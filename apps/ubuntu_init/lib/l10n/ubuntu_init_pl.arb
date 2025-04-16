@@ -1,114 +1,43 @@
 {
   "welcomePageHeader": "Witaj w {distro}",
-  "@welcomePageHeader": {},
   "welcomeWhatsNew": "CO NOWEGO?",
-  "@welcomeWhatsNew": {},
   "welcomeStoreTitle": "Nowy wygląd Centrum oprogramowania",
-  "@welcomeStoreTitle": {},
   "welcomeSecuritySubtitle": "Nowe opcje szyfrowania sprzętowego lub ZFS.",
-  "@welcomeSecuritySubtitle": {},
   "welcomeSecurityTitle": "Zwiększone bezpieczeństwo",
-  "@welcomeSecurityTitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Zobacz listę zmian</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryPageTitle": "Telemetria",
-  "@telemetryPageTitle": {},
   "telemetryHeader": "Pomóż ulepszyć {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryDescription": "Pomóż nam ulepszyć {distro}, udostępniając nam swoje dane systemowe. Obejmuje to takie elementy jak model urządzenia, zainstalowane oprogramowanie i lokalizację wybraną dla strefy czasowej.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Tak, udostępniaj dane systemowe zespołowi {distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "Nie, nie udostępniaj danych systemowych",
-  "@telemetryLabelOff": {},
   "telemetryReportLabel": "Pokaż pierwszy raport",
-  "@telemetryReportLabel": {},
   "telemetryLegalLabel": "Informacje prawne",
-  "@telemetryLegalLabel": {},
   "welcomePageTitle": "Witamy",
-  "@welcomePageTitle": {},
   "welcomeStartTitle": "Usprawniony początek",
-  "@welcomeStartTitle": {},
   "welcomeStartSubtitle": "Obsługiwanie przejrzystszej konfiguracji.",
-  "@welcomeStartSubtitle": {},
   "welcomeStoreSubtitle": "Znalezienie ulubionego oprogramowania nigdy nie było łatwiejsze.",
-  "@welcomeStoreSubtitle": {},
   "telemetryReportTitle": "Szczegóły raportowania",
-  "@telemetryReportTitle": {},
   "privacyPageTitle": "Usługi lokalizacyjne",
-  "@privacyPageTitle": {},
   "privacyLocationTitle": "Włączyć usługi lokalizacyjne?",
-  "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "Informuj programy o swojej lokalizacji geograficznej.\nZawsze możesz to zmienić w ustawieniach systemu.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Usługi lokalizacyjne",
-  "@privacyLocationEnable": {},
   "privacyPolicyLink": "Prywatność danych",
-  "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProTokenTextfieldHint": "Token",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Zawsze bezpłatnie do użytku osobistego. 30-dniowy okres próbny dla przedsiębiorstw. <a href=\"https://{url}\">Dowiedz się więcej</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProTokenAttachErrorVariant": "Token nieprawidłowy, ponów",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Pomiń na razie",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProSucessAttachDescription": "Usługami Pro możesz zarządzać w aplikacji Oprogramowanie i aktualizacje.",
-  "@ubuntuProSucessAttachDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro włączono teraz w tym urządzeniu",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProHeader": "Podłącz to urządzenie",
-  "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "lub dodaj token ręcznie",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProSubscriptionDescription": "Uzyskaj najbardziej kompleksową subskrypcję zabezpieczeń oprogramowania typu open source",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProTokenAttachButton": "Podłącz",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProTokenAttachError": "Token nieprawidłowy",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "Token prawidłowy",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Zawsze możesz włączyć Ubuntu Pro później za pomocą aplikacji Oprogramowanie i aktualizacje.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Włącz Ubuntu Pro",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Podłącz to urządzenie do subskrypcji Ubuntu Pro, aby otrzymywać aktualizacje zabezpieczeń w szerszej gamie pakietów do 2032 roku.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProMagicAttachInstructions": "Podłącz szybko z tym kodem pod adresem <a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
-  "telemetryCollectError": "Nie udało się zebrać danych telemetrycznych",
-  "@telemetryCollectError": {}
+  "telemetryCollectError": "Nie udało się zebrać danych telemetrycznych"
 }

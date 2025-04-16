@@ -205,9 +205,9 @@ class _AccentColorMapper extends ColorMapper {
     if (accent == null) {
       return color;
     }
-    final opacity = color.opacity;
-    if (color.withOpacity(1.0) == _baseColor) {
-      return accent!.withOpacity(opacity);
+    final alpha = color.a;
+    if (color.withValues(alpha: 1.0) == _baseColor) {
+      return accent!.withValues(alpha: alpha);
     } else {
       return color;
     }

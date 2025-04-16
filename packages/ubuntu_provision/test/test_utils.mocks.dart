@@ -1083,6 +1083,7 @@ class MockImage extends _i1.Mock implements _i17.Image {
     String? prefixLineOne = r'',
     String? prefixOtherLines,
     _i7.DiagnosticLevel? minLevel = _i7.DiagnosticLevel.debug,
+    int? wrapWidth = 65,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -1092,6 +1093,7 @@ class MockImage extends _i1.Mock implements _i17.Image {
             #prefixLineOne: prefixLineOne,
             #prefixOtherLines: prefixOtherLines,
             #minLevel: minLevel,
+            #wrapWidth: wrapWidth,
           },
         ),
         returnValue: _i19.dummyValue<String>(
@@ -1103,6 +1105,7 @@ class MockImage extends _i1.Mock implements _i17.Image {
               #prefixLineOne: prefixLineOne,
               #prefixOtherLines: prefixOtherLines,
               #minLevel: minLevel,
+              #wrapWidth: wrapWidth,
             },
           ),
         ),
@@ -3429,6 +3432,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
     String? prefixLineOne = r'',
     String? prefixOtherLines,
     _i7.DiagnosticLevel? minLevel = _i7.DiagnosticLevel.debug,
+    int? wrapWidth = 65,
   }) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -3438,6 +3442,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             #prefixLineOne: prefixLineOne,
             #prefixOtherLines: prefixOtherLines,
             #minLevel: minLevel,
+            #wrapWidth: wrapWidth,
           },
         ),
         returnValue: _i19.dummyValue<String>(
@@ -3449,6 +3454,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
               #prefixLineOne: prefixLineOne,
               #prefixOtherLines: prefixOtherLines,
               #minLevel: minLevel,
+              #wrapWidth: wrapWidth,
             },
           ),
         ),
@@ -3461,6 +3467,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
               #prefixLineOne: prefixLineOne,
               #prefixOtherLines: prefixOtherLines,
               #minLevel: minLevel,
+              #wrapWidth: wrapWidth,
             },
           ),
         ),

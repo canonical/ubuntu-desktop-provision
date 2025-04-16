@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'வரவேற்கிறோம்';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Welcome to $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'வன்பொருள் உதவி அல்லது ZFS குறியாக்கத்திற்கான புதிய விருப்பங்கள்.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href = \"$url\"> சேஞ்ச்லாக் காண்க </a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'டெலிமெட்ரி';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return '$distro ஐ மேம்படுத்த உதவுங்கள்';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'உங்கள் கணினி தரவை எங்களுடன் பகிர்வதன் மூலம் $distro ஐ மேம்படுத்த எங்களுக்கு உதவுங்கள். உங்கள் இயந்திர மாதிரி, நிறுவப்பட்ட மென்பொருள் மற்றும் உங்கள் நேர மண்டலத்திற்காக நீங்கள் தேர்ந்தெடுத்த இடம் போன்ற விசயங்கள் இதில் அடங்கும்.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'ஆம், கணினி தரவை $distro குழுவுடன் பகிர்ந்து கொள்ளுங்கள்';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'தரவு தனியுரிமை';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'இந்த குறியீட்டைக் கொண்டு <a href = \"https: // $url\"> $url </a> இல் மேசிக் இணைக்கவும்';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'திறந்த மூல மென்பொருள் பாதுகாப்பிற்கான மிக விரிவான சந்தாவைப் பெறுங்கள்';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'தனிப்பட்ட பயன்பாட்டிற்கு எப்போதும் இலவசம். நிறுவனங்களுக்கான 30 நாட்கள் சோதனை. <a href = \"https: // $url\"> மேலும் அறிக </a>';
   }
 

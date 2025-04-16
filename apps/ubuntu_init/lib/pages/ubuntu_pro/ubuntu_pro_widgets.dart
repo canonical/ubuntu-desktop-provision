@@ -71,7 +71,7 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
       alignment: AlignmentDirectional.centerStart,
       child: YaruBorderContainer(
         color: isSelected
-            ? colorScheme.primary.withOpacity(0.2)
+            ? colorScheme.primary.withValues(alpha: 0.2)
             : colorScheme.primaryContainer,
         border: Border.all(
           color: isSelected ? colorScheme.primary : theme.dividerColor,

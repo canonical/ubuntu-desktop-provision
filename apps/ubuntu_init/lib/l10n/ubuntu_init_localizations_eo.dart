@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Bonvenon';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Bonvenon al $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Vidi protokolon de ŝanĝoj</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetrio';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Helpu plibonigi $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Helpu nin plibonigi $distro sendante viajn sistemajn datenojn al ni. Tio inkluzivas interalie la modelon de via maŝino, instalitajn programojn kaj tiun lokon, kiun vi elektis por via horzono.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Jes, sendu sistemajn datenojn al la evoluigantoj de $distro';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Datena privateco';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Aŭtomate alkroĉu per la jena kodo ĉe <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Abonu la plej ampleksan protekton pri malfermitkodaj programoj';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Ĉiam senkosta por persona uzo, 30 tagoj da provperiodo por entreprenoj. <a href=\"https://$url\">Lernu pli</a>';
   }
 

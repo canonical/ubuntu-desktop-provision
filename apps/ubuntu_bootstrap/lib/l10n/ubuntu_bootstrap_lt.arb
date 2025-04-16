@@ -1,611 +1,183 @@
 {
   "@@locale": "lt",
   "onBatteryWarning": "<font color=\"{color}\">Įspėjimas:</font> Šis kompiuteris daugiau nebėra prijungtas prie elektros maitinimo šaltinio.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "changeButtonText": "Keisti",
-  "@changeButtonText": {},
   "welcome": "Sveiki,",
-  "@welcome": {},
   "rstTitle": "RST yra įjungta",
-  "@rstTitle": {},
   "windowTitle": "Įdiegti {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tryOption": "Išbandyti {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installOption": "Įdiegti {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "updatesOtherSoftwarePageTitle": "Programos ir atnaujinimai",
-  "@updatesOtherSoftwarePageTitle": {},
   "otherOptions": "Kitos parinktys",
-  "@otherOptions": {},
   "installThirdPartyTitle": "Įdiegti trečiųjų šalių programinę įrangą, skirtą grafikos ir belaidžio (Wi-Fi) ryšio aparatinei įrangai, o taip pat papildomus medijos formatus",
-  "@installThirdPartyTitle": {},
   "installationTypeErase": "Ištrinti duomenis diske ir įdiegti {DISTRO}",
-  "@installationTypeErase": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installThirdPartySubtitle": "Šiai programinei įrangai taikomos licencijos sąlygos, kurias rasite jos dokumentacijoje. Kai kuri programinė įranga yra nuosavybinė.",
-  "@installThirdPartySubtitle": {},
   "installationTypeDualOSDetected": "Šiuo metu šiame kompiuteryje yra įdiegtos {os1} ir {os2}. Ką norėtumėte daryti?",
-  "@installationTypeDualOSDetected": {
-    "type": "text",
-    "placeholders": {
-      "os1": {},
-      "os2": {}
-    }
-  },
   "installationTypeMultiOSDetected": "Šiuo metu šiame kompiuteryje yra įdiegtos kelios operacinės sistemos. Ką norėtumėte daryti?",
-  "@installationTypeMultiOSDetected": {},
   "configureSecureBootDescription": "Pasirinkote įdiegti trečiųjų šalių tvarkyklės programinę įrangą. Tai reikalauja, kad būtų išjungtas saugusis paleidimashis.\nNorėdami tai atlikti, dabar turite pasirinkti saugumo raktą, o kai sistema bus paleista iš naujo, turėsite jį įvesti.",
-  "@configureSecureBootDescription": {},
   "configureSecureBootOption": "Konfigūruoti saugųjį paleidimą",
-  "@configureSecureBootOption": {},
   "chooseSecurityKey": "Pasirinkite saugumo raktą",
-  "@chooseSecurityKey": {},
   "confirmSecurityKey": "Patvirtinkite saugumo raktą",
-  "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Kol kas neįdiegti tvarkyklės programinės įrangos",
-  "@dontInstallDriverSoftwareNow": {},
   "configureSecureBootSecurityKeyRequired": "Reikia nurodyti saugumo raktą",
-  "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "Saugumo raktai nesutampa",
-  "@secureBootSecurityKeysDontMatch": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Įspėjimas:</font> Tai ištrins visas {os} programas, dokumentus, nuotraukas, muziką ir visus kitus failus.",
-  "@installationTypeReinstallWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "os": {}
-    }
-  },
   "tryOrInstallTitle": "Išbandykite arba įsidiekite {DISTRO}",
-  "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Taisyti diegimą",
-  "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "Taisymas iš naujo įdiegs visą įdiegtą programinę įrangą nepaveikdamas dokumentų ar nustatymų.",
-  "@tryOrInstallRepairDescription": {},
   "tryOrInstallReleaseNotesLabel": "Galite pageidauti perskaityti <a href=\"{url}\">laidos informaciją</a>.",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "rstDescription": "Šis kompiuteris naudoja Intel RST (Rapid Storage Technology). Prieš įdiegdami Ubuntu, turite „Windows“ sistemoje išjungti RST.",
-  "@rstDescription": {},
   "rstInstructions": "Norėdami skaityti instrukcijas, nuskenuokite kitu įrenginiu QR kodą arba apsilankykite adresu: <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "configureSecureBootTitle": "Konfigūruoti saugųjį paleidimą",
-  "@configureSecureBootTitle": {},
   "installationTypeTitle": "Įdiegimo tipas",
-  "@installationTypeTitle": {},
   "installationTypeOSDetected": "Šiuo metu šiame kompiuteryje yra įdiegta {os}. Ką norėtumėte daryti?",
-  "@installationTypeOSDetected": {
-    "type": "text",
-    "placeholders": {
-      "os": {}
-    }
-  },
   "installationTypeNoOSDetected": "Šiuo metu šiame kompiuteryje nėra įdiegtų operacinių sistemų. Ką norėtumėte daryti?",
-  "@installationTypeNoOSDetected": {},
   "installationTypeAdvancedLabel": "Išplėstinės ypatybės...",
-  "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Išplėstinės ypatybės",
-  "@installationTypeAdvancedTitle": {},
   "installationTypeNone": "Nėra",
-  "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nieko nepasirinkta",
-  "@installationTypeNoneSelected": {},
   "installationTypeLVMSelected": "LVM pasirinkta",
-  "@installationTypeLVMSelected": {},
   "installationTypeEncryptInfo": "Kitame žingsnyje pasirinksite saugumo raktą.",
-  "@installationTypeEncryptInfo": {},
   "installationTypeZFSSelected": "ZFS pasirinkta",
-  "@installationTypeZFSSelected": {},
   "installationTypeReinstall": "Ištrinti {os} ir įdiegti iš naujo",
-  "@installationTypeReinstall": {
-    "type": "text",
-    "placeholders": {
-      "os": {}
-    }
-  },
   "installationTypeAlongside": "Įdiegti {product} šalia {os}",
-  "@installationTypeAlongside": {
-    "type": "text",
-    "placeholders": {
-      "product": {},
-      "os": {}
-    }
-  },
   "tryDescription": "Galite išbandyti {RELEASE} neatlikdami kompiuteryje jokių pakeitimų.",
-  "@tryDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installDescription": "Įsidiekite {RELEASE} šalia savo dabartinės operacinės sistemoje arba vietoje jos. Tai neturėtų ilgai užtrukti.",
-  "@installDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeEncrypt": "Šifruoti naują {RELEASE} diegimą, kad būtų užtikrintas saugumas",
-  "@installationTypeEncrypt": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "restartNow": "Paleisti iš naujo dabar",
-  "@restartNow": {},
   "confirmInstallButton": "Įdiegti",
-  "@confirmInstallButton": {},
   "bitlockerTitle": "„BitLocker“ yra įjungta",
-  "@bitlockerTitle": {},
   "installDriversTitle": "Įdiegti trečiųjų šalių programinę įrangą, skirtą grafikos ir belaidžio ryšio (Wi-Fi) aparatinei įrangai",
-  "@installDriversTitle": {},
   "installDriversSubtitle": "Šios tvarkyklės yra platinamos pagal licencijas, nurodytas jų dokumentacijoje. Tvarkyklės yra nuosavybinės.",
-  "@installDriversSubtitle": {},
   "restartIntoWindows": "Paleisti iš naujo į „Windows“",
-  "@restartIntoWindows": {},
   "confirmPartitionTable": "{serial} ({path})",
-  "@confirmPartitionTable": {
-    "description": "An entry for a disk whose partition table is being changed",
-    "placeholders": {
-      "serial": {},
-      "path": {}
-    }
-  },
   "confirmPartitionChanges": "Bus pritaikyti šie skirsnių pakeitimai:",
-  "@confirmPartitionChanges": {},
   "confirmPartitionResize": "skirsnio <b>{sysname}</b> dydis pakeistas iš <b>{oldsize}</b> į <b>{newsize}</b>",
-  "@confirmPartitionResize": {
-    "description": "A resized partition entry",
-    "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
-    }
-  },
   "restartInto": "Paleisti iš naujo į {system}",
-  "@restartInto": {
-    "type": "text",
-    "placeholders": {
-      "system": {}
-    }
-  },
   "bitlockerDescription": "Šis kompiuteris naudoja „Windows BitLocker“ šifravimą.\nNorėdami tęsti, turite pasinaudoti „Windows“ ir sukurti laisvą vietą arba pasirinkti variantą '{option}'.",
-  "@bitlockerDescription": {},
   "newPartitionTableConfirmationMessage": "Sukūrus naują skirsnių lentelę visame įrenginyje, bus pašalinti visi jo dabartiniai skirsniai. Kol kas šią operaciją galima atšaukti, jei reikės.",
-  "@newPartitionTableConfirmationMessage": {},
   "installationTypeAlongsideInfo": "Dokumentai, muzika ir kiti asmeniniai failai bus išsaugoti. Kas kartą įjungę kompiuterį, galėsite pasirinkti, kurią operacinę sistemą paleisti.",
-  "@installationTypeAlongsideInfo": {},
   "showSecurityKey": "Rodyti saugumo raktą",
-  "@showSecurityKey": {},
   "installationTypeLVMEncryptionSelected": "Pasirinkta LVM ir šifravimas",
-  "@installationTypeLVMEncryptionSelected": {},
   "selectGuidedStorageInstallNow": "Įdiegti dabar",
-  "@selectGuidedStorageInstallNow": {},
   "installAlongsideAllocateSpace": "Paskirstyti vietą",
-  "@installAlongsideAllocateSpace": {},
   "installAlongsideFiles": "Failai",
-  "@installAlongsideFiles": {},
   "installAlongsidePartition": "Skirsnis:",
-  "@installAlongsidePartition": {},
   "installAlongsideAvailable": "Prieinama:",
-  "@installAlongsideAvailable": {},
   "installAlongsideSize": "Dydis:",
-  "@installAlongsideSize": {},
   "partitionCreateTitle": "Kurti skirsnį",
-  "@partitionCreateTitle": {},
   "newPartitionTable": "Nauja skirsnių lentelė",
-  "@newPartitionTable": {},
   "bootLoaderDevice": "Įrenginys, skirtas pradinio įkėliklio diegimui",
-  "@bootLoaderDevice": {},
   "partitionEditTitle": "Keisti skirsnį",
-  "@partitionEditTitle": {},
   "partitionTypeLabel": "Naujo skirsnio tipas:",
-  "@partitionTypeLabel": {},
   "partitionTypePrimary": "Pirminis",
-  "@partitionTypePrimary": {},
   "partitionLocationBeginning": "Šios vietos pradžia",
-  "@partitionLocationBeginning": {},
   "confirmPartitionTables": "Šių įrenginių skirsnių lentelėms yra atlikti pakeitimai:",
-  "@confirmPartitionTables": {},
   "confirmPartitionCreate": "sukurtas skirsnis <b>{sysname}</b>",
-  "@confirmPartitionCreate": {
-    "description": "A created partition entry",
-    "placeholders": {
-      "sysname": {}
-    }
-  },
   "appTitle": "Ubuntu darbalaukio diegimo programa",
-  "@appTitle": {},
   "diskHeadersType": "Tipas",
-  "@diskHeadersType": {},
   "diskHeadersMountPoint": "Prijungimo vieta",
-  "@diskHeadersMountPoint": {},
   "installationTypeManual": "Rankinis skaidymas",
-  "@installationTypeManual": {},
   "partitionLocationLabel": "Naujo skirsnio vieta:",
-  "@partitionLocationLabel": {},
   "partitionLocationEnd": "Šios vietos pabaiga",
-  "@partitionLocationEnd": {},
   "dontInstallDriverSoftwareNowDescription": "Vėliau galėsite ją įdiegti, atvėrę Programinę įrangą ir atnaujinimus.",
-  "@dontInstallDriverSoftwareNowDescription": {},
   "partitionFormatLabel": "Naudojamas kaip:",
-  "@partitionFormatLabel": {},
   "offlineWarning": "Šiuo metu nesate prisijungę prie interneto",
-  "@offlineWarning": {},
   "installationTypeAlongsideDual": "Įdiegti {product} šalia {os1} ir {os2}",
-  "@installationTypeAlongsideDual": {
-    "type": "text",
-    "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
-    }
-  },
   "installationTypeAlongsideMulti": "Įdiegti {product} šalia jų",
-  "@installationTypeAlongsideMulti": {
-    "type": "text",
-    "placeholders": {
-      "product": {}
-    }
-  },
   "installationTypeManualInfo": "Galite dalinti laikmenas į skirsnius, keisti skirsnių dydį arba pasirinkti kelis skirsnius {DISTRO} įdiegimui",
-  "@installationTypeManualInfo": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "diskHeadersFormat": "Formatuoti",
-  "@diskHeadersFormat": {},
   "newPartitionTableConfirmationTitle": "Naujas tuščias skirsnis",
-  "@newPartitionTableConfirmationTitle": {},
   "confirmPageTitle": "Pasiruošę įdiegti",
-  "@confirmPageTitle": {},
   "confirmPartitionFormatMount": "skirsnis <b>{sysname}</b> formatuotas kaip <b>{format}</b> ir naudojamas kaip <b>{mount}</b>",
-  "@confirmPartitionFormatMount": {
-    "description": "A formatted and mounted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
-    }
-  },
   "continueTesting": "Tęsti sistemos bandymą",
-  "@continueTesting": {},
   "updatesOtherSoftwarePageDescription": "Kokias programas pradžiai norėtumėte įdiegti?",
-  "@updatesOtherSoftwarePageDescription": {},
   "installCodecsTitle": "Atsisiųsti ir įdiegti papildomų medijos formatų palaikymą",
-  "@installCodecsTitle": {},
   "installCodecsSubtitle": "Ši programinė įranga yra platinama pagal licencijas, nurodytas jos dokumentacijoje. Kai kuri programinė įranga yra nuosavybinė.",
-  "@installCodecsSubtitle": {},
   "installationTypeZFS": "EKSPERIMENTINIS: Ištrinti diską ir naudoti ZFS",
-  "@installationTypeZFS": {},
   "installationTypeAlongsideUnknown": "Įdiegti {product} šalia kitų skirsnių",
-  "@installationTypeAlongsideUnknown": {
-    "type": "text",
-    "placeholders": {
-      "product": {}
-    }
-  },
   "selectGuidedStoragePageTitle": "Ištrinti diską ir įdiegti {DISTRO}",
-  "@selectGuidedStoragePageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "selectGuidedStorageDropdownLabel": "Pasirinkite diską:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Bus naudojamas visas diskas:",
-  "@selectGuidedStorageInfoLabel": {},
   "installAlongsideSpaceDivider": "Paskirstykite vietą diske, tempdami žemiau esantį dalytuvą:",
-  "@installAlongsideSpaceDivider": {},
   "diskHeadersSize": "Dydis",
-  "@diskHeadersSize": {},
   "allocateDiskSpace": "Rankinis skaidymas",
-  "@allocateDiskSpace": {},
   "installAlongsideHiddenPartitions": "{num} mažesni skirsniai yra paslėpti. Norėdami daugiau galimybių, naudokite <a href=\"{url}\">išplėstinį skaidymo įrankį</a>",
-  "@installAlongsideHiddenPartitions": {
-    "type": "text",
-    "placeholders": {
-      "num": {},
-      "url": {}
-    }
-  },
   "installAlongsideResizePartition": "Keisti skirsnio dydį",
-  "@installAlongsideResizePartition": {},
   "diskHeadersDevice": "Įrenginys",
-  "@diskHeadersDevice": {},
   "diskHeadersUsed": "Panaudotas",
-  "@diskHeadersUsed": {},
   "diskHeadersSystem": "Sistema",
-  "@diskHeadersSystem": {},
   "partitionLimitReached": "Pasiekta riba",
-  "@partitionLimitReached": {},
   "partitionTypeLogical": "Loginis",
-  "@partitionTypeLogical": {},
   "partitionSizeLabel": "Dydis:",
-  "@partitionSizeLabel": {},
   "partitionErase": "Formatuoti skirsnį",
-  "@partitionErase": {},
   "partitionMountPointLabel": "Prijungimo vieta:",
-  "@partitionMountPointLabel": {},
   "confirmHeader": "Jei tęsite, žemiau išvardyti pakeitimai bus įrašyti į diskus. Tolimesnius pakeitimus galėsite atlikti rankiniu būdu.",
-  "@confirmHeader": {},
   "installationCompleteTitle": "Įdiegimas baigtas",
-  "@installationCompleteTitle": {},
   "confirmPartitionMount": "skirsnis <b>{sysname}</b> naudojamas kaip <b>{mount}</b>",
-  "@confirmPartitionMount": {
-    "description": "A mounted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "mount": {}
-    }
-  },
   "confirmPartitionFormat": "skirsnis <b>{sysname}</b> formatuotas kaip <b>{format}</b>",
-  "@confirmPartitionFormat": {
-    "description": "A formatted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "format": {}
-    }
-  },
   "bitlockerInstructions": "Norėdami skaityti instrukcijas, nuskenuokite kitu įrenginiu QR kodą arba apsilankykite adresu: <a href=\"https://{url}\">{url}</a>",
-  "@bitlockerInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "partitionFormatNone": "Palikti neformatuotą",
-  "@partitionFormatNone": {},
   "freeDiskSpace": "Laisva vieta",
-  "@freeDiskSpace": {},
   "tooManyPrimaryPartitions": "Per daug pirminių skirsnių",
-  "@tooManyPrimaryPartitions": {},
   "readyToUse": "{system} įdiegta ir paruošta naudoti",
-  "@readyToUse": {
-    "type": "text",
-    "placeholders": {
-      "system": {}
-    }
-  },
   "shutdown": "Išjungti",
-  "@shutdown": {},
   "installationSlidesAvailable": "Prieinama:",
-  "@installationSlidesAvailable": {},
   "installationSlidesWelcomeBody": "Nepaisant to, ar esate plėtotojas, kūrėjas, žaidimų megėjas ar administratorius, atrasite naujus įrankius, kurie pagerins produktyvumą ir jūsų patyrimą su {RELEASE}.",
-  "@installationSlidesWelcomeBody": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "quitButtonText": "Baigti diegimą",
-  "@quitButtonText": {},
   "loadingHeader": "Ruošiama {DISTRO}…",
-  "@loadingHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "confirmDevicesTitle": "Įrenginiai",
-  "@confirmDevicesTitle": {},
   "confirmPartitionsTitle": "Skirsniai",
-  "@confirmPartitionsTitle": {},
   "installationSlidesTitle": "Jus sveikina {RELEASE}",
-  "@installationSlidesTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationSlidesIncluded": "Įtraukta:",
-  "@installationSlidesIncluded": {},
   "installationSlidesWelcomeTitle": "Greita, nemokama ir pilna naujų ypatybių",
-  "@installationSlidesWelcomeTitle": {},
   "installationSlidesWelcomeHeader": "Naujausia {DISTRO} versija paverčia naudojimąsi kompiuteriu neįtikėtinai lengvu.",
-  "@installationSlidesWelcomeHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSoftwareTitle": "Visos reikiamos programos",
-  "@installationSlidesSoftwareTitle": {},
   "installationSlidesSoftwareBody": "Diekite, tvarkykite ir atnaujinkite visas savo programas naudodamiesi „Ubuntu Software“, įskaitant tūkstančius programų iš tiek „Snap Store“, tiek {DISTRO} archyvo.",
-  "@installationSlidesSoftwareBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesDevelopmentTitle": "Plėtokite naudodami geriausią, ką siūlo atvirasis kodas",
-  "@installationSlidesDevelopmentTitle": {},
   "installationSlidesDevelopmentBody": "{DISTRO} yra tobula kompiuterizuota darbo vieta, skirta programų ar saityno plėtojimui, duomenų mokslui bei dirbtinio intelekto/kompiuterio mokymosi vystymui, o taip pat plėtojimo operacijoms ir administravimui. Kiekvienoje {DISTRO} laidoje yra naujausios įrankių grandinės ir yra palaikomos visos pagrindinės integruotosios plėtojimo aplinkos.",
-  "@installationSlidesDevelopmentBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesCreativityTitle": "Vystykite savo kūrybingumą",
-  "@installationSlidesCreativityTitle": {},
   "installingSystem": "Įdiegiama sistema…",
-  "@installingSystem": {},
   "configuringSystem": "Nustatoma sistema…",
-  "@configuringSystem": {},
   "installationSlidesAccessibilityBody": "{DISTRO} filosofijos gelmėje yra įsitikinimas, jog naudojimasis kompiuteriu yra prieinamas kiekvienam. Dėka išplėstinių prieinamumo įrankių ir parametrų, skirtų keisti kalbą, spalvas bei teksto dydį, {DISTRO} paverčia naudojimąsi kompiuteriu lengvu – nepaisant to, kur esate ar kas bebūtumėte.",
-  "@installationSlidesAccessibilityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "notEnoughDiskSpaceAvailable": "Prieinama:",
-  "@notEnoughDiskSpaceAvailable": {},
   "notEnoughDiskSpaceUbuntu": "Nepakanka vietos diske, kad būtų įdiegta {DISTRO}",
-  "@notEnoughDiskSpaceUbuntu": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "copyingFiles": "Kopijuojami failai…",
-  "@copyingFiles": {},
   "installationFailed": "Nepavyko įdiegti",
-  "@installationFailed": {},
   "installationSlidesAccessibilityOrca": "Orca ekrano skaityklė",
-  "@installationSlidesAccessibilityOrca": {},
   "installationSlidesCreativityBody": "Jei esate animatorius, dizaineris, vaizdo įrašų kūrėjas ar žaidimų plėtotojas, be vargo perkelsite savo darbo eigą į {DISTRO}, kuri palaiko atvirojo kodo ir pramoninių standartų programinę įrangą bei programas.",
-  "@installationSlidesCreativityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesGamingTitle": "Puikiai tinka žaidimams",
-  "@installationSlidesGamingTitle": {},
   "installationSlidesGamingBody": "{DISTRO} palaiko naujausias „NVIDIA“ ir „Mesa“ tvarkykles, kad pagerintų našumą ir suderinamumą. Tūkstančiai „Windows“ žaidimų pavadinimų, tokių programų kaip „Steam“ dėka, be jokios papildomos konfigūracijos gali būti paleisti {DISTRO}.",
-  "@installationSlidesGamingBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSecurityTitle": "Privati ir saugi",
-  "@installationSlidesSecurityTitle": {},
   "installationSlidesSecurityBody": "{DISTRO} teikia visus reikiamus įrankius, kad privačiai naudotumėtės internetu ir išliktumėte saugūs. Dėka užkardos ir VPN palaikymo bei daugelio į privatumą orientuotų programų, yra užtikrinama, kad niekas kitas, o tik jūs galėtumėte pilnai valdyti savo duomenis.",
-  "@installationSlidesSecurityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSecurityLts": "Visoms {DISTRO} LTS laidoms 5 metų laikotarpyje yra teikiamos saugumo spragų pataisos. Šį laikotarpį „Ubuntu Pro“ prenumeratos dėka galima pratęsti iki 10 metų.",
-  "@installationSlidesSecurityLts": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesProductivityTitle": "Padidinkite savo produktyvumą",
-  "@installationSlidesProductivityTitle": {},
   "installationSlidesProductivityBody": "Į {DISTRO} darbalaukį įeina LibreOffice, raštinės programų rinkinys, suderinamas su „Microsoft Office“. Jį sudaro programos, skirtos kurti dokumentus, skaičiuokles bei pateiktis. Taip pat yra prieinami populiarūs bendradarbiavimo įrankiai.",
-  "@installationSlidesProductivityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesAccessibilityTitle": "Prieinama visiems",
-  "@installationSlidesAccessibilityTitle": {},
   "installationSlidesAccessibilityLanguages": "Kalbos palaikymas",
-  "@installationSlidesAccessibilityLanguages": {},
   "installationSlidesSupportTitle": "Pagalba ir palaikymas",
-  "@installationSlidesSupportTitle": {},
   "installationSlidesSupportHeader": "Oficiali {DISTRO} dokumentacija yra prieinama tiek internete, tiek spustelėjus ant žinyno piktogramos doke.",
-  "@installationSlidesSupportHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSupportCommunity": "„Ask Ubuntu“ apima didelį klausimų ir atsakymų spektrą, o „Ubuntu Discourse“ teikia žinyną bei patarimus tiek naujiems, tiek pažengusiems naudotojams.",
-  "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Naudotojams iš įmonių Canonical teikia komercinį palaikymą, padėdama darbo vietoje lengvai pritaikyti ir saugiai valdyti Ubuntu.",
-  "@installationSlidesSupportEnterprise": {},
   "installationSlidesSupportResources": "Naudingi ištekliai:",
-  "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Oficiali dokumentacija",
-  "@installationSlidesSupportDocumentation": {},
   "installationSlidesSupportUbuntuPro": "Naudotojų iš įmonių palaikymas 24/7 naudojant „Ubuntu Pro“",
-  "@installationSlidesSupportUbuntuPro": {},
   "notEnoughDiskSpaceTitle": "Trūksta vietos",
-  "@notEnoughDiskSpaceTitle": {},
   "notEnoughDiskSpaceRequired": "Reikia:",
-  "@notEnoughDiskSpaceRequired": {},
   "rstHeader": "Norėdami tęsti, išjunkite RST",
-  "@rstHeader": {},
   "bitlockerHeader": "Norėdami tęsti, išjunkite „BitLocker“",
-  "@bitlockerHeader": {},
   "restartIntoWindowsDescription": "Ar tikrai norite paleisti kompiuterį iš naujo? Vėliau jums teks pradėti {DISTRO} diegimą iš naujo, kad užbaigtumėte diegti {DISTRO}.",
-  "@restartIntoWindowsDescription": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "restartIntoWindowsTitle": "Paleisti iš naujo į „Windows“ sistemą?",
-  "@restartIntoWindowsTitle": {},
   "loadingPageTitle": "Jus sveikina {DISTRO}",
-  "@loadingPageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "allocateDiskSpaceInvalidMountPointSpace": "Prijungimo vietos negali turėti tarpų",
-  "@allocateDiskSpaceInvalidMountPointSpace": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Įspėjimas:</font> Jei prarasite šį saugumo raktą, visi duomenys bus prarasti. Rekomenduojame užsirašyti šį raktą ir laikyti jį saugioje vietoje atokiai nuo šio kompiuterio.",
-  "@recoveryKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "autoinstallTitle": "Įdiegimo tipas",
-  "@autoinstallTitle": {},
   "autoinstallInteractiveOption": "Interaktyvus įdiegimas",
-  "@autoinstallInteractiveOption": {},
   "autoinstallAutomatedOption": "Automatizuotas įdiegimas",
-  "@autoinstallAutomatedOption": {},
   "warningLabel": "Įspėjimas:",
-  "@warningLabel": {},
   "hideSecurityKey": "Slėpti",
-  "@hideSecurityKey": {},
   "codecsAndDriversPageDescription": "Įdiegti rekomenduojamą nuosavybinę programinę įrangą?",
-  "@codecsAndDriversPageDescription": {},
   "codecsAndDriversNvidiaNote": "Aptikta „NVIDIA“ grafikos plokštė",
-  "@codecsAndDriversNvidiaNote": {},
   "codecsAndDriversNvidiaBody": "Geriausiam „NVIDIA“ grafikos plokštės našumui pasiekti, yra primygtinai rekomenduojama įdiegti papildomas tvarkykles.",
-  "@codecsAndDriversNvidiaBody": {},
-  "choosePassphraseTitle": "Disko slaptafrazė",
-  "@choosePassphraseTitle": {}
+  "choosePassphraseTitle": "Disko slaptafrazė"
 }

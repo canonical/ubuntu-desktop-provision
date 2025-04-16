@@ -47,7 +47,7 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                       Theme.of(context)
                           .colorScheme
                           .success
-                          .withOpacity(model.token.isEmpty ? 0.5 : 1),
+                          .withValues(alpha: model.token.isEmpty ? 0.5 : 1),
                     ),
                   ),
                   child: Text(
