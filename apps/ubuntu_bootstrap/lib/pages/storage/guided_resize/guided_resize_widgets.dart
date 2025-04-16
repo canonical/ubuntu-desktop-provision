@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -31,7 +30,7 @@ class StorageSelector extends ConsumerWidget {
       partition?.os?.long ?? partition?.format,
       if (partition?.size != null) context.formatByteSize(partition!.size!),
     ];
-    return parts.whereNotNull().join(' - ');
+    return parts.nonNulls.join(' - ');
   }
 
   static String formatStorage(BuildContext context, WidgetRef ref, int index) {

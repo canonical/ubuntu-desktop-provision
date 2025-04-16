@@ -80,7 +80,7 @@ class ThemeVariant {
       _log.error('could not parse color \'$colorString\'');
       return null;
     }
-    return Color(color).withOpacity(1);
+    return Color(color).withValues(alpha: 1);
   }
 }
 
