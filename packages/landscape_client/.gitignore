@@ -1,0 +1,9 @@
+build/
+coverage/
+doc/
+.idea/
+*.iml
+.vscode/
+.dart_tool/
+pubspec.lock
+pubspec_overrides.yaml
