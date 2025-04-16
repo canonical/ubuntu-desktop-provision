@@ -2075,6 +2075,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'I understand I may lose all my data if I don\'t have a recovery key'**
   String get recoveryKeyConfirmation;
 
+  /// No description provided for @recoveryKeyLinkLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn more'**
+  String get recoveryKeyLinkLabel;
+
   /// No description provided for @landscapeMagicAttachInstructions.
   ///
   /// In en, this message translates to:

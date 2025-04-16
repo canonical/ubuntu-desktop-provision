@@ -1091,6 +1091,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Mi komprenas, ke mi povos perdi ĉiom da miaj datenoj, se mi ne havos restaŭran ŝlosilon';
 
   @override
+  String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
   String landscapeMagicAttachInstructions(Object url) {
     return 'Skanu la QR-kodon aŭ tajpu la ĉi suban kodon ĉe <a href=\"https://$url\">$url</a>';
   }
