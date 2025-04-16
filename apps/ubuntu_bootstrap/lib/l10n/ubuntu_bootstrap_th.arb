@@ -1,73 +1,16 @@
 {
   "@@locale": "th",
   "tryOption": "ทดลอง {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installOption": "ติดตั้ง {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "welcome": "ยินดีต้อนรับ",
-  "@welcome": {},
   "windowTitle": "ติดตั้ง {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tryOrInstallReleaseNotesLabel": "คุณอาจต้องการอ่าน <a href=\"{url}\">บันทึกการออกรุ่น</a>",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "tryOrInstallRepairOption": "ซ่อมแซมระบบที่ติดตั้ง",
-  "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "การซ่อมแซมจะเป็นการติดตั้งซอฟต์แวร์ทั้งหมดที่ติดตั้งไว้ใหม่อีกครั้งโดยไม่แตะต้องเอกสารหรือการตั้งค่าของคุณ",
-  "@tryOrInstallRepairDescription": {},
   "tryDescription": "คุณสามารถทดลองใช้ {RELEASE} โดยไม่ทำการเปลี่ยนแปลงใดกับคอมพิวเตอร์ของคุณได้",
-  "@tryDescription": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "installDescription": "ติดตั้ง {RELEASE} ควบคู่ (หรือแทนที่) ระบบปฏิบัติการปัจจุบันของคุณ ซึ่งกระบวนการนี้จะใช้เวลาไม่นานมากนัก",
-  "@installDescription": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "rstTitle": "ตรวจพบ RST",
-  "@rstTitle": {},
   "rstHeader": "ปิด RST เพื่อดำเนินการต่อ",
-  "@rstHeader": {},
   "rstDescription": "คอมพิวเตอร์เครื่องนี้ใช้ Intel RST (Rapid Storage Technology) คุณต้องปิด RST ใน Windows ก่อนที่จะติดตั้ง {DISTRO}",
-  "@rstDescription": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
-  "rstInstructions": "ถ้าต้องการดูคำแนะนำ ให้สแกนคิวอาร์โค้ดด้วยอุปกรณ์อื่น หรือไปยัง <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  }
+  "rstInstructions": "ถ้าต้องการดูคำแนะนำ ให้สแกนคิวอาร์โค้ดด้วยอุปกรณ์อื่น หรือไปยัง <a href=\"https://{url}\">{url}</a>"
 }

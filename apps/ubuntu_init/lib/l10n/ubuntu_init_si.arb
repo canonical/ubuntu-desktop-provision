@@ -1,66 +1,24 @@
 {
   "welcomePageTitle": "ආයුබෝවන්",
-  "@welcomePageTitle": {},
   "welcomeWhatsNew": "අළුත් දෑ",
-  "@welcomeWhatsNew": {},
   "telemetryHeader": "{distro} වැඩිදියුණුවට සහාය වන්න",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "privacyPageTitle": "ස්ථාන සේවා",
-  "@privacyPageTitle": {},
   "telemetryLegalLabel": "නෛතික දැන්වීම",
-  "@telemetryLegalLabel": {},
   "telemetryReportLabel": "පළමු වාර්තාව පෙන්වන්න",
-  "@telemetryReportLabel": {},
   "ubuntuProPageTitle": "උබුන්ටු ප්‍රෝ",
-  "@ubuntuProPageTitle": {},
   "ubuntuProOnBoardingSkipForNow": "දැනට මඟහරින්න",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "උබුන්ටු ප්‍රෝ සබල කරන්න",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "welcomePageHeader": "{distro} වෙත පිළිගනිමු",
-  "@welcomePageHeader": {},
   "welcomeChangelogLabel": "<a href=\"{url}\"> වෙනස්කම් සටහන බලන්න </a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "privacyLocationEnable": "ස්ථාන සේවා",
-  "@privacyLocationEnable": {},
   "telemetryLabelOff": "පද්ධතියේ දත්ත යවන්න එපා",
-  "@telemetryLabelOff": {},
   "telemetryLabelOn": "පද්ධතියේ දත්ත {distro} වෙත යවන්න",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryDescription": "ඔබගේ පද්ධතියේ දත්ත බෙදාගෙන {distro} වැඩිදියුණුවට උදව් කරන්න. මෙයට යන්ත්‍රයේ මාදිළිය, ස්ථාපිත මෘදුකාංග සහ ඔබ වේලා කලාපය සඳහා තේරූ ස්ථානය වැනි දෑ ඇතුළත් වේ.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryReportTitle": "වාර්තාවේ විස්තර",
-  "@telemetryReportTitle": {},
   "privacyLocationTitle": "ස්ථාන සේවාව සබල කරනවා ද?",
-  "@privacyLocationTitle": {},
   "privacyPolicyLink": "දත්ත රහස්‍යතාව",
-  "@privacyPolicyLink": {},
   "ubuntuProHeader": "මෙම යන්ත්‍රය අමුණන්න",
-  "@ubuntuProHeader": {},
   "ubuntuProTokenAttachButton": "අමුණන්න",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProSucessAttachHeader": "මෙම යන්ත්‍රයට දැන් උබුන්ටු ප්‍රෝ සබල කර ඇත",
-  "@ubuntuProSucessAttachHeader": {},
-  "ubuntuProSucessAttachDescription": "ඔබගේ ආධික්‍ය සේවා මෘදුකාංග හා යාවත්කාල යෙදුමෙන් කළමනාකරණයට හැකිය.",
-  "@ubuntuProSucessAttachDescription": {}
+  "ubuntuProSucessAttachDescription": "ඔබගේ ආධික්‍ය සේවා මෘදුකාංග හා යාවත්කාල යෙදුමෙන් කළමනාකරණයට හැකිය."
 }

@@ -1,114 +1,43 @@
 {
   "welcomePageTitle": "Willkommen",
-  "@welcomePageTitle": {},
   "welcomePageHeader": "Willkommen bei {distro}",
-  "@welcomePageHeader": {},
   "welcomeWhatsNew": "WAS IST NEU?",
-  "@welcomeWhatsNew": {},
   "welcomeStartTitle": "Ein optimierter Start",
-  "@welcomeStartTitle": {},
   "welcomeSecuritySubtitle": "Neue Optionen für hardwaregestützte oder ZFS-Verschlüsselung.",
-  "@welcomeSecuritySubtitle": {},
   "telemetryPageTitle": "Telemetrie",
-  "@telemetryPageTitle": {},
   "telemetryLegalLabel": "Rechtlicher Hinweis",
-  "@telemetryLegalLabel": {},
   "privacyPageTitle": "Standortbezogene Dienste",
-  "@privacyPageTitle": {},
   "privacyLocationTitle": "Standortbezogene Dienste aktivieren?",
-  "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "Lassen Sie Anwendungen Ihren geografischen Aufenthaltsort kennen.\nSie können dies jederzeit in den Systemeinstellungen ändern.",
-  "@privacyLocationSubtitle": {},
   "welcomeStoreSubtitle": "Es war noch nie so einfach, Ihre Lieblingssoftware zu finden.",
-  "@welcomeStoreSubtitle": {},
   "welcomeSecurityTitle": "Erhöhte Sicherheit",
-  "@welcomeSecurityTitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Änderungsprotokoll ansehen</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryHeader": "Helfen Sie mit, {distro} zu verbessern",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryDescription": "Helfen Sie uns, {distro} zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Gerätemodell, installierte Software und der Ort, den Sie für Ihre Zeitzone ausgewählt haben.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Ja, Systemdaten mit dem {distro}-Team teilen",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "Nein, keine Systemdaten teilen",
-  "@telemetryLabelOff": {},
   "privacyLocationEnable": "Standortbezogene Dienste",
-  "@privacyLocationEnable": {},
   "privacyPolicyLink": "Datenschutz",
-  "@privacyPolicyLink": {},
   "welcomeStartSubtitle": "Unterstützung einer saubereren Einrichtung.",
-  "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Neues Aussehen des App Store",
-  "@welcomeStoreTitle": {},
   "telemetryReportLabel": "Ersten Bericht anzeigen",
-  "@telemetryReportLabel": {},
   "telemetryReportTitle": "Einzelheiten der Berichterstattung",
-  "@telemetryReportTitle": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProTokenAttachButton": "Anbinden",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProTokenAttachError": "Ungültiges Token",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "Gültiges Token",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachErrorVariant": "Ungültiges Token, erneut versuchen",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Vorerst überspringen",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pro aktivieren",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro ist jetzt auf diesem Gerät aktiviert",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProHeader": "Dieses Gerät anbinden",
-  "@ubuntuProHeader": {},
   "ubuntuProTokenTextfieldHint": "Token",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProSucessAttachDescription": "Sie können Ihre Pro-Dienste in der Anwendung Software & Aktualisierungen verwalten.",
-  "@ubuntuProSucessAttachDescription": {},
   "ubuntuProOrAddTokenManually": "oder fügen Sie manuell ein Token hinzu",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProSubscriptionDescription": "Holen Sie sich das umfassendste Abonnement für die Sicherheit von quelloffener Software",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Immer kostenlos für den persönlichen Gebrauch. 30-Tage-Testversion für Unternehmen. <a href=\"https://{url}\">Mehr erfahren</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProOnBoardingSkipForNowDescription": "Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Binden Sie dieses Gerät an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "telemetryCollectError": "Fehler bei der Erfassung von Telemetriedaten",
-  "@telemetryCollectError": {},
-  "ubuntuProMagicAttachInstructions": "Magisches Anbinden mit diesem Code unter <a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  }
+  "ubuntuProMagicAttachInstructions": "Magisches Anbinden mit diesem Code unter <a href=\"https://{url}\">{url}</a>"
 }

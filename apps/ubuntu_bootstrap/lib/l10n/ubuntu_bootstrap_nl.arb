@@ -1,1157 +1,329 @@
 {
   "@@locale": "nl",
   "appTitle": "Ubuntu Desktop instalatieprogramma",
-  "@appTitle": {},
   "windowTitle": "{RELEASE} installeren",
-  "@windowTitle": {},
   "welcome": "Welkom",
-  "@welcome": {},
   "tryOrInstallTitle": "{DISTRO} uitproberen of installeren",
-  "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Repareer de installatie",
-  "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "Reparatie zal opnieuw alles installeren, zonder de bestaande documenten of instellingen aan te passen.",
-  "@tryOrInstallRepairDescription": {},
   "tryOption": "{RELEASE} uitproberen",
-  "@tryOption": {},
   "tryDescription": "U kunt {RELEASE} uitproberen, zonder dat er aanpassingen op de bestaande installatie wordt gemaakt.",
-  "@tryDescription": {},
   "installOption": "{RELEASE} installeren",
-  "@installOption": {},
   "installDescription": "Installeer {RELEASE} naast (of in plaats van) het huidige besturingssysteem, dit zal niet lang duren.",
-  "@installDescription": {},
   "tryOrInstallReleaseNotesLabel": "De wijzigingen in deze uitgave kunt U <a href=\"{url}\">hier, in het Engels, lezen</a>.",
-  "@tryOrInstallReleaseNotesLabel": {},
   "rstTitle": "RST uitschakelen",
-  "@rstTitle": {},
   "rstDescription": "Deze computer maakt gebruik van Intel RST (Rapid Storage Technology). Om Ubuntu te installeren, is het noodzakelijk om dit uit te schakelen.",
-  "@rstDescription": {},
   "rstInstructions": "Voor instructies, open de volgende website op uw telefoon of op een ander apparaat: <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {},
   "configureSecureBootOption": "Secure Boot configureren",
-  "@configureSecureBootOption": {},
   "autoinstallDirectErrorInvalidUrlBody": "Controleer of de URL correct is of selecteer een lokaal bestand.",
-  "@autoinstallDirectErrorInvalidUrlBody": {},
   "autoinstallLandscapeDescription": "Voor gebruikers in organisaties die een automatisch installatiebestand leveren via Landscape.",
-  "@autoinstallLandscapeDescription": {},
   "autoinstallLandscapeOption": "Geautomatiseerd met Landscape",
-  "@autoinstallLandscapeOption": {},
   "dontInstallDriverSoftwareNow": "Stuurprogramma's voorlopig niet installeren",
-  "@dontInstallDriverSoftwareNow": {},
   "confirmSecurityKey": "De beveiligingssleutel bevestigen",
-  "@confirmSecurityKey": {},
   "autoinstallDirectFileClearButtonLabel": "Bestand wissen",
-  "@autoinstallDirectFileClearButtonLabel": {},
   "autoinstallDirectFilePickerFilterLabel": "YAML-bestanden",
-  "@autoinstallDirectFilePickerFilterLabel": {},
   "autoinstallDirectImportButtonLabel": "Importeren",
-  "@autoinstallDirectImportButtonLabel": {},
   "autoinstallDirectErrorNetworkTitle": "Autom. installatiebestand is onbereikbaar",
-  "@autoinstallDirectErrorNetworkTitle": {},
   "autoinstallDirectErrorNetworkBody": "Controleer of de URL correct is, test de internetverbinding of probeer het later.",
-  "@autoinstallDirectErrorNetworkBody": {},
   "autoinstallDirectErrorInvalidUrlTitle": "Ongeldige URL",
-  "@autoinstallDirectErrorInvalidUrlTitle": {},
   "autoinstallDirectErrorInvalidContentTitle": "Ongeldig autom. installatiebestand",
-  "@autoinstallDirectErrorInvalidContentTitle": {},
   "autoinstallDirectErrorInvalidContentBody": "Controleer het bestand of geef een ander bestand op.",
-  "@autoinstallDirectErrorInvalidContentBody": {},
   "autoinstallDirectErrorFileSystemTitle": "Autom. installatiebestand is niet leesbaar",
-  "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorFileSystemBody": "Controleer je machtigingen of biedt een ander bestand aan.",
-  "@autoinstallDirectErrorFileSystemBody": {},
   "autoinstallDirectErrorUnkownTitle": "Onbekende fout",
-  "@autoinstallDirectErrorUnkownTitle": {},
   "autoinstallHeader": "Hoe wilt je {DISTRO} installeren?",
-  "@autoinstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "loadingHeader": "{DISTRO} voorbereiden…",
-  "@loadingHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "warningLabel": "Waarschuwing:",
-  "@warningLabel": {},
   "autoinstallInstructions": "Voer de URL van de autoinstall.yaml of het lokale bestandspad in:",
-  "@autoinstallInstructions": {},
   "autoinstallDirectOption": "Geautomatiseerd met autom. installatiebestand",
-  "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Voor gevorderde gebruikers die een autoinstall.yaml hebben voor consistente en reproduceerbare systeeminstellingen.",
-  "@autoinstallDirectDescription": {},
   "quitButtonText": "Installatie afbreken",
-  "@quitButtonText": {},
   "chooseSecurityKey": "Kies een beveiligingssleutel",
-  "@chooseSecurityKey": {},
   "configureSecureBootDescription": "Je hebt ervoor gekozen om stuurprogramma's van derden te installeren. Hiervoor moet Secure Boot worden uitgeschakeld.\nOm dit te doen, moet je nu een beveiligingssleutel kiezen en deze invoeren wanneer het systeem opnieuw wordt opgestart.",
-  "@configureSecureBootDescription": {},
   "autoinstallTitle": "Type installatie",
-  "@autoinstallTitle": {},
   "autoinstallInteractiveOption": "Interactieve installatie",
-  "@autoinstallInteractiveOption": {},
   "configureSecureBootTitle": "Secure Boot configureren",
-  "@configureSecureBootTitle": {},
   "tryOrInstallHeader": "Wat wil je doen met {DISTRO}?",
-  "@tryOrInstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "autoinstallInteractiveDescription": "Voor gebruikers die stap voor stap door de installatie geleid willen worden.",
-  "@autoinstallInteractiveDescription": {},
   "changeButtonText": "Veranderen",
-  "@changeButtonText": {},
   "loadingPageTitle": "Welkom bij {DISTRO}",
-  "@loadingPageTitle": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "rstHeader": "RST moet uitgeschakeld worden om door te gaan met de installatie",
-  "@rstHeader": {},
   "rstDisable": "Je computer maakt gebruik van Intel RST (Rapid Storage Technology). Je kunt RST uitschakelen in:",
-  "@rstDisable": {},
   "rstDisableWindows": "Windows, als je een dual-boot-opstelling met Windows gebruikt",
-  "@rstDisableWindows": {},
   "rstDisableBios": "De BIOS-instellingen",
-  "@rstDisableBios": {},
   "autoinstallDirectTitle": "Geautomatiseerde installatie",
-  "@autoinstallDirectTitle": {},
   "autoinstallDirectHeader": "Autom. installatiebestand importeren",
-  "@autoinstallDirectHeader": {},
   "autoinstallDirectUrlLabel": "Je kunt de URL van een autom. installatiebestand invoeren:",
-  "@autoinstallDirectUrlLabel": {},
   "autoinstallDirectFileLabel": "Of selecteer een lokaal bestand:",
-  "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Bestand selecteren…",
-  "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFilePickerTitle": "Bestand kiezen",
-  "@autoinstallDirectFilePickerTitle": {},
   "configureSecureBootSecurityKeyRequired": "Beveiligingssleutel is vereist",
-  "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "Beveiligingssleutels komen niet overeen",
-  "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageDescription": "Welke apps zou je om te beginnen willen installeren?",
-  "@updatesOtherSoftwarePageDescription": {},
   "dontInstallDriverSoftwareNowDescription": "Je kunt het later installeren vanuit Software & Updates.",
-  "@dontInstallDriverSoftwareNowDescription": {},
   "showSecurityKey": "Weergeven",
-  "@showSecurityKey": {},
   "updatesOtherSoftwarePageTitle": "Toepassingen",
-  "@updatesOtherSoftwarePageTitle": {},
   "hideSecurityKey": "Verbergen",
-  "@hideSecurityKey": {},
   "codecsAndDriversNvidiaNote": "NVIDIA grafische kaart gedetecteerd",
-  "@codecsAndDriversNvidiaNote": {},
   "codecsAndDriversNvidiaBody": "Voor de beste prestaties van NVIDIA grafische kaarten wordt het installeren van extra stuurprogramma's sterk aanbevolen.",
-  "@codecsAndDriversNvidiaBody": {},
   "minimalInstallationTitle": "Standaard-selectie",
-  "@minimalInstallationTitle": {},
   "fullInstallationSubtitle": "Een offline-vriendelijke selectie van kantoorsoftware, hulpprogramma's en webbrowsers.",
-  "@fullInstallationSubtitle": {},
   "codecsAndDriversPageTitle": "Optimaliseer je computer",
-  "@codecsAndDriversPageTitle": {},
   "codecsAndDriversPageBody": "{DISTRO} wordt standaard geleverd zonder propriëtaire software. Het installeren van extra software kan de prestaties van je computer verbeteren.",
-  "@codecsAndDriversPageBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "fullInstallationTitle": "Uitgebreide selectie",
-  "@fullInstallationTitle": {},
   "installationTypeNoneInfo": "Standaard bestandssysteem zonder versleuteling.",
-  "@installationTypeNoneInfo": {},
   "installationTypeLVMEncryptionInfo": "Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.",
-  "@installationTypeLVMEncryptionInfo": {},
   "installationTypeZFSEncryptionInfo": "Lokale versleuteling met ZFS. Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren.",
-  "@installationTypeZFSEncryptionInfo": {},
   "selectGuidedStoragePartitionDropdownLabel": "Partitie selecteren:",
-  "@selectGuidedStoragePartitionDropdownLabel": {},
   "selectGuidedStorageInstallNow": "Nu installeren",
-  "@selectGuidedStorageInstallNow": {},
   "guidedStoragePageHeader": "Kies waar je {DISTRO} wilt installeren",
-  "@guidedStoragePageHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "allocateDiskSpaceInvalidMountPointSlash": "Aankoppelpunten moeten beginnen met \"/\"",
-  "@allocateDiskSpaceInvalidMountPointSlash": {},
   "installationTypeLVMEncryptionSelected": "LVM en versleuteling geselecteerd",
-  "@installationTypeLVMEncryptionSelected": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Waarschuwing:</font> Hiermee worden alle {os}-programma's, documenten, foto's, muziek en andere bestanden verwijderd.",
-  "@installationTypeReinstallWarning": {
-    "placeholders": {
-      "color": {
-        "type": "String"
-      },
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "selectGuidedStorageInfoLabel": "De hele schijf wordt gebruikt:",
-  "@selectGuidedStorageInfoLabel": {},
   "installThirdPartyTitle": "Software van derde partijen installeren voor grafische en Wi-Fi-hardware en extra mediaformaten",
-  "@installThirdPartyTitle": {},
   "installDriversSubtitle": "Met inbegrip van, maar niet beperkt tot, NVIDIA-stuurprogramma's en dergelijke",
-  "@installDriversSubtitle": {},
   "installCodecsSubtitle": "Inclusief maar niet beperkt tot MP3, MP4, MOV en dergelijke",
-  "@installCodecsSubtitle": {},
   "choosePassphraseBody": "Je hebt een wachtwoordzin nodig om je bestanden te versleutelen. Elke keer dat je de computer aanzet, wordt je om je wachtwoordzin gevraagd.",
-  "@choosePassphraseBody": {},
   "createPassphrase": "Wachtwoordzin aanmaken",
-  "@createPassphrase": {},
   "choosePassphraseInfoBody": "Als je de wachtwoordzin verliest, verlies je al je gegevens.",
-  "@choosePassphraseInfoBody": {},
   "confirmPassphrase": "Wachtwoordzin bevestigen",
-  "@confirmPassphrase": {},
   "installationTypeErase": "De schijf wissen en {DISTRO} installeren",
-  "@installationTypeErase": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseInfo": "Alle gegevens en partities op de schijf worden gewist, inclusief besturingssystemen.",
-  "@installationTypeEraseInfo": {},
   "installationTypeAdvancedTitle": "Versleuteling en bestandssysteem",
-  "@installationTypeAdvancedTitle": {},
   "installationTypeNoneSelected": "Niets geselecteerd",
-  "@installationTypeNoneSelected": {},
   "installationTypeLVM": "LVM gebruiken zonder versleuteling",
-  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM geselecteerd",
-  "@installationTypeLVMSelected": {},
   "installationTypeTPMInfo": "<a href=\"{url}\">Lees meer over TPM-versleuteling</a> voordat je deze optie kiest. Dit werkt mogelijk niet met jouw hardware of toekomstige versies van {DISTRO}.",
-  "@installationTypeTPMInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeTPMSelected": "TPM geselecteerd",
-  "@installationTypeTPMSelected": {},
   "installationTypeManual": "Handmatige installatie",
-  "@installationTypeManual": {},
   "installationTypeEraseAndInstallInfo": "Alle bestanden en gegevens van de bestaande {os}-installatie worden permanent verwijderd.",
-  "@installationTypeEraseAndInstallInfo": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installAlongsideAvailable": "Beschikbaar:",
-  "@installAlongsideAvailable": {},
   "allocateDiskSpace": "Handmatige partitionering",
-  "@allocateDiskSpace": {},
   "codecsAndDriversPageDescription": "Aanbevolen propriëtaire software installeren?",
-  "@codecsAndDriversPageDescription": {},
   "otherOptions": "Andere opties",
-  "@otherOptions": {},
   "choosePassphraseMismatch": "De wachtwoordzinnen komen niet overeen",
-  "@choosePassphraseMismatch": {},
   "installationTypeZFS": "ZFS gebruiken zonder versleuteling",
-  "@installationTypeZFS": {},
   "installationTypeEncryptInfo": "In de volgende stap kies je een beveiligingssleutel.",
-  "@installationTypeEncryptInfo": {},
   "installationTypeZFSEncryptionSelected": "ZFS en versleuteling geselecteerd",
-  "@installationTypeZFSEncryptionSelected": {},
   "installationTypeReinstall": "{os} wissen en opnieuw installeren",
-  "@installationTypeReinstall": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongside": "{product} naast {os} installeren",
-  "@installationTypeAlongside": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      },
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installAlongsideAllocateSpace": "Ruimte toewijzen",
-  "@installAlongsideAllocateSpace": {},
   "installationTypeTPM": "Hardwarematige versleuteling gebruiken",
-  "@installationTypeTPM": {},
   "installationTypeAdvancedLabel": "Geavanceerde opties weergeven…",
-  "@installationTypeAdvancedLabel": {},
   "choosePassphraseHeader": "Wachtwoordzin aanmaken",
-  "@choosePassphraseHeader": {},
   "installationTypeMultiOSDetected": "Op deze computer staan momenteel meerdere besturingssystemen. Wat zou je willen doen?",
-  "@installationTypeMultiOSDetected": {},
   "minimalInstallationSubtitle": "Alleen de essentie, webbrowser en basishulpprogramma's.",
-  "@minimalInstallationSubtitle": {},
   "installCodecsTitle": "Ondersteuning voor extra media-indelingen downloaden en installeren",
-  "@installCodecsTitle": {},
   "choosePassphraseTitle": "Wachtwoordzin voor de schijf",
-  "@choosePassphraseTitle": {},
   "installAlongsidePartition": "Partitie:",
-  "@installAlongsidePartition": {},
   "installationTypeExperimental": "Experimenteel",
-  "@installationTypeExperimental": {},
   "installationTypeZFSSelected": "ZFS geselecteerd",
-  "@installationTypeZFSSelected": {},
   "choosePassphraseRequired": "Een wachtwoordzin is vereist",
-  "@choosePassphraseRequired": {},
   "installationTypeDualOSDetected": "Op deze computer staan momenteel {os1} en {os2}. Wat zou je willen doen?",
-  "@installationTypeDualOSDetected": {
-    "placeholders": {
-      "os1": {
-        "type": "String"
-      },
-      "os2": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeOSDetected": "Op deze computer staat momenteel {os}. Wat zou je willen doen?",
-  "@installationTypeOSDetected": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeNoOSDetected": "Deze computer heeft momenteel geen gedetecteerde besturingssystemen. Wat zou je willen doen?",
-  "@installationTypeNoOSDetected": {},
   "installationTypeAlongsideDual": "{product} naast {os1} en {os2} installeren",
-  "@installationTypeAlongsideDual": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      },
-      "os1": {
-        "type": "String"
-      },
-      "os2": {
-        "type": "String"
-      }
-    }
-  },
   "installAlongsideResizePartition": "Grootte van de partitie wijzigen",
-  "@installAlongsideResizePartition": {},
   "selectGuidedStorageDriveDropdownLabel": "Schijf selecteren:",
-  "@selectGuidedStorageDriveDropdownLabel": {},
   "selectGuidedStorageInfo": "Helemaal opnieuw beginnen op de geselecteerde schijf.",
-  "@selectGuidedStorageInfo": {},
   "installAlongsideSpaceDivider": "Wijs schijfruimte toe door hieronder de scheidingslijn te verslepen:",
-  "@installAlongsideSpaceDivider": {},
   "installAlongsideHiddenPartitions": "{num} kleinere partities zijn verborgen, gebruik dan de <a href=\"{url}\">geavanceerde partitionering</a> voor meer controle",
-  "@installAlongsideHiddenPartitions": {
-    "placeholders": {
-      "num": {
-        "type": "int"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "batteryWarning": "De computer is niet aangesloten op een stroombron.",
-  "@batteryWarning": {},
   "offlineWarning": "Je bent momenteel offline",
-  "@offlineWarning": {},
   "choosePassphraseHint": "Kies een wachtwoordzin",
-  "@choosePassphraseHint": {},
   "choosePassphraseConfirmHint": "Wachtwoordzin bevestigen",
-  "@choosePassphraseConfirmHint": {},
   "choosePassphraseInfoHeader": "Bewaar je wachtwoordzin op een veilige plek",
-  "@choosePassphraseInfoHeader": {},
   "chooseOptionalPassphraseHeader": "Wachtwoordzin aanmaken (optioneel)",
-  "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseBody": "Een wachtwoordzin kan helpen je gegevens te beschermen, zelfs als jouw hardware wordt gecompromitteerd. Je moet de wachtwoordzin elke keer invoeren wanneer je de computer aanzet. Je kunt het later niet meer verwijderen",
-  "@chooseOptionalPassphraseBody": {},
   "chooseOptionalPassphraseInfoHeader": "Bewaar je wachtwoordzin en herstelcodes op een veilige plek",
-  "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseInfoBody": "Als je de wachtwoordzin verliest, verlies je al je gegevens. De wachtwoordzin is niet de herstelcode of het wachtwoord van je gebruiker.",
-  "@chooseOptionalPassphraseInfoBody": {},
   "installationTypeTitle": "Schijfindeling",
-  "@installationTypeTitle": {},
   "installationTypeHeader": "Hoe wil je {DISTRO} installeren?",
-  "@installationTypeHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeLVMEncryption": "Versleutelen met een wachtwoordzin",
-  "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryption": "Versleutelen met een wachtwoordzin met ZFS",
-  "@installationTypeZFSEncryption": {},
   "installationTypeAlongsideMulti": "{product} naast bestaande besturingssystemen installeren",
-  "@installationTypeAlongsideMulti": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongsideUnknown": "{product} naast andere partities installeren",
-  "@installationTypeAlongsideUnknown": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseAndInstall": "{os} wissen en {product} installeren",
-  "@installationTypeEraseAndInstall": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      },
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeManualInfo": "Voor gevorderde gebruikers die op zoek zijn naar aangepaste schijfconfiguraties.",
-  "@installationTypeManualInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "selectGuidedStoragePageTitle": "Schijf wissen en {DISTRO} installeren",
-  "@selectGuidedStoragePageTitle": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongsideInfo": "Selecteer een partitie om de grootte te wijzigen en ruimte te maken voor {product}. Je kunt bij het opstarten je besturingssysteem kiezen.",
-  "@installationTypeAlongsideInfo": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "allocateDiskSpaceInvalidMountPointSpace": "Aankoppelpunten mogen geen spaties bevatten",
-  "@allocateDiskSpaceInvalidMountPointSpace": {},
   "installThirdPartySubtitle": "Deze software is onderworpen aan licentievoorwaarden die bij de documentatie zijn inbegrepen. Een deel ervan is gepatenteerd.",
-  "@installThirdPartySubtitle": {},
   "installDriversTitle": "Software van derden installeren voor grafische en Wi-Fi-hardware",
-  "@installDriversTitle": {},
   "installAlongsideFiles": "Bestanden",
-  "@installAlongsideFiles": {},
   "installationTypeNone": "Geen versleuteling",
-  "@installationTypeNone": {},
   "installAlongsideSize": "Grootte:",
-  "@installAlongsideSize": {},
   "diskHeadersMountPoint": "Aankoppelpunt",
-  "@diskHeadersMountPoint": {},
   "confirmEntryDiskSetup": "Type installatie",
-  "@confirmEntryDiskSetup": {},
   "confirmPartitionTables": "De partitietabellen van de volgende apparaten worden gewijzigd:",
-  "@confirmPartitionTables": {},
   "partitionLimitReached": "Limiet bereikt",
-  "@partitionLimitReached": {},
   "bootLoaderDevice": "Apparaat voor installatie van bootloader",
-  "@bootLoaderDevice": {},
   "allocateDiskSpaceInvalidMountPointFormat": "{format} is geen ondersteund bestandssysteem voor {mountpoint}",
-  "@allocateDiskSpaceInvalidMountPointFormat": {
-    "mountpoint": {
-      "type": "String"
-    },
-    "format": {
-      "type": "String"
-    }
-  },
   "diskHeadersDevice": "Apparaat",
-  "@diskHeadersDevice": {},
   "newPartitionTable": "Nieuwe partitietabel",
-  "@newPartitionTable": {},
   "partitionCreateTitle": "Partitie aanmaken",
-  "@partitionCreateTitle": {},
   "partitionSizeLabel": "Grootte:",
-  "@partitionSizeLabel": {},
   "confirmDiskEncryptionNone": "Geen",
-  "@confirmDiskEncryptionNone": {},
   "freeDiskSpace": "Vrije ruimte",
-  "@freeDiskSpace": {},
   "partitionLocationBeginning": "Begin van deze ruimte",
-  "@partitionLocationBeginning": {},
   "confirmInstallButton": "Installeren",
-  "@confirmInstallButton": {},
   "partitionTypePrimary": "Primair",
-  "@partitionTypePrimary": {},
   "diskHeadersSize": "Grootte",
-  "@diskHeadersSize": {},
   "confirmDiskEncryptionTPM": "TPM",
-  "@confirmDiskEncryptionTPM": {},
   "confirmEntryApplications": "Toepassingen",
-  "@confirmEntryApplications": {},
   "diskHeadersSystem": "Systeem",
-  "@diskHeadersSystem": {},
   "diskHeadersFormat": "Formatteren",
-  "@diskHeadersFormat": {},
   "partitionFormatNone": "Ongeformatteerd laten",
-  "@partitionFormatNone": {},
   "newPartitionTableConfirmationTitle": "Nieuwe lege partitie",
-  "@newPartitionTableConfirmationTitle": {},
   "confirmPartitionTable": "{serial} ({path})",
-  "@confirmPartitionTable": {
-    "description": "An entry for a disk whose partition table is being changed",
-    "placeholders": {
-      "serial": {
-        "type": "String"
-      },
-      "path": {
-        "type": "String"
-      }
-    }
-  },
   "partitionFormatKeep": "Als {format} geformatteerd laten",
-  "@partitionFormatKeep": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "partitionTypeLabel": "Typ voor de nieuwe partitie:",
-  "@partitionTypeLabel": {},
   "partitionFormatLabel": "Gebruikt als:",
-  "@partitionFormatLabel": {},
   "confirmProprietarySoftwareDrivers": "Stuurprogramma's",
-  "@confirmProprietarySoftwareDrivers": {},
   "partitionTypeLogical": "Logisch",
-  "@partitionTypeLogical": {},
   "partitionLocationLabel": "Locatie voor de nieuwe partitie:",
-  "@partitionLocationLabel": {},
   "partitionLocationEnd": "Einde van deze ruimte",
-  "@partitionLocationEnd": {},
   "partitionErase": "De partitie formatteren",
-  "@partitionErase": {},
   "confirmDevicesTitle": "Apparaten",
-  "@confirmDevicesTitle": {},
   "confirmEntryInstallationDisk": "Installatieschijf",
-  "@confirmEntryInstallationDisk": {},
   "confirmEntryProprietarySoftware": "Propriëtaire software",
-  "@confirmEntryProprietarySoftware": {},
   "confirmSectionGeneralTitle": "Algemeen",
-  "@confirmSectionGeneralTitle": {},
   "confirmPartitionsTitle": "Partities",
-  "@confirmPartitionsTitle": {},
   "confirmSectionSecurityAndMoreTitle": "Beveiliging & meer",
-  "@confirmSectionSecurityAndMoreTitle": {},
   "confirmTableErased": "Gewist",
-  "@confirmTableErased": {},
   "confirmTableUnchanged": "Onveranderd",
-  "@confirmTableUnchanged": {},
   "partitionEditTitle": "Partitie bewerken",
-  "@partitionEditTitle": {},
   "partitionMountPointLabel": "Aankoppelpunt:",
-  "@partitionMountPointLabel": {},
   "newPartitionTableConfirmationMessage": "Bij de aanmaak van een nieuwe partitietabel op een heel apparaat, worden alle huidige partities verwijderd. Deze handeling kan indien nodig ongedaan worden gemaakt.",
-  "@newPartitionTableConfirmationMessage": {},
   "confirmHeader": "Bekijk uw keuzes",
-  "@confirmHeader": {},
   "confirmDiskEncryptionZFS": "LUKS (ZFS)",
-  "@confirmDiskEncryptionZFS": {},
   "confirmPageTitle": "Klaar voor installatie",
-  "@confirmPageTitle": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
-  "@confirmDiskEncryptionLVM": {},
   "confirmEntryDiskEncryption": "Versleuteling van de schijf",
-  "@confirmEntryDiskEncryption": {},
   "confirmProprietarySoftwareCodecs": "Codecs",
-  "@confirmProprietarySoftwareCodecs": {},
   "confirmProprietarySoftwareCodecsDrivers": "Codecs & stuurprogramma's",
-  "@confirmProprietarySoftwareCodecsDrivers": {},
   "diskHeadersType": "Type",
-  "@diskHeadersType": {},
   "tooManyPrimaryPartitions": "Te veel primaire partities",
-  "@tooManyPrimaryPartitions": {},
   "diskHeadersUsed": "Gebruikt",
-  "@diskHeadersUsed": {},
   "bitlockerInfoTitle": "Bitlocker gedetecteerd",
-  "@bitlockerInfoTitle": {},
   "bitlockerInfoInstructions": "Ga voor instructies naar de <a href=\"{url}\">BitLocker handleiding</a>.",
-  "@bitlockerInfoInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "bitlockerInfoRecovery": "Na installatie kan Windows bij het opstarten om herstelcodes vragen.",
-  "@bitlockerInfoRecovery": {},
   "installationSlidesTitle": "Welkom bij {RELEASE}",
-  "@installationSlidesTitle": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesAccessibilityLanguages": "Taalondersteuning",
-  "@installationSlidesAccessibilityLanguages": {},
   "notEnoughDiskSpaceAvailable": "Beschikbaar:",
-  "@notEnoughDiskSpaceAvailable": {},
   "refreshInfo": "Bijwerken naar de nieuwste versie voor verbeterde betrouwbaarheid en meer functies.",
-  "@refreshInfo": {},
   "refreshReady": "Update klaar",
-  "@refreshReady": {},
   "refreshSnapRefresh": "{snap} vernieuwen…",
-  "@refreshSnapRefresh": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapMount": "{snap} aankoppelen…",
-  "@refreshSnapMount": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapPrepare": "{snap} voorbereiden…",
-  "@refreshSnapPrepare": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapSetupProfiles": "{snap}-beveiligingsprofielen instellen…",
-  "@refreshSnapSetupProfiles": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapUpdateKernelCommandLine": "{snap}-kernel Opdrachtregel bijwerken...",
-  "@refreshSnapUpdateKernelCommandLine": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapCopyData": "{snap}-gegevens kopiëren…",
-  "@refreshSnapCopyData": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapLink": "{snap} koppelen…",
-  "@refreshSnapLink": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapStartServices": "{snap}-diensten starten…",
-  "@refreshSnapStartServices": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "recoveryKeyInfoHeader": "Zonder herstelcode kun je al je gegevens verliezen",
-  "@recoveryKeyInfoHeader": {},
   "landscapeDomainHeader": "Landscape-domain invoeren (FQDN)",
-  "@landscapeDomainHeader": {},
   "landscapeDomainTextField": "Landscape-domein (FQDN)",
-  "@landscapeDomainTextField": {},
   "landscapeMagicAttachInstructions": "Scan de QR-code of voer de onderstaande code in op <a href=\"https://{url}\">{url}</a>",
-  "@landscapeMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "landscapeDomainInvalidDomainWarning": "Ongeldig domein, controleer het of neem contact op met je IT-ondersteuning",
-  "@landscapeDomainInvalidDomainWarning": {},
   "landscapeCodeExpiredWarning": "Code verlopen, probeer het opnieuw",
-  "@landscapeCodeExpiredWarning": {},
   "landscapeLoginFailedWarning": "Inloggen mislukt, probeer het opnieuw",
-  "@landscapeLoginFailedWarning": {},
   "installationSlidesSupportTitle": "Hulp en ondersteuning",
-  "@installationSlidesSupportTitle": {},
   "installationSlidesSupportHeader": "De officiële {DISTRO}-documentatie is zowel online beschikbaar als via het Help-pictogram in het dok.",
-  "@installationSlidesSupportHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapCheckRerefresh": "Vernieuwing van {snap} opnieuw controleren…",
-  "@refreshSnapCheckRerefresh": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "landscapePageTitle": "Geautomatiseerde installatie",
-  "@landscapePageTitle": {},
   "landscapeDomainInstructions": "Geef het Landscape-domein van je organisatie op om aan te melden en een automatisch installatiebestand op te halen. Je kunt de FQDN verkrijgen bij je IT-ondersteuning.",
-  "@landscapeDomainInstructions": {},
   "installationSlidesWelcomeTitle": "Snel, gratis en vol nieuwe functies",
-  "@installationSlidesWelcomeTitle": {},
   "recoveryKeyHeader": "Herstelcode opvragen",
-  "@recoveryKeyHeader": {},
   "landscapeHeader": "Inloggen bij Landscape",
-  "@landscapeHeader": {},
   "restartInto": "Opnieuw opstarten naar {system}",
-  "@restartInto": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "restartWarningBody": "Start opnieuw op om de installatie te voltooien of ga door met testen.\nWijzigingen die u aanbrengt, worden niet opgeslagen.",
-  "@restartWarningBody": {},
   "rebootToConfigure": "**{system}** is naar de schijf gekopieerd",
-  "@rebootToConfigure": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "restartIntoWindowsDescription": "Weet je zeker dat je jouw computer opnieuw wilt opstarten? Je moet de installatie van {DISTRO} later opnieuw opstarten om de installatie van {DISTRO} te voltooien.",
-  "@restartIntoWindowsDescription": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesAvailable": "Beschikbaar:",
-  "@installationSlidesAvailable": {},
   "restartIntoWindowsTitle": "Opnieuw starten naar Windows?",
-  "@restartIntoWindowsTitle": {},
   "installationSlidesAccessibilityOrca": "Orca Screen Reader",
-  "@installationSlidesAccessibilityOrca": {},
   "installationSlidesSecurityTitle": "Privé en veilig",
-  "@installationSlidesSecurityTitle": {},
   "notEnoughDiskSpaceUbuntu": "Niet genoeg schijfruimte om {DISTRO} te installeren",
-  "@notEnoughDiskSpaceUbuntu": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "refreshRestart": "Sluit het installatieprogramma en start het opnieuw op om door te gaan",
-  "@refreshRestart": {},
   "refreshSnapDownload": "{snap} downloaden…",
-  "@refreshSnapDownload": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "restartIntoWindows": "Opnieuw starten naar Windows",
-  "@restartIntoWindows": {},
   "installationSlidesSoftwareTitle": "Alle toepassingen die je nodig hebt",
-  "@installationSlidesSoftwareTitle": {},
   "refreshCloseLabel": "Installatieprogramma sluiten",
-  "@refreshCloseLabel": {},
   "refreshSnapPrerequisites": "Vereisten voor {snap} worden gecontroleerd…",
-  "@refreshSnapPrerequisites": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapStopServices": "{snap}-diensten beëindigen…",
-  "@refreshSnapStopServices": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapUpdateAssets": "{snap}-materialen bijwerken…",
-  "@refreshSnapUpdateAssets": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshPageTitle": "Update beschikbaar",
-  "@refreshPageTitle": {},
   "installationSlidesWelcomeHeader": "De nieuwste versie van {DISTRO} maakt computergebruik eenvoudiger dan ooit.",
-  "@installationSlidesWelcomeHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSupportCommunity": "Ask Ubuntu behandelt een breed scala aan vragen en antwoorden en het Ubuntu Discourse biedt handleidingen en discussies voor zowel nieuwe als ervaren gebruikers.",
-  "@installationSlidesSupportCommunity": {},
   "recoveryKeyTitle": "TPM-herstelcode",
-  "@recoveryKeyTitle": {},
   "installingSystem": "Systeem installeren…",
-  "@installingSystem": {},
   "installationSlidesSecurityBody": "{DISTRO} biedt alle tools die je nodig hebt om online privé en veilig te blijven. Met ingebouwde firewall- en VPN-ondersteuning en een groot aantal privacygerichte applicaties om ervoor te zorgen dat je volledige controle houdt over jouw gegevens.",
-  "@installationSlidesSecurityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "refreshUpdateNow": "Nu bijwerken",
-  "@refreshUpdateNow": {},
   "refreshSnapValidate": "{snap} valideren…",
-  "@refreshSnapValidate": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "rebootToConfigureWarning": "Je moet de computer opnieuw opstarten om het installatieproces voort te zetten.",
-  "@rebootToConfigureWarning": {},
   "installationSlidesProductivityBody": "{DISTRO} Desktop bevat LibreOffice, een suite van Microsoft Office-compatibele open source-applicaties voor documenten, spreadsheets en presentaties. Populaire samenwerkingstools zijn ook beschikbaar.",
-  "@installationSlidesProductivityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesAccessibilityBody": "De kern van de {DISTRO}-filosofie is de overtuiging dat computers voor iedereen zijn. Met geavanceerde toegankelijkheidstools en opties om taal, kleuren en tekstgrootte te wijzigen, maakt {DISTRO} computergebruik eenvoudig, wie en waar je ook bent.",
-  "@installationSlidesAccessibilityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "refreshHeader": "Er is een update beschikbaar voor het installatieprogramma",
-  "@refreshHeader": {},
   "refreshSnapAutoConnect": "{snap}-stekkers en -sleuven aansluiten…",
-  "@refreshSnapAutoConnect": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapSetAutoAliases": "Automatische {snap}-aliassen instellen…",
-  "@refreshSnapSetAutoAliases": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "copyingFiles": "Bestanden kopiëren…",
-  "@copyingFiles": {},
   "bitlockerInfoDescription": "Een of meer partities zijn versleuteld met BitLocker.",
-  "@bitlockerInfoDescription": {},
   "bitlockerInfoDisable": "Voor een installatie naast Windows moet BitLocker in Windows uitgeschakeld worden.",
-  "@bitlockerInfoDisable": {},
   "confirmTableCreatedFormattedMounted": "Aangemaakt en geformatteerd als {format} gebruikt voor {mountpoint}",
-  "@confirmTableCreatedFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSupportEnterprise": "Voor zakelijke gebruikers biedt Canonical commerciële ondersteuning om het gemakkelijk te maken om Ubuntu veilig op de werkplek in te voeren en te beheren.",
-  "@installationSlidesSupportEnterprise": {},
   "installationSlidesSoftwareBody": "Installeer, beheer en update al je apps in Ubuntu Software, inclusief duizenden applicaties uit zowel de Snap Store als het {DISTRO}-archief.",
-  "@installationSlidesSoftwareBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationCompleteTitle": "Installatie voltooid",
-  "@installationCompleteTitle": {},
   "continueTesting": "Doorgaan met testen",
-  "@continueTesting": {},
   "installationSlidesCreativityTitle": "Vergroot je creativiteit",
-  "@installationSlidesCreativityTitle": {},
   "installationSlidesAccessibilityTitle": "Toegang voor iedereen",
-  "@installationSlidesAccessibilityTitle": {},
   "installationSlidesProductivityTitle": "Verhoog je productiviteit",
-  "@installationSlidesProductivityTitle": {},
   "installationSlidesSupportDocumentation": "Officiële documentatie",
-  "@installationSlidesSupportDocumentation": {},
   "configuringSystem": "Systeem instellen…",
-  "@configuringSystem": {},
   "notEnoughDiskSpaceTitle": "Niet genoeg schijfruimte",
-  "@notEnoughDiskSpaceTitle": {},
   "refreshUpdating": "{snap} bijwerken…",
-  "@refreshUpdating": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapSetupAliases": "{snap}-aliassen inrichten…",
-  "@refreshSnapSetupAliases": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "notEnoughDiskSpaceBody": "De geselecteerde schijf heeft niet genoeg schijfruimte om {DISTRO} te installeren. Sluit het installatieprogramma om ruimte vrij te maken of selecteer een andere schijf.",
-  "@notEnoughDiskSpaceBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "notEnoughDiskSpaceRequired": "Vereist:",
-  "@notEnoughDiskSpaceRequired": {},
   "refreshInstall": "Bijwerken naar versie {version}",
-  "@refreshInstall": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
   "refreshUpToDate": "De huidige versie {version} is up-to-date.",
-  "@refreshUpToDate": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeDomainNoInternetDescriptionWarning": "Internet is nodig om het automatische installatiebestand op te halen van Landscape",
-  "@landscapeDomainNoInternetDescriptionWarning": {},
   "recoveryKeyStorageAdvice": "Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. Je kunt hem bijvoorbeeld nodig hebben als je bepaalde onderdelen in je computer vervangt of de firmware bijwerkt.",
-  "@recoveryKeyStorageAdvice": {},
   "installationSlidesWelcomeBody": "Of je nu een ontwikkelaar bent of maker of gamer of beheerder, in {RELEASE} vind je nieuwe hulpmiddelen om je productiviteit en je ervaring te verbeteren.",
-  "@installationSlidesWelcomeBody": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableResized": "Grootte aangepast van {oldsize} naar {newsize}",
-  "@confirmTableResized": {
-    "placeholders": {
-      "oldsize": {
-        "type": "String"
-      },
-      "newsize": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormattedMounted": "Geformatteerd als {format} gebruikt voor {mountpoint}",
-  "@confirmTableFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormatted": "Geformatteerd als {format}",
-  "@confirmTableFormatted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSecurityLts": "Alle {DISTRO} LTS-releases worden uitgegeven met vijf jaar beveiligingsupdates, verlengd tot tien jaar met een Ubuntu Pro-abonnement.",
-  "@installationSlidesSecurityLts": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "bitlockerWarningTitle": "Zonder BitLocker-herstelcodes kun je al je gegevens kwijtraken",
-  "@bitlockerWarningTitle": {},
   "installationSlidesSupportUbuntuPro": "24/7 ondersteuning op bedrijfsniveau met Ubuntu Pro",
-  "@installationSlidesSupportUbuntuPro": {},
   "refreshSnapRemoveAliases": "{snap}-aliassen verwijderen…",
-  "@refreshSnapRemoveAliases": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeDomainHintText": "Landscape-domein (FQDN)",
-  "@landscapeDomainHintText": {},
   "landscapeErrorPageBody": "Neem contact op met uw IT-ondersteuning of probeer een andere installatieoptie.",
-  "@landscapeErrorPageBody": {},
   "landscapeErrorPageCode": "Foutcode: {code}",
-  "@landscapeErrorPageCode": {
-    "placeholders": {
-      "code": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeConfirmPageSuccessInfoTitle": "Ubuntu wordt geïnstalleerd met de door jouw organisatie verstrekte configuratie",
-  "@landscapeConfirmPageSuccessInfoTitle": {},
   "landscapeConfirmPageSuccessInfoContent": "Je kunt het automatische installatiebestand dat uit Landscape is geïmporteerd hieronder bekijken.",
-  "@landscapeConfirmPageSuccessInfoContent": {},
   "restartComputer": "Computer opnieuw starten",
-  "@restartComputer": {},
   "restartComputerTitle": "Computer opnieuw starten?",
-  "@restartComputerTitle": {},
   "installationSlidesIncluded": "Inbegrepen:",
-  "@installationSlidesIncluded": {},
   "installationSlidesDevelopmentTitle": "Ontwikkel enmet het beste van open source",
-  "@installationSlidesDevelopmentTitle": {},
   "installationSlidesCreativityBody": "Of je een animator, ontwerper, videomaker of game-ontwikkelaar bent, het is eenvoudig om je workflows naar {DISTRO} te brengen met ondersteuning voor open source en industriestandaard software en applicaties.",
-  "@installationSlidesCreativityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesGamingTitle": "Geweldig voor gamen",
-  "@installationSlidesGamingTitle": {},
   "installationSlidesSupportResources": "Nuttige bronnen:",
-  "@installationSlidesSupportResources": {},
   "refreshCurrent": "De huidige {snap}-versie is {version}.",
-  "@refreshCurrent": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      },
-      "version": {
-        "type": "String"
-      }
-    }
-  },
   "recoveryKeyInfoBody": "Vraag een herstelcode op zodra je je voor het eerst aanmeldt bij {distro} en bewaar deze op een veilige plek.",
-  "@recoveryKeyInfoBody": {
-    "placeholders": {
-      "distro": {
-        "type": "String"
-      }
-    }
-  },
   "next": "Verder",
-  "@next": {},
   "recoveryKeyConfirmation": "Ik begrijp dat ik al mijn gegevens kan verliezen als ik geen herstelcode heb",
-  "@recoveryKeyConfirmation": {},
   "shutdown": "Afsluiten",
-  "@shutdown": {},
   "refreshSnapUnlink": "{snap} loskoppelen…",
-  "@refreshSnapUnlink": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "readyToUse": "{system} is geïnstalleerd en klaar voor gebruik",
-  "@readyToUse": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapCleanup": "{snap} opschonen…",
-  "@refreshSnapCleanup": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableMounted": "Gebruikt voor {mountpoint}",
-  "@confirmTableMounted": {
-    "placeholders": {
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "restartNow": "Nu opnieuw starten",
-  "@restartNow": {},
   "installationSlidesDevelopmentBody": "{DISTRO} is het ideale werkstation voor app- of webontwikkeling, data science en AI/ML, maar ook voor devops en beheer. Elke {DISTRO}-release bevat de nieuwste toolchains en ondersteunt alle belangrijke IDE's.",
-  "@installationSlidesDevelopmentBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeErrorPageTitle": "Geautomatiseerde installatie is niet beschikbaar voor dit account",
-  "@landscapeErrorPageTitle": {},
   "recoveryKeyCommand": "Om een herstelcode te krijgen, moet je de installatie voltooien, de computer opnieuw opstarten en deze opdracht uitvoeren in de terminal:",
-  "@recoveryKeyCommand": {},
   "installationSlidesGamingBody": "{DISTRO} ondersteunt de nieuwste NVIDIA- en Mesa-stuurprogramma's om de prestaties en compatibiliteit te verbeteren. Duizenden Windows-titels spelen geweldig op {DISTRO} via applicaties zoals Steam, zonder extra configuratie.",
-  "@installationSlidesGamingBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationFailed": "Installatie mislukt",
-  "@installationFailed": {},
-  "landscapeDomainNoInternetTitleWarning": "Maak verbinding met internet om door te gaan",
-  "@landscapeDomainNoInternetTitleWarning": {}
+  "landscapeDomainNoInternetTitleWarning": "Maak verbinding met internet om door te gaan"
 }

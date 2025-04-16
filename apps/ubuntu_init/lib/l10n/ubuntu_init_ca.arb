@@ -1,70 +1,26 @@
 {
   "welcomePageTitle": "Us donem la benvinguda",
-  "@welcomePageTitle": {},
   "welcomePageHeader": "Us donem la benvinguda a {distro}",
-  "@welcomePageHeader": {},
   "welcomeWhatsNew": "NOVETATS",
-  "@welcomeWhatsNew": {},
   "welcomeStartTitle": "Un inici àgil",
-  "@welcomeStartTitle": {},
   "welcomeStoreSubtitle": "Mai no ha estat més fàcil trobar el vostre programari preferit.",
-  "@welcomeStoreSubtitle": {},
   "telemetryHeader": "Ajudeu perquè l’{distro} sigui millor",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "welcomeSecuritySubtitle": "Opcions noves per al xifrat per maquinari o mitjançant el ZFS.",
-  "@welcomeSecuritySubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Vegeu el registre de canvis</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryDescription": "Compartiu dades anònimament amb l’{distro} perquè puguem millorar la vostra experiència.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "No, no comparteixis dades del sistema",
-  "@telemetryLabelOff": {},
   "telemetryLegalLabel": "Informació legal",
-  "@telemetryLegalLabel": {},
   "privacyLocationTitle": "Voleu activar els serveis d’ubicació?",
-  "@privacyLocationTitle": {},
   "privacyPolicyLink": "Privadesa de les dades",
-  "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "welcomeSecurityTitle": "Seguretat millorada",
-  "@welcomeSecurityTitle": {},
   "welcomeStoreTitle": "Botiga d’aplicacions amb un aspecte nou",
-  "@welcomeStoreTitle": {},
   "telemetryReportLabel": "Detalls de l’informe",
-  "@telemetryReportLabel": {},
   "telemetryReportTitle": "Detalls de l’informe",
-  "@telemetryReportTitle": {},
   "telemetryPageTitle": "Telemetria",
-  "@telemetryPageTitle": {},
   "privacyPageTitle": "Serveis d’ubicació",
-  "@privacyPageTitle": {},
   "privacyLocationSubtitle": "Permeteu que les aplicacions coneguin la vostra ubicació geogràfica.\nPodeu canviar-ho en qualsevol moment als Paràmetres del sistema.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Serveis d’ubicació",
-  "@privacyLocationEnable": {},
   "telemetryLabelOn": "Sí, vull compartir dades del sistema amb l’equip de l’{distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
-  "welcomeStartSubtitle": "Afavoreix una experiència d’instal·lació més senzilla.",
-  "@welcomeStartSubtitle": {}
+  "welcomeStartSubtitle": "Afavoreix una experiència d’instal·lació més senzilla."
 }

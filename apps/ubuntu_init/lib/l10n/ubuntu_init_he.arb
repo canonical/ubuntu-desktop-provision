@@ -1,114 +1,43 @@
 {
   "welcomePageTitle": "ברוך בואך",
-  "@welcomePageTitle": {},
   "welcomePageHeader": "ברוך בואך אל {distro}",
-  "@welcomePageHeader": {},
   "welcomeWhatsNew": "מה חדש?",
-  "@welcomeWhatsNew": {},
   "welcomeStartTitle": "התחלה חלקה",
-  "@welcomeStartTitle": {},
   "welcomeStartSubtitle": "תמיכה בחוויית הקמה פשוטה יותר.",
-  "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "חנות יישומים במראה חדש",
-  "@welcomeStoreTitle": {},
   "telemetryReportLabel": "הצגת הדוח הראשון",
-  "@telemetryReportLabel": {},
   "welcomeStoreSubtitle": "מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.",
-  "@welcomeStoreSubtitle": {},
   "welcomeSecurityTitle": "אבטחה משופרת",
-  "@welcomeSecurityTitle": {},
   "welcomeSecuritySubtitle": "אפשרויות חדשות להצפנת ZFS בגיבוי חומרה.",
-  "@welcomeSecuritySubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">הצגת יומן השינויים</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryHeader": "סיוע בשיפור {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryPageTitle": "מדדים",
-  "@telemetryPageTitle": {},
   "telemetryDescription": "אפשר לסייע לנו לשפר את {distro} על ידי שיתוף נתוני המערכת שלך איתנו. לרבות פרטים כגון דגם המחשב שלך, התוכנות המותקנות והמקום שבחרת לאזור הזמן שלך.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "כן, לשתף את נתוני המערכת שלי עם צוות {distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "לא, לא לשתף את נתוני המערכת שלי",
-  "@telemetryLabelOff": {},
   "telemetryReportTitle": "פרטי דיווח",
-  "@telemetryReportTitle": {},
   "telemetryLegalLabel": "הצהרה משפטית",
-  "@telemetryLegalLabel": {},
   "privacyPageTitle": "שירותי מיקום",
-  "@privacyPageTitle": {},
   "privacyLocationTitle": "להפעיל שירותי מיקום?",
-  "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "לאפשר ליישומים לדעת מה מיקומך הגאוגרפי.\nאפשר לשנות זאת בכל עת דרך הגדרות המערכת.",
-  "@privacyLocationSubtitle": {},
   "privacyPolicyLink": "פרטיות נתונים",
-  "@privacyPolicyLink": {},
   "privacyLocationEnable": "שירותי מיקום",
-  "@privacyLocationEnable": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProMagicAttachInstructions": "הצטרפות קסם עם הקוד הזה דרך <a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProHeader": "צירוף המכונה הזאת",
-  "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "או להוסיף את האסימון ידנית",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProOnBoardingSkipForNow": "לדלג לעת עתה",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingSkipForNowDescription": "תמיד אפשר להפעיל את Ubuntu Pro בהמשך דרך יישום התוכנה והעדכונים.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "הפעלת Ubuntu Pro",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro מופעל מעתה במכונה הזאת",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "אפשר לנהל את שירותי ה־Pro שלך ביישום התוכנה והעדכונים.",
-  "@ubuntuProSucessAttachDescription": {},
   "ubuntuProTokenTextfieldHint": "אסימון",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProTokenAttachError": "אסימון שגוי",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "אסימון תקף",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachErrorVariant": "אסימון שגוי, נא לנסות שוב",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProSubscriptionDescription": "קבלת המינוי המקיף ביותר לאבטחה של תוכנה בקוד פתוח",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "תמיד חינמי לשימוש אישי. 30 יום ניסיון לתאגידים. <a href=\"https://{url}\">למידע נוסף</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProTokenAttachButton": "צירוף",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "אפשר לצרף את המכונה הזאת למינוי Ubuntu Pro לקבלת עדכוני אבטחה ומגוון רחב יותר של חבילות עד 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
-  "telemetryCollectError": "איסוף המדדים נכשל",
-  "@telemetryCollectError": {}
+  "telemetryCollectError": "איסוף המדדים נכשל"
 }

@@ -1,114 +1,43 @@
 {
   "welcomeStoreTitle": "Un nuevo aspecto para la Tienda de Aplicaciones",
-  "@welcomeStoreTitle": {},
   "telemetryReportLabel": "Mostrar el primer informe",
-  "@telemetryReportLabel": {},
   "welcomePageTitle": "Le damos la bienvenida",
-  "@welcomePageTitle": {},
   "welcomeStartSubtitle": "A favor de una experiencia de puesta en marcha más prolija.",
-  "@welcomeStartSubtitle": {},
   "welcomeStartTitle": "Un comienzo simplificado",
-  "@welcomeStartTitle": {},
   "welcomeStoreSubtitle": "Nunca ha sido tan fácil encontrar sus programas favoritos.",
-  "@welcomeStoreSubtitle": {},
   "welcomePageHeader": "Le damos la bienvenida a {distro}",
-  "@welcomePageHeader": {},
   "welcomeSecurityTitle": "Mayor seguridad",
-  "@welcomeSecurityTitle": {},
   "privacyPageTitle": "Servicios de ubicación",
-  "@privacyPageTitle": {},
   "welcomeWhatsNew": "¿QUÉ HAY DE NUEVO?",
-  "@welcomeWhatsNew": {},
   "welcomeSecuritySubtitle": "Nuevas opciones de cifrado por hardware o ZFS.",
-  "@welcomeSecuritySubtitle": {},
   "telemetryReportTitle": "Detalles del informe",
-  "@telemetryReportTitle": {},
   "privacyLocationTitle": "¿Quiere activar los servicios de ubicación?",
-  "@privacyLocationTitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Ver registro de cambios</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryPageTitle": "Telemetría",
-  "@telemetryPageTitle": {},
   "privacyLocationSubtitle": "Permita que las aplicaciones conozcan su ubicación geográfica.\nPuede cambiar esto en cualquier momento en la Configuración del sistema.",
-  "@privacyLocationSubtitle": {},
   "telemetryHeader": "Ayude a mejorar {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "privacyLocationEnable": "Servicios de ubicación",
-  "@privacyLocationEnable": {},
   "telemetryDescription": "Ayúdenos a mejorar {distro} compartiendo los datos de su sistema con nosotros. Esto incluye cosas como el modelo de su máquina, el software instalado y la ubicación que eligió para su zona horaria.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Sí, compartir datos del sistema con el equipo de {distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "No, no compartir datos del sistema",
-  "@telemetryLabelOff": {},
   "telemetryLegalLabel": "Aviso legal",
-  "@telemetryLegalLabel": {},
   "privacyPolicyLink": "Protección de los datos",
-  "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProMagicAttachInstructions": "Adjunte magia con este código en<a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProSucessAttachDescription": "Puedes administrar tus servicios de Ubuntu Pro en Software y Actualizaciones.",
-  "@ubuntuProSucessAttachDescription": {},
   "ubuntuProHeader": "Conecte esta máquina",
-  "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "o agregar un token manualmente",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProTokenTextfieldHint": "Token",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProSubscriptionDescription": "Obtenga la suscripción más completa para la seguridad del software de código abierto",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Siempre gratuito para uso personal. Prueba de 30 días para empresas.<a href=\"https://{url}\"> Más información</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProTokenAttachButton": "Adjuntar",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProTokenAttachError": "Token no válido",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "Token válido",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachErrorVariant": "Token no válido, reintentar",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Omitir por ahora",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Siempre puede activar Ubuntu Pro más adelante a través de la aplicación Programas y actualizaciones.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Activar Ubuntu Pro",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Vincule esta máquina a una suscripción de Ubuntu Pro para recibir actualizaciones de seguridad para una mayor cantidad de paquetes hasta 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro ya está activado en esta máquina",
-  "@ubuntuProSucessAttachHeader": {},
-  "telemetryCollectError": "Error al recopilar datos de telemetría",
-  "@telemetryCollectError": {}
+  "telemetryCollectError": "Error al recopilar datos de telemetría"
 }

@@ -1,1198 +1,346 @@
 {
   "@@locale": "cs",
   "installDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Nebude to zdlouhavé.",
-  "@installDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installOption": "Nainstalovat {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "windowTitle": "Nainstalovat {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "appTitle": "Instalátor Ubuntu pro osobní počítače",
-  "@appTitle": {},
   "changeButtonText": "Změnit",
-  "@changeButtonText": {},
   "welcome": "Vítejte",
-  "@welcome": {},
   "tryOrInstallTitle": "Vyzkoušet nebo nainstalovat {DISTRO}",
-  "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Opravit instalaci",
-  "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "Oprava přeinstaluje veškerý doposud nainstalovaný software, ale zachová data a nastavení uživatele.",
-  "@tryOrInstallRepairDescription": {},
   "tryOrInstallReleaseNotesLabel": "Nejspíš si budete chtít přečíst <a href=\"{url}\">poznámky k vydání</a>.",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "rstTitle": "Zjištěno RST",
-  "@rstTitle": {},
   "rstDescription": "Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné {DISTRO} nainstalovat, je třeba ve Windows funkci RST vypnout.",
-  "@rstDescription": {},
   "rstInstructions": "Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo navštivte: <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "configureSecureBootTitle": "Nastavit Secure Boot",
-  "@configureSecureBootTitle": {},
   "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardwaru pocházející od třetí strany. K tomu je nutné\nvypnout Secure Boot. Musíte si teď proto zvolit klíč zabezpečení a zadat ho po restartu systému.",
-  "@configureSecureBootDescription": {},
   "configureSecureBootOption": "Nastavit Secure Boot",
-  "@configureSecureBootOption": {},
   "chooseSecurityKey": "Zvolte si klíč zabezpečení",
-  "@chooseSecurityKey": {},
   "confirmSecurityKey": "Zopakujte klíč zabezpečení",
-  "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Zatím ještě ovladač neinstalovat",
-  "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "Můžete ho později nainstalovat pomocí nástroje Software a aktualizace.",
-  "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Je třeba zadat klíč zabezpečení",
-  "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "Klíče zabezpečení se liší",
-  "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageTitle": "Aplikace a aktualizace",
-  "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Které aplikace chcete mít hned od začátku nainstalované?",
-  "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "Další možnosti",
-  "@otherOptions": {},
   "installThirdPartyTitle": "Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových sítí (Wi-Fi), a také dodatečné kodeky multimédií",
-  "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některá jsou proprietární.",
-  "@installThirdPartySubtitle": {},
   "installationTypeTitle": "Nastavení disku",
-  "@installationTypeTitle": {},
   "installationTypeOSDetected": "Na tomto počítači se už nachází {os}. Co si přejete udělat?",
-  "@installationTypeOSDetected": {
-    "type": "text",
-    "placeholders": {
-      "os": {}
-    }
-  },
   "installationTypeNoOSDetected": "Na tomto počítači nebyl zjištěn žádný operační systém. Co si přejete udělat?",
-  "@installationTypeNoOSDetected": {},
   "installationTypeAdvancedLabel": "Zobrazit pokročilé možnosti…",
-  "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Šifrování a souborový systém",
-  "@installationTypeAdvancedTitle": {},
   "installationTypeNone": "Bez šifrování",
-  "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nic nevybráno",
-  "@installationTypeNoneSelected": {},
   "installationTypeLVMSelected": "Vybráno LVM",
-  "@installationTypeLVMSelected": {},
   "installationTypeEncryptInfo": "V následujícím kroku si zvolíte šifrovací klíč.",
-  "@installationTypeEncryptInfo": {},
   "installationTypeZFSSelected": "Vybráno ZFS",
-  "@installationTypeZFSSelected": {},
   "installationTypeZFS": "Použít ZFS bez šifrování",
-  "@installationTypeZFS": {},
   "installationTypeReinstall": "Vymazat {os} a přeinstalovat",
-  "@installationTypeReinstall": {
-    "type": "text",
-    "placeholders": {
-      "os": {}
-    }
-  },
   "installationTypeReinstallWarning": "<font color=\"{color}\">Varování:</font> Tímto se smažou veškeré aplikace, dokumenty, fotky, hudba a všechny ostatní soubory v systému {os}.",
-  "@installationTypeReinstallWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "os": {}
-    }
-  },
   "installationTypeAlongside": "Nainstalovat {product} vedle {os}",
-  "@installationTypeAlongside": {
-    "type": "text",
-    "placeholders": {
-      "product": {},
-      "os": {}
-    }
-  },
   "installationTypeAlongsideInfo": "Vyberte oddíl, jehož velikost chcete změnit, aby se vytvořilo místo pro {product}. Operační systém si můžete vybrat při spuštění počítače.",
-  "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ruční instalace",
-  "@installationTypeManual": {},
   "selectGuidedStorageDropdownLabel": "Vyberte jednotku:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Použije se celý disk:",
-  "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Nainstalovat nyní",
-  "@selectGuidedStorageInstallNow": {},
   "allocateDiskSpace": "Ruční dělení",
-  "@allocateDiskSpace": {},
   "confirmInstallButton": "Instalace",
-  "@confirmInstallButton": {},
   "diskHeadersDevice": "Zařízení",
-  "@diskHeadersDevice": {},
   "diskHeadersType": "Typ",
-  "@diskHeadersType": {},
   "diskHeadersMountPoint": "Přípojný bod",
-  "@diskHeadersMountPoint": {},
   "diskHeadersSize": "Velikost",
-  "@diskHeadersSize": {},
   "diskHeadersUsed": "Využito",
-  "@diskHeadersUsed": {},
   "diskHeadersSystem": "Systém",
-  "@diskHeadersSystem": {},
   "diskHeadersFormat": "Formátovat",
-  "@diskHeadersFormat": {},
   "freeDiskSpace": "Volné místo",
-  "@freeDiskSpace": {},
   "newPartitionTable": "Nová tabulka dělení oddílů",
-  "@newPartitionTable": {},
   "bootLoaderDevice": "Zařízení kam nainstalovat zavaděč systému",
-  "@bootLoaderDevice": {},
   "partitionCreateTitle": "Vytvořit oddíl",
-  "@partitionCreateTitle": {},
   "partitionEditTitle": "Upravit oddíl",
-  "@partitionEditTitle": {},
   "partitionMountPointLabel": "Přípojný bod:",
-  "@partitionMountPointLabel": {},
   "partitionErase": "Naformátovat oddíl",
-  "@partitionErase": {},
   "partitionFormatLabel": "Použito jako:",
-  "@partitionFormatLabel": {},
   "partitionLocationEnd": "Konec tohoto prostoru",
-  "@partitionLocationEnd": {},
   "partitionLocationBeginning": "Začátek tohoto prostoru",
-  "@partitionLocationBeginning": {},
   "partitionLocationLabel": "Umístění nového oddílu:",
-  "@partitionLocationLabel": {},
   "partitionTypeLogical": "Logický",
-  "@partitionTypeLogical": {},
   "partitionTypePrimary": "Primární",
-  "@partitionTypePrimary": {},
   "partitionTypeLabel": "Typ nového oddílu:",
-  "@partitionTypeLabel": {},
   "partitionSizeLabel": "Velikost:",
-  "@partitionSizeLabel": {},
   "shutdown": "Vypnout",
-  "@shutdown": {},
   "restartInto": "Restartovat do {system}",
-  "@restartInto": {
-    "type": "text",
-    "placeholders": {
-      "system": {}
-    }
-  },
   "readyToUse": "{system} je nainstalované a připravené k použití",
-  "@readyToUse": {
-    "type": "text",
-    "placeholders": {
-      "system": {}
-    }
-  },
   "installationCompleteTitle": "Instalace dokončena",
-  "@installationCompleteTitle": {},
   "confirmPartitionChanges": "Budou provedeny následující změny na oddílech:",
-  "@confirmPartitionChanges": {},
   "confirmPartitionTables": "Tabulky dělení oddílů se na následujících zařízení změní:",
-  "@confirmPartitionTables": {},
   "confirmHeader": "Zkontrolujte své volby",
-  "@confirmHeader": {},
   "confirmPageTitle": "Připraveno k instalaci",
-  "@confirmPageTitle": {},
   "confirmPartitionTable": "{serial} ({path})",
-  "@confirmPartitionTable": {
-    "description": "An entry for a disk whose partition table is being changed",
-    "placeholders": {
-      "serial": {},
-      "path": {}
-    }
-  },
   "bitlockerDescription": "Na tomto počítači je používáno šifrování nástrojem Windows BitLocker.\nAby bylo možné pokračovat, je třeba pomocí Windows udělat volné místo nebo zvolit '{option}'.",
-  "@bitlockerDescription": {},
   "bitlockerTitle": "BitLocker je zapnutý",
-  "@bitlockerTitle": {},
   "restartIntoWindows": "Restartovat do Windows",
-  "@restartIntoWindows": {},
   "bitlockerInstructions": "Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://{url}\">{url}</a>",
-  "@bitlockerInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "tryOption": "Vyzkoušet {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tryDescription": "Můžete si {RELEASE} vyzkoušet, aniž by se v počítači cokoli změnilo.",
-  "@tryDescription": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationTypeErase": "Vymazat disk a nainstalovat {DISTRO}",
-  "@installationTypeErase": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationTypeEncrypt": "Zabezpečit novou instalaci {RELEASE} šifrováním",
-  "@installationTypeEncrypt": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "selectGuidedStoragePageTitle": "Vymazat disk a nainstalovat {DISTRO}",
-  "@selectGuidedStoragePageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationTypeManualInfo": "Pro pokročilé uživatele, kteří chtějí nastavení disků upravit vlastnoručně.",
-  "@installationTypeManualInfo": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "newPartitionTableConfirmationTitle": "Nový prázdný oddíl",
-  "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Vytvoření nové tabulky oddílů na celém zařízení odebere veškeré stávající oddíly. V tomto kroku ještě lze tuto operaci vzít zpět.",
-  "@newPartitionTableConfirmationMessage": {},
   "onBatteryWarning": "<font color=\"{color}\">Upozornění:</font> Počítač není připojen k napájení ze zásuvky.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeDualOSDetected": "Na tomto počítači se už nacházejí {os1} a {os2}. Co si přejete udělat?",
-  "@installationTypeDualOSDetected": {
-    "type": "text",
-    "placeholders": {
-      "os1": {},
-      "os2": {}
-    }
-  },
   "installationTypeMultiOSDetected": "Na tomto počítači se už nachází několik operačních systémů. Co si přejete udělat?",
-  "@installationTypeMultiOSDetected": {},
   "copyingFiles": "Kopírování souborů…",
-  "@copyingFiles": {},
   "installationFailed": "Instalace se nezdařila",
-  "@installationFailed": {},
   "quitButtonText": "Opustit instalaci",
-  "@quitButtonText": {},
   "installingSystem": "Instalace systému…",
-  "@installingSystem": {},
   "configuringSystem": "Nastavování systému…",
-  "@configuringSystem": {},
   "installationTypeAlongsideDual": "Nainstalovat {product} vedle {os1} a {os2}",
-  "@installationTypeAlongsideDual": {
-    "type": "text",
-    "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
-    }
-  },
   "installAlongsideSpaceDivider": "Přidělte prostor na jednotce posunutím dělítka níže:",
-  "@installAlongsideSpaceDivider": {},
   "installAlongsideAvailable": "K dispozici:",
-  "@installAlongsideAvailable": {},
   "notEnoughDiskSpaceTitle": "Nedostatek místa na disku",
-  "@notEnoughDiskSpaceTitle": {},
   "installationTypeLVMEncryptionSelected": "Vybráno LVM a šifrování",
-  "@installationTypeLVMEncryptionSelected": {},
   "installAlongsideHiddenPartitions": "{num} menších oddílů skryto. Pokud potřebujete postup více upravit, použijte <a href=\"{url}\">nástroj pro pokročilou správu oddílů</a>",
-  "@installAlongsideHiddenPartitions": {
-    "type": "text",
-    "placeholders": {
-      "num": {},
-      "url": {}
-    }
-  },
   "confirmPartitionResize": "velikost oddílu <b>{sysname}</b> změněna z <b>{oldsize}</b> na <b>{newsize}</b>",
-  "@confirmPartitionResize": {
-    "description": "A resized partition entry",
-    "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
-    }
-  },
   "installAlongsideResizePartition": "Změnit velikost oddílu",
-  "@installAlongsideResizePartition": {},
   "confirmPartitionCreate": "oddíl <b>{sysname}</b> vytvořen",
-  "@confirmPartitionCreate": {
-    "description": "A created partition entry",
-    "placeholders": {
-      "sysname": {}
-    }
-  },
   "confirmPartitionMount": "oddíl <b>{sysname}</b> použit pro <b>{mount}</b>",
-  "@confirmPartitionMount": {
-    "description": "A mounted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "mount": {}
-    }
-  },
   "showSecurityKey": "Zobrazit",
-  "@showSecurityKey": {},
   "installationTypeAlongsideMulti": "Nainstalovat {product} vedle stávajících operačních systémů",
-  "@installationTypeAlongsideMulti": {
-    "type": "text",
-    "placeholders": {
-      "product": {}
-    }
-  },
   "installationTypeAlongsideUnknown": "Nainstalovat {product} vedle ostatních oddílů",
-  "@installationTypeAlongsideUnknown": {
-    "type": "text",
-    "placeholders": {
-      "product": {}
-    }
-  },
   "installAlongsideAllocateSpace": "Přidělit prostor",
-  "@installAlongsideAllocateSpace": {},
   "installAlongsideFiles": "Soubory",
-  "@installAlongsideFiles": {},
   "installAlongsidePartition": "Oddíl:",
-  "@installAlongsidePartition": {},
   "installAlongsideSize": "Velikost:",
-  "@installAlongsideSize": {},
   "confirmPartitionFormatMount": "oddíl <b>{sysname}</b> naformátovaný jako <b>{format}</b> použit pro <b>{mount}</b>",
-  "@confirmPartitionFormatMount": {
-    "description": "A formatted and mounted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
-    }
-  },
   "confirmPartitionFormat": "oddíl <b>{sysname}</b> naformátován jako <b>{format}</b>",
-  "@confirmPartitionFormat": {
-    "description": "A formatted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "format": {}
-    }
-  },
   "installDriversTitle": "Nainstalovat ovladače od třetích stran pro grafické čipy a síťová rozhraní Wi-Fi",
-  "@installDriversTitle": {},
   "installCodecsTitle": "Stáhnout a nainstalovat podporu pro další multimediální formáty",
-  "@installCodecsTitle": {},
   "installCodecsSubtitle": "Obsahuje mimo jiné MP3, MP4, MOV a podobné",
-  "@installCodecsSubtitle": {},
   "installDriversSubtitle": "Obsahuje mimo jiné ovladače NVIDIA a podobné",
-  "@installDriversSubtitle": {},
   "offlineWarning": "Nejste připojení k Internetu",
-  "@offlineWarning": {},
   "restartNow": "Restartovat nyní",
-  "@restartNow": {},
   "continueTesting": "Pokračovat ve zkoušení",
-  "@continueTesting": {},
   "tooManyPrimaryPartitions": "Příliš mnoho primárních oddílů",
-  "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Dosaženo limitu",
-  "@partitionLimitReached": {},
   "partitionFormatNone": "Ponechat nenaformátované",
-  "@partitionFormatNone": {},
   "loadingHeader": "Připravuje se {DISTRO}…",
-  "@loadingHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "confirmDevicesTitle": "Zařízení",
-  "@confirmDevicesTitle": {},
   "confirmPartitionsTitle": "Oddíly",
-  "@confirmPartitionsTitle": {},
   "installationSlidesAvailable": "K dispozici:",
-  "@installationSlidesAvailable": {},
   "installationSlidesWelcomeBody": "Ať už jste vývojáři, tvůrci, hráči či správci, v {RELEASE} naleznete nové nástroje, které vám zvýší produktivitu a zpříjemní používání systému.",
-  "@installationSlidesWelcomeBody": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationSlidesSoftwareTitle": "Všechny aplikace, které potřebujete",
-  "@installationSlidesSoftwareTitle": {},
   "installationSlidesSoftwareBody": "V Centru aplikací můžete instalovat, spravovat a aktualizovat všechny aplikace, včetně tisíců aplikací z obchodu Snap i z archivu {DISTRO}.",
-  "@installationSlidesSoftwareBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesDevelopmentTitle": "Vyvíjejte s nejlepším open source",
-  "@installationSlidesDevelopmentTitle": {},
   "installationSlidesGamingTitle": "Skvělé pro hraní her",
-  "@installationSlidesGamingTitle": {},
   "installationSlidesSecurityTitle": "Soukromé a bezpečné",
-  "@installationSlidesSecurityTitle": {},
   "installationSlidesSecurityBody": "{DISTRO} poskytuje veškeré nástroje které jsou zapotřebí pro ochranu soukromí a bezpečné používání Internetu. Díky vestavěné bráně firewall, podpoře VPN a řadě aplikací zaměřených na ochranu soukromí máte svá data plně pod kontrolou.",
-  "@installationSlidesSecurityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSecurityLts": "Všechna vydání {DISTRO} LTS dostávají opravy zabezpečení po dobu pěti let, nebo prodloužené na deset let předplatným Ubuntu Pro.",
-  "@installationSlidesSecurityLts": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesProductivityBody": "{DISTRO} Desktop obsahuje LibreOffice – sadu open source aplikací kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.",
-  "@installationSlidesProductivityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesAccessibilityTitle": "Přístupnost pro každého",
-  "@installationSlidesAccessibilityTitle": {},
   "installationSlidesAccessibilityOrca": "Čtečka obrazovky Orca",
-  "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "Podpora jazyků",
-  "@installationSlidesAccessibilityLanguages": {},
   "installationSlidesSupportHeader": "Oficiální dokumentace k {DISTRO} je k dispozici jak online, tak přes ikonu Nápověda na panelu.",
-  "@installationSlidesSupportHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSupportCommunity": "Stránka Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.",
-  "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Pro firemní uživatele Canonical poskytuje komerční podporu, díky které je snadné zavést a spravovat Ubuntu na pracovišti.",
-  "@installationSlidesSupportEnterprise": {},
   "installationSlidesSupportResources": "Užitečné zdroje:",
-  "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Oficiální dokumentace",
-  "@installationSlidesSupportDocumentation": {},
   "installationSlidesSupportUbuntuPro": "Nepřetržitá podpora na podnikové úrovni s Ubuntu Pro",
-  "@installationSlidesSupportUbuntuPro": {},
   "notEnoughDiskSpaceRequired": "Vyžadováno:",
-  "@notEnoughDiskSpaceRequired": {},
   "installationSlidesTitle": "Vítejte v {RELEASE}",
-  "@installationSlidesTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationSlidesIncluded": "Obsaženo:",
-  "@installationSlidesIncluded": {},
   "installationSlidesWelcomeTitle": "Rychlé, bezplatné a plné nových funkcí",
-  "@installationSlidesWelcomeTitle": {},
   "installationSlidesWelcomeHeader": "Nejnovější verze {DISTRO} usnadňuje používání počítače víc než kdy dříve.",
-  "@installationSlidesWelcomeHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesCreativityTitle": "Buďte tvořivější",
-  "@installationSlidesCreativityTitle": {},
   "installationSlidesDevelopmentBody": "{DISTRO} je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci (AI/ML), a také pro devops a správu systémů. Každé vydání {DISTRO} obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí (IDE).",
-  "@installationSlidesDevelopmentBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesCreativityBody": "Poku jste animátory, designéry, tvůrci videí či vývojáři her, je snadné přenést své pracovní postupy na {DISTRO} díky podpoře software a aplikací, které patří k open source a oborovým standardům.",
-  "@installationSlidesCreativityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesGamingBody": "{DISTRO} podporuje nejnovější ovladače NVIDIA a Mesa, což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na {DISTRO} prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.",
-  "@installationSlidesGamingBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesProductivityTitle": "Zvyšte svou produktivitu",
-  "@installationSlidesProductivityTitle": {},
   "installationSlidesAccessibilityBody": "V jádru filozofie {DISTRO} je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění a možnostem změnit jazyk, barvy a velikost textu rozhraní usnadňuje {DISTRO} používání počítače, ať už jste kdokoli a kdekoli.",
-  "@installationSlidesAccessibilityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSupportTitle": "Nápověda a podpora",
-  "@installationSlidesSupportTitle": {},
   "notEnoughDiskSpaceAvailable": "K dispozici:",
-  "@notEnoughDiskSpaceAvailable": {},
   "notEnoughDiskSpaceUbuntu": "Nedostatek místa na disku pro instalaci {DISTRO}",
-  "@notEnoughDiskSpaceUbuntu": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "rstHeader": "Aby mohla instalace pokračovat, musíte RST vypnout",
-  "@rstHeader": {},
   "restartIntoWindowsTitle": "Restartovat do Windows?",
-  "@restartIntoWindowsTitle": {},
   "restartIntoWindowsDescription": "Opravdu chcete počítač restartovat? Pokud pak budete chtít instalaci {DISTRO} dokončit, bude třeba instalaci {DISTRO} spustit znovu.",
-  "@restartIntoWindowsDescription": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "bitlockerHeader": "Aby bylo možné pokračovat, vypněte BitLocker",
-  "@bitlockerHeader": {},
   "allocateDiskSpaceInvalidMountPointSlash": "Je třeba, aby přípojné body začínaly na „/“",
-  "@allocateDiskSpaceInvalidMountPointSlash": {},
   "allocateDiskSpaceInvalidMountPointSpace": "Přípojné body nemohou obsahovat mezery",
-  "@allocateDiskSpaceInvalidMountPointSpace": {},
   "partitionFormatKeep": "Ponechat naformátované jako {format}",
-  "@partitionFormatKeep": {
-    "type": "text",
-    "placeholders": {
-      "format": {}
-    }
-  },
   "loadingPageTitle": "Vítejte v {DISTRO}",
-  "@loadingPageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "refreshSnapPrerequisites": "Zajišťování závislostí pro {snap}…",
-  "@refreshSnapPrerequisites": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapRefresh": "Znovunačítání {snap}…",
-  "@refreshSnapRefresh": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapLink": "Napojování {snap}…",
-  "@refreshSnapLink": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "installationTypeTPM": "Použít hardwarové šifrování",
-  "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Vybráno TPM",
-  "@installationTypeTPMSelected": {},
   "refreshPageTitle": "Je k dispozici aktualizace",
-  "@refreshPageTitle": {},
   "refreshCurrent": "Stávající verze {snap} je {version}.",
-  "@refreshCurrent": {
-    "type": "text",
-    "placeholders": {
-      "snap": {},
-      "version": {}
-    }
-  },
   "refreshInstall": "Aktualizovat na verzi {version}",
-  "@refreshInstall": {
-    "type": "text",
-    "placeholders": {
-      "version": {}
-    }
-  },
   "refreshSnapCheckRerefresh": "Kontrola opětovného znovunačítání {snap}…",
-  "@refreshSnapCheckRerefresh": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshUpToDate": "Stávající verze {version} je aktuální.",
-  "@refreshUpToDate": {
-    "type": "text",
-    "placeholders": {
-      "version": {}
-    }
-  },
   "refreshUpdating": "Aktualizování {snap}…",
-  "@refreshUpdating": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapPrepare": "Příprava {snap}…",
-  "@refreshSnapPrepare": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshRestart": "Pro pokračování prosím instalátor ukončete a znovu spusťte",
-  "@refreshRestart": {},
   "refreshSnapDownload": "Stahování {snap}…",
-  "@refreshSnapDownload": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapStartServices": "Spouštění služeb {snap}…",
-  "@refreshSnapStartServices": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapValidate": "Ověřování {snap}…",
-  "@refreshSnapValidate": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapMount": "Připojování {snap}…",
-  "@refreshSnapMount": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapStopServices": "Zastavování služeb {snap}…",
-  "@refreshSnapStopServices": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapRemoveAliases": "Odebírání alternativních názvů {snap}…",
-  "@refreshSnapRemoveAliases": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapUnlink": "Rušení odkazů na {snap}…",
-  "@refreshSnapUnlink": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapUpdateAssets": "Aktualizace dat {snap}…",
-  "@refreshSnapUpdateAssets": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů {snap} pro spouštění jádra systému…",
-  "@refreshSnapUpdateKernelCommandLine": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapCopyData": "Kopírování dat {snap}…",
-  "@refreshSnapCopyData": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapSetupProfiles": "Nastavování profilů zabezpečení {snap}…",
-  "@refreshSnapSetupProfiles": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapAutoConnect": "Připojování rozhraní a slotů {snap}…",
-  "@refreshSnapAutoConnect": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapSetAutoAliases": "Nastavování automatických alternativních názvů pro {snap}…",
-  "@refreshSnapSetAutoAliases": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapSetupAliases": "Nastavování alternativních názvů pro {snap}…",
-  "@refreshSnapSetupAliases": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapCleanup": "Úklid {snap}…",
-  "@refreshSnapCleanup": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "recoveryKeyTitle": "Obnovovací klíč k TPM",
-  "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Pro získání obnovovacího klíče dokončete instalaci, restartujte počítač a v terminálu spusťte tento příkaz:",
-  "@recoveryKeyCommand": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Varování:</font> Pokud klíč k zabezpečení ztratíte, budou veškerá data ztracena. Pokud vám to pomůže, šifrovací klíč si zapište na papír a ten si bezpečně uložte někam mimo počítač.",
-  "@recoveryKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "fullInstallationSubtitle": "Výběr webového prohlížeče, kancelářských nástrojů a pomůcek nevyžadujících internet.",
-  "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Výchozí výběr",
-  "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Jen to nejnutnější, webový prohlížeč a základní nástroje.",
-  "@minimalInstallationSubtitle": {},
   "fullInstallationTitle": "Rozšířená instalace",
-  "@fullInstallationTitle": {},
   "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být instalací provedeni krok za krokem.",
-  "@autoinstallInteractiveDescription": {},
   "autoinstallTitle": "Typ instalace",
-  "@autoinstallTitle": {},
   "autoinstallHeader": "Jak chcete nainstalovat {DISTRO}?",
-  "@autoinstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "autoinstallInteractiveOption": "Interaktivní instalace",
-  "@autoinstallInteractiveOption": {},
   "autoinstallAutomatedOption": "Automatická instalace",
-  "@autoinstallAutomatedOption": {},
   "autoinstallInstructions": "Zadejte adresu URL autoinstall.yaml nebo cestu k místnímu souboru:",
-  "@autoinstallInstructions": {},
   "autoinstallAutomatedDescription": "Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.",
-  "@autoinstallAutomatedDescription": {},
   "warningLabel": "Varování:",
-  "@warningLabel": {},
   "tryOrInstallHeader": "Co chcete s {DISTRO} udělat?",
-  "@tryOrInstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "hideSecurityKey": "Skrýt",
-  "@hideSecurityKey": {},
   "codecsAndDriversPageTitle": "Optimalizovat počítač",
-  "@codecsAndDriversPageTitle": {},
   "codecsAndDriversPageDescription": "Instalovat doporučený proprietární software?",
-  "@codecsAndDriversPageDescription": {},
   "codecsAndDriversPageBody": "{DISTRO} se standardně dodává bez proprietárního softwaru. Instalace dalšího softwaru může zlepšit výkon vašeho počítače.",
-  "@codecsAndDriversPageBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "codecsAndDriversNvidiaNote": "Byla zjištěna grafická karta NVIDIA",
-  "@codecsAndDriversNvidiaNote": {},
   "codecsAndDriversNvidiaBody": "Pro nejlepší výkon grafických karet NVIDIA se důrazně doporučuje nainstalovat dodatečné ovladače.",
-  "@codecsAndDriversNvidiaBody": {},
   "batteryWarning": "Počítač není připojen ke zdroji napájení.",
-  "@batteryWarning": {},
   "choosePassphraseTitle": "Přístupové heslo disku",
-  "@choosePassphraseTitle": {},
   "choosePassphraseHeader": "Vytvořit přístupové heslo",
-  "@choosePassphraseHeader": {},
   "choosePassphraseBody": "K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí vás počítač vyzve k zadání tohoto hesla.",
-  "@choosePassphraseBody": {},
   "choosePassphraseHint": "Zvolte přístupové heslo",
-  "@choosePassphraseHint": {},
   "choosePassphraseConfirmHint": "Potvrďte přístupové heslo",
-  "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Je vyžadováno přístupové heslo",
-  "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Přístupová hesla se liší",
-  "@choosePassphraseMismatch": {},
   "choosePassphraseInfoHeader": "Přístupové heslo si uložte na bezpečném místě",
-  "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte i všechna data.",
-  "@choosePassphraseInfoBody": {},
   "createPassphrase": "Vytvořte přístupové heslo",
-  "@createPassphrase": {},
   "confirmPassphrase": "Potvrďte přístupové heslo",
-  "@confirmPassphrase": {},
   "installationTypeHeader": "Jak chcete {DISTRO} nainstalovat?",
-  "@installationTypeHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseInfo": "Všechna data a oddíly na disku budou smazány, včetně operačních systémů.",
-  "@installationTypeEraseInfo": {},
   "installationTypeExperimental": "Experimentální",
-  "@installationTypeExperimental": {},
   "installationTypeLVM": "Použít LVM bez šifrování",
-  "@installationTypeLVM": {},
   "installationTypeLVMEncryption": "Šifrovat pomocí přístupového hesla",
-  "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryption": "Šifrovat s přístupovým heslem pomocí ZFS",
-  "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Vybráno ZFS a šifrování",
-  "@installationTypeZFSEncryptionSelected": {},
   "installationTypeTPMInfo": "Než zvolíte tuto možnost, <a href=\"{url}\">Přečtěte si o šifrování TPM</a>. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních {DISTRO}.",
-  "@installationTypeTPMInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "selectGuidedStorageInfo": "Začněte na zvoleném disku od nuly.",
-  "@selectGuidedStorageInfo": {},
   "selectGuidedStorageDriveDropdownLabel": "Vyberte disk:",
-  "@selectGuidedStorageDriveDropdownLabel": {},
   "selectGuidedStoragePartitionDropdownLabel": "Vyberte oddíl:",
-  "@selectGuidedStoragePartitionDropdownLabel": {},
   "guidedStoragePageHeader": "Vyberte, kam {DISTRO} nainstalovat",
-  "@guidedStoragePageHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
-  "@confirmDiskEncryptionLVM": {},
   "confirmDiskEncryptionZFS": "LUKS (ZFS)",
-  "@confirmDiskEncryptionZFS": {},
   "confirmDiskEncryptionTPM": "TPM",
-  "@confirmDiskEncryptionTPM": {},
   "confirmDiskEncryptionNone": "Žádné",
-  "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Aplikace",
-  "@confirmEntryApplications": {},
   "confirmEntryDiskSetup": "Typ instalace",
-  "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Šifrování disku",
-  "@confirmEntryDiskEncryption": {},
   "confirmEntryInstallationDisk": "Instalační disk",
-  "@confirmEntryInstallationDisk": {},
   "confirmEntryProprietarySoftware": "Proprietární software",
-  "@confirmEntryProprietarySoftware": {},
   "confirmSectionGeneralTitle": "Obecné",
-  "@confirmSectionGeneralTitle": {},
   "confirmSectionSecurityAndMoreTitle": "Bezpečnost a další",
-  "@confirmSectionSecurityAndMoreTitle": {},
   "confirmProprietarySoftwareCodecs": "Kodeky",
-  "@confirmProprietarySoftwareCodecs": {},
   "confirmProprietarySoftwareCodecsDrivers": "Kodeky a ovladače",
-  "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "Ovladače",
-  "@confirmProprietarySoftwareDrivers": {},
   "rebootToConfigure": "**{system}** bylo zkopírováno na disk",
-  "@rebootToConfigure": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "restartWarningBody": "Restartujte, aby se dokončila instalace, nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.",
-  "@restartWarningBody": {},
   "rebootToConfigureWarning": "Chcete-li pokračovat v procesu instalace, musíte počítač restartovat.",
-  "@rebootToConfigureWarning": {},
   "refreshHeader": "Pro instalační program je k dispozici aktualizace",
-  "@refreshHeader": {},
   "refreshUpdateNow": "Aktualizovat nyní",
-  "@refreshUpdateNow": {},
   "refreshInfo": "Aktualizujte na nejnovější verzi pro lepší spolehlivost a více funkcí.",
-  "@refreshInfo": {},
   "refreshReady": "Aktualizace je připravena",
-  "@refreshReady": {},
   "refreshCloseLabel": "Zavřít instalační program",
-  "@refreshCloseLabel": {},
   "validate": "Ověřit",
-  "@validate": {},
   "notEnoughDiskSpaceBody": "Vybraný disk nemá pro instalaci {DISTRO} dostatek místa. Ukončete instalační program a uvolněte místo, nebo vyberte jiný disk.",
-  "@notEnoughDiskSpaceBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "allocateDiskSpaceInvalidMountPointFormat": "{format} není podporovaný souborový systém pro {mountpoint}",
-  "@allocateDiskSpaceInvalidMountPointFormat": {
-    "mountpoint": {
-      "type": "String"
-    },
-    "format": {
-      "type": "String"
-    }
-  },
   "autoinstallDirectFileClearButtonLabel": "Vyčistit soubor",
-  "@autoinstallDirectFileClearButtonLabel": {},
   "autoinstallDirectTitle": "Automatická instalace",
-  "@autoinstallDirectTitle": {},
   "autoinstallDirectHeader": "Importovat soubor autoinstall",
-  "@autoinstallDirectHeader": {},
   "autoinstallDirectUrlLabel": "Můžete zadat adresu URL souboru autoinstall:",
-  "@autoinstallDirectUrlLabel": {},
   "autoinstallDirectFileLabel": "Nebo vyberte místní soubor:",
-  "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Vybrat soubor…",
-  "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectErrorInvalidContentTitle": "Neplatný soubor autoinstall",
-  "@autoinstallDirectErrorInvalidContentTitle": {},
   "landscapeDomainNoInternetDescriptionWarning": "K načtení souboru autoinstall z Landscape je potřeba internet",
-  "@landscapeDomainNoInternetDescriptionWarning": {},
   "autoinstallDirectErrorUnkownTitle": "Neznámá chyba",
-  "@autoinstallDirectErrorUnkownTitle": {},
   "landscapeDomainNoInternetTitleWarning": "Chcete-li pokračovat, připojte se k internetu",
-  "@landscapeDomainNoInternetTitleWarning": {},
   "autoinstallDirectErrorInvalidContentBody": "Zkontrolujte soubor nebo poskytněte jiný.",
-  "@autoinstallDirectErrorInvalidContentBody": {},
   "chooseOptionalPassphraseBody": "Přístupové heslo pomůže chránit vaše data, i když je váš hardware kompromitován. Při každém zapnutí počítače budete muset zadat přístupové heslo. Později jej již nebudete moci odstranit",
-  "@chooseOptionalPassphraseBody": {},
   "autoinstallDirectErrorInvalidUrlBody": "Zkontrolujte správnost adresy URL nebo vyberte místní soubor.",
-  "@autoinstallDirectErrorInvalidUrlBody": {},
   "autoinstallLandscapeOption": "Automatizováno podle Landscape",
-  "@autoinstallLandscapeOption": {},
   "autoinstallLandscapeDescription": "Pro uživatele v organizacích, které poskytují soubor autoinstall prostřednictvím Landscape.",
-  "@autoinstallLandscapeDescription": {},
   "next": "Další",
-  "@next": {},
   "landscapeDomainTextField": "Doména Landscape (FQDN)",
-  "@landscapeDomainTextField": {},
   "chooseOptionalPassphraseHeader": "Vytvořit přístupové heslo (volitelné)",
-  "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseInfoHeader": "Uložte si přístupové heslo a klíč pro obnovení na bezpečném místě",
-  "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseInfoBody": "Pokud ztratíte přístupové heslo, ztratíte i všechna data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.",
-  "@chooseOptionalPassphraseInfoBody": {},
   "recoveryKeyHeader": "Získat obnovovací klíč",
-  "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Bez klíče pro obnovení můžete přijít o všechna data",
-  "@recoveryKeyInfoHeader": {},
   "recoveryKeyInfoBody": "Jakmile se poprvé přihlásíte do {distro}, získejte obnovovací klíč a uložte si jej na bezpečném místě.",
-  "@recoveryKeyInfoBody": {
-    "placeholders": {
-      "distro": {
-        "type": "String"
-      }
-    }
-  },
   "recoveryKeyConfirmation": "Rozumím, že pokud nebudu mít klíč pro obnovení, mohu ztratit všechna svá data",
-  "@recoveryKeyConfirmation": {},
   "landscapeMagicAttachInstructions": "Naskenujte QR kód nebo zadejte kód níže na <a href=\"https://{url}\">{url}</a>",
-  "@landscapeMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "landscapePageTitle": "Automatická instalace",
-  "@landscapePageTitle": {},
   "landscapeDomainHeader": "Zadejte doménu Landscape (FQDN)",
-  "@landscapeDomainHeader": {},
   "landscapeDomainInstructions": "Zadejte doménu Landscape vaší organizace, abyste se mohli přihlásit a načíst soubor autoinstall. FQDN můžete získat od vaší IT podpory.",
-  "@landscapeDomainInstructions": {},
   "landscapeDomainInvalidDomainWarning": "Neplatná doména, zkontrolujte nebo kontaktujte IT podporu",
-  "@landscapeDomainInvalidDomainWarning": {},
   "landscapeCodeExpiredWarning": "Kód vypršel, zkuste to znovu",
-  "@landscapeCodeExpiredWarning": {},
   "autoinstallDirectFilePickerTitle": "Vybrat soubor",
-  "@autoinstallDirectFilePickerTitle": {},
   "autoinstallDirectFilePickerFilterLabel": "Soubory YAML",
-  "@autoinstallDirectFilePickerFilterLabel": {},
   "autoinstallDirectImportButtonLabel": "Importovat",
-  "@autoinstallDirectImportButtonLabel": {},
   "autoinstallDirectErrorNetworkTitle": "K souboru autoinstall nelze přistoupit",
-  "@autoinstallDirectErrorNetworkTitle": {},
   "autoinstallDirectErrorNetworkBody": "Zkontrolujte správnost adresy URL, otestujte připojení k internetu nebo to zkuste později.",
-  "@autoinstallDirectErrorNetworkBody": {},
   "autoinstallDirectErrorInvalidUrlTitle": "Neplatná adresa URL",
-  "@autoinstallDirectErrorInvalidUrlTitle": {},
   "autoinstallDirectErrorFileSystemTitle": "Soubor autoinstall není čitelný",
-  "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorFileSystemBody": "Zkontrolujte svá oprávnění nebo poskytněte jiný soubor.",
-  "@autoinstallDirectErrorFileSystemBody": {},
   "autoinstallDirectOption": "Automatizováno podle souboru autoinstall",
-  "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.",
-  "@autoinstallDirectDescription": {},
   "landscapeHeader": "Přihlásit se k Landscape",
-  "@landscapeHeader": {},
   "landscapeLoginFailedWarning": "Přihlášení se nezdařilo, zkuste to znovu",
-  "@landscapeLoginFailedWarning": {},
   "recoveryKeyStorageAdvice": "Uložte si klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.",
-  "@recoveryKeyStorageAdvice": {},
   "installationTypeEraseAndInstall": "Vymazat {os} a nainstalovat {product}",
-  "@installationTypeEraseAndInstall": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      },
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseAndInstallInfo": "Všechny soubory a data ze stávající instalace {os} budou trvale smazány.",
-  "@installationTypeEraseAndInstallInfo": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "rstDisableBios": "Nastavení BIOSu",
-  "@rstDisableBios": {},
   "restartComputer": "Restartovat počítač",
-  "@restartComputer": {},
   "restartComputerTitle": "Restartovat počítač?",
-  "@restartComputerTitle": {},
   "rstDisableWindows": "Windows, pokud používáte dual boot se systémem Windows",
-  "@rstDisableWindows": {},
   "rstDisable": "Váš počítač používá technologii Intel RST (Rapid Storage Technology). RST můžete vypnout buď v:",
-  "@rstDisable": {},
   "bitlockerInfoTitle": "Zjištěn BitLocker",
-  "@bitlockerInfoTitle": {},
   "bitlockerInfoDescription": "Jeden nebo více oddílů je šifrováno pomocí nástroje BitLocker.",
-  "@bitlockerInfoDescription": {},
   "installationTypeLVMEncryptionInfo": "Při každém zapnutí počítače budete muset zadat přístupové heslo. Používá se šifrování LUKS s LVM.",
-  "@installationTypeLVMEncryptionInfo": {},
   "installationTypeNoneInfo": "Standardní souborový systém bez šifrování.",
-  "@installationTypeNoneInfo": {},
   "installationTypeZFSEncryptionInfo": "Nativní šifrování pomocí ZFS. Při každém zapnutí počítače budete muset zadat přístupové heslo.",
-  "@installationTypeZFSEncryptionInfo": {},
   "bitlockerWarningTitle": "Bez obnovovacích klíčů nástroje BitLocker můžete přijít o všechna data",
-  "@bitlockerWarningTitle": {},
   "bitlockerInfoDisable": "Pro instalaci vedle systému Windows vypněte ve Windows nástroj BitLocker.",
-  "@bitlockerInfoDisable": {},
   "bitlockerInfoRecovery": "Po instalaci může systém Windows při spuštění vyžadovat obnovovací klíče.",
-  "@bitlockerInfoRecovery": {},
   "bitlockerInfoInstructions": "Pokyny naleznete v <a href=\"{url}\">průvodci nástrojem BitLocker</a>.",
-  "@bitlockerInfoInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableErased": "Vymazáno",
-  "@confirmTableErased": {},
   "confirmTableUnchanged": "Nezměněno",
-  "@confirmTableUnchanged": {},
   "confirmTableResized": "Změněna velikost z {oldsize} na {newsize}",
-  "@confirmTableResized": {
-    "placeholders": {
-      "oldsize": {
-        "type": "String"
-      },
-      "newsize": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableCreatedFormattedMounted": "Vytvořeno a naformátováno jako {format}, použito pro {mountpoint}",
-  "@confirmTableCreatedFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormattedMounted": "Naformátováno jako {format}, použito pro {mountpoint}",
-  "@confirmTableFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableMounted": "Použito pro {mountpoint}",
-  "@confirmTableMounted": {
-    "placeholders": {
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormatted": "Naformátováno jako {format}",
-  "@confirmTableFormatted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeDomainHintText": "Doména Landscape (FQDN)",
-  "@landscapeDomainHintText": {},
   "landscapeErrorPageTitle": "Automatizovaná instalace není pro váš účet k dispozici",
-  "@landscapeErrorPageTitle": {},
   "landscapeErrorPageBody": "Obraťte se na svou IT podporu nebo zkuste jinou možnost instalace.",
-  "@landscapeErrorPageBody": {},
   "landscapeErrorPageCode": "Kód chyby: {code}",
-  "@landscapeErrorPageCode": {
-    "placeholders": {
-      "code": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainstalováno s nastavením, které poskytuje vaše organizace",
-  "@landscapeConfirmPageSuccessInfoTitle": {},
-  "landscapeConfirmPageSuccessInfoContent": "Níže si můžete prohlédnout soubor s nastaveními pro automatickou instalaci, načtený z Landscape.",
-  "@landscapeConfirmPageSuccessInfoContent": {}
+  "landscapeConfirmPageSuccessInfoContent": "Níže si můžete prohlédnout soubor s nastaveními pro automatickou instalaci, načtený z Landscape."
 }
