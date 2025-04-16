@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Üdvözöljük';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Üdvözli a(z) $distro!';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Új lehetőségek a hardveresen támogatott vagy ZFS titkosításhoz.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Változásnapló megtekintése</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetria';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Segítség a(z) $distro továbbfejlesztéséhez';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Segítsen nekünk a(z) $distro továbbfejlesztésében azzal, hogy megosztja velünk a rendszere adatait. Ez olyan dolgokat tartalmaz, mint a gép modellje, a telepített szoftverek és az időzónához választott hely.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Igen, a rendszer adatainak megosztása a(z) $distro csapatával';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Adatvédelem';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Varázslatos csatolás ezzel a kóddal az <a href=\"https://$url\">$url</a> oldalon';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'A legátfogóbb előfizetés beszerzése a nyílt forráskódú szoftverek biztonságához';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Mindig ingyenes személyes használatra. 30 napos próbaidőszak a vállalkozásoknak. <a href=\"https://$url\">Tudjon meg többet</a>';
   }
 

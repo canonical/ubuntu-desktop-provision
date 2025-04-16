@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_bootstrap_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -525,7 +527,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Einhängepunkte dürfen keine Leerzeichen enthalten';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
     return '$format ist ein nicht unterstütztes Dateisystem für $mountpoint';
   }
 
@@ -1091,7 +1093,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Ich verstehe, dass ich alle meine Daten verlieren kann, wenn ich keinen Wiederherstellungsschlüssel habe';
 
   @override
-  String landscapeMagicAttachInstructions(Object url) {
+  String landscapeMagicAttachInstructions(String url) {
     return 'Scannen Sie den QR-Code oder geben Sie den unten stehenden Code unter <a href=\"https://$url\">$url</a> ein';
   }
 

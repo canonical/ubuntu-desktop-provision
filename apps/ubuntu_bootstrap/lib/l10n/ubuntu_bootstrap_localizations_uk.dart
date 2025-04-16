@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_bootstrap_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -525,7 +527,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Точки монтування не можуть містити пробілів';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
     return '$format не є підтримуваною файловою системою для $mountpoint';
   }
 
@@ -1091,7 +1093,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Я розумію, що можу втратити всі свої дані, якщо у мене немає ключа відновлення';
 
   @override
-  String landscapeMagicAttachInstructions(Object url) {
+  String landscapeMagicAttachInstructions(String url) {
     return 'Відскануйте QR-код або введіть код нижче за посиланням <a href=\"https://$url\">$url</a>';
   }
 

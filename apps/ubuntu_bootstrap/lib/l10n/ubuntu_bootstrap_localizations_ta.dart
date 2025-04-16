@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_bootstrap_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -525,7 +527,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'மவுண்ட் புள்ளிகளில் இடைவெளிகளைக் கொண்டிருக்க முடியாது';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
     return '$format is not a supported filesystem for $mountpoint';
   }
 
@@ -1091,7 +1093,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'என்னிடம் மீட்பு விசை இல்லையென்றால் எனது எல்லா தரவையும் இழக்க நேரிடும் என்பதை நான் புரிந்துகொள்கிறேன்';
 
   @override
-  String landscapeMagicAttachInstructions(Object url) {
+  String landscapeMagicAttachInstructions(String url) {
     return 'QR குறியீட்டை ச்கேன் செய்யுங்கள் அல்லது கீழே உள்ள குறியீட்டை <a href = \"https: // $url\"> $url </a> இல் உள்ளிடவும்';
   }
 

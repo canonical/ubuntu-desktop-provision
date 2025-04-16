@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Ласкаво просимо';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Ласкаво просимо в $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Нові параметри для апаратного або ZFS шифрування.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Переглянути журнал змін</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Телеметрія';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Допомогти покращити $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Допоможіть нам покращити $distro, поділившись з нами даними вашої системи. Сюди входять такі речі, як модель вашого комп\'ютера, встановлене програмне забезпечення та місце, яке ви вибрали для свого часового поясу.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Так, поділитись системними даними з командою $distro';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Конфіденційність даних';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Магічне прикріплення з цим кодом за адресою <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Придбайте найповнішу передплату на захист програмного забезпечення з відкритим кодом';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Завжди безплатно для особистого користування. 30-денна пробна версія для підприємств. <a href=\"https://$url\">Докладніше</a>';
   }
 

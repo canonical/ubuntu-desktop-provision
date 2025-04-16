@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_bootstrap_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -525,7 +527,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => 'Titik kait tidak boleh mengandung spasi';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
     return '$format bukan suatu sistem berkas yang didukung untuk $mountpoint';
   }
 
@@ -1091,7 +1093,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Saya mengerti saya mungkin kehilangan semua data saya jika saya tidak memiliki kunci pemulihan';
 
   @override
-  String landscapeMagicAttachInstructions(Object url) {
+  String landscapeMagicAttachInstructions(String url) {
     return 'Pindai kode QR atau masukkan kode di bawah pada <a href=\"https://$url\">$url</a>';
   }
 
