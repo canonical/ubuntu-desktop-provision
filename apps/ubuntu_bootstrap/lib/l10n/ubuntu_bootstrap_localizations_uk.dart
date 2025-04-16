@@ -1091,6 +1091,9 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Я розумію, що можу втратити всі свої дані, якщо у мене немає ключа відновлення';
 
   @override
+  String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
   String landscapeMagicAttachInstructions(Object url) {
     return 'Відскануйте QR-код або введіть код нижче за посиланням <a href=\"https://$url\">$url</a>';
   }

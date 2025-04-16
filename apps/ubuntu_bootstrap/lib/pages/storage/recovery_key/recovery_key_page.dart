@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
@@ -8,6 +9,9 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
+const fdeLink =
+    'https://discourse.ubuntu.com/t/hardware-backed-encryption-and-recovery-keys-in-ubuntu-desktop/58243';
 
 class RecoveryKeyPage extends ConsumerWidget {
   const RecoveryKeyPage({super.key});
@@ -55,7 +59,24 @@ class RecoveryKeyPage extends ConsumerWidget {
             textBaseline: TextBaseline.alphabetic,
           ),
         ),
-        Text(l10n.recoveryKeyStorageAdvice),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(l10n.recoveryKeyStorageAdvice),
+            Html(
+              data: '<a href="$fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
+              style: {
+                'body': Style(margin: Margins.zero),
+                'a': Style(
+                  color: Theme.of(context).colorScheme.link,
+                  textDecoration: TextDecoration.none,
+                ),
+              },
+              shrinkWrap: true,
+              onLinkTap: (url, __, ___) => launchUrl(url!),
+            ),
+          ],
+        ),
         YaruCheckButton(
           title: Text(
             l10n.recoveryKeyConfirmation,
