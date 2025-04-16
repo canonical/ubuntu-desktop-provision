@@ -1,114 +1,43 @@
 {
   "welcomePageTitle": "Selamat Datang",
-  "@welcomePageTitle": {},
   "welcomePageHeader": "Selamat datang di {distro}",
-  "@welcomePageHeader": {},
   "welcomeWhatsNew": "APA YANG BARU?",
-  "@welcomeWhatsNew": {},
   "welcomeStartTitle": "Awal yang dirampingkan",
-  "@welcomeStartTitle": {},
   "welcomeStartSubtitle": "Mendukung pengalaman penyiapan yang lebih bersih.",
-  "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Tampilan baru App Store",
-  "@welcomeStoreTitle": {},
   "welcomeStoreSubtitle": "Tidak pernah lebih mudah untuk menemukan perangkat lunak favorit Anda.",
-  "@welcomeStoreSubtitle": {},
   "welcomeSecurityTitle": "Keamanan yang ditingkatkan",
-  "@welcomeSecurityTitle": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro kini difungsikan pada mesin ini",
-  "@ubuntuProSucessAttachHeader": {},
   "telemetryCollectError": "Gagal mengumpulkan data telemetri",
-  "@telemetryCollectError": {},
   "privacyPolicyLink": "Privasi Data",
-  "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProMagicAttachInstructions": "Pencantolan ajaib dengan kode ini pada <a href=\"https://{url}\"></a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProHeader": "Cantolkan mesin ini",
-  "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "atau tambahkan suatu token secara manual",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProSubscriptionDescription": "Dapatkan langganan yang paling komprehensif untuk keamanan perangkat lunak sumber terbuka",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProTokenAttachError": "Token tidak valid",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "Token valid",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachErrorVariant": "Token tidak valid, coba lagi",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "Lewati dulu",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Anda selalu dapat mengaktifkan Ubuntu Pro nanti melalui aplikasi Perangkat Lunak & Pembaruan.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "welcomeSecuritySubtitle": "Opsi baru untuk enkripsi ZFS atau yang didukung perangkat keras.",
-  "@welcomeSecuritySubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Lihat changelog</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryPageTitle": "Telemetri",
-  "@telemetryPageTitle": {},
   "telemetryHeader": "Bantu meningkatkan {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "privacyLocationSubtitle": "Mengizinkan aplikasi mengetahui lokasi geografis Anda.\nAnda dapat mengubah ini kapan pun dalam Pengaturan Sistem.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Layanan lokasi",
-  "@privacyLocationEnable": {},
   "telemetryReportTitle": "Melaporkan rincian",
-  "@telemetryReportTitle": {},
   "telemetryDescription": "Bantu kami meningkatkan {distro} dengan membagikan data sistem Anda dengan kami. Ini termasuk hal-hal seperti model mesin Anda, perangkat lunak yang terpasang, dan lokasi yang Anda pilih untuk zona waktu Anda.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Ya, bagikan data sistem dengan tim {distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLegalLabel": "Pemberitahuan legal",
-  "@telemetryLegalLabel": {},
   "privacyPageTitle": "Layanan lokasi",
-  "@privacyPageTitle": {},
   "privacyLocationTitle": "Fungsikan layanan lokasi?",
-  "@privacyLocationTitle": {},
   "telemetryLabelOff": "Tidak, jangan bagikan data sistem",
-  "@telemetryLabelOff": {},
   "telemetryReportLabel": "Tampilkan laporan pertama",
-  "@telemetryReportLabel": {},
   "ubuntuProTokenTextfieldHint": "Token",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProTokenAttachButton": "Cantolkan",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Selalu bebas untuk penggunaan pribadi. Uji coba 30 hari bagi perusahaan. <a href=\"https://{url}\">Pelajari lebih lanjut</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProOnBoardingEnableUbuntuPro": "Fungsikan Ubuntu Pro",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Cantolkan mesin ini ke suatu langganan Ubuntu Pro untuk pembaruan keamanan pada berbagai paket, hingga 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
-  "ubuntuProSucessAttachDescription": "Anda dapat mengelola layanan Pro Anda dalam aplikasi Perangkat Lunak & Pembaruan.",
-  "@ubuntuProSucessAttachDescription": {}
+  "ubuntuProSucessAttachDescription": "Anda dapat mengelola layanan Pro Anda dalam aplikasi Perangkat Lunak & Pembaruan."
 }

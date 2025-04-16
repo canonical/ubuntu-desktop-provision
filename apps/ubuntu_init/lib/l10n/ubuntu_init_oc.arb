@@ -1,114 +1,43 @@
 {
   "welcomePageTitle": "Benvengut",
-  "@welcomePageTitle": {},
   "telemetryDescription": "Ajudatz-nos a melhorar {distro} en partejant amb nosautres las donadas de vòstre sistèma. Aquò inclutz causas coma lo modèl de vòstra maqina, los logicials installats e l’emplaçament que causiguèretz per la zòna orària.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryReportTitle": "Detalhs del rapòrt",
-  "@telemetryReportTitle": {},
   "privacyPolicyLink": "Proteccion de las donadas",
-  "@privacyPolicyLink": {},
   "welcomeStoreSubtitle": "Jamai es pas estat tan simple de trobar vòstre logicial preferit.",
-  "@welcomeStoreSubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Veire lo jornal de modificacions</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryLegalLabel": "Informacions legalas",
-  "@telemetryLegalLabel": {},
   "welcomeSecuritySubtitle": "Opcions novèlas de chiframent material o ZFS.",
-  "@welcomeSecuritySubtitle": {},
   "privacyPageTitle": "Servicis de localizacion",
-  "@privacyPageTitle": {},
   "welcomePageHeader": "La benvenguda dins {distro}",
-  "@welcomePageHeader": {},
   "privacyLocationEnable": "Servicis de localizacion",
-  "@privacyLocationEnable": {},
   "telemetryHeader": "Ajudar a melhorar {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "welcomeStoreTitle": "Un estil novèl per la logitèca",
-  "@welcomeStoreTitle": {},
   "welcomeSecurityTitle": "Seguretat renfortida",
-  "@welcomeSecurityTitle": {},
   "telemetryReportLabel": "Veire lo primièr rapòrt",
-  "@telemetryReportLabel": {},
   "telemetryLabelOn": "Òc, partejar las donadas sistèma amb la còla de {distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "privacyLocationTitle": "Activar los servicis de localizacion ?",
-  "@privacyLocationTitle": {},
   "welcomeStartTitle": "Un començament simplificat",
-  "@welcomeStartTitle": {},
   "telemetryPageTitle": "Telemetria",
-  "@telemetryPageTitle": {},
   "privacyLocationSubtitle": "Permet que las aplicacions ajan accès a vòstre posicion geografica.\nO podètz cambiar quand volètz als Paramètres del sistèma.",
-  "@privacyLocationSubtitle": {},
   "welcomeWhatsNew": "QUÉ DE NÒU ?",
-  "@welcomeWhatsNew": {},
   "telemetryLabelOff": "Non, partejar pas cap de donadas sistèma",
-  "@telemetryLabelOff": {},
   "welcomeStartSubtitle": "Encoratja a una experiéncia de configuracion mai neta.",
-  "@welcomeStartSubtitle": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProHeader": "Ligar aquesta maquina",
-  "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "o apondre un geton manualament",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProTokenAttachButton": "Ligar",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProTokenTextfieldHint": "Geton",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProTokenAttachError": "Get on invalid",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "Get on valid",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProOnBoardingSkipForNow": "Passar pel moment",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Activar Ubuntu Pro",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProTokenAttachErrorVariant": "Get on invalid, tornatz ensajar",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro es ara activat sus aquesta maquina",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "Podètz gerir los servicis Pro dins l'aplicacion Logicial e mesas a jorn.",
-  "@ubuntuProSucessAttachDescription": {},
   "telemetryCollectError": "Fracàs de la collècta de donadas de telemetria",
-  "@telemetryCollectError": {},
   "ubuntuProSubscriptionDescription": "Soscrivètz a l’abonament amb la melhora seguretat dels logicials liures",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Totjorn gratuit per un usatge personal. 30 jorns d’ensag per las entrepresas. <a href=\"https://{url}\">Ne saber mai</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProMagicAttachInstructions": "Ligason magica amb aqueste còdi sus <a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProOnBoardingSkipForNowDescription": "Podètz totjorn activar Ubuntu Pro mai tard dins l’aplicacion Logicials e mesas a jorn.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
-  "ubuntuProOnBoardingEnableUbuntuProDescription": "Ligatz aquesta maquina a un abonament Ubuntu Pro per de mesas a jorn de seguretat sus un grand nombre de paquets, fins a 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {}
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Ligatz aquesta maquina a un abonament Ubuntu Pro per de mesas a jorn de seguretat sus un grand nombre de paquets, fins a 2032."
 }
