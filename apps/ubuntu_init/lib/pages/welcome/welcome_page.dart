@@ -31,7 +31,7 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
           SvgPicture.asset('assets/ubuntu.svg', package: 'ubuntu_init'),
           const SizedBox(height: kWizardSpacing),
           Text(
-            l10n.welcomePageHeader(model.productInfo),
+            l10n.welcomePageHeader(model.productInfo.toString()),
             style: theme.textTheme.titleLarge,
             textAlign: TextAlign.center,
           ),
