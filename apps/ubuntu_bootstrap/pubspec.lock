@@ -66,10 +66,10 @@ packages:
     dependency: transitive
     description:
       name: assorted_layout_widgets
-      sha256: "5b7f7c76a1a4c7cf95edfb854c3ed09ce9cb7f25a372f2d9a8d4c1569d42ecfb"
+      sha256: "86eacbd25f7dd14a8182003935b07d94205ae4b0e6bedee03bde1404746bb7a9"
       url: "https://pub.dev"
     source: hosted
-    version: "9.0.2"
+    version: "10.7.0"
   async:
     dependency: "direct main"
     description:
@@ -747,10 +747,10 @@ packages:
     dependency: transitive
     description:
       name: matrix4_transform
-      sha256: "42c42610deecc382be2653f4a21358537401bd5b027c168a174c7c6a64959908"
+      sha256: "1346e53517e3081d3e8362377be97e285e2bd348855c177eae2a18aa965cafa0"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.1"
+    version: "4.0.1"
   meta:
     dependency: "direct main"
     description:
@@ -1339,10 +1339,10 @@ packages:
     dependency: "direct dev"
     description:
       name: ubuntu_test
-      sha256: "617ab8343bf57d9a7a9d9ceae7599b8ae67100afab16f539fdb870aed4f21e23"
+      sha256: "14895de10fefe892ca247dd81ce0e8f818205e841eea0581d1611ca350718770"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.2"
+    version: "0.2.3"
   ubuntu_utils:
     dependency: "direct main"
     description:
@@ -1354,10 +1354,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_widgets
-      sha256: "9095bedac3928f4313ba7f2b37dd4658f684efa51e88f60fc83590e5fb3a88ef"
+      sha256: "55a569992f39fd6e8a3116becf9cda988e4d551f85b86f4862852cebdf44b20f"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.1"
+    version: "0.7.2"
   ubuntu_wizard:
     dependency: "direct main"
     description:
@@ -1585,18 +1585,18 @@ packages:
     dependency: "direct main"
     description:
       name: yaru
-      sha256: afc659f78a0bef5e06ebbbd516979afceca7526b7703daa444bf419a54b2dc85
+      sha256: f149399d81ecd3d20bfcc79afd5ddd9bcd7e4c901d5e602a8577fe59c71c8617
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.2"
+    version: "7.0.0"
   yaru_test:
     dependency: "direct dev"
     description:
       name: yaru_test
-      sha256: d45f0099db88e997e69218d232fd27d9c024a4fe4d918371b3012b3b95b8e419
+      sha256: "24d704350c2c0fb03a68fde697e9671a0497ba4b43f7c56659455b950bb6b2e7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0"
+    version: "0.3.1"
   yaru_window:
     dependency: transitive
     description:

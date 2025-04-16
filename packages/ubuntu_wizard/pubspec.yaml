@@ -14,7 +14,7 @@ dependencies:
   ubuntu_localizations: ^0.5.0
   ubuntu_widgets: ^0.7.1
   wizard_router: ^1.2.0
-  yaru: ^5.3.0
+  yaru: ^7.0.0
 
 
 dev_dependencies:
@@ -22,4 +22,4 @@ dev_dependencies:
     sdk: flutter
   ubuntu_lints: ^0.4.0
   ubuntu_test: ^0.2.2
-  yaru_test: ^0.2.0
+  yaru_test: ^0.3.0
