@@ -58,7 +58,7 @@ class InfoBox extends StatelessWidget {
       children: [
         Expanded(
           child: YaruBorderContainer(
-            color: baseColor.withOpacity(0.1),
+            color: baseColor.withValues(alpha: 0.1),
             border: Border.all(color: baseColor),
             borderRadius: kWizardBorderRadius,
             child: ListTile(

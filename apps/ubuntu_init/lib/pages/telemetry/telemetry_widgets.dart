@@ -30,7 +30,7 @@ class TelemetryButton extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 500),
       decoration: BoxDecoration(
         color: value == groupValue
-            ? scheme.primary.withOpacity(0.1)
+            ? scheme.primary.withValues(alpha: 0.1)
             : scheme.primaryContainer,
         border: Border.all(
           color: value == groupValue ? scheme.primary : scheme.outline,
