@@ -395,11 +395,13 @@
   "allocateDiskSpaceInvalidMountPointSpace": "Mount points cannot contain spaces",
   "allocateDiskSpaceInvalidMountPointFormat": "{format} is not a supported filesystem for {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
-    "mountpoint": {
-      "type": "String"
-    },
-    "format": {
-      "type": "String"
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
     }
   },
   "diskHeadersDevice": "Device",
@@ -931,9 +933,10 @@
   "recoveryKeyLinkLabel": "Learn more",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
-    "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "landscapePageTitle": "Automated installation",
