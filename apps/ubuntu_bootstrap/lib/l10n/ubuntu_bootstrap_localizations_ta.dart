@@ -1091,6 +1091,9 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'என்னிடம் மீட்பு விசை இல்லையென்றால் எனது எல்லா தரவையும் இழக்க நேரிடும் என்பதை நான் புரிந்துகொள்கிறேன்';
 
   @override
+  String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
   String landscapeMagicAttachInstructions(Object url) {
     return 'QR குறியீட்டை ச்கேன் செய்யுங்கள் அல்லது கீழே உள்ள குறியீட்டை <a href = \"https: // $url\"> $url </a> இல் உள்ளிடவும்';
   }
