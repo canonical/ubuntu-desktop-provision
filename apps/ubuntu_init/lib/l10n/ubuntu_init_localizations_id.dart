@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Selamat Datang';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Selamat datang di $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Opsi baru untuk enkripsi ZFS atau yang didukung perangkat keras.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Lihat changelog</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetri';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Bantu meningkatkan $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Bantu kami meningkatkan $distro dengan membagikan data sistem Anda dengan kami. Ini termasuk hal-hal seperti model mesin Anda, perangkat lunak yang terpasang, dan lokasi yang Anda pilih untuk zona waktu Anda.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Ya, bagikan data sistem dengan tim $distro';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Privasi Data';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Pencantolan ajaib dengan kode ini pada <a href=\"https://$url\"></a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Dapatkan langganan yang paling komprehensif untuk keamanan perangkat lunak sumber terbuka';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Selalu bebas untuk penggunaan pribadi. Uji coba 30 hari bagi perusahaan. <a href=\"https://$url\">Pelajari lebih lanjut</a>';
   }
 

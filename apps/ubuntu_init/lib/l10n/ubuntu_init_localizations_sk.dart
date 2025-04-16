@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Vitajte';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Vitajte v $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Nové možnosti pre hardvérové šifrovanie alebo ZFS.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Zobraziť zoznam zmien</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetria';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Pomôžte zlepšiť $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Pomôžte nám zlepšiť $distro zdieľaním svojich systémových údajov s nami. To zahŕňa veci, ako je model vášho zariadenia, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Áno, zdieľať systémové údaje s $distro tímom';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Ochrana údajov';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Pripojiť sa s týmto kódom na <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Získajte najkomplexnejšie predplatné pre bezpečnosť softvéru s otvoreným zdrojovým kódom';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Vždy zadarmo na osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://$url\">Viac informácií</a>';
   }
 

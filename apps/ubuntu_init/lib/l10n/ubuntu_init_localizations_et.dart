@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Tere tulemast';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Tere tulemast, see on $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Uued raudvara- või ZFSi-põhise krüptimise valikud.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Vaata muudatuste logi</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemeetria';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Aita meid $distro parandamisel';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Jagades meiega selle süsteemi andmeid, aita meid $distro parandamisel . Andmete hulgas on arvuti mudel, paigaldatud tarkvara ja asukoht, mille määrasid ajavööndi valimiseks.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Jah, jaga süsteemi andmeid $distro arendustiimiga';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Andmekaitse';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Liitu imeväel selle koodi abil aadressil <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Võta kasutusele kõige mitmekülgsem avatud lähtekoodiga tarkvara turvalahendus';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Alati tasuta erakasutuseks. 30-päevane prooviperiood ärikasutuseks. <a href=\"https://$url\">Vaata lisateavet</a>';
   }
 

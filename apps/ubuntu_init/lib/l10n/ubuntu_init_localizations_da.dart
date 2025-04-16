@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Velkommen';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Velkommen til $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Nye indstillinger for hardwareunderstøttet eller ZFS-kryptering.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Vis ændringslog</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetri';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Hjælp med at forbedre $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Hjælp os med at forbedre $distro ved at dele dine systemdata med os. Dette inkluderer bl.a. din maskinmodel, installeret software samt hvilken lokalitet, du har som tidszone.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Ja, del systemdata med holdet bag $distro';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Dataprivatliv';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magisk tilslutning med denne kode på <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Få det mest omfattende abonnement på open source-softwaresikkerhed';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Altid gratis til personligt brug. 30-dages prøveabonnement til firmaer. <a href=\"https://$url\">Mere info</a>';
   }
 

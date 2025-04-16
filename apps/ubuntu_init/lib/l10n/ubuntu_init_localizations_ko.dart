@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get welcomePageTitle => '환영합니다';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return '$distro에 오신 것을 환영합니다';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => '하드웨어 / ZFS 암호화에 대한 새로운 옵션을 제공합니다.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">변경 기록 확인</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get telemetryPageTitle => '원격 모니터링';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return '$distro 개선에 기여하기';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return '$distro를 개선하는 데 도움이 되도록 귀하의 시스템 데이터를 저희와 공유해 주세요. 여기에는 귀하의 장치 모델, 설치된 소프트웨어, 시간대와 같은 정보가 포함됩니다.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return '네, $distro 팀에 시스템 데이터를 제공합니다';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get privacyPolicyLink => '데이터 프라이버시';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return '이 코드로 <a href=\"https://$url\">$url</a>에서 간편하게 등록 가능';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => '오픈소스 소프트웨어 보안을 위한 가장 믿음직한 구독을 신청하세요';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return '개인 사용자에게 항상 무료. 기업 고객에게 30일 무료 체험 제공. <a href=\"https://$url\">더 알아보기</a>';
   }
 

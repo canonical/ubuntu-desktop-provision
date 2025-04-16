@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'მოგესალმებით';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'მოგესალმებათ $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'ახალი პარამეტრები აპარატურული ან ZFS დაშიფვრისთვის.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">ცვლილებების ჟურნალის ნახვა</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'ტელემეტრია';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'დაგვეხმარეთ $distro-ის გაუმჯობესებაში';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'დაგვეხმარეთ, $distro უკეთესი გავხადოთ, თქვენი სისტემის მონაცემების გაზიარებით. ეს შეიცავს ისეთ მონაცემებს, როგორიცაა თქვენი მანქანის მოდელი, დაყენებული პროგრამები და მდებარეობა, რომელიც დროის სარტყლისთვის აირჩიეთ.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'დიახ, გავაზიარებ სისტემის მონაცემებს $distro-ის გუნდთან';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'მონაცემების კონფიდენციალობა';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'მიაბით ჯადოსნურად ამ კოდით მისამართზე <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'მიიღეთ შესაბამისი გამოწერა ღია კოდის პროგრამების უსაფრთხოებისთვის';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'ყოველთვის უფასო პირადი მოხმარებისთვის. 30-დღიანი გამოსაცდელი პერიოდი საწარმოებისთვის. <a href=\"https://$url\">გაიგეთ მეტი</a>';
   }
 
