@@ -2,7 +2,13 @@
   "welcomePageTitle": "Welcome",
   "@welcomePageTitle": {},
   "welcomePageHeader": "Welcome to {distro}",
-  "@welcomePageHeader": {},
+  "@welcomePageHeader": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
   "welcomeWhatsNew": "WHAT'S NEW?",
   "@welcomeWhatsNew": {},
   "welcomeStartTitle": "A streamlined start",
@@ -19,32 +25,36 @@
   "@welcomeSecuritySubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">View changelog</a>",
   "@welcomeChangelogLabel": {
-    "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "Telemetry",
   "@telemetryPageTitle": {},
   "telemetryHeader": "Help improve {distro}",
   "@telemetryHeader": {
-    "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryDescription": "Help us improve {distro} by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.",
   "@telemetryDescription": {
-    "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "Yes, share system data with the {distro} team",
   "@telemetryLabelOn": {
-    "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "No, don't share system data",
@@ -68,9 +78,10 @@
   "@privacyPolicyLink": {},
   "ubuntuProMagicAttachInstructions": "Magic attach with this code at <a href=\"https://{url}\">{url}</a>",
   "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProPageTitle": "Ubuntu Pro",
@@ -85,9 +96,10 @@
   "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProTokenAttachButton": "Attach",
