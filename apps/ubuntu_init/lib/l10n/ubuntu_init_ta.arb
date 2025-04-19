@@ -1,5 +1,5 @@
 {
-  "welcomePageHeader": "Welcome to {distro}",
+  "welcomePageHeader": "{distro} க்கு வருக",
   "@welcomePageHeader": {},
   "welcomeWhatsNew": "புதியது என்ன?",
   "@welcomeWhatsNew": {},
@@ -34,7 +34,7 @@
   },
   "telemetryReportLabel": "முதல் அறிக்கையைக் காட்டு",
   "@telemetryReportLabel": {},
-  "telemetryReportTitle": "விவரங்கள் விவரங்கள்",
+  "telemetryReportTitle": "அறிக்கையிடல் விவரங்கள்",
   "@telemetryReportTitle": {},
   "telemetryLegalLabel": "சட்ட அறிவிப்பு",
   "@telemetryLegalLabel": {},
