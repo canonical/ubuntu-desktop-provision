@@ -4,5 +4,11 @@
   "keyboardTestHint": "Πληκτρολογήστε εδώ για να δοκιμάσετε το πληκτρολόγιό σας",
   "keyboardDetectTitle": "Εντοπισμός διάταξης πληκτρολογίου",
   "keyboardPressKeyLabel": "Παρακαλώ πιέστε ένα από τα ακόλουθα πλήκτρα:",
-  "keyboardKeyPresentLabel": "Υπάρχει στο πληκτρολόγιό σας το ακόλουθο πλήκτρο;"
+  "@keyboardPressKeyLabel": {},
+  "keyboardKeyPresentLabel": "Υπάρχει στο πληκτρολόγιό σας το ακόλουθο πλήκτρο;",
+  "@keyboardKeyPresentLabel": {},
+  "restart": "Επανεκκίνηση",
+  "@restart": {},
+  "close": "Κλείσιμο",
+  "@close": {}
 }
