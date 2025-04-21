@@ -10,5 +10,141 @@
   "restart": "Επανεκκίνηση",
   "@restart": {},
   "close": "Κλείσιμο",
-  "@close": {}
+  "@close": {},
+  "timezoneTimezoneLabel": "Ζώνη ώρας",
+  "@timezoneTimezoneLabel": {},
+  "themeLight": "Φωτεινό",
+  "@themeLight": {},
+  "localeHeader": "Διαλέξτε την γλώσσα σας:",
+  "@localeHeader": {},
+  "identityUsernameInUse": "Το όνομα χρήστη υπάρχει ήδη.",
+  "@identityUsernameInUse": {},
+  "identityUsernameInvalidChars": "Το όνομα περιέχει λανθασμένους χαρακτήρες.",
+  "@identityUsernameInvalidChars": {},
+  "identityConfirmPasswordLabel": "Επιβεβαίωση κωδικού",
+  "@identityConfirmPasswordLabel": {},
+  "identityPasswordMismatch": "Αυτοί οι κωδικοί δεν ταιριάζουν",
+  "@identityPasswordMismatch": {},
+  "networkPageHeader": "Σύνδεση στο Διαδίκτυο",
+  "@networkPageHeader": {},
+  "networkWifiOff": "Ασύρματη δικτύωση απενεργοποιημένη",
+  "@networkWifiOff": {},
+  "eulaPageTitle": "Συμφωνητικό",
+  "@eulaPageTitle": {},
+  "accessibilityPageTitle": "Προσβασιμότητα",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Προσβασιμότητα στην {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityZoomLabel": "Μεγέθυνση",
+  "@accessibilityZoomLabel": {},
+  "accessibilityHighContrastLabel": "Μεγάλη αντίθεση",
+  "@accessibilityHighContrastLabel": {},
+  "accessibilityLargeTextLabel": "Μεγάλο κείμενο",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilityVisualAlertsLabel": "Εικονικές ειδοποιήσεις",
+  "@accessibilityVisualAlertsLabel": {},
+  "accessibilitySlowKeysLabel": "Αργά πλήκτρα",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityMouseKeysLabel": "Πλήκτρα ποντικιού",
+  "@accessibilityMouseKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Μεγέθυνση Επιφάνεια Εργασίας",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageTitle": "Κάτι πήγε στραβά",
+  "@errorPageTitle": {},
+  "themeDark": "Σκοτεινό",
+  "@themeDark": {},
+  "networkHiddenWifiNameLabel": "Όνομα δικτύου",
+  "@networkHiddenWifiNameLabel": {},
+  "identityInvalidHostname": "Το όνομα υπολογιστή είναι άκυρο",
+  "@identityInvalidHostname": {},
+  "identityUsernameLabel": "Το όνομα χρήστη",
+  "@identityUsernameLabel": {},
+  "identityRealNameTooLong": "Αυτό το όνομα είναι πολύ μακρύ.",
+  "@identityRealNameTooLong": {},
+  "timezonePageTitle": "Επιλέξτε την ζώνη ώρας",
+  "@timezonePageTitle": {},
+  "themePageTitle": "Επιλέξτε το θέμα σας",
+  "@themePageTitle": {},
+  "activeDirectoryDomainInvalidChars": "Λανθασμένοι χαρακτήρες",
+  "@activeDirectoryDomainInvalidChars": {},
+  "accessibilityPageBody": "Τροποποιήστε {DISTRO} στις ανάγκες σας πριν το σετάρισμα. Μπορείτε πάντα να τις αλλάξετε στις Ρυθμίσεις Συστήματος.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkWiredOption": "Χρησιμοποιήστε Ethernet",
+  "@networkWiredOption": {},
+  "timezoneLocationLabel": "Τοποθεσία",
+  "@timezoneLocationLabel": {},
+  "themePageHeader": "Μπορείτε πάντα να το αλλάξετε στις ρυθμίσεις εμφάνισης.",
+  "@themePageHeader": {},
+  "identityUsernameRequired": "Το όνομα χρηστή είναι απαραίτητο",
+  "@identityUsernameRequired": {},
+  "identityPasswordLabel": "Κωδικός",
+  "@identityPasswordLabel": {},
+  "localePageTitle": "Καλώς ήρθατε στο {DISTRO}",
+  "@localePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "identityRealNameRequired": "Το όνομα σας είναι απαραίτητο",
+  "@identityRealNameRequired": {},
+  "identityPageTitle": "Δημιουργήστε τον λογαριασμό σας",
+  "@identityPageTitle": {},
+  "identityHostnameTooLong": "Αυτό το όνομα υπολογιστή είναι πολύ μακρύ.",
+  "@identityHostnameTooLong": {},
+  "identityAutoLogin": "Συνδεθείτε αυτόματα",
+  "@identityAutoLogin": {},
+  "identityRealNameLabel": "Το όνομα σας",
+  "@identityRealNameLabel": {},
+  "identityHostnameLabel": "Το όνομα του υπολογιστή σας",
+  "@identityHostnameLabel": {},
+  "activeDirectoryPasswordLabel": "Κωδικός",
+  "@activeDirectoryPasswordLabel": {},
+  "identityInvalidUsername": "Το όνομα χρήστη είναι άκυρο",
+  "@identityInvalidUsername": {},
+  "identityPasswordHide": "Απόκρυψη",
+  "@identityPasswordHide": {},
+  "identityUsernameTooLong": "Αυτό το όνομα είναι πολύ μακρύ.",
+  "@identityUsernameTooLong": {},
+  "identityPasswordRequired": "Ο κωδικός είναι απαραίτητος",
+  "@identityPasswordRequired": {},
+  "networkWiredNone": "Δεν υπάρχει σύνδεση Ethernet",
+  "@networkWiredNone": {},
+  "activeDirectoryInfo": "{DISTRO} έχει σχεδιαστεί να ενσωματώνει χωρίς πρόβλημα με Ενεργό Ευρετήριο για ευκολότερη διαχείριση.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryDomainTooLong": "Πολύ μεγάλο",
+  "@activeDirectoryDomainTooLong": {},
+  "networkHiddenWifiOption": "Συνδεθείτε σε ένα κρυφό δίκτυο Wi-Fi",
+  "@networkHiddenWifiOption": {},
+  "activeDirectoryAdminInvalidChars": "Λανθασμένοι χαρακτήρες",
+  "@activeDirectoryAdminInvalidChars": {},
+  "networkPageTitle": "Σύνδεση Διαδικτύου",
+  "@networkPageTitle": {},
+  "networkWiredOff": "Η σύνδεση Ethernet είναι απενεργοποιημένη",
+  "@networkWiredOff": {},
+  "networkWifiOption": "Συνδεθείτε σε ένα δίκτυο Wi-Fi",
+  "@networkWifiOption": {},
+  "networkWifiEnable": "Ενεργοποίηση Wi-Fi",
+  "@networkWifiEnable": {},
+  "eulaAcceptTerms": "Έχω διαβάσει και έχω αποδεχτεί τους όρους",
+  "@eulaAcceptTerms": {}
 }
