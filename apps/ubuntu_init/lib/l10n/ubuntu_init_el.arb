@@ -1,1 +1,54 @@
-{}
+{
+  "welcomePageTitle": "Καλώς Ήρθατε",
+  "@welcomePageTitle": {},
+  "welcomeWhatsNew": "Τι νέο υπάρχει?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartSubtitle": "Υποστηρίζοντας μια καθαρότερη εμπειρία χρήστη.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreSubtitle": "Δεν ήταν πότε πιο εύκολο να βρείτε το αγαπημένο σας λογισμικό.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Προχωρημένη Ασφάλεια",
+  "@welcomeSecurityTitle": {},
+  "telemetryLabelOff": "Όχι,δεν μοιράζεστε δεδομένα συστήματος",
+  "@telemetryLabelOff": {},
+  "telemetryLegalLabel": "Νομική λεπτομέρεια",
+  "@telemetryLegalLabel": {},
+  "privacyPageTitle": "Υπηρεσίες τοποθεσίας",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Ενεργοποίηση υπηρεσιών τοποθεσίας?",
+  "@privacyLocationTitle": {},
+  "privacyLocationEnable": "Υπηρεσία τοποθεσίας",
+  "@privacyLocationEnable": {},
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "ubuntuProOnBoardingSkipForNow": "Παράλειψη για τώρα",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ενεργοποίηση Ubuntu-Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.",
+  "@ubuntuProSucessAttachDescription": {},
+  "telemetryReportLabel": "Δείξε πρώτη αναφορά",
+  "@telemetryReportLabel": {},
+  "telemetryLabelOn": "Ναι,μοιραστείτε δεδομένα συστήματος με την ομάδα {distro}",
+  "@telemetryLabelOn": {
+    "type": "text",
+    "placeholders": {
+      "distro": {}
+    }
+  },
+  "welcomeStoreTitle": "Νέα εμφάνιση Κέντρου Λογισμικού",
+  "@welcomeStoreTitle": {},
+  "welcomePageHeader": "Καλώς Ήρθατε στο {distro}",
+  "@welcomePageHeader": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Πάντα δωρεάν για προσωπική χρήση.30 ημέρες για επιχειρήσεις.<a href=\"https://{url}\">Μάθετε περισσότερα</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "type": "text",
+    "placeholders": {
+      "url": {}
+    }
+  }
+}
