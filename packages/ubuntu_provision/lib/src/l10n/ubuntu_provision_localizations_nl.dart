@@ -67,7 +67,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Er ging iets fout';
 
   @override
-  String get errorPageUnexpected => 'Het spijt ons, maar we weten niet wat de fout is. U kan proberen de computer te herstarten en opnieuw te beginnen met de installatie. U kan ook <a>het probleem melden</a>.';
+  String get errorPageUnexpected => 'Het spijt ons, maar we weten niet wat de fout is. U kunt proberen de computer te herstarten en opnieuw te beginnen met de installatie. U kan ook <a>het probleem melden</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -99,7 +99,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Toetsenbordindeling';
 
   @override
-  String get keyboardHeader => 'Kies de indeling van het toetsenbord';
+  String get keyboardHeader => 'Kies de indeling van uw toetsenbord';
 
   @override
   String get keyboardTestHint => 'Type hieronder om het toetsenbord te testen';
@@ -140,7 +140,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Kies uw taal:';
 
   @override
-  String get identityPageTitle => 'Maak een account';
+  String get identityPageTitle => 'Maak uw account aan';
 
   @override
   String get identityAutoLogin => 'Automatisch inloggen';
