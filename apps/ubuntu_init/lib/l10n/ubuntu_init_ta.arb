@@ -1,5 +1,6 @@
 {
-  "welcomePageHeader": "Welcome to {distro}",
+  "welcomePageHeader": "{distro} க்கு வருக",
+  "@welcomePageHeader": {},
   "welcomeWhatsNew": "புதியது என்ன?",
   "welcomeChangelogLabel": "<a href = \"{url}\"> சேஞ்ச்லாக் காண்க </a>",
   "welcomeStoreTitle": "புதிய தோற்ற ஆப் கடை",
@@ -9,7 +10,9 @@
   "telemetryHeader": "{distro} ஐ மேம்படுத்த உதவுங்கள்",
   "telemetryDescription": "உங்கள் கணினி தரவை எங்களுடன் பகிர்வதன் மூலம் {distro} ஐ மேம்படுத்த எங்களுக்கு உதவுங்கள். உங்கள் இயந்திர மாதிரி, நிறுவப்பட்ட மென்பொருள் மற்றும் உங்கள் நேர மண்டலத்திற்காக நீங்கள் தேர்ந்தெடுத்த இடம் போன்ற விசயங்கள் இதில் அடங்கும்.",
   "telemetryReportLabel": "முதல் அறிக்கையைக் காட்டு",
-  "telemetryReportTitle": "விவரங்கள் விவரங்கள்",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "அறிக்கையிடல் விவரங்கள்",
+  "@telemetryReportTitle": {},
   "telemetryLegalLabel": "சட்ட அறிவிப்பு",
   "telemetryCollectError": "டெலிமெட்ரி தரவை சேகரிப்பதில் தோல்வி",
   "privacyLocationTitle": "இருப்பிட சேவைகளை இயக்கவா?",
