@@ -1,1 +1,23 @@
-{}
+{
+  "welcomePageTitle": "Καλώς Ήρθατε",
+  "welcomeWhatsNew": "Τι νέο υπάρχει?",
+  "welcomeStartSubtitle": "Υποστηρίζοντας μια καθαρότερη εμπειρία χρήστη.",
+  "welcomeStoreSubtitle": "Δεν ήταν πότε πιο εύκολο να βρείτε το αγαπημένο σας λογισμικό.",
+  "welcomeSecurityTitle": "Προχωρημένη Ασφάλεια",
+  "telemetryLabelOff": "Όχι,δεν μοιράζεστε δεδομένα συστήματος",
+  "telemetryLegalLabel": "Νομική λεπτομέρεια",
+  "privacyPageTitle": "Υπηρεσίες τοποθεσίας",
+  "privacyLocationTitle": "Ενεργοποίηση υπηρεσιών τοποθεσίας?",
+  "privacyLocationEnable": "Υπηρεσία τοποθεσίας",
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "ubuntuProOnBoardingSkipForNow": "Παράλειψη για τώρα",
+  "ubuntuProOnBoardingSkipForNowDescription": "Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.",
+  "ubuntuProOnBoardingEnableUbuntuPro": "Ενεργοποίηση Ubuntu-Pro",
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα",
+  "ubuntuProSucessAttachDescription": "Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.",
+  "telemetryReportLabel": "Δείξε πρώτη αναφορά",
+  "telemetryLabelOn": "Ναι,μοιραστείτε δεδομένα συστήματος με την ομάδα {distro}",
+  "welcomeStoreTitle": "Νέα εμφάνιση Κέντρου Λογισμικού",
+  "welcomePageHeader": "Καλώς Ήρθατε στο {distro}",
+  "ubuntuProSubscriptionFreeForPersonalUse": "Πάντα δωρεάν για προσωπική χρήση.30 ημέρες για επιχειρήσεις.<a href=\"https://{url}\">Μάθετε περισσότερα</a>"
+}

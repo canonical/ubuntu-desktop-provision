@@ -9,16 +9,16 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Προσβασιμότητα';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Προσβασιμότητα στην $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Τροποποιήστε $DISTRO στις ανάγκες σας πριν το σετάρισμα. Μπορείτε πάντα να τις αλλάξετε στις Ρυθμίσεις Συστήματος.';
   }
 
   @override
@@ -34,13 +34,13 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get accessibilityPointingLabel => 'Pointing and clicking';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Μεγέθυνση';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Μεγάλη αντίθεση';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Μεγάλο κείμενο';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Reduce animation';
@@ -49,22 +49,22 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get accessibilityScreenReaderLabel => 'Screen reader';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Εικονικές ειδοποιήσεις';
 
   @override
   String get accessibilityStickKeysLabel => 'Sticky keys';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Αργά πλήκτρα';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Πλήκτρα ποντικιού';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Μεγέθυνση Επιφάνεια Εργασίας';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Κάτι πήγε στραβά';
 
   @override
   String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
@@ -81,19 +81,19 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Hide log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Επανεκκίνηση';
 
   @override
-  String get close => 'Close';
+  String get close => 'Κλείσιμο';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'Επιλέξτε την ζώνη ώρας';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'Τοποθεσία';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'Ζώνη ώρας';
 
   @override
   String get keyboardTitle => 'Διάταξη πληκτρολογίου';
@@ -120,45 +120,45 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get keyboardKeyPresentLabel => 'Υπάρχει στο πληκτρολόγιό σας το ακόλουθο πλήκτρο;';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'Επιλέξτε το θέμα σας';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader => 'Μπορείτε πάντα να το αλλάξετε στις ρυθμίσεις εμφάνισης.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'Σκοτεινό';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'Φωτεινό';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Καλώς ήρθατε στο $DISTRO';
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'Διαλέξτε την γλώσσα σας:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'Δημιουργήστε τον λογαριασμό σας';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'Συνδεθείτε αυτόματα';
 
   @override
   String get identityRequirePassword => 'Require my password to log in';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'Το όνομα σας';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'Το όνομα σας είναι απαραίτητο';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'Αυτό το όνομα είναι πολύ μακρύ.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'Το όνομα του υπολογιστή σας';
 
   @override
   String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
@@ -167,49 +167,49 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get identityHostnameRequired => 'A computer name is required';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'Αυτό το όνομα υπολογιστή είναι πολύ μακρύ.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'Το όνομα υπολογιστή είναι άκυρο';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'Το όνομα χρήστη';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'Το όνομα χρηστή είναι απαραίτητο';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'Το όνομα χρήστη είναι άκυρο';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'Το όνομα χρήστη υπάρχει ήδη.';
 
   @override
   String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'Αυτό το όνομα είναι πολύ μακρύ.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'Το όνομα περιέχει λανθασμένους χαρακτήρες.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'Κωδικός';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'Ο κωδικός είναι απαραίτητος';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'Επιβεβαίωση κωδικού';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'Αυτοί οι κωδικοί δεν ταιριάζουν';
 
   @override
   String get identityPasswordShow => 'Show';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Απόκρυψη';
 
   @override
   String get identityActiveDirectoryOption => 'Use Active Directory';
@@ -225,7 +225,7 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO έχει σχεδιαστεί να ενσωματώνει χωρίς πρόβλημα με Ενεργό Ευρετήριο για ευκολότερη διαχείριση.';
   }
 
   @override
@@ -238,10 +238,10 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEmpty => 'Required';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Πολύ μεγάλο';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Λανθασμένοι χαρακτήρες';
 
   @override
   String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
@@ -268,10 +268,10 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get activeDirectoryAdminEmpty => 'Required';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Λανθασμένοι χαρακτήρες';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Κωδικός';
 
   @override
   String get activeDirectoryPasswordEmpty => 'Required';
@@ -283,22 +283,22 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'Σύνδεση Διαδικτύου';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'Σύνδεση στο Διαδίκτυο';
 
   @override
   String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'Χρησιμοποιήστε Ethernet';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'Δεν υπάρχει σύνδεση Ethernet';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'Η σύνδεση Ethernet είναι απενεργοποιημένη';
 
   @override
   String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
@@ -307,10 +307,10 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get networkWiredEnable => 'Enable wired';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'Συνδεθείτε σε ένα δίκτυο Wi-Fi';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'Ασύρματη δικτύωση απενεργοποιημένη';
 
   @override
   String get networkWifiNone => 'No Wi-Fi devices detected';
@@ -319,13 +319,13 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'Ενεργοποίηση Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'Συνδεθείτε σε ένα κρυφό δίκτυο Wi-Fi';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'Όνομα δικτύου';
 
   @override
   String get networkHiddenWifiNameRequired => 'A network name is required';
@@ -334,7 +334,7 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Do not connect to the internet';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Συμφωνητικό';
 
   @override
   String get eulaReviewTerms => 'Review the license terms';
@@ -343,5 +343,5 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Έχω διαβάσει και έχω αποδεχτεί τους όρους';
 }

@@ -29,7 +29,7 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Nieuw uiterlijk voor de App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'Het is nog nooit zo eenvoudig geweest om je favoriete software te vinden.';
+  String get welcomeStoreSubtitle => 'Het was nog nooit zo eenvoudig om uw favoriete software te vinden.';
 
   @override
   String get welcomeSecurityTitle => 'Verbeterde beveiliging';
@@ -52,7 +52,7 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Help ons $distro te verbeteren door jouw systeemgegevens met ons te delen. Dit omvat zaken als je computermodel, geïnstalleerde software en de locatie die je voor jouw tijdzone heeft gekozen.';
+    return 'Help ons $distro te verbeteren door uw systeemgegevens met ons te delen. Dit omvat zaken als je computermodel, geïnstalleerde software en de locatie die u voor uw tijdzone heeft gekozen.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Locatie-diensten inschakelen?';
 
   @override
-  String get privacyLocationSubtitle => 'Laat applicaties jouw geografische locatie weten.\nJe kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.';
+  String get privacyLocationSubtitle => 'Laat applicaties uw geografische locatie weten.\nU kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.';
 
   @override
   String get privacyLocationEnable => 'Locatie-diensten';
@@ -143,5 +143,5 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is nu ingeschakeld op deze machine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Je kunt je Pro-diensten beheren in de applicatie Software & Updates.';
+  String get ubuntuProSucessAttachDescription => 'U kunt uw Pro-diensten beheren in de applicatie Software & Updates.';
 }
