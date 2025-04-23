@@ -9,95 +9,95 @@ class FactoryResetToolsLocalizationsEl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Εργαλεία επαναφοράς';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Εργαλεία εργοστασιακών ρυθμίσεων';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Τι θα θέλατε να κάνετε?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Δημιουργία μέσου επαναφοράς';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Έναρξη επαναφοράς εργοστασιακών ρυθμίσεων';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Δημιουργήστε μέσο επαναφοράς';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Δημιουργήστε ένα μέσο επαναφοράς το συστήματος έτσι ώστε να διαχειριστείτε την εγκατάσταση Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Διαλέξτε ένα μέσο επαναφοράς δίσκου.Ο δίσκος πρέπει να είναι τουλάχιστον 16 GB';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Ο δίσκος θα μορφοποιηθεί και τα δεδομένα θα χαθούν.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Μέσο επαναφοράς';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Δεν βρέθηκε δίσκος';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Χρειάζεστε μια μονάδα δίσκου.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Επιλέξτε μια επιλογή εργοστασιακής επαναφοράς';
 
   @override
   String get loadingDrives => 'Please wait while we fetch the drives.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Η μονάδα δίσκου είναι έτοιμη';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Όταν θέλετε να το χρησιμοποιήσετε τοποθετήστε την μονάδα δίσκου στον υπολογιστή σας και κάντε επανεκκίνηση';
 
   @override
   String get errorLoadingDrives => 'An error occurred while fetching the drives.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Φόρτωση';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Αντιγραφή';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Τελειώνει';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Ολοκληρώθηκε';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Απέτυχε';
 
   @override
-  String get error => 'Error';
+  String get error => 'Λάθος';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Φορτώνει...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Προειδοποίηση';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Επαναφορά';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Επανεκκίνηση';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Μορφοποίηση';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Απέτυχε να τρέξει την εντολή';
 
   @override
-  String get close => 'Close';
+  String get close => 'Κλείσιμο';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ΟΚ';
 }

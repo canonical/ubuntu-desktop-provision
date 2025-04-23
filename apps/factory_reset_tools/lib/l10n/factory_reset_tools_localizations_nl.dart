@@ -15,7 +15,7 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get windowTitle => 'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
 
   @override
-  String get homeTitle => 'Wat zou je willen doen?';
+  String get homeTitle => 'Wat zou u willen doen?';
 
   @override
   String get createResetMedia => 'Herstelmedia aanmaken';
@@ -27,7 +27,7 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Een herstel-USB aanmaken';
 
   @override
-  String get createUsbBody => 'Een herstel-USB aanmaken om het systeem te herstellen en je Ubuntu-installaties aan te passen.';
+  String get createUsbBody => 'Een herstel-USB aanmaken om het systeem te herstellen en uw Ubuntu-installaties aan te passen.';
 
   @override
   String get createUsbListExplanation => 'Selecteer een USB-flashstation. De schijf moet **minstens 16 GB ruimte hebben.**';
@@ -54,7 +54,7 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Herstel-USB is klaar';
 
   @override
-  String get resetMediaReadyBody => 'Om hem te gebruiken, plaats je het USB-station in de computer die je wilt herstellen en start deze opnieuw op.';
+  String get resetMediaReadyBody => 'Om deze te gebruiken, plaatst u het USB-station in de computer die u wilt herstellen en start u deze opnieuw op.';
 
   @override
   String get errorLoadingDrives => 'Er is een fout opgetreden bij het inlezen van de schijven.';

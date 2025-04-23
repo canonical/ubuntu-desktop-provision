@@ -13,7 +13,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Welcome to $distro';
+    return '$distro க்கு வருக';
   }
 
   @override
@@ -67,7 +67,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get telemetryReportLabel => 'முதல் அறிக்கையைக் காட்டு';
 
   @override
-  String get telemetryReportTitle => 'விவரங்கள் விவரங்கள்';
+  String get telemetryReportTitle => 'அறிக்கையிடல் விவரங்கள்';
 
   @override
   String get telemetryLegalLabel => 'சட்ட அறிவிப்பு';

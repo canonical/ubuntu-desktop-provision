@@ -65,7 +65,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorFileSystemTitle => 'Autom. installatiebestand is niet leesbaar';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Controleer je machtigingen of biedt een ander bestand aan.';
+  String get autoinstallDirectErrorFileSystemBody => 'Controleer uw machtigingen of biedt een ander bestand aan.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Onbekende fout';
@@ -75,7 +75,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'Hoe wilt je $DISTRO installeren?';
+    return 'Hoe wilt u $DISTRO installeren?';
   }
 
   @override
@@ -125,7 +125,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'Wat wil je doen met $DISTRO?';
+    return 'Wat wilt u doen met $DISTRO?';
   }
 
   @override
@@ -151,12 +151,12 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Installeer $RELEASE naast (of in plaats van) het huidige besturingssysteem, dit zal niet lang duren.';
+    return 'Installeer $RELEASE naast (of in plaats van) uw huidige besturingssysteem, dit zal niet lang duren.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'De wijzigingen in deze uitgave kunt U <a href=\"$url\">hier, in het Engels, lezen</a>.';
+    return 'De wijzigingen in deze uitgave kun je <a href=\"$url\">hier, in het Engels, lezen</a>.';
   }
 
   @override
@@ -169,7 +169,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get rstDisable => 'Je computer maakt gebruik van Intel RST (Rapid Storage Technology). Je kunt RST uitschakelen in:';
 
   @override
-  String get rstDisableWindows => 'Windows, als je een dual-boot-opstelling met Windows gebruikt';
+  String get rstDisableWindows => 'Windows, als u een dual-boot-opstelling met Windows gebruikt';
 
   @override
   String get rstDisableBios => 'De BIOS-instellingen';
@@ -183,7 +183,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Secure Boot configureren';
 
   @override
-  String get configureSecureBootDescription => 'Je hebt ervoor gekozen om stuurprogramma\'s van derden te installeren. Hiervoor moet Secure Boot worden uitgeschakeld.\nOm dit te doen, moet je nu een beveiligingssleutel kiezen en deze invoeren wanneer het systeem opnieuw wordt opgestart.';
+  String get configureSecureBootDescription => 'U hebt ervoor gekozen om stuurprogramma\'s van derden te installeren. Hiervoor moet Secure Boot worden uitgeschakeld.\nOm dit te doen, moet u nu een beveiligingssleutel kiezen en deze invoeren wanneer het systeem opnieuw wordt opgestart.';
 
   @override
   String get configureSecureBootOption => 'Secure Boot configureren';
@@ -216,17 +216,17 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageTitle => 'Toepassingen';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'Welke apps zou je om te beginnen willen installeren?';
+  String get updatesOtherSoftwarePageDescription => 'Welke apps zou u om te beginnen willen installeren?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimaliseer je computer';
+  String get codecsAndDriversPageTitle => 'Optimaliseer uw computer';
 
   @override
   String get codecsAndDriversPageDescription => 'Aanbevolen propriëtaire software installeren?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO wordt standaard geleverd zonder propriëtaire software. Het installeren van extra software kan de prestaties van je computer verbeteren.';
+    return '$DISTRO wordt standaard geleverd zonder propriëtaire software. Het installeren van extra software kan de prestaties van uw computer verbeteren.';
   }
 
   @override
@@ -281,7 +281,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => 'Wachtwoordzin aanmaken';
 
   @override
-  String get choosePassphraseBody => 'Je hebt een wachtwoordzin nodig om je bestanden te versleutelen. Elke keer dat je de computer aanzet, wordt je om je wachtwoordzin gevraagd.';
+  String get choosePassphraseBody => 'U hebt een wachtwoordzin nodig om uw bestanden te versleutelen. Elke keer dat u de computer aanzet, wordt u om uw wachtwoordzin gevraagd.';
 
   @override
   String get choosePassphraseHint => 'Kies een wachtwoordzin';
@@ -296,22 +296,22 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'De wachtwoordzinnen komen niet overeen';
 
   @override
-  String get choosePassphraseInfoHeader => 'Bewaar je wachtwoordzin op een veilige plek';
+  String get choosePassphraseInfoHeader => 'Bewaar uw wachtwoordzin op een veilige plek';
 
   @override
-  String get choosePassphraseInfoBody => 'Als je de wachtwoordzin verliest, verlies je al je gegevens.';
+  String get choosePassphraseInfoBody => 'Als uw de wachtwoordzin kwijtraakt, verliest u de toegang tot al uw gegevens.';
 
   @override
   String get chooseOptionalPassphraseHeader => 'Wachtwoordzin aanmaken (optioneel)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'Een wachtwoordzin kan helpen je gegevens te beschermen, zelfs als jouw hardware wordt gecompromitteerd. Je moet de wachtwoordzin elke keer invoeren wanneer je de computer aanzet. Je kunt het later niet meer verwijderen';
+  String get chooseOptionalPassphraseBody => 'Een wachtwoordzin kan helpen uw gegevens te beschermen, zelfs als uw hardware wordt gecompromitteerd. Uw moet de wachtwoordzin elke keer invoeren wanneer u de computer aanzet. U kunt het later niet meer verwijderen';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Bewaar je wachtwoordzin en herstelcodes op een veilige plek';
+  String get chooseOptionalPassphraseInfoHeader => 'Bewaar uw wachtwoordzin en herstelcodes op een veilige plek';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Als je de wachtwoordzin verliest, verlies je al je gegevens. De wachtwoordzin is niet de herstelcode of het wachtwoord van je gebruiker.';
+  String get chooseOptionalPassphraseInfoBody => 'Als u de wachtwoordzin verliest, verliest u de toegang tot al uw gegevens. De wachtwoordzin is geen vervanger voor de herstelsleutel of uw gebruikerswachtwoord.';
 
   @override
   String get createPassphrase => 'Wachtwoordzin aanmaken';
@@ -324,24 +324,24 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'Hoe wil je $DISTRO installeren?';
+    return 'Hoe wilt u $DISTRO installeren?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'Op deze computer staat momenteel $os. Wat zou je willen doen?';
+    return 'Op deze computer staat momenteel $os. Wat zou u willen doen?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'Op deze computer staan momenteel $os1 en $os2. Wat zou je willen doen?';
+    return 'Op deze computer staan momenteel $os1 en $os2. Wat zou u willen doen?';
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'Op deze computer staan momenteel meerdere besturingssystemen. Wat zou je willen doen?';
+  String get installationTypeMultiOSDetected => 'Op deze computer staan momenteel meerdere besturingssystemen. Wat zou u willen doen?';
 
   @override
-  String get installationTypeNoOSDetected => 'Deze computer heeft momenteel geen gedetecteerde besturingssystemen. Wat zou je willen doen?';
+  String get installationTypeNoOSDetected => 'Deze computer heeft momenteel geen gedetecteerde besturingssystemen. Wat zou u willen doen?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -379,7 +379,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Versleutelen met een wachtwoordzin';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.';
+  String get installationTypeLVMEncryptionInfo => 'U moet elke keer dat u de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM en versleuteling geselecteerd';
@@ -394,7 +394,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryption => 'Versleutelen met een wachtwoordzin met ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Lokale versleuteling met ZFS. Je moet elke keer dat je de computer aanzet een wachtwoordzin invoeren.';
+  String get installationTypeZFSEncryptionInfo => 'Lokale versleuteling met ZFS. U moet elke keer dat u de computer aanzet een wachtwoordzin invoeren.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS geselecteerd';
@@ -407,7 +407,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Lees meer over TPM-versleuteling</a> voordat je deze optie kiest. Dit werkt mogelijk niet met jouw hardware of toekomstige versies van $DISTRO.';
+    return '<a href=\"$url\">Lees meer over TPM-versleuteling</a> voordat u deze optie kiest. Dit werkt mogelijk niet met jouw hardware of toekomstige versies van $DISTRO.';
   }
 
   @override
@@ -445,7 +445,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Selecteer een partitie om de grootte te wijzigen en ruimte te maken voor $product. Je kunt bij het opstarten je besturingssysteem kiezen.';
+    return 'Selecteer een partitie om de grootte te wijzigen en ruimte te maken voor $product. U kunt bij het opstarten je besturingssysteem kiezen.';
   }
 
   @override
@@ -764,7 +764,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get bitlockerWarningTitle => 'Zonder BitLocker-herstelcodes kun je al je gegevens kwijtraken';
+  String get bitlockerWarningTitle => 'Zonder BitLocker-herstelcodes kunt u al uw gegevens kwijtraken';
 
   @override
   String get restartComputer => 'Computer opnieuw starten';
@@ -780,7 +780,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Weet je zeker dat je jouw computer opnieuw wilt opstarten? Je moet de installatie van $DISTRO later opnieuw opstarten om de installatie van $DISTRO te voltooien.';
+    return 'Weet u zeker dat u uw computer opnieuw wilt opstarten? U moet de installatie van $DISTRO later opnieuw opstarten om de installatie van $DISTRO te voltooien.';
   }
 
   @override
@@ -804,15 +804,15 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Of je nu een ontwikkelaar bent of maker of gamer of beheerder, in $RELEASE vind je nieuwe hulpmiddelen om je productiviteit en je ervaring te verbeteren.';
+    return 'Of u nu een ontwikkelaar bent of maker of gamer of beheerder, in $RELEASE vind u nieuwe hulpmiddelen om uw productiviteit en ervaring te verbeteren.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Alle toepassingen die je nodig hebt';
+  String get installationSlidesSoftwareTitle => 'Alle toepassingen die u nodig hebt';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Installeer, beheer en update al je apps in Ubuntu Software, inclusief duizenden applicaties uit zowel de Snap Store als het $DISTRO-archief.';
+    return 'Installeer, beheer en update al uw apps in Ubuntu Software, inclusief duizenden applicaties uit zowel de Snap Store als het $DISTRO-archief.';
   }
 
   @override
@@ -824,11 +824,11 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Vergroot je creativiteit';
+  String get installationSlidesCreativityTitle => 'Vergroot uw creativiteit';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Of je een animator, ontwerper, videomaker of game-ontwikkelaar bent, het is eenvoudig om je workflows naar $DISTRO te brengen met ondersteuning voor open source en industriestandaard software en applicaties.';
+    return 'Of u een animator, ontwerper, videomaker of game-ontwikkelaar bent, het is eenvoudig om uw workflows naar $DISTRO te brengen met ondersteuning voor open source en industriestandaard software en applicaties.';
   }
 
   @override
@@ -844,7 +844,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO biedt alle tools die je nodig hebt om online privé en veilig te blijven. Met ingebouwde firewall- en VPN-ondersteuning en een groot aantal privacygerichte applicaties om ervoor te zorgen dat je volledige controle houdt over jouw gegevens.';
+    return '$DISTRO biedt alle tools die u nodig hebt om online privé en veilig te blijven. Met ingebouwde firewall- en VPN-ondersteuning en een groot aantal privacygerichte applicaties om ervoor te zorgen dat u volledige controle houdt over uw gegevens.';
   }
 
   @override
@@ -853,7 +853,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Verhoog je productiviteit';
+  String get installationSlidesProductivityTitle => 'Verhoog uw productiviteit';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -865,7 +865,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'De kern van de $DISTRO-filosofie is de overtuiging dat computers voor iedereen zijn. Met geavanceerde toegankelijkheidstools en opties om taal, kleuren en tekstgrootte te wijzigen, maakt $DISTRO computergebruik eenvoudig, wie en waar je ook bent.';
+    return 'De kern van de $DISTRO-filosofie is de overtuiging dat computers voor iedereen zijn. Met geavanceerde toegankelijkheidstools en opties om taal, kleuren en tekstgrootte te wijzigen, maakt $DISTRO computergebruik eenvoudig, wie en waar u ook bent.';
   }
 
   @override
@@ -1076,18 +1076,18 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get recoveryKeyHeader => 'Herstelcode opvragen';
 
   @override
-  String get recoveryKeyInfoHeader => 'Zonder herstelcode kun je al je gegevens verliezen';
+  String get recoveryKeyInfoHeader => 'Zonder herstelcode kunt u al uw gegevens verliezen';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Vraag een herstelcode op zodra je je voor het eerst aanmeldt bij $distro en bewaar deze op een veilige plek.';
+    return 'Vraag een herstelcode op zodra u voor het eerst aanmeldt bij $distro en bewaar deze op een veilige plek.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Om een herstelcode te krijgen, moet je de installatie voltooien, de computer opnieuw opstarten en deze opdracht uitvoeren in de terminal:';
+  String get recoveryKeyCommand => 'Om een herstelcode te krijgen, moet u de installatie voltooien, de computer opnieuw opstarten en deze opdracht uitvoeren in de terminal:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. Je kunt hem bijvoorbeeld nodig hebben als je bepaalde onderdelen in je computer vervangt of de firmware bijwerkt.';
+  String get recoveryKeyStorageAdvice => 'Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. U kunt deze bijvoorbeeld nodig hebben als u bepaalde onderdelen in uw computer vervangt of de firmware bijwerkt.';
 
   @override
   String get recoveryKeyConfirmation => 'Ik begrijp dat ik al mijn gegevens kan verliezen als ik geen herstelcode heb';
@@ -1113,7 +1113,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Landscape-domein (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Geef het Landscape-domein van je organisatie op om aan te melden en een automatisch installatiebestand op te halen. Je kunt de FQDN verkrijgen bij je IT-ondersteuning.';
+  String get landscapeDomainInstructions => 'Geef het Landscape-domein van uw organisatie op om aan te melden en een automatisch installatiebestand op te halen. U kunt de FQDN verkrijgen bij je IT-ondersteuning.';
 
   @override
   String get landscapeDomainTextField => 'Landscape-domein (FQDN)';
@@ -1122,7 +1122,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get next => 'Verder';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Ongeldig domein, controleer het of neem contact op met je IT-ondersteuning';
+  String get landscapeDomainInvalidDomainWarning => 'Ongeldig domein, controleer het of neem contact op met uw IT-ondersteuning';
 
   @override
   String get landscapeDomainNoInternetTitleWarning => 'Maak verbinding met internet om door te gaan';
@@ -1148,7 +1148,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu wordt geïnstalleerd met de door jouw organisatie verstrekte configuratie';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu wordt geïnstalleerd met de door uw organisatie verstrekte configuratie';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent => 'Je kunt het automatische installatiebestand dat uit Landscape is geïmporteerd hieronder bekijken.';
