@@ -1091,6 +1091,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => '我明白我可能会在没有恢复密钥的情况下丢失所有数据';
 
   @override
+  String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
   String landscapeMagicAttachInstructions(Object url) {
     return '扫二维码然后在下面输入代码。<a href=\"https://$url\">$url</a>';
   }
