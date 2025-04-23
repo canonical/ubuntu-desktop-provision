@@ -78,7 +78,7 @@ extension WizardThemeDataX on ThemeData {
           }
           if (states.contains(WidgetState.disabled)) {
             return textStyle.copyWith(
-              color: colorScheme.onSurface.withOpacity(0.38),
+              color: colorScheme.onSurface.withValues(alpha: 0.38),
             );
           }
           return textStyle.copyWith(color: colorScheme.onSurfaceVariant);

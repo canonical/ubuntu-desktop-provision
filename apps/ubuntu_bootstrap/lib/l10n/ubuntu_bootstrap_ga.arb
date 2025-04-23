@@ -1,1300 +1,343 @@
 {
   "@@locale": "ga",
   "welcome": "Fáilte",
-  "@welcome": {},
   "windowTitle": "Suiteáil {RELEASE}",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installOption": "Suiteáil {RELEASE}",
-  "@installOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "tryOrInstallReleaseNotesLabel": "B'fhéidir gur mhaith leat na <a href=\"{url}\">nótaí eisithe a léamh</a>.",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "tryOption": "Bain triail as {RELEASE}",
-  "@tryOption": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "appTitle": "Suiteálaí Deisce Ubuntu",
-  "@appTitle": {},
   "autoinstallTitle": "Cineál suiteála",
-  "@autoinstallTitle": {},
   "autoinstallHeader": "Conas ba mhaith leat {DISTRO}a shuiteáil?",
-  "@autoinstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "autoinstallInstructions": "Iontráil URL autoinstall.yaml nó cosán comhaid logánta:",
-  "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Suiteáil idirghníomhach",
-  "@autoinstallInteractiveOption": {},
   "autoinstallInteractiveDescription": "D'úsáideoirí ar mian leo a bheith treoraithe céim ar chéim tríd an tsuiteáil.",
-  "@autoinstallInteractiveDescription": {},
   "autoinstallAutomatedOption": "Suiteáil uathoibrithe",
-  "@autoinstallAutomatedOption": {},
   "autoinstallAutomatedDescription": "I gcás úsáideoirí chun cinn a bhfuil autoinstall.yaml acu le haghaidh socruithe córais comhsheasmhacha agus in-athdhéanta.",
-  "@autoinstallAutomatedDescription": {},
   "tryOrInstallHeader": "Cad ba mhaith leat a dhéanamh le {DISTRO}?",
-  "@tryOrInstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "tryOrInstallRepairOption": "Suiteáil deisiúcháin",
-  "@tryOrInstallRepairOption": {},
   "tryOrInstallRepairDescription": "Beidh deisiú reinstall gach bogearraí suiteáilte gan teagmháil doiciméid nó suímh.",
-  "@tryOrInstallRepairDescription": {},
   "configureSecureBootDescription": "Roghnaigh tú bogearraí tiománaí tríú páirtí a shuiteáil. Éilíonn sé seo Tosaithe Slán a chasadh as.\nChun seo a dhéanamh, ní mór duit eochair slándála a roghnú anois, agus é a chur isteach nuair a thosaíonn an córas.",
-  "@configureSecureBootDescription": {},
   "showSecurityKey": "Taispeáin",
-  "@showSecurityKey": {},
   "hideSecurityKey": "Folaigh",
-  "@hideSecurityKey": {},
   "updatesOtherSoftwarePageTitle": "Iarratais",
-  "@updatesOtherSoftwarePageTitle": {},
   "updatesOtherSoftwarePageDescription": "Cad iad na feidhmchláir ar mhaith leat a shuiteáil chun tosú leo?",
-  "@updatesOtherSoftwarePageDescription": {},
   "codecsAndDriversPageTitle": "Optamaigh do ríomhaire",
-  "@codecsAndDriversPageTitle": {},
   "codecsAndDriversPageDescription": "Suiteáil bogearraí dílseánaigh molta?",
-  "@codecsAndDriversPageDescription": {},
   "codecsAndDriversPageBody": "{DISTRO} longa gan aon bhogearraí dílseánaigh de réir réamhshocraithe. D'fhéadfadh suiteáil bogearraí breise feidhmíocht do ríomhaire a fheabhsú.",
-  "@codecsAndDriversPageBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "codecsAndDriversNvidiaNote": "Braitheadh cárta grafaicí NVIDIA",
-  "@codecsAndDriversNvidiaNote": {},
   "codecsAndDriversNvidiaBody": "Maidir leis an bhfeidhmíocht is fearr de chártaí grafacha NVIDIA, moltar go láidir tiománaithe breise a shuiteáil.",
-  "@codecsAndDriversNvidiaBody": {},
   "fullInstallationTitle": "Roghnúchán breisithe",
-  "@fullInstallationTitle": {},
   "fullInstallationSubtitle": "Rogha as líne d'uirlisí oifige, fóntais agus brabhsálaí gréasáin.",
-  "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Roghnú réamhshocraithe",
-  "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Díreach na essentials, brabhsálaí gréasáin agus fóntais bhunúsacha.",
-  "@minimalInstallationSubtitle": {},
   "otherOptions": "Roghanna eile",
-  "@otherOptions": {},
   "installThirdPartyTitle": "Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi, chomh maith le formáidí meáin breise",
-  "@installThirdPartyTitle": {},
   "choosePassphraseHeader": "Cruthaigh pasfhrása",
-  "@choosePassphraseHeader": {},
   "choosePassphraseBody": "Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.",
-  "@choosePassphraseBody": {},
   "choosePassphraseHint": "Roghnaigh pasfhrása",
-  "@choosePassphraseHint": {},
   "choosePassphraseConfirmHint": "Deimhnigh an pasfhrása",
-  "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Tá pasfhrása de dhíth",
-  "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Ní mheaitseálann na pasfhrásaí",
-  "@choosePassphraseMismatch": {},
   "choosePassphraseInfoHeader": "Stóráil do phasfhrása áit éigin sábháilte",
-  "@choosePassphraseInfoHeader": {},
   "choosePassphraseInfoBody": "Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.",
-  "@choosePassphraseInfoBody": {},
   "createPassphrase": "Cruthaigh pasfhrása",
-  "@createPassphrase": {},
   "confirmPassphrase": "Deimhnigh an pasfhrása",
-  "@confirmPassphrase": {},
   "installationTypeTitle": "Socrú diosca",
-  "@installationTypeTitle": {},
   "installationTypeHeader": "Conas is mian leat {DISTRO}a shuiteáil?",
-  "@installationTypeHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeOSDetected": "Tá {os} ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?",
-  "@installationTypeOSDetected": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeDualOSDetected": "Tá {os1} agus {os2} ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?",
-  "@installationTypeDualOSDetected": {
-    "placeholders": {
-      "os1": {
-        "type": "String"
-      },
-      "os2": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeMultiOSDetected": "Tá córais oibriúcháin éagsúla ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?",
-  "@installationTypeMultiOSDetected": {},
   "installationTypeNoOSDetected": "Níl aon chórais oibriúcháin aimsithe ag an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?",
-  "@installationTypeNoOSDetected": {},
   "installationTypeErase": "Léirscrios diosca agus suiteáil {DISTRO}",
-  "@installationTypeErase": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseInfo": "Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.",
-  "@installationTypeEraseInfo": {},
   "installationTypeAdvancedLabel": "Taispeáin ardroghanna...",
-  "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Criptiú agus córas comhaid",
-  "@installationTypeAdvancedTitle": {},
   "installationTypeExperimental": "Turgnamhach",
-  "@installationTypeExperimental": {},
   "installationTypeNoneSelected": "Níl aon cheann roghnaithe",
-  "@installationTypeNoneSelected": {},
   "installationTypeLVM": "Bain úsáid as LVM gan criptiú",
-  "@installationTypeLVM": {},
   "installationTypeLVMSelected": "LVM roghnaithe",
-  "@installationTypeLVMSelected": {},
   "installationTypeLVMEncryption": "Criptigh le pasfhrása",
-  "@installationTypeLVMEncryption": {},
   "installationTypeLVMEncryptionSelected": "LVM agus criptiú roghnaithe",
-  "@installationTypeLVMEncryptionSelected": {},
   "installationTypeEncryptInfo": "Roghnóidh tú eochair slándála sa chéad chéim eile.",
-  "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "Bain úsáid as ZFS gan criptiú",
-  "@installationTypeZFS": {},
   "installationTypeZFSEncryption": "Criptigh le pasfhrása ag baint úsáide as ZFS",
-  "@installationTypeZFSEncryption": {},
   "installationTypeZFSSelected": "ZFS roghnaithe",
-  "@installationTypeZFSSelected": {},
   "installationTypeZFSEncryptionSelected": "ZFS agus criptiú roghnaithe",
-  "@installationTypeZFSEncryptionSelected": {},
   "installationTypeTPM": "Bain úsáid as criptiúchán crua-earraí",
-  "@installationTypeTPM": {},
   "installationTypeTPMSelected": "TPM roghnaithe",
-  "@installationTypeTPMSelected": {},
   "installationTypeReinstall": "Léirscrios {os} agus reinstall",
-  "@installationTypeReinstall": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongside": "Suiteáil {product} in éineacht le {os}",
-  "@installationTypeAlongside": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      },
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongsideDual": "Suiteáil {product} in éineacht le {os1} agus {os2}",
-  "@installationTypeAlongsideDual": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      },
-      "os1": {
-        "type": "String"
-      },
-      "os2": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongsideMulti": "Suiteáil {product} taobh le córais oibriúcháin atá ann cheana",
-  "@installationTypeAlongsideMulti": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongsideUnknown": "Suiteáil {product} in éineacht le deighiltí eile",
-  "@installationTypeAlongsideUnknown": {
-    "placeholders": {
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeAlongsideInfo": "Roghnaigh deighilt chun méid a athrú agus spás a chruthú do {product}. Is féidir leat do chóras oibriúcháin a roghnú le linn tosaithe.",
-  "@installationTypeAlongsideInfo": {},
   "selectGuidedStoragePageTitle": "Léirscrios diosca agus suiteáil {DISTRO}",
-  "@selectGuidedStoragePageTitle": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "selectGuidedStorageInfo": "Tosaigh ón tús ar do dhiosca roghnaithe.",
-  "@selectGuidedStorageInfo": {},
   "selectGuidedStorageDriveDropdownLabel": "Roghnaigh tiomántán:",
-  "@selectGuidedStorageDriveDropdownLabel": {},
   "selectGuidedStoragePartitionDropdownLabel": "Roghnaigh laindéal:",
-  "@selectGuidedStoragePartitionDropdownLabel": {},
   "installAlongsidePartition": "Críochdheighilt:",
-  "@installAlongsidePartition": {},
   "installAlongsideSize": "Méid:",
-  "@installAlongsideSize": {},
   "installAlongsideAvailable": "Ar fáil:",
-  "@installAlongsideAvailable": {},
   "allocateDiskSpace": "Deighilt láimhe",
-  "@allocateDiskSpace": {},
   "allocateDiskSpaceInvalidMountPointSlash": "Ní mór pointí Mount tús a chur le \"/\"",
-  "@allocateDiskSpaceInvalidMountPointSlash": {},
   "allocateDiskSpaceInvalidMountPointSpace": "Ní féidir spásanna a bheith i bpointí feistithe",
-  "@allocateDiskSpaceInvalidMountPointSpace": {},
   "diskHeadersDevice": "Gléas",
-  "@diskHeadersDevice": {},
   "diskHeadersType": "Cineál",
-  "@diskHeadersType": {},
   "diskHeadersMountPoint": "Pointe feistithe",
-  "@diskHeadersMountPoint": {},
   "diskHeadersSize": "Méid",
-  "@diskHeadersSize": {},
   "diskHeadersUsed": "Úsáidte",
-  "@diskHeadersUsed": {},
   "newPartitionTableConfirmationTitle": "Críochdheighilt fholamh nua",
-  "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Beidh Cruthú tábla laindéal nua ar gléas ar fad a bhaint gach ceann de na Deighiltí atá ann faoi láthair. Is féidir an oibríocht seo a chealú más gá.",
-  "@newPartitionTableConfirmationMessage": {},
   "tooManyPrimaryPartitions": "An iomarca críochdheighiltí bunscoile",
-  "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Teorainn bainte amach",
-  "@partitionLimitReached": {},
   "bootLoaderDevice": "Gléas le haghaidh suiteáil loader tosaithe",
-  "@bootLoaderDevice": {},
   "partitionCreateTitle": "Cruthaigh críochdheighilt",
-  "@partitionCreateTitle": {},
   "partitionEditTitle": "Cuir críochdheighilt in eagar",
-  "@partitionEditTitle": {},
   "partitionSizeLabel": "Méid:",
-  "@partitionSizeLabel": {},
   "partitionTypeLabel": "Cineál don laindéal nua:",
-  "@partitionTypeLabel": {},
   "partitionTypePrimary": "Bunscoileanna",
-  "@partitionTypePrimary": {},
   "partitionTypeLogical": "Loighciúil",
-  "@partitionTypeLogical": {},
   "partitionLocationLabel": "Suíomh don chríochdheighilt nua:",
-  "@partitionLocationLabel": {},
   "partitionLocationBeginning": "Tús an spáis seo",
-  "@partitionLocationBeginning": {},
   "partitionLocationEnd": "Deireadh an spáis seo",
-  "@partitionLocationEnd": {},
   "partitionFormatLabel": "Úsáidte mar:",
-  "@partitionFormatLabel": {},
   "partitionFormatNone": "Fág gan fhoirm",
-  "@partitionFormatNone": {},
   "partitionFormatKeep": "Fág formáidithe mar {format}",
-  "@partitionFormatKeep": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "confirmPageTitle": "Réidh le suiteáil",
-  "@confirmPageTitle": {},
   "confirmHeader": "Déan athbhreithniú ar do chuid roghanna",
-  "@confirmHeader": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
-  "@confirmDiskEncryptionLVM": {},
   "confirmDiskEncryptionZFS": "LUKS (ZFS)",
-  "@confirmDiskEncryptionZFS": {},
   "confirmDiskEncryptionNone": "Ceann ar bith",
-  "@confirmDiskEncryptionNone": {},
   "confirmEntryProprietarySoftware": "Bogearraí dílseánaigh",
-  "@confirmEntryProprietarySoftware": {},
   "readyToUse": "Tá {system} suiteáilte agus réidh le húsáid",
-  "@readyToUse": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "rebootToConfigure": "**{system}** cóipeáladh chuig an diosca",
-  "@rebootToConfigure": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "restartInto": "Atosaigh i {system}",
-  "@restartInto": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "restartWarningBody": "Atosaigh chun an tsuiteáil a chríochnú nó leanúint ar aghaidh leis an tástáil.\nNí shábhálfar aon athruithe a dhéanann tú.",
-  "@restartWarningBody": {},
   "rebootToConfigureWarning": "Caithfidh tú an ríomhaire a atosú chun leanúint leis an bpróiseas suiteála.",
-  "@rebootToConfigureWarning": {},
   "bitlockerTitle": "Tá BitLocker cumasaithe",
-  "@bitlockerTitle": {},
   "bitlockerHeader": "Cas as BitLocker chun leanúint ar aghaidh",
-  "@bitlockerHeader": {},
   "bitlockerDescription": "Úsáideann an ríomhaire seo criptiú Windows BitLocker.\nNí mór duit Windows a úsáid chun spás saor in aisce a chruthú nó dul ar ais agus '{option}' a roghnú chun leanúint ar aghaidh.",
-  "@bitlockerDescription": {
-    "placeholders": {
-      "option": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSoftwareTitle": "Na hiarratais go léir a theastaíonn uait",
-  "@installationSlidesSoftwareTitle": {},
   "installationSlidesDevelopmentBody": "Is é {DISTRO} an stáisiún oibre idéalach d'fhorbairt app nó gréasáin, eolaíocht sonraí agus AI / ML chomh maith le devops agus riarachán. Cuimsíonn gach eisiúint {DISTRO} na huirlisí is déanaí agus tacaíonn sé le gach IDEs mór.",
-  "@installationSlidesDevelopmentBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesCreativityBody": "Más beochantóir, dearthóir, cruthaitheoir físe nó forbróir cluiche tú tá sé éasca do shreabhadh oibre a thabhairt chuig {DISTRO} le tacaíocht do bhogearraí agus feidhmchláir caighdeánacha foinse oscailte agus tionscail.",
-  "@installationSlidesCreativityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesGamingTitle": "Iontach do chearrbhachas",
-  "@installationSlidesGamingTitle": {},
   "installationSlidesGamingBody": "Tacaíonn {DISTRO} leis na tiománaithe NVIDIA agus Mesa is déanaí chun feidhmíocht agus comhoiriúnacht a fheabhsú. Imríonn na mílte teideal Windows go hiontach ar {DISTRO} trí fheidhmchláir cosúil le Gaile gan aon chumraíocht bhreise.",
-  "@installationSlidesGamingBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSecurityTitle": "Príobháideach agus slán",
-  "@installationSlidesSecurityTitle": {},
   "installationSlidesSecurityBody": "Soláthraíonn {DISTRO} na huirlisí go léir a theastaíonn uait chun fanacht príobháideach agus slán ar líne. Le tacaíocht balla dóiteáin agus VPN tógtha agus a lán feidhmchlár atá dírithe ar phríobháideachas chun a chinntiú go bhfuil smacht iomlán agat ar do chuid sonraí.",
-  "@installationSlidesSecurityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSecurityLts": "Tagann gach eisiúint LTS {DISTRO} le cúig bliana de phaisteáil slándála san áireamh, ag síneadh go deich mbliana le síntiús Ubuntu Pro.",
-  "@installationSlidesSecurityLts": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesProductivityBody": "{DISTRO} Áirítear ar an deasc LibreOffice, sraith feidhmchlár foinse oscailte comhoiriúnach Microsoft Office do dhoiciméid, scarbhileoga agus cur i láthair. Tá uirlisí comhoibrithe coitianta ar fáil freisin.",
-  "@installationSlidesProductivityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesAccessibilityBody": "I gcroílár na fealsúnachta {DISTRO} tá an creideamh go bhfuil ríomhaireacht do gach duine. Le huirlisí inrochtaineachta chun cinn agus roghanna chun teanga, dathanna agus méid téacs a athrú, déanann {DISTRO} ríomhaireacht éasca - cibé duine agus cibé áit a bhfuil tú.",
-  "@installationSlidesAccessibilityBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSupportCommunity": "Clúdaíonn Ask Ubuntu raon ceisteanna agus freagraí agus soláthraíonn Dioscúrsa Ubuntu treoracha agus plé d'úsáideoirí nua agus a bhfuil taithí acu.",
-  "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "D'úsáideoirí fiontair soláthraíonn Canonical tacaíocht tráchtála chun é a dhéanamh éasca le dul ar bord agus Ubuntu a bhainistiú go daingean san ionad oibre.",
-  "@installationSlidesSupportEnterprise": {},
   "installationSlidesSupportResources": "Acmhainní cabhracha:",
-  "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Doiciméid oifigiúla",
-  "@installationSlidesSupportDocumentation": {},
   "installationSlidesSupportUbuntuPro": "Tacaíocht fiontar-grád 24 / 7 le Ubuntu Pro",
-  "@installationSlidesSupportUbuntuPro": {},
   "copyingFiles": "Comhaid á gcóipeáil…",
-  "@copyingFiles": {},
   "installingSystem": "An córas á shuiteáil…",
-  "@installingSystem": {},
   "configuringSystem": "An córas á bhunú…",
-  "@configuringSystem": {},
   "installationFailed": "Theip ar shuiteáil",
-  "@installationFailed": {},
   "notEnoughDiskSpaceTitle": "Níl go leor spás diosca ann",
-  "@notEnoughDiskSpaceTitle": {},
   "notEnoughDiskSpaceUbuntu": "Níl go leor spás diosca le suiteáil {DISTRO}",
-  "@notEnoughDiskSpaceUbuntu": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "notEnoughDiskSpaceBody": "Níl go leor spáis diosca ag an diosca roghnaithe chun {DISTRO} a shuiteáil. Scoir den suiteálaí chun spás a chur ar fáil nó roghnaigh diosca eile.",
-  "@notEnoughDiskSpaceBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "notEnoughDiskSpaceAvailable": "Ar fáil:",
-  "@notEnoughDiskSpaceAvailable": {},
   "notEnoughDiskSpaceRequired": "De Dhíth:",
-  "@notEnoughDiskSpaceRequired": {},
   "refreshPageTitle": "Nuashonrú ar fáil",
-  "@refreshPageTitle": {},
   "refreshHeader": "Tá nuashonrú ar fáil don suiteálaí",
-  "@refreshHeader": {},
   "refreshCurrent": "Is é {version} an leagan {snap} reatha.",
-  "@refreshCurrent": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      },
-      "version": {
-        "type": "String"
-      }
-    }
-  },
   "refreshInstall": "Nuashonrú go leagan {version}",
-  "@refreshInstall": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapPrerequisites": "Réamhriachtanais {snap} a chinntiú...",
-  "@refreshSnapPrerequisites": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapRefresh": "Athnuachan {snap}...",
-  "@refreshSnapRefresh": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapValidate": "Ag bailíochtú {snap}...",
-  "@refreshSnapValidate": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapUpdateAssets": "Sócmhainní {snap} á nuashonrú...",
-  "@refreshSnapUpdateAssets": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapUpdateKernelCommandLine": "Líne ordaithe eithne {snap} á nuashonrú...",
-  "@refreshSnapUpdateKernelCommandLine": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapAutoConnect": "Plocóidí agus sliotáin {snap} á nascadh...",
-  "@refreshSnapAutoConnect": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapCleanup": "Ag glanadh suas {snap}...",
-  "@refreshSnapCleanup": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "recoveryKeyCommand": "Chun eochair athshlánaithe a fháil, cuir an tsuiteáil i gcrích, atosaigh do ríomhaire, agus rith an t-ordú seo sa teirminéal:",
-  "@recoveryKeyCommand": {},
   "validate": "Bailíochtaigh",
-  "@validate": {},
   "confirmPartitionFormatMount": "deighilt <b>{ sysname}</b> formáidithe mar <b>{format}</b> a úsáidtear le haghaidh <b>{mount}</b>",
-  "@confirmPartitionFormatMount": {
-    "description": "A formatted and mounted partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
-      "format": {
-        "type": "String"
-      },
-      "mount": {
-        "type": "String"
-      }
-    }
-  },
   "confirmPartitionMount": "deighilt <b>{sysname}</b> a úsáidtear le haghaidh <b>{mount}</b>",
-  "@confirmPartitionMount": {
-    "description": "A mounted partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
-      "mount": {
-        "type": "String"
-      }
-    }
-  },
   "changeButtonText": "Athrú",
-  "@changeButtonText": {},
   "quitButtonText": "Scoir den tsuiteáil",
-  "@quitButtonText": {},
   "loadingPageTitle": "Fáilte go {DISTRO}",
-  "@loadingPageTitle": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "loadingHeader": "Ag ullmhú {DISTRO}…",
-  "@loadingHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "warningLabel": "Rabhadh:",
-  "@warningLabel": {},
   "tryOrInstallTitle": "Bain triail as nó suiteáil {DISTRO}",
-  "@tryOrInstallTitle": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "tryDescription": "Is féidir leat triail a bhaint as {RELEASE} gan aon athruithe a dhéanamh ar do ríomhaire.",
-  "@tryDescription": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "installDescription": "Suiteáil {RELEASE} in éineacht (nó in ionad) do chóras oibriúcháin reatha. Níor cheart go dtógfadh sé seo rófhada.",
-  "@installDescription": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "rstTitle": "Braitheadh RST",
-  "@rstTitle": {},
   "rstHeader": "Ní mór duit RST a dhíchumasú chun leanúint leis an tsuiteáil",
-  "@rstHeader": {},
   "rstDescription": "Úsáideann an ríomhaire seo Intel RST (Teicneolaíocht Stórála Mear). Ní mór duit RST a mhúchadh in Windows sula suiteálann tú {DISTRO}.",
-  "@rstDescription": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "configureSecureBootTitle": "Cumraigh Tosaithe Slán",
-  "@configureSecureBootTitle": {},
   "rstInstructions": "Le treoracha a fháil, scanadh an cód QR ar ghléas eile nó tabhair cuairt ar: <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "configureSecureBootOption": "Cumraigh Tosaithe Slán",
-  "@configureSecureBootOption": {},
   "chooseSecurityKey": "Roghnaigh eochair slándála",
-  "@chooseSecurityKey": {},
   "confirmSecurityKey": "Deimhnigh an eochair slándála",
-  "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Ná suiteáil na bogearraí tiománaí anois",
-  "@dontInstallDriverSoftwareNow": {},
   "configureSecureBootSecurityKeyRequired": "Tá eochair shlándála de dhíth",
-  "@configureSecureBootSecurityKeyRequired": {},
   "secureBootSecurityKeysDontMatch": "Ní mheaitseálann eochracha slándála",
-  "@secureBootSecurityKeysDontMatch": {},
   "dontInstallDriverSoftwareNowDescription": "Is féidir leat é a shuiteáil níos déanaí ó Bogearraí & Nuashonruithe.",
-  "@dontInstallDriverSoftwareNowDescription": {},
   "installThirdPartySubtitle": "Tá an bogearraí seo faoi réir téarmaí ceadúnais san áireamh lena dhoiciméadú. Tá cuid acu dílsithe.",
-  "@installThirdPartySubtitle": {},
   "installDriversTitle": "Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi",
-  "@installDriversTitle": {},
   "installDriversSubtitle": "Lena n-áirítear tiománaithe NVIDIA agus tiománaithe",
-  "@installDriversSubtitle": {},
   "installCodecsTitle": "Íoslódáil agus suiteáil tacaíocht le haghaidh formáidí meáin breise",
-  "@installCodecsTitle": {},
   "installCodecsSubtitle": "Lena n-áirítear MP3, MP4, MOV agus",
-  "@installCodecsSubtitle": {},
   "batteryWarning": "Níl an ríomhaire plugáilte isteach i bhfoinse cumhachta.",
-  "@batteryWarning": {},
   "offlineWarning": "Tá tú as líne faoi láthair",
-  "@offlineWarning": {},
   "choosePassphraseTitle": "Pasfhrása diosca",
-  "@choosePassphraseTitle": {},
   "installationTypeNone": "Gan criptiú",
-  "@installationTypeNone": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Rabhadh:</font> Scriosfaidh sé seo do ríomhchláir, doiciméid, grianghraif, ceol agus comhaid ar bith eile {os}.",
-  "@installationTypeReinstallWarning": {
-    "placeholders": {
-      "color": {
-        "type": "String"
-      },
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeManual": "Suiteáil láimhe",
-  "@installationTypeManual": {},
   "installationTypeManualInfo": "D'úsáideoirí chun cinn ag lorg socruithe diosca saincheaptha.",
-  "@installationTypeManualInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "selectGuidedStorageInstallNow": "Suiteáil anois",
-  "@selectGuidedStorageInstallNow": {},
   "selectGuidedStorageInfoLabel": "Úsáidfear an diosca iomlán:",
-  "@selectGuidedStorageInfoLabel": {},
   "installAlongsideSpaceDivider": "Leithdháileadh spás tiomána tríd an roinnteoir a tharraingt thíos:",
-  "@installAlongsideSpaceDivider": {},
   "installAlongsideResizePartition": "Athraigh méid na críochdheighilte",
-  "@installAlongsideResizePartition": {},
   "installAlongsideHiddenPartitions": "Tá {num} deighiltí níos lú i bhfolach, bain úsáid as an <a href=\"{url}\">uirlis ardroinnte</a> le haghaidh tuilleadh rialaithe",
-  "@installAlongsideHiddenPartitions": {
-    "placeholders": {
-      "num": {
-        "type": "int"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "guidedStoragePageHeader": "Roghnaigh cá háit le {DISTRO} a shuiteáil",
-  "@guidedStoragePageHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installAlongsideAllocateSpace": "Spás a leithdháileadh",
-  "@installAlongsideAllocateSpace": {},
   "installAlongsideFiles": "Comhaid",
-  "@installAlongsideFiles": {},
   "diskHeadersSystem": "Córas",
-  "@diskHeadersSystem": {},
   "diskHeadersFormat": "Formáid",
-  "@diskHeadersFormat": {},
   "freeDiskSpace": "Spás saor in aisce",
-  "@freeDiskSpace": {},
   "newPartitionTable": "Tábla nua críochdheighilte",
-  "@newPartitionTable": {},
   "partitionErase": "Formáidigh an laindéal",
-  "@partitionErase": {},
   "partitionMountPointLabel": "Pointe gléasta:",
-  "@partitionMountPointLabel": {},
   "confirmDiskEncryptionTPM": "TPMName",
-  "@confirmDiskEncryptionTPM": {},
   "confirmDevicesTitle": "Gléasanna",
-  "@confirmDevicesTitle": {},
   "confirmEntryApplications": "Iarratais",
-  "@confirmEntryApplications": {},
   "confirmEntryDiskSetup": "Cineál a shuiteáil",
-  "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Criptiú diosca",
-  "@confirmEntryDiskEncryption": {},
   "confirmEntryInstallationDisk": "Diosca suiteála",
-  "@confirmEntryInstallationDisk": {},
   "confirmSectionGeneralTitle": "Ginearálta",
-  "@confirmSectionGeneralTitle": {},
   "confirmPartitionsTitle": "Deighiltí",
-  "@confirmPartitionsTitle": {},
   "confirmPartitionTables": "Athraítear táblaí críochdheighilte na ngléasanna seo a leanas:",
-  "@confirmPartitionTables": {},
   "confirmPartitionChanges": "Tá na hathruithe críochdheighilte seo a leanas le cur i bhfeidhm:",
-  "@confirmPartitionChanges": {},
   "confirmSectionSecurityAndMoreTitle": "Slándáil & tuilleadh",
-  "@confirmSectionSecurityAndMoreTitle": {},
   "confirmPartitionTable": "{serial} ({path})",
-  "@confirmPartitionTable": {
-    "description": "An entry for a disk whose partition table is being changed",
-    "placeholders": {
-      "serial": {
-        "type": "String"
-      },
-      "path": {
-        "type": "String"
-      }
-    }
-  },
   "confirmPartitionResize": "críochdheighilte <b>{sysname}</b> athrú méide ó <b>{oldsize}</b> go <b>{newsize}</b>",
-  "@confirmPartitionResize": {
-    "description": "A resized partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
-      "oldsize": {
-        "type": "String"
-      },
-      "newsize": {
-        "type": "String"
-      }
-    }
-  },
   "confirmPartitionFormat": "deighilt <b>{ sysname}</b> formáidithe mar <b>{format}</b>",
-  "@confirmPartitionFormat": {
-    "description": "A formatted partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      },
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "confirmProprietarySoftwareCodecs": "CodecsName",
-  "@confirmProprietarySoftwareCodecs": {},
   "confirmProprietarySoftwareDrivers": "Tiománaithe",
-  "@confirmProprietarySoftwareDrivers": {},
   "confirmInstallButton": "Suiteáil",
-  "@confirmInstallButton": {},
   "installationCompleteTitle": "Suiteáil curtha i gcrích",
-  "@installationCompleteTitle": {},
   "confirmPartitionCreate": "deighilt <b>{ sysname}</b> cruthaithe",
-  "@confirmPartitionCreate": {
-    "description": "A created partition entry",
-    "placeholders": {
-      "sysname": {
-        "type": "String"
-      }
-    }
-  },
   "confirmProprietarySoftwareCodecsDrivers": "Codecs agus tiománaithe",
-  "@confirmProprietarySoftwareCodecsDrivers": {},
   "shutdown": "Múch",
-  "@shutdown": {},
   "restartNow": "Atosaigh anois",
-  "@restartNow": {},
   "continueTesting": "Leanúint ar aghaidh leis an tástáil",
-  "@continueTesting": {},
   "bitlockerInstructions": "Le treoracha a fháil, scanadh an cód QR ar ghléas eile nó tabhair cuairt ar: <a href=\"https://{url}\">{url}</a>",
-  "@bitlockerInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "restartIntoWindows": "Atosaigh isteach Windows",
-  "@restartIntoWindows": {},
   "restartIntoWindowsTitle": "Atosaigh i Windows?",
-  "@restartIntoWindowsTitle": {},
   "restartIntoWindowsDescription": "An bhfuil tú cinnte go bhfuil fonn ort do ríomhaire a atosú? Beidh ort an tsuiteáil {DISTRO} a atosú níos déanaí chun suiteáil {DISTRO} a chríochnú.",
-  "@restartIntoWindowsDescription": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesTitle": "Fáilte go {RELEASE}",
-  "@installationSlidesTitle": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesAvailable": "Ar fáil:",
-  "@installationSlidesAvailable": {},
   "installationSlidesIncluded": "San áireamh:",
-  "@installationSlidesIncluded": {},
   "installationSlidesWelcomeTitle": "Fast, saor in aisce agus lán de ghnéithe nua",
-  "@installationSlidesWelcomeTitle": {},
   "installationSlidesWelcomeHeader": "Déanann an leagan is déanaí de {DISTRO} ríomhaireacht níos éasca ná riamh.",
-  "@installationSlidesWelcomeHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesWelcomeBody": "Cibé an forbróir, cruthaitheoir, gamer nó riarthóir tú gheobhaidh tú uirlisí nua chun do tháirgiúlacht a fheabhsú agus do thaithí i {RELEASE}a fheabhsú.",
-  "@installationSlidesWelcomeBody": {
-    "placeholders": {
-      "RELEASE": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesSoftwareBody": "Suiteáil, bainistigh agus nuashonraigh do chuid feidhmchlár go léir i mBogearraí Ubuntu, lena n-áirítear na mílte feidhmchlár ón Snap Store agus ón gcartlann {DISTRO} araon.",
-  "@installationSlidesSoftwareBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationSlidesDevelopmentTitle": "Forbairt leis an chuid is fearr de fhoinse oscailte",
-  "@installationSlidesDevelopmentTitle": {},
   "installationSlidesCreativityTitle": "Feabhas a chur ar do chruthaitheacht",
-  "@installationSlidesCreativityTitle": {},
   "installationSlidesProductivityTitle": "Cumhacht suas do tháirgiúlacht",
-  "@installationSlidesProductivityTitle": {},
   "installationSlidesAccessibilityTitle": "Rochtain do gach duine",
-  "@installationSlidesAccessibilityTitle": {},
   "installationSlidesAccessibilityOrca": "Léitheoir Scáileáin Orca",
-  "@installationSlidesAccessibilityOrca": {},
   "installationSlidesAccessibilityLanguages": "Tacaíocht teanga",
-  "@installationSlidesAccessibilityLanguages": {},
   "installationSlidesSupportTitle": "Cabhair agus tacaíocht",
-  "@installationSlidesSupportTitle": {},
   "installationSlidesSupportHeader": "Tá an doiciméadú oifigiúil {DISTRO} ar fáil ar líne agus tríd an deilbhín Cabhair sa duga.",
-  "@installationSlidesSupportHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "refreshUpdateNow": "Nuashonraigh anois",
-  "@refreshUpdateNow": {},
   "refreshInfo": "Nuashonrú ar an leagan is déanaí le haghaidh iontaofacht níos fearr agus gnéithe níos mó.",
-  "@refreshInfo": {},
   "refreshReady": "Nuashonraigh réidh",
-  "@refreshReady": {},
   "refreshUpToDate": "Tá an leagan reatha {version} cothrom le dáta.",
-  "@refreshUpToDate": {
-    "placeholders": {
-      "version": {
-        "type": "String"
-      }
-    }
-  },
   "refreshUpdating": "{snap}á nuashonrú...",
-  "@refreshUpdating": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshRestart": "Dún an suiteálaí agus athsheoladh chun leanúint ar aghaidh",
-  "@refreshRestart": {},
   "refreshCloseLabel": "Dún an suiteálaí",
-  "@refreshCloseLabel": {},
   "refreshSnapCheckRerefresh": "Seiceáil {snap} ath-athnuachan...",
-  "@refreshSnapCheckRerefresh": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapPrepare": "Ag ullmhú {snap}...",
-  "@refreshSnapPrepare": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapDownload": "Ag íosluchtú {snap}...",
-  "@refreshSnapDownload": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapMount": "Gléasta {snap}...",
-  "@refreshSnapMount": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapStopServices": "Ag stopadh seirbhísí {snap}...",
-  "@refreshSnapStopServices": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapRemoveAliases": "Ailiasanna {snap} á mbaint...",
-  "@refreshSnapRemoveAliases": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapUnlink": "Ag dínascadh {snap}...",
-  "@refreshSnapUnlink": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapCopyData": "Sonraí {snap} á gcóipeáil...",
-  "@refreshSnapCopyData": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapSetupProfiles": "Próifílí slándála {snap} á mbunú...",
-  "@refreshSnapSetupProfiles": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapLink": "Ag nascadh {snap}...",
-  "@refreshSnapLink": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapSetAutoAliases": "Ailiasanna uathoibríocha {snap} á socrú...",
-  "@refreshSnapSetAutoAliases": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapSetupAliases": "Ailiasanna {snap} á mbunú...",
-  "@refreshSnapSetupAliases": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "refreshSnapStartServices": "Seirbhísí {snap} á thosú...",
-  "@refreshSnapStartServices": {
-    "placeholders": {
-      "snap": {
-        "type": "String"
-      }
-    }
-  },
   "recoveryKeyTitle": "Eochair aisghabhála TPM",
-  "@recoveryKeyTitle": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Rabhadh:</font> Má chailleann tú an eochair shlándála seo, caillfear na sonraí go léir. Más gá duit, scríobh síos d’eochair agus coinnigh in áit shábháilte í.",
-  "@recoveryKeyWarning": {
-    "placeholders": {
-      "color": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeTPMInfo": "<a href=\"{url}\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo. Seans nach n-oibreoidh sé seo le do chrua-earraí nó le heisiúintí {DISTRO} amach anseo.",
-  "@installationTypeTPMInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "allocateDiskSpaceInvalidMountPointFormat": "Ní córas comhaid tacaithe é {format} do {mountpoint}",
-  "@allocateDiskSpaceInvalidMountPointFormat": {
-    "mountpoint": {
-      "type": "String"
-    },
-    "format": {
-      "type": "String"
-    }
-  },
   "installationTypeEraseAndInstallInfo": "Scriosfar go buan gach comhad agus sonraí ón suiteáil {os} atá ann cheana féin.",
-  "@installationTypeEraseAndInstallInfo": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseAndInstall": "Scrios {os} agus suiteáil {product}",
-  "@installationTypeEraseAndInstall": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      },
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "autoinstallDirectHeader": "Iompórtáil comhad a shuiteáil uathoibríoch",
-  "@autoinstallDirectHeader": {},
   "autoinstallDirectUrlLabel": "Is féidir leat URL an chomhaid uathshuiteála a chur isteach:",
-  "@autoinstallDirectUrlLabel": {},
   "autoinstallDirectTitle": "Suiteáil uathoibrithe",
-  "@autoinstallDirectTitle": {},
   "autoinstallDirectFilePickerFilterLabel": "Comhaid YAML",
-  "@autoinstallDirectFilePickerFilterLabel": {},
   "autoinstallDirectFileButtonLabel": "Roghnaigh comhad...",
-  "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFileLabel": "Nó roghnaigh comhad áitiúil:",
-  "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFilePickerTitle": "Roghnaigh comhad",
-  "@autoinstallDirectFilePickerTitle": {},
   "autoinstallDirectImportButtonLabel": "Iompórtáil",
-  "@autoinstallDirectImportButtonLabel": {},
   "autoinstallDirectErrorInvalidUrlBody": "Seiceáil go bhfuil an URL ceart nó roghnaigh comhad áitiúil.",
-  "@autoinstallDirectErrorInvalidUrlBody": {},
   "autoinstallDirectFileClearButtonLabel": "Glan an comhad",
-  "@autoinstallDirectFileClearButtonLabel": {},
   "autoinstallDirectErrorNetworkTitle": "Níl an comhad uathshuiteála inrochtana",
-  "@autoinstallDirectErrorNetworkTitle": {},
   "autoinstallDirectErrorNetworkBody": "Seiceáil go bhfuil an URL i gceart, déan do nasc idirlín a thástáil, nó bain triail eile as ar ball.",
-  "@autoinstallDirectErrorNetworkBody": {},
   "autoinstallDirectErrorInvalidUrlTitle": "URL neamhbhailí",
-  "@autoinstallDirectErrorInvalidUrlTitle": {},
   "autoinstallDirectErrorInvalidContentTitle": "Comhad uathshuiteála neamhbhailí",
-  "@autoinstallDirectErrorInvalidContentTitle": {},
   "autoinstallDirectErrorInvalidContentBody": "Seiceáil an comhad nó cuir ceann eile ar fáil.",
-  "@autoinstallDirectErrorInvalidContentBody": {},
   "autoinstallDirectErrorFileSystemTitle": "Níl an comhad uathshuiteála inléite",
-  "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorFileSystemBody": "Seiceáil do cheadanna nó cuir comhad eile ar fáil.",
-  "@autoinstallDirectErrorFileSystemBody": {},
   "autoinstallDirectErrorUnkownTitle": "Earráid anaithnid",
-  "@autoinstallDirectErrorUnkownTitle": {},
   "autoinstallDirectOption": "Uathoibríoch le comhad uathshuiteála",
-  "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.",
-  "@autoinstallDirectDescription": {},
   "chooseOptionalPassphraseBody": "Is féidir le pasfhrása cabhrú le do shonraí a chosaint fiú má chuirtear isteach ar do chrua-earraí. Beidh ort an pasfhrása a chur isteach gach uair a chasann tú ar do ríomhaire. Ní bheidh tú in ann é a bhaint níos déanaí",
-  "@chooseOptionalPassphraseBody": {},
   "recoveryKeyHeader": "Faigh eochair athshlánaithe",
-  "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe",
-  "@recoveryKeyInfoHeader": {},
   "autoinstallLandscapeOption": "Uathoibrithe le Tírdhreach",
-  "@autoinstallLandscapeOption": {},
   "autoinstallLandscapeDescription": "D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.",
-  "@autoinstallLandscapeDescription": {},
   "recoveryKeyStorageAdvice": "Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.",
-  "@recoveryKeyStorageAdvice": {},
   "landscapePageTitle": "Suiteáil uathoibrithe",
-  "@landscapePageTitle": {},
   "next": "Ar aghaidh",
-  "@next": {},
   "landscapeDomainInvalidDomainWarning": "Fearann neamhbhailí, seiceáil le do thoil nó déan teagmháil le do thacaíocht TF",
-  "@landscapeDomainInvalidDomainWarning": {},
   "landscapeDomainNoInternetDescriptionWarning": "Tá gá leis an Idirlíon chun an comhad uathshuiteála a fháil ó Landscape",
-  "@landscapeDomainNoInternetDescriptionWarning": {},
   "landscapeLoginFailedWarning": "Theip ar logáil isteach, bain triail eile as",
-  "@landscapeLoginFailedWarning": {},
   "landscapeHeader": "Logáil isteach ar an Tírdhreach",
-  "@landscapeHeader": {},
   "chooseOptionalPassphraseHeader": "Cruthaigh pasfhrása (roghnach)",
-  "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseInfoHeader": "Stóráil do phasfhocal agus eochair athshlánaithe áit éigin sábháilte",
-  "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseInfoBody": "Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.",
-  "@chooseOptionalPassphraseInfoBody": {},
   "recoveryKeyInfoBody": "Faigh eochair athshlánaithe chomh luath agus a logálann tú isteach i {distro} den chéad uair agus stóráil áit éigin sábháilte í.",
-  "@recoveryKeyInfoBody": {
-    "placeholders": {
-      "distro": {
-        "type": "String"
-      }
-    }
-  },
   "recoveryKeyConfirmation": "Tuigim go mb'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam",
-  "@recoveryKeyConfirmation": {},
   "landscapeMagicAttachInstructions": "Scan an cód QR nó cuir isteach an cód thíos ag <a href=\"https://{url}\">{url}</a>",
-  "@landscapeMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "landscapeDomainHeader": "Cuir isteach fearann Tírdhreacha (FQDN)",
-  "@landscapeDomainHeader": {},
   "landscapeDomainNoInternetTitleWarning": "Ceangail leis an idirlíon chun leanúint ar aghaidh",
-  "@landscapeDomainNoInternetTitleWarning": {},
   "landscapeCodeExpiredWarning": "Chuaigh an cód in éag, bain triail eile as",
-  "@landscapeCodeExpiredWarning": {},
   "landscapeDomainInstructions": "Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.",
-  "@landscapeDomainInstructions": {},
   "landscapeDomainTextField": "Fearann tírdhreacha (FQDN)",
-  "@landscapeDomainTextField": {},
   "rstDisable": "Úsáideann do ríomhaire Intel RST (Teicneolaíocht Stórála Mear). Is féidir leat RST a dhíchumasú ceachtar i:",
-  "@rstDisable": {},
   "restartComputer": "Atosaigh ríomhaire",
-  "@restartComputer": {},
   "restartComputerTitle": "Atosaigh ríomhaire?",
-  "@restartComputerTitle": {},
   "rstDisableWindows": "Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows",
-  "@rstDisableWindows": {},
   "rstDisableBios": "Socruithe BIOS",
-  "@rstDisableBios": {},
   "bitlockerInfoDescription": "Tá deighilt amháin nó níos mó criptithe le BitLocker.",
-  "@bitlockerInfoDescription": {},
   "bitlockerInfoRecovery": "Féadfaidh Windows eochracha athshlánaithe a iarraidh ar an tosaithe tar éis na suiteála.",
-  "@bitlockerInfoRecovery": {},
   "bitlockerInfoInstructions": "Le treoracha a fháil, tabhair cuairt ar an <a href=\"{url}\">Treoir BitLocker</a>.",
-  "@bitlockerInfoInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "bitlockerInfoTitle": "Braitheadh BitLocker",
-  "@bitlockerInfoTitle": {},
   "bitlockerInfoDisable": "Chun é a shuiteáil taobh le Windows, díchumasaigh BitLocker i Windows.",
-  "@bitlockerInfoDisable": {},
   "bitlockerWarningTitle": "Seans go gcaillfidh tú do shonraí go léir gan eochracha athshlánaithe BitLocker",
-  "@bitlockerWarningTitle": {},
   "installationTypeNoneInfo": "Córas comhad caighdeánach gan criptiú.",
-  "@installationTypeNoneInfo": {},
   "installationTypeLVMEncryptionInfo": "Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.",
-  "@installationTypeLVMEncryptionInfo": {},
   "installationTypeZFSEncryptionInfo": "Criptiú dúchasach le ZFS. Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl.",
-  "@installationTypeZFSEncryptionInfo": {},
   "confirmTableErased": "Scriosta",
-  "@confirmTableErased": {},
   "confirmTableResized": "Athmhéadaithe ó {oldsize} go {newsize}",
-  "@confirmTableResized": {
-    "placeholders": {
-      "oldsize": {
-        "type": "String"
-      },
-      "newsize": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormattedMounted": "Formáidithe mar {format} a úsáidtear le haghaidh {mountpoint}",
-  "@confirmTableFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableMounted": "Úsáidte le haghaidh {mountpoint}",
-  "@confirmTableMounted": {
-    "placeholders": {
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeErrorPageCode": "Cód earráide: {code}",
-  "@landscapeErrorPageCode": {
-    "placeholders": {
-      "code": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableCreatedFormattedMounted": "Cruthaithe agus formáidithe mar {format} a úsáidtear le haghaidh {mountpoint}",
-  "@confirmTableCreatedFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormatted": "Formáidithe mar {format}",
-  "@confirmTableFormatted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableUnchanged": "Gan athrú",
-  "@confirmTableUnchanged": {},
   "landscapeErrorPageBody": "Déan teagmháil le do thacaíocht TF nó bain triail as rogha suiteála eile.",
-  "@landscapeErrorPageBody": {},
   "landscapeErrorPageTitle": "Níl suiteáil uathoibrithe ar fáil le do chuntas",
-  "@landscapeErrorPageTitle": {},
   "landscapeDomainHintText": "Fearann tírdhreacha (FQDN)",
-  "@landscapeDomainHintText": {},
   "landscapeConfirmPageSuccessInfoTitle": "Suiteáilfidh Ubuntu leis an gcumraíocht a sholáthraíonn d'eagraíocht",
-  "@landscapeConfirmPageSuccessInfoTitle": {},
-  "landscapeConfirmPageSuccessInfoContent": "Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.",
-  "@landscapeConfirmPageSuccessInfoContent": {}
+  "landscapeConfirmPageSuccessInfoContent": "Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos."
 }

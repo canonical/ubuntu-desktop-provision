@@ -1,1153 +1,346 @@
 {
   "@@locale": "pl",
   "windowTitle": "Zainstaluj {RELEASE}",
-  "@windowTitle": {},
   "tryOrInstallRepairOption": "Napraw instalację",
-  "@tryOrInstallRepairOption": {},
   "tryOrInstallTitle": "Wypróbuj lub zainstaluj {DISTRO}",
-  "@tryOrInstallTitle": {},
   "tryOrInstallRepairDescription": "Naprawa spowoduje ponowną instalację całego zainstalowanego oprogramowania bez naruszania dokumentów lub ustawień.",
-  "@tryOrInstallRepairDescription": {},
   "appTitle": "Instalator Ubuntu Desktop",
-  "@appTitle": {},
   "installThirdPartySubtitle": "Oprogramowanie to podlega warunkom licencyjnym dołączonym do jego dokumentacji. Niektóre z nich są własnościowe.",
-  "@installThirdPartySubtitle": {},
   "changeButtonText": "Zmień",
-  "@changeButtonText": {},
   "tryOption": "Wypróbuj {RELEASE}",
-  "@tryOption": {},
   "rstInstructions": "Aby uzyskać instrukcje, zeskanuj kod QR na innym urządzeniu lub odwiedź: <a href=\"https://{url}\">{url}</a>",
-  "@rstInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "tryDescription": "Możesz wypróbować {RELEASE} bez wprowadzania jakichkolwiek zmian na swoim komputerze.",
-  "@tryDescription": {},
   "installDescription": "Zainstaluj {RELEASE} obok (lub zamiast) obecnego systemu operacyjnego. Nie powinno to potrwać zbyt długo.",
-  "@installDescription": {},
   "selectGuidedStorageDropdownLabel": "Wybierz napęd:",
-  "@selectGuidedStorageDropdownLabel": {},
   "configureSecureBootOption": "Skonfiguruj bezpieczny rozruch (Secure Boot)",
-  "@configureSecureBootOption": {},
   "chooseSecurityKey": "Wybierz klucz bezpieczeństwa",
-  "@chooseSecurityKey": {},
   "installationTypeErase": "Wymaż dysk i zainstaluj {DISTRO}",
-  "@installationTypeErase": {},
   "updatesOtherSoftwarePageDescription": "Jakie programy chcesz zainstalować na początek?",
-  "@updatesOtherSoftwarePageDescription": {},
   "installationTypeTitle": "Konfiguracja dysku",
-  "@installationTypeTitle": {},
   "installThirdPartyTitle": "Zainstaluj oprogramowanie innych dostawców do obsługi sprzętu graficznego i Wi-Fi, a także dodatkowe formaty multimedialne",
-  "@installThirdPartyTitle": {},
   "installationTypeReinstall": "Wymaż {os} i zainstaluj ponownie",
-  "@installationTypeReinstall": {
-    "type": "text",
-    "placeholders": {
-      "os": {}
-    }
-  },
   "installationTypeReinstallWarning": "<font color=\"{color}\">Ostrzeżenie:</font> spowoduje to usunięcie wszystkich programów {os}, dokumentów, zdjęć, muzyki i wszelkich innych plików.",
-  "@installationTypeReinstallWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {},
-      "os": {}
-    }
-  },
   "diskHeadersFormat": "Formatowanie",
-  "@diskHeadersFormat": {},
   "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
-  "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "Użyj ZFS bez szyfrowania",
-  "@installationTypeZFS": {},
   "installationTypeManualInfo": "Dla zaawansowanych użytkowników preferujących niestandardowe konfiguracje dysków.",
-  "@installationTypeManualInfo": {},
   "partitionLocationLabel": "Położenie nowej partycji:",
-  "@partitionLocationLabel": {},
   "installationTypeZFSSelected": "Wybrano ZFS",
-  "@installationTypeZFSSelected": {},
   "selectGuidedStoragePageTitle": "Wymaż dysk i zainstaluj {DISTRO}",
-  "@selectGuidedStoragePageTitle": {},
   "allocateDiskSpace": "Ręczne partycjonowanie",
-  "@allocateDiskSpace": {},
   "diskHeadersType": "Typ",
-  "@diskHeadersType": {},
   "newPartitionTable": "Nowa tablica partycji",
-  "@newPartitionTable": {},
   "partitionTypeLogical": "Logiczna",
-  "@partitionTypeLogical": {},
   "installationTypeAlongside": "Zainstaluj {product} obok {os}",
-  "@installationTypeAlongside": {
-    "type": "text",
-    "placeholders": {
-      "product": {},
-      "os": {}
-    }
-  },
   "selectGuidedStorageInstallNow": "Zainstaluj teraz",
-  "@selectGuidedStorageInstallNow": {},
   "confirmInstallButton": "Instaluj",
-  "@confirmInstallButton": {},
   "diskHeadersDevice": "Urządzenie",
-  "@diskHeadersDevice": {},
   "diskHeadersMountPoint": "Punkt montowania",
-  "@diskHeadersMountPoint": {},
   "freeDiskSpace": "Wolna przestrzeń",
-  "@freeDiskSpace": {},
   "selectGuidedStorageInfoLabel": "Zostanie użyta cała powierzchnia dysku:",
-  "@selectGuidedStorageInfoLabel": {},
   "diskHeadersSize": "Rozmiar",
-  "@diskHeadersSize": {},
   "diskHeadersUsed": "Zajęte",
-  "@diskHeadersUsed": {},
   "diskHeadersSystem": "System",
-  "@diskHeadersSystem": {},
   "confirmPartitionChanges": "Zostaną zastosowane następujące zmiany partycji:",
-  "@confirmPartitionChanges": {},
   "welcome": "Witamy",
-  "@welcome": {},
   "installOption": "Zainstaluj {RELEASE}",
-  "@installOption": {},
   "tryOrInstallReleaseNotesLabel": "Możesz chcieć przeczytać <a href=\"{url}\">informacje o wydaniu</a>.",
-  "@tryOrInstallReleaseNotesLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "rstTitle": "Wykryto RST",
-  "@rstTitle": {},
   "rstDescription": "Ten komputer wykorzystuje funkcję Intel RST (Rapid Storage Technology). Musisz wyłączyć RST w systemie Windows przed instalacją {DISTRO}.",
-  "@rstDescription": {},
   "configureSecureBootTitle": "Skonfiguruj bezpieczny rozruch (Secure Boot)",
-  "@configureSecureBootTitle": {},
   "configureSecureBootDescription": "Wybrano instalację oprogramowania sterownika innego dostawcy. Wymaga to wyłączenia bezpiecznego rozruchu (Secure Boot).\nAby to zrobić, musisz teraz wybrać klucz bezpieczeństwa i podać go po ponownym uruchomieniu systemu.",
-  "@configureSecureBootDescription": {},
   "confirmSecurityKey": "Potwierdź klucz bezpieczeństwa",
-  "@confirmSecurityKey": {},
   "dontInstallDriverSoftwareNow": "Na razie nie instaluj oprogramowania sterownika",
-  "@dontInstallDriverSoftwareNow": {},
   "dontInstallDriverSoftwareNowDescription": "Możesz zainstalować je później za pomocą aplikacji Oprogramowanie i aktualizacje.",
-  "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Wymagany jest klucz bezpieczeństwa",
-  "@configureSecureBootSecurityKeyRequired": {},
   "updatesOtherSoftwarePageTitle": "Programy",
-  "@updatesOtherSoftwarePageTitle": {},
   "otherOptions": "Pozostałe opcje",
-  "@otherOptions": {},
   "secureBootSecurityKeysDontMatch": "Klucze bezpieczeństwa nie są zgodne",
-  "@secureBootSecurityKeysDontMatch": {},
   "installationTypeOSDetected": "Na tym komputerze jest obecnie zainstalowany system {os}. Co chcesz zrobić?",
-  "@installationTypeOSDetected": {
-    "type": "text",
-    "placeholders": {
-      "os": {}
-    }
-  },
   "installationTypeNoOSDetected": "Na tym komputerze nie ma obecnie wykrytych systemów operacyjnych. Co chcesz zrobić?",
-  "@installationTypeNoOSDetected": {},
   "installationTypeAdvancedLabel": "Pokaż opcje zaawansowane...",
-  "@installationTypeAdvancedLabel": {},
   "installationTypeAdvancedTitle": "Szyfrowanie i system plików",
-  "@installationTypeAdvancedTitle": {},
   "installationTypeNone": "Bez szyfrowania",
-  "@installationTypeNone": {},
   "installationTypeNoneSelected": "Nie wybrano",
-  "@installationTypeNoneSelected": {},
   "installationTypeLVMSelected": "Wybrano LVM",
-  "@installationTypeLVMSelected": {},
   "installationTypeEncrypt": "Zaszyfruj nową instalację {RELEASE} dla bezpieczeństwa",
-  "@installationTypeEncrypt": {},
   "installationTypeAlongsideInfo": "Wybierz partycję do zmiany rozmiaru i utworzenia przestrzeni dla {product}. Możesz wybrać swój system operacyjny podczas rozruchu.",
-  "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ręczne partycjonowanie",
-  "@installationTypeManual": {},
   "bootLoaderDevice": "Urządzenie do instalacji programu rozruchowego",
-  "@bootLoaderDevice": {},
   "partitionCreateTitle": "Utwórz partycję",
-  "@partitionCreateTitle": {},
   "partitionEditTitle": "Modyfikowanie partycji",
-  "@partitionEditTitle": {},
   "partitionSizeLabel": "Rozmiar:",
-  "@partitionSizeLabel": {},
   "partitionTypeLabel": "Typ nowej partycji:",
-  "@partitionTypeLabel": {},
   "partitionTypePrimary": "Podstawowa",
-  "@partitionTypePrimary": {},
   "partitionLocationBeginning": "Początek przestrzeni",
-  "@partitionLocationBeginning": {},
   "partitionLocationEnd": "Koniec przestrzeni",
-  "@partitionLocationEnd": {},
   "partitionFormatLabel": "Używana jako:",
-  "@partitionFormatLabel": {},
   "partitionErase": "Sformatuj partycję",
-  "@partitionErase": {},
   "partitionMountPointLabel": "Punkt montowania:",
-  "@partitionMountPointLabel": {},
   "confirmPageTitle": "Gotów do instalacji",
-  "@confirmPageTitle": {},
   "confirmHeader": "Przejrzyj swoje wybory",
-  "@confirmHeader": {},
   "confirmPartitionTables": "Zmieniane są tablice partycji następujących urządzeń:",
-  "@confirmPartitionTables": {},
   "confirmPartitionTable": "{serial} ({path})",
-  "@confirmPartitionTable": {
-    "description": "An entry for a disk whose partition table is being changed",
-    "placeholders": {
-      "serial": {},
-      "path": {}
-    }
-  },
   "installationCompleteTitle": "Instalacja zakończona",
-  "@installationCompleteTitle": {},
   "readyToUse": "{system} został zainstalowany i jest gotowy do użycia",
-  "@readyToUse": {
-    "type": "text",
-    "placeholders": {
-      "system": {}
-    }
-  },
   "restartInto": "Uruchom ponownie do {system}",
-  "@restartInto": {
-    "type": "text",
-    "placeholders": {
-      "system": {}
-    }
-  },
   "shutdown": "Zamknij",
-  "@shutdown": {},
   "bitlockerTitle": "Funkcja BitLocker jest włączona",
-  "@bitlockerTitle": {},
   "bitlockerDescription": "Ten komputer używa szyfrowania Windows BitLocker.\nNależy użyć systemu Windows do utworzenia wolnej przestrzeni lub wybrać '{option}', aby kontynuować.",
-  "@bitlockerDescription": {},
   "bitlockerInstructions": "Aby uzyskać instrukcje, zeskanuj kod QR na innym urządzeniu lub odwiedź: <a href=\"https://{url}\">{url}</a>",
-  "@bitlockerInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "restartIntoWindows": "Uruchom ponownie do Windows",
-  "@restartIntoWindows": {},
   "newPartitionTableConfirmationTitle": "Nowa pusta partycja",
-  "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Utworzenie nowej tabeli partycji na całym urządzeniu spowoduje usunięcie wszystkich jego bieżących partycji. Operację tę można cofnąć w razie potrzeby.",
-  "@newPartitionTableConfirmationMessage": {},
   "onBatteryWarning": "<font color=\"{color}\">Ostrzeżenie:</font> komputer nie jest podłączony do źródła zasilania.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeDualOSDetected": "Na tym komputerze są obecnie zainstalowane systemy {os1} i {os2}. Co chcesz zrobić?",
-  "@installationTypeDualOSDetected": {
-    "type": "text",
-    "placeholders": {
-      "os1": {},
-      "os2": {}
-    }
-  },
   "installationTypeMultiOSDetected": "Na tym komputerze jest obecnie zainstalowanych wiele systemów operacyjnych. Co chcesz zrobić?",
-  "@installationTypeMultiOSDetected": {},
   "copyingFiles": "Kopiowanie plików…",
-  "@copyingFiles": {},
   "installationFailed": "Instalacja nieudana",
-  "@installationFailed": {},
   "installationTypeAlongsideMulti": "Zainstaluj {product} obok istniejących systemów operacyjnych",
-  "@installationTypeAlongsideMulti": {
-    "type": "text",
-    "placeholders": {
-      "product": {}
-    }
-  },
   "installAlongsideSpaceDivider": "Przydziel przestrzeń dyskową, przesuwając poniższą podziałkę:",
-  "@installAlongsideSpaceDivider": {},
   "installAlongsideResizePartition": "Zmień rozmiar partycji",
-  "@installAlongsideResizePartition": {},
   "installAlongsideAllocateSpace": "Przydziel przestrzeń",
-  "@installAlongsideAllocateSpace": {},
   "installAlongsideFiles": "Pliki",
-  "@installAlongsideFiles": {},
   "installAlongsidePartition": "Partycja:",
-  "@installAlongsidePartition": {},
   "installAlongsideAvailable": "Dostępne:",
-  "@installAlongsideAvailable": {},
   "installationTypeAlongsideDual": "Zainstaluj {product} obok {os1} i {os2}",
-  "@installationTypeAlongsideDual": {
-    "type": "text",
-    "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
-    }
-  },
   "installationTypeAlongsideUnknown": "Zainstaluj {product} obok innych partycji",
-  "@installationTypeAlongsideUnknown": {
-    "type": "text",
-    "placeholders": {
-      "product": {}
-    }
-  },
   "installAlongsideHiddenPartitions": "{num} mniejsze partycje są ukryte, użyj <a href=\"{url}\">zaawansowanego narzędzia do partycjonowania</a>, aby uzyskać większą kontrolę",
-  "@installAlongsideHiddenPartitions": {
-    "type": "text",
-    "placeholders": {
-      "num": {},
-      "url": {}
-    }
-  },
   "installAlongsideSize": "Rozmiar:",
-  "@installAlongsideSize": {},
   "confirmPartitionFormatMount": "partycja <b>{sysname}</b> sformatowana jako <b>{format}</b> używana do <b>{mount}</b>",
-  "@confirmPartitionFormatMount": {
-    "description": "A formatted and mounted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
-    }
-  },
   "notEnoughDiskSpaceTitle": "Za mało przestrzeni dyskowej",
-  "@notEnoughDiskSpaceTitle": {},
   "quitButtonText": "Zakończ instalację",
-  "@quitButtonText": {},
   "confirmPartitionMount": "partycja <b>{sysname}</b> używana do <b>{mount}</b>",
-  "@confirmPartitionMount": {
-    "description": "A mounted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "mount": {}
-    }
-  },
   "confirmPartitionResize": "partycja <b>{sysname}</b> zmieniła rozmiar z <b>{oldsize}</b> na <b>{newsize}</b>",
-  "@confirmPartitionResize": {
-    "description": "A resized partition entry",
-    "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
-    }
-  },
   "confirmPartitionFormat": "partycja <b>{sysname}</b> sformatowana jako <b>{format}</b>",
-  "@confirmPartitionFormat": {
-    "description": "A formatted partition entry",
-    "placeholders": {
-      "sysname": {},
-      "format": {}
-    }
-  },
   "confirmPartitionCreate": "utworzona partycja <b>{sysname}</b>",
-  "@confirmPartitionCreate": {
-    "description": "A created partition entry",
-    "placeholders": {
-      "sysname": {}
-    }
-  },
   "configuringSystem": "Konfigurowanie systemu…",
-  "@configuringSystem": {},
   "installingSystem": "Instalowanie systemu…",
-  "@installingSystem": {},
   "showSecurityKey": "Pokaż klucz bezpieczeństwa",
-  "@showSecurityKey": {},
   "installationTypeLVMEncryptionSelected": "Wybrano LVM i szyfrowanie",
-  "@installationTypeLVMEncryptionSelected": {},
   "installDriversTitle": "Zainstaluj oprogramowanie innego dostawcy do sprzętu graficznego i Wi-Fi",
-  "@installDriversTitle": {},
   "installCodecsTitle": "Pobierz i zainstaluj obsługę dodatkowych formatów multimediów",
-  "@installCodecsTitle": {},
   "installCodecsSubtitle": "W tym między innymi MP3, MP4, MOV i podobne",
-  "@installCodecsSubtitle": {},
   "installDriversSubtitle": "W tym między innymi sterowniki NVIDIA i podobne",
-  "@installDriversSubtitle": {},
   "tooManyPrimaryPartitions": "Zbyt wiele partycji podstawowych",
-  "@tooManyPrimaryPartitions": {},
   "partitionLimitReached": "Osiągnięto limit",
-  "@partitionLimitReached": {},
   "restartNow": "Uruchom ponownie teraz",
-  "@restartNow": {},
   "continueTesting": "Kontynuuj testowanie",
-  "@continueTesting": {},
   "offlineWarning": "Jesteś obecnie offline",
-  "@offlineWarning": {},
   "partitionFormatNone": "Pozostaw niesformatowaną",
-  "@partitionFormatNone": {},
   "loadingHeader": "Przygotowywanie {DISTRO}…",
-  "@loadingHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "confirmDevicesTitle": "Urządzenia",
-  "@confirmDevicesTitle": {},
   "confirmPartitionsTitle": "Partycje",
-  "@confirmPartitionsTitle": {},
   "installationSlidesTitle": "Witaj w {RELEASE}",
-  "@installationSlidesTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationSlidesIncluded": "Dołączone:",
-  "@installationSlidesIncluded": {},
   "installationSlidesWelcomeTitle": "Szybki, darmowy i pełen nowych funkcji",
-  "@installationSlidesWelcomeTitle": {},
   "installationSlidesWelcomeBody": "Niezależnie od tego, czy jesteś programistą, twórcą, graczem czy administratorem, w {RELEASE} znajdziesz nowe narzędzia, które poprawią produktywność i wrażenia.",
-  "@installationSlidesWelcomeBody": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
   "installationSlidesSoftwareTitle": "Wszystkie potrzebne aplikacje",
-  "@installationSlidesSoftwareTitle": {},
   "installationSlidesDevelopmentTitle": "Twórz z wykorzystaniem najlepszych rozwiązań open source",
-  "@installationSlidesDevelopmentTitle": {},
   "installationSlidesCreativityTitle": "Zwiększ swoją kreatywność",
-  "@installationSlidesCreativityTitle": {},
   "installationSlidesGamingTitle": "Świetny do gier",
-  "@installationSlidesGamingTitle": {},
   "installationSlidesGamingBody": "{DISTRO} obsługuje najnowsze sterowniki NVIDIA i Mesa, aby poprawić wydajność i kompatybilność. Tysiące tytułów dla systemu Windows działają świetnie na {DISTRO} za pośrednictwem aplikacji takich jak Steam, bez dodatkowej konfiguracji.",
-  "@installationSlidesGamingBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSecurityTitle": "Prywatny i bezpieczny",
-  "@installationSlidesSecurityTitle": {},
   "installationSlidesProductivityTitle": "Zwiększ swoją produktywność",
-  "@installationSlidesProductivityTitle": {},
   "installationSlidesProductivityBody": "{DISTRO} Desktop zawiera LibreOffice, pakiet kompatybilnych z Microsoft Office aplikacji open source do dokumentów, arkuszy kalkulacyjnych i prezentacji. Dostępne są również popularne narzędzia do współpracy.",
-  "@installationSlidesProductivityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesAccessibilityTitle": "Dostęp dla wszystkich",
-  "@installationSlidesAccessibilityTitle": {},
   "installationSlidesAccessibilityOrca": "Czytnik ekranu Orca",
-  "@installationSlidesAccessibilityOrca": {},
   "installationSlidesSupportTitle": "Pomoc i wsparcie",
-  "@installationSlidesSupportTitle": {},
   "installationSlidesSupportHeader": "Oficjalna dokumentacja {DISTRO} jest dostępna zarówno online, jak i poprzez ikonę Pomoc w doku.",
-  "@installationSlidesSupportHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSupportCommunity": "Serwis Ask Ubuntu obejmuje szereg pytań i odpowiedzi, a Ubuntu Discourse zawiera przewodniki i dyskusje dla nowych i doświadczonych użytkowników.",
-  "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Dla użytkowników korporacyjnych Canonical zapewnia komercyjne wsparcie, aby ułatwić wdrożenie i bezpieczne zarządzanie systemem Ubuntu w miejscu pracy.",
-  "@installationSlidesSupportEnterprise": {},
   "installationSlidesCreativityBody": "Jeśli zajmujesz się animacją, projektowaniem, tworzeniem wideo lub gier, możesz łatwo przenieść swoje przepływy pracy do {DISTRO} dzięki obsłudze oprogramowania i aplikacji będących standardem branżowym oraz open source.",
-  "@installationSlidesCreativityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "notEnoughDiskSpaceUbuntu": "Za mało przestrzeni dyskowej do zainstalowania {DISTRO}",
-  "@notEnoughDiskSpaceUbuntu": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSupportUbuntuPro": "Całodobowe wsparcie klasy korporacyjnej za pomocą Ubuntu Pro",
-  "@installationSlidesSupportUbuntuPro": {},
   "installationSlidesAvailable": "Dostępne:",
-  "@installationSlidesAvailable": {},
   "installationSlidesWelcomeHeader": "Najnowsza wersja {DISTRO} sprawia, że korzystanie z komputera jest łatwiejsze niż kiedykolwiek.",
-  "@installationSlidesWelcomeHeader": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesDevelopmentBody": "{DISTRO} to idealna stacja robocza do tworzenia aplikacji lub stron internetowych, nauki o danych i sztucznej inteligencji/uczenia maszynowego, a także DevOps i administracji. Każda wersja {DISTRO} zawiera najnowsze zestawy narzędzi i obsługuje wszystkie główne IDE.",
-  "@installationSlidesDevelopmentBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSecurityLts": "Wszystkie wersje {DISTRO} LTS są dostarczane z pięcioletnim łataniem zabezpieczeń, które można wydłużyć do dziesięciu lat za pomocą subskrypcji Ubuntu Pro.",
-  "@installationSlidesSecurityLts": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSoftwareBody": "Instaluj, zarządzaj i aktualizuj wszystkie aplikacje w Ubuntu Software, w tym tysiące aplikacji zarówno ze Snap Store, jak i archiwum {DISTRO}.",
-  "@installationSlidesSoftwareBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSecurityBody": "{DISTRO} zapewnia wszystkie narzędzia potrzebne do zachowania prywatności i bezpieczeństwa w Internecie. Umożliwia pełną kontrolę nad danymi dzięki wbudowanej zaporze sieciowej, obsłudze VPN oraz wielu aplikacjom zorientowanym na prywatność.",
-  "@installationSlidesSecurityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesAccessibilityBody": "U podstaw filozofii {DISTRO} leży przekonanie, że informatyka jest dla każdego. Dzięki zaawansowanym narzędziom ułatwień dostępu i opcjom zmiany języka, kolorów oraz rozmiaru tekstu {DISTRO} sprawia, że korzystanie z komputera jest łatwe — kimkolwiek i gdziekolwiek jesteś.",
-  "@installationSlidesAccessibilityBody": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "installationSlidesSupportResources": "Pomocne zasoby:",
-  "@installationSlidesSupportResources": {},
   "installationSlidesAccessibilityLanguages": "Obsługa języków",
-  "@installationSlidesAccessibilityLanguages": {},
   "installationSlidesSupportDocumentation": "Oficjalna dokumentacja",
-  "@installationSlidesSupportDocumentation": {},
   "notEnoughDiskSpaceAvailable": "Dostępna:",
-  "@notEnoughDiskSpaceAvailable": {},
   "notEnoughDiskSpaceRequired": "Wymagana:",
-  "@notEnoughDiskSpaceRequired": {},
   "rstHeader": "Musisz wyłącz funkcję RST, aby kontynuować",
-  "@rstHeader": {},
   "restartIntoWindowsDescription": "Czy na pewno chcesz ponownie uruchomić komputer? Później należy ponownie uruchomić instalację {DISTRO}, aby zakończyć instalowanie {DISTRO}.",
-  "@restartIntoWindowsDescription": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "restartIntoWindowsTitle": "Uruchomić ponownie do Windows?",
-  "@restartIntoWindowsTitle": {},
   "bitlockerHeader": "Wyłącz funkcję BitLocker, aby kontynuować",
-  "@bitlockerHeader": {},
   "allocateDiskSpaceInvalidMountPointSpace": "Punkty montowania nie mogą zawierać spacji",
-  "@allocateDiskSpaceInvalidMountPointSpace": {},
   "allocateDiskSpaceInvalidMountPointSlash": "Punkty montowania muszą zaczynać się od „/”",
-  "@allocateDiskSpaceInvalidMountPointSlash": {},
   "partitionFormatKeep": "Pozostaw sformatowaną jako {format}",
-  "@partitionFormatKeep": {
-    "type": "text",
-    "placeholders": {
-      "format": {}
-    }
-  },
   "loadingPageTitle": "Witaj w {DISTRO}",
-  "@loadingPageTitle": {
-    "type": "text",
-    "placeholders": {
-      "DISTRO": {}
-    }
-  },
   "refreshInstall": "Zaktualizuj do wersji {version}",
-  "@refreshInstall": {
-    "type": "text",
-    "placeholders": {
-      "version": {}
-    }
-  },
   "refreshUpToDate": "Bieżąca wersja {version} jest aktualna.",
-  "@refreshUpToDate": {
-    "type": "text",
-    "placeholders": {
-      "version": {}
-    }
-  },
   "refreshSnapRefresh": "Odświeżanie {snap}...",
-  "@refreshSnapRefresh": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapCheckRerefresh": "Sprawdzanie ponownego odświeżenia {snap}...",
-  "@refreshSnapCheckRerefresh": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapMount": "Montowanie {snap}...",
-  "@refreshSnapMount": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapUpdateAssets": "Aktualizowanie zasobów {snap}...",
-  "@refreshSnapUpdateAssets": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapSetupAliases": "Konfigurowanie aliasów {snap}...",
-  "@refreshSnapSetupAliases": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapStartServices": "Uruchamianie usług {snap}...",
-  "@refreshSnapStartServices": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapCleanup": "Czyszczenie {snap}...",
-  "@refreshSnapCleanup": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "recoveryKeyTitle": "Klucz odzyskiwania modułu TPM",
-  "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Aby uzyskać klucz odzyskiwania, zakończ instalację, uruchom ponownie komputer i uruchom to polecenie w terminalu:",
-  "@recoveryKeyCommand": {},
   "installationTypeTPM": "Użyj szyfrowania sprzętowego",
-  "@installationTypeTPM": {},
   "installationTypeTPMSelected": "Wybrano moduł TPM",
-  "@installationTypeTPMSelected": {},
   "refreshPageTitle": "Dostępna aktualizacja",
-  "@refreshPageTitle": {},
   "refreshCurrent": "Bieżąca wersja {snap} to {version}.",
-  "@refreshCurrent": {
-    "type": "text",
-    "placeholders": {
-      "snap": {},
-      "version": {}
-    }
-  },
   "refreshUpdating": "Aktualizowanie {snap}...",
-  "@refreshUpdating": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshRestart": "Zamknij instalator i uruchom go ponownie, aby kontynuować",
-  "@refreshRestart": {},
   "refreshSnapPrerequisites": "Sprawdzanie wymagań wstępnych {snap}...",
-  "@refreshSnapPrerequisites": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapPrepare": "Przygotowywanie {snap}...",
-  "@refreshSnapPrepare": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapDownload": "Pobieranie {snap}...",
-  "@refreshSnapDownload": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapValidate": "Sprawdzanie poprawności {snap}...",
-  "@refreshSnapValidate": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapStopServices": "Zatrzymywanie usług {snap}...",
-  "@refreshSnapStopServices": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapRemoveAliases": "Usuwanie aliasów {snap}...",
-  "@refreshSnapRemoveAliases": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapUnlink": "Odłączanie {snap}...",
-  "@refreshSnapUnlink": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapUpdateKernelCommandLine": "Aktualizowanie wiersza poleceń jądra {snap}...",
-  "@refreshSnapUpdateKernelCommandLine": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapCopyData": "Kopiowanie danych {snap}...",
-  "@refreshSnapCopyData": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapSetupProfiles": "Konfigurowanie profili bezpieczeństwa {snap}...",
-  "@refreshSnapSetupProfiles": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapLink": "Łączenie {snap}...",
-  "@refreshSnapLink": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapAutoConnect": "Łączenie wtyczek i gniazd {snap}...",
-  "@refreshSnapAutoConnect": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "refreshSnapSetAutoAliases": "Ustawianie automatycznych aliasów {snap}...",
-  "@refreshSnapSetAutoAliases": {
-    "type": "text",
-    "placeholders": {
-      "snap": {}
-    }
-  },
   "recoveryKeyWarning": "<font color=\"{color}\">Ostrzeżenie:</font> jeśli zgubisz ten klucz bezpieczeństwa, wszystkie dane zostaną utracone. W razie potrzeby zapisz swój klucz i przechowuj go w bezpiecznym miejscu gdzie indziej.",
-  "@recoveryKeyWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "minimalInstallationTitle": "Domyślny wybór",
-  "@minimalInstallationTitle": {},
   "minimalInstallationSubtitle": "Tylko niezbędne elementy, przeglądarka internetowa i podstawowe narzędzia.",
-  "@minimalInstallationSubtitle": {},
   "fullInstallationSubtitle": "Ukierunkowany na tryb offline wybór narzędzi biurowych, programów użytkowych oraz przeglądarka internetowa.",
-  "@fullInstallationSubtitle": {},
   "fullInstallationTitle": "Rozszerzony wybór",
-  "@fullInstallationTitle": {},
   "autoinstallInstructions": "Wpisz adres URL pliku autoinstall.yaml lub ścieżkę pliku lokalnego:",
-  "@autoinstallInstructions": {},
   "warningLabel": "Ostrzeżenie:",
-  "@warningLabel": {},
   "tryOrInstallHeader": "Co chcesz zrobić z {DISTRO}?",
-  "@tryOrInstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "codecsAndDriversPageDescription": "Zainstalować zalecane oprogramowanie własnościowe?",
-  "@codecsAndDriversPageDescription": {},
   "codecsAndDriversNvidiaNote": "Wykryto kartę graficzną NVIDIA",
-  "@codecsAndDriversNvidiaNote": {},
   "batteryWarning": "Komputer nie jest podłączony do źródła zasilania.",
-  "@batteryWarning": {},
   "choosePassphraseTitle": "Hasło dysku",
-  "@choosePassphraseTitle": {},
   "choosePassphraseHeader": "Utwórz hasło",
-  "@choosePassphraseHeader": {},
   "choosePassphraseBody": "Aby zaszyfrować pliki, potrzebujesz hasła. Przy każdym włączeniu komputera będzie wymagane podanie hasła.",
-  "@choosePassphraseBody": {},
   "choosePassphraseHint": "Wybierz hasło",
-  "@choosePassphraseHint": {},
   "choosePassphraseConfirmHint": "Potwierdź hasło",
-  "@choosePassphraseConfirmHint": {},
   "choosePassphraseRequired": "Wymagane jest hasło",
-  "@choosePassphraseRequired": {},
   "choosePassphraseMismatch": "Hasła nie pasują do siebie",
-  "@choosePassphraseMismatch": {},
   "choosePassphraseInfoHeader": "Przechowuj hasło w bezpiecznym miejscu",
-  "@choosePassphraseInfoHeader": {},
   "createPassphrase": "Utwórz hasło",
-  "@createPassphrase": {},
   "installationTypeHeader": "W jaki sposób chcesz zainstalować {DISTRO}?",
-  "@installationTypeHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeExperimental": "Eksperymentalne",
-  "@installationTypeExperimental": {},
   "installationTypeLVM": "Użyj LVM bez szyfrowania",
-  "@installationTypeLVM": {},
   "installationTypeEraseInfo": "Wszystkie dane i partycje na dysku zostaną wymazane, łącznie z systemami operacyjnymi.",
-  "@installationTypeEraseInfo": {},
   "installationTypeLVMEncryption": "Zaszyfruj przy użyciu hasła",
-  "@installationTypeLVMEncryption": {},
   "installationTypeZFSEncryption": "Szyfruj za pomocą hasła przy użyciu ZFS",
-  "@installationTypeZFSEncryption": {},
   "installationTypeZFSEncryptionSelected": "Wybrano ZFS i szyfrowanie",
-  "@installationTypeZFSEncryptionSelected": {},
   "selectGuidedStorageInfo": "Zacznij od zera na wybranym dysku.",
-  "@selectGuidedStorageInfo": {},
   "selectGuidedStorageDriveDropdownLabel": "Wybierz dysk:",
-  "@selectGuidedStorageDriveDropdownLabel": {},
   "selectGuidedStoragePartitionDropdownLabel": "Wybierz partycję:",
-  "@selectGuidedStoragePartitionDropdownLabel": {},
   "guidedStoragePageHeader": "Wybierz miejsce instalacji {DISTRO}",
-  "@guidedStoragePageHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "confirmEntryDiskSetup": "Rodzaj instalacji",
-  "@confirmEntryDiskSetup": {},
   "confirmEntryDiskEncryption": "Szyfrowanie dysku",
-  "@confirmEntryDiskEncryption": {},
   "confirmEntryInstallationDisk": "Dysk instalacyjny",
-  "@confirmEntryInstallationDisk": {},
   "confirmEntryProprietarySoftware": "Oprogramowanie własnościowe",
-  "@confirmEntryProprietarySoftware": {},
   "confirmSectionGeneralTitle": "Ogólne",
-  "@confirmSectionGeneralTitle": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
-  "@confirmDiskEncryptionLVM": {},
   "confirmDiskEncryptionZFS": "LUKS (ZFS)",
-  "@confirmDiskEncryptionZFS": {},
   "confirmDiskEncryptionTPM": "TPM",
-  "@confirmDiskEncryptionTPM": {},
   "confirmDiskEncryptionNone": "Brak",
-  "@confirmDiskEncryptionNone": {},
   "confirmEntryApplications": "Programy",
-  "@confirmEntryApplications": {},
   "confirmProprietarySoftwareCodecs": "Kodeki",
-  "@confirmProprietarySoftwareCodecs": {},
   "confirmProprietarySoftwareCodecsDrivers": "Kodeki i sterowniki",
-  "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "Sterowniki",
-  "@confirmProprietarySoftwareDrivers": {},
   "rebootToConfigure": "**{system}** skopiowano na dysk",
-  "@rebootToConfigure": {
-    "placeholders": {
-      "system": {
-        "type": "String"
-      }
-    }
-  },
   "restartWarningBody": "Uruchom ponownie w celu dokończenia instalacji lub kontynuuj testowanie.\nWszelkie wprowadzone zmiany nie zostaną zapisane.",
-  "@restartWarningBody": {},
   "rebootToConfigureWarning": "Musisz ponownie uruchomić komputer, aby kontynuować proces instalacji.",
-  "@rebootToConfigureWarning": {},
   "refreshUpdateNow": "Zaktualizuj teraz",
-  "@refreshUpdateNow": {},
   "refreshReady": "Aktualizacja przygotowana",
-  "@refreshReady": {},
   "autoinstallTitle": "Rodzaj instalacji",
-  "@autoinstallTitle": {},
   "confirmSectionSecurityAndMoreTitle": "Bezpieczeństwo i nie tylko",
-  "@confirmSectionSecurityAndMoreTitle": {},
   "autoinstallHeader": "Jak chcesz zainstalować {DISTRO}?",
-  "@autoinstallHeader": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "autoinstallInteractiveOption": "Instalacja interaktywna",
-  "@autoinstallInteractiveOption": {},
   "autoinstallInteractiveDescription": "Dla użytkowników, którzy chcą być prowadzeni krok po kroku przez instalację.",
-  "@autoinstallInteractiveDescription": {},
   "autoinstallAutomatedOption": "Instalacja zautomatyzowana",
-  "@autoinstallAutomatedOption": {},
   "autoinstallAutomatedDescription": "Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml zapewniający spójne i powtarzalne konfiguracje systemu.",
-  "@autoinstallAutomatedDescription": {},
   "hideSecurityKey": "Ukryj",
-  "@hideSecurityKey": {},
   "codecsAndDriversPageTitle": "Zoptymalizuj swój komputer",
-  "@codecsAndDriversPageTitle": {},
   "codecsAndDriversPageBody": "Domyślnie {DISTRO} nie dostarcza żadnego oprogramowania własnościowego. Zainstalowanie dodatkowego oprogramowania może poprawić wydajność komputera.",
-  "@codecsAndDriversPageBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "codecsAndDriversNvidiaBody": "Aby uzyskać najlepszą wydajność kart graficznych NVIDIA, zdecydowanie zaleca się zainstalowanie dodatkowych sterowników.",
-  "@codecsAndDriversNvidiaBody": {},
   "choosePassphraseInfoBody": "Jeśli zgubisz hasło, utracisz wszystkie swoje dane.",
-  "@choosePassphraseInfoBody": {},
   "confirmPassphrase": "Potwierdź hasło",
-  "@confirmPassphrase": {},
   "installationTypeTPMInfo": "<a href=\"{url}\">Przeczytaj o szyfrowaniu TPM</a> przed wyborem tej opcji. Może ona nie działać z tym sprzętem lub przyszłymi wersjami {DISTRO}.",
-  "@installationTypeTPMInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "refreshHeader": "Dostępna jest aktualizacja instalatora",
-  "@refreshHeader": {},
   "refreshInfo": "Zaktualizuj do najnowszej wersji, aby zwiększyć niezawodność i uzyskać więcej funkcji.",
-  "@refreshInfo": {},
   "refreshCloseLabel": "Zamknij instalator",
-  "@refreshCloseLabel": {},
   "validate": "Sprawdź",
-  "@validate": {},
   "notEnoughDiskSpaceBody": "Na wybranym dysku nie ma wystarczającej ilości przestrzeni dyskowej, aby zainstalować {DISTRO}. Zakończ instalator, aby zwolnić przestrzeń, lub wybierz inny dysk.",
-  "@notEnoughDiskSpaceBody": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      }
-    }
-  },
   "allocateDiskSpaceInvalidMountPointFormat": "{format} nie jest obsługiwanym systemem plików dla {mountpoint}",
-  "@allocateDiskSpaceInvalidMountPointFormat": {
-    "mountpoint": {
-      "type": "String"
-    },
-    "format": {
-      "type": "String"
-    }
-  },
   "installationTypeEraseAndInstall": "Wymaż {os} i zainstaluj {product}",
-  "@installationTypeEraseAndInstall": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      },
-      "product": {
-        "type": "String"
-      }
-    }
-  },
   "installationTypeEraseAndInstallInfo": "Wszystkie pliki i dane z istniejącej instalacji {os} zostaną trwale usunięte.",
-  "@installationTypeEraseAndInstallInfo": {
-    "placeholders": {
-      "os": {
-        "type": "String"
-      }
-    }
-  },
   "autoinstallDirectHeader": "Importuj plik autoinstalacji",
-  "@autoinstallDirectHeader": {},
   "autoinstallDirectFileLabel": "Lub wybierz plik lokalny:",
-  "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Wybierz plik...",
-  "@autoinstallDirectFileButtonLabel": {},
   "autoinstallDirectFilePickerTitle": "Wybierz plik",
-  "@autoinstallDirectFilePickerTitle": {},
   "autoinstallDirectFilePickerFilterLabel": "Pliki YAML",
-  "@autoinstallDirectFilePickerFilterLabel": {},
   "autoinstallDirectImportButtonLabel": "Importuj",
-  "@autoinstallDirectImportButtonLabel": {},
   "autoinstallDirectTitle": "Instalacja zautomatyzowana",
-  "@autoinstallDirectTitle": {},
   "autoinstallDirectUrlLabel": "Możesz wpisać adres URL pliku autoinstalacji:",
-  "@autoinstallDirectUrlLabel": {},
   "autoinstallDirectErrorNetworkTitle": "Plik autoinstalacji jest niedostępny",
-  "@autoinstallDirectErrorNetworkTitle": {},
   "autoinstallDirectErrorInvalidUrlTitle": "Nieprawidłowy adres URL",
-  "@autoinstallDirectErrorInvalidUrlTitle": {},
   "autoinstallDirectErrorInvalidContentTitle": "Nieprawidłowy plik autoinstalacji",
-  "@autoinstallDirectErrorInvalidContentTitle": {},
   "autoinstallDirectErrorInvalidContentBody": "Sprawdź plik lub podaj inny.",
-  "@autoinstallDirectErrorInvalidContentBody": {},
   "autoinstallDirectErrorFileSystemTitle": "Plik autoinstalacji jest nieczytelny",
-  "@autoinstallDirectErrorFileSystemTitle": {},
   "autoinstallDirectErrorFileSystemBody": "Sprawdź swoje uprawnienia lub prześlij inny plik.",
-  "@autoinstallDirectErrorFileSystemBody": {},
   "autoinstallDirectErrorUnkownTitle": "Nieznany błąd",
-  "@autoinstallDirectErrorUnkownTitle": {},
   "autoinstallDirectOption": "Zautomatyzowana za pomocą pliku autoinstalacji",
-  "@autoinstallDirectOption": {},
   "autoinstallDirectDescription": "Dla zaawansowanych użytkowników, którzy mają plik autoinstall.yaml w celu zapewnienia spójnej i powtarzalnej konfiguracji systemu.",
-  "@autoinstallDirectDescription": {},
   "autoinstallDirectErrorInvalidUrlBody": "Sprawdź, czy adres URL jest poprawny lub wybierz plik lokalny.",
-  "@autoinstallDirectErrorInvalidUrlBody": {},
   "autoinstallDirectErrorNetworkBody": "Sprawdź poprawność adresu URL, przetestuj połączenie internetowe lub spróbuj później.",
-  "@autoinstallDirectErrorNetworkBody": {},
   "autoinstallDirectFileClearButtonLabel": "Wyczyść plik",
-  "@autoinstallDirectFileClearButtonLabel": {},
   "landscapeMagicAttachInstructions": "Zeskanuj kod QR lub wprowadź poniższy kod na <a href=\"https://{url}\">{url}</a>",
-  "@landscapeMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "autoinstallLandscapeOption": "Zautomatyzowana za pomocą Landscape",
-  "@autoinstallLandscapeOption": {},
   "landscapeCodeExpiredWarning": "Kod wygasł, spróbuj ponownie",
-  "@landscapeCodeExpiredWarning": {},
   "landscapeLoginFailedWarning": "Logowanie nie powiodło się, spróbuj ponownie",
-  "@landscapeLoginFailedWarning": {},
   "autoinstallLandscapeDescription": "Dla użytkowników w organizacjach udostępniających plik autoinstalacji za pośrednictwem Landscape.",
-  "@autoinstallLandscapeDescription": {},
   "landscapePageTitle": "Instalacja zautomatyzowana",
-  "@landscapePageTitle": {},
   "landscapeHeader": "Zaloguj się do Landscape",
-  "@landscapeHeader": {},
   "landscapeDomainHeader": "Wprowadź domenę Landscape (FQDN)",
-  "@landscapeDomainHeader": {},
   "landscapeDomainTextField": "Domena Landscape (FQDN)",
-  "@landscapeDomainTextField": {},
   "next": "Dalej",
-  "@next": {},
   "landscapeDomainNoInternetDescriptionWarning": "Do pobrania pliku autoinstalacji z Landscape potrzebny jest Internet",
-  "@landscapeDomainNoInternetDescriptionWarning": {},
   "landscapeDomainNoInternetTitleWarning": "Połącz się z Internetem, aby kontynuować",
-  "@landscapeDomainNoInternetTitleWarning": {},
   "landscapeDomainInvalidDomainWarning": "Nieprawidłowa domena, sprawdź lub skontaktuj się z pomocą techniczną",
-  "@landscapeDomainInvalidDomainWarning": {},
   "landscapeDomainInstructions": "Podaj domenę Landscape swojej organizacji, aby się zalogować i pobrać plik autoinstalacji. Możesz uzyskać FQDN od pomocy technicznej.",
-  "@landscapeDomainInstructions": {},
   "chooseOptionalPassphraseHeader": "Utwórz hasło (opcjonalnie)",
-  "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseInfoHeader": "Przechowuj hasło i klucz odzyskiwania w bezpiecznym miejscu",
-  "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseInfoBody": "Jeśli zgubisz hasło, stracisz wszystkie dane. Hasło nie zastępuje klucza odzyskiwania ani hasła użytkownika.",
-  "@chooseOptionalPassphraseInfoBody": {},
   "recoveryKeyInfoBody": "Zaraz po pierwszym zalogowaniu do {distro} uzyskaj klucz odzyskiwania i przechowuj go w bezpiecznym miejscu.",
-  "@recoveryKeyInfoBody": {
-    "placeholders": {
-      "distro": {
-        "type": "String"
-      }
-    }
-  },
   "chooseOptionalPassphraseBody": "Hasło może pomóc chronić dane, nawet jeśli sprzęt zostanie naruszony. Konieczne będzie wprowadzanie hasła za każdym razem po włączeniu komputera. Nie będzie można go później usunąć",
-  "@chooseOptionalPassphraseBody": {},
   "recoveryKeyHeader": "Uzyskaj klucz odzyskiwania",
-  "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Bez klucza odzyskiwania możesz utracić wszystkie swoje dane",
-  "@recoveryKeyInfoHeader": {},
   "recoveryKeyConfirmation": "Rozumiem, że mogę utracić wszystkie swoje dane, jeśli nie będę mieć klucza odzyskiwania",
-  "@recoveryKeyConfirmation": {},
   "recoveryKeyStorageAdvice": "Przechowuj klucz odzyskiwania w bezpiecznym miejscu. Używaj go do odszyfrowania dysku w przypadku niektórych zmian w systemie. Przykładowo możesz go potrzebować, jeśli zmienisz komponenty w komputerze lub zaktualizujesz oprogramowanie układowe.",
-  "@recoveryKeyStorageAdvice": {},
   "restartComputer": "Uruchom ponownie komputer",
-  "@restartComputer": {},
   "rstDisableWindows": "Windows, jeśli korzystasz z konfiguracji podwójnego rozruchu z tym systemem",
-  "@rstDisableWindows": {},
   "restartComputerTitle": "Uruchomić ponownie komputer?",
-  "@restartComputerTitle": {},
   "rstDisable": "Ten komputer używa funkcji Intel RST (Rapid Storage Technology). Możesz wyłączyć RST w:",
-  "@rstDisable": {},
   "rstDisableBios": "Ustawieniach BIOS-u",
-  "@rstDisableBios": {},
   "bitlockerInfoInstructions": "Instrukcje znajdziesz w <a href=\"{url}\">przewodniku po funkcji BitLocker</a>.",
-  "@bitlockerInfoInstructions": {
-    "placeholders": {
-      "url": {
-        "type": "String"
-      }
-    }
-  },
   "bitlockerInfoDisable": "Aby przeprowadzić instalację obok systemu Windows, wyłącz funkcję BitLocker w systemie Windows.",
-  "@bitlockerInfoDisable": {},
   "bitlockerWarningTitle": "Bez kluczy odzyskiwania funkcji BitLocker możesz utracić wszystkie swoje dane",
-  "@bitlockerWarningTitle": {},
   "bitlockerInfoRecovery": "Po instalacji system Windows może zażądać kluczy odzyskiwania podczas rozruchu.",
-  "@bitlockerInfoRecovery": {},
   "bitlockerInfoDescription": "Jedna lub więcej partycji są szyfrowane za pomocą funkcji BitLocker.",
-  "@bitlockerInfoDescription": {},
   "bitlockerInfoTitle": "Wykryto funkcję BitLocker",
-  "@bitlockerInfoTitle": {},
   "installationTypeNoneInfo": "Standardowy system plików bez szyfrowania.",
-  "@installationTypeNoneInfo": {},
   "installationTypeZFSEncryptionInfo": "Natywne szyfrowanie z ZFS. Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera.",
-  "@installationTypeZFSEncryptionInfo": {},
   "installationTypeLVMEncryptionInfo": "Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera. Używa szyfrowania LUKS z LVM.",
-  "@installationTypeLVMEncryptionInfo": {},
   "confirmTableResized": "Zmieniono rozmiar z {oldsize} na {newsize}",
-  "@confirmTableResized": {
-    "placeholders": {
-      "oldsize": {
-        "type": "String"
-      },
-      "newsize": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableErased": "Wymazano",
-  "@confirmTableErased": {},
   "confirmTableUnchanged": "Nie zmieniono",
-  "@confirmTableUnchanged": {},
   "confirmTableCreatedFormattedMounted": "Utworzono i sformatowano jako {format} do użycia dla {mountpoint}",
-  "@confirmTableCreatedFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormatted": "Sformatowano jako {format}",
-  "@confirmTableFormatted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableMounted": "Do użyciu dla {mountpoint}",
-  "@confirmTableMounted": {
-    "placeholders": {
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "confirmTableFormattedMounted": "Sformatowano jako {format} do użycia dla {mountpoint}",
-  "@confirmTableFormattedMounted": {
-    "placeholders": {
-      "format": {
-        "type": "String"
-      },
-      "mountpoint": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeErrorPageBody": "Skontaktuj się ze swoim wsparciem IT lub wypróbuj inną opcję instalacji.",
-  "@landscapeErrorPageBody": {},
   "landscapeErrorPageCode": "Kod błędu: {code}",
-  "@landscapeErrorPageCode": {
-    "placeholders": {
-      "code": {
-        "type": "String"
-      }
-    }
-  },
   "landscapeDomainHintText": "Domena Landscape (FQDN)",
-  "@landscapeDomainHintText": {},
   "landscapeErrorPageTitle": "Automatyczna instalacja nie jest dostępna dla Twojego konta",
-  "@landscapeErrorPageTitle": {},
   "landscapeConfirmPageSuccessInfoTitle": "Ubuntu zostanie zainstalowany z konfiguracją dostarczoną przez Twoją organizację",
-  "@landscapeConfirmPageSuccessInfoTitle": {},
-  "landscapeConfirmPageSuccessInfoContent": "Poniżej możesz przejrzeć plik autoinstalacji zaimportowany z Landscape.",
-  "@landscapeConfirmPageSuccessInfoContent": {}
+  "landscapeConfirmPageSuccessInfoContent": "Poniżej możesz przejrzeć plik autoinstalacji zaimportowany z Landscape."
 }

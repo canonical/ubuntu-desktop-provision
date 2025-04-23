@@ -1,114 +1,43 @@
 {
   "welcomePageTitle": "Velkommen",
-  "@welcomePageTitle": {},
   "welcomePageHeader": "Velkommen til {distro}",
-  "@welcomePageHeader": {},
   "welcomeStartTitle": "En strømlinet start",
-  "@welcomeStartTitle": {},
   "welcomeStoreSubtitle": "Det har aldrig været nemmere at finde din yndlingssoftware.",
-  "@welcomeStoreSubtitle": {},
   "welcomeSecurityTitle": "Forbedret sikkerhed",
-  "@welcomeSecurityTitle": {},
   "welcomeStartSubtitle": "Velorganiseret opsætning.",
-  "@welcomeStartSubtitle": {},
   "welcomeWhatsNew": "NYHEDER",
-  "@welcomeWhatsNew": {},
   "telemetryLegalLabel": "Juridisk information",
-  "@telemetryLegalLabel": {},
   "welcomeSecuritySubtitle": "Nye indstillinger for hardwareunderstøttet eller ZFS-kryptering.",
-  "@welcomeSecuritySubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Vis ændringslog</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryPageTitle": "Telemetri",
-  "@telemetryPageTitle": {},
   "telemetryHeader": "Hjælp med at forbedre {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryDescription": "Hjælp os med at forbedre {distro} ved at dele dine systemdata med os. Dette inkluderer bl.a. din maskinmodel, installeret software samt hvilken lokalitet, du har som tidszone.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Ja, del systemdata med holdet bag {distro}",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "Nej, del ikke systemdata",
-  "@telemetryLabelOff": {},
   "telemetryReportLabel": "Vis den første rapport",
-  "@telemetryReportLabel": {},
   "telemetryReportTitle": "Rapportering af detaljer",
-  "@telemetryReportTitle": {},
   "privacyPageTitle": "Lokalitetstjenester",
-  "@privacyPageTitle": {},
   "privacyLocationTitle": "Slå lokalitetstjenester til?",
-  "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "Lad programmer kende din geografiske placering.\nDu kan ændre dette når som helst i Systemindstillinger.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Lokalitetstjenester",
-  "@privacyLocationEnable": {},
   "privacyPolicyLink": "Dataprivatliv",
-  "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "welcomeStoreTitle": "Appbutik med nyt udseende",
-  "@welcomeStoreTitle": {},
   "ubuntuProHeader": "Tilknyt denne maskine",
-  "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "eller tilføj token manuelt",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProTokenAttachSucess": "Gyldigt token",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachError": "Ugyldigt token",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Altid gratis til personligt brug. 30-dages prøveabonnement til firmaer. <a href=\"https://{url}\">Mere info</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProSubscriptionDescription": "Få det mest omfattende abonnement på open source-softwaresikkerhed",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSucessAttachDescription": "Du kan håndtere dine Pro-tjenester i programmet Software og opdateringer.",
-  "@ubuntuProSucessAttachDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro er nu slået til på denne maskine",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Tilknyt denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Slå Ubuntu Pro til",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Du kan altid slå Ubuntu Pro til senere via programmet Software og opdateringer.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingSkipForNow": "Spring over indtil videre",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProTokenAttachErrorVariant": "Ugyldigt token, prøv igen",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProMagicAttachInstructions": "Magisk tilslutning med denne kode på <a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProTokenTextfieldHint": "Token",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProTokenAttachButton": "Tilknyt",
-  "@ubuntuProTokenAttachButton": {},
-  "telemetryCollectError": "Kunne ikke indsamle telemetridata",
-  "@telemetryCollectError": {}
+  "telemetryCollectError": "Kunne ikke indsamle telemetridata"
 }

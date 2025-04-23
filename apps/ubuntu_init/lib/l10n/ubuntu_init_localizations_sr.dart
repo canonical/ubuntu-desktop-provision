@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -10,7 +12,7 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get welcomePageTitle => 'Добродошли';
 
   @override
-  String welcomePageHeader(Object distro) {
+  String welcomePageHeader(String distro) {
     return 'Добродошли у $distro';
   }
 
@@ -36,7 +38,7 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Нове опције за хардверски подржану или ZFS енкрипцију.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Погледајте дневник промена</a>';
   }
 
@@ -44,17 +46,17 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Телеметрија';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Помозите унапређењу $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Помозите нам да унапредимо $distro тако што ћете поделити податке о вашем систему са нама. Ово укључује ствари као што су модел вашег рачунара, инсталирани софтвер и локација коју сте изабрали за вашу временску зону.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Да, поделите податке о систему са $distro тимом';
   }
 
@@ -89,7 +91,7 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Приватност података';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Магично повезивање са овим кодом на <a href=\"https://$url\">$url</a>';
   }
 
@@ -109,7 +111,7 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Добијте најкомплетнију претплату за безбедност софтвера отвореног кода';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Увек бесплатно за личну употребу. 30-дневно пробно коришћење за предузећа. <a href=\"https://$url\">Сазнајте више</a>';
   }
 

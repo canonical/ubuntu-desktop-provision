@@ -1155,7 +1155,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{format} is not a supported filesystem for {mountpoint}'**
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint);
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format);
 
   /// No description provided for @diskHeadersDevice.
   ///
@@ -2085,7 +2085,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>'**
-  String landscapeMagicAttachInstructions(Object url);
+  String landscapeMagicAttachInstructions(String url);
 
   /// No description provided for @landscapePageTitle.
   ///

@@ -1,76 +1,29 @@
 {
   "welcomePageTitle": "Velkommen",
-  "@welcomePageTitle": {},
   "privacyPolicyLink": "Databeskyttelse",
-  "@privacyPolicyLink": {},
   "welcomePageHeader": "Velkommen til {distro}",
-  "@welcomePageHeader": {},
   "welcomeStartTitle": "En strømlinjeformet start",
-  "@welcomeStartTitle": {},
   "welcomeWhatsNew": "Hva er nytt?",
-  "@welcomeWhatsNew": {},
   "telemetryLabelOff": "Nei, ikke del systemdata",
-  "@telemetryLabelOff": {},
   "telemetryHeader": "Hjelp til å forbedre {distro}",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLegalLabel": "Juridisk",
-  "@telemetryLegalLabel": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">Vis endringslogg</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "welcomeStartSubtitle": "Tilbyr renere oppsettsflyt.",
-  "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "Programbutikk med nytt utseende",
-  "@welcomeStoreTitle": {},
   "welcomeStoreSubtitle": "Det har aldri vært enklere å finne dine favorittprogrammer.",
-  "@welcomeStoreSubtitle": {},
   "welcomeSecurityTitle": "Økt sikkerhet",
-  "@welcomeSecurityTitle": {},
   "welcomeSecuritySubtitle": "Nye alternativer for maskinvarebasert- eller ZFS-kryptering.",
-  "@welcomeSecuritySubtitle": {},
   "telemetryPageTitle": "Telemetri",
-  "@telemetryPageTitle": {},
   "telemetryDescription": "Del data anonymt med {distro} slik at opplevelsen kan forbedres.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Ja, del systemdata med {distro}-laget",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryReportLabel": "Innrapporteringsdetaljer",
-  "@telemetryReportLabel": {},
   "telemetryReportTitle": "Innrapporteringsdetaljer",
-  "@telemetryReportTitle": {},
   "privacyPageTitle": "Posisjoneringstjenester",
-  "@privacyPageTitle": {},
   "privacyLocationTitle": "Skru på posisjoneringstjenester?",
-  "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "La programmer få tilgang til din geografiske plassering.\nDu kan endre dette når som helst i systeminnstillingene.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Posisjoneringstjenster",
-  "@privacyLocationEnable": {},
   "ubuntuProTokenTextfieldHint": "Symbol",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProTokenAttachError": "Ugyldig symbol",
-  "@ubuntuProTokenAttachError": {},
-  "ubuntuProTokenAttachSucess": "Gyldig symbol",
-  "@ubuntuProTokenAttachSucess": {}
+  "ubuntuProTokenAttachSucess": "Gyldig symbol"
 }

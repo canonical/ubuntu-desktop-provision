@@ -1,12 +1,5 @@
 {
   "@@locale": "bo",
   "windowTitle": "{RELEASE}་སྒྲིག་འཇུག་བྱེད་པ",
-  "@windowTitle": {
-    "type": "text",
-    "placeholders": {
-      "RELEASE": {}
-    }
-  },
-  "welcome": "དགའ་བསུ་ཞུ",
-  "@welcome": {}
+  "welcome": "དགའ་བསུ་ཞུ"
 }

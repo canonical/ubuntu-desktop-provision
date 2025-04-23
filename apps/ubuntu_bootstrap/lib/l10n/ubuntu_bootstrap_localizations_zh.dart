@@ -1,3 +1,5 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_bootstrap_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -525,7 +527,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => '挂载点不可带有空格';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
     return '$format 不是 $mountpoint 支持的文件系统';
   }
 
@@ -1094,7 +1096,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get recoveryKeyLinkLabel => 'Learn more';
 
   @override
-  String landscapeMagicAttachInstructions(Object url) {
+  String landscapeMagicAttachInstructions(String url) {
     return '扫二维码然后在下面输入代码。<a href=\"https://$url\">$url</a>';
   }
 
@@ -1675,7 +1677,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get allocateDiskSpaceInvalidMountPointSpace => '掛載點不可包含空白字元';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
     return '$format 不是 $mountpoint 支援的檔案系統';
   }
 
@@ -2241,7 +2243,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get recoveryKeyConfirmation => '我知道如果沒有復原金鑰，我可能會遺失所有資料';
 
   @override
-  String landscapeMagicAttachInstructions(Object url) {
+  String landscapeMagicAttachInstructions(String url) {
     return '掃描 QR code 或在 <a href=\"https://$url\">$url</a> 輸入以下代碼';
   }
 

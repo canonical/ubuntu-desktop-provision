@@ -1,114 +1,43 @@
 {
   "welcomePageTitle": "მოგესალმებით",
-  "@welcomePageTitle": {},
   "telemetryCollectError": "ტელემეტრიის მონაცემების შეგროვება ჩავარდა",
-  "@telemetryCollectError": {},
   "privacyLocationSubtitle": "მიეცით აპლიკაციას ნება, თქვენი გეოგრაფიული მდებარეობა გაიგოს.\nამის შეცვლა ნებისმიერ დროს შეგიძლიათ სისტემის მორგების ფანჯარაში.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "მდებარეობის სერვისები",
-  "@privacyLocationEnable": {},
   "privacyPolicyLink": "მონაცემების კონფიდენციალობა",
-  "@privacyPolicyLink": {},
   "ubuntuProOrAddTokenManually": "ან დაამატეთ ტოკენი ხელით",
-  "@ubuntuProOrAddTokenManually": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
-  "@ubuntuProPageTitle": {},
   "ubuntuProTokenTextfieldHint": "ტოკენი",
-  "@ubuntuProTokenTextfieldHint": {},
   "ubuntuProSubscriptionDescription": "მიიღეთ შესაბამისი გამოწერა ღია კოდის პროგრამების უსაფრთხოებისთვის",
-  "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "ყოველთვის უფასო პირადი მოხმარებისთვის. 30-დღიანი გამოსაცდელი პერიოდი საწარმოებისთვის. <a href=\"https://{url}\">გაიგეთ მეტი</a>",
-  "@ubuntuProSubscriptionFreeForPersonalUse": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProTokenAttachButton": "მიმაგრება",
-  "@ubuntuProTokenAttachButton": {},
   "ubuntuProTokenAttachError": "არასწორი ტოკენი",
-  "@ubuntuProTokenAttachError": {},
   "ubuntuProTokenAttachSucess": "სწორი ტოკენი",
-  "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachErrorVariant": "არასწორი ტოკენი. თავიდან სცადეთ",
-  "@ubuntuProTokenAttachErrorVariant": {},
   "ubuntuProOnBoardingSkipForNow": "ახლა გამოტოვება",
-  "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingSkipForNowDescription": "Ubuntu Pro-ის ჩართვა ყოველთვის შეგიძლიათ მოგვიანებით, პროგრამებისა და განახლებების აპლიკაციიდან.",
-  "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pro-ის ჩართვა",
-  "@ubuntuProOnBoardingEnableUbuntuPro": {},
   "ubuntuProOnBoardingEnableUbuntuProDescription": "მიამაგრეთ ამ მანქანას Ubuntu Pro-ის გამოწერა, რომ უსაფრთხოდ განაახლოთ უფრო მეტი პროგრამა, 2032-მდე.",
-  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro ახლა ჩართულია ამ მანქანაზე",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "თქვენი Pro-ის სერვისების მართვა პროგრამებისა და განახლებების აპლიკაციაში შეგიძლიათ.",
-  "@ubuntuProSucessAttachDescription": {},
   "welcomePageHeader": "მოგესალმებათ {distro}",
-  "@welcomePageHeader": {},
   "welcomeWhatsNew": "რამე ახალი?",
-  "@welcomeWhatsNew": {},
   "welcomeStartTitle": "დაოპტიმიზებული გაშვება",
-  "@welcomeStartTitle": {},
   "welcomeStartSubtitle": "უფრო სუფთად მორგების მხარდაჭერა.",
-  "@welcomeStartSubtitle": {},
   "welcomeStoreTitle": "ახალი ხედი App Store-სთვის",
-  "@welcomeStoreTitle": {},
   "welcomeSecurityTitle": "გაფართოებული უსაფრთხოება",
-  "@welcomeSecurityTitle": {},
   "welcomeSecuritySubtitle": "ახალი პარამეტრები აპარატურული ან ZFS დაშიფვრისთვის.",
-  "@welcomeSecuritySubtitle": {},
   "telemetryPageTitle": "ტელემეტრია",
-  "@telemetryPageTitle": {},
   "telemetryHeader": "დაგვეხმარეთ {distro}-ის გაუმჯობესებაში",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "დიახ, გავაზიარებ სისტემის მონაცემებს {distro}-ის გუნდთან",
-  "@telemetryLabelOn": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOff": "არა, არ გავაზიარებ სისტემის მონაცემებს",
-  "@telemetryLabelOff": {},
   "privacyLocationTitle": "ჩავრთო მდებარეობის სერვისები?",
-  "@privacyLocationTitle": {},
   "telemetryReportLabel": "პირველი ანგარიშის ჩვენება",
-  "@telemetryReportLabel": {},
   "telemetryReportTitle": "ანგარიშის დეტალები",
-  "@telemetryReportTitle": {},
   "privacyPageTitle": "მდებარეობის სერვისები",
-  "@privacyPageTitle": {},
   "ubuntuProMagicAttachInstructions": "მიაბით ჯადოსნურად ამ კოდით მისამართზე <a href=\"https://{url}\">{url}</a>",
-  "@ubuntuProMagicAttachInstructions": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "ubuntuProHeader": "ამ მანქანის მიმაგრება",
-  "@ubuntuProHeader": {},
   "welcomeStoreSubtitle": "რჩეული პროგრამების ძებნა ასე ადვილი არასდროს ყოფილა.",
-  "@welcomeStoreSubtitle": {},
   "welcomeChangelogLabel": "<a href=\"{url}\">ცვლილებების ჟურნალის ნახვა</a>",
-  "@welcomeChangelogLabel": {
-    "type": "text",
-    "placeholders": {
-      "url": {}
-    }
-  },
   "telemetryDescription": "დაგვეხმარეთ, {distro} უკეთესი გავხადოთ, თქვენი სისტემის მონაცემების გაზიარებით. ეს შეიცავს ისეთ მონაცემებს, როგორიცაა თქვენი მანქანის მოდელი, დაყენებული პროგრამები და მდებარეობა, რომელიც დროის სარტყლისთვის აირჩიეთ.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
-  "telemetryLegalLabel": "იურიდიული გაფრთხილება",
-  "@telemetryLegalLabel": {}
+  "telemetryLegalLabel": "იურიდიული გაფრთხილება"
 }
