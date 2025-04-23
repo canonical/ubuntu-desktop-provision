@@ -7,35 +7,19 @@
   "welcomeStartTitle": "Een optimale start",
   "welcomeStartSubtitle": "Ondersteuning voor een schonere inrichting.",
   "welcomeStoreTitle": "Nieuw uiterlijk voor de App Store",
-  "@welcomeStoreTitle": {},
   "welcomeStoreSubtitle": "Het was nog nooit zo eenvoudig om uw favoriete software te vinden.",
-  "@welcomeStoreSubtitle": {},
   "welcomeSecurityTitle": "Verbeterde beveiliging",
   "welcomeSecuritySubtitle": "Nieuwe opties voor hardwarematige of ZFS-codering.",
   "welcomeChangelogLabel": "<a href=\"{url}\">Wijzigingen bekijken</a>",
   "telemetryPageTitle": "Telemetrie",
   "telemetryHeader": "Help mee om {distro} te verbeteren",
-  "@telemetryHeader": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryDescription": "Help ons {distro} te verbeteren door uw systeemgegevens met ons te delen. Dit omvat zaken als je computermodel, geïnstalleerde software en de locatie die u voor uw tijdzone heeft gekozen.",
-  "@telemetryDescription": {
-    "type": "text",
-    "placeholders": {
-      "distro": {}
-    }
-  },
   "telemetryLabelOn": "Ja, systeemgegevens delen met het {distro}-team",
   "telemetryLabelOff": "Nee, geen systeemgegevens delen",
   "telemetryReportTitle": "Details van de rapportage",
   "privacyPageTitle": "Locatie-diensten",
   "privacyLocationTitle": "Locatie-diensten inschakelen?",
-  "@privacyLocationTitle": {},
   "privacyLocationSubtitle": "Laat applicaties uw geografische locatie weten.\nU kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.",
-  "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Locatie-diensten",
   "privacyPolicyLink": "Privacy van gegevens",
   "ubuntuProTokenTextfieldHint": "Token",
@@ -48,9 +32,7 @@
   "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pro activeren",
   "ubuntuProOnBoardingEnableUbuntuProDescription": "Deze machine koppelen aan een Ubuntu Pro-abonnement voor beveiligingsupdates op een breder scala aan pakketten, tot 2032.",
   "ubuntuProSucessAttachHeader": "Ubuntu Pro is nu ingeschakeld op deze machine",
-  "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "U kunt uw Pro-diensten beheren in de applicatie Software & Updates.",
-  "@ubuntuProSucessAttachDescription": {},
   "ubuntuProSubscriptionFreeForPersonalUse": "Altijd gratis voor persoonlijk gebruik. 30 dagen proefversie voor ondernemingen. <a href=\"https://{url}\">Meer informatie</a>",
   "telemetryLegalLabel": "Juridische mededeling",
   "ubuntuProTokenAttachButton": "Koppelen",
