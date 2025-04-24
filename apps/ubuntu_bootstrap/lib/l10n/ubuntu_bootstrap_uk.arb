@@ -664,7 +664,7 @@
   "@confirmTableMounted": {},
   "confirmTableFormatted": "Відформатовано як {format}",
   "@confirmTableFormatted": {},
-  "landscapeMagicAttachInstructions": "Відскануйте QR-код або введіть код нижче за посиланням <a href=\"https://{url}\">{url}</a>",
+  "landscapeMagicAttachInstructions": "Скануйте QR-код або введіть код нижче за посиланням <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {},
   "landscapeHeader": "Увійдіть до Landscape",
   "@landscapeHeader": {},
@@ -686,6 +686,6 @@
   "@installationTypeEraseAndInstall": {},
   "installationTypeEraseAndInstallInfo": "Усі файли та дані з наявної установки {os} буде видалено назавжди.",
   "@installationTypeEraseAndInstallInfo": {},
-  "recoveryKeyLinkLabel": "Дізнатися більше",
+  "recoveryKeyLinkLabel": "Докладніше",
   "@recoveryKeyLinkLabel": {}
 }
