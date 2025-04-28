@@ -9,7 +9,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "privacyPolicyLink": "Datena privateco",
@@ -30,7 +32,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeSecuritySubtitle": "Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.",
@@ -51,14 +55,18 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryDescription": "Helpu nin plibonigi {distro} sendante viajn sistemajn datenojn al ni. Tio inkluzivas interalie la modelon de via maŝino, instalitajn programojn kaj tiun lokon, kiun vi elektis por via horzono.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "Ne, sendu neniom da sistemaj datenoj",
@@ -73,7 +81,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProHeader": "Alkroĉi ĉi tiun komputilon",
@@ -82,7 +92,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProSucessAttachHeader": "Ubuntu Pro estas nun ŝaltita sur ĉi tiu komputilo",

@@ -27,28 +27,36 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryHeader": "Helfen Sie mit, {distro} zu verbessern",
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryDescription": "Helfen Sie uns, {distro} zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Computermodell, installierte Software und der Ort, den Sie für Ihre Zeitzone gewählt haben.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "Ja, Systemdaten mit dem {distro}-Team teilen",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "Nein, keine Systemdaten teilen",
@@ -95,7 +103,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProOnBoardingSkipForNowDescription": "Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.",
@@ -108,7 +118,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   }
 }

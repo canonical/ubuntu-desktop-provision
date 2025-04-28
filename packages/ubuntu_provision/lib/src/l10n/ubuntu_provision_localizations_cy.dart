@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_provision_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Welsh (`cy`).
 class UbuntuProvisionLocalizationsCy extends UbuntuProvisionLocalizations {

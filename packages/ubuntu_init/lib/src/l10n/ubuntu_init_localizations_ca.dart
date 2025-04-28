@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Catalan Valencian (`ca`).
 class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Opcions noves per al xifrat per maquinari o mitjançant el ZFS.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Vegeu el registre de canvis</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetria';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Ajudeu perquè l’$distro sigui millor';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Compartiu dades anònimament amb l’$distro perquè puguem millorar la vostra experiència.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Sí, vull compartir dades del sistema amb l’equip de l’$distro';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Privadesa de les dades';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
   }
 

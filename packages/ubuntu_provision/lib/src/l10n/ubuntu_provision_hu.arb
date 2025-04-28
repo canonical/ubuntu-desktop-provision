@@ -33,7 +33,9 @@
   "@localePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "localeHeader": "Nyelv kiválasztása:",

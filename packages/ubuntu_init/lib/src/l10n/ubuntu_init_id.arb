@@ -27,7 +27,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProHeader": "Cantolkan mesin ini",
@@ -52,7 +54,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "Telemetri",
@@ -61,7 +65,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "privacyLocationSubtitle": "Mengizinkan aplikasi mengetahui lokasi geografis Anda.\nAnda dapat mengubah ini kapan pun dalam Pengaturan Sistem.",
@@ -74,14 +80,18 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "Ya, bagikan data sistem dengan tim {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLegalLabel": "Pemberitahuan legal",
@@ -102,7 +112,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProOnBoardingEnableUbuntuPro": "Fungsikan Ubuntu Pro",

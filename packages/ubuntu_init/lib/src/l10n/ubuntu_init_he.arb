@@ -23,14 +23,18 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryHeader": "סיוע בשיפור {distro}",
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "מדדים",
@@ -39,14 +43,18 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "כן, לשתף את נתוני המערכת שלי עם צוות {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "לא, לא לשתף את נתוני המערכת שלי",
@@ -71,7 +79,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProHeader": "צירוף המכונה הזאת",
@@ -102,7 +112,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProTokenAttachButton": "צירוף",

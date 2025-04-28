@@ -9,7 +9,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "Тэлеметрыя",
@@ -18,14 +20,18 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "Так, абагуліць сістэмныя даныя з камандай {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "Не, не абагуляць сістэмныя даныя",
@@ -54,7 +60,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProOrAddTokenManually": "або дадайце токен уручную",
@@ -67,7 +75,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProTokenAttachButton": "Далучыць",
@@ -104,7 +114,9 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLegalLabel": "Юрыдычныя папярэджанні",

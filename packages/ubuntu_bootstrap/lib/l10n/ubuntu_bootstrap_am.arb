@@ -6,21 +6,27 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryOption": "ይሞክሩ {RELEASE}",
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "መግጠም {RELEASE}",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "changeButtonText": "ለውጥ",

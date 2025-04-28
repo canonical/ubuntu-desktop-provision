@@ -24,7 +24,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RST detectado",
@@ -35,7 +37,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "updatesOtherSoftwarePageTitle": "Aplicaciones",
@@ -76,8 +80,12 @@
   "@confirmPartitionTable": {
     "description": "Entrada de un disco cuya tabla de partición está siendo modificada",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionChanges": "Se aplicarán los cambios siguientes a las particiones:",
@@ -106,7 +114,9 @@
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "changeButtonText": "Cambiar",
@@ -137,7 +147,9 @@
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeZFS": "Borrar disco y usar ZFS",
@@ -146,15 +158,21 @@
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
-      "color": {},
-      "os": {}
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeOSDetected": "Actualmente este equipo tiene {os} instalado. ¿Qué le gustaría hacer?",
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeNoOSDetected": "Actualmente este equipo no tiene ningún sistema operativo detectado. ¿Qué le gustaría hacer?",
@@ -175,8 +193,6 @@
   "@installationTypeLVMSelected": {},
   "selectGuidedStoragePageTitle": "Borrar el disco e instalar {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
-  "selectGuidedStorageDropdownLabel": "Seleccionar la unidad:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Se utilizará todo el disco:",
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Instalar ahora",
@@ -189,8 +205,12 @@
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os": {}
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideInfo": "Podrá elegir qué sistema operativo quiere iniciar en cada arranque.",
@@ -221,29 +241,30 @@
   "@restartInto": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "readyToUse": "{system} está instalado y listo para usarse",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
-      "system": {}
-    }
-  },
-  "onBatteryWarning": "<font color=\"{color}\">Advertencia:</font> El equipo no está conectado a una fuente de alimentación.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "installationTypeDualOSDetected": "Actualmente este equipo tiene {os1} y {os2} instalado. ¿Qué le gustaría hacer?",
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
-      "os1": {},
-      "os2": {}
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "installationTypeMultiOSDetected": "Actualmente este equipo tiene varios sistemas operativos instalados. ¿Qué le gustaría hacer?",
@@ -264,24 +285,36 @@
   "@installationTypeAlongsideDual": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideHiddenPartitions": "Hay {num} particiones más pequeñas ocultas. Use la <a href=\"{url}\">herramienta de partición avanzada</a> para un mayor control",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
-      "num": {},
-      "url": {}
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideMulti": "Instalar {product} junto a estos",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideSize": "Tamaño:",
@@ -300,7 +333,9 @@
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "quitButtonText": "Salir de la instalación",
@@ -315,41 +350,63 @@
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
+      "sysname": {
+        "type": "String"
+      },
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionFormat": "partición <b>{sysname}</b> formateada como <b>{format}</b>",
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    }
     }
   },
   "confirmPartitionFormatMount": "partición <b>{sysname}</b> formateada como <b>{format}</b> utilizada para <b>{mount}</b>",
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionMount": "partición <b>{sysname}</b> utilizada para <b>{mount}</b>",
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionCreate": "partición <b>{sysname}</b> creada",
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
-      "sysname": {}
+      "sysname": {
+        "type": "String"
+      }
     }
   },
   "showSecurityKey": "Mostrar",
@@ -380,7 +437,9 @@
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "confirmDevicesTitle": "Dispositivos",
@@ -393,21 +452,27 @@
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "notEnoughDiskSpaceUbuntu": "No hay suficiente espacio en disco para instalar {DISTRO}",
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAccessibilityBody": "En el corazón de la filosofía de {DISTRO} reside la creencia de que la informática es para todas las personas. Las herramientas avanzadas de accesibilidad y las opciones de idioma, colores y tamaño del texto hacen que la computación con {DISTRO} sea sencilla, sea quien sea y esté donde esté.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "notEnoughDiskSpaceAvailable": "Disponible:",
@@ -416,7 +481,9 @@
   "@installationSlidesTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAvailable": "Disponible:",
@@ -447,35 +514,45 @@
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSecurityLts": "Todas las versiones {DISTRO} LTS vienen con cinco años de parches de seguridad incluidos, que se extienden a diez años con una suscripción a Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesProductivityBody": "{DISTRO} Escritorio incluye LibreOffice, un conjunto de aplicaciones de código abierto compatibles con Microsoft Office para documentos, hojas de cálculo y presentaciones. También dispone de conocidas herramientas de colaboración.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesWelcomeHeader": "La última versión de {DISTRO} hace que la informática sea más fácil que nunca.",
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesWelcomeBody": "Tanto si eres desarrollador, creador, jugador o administrador, en {RELEASE} encontrarás nuevas herramientas para mejorar tu productividad y mejorar tu experiencia.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSoftwareTitle": "Todas las aplicaciones que necesitas",
@@ -484,7 +561,9 @@
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesDevelopmentTitle": "Desarrolla con lo mejor del código abierto",
@@ -493,7 +572,9 @@
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesCreativityTitle": "Potencia tu creatividad",
@@ -502,7 +583,9 @@
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesGamingTitle": "Ideal para jugar",
@@ -511,7 +594,9 @@
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesProductivityTitle": "Aumente su productividad",
@@ -526,7 +611,9 @@
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "bitlockerHeader": "Desactive BitLocker para continuar",
@@ -539,14 +626,18 @@
   "@partitionFormatKeep": {
     "type": "text",
     "placeholders": {
-      "format": {}
+      "format": {
+      "type": "String"
+    }
     }
   },
   "loadingPageTitle": "Le damos la bienvenida a {DISTRO}",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeTPM": "Activar cifrado por hárdwer de todo el disco",
@@ -555,35 +646,45 @@
   "@refreshSnapCopyData": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupProfiles": "Configurando los perfiles de seguridad {snap}...",
   "@refreshSnapSetupProfiles": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapLink": "Enlazando {snap}...",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetAutoAliases": "Estableciendo los alias automáticos {snap}...",
   "@refreshSnapSetAutoAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupAliases": "Configurando los alias {snap}...",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshPageTitle": "Actualización disponible",
@@ -594,99 +695,129 @@
   "@refreshCurrent": {
     "type": "text",
     "placeholders": {
-      "snap": {},
-      "version": {}
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrepare": "Preparando {snap}...",
   "@refreshSnapPrepare": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapDownload": "Descargando {snap}...",
   "@refreshSnapDownload": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStopServices": "Deteniendo los servicios {snap}...",
   "@refreshSnapStopServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshInstall": "Actualizar a la versión {version}",
   "@refreshInstall": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCheckRerefresh": "Comprobando la actualización {snap}...",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapMount": "Montando {snap}...",
   "@refreshSnapMount": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapValidate": "Validando {snap}...",
   "@refreshSnapValidate": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRemoveAliases": "Eliminando el alias {snap}...",
   "@refreshSnapRemoveAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUnlink": "Desvinculando {snap}...",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateAssets": "Los artículos se están actualizando {snap}...",
   "@refreshSnapUpdateAssets": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshUpToDate": "La versión actual {version} está actualizada.",
   "@refreshUpToDate": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateKernelCommandLine": "Actualizando la línea de comandos del kernel {snap} ...",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshUpdating": "Actualizando {snap}...",
   "@refreshUpdating": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshRestart": "Cierre el instalador y vuelva a iniciarlo para continuar",
@@ -697,14 +828,18 @@
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
-      "color": {}
+      "color": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStartServices": "Iniciando los servicios {snap}...",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "recoveryKeyCommand": "Puede acceder a tu clave de recuperación después de la instalación con el siguiente comando:",
@@ -713,28 +848,36 @@
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapAutoConnect": "Conectar {snap} las conexiones y dispositivos...",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCleanup": "Limpiando {snap}...",
   "@refreshSnapCleanup": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRefresh": "Actualizando {snap}…",
   "@refreshSnapRefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "minimalInstallationTitle": "Selección predeterminada",

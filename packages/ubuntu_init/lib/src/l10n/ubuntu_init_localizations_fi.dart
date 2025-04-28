@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Finnish (`fi`).
 class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Uusia asetuksia laitteistopohjaiselle salaukselle ja ZFS-salaukselle.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Näytä muutosloki</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetria';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Auta parantamaan ${distro}a';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Jaa järjestelmän tietoja, jotta voimme parantaa ${distro}a. Tiedot sisältävät laitemallin, asennetut ohjelmistot ja valitun aikavyöhykesijainnin.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Kyllä, jaa järjestelmän tietoja $distro-tiimille';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Tietosuoja';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Liitä tämä erityisellä koodilla osoitteessa <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Hanki kokonaisvaltainen avoimen lähdekoodin tietoturvapalvelu';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Henkilökohtaiseen käyttöön ilmainen, 30 päivän kokeilujakso yrityksille. <a href=\"https://$url\">Lue lisää</a>';
   }
 

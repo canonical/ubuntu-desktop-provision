@@ -13,7 +13,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "گزارش از دور",
@@ -22,14 +24,18 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "بله. داده‌ها با گروه {distro} هم‌رسانی شوند",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryReportTitle": "جزییات گزارش",
@@ -54,7 +60,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "نه. داده‌های سامانه هم‌رسانی نشوند",

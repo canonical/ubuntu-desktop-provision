@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Chinese (`zh`).
 class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => '新的硬件支持加密或 ZFS 加密选项。';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">查看更新日志</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get telemetryPageTitle => '数据收集';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return '帮助改善 $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return '通过与我们分享您的系统数据，帮助我们改善 $distro。这包括您的计算机型号、安装的软件与时区选择的位置。';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return '是的，与 $distro 团队分享系统数据';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get privacyPolicyLink => '数据隐私政策';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
   }
 
@@ -176,7 +180,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get welcomeSecuritySubtitle => '提供硬體支援磁碟加密或 ZFS 加密的選項。';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">檢視變更日誌</a>';
   }
 
@@ -184,17 +188,17 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get telemetryPageTitle => '數據蒐集';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return '協助我們改善 $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return '將您的系統資料分享給我們以協助我們改善 $distro 。這包含了像是您的機器型號、已安裝的軟體以及您選擇的時區地理位置資料。';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return '是，請將系統資料分享給 $distro 團隊';
   }
 
@@ -226,7 +230,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get privacyPolicyLink => '隱私條款';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return '使用 <a href=\"https://$url\">$url</a> 連結來自動將系統綁定至 Ubuntu Pro';
   }
 
@@ -246,7 +250,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProSubscriptionDescription => '取得最廣泛覆蓋的開放來源碼軟體安全訂閱方案';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return '個人使用永遠免費。企業使用免費 30 天試用期。<a href=\"https://$url\">了解更多</a>';
   }
 

@@ -4,21 +4,27 @@
   "@installDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "Nainstalovat {RELEASE}",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "windowTitle": "Nainstalovat {RELEASE}",
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "appTitle": "Instalátor Ubuntu pro osobní počítače",
@@ -37,7 +43,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RST je zapnuté",
@@ -48,7 +56,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "configureSecureBootTitle": "Nastavit Secure Boot",
@@ -85,7 +95,9 @@
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeNoOSDetected": "Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?",
@@ -110,31 +122,39 @@
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeReinstallWarning": "<font color=\"{color}\">VAROVÁNÍ:</font> Toto smaže veškeré aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory), nacházející se v rámci {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
-      "color": {},
-      "os": {}
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongside": "Nainstalovat {product} vedle {os}",
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os": {}
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideInfo": "Dokumenty, hudba a ostatní osobní soubory zůstanou zachovány. Pokaždé, když počítač spustíte z vypnutého stavu (tedy nikoli uspání), budete si moci zvolit který operační systém spustit.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeManual": "Ruční rozdělení na oddíly",
   "@installationTypeManual": {},
-  "selectGuidedStorageDropdownLabel": "Vyberte jednotku:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Bude použit celý disk:",
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Nainstalovat nyní",
@@ -193,14 +213,18 @@
   "@restartInto": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "readyToUse": "{system} je nainstalované a připravené k použití",
   "@readyToUse": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "installationCompleteTitle": "Instalace dokončena",
@@ -217,8 +241,12 @@
   "@confirmPartitionTable": {
     "description": "An entry for a disk whose partition table is being changed",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "bitlockerDescription": "Na tomto počítači je používáno šifrování nástrojem Windows BitLocker.\nAby bylo možné pokračovat, je třeba pomocí Windows udělat volné místo nebo zvolit '{option}'.",
@@ -231,68 +259,79 @@
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "tryOption": "Vyzkoušet {RELEASE}",
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryDescription": "Můžete si vyzkoušet {RELEASE} aniž by se v počítači cokoli měnilo.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationTypeErase": "Vymazat disk a nainstalovat {DISTRO}",
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeEncrypt": "Zabezpečit novou instalaci {RELEASE} šifrováním",
   "@installationTypeEncrypt": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "selectGuidedStoragePageTitle": "Vymazat disk a nainstalovat {DISTRO}",
   "@selectGuidedStoragePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeManualInfo": "Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "newPartitionTableConfirmationTitle": "Nový prázdný oddíl",
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Vytvoření nové tabulky oddílů na celém zařízení z něj odebere veškeré stávající oddíly. V případě potřeby lze v tomto kroku ještě tuto operaci vzít zpět (ovšem po zapsání změn už pak ne).",
   "@newPartitionTableConfirmationMessage": {},
-  "onBatteryWarning": "<font color=\"{color}\">Upozornění:</font> Počítač není připojen k napájení ze zásuvky.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeDualOSDetected": "Na tomto počítači se už nacházejí {os1} a {os2}. Co si přejete udělat?",
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
-      "os1": {},
-      "os2": {}
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "installationTypeMultiOSDetected": "Na tomto počítači se v současnosti nachází vícero operačních systémů. Co si přejete udělat?",
@@ -311,9 +350,15 @@
   "@installationTypeAlongsideDual": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideSpaceDivider": "Přidělte prostor na jednotce posunutím dělítka níže:",
@@ -328,17 +373,27 @@
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
-      "num": {},
-      "url": {}
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionResize": "velikost oddílu <b>{sysname}</b> změněna z <b>{oldsize}</b> na <b>{newsize}</b>",
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
+      "sysname": {
+        "type": "String"
+      },
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideResizePartition": "Změnit velikost oddílu",
@@ -347,15 +402,21 @@
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
-      "sysname": {}
+      "sysname": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionMount": "oddíl <b>{sysname}</b> použit pro <b>{mount}</b>",
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "showSecurityKey": "Zobrazit klíč zabezpečení",
@@ -364,14 +425,18 @@
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideUnknown": "Nainstalovat {product} vedle ostatních oddílů",
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideAllocateSpace": "Přidělit prostor",
@@ -386,17 +451,27 @@
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionFormat": "oddíl <b>{sysname}</b> naformátován jako <b>{format}</b>",
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    }
     }
   },
   "installDriversTitle": "Nainstalovat ovladače od třetích stran pro grafické čipy a Wi-Fi síťová rozhraní",
@@ -423,7 +498,9 @@
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "confirmDevicesTitle": "Zařízení",
@@ -436,7 +513,9 @@
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSoftwareTitle": "Všechny aplikace které potřebujete",
@@ -445,7 +524,9 @@
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesDevelopmentTitle": "Vyvíjejte s nejlepším open source",
@@ -458,21 +539,27 @@
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSecurityLts": "Všechna {DISTRO} LTS vydání dostávají po dobu pěti let opravy zabezpečení s tím, že je možné prodloužit na deset let předplatným Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesProductivityBody": "{DISTRO} Desktop obsahuje LibreOffice – sadu open source aplikaci, kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAccessibilityTitle": "Přístupnost pro každého",
@@ -485,7 +572,9 @@
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSupportCommunity": "Web Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.",
@@ -504,7 +593,9 @@
   "@installationSlidesTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesIncluded": "Obsaženo:",
@@ -515,7 +606,9 @@
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesCreativityTitle": "Buďte tvořivější",
@@ -524,21 +617,27 @@
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesCreativityBody": "Poku jste animátory, designéry, tvůrci videí či vývojáři her, je snadné přenést své pracovní postupy na {DISTRO} díky podpoře software a aplikací, které patří k open source a oborovým standardům.",
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesGamingBody": "{DISTRO} podporuje nejnovější ovladače od NVIDIA (to stejné ty z Mesa), což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na {DISTRO} prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesProductivityTitle": "Zvyšte svou produktivitu",
@@ -547,7 +646,9 @@
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSupportTitle": "Nápověda a podpora",
@@ -558,7 +659,9 @@
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "rstHeader": "Aby bylo možné pokračovat, vypněte RST",
@@ -569,7 +672,9 @@
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "bitlockerHeader": "Aby bylo možné pokračovat, vypněte BitLocker",
@@ -582,35 +687,45 @@
   "@partitionFormatKeep": {
     "type": "text",
     "placeholders": {
-      "format": {}
+      "format": {
+      "type": "String"
+    }
     }
   },
   "loadingPageTitle": "Vítejte v {DISTRO}",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrerequisites": "Zajišťování závislostí pro {snap}…",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRefresh": "Znovunačítání {snap}…",
   "@refreshSnapRefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapLink": "Napojování {snap}…",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "installationTypeTPM": "Zapnout na hardware založené šifrování celého disku",
@@ -623,43 +738,57 @@
   "@refreshCurrent": {
     "type": "text",
     "placeholders": {
-      "snap": {},
-      "version": {}
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshInstall": "Aktualizovat na verzi {version}",
   "@refreshInstall": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCheckRerefresh": "Zjišťování opětovného znovunačítání {snap}…",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshUpToDate": "Stávající verze {version} je aktuální.",
   "@refreshUpToDate": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshUpdating": "Aktualizování {snap}…",
   "@refreshUpdating": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrepare": "Příprava {snap}…",
   "@refreshSnapPrepare": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshRestart": "Pro pokračování prosím instalátor ukončete a znovu spusťte",
@@ -668,105 +797,135 @@
   "@refreshSnapDownload": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStartServices": "Start služeb {snap}…",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapValidate": "Ověřování {snap}…",
   "@refreshSnapValidate": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapMount": "Připojování {snap}…",
   "@refreshSnapMount": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStopServices": "Zastavování služeb {snap}…",
   "@refreshSnapStopServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRemoveAliases": "Odebírání alternativních názvů {snap}…",
   "@refreshSnapRemoveAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUnlink": "Rušení odkazování na {snap}…",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateAssets": "Aktualizace dat {snap}…",
   "@refreshSnapUpdateAssets": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů pro spouštění jádra systému {snap}…",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCopyData": "Kopírování dat {snap}…",
   "@refreshSnapCopyData": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupProfiles": "Nastavování profilů zabezpečení {snap}…",
   "@refreshSnapSetupProfiles": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapAutoConnect": "Připojování rozhraní a slotů {snap}…",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetAutoAliases": "Nastavování automatických alternativních názvů pro {snap}…",
   "@refreshSnapSetAutoAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupAliases": "Nastavování alternativních názvů pro {snap}…",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCleanup": "Úklid {snap}…",
   "@refreshSnapCleanup": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "recoveryKeyTitle": "Obnovovací klíč k TPM",
@@ -777,7 +936,9 @@
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
-      "color": {}
+      "color": {
+        "type": "String"
+      }
     }
   },
   "fullInstallationSubtitle": "Výběr kancelářských nástrojů, pomůcek a webového prohlížeče vhodných pro režim offline.",

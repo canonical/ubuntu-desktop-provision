@@ -24,8 +24,6 @@
   "@installationTypeZFSSelected": {},
   "installationTypeManual": "Alguna altra cosa",
   "@installationTypeManual": {},
-  "selectGuidedStorageDropdownLabel": "Seleccioneu la unitat:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "S'utilitzarà el disc sencer:",
   "@selectGuidedStorageInfoLabel": {},
   "diskHeadersDevice": "Dispositiu",
@@ -96,7 +94,9 @@
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideInfo": "Els documents, la música i la resta de fitxers personals es conservaran. Podreu triar quin sistema operatiu voleu utilitzar cada cop que engegueu l'ordinador.",
@@ -105,7 +105,9 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryOrInstallRepairOption": "Repara la instal·lació",
@@ -116,35 +118,45 @@
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryDescription": "Podeu provar {RELEASE} sense fer cap canvi al vostre ordinador.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "Instal·la el sistema {RELEASE}",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installDescription": "Instal·lar {RELEASE} al costat (o en lloc de) del vostre sistema operatiu actual. Això no hauria de trigar massa.",
   "@installDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryOrInstallReleaseNotesLabel": "És possible que vulgueu llegir la <a href=\"{url}\"> nota de llançament</a>.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstDescription": "Aquest ordinador utilitza Intel RST (Tecnologia d'emmagatzematge ràpid). Heu de desactivar RST a Windows abans d'instal·lar Ubuntu.",
@@ -153,7 +165,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "configureSecureBootTitle": "Configura l'arrencada segura",
@@ -180,8 +194,12 @@
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
-      "os1": {},
-      "os2": {}
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "quitButtonText": "Surt de la instal·lació",

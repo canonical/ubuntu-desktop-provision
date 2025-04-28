@@ -101,7 +101,9 @@
   "@localePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "identityAutoLogin": "自動登入",

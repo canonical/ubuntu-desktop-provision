@@ -24,7 +24,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "A RST está ativa",
@@ -35,7 +37,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "configureSecureBootTitle": "Configurar o Arranque Seguro",
@@ -72,7 +76,9 @@
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeNoOSDetected": "Este computador não tem atualmente nenhum sistema operativo detetado. O que pretende fazer?",
@@ -101,23 +107,33 @@
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeReinstallWarning": "<font color=\"{color}\">Aviso:</font> Isso vai apagar todos os programas do {os}, documentos, fotos, músicas e quaisquer outros ficheiros.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
-      "color": {},
-      "os": {}
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongside": "Instalar o {product} junto com o {os}",
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os": {}
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideInfo": "Documentos, músicas e outros ficheiros pessoais serão mantidos. Poderá selecionar qual o sistema operativo a usar cada vez que o computador iniciar.",
@@ -126,8 +142,6 @@
   "@installationTypeManual": {},
   "selectGuidedStoragePageTitle": "Apagar o disco e instalar o {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
-  "selectGuidedStorageDropdownLabel": "Selecione a unidade:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "O disco inteiro será utilizado:",
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Instalar agora",
@@ -190,8 +204,12 @@
   "@confirmPartitionTable": {
     "description": "An entry for a disk whose partition table is being changed",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionChanges": "As seguintes alterações às partições serão aplicadas:",
@@ -202,14 +220,18 @@
   "@readyToUse": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "restartInto": "Reiniciar no {system}",
   "@restartInto": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "shutdown": "Desligar",
@@ -220,7 +242,9 @@
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "restartIntoWindows": "Reiniciar no Windows",
@@ -231,7 +255,9 @@
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "bitlockerDescription": "Este computador usa encriptação BitLocker do Windows.\nPrecisa de usar o Windows para libertar espaço ou escolha '{option}' para continuar.",
@@ -240,8 +266,12 @@
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
-      "os1": {},
-      "os2": {}
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "installationTypeMultiOSDetected": "Este computador tem vários sistemas operativos instalados. O que pretende fazer?",
@@ -254,16 +284,24 @@
   "@installationTypeAlongsideDual": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideMulti": "Instalar o {product} a seu lado",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideSpaceDivider": "Alocar espaço no disco ao arrastar o divisor abaixo:",
@@ -280,16 +318,24 @@
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
+      "sysname": {
+        "type": "String"
+      },
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionCreate": "partição <b>{sysname}</b> criada",
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
-      "sysname": {}
+      "sysname": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideFiles": "Ficheiros",
@@ -300,49 +346,62 @@
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideResizePartition": "Redimensionar partição",
   "@installAlongsideResizePartition": {},
-  "onBatteryWarning": "<font color=\"{color}\">Aviso:</font> O computador não está ligado a uma fonte de energia.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installAlongsideHiddenPartitions": "{num} pequenas partições estão ocultas, utilize a <a href=\"{url}\"> ferramenta de particionamento avançado</a> para mais controlo",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
-      "num": {},
-      "url": {}
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionFormatMount": "partição <b>{sysname}</b> formatada como <b>{format}</b> usada para <b>{mount}</b>",
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionFormat": "partição <b>{sysname}</b> formatada como <b>{format}</b>",
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    }
     }
   },
   "confirmPartitionMount": "partição <b>{sysname}</b> usada para <b>{mount}</b>",
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "showSecurityKey": "Mostrar",
@@ -383,7 +442,9 @@
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "confirmDevicesTitle": "Dispositivos",
@@ -394,7 +455,9 @@
   "@installationSlidesTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAvailable": "Disponível:",
@@ -407,21 +470,27 @@
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesWelcomeBody": "Quer seja programador, criador, jogador ou administrador, encontrará novas ferramentas para melhorar a sua produtividade e melhorar a sua experiência no {RELEASE}.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSoftwareBody": "Instale, faça a gestão e atualize todas as suas aplicações no Ubuntu Software, incluindo milhares de aplicações tanto da Loja Snap como do arquivo do {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesCreativityTitle": "Aumente a sua criatividade",
@@ -430,7 +499,9 @@
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesGamingTitle": "Óptimo para jogos",
@@ -439,14 +510,18 @@
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSecurityLts": "Todos as versões do {DISTRO} LTS vêm com cinco anos de correções de segurança incluídos, prolongando-se até dez anos com uma subscrição Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesProductivityTitle": "Potencie a sua produtividade",
@@ -455,7 +530,9 @@
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAccessibilityTitle": "Acesso para todos",
@@ -478,14 +555,18 @@
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSecurityBody": "O {DISTRO} fornece todas as ferramentas necessárias para se manter privado e seguro online. Com firewall incorporado e suporte VPN e uma série de aplicações centradas na privacidade para garantir que tem o controlo total dos seus dados.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSoftwareTitle": "Todas as aplicações de que precisa",
@@ -496,7 +577,9 @@
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSecurityTitle": "Privado e seguro",
@@ -505,14 +588,18 @@
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAccessibilityBody": "No centro da filosofia do {DISTRO} está a crença de que a informática é para todos. Com ferramentas avançadas de acessibilidade e opções para mudar o idioma, cores e tamanho do texto, o {DISTRO} torna a computação fácil, a quem quer que seja e onde quer que esteja.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSupportCommunity": "O Ask Ubuntu abrange uma série de perguntas e respostas e o Ubuntu Discourse fornece guias e fóruns para utilizadores novos e experientes.",
@@ -531,7 +618,9 @@
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "allocateDiskSpaceInvalidMountPointSlash": "Os pontos de montagem devem começar com \"/\"",
@@ -542,14 +631,18 @@
   "@partitionFormatKeep": {
     "type": "text",
     "placeholders": {
-      "format": {}
+      "format": {
+      "type": "String"
+    }
     }
   },
   "loadingPageTitle": "Bem-vindo ao {DISTRO}",
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "refreshPageTitle": "Atualização disponível",
@@ -558,15 +651,21 @@
   "@refreshInstall": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshCurrent": "A versão atual de {snap} é {version}.",
   "@refreshCurrent": {
     "type": "text",
     "placeholders": {
-      "snap": {},
-      "version": {}
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
     }
   },
   "installationTypeTPMSelected": "TPM selecionado",
@@ -579,126 +678,162 @@
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateAssets": "A atuallizar os recursos de {snap}...",
   "@refreshSnapUpdateAssets": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrerequisites": "Garantindo os pré-requisitos de {snap}...",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStartServices": "A iniciar serviços de {snap}...",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapAutoConnect": "A conectar os conectores e encaixes de {snap}...",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateKernelCommandLine": "A atualizar a linha de comando do kernel de {snap}...",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRefresh": "A refrescar {snap}...",
   "@refreshSnapRefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupProfiles": "A configurar os perfis de segurança de {snap}...",
   "@refreshSnapSetupProfiles": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshUpdating": "A atualizar {snap}...",
   "@refreshUpdating": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCleanup": "A limpar {snap}...",
   "@refreshSnapCleanup": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapLink": "A vincular {snap}...",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrepare": "A preparar {snap}...",
   "@refreshSnapPrepare": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCopyData": "A copiar os dados de {snap}...",
   "@refreshSnapCopyData": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapValidate": "A validar {snap}...",
   "@refreshSnapValidate": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapDownload": "A transferir {snap}...",
   "@refreshSnapDownload": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCheckRerefresh": "A verificar o re-refrescamento de {snap}...",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStopServices": "A parar serviços de {snap}...",
   "@refreshSnapStopServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapMount": "A montar {snap}...",
   "@refreshSnapMount": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "recoveryKeyCommand": "Você pode acessar à sua chave de recuperação após a instalação com o seguinte comando:",
@@ -707,28 +842,36 @@
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetAutoAliases": "A definir um pseudónimo automático de {snap}...",
   "@refreshSnapSetAutoAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshUpToDate": "A versão atual {version} está atualizada.",
   "@refreshUpToDate": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRemoveAliases": "A remover pseudónimos de {snap}...",
   "@refreshSnapRemoveAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshRestart": "Feche o instalador e reinicie-o para continuar",
@@ -737,7 +880,9 @@
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
-      "color": {}
+      "color": {
+        "type": "String"
+      }
     }
   },
   "autoinstallTitle": "Tipo de instalação",

@@ -1,18 +1,15 @@
 {
   "@@locale": "ml",
-  "onBatteryWarning": "<font color=\"{color}\">മുന്നറിയിപ്പ്</font>: കമ്പ്യൂട്ടർ ഒരു വൈദ്യുത സ്രോതസ്സുമായി ബന്ധിപ്പിച്ചിട്ടില്ല.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "installationTypeReinstallWarning": "<font color=\"{color}\">മുന്നറിയിപ്പ്:</font> ഇത് നിങ്ങളുടെ എല്ലാ {os} പ്രോഗ്രാമുകളും ഡോക്യുമെന്റുകളും ഫോട്ടോകളും സംഗീതവും മറ്റേതെങ്കിലും ഫയലുകളും ഇല്ലാതാക്കും.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
-      "color": {},
-      "os": {}
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideInfo": "പ്രമാണങ്ങളും സംഗീതവും മറ്റ് സ്വകാര്യ ഫയലുകളും സൂക്ഷിക്കും. ഓരോ തവണ കമ്പ്യൂട്ടർ ഓണാകുമ്പോഴും ഏത് ഓപ്പറേറ്റിംഗ് സിസ്റ്റം വേണമെന്ന് നിങ്ങൾക്ക് തിരഞ്ഞെടുക്കാം.",
@@ -33,15 +30,21 @@
   "@confirmPartitionTable": {
     "description": "An entry for a disk whose partition table is being changed",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "selectGuidedStoragePageTitle": "ഡിസ്ക് മായ്ച്ച് {DISTRO} ഇൻസ്റ്റാൾ ചെയ്യുക",
   "@selectGuidedStoragePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "partitionTypeLabel": "പുതിയ പാർട്ടീഷന്റെ തരം:",
@@ -62,36 +65,48 @@
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeEncrypt": "സുരക്ഷയ്ക്കായി പുതിയ {RELEASE} ഇൻസ്റ്റാളേഷൻ എൻക്രിപ്റ്റ് ചെയ്യുക",
   "@installationTypeEncrypt": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationTypeReinstall": "{os} മായ്ച്ച് വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യുക",
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongside": "{os} എന്നതിനൊപ്പം {product} ഇൻസ്റ്റാൾ ചെയ്യുക",
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os": {}
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeManualInfo": "നിങ്ങൾക്ക് സ്വയം പാർട്ടീഷനുകൾ സൃഷ്ടിക്കുകയോ വലുപ്പം മാറ്റുകയോ ചെയ്യാം, അല്ലെങ്കിൽ {DISTRO}-നായി ഒന്നിലധികം പാർട്ടീഷനുകൾ തിരഞ്ഞെടുക്കാം",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "appTitle": "ഉബുണ്ടു ഡെസ്ക്ടോപ്പ് ഇൻസ്റ്റാളർ",
@@ -110,7 +125,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RST ഓഫ് ചെയ്യുക",
@@ -121,7 +138,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "configureSecureBootTitle": "സെക്യൂർ ബൂട്ട് ക്രമീകരിക്കുക",
@@ -158,7 +177,9 @@
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAdvancedLabel": "വിപുലമായ സവിശേഷതകൾ…",
@@ -181,8 +202,6 @@
   "@installationTypeZFSSelected": {},
   "installationTypeManual": "വേറെ എന്തെങ്കിലും",
   "@installationTypeManual": {},
-  "selectGuidedStorageDropdownLabel": "ഡ്രൈവ് തിരഞ്ഞെടുക്കുക:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "മുഴുവൻ ഡിസ്കും ഉപയോഗിക്കും:",
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "ഇപ്പോൾ ഇൻസ്റ്റാൾ ചെയ്യുക",
@@ -229,14 +248,18 @@
   "@readyToUse": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "restartInto": "{system}-ലേക്ക് റീസ്റ്റാർട്ട് ചെയ്യുക",
   "@restartInto": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "shutdown": "ഷട്ട് ഡൗൺ",
@@ -249,42 +272,54 @@
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "windowTitle": "{RELEASE} ഇൻസ്റ്റാൾ ചെയ്യുക",
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryOption": "{RELEASE} ഉപയോഗിച്ച് നോക്കുക",
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryDescription": "നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ മാറ്റങ്ങളൊന്നും വരുത്താതെ തന്നെ നിങ്ങൾക്ക് {RELEASE} പരീക്ഷിക്കാവുന്നതാണ്.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "{RELEASE} ഇൻസ്റ്റാൾ ചെയ്യുക",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installDescription": "നിങ്ങളുടെ നിലവിലെ ഓപ്പറേറ്റിംഗ് സിസ്റ്റത്തിനൊപ്പം (അല്ലെങ്കിൽ പകരം) {RELEASE} ഇൻസ്റ്റാൾ ചെയ്യുക. ഇത് അധിക സമയം എടുക്കാൻ പാടില്ലാത്തതാണ്.",
   "@installDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   }
 }

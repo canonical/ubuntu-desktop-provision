@@ -52,14 +52,18 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryDescription": "உங்கள் கணினியில் எந்த மாற்றமும் செய்யாமல் {RELEASE}ஐ சோதிக்கலாம்.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "welcome": "நல்வரவு",
@@ -70,14 +74,18 @@
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "நிறுவு{RELEASE}",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RSTயை முடக்கு",

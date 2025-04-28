@@ -10,7 +10,9 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "changeButtonText": "შეცვლა",
@@ -23,14 +25,18 @@
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "{RELEASE}-ის დაყენება",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RST ჩართულია",
@@ -39,14 +45,18 @@
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "loadingHeader": "{DISTRO}-ის მომზადება…",
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideAvailable": "ხელმისაწვდომი:",

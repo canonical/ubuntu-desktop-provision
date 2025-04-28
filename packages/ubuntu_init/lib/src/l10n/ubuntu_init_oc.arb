@@ -5,7 +5,9 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryReportTitle": "Detalhs del rapòrt",
@@ -18,7 +20,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryLegalLabel": "Informacions legalas",
@@ -35,7 +39,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeStoreTitle": "Un estil novèl per la logitèca",
@@ -48,7 +54,9 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "privacyLocationTitle": "Activar los servicis de localizacion ?",

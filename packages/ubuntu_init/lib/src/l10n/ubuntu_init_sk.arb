@@ -11,7 +11,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "Telemetria",
@@ -24,7 +26,9 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "Nie, nezdieľať systémové údaje",
@@ -53,14 +57,18 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryDescription": "Pomôžte nám zlepšiť {distro} zdieľaním svojich systémových údajov s nami. To zahŕňa aj veci, ako je model vášho počítača, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "privacyPolicyLink": "Ochrana údajov",
@@ -71,7 +79,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProHeader": "Pripojiť tento počítač",
@@ -102,7 +112,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProOrAddTokenManually": "alebo pridať token ručne",

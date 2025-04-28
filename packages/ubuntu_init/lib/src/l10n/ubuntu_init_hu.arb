@@ -3,7 +3,9 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryReportTitle": "Jelentéskészítés részletei",
@@ -18,7 +20,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryLegalLabel": "Jogi nyilatkozat",
@@ -35,7 +39,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeStoreTitle": "Új megjelenésű alkalmazásbolt",
@@ -48,7 +54,9 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "privacyLocationTitle": "Engedélyezi a helymeghatározó szolgáltatásokat?",

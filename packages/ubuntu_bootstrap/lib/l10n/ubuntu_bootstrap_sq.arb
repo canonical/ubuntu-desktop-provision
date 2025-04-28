@@ -14,8 +14,6 @@
   "@otherOptions": {},
   "installationTypeNone": "Asnjë",
   "@installationTypeNone": {},
-  "selectGuidedStorageDropdownLabel": "Zgjidh draivin:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInstallNow": "Instalo tani",
   "@selectGuidedStorageInstallNow": {},
   "diskHeadersMountPoint": "Pika e montimit",
@@ -44,7 +42,9 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "diskHeadersFormat": "Formato",
@@ -97,8 +97,12 @@
   "@confirmPartitionTable": {
     "description": "An entry for a disk whose partition table is being changed",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "tryOrInstallTitle": "Provo ose instalo",
@@ -109,14 +113,18 @@
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "Instalo {RELEASE}",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationTypeLVMEncryptionSelected": "LMV dhe kodimi i selektuare",

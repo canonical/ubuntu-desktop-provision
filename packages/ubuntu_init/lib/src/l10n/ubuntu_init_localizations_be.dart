@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Belarusian (`be`).
 class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Новыя параметры для апаратнага забеспячэння або шыфравання ZFS.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Паглядзець журнал змен</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Тэлеметрыя';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Дапамажыце палепшыць $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Дапамажыце нам палепшыць $distro абагульваючы свае сістэмныя даныя з намі. Гэта ўключае наступныя звесткі: мадэль камп\'ютара, месцазнаходжанне і часавы пояс.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Так, абагуліць сістэмныя даныя з камандай $distro';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Прыватнасць даных';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Магічнае далучэнне з гэтым кодам на <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Атрымайце найбольш усёабдымную падпіску для бяспекі праграмнага забеспячэння з адкрытым зыходным кодам';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Заўсёды бясплатна для некамерцыйнага выкарыстання і бясплатны выпрабавальны перыяд на працягу 30 дзён для прадпрыемстваў. <a href=\"https://$url\">Даведацца больш</a>';
   }
 

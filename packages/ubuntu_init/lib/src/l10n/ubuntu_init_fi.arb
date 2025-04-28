@@ -5,14 +5,18 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeChangelogLabel": "<a href=\"{url}\">Näytä muutosloki</a>",
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "privacyPageTitle": "Sijaintipalvelut",
@@ -25,14 +29,18 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOn": "Kyllä, jaa järjestelmän tietoja {distro}-tiimille",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "privacyLocationTitle": "Otetaanko sijaintipalvelut käyttöön?",
@@ -81,7 +89,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProSubscriptionDescription": "Hanki kokonaisvaltainen avoimen lähdekoodin tietoturvapalvelu",
@@ -92,7 +102,9 @@
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProTokenAttachButton": "Liitä",

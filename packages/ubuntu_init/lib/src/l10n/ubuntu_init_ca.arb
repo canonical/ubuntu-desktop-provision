@@ -13,7 +13,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeSecuritySubtitle": "Opcions noves per al xifrat per maquinari o mitjançant el ZFS.",
@@ -22,14 +24,18 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryDescription": "Compartiu dades anònimament amb l’{distro} perquè puguem millorar la vostra experiència.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "No, no comparteixis dades del sistema",
@@ -62,7 +68,9 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeStartSubtitle": "Afavoreix una experiència d’instal·lació més senzilla.",

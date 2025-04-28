@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Swedish (`sv`).
 class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Nya alternativ för hårdvarustöd kryptering eller ZFS-kryptering.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Visa ändringslogg</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetri';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Hjälp till att förbättra $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Hjälp oss att förbättra $distro genom att dela din systemdata med oss. Detta inkluderar saker som din maskinmodell, installerad programvara och den plats du valde för din tidszon.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Ja, dela systemdata med $distro-teamet';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Dataintegritet';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magisk anslut med koden på <a href=\"https://$url\"></a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Få den mest omfattande prenumerationen för säkerhet med öppen källkod';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Alltid gratis för personligt bruk. 30 dagars provperiod för företag. <a href=\"https://$url\">Läs mer</a>';
   }
 

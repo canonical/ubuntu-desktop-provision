@@ -24,14 +24,18 @@
   "@installDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">Sürüm notlarını</a> okumak isteyebilirsiniz.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RST etkin",
@@ -42,7 +46,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "chooseSecurityKey": "Güvenlik anahtarı seçin",
@@ -67,13 +73,6 @@
   "@otherOptions": {},
   "installThirdPartyTitle": "Grafikler ve Wi-Fi donanımı için üçüncü taraf yazılımların yanı sıra ek medya biçimlerini de kur",
   "@installThirdPartyTitle": {},
-  "onBatteryWarning": "<font color=\"{color}\">Uyarı:</font> Bilgisayar güç kaynağına takılı değil.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "selectGuidedStorageInstallNow": "Şimdi kur",
   "@selectGuidedStorageInstallNow": {},
   "diskHeadersSize": "Boyut",
@@ -120,14 +119,16 @@
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os": {}
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeManual": "Elle bölümlendirme",
   "@installationTypeManual": {},
-  "selectGuidedStorageDropdownLabel": "Sürücü seçin:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Bütün disk kullanılacaktır:",
   "@selectGuidedStorageInfoLabel": {},
   "updatesOtherSoftwarePageTitle": "Uygulamalar ve güncellemeler",
@@ -154,7 +155,9 @@
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "partitionSizeLabel": "Boyut:",
@@ -177,8 +180,12 @@
   "@confirmPartitionTable": {
     "description": "An entry for a disk whose partition table is being changed",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionChanges": "Aşağıdaki bölüm değişiklikleri uygulanacak:",
@@ -189,7 +196,9 @@
   "@readyToUse": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "shutdown": "Kapat",
@@ -202,21 +211,27 @@
   "@installationTypeErase": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "selectGuidedStoragePageTitle": "Diski sil ve {DISTRO} kur",
   "@selectGuidedStoragePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeOSDetected": "Bu bilgisayarda şu anda {os} var. Ne yapmak istersiniz?",
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "bootLoaderDevice": "Önyükleyici kurulumu yapılacak cihaz",
@@ -225,7 +240,9 @@
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "installingSystem": "Sistem kuruluyor…",
@@ -242,22 +259,30 @@
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
-      "color": {},
-      "os": {}
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeManualInfo": "Bölümleri kendiniz oluşturabilir veya yeniden boyutlandırabilir ya da {DISTRO} için birden çok bölüm seçebilirsiniz",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideMulti": "{product} işletim sistemini onların yanına kur",
   "@installationTypeAlongsideMulti": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideResizePartition": "Bölümü yeniden boyutlandır",
@@ -268,8 +293,12 @@
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
-      "num": {},
-      "url": {}
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
     }
   },
   "installAlongsidePartition": "Bölüm:",
@@ -280,8 +309,12 @@
   "@installationTypeDualOSDetected": {
     "type": "text",
     "placeholders": {
-      "os1": {},
-      "os2": {}
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "partitionFormatLabel": "Kullanılan:",
@@ -290,8 +323,12 @@
   "@confirmPartitionMount": {
     "description": "A mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionTables": "Aşağıdaki cihazların bölüm tabloları değiştirildi:",
@@ -300,9 +337,15 @@
   "@confirmPartitionResize": {
     "description": "A resized partition entry",
     "placeholders": {
-      "sysname": {},
-      "oldsize": {},
-      "newsize": {}
+      "sysname": {
+        "type": "String"
+      },
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
     }
   },
   "confirmHeader": "Devam ederseniz, aşağıda listelenen değişiklikler disklere yazılacak. Daha fazla değişikliği elle yapabileceksiniz.",
@@ -317,15 +360,21 @@
   "@confirmPartitionFormat": {
     "description": "A formatted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    }
     }
   },
   "restartInto": "{system} ile yeniden başlat",
   "@restartInto": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "installAlongsideSize": "Boyut:",
@@ -336,39 +385,57 @@
   "@installationTypeAlongsideUnknown": {
     "type": "text",
     "placeholders": {
-      "product": {}
+      "product": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionCreate": "<b>{sysname}</b> bölümü oluşturuldu",
   "@confirmPartitionCreate": {
     "description": "A created partition entry",
     "placeholders": {
-      "sysname": {}
+      "sysname": {
+        "type": "String"
+      }
     }
   },
   "installationTypeEncrypt": "Güvenlik için yeni {RELEASE} kurulumunu şifrele",
   "@installationTypeEncrypt": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideDual": "{product} işletim sistemini {os1} ve {os2} yanına kur",
   "@installationTypeAlongsideDual": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os1": {},
-      "os2": {}
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
     }
   },
   "confirmPartitionFormatMount": "<b>{format} </b> biçimindeki <b>{sysname}</b> bölümü <b>{mount}</b> için kullanıldı",
   "@confirmPartitionFormatMount": {
     "description": "A formatted and mounted partition entry",
     "placeholders": {
-      "sysname": {},
-      "format": {},
-      "mount": {}
+      "sysname": {
+        "type": "String"
+      },
+      "format": {
+      "type": "String"
+    },
+      "mount": {
+        "type": "String"
+      }
     }
   },
   "bitlockerDescription": "Bu bilgisayar Windows BitLocker şifreleme kullanmaktadır.\nBoş alan oluşturmak için Windows'u kullanmanız ya da devam etmek için '{option}'i seçmeniz gerekir.",
@@ -403,7 +470,9 @@
   "@installationSlidesTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesIncluded": "Dahil:",
@@ -414,14 +483,18 @@
   "@installationSlidesWelcomeHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "loadingHeader": "{DISTRO} hazırlanıyor…",
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "confirmDevicesTitle": "Aygıtlar",
@@ -434,7 +507,9 @@
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSoftwareTitle": "İhtiyacınız olan tüm uygulamalar",
@@ -443,7 +518,9 @@
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesDevelopmentTitle": "Açık kaynağın en iyisi ile geliştir",
@@ -452,7 +529,9 @@
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesCreativityTitle": "Yaratıcılığınızı zenginleştirin",
@@ -471,14 +550,18 @@
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAccessibilityBody": "{DISTRO} felsefesinin temelinde bilgisayarın herkes için olduğu inancı yatmaktadır. Gelişmiş erişilebilirlik araçları ve dili, renkleri ve metin boyutunu değiştirme seçenekleriyle {DISTRO}, kim ve nerede olursanız olun bilgisayar kullanmayı kolaylaştırır.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSupportTitle": "Yardım ve Destek",
@@ -487,14 +570,18 @@
   "@installationSlidesSupportHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "notEnoughDiskSpaceUbuntu": "{DISTRO} kurmak için yeterli disk alanı yok",
   "@notEnoughDiskSpaceUbuntu": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "notEnoughDiskSpaceAvailable": "Kullanılabilir:",
@@ -505,7 +592,9 @@
   "@installationSlidesCreativityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesGamingTitle": "Oyun için harika",
@@ -514,14 +603,18 @@
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesProductivityBody": "{DISTRO} Masaüstü, belgeler, elektronik tablolar ve sunumlar için Microsoft Office uyumlu açık kaynak uygulamaları paketi olan LibreOffice'i içerir. Popüler işbirliği araçları da mevcuttur.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesAccessibilityOrca": "Orca Ekran Okuyucu",
@@ -532,7 +625,9 @@
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSecurityTitle": "Özel ve güvenli",
@@ -541,7 +636,9 @@
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationSlidesSupportCommunity": "Ubuntu'ya Sor çeşitli soru ve yanıtlarını kapsar. Ubuntu Discourse yeni ve deneyimli kullanıcılar için kılavuzlar ve tartışmalar sunar.",
@@ -562,7 +659,9 @@
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "installationTypeTPM": "DENEYSEL: Donanım destekli tam disk şifrelemeyi etkinleştir",
@@ -573,22 +672,30 @@
   "@partitionFormatKeep": {
     "type": "text",
     "placeholders": {
-      "format": {}
+      "format": {
+      "type": "String"
+    }
     }
   },
   "refreshCurrent": "Geçerli {snap} sürümü: {version}.",
   "@refreshCurrent": {
     "type": "text",
     "placeholders": {
-      "snap": {},
-      "version": {}
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshUpdating": "{snap} güncelleniyor...",
   "@refreshUpdating": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshRestart": "Kurucuyu yeniden başlatın.",
@@ -597,14 +704,18 @@
   "@refreshSnapSetAutoAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapAutoConnect": "{snap} fişleri ve yuvaları bağlanıyor...",
   "@refreshSnapAutoConnect": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "recoveryKeyTitle": "TPM kurtarma anahtarı",
@@ -613,7 +724,9 @@
   "@recoveryKeyWarning": {
     "type": "text",
     "placeholders": {
-      "color": {}
+      "color": {
+        "type": "String"
+      }
     }
   },
   "refreshPageTitle": "Güncelleme var",
@@ -622,119 +735,153 @@
   "@refreshInstall": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshUpToDate": "Geçerli sürüm {version} güncel.",
   "@refreshUpToDate": {
     "type": "text",
     "placeholders": {
-      "version": {}
+      "version": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRefresh": "{snap} yenileniyor...",
   "@refreshSnapRefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrepare": "{snap} hazırlanıyor...",
   "@refreshSnapPrepare": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapDownload": "{snap} indiriliyor...",
   "@refreshSnapDownload": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapValidate": "{snap} doğrulanıyor...",
   "@refreshSnapValidate": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapMount": "{snap} bağlanıyor...",
   "@refreshSnapMount": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStopServices": "{snap} hizmetleri durduruluyor...",
   "@refreshSnapStopServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapRemoveAliases": "{snap} takma adları kaldırılıyor...",
   "@refreshSnapRemoveAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUnlink": "{snap} bağlantısı kaldırılıyor...",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateAssets": "{snap} varlıkları güncelleniyor...",
   "@refreshSnapUpdateAssets": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapUpdateKernelCommandLine": "{snap} çekirdek komut satırı güncelleniyor...",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCopyData": "{snap} verileri kopyalanıyor...",
   "@refreshSnapCopyData": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupProfiles": "{snap} güvenlik profilleri ayarlanıyor...",
   "@refreshSnapSetupProfiles": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapLink": "{snap} bağlanıyor...",
   "@refreshSnapLink": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapSetupAliases": "{snap} takma adları ayarlanıyor...",
   "@refreshSnapSetupAliases": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapStartServices": "{snap} hizmetleri başlatılıyor...",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "recoveryKeyCommand": "Kurtarma anahtarınıza kurulumdan sonra aşağıdaki komutla erişebilirsiniz:",
@@ -743,21 +890,27 @@
   "@refreshSnapCleanup": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapPrerequisites": "{snap} ön koşulları sağlanıyor...",
   "@refreshSnapPrerequisites": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "refreshSnapCheckRerefresh": "{snap} yeniden yenilemesi denetleniyor...",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
-      "snap": {}
+      "snap": {
+        "type": "String"
+      }
     }
   },
   "fullInstallationSubtitle": "Ofis araçları, yardımcı araçlar, web tarayıcısı ve oyunlardan oluşan çevrimdışı dostu bir seçim.",

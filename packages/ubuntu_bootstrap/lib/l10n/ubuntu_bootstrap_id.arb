@@ -4,7 +4,9 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "configureSecureBootDescription": "Anda telah memilih untuk memasang perangkat lunak driver pihak ketiga. Ini membutuhkan mematikan Boot Aman.\nUntuk melakukan ini, Anda harus memilih kunci keamanan sekarang, dan memasukkannya saat sistem dimulai ulang.",
@@ -21,7 +23,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstDescription": "Komputer ini menggunakan Intel RST (Rapid Storage Technology). Anda harus mematikan RST di Windows sebelum memasang Ubuntu.",
@@ -46,8 +50,12 @@
   "@installationTypeAlongside": {
     "type": "text",
     "placeholders": {
-      "product": {},
-      "os": {}
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "diskHeadersSize": "Ukuran",
@@ -86,8 +94,12 @@
   "@confirmPartitionTable": {
     "description": "An entry for a disk whose partition table is being changed",
     "placeholders": {
-      "serial": {},
-      "path": {}
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
     }
   },
   "appTitle": "Penginstal Desktop Ubuntu",
@@ -136,7 +148,9 @@
   "@installationTypeOSDetected": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeNoOSDetected": "Komputer ini saat ini tidak memiliki sistem operasi yang terdeteksi. Apa yang ingin Anda lakukan?",
@@ -159,15 +173,21 @@
   "@installationTypeReinstall": {
     "type": "text",
     "placeholders": {
-      "os": {}
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeReinstallWarning": "<font color=\"{color}\">Peringatan:</font> Ini akan menghapus semua program {os}, dokumen, foto, musik, dan sebarang berkas lain.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
-      "color": {},
-      "os": {}
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
     }
   },
   "installationTypeAlongsideInfo": "Dokumen, musik, dan berkas-berkas pribadi lain akan disimpan. Anda dapat memilih sistem operasi yang Anda inginkan setiap kali komputer dinyalakan.",
@@ -176,8 +196,6 @@
   "@installationTypeManual": {},
   "selectGuidedStoragePageTitle": "Hapus disk dan pasang {DISTRO}",
   "@selectGuidedStoragePageTitle": {},
-  "selectGuidedStorageDropdownLabel": "Pilih drive:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "Seluruh disk akan digunakan:",
   "@selectGuidedStorageInfoLabel": {},
   "diskHeadersUsed": "Dipakai",
@@ -206,14 +224,18 @@
   "@readyToUse": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "restartInto": "Mulai ulang ke {system}",
   "@restartInto": {
     "type": "text",
     "placeholders": {
-      "system": {}
+      "system": {
+        "type": "String"
+      }
     }
   },
   "shutdown": "Matikan",
@@ -226,18 +248,13 @@
   "@bitlockerInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "restartIntoWindows": "Mulai Ulang Ke Windows",
   "@restartIntoWindows": {},
-  "onBatteryWarning": "<font color=\"{color}\">Peringatan</font>: Komputer tidak tertancam ke suatu sumber listrik.",
-  "@onBatteryWarning": {
-    "type": "text",
-    "placeholders": {
-      "color": {}
-    }
-  },
   "newPartitionTableConfirmationTitle": "Buat suatu tabel partisi baru yang kosong pada peranti ini?",
   "@newPartitionTableConfirmationTitle": {},
   "newPartitionTableConfirmationMessage": "Anda telah memilih seluruh peranti untuk dipartisi. Bila Anda melanjutkan membuat suatu tabel partisi baru pada peranti ini, maka semua partisi saat ini akan dihapus.\n\nPerhatikan bahwa Anda akan dapat membatalkan operasi ini nanti bila Anda mau.",

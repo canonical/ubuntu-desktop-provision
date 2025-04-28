@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'factory_reset_tools_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Northern Sami (`se`).
 class FactoryResetToolsLocalizationsSe extends FactoryResetToolsLocalizations {

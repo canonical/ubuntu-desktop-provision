@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Irish (`ga`).
 class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Roghanna nua le haghaidh criptithe crua-earraí nó ZFS.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Féach ar loga athruithe</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'teiliméadracht';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Cabhraigh le $distro a fheabhsú';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Cabhraigh linn $distro a fheabhsú trí shonraí do chórais a roinnt linn. Áiríonn sé seo rudaí cosúil le do mhúnla meaisín, bogearraí suiteáilte agus an suíomh a roghnaigh tú do do chrios ama.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Sea, roinn sonraí córais leis an bhfoireann $distro';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Príobháideacht Sonraí';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Ceangail draíocht leis an gcód seo ag <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Faigh an síntiús is cuimsithí le haghaidh slándáil bogearraí foinse oscailte';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'I gcónaí saor in aisce le haghaidh úsáide pearsanta. Triail 30-lá d’fhiontair. <a href=\"https://$url\">Foghlaim tuilleadh</a>';
   }
 

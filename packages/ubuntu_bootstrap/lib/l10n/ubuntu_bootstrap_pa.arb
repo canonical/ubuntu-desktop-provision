@@ -4,14 +4,18 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryOption": "{RELEASE}ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "welcome": "ਜੀ ਆਇਆਂ ਨੂੰ",
@@ -20,7 +24,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "@keyboardKeyPresentLabel": {}

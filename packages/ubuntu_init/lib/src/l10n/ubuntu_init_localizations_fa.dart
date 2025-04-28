@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Persian (`fa`).
 class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'گزینه‌هایی جدید برای رمزنگاری ZFS یا با پشتیبانی از سخت‌افزار.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">دیدن گزارش دگرگونی</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'گزارش از دور';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'کمک به بهبود $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'هم‌رسانی ناشناس داده‌ها با $distro برای بهبود تجربه‌تان.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'بله. داده‌ها با گروه $distro هم‌رسانی شوند';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'محرمانگی داده‌ها';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
   }
 

@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Norwegian Bokmål (`nb`).
 class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Nye alternativer for maskinvarebasert- eller ZFS-kryptering.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Vis endringslogg</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Telemetri';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Hjelp til å forbedre $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Del data anonymt med $distro slik at opplevelsen kan forbedres.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Ja, del systemdata med $distro-laget';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Databeskyttelse';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
   }
 

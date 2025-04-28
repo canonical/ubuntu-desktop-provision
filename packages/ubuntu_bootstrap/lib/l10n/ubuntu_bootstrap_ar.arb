@@ -8,7 +8,9 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "quitButtonText": "قم بإنهاء التثبيت",
@@ -23,28 +25,36 @@
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryDescription": "يمكنك تجربة {RELEASE} بدون إجراء اي تغييرات لجهازك.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "ثبت {RELEASE}",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installDescription": "ثبت {RELEASE} بجانب او بدلا من نظامك الحالي. لا ينبغي لهذا الإجراء اخذ الكثير من الوقت.",
   "@installDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "appTitle": "مثبت سطح مكتب أوبونتو",
@@ -103,8 +113,6 @@
   "@installationTypeZFS": {},
   "installationTypeZFSSelected": "حُدد ZFS",
   "@installationTypeZFSSelected": {},
-  "selectGuidedStorageDropdownLabel": "اختر القرص:",
-  "@selectGuidedStorageDropdownLabel": {},
   "selectGuidedStorageInfoLabel": "سيُستخدم القرص بأكمله:",
   "@selectGuidedStorageInfoLabel": {},
   "diskHeadersDevice": "الجهاز",
@@ -135,7 +143,9 @@
   "@loadingHeader": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "تم تشغيل RST",
@@ -144,14 +154,18 @@
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "tryOrInstallReleaseNotesLabel": "قد ترغب في قراءة </a> ملاحظات الإصدار <a href=\"{url}\">.",
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstDescription": "يستخدم هذا الكمبيوتر Intel RST (تقنية التخزين السريع). تحتاج إلى إيقاف تشغيل RST في Windows قبل تثبيت Ubuntu.",
@@ -160,7 +174,9 @@
   "@loadingPageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "confirmSecurityKey": "تأكيد مفتاح الأمان",
