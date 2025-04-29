@@ -139,7 +139,6 @@ class _SlideViewState extends State<SlideView> {
                         ),
                       ),
                   ],
-                  onPopPage: (route, result) => route.didPop(result),
                 );
               },
             ),

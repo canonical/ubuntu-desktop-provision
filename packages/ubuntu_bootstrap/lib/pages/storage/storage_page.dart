@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -169,7 +168,7 @@ class _InstallationTypeTile extends ConsumerWidget {
         title: title,
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [subtitle, trailing].whereNotNull().toList(),
+          children: [subtitle, trailing].nonNulls.toList(),
         ),
         contentPadding: kWizardTilePadding,
         isThreeLine: true,

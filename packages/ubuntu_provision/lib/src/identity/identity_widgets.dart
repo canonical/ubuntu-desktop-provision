@@ -88,9 +88,7 @@ extension UsernameValidationL10n on UsernameValidation {
         return lang.identityUsernameInvalidChars;
       case UsernameValidation.TOO_LONG:
         return lang.identityUsernameTooLong;
-      default:
-        throw UnimplementedError(toString());
-    }
+      }
   }
 }
 
