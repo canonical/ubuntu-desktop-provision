@@ -36,7 +36,10 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
                   color: Theme.of(context).colorScheme.success,
                   width: 2,
                 ),
-                color: Theme.of(context).colorScheme.success.withValues(alpha: 0.1),
+                color: Theme.of(context)
+                    .colorScheme
+                    .success
+                    .withValues(alpha: 0.1),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
