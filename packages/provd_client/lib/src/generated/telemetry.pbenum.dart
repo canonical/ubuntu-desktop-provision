@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: telemetry.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -27,7 +27,7 @@ class SendResponse_SendResponseType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, SendResponse_SendResponseType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static SendResponse_SendResponseType? valueOf($core.int value) => _byValue[value];
 
-  const SendResponse_SendResponseType._($core.int v, $core.String n) : super(v, n);
+  const SendResponse_SendResponseType._(super.v, super.n);
 }
 
 

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: telemetry.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'telemetry.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'telemetry.pbenum.dart';
 
@@ -64,7 +66,7 @@ class CollectResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasMetrics() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMetrics() => clearField(1);
+  void clearMetrics() => $_clearField(1);
 }
 
 class SendResponse extends $pb.GeneratedMessage {
@@ -110,11 +112,11 @@ class SendResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   SendResponse_SendResponseType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(SendResponse_SendResponseType v) { setField(1, v); }
+  set type(SendResponse_SendResponseType v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 

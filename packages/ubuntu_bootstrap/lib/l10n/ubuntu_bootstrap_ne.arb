@@ -6,7 +6,9 @@
   "@windowTitle": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "welcome": "स्वागत छ",
@@ -17,7 +19,9 @@
   "@tryOrInstallReleaseNotesLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "rstTitle": "RST बन्द गर्नुहोस्",
@@ -26,28 +30,36 @@
   "@tryOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "tryDescription": "तपाईंले आफ्नो कम्प्युटरमा कुनै परिवर्तन नगरी {RELEASE} प्रयोग गर्न सक्नुहुन्छ।",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installOption": "{RELEASE} स्थापना गर्नुहोस्",
   "@installOption": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   },
   "installDescription": "आफ्नो अन्य अपरेटिङ सिस्टम संगै {RELEASE} स्थापना गर्नुहोस्। यो छिटो हुनेछ।",
   "@installDescription": {
     "type": "text",
     "placeholders": {
-      "RELEASE": {}
+      "RELEASE": {
+        "type": "String"
+      }
     }
   }
 }

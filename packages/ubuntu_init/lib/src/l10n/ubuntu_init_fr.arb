@@ -13,7 +13,9 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "welcomeSecurityTitle": "Sécurité renforcée",
@@ -22,7 +24,9 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "privacyLocationTitle": "Activer les services de localisation ?",
@@ -47,7 +51,9 @@
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryReportTitle": "Détails du rapport",
@@ -56,14 +62,18 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProSubscriptionFreeForPersonalUse": "Toujours gratuit pour un usage personnel. 30 jours d'essai pour les entreprises. <a href=\"https://{url}\">En savoir plus</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProOrAddTokenManually": "ou ajouter un jeton manuellement",
@@ -72,7 +82,9 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProHeader": "Rattacher cette machine",

@@ -69,7 +69,9 @@
   "@localePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "identityHostnameLabel": "თქვენი კომპიუტერის სახელი",

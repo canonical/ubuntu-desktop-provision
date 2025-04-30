@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: user.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -33,7 +33,7 @@ class UsernameValidation extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, UsernameValidation> _byValue = $pb.ProtobufEnum.initByValue(values);
   static UsernameValidation? valueOf($core.int value) => _byValue[value];
 
-  const UsernameValidation._($core.int v, $core.String n) : super(v, n);
+  const UsernameValidation._(super.v, super.n);
 }
 
 

@@ -16,7 +16,7 @@ class InfoBadge extends StatelessWidget {
     return Padding(
       padding: padding ?? const EdgeInsets.only(left: kWizardSpacing),
       child: YaruBorderContainer(
-        color: baseColor.withOpacity(0.1),
+        color: baseColor.withValues(alpha: 0.1),
         border: Border.all(color: baseColor),
         borderRadius: BorderRadius.circular(20),
         child: Padding(

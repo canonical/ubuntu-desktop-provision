@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: pro.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'pro.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'pro.pbenum.dart';
 
@@ -64,7 +66,7 @@ class ProAttachRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasToken() => $_has(0);
   @$pb.TagNumber(1)
-  void clearToken() => clearField(1);
+  void clearToken() => $_clearField(1);
 }
 
 class ProAttachResponse extends $pb.GeneratedMessage {
@@ -110,11 +112,11 @@ class ProAttachResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ProAttachResponse_ProAttachResponseType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(ProAttachResponse_ProAttachResponseType v) { setField(1, v); }
+  set type(ProAttachResponse_ProAttachResponseType v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 }
 
 class ProMagicAttachResponse extends $pb.GeneratedMessage {
@@ -165,11 +167,11 @@ class ProMagicAttachResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ProMagicAttachResponseType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(ProMagicAttachResponseType v) { setField(1, v); }
+  set type(ProMagicAttachResponseType v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearType() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get userCode => $_getSZ(1);
@@ -178,7 +180,7 @@ class ProMagicAttachResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasUserCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUserCode() => clearField(2);
+  void clearUserCode() => $_clearField(2);
 }
 
 

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: user.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -67,12 +67,12 @@ abstract class UserServiceBase extends $grpc.Service {
         ($11.ValidateUsernameResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> createUser_Pre($grpc.ServiceCall call, $async.Future<$11.CreateUserRequest> request) async {
-    return createUser(call, await request);
+  $async.Future<$0.Empty> createUser_Pre($grpc.ServiceCall $call, $async.Future<$11.CreateUserRequest> $request) async {
+    return createUser($call, await $request);
   }
 
-  $async.Future<$11.ValidateUsernameResponse> validateUsername_Pre($grpc.ServiceCall call, $async.Future<$11.ValidateUsernameRequest> request) async {
-    return validateUsername(call, await request);
+  $async.Future<$11.ValidateUsernameResponse> validateUsername_Pre($grpc.ServiceCall $call, $async.Future<$11.ValidateUsernameRequest> $request) async {
+    return validateUsername($call, await $request);
   }
 
   $async.Future<$0.Empty> createUser($grpc.ServiceCall call, $11.CreateUserRequest request);

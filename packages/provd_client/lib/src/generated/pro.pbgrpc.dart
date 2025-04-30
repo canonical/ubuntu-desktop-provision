@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: pro.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -83,16 +83,16 @@ abstract class ProServiceBase extends $grpc.Service {
         ($1.BoolValue value) => value.writeToBuffer()));
   }
 
-  $async.Stream<$7.ProMagicAttachResponse> proMagicAttach_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async* {
-    yield* proMagicAttach(call, await request);
+  $async.Stream<$7.ProMagicAttachResponse> proMagicAttach_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async* {
+    yield* proMagicAttach($call, await $request);
   }
 
-  $async.Future<$7.ProAttachResponse> proAttach_Pre($grpc.ServiceCall call, $async.Future<$7.ProAttachRequest> request) async {
-    return proAttach(call, await request);
+  $async.Future<$7.ProAttachResponse> proAttach_Pre($grpc.ServiceCall $call, $async.Future<$7.ProAttachRequest> $request) async {
+    return proAttach($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> proStatus_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return proStatus(call, await request);
+  $async.Future<$1.BoolValue> proStatus_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return proStatus($call, await $request);
   }
 
   $async.Stream<$7.ProMagicAttachResponse> proMagicAttach($grpc.ServiceCall call, $0.Empty request);

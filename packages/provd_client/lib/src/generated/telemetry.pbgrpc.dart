@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: telemetry.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -82,16 +82,16 @@ abstract class TelemetryServiceBase extends $grpc.Service {
         ($8.SendResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$8.CollectResponse> collect_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return collect(call, await request);
+  $async.Future<$8.CollectResponse> collect_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return collect($call, await $request);
   }
 
-  $async.Future<$8.SendResponse> collectAndSend_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return collectAndSend(call, await request);
+  $async.Future<$8.SendResponse> collectAndSend_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return collectAndSend($call, await $request);
   }
 
-  $async.Future<$8.SendResponse> sendDecline_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return sendDecline(call, await request);
+  $async.Future<$8.SendResponse> sendDecline_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return sendDecline($call, await $request);
   }
 
   $async.Future<$8.CollectResponse> collect($grpc.ServiceCall call, $0.Empty request);

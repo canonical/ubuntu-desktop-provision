@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: chown.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'chown.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'chown.pbenum.dart';
 
@@ -64,7 +66,7 @@ class ChownRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUsername() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUsername() => clearField(1);
+  void clearUsername() => $_clearField(1);
 }
 
 class ChownResponse extends $pb.GeneratedMessage {
@@ -110,11 +112,11 @@ class ChownResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   ChownResponse_ChownResponseCode get code => $_getN(0);
   @$pb.TagNumber(1)
-  set code(ChownResponse_ChownResponseCode v) { setField(1, v); }
+  set code(ChownResponse_ChownResponseCode v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
+  void clearCode() => $_clearField(1);
 }
 
 

@@ -31,6 +31,7 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
         Text(lang.accessibilityPageBody(flavor.displayName)),
         const SizedBox(height: kWizardSpacing),
         YaruExpansionPanel(
+          shrinkWrap: true,
           headers: [
             YaruTile(
               leading: const Icon(YaruIcons.eye),

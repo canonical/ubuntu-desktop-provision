@@ -125,21 +125,22 @@ class _SlideViewState extends State<SlideView> {
             child: ValueListenableBuilder<int>(
               valueListenable: widget.controller,
               builder: (context, value, child) {
-                return Navigator(
-                  pages: [
-                    for (var i = 0; i <= value; ++i)
-                      SlidePage(
-                        key: ValueKey(i),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: widget.slides[i],
-                            ),
-                          ],
-                        ),
+                final pages = [
+                  for (var i = 0; i <= value; ++i)
+                    SlidePage(
+                      key: ValueKey(i),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: widget.slides[i],
+                          ),
+                        ],
                       ),
-                  ],
-                  onPopPage: (route, result) => route.didPop(result),
+                    ),
+                ];
+                return Navigator(
+                  pages: pages,
+                  onDidRemovePage: pages.remove,
                 );
               },
             ),

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: timezone.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -67,12 +67,12 @@ abstract class TimezoneServiceBase extends $grpc.Service {
         ($10.GetTimezoneResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> setTimezone_Pre($grpc.ServiceCall call, $async.Future<$10.SetTimezoneRequest> request) async {
-    return setTimezone(call, await request);
+  $async.Future<$0.Empty> setTimezone_Pre($grpc.ServiceCall $call, $async.Future<$10.SetTimezoneRequest> $request) async {
+    return setTimezone($call, await $request);
   }
 
-  $async.Future<$10.GetTimezoneResponse> getTimezone_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getTimezone(call, await request);
+  $async.Future<$10.GetTimezoneResponse> getTimezone_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getTimezone($call, await $request);
   }
 
   $async.Future<$0.Empty> setTimezone($grpc.ServiceCall call, $10.SetTimezoneRequest request);

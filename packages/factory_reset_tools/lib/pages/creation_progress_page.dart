@@ -39,7 +39,9 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
   void onStatusChanged(ResetMediaCreationProgress progress) {
     if (progress.status == ResetMediaCreationStatus.finished) {
       Future.delayed(const Duration(seconds: 2), () {
-        Wizard.of(context).next();
+        if (mounted) {
+          Wizard.of(context).next();
+        }
       });
     }
     setState(() {

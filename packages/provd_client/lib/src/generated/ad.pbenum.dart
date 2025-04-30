@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ad.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -41,7 +41,7 @@ class AdDomainNameValidation extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, AdDomainNameValidation> _byValue = $pb.ProtobufEnum.initByValue(values);
   static AdDomainNameValidation? valueOf($core.int value) => _byValue[value];
 
-  const AdDomainNameValidation._($core.int v, $core.String n) : super(v, n);
+  const AdDomainNameValidation._(super.v, super.n);
 }
 
 class CheckAdminNameResponse_AdAdminNameValidation extends $pb.ProtobufEnum {
@@ -58,7 +58,7 @@ class CheckAdminNameResponse_AdAdminNameValidation extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, CheckAdminNameResponse_AdAdminNameValidation> _byValue = $pb.ProtobufEnum.initByValue(values);
   static CheckAdminNameResponse_AdAdminNameValidation? valueOf($core.int value) => _byValue[value];
 
-  const CheckAdminNameResponse_AdAdminNameValidation._($core.int v, $core.String n) : super(v, n);
+  const CheckAdminNameResponse_AdAdminNameValidation._(super.v, super.n);
 }
 
 class CheckPasswordResponse_AdPasswordValidation extends $pb.ProtobufEnum {
@@ -73,7 +73,7 @@ class CheckPasswordResponse_AdPasswordValidation extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, CheckPasswordResponse_AdPasswordValidation> _byValue = $pb.ProtobufEnum.initByValue(values);
   static CheckPasswordResponse_AdPasswordValidation? valueOf($core.int value) => _byValue[value];
 
-  const CheckPasswordResponse_AdPasswordValidation._($core.int v, $core.String n) : super(v, n);
+  const CheckPasswordResponse_AdPasswordValidation._(super.v, super.n);
 }
 
 class GetJoinResultResponse_AdJoinResult extends $pb.ProtobufEnum {
@@ -94,7 +94,7 @@ class GetJoinResultResponse_AdJoinResult extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, GetJoinResultResponse_AdJoinResult> _byValue = $pb.ProtobufEnum.initByValue(values);
   static GetJoinResultResponse_AdJoinResult? valueOf($core.int value) => _byValue[value];
 
-  const GetJoinResultResponse_AdJoinResult._($core.int v, $core.String n) : super(v, n);
+  const GetJoinResultResponse_AdJoinResult._(super.v, super.n);
 }
 
 

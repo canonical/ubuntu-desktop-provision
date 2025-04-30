@@ -79,6 +79,8 @@ import 'ubuntu_init_localizations_uk.dart';
 import 'ubuntu_init_localizations_vi.dart';
 import 'ubuntu_init_localizations_zh.dart';
 
+// ignore_for_file: type=lint
+
 /// Callers can lookup localized strings with an instance of UbuntuInitLocalizations
 /// returned by `UbuntuInitLocalizations.of(context)`.
 ///
@@ -295,7 +297,7 @@ abstract class UbuntuInitLocalizations {
   ///
   /// In en, this message translates to:
   /// **'<a href=\"{url}\">View changelog</a>'**
-  String welcomeChangelogLabel(Object url);
+  String welcomeChangelogLabel(String url);
 
   /// No description provided for @telemetryPageTitle.
   ///
@@ -307,19 +309,19 @@ abstract class UbuntuInitLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Help improve {distro}'**
-  String telemetryHeader(Object distro);
+  String telemetryHeader(String distro);
 
   /// No description provided for @telemetryDescription.
   ///
   /// In en, this message translates to:
   /// **'Help us improve {distro} by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.'**
-  String telemetryDescription(Object distro);
+  String telemetryDescription(String distro);
 
   /// No description provided for @telemetryLabelOn.
   ///
   /// In en, this message translates to:
   /// **'Yes, share system data with the {distro} team'**
-  String telemetryLabelOn(Object distro);
+  String telemetryLabelOn(String distro);
 
   /// No description provided for @telemetryLabelOff.
   ///
@@ -385,7 +387,7 @@ abstract class UbuntuInitLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Magic attach with this code at <a href=\"https://{url}\">{url}</a>'**
-  String ubuntuProMagicAttachInstructions(Object url);
+  String ubuntuProMagicAttachInstructions(String url);
 
   /// No description provided for @ubuntuProPageTitle.
   ///
@@ -421,7 +423,7 @@ abstract class UbuntuInitLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>'**
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url);
+  String ubuntuProSubscriptionFreeForPersonalUse(String url);
 
   /// No description provided for @ubuntuProTokenAttachButton.
   ///

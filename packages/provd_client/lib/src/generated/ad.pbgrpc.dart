@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ad.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -187,44 +187,44 @@ abstract class ActiveDirectoryServiceBase extends $grpc.Service {
         ($2.GetJoinResultResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$2.HasSupportResponse> hasSupport_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return hasSupport(call, await request);
+  $async.Future<$2.HasSupportResponse> hasSupport_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return hasSupport($call, await $request);
   }
 
-  $async.Future<$2.IsUsedResponse> isUsed_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return isUsed(call, await request);
+  $async.Future<$2.IsUsedResponse> isUsed_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return isUsed($call, await $request);
   }
 
-  $async.Future<$0.Empty> setUsed_Pre($grpc.ServiceCall call, $async.Future<$2.SetUsedRequest> request) async {
-    return setUsed(call, await request);
+  $async.Future<$0.Empty> setUsed_Pre($grpc.ServiceCall $call, $async.Future<$2.SetUsedRequest> $request) async {
+    return setUsed($call, await $request);
   }
 
-  $async.Future<$2.GetConnectionInfoResponse> getConnectionInfo_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getConnectionInfo(call, await request);
+  $async.Future<$2.GetConnectionInfoResponse> getConnectionInfo_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getConnectionInfo($call, await $request);
   }
 
-  $async.Future<$0.Empty> setConnectionInfo_Pre($grpc.ServiceCall call, $async.Future<$2.SetConnectionInfoRequest> request) async {
-    return setConnectionInfo(call, await request);
+  $async.Future<$0.Empty> setConnectionInfo_Pre($grpc.ServiceCall $call, $async.Future<$2.SetConnectionInfoRequest> $request) async {
+    return setConnectionInfo($call, await $request);
   }
 
-  $async.Future<$2.CheckDomainNameResponse> checkDomainName_Pre($grpc.ServiceCall call, $async.Future<$2.CheckDomainNameRequest> request) async {
-    return checkDomainName(call, await request);
+  $async.Future<$2.CheckDomainNameResponse> checkDomainName_Pre($grpc.ServiceCall $call, $async.Future<$2.CheckDomainNameRequest> $request) async {
+    return checkDomainName($call, await $request);
   }
 
-  $async.Future<$2.CheckAdminNameResponse> checkAdminName_Pre($grpc.ServiceCall call, $async.Future<$2.CheckAdminNameRequest> request) async {
-    return checkAdminName(call, await request);
+  $async.Future<$2.CheckAdminNameResponse> checkAdminName_Pre($grpc.ServiceCall $call, $async.Future<$2.CheckAdminNameRequest> $request) async {
+    return checkAdminName($call, await $request);
   }
 
-  $async.Future<$2.CheckPasswordResponse> checkPassword_Pre($grpc.ServiceCall call, $async.Future<$2.CheckPasswordRequest> request) async {
-    return checkPassword(call, await request);
+  $async.Future<$2.CheckPasswordResponse> checkPassword_Pre($grpc.ServiceCall $call, $async.Future<$2.CheckPasswordRequest> $request) async {
+    return checkPassword($call, await $request);
   }
 
-  $async.Future<$2.PingDomainControllerResponse> pingDomainController_Pre($grpc.ServiceCall call, $async.Future<$2.PingDomainControllerRequest> request) async {
-    return pingDomainController(call, await request);
+  $async.Future<$2.PingDomainControllerResponse> pingDomainController_Pre($grpc.ServiceCall $call, $async.Future<$2.PingDomainControllerRequest> $request) async {
+    return pingDomainController($call, await $request);
   }
 
-  $async.Future<$2.GetJoinResultResponse> getJoinResult_Pre($grpc.ServiceCall call, $async.Future<$2.GetJoinResultRequest> request) async {
-    return getJoinResult(call, await request);
+  $async.Future<$2.GetJoinResultResponse> getJoinResult_Pre($grpc.ServiceCall $call, $async.Future<$2.GetJoinResultRequest> $request) async {
+    return getJoinResult($call, await $request);
   }
 
   $async.Future<$2.HasSupportResponse> hasSupport($grpc.ServiceCall call, $0.Empty request);

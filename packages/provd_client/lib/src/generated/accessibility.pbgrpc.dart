@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: accessibility.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -487,124 +487,124 @@ abstract class AccessibilityServiceBase extends $grpc.Service {
         ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.BoolValue> getHighContrast_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getHighContrast(call, await request);
+  $async.Future<$1.BoolValue> getHighContrast_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getHighContrast($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableHighContrast_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableHighContrast(call, await request);
+  $async.Future<$0.Empty> enableHighContrast_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableHighContrast($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableHighContrast_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableHighContrast(call, await request);
+  $async.Future<$0.Empty> disableHighContrast_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableHighContrast($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getReducedMotion_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getReducedMotion(call, await request);
+  $async.Future<$1.BoolValue> getReducedMotion_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getReducedMotion($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableReducedMotion_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableReducedMotion(call, await request);
+  $async.Future<$0.Empty> enableReducedMotion_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableReducedMotion($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableReducedMotion_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableReducedMotion(call, await request);
+  $async.Future<$0.Empty> disableReducedMotion_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableReducedMotion($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getLargeText_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getLargeText(call, await request);
+  $async.Future<$1.BoolValue> getLargeText_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getLargeText($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableLargeText_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableLargeText(call, await request);
+  $async.Future<$0.Empty> enableLargeText_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableLargeText($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableLargeText_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableLargeText(call, await request);
+  $async.Future<$0.Empty> disableLargeText_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableLargeText($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getScreenReader_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getScreenReader(call, await request);
+  $async.Future<$1.BoolValue> getScreenReader_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getScreenReader($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableScreenReader_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableScreenReader(call, await request);
+  $async.Future<$0.Empty> enableScreenReader_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableScreenReader($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableScreenReader_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableScreenReader(call, await request);
+  $async.Future<$0.Empty> disableScreenReader_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableScreenReader($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getVisualAlerts(call, await request);
+  $async.Future<$1.BoolValue> getVisualAlerts_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getVisualAlerts($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableVisualAlerts(call, await request);
+  $async.Future<$0.Empty> enableVisualAlerts_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableVisualAlerts($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableVisualAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableVisualAlerts(call, await request);
+  $async.Future<$0.Empty> disableVisualAlerts_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableVisualAlerts($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getScreenKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getScreenKeyboard(call, await request);
+  $async.Future<$1.BoolValue> getScreenKeyboard_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getScreenKeyboard($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableScreenKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableScreenKeyboard(call, await request);
+  $async.Future<$0.Empty> enableScreenKeyboard_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableScreenKeyboard($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableScreenKeyboard_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableScreenKeyboard(call, await request);
+  $async.Future<$0.Empty> disableScreenKeyboard_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableScreenKeyboard($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getStickyKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getStickyKeys(call, await request);
+  $async.Future<$1.BoolValue> getStickyKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getStickyKeys($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableStickyKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableStickyKeys(call, await request);
+  $async.Future<$0.Empty> enableStickyKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableStickyKeys($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableStickyKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableStickyKeys(call, await request);
+  $async.Future<$0.Empty> disableStickyKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableStickyKeys($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getSlowKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getSlowKeys(call, await request);
+  $async.Future<$1.BoolValue> getSlowKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getSlowKeys($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableSlowKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableSlowKeys(call, await request);
+  $async.Future<$0.Empty> enableSlowKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableSlowKeys($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableSlowKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableSlowKeys(call, await request);
+  $async.Future<$0.Empty> disableSlowKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableSlowKeys($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getMouseKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getMouseKeys(call, await request);
+  $async.Future<$1.BoolValue> getMouseKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getMouseKeys($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableMouseKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableMouseKeys(call, await request);
+  $async.Future<$0.Empty> enableMouseKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableMouseKeys($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableMouseKeys_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableMouseKeys(call, await request);
+  $async.Future<$0.Empty> disableMouseKeys_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableMouseKeys($call, await $request);
   }
 
-  $async.Future<$1.BoolValue> getDesktopZoom_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getDesktopZoom(call, await request);
+  $async.Future<$1.BoolValue> getDesktopZoom_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getDesktopZoom($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableDesktopZoom_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableDesktopZoom(call, await request);
+  $async.Future<$0.Empty> enableDesktopZoom_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableDesktopZoom($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableDesktopZoom_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableDesktopZoom(call, await request);
+  $async.Future<$0.Empty> disableDesktopZoom_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableDesktopZoom($call, await $request);
   }
 
   $async.Future<$1.BoolValue> getHighContrast($grpc.ServiceCall call, $0.Empty request);

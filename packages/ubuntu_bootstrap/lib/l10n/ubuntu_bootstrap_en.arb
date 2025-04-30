@@ -347,12 +347,12 @@
   "allocateDiskSpaceInvalidMountPointSpace": "Mount points cannot contain spaces",
   "allocateDiskSpaceInvalidMountPointFormat": "{format} is not a supported filesystem for {mountpoint}",
   "@allocateDiskSpaceInvalidMountPointFormat": {
-      "mountpoint": {
-        "type": "String"
-      },
-      "format": {
-        "type": "String"
-      }
+    "mountpoint": {
+      "type": "String"
+    },
+    "format": {
+      "type": "String"
+    }
   },
   "diskHeadersDevice": "Device",
   "diskHeadersType": "Type",

@@ -17,14 +17,18 @@
   "@telemetryHeader": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryDescription": "Ajude-nos a melhorar o {distro} compartilhando seus dados do sistema conosco. Isso inclui itens como o modelo da máquina, o software instalado e o local escolhido para o fuso horário.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryReportLabel": "Mostrar o primeiro relatório",
@@ -47,7 +51,9 @@
   "@welcomeChangelogLabel": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryPageTitle": "Telemetria",
@@ -56,7 +62,9 @@
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
-      "distro": {}
+      "distro": {
+        "type": "String"
+      }
     }
   },
   "telemetryLabelOff": "Não, não compartilhe dados do sistema",
@@ -69,14 +77,18 @@
   "@ubuntuProMagicAttachInstructions": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "ubuntuProSubscriptionFreeForPersonalUse": "Sempre gratuita para uso pessoal. 30 dias de teste para empresas. <a href=\"https://{url}\">Saiba mais</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
-      "url": {}
+      "url": {
+        "type": "String"
+      }
     }
   },
   "telemetryCollectError": "Falha ao coletar dados de telemetria",

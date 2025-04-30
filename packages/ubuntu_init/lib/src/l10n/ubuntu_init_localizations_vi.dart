@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Vietnamese (`vi`).
 class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'Các tùy chọn mới cho mã hóa bằng phần cứng hoặc ZTS.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">Xem nhật ký thay đổi</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'Thu thập dữ liệu';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'Giúp cải thiện $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'Chia sẻ dữ liệu ẩn danh với $distro để chúng tôi có thể cải thiện trải nghiệm của bạn.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'Có, chia sẻ dữ liệu hệ thống với đội ngũ $distro';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'Data Privacy';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsVi extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
   }
 

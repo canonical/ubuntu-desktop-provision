@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: privacy.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -82,16 +82,16 @@ abstract class PrivacyServiceBase extends $grpc.Service {
         ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.BoolValue> getLocationServices_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getLocationServices(call, await request);
+  $async.Future<$1.BoolValue> getLocationServices_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getLocationServices($call, await $request);
   }
 
-  $async.Future<$0.Empty> enableLocationServices_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return enableLocationServices(call, await request);
+  $async.Future<$0.Empty> enableLocationServices_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return enableLocationServices($call, await $request);
   }
 
-  $async.Future<$0.Empty> disableLocationServices_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return disableLocationServices(call, await request);
+  $async.Future<$0.Empty> disableLocationServices_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return disableLocationServices($call, await $request);
   }
 
   $async.Future<$1.BoolValue> getLocationServices($grpc.ServiceCall call, $0.Empty request);

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: theme.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -25,7 +25,7 @@ class Theme extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, Theme> _byValue = $pb.ProtobufEnum.initByValue(values);
   static Theme? valueOf($core.int value) => _byValue[value];
 
-  const Theme._($core.int v, $core.String n) : super(v, n);
+  const Theme._(super.v, super.n);
 }
 
 class AccentColor extends $pb.ProtobufEnum {
@@ -56,7 +56,7 @@ class AccentColor extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, AccentColor> _byValue = $pb.ProtobufEnum.initByValue(values);
   static AccentColor? valueOf($core.int value) => _byValue[value];
 
-  const AccentColor._($core.int v, $core.String n) : super(v, n);
+  const AccentColor._(super.v, super.n);
 }
 
 

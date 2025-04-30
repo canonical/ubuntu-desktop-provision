@@ -107,7 +107,9 @@
   "@localePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "identityActiveDirectoryOption": "Скористатися Active Directory",

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: chown.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -25,7 +25,7 @@ class ChownResponse_ChownResponseCode extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, ChownResponse_ChownResponseCode> _byValue = $pb.ProtobufEnum.initByValue(values);
   static ChownResponse_ChownResponseCode? valueOf($core.int value) => _byValue[value];
 
-  const ChownResponse_ChownResponseCode._($core.int v, $core.String n) : super(v, n);
+  const ChownResponse_ChownResponseCode._(super.v, super.n);
 }
 
 

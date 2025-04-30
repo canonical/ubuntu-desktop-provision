@@ -33,7 +33,9 @@
   "@localePageTitle": {
     "type": "text",
     "placeholders": {
-      "DISTRO": {}
+      "DISTRO": {
+        "type": "String"
+      }
     }
   },
   "localeHeader": "언어를 선택하십시오:",

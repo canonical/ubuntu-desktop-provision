@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: eula.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -51,8 +51,8 @@ abstract class EulaServiceBase extends $grpc.Service {
         ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> acceptEula_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return acceptEula(call, await request);
+  $async.Future<$0.Empty> acceptEula_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return acceptEula($call, await $request);
   }
 
   $async.Future<$0.Empty> acceptEula($grpc.ServiceCall call, $0.Empty request);

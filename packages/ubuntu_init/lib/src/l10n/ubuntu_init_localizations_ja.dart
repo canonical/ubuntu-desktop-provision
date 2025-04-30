@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Japanese (`ja`).
 class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'ハードウェベースとZFS暗号化に関する新しいオプションを追加しました。';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">変更点を確認する</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   String get telemetryPageTitle => '情報収集';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return '$distro の改善を手助けする';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'システムデータを共有してもらえると、$distro の改善に役立てます。マシンのモデル、インストールしたソフトウェアとタイムゾーンから取得した場所が含まれます。';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return '$distro チームへシステムデータを共有する';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'データプライバシー';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return '<a href=\"https://$url\">$url</a>のコードでアタッチ';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'オープンソースソフトウェアのセキュリティのための最も包括的なサブスクリプション';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return '個人用途は常に無料です。エンタープライズ向けは30日間無料体験です。<a href=\"https://$url\">詳細</a>';
   }
 

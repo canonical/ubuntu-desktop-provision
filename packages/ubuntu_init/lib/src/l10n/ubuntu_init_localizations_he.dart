@@ -1,4 +1,8 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
 import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
 
 /// The translations for Hebrew (`he`).
 class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
@@ -34,7 +38,7 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get welcomeSecuritySubtitle => 'אפשרויות חדשות להצפנת ZFS בגיבוי חומרה.';
 
   @override
-  String welcomeChangelogLabel(Object url) {
+  String welcomeChangelogLabel(String url) {
     return '<a href=\"$url\">הצגת יומן השינויים</a>';
   }
 
@@ -42,17 +46,17 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get telemetryPageTitle => 'מדדים';
 
   @override
-  String telemetryHeader(Object distro) {
+  String telemetryHeader(String distro) {
     return 'סיוע בשיפור $distro';
   }
 
   @override
-  String telemetryDescription(Object distro) {
+  String telemetryDescription(String distro) {
     return 'אפשר לסייע לנו לשפר את $distro על ידי שיתוף נתוני המערכת שלך איתנו. לרבות פרטים כגון דגם המחשב שלך, התוכנות המותקנות והמקום שבחרת לאזור הזמן שלך.';
   }
 
   @override
-  String telemetryLabelOn(Object distro) {
+  String telemetryLabelOn(String distro) {
     return 'כן, לשתף את נתוני המערכת שלי עם צוות $distro';
   }
 
@@ -87,7 +91,7 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get privacyPolicyLink => 'פרטיות נתונים';
 
   @override
-  String ubuntuProMagicAttachInstructions(Object url) {
+  String ubuntuProMagicAttachInstructions(String url) {
     return 'הצטרפות קסם עם הקוד הזה דרך <a href=\"https://$url\">$url</a>';
   }
 
@@ -107,7 +111,7 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get ubuntuProSubscriptionDescription => 'קבלת המינוי המקיף ביותר לאבטחה של תוכנה בקוד פתוח';
 
   @override
-  String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
     return 'תמיד חינמי לשימוש אישי. 30 יום ניסיון לתאגידים. <a href=\"https://$url\">למידע נוסף</a>';
   }
 
