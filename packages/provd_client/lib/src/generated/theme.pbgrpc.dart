@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: theme.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -97,20 +97,20 @@ abstract class ThemeServiceBase extends $grpc.Service {
         ($9.GetAccentResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> setTheme_Pre($grpc.ServiceCall call, $async.Future<$9.SetThemeRequest> request) async {
-    return setTheme(call, await request);
+  $async.Future<$0.Empty> setTheme_Pre($grpc.ServiceCall $call, $async.Future<$9.SetThemeRequest> $request) async {
+    return setTheme($call, await $request);
   }
 
-  $async.Future<$9.GetThemeResponse> getTheme_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getTheme(call, await request);
+  $async.Future<$9.GetThemeResponse> getTheme_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getTheme($call, await $request);
   }
 
-  $async.Future<$0.Empty> setAccent_Pre($grpc.ServiceCall call, $async.Future<$9.SetAccentRequest> request) async {
-    return setAccent(call, await request);
+  $async.Future<$0.Empty> setAccent_Pre($grpc.ServiceCall $call, $async.Future<$9.SetAccentRequest> $request) async {
+    return setAccent($call, await $request);
   }
 
-  $async.Future<$9.GetAccentResponse> getAccent_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getAccent(call, await request);
+  $async.Future<$9.GetAccentResponse> getAccent_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getAccent($call, await $request);
   }
 
   $async.Future<$0.Empty> setTheme($grpc.ServiceCall call, $9.SetThemeRequest request);

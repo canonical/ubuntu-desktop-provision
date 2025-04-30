@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: locale.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -12,6 +12,8 @@
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class SetLocaleRequest extends $pb.GeneratedMessage {
   factory SetLocaleRequest({
@@ -60,7 +62,7 @@ class SetLocaleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasLocale() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocale() => clearField(1);
+  void clearLocale() => $_clearField(1);
 }
 
 class GetLocaleResponse extends $pb.GeneratedMessage {
@@ -110,7 +112,7 @@ class GetLocaleResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasLocale() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLocale() => clearField(1);
+  void clearLocale() => $_clearField(1);
 }
 
 

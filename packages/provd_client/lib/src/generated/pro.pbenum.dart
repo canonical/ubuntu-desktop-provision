@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: pro.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -35,7 +35,7 @@ class ProMagicAttachResponseType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, ProMagicAttachResponseType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static ProMagicAttachResponseType? valueOf($core.int value) => _byValue[value];
 
-  const ProMagicAttachResponseType._($core.int v, $core.String n) : super(v, n);
+  const ProMagicAttachResponseType._(super.v, super.n);
 }
 
 class ProAttachResponse_ProAttachResponseType extends $pb.ProtobufEnum {
@@ -54,7 +54,7 @@ class ProAttachResponse_ProAttachResponseType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, ProAttachResponse_ProAttachResponseType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static ProAttachResponse_ProAttachResponseType? valueOf($core.int value) => _byValue[value];
 
-  const ProAttachResponse_ProAttachResponseType._($core.int v, $core.String n) : super(v, n);
+  const ProAttachResponse_ProAttachResponseType._(super.v, super.n);
 }
 
 

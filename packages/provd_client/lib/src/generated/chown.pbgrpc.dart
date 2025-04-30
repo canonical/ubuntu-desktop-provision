@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: chown.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -51,8 +51,8 @@ abstract class ChownServiceBase extends $grpc.Service {
         ($3.ChownResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$3.ChownResponse> chownSettings_Pre($grpc.ServiceCall call, $async.Future<$3.ChownRequest> request) async {
-    return chownSettings(call, await request);
+  $async.Future<$3.ChownResponse> chownSettings_Pre($grpc.ServiceCall $call, $async.Future<$3.ChownRequest> $request) async {
+    return chownSettings($call, await $request);
   }
 
   $async.Future<$3.ChownResponse> chownSettings($grpc.ServiceCall call, $3.ChownRequest request);

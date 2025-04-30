@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: gdm.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -52,8 +52,8 @@ abstract class GdmServiceBase extends $grpc.Service {
         ($0.Empty value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> launchDesktopSession_Pre($grpc.ServiceCall call, $async.Future<$4.GdmServiceRequest> request) async {
-    return launchDesktopSession(call, await request);
+  $async.Future<$0.Empty> launchDesktopSession_Pre($grpc.ServiceCall $call, $async.Future<$4.GdmServiceRequest> $request) async {
+    return launchDesktopSession($call, await $request);
   }
 
   $async.Future<$0.Empty> launchDesktopSession($grpc.ServiceCall call, $4.GdmServiceRequest request);

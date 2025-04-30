@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: keyboard.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -12,6 +12,8 @@
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class KeyboardSettings extends $pb.GeneratedMessage {
   factory KeyboardSettings({
@@ -65,7 +67,7 @@ class KeyboardSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasLayout() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLayout() => clearField(1);
+  void clearLayout() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get variant => $_getSZ(1);
@@ -74,7 +76,7 @@ class KeyboardSettings extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasVariant() => $_has(1);
   @$pb.TagNumber(2)
-  void clearVariant() => clearField(2);
+  void clearVariant() => $_clearField(2);
 }
 
 class SetKeyboardRequest extends $pb.GeneratedMessage {
@@ -120,11 +122,11 @@ class SetKeyboardRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   KeyboardSettings get settings => $_getN(0);
   @$pb.TagNumber(1)
-  set settings(KeyboardSettings v) { setField(1, v); }
+  set settings(KeyboardSettings v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSettings() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSettings() => clearField(1);
+  void clearSettings() => $_clearField(1);
   @$pb.TagNumber(1)
   KeyboardSettings ensureSettings() => $_ensure(0);
 }
@@ -172,11 +174,11 @@ class SetInputSourceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   KeyboardSettings get settings => $_getN(0);
   @$pb.TagNumber(1)
-  set settings(KeyboardSettings v) { setField(1, v); }
+  set settings(KeyboardSettings v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSettings() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSettings() => clearField(1);
+  void clearSettings() => $_clearField(1);
   @$pb.TagNumber(1)
   KeyboardSettings ensureSettings() => $_ensure(0);
 }
@@ -224,11 +226,11 @@ class GetKeyboardResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   KeyboardSetup get setup => $_getN(0);
   @$pb.TagNumber(1)
-  set setup(KeyboardSetup v) { setField(1, v); }
+  set setup(KeyboardSetup v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSetup() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSetup() => clearField(1);
+  void clearSetup() => $_clearField(1);
   @$pb.TagNumber(1)
   KeyboardSetup ensureSetup() => $_ensure(0);
 }
@@ -281,16 +283,16 @@ class KeyboardSetup extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   KeyboardSettings get settings => $_getN(0);
   @$pb.TagNumber(1)
-  set settings(KeyboardSettings v) { setField(1, v); }
+  set settings(KeyboardSettings v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSettings() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSettings() => clearField(1);
+  void clearSettings() => $_clearField(1);
   @$pb.TagNumber(1)
   KeyboardSettings ensureSettings() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<KeyboardLayout> get layouts => $_getList(1);
+  $pb.PbList<KeyboardLayout> get layouts => $_getList(1);
 }
 
 class KeyboardLayout extends $pb.GeneratedMessage {
@@ -350,7 +352,7 @@ class KeyboardLayout extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
+  void clearCode() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
@@ -359,10 +361,10 @@ class KeyboardLayout extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearName() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<KeyboardVariant> get variants => $_getList(2);
+  $pb.PbList<KeyboardVariant> get variants => $_getList(2);
 }
 
 class KeyboardVariant extends $pb.GeneratedMessage {
@@ -417,7 +419,7 @@ class KeyboardVariant extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCode() => clearField(1);
+  void clearCode() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
@@ -426,7 +428,7 @@ class KeyboardVariant extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearName() => $_clearField(2);
 }
 
 

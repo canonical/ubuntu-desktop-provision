@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: user.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'user.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'user.pbenum.dart';
 
@@ -84,7 +86,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasRealName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRealName() => clearField(1);
+  void clearRealName() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get hostname => $_getSZ(1);
@@ -93,7 +95,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasHostname() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHostname() => clearField(2);
+  void clearHostname() => $_clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get username => $_getSZ(2);
@@ -102,7 +104,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasUsername() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUsername() => clearField(3);
+  void clearUsername() => $_clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get password => $_getSZ(3);
@@ -111,7 +113,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasPassword() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPassword() => clearField(4);
+  void clearPassword() => $_clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get autoLogin => $_getBF(4);
@@ -120,7 +122,7 @@ class User extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasAutoLogin() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAutoLogin() => clearField(5);
+  void clearAutoLogin() => $_clearField(5);
 }
 
 class CreateUserRequest extends $pb.GeneratedMessage {
@@ -171,11 +173,11 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   User get user => $_getN(0);
   @$pb.TagNumber(1)
-  set user(User v) { setField(1, v); }
+  set user(User v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUser() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUser() => clearField(1);
+  void clearUser() => $_clearField(1);
   @$pb.TagNumber(1)
   User ensureUser() => $_ensure(0);
 
@@ -186,7 +188,7 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIsAdmin() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIsAdmin() => clearField(2);
+  void clearIsAdmin() => $_clearField(2);
 }
 
 class ValidateUsernameRequest extends $pb.GeneratedMessage {
@@ -236,7 +238,7 @@ class ValidateUsernameRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUsername() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUsername() => clearField(1);
+  void clearUsername() => $_clearField(1);
 }
 
 class ValidateUsernameResponse extends $pb.GeneratedMessage {
@@ -282,11 +284,11 @@ class ValidateUsernameResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UsernameValidation get usernameValidation => $_getN(0);
   @$pb.TagNumber(1)
-  set usernameValidation(UsernameValidation v) { setField(1, v); }
+  set usernameValidation(UsernameValidation v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasUsernameValidation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUsernameValidation() => clearField(1);
+  void clearUsernameValidation() => $_clearField(1);
 }
 
 

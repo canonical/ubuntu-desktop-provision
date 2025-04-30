@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: locale.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -67,12 +67,12 @@ abstract class LocaleServiceBase extends $grpc.Service {
         ($6.GetLocaleResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.Empty> setLocale_Pre($grpc.ServiceCall call, $async.Future<$6.SetLocaleRequest> request) async {
-    return setLocale(call, await request);
+  $async.Future<$0.Empty> setLocale_Pre($grpc.ServiceCall $call, $async.Future<$6.SetLocaleRequest> $request) async {
+    return setLocale($call, await $request);
   }
 
-  $async.Future<$6.GetLocaleResponse> getLocale_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async {
-    return getLocale(call, await request);
+  $async.Future<$6.GetLocaleResponse> getLocale_Pre($grpc.ServiceCall $call, $async.Future<$0.Empty> $request) async {
+    return getLocale($call, await $request);
   }
 
   $async.Future<$0.Empty> setLocale($grpc.ServiceCall call, $6.SetLocaleRequest request);

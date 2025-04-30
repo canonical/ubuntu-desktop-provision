@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: theme.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'theme.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'theme.pbenum.dart';
 
@@ -60,11 +62,11 @@ class SetThemeRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Theme get theme => $_getN(0);
   @$pb.TagNumber(1)
-  set theme(Theme v) { setField(1, v); }
+  set theme(Theme v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTheme() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTheme() => clearField(1);
+  void clearTheme() => $_clearField(1);
 }
 
 class GetThemeResponse extends $pb.GeneratedMessage {
@@ -110,11 +112,11 @@ class GetThemeResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Theme get brightness => $_getN(0);
   @$pb.TagNumber(1)
-  set brightness(Theme v) { setField(1, v); }
+  set brightness(Theme v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasBrightness() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBrightness() => clearField(1);
+  void clearBrightness() => $_clearField(1);
 }
 
 class SetAccentRequest extends $pb.GeneratedMessage {
@@ -160,11 +162,11 @@ class SetAccentRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AccentColor get accentColor => $_getN(0);
   @$pb.TagNumber(1)
-  set accentColor(AccentColor v) { setField(1, v); }
+  set accentColor(AccentColor v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccentColor() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccentColor() => clearField(1);
+  void clearAccentColor() => $_clearField(1);
 }
 
 class GetAccentResponse extends $pb.GeneratedMessage {
@@ -210,11 +212,11 @@ class GetAccentResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AccentColor get accentColor => $_getN(0);
   @$pb.TagNumber(1)
-  set accentColor(AccentColor v) { setField(1, v); }
+  set accentColor(AccentColor v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAccentColor() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccentColor() => clearField(1);
+  void clearAccentColor() => $_clearField(1);
 }
 
 

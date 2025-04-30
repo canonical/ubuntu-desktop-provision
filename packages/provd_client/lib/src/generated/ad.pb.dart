@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ad.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'ad.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ad.pbenum.dart';
 
@@ -64,7 +66,7 @@ class HasSupportResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasHasSupport() => $_has(0);
   @$pb.TagNumber(1)
-  void clearHasSupport() => clearField(1);
+  void clearHasSupport() => $_clearField(1);
 }
 
 class IsUsedResponse extends $pb.GeneratedMessage {
@@ -114,7 +116,7 @@ class IsUsedResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasIsUsed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIsUsed() => clearField(1);
+  void clearIsUsed() => $_clearField(1);
 }
 
 class SetUsedRequest extends $pb.GeneratedMessage {
@@ -164,7 +166,7 @@ class SetUsedRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasIsUsed() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIsUsed() => clearField(1);
+  void clearIsUsed() => $_clearField(1);
 }
 
 class GetConnectionInfoResponse extends $pb.GeneratedMessage {
@@ -210,11 +212,11 @@ class GetConnectionInfoResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AdConnectionInfo get adConnectionInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set adConnectionInfo(AdConnectionInfo v) { setField(1, v); }
+  set adConnectionInfo(AdConnectionInfo v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAdConnectionInfo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAdConnectionInfo() => clearField(1);
+  void clearAdConnectionInfo() => $_clearField(1);
   @$pb.TagNumber(1)
   AdConnectionInfo ensureAdConnectionInfo() => $_ensure(0);
 }
@@ -262,11 +264,11 @@ class SetConnectionInfoRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AdConnectionInfo get adConnectionInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set adConnectionInfo(AdConnectionInfo v) { setField(1, v); }
+  set adConnectionInfo(AdConnectionInfo v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAdConnectionInfo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAdConnectionInfo() => clearField(1);
+  void clearAdConnectionInfo() => $_clearField(1);
   @$pb.TagNumber(1)
   AdConnectionInfo ensureAdConnectionInfo() => $_ensure(0);
 }
@@ -318,7 +320,7 @@ class CheckAdminNameRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasAdminName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAdminName() => clearField(1);
+  void clearAdminName() => $_clearField(1);
 }
 
 class CheckAdminNameResponse extends $pb.GeneratedMessage {
@@ -364,11 +366,11 @@ class CheckAdminNameResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CheckAdminNameResponse_AdAdminNameValidation get validation => $_getN(0);
   @$pb.TagNumber(1)
-  set validation(CheckAdminNameResponse_AdAdminNameValidation v) { setField(1, v); }
+  set validation(CheckAdminNameResponse_AdAdminNameValidation v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasValidation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValidation() => clearField(1);
+  void clearValidation() => $_clearField(1);
 }
 
 class CheckPasswordRequest extends $pb.GeneratedMessage {
@@ -418,7 +420,7 @@ class CheckPasswordRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPassword() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPassword() => clearField(1);
+  void clearPassword() => $_clearField(1);
 }
 
 class CheckPasswordResponse extends $pb.GeneratedMessage {
@@ -464,11 +466,11 @@ class CheckPasswordResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CheckPasswordResponse_AdPasswordValidation get validation => $_getN(0);
   @$pb.TagNumber(1)
-  set validation(CheckPasswordResponse_AdPasswordValidation v) { setField(1, v); }
+  set validation(CheckPasswordResponse_AdPasswordValidation v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasValidation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValidation() => clearField(1);
+  void clearValidation() => $_clearField(1);
 }
 
 class CheckDomainNameRequest extends $pb.GeneratedMessage {
@@ -518,7 +520,7 @@ class CheckDomainNameRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasDomainName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDomainName() => clearField(1);
+  void clearDomainName() => $_clearField(1);
 }
 
 class CheckDomainNameResponse extends $pb.GeneratedMessage {
@@ -562,7 +564,7 @@ class CheckDomainNameResponse extends $pb.GeneratedMessage {
   static CheckDomainNameResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<AdDomainNameValidation> get validation => $_getList(0);
+  $pb.PbList<AdDomainNameValidation> get validation => $_getList(0);
 }
 
 class PingDomainControllerRequest extends $pb.GeneratedMessage {
@@ -612,7 +614,7 @@ class PingDomainControllerRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasDomain() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDomain() => clearField(1);
+  void clearDomain() => $_clearField(1);
 }
 
 class PingDomainControllerResponse extends $pb.GeneratedMessage {
@@ -658,11 +660,11 @@ class PingDomainControllerResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AdDomainNameValidation get validation => $_getN(0);
   @$pb.TagNumber(1)
-  set validation(AdDomainNameValidation v) { setField(1, v); }
+  set validation(AdDomainNameValidation v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasValidation() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValidation() => clearField(1);
+  void clearValidation() => $_clearField(1);
 }
 
 class GetJoinResultRequest extends $pb.GeneratedMessage {
@@ -708,11 +710,11 @@ class GetJoinResultRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   AdConnectionInfo get adConnectionInfo => $_getN(0);
   @$pb.TagNumber(1)
-  set adConnectionInfo(AdConnectionInfo v) { setField(1, v); }
+  set adConnectionInfo(AdConnectionInfo v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAdConnectionInfo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAdConnectionInfo() => clearField(1);
+  void clearAdConnectionInfo() => $_clearField(1);
   @$pb.TagNumber(1)
   AdConnectionInfo ensureAdConnectionInfo() => $_ensure(0);
 }
@@ -760,11 +762,11 @@ class GetJoinResultResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   GetJoinResultResponse_AdJoinResult get joinResult => $_getN(0);
   @$pb.TagNumber(1)
-  set joinResult(GetJoinResultResponse_AdJoinResult v) { setField(1, v); }
+  set joinResult(GetJoinResultResponse_AdJoinResult v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasJoinResult() => $_has(0);
   @$pb.TagNumber(1)
-  void clearJoinResult() => clearField(1);
+  void clearJoinResult() => $_clearField(1);
 }
 
 class AdConnectionInfo extends $pb.GeneratedMessage {
@@ -824,7 +826,7 @@ class AdConnectionInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasDomainName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDomainName() => clearField(1);
+  void clearDomainName() => $_clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get adminName => $_getSZ(1);
@@ -833,7 +835,7 @@ class AdConnectionInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasAdminName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAdminName() => clearField(2);
+  void clearAdminName() => $_clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get password => $_getSZ(2);
@@ -842,7 +844,7 @@ class AdConnectionInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasPassword() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPassword() => clearField(3);
+  void clearPassword() => $_clearField(3);
 }
 
 
