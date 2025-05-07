@@ -409,6 +409,7 @@ class Disk with _$Disk {
     String? model,
     String? vendor,
     @Default(false) bool hasInUsePartition,
+    bool? requiresReformat,
   }) = _Disk;
 
   factory Disk.fromJson(Map<String, dynamic> json) => _$DiskFromJson(json);
@@ -501,6 +502,7 @@ class GuidedStorageTarget with _$GuidedStorageTarget {
   @FreezedUnionValue('GuidedStorageTargetReformat')
   const factory GuidedStorageTarget.reformat({
     required String diskId,
+    String? ptable,
     @Default([]) List<GuidedCapability> allowed,
     @Default([]) List<GuidedDisallowedCapability> disallowed,
   }) = GuidedStorageTargetReformat;
