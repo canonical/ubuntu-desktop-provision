@@ -240,7 +240,7 @@
   "@installDriversSubtitle": {},
   "installCodecsSubtitle": "Sisältäen mutta ei rajoittuen MP3, MP4, MOV ja vastaavat",
   "@installCodecsSubtitle": {},
-  "installationTypeAlongsideMulti": "Asenna {product} niiden rinnalle",
+  "installationTypeAlongsideMulti": "Asenna {product} olemassa olevien käyttöjärjestelmien rinnalle",
   "@installationTypeAlongsideMulti": {},
   "tooManyPrimaryPartitions": "Liian monta ensisijaista osiota",
   "@tooManyPrimaryPartitions": {},
@@ -396,7 +396,7 @@
   "@refreshSnapStopServices": {},
   "refreshSnapMount": "Liitetään {snap}...",
   "@refreshSnapMount": {},
-  "recoveryKeyCommand": "Pääset palautusavaimeesi asennuksen jälkeen seuraavalla komennolla:",
+  "recoveryKeyCommand": "Ottaaksesi ylös palautusavaimen odota asennuksen valmistumista, käynnistä tietokone uudelleen ja suorita seuraava komento päätteessä:",
   "@recoveryKeyCommand": {},
   "refreshSnapSetupAliases": "Asetetaan {snap}-aliaksia...",
   "@refreshSnapSetupAliases": {},
@@ -418,7 +418,7 @@
   "@codecsAndDriversPageBody": {},
   "installationTypeEraseInfo": "Kaikki tiedot ja osiot levyllä poistetaan, mukaan lukien käyttöjärjestelmä.",
   "@installationTypeEraseInfo": {},
-  "installationTypeTPMInfo": "Tämä on kokeellinen ominaisuus. Se ei välttämättä toimi laitteistollasi tai tulevissa {DISTRO}-jakeluissa. <a href=\"{url}\">Lue TPM-salauksesta</a>, ennen kuin valitset tämän.",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Lue TPM-salauksesta</a> ennen kuin otat käyttöön tämän valinnan. Tämä ei välttämättä toimi sinun laitteistollasi tai tulevilla {DISTRO}-julkaisuilla.",
   "@installationTypeTPMInfo": {},
   "restartWarningBody": "Käynnistä uudelleen viimeistelläksesi asennuksen tai jatka testaamista.\nTekemiäsi muutoksia ei tallenneta.",
   "@restartWarningBody": {},
@@ -619,5 +619,160 @@
   "autoinstallDirectTitle": "Automaattinen asennus",
   "@autoinstallDirectTitle": {},
   "autoinstallDirectHeader": "Tuo autoinstall-tiedosto",
-  "@autoinstallDirectHeader": {}
+  "@autoinstallDirectHeader": {},
+  "recoveryKeyStorageAdvice": "Tallenna palautusavain turvalliseen paikkaan. Sitä voi käyttää levyn salauksen purkuun tietyissä järjestelmämuutostilanteissa. Sitä voidaan tarvita esimerkiksi jos tietokoneen komponentteja vaihdetaan tai sen laiteohjelmisto päivitetään.",
+  "@recoveryKeyStorageAdvice": {},
+  "landscapeDomainTextField": "Landscape-toimialue (FQDN)",
+  "@landscapeDomainTextField": {},
+  "autoinstallLandscapeOption": "Automatisoitu Landscape-palvelulla",
+  "@autoinstallLandscapeOption": {},
+  "landscapeHeader": "Kirjaudu Landscapeen",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Syöytä Landscape-toimialue (FQDN)",
+  "@landscapeDomainHeader": {},
+  "recoveryKeyConfirmation": "Ymmärrän että kaikki tiedot saatetaan menettää, mikäli palautusavainta ei ole tallessa",
+  "@recoveryKeyConfirmation": {},
+  "autoinstallDirectErrorInvalidContentBody": "Tarkista tiedosto tai valitse jokin toinen.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorInvalidContentTitle": "Virheellinen autoinstall-tiedosto",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallDirectOption": "Automatisoitu autoinstall-tiedostolla",
+  "@autoinstallDirectOption": {},
+  "autoinstallDirectImportButtonLabel": "Tuo",
+  "@autoinstallDirectImportButtonLabel": {},
+  "autoinstallDirectErrorInvalidUrlBody": "Tarkista että URL on kelvollinen, tai valitse paikallinen tiedosto.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "autoinstallDirectErrorFileSystemTitle": "Autoinstall-tiedostoa ei voi lukea",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "autoinstallDirectErrorNetworkTitle": "Autoinstall-tiedostoa ei voida avata",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorNetworkBody": "Tarkista että URL on oikein, testaa Internet-yhteytesi toimivuus, tai yritä myöhemmin uudelleen.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallDirectErrorFileSystemBody": "Tarkista tiedoston oikeudet tai käytä toista tiedostoa.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML-tiedostot",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "Virheellinen URL",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectFileClearButtonLabel": "Poista tiedostovalinta",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Valitse tiedosto",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectDescription": "Edistyneet käyttäjät voivat käyttää autoinstall.yaml-tiedostoa yhdenmukaisten ja toistettavissa olevien järjestelmäasennusten tekemiseen.",
+  "@autoinstallDirectDescription": {},
+  "installationTypeNoneInfo": "Tavallinen tiedostojärjestelmä ilman salausta.",
+  "@installationTypeNoneInfo": {},
+  "landscapeErrorPageTitle": "Automatisoitua asennus ei ole mahdollinen tililläsi",
+  "@landscapeErrorPageTitle": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet-yhteys tarvitaan autoinstall-tiedoston noutamiseen Landscapesta",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeConfirmPageSuccessInfoContent": "Voit käydä läpi Landscapesta tuodun autoinstall-tiedoston sisältöä alla.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "bitlockerWarningTitle": "Ilman BitLocker-palautusavaimia on mahdollista, että kaikki tiedot menetetään",
+  "@bitlockerWarningTitle": {},
+  "confirmTableCreatedFormattedMounted": "Luotu ja alustettu tiedostojärjestelmällä {format} kohteelle {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeMagicAttachInstructions": "Skannaa QR-koodi tai syötä sen alla oleva koodi osoitteessa <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeCodeExpiredWarning": "Koodi on vanhentunut, ole hyvä ja yritä uudelleen",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeErrorPageCode": "Virhekoodi: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseOptionalPassphraseBody": "Tunnuslause auttaa suojelemaan tietoja, jos laite joutuu vääriin käsiin. Tunnuslause tulee syöttää joka kerta tietokonetta käynnistettäessä. Sitä ei voi poistaa käytöstä myöhemmin",
+  "@chooseOptionalPassphraseBody": {},
+  "landscapeErrorPageBody": "Ota yhteys IT-tukeesi tai kokeile toista asennusvaihtoehtoa.",
+  "@landscapeErrorPageBody": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} ei ole tuettu tiedostojärjestelmä kohteelle {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Alustettu tiedostojärjestelmällä {format} kohteelle {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu asennetaan organisaation ehdottamilla asetuksilla",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeDomainInstructions": "Syötä organisaation Landscape-toimialue kirjautuaksesi ja autoinstall-tiedoston noutamista varten. Saat FQDN:n IT-tuelta.",
+  "@landscapeDomainInstructions": {},
+  "landscapeLoginFailedWarning": "Kirjautuminen epäonnistui, yritä uudelleen",
+  "@landscapeLoginFailedWarning": {},
+  "rstDisable": "Tietokoneesi käyttää Intel RST:tä (Rapid Storage Technology). Voit ottaa RST:n pois käytöstä joko:",
+  "@rstDisable": {},
+  "rstDisableWindows": "Windowsissa, jos käytät kahden käyttöjärjestelmän rinnakkaisasennusta Windowsilla",
+  "@rstDisableWindows": {},
+  "rstDisableBios": "BIOS-asetuksissa",
+  "@rstDisableBios": {},
+  "chooseOptionalPassphraseInfoBody": "Jos tunnuslause hukkuu, kaikki tiedot menetetään. Tunnuslause ei korvaa palautusavainta tai käyttäjäns salasanaa.",
+  "@chooseOptionalPassphraseInfoBody": {},
+  "confirmTableMounted": "Käytössä kohteelle {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Alustettu tiedostojärjestelmällä {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyInfoBody": "Ota ylös palautusavain heti ensimmäisellä kirjautumiskerralla {distro}un ja tallenna se turvalliseen paikkaan.",
+  "@recoveryKeyInfoBody": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallLandscapeDescription": "Käyttäjille, joiden organisaatio tarjoaa autoinstall-tiedoston Landscapen kautta.",
+  "@autoinstallLandscapeDescription": {},
+  "landscapeDomainHintText": "Landscape-toimialue (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeDomainInvalidDomainWarning": "Virheellinen toimialue, tarkista se tai ota yhteys IT-tukeen",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "autoinstallDirectUrlLabel": "Voit syöttää autoinstall-tiedoston URL-osoitteen:",
+  "@autoinstallDirectUrlLabel": {},
+  "autoinstallDirectFileLabel": "Tai valita paikallisen tiedoston:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Valitse tiedosto...",
+  "@autoinstallDirectFileButtonLabel": {}
 }
