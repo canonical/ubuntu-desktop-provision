@@ -233,6 +233,7 @@ void main() {
       model: 'QEMU',
       vendor: 'ATA',
       hasInUsePartition: true,
+      requiresReformat: false,
     );
 
     expect(disk.sysname, equals('path'));
@@ -256,6 +257,7 @@ void main() {
       'model': 'QEMU',
       'vendor': 'ATA',
       'has_in_use_partition': true,
+      'requires_reformat': false,
     };
 
     expect(disk.toJson(), equals(json));
@@ -268,6 +270,7 @@ void main() {
         diskId: '0',
         allowed: [],
         disallowed: [],
+        ptable: null,
       ),
       capability: GuidedCapability.LVM,
       password: '2',
@@ -279,6 +282,7 @@ void main() {
         'disk_id': '0',
         'allowed': [],
         'disallowed': [],
+        'ptable': null,
         '\$type': 'GuidedStorageTargetReformat',
       },
       'capability': 'LVM',
