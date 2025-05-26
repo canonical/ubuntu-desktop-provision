@@ -14,6 +14,7 @@ import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
+import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/rst/rst_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
@@ -23,7 +24,6 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
-import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
@@ -44,6 +44,7 @@ import '../../../packages/ubuntu_provision/test/timezone/test_timezone.dart';
 import 'autoinstall/test_autoinstall.dart';
 import 'confirm/test_confirm.dart';
 import 'install/test_install.dart';
+import 'recovery_key/test_recovery_key.dart';
 import 'refresh/test_refresh.dart';
 import 'rst/test_rst.dart';
 import 'secure_boot/test_secure_boot.dart';
@@ -260,7 +261,6 @@ void main() {
     expect(find.byType(ConfirmPage), findsOneWidget);
     verify(guidedReformatModel.init()).called(1); // skipped
     verify(passphraseModel.init()).called(1); // skipped
-    verify(recoveryKeyModel.init()).called(1); // skipped
     verify(confirmModel.init()).called(1);
 
     await tester.tapButton(l10n.confirmInstallButton);
@@ -430,6 +430,7 @@ void main() {
             'identity',
             'activeDirectory',
             'timezone',
+            'recoveryKey',
           },
         ),
       ),

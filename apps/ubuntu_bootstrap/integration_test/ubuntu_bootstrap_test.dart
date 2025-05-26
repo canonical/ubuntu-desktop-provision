@@ -310,13 +310,13 @@ void main() {
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
-    await tester.testRecoveryKeyPage();
     await tester.testPassphrasePage(passphrase: '', skip: true);
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
+    await tester.testRecoveryKeyPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
 
@@ -363,7 +363,6 @@ void main() {
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
-    await tester.testRecoveryKeyPage();
     await tester.testPassphrasePage(passphrase: 'passphrase');
 
     await tester.testIdentityPage(identity: identity, password: 'password');

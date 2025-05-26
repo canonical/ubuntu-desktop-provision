@@ -57,6 +57,7 @@ enum InstallationStep with RouteName {
   identity(IdentityPage.new),
   activeDirectory(ActiveDirectoryPage.new),
   timezone(TimezonePage.new),
+  recoveryKey(RecoveryKeyPage.new),
   confirm(ConfirmPage.new, required: true),
   install(
     InstallPage.new,

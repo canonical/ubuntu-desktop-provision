@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
+import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/widgets/info_box.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -13,10 +13,11 @@ import 'package:yaru/yaru.dart';
 const fdeLink =
     'https://discourse.ubuntu.com/t/hardware-backed-encryption-and-recovery-keys-in-ubuntu-desktop/58243';
 
-class RecoveryKeyPage extends ConsumerWidget {
+class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
   const RecoveryKeyPage({super.key});
 
-  static Future<bool> load(WidgetRef ref) {
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
     if (ref.read(storageModelProvider).type == StorageType.manual) {
       return Future.value(false);
     }
