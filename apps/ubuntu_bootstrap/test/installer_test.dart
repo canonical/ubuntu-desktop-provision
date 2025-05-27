@@ -56,7 +56,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
-    expect(find.byType(InstallPage), findsOneWidget);
+    expect(find.byType(DonePage), findsOneWidget);
   });
 
   testWidgets('initializes subiquity', (tester) async {

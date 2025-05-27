@@ -12,6 +12,7 @@ import 'package:ubuntu_bootstrap/app/installation_step.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
+import 'package:ubuntu_bootstrap/pages/done/done_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/loading/loading_provider.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
@@ -43,6 +44,7 @@ import '../../../packages/ubuntu_provision/test/network/test_network.dart';
 import '../../../packages/ubuntu_provision/test/timezone/test_timezone.dart';
 import 'autoinstall/test_autoinstall.dart';
 import 'confirm/test_confirm.dart';
+import 'done/test_done.dart';
 import 'install/test_install.dart';
 import 'recovery_key/test_recovery_key.dart';
 import 'refresh/test_refresh.dart';
@@ -158,6 +160,7 @@ void main() {
     final identityModel = buildIdentityModel(isValid: true);
     final activeDirectoryModel = buildActiveDirectoryModel();
     final installModel = buildInstallModel(isDone: true);
+    final doneModel = buildDoneModel();
 
     registerMockAutoinstallService();
     registerMockService<DesktopService>(MockDesktopService());
@@ -190,6 +193,8 @@ void main() {
           activeDirectoryModelProvider
               .overrideWith((_) => activeDirectoryModel),
           installModelProvider.overrideWith((_) => installModel),
+          slidesProvider.overrideWith((_) => MockSlidesModel()),
+          doneModelProvider.overrideWith((_) => doneModel),
         ],
         child: tester.buildTestWizard(excludedPages: {}),
       ),
@@ -265,8 +270,9 @@ void main() {
 
     await tester.tapButton(l10n.confirmInstallButton);
     await tester.pumpAndSettle();
-    expect(find.byType(InstallPage), findsOneWidget);
+    expect(find.byType(DonePage), findsOneWidget);
     verify(installModel.init()).called(1);
+    verify(doneModel.init()).called(1);
   });
 
   testWidgets('rst', (tester) async {
@@ -401,6 +407,7 @@ void main() {
     final storageModel = buildStorageModel();
     final confirmModel = buildConfirmModel();
     final installModel = buildInstallModel(isDone: true);
+    final doneModel = buildDoneModel();
 
     await tester.pumpWidget(
       ProviderScope(
@@ -413,6 +420,7 @@ void main() {
           confirmModelProvider.overrideWith((_) => confirmModel),
           installModelProvider.overrideWith((_) => installModel),
           slidesProvider.overrideWith((_) => MockSlidesModel()),
+          doneModelProvider.overrideWith((_) => doneModel),
         ],
         child: tester.buildTestWizard(
           excludedPages: {
@@ -454,8 +462,9 @@ void main() {
 
     await tester.tapButton(l10n.confirmInstallButton);
     await tester.pumpAndSettle();
-    expect(find.byType(InstallPage), findsOneWidget);
+    expect(find.byType(DonePage), findsOneWidget);
     verify(installModel.init()).called(1);
+    verify(doneModel.init()).called(1);
   });
 
   testWidgets('refresh', (tester) async {

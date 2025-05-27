@@ -35,7 +35,6 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: l10n.recoveryKeyTitle,
       title: l10n.recoveryKeyHeader,
       bottomBar: WizardBar(
-        leading: const BackWizardButton(),
         trailing: [
           NextWizardButton(
             enabled: ref.watch(

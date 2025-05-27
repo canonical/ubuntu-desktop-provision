@@ -67,6 +67,7 @@ void main() {
 
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -99,6 +100,7 @@ void main() {
     await tester.testGuidedCapabilityPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -138,6 +140,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -185,6 +188,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -225,6 +229,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -267,6 +272,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -316,9 +322,10 @@ void main() {
     await expectIdentity(identity);
 
     await tester.testTimezonePage();
-    await tester.testRecoveryKeyPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testRecoveryKeyPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -371,6 +378,8 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testRecoveryKeyPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -414,6 +423,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -539,6 +549,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage(hasBitLocker: true);
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -577,6 +588,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage(hasBitLocker: true);
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -656,6 +668,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -731,6 +744,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage(hasBitLocker: true);
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -806,6 +820,7 @@ void main() {
     await tester.testNetworkPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapRestartNow();
@@ -845,6 +860,7 @@ Future<void> eraseInstallTest({
   await tester.testTimezonePage();
   await tester.testConfirmPage();
   await tester.testInstallPage();
+  await tester.testDonePage();
 
   final windowClosed = YaruTestWindow.waitForClosed();
   await tester.tapContinueTesting();

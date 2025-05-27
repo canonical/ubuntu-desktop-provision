@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
-import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
+import 'package:ubuntu_bootstrap/pages/done/done_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class DonePage extends ConsumerWidget {
+class DonePage extends ConsumerWidget with ProvisioningPage {
   const DonePage({super.key});
+
+  @override
+  Future<bool> load(BuildContext context, WidgetRef ref) {
+    return ref.read(doneModelProvider).init().then((_) => true);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(installModelProvider);
+    final model = ref.watch(doneModelProvider);
     final theme = Theme.of(context);
     final mascot = ref.watch(pageImagesProvider).get('done');
     final isCoreDesktop =

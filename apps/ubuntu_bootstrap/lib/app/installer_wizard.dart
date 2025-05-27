@@ -72,9 +72,9 @@ class _InstallWizard extends ConsumerWidget {
               const LoadingPage().load(context, ref).then((_) => null),
         ),
         ...preInstallRoutes,
-        InstallationStep.install.route: WizardRoute(
-          builder: (_) => const InstallPage(),
-          onLoad: (_) => const InstallPage().load(context, ref),
+        InstallationStep.done.route: WizardRoute(
+          builder: (_) => const DonePage(),
+          onLoad: (_) => const DonePage().load(context, ref),
         ),
         InstallationStep.error.route: WizardRoute(
           builder: (_) => const ErrorPage(allowRestart: false),
@@ -131,6 +131,10 @@ class _AutoinstallWizard extends ConsumerWidget {
         InstallationStep.install.route: WizardRoute(
           builder: (_) => const InstallPage(),
           onLoad: (_) => const InstallPage().load(context, ref),
+        ),
+        InstallationStep.done.route: WizardRoute(
+          builder: (_) => const DonePage(),
+          onLoad: (_) => const DonePage().load(context, ref),
         ),
         InstallationStep.error.route: WizardRoute(
           builder: (_) => const ErrorPage(allowRestart: false),
