@@ -656,4 +656,52 @@ void main() {
       expect(await client.getInteractiveSections(), ['network']);
     });
   });
+
+  group('tpm fde', () {
+    setUpAll(() async {
+      final subiquityPath = await getSubiquityPath();
+      final endpoint = await defaultEndpoint(ServerMode.DRY_RUN);
+      final process = SubiquityProcess.python(
+        'subiquity.cmd.server',
+        serverMode: ServerMode.DRY_RUN,
+        subiquityPath: subiquityPath,
+      );
+      testServer = SubiquityServer(
+        process: process,
+        endpoint: endpoint,
+      );
+      client = SubiquityClient();
+      final socketPath = await testServer.start(
+        args: [
+          '--machine-config=examples/machines/simple.json',
+          '--source-catalog=examples/sources/desktop.yaml',
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+          '--storage-version=2',
+          '--bootloader=uefi',
+        ],
+      );
+      client.open(socketPath);
+    });
+
+    tearDownAll(() async {
+      await client.close();
+      await testServer.stop();
+    });
+
+    test('get core boot recovery key v2', () async {
+      await client.setVariant(Variant.DESKTOP);
+      await client.setSource('ubuntu-desktop');
+      final guided = await client.getGuidedStorageV2();
+      final target =
+          guided.targets.whereType<GuidedStorageTargetReformat>().last;
+      final choice = GuidedChoiceV2(
+        target: target,
+        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        sizingPolicy: null,
+      );
+      await client.setGuidedStorageV2(choice);
+      final response = await client.getCoreBootRecoveryKeyV2();
+      expect(response, isNotEmpty);
+    });
+  });
 }
