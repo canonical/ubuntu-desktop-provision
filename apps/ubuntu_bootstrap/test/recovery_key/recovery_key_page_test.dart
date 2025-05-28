@@ -23,10 +23,11 @@ void main() {
     );
   }
 
-  testWidgets('command', (tester) async {
-    final model = buildRecoveryKeyModel();
+  testWidgets('display recovery key', (tester) async {
+    const recoveryKey = '12345-12345-12345-12345-12345-12345-12345-12345';
+    final model = buildRecoveryKeyModel(recoveryKey: recoveryKey);
     await tester.pumpApp((_) => buildPage(model));
 
-    expect(find.text(kRecoveryKeyCommand), findsOneWidget);
+    expect(find.text(recoveryKey), findsOneWidget);
   });
 }
