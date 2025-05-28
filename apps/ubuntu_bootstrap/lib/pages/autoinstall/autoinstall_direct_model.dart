@@ -4,7 +4,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
-import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaml/yaml.dart';
 
 part 'autoinstall_direct_model.freezed.dart';
@@ -72,8 +71,6 @@ sealed class AutoinstallDirectError with _$AutoinstallDirectError {
 
 @riverpod
 class AutoinstallDirectModel extends _$AutoinstallDirectModel {
-  late final _portal = getService<XdgDesktopPortalClient>();
-
   @override
   AutoinstallDirectState build() => AutoinstallDirectState();
 
@@ -86,34 +83,11 @@ class AutoinstallDirectModel extends _$AutoinstallDirectModel {
     state = state.copyWith(localPath: localPath, url: '', error: null);
   }
 
-  Future<void> pickLocalFile(String title, String filterName) async {
-    try {
-      final result = await _portal.fileChooser.openFile(
-        title: title,
-        filters: [
-          XdgFileChooserFilter(
-            filterName,
-            [
-              XdgFileChooserGlobPattern('*.yaml'),
-              XdgFileChooserGlobPattern('*.yml'),
-              XdgFileChooserMimeTypePattern('application/yaml'),
-            ],
-          ),
-        ],
-      ).first;
-      final uri = Uri.parse(result.uris.first);
-      setLocalPath(uri);
-    } on Exception catch (e) {
-      _log.debug('Caught error during pickLocalFile: $e');
-      state = switch (e) {
-        XdgPortalRequestCancelledException _ =>
-          state.copyWith(localPath: null, isLoading: false),
-        _ => state.copyWith(
-            error: AutoinstallDirectError.from(e),
-            isLoading: false,
-          ),
-      };
-    }
+  void setError(Exception e) {
+    state = state.copyWith(
+      error: AutoinstallDirectError.from(e),
+      isLoading: false,
+    );
   }
 
   /// Returns true on success, which indicates that we can restart subiquity and the UI
