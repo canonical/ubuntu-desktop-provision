@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:mockito/annotations.dart';
@@ -38,29 +37,24 @@ extension WidgetTesterX on WidgetTester {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
 
-    // The root level `ProviderScope` is needed so that the file picker dialog from the autoinstall
-    // flow can access providers. (We push a `DialogRoute` containing a `ModalBarrier` onto the
-    // root navigator to block the UI while showing the external XDG file picker)
-    return ProviderScope(
-      child: MaterialApp(
-        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
-        theme: yaruLight,
-        home: Wizard(
-          routes: {
-            '/': WizardRoute(
-              builder: builder,
-              onNext: (settings) => '/next',
+    return MaterialApp(
+      localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
+      theme: yaruLight,
+      home: Wizard(
+        routes: {
+          '/': WizardRoute(
+            builder: builder,
+            onNext: (settings) => '/next',
+          ),
+          '/next': WizardRoute(
+            builder: (_) => const Row(
+              children: [
+                Text('Next page'),
+                BackWizardButton(),
+              ],
             ),
-            '/next': WizardRoute(
-              builder: (_) => const Row(
-                children: [
-                  Text('Next page'),
-                  BackWizardButton(),
-                ],
-              ),
-            ),
-          },
-        ),
+          ),
+        },
       ),
     );
   }
