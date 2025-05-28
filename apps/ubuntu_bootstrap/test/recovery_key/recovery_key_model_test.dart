@@ -6,6 +6,8 @@ import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import '../test_utils.dart';
 
 void main() {
+  const testRecoveryKey = '12345-12345-12345-12345-12345-12345-12345-12345';
+
   test('init', () async {
     final storage = MockStorageService();
     final model = RecoveryKeyModel(storage: storage);
@@ -15,6 +17,10 @@ void main() {
 
     when(storage.guidedCapability)
         .thenReturn(GuidedCapability.CORE_BOOT_ENCRYPTED);
+    when(storage.getCoreBootRecoveryKey()).thenAnswer(
+      (_) async => testRecoveryKey,
+    );
     expect(await model.init(), isTrue);
+    expect(model.recoveryKey, equals(testRecoveryKey));
   });
 }

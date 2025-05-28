@@ -627,6 +627,21 @@ class MockStorageService extends _i1.Mock implements _i12.StorageService {
         ),
         returnValue: _i9.Future<List<_i5.Disk>>.value(<_i5.Disk>[]),
       ) as _i9.Future<List<_i5.Disk>>);
+
+  @override
+  _i9.Future<String> getCoreBootRecoveryKey() => (super.noSuchMethod(
+        Invocation.method(
+          #getCoreBootRecoveryKey,
+          [],
+        ),
+        returnValue: _i9.Future<String>.value(_i8.dummyValue<String>(
+          this,
+          Invocation.method(
+            #getCoreBootRecoveryKey,
+            [],
+          ),
+        )),
+      ) as _i9.Future<String>);
 }
 
 /// A class which mocks [PageImages].

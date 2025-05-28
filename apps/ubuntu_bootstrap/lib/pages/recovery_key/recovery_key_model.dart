@@ -40,7 +40,7 @@ class RecoveryKeyModel extends SafeChangeNotifier {
     ].contains(_storage.guidedCapability)) {
       return false;
     }
-    _recoveryKey = '55055-39320-64491-48436-47667-15525-36879-32875';
+    _recoveryKey = await _storage.getCoreBootRecoveryKey();
     return true;
   }
 }
