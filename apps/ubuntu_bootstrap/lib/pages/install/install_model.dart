@@ -14,8 +14,6 @@ final installModelProvider = ChangeNotifierProvider(
     getService<SubiquityClient>(),
     getService<JournalService>(),
     getService<ProductService>(),
-    getService<SessionService>(),
-    getService<ConfigService>(),
   ),
 );
 
@@ -65,15 +63,11 @@ class InstallModel extends SafeChangeNotifier {
     this._client,
     this._journal,
     this._product,
-    this._session,
-    this._config,
   );
 
   final SubiquityClient _client;
   final JournalService _journal;
   final ProductService _product;
-  final SessionService _session;
-  final ConfigService _config;
 
   Stream<String>? _log;
   ApplicationStatus? _status;
@@ -162,10 +156,6 @@ class InstallModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
-  late final ProvisioningMode _provisioningMode;
-
-  ProvisioningMode get provisioningMode => _provisioningMode;
-
   /// Initializes and starts monitoring the status of the installation.
   Future<void> init() async {
     final status = await _client.getStatus();
@@ -176,7 +166,6 @@ class InstallModel extends SafeChangeNotifier {
     ).listen(_processEvent);
     _statuses = _client.monitorStatus().listen(_updateStatus);
     _updateStatus(status);
-    _provisioningMode = await _config.provisioningMode;
   }
 
   @override
@@ -185,6 +174,4 @@ class InstallModel extends SafeChangeNotifier {
     _statuses?.cancel();
     super.dispose();
   }
-
-  Future<void> reboot() => _session.reboot();
 }

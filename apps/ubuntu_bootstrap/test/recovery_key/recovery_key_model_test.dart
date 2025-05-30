@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
-import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_model.dart';
+import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 
-import 'test_recovery_key.dart';
+import '../test_utils.dart';
 
 void main() {
   test('init', () async {

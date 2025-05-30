@@ -484,7 +484,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
 
     await tapConfirm();
-    await pumpAndSettle();
+    await pump();
   }
 
   Future<void> testInstallPage({
@@ -492,13 +492,23 @@ extension UbuntuBootstrapPageTester on WidgetTester {
   }) async {
     await pumpUntilPage(InstallPage);
 
-    final context = element(find.byType(InstallPage));
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+
+    await pumpAndSettle();
+  }
+
+  Future<void> testDonePage({
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(DonePage);
+    final context = element(find.byType(DonePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);
     }
-
     await pumpUntil(find.button(l10n.continueTesting));
     await pumpAndSettle();
   }

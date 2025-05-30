@@ -67,6 +67,7 @@ void main() {
 
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -99,6 +100,7 @@ void main() {
     await tester.testGuidedCapabilityPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -138,6 +140,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -185,6 +188,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -225,6 +229,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -267,6 +272,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -310,7 +316,6 @@ void main() {
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
-    await tester.testRecoveryKeyPage();
     await tester.testPassphrasePage(passphrase: '', skip: true);
 
     await tester.testIdentityPage(identity: identity, password: 'password');
@@ -319,6 +324,8 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testRecoveryKeyPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -363,7 +370,6 @@ void main() {
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
-    await tester.testRecoveryKeyPage();
     await tester.testPassphrasePage(passphrase: 'passphrase');
 
     await tester.testIdentityPage(identity: identity, password: 'password');
@@ -372,6 +378,8 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testRecoveryKeyPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -415,6 +423,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -540,6 +549,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage(hasBitLocker: true);
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -578,6 +588,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage(hasBitLocker: true);
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -657,6 +668,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -732,6 +744,7 @@ void main() {
     await tester.testTimezonePage();
     await tester.testConfirmPage(hasBitLocker: true);
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapContinueTesting();
@@ -807,6 +820,7 @@ void main() {
     await tester.testNetworkPage();
     await tester.testConfirmPage();
     await tester.testInstallPage();
+    await tester.testDonePage();
 
     final windowClosed = YaruTestWindow.waitForClosed();
     await tester.tapRestartNow();
@@ -846,6 +860,7 @@ Future<void> eraseInstallTest({
   await tester.testTimezonePage();
   await tester.testConfirmPage();
   await tester.testInstallPage();
+  await tester.testDonePage();
 
   final windowClosed = YaruTestWindow.waitForClosed();
   await tester.tapContinueTesting();

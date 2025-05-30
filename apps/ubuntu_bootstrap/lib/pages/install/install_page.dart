@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
-import 'package:ubuntu_bootstrap/pages/install/done_page.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
+final _didProceedProvider = StateProvider((_) => false);
 
 class InstallPage extends ConsumerWidget with ProvisioningPage {
   const InstallPage({super.key});
@@ -33,12 +34,17 @@ class InstallPage extends ConsumerWidget with ProvisioningPage {
         ref.watch(installModelProvider.select((m) => m.isInstalling));
     YaruWindow.setClosable(context, !isInstalling);
 
-    return AnimatedSwitcher(
-      duration: kThemeAnimationDuration,
-      switchInCurve: Curves.easeInExpo,
-      switchOutCurve: Curves.easeOutExpo,
-      child: isDone ? const DonePage() : const _SlidePage(),
-    );
+    // It's possible that the page gets rebuilt again before advancing to the
+    // next one. This ensures we only call `next()` once.
+    final didProceed = ref.watch(_didProceedProvider);
+    if (isDone && !didProceed) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        ref.read(_didProceedProvider.notifier).state = true;
+        Wizard.of(context).next();
+      });
+    }
+
+    return const _SlidePage();
   }
 }
 

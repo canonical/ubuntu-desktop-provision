@@ -21,8 +21,6 @@ void main() async {
       MockSubiquityClient(),
       MockJournalService(),
       product,
-      MockSessionService(),
-      MockConfigService(),
     );
     expect(model.productInfo.name, 'Ubuntu');
     expect(model.productInfo.version, '24.04 LTS');
@@ -36,11 +34,7 @@ void main() async {
     when(journal.start(['event'], output: JournalOutput.cat))
         .thenAnswer((_) => const Stream.empty());
     final product = MockProductService();
-    final session = MockSessionService();
-    final config = MockConfigService();
-    when(config.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-    final model = InstallModel(client, journal, product, session, config);
+    final model = InstallModel(client, journal, product);
 
     when(client.getStatus())
         .thenAnswer((_) async => testStatus(ApplicationState.values.first));
@@ -81,11 +75,7 @@ void main() async {
 
     final product = MockProductService();
 
-    final session = MockSessionService();
-    final config = MockConfigService();
-    when(config.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-    final model = InstallModel(client, journal, product, session, config);
+    final model = InstallModel(client, journal, product);
 
     expect(model.state, isNull);
     expect(model.isInstalling, isFalse);
@@ -141,11 +131,7 @@ void main() async {
 
     final product = MockProductService();
 
-    final session = MockSessionService();
-    final config = MockConfigService();
-    when(config.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-    final model = InstallModel(client, journal, product, session, config);
+    final model = InstallModel(client, journal, product);
 
     expect(model.hasError, isFalse);
 
@@ -159,8 +145,6 @@ void main() async {
       MockSubiquityClient(),
       MockJournalService(),
       MockProductService(),
-      MockSessionService(),
-      MockConfigService(),
     );
 
     expect(model.isLogVisible, isFalse);
@@ -175,23 +159,6 @@ void main() async {
     model.toggleLogVisibility();
     expect(model.isLogVisible, isFalse);
     expect(wasNotified, equals(2));
-  });
-
-  test('reboot', () async {
-    final client = MockSubiquityClient();
-    final session = MockSessionService();
-    final config = MockConfigService();
-    when(config.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-    final model = InstallModel(
-      client,
-      MockJournalService(),
-      MockProductService(),
-      session,
-      config,
-    );
-    await model.reboot();
-    verify(session.reboot()).called(1);
   });
 
   test('events', () async {
@@ -213,11 +180,7 @@ void main() async {
 
     final product = MockProductService();
 
-    final session = MockSessionService();
-    final config = MockConfigService();
-    when(config.provisioningMode)
-        .thenAnswer((_) async => ProvisioningMode.standard);
-    final model = InstallModel(client, journal, product, session, config);
+    final model = InstallModel(client, journal, product);
 
     expect(model.event.action, InstallationAction.none);
 

@@ -6,7 +6,6 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_p
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
-import 'package:ubuntu_bootstrap/pages/storage/recovery_key/recovery_key_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
 import 'package:ubuntu_provision/interfaces.dart';
@@ -16,7 +15,6 @@ export 'guided_reformat/guided_reformat_page.dart';
 export 'guided_resize/guided_resize_page.dart';
 export 'manual/manual_storage_page.dart';
 export 'passphrase/passphrase_page.dart';
-export 'recovery_key/recovery_key_page.dart';
 export 'storage_page.dart';
 export 'storage_routes.dart';
 
@@ -56,11 +54,6 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
         builder: (_) => GuidedCapabilitiesPage(),
         userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
         onLoad: (_) => const GuidedCapabilitiesPage().load(context, ref),
-      ),
-      StorageSteps.recoveryKey.route: WizardRoute(
-        builder: (_) => const RecoveryKeyPage(),
-        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
-        onLoad: (_) => RecoveryKeyPage.load(ref),
       ),
       StorageSteps.passphrase.route: WizardRoute(
         builder: (_) => const PassphrasePage(),

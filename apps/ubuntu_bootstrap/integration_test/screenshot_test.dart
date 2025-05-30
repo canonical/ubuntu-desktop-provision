@@ -508,6 +508,7 @@ Future<void> main() async {
       await tester.testConfirmPage(
         screenshot: '$currentThemeName/confirm',
       );
+      await tester.pumpAndSettle();
     },
     variant: themeVariant,
   );
@@ -549,10 +550,10 @@ Future<void> main() async {
       await tester.runApp(() => runInstallerApp([], theme: currentTheme));
       await tester.pumpAndSettle();
 
-      await tester.jumpToPage(InstallationStep.install.route);
+      await tester.jumpToPage(InstallationStep.done.route);
       await tester.pumpAndSettle();
 
-      await tester.testInstallPage(
+      await tester.testDonePage(
         screenshot: '$currentThemeName/complete',
       );
     },
