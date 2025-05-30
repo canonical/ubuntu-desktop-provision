@@ -29,19 +29,19 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileLabel => 'Or select a local file:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Dosya seç...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Dosyayı temizle';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Dosya seçin';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML dosyaları';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'İçeri aktar';
 
   @override
   String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
@@ -50,7 +50,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Geçersiz URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';

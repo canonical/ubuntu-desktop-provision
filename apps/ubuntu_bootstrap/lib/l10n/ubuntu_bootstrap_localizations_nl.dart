@@ -75,7 +75,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'Hoe wilt u $DISTRO installeren?';
+    return 'Hoe zou u $DISTRO willen installeren?';
   }
 
   @override
@@ -828,7 +828,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Of u een animator, ontwerper, videomaker of game-ontwikkelaar bent, het is eenvoudig om uw workflows naar $DISTRO te brengen met ondersteuning voor open source en industriestandaard software en applicaties.';
+    return 'Of u een animator, ontwerper, videomaker of game-ontwikkelaar bent, u kunt uw workflows eenvoudig naar $DISTRO overbrengen met ondersteuning voor open source en industriestandaard software en applicaties.';
   }
 
   @override
@@ -883,7 +883,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu behandelt een breed scala aan vragen en antwoorden en het Ubuntu Discourse biedt handleidingen en discussies voor zowel nieuwe als ervaren gebruikers.';
+  String get installationSlidesSupportCommunity => 'Ask Ubuntu behandelt een breed scala aan vragen en antwoorden en Ubuntu Discourse biedt handleidingen en discussies voor zowel nieuwe als ervaren gebruikers.';
 
   @override
   String get installationSlidesSupportEnterprise => 'Voor zakelijke gebruikers biedt Canonical commerciële ondersteuning om het gemakkelijk te maken om Ubuntu veilig op de werkplek in te voeren en te beheren.';
@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Ik begrijp dat ik al mijn gegevens kan verliezen als ik geen herstelcode heb';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Meer informatie';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1113,7 +1113,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Landscape-domein (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Geef het Landscape-domein van uw organisatie op om aan te melden en een automatisch installatiebestand op te halen. U kunt de FQDN verkrijgen bij je IT-ondersteuning.';
+  String get landscapeDomainInstructions => 'Geef het Landscape-domein van uw organisatie op om aan te melden en een automatisch installatiebestand op te halen. U kunt de FQDN verkrijgen bij uw IT-ondersteuning.';
 
   @override
   String get landscapeDomainTextField => 'Landscape-domein (FQDN)';

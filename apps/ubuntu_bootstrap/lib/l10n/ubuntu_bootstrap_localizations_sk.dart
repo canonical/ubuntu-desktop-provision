@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Rozumiem, že môžem prísť o všetky svoje údaje, ak nebudem mať obnovovací kľúč';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Zistiť viac';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

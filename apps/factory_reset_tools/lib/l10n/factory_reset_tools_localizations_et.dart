@@ -48,7 +48,7 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
   String get factoryResetTitle => 'Palun tee oma valik alustamiseks tehaseseadistuste taastamisega';
 
   @override
-  String get loadingDrives => 'Palun oota, kuni tuvastame andmekandjaid.';
+  String get loadingDrives => 'Palun oota, kuni tuvastan andmekandjaid.';
 
   @override
   String get resetMediaReadyTitle => 'Taastamiseks mõeldud USB-põhine andmekandja on valmis';
@@ -60,13 +60,13 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
   String get errorLoadingDrives => 'Andmekandjate tuvastamisel tekkis viga.';
 
   @override
-  String get resetMediaInitializing => 'Valmendame protsessi';
+  String get resetMediaInitializing => 'Valmendan protsessi';
 
   @override
   String get resetMediaCopying => 'Kopeerime';
 
   @override
-  String get resetMediaFinalizing => 'Lõpetame protsessi';
+  String get resetMediaFinalizing => 'Lõpetan protsessi tööd';
 
   @override
   String get resetMediaFinished => 'Lõpetatud';

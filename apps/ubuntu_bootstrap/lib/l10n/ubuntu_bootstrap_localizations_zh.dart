@@ -1789,7 +1789,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmDevicesTitle => '裝置';
 
   @override
-  String get confirmEntryApplications => '應用軟體';
+  String get confirmEntryApplications => '應用程式';
 
   @override
   String get confirmEntryDiskSetup => '安裝類型';
@@ -1882,7 +1882,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get restartWarningBody => '重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所作的變更將不會被保存。';
+  String get restartWarningBody => '重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所做的變更將不會被保存。';
 
   @override
   String get rebootToConfigureWarning => '您必須重新啟動電腦以繼續您的安裝流程。';
@@ -1962,7 +1962,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return '在 Ubuntu 軟體中心安裝、管理和更新您的所有應用軟體，包括來自 Snap Store 和 $DISTRO 軟體庫的上千個應用軟體。';
+    return '在 Ubuntu 軟體中心安裝、管理和更新您的所有應用程式，包括來自 Snap Store 和 $DISTRO 軟體庫的上千個應用程式。';
   }
 
   @override

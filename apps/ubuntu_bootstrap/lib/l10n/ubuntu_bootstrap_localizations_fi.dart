@@ -17,58 +17,58 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Automaattinen asennus';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Tuo autoinstall-tiedosto';
 
   @override
-  String get autoinstallDirectUrlLabel => 'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => 'Voit syöttää autoinstall-tiedoston URL-osoitteen:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Tai valita paikallisen tiedoston:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Valitse tiedosto...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Poista tiedostovalinta';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Valitse tiedosto';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML-tiedostot';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Tuo';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall-tiedostoa ei voida avata';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'Tarkista että URL on oikein, testaa Internet-yhteytesi toimivuus, tai yritä myöhemmin uudelleen.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Virheellinen URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'Tarkista että URL on kelvollinen, tai valitse paikallinen tiedosto.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => 'Virheellinen autoinstall-tiedosto';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Check the file or provide a different one.';
+  String get autoinstallDirectErrorInvalidContentBody => 'Tarkista tiedosto tai valitse jokin toinen.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => 'Autoinstall-tiedostoa ei voi lukea';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => 'Tarkista tiedoston oikeudet tai käytä toista tiedostoa.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Tuntematon virhe';
 
   @override
   String get autoinstallTitle => 'Asennuksen tyyppi';
@@ -88,16 +88,16 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get autoinstallInteractiveDescription => 'Käyttäjille, jotka haluvat vaiheittaisesti opastetun asennuksen.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Automatisoitu autoinstall-tiedostolla';
 
   @override
-  String get autoinstallDirectDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+  String get autoinstallDirectDescription => 'Edistyneet käyttäjät voivat käyttää autoinstall.yaml-tiedostoa yhdenmukaisten ja toistettavissa olevien järjestelmäasennusten tekemiseen.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Automatisoitu Landscape-palvelulla';
 
   @override
-  String get autoinstallLandscapeDescription => 'For users in organizations that provide an autoinstall file via Landscape.';
+  String get autoinstallLandscapeDescription => 'Käyttäjille, joiden organisaatio tarjoaa autoinstall-tiedoston Landscapen kautta.';
 
   @override
   String get changeButtonText => 'Muuta';
@@ -163,16 +163,16 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST on käytössä';
 
   @override
-  String get rstHeader => 'Poista RST käytöstä jatkaaksesi';
+  String get rstHeader => 'RST tulee poistaa käytöstä jatkaaksesi';
 
   @override
-  String get rstDisable => 'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+  String get rstDisable => 'Tietokoneesi käyttää Intel RST:tä (Rapid Storage Technology). Voit ottaa RST:n pois käytöstä joko:';
 
   @override
-  String get rstDisableWindows => 'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windowsissa, jos käytät kahden käyttöjärjestelmän rinnakkaisasennusta Windowsilla';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOS-asetuksissa';
 
   @override
   String rstInstructions(String url) {
@@ -296,22 +296,22 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get choosePassphraseMismatch => 'Tunnuslauseet eivät vastaa toisiaan';
 
   @override
-  String get choosePassphraseInfoHeader => 'Varmista, että talletat tunnuslauseen';
+  String get choosePassphraseInfoHeader => 'Tallenna tunnuslause turvalliseen paikkaan';
 
   @override
-  String get choosePassphraseInfoBody => 'Jos unohdat tai kadotat tunnuslauseen, menetät pääsyn dataan.';
+  String get choosePassphraseInfoBody => 'Jos unohdat tai kadotat tunnuslauseen, menetät pääsyn tietoihin.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
+  String get chooseOptionalPassphraseHeader => 'Luo tunnuslause (valinnainen)';
 
   @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
+  String get chooseOptionalPassphraseBody => 'Tunnuslause auttaa suojelemaan tietoja, jos laite joutuu vääriin käsiin. Tunnuslause tulee syöttää joka kerta tietokonetta käynnistettäessä. Sitä ei voi poistaa käytöstä myöhemmin';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
+  String get chooseOptionalPassphraseInfoHeader => 'Tallenna tunnuslause ja palautusavain turvalliseen paikkaan';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+  String get chooseOptionalPassphraseInfoBody => 'Jos tunnuslause hukkuu, kaikki tiedot menetetään. Tunnuslause ei korvaa palautusavainta tai käyttäjäns salasanaa.';
 
   @override
   String get createPassphrase => 'Luo tunnuslause';
@@ -349,37 +349,37 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Aloita tyhjästä valitsemallasi levyllä.';
+  String get installationTypeEraseInfo => 'Kaikki tiedot ja osiot levyllä poistetaan, mukaan lukien käyttöjärjestelmä.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Edistyneet asetukset...';
+  String get installationTypeAdvancedLabel => 'Näytä edistyneet asetukset...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Edistyneet asetukset';
+  String get installationTypeAdvancedTitle => 'Salaus ja tiedostojärjestelmä';
 
   @override
   String get installationTypeExperimental => 'Kokeellinen';
 
   @override
-  String get installationTypeNone => 'Ei mitään';
+  String get installationTypeNone => 'Ei salausta';
 
   @override
-  String get installationTypeNoneInfo => 'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Tavallinen tiedostojärjestelmä ilman salausta.';
 
   @override
   String get installationTypeNoneSelected => 'Ei valintoja';
 
   @override
-  String get installationTypeLVM => 'Käytä LVM:ää';
+  String get installationTypeLVM => 'Käytä LVM:ää ilman salausta';
 
   @override
   String get installationTypeLVMSelected => 'LVM valittu';
 
   @override
-  String get installationTypeLVMEncryption => 'Käytä LVM:ää ja salausta';
+  String get installationTypeLVMEncryption => 'Salaa tunnuslauseella';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String get installationTypeLVMEncryptionInfo => 'Tunnuslause tulee syöttää joka kerta tietokonetta avattaessa. Tämä valinta käyttää LUKS-salausta yhdessä LVM:n kanssa.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
@@ -388,13 +388,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'Salausavain valitaan seuraavassa vaiheessa.';
 
   @override
-  String get installationTypeZFS => 'Tyhjennä levy ja käytä ZFS:ää';
+  String get installationTypeZFS => 'Käytä ZFS:ää ilman salausta';
 
   @override
-  String get installationTypeZFSEncryption => 'Tyhjennä levy ja käytä ZFS:ää sekä salausta';
+  String get installationTypeZFSEncryption => 'Salaa tunnuslauseella käyttäen ZFS:ää';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+  String get installationTypeZFSEncryptionInfo => 'ZFS:n oma salausjärjestelmä. Tunnuslause tulee syöttää joka kerta tietokonetta avattaessa.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS valittu';
@@ -407,7 +407,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Tämä on kokeellinen ominaisuus. Se ei välttämättä toimi laitteistollasi tai tulevissa $DISTRO-jakeluissa. <a href=\"$url\">Lue TPM-salauksesta</a>, ennen kuin valitset tämän.';
+    return '<a href=\"$url\">Lue TPM-salauksesta</a> ennen kuin otat käyttöön tämän valinnan. Tämä ei välttämättä toimi sinun laitteistollasi tai tulevilla $DISTRO-julkaisuilla.';
   }
 
   @override
@@ -435,7 +435,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Asenna $product niiden rinnalle';
+    return 'Asenna $product olemassa olevien käyttöjärjestelmien rinnalle';
   }
 
   @override
@@ -445,17 +445,17 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Voit valita käyttöjärjestelmän käynnistettäessä.';
+    return 'Valitse osio jonka kokoa muutetaan, jotta ${product}lle olisi riittävästi tilaa. Voit valita käyttöjärjestelmän käynnistettäessä.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Poista $os ja asenna $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Kaikki olemassa olevan käyttöjärjestelmän $os tiedot ja tiedostot poistetaan pysyvästi.';
   }
 
   @override
@@ -528,7 +528,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format ei ole tuettu tiedostojärjestelmä kohteelle $mountpoint';
   }
 
   @override
@@ -642,7 +642,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Sovellukset';
 
   @override
-  String get confirmEntryDiskSetup => 'Levymääritys';
+  String get confirmEntryDiskSetup => 'Asennustyyppi';
 
   @override
   String get confirmEntryDiskEncryption => 'Levyn salaus';
@@ -683,34 +683,34 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Asenna';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Poistettu';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Ei muutettu';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Muutettu koosta $oldsize kokoon $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Luotu ja alustettu tiedostojärjestelmällä $format kohteelle $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Alustettu tiedostojärjestelmällä $format kohteelle $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Käytössä kohteelle $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Alustettu tiedostojärjestelmällä $format';
   }
 
   @override
@@ -747,30 +747,30 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Jatka testaamista';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker havaittu';
 
   @override
-  String get bitlockerInfoDescription => 'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'Yksi tai useampia osioita on salattu BitLockerilla.';
 
   @override
-  String get bitlockerInfoDisable => 'To install alongside Windows, disable BitLocker in Windows.';
+  String get bitlockerInfoDisable => 'Asentaaksesi Windowsin rinnalle, ota Bitlocker pois käytöstä Windowsissa.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows may request recovery keys on boot after installation.';
+  String get bitlockerInfoRecovery => 'Windows voi vaatia palautusavaimia asennuksen jälkeen käynnistettäessä.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Lue lisää <a href=\"$url\">BitLocker-ohjeesta</a>.';
   }
 
   @override
-  String get bitlockerWarningTitle => 'You may lose all your data without BitLocker recovery keys';
+  String get bitlockerWarningTitle => 'Ilman BitLocker-palautusavaimia on mahdollista, että kaikki tiedot menetetään';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Käynnistä tietokone uudelleen';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Käynnistetäänkö tietokone uudelleen?';
 
   @override
   String get restartIntoWindows => 'Uudelleenkäynnistä Windowsiin';
@@ -1073,83 +1073,83 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM-palautusavain';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Luo palautusavain';
 
   @override
-  String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'Saatat menettää kaikki tiedot ilman palautusavainta';
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'Ota ylös palautusavain heti ensimmäisellä kirjautumiskerralla ${distro}un ja tallenna se turvalliseen paikkaan.';
   }
 
   @override
-  String get recoveryKeyCommand => 'Pääset palautusavaimeesi asennuksen jälkeen seuraavalla komennolla:';
+  String get recoveryKeyCommand => 'Ottaaksesi ylös palautusavaimen odota asennuksen valmistumista, käynnistä tietokone uudelleen ja suorita seuraava komento päätteessä:';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
+  String get recoveryKeyStorageAdvice => 'Tallenna palautusavain turvalliseen paikkaan. Sitä voi käyttää levyn salauksen purkuun tietyissä järjestelmämuutostilanteissa. Sitä voidaan tarvita esimerkiksi jos tietokoneen komponentteja vaihdetaan tai sen laiteohjelmisto päivitetään.';
 
   @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'Ymmärrän että kaikki tiedot saatetaan menettää, mikäli palautusavainta ei ole tallessa';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Lue lisää';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Skannaa QR-koodi tai syötä sen alla oleva koodi osoitteessa <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Automaattinen asennus';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Kirjaudu Landscapeen';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Syöytä Landscape-toimialue (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape-toimialue (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+  String get landscapeDomainInstructions => 'Syötä organisaation Landscape-toimialue kirjautuaksesi ja autoinstall-tiedoston noutamista varten. Saat FQDN:n IT-tuelta.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape-toimialue (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Seuraava';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Invalid domain, please check or contact your IT support';
+  String get landscapeDomainInvalidDomainWarning => 'Virheellinen toimialue, tarkista se tai ota yhteys IT-tukeen';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => 'Yhdistä Internetiin jatkaaksesi';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet is needed to fetch the autoinstall file from Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning => 'Internet-yhteys tarvitaan autoinstall-tiedoston noutamiseen Landscapesta';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Koodi on vanhentunut, ole hyvä ja yritä uudelleen';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'Kirjautuminen epäonnistui, yritä uudelleen';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'Automatisoitua asennus ei ole mahdollinen tililläsi';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'Ota yhteys IT-tukeesi tai kokeile toista asennusvaihtoehtoa.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Virhekoodi: $code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu asennetaan organisaation ehdottamilla asetuksilla';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent => 'Voit käydä läpi Landscapesta tuodun autoinstall-tiedoston sisältöä alla.';
 }

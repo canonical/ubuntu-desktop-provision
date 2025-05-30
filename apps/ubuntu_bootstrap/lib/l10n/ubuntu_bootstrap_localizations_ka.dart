@@ -44,16 +44,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'შემოტანა';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => 'ავტოდაყენების ფაილი ხელმისაწვდომი არაა';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Check the URL is correct, test your internet connection, or try later.';
+  String get autoinstallDirectErrorNetworkBody => 'შეამოწმეთ, სწორია, თუ არა URL, შეამოწმეთ კავშირი ინტერნეტთან, ან მოგვიანებით სცადეთ.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'არასწორი URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Check the URL is correct or select a local file.';
+  String get autoinstallDirectErrorInvalidUrlBody => 'შეამოწმეთ URL-ის სისწორე, ან აირჩიეთ ლოკალური ფაილი.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle => 'Invalid autoinstall file';
@@ -352,16 +352,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'All data and partitions on the disk will be erased, including operating systems.';
 
   @override
-  String get installationTypeAdvancedLabel => 'დამატებითი ფუნქციები...';
+  String get installationTypeAdvancedLabel => 'დამატებითი პარამეტრების ჩვენება...';
 
   @override
-  String get installationTypeAdvancedTitle => 'დამატებითი ფუნქციები';
+  String get installationTypeAdvancedTitle => 'დაშიფვრა და ფაილური სისტემა';
 
   @override
   String get installationTypeExperimental => 'ექსპერიმენტული';
 
   @override
-  String get installationTypeNone => 'არც-ერთი';
+  String get installationTypeNone => 'დაშიფვრის გარეშე';
 
   @override
   String get installationTypeNoneInfo => 'Standard file system without encryption.';
@@ -370,7 +370,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneSelected => 'არჩეული არაფერია';
 
   @override
-  String get installationTypeLVM => 'LVM-ის გამოყენება';
+  String get installationTypeLVM => 'LVM-ის გამოყენება დაშიფვრის გარეშე';
 
   @override
   String get installationTypeLVMSelected => 'არჩეულია LVM';
@@ -484,7 +484,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'დაყენება';
+  String get selectGuidedStorageInstallNow => 'დაყენება ახლა';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
@@ -642,7 +642,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'აპლიკაციები';
 
   @override
-  String get confirmEntryDiskSetup => 'დისკის მორგება';
+  String get confirmEntryDiskSetup => 'დაყენების ტიპი';
 
   @override
   String get confirmEntryDiskEncryption => 'დისკის დაშიფვრა';

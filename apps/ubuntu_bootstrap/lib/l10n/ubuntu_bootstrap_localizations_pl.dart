@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Rozumiem, że mogę utracić wszystkie swoje dane, jeśli nie będę mieć klucza odzyskiwania';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Dowiedz się więcej';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
