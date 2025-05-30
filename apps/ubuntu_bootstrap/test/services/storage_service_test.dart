@@ -9,6 +9,7 @@ void main() {
   final testTargets = testDisks
       .map((disk) => GuidedStorageTargetReformat(diskId: disk.id))
       .toList();
+  const testRecoveryKey = '12345-12345-12345-12345-12345-12345-12345-12345';
 
   late SubiquityClient client;
 
@@ -36,6 +37,8 @@ void main() {
     );
     when(client.resetStorageV2())
         .thenAnswer((_) async => fakeStorageResponse());
+    when(client.getCoreBootRecoveryKeyV2())
+        .thenAnswer((_) async => testRecoveryKey);
   });
 
   test('get guided storage', () async {
@@ -324,5 +327,14 @@ void main() {
     await service.setGuidedStorage();
     verify(client.setGuidedStorageV2(choice)).called(1);
     verify(client.setStorageV2()).called(1);
+  });
+
+  test('get recovery key', () async {
+    final service = StorageService(client);
+    await service.init();
+
+    final result = await service.getCoreBootRecoveryKey();
+    expect(result, equals(testRecoveryKey));
+    verify(client.getCoreBootRecoveryKeyV2()).called(1);
   });
 }

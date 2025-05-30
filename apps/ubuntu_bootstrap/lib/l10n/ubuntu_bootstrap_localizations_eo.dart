@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Vi eble perdos ĉiom da viaj datenoj sen restaŭra ŝlosilo';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Akiru restaŭran ŝlosilon tuj post unua saluto al $distro, kaj konservu ĝin ie sekure.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Por akiri restaŭran ŝlosilon, finu la instaladon, restartigu vian komputilon, kaj rulu la jenon en la terminalo:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Konservu la restaŭran ŝlosilon ie sekure. Uzu ĝin por malĉifri la diskon por kelkaj sistemaj ŝanĝoj. Ekzemple, oni bezonos ĝin, se oni ŝanĝos la komponantojn de via komputilo aŭ ĝisdatigos la mikroprogramaron.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Lerni plu';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

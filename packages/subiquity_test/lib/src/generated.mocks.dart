@@ -747,6 +747,21 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
       ) as _i5.Future<_i2.StorageResponseV2>);
 
   @override
+  _i5.Future<String> getCoreBootRecoveryKeyV2() => (super.noSuchMethod(
+        Invocation.method(
+          #getCoreBootRecoveryKeyV2,
+          [],
+        ),
+        returnValue: _i5.Future<String>.value(_i6.dummyValue<String>(
+          this,
+          Invocation.method(
+            #getCoreBootRecoveryKeyV2,
+            [],
+          ),
+        )),
+      ) as _i5.Future<String>);
+
+  @override
   _i5.Future<void> reboot({bool? immediate = false}) => (super.noSuchMethod(
         Invocation.method(
           #reboot,

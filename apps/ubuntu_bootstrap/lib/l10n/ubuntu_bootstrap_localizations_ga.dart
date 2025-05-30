@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Faigh eochair athshlánaithe chomh luath agus a logálann tú isteach i $distro den chéad uair agus stóráil áit éigin sábháilte í.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Chun eochair athshlánaithe a fháil, cuir an tsuiteáil i gcrích, atosaigh do ríomhaire, agus rith an t-ordú seo sa teirminéal:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b\'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Foghlaim níos mó';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Helyreállítási kulcs nélkül elveszítheti az összes adatát';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Szerezzen be egy helyreállítási kulcsot, amint először bejelentkezik a(z) $distro rendszerbe, és tárolja azt biztonságos helyen.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'A helyreállítási kulcs beszerzéséhez fejezze be a telepítést, indítsa újra a számítógépet, majd futtassa ezt a parancsot a terminálban:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Tárolja a helyreállítási kulcsot biztonságos helyen. Használja azt a lemez bizonyos rendszerváltozások esetén történő visszafejtéséhez. Például szüksége lehet rá, ha megváltoztatja a számítógépben lévő alkatrészeket vagy frissíti a belső vezérlőprogramot.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

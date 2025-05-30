@@ -430,6 +430,11 @@ class SubiquityClient {
     );
   }
 
+  Future<String> getCoreBootRecoveryKeyV2() async {
+    final request = await _openUrl('GET', 'storage/v2/core_boot_recovery_key');
+    return _receive('getCoreBootRecoveryKeyV2()', request);
+  }
+
   Future<void> reboot({bool immediate = false}) async {
     final params = {
       'mode': jsonEncode('REBOOT'),

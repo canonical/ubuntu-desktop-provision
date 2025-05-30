@@ -3,10 +3,11 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
-import 'dart:ui' as _i4;
+import 'dart:async' as _i4;
+import 'dart:ui' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:mockito/src/dummies.dart' as _i3;
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart'
     as _i2;
 
@@ -38,6 +39,15 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
       ) as bool);
 
   @override
+  String get recoveryKey => (super.noSuchMethod(
+        Invocation.getter(#recoveryKey),
+        returnValue: _i3.dummyValue<String>(
+          this,
+          Invocation.getter(#recoveryKey),
+        ),
+      ) as String);
+
+  @override
   bool get hasListeners => (super.noSuchMethod(
         Invocation.getter(#hasListeners),
         returnValue: false,
@@ -59,16 +69,16 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
       );
 
   @override
-  _i3.Future<bool> init() => (super.noSuchMethod(
+  _i4.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i3.Future<bool>.value(false),
-      ) as _i3.Future<bool>);
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
 
   @override
-  void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -77,7 +87,7 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
       );
 
   @override
-  void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

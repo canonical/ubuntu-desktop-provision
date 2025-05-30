@@ -176,4 +176,10 @@ class StorageService {
   Future<List<Disk>> reformatDisk(Disk disk) {
     return _client.reformatDiskV2(disk).then(_updateStorage);
   }
+
+  /// Returns the recovery key for CORE_BOOT_ENCRYPTED guided scenarios. Needs
+  /// to be called after [setGuidedStorage].
+  Future<String> getCoreBootRecoveryKey() {
+    return _client.getCoreBootRecoveryKeyV2();
+  }
 }

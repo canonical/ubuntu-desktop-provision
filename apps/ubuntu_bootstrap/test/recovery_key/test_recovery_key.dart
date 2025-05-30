@@ -6,9 +6,13 @@ import 'test_recovery_key.mocks.dart';
 export 'test_recovery_key.mocks.dart';
 
 @GenerateMocks([RecoveryKeyModel])
-RecoveryKeyModel buildRecoveryKeyModel({bool? init}) {
+RecoveryKeyModel buildRecoveryKeyModel({
+  bool? init,
+  String? recoveryKey,
+}) {
   final model = MockRecoveryKeyModel();
   when(model.init()).thenAnswer((_) async => init ?? false);
   when(model.confirmed).thenReturn(true);
+  when(model.recoveryKey).thenReturn(recoveryKey ?? '');
   return model;
 }
