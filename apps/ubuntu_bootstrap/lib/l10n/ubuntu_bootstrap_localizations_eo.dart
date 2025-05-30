@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Mi komprenas, ke mi povos perdi ĉiom da miaj datenoj, se mi ne havos restaŭran ŝlosilon';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Lerni plu';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

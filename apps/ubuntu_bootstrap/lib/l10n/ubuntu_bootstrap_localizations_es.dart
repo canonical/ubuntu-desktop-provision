@@ -349,7 +349,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Todos los datos y particiones en el disco serán borradas, incluyendo es sistema operativo.';
+  String get installationTypeEraseInfo => 'Todos los datos y particiones en el disco serán borradas, incluyendo el sistema operativo.';
 
   @override
   String get installationTypeAdvancedLabel => 'Mostrar opciones avanzadas…';
@@ -450,7 +450,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Elimine $os e instañe $product';
+    return 'Elimine $os e instale $product';
   }
 
   @override
@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Comprendo que puedo perder todos mis datos si no tengo una clave de recuperación';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Saber más';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

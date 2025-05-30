@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Tuigim go mb\'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Foghlaim níos mó';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

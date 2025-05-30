@@ -9,95 +9,95 @@ class FactoryResetToolsLocalizationsKm extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsKm([String locale = 'km']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'ឧបករណ៍កំណត់ឡើងវិញពីរោងចក្រ';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'ឧបករណ៍កំណត់ឡើងវិញពីរោងចក្រ';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'តើអ្នកចង់ធ្វើអ្វី?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'បង្កើតប្រព័ន្ធផ្សព្វផ្សាយកំណត់ឡើងវិញ';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'ចាប់ផ្តើមកំណត់រោងចក្រឡើងវិញ';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'បង្កើតមេឌៀកំណត់ USB ឡើងវិញ';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'បង្កើតមេឌៀកំណត់ USB ឡើងវិញ ដើម្បីស្ដារប្រព័ន្ធ ក៏ដូចជាការប្ដូរការដំឡើង Ubuntu របស់អ្នកតាមបំណង។';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'ជ្រើសរើស USB flash drive ។ ដ្រាយវ៍ត្រូវតែមាន **ទំហំផ្ទុកយ៉ាងហោចណាស់ 16GB។**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'ថាសហ្វ្លាសនឹងត្រូវបានធ្វើកំណែទម្រង់ ហើយទិន្នន័យទាំងអស់នៅលើដ្រាយនឹងបាត់បង់។';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'ឧបករណ៍ផ្ទុក USB កំណត់ឡើងវិញ';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'មិនបានរកឃើញកន្លែងផ្ទុកដែលអាចដកចេញបានទេ';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'អ្នកត្រូវការកន្លែងផ្ទុក USB ដើម្បីបង្កើតមេឌៀកំណត់ឡើងវិញពីរោងចក្រ។';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'ជ្រើសរើសជម្រើសមួយដើម្បីចាប់ផ្តើមកំណត់ដូចរោងចក្រឡើងវិញ';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'សូមរង់ចាំខណៈពេលដែលយើងទៅយកថាស។';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'ឧបករណ៍ផ្ទុក USB កំណត់ឡើងវិញគឺរួចរាល់';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'នៅពេលអ្នកចង់ប្រើវា សូមបញ្ចូល USB drive ទៅក្នុងកុំព្យូទ័រដែលអ្នកចង់កំណត់ឡើងវិញ ហើយចាប់ផ្តើមវាឡើងវិញ។';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'កំហុស​មួយ​បាន​កើត​ឡើង​ពេល​ទៅ​យក​ថាស។';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'ការចាប់ផ្តើម';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'ការចម្លង';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'ការបញ្ចប់';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'បានបញ្ចប់';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'បានបរាជ័យ';
 
   @override
-  String get error => 'Error';
+  String get error => 'កំហុស';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'កំពុង​ដំណើរការ...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'ការព្រមាន';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'ស្តារឡើងវិញ';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'ចាប់ផ្ដើមឡើងវិញ';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'សម្អាតឡើងវិញ';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'បរាជ័យក្នុងការដំណើរការពាក្យបញ្ជា';
 
   @override
-  String get close => 'Close';
+  String get close => 'បិទ';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'យល់ព្រម';
 }

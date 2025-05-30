@@ -224,7 +224,7 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get privacyLocationTitle => '是否開啟地理位置服務？';
 
   @override
-  String get privacyLocationSubtitle => '讓應用軟體知道您的地理位置，\n您可以在「系統設定」中隨時變更。';
+  String get privacyLocationSubtitle => '讓應用程式知道您的地理位置，\n您可以在「系統設定」中隨時變更。';
 
   @override
   String get privacyLocationEnable => '地理位置';

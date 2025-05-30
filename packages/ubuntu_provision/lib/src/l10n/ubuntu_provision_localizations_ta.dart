@@ -13,12 +13,12 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO இல் அணுகல்தன்மை';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'அமைப்பதற்கு முன் உங்கள் தேவைக்கேற்ப $DISTRO-ஐத் தனிப்பயனாக்குங்கள். பின்னர் அவற்றை முறைமை அமைப்புகளில் மாற்றலாம்.';
   }
 
   @override
@@ -67,11 +67,11 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'ஏதோ தவறு நடந்தது';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'மன்னிக்கவும், ஆனால் பிழை என்னவென்று எங்களுக்குத் தெரியவில்லை. உங்கள் கணினியை மறுதொடக்கம் செய்து நிறுவல் செயல்முறையை மீண்டும் தொடங்கலாம். நீங்கள் <a>சிக்கலைப் புகாரளிக்கலாம்</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'தொடர்புடைய பிழைத்திருத்தத் தகவல்களுடன் தானியங்கி பிழை அறிக்கையை அனுப்ப, தயவுசெய்து <pre>sudo ubuntu-bug $SNAP</pre> ஐ ஒரு முனையத்தில் அல்லது கட்டளை கன்சோலில் (Alt+F2) இயக்கவும்.';
   }
 
   @override
@@ -99,7 +99,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'விசைப்பலகை அமைப்பு';
 
   @override
-  String get keyboardHeader => 'உங்களின் விசைப்பலகை அமைப்பைத் தேர்வு செய்யவும்:';
+  String get keyboardHeader => 'உங்களின் விசைப்பலகை அமைப்பைத் தேர்வு செய்';
 
   @override
   String get keyboardTestHint => 'உங்கள் விசைப்பலகையை சோதிக்க இங்கு தட்டச்சு செய்யவும்';
@@ -133,14 +133,14 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO க்கு வருக';
   }
 
   @override
   String get localeHeader => 'உங்கள் மொழியைத் தேர்வுசெய்க:';
 
   @override
-  String get identityPageTitle => 'நீங்கள் யார்?';
+  String get identityPageTitle => 'உங்கள் கணக்கை உருவாக்கு';
 
   @override
   String get identityAutoLogin => 'தானியங்கியாக உள்நுழையவும்';
@@ -280,7 +280,7 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => 'செயலில் உள்ள கோப்பகத்திற்கான இணைப்பை உள்ளமைப்பதில் பிழை';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'மன்னிக்கவும், தற்போது ஆக்டிவ் டைரக்டரியை அமைக்க முடியாது. உங்கள் சிஸ்டம் இயங்கத் தொடங்கியதும், உதவிக்கு <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> ஐப் பார்வையிடவும்.';
 
   @override
   String get networkPageTitle => 'இணைய இணைப்பு';

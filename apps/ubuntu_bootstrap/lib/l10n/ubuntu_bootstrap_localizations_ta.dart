@@ -9,7 +9,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appTitle => 'உபுண்டு டெச்க்டாப் நிறுவி';
+  String get appTitle => 'உபுண்டு பணிமேடை நிறுவி';
 
   @override
   String windowTitle(String RELEASE) {
@@ -91,7 +91,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectOption => 'ஆட்டோஇன்ச்டால் கோப்புடன் தானியங்கி';
 
   @override
-  String get autoinstallDirectDescription => 'நிலையான மற்றும் மீண்டும் மீண்டும் செய்யக்கூடிய கணினி அமைப்புகளுக்கு ஆட்டோஇன்ச்டால்.யாம்லைக் கொண்ட மேம்பட்ட பயனர்களுக்கு.';
+  String get autoinstallDirectDescription => 'நிலையான மற்றும் மீண்டும் நிகழகூடிய கணினி அமைப்புகளுக்கு ஆட்டோஇன்ச்டால்.யாம்லைக் கொண்ட மேம்பட்ட பயனர்களுக்கு.';
 
   @override
   String get autoinstallLandscapeOption => 'நிலப்பரப்புடன் தானியங்கி';
@@ -107,7 +107,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO வருக';
   }
 
   @override
@@ -120,7 +120,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return '$DISTRO முயற்சி அல்லது நிறுவு';
   }
 
   @override
@@ -425,12 +425,12 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return '$os பக்கதில் $product நிறுவு';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return '$os1 மற்றும் $os2 பக்கத்தில் $product நிறுவு';
   }
 
   @override
@@ -445,7 +445,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+    return '$product-க்கான அளவை மாற்றவும் இடத்தை உருவாக்கவும் ஒரு பகிர்வைத் தேர்ந்தெடுக்கவும். துவக்கத்தின் போது உங்கள் இயக்க முறைமையைத் தேர்வுசெய்யலாம்.';
   }
 
   @override
@@ -528,7 +528,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$mountpoint-க்கு $format என்பது ஆதரிக்கப்படும் கோப்பு முறைமை அல்ல';
   }
 
   @override
@@ -695,17 +695,17 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return '$mountpoint க்குப் பயன்படுத்தப்படும் $format ஆக உருவாக்கப்பட்டு வடிவமைக்கப்பட்டது';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '$mountpoint க்குப் பயன்படுத்தப்படும் $format ஆக வடிவமைக்கப்பட்டது';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return '$mountpointக்கு பயன்படுத்தப்பட்டது';
   }
 
   @override
@@ -728,7 +728,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return '$system இல் மீண்டும் துவக்கவும்';
   }
 
   @override
@@ -799,12 +799,12 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return '$DISTRO இன் சமீபத்திய பதிப்பு கணினிமயமாக்கலை முன்னெப்போதையும் விட எளிதாக்குகிறது.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'நீங்கள் ஒரு டெவலப்பர், படைப்பாளர், விளையாட்டாளர் அல்லது நிர்வாகியாக இருந்தாலும் சரி, உங்கள் உற்பத்தித்திறனை மேம்படுத்தவும் உங்கள் அனுபவத்தை மேம்படுத்தவும் $RELEASE இல் புதிய கருவிகளைக் காண்பீர்கள்.';
   }
 
   @override
@@ -828,7 +828,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'நீங்கள் ஒரு அனிமேட்டர், வடிவமைப்பாளர், வீடியோ படைப்பாளர் அல்லது விளையாட்டு உருவாக்குநராக இருந்தால், திறந்த மூல மற்றும் தொழில்துறை தரநிலை மென்பொருள் மற்றும் பயன்பாடுகளுக்கான ஆதரவுடன் உங்கள் பணிப்பாய்வுகளை $DISTRO க்குக் கொண்டு வருவது எளிது.';
   }
 
   @override
@@ -836,7 +836,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return 'செயல்திறன் மற்றும் இணக்கத்தன்மையை மேம்படுத்த $DISTRO சமீபத்திய NVIDIA மற்றும் Mesa இயக்கிகளை ஆதரிக்கிறது. கூடுதல் உள்ளமைவு இல்லாமல் Steam போன்ற பயன்பாடுகள் வழியாக ஆயிரக்கணக்கான Windows தலைப்புகள் $DISTRO இல் சிறப்பாக இயங்குகின்றன.';
   }
 
   @override
@@ -844,7 +844,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return 'ஆன்லைனில் தனிப்பட்டதாகவும் பாதுகாப்பாகவும் இருக்க உங்களுக்குத் தேவையான அனைத்து கருவிகளையும் $DISTRO வழங்குகிறது. உள்ளமைக்கப்பட்ட ஃபயர்வால் மற்றும் VPN ஆதரவு மற்றும் உங்கள் தரவின் முழு கட்டுப்பாட்டிலும் நீங்கள் இருப்பதை உறுதிசெய்ய ஏராளமான தனியுரிமை மையப்படுத்தப்பட்ட பயன்பாடுகளுடன்.';
   }
 
   @override
@@ -1080,7 +1080,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
+    return 'நீங்கள் முதலில் $distro இல் உள்நுழைந்தவுடன் ஒரு மீட்பு விசையைப் பெற்று, அதை எங்காவது பாதுகாப்பான இடத்தில் சேமிக்கவும்.';
   }
 
   @override
@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'என்னிடம் மீட்பு விசை இல்லையென்றால் எனது எல்லா தரவையும் இழக்க நேரிடும் என்பதை நான் புரிந்துகொள்கிறேன்';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'மேலும் அறிக';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

@@ -960,7 +960,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(String snap) {
-    return 'Uuendame paketti: $snap...';
+    return 'Uuendan paketi andmeid: $snap...';
   }
 
   @override
@@ -976,7 +976,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Uuendame paketti: $snap...';
+    return 'Uuendan paketti: $snap...';
   }
 
   @override
@@ -986,7 +986,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Valmistame paketti ette: $snap...';
+    return 'Valmistan paketti ette: $snap...';
   }
 
   @override
@@ -1006,27 +1006,27 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Peatame paketi teenuseid: $snap...';
+    return 'Peatan paketi teenuseid: $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Eemaldame paketi aliasi: $snap...';
+    return 'Eemaldan paketi aliasi: $snap...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Eemaldame paketi linke: $snap...';
+    return 'Eemaldan paketi linke: $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Uuendame paketi komponente: $snap...';
+    return 'Uuendan paketi komponente: $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Uuendame paketi käsurida süsteemi tuuma jaoks: $snap...';
+    return 'Uuendan paketi käsurida süsteemi tuuma jaoks: $snap...';
   }
 
   @override
@@ -1046,7 +1046,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Ühendame paketi pistikuid ja slotte: $snap...';
+    return 'Ühendan paketi pistikuid ja slotte: $snap...';
   }
 
   @override
@@ -1061,12 +1061,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Käivitame paketi teenuseid: $snap...';
+    return 'Käivitan paketi teenuseid: $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Eemaldame paketi paigaldusandmeid: $snap...';
+    return 'Eemaldan paketi paigaldusandmeid: $snap...';
   }
 
   @override
@@ -1093,7 +1093,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get recoveryKeyConfirmation => 'Ma mõistan, et ilma taastevõtmeta võin kaotada ligipääsu kõikidele oma andmetele';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Lisateave';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
