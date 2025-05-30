@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Vous risquez de perdre toutes vos données sans clé de récupération';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Obtenez une clé de récupération dès que vous vous connectez à $distro et conservez-la en lieu sûr.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Pour obtenir une clé de récupération, terminer l’installation, redémarrer votre ordinateur puis exécuter cette commande dans le terminal :';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Stocker la clé de récupération en lieu sûr. Utilisez-la pour déchiffrer le disque en cas de certains changements du système. Par exemple, vous pourriez en avoir besoin si vous changez les composants de votre ordinateur ou mettez à jour le micrologiciel.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'En savoir plus';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

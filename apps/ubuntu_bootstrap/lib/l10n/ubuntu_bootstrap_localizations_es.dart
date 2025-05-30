@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Puede perder todos sus datos sin una clave de recuperación';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Obtenga una clave de recuperación tan pronto como su primer acceso a $distro y almacénela en algún lugar seguro.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Puede obtener una llave de recuperación, complete la instalación, reinicie su equipo, y ejecute este comando dentro del terminal:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Almacene la clave de recuperación donde sea seguro. Utilícela para cifrar el disco en caso de ciertos cambios del sistema. Por ejemplo, puede necesitarlo si cambia los componentes en su equipo o actualice el firmware.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Saber más';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

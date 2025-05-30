@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Ilma taastevõtmeta võid kaotada ligipääsu kõikidele oma andmetele';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Loo oma taastevõti niipea, kui esimest korda logid sisse $distro operatsioonisüsteemi ning palun märgi ta üles ning hoia turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Taastevõtme loomiseks lõpeta paigaldus, käivita arvuti uuesti ning käsurealt käivita järgnev käsk:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Hoia taastevõtit turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis. Mõnede süsteemimuudatuste puhul pead teda kasutama andmekandja dekrüptimiseks. Näiteks võib teda vaja olla, kui muudad oma arvuti raudvaralisi komponente või uuendad püsivara.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Lisateave';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
