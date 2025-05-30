@@ -78,6 +78,16 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
       ) as _i4.Future<bool>);
 
   @override
+  _i4.Future<void> writeRecoveryKey(Uri? uri) => (super.noSuchMethod(
+        Invocation.method(
+          #writeRecoveryKey,
+          [uri],
+        ),
+        returnValue: _i4.Future<void>.value(),
+        returnValueForMissingStub: _i4.Future<void>.value(),
+      ) as _i4.Future<void>);
+
+  @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,

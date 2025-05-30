@@ -9,6 +9,7 @@ import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
 const fdeLink =
@@ -116,8 +117,35 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
         Wrap(
           children: [
             OutlinedButton(
-              // TODO: file picker
-              onPressed: () {},
+              // TODO: proper error handling
+              onPressed: () async {
+                try {
+                  final uri = await showSaveFileDialog(
+                    context: context,
+                    title: 'Save recovery key',
+                    defaultFileName: 'recovery-key.txt',
+                    filters: [
+                      XdgFileChooserFilter('text files', [
+                        XdgFileChooserGlobPattern('*.txt'),
+                      ]),
+                    ],
+                  );
+                  if (uri != null) {
+                    await model.writeRecoveryKey(uri);
+                  }
+                } on Exception catch (e) {
+                  if (context.mounted) {
+                    await showDialog(
+                      context: context,
+                      builder: (_) => AlertDialog(
+                        title: YaruDialogTitleBar(title: Text('Error')),
+                        titlePadding: EdgeInsets.zero,
+                        content: Text(RecoveryKeyException.from(e).toString()),
+                      ),
+                    );
+                  }
+                }
+              },
               child: Text(l10n.recoveryKeySaveToFileLabel),
             ),
             OutlinedButton(

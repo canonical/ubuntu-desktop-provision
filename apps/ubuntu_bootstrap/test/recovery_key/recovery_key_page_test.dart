@@ -24,10 +24,9 @@ void main() {
   }
 
   testWidgets('display recovery key', (tester) async {
-    const recoveryKey = '12345-12345-12345-12345-12345-12345-12345-12345';
-    final model = buildRecoveryKeyModel(recoveryKey: recoveryKey);
+    final model = buildRecoveryKeyModel(recoveryKey: testRecoveryKey);
     await tester.pumpApp((_) => buildPage(model));
 
-    expect(find.text(recoveryKey), findsOneWidget);
+    expect(find.text(testRecoveryKey), findsOneWidget);
   });
 }

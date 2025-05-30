@@ -5,6 +5,7 @@ import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'test_recovery_key.mocks.dart';
 export 'test_recovery_key.mocks.dart';
 
+const testRecoveryKey = '12345-12345-12345-12345-12345-12345-12345-12345';
 @GenerateMocks([RecoveryKeyModel])
 RecoveryKeyModel buildRecoveryKeyModel({
   bool? init,
