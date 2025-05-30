@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Bez klíče pro obnovení můžete přijít o všechna data';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Jakmile se poprvé přihlásíte do $distro, získejte obnovovací klíč a uložte si jej na bezpečném místě.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Pro získání obnovovacího klíče dokončete instalaci, restartujte počítač a v terminálu spusťte tento příkaz:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Uložte si klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Dozvědět se více';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

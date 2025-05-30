@@ -1079,12 +1079,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get recoveryKeyInfoHeader => 'Anda bisa kehilangan semua data Anda tanpa kunci pemulihan';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Dapatkan kunci pemulihan segera setelah Anda log masuk pertama ke $distro dan menyimpannya di suatu tempat aman.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Untuk mendapatkan kunci pemulihan, selesaikan instalasi, restart komputer Anda, dan jalankan perintah ini di terminal:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Simpan kunci pemulihan di suatu tempat aman. Gunakan untuk mengenkripsi disk jika terjadi perubahan sistem tertentu. Misalnya, Anda mungkin perlu jika Anda mengubah komponen di komputer atau memperbarui firmware.';
@@ -1094,6 +1089,20 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

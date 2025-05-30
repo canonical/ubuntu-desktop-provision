@@ -65,7 +65,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
         TextFormField(
           initialValue: model.recoveryKey,
           decoration: InputDecoration(
-            labelText: 'Recovery key',
+            labelText: l10n.recoveryKeyTextFieldLabel,
             suffixIcon: YaruIconButton(
               icon: const Icon(YaruIcons.copy, size: 16),
               onPressed: () {
@@ -95,8 +95,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
             OutlinedButton(
               // TODO: file picker
               onPressed: () {},
-              // TODO: l10n string
-              child: Text('Save to file'),
+              child: Text(l10n.recoveryKeySaveToFileLabel),
             ),
             OutlinedButton(
               onPressed: () => showDialog(
@@ -104,8 +103,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
                 builder: (_) =>
                     _RecoveryKeyDialog(recoveryKey: model.recoveryKey),
               ),
-              // TODO: l10n string
-              child: Text('Show QR code'),
+              child: Text(l10n.recoveryKeyShowQrCodeLabel),
             ),
           ].withSpacing(kWizardSpacing / 2),
         ),
@@ -122,7 +120,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
-class _RecoveryKeyDialog extends StatelessWidget {
+class _RecoveryKeyDialog extends ConsumerWidget {
   const _RecoveryKeyDialog({
     required this.recoveryKey,
   });
@@ -130,34 +128,40 @@ class _RecoveryKeyDialog extends StatelessWidget {
   final String recoveryKey;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+    final flavor = ref.watch(flavorProvider);
     return AlertDialog(
-      title: YaruDialogTitleBar(),
+      title: YaruDialogTitleBar(
+        title: Text(l10n.recoveryKeyQrDialogTitle(flavor.displayName)),
+      ),
       titlePadding: EdgeInsets.zero,
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          BarcodeWidget(
-            margin: const EdgeInsets.symmetric(
-              vertical: kWizardSpacing,
-            ),
-            color: Theme.of(context).colorScheme.onSurface,
-            barcode: Barcode.qrCode(),
-            data: recoveryKey,
-            width: 200,
-            height: 200,
-          ),
-          Text(
-            recoveryKey,
-            style: TextStyle(
-              inherit: false,
-              fontFamily: 'Ubuntu Mono',
-              fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
-              textBaseline: TextBaseline.alphabetic,
+      content: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: 500),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(l10n.recoveryKeyQrDialogBody),
+            BarcodeWidget(
+              margin: const EdgeInsets.all(2 * kWizardSpacing),
               color: Theme.of(context).colorScheme.onSurface,
+              barcode: Barcode.qrCode(),
+              data: recoveryKey,
+              width: 200,
+              height: 200,
             ),
-          ),
-        ],
+            Text(
+              recoveryKey,
+              style: TextStyle(
+                inherit: false,
+                fontFamily: 'Ubuntu Mono',
+                fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
+                textBaseline: TextBaseline.alphabetic,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

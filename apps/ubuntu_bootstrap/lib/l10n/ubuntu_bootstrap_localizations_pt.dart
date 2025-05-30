@@ -1073,27 +1073,36 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Chave de recuperação TPM';
 
   @override
-  String get recoveryKeyHeader => 'Get a recovery key';
+  String get recoveryKeyHeader => 'Save your recovery key';
 
   @override
   String get recoveryKeyInfoHeader => 'You may lose all your data without a recovery key';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Get a recovery key as soon as you first log into $distro and store it somewhere safe.';
-  }
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyCommand => 'Você pode acessar à sua chave de recuperação após a instalação com o seguinte comando:';
+  String get recoveryKeyStorageAdvice => 'If decryption fails during startup, you will need to provide this recovery key. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.';
-
-  @override
-  String get recoveryKeyConfirmation => 'I understand I may lose all my data if I don\'t have a recovery key';
+  String get recoveryKeyConfirmation => 'I saved my recovery key somewhere safe';
 
   @override
   String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -2053,7 +2062,4 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get recoveryKeyTitle => 'Chave de recuperação do TPM';
-
-  @override
-  String get recoveryKeyCommand => 'Você pode acessar sua chave de recuperação após a instalação com o seguinte comando:';
 }
