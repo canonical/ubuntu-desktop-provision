@@ -26,6 +26,20 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
     return ref.read(recoveryKeyModelProvider).init();
   }
 
+  void saveToClipboard(BuildContext context, String text) {
+    Clipboard.setData(
+      ClipboardData(text: text),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          UbuntuBootstrapLocalizations.of(context)
+              .recoveryKeyClipboardNotifiaction,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -62,33 +76,36 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
             ),
           ],
         ),
-        TextFormField(
-          initialValue: model.recoveryKey,
-          decoration: InputDecoration(
-            labelText: l10n.recoveryKeyTextFieldLabel,
-            suffixIcon: YaruIconButton(
-              icon: const Icon(YaruIcons.copy, size: 16),
-              onPressed: () {
-                Clipboard.setData(
-                  ClipboardData(text: model.recoveryKey),
-                );
-              },
-            ),
-            suffixIconConstraints: BoxConstraints(
-              maxWidth: 32,
-              maxHeight: 32,
-            ),
-          ),
-          readOnly: true,
-          minLines: 1,
-          maxLines: 2,
-          style: TextStyle(
-            inherit: false,
-            fontFamily: 'Ubuntu Mono',
-            fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
-            textBaseline: TextBaseline.alphabetic,
-            color: Theme.of(context).colorScheme.onSurface,
-          ),
+        Builder(
+          // This builder is needed to access the build context that contains
+          // the ScaffoldMessenger to display the Snackbar
+          builder: (context) {
+            return TextFormField(
+              onTap: () => saveToClipboard(context, model.recoveryKey),
+              initialValue: model.recoveryKey,
+              decoration: InputDecoration(
+                labelText: l10n.recoveryKeyTextFieldLabel,
+                suffixIcon: YaruIconButton(
+                  icon: const Icon(YaruIcons.copy, size: 16),
+                  onPressed: () => saveToClipboard(context, model.recoveryKey),
+                ),
+                suffixIconConstraints: BoxConstraints(
+                  maxWidth: 32,
+                  maxHeight: 32,
+                ),
+              ),
+              readOnly: true,
+              minLines: 1,
+              maxLines: 2,
+              style: TextStyle(
+                inherit: false,
+                fontFamily: 'Ubuntu Mono',
+                fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
+                textBaseline: TextBaseline.alphabetic,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+            );
+          },
         ),
         Wrap(
           children: [
