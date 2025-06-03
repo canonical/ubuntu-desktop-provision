@@ -917,10 +917,11 @@
     }
   },
   "recoveryKeyTitle": "Recovery key",
+  "recoveryKeyTitleBadgeLabel": "Important",
   "recoveryKeyHeader": "Save your recovery key",
   "recoveryKeyInfoHeader": "You may lose all your data without a recovery key",
   "recoveryKeyTextFieldLabel": "Recovery key",
-  "recoveryKeyStorageAdvice": "If decryption fails during startup, you will need to provide this recovery key. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.",
+  "recoveryKeyStorageAdvice": "You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.",
   "recoveryKeyConfirmation": "I saved my recovery key somewhere safe",
   "recoveryKeyLinkLabel": "Learn more",
   "recoveryKeySaveToFileLabel": "Save to file",
@@ -933,7 +934,8 @@
       }
     }
   },
-  "recoveryKeyQrDialogBody": "Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.",
+  "recoveryKeyQrDialogBody": "Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.",
+  "recoveryKeyClipboardNotifiaction": "Copied to clipboard",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "placeholders": {

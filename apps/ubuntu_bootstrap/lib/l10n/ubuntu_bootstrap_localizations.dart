@@ -2039,6 +2039,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Recovery key'**
   String get recoveryKeyTitle;
 
+  /// No description provided for @recoveryKeyTitleBadgeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Important'**
+  String get recoveryKeyTitleBadgeLabel;
+
   /// No description provided for @recoveryKeyHeader.
   ///
   /// In en, this message translates to:
@@ -2060,7 +2066,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @recoveryKeyStorageAdvice.
   ///
   /// In en, this message translates to:
-  /// **'If decryption fails during startup, you will need to provide this recovery key. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.'**
+  /// **'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.'**
   String get recoveryKeyStorageAdvice;
 
   /// No description provided for @recoveryKeyConfirmation.
@@ -2096,8 +2102,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @recoveryKeyQrDialogBody.
   ///
   /// In en, this message translates to:
-  /// **'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.'**
+  /// **'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.'**
   String get recoveryKeyQrDialogBody;
+
+  /// No description provided for @recoveryKeyClipboardNotifiaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied to clipboard'**
+  String get recoveryKeyClipboardNotifiaction;
 
   /// No description provided for @landscapeMagicAttachInstructions.
   ///

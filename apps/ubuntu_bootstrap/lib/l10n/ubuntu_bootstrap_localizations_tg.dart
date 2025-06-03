@@ -1073,6 +1073,9 @@ class UbuntuBootstrapLocalizationsTg extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Recovery key';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => 'Save your recovery key';
 
   @override
@@ -1082,7 +1085,7 @@ class UbuntuBootstrapLocalizationsTg extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyStorageAdvice => 'If decryption fails during startup, you will need to provide this recovery key. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+  String get recoveryKeyStorageAdvice => 'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
 
   @override
   String get recoveryKeyConfirmation => 'I saved my recovery key somewhere safe';
@@ -1102,7 +1105,10 @@ class UbuntuBootstrapLocalizationsTg extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe and accessible, such as a password manager. You can also take a photo for later use.';
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
