@@ -138,6 +138,8 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           title: Text(
             l10n.recoveryKeyConfirmation,
             maxLines: 2,
+            // TODO: remove hardcoded style once this is avialable in yaru.
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           value: model.confirmed,
           onChanged: model.setConfirmed,
