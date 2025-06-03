@@ -1,14 +1,20 @@
+import 'dart:io';
+
 import 'package:file/file.dart';
 import 'package:file/local.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services/storage_service.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 
 part 'recovery_key_model.freezed.dart';
+
+final _log = Logger('recovery_key_model');
 
 final recoveryKeyModelProvider = ChangeNotifierProvider(
   (_) => RecoveryKeyModel(storage: getService<StorageService>()),
@@ -35,11 +41,15 @@ class RecoveryKeyModel extends SafeChangeNotifier {
   RecoveryKeyModel({
     required StorageService storage,
     @visibleForTesting FileSystem? fileSystem,
+    @visibleForTesting
+    Future<ProcessResult> Function(String, List<String>)? runProcess,
   })  : _storage = storage,
-        _fs = fileSystem ?? LocalFileSystem();
+        _fs = fileSystem ?? LocalFileSystem(),
+        _runProcess = runProcess ?? Process.run;
 
   final StorageService _storage;
   final FileSystem _fs;
+  final Future<ProcessResult> Function(String, List<String>) _runProcess;
 
   var _confirmed = false;
   bool get confirmed => _confirmed;
@@ -66,8 +76,22 @@ class RecoveryKeyModel extends SafeChangeNotifier {
     return true;
   }
 
+  Future<String?> _findFileSystem(Uri uri) async {
+    final result = await _runProcess(
+      'findmnt',
+      ['-no', 'SOURCE', '-T', p.dirname(uri.path)],
+    );
+    if (result.exitCode != 0) {
+      _log.error('error running findmnt: ${result.stdout} ${result.stderr}');
+      return null;
+    }
+
+    return (result.stdout as String?)?.trim();
+  }
+
   Future<void> writeRecoveryKey(Uri uri) async {
-    if (uri.pathSegments.first == 'target') {
+    if (uri.pathSegments.first == 'target' ||
+        await _findFileSystem(uri) == '/cow') {
       throw RecoveryKeyException.disallowedPath();
     }
     await _fs.file(uri.path).writeAsString(_recoveryKey);
