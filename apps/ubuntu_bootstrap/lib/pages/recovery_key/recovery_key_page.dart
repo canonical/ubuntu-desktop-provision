@@ -48,6 +48,16 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: l10n.recoveryKeyTitle,
       title: l10n.recoveryKeyHeader,
+      trailingTitleWidget: Expanded(
+        child: Row(
+          children: [
+            YaruInfoBadge(
+              title: Text(l10n.recoveryKeyTitleBadgeLabel),
+              yaruInfoType: YaruInfoType.danger,
+            ),
+          ],
+        ),
+      ),
       bottomBar: WizardBar(
         trailing: [
           NextWizardButton(
