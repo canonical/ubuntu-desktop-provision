@@ -60,11 +60,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
       ),
       bottomBar: WizardBar(
         trailing: [
-          NextWizardButton(
-            enabled: ref.watch(
-              recoveryKeyModelProvider.select((model) => model.confirmed),
-            ),
-          ),
+          NextWizardButton(enabled: model.confirmed),
         ],
       ),
       children: <Widget>[
