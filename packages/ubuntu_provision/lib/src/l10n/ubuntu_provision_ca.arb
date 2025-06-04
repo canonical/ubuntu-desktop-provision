@@ -78,5 +78,15 @@
   "close": "Tanca",
   "@close": {},
   "restart": "Reinicia",
-  "@restart": {}
+  "@restart": {},
+  "accessibilityPageTitle": "Accessibilitat",
+  "@accessibilityPageTitle": {},
+  "accessibilityPageHeader": "Accessibilitat a {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  }
 }
