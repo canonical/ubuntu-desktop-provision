@@ -380,7 +380,7 @@
   "@refreshSnapSetupAliases": {},
   "refreshSnapStartServices": "Spúšťajú sa služby {snap}...",
   "@refreshSnapStartServices": {},
-  "recoveryKeyTitle": "TPM kľúč na obnovenie",
+  "recoveryKeyTitle": "Obnovovací kľúč",
   "@recoveryKeyTitle": {},
   "refreshSnapCleanup": "Čistí sa {snap}...",
   "@refreshSnapCleanup": {},
@@ -618,13 +618,13 @@
   "@chooseOptionalPassphraseHeader": {},
   "chooseOptionalPassphraseInfoHeader": "Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto",
   "@chooseOptionalPassphraseInfoHeader": {},
-  "recoveryKeyHeader": "Získanie obnovovacieho kľúča",
+  "recoveryKeyHeader": "Uložte si svoj obnovovací kľúč",
   "@recoveryKeyHeader": {},
-  "recoveryKeyStorageAdvice": "Uložte obnovovací kľúč na bezpečné miesto. Použite ho na dešifrovanie disku v prípade určitých zmien v systéme. Napríklad ho môžete potrebovať, ak zmeníte komponenty vo vašom počítači alebo aktualizujete firmvér.",
+  "recoveryKeyStorageAdvice": "Tento obnovovací kľúč budete potrebovať, ak dešifrovanie pri štarte zlyhá. Bez tohto kľúča stratíte prístup ku všetkým svojim údajom. Uložte si ho na bezpečné miesto, napríklad do správcu hesiel.",
   "@recoveryKeyStorageAdvice": {},
   "recoveryKeyInfoHeader": "Bez obnovovacieho kľúča môžete prísť o všetky svoje údaje",
   "@recoveryKeyInfoHeader": {},
-  "recoveryKeyConfirmation": "Rozumiem, že môžem prísť o všetky svoje údaje, ak nebudem mať obnovovací kľúč",
+  "recoveryKeyConfirmation": "Uložil som si svoj obnovovací kľúč na bezpečné miesto",
   "@recoveryKeyConfirmation": {},
   "chooseOptionalPassphraseInfoBody": "Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje. Prístupová fráza nenahrádza obnovovací kľúč ani vaše používateľské heslo.",
   "@chooseOptionalPassphraseInfoBody": {},
@@ -685,5 +685,25 @@
   "landscapeConfirmPageSuccessInfoTitle": "Ubuntu bude nainštalované podľa nastavení určených vašou organizáciou",
   "@landscapeConfirmPageSuccessInfoTitle": {},
   "recoveryKeyLinkLabel": "Zistiť viac",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "Obnovovací kľúč",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeySaveToFileLabel": "Uložiť do súboru",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "Zobraziť QR kód",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyClipboardNotifiaction": "Skopírované do schránky",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop – Obnovovací kľúč",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Naskenujte QR kód, aby ste skopírovali obnovovací kľúč a uložili si ho na bezpečné miesto, napríklad do správcu hesiel. Môžete si ho tiež odfotiť pre neskoršie použitie.",
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyTitleBadgeLabel": "Dôležité",
+  "@recoveryKeyTitleBadgeLabel": {}
 }
