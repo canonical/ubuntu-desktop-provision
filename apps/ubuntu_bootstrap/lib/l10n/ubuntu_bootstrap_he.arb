@@ -402,7 +402,7 @@
   "@refreshSnapStartServices": {},
   "refreshSnapCleanup": "{snap} מתפנה…",
   "@refreshSnapCleanup": {},
-  "recoveryKeyTitle": "מפתח שחזור TPM",
+  "recoveryKeyTitle": "מפתח שחזור",
   "@recoveryKeyTitle": {},
   "refreshUpdating": "{snap} מתעדכן…",
   "@refreshUpdating": {},
@@ -580,13 +580,13 @@
   "@chooseOptionalPassphraseInfoHeader": {},
   "chooseOptionalPassphraseInfoBody": "אובדן מילת הצופן שלך תוביל לאובדן כל הנתונים שלך. מילת הצופן אינה מחליפה את קוד השחזור או את הסיסמה שלך.",
   "@chooseOptionalPassphraseInfoBody": {},
-  "recoveryKeyHeader": "קבלת קוד שחזור",
+  "recoveryKeyHeader": "לשמור את מפתח השחזור שלך",
   "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "הנתונים שלך עלולים ללכת לאיבוד ללא מפתח שחזור",
   "@recoveryKeyInfoHeader": {},
   "recoveryKeyInfoBody": "אפשר לקבל מפתח שחזור עם הכניסה הראשונה ל־{distro} ולאחסן אותו במקום בטוח.",
   "@recoveryKeyInfoBody": {},
-  "recoveryKeyConfirmation": "ברור לי שכל הנתונים שלי יאבדו אם אין לי מפתח שחזור",
+  "recoveryKeyConfirmation": "שמרתי את מפתח השחזור שלי במקום בטוח",
   "@recoveryKeyConfirmation": {},
   "landscapeMagicAttachInstructions": "נא לסרוק את ה־QR או למלא את הקוד להלן דרך <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {},
@@ -630,7 +630,7 @@
   "@autoinstallDirectDescription": {},
   "rstDisable": "המחשב שלך משתמש ב־RST (טכנולוגיית אחסון מהיר) של אינטל. אפשר להשבית את RST דרך:",
   "@rstDisable": {},
-  "recoveryKeyStorageAdvice": "יש לאחסן את מפתח השחזור במקום אחר. אפשר להשתמש בו כדי להצפין את הכונן במקרה של שינויים מסוימים במערכת. למשל, יכול להיות שהוא נחוץ במקרה של שינוי הרכיבים במחשב שלך או שדרוג קושחה.",
+  "recoveryKeyStorageAdvice": "את המפתח הזה צריך לספק אם פענוח ההצפנה נכשל במהלך העלייה. ללא המפתח, הגישה שלך לכל הנתונים שלך תלך לאיבוד. כדאי לשמור אותו במקום בטוח, כגון מנהל סיסמאות.",
   "@recoveryKeyStorageAdvice": {},
   "landscapeDomainInstructions": "נא לספק את שם התחום של הארגון שלך ב־Landscape כדי להיכנס ולמשוך קובץ התקנה אוטומטית (autoinstall). אפשר לקבל את שם התחום המלא (FQDN) שלך מתמיכת המחשוב.",
   "@landscapeDomainInstructions": {},
@@ -687,5 +687,25 @@
   "landscapeConfirmPageSuccessInfoContent": "אפשר לסקור את קובץ ההתקנה האוטומטית (autoinstall) מ־Landscape להלן.",
   "@landscapeConfirmPageSuccessInfoContent": {},
   "recoveryKeyLinkLabel": "מידע נוסף",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "מפתח שחזור",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeySaveToFileLabel": "שמירה לקובץ",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "הצגת קוד QR",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} לשולחן העבודה - מפתח שחזור",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "יש לסרוק את קוד ה־QR כדי להעתיק את מפתח השחזור ולשמור אותו במקום בטוח כגון מנהל סיסמאות. אפשר גם לצלם אותו לשימוש עתידי.",
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyClipboardNotifiaction": "הועתק ללוח הגזירים",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyTitleBadgeLabel": "חשוב",
+  "@recoveryKeyTitleBadgeLabel": {}
 }
