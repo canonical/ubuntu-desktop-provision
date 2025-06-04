@@ -528,7 +528,7 @@
   "@refreshSnapSetupAliases": {},
   "refreshSnapStartServices": "Seirbhísí {snap} á thosú...",
   "@refreshSnapStartServices": {},
-  "recoveryKeyTitle": "Eochair aisghabhála TPM",
+  "recoveryKeyTitle": "Eochair aisghabhála",
   "@recoveryKeyTitle": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Rabhadh:</font> Má chailleann tú an eochair shlándála seo, caillfear na sonraí go léir. Más gá duit, scríobh síos d’eochair agus coinnigh in áit shábháilte í.",
   "@recoveryKeyWarning": {},
@@ -582,7 +582,7 @@
   "@autoinstallDirectDescription": {},
   "chooseOptionalPassphraseBody": "Is féidir le pasfhrása cabhrú le do shonraí a chosaint fiú má chuirtear isteach ar do chrua-earraí. Beidh ort an pasfhrása a chur isteach gach uair a chasann tú ar do ríomhaire. Ní bheidh tú in ann é a bhaint níos déanaí",
   "@chooseOptionalPassphraseBody": {},
-  "recoveryKeyHeader": "Faigh eochair athshlánaithe",
+  "recoveryKeyHeader": "Sábháil d'eochair aisghabhála",
   "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe",
   "@recoveryKeyInfoHeader": {},
@@ -590,7 +590,7 @@
   "@autoinstallLandscapeOption": {},
   "autoinstallLandscapeDescription": "D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.",
   "@autoinstallLandscapeDescription": {},
-  "recoveryKeyStorageAdvice": "Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.",
+  "recoveryKeyStorageAdvice": "Beidh ort an eochair aisghabhála seo a sholáthar má theipeann ar an díchriptiú le linn an tosaithe. Gan an eochair, caillfidh tú rochtain ar do chuid sonraí go léir. Sábháil é in áit shábháilte, amhail bainisteoir pasfhocal.",
   "@recoveryKeyStorageAdvice": {},
   "landscapePageTitle": "Suiteáil uathoibrithe",
   "@landscapePageTitle": {},
@@ -612,7 +612,7 @@
   "@chooseOptionalPassphraseInfoBody": {},
   "recoveryKeyInfoBody": "Faigh eochair athshlánaithe chomh luath agus a logálann tú isteach i {distro} den chéad uair agus stóráil áit éigin sábháilte í.",
   "@recoveryKeyInfoBody": {},
-  "recoveryKeyConfirmation": "Tuigim go mb'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam",
+  "recoveryKeyConfirmation": "Shábháil mé m'eochair aisghabhála in áit shábháilte",
   "@recoveryKeyConfirmation": {},
   "landscapeMagicAttachInstructions": "Scan an cód QR nó cuir isteach an cód thíos ag <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {},
@@ -681,5 +681,25 @@
   "landscapeConfirmPageSuccessInfoContent": "Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.",
   "@landscapeConfirmPageSuccessInfoContent": {},
   "recoveryKeyLinkLabel": "Foghlaim níos mó",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "Eochair aisghabhála",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeySaveToFileLabel": "Sábháil chuig comhad",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "Taispeáin cód QR",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyQrDialogTitle": "Deasc {DISTRO} - Eochair aisghabhála",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyClipboardNotifiaction": "Cóipeáilte chuig an ghearrthaisce",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyTitleBadgeLabel": "Tábhachtach",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeyQrDialogBody": "Scan an cód QR chun an eochair aisghabhála a chóipeáil agus í a shábháil in áit shábháilte, amhail bainisteoir pasfhocal. Is féidir leat grianghraf a thógáil freisin lena úsáid níos déanaí.",
+  "@recoveryKeyQrDialogBody": {}
 }
