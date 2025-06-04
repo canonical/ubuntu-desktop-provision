@@ -2036,13 +2036,19 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @recoveryKeyTitle.
   ///
   /// In en, this message translates to:
-  /// **'TPM recovery key'**
+  /// **'Recovery key'**
   String get recoveryKeyTitle;
+
+  /// No description provided for @recoveryKeyTitleBadgeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Important'**
+  String get recoveryKeyTitleBadgeLabel;
 
   /// No description provided for @recoveryKeyHeader.
   ///
   /// In en, this message translates to:
-  /// **'Get a recovery key'**
+  /// **'Save your recovery key'**
   String get recoveryKeyHeader;
 
   /// No description provided for @recoveryKeyInfoHeader.
@@ -2051,28 +2057,22 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'You may lose all your data without a recovery key'**
   String get recoveryKeyInfoHeader;
 
-  /// No description provided for @recoveryKeyInfoBody.
+  /// No description provided for @recoveryKeyTextFieldLabel.
   ///
   /// In en, this message translates to:
-  /// **'Get a recovery key as soon as you first log into {distro} and store it somewhere safe.'**
-  String recoveryKeyInfoBody(String distro);
-
-  /// No description provided for @recoveryKeyCommand.
-  ///
-  /// In en, this message translates to:
-  /// **'To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:'**
-  String get recoveryKeyCommand;
+  /// **'Recovery key'**
+  String get recoveryKeyTextFieldLabel;
 
   /// No description provided for @recoveryKeyStorageAdvice.
   ///
   /// In en, this message translates to:
-  /// **'Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.'**
+  /// **'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.'**
   String get recoveryKeyStorageAdvice;
 
   /// No description provided for @recoveryKeyConfirmation.
   ///
   /// In en, this message translates to:
-  /// **'I understand I may lose all my data if I don\'t have a recovery key'**
+  /// **'I saved my recovery key somewhere safe'**
   String get recoveryKeyConfirmation;
 
   /// No description provided for @recoveryKeyLinkLabel.
@@ -2080,6 +2080,36 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Learn more'**
   String get recoveryKeyLinkLabel;
+
+  /// No description provided for @recoveryKeySaveToFileLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Save to file'**
+  String get recoveryKeySaveToFileLabel;
+
+  /// No description provided for @recoveryKeyShowQrCodeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Show QR code'**
+  String get recoveryKeyShowQrCodeLabel;
+
+  /// No description provided for @recoveryKeyQrDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{DISTRO} Desktop - Recovery key'**
+  String recoveryKeyQrDialogTitle(String DISTRO);
+
+  /// No description provided for @recoveryKeyQrDialogBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.'**
+  String get recoveryKeyQrDialogBody;
+
+  /// No description provided for @recoveryKeyClipboardNotifiaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied to clipboard'**
+  String get recoveryKeyClipboardNotifiaction;
 
   /// No description provided for @landscapeMagicAttachInstructions.
   ///

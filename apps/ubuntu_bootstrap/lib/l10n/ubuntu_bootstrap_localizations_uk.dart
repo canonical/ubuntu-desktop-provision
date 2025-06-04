@@ -1073,18 +1073,16 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Ключ відновлення TPM';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => 'Отримати ключ відновлення';
 
   @override
   String get recoveryKeyInfoHeader => 'Без ключа відновлення ви можете втратити всі свої дані';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Отримайте ключ відновлення одразу після першого входу до $distro і зберігайте його у безпечному місці.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Щоб отримати ключ відновлення, завершіть встановлення, перезапустіть комп\'ютер і виконайте цю команду в терміналі:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Зберігайте ключ відновлення в надійному місці. Використовуйте його, щоб розшифрувати диск у разі певних змін у системі. Наприклад, він може знадобитися, якщо ви заміните компоненти в комп\'ютері або оновите прошивку.';
@@ -1094,6 +1092,23 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Докладніше';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

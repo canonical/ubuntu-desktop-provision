@@ -1073,18 +1073,16 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'டிபிஎம் மீட்பு விசை';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => 'மீட்பு விசையைப் பெறுங்கள்';
 
   @override
   String get recoveryKeyInfoHeader => 'மீட்பு விசை இல்லாமல் உங்கள் எல்லா தரவையும் இழக்க நேரிடும்';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'நீங்கள் முதலில் $distro இல் உள்நுழைந்தவுடன் ஒரு மீட்பு விசையைப் பெற்று, அதை எங்காவது பாதுகாப்பான இடத்தில் சேமிக்கவும்.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'மீட்பு விசையைப் பெற, நிறுவலை முடிக்க, உங்கள் கணினியை மறுதொடக்கம் செய்து, இந்த கட்டளையை முனையத்தில் இயக்கவும்:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'மீட்பு விசையை எங்காவது பாதுகாப்பாக சேமிக்கவும். சில கணினி மாற்றங்கள் ஏற்பட்டால் வட்டு மறைகுறியாக்க இதைப் பயன்படுத்தவும். எடுத்துக்காட்டாக, உங்கள் கணினியில் உள்ள கூறுகளை மாற்றினால் அல்லது ஃபார்ம்வேரைப் புதுப்பித்தால் உங்களுக்குத் தேவைப்படலாம்.';
@@ -1094,6 +1092,23 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'மேலும் அறிக';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

@@ -1073,18 +1073,16 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM-herstelcode';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => 'Herstelcode opvragen';
 
   @override
   String get recoveryKeyInfoHeader => 'Zonder herstelcode kunt u al uw gegevens verliezen';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Vraag een herstelcode op zodra u voor het eerst aanmeldt bij $distro en bewaar deze op een veilige plek.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Om een herstelcode te krijgen, moet u de installatie voltooien, de computer opnieuw opstarten en deze opdracht uitvoeren in de terminal:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. U kunt deze bijvoorbeeld nodig hebben als u bepaalde onderdelen in uw computer vervangt of de firmware bijwerkt.';
@@ -1094,6 +1092,23 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Meer informatie';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

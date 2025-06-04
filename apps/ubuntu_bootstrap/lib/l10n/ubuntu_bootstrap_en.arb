@@ -916,21 +916,26 @@
       }
     }
   },
-  "recoveryKeyTitle": "TPM recovery key",
-  "recoveryKeyHeader": "Get a recovery key",
+  "recoveryKeyTitle": "Recovery key",
+  "recoveryKeyTitleBadgeLabel": "Important",
+  "recoveryKeyHeader": "Save your recovery key",
   "recoveryKeyInfoHeader": "You may lose all your data without a recovery key",
-  "recoveryKeyInfoBody": "Get a recovery key as soon as you first log into {distro} and store it somewhere safe.",
-  "@recoveryKeyInfoBody": {
+  "recoveryKeyTextFieldLabel": "Recovery key",
+  "recoveryKeyStorageAdvice": "You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.",
+  "recoveryKeyConfirmation": "I saved my recovery key somewhere safe",
+  "recoveryKeyLinkLabel": "Learn more",
+  "recoveryKeySaveToFileLabel": "Save to file",
+  "recoveryKeyShowQrCodeLabel": "Show QR code",
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Recovery key",
+  "@recoveryKeyQrDialogTitle": {
     "placeholders": {
-      "distro": {
+      "DISTRO": {
         "type": "String"
       }
     }
   },
-  "recoveryKeyCommand": "To get a recovery key, complete the installation, restart your computer, and run this command in the terminal:",
-  "recoveryKeyStorageAdvice": "Store the recovery key somewhere safe. Use it to decrypt the disk in case of certain system changes. For example, you may need it if you change the components in your computer or update firmware.",
-  "recoveryKeyConfirmation": "I understand I may lose all my data if I don't have a recovery key",
-  "recoveryKeyLinkLabel": "Learn more",
+  "recoveryKeyQrDialogBody": "Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.",
+  "recoveryKeyClipboardNotifiaction": "Copied to clipboard",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "placeholders": {

@@ -1073,18 +1073,16 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM-Wiederherstellungsschlüssel';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => 'Wiederherstellungsschlüssel erhalten';
 
   @override
   String get recoveryKeyInfoHeader => 'Ohne einen Wiederherstellungsschlüssel können Sie alle Ihre Daten verlieren';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Besorgen Sie sich einen Wiederherstellungsschlüssel, sobald Sie sich zum ersten Mal bei $distro anmelden, und bewahren Sie ihn an einem sicheren Ort auf.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Um einen Wiederherstellungsschlüssel zu erhalten, schließen Sie die Installation ab, starten Sie Ihren Computer neu und führen Sie diesen Befehl im Terminal aus:';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Bewahren Sie den Wiederherstellungsschlüssel an einem sicheren Ort auf. Verwenden Sie ihn zum Entschlüsseln der Festplatte im Falle bestimmter Systemänderungen. Sie benötigen ihn zum Beispiel, wenn Sie die Komponenten in Ihrem Computer ändern oder die Firmware aktualisieren.';
@@ -1094,6 +1092,23 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Mehr erfahren';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

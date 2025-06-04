@@ -6,6 +6,7 @@ import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
 class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
@@ -53,15 +54,27 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         Row(
           children: [
             OutlinedButton(
-              onPressed: () => Navigator.of(context, rootNavigator: true).push(
-                DialogRoute(
-                  context: context,
-                  builder: (_) => _FilePicker(
+              onPressed: () async {
+                try {
+                  final uri = await showOpenFileDialog(
+                    context: context,
                     title: lang.autoinstallDirectFilePickerTitle,
-                    filterLabel: lang.autoinstallDirectFilePickerFilterLabel,
-                  ),
-                ),
-              ),
+                    filters: [
+                      XdgFileChooserFilter(
+                        lang.autoinstallDirectFilePickerFilterLabel,
+                        [
+                          XdgFileChooserGlobPattern('*.yaml'),
+                          XdgFileChooserGlobPattern('*.yml'),
+                          XdgFileChooserMimeTypePattern('application/yaml'),
+                        ],
+                      ),
+                    ],
+                  );
+                  notifier.setLocalPath(uri);
+                } on XdgPortalRequestFailedException catch (e) {
+                  notifier.setError(e);
+                }
+              },
               child: Text(lang.autoinstallDirectFileButtonLabel),
             ),
             if (directModel.localPath != null) ...[
@@ -88,43 +101,6 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         ),
       ],
     );
-  }
-}
-
-// Custom file picker widget that displays a non-dismissable `ModalBarrier` while awaiting the
-// response from `pickLocalFile`
-class _FilePicker extends ConsumerStatefulWidget {
-  const _FilePicker({
-    required this.title,
-    required this.filterLabel,
-  });
-
-  final String title;
-  final String filterLabel;
-
-  @override
-  ConsumerState<_FilePicker> createState() => _FilePickerState();
-}
-
-class _FilePickerState extends ConsumerState<_FilePicker> {
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) => showPicker());
-  }
-
-  Future<void> showPicker() async {
-    await ref
-        .read(autoinstallDirectModelProvider.notifier)
-        .pickLocalFile(widget.title, widget.filterLabel);
-    if (mounted) {
-      Navigator.of(context).pop();
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return const ModalBarrier(dismissible: false);
   }
 }
 

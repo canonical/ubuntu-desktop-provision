@@ -1073,18 +1073,16 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'Clau de recuperacion del TPM';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => 'Obténer una clau de recuperacion';
 
   @override
   String get recoveryKeyInfoHeader => 'Poiriatz pèrdre totas vòstras donadas sens una clau de recuperacion';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return 'Obtenètz una clau de recuperacion tre la primièra connexion a $distro e gardatz-la en luòc segur.';
-  }
-
-  @override
-  String get recoveryKeyCommand => 'Per obténer la clau de recuperacion, acabatz l’installacion, reaviatz l’ordenador puèi executatz la comanda seguenta dins un terminal :';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => 'Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.';
@@ -1094,6 +1092,23 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

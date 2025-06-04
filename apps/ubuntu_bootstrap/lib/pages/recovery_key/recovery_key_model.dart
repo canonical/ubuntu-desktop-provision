@@ -30,11 +30,17 @@ class RecoveryKeyModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
+  late final String _recoveryKey;
+  String get recoveryKey => _recoveryKey;
+
   Future<bool> init() async {
-    return switch (_storage.guidedCapability) {
-      GuidedCapability.CORE_BOOT_ENCRYPTED => true,
-      GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED => true,
-      _ => false,
-    };
+    if (![
+      GuidedCapability.CORE_BOOT_ENCRYPTED,
+      GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+    ].contains(_storage.guidedCapability)) {
+      return false;
+    }
+    _recoveryKey = await _storage.getCoreBootRecoveryKey();
+    return true;
   }
 }

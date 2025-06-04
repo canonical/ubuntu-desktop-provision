@@ -1073,18 +1073,16 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitle => 'TPM 恢复密钥';
 
   @override
+  String get recoveryKeyTitleBadgeLabel => 'Important';
+
+  @override
   String get recoveryKeyHeader => '获取恢复密钥';
 
   @override
   String get recoveryKeyInfoHeader => '没有恢复密钥，您可能丢失所有数据';
 
   @override
-  String recoveryKeyInfoBody(String distro) {
-    return '在您登入 $distro 时立刻获取恢复密钥并将其存储在安全的地方。';
-  }
-
-  @override
-  String get recoveryKeyCommand => '要获取恢复密钥，完成安装，重新启动计算机，然后在终端内执行此命令：';
+  String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
   String get recoveryKeyStorageAdvice => '将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。';
@@ -1094,6 +1092,23 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyLinkLabel => 'Learn more';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Save to file';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Recovery key';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -2227,14 +2242,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get recoveryKeyInfoHeader => '如果沒有復原金鑰，您可能會遺失所有資料';
-
-  @override
-  String recoveryKeyInfoBody(String distro) {
-    return '當您第一次登入 $distro 時，請立即取得還原金鑰，並將它存放在安全的地方。';
-  }
-
-  @override
-  String get recoveryKeyCommand => '若要取得復原金鑰，請完成安裝，重新啟動電腦，然後在終端機執行此命令：';
 
   @override
   String get recoveryKeyStorageAdvice => '將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。';
