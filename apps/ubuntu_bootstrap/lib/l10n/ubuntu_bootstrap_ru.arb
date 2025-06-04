@@ -398,7 +398,7 @@
   "@refreshSnapStartServices": {},
   "refreshSnapCleanup": "Очистка {snap}…",
   "@refreshSnapCleanup": {},
-  "recoveryKeyTitle": "Ключ восстановления TPM",
+  "recoveryKeyTitle": "Ключ восстановления",
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Чтобы получить ключ восстановления, завершите установку, перезапустите компьютер и выполните следующую команду в терминале:",
   "@recoveryKeyCommand": {},
@@ -618,11 +618,11 @@
   "@chooseOptionalPassphraseHeader": {},
   "recoveryKeyInfoHeader": "Без ключа восстановления вы можете потерять все свои данные",
   "@recoveryKeyInfoHeader": {},
-  "recoveryKeyConfirmation": "Я понимаю, что могу потерять все свои данные, если у меня нет ключа восстановления",
+  "recoveryKeyConfirmation": "Я сохранил свой ключ восстановления в безопасном месте",
   "@recoveryKeyConfirmation": {},
-  "recoveryKeyHeader": "Получить ключ восстановления",
+  "recoveryKeyHeader": "Сохранить ваш ключ восстановления",
   "@recoveryKeyHeader": {},
-  "recoveryKeyStorageAdvice": "Храните ключ восстановления в безопасном месте. Используйте его для расшифровки диска в случае некоторых изменений в системе. Например, он может понадобиться при замене компонентов в компьютере или обновлении прошивки.",
+  "recoveryKeyStorageAdvice": "Вам нужно будет предоставить этот ключ восстановления, если во время запуска не удаётся провести расшифровку. Без ключа вы потеряете доступ ко всем своим данным. Сохраните его в безопасном месте, например, в менеджере паролей.",
   "@recoveryKeyStorageAdvice": {},
   "chooseOptionalPassphraseBody": "Парольная фраза поможет защитить Ваши данные даже в том случае, если оборудование будет взломано. Пароль нужно будет вводить каждый раз, когда Вы включаете компьютер. Удалить её впоследствии будет невозможно",
   "@chooseOptionalPassphraseBody": {},
@@ -687,5 +687,25 @@
   "confirmTableErased": "Очищено",
   "@confirmTableErased": {},
   "recoveryKeyLinkLabel": "Узнать больше",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "Ключ восстановления",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeyTitleBadgeLabel": "Важное",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeySaveToFileLabel": "Сохранить в файл",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "Показать QR-код",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Ключ восстановления",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Отсканируйте QR-код, чтобы скопировать ключ восстановления и сохранить его в безопасном месте, например, в менеджере паролей. Также вы можете сделать фотографию и использовать её позже.",
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyClipboardNotifiaction": "Скопировано в буфер обмена",
+  "@recoveryKeyClipboardNotifiaction": {}
 }
