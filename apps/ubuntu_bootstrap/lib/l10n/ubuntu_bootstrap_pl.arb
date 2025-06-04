@@ -362,7 +362,7 @@
   "@refreshSnapStartServices": {},
   "refreshSnapCleanup": "Czyszczenie {snap}...",
   "@refreshSnapCleanup": {},
-  "recoveryKeyTitle": "Klucz odzyskiwania modułu TPM",
+  "recoveryKeyTitle": "Klucz odzyskiwania",
   "@recoveryKeyTitle": {},
   "recoveryKeyCommand": "Aby uzyskać klucz odzyskiwania, zakończ instalację, uruchom ponownie komputer i uruchom to polecenie w terminalu:",
   "@recoveryKeyCommand": {},
@@ -624,13 +624,13 @@
   "@recoveryKeyInfoBody": {},
   "chooseOptionalPassphraseBody": "Hasło może pomóc chronić dane, nawet jeśli sprzęt zostanie naruszony. Konieczne będzie wprowadzanie hasła za każdym razem po włączeniu komputera. Nie będzie można go później usunąć",
   "@chooseOptionalPassphraseBody": {},
-  "recoveryKeyHeader": "Uzyskaj klucz odzyskiwania",
+  "recoveryKeyHeader": "Zapisz klucz odzyskiwania",
   "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Bez klucza odzyskiwania możesz utracić wszystkie swoje dane",
   "@recoveryKeyInfoHeader": {},
-  "recoveryKeyConfirmation": "Rozumiem, że mogę utracić wszystkie swoje dane, jeśli nie będę mieć klucza odzyskiwania",
+  "recoveryKeyConfirmation": "Mam zapisany klucz odzyskiwania w bezpiecznym miejscu",
   "@recoveryKeyConfirmation": {},
-  "recoveryKeyStorageAdvice": "Przechowuj klucz odzyskiwania w bezpiecznym miejscu. Używaj go do odszyfrowania dysku w przypadku niektórych zmian w systemie. Przykładowo możesz go potrzebować, jeśli zmienisz komponenty w komputerze lub zaktualizujesz oprogramowanie układowe.",
+  "recoveryKeyStorageAdvice": "Jeśli odszyfrowanie nie powiedzie się podczas uruchamiania, konieczne będzie podanie tego klucza odzyskiwania. Bez klucza utracisz dostęp do wszystkich swoich danych. Zapisz go w bezpiecznym miejscu, np. w menedżerze haseł.",
   "@recoveryKeyStorageAdvice": {},
   "restartComputer": "Uruchom ponownie komputer",
   "@restartComputer": {},
@@ -687,5 +687,25 @@
   "landscapeConfirmPageSuccessInfoContent": "Poniżej możesz przejrzeć plik autoinstalacji zaimportowany z Landscape.",
   "@landscapeConfirmPageSuccessInfoContent": {},
   "recoveryKeyLinkLabel": "Dowiedz się więcej",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "Klucz odzyskiwania",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeySaveToFileLabel": "Zapisz do pliku",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "Pokaż kod QR",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyClipboardNotifiaction": "Skopiowano do schowka",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyTitleBadgeLabel": "Ważne",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Klucz odzyskiwania",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Zeskanuj kod QR, aby skopiować klucz odzyskiwania i zapisać go w bezpiecznym miejscu, np. w menedżerze haseł. Możesz również zrobić zdjęcie do późniejszego wykorzystania.",
+  "@recoveryKeyQrDialogBody": {}
 }
