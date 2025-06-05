@@ -290,9 +290,6 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get choosePassphraseConfirmHint => 'Confirmez la phrase secrète';
 
   @override
-  String get choosePassphraseRequired => 'Une phrase secrète est nécessaire';
-
-  @override
   String get choosePassphraseMismatch => 'Les phrases secrètes ne correspondent pas';
 
   @override
@@ -302,22 +299,73 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Si vous perdez votre phrase secrète, vous perdrez toutes vos données.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Créer une phrase de passe (facultatif)';
-
-  @override
-  String get chooseOptionalPassphraseBody => 'Une phrase de passe peut aider à protéger vos données même si votre matériel est compromis. Vous devrez entrer la phrase de passe chaque fois que vous allumez votre ordinateur. Vous ne serez pas en mesure de la supprimer plus tard';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => 'Conservez votre phrase de passe et la clé de récupération en lieu sûr';
 
   @override
   String get chooseOptionalPassphraseInfoBody => 'Si vous perdez votre phrase de passe, vous perdrez toutes vos données. La phrase de passe ne remplace pas la clé de récupération ni votre mot de passe utilisateur.';
 
   @override
-  String get createPassphrase => 'Créer une phrase secrète';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => 'Confirmer la phrase secrète';
+  String get passphrasePageHeaderPassphrase => 'Create an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Create an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Choose a passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'Choose a PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypeNoneTileSubTitle => 'Most convenient. Make sure not to enable automatic login for any user.';
+
+  @override
+  String get passphraseTypePageHeader => 'Add an encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, your computer’s Trusted Platform Module (TPM) unlocks your disk when you start Ubuntu. However, you can also require a PIN or a passphrase to further protect your data. You will be able to change your PIN or passphrase later, but not disable them.';
 
   @override
   String get installationTypeTitle => 'Configuration du disque';

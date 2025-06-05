@@ -290,9 +290,6 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get choosePassphraseConfirmHint => 'A jelmondat megerősítése';
 
   @override
-  String get choosePassphraseRequired => 'A jelmondat megadása kötelező';
-
-  @override
   String get choosePassphraseMismatch => 'A jelmondatok nem egyeznek';
 
   @override
@@ -302,22 +299,73 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Ha elveszíti a jelmondatát, akkor elveszíti az összes adatát.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Jelmondat létrehozása (választható)';
-
-  @override
-  String get chooseOptionalPassphraseBody => 'A jelmondat segíthet megvédeni az adatokat még akkor is, ha a hardver veszélybe kerül. A jelmondatot minden alkalommal meg kell adnia, amikor bekapcsolja a számítógépet. Később nem lesz képes eltávolítani a jelmondatot.';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => 'Tárolja a jelmondatát és a helyreállítási kulcsot biztonságos helyen';
 
   @override
   String get chooseOptionalPassphraseInfoBody => 'Ha elveszíti a jelmondatát, akkor elveszíti az összes adatát. A jelszó nem helyettesíti a helyreállítási kulcsot vagy a felhasználói jelszavát.';
 
   @override
-  String get createPassphrase => 'Jelmondat létrehozása';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => 'A jelmondat megerősítése';
+  String get passphrasePageHeaderPassphrase => 'Create an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Create an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Choose a passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'Choose a PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypeNoneTileSubTitle => 'Most convenient. Make sure not to enable automatic login for any user.';
+
+  @override
+  String get passphraseTypePageHeader => 'Add an encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, your computer’s Trusted Platform Module (TPM) unlocks your disk when you start Ubuntu. However, you can also require a PIN or a passphrase to further protect your data. You will be able to change your PIN or passphrase later, but not disable them.';
 
   @override
   String get installationTypeTitle => 'Lemez beállítása';

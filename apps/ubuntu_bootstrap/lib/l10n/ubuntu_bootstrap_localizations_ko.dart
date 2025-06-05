@@ -290,9 +290,6 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get choosePassphraseConfirmHint => '암호 확인';
 
   @override
-  String get choosePassphraseRequired => '암호가 필요합니다';
-
-  @override
   String get choosePassphraseMismatch => '암호가 일치하지 않습니다';
 
   @override
@@ -302,22 +299,73 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => '암호를 분실하면 모든 데이터를 잃게 됩니다.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Create a passphrase (optional)';
-
-  @override
-  String get chooseOptionalPassphraseBody => 'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => 'Store your passphrase and recovery key somewhere safe';
 
   @override
   String get chooseOptionalPassphraseInfoBody => 'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
 
   @override
-  String get createPassphrase => '암호 만들기';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => '암호 확인';
+  String get passphrasePageHeaderPassphrase => 'Create an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Create an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Choose a passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'Choose a PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypeNoneTileSubTitle => 'Most convenient. Make sure not to enable automatic login for any user.';
+
+  @override
+  String get passphraseTypePageHeader => 'Add an encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, your computer’s Trusted Platform Module (TPM) unlocks your disk when you start Ubuntu. However, you can also require a PIN or a passphrase to further protect your data. You will be able to change your PIN or passphrase later, but not disable them.';
 
   @override
   String get installationTypeTitle => '디스크 설정';

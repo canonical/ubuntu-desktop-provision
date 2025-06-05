@@ -290,9 +290,6 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get choosePassphraseConfirmHint => 'Korda salafraasi';
 
   @override
-  String get choosePassphraseRequired => 'Salafraas on nõutav';
-
-  @override
   String get choosePassphraseMismatch => 'Salafraasid ei klapi omavahel';
 
   @override
@@ -302,22 +299,73 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Kui unustad salafraasi siis kaotad ligipääsu kõikidele oma andmetele.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Loo salafraas (valikuline)';
-
-  @override
-  String get chooseOptionalPassphraseBody => 'Salafraas võimaldab kaitsta sinu andmeid olukorras, kus see arvuti või seade satub valedesse kätesse. Pead salafraasi sisestama igal arvuti käivitamisel ning sa ei saa seda hiljem eemaldada';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => 'Salvesta salafraas ja taastevõti turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
 
   @override
   String get chooseOptionalPassphraseInfoBody => 'Kui unustad salafraasi, siis kaotad ligipääsu oma andmetele. Salafraas ei asenda taastevõtit ega kasutajakonto salasõna.';
 
   @override
-  String get createPassphrase => 'Loo salafraas';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => 'Korda salafraasi';
+  String get passphrasePageHeaderPassphrase => 'Create an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Create an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to your disk by using your recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Choose a passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'Choose a PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypeNoneTileSubTitle => 'Most convenient. Make sure not to enable automatic login for any user.';
+
+  @override
+  String get passphraseTypePageHeader => 'Add an encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, your computer’s Trusted Platform Module (TPM) unlocks your disk when you start Ubuntu. However, you can also require a PIN or a passphrase to further protect your data. You will be able to change your PIN or passphrase later, but not disable them.';
 
   @override
   String get installationTypeTitle => 'Kettaseadistus';
