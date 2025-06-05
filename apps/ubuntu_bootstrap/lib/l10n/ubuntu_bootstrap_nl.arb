@@ -470,7 +470,7 @@
   "@landscapeDomainInstructions": {},
   "installationSlidesWelcomeTitle": "Snel, gratis en vol nieuwe functies",
   "@installationSlidesWelcomeTitle": {},
-  "recoveryKeyHeader": "Herstelcode opvragen",
+  "recoveryKeyHeader": "Herstelcode opslaan",
   "@recoveryKeyHeader": {},
   "landscapeHeader": "Inloggen bij Landscape",
   "@landscapeHeader": {},
@@ -514,7 +514,7 @@
   "@installationSlidesWelcomeHeader": {},
   "installationSlidesSupportCommunity": "Ask Ubuntu behandelt een breed scala aan vragen en antwoorden en Ubuntu Discourse biedt handleidingen en discussies voor zowel nieuwe als ervaren gebruikers.",
   "@installationSlidesSupportCommunity": {},
-  "recoveryKeyTitle": "TPM-herstelcode",
+  "recoveryKeyTitle": "Herstelcode",
   "@recoveryKeyTitle": {},
   "installingSystem": "Systeem installeren…",
   "@installingSystem": {},
@@ -578,7 +578,7 @@
   "@refreshUpToDate": {},
   "landscapeDomainNoInternetDescriptionWarning": "Internet is nodig om het automatische installatiebestand op te halen van Landscape",
   "@landscapeDomainNoInternetDescriptionWarning": {},
-  "recoveryKeyStorageAdvice": "Bewaar de herstelcode op een veilige plek. Gebruik hem om de schijf te decoderen in geval van bepaalde systeemwijzigingen. U kunt deze bijvoorbeeld nodig hebben als u bepaalde onderdelen in uw computer vervangt of de firmware bijwerkt.",
+  "recoveryKeyStorageAdvice": "U moet deze herstelcode opgeven als de decodering mislukt tijdens het opstarten. Zonder de sleutel verliest u de toegang tot al uw gegevens. Bewaar het op een veilige plek, zoals een wachtwoordmanager.",
   "@recoveryKeyStorageAdvice": {},
   "installationSlidesWelcomeBody": "Of u nu een ontwikkelaar bent of maker of gamer of beheerder, in {RELEASE} vind u nieuwe hulpmiddelen om uw productiviteit en ervaring te verbeteren.",
   "@installationSlidesWelcomeBody": {},
@@ -626,7 +626,7 @@
   "@recoveryKeyInfoBody": {},
   "next": "Verder",
   "@next": {},
-  "recoveryKeyConfirmation": "Ik begrijp dat ik al mijn gegevens kan verliezen als ik geen herstelcode heb",
+  "recoveryKeyConfirmation": "Ik heb mijn herstelcode ergens veilig opgeslagen",
   "@recoveryKeyConfirmation": {},
   "shutdown": "Afsluiten",
   "@shutdown": {},
@@ -653,5 +653,25 @@
   "landscapeDomainNoInternetTitleWarning": "Maak verbinding met internet om door te gaan",
   "@landscapeDomainNoInternetTitleWarning": {},
   "recoveryKeyLinkLabel": "Meer informatie",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTitleBadgeLabel": "Belangrijk",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeyTextFieldLabel": "Herstelcode",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeySaveToFileLabel": "Opslaan naar bestand",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "QR-code weergeven",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyClipboardNotifiaction": "Gekopieerd naar klembord",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Herstelcode",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Scan de QR-code om de herstelcode te kopiëren en op een veilige plek op te slaan, zoals een wachtwoordmanager. U kunt ook een foto maken voor later gebruik.",
+  "@recoveryKeyQrDialogBody": {}
 }
