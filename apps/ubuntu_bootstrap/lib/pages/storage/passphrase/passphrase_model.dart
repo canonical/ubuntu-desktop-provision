@@ -49,23 +49,23 @@ class PassphraseModel extends SafeChangeNotifier {
   bool get isValid =>
       passphrase.isNotEmpty && passphrase == confirmedPassphrase;
 
-  /// Whether the user can skip providing a passphrase
-  bool get canSkip => isTpm && passphrase.isEmpty;
+  PassphraseType get passphraseType => _service.passphraseType;
 
   /// Initializes the model.
   Future<bool> init() async {
-    switch (_service.guidedCapability) {
-      case GuidedCapability.LVM_LUKS:
-      case GuidedCapability.ZFS_LUKS_KEYSTORE:
-      case GuidedCapability.CORE_BOOT_ENCRYPTED:
-      case GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED:
-        await loadPassphrase();
-        return true;
-
-      default:
-        await clearPassphrase();
-        return false;
+    if ([
+          GuidedCapability.LVM_LUKS,
+          GuidedCapability.ZFS_LUKS_KEYSTORE,
+          GuidedCapability.CORE_BOOT_ENCRYPTED,
+          GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+        ].contains(_service.guidedCapability) &&
+        passphraseType != PassphraseType.none) {
+      await loadPassphrase();
+      return true;
     }
+
+    await clearPassphrase();
+    return false;
   }
 
   /// Loads the passphrase from the service.

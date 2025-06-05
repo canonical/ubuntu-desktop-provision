@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru/icons.dart';
 
@@ -15,26 +16,20 @@ class PassphraseFormField extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final model = ref.read(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final securityKey = ref.watch(
-      passphraseModelProvider.select((model) => model.passphrase),
-    );
-    final showSecurityKey = ref.watch(
-      passphraseModelProvider.select((model) => model.showPassphrase),
-    );
 
     return ValidatedFormField(
       fieldWidth: fieldWidth,
-      labelText: lang.choosePassphraseHint,
-      obscureText: !showSecurityKey,
-      successWidget: securityKey.isNotEmpty ? const SuccessIcon() : null,
-      initialValue: securityKey,
+      labelText: model.passphraseType.localizedChooseHint(lang),
+      obscureText: !model.showPassphrase,
+      successWidget: model.passphrase.isNotEmpty ? const SuccessIcon() : null,
+      initialValue: model.passphrase,
       suffixIcon: const _SecurityKeyShowButton(),
       validator: RequiredValidator(
-        errorText: lang.choosePassphraseRequired,
+        errorText: model.passphraseType.localizedRequiredError(lang),
       ),
       onChanged: (value) {
-        final model = ref.read(passphraseModelProvider);
         model.passphrase = value;
       },
     );
@@ -48,29 +43,22 @@ class ConfirmPassphraseFormField extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final model = ref.watch(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final securityKey =
-        ref.watch(passphraseModelProvider.select((model) => model.passphrase));
-    final confirmedSecurityKey = ref.watch(
-      passphraseModelProvider.select((model) => model.confirmedPassphrase),
-    );
-    final showSecurityKey = ref
-        .watch(passphraseModelProvider.select((model) => model.showPassphrase));
 
     return ValidatedFormField(
       fieldWidth: fieldWidth,
-      labelText: lang.choosePassphraseConfirmHint,
-      obscureText: !showSecurityKey,
+      labelText: model.passphraseType.localizedConfirmHint(lang),
+      obscureText: !model.showPassphrase,
       successWidget:
-          confirmedSecurityKey.isNotEmpty ? const SuccessIcon() : null,
-      initialValue: confirmedSecurityKey,
+          model.confirmedPassphrase.isNotEmpty ? const SuccessIcon() : null,
+      initialValue: model.confirmedPassphrase,
       autovalidateMode: AutovalidateMode.always,
       validator: EqualValidator(
-        securityKey,
-        errorText: lang.choosePassphraseMismatch,
+        model.passphrase,
+        errorText: model.passphraseType.localizedMismatchError(lang),
       ),
       onChanged: (value) {
-        final model = ref.read(passphraseModelProvider);
         model.confirmedPassphrase = value;
       },
     );

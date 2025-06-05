@@ -6,6 +6,7 @@ enum StorageSteps with RouteName {
   guidedReformat,
   guidedResize,
   manual,
+  passphraseType,
   passphrase,
   recoveryKey;
 }

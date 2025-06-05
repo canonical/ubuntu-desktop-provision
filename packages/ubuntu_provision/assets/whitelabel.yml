@@ -41,6 +41,8 @@ pages:
     image: "assets/images/disk.svg"
   guided-reformat:
     image: "assets/images/disk.svg"
+  passphrase-type:
+    image: "assets/images/passphrase.svg"
   passphrase:
     image: "assets/images/passphrase.svg"
   recovery-key:
