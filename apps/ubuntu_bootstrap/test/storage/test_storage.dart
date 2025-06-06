@@ -11,6 +11,7 @@ export 'guided_reformat/test_guided_reformat.dart';
 export 'guided_resize/test_guided_resize.dart';
 export 'manual/test_manual_storage.dart';
 export 'passphrase/test_passphrase.dart';
+export 'passphrase_type/test_passphrase_type.dart';
 export 'test_storage.mocks.dart';
 
 @GenerateMocks([StorageModel])
