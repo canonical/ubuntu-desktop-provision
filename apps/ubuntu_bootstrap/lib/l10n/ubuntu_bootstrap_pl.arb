@@ -707,5 +707,19 @@
     }
   },
   "recoveryKeyQrDialogBody": "Zeskanuj kod QR, aby skopiować klucz odzyskiwania i zapisać go w bezpiecznym miejscu, np. w menedżerze haseł. Możesz również zrobić zdjęcie do późniejszego wykorzystania.",
-  "@recoveryKeyQrDialogBody": {}
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyFilePickerFilter": "Pliki tekstowe",
+  "@recoveryKeyFilePickerFilter": {},
+  "recoveryKeyExceptionUnknownTitle": "Nieznany błąd",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionDisallowedPathBody": "Spróbuj innej lokalizacji, np. dysku wymiennego, lub użyj innej metody.",
+  "@recoveryKeyExceptionDisallowedPathBody": {},
+  "recoveryKeyFilePickerTitle": "Zapisz plik klucza odzyskiwania",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyExceptionFileSystemTitle": "Plik klucza odzyskiwania nie został zapisany",
+  "@recoveryKeyExceptionFileSystemTitle": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "Pliku klucza odzyskiwania nie można zapisać w lokalizacji tymczasowej",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "Nie masz uprawnień do zapisu w tym folderze. Spróbuj innej lokalizacji lub użyj innej metody.",
+  "@recoveryKeyExceptionFileSystemBody": {}
 }
