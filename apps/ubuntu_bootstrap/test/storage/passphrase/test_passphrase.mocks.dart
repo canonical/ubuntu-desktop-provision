@@ -3,13 +3,14 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i4;
-import 'dart:ui' as _i5;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i3;
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart'
     as _i2;
+import 'package:ubuntu_bootstrap/services.dart' as _i4;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -96,10 +97,10 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
       ) as bool);
 
   @override
-  bool get canSkip => (super.noSuchMethod(
-        Invocation.getter(#canSkip),
-        returnValue: false,
-      ) as bool);
+  _i4.PassphraseType get passphraseType => (super.noSuchMethod(
+        Invocation.getter(#passphraseType),
+        returnValue: _i4.PassphraseType.passphrase,
+      ) as _i4.PassphraseType);
 
   @override
   bool get hasListeners => (super.noSuchMethod(
@@ -114,46 +115,46 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
       ) as bool);
 
   @override
-  _i4.Future<bool> init() => (super.noSuchMethod(
+  _i5.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i4.Future<bool>.value(false),
-      ) as _i4.Future<bool>);
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
 
   @override
-  _i4.Future<void> loadPassphrase() => (super.noSuchMethod(
+  _i5.Future<void> loadPassphrase() => (super.noSuchMethod(
         Invocation.method(
           #loadPassphrase,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  _i4.Future<void> savePassphrase() => (super.noSuchMethod(
+  _i5.Future<void> savePassphrase() => (super.noSuchMethod(
         Invocation.method(
           #savePassphrase,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  _i4.Future<void> clearPassphrase() => (super.noSuchMethod(
+  _i5.Future<void> clearPassphrase() => (super.noSuchMethod(
         Invocation.method(
           #clearPassphrase,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -162,7 +163,7 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
       );
 
   @override
-  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

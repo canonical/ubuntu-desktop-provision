@@ -378,6 +378,37 @@ Future<void> main() async {
   );
 
   testWidgets(
+    'passphrase type',
+    (tester) async {
+      await tester.runApp(
+        () => runInstallerApp(
+          [
+            '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+          ],
+          theme: currentTheme,
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.jumpToStorageWizard();
+      await tester.pumpAndSettle();
+
+      await tester.testStoragePage(
+        type: StorageType.erase,
+      );
+
+      await tester.testGuidedCapabilityPage(
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      );
+
+      await tester.testPassphraseTypePage(
+        screenshot: '$currentThemeName/passphrase-type',
+      );
+    },
+    variant: themeVariant,
+  );
+
+  testWidgets(
     'passphrase',
     (tester) async {
       await tester.runApp(

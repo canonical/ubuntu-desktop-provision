@@ -404,30 +404,46 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     await pumpAndSettle();
   }
 
+  Future<void> testPassphraseTypePage({
+    PassphraseType passphraseType = PassphraseType.none,
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(PassphraseTypePage);
+
+    final context = element(find.byType(PassphraseTypePage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(find.titleBar(l10n.passphrasePageTitle), findsOneWidget);
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+
+    await tap(find.text(passphraseType.localizedTileTitle(l10n)));
+    await pumpAndSettle();
+
+    await tapNext();
+    await pumpAndSettle();
+  }
+
   Future<void> testPassphrasePage({
     required String passphrase,
     String? screenshot,
-    bool skip = false,
+    PassphraseType passphraseType = PassphraseType.passphrase,
   }) async {
     await pumpUntilPage(PassphrasePage);
 
     final context = element(find.byType(PassphrasePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    expect(find.titleBar(l10n.choosePassphraseTitle), findsOneWidget);
-
-    if (skip) {
-      await tapSkip();
-      await pumpAndSettle();
-      return;
-    }
+    expect(find.titleBar(l10n.passphrasePageTitle), findsOneWidget);
 
     await enterText(
-      find.textField(l10n.choosePassphraseHint),
+      find.textField(passphraseType.localizedChooseHint(l10n)),
       passphrase,
     );
     await enterText(
-      find.textField(l10n.confirmPassphrase),
+      find.textField(passphraseType.localizedConfirmHint(l10n)),
       passphrase,
     );
 

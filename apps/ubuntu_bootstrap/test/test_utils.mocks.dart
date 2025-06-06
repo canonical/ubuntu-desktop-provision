@@ -438,6 +438,21 @@ class MockStorageService extends _i1.Mock implements _i12.StorageService {
       );
 
   @override
+  _i12.PassphraseType get passphraseType => (super.noSuchMethod(
+        Invocation.getter(#passphraseType),
+        returnValue: _i12.PassphraseType.passphrase,
+      ) as _i12.PassphraseType);
+
+  @override
+  set passphraseType(_i12.PassphraseType? passphraseType) => super.noSuchMethod(
+        Invocation.setter(
+          #passphraseType,
+          passphraseType,
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   set guidedTarget(_i5.GuidedStorageTarget? target) => super.noSuchMethod(
         Invocation.setter(
           #guidedTarget,

@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
+import 'package:ubuntu_bootstrap/services/storage_service.dart';
 
 import 'test_passphrase.dart';
 
@@ -60,6 +61,7 @@ void main() {
     verify(service.passphrase = 'foo123').called(1);
     verifyNever(service.setGuidedStorage());
     when(service.passphrase).thenReturn('bar456');
+    when(service.passphraseType).thenReturn(PassphraseType.passphrase);
 
     await model.loadPassphrase();
     verify(service.passphrase).called(1);

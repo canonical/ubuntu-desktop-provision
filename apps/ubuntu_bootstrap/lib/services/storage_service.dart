@@ -8,6 +8,13 @@ export 'package:subiquity_client/subiquity_client.dart'
 
 final _log = Logger('storage');
 
+/// Type of the passphrase to be used - [none] and [pin] are only supported for TPM FDE
+enum PassphraseType {
+  passphrase,
+  none,
+  pin,
+}
+
 /// Provides means to read and modify the storage configuration.
 class StorageService {
   /// Creates the service with the given [_client].
@@ -31,6 +38,7 @@ class StorageService {
   GuidedStorageTarget? _guidedTarget;
   GuidedCapability? _guidedCapability;
   String? _passphrase;
+  PassphraseType _passphraseType = PassphraseType.passphrase;
 
   /// Whether the system has multiple disks available for guided partitioning.
   bool get hasMultipleDisks => _hasMultipleDisks ?? false;
@@ -54,6 +62,14 @@ class StorageService {
     _passphrase = passphrase;
   }
 
+  /// The type of the passphrase, defaulting to [passphrase] for non-TPM cases
+  PassphraseType get passphraseType => _passphraseType;
+  set passphraseType(PassphraseType passphraseType) {
+    if (_passphraseType == passphraseType) return;
+    _log.debug('set passphrase type: $passphraseType');
+    _passphraseType = passphraseType;
+  }
+
   /// A guided storage target.
   GuidedStorageTarget? get guidedTarget => _guidedTarget;
   set guidedTarget(GuidedStorageTarget? target) {
@@ -66,6 +82,15 @@ class StorageService {
   set guidedCapability(GuidedCapability? capability) {
     _log.debug('select guided capability: $capability');
     _guidedCapability = capability;
+
+    if ([
+      GuidedCapability.CORE_BOOT_ENCRYPTED,
+      GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+    ].contains(guidedCapability)) {
+      passphraseType = PassphraseType.none;
+    } else {
+      passphraseType = PassphraseType.passphrase;
+    }
   }
 
   /// A list of existing OS installations or null if not detected.
@@ -91,7 +116,9 @@ class StorageService {
     await _client.setGuidedStorageV2(
       GuidedChoiceV2(
         target: guidedTarget!,
-        password: passphrase,
+        password:
+            passphraseType == PassphraseType.passphrase ? passphrase : null,
+        pin: passphraseType == PassphraseType.pin ? passphrase : null,
         capability: guidedCapability ?? guidedTarget!.allowed.first,
         sizingPolicy: SizingPolicy.ALL,
       ),

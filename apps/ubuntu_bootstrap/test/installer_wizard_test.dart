@@ -25,6 +25,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_reformat/guided_reformat_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
@@ -151,6 +152,7 @@ void main() {
     final secureBootModel = buildSecureBootModel();
     final storageModel = buildStorageModel();
     final guidedReformatModel = buildGuidedReformatModel();
+    final passphraseTypeModel = buildPassphraseTypeModel();
     final passphraseModel = buildPassphraseModel(usePassphrase: false);
     final recoveryKeyModel = buildRecoveryKeyModel();
     final confirmModel = buildConfirmModel();
@@ -185,6 +187,7 @@ void main() {
           secureBootModelProvider.overrideWith((_) => secureBootModel),
           storageModelProvider.overrideWith((_) => storageModel),
           guidedReformatModelProvider.overrideWith((_) => guidedReformatModel),
+          passphraseTypeModelProvider.overrideWith((_) => passphraseTypeModel),
           passphraseModelProvider.overrideWith((_) => passphraseModel),
           recoveryKeyModelProvider.overrideWith((_) => recoveryKeyModel),
           confirmModelProvider.overrideWith((_) => confirmModel),
@@ -265,6 +268,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(ConfirmPage), findsOneWidget);
     verify(guidedReformatModel.init()).called(1); // skipped
+    verify(passphraseTypeModel.init()).called(1); // skipped
     verify(passphraseModel.init()).called(1); // skipped
     verify(confirmModel.init()).called(1);
 
