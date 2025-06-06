@@ -685,5 +685,9 @@
   "recoveryKeyConfirmation": "Compreni que pòdi pèrdre totas mas donadas s'ai pas de clau de recuperacion",
   "@recoveryKeyConfirmation": {},
   "landscapeHeader": "Accedir a Landscape",
-  "@landscapeHeader": {}
+  "@landscapeHeader": {},
+  "recoveryKeyLinkLabel": "Ne saber mai",
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "Clau de recuperacion",
+  "@recoveryKeyTextFieldLabel": {}
 }
