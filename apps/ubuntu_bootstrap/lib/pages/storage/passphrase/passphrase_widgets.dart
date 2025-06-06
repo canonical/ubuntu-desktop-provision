@@ -96,7 +96,6 @@ class _ConfirmPassphraseFormFieldState
       obscureText: !model.showPassphrase,
       successWidget:
           model.confirmedPassphrase.isNotEmpty ? const SuccessIcon() : null,
-      autovalidateMode: AutovalidateMode.always,
       validator: EqualValidator(
         model.passphrase,
         errorText: model.passphraseType.localizedMismatchError(lang),
