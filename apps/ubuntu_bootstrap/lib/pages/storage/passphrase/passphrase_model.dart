@@ -70,7 +70,13 @@ class PassphraseModel extends SafeChangeNotifier {
 
   /// Loads the passphrase from the service.
   Future<void> loadPassphrase() async {
-    _passphrase.value = _confirmedPassphrase.value = _service.passphrase ?? '';
+    var savedPassphrase = _service.passphrase ?? '';
+    // For PIN: only restore the passphrase if it's numeric
+    if (passphraseType == PassphraseType.pin &&
+        !RegExp(r'^\d+$').hasMatch(savedPassphrase)) {
+      savedPassphrase = '';
+    }
+    _passphrase.value = _confirmedPassphrase.value = savedPassphrase;
   }
 
   /// Saves the passphrase to the service and clears the local values.
