@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_page.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
 import '../test_utils.dart';
@@ -47,5 +48,19 @@ void main() {
       utf8.decode(tester.widget<BarcodeWidget>(qrCode).data),
       equals(testRecoveryKey),
     );
+  });
+
+  testWidgets('error state', (tester) async {
+    final model = buildRecoveryKeyModel(
+      recoveryKey: testRecoveryKey,
+      error: RecoveryKeyExceptionUnknown(
+        rawError: 'test error',
+      ),
+    );
+    await tester.pumpApp((_) => buildPage(model));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(YaruInfoBox), findsOneWidget);
+    expect(find.text('test error'), findsOneWidget);
   });
 }

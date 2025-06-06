@@ -14,6 +14,7 @@ extension RecoveryKeyExceptionL10n on RecoveryKeyException {
           l10n.recoveryKeyExceptionDisallowedPathBody,
         RecoveryKeyExceptionFileSystem() =>
           l10n.recoveryKeyExceptionFileSystemBody,
-        RecoveryKeyExceptionUnknown() => toString(),
+        RecoveryKeyExceptionUnknown() =>
+          (this as RecoveryKeyExceptionUnknown).rawError,
       };
 }
