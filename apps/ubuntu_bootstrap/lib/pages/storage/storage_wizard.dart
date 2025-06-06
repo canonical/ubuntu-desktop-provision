@@ -16,6 +16,8 @@ export 'guided_reformat/guided_reformat_page.dart';
 export 'guided_resize/guided_resize_page.dart';
 export 'manual/manual_storage_page.dart';
 export 'passphrase/passphrase_page.dart';
+export 'passphrase_type/passphrase_type_l10n.dart';
+export 'passphrase_type/passphrase_type_page.dart';
 export 'storage_page.dart';
 export 'storage_routes.dart';
 

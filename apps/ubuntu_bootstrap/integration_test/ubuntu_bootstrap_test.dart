@@ -316,7 +316,7 @@ void main() {
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
-    await tester.testPassphrasePage(passphrase: '', skip: true);
+    await tester.testPassphraseTypePage();
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
@@ -370,7 +370,70 @@ void main() {
       guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
 
+    await tester.testPassphraseTypePage(
+      passphraseType: PassphraseType.passphrase,
+    );
     await tester.testPassphrasePage(passphrase: 'passphrase');
+
+    await tester.testIdentityPage(identity: identity, password: 'password');
+    await expectIdentity(identity);
+
+    await tester.testTimezonePage();
+    await tester.testConfirmPage();
+    await tester.testInstallPage();
+    await tester.testRecoveryKeyPage();
+    await tester.testDonePage();
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapContinueTesting();
+    await expectLater(windowClosed, completes);
+
+    await verifySubiquityConfig(
+      identity: identity,
+      capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+  });
+
+  testWidgets('tpm with pin', (tester) async {
+    const identity = Identity(
+      realname: 'User',
+      hostname: 'ubuntu',
+      username: 'user',
+    );
+
+    await tester.runApp(
+      () => app.main([
+        '--source-catalog=examples/sources/tpm.yaml',
+        '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+        '--',
+        '--bootloader=uefi',
+      ]),
+    );
+
+    await tester.pumpAndSettle();
+    await tester.testLocalePage();
+    await tester.testAccessibilityPage();
+    await tester.testKeyboardPage();
+    await tester.testNetworkPage(mode: ConnectMode.none);
+    await tester.testRefreshPage();
+    await tester.testAutoinstallPage();
+    await tester.testSourceSelectionPage();
+    await tester.testCodecsAndDriversPage();
+
+    await tester.testStoragePage(
+      type: StorageType.erase,
+    );
+    await tester.testGuidedCapabilityPage(
+      guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    );
+
+    await tester.testPassphraseTypePage(
+      passphraseType: PassphraseType.pin,
+    );
+    await tester.testPassphrasePage(
+      passphrase: '12345',
+      passphraseType: PassphraseType.pin,
+    );
 
     await tester.testIdentityPage(identity: identity, password: 'password');
     await expectIdentity(identity);
