@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Nejste připojení k Internetu';
 
   @override
-  String get choosePassphraseTitle => 'Přístupové heslo disku';
-
-  @override
   String get choosePassphraseHeader => 'Vytvořit přístupové heslo';
 
   @override
   String get choosePassphraseBody => 'K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí vás počítač vyzve k zadání tohoto hesla.';
-
-  @override
-  String get choosePassphraseHint => 'Zvolte přístupové heslo';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Potvrďte přístupové heslo';
-
-  @override
-  String get choosePassphraseMismatch => 'Přístupová hesla se liší';
 
   @override
   String get choosePassphraseInfoHeader => 'Přístupové heslo si uložte na bezpečném místě';

@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Sètz fòra linha';
 
   @override
-  String get choosePassphraseTitle => 'Frasa secrèta del disc';
-
-  @override
   String get choosePassphraseHeader => 'Crear un senhal';
 
   @override
   String get choosePassphraseBody => 'Avètz besonh d\'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu\'aviatz vòstre ordenador.';
-
-  @override
-  String get choosePassphraseHint => 'Causissètz una frasa secrèta';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Verificatz la frasa secrèta';
-
-  @override
-  String get choosePassphraseMismatch => 'Las frasas secrètas correspondon pas';
 
   @override
   String get choosePassphraseInfoHeader => 'Gardatz vòstra frasa secrèta en luòc segur';

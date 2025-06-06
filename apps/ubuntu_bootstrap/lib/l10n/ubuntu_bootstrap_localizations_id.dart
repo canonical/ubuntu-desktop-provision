@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Anda sekarang sedang luring';
 
   @override
-  String get choosePassphraseTitle => 'Frasa sandi disk';
-
-  @override
   String get choosePassphraseHeader => 'Buat frasa sandi';
 
   @override
   String get choosePassphraseBody => 'Anda perlu frasa sandi untuk mengenkripsi berkas Anda. Anda akan diminta untuk frasa sandi Anda setiap kali Anda menyalakan komputer Anda.';
-
-  @override
-  String get choosePassphraseHint => 'Pilih frasa sandi';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Konfirmasikan frasa sandi';
-
-  @override
-  String get choosePassphraseMismatch => 'Frasa sandi tidak cocok';
 
   @override
   String get choosePassphraseInfoHeader => 'Simpan frasa sandi Anda di suatu tempat yang aman';

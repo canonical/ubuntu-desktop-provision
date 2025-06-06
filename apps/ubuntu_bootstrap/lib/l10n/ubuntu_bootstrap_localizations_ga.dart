@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Tá tú as líne faoi láthair';
 
   @override
-  String get choosePassphraseTitle => 'Pasfhrása diosca';
-
-  @override
   String get choosePassphraseHeader => 'Cruthaigh pasfhrása';
 
   @override
   String get choosePassphraseBody => 'Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.';
-
-  @override
-  String get choosePassphraseHint => 'Roghnaigh pasfhrása';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Deimhnigh an pasfhrása';
-
-  @override
-  String get choosePassphraseMismatch => 'Ní mheaitseálann na pasfhrásaí';
 
   @override
   String get choosePassphraseInfoHeader => 'Stóráil do phasfhrása áit éigin sábháilte';

@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Vi estas aktuale ne konektita al Interreto';
 
   @override
-  String get choosePassphraseTitle => 'Diska pasfrazo';
-
-  @override
   String get choosePassphraseHeader => 'Krei pasfrazon';
 
   @override
   String get choosePassphraseBody => 'Vi devas havi pasfrazon por ĉifri viajn dosierojn. Vi devos tajpi vian pasfrazon ĉiujn fojojn, kiam via komputilo startos.';
-
-  @override
-  String get choosePassphraseHint => 'Elektu pasfrazon';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Konfirmu la pasfrazon';
-
-  @override
-  String get choosePassphraseMismatch => 'La pasfrazoj ne kongruas';
 
   @override
   String get choosePassphraseInfoHeader => 'Konservu vian pasfrazon ie sekure';

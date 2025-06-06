@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Vous êtes actuellement hors ligne';
 
   @override
-  String get choosePassphraseTitle => 'Phrase secrète du disque';
-
-  @override
   String get choosePassphraseHeader => 'Créez une phrase secrète';
 
   @override
   String get choosePassphraseBody => 'Vous avez besoin d\'une phrase secrète pour chiffrer vos fichiers. Votre phrase secrète vous sera demandée à chaque fois que vous allumez sur votre ordinateur.';
-
-  @override
-  String get choosePassphraseHint => 'Choisissez une phrase secrète';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Confirmez la phrase secrète';
-
-  @override
-  String get choosePassphraseMismatch => 'Les phrases secrètes ne correspondent pas';
 
   @override
   String get choosePassphraseInfoHeader => 'Stockez votre phrase secrète en lieu sûr';

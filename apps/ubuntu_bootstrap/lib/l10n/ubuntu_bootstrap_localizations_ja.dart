@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => '現在オフラインです';
 
   @override
-  String get choosePassphraseTitle => 'ディスクのパスフレーズ';
-
-  @override
   String get choosePassphraseHeader => 'パスフレーズを作成';
 
   @override
   String get choosePassphraseBody => 'ファイルを暗号化するパスフレーズが必要です。コンピューターの電源を入れるたびに毎回パスフレーズを入力します。';
-
-  @override
-  String get choosePassphraseHint => 'パスフレーズを入力';
-
-  @override
-  String get choosePassphraseConfirmHint => 'パスフレーズを確認';
-
-  @override
-  String get choosePassphraseMismatch => 'パスフレーズが一致しません';
 
   @override
   String get choosePassphraseInfoHeader => '確実にパスフレーズを保存してください';

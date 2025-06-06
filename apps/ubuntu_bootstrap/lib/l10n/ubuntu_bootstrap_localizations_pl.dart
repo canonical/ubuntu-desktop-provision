@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Jesteś obecnie offline';
 
   @override
-  String get choosePassphraseTitle => 'Hasło dysku';
-
-  @override
   String get choosePassphraseHeader => 'Utwórz hasło';
 
   @override
   String get choosePassphraseBody => 'Aby zaszyfrować pliki, potrzebujesz hasła. Przy każdym włączeniu komputera będzie wymagane podanie hasła.';
-
-  @override
-  String get choosePassphraseHint => 'Wybierz hasło';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Potwierdź hasło';
-
-  @override
-  String get choosePassphraseMismatch => 'Hasła nie pasują do siebie';
 
   @override
   String get choosePassphraseInfoHeader => 'Przechowuj hasło w bezpiecznym miejscu';

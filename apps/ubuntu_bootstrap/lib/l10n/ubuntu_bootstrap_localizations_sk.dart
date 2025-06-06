@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'V tejto chvíli nie ste pripojení';
 
   @override
-  String get choosePassphraseTitle => 'Prístupová fráza disku';
-
-  @override
   String get choosePassphraseHeader => 'Vytvorenie prístupovej frázy';
 
   @override
   String get choosePassphraseBody => 'Na šifrovanie súborov potrebujete prístupovú frázu. Pri každom zapnutí počítača sa zobrazí výzva na zadanie prístupovej frázy.';
-
-  @override
-  String get choosePassphraseHint => 'Vyberte prístupovú frázu';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Zopakujte zadanie prístupovej frázy';
-
-  @override
-  String get choosePassphraseMismatch => 'Prístupové frázy sa nezhodujú';
 
   @override
   String get choosePassphraseInfoHeader => 'Uložte svoju prístupovú frázu na bezpečné miesto';

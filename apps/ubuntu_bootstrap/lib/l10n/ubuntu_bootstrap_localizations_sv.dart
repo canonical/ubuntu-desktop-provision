@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Du är för närvarande offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk lösenfras';
-
-  @override
   String get choosePassphraseHeader => 'Skapa en lösenfras';
 
   @override
   String get choosePassphraseBody => 'Du behöver en lösenfras för att kryptera dina filer. Du kommer att bli ombedd att ange din lösenfras varje gång du slår på din dator.';
-
-  @override
-  String get choosePassphraseHint => 'Välj en lösenfras';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Bekräfta lösenfrasen';
-
-  @override
-  String get choosePassphraseMismatch => 'Lösenfraserna matchar inte';
 
   @override
   String get choosePassphraseInfoHeader => 'Förvara din lösenfras på ett säkert ställe';

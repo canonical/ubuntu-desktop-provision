@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get offlineWarning => '您当前处于离线状态';
 
   @override
-  String get choosePassphraseTitle => '磁盘密码';
-
-  @override
   String get choosePassphraseHeader => '创建密码';
 
   @override
   String get choosePassphraseBody => '您需要密码来加密文件。在每次启动计算机时都会提示您输入此密码。';
-
-  @override
-  String get choosePassphraseHint => '选择密码';
-
-  @override
-  String get choosePassphraseConfirmHint => '确认密码';
-
-  @override
-  String get choosePassphraseMismatch => '密码不匹配';
 
   @override
   String get choosePassphraseInfoHeader => '将您的密码保存在安全的地方';
@@ -1509,22 +1497,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get offlineWarning => '您目前處於離線狀態';
 
   @override
-  String get choosePassphraseTitle => '磁碟密碼';
-
-  @override
   String get choosePassphraseHeader => '建立密碼';
 
   @override
   String get choosePassphraseBody => '您需要一個密碼來加密您的檔案。每次開啟電腦時，系統都會提示您輸入密碼。';
-
-  @override
-  String get choosePassphraseHint => '選擇密碼';
-
-  @override
-  String get choosePassphraseConfirmHint => '確認密碼';
-
-  @override
-  String get choosePassphraseMismatch => '密碼不符合';
 
   @override
   String get choosePassphraseInfoHeader => '將您的密碼存放在安全的地方';

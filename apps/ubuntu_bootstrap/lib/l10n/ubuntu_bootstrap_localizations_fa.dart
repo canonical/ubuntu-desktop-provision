@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'در حال حاضر برون‌خطید';
 
   @override
-  String get choosePassphraseTitle => 'عبارت عبور دیسک';
-
-  @override
   String get choosePassphraseHeader => 'ایجاد عبارت عبور';
 
   @override
   String get choosePassphraseBody => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
-
-  @override
-  String get choosePassphraseHint => 'گزینش عبارت عبور';
-
-  @override
-  String get choosePassphraseConfirmHint => 'تأیید عبارت عبور';
-
-  @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
 
   @override
   String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';

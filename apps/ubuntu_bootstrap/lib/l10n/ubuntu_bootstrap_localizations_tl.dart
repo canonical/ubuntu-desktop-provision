@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsTl extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'You are currently offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk passphrase';
-
-  @override
   String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
   String get choosePassphraseBody => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
-
-  @override
-  String get choosePassphraseHint => 'Choose a passphrase';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
-
-  @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
 
   @override
   String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';

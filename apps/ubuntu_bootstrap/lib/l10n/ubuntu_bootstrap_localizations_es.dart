@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Actualmente no hay conexión';
 
   @override
-  String get choosePassphraseTitle => 'Contraseña del disco';
-
-  @override
   String get choosePassphraseHeader => 'Crear una contraseña';
 
   @override
   String get choosePassphraseBody => 'Necesita una contraseña para cifrar sus archivos. Se le solicitará su contraseña cada vez que encienda su ordenador.';
-
-  @override
-  String get choosePassphraseHint => 'Elige una contraseña';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Verificar la contraseña';
-
-  @override
-  String get choosePassphraseMismatch => 'Las contraseña no coinciden';
 
   @override
   String get choosePassphraseInfoHeader => 'Almacene su frase secreta en algún lugar seguro';

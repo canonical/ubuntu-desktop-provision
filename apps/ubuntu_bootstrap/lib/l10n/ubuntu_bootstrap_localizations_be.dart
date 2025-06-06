@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Вы зараз па-за сеткай';
 
   @override
-  String get choosePassphraseTitle => 'Парольная фраза для дыска';
-
-  @override
   String get choosePassphraseHeader => 'Стварыць парольную фразу';
 
   @override
   String get choosePassphraseBody => 'Для шыфравання файлаў неабходна парольная фраза. Вам неабходна будзе ўводзіць яе пры кожным уключэнні камп\'ютара.';
-
-  @override
-  String get choosePassphraseHint => 'Выберыце парольную фразу';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Пацвердзіць парольную фразу';
-
-  @override
-  String get choosePassphraseMismatch => 'Парольныя фразы не супадаюць';
 
   @override
   String get choosePassphraseInfoHeader => 'Не забудзьце захаваць парольную фразу';

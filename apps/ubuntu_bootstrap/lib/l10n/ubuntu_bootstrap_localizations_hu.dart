@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Jelenleg kapcsolat nélkül van';
 
   @override
-  String get choosePassphraseTitle => 'Lemez jelmondata';
-
-  @override
   String get choosePassphraseHeader => 'Jelmondat létrehozása';
 
   @override
   String get choosePassphraseBody => 'Jelmondatra van szüksége a fájlok titkosításához. A számítógép bekapcsolásakor minden alkalommal meg kell adnia a jelmondatot.';
-
-  @override
-  String get choosePassphraseHint => 'Jelmondat kiválasztása';
-
-  @override
-  String get choosePassphraseConfirmHint => 'A jelmondat megerősítése';
-
-  @override
-  String get choosePassphraseMismatch => 'A jelmondatok nem egyeznek';
 
   @override
   String get choosePassphraseInfoHeader => 'Tárolja a jelmondatát biztonságos helyen';

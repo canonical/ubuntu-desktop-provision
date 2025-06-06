@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'De momento está offline';
 
   @override
-  String get choosePassphraseTitle => 'Palavra-passe do disco';
-
-  @override
   String get choosePassphraseHeader => 'Crie uma palavra-passe';
 
   @override
   String get choosePassphraseBody => 'É necessária uma palavra-passe para encriptar os ficheiros. Ser-lhe-á pedido que introduza a sua palavra-passe sempre que ligar o computador.';
-
-  @override
-  String get choosePassphraseHint => 'Escolha uma palavra-passe';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Confirme a palavra-passe';
-
-  @override
-  String get choosePassphraseMismatch => 'As palavras-passe não coincidem';
 
   @override
   String get choosePassphraseInfoHeader => 'Certifique-se de que guarda a sua palavra-passe';
@@ -1434,22 +1422,10 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get offlineWarning => 'Você está off-line no momento';
 
   @override
-  String get choosePassphraseTitle => 'Senha do disco';
-
-  @override
   String get choosePassphraseHeader => 'Criar uma senha';
 
   @override
   String get choosePassphraseBody => 'Você precisa de uma senha para criptografar seus arquivos. Você será solicitado a fornecer sua senha toda vez que ligar o computador.';
-
-  @override
-  String get choosePassphraseHint => 'Escolha uma senha';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Confirme a senha';
-
-  @override
-  String get choosePassphraseMismatch => 'As senhas não correspondem';
 
   @override
   String get choosePassphraseInfoHeader => 'Certifique-se de salvar sua senha';

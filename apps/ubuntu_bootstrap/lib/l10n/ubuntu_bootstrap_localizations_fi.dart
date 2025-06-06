@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Et ole yhteydessä verkkoon';
 
   @override
-  String get choosePassphraseTitle => 'Levyn tunnuslause';
-
-  @override
   String get choosePassphraseHeader => 'Luo tunnuslause';
 
   @override
   String get choosePassphraseBody => 'Tarvitset tunnuslauseen salataksesi tiedostosi. Tunnuslause tulee kirjoittaa joka kerta, kun tietokone käynnistetään.';
-
-  @override
-  String get choosePassphraseHint => 'Valitse tunnuslause';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Vahvista tunnuslause';
-
-  @override
-  String get choosePassphraseMismatch => 'Tunnuslauseet eivät vastaa toisiaan';
 
   @override
   String get choosePassphraseInfoHeader => 'Tallenna tunnuslause turvalliseen paikkaan';

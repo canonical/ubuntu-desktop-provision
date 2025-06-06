@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'நீங்கள் தற்போது ஆஃப்லைனில் இருக்கிறீர்கள்';
 
   @override
-  String get choosePassphraseTitle => 'வட்டு கடவுச்சொல்';
-
-  @override
   String get choosePassphraseHeader => 'ஒரு கடவுச்சொல்லை உருவாக்கவும்';
 
   @override
   String get choosePassphraseBody => 'உங்கள் கோப்புகளை குறியாக்க உங்களுக்கு ஒரு கடவுச்சொல் தேவை. உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் உங்கள் கடவுச்சொற்றுக்கு கேட்கப்படுவீர்கள்.';
-
-  @override
-  String get choosePassphraseHint => 'கடவுச்சொற்றைத் தேர்வுசெய்க';
-
-  @override
-  String get choosePassphraseConfirmHint => 'பாச்ஃபிரேசை உறுதிப்படுத்தவும்';
-
-  @override
-  String get choosePassphraseMismatch => 'கடவுச்சொற்கள் பொருந்தவில்லை';
 
   @override
   String get choosePassphraseInfoHeader => 'உங்கள் கடவுச்சொல் எங்காவது பாதுகாப்பாக சேமிக்கவும்';

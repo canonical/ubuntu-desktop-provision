@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Sa hetkel pole võrgus';
 
   @override
-  String get choosePassphraseTitle => 'Ketta salafraas';
-
-  @override
   String get choosePassphraseHeader => 'Loo salafraas';
 
   @override
   String get choosePassphraseBody => 'Vajad salafraasi failide krüptimiseks. Pead selle sisestama igal arvuti käivituskorral.';
-
-  @override
-  String get choosePassphraseHint => 'Vali salafraas';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Korda salafraasi';
-
-  @override
-  String get choosePassphraseMismatch => 'Salafraasid ei klapi omavahel';
 
   @override
   String get choosePassphraseInfoHeader => 'Salvesta salafraas turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';

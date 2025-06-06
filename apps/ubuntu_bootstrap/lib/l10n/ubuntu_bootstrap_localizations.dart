@@ -719,12 +719,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'You are currently offline'**
   String get offlineWarning;
 
-  /// No description provided for @choosePassphraseTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Disk passphrase'**
-  String get choosePassphraseTitle;
-
   /// No description provided for @choosePassphraseHeader.
   ///
   /// In en, this message translates to:
@@ -736,24 +730,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.'**
   String get choosePassphraseBody;
-
-  /// No description provided for @choosePassphraseHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Choose a passphrase'**
-  String get choosePassphraseHint;
-
-  /// No description provided for @choosePassphraseConfirmHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm the passphrase'**
-  String get choosePassphraseConfirmHint;
-
-  /// No description provided for @choosePassphraseMismatch.
-  ///
-  /// In en, this message translates to:
-  /// **'The passphrases do not match'**
-  String get choosePassphraseMismatch;
 
   /// No description provided for @choosePassphraseInfoHeader.
   ///

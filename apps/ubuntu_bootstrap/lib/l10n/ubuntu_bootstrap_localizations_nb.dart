@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Du er frakoblet';
 
   @override
-  String get choosePassphraseTitle => 'Disk-passord';
-
-  @override
   String get choosePassphraseHeader => 'Opprett et passord';
 
   @override
   String get choosePassphraseBody => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
-
-  @override
-  String get choosePassphraseHint => 'Velg et passord';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Bekreft passordet';
-
-  @override
-  String get choosePassphraseMismatch => 'Passordene samsvarer ikke';
 
   @override
   String get choosePassphraseInfoHeader => 'Forsikre deg om at du lagrer passordet';

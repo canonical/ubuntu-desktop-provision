@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Тренутно сте ван мреже';
 
   @override
-  String get choosePassphraseTitle => 'Лозинка за диск';
-
-  @override
   String get choosePassphraseHeader => 'Направите лозинку';
 
   @override
   String get choosePassphraseBody => 'Потребна вам је лозинка да бисте шифровали своје датотеке. Бићете упитани за лозинку сваки пут када укључите рачунар.';
-
-  @override
-  String get choosePassphraseHint => 'Изаберите лозинку';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Потврдите лозинку';
-
-  @override
-  String get choosePassphraseMismatch => 'Лозинке се не поклапају';
 
   @override
   String get choosePassphraseInfoHeader => 'Обавезно сачувајте своју лозинку';

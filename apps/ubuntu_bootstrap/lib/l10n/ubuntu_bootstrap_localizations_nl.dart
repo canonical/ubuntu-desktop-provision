@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Je bent momenteel offline';
 
   @override
-  String get choosePassphraseTitle => 'Wachtwoordzin voor de schijf';
-
-  @override
   String get choosePassphraseHeader => 'Wachtwoordzin aanmaken';
 
   @override
   String get choosePassphraseBody => 'U hebt een wachtwoordzin nodig om uw bestanden te versleutelen. Elke keer dat u de computer aanzet, wordt u om uw wachtwoordzin gevraagd.';
-
-  @override
-  String get choosePassphraseHint => 'Kies een wachtwoordzin';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Wachtwoordzin bevestigen';
-
-  @override
-  String get choosePassphraseMismatch => 'De wachtwoordzinnen komen niet overeen';
 
   @override
   String get choosePassphraseInfoHeader => 'Bewaar uw wachtwoordzin op een veilige plek';

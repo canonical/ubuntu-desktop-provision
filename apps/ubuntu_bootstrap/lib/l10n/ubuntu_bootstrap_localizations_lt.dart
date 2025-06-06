@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Šiuo metu nesate prisijungę prie interneto';
 
   @override
-  String get choosePassphraseTitle => 'Disko slaptafrazė';
-
-  @override
   String get choosePassphraseHeader => 'Create a passphrase';
 
   @override
   String get choosePassphraseBody => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
-
-  @override
-  String get choosePassphraseHint => 'Choose a passphrase';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Confirm the passphrase';
-
-  @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
 
   @override
   String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';

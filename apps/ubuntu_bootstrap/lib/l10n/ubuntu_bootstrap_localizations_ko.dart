@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get offlineWarning => '현재 오프라인 상태입니다';
 
   @override
-  String get choosePassphraseTitle => '디스크 암호';
-
-  @override
   String get choosePassphraseHeader => '암호 만들기';
 
   @override
   String get choosePassphraseBody => '파일을 암호화하려면 암호를 설정해야 합니다. 컴퓨터를 켤 때마다 암호를 묻는 메시지가 표시됩니다.';
-
-  @override
-  String get choosePassphraseHint => '암호 선택';
-
-  @override
-  String get choosePassphraseConfirmHint => '암호 확인';
-
-  @override
-  String get choosePassphraseMismatch => '암호가 일치하지 않습니다';
 
   @override
   String get choosePassphraseInfoHeader => '암호를 안전한 곳에 저장해 두세요';

@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Sie sind derzeit offline';
 
   @override
-  String get choosePassphraseTitle => 'Festplatten-Passphrase';
-
-  @override
   String get choosePassphraseHeader => 'Passphrase erstellen';
 
   @override
   String get choosePassphraseBody => 'Sie benötigen eine Passphrase, um Ihre Dateien zu verschlüsseln. Sie werden jedes Mal, wenn Sie Ihren Computer einschalten, zur Eingabe Ihrer Passphrase aufgefordert.';
-
-  @override
-  String get choosePassphraseHint => 'Passphrase auswählen';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Passphrase bestätigen';
-
-  @override
-  String get choosePassphraseMismatch => 'Die Passphrasen stimmen nicht überein';
 
   @override
   String get choosePassphraseInfoHeader => 'Bewahren Sie Ihre Passphrase an einem sicheren Ort auf';

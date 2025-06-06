@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'You are currently offline';
 
   @override
-  String get choosePassphraseTitle => 'დისკის საკვანძო ფრაზა';
-
-  @override
   String get choosePassphraseHeader => 'საკვანძო ფრაზის შექმნა';
 
   @override
   String get choosePassphraseBody => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
-
-  @override
-  String get choosePassphraseHint => 'აირჩიეთ საკვანძო ფრაზა';
-
-  @override
-  String get choosePassphraseConfirmHint => 'დაადასტურეთ საკვანძო ფრაზა';
-
-  @override
-  String get choosePassphraseMismatch => 'The passphrases do not match';
 
   @override
   String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';

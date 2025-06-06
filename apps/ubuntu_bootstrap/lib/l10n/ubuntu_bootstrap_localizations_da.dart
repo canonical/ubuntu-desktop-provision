@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Du er i øjeblikket offline';
 
   @override
-  String get choosePassphraseTitle => 'Diskadgangskode';
-
-  @override
   String get choosePassphraseHeader => 'Opret en adgangskode';
 
   @override
   String get choosePassphraseBody => 'Du skal bruge en adgangskode for at kryptere dine filer. Du vil blive bedt om din adgangskode hver gang, du tænder computeren.';
-
-  @override
-  String get choosePassphraseHint => 'Vælg en adgangskode';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Bekræft adgangskoden';
-
-  @override
-  String get choosePassphraseMismatch => 'Adgangskoderne stemmer ikke overens';
 
   @override
   String get choosePassphraseInfoHeader => 'Sørg for at gemme din adgangskode';

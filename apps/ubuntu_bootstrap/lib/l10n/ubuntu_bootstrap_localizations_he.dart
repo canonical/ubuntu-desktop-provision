@@ -275,22 +275,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'החיבור שלך מנותק';
 
   @override
-  String get choosePassphraseTitle => 'מילת צופן של הכונן';
-
-  @override
   String get choosePassphraseHeader => 'יצירת מילת צופן';
 
   @override
   String get choosePassphraseBody => 'צריך מילת צופן כדי להצפין את הקבצים שלך. תופיע בקשה למילוי מילת הצופן עם כל הפעלה של המחשב.';
-
-  @override
-  String get choosePassphraseHint => 'נא לבחור מילת צופן';
-
-  @override
-  String get choosePassphraseConfirmHint => 'אישור מילת הצופן';
-
-  @override
-  String get choosePassphraseMismatch => 'מילות הצופן לא תואמות';
 
   @override
   String get choosePassphraseInfoHeader => 'נא לאחסן את מילת הצופן שלך במקום בטוח';
