@@ -665,6 +665,7 @@ void main() {
         'subiquity.cmd.server',
         serverMode: ServerMode.DRY_RUN,
         subiquityPath: subiquityPath,
+        environment: {'SUBIQUITY_REPLAY_TIMESCALE': '100'},
       );
       testServer = SubiquityServer(
         process: process,
@@ -691,6 +692,21 @@ void main() {
     test('get core boot recovery key v2', () async {
       await client.setVariant(Variant.DESKTOP);
       await client.setSource('ubuntu-desktop');
+      await client.markConfigured([
+        'locale',
+        'keyboard',
+        'mirror',
+        'proxy',
+        'ssh',
+        'snaplist',
+        'identity',
+        'timezone',
+        'drivers',
+        'codecs',
+        'snaplist',
+        'network',
+        'ubuntu_pro',
+      ]);
       final guided = await client.getGuidedStorageV2();
       final target =
           guided.targets.whereType<GuidedStorageTargetReformat>().last;
@@ -700,6 +716,14 @@ void main() {
         sizingPolicy: null,
       );
       await client.setGuidedStorageV2(choice);
+      await client.setStorageV2();
+      await client.monitorStatus().firstWhere(
+            (status) => status?.state == ApplicationState.NEEDS_CONFIRMATION,
+          );
+      await client.confirm('/dev/tty1');
+      await client
+          .monitorStatus()
+          .firstWhere((status) => status?.state == ApplicationState.DONE);
       final response = await client.getCoreBootRecoveryKeyV2();
       expect(response, isNotEmpty);
     });

@@ -82,13 +82,14 @@ class SubiquityProcess {
     String? pythonExecutable,
     String? subiquityPath,
     ServerMode? serverMode,
+    Map<String, String>? environment,
   }) {
     final cmd = pythonExecutable ??
         Platform.environment['SNAP_PYTHON'] ??
         '/usr/bin/python3';
 
     final arguments = ['-m', pythonModule];
-    final env = <String, String>{};
+    final env = environment ?? <String, String>{};
 
     if (serverMode == ServerMode.DRY_RUN) {
       arguments.add('--dry-run');
