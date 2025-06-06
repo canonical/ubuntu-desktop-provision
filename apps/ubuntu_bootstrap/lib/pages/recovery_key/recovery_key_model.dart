@@ -101,7 +101,7 @@ class RecoveryKeyModel extends SafeChangeNotifier {
 
   Future<void> writeRecoveryKey(Uri uri) async {
     if (uri.pathSegments.first == 'target' ||
-        await _findFileSystem(uri) == '/cow') {
+        ['/cow', 'tmpfs'].contains(await _findFileSystem(uri))) {
       throw RecoveryKeyException.disallowedPath();
     }
     await _fs.file(uri.path).writeAsString(_recoveryKey);

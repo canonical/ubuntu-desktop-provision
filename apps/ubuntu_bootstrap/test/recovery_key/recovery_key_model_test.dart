@@ -52,6 +52,13 @@ void main() {
         expectedErrorMatcher: isA<RecoveryKeyExceptionDisallowedPath>(),
       ),
       (
+        name: 'tmpfs',
+        directory: '/tmp',
+        findmntStdout: 'tmpfs',
+        findmntExitCode: 0,
+        expectedErrorMatcher: isA<RecoveryKeyExceptionDisallowedPath>(),
+      ),
+      (
         name: 'findmnt error',
         directory: '/home/ubuntu/Desktop',
         findmntStdout: '/cow',
