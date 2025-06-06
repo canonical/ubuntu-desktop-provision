@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -14,6 +15,7 @@ import 'package:yaru/yaru.dart';
 
 const fdeLink =
     'https://discourse.ubuntu.com/t/hardware-backed-encryption-and-recovery-keys-in-ubuntu-desktop/58243';
+const defaultRecoveryKeyFileName = 'recovery-key.txt';
 
 class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
   const RecoveryKeyPage({super.key});
@@ -117,15 +119,14 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
         Wrap(
           children: [
             OutlinedButton(
-              // TODO: proper error handling
               onPressed: () async {
                 try {
                   final uri = await showSaveFileDialog(
                     context: context,
-                    title: 'Save recovery key',
-                    defaultFileName: 'recovery-key.txt',
+                    title: l10n.recoveryKeyFilePickerTitle,
+                    defaultFileName: defaultRecoveryKeyFileName,
                     filters: [
-                      XdgFileChooserFilter('text files', [
+                      XdgFileChooserFilter(l10n.recoveryKeyFilePickerFilter, [
                         XdgFileChooserGlobPattern('*.txt'),
                       ]),
                     ],
@@ -133,17 +134,9 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
                   if (uri != null) {
                     await model.writeRecoveryKey(uri);
                   }
+                  model.setError(null);
                 } on Exception catch (e) {
-                  if (context.mounted) {
-                    await showDialog(
-                      context: context,
-                      builder: (_) => AlertDialog(
-                        title: YaruDialogTitleBar(title: Text('Error')),
-                        titlePadding: EdgeInsets.zero,
-                        content: Text(RecoveryKeyException.from(e).toString()),
-                      ),
-                    );
-                  }
+                  model.setError(RecoveryKeyException.from(e));
                 }
               },
               child: Text(l10n.recoveryKeySaveToFileLabel),
@@ -168,6 +161,12 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           value: model.confirmed,
           onChanged: model.setConfirmed,
         ),
+        if (model.error != null)
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.danger,
+            title: Text(model.error!.localizedTitle(l10n)),
+            child: Text(model.error!.localizedBody(l10n)),
+          ),
       ].withSpacing(kWizardSpacing),
     );
   }

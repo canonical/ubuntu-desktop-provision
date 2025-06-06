@@ -69,6 +69,15 @@ class MockRecoveryKeyModel extends _i1.Mock implements _i2.RecoveryKeyModel {
       );
 
   @override
+  void setError(_i2.RecoveryKeyException? error) => super.noSuchMethod(
+        Invocation.method(
+          #setError,
+          [error],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   _i4.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,

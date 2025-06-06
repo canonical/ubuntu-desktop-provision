@@ -65,6 +65,16 @@ class RecoveryKeyModel extends SafeChangeNotifier {
   late final String _recoveryKey;
   String get recoveryKey => _recoveryKey;
 
+  RecoveryKeyException? _error;
+  RecoveryKeyException? get error => _error;
+  void setError(RecoveryKeyException? error) {
+    if (_error != error) {
+      _error = error;
+      _log.info('UI set error state: $error');
+      notifyListeners();
+    }
+  }
+
   Future<bool> init() async {
     if (![
       GuidedCapability.CORE_BOOT_ENCRYPTED,
