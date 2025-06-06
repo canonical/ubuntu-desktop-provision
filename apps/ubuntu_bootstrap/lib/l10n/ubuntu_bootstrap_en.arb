@@ -936,6 +936,13 @@
   },
   "recoveryKeyQrDialogBody": "Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.",
   "recoveryKeyClipboardNotifiaction": "Copied to clipboard",
+  "recoveryKeyExceptionFileSystemTitle": "Recovery key file not saved",
+  "recoveryKeyExceptionDisallowedPathTitle": "Recovery key file cannot be saved in a temporary location",
+  "recoveryKeyExceptionUnknownTitle": "Unknown error",
+  "recoveryKeyExceptionFileSystemBody": "You do not have permission to write to that folder. Try a different location or use another method.",
+  "recoveryKeyExceptionDisallowedPathBody": "Try a different location, such as a removable drive, or use another method.",
+  "recoveryKeyFilePickerTitle": "Save recovery key file",
+  "recoveryKeyFilePickerFilter": "Text files",
   "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {
     "placeholders": {

@@ -4,15 +4,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
 const fdeLink =
     'https://discourse.ubuntu.com/t/hardware-backed-encryption-and-recovery-keys-in-ubuntu-desktop/58243';
+const defaultRecoveryKeyFileName = 'recovery-key.txt';
 
 class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
   const RecoveryKeyPage({super.key});
@@ -116,8 +119,26 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
         Wrap(
           children: [
             OutlinedButton(
-              // TODO: file picker
-              onPressed: () {},
+              onPressed: () async {
+                try {
+                  final uri = await showSaveFileDialog(
+                    context: context,
+                    title: l10n.recoveryKeyFilePickerTitle,
+                    defaultFileName: defaultRecoveryKeyFileName,
+                    filters: [
+                      XdgFileChooserFilter(l10n.recoveryKeyFilePickerFilter, [
+                        XdgFileChooserGlobPattern('*.txt'),
+                      ]),
+                    ],
+                  );
+                  if (uri != null) {
+                    await model.writeRecoveryKey(uri);
+                  }
+                  model.setError(null);
+                } on Exception catch (e) {
+                  model.setError(RecoveryKeyException.from(e));
+                }
+              },
               child: Text(l10n.recoveryKeySaveToFileLabel),
             ),
             OutlinedButton(
@@ -140,6 +161,12 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           value: model.confirmed,
           onChanged: model.setConfirmed,
         ),
+        if (model.error != null)
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.danger,
+            title: Text(model.error!.localizedTitle(l10n)),
+            child: Text(model.error!.localizedBody(l10n)),
+          ),
       ].withSpacing(kWizardSpacing),
     );
   }

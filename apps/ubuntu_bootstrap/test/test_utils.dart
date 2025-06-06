@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gsettings/gsettings.dart';
 import 'package:mockito/annotations.dart';
@@ -37,24 +38,27 @@ extension WidgetTesterX on WidgetTester {
     view.devicePixelRatio = 1;
     view.physicalSize = const Size(960, 680);
 
-    return MaterialApp(
-      localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
-      theme: yaruLight,
-      home: Wizard(
-        routes: {
-          '/': WizardRoute(
-            builder: builder,
-            onNext: (settings) => '/next',
-          ),
-          '/next': WizardRoute(
-            builder: (_) => const Row(
-              children: [
-                Text('Next page'),
-                BackWizardButton(),
-              ],
+    // This provider scope allows dialog routes to access providers in widget tests
+    return ProviderScope(
+      child: MaterialApp(
+        localizationsDelegates: GlobalUbuntuBootstrapLocalizations.delegates,
+        theme: yaruLight,
+        home: Wizard(
+          routes: {
+            '/': WizardRoute(
+              builder: builder,
+              onNext: (settings) => '/next',
             ),
-          ),
-        },
+            '/next': WizardRoute(
+              builder: (_) => const Row(
+                children: [
+                  Text('Next page'),
+                  BackWizardButton(),
+                ],
+              ),
+            ),
+          },
+        ),
       ),
     );
   }

@@ -1111,6 +1111,27 @@ class UbuntuBootstrapLocalizationsKu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
+  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+
+  @override
+  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+
+  @override
+  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+
+  @override
+  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+
+  @override
+  String get recoveryKeyFilePickerFilter => 'Text files';
+
+  @override
   String landscapeMagicAttachInstructions(String url) {
     return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
   }
