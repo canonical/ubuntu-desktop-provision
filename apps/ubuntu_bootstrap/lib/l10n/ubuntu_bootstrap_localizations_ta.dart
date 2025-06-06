@@ -1111,6 +1111,27 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
+  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+
+  @override
+  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+
+  @override
+  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+
+  @override
+  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+
+  @override
+  String get recoveryKeyFilePickerFilter => 'Text files';
+
+  @override
   String landscapeMagicAttachInstructions(String url) {
     return 'QR குறியீட்டை ச்கேன் செய்யுங்கள் அல்லது கீழே உள்ள குறியீட்டை <a href = \"https: // $url\"> $url </a> இல் உள்ளிடவும்';
   }
