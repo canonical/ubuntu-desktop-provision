@@ -707,5 +707,19 @@
   "recoveryKeyQrDialogBody": "Отсканируйте QR-код, чтобы скопировать ключ восстановления и сохранить его в безопасном месте, например, в менеджере паролей. Также вы можете сделать фотографию и использовать её позже.",
   "@recoveryKeyQrDialogBody": {},
   "recoveryKeyClipboardNotifiaction": "Скопировано в буфер обмена",
-  "@recoveryKeyClipboardNotifiaction": {}
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyExceptionUnknownTitle": "Неизвестная ошибка",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionFileSystemTitle": "Файл ключа восстановления не сохранён",
+  "@recoveryKeyExceptionFileSystemTitle": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "Файл ключа восстановления не может быть сохранён во временной папке",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "У вас нет разрешения на запись в эту папку. Попробуйте другое место или воспользуйтесь другим способом.",
+  "@recoveryKeyExceptionFileSystemBody": {},
+  "recoveryKeyExceptionDisallowedPathBody": "Попробуйте использовать другое место, например съёмный диск, или воспользуйтесь другим способом.",
+  "@recoveryKeyExceptionDisallowedPathBody": {},
+  "recoveryKeyFilePickerTitle": "Сохранить файл ключа восстановления",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyFilePickerFilter": "Текстовые файлы",
+  "@recoveryKeyFilePickerFilter": {}
 }
