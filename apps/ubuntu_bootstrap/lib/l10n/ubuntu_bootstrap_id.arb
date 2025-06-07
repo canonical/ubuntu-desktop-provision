@@ -707,5 +707,19 @@
   "recoveryKeyClipboardNotifiaction": "Disalin ke papan klip",
   "@recoveryKeyClipboardNotifiaction": {},
   "recoveryKeyTitleBadgeLabel": "Penting",
-  "@recoveryKeyTitleBadgeLabel": {}
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "Berkas kunci pemulihan tidak dapat disimpan di lokasi sementara",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionDisallowedPathBody": "Coba lokasi yang berbeda, seperti drive lepas pasang, atau gunakan metode lain.",
+  "@recoveryKeyExceptionDisallowedPathBody": {},
+  "recoveryKeyExceptionUnknownTitle": "Galat tak dikenal",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "Anda tidak memiliki izin untuk menulis ke folder itu. Coba lokasi yang berbeda atau gunakan metode lain.",
+  "@recoveryKeyExceptionFileSystemBody": {},
+  "recoveryKeyFilePickerTitle": "Simpan berkasi kunci pemulihan",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyFilePickerFilter": "Berkas teks",
+  "@recoveryKeyFilePickerFilter": {},
+  "recoveryKeyExceptionFileSystemTitle": "Berkas kunci pemulihan tidak disimpan",
+  "@recoveryKeyExceptionFileSystemTitle": {}
 }
