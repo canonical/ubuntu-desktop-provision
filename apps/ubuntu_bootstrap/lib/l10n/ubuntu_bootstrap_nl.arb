@@ -470,7 +470,7 @@
   "@landscapeDomainInstructions": {},
   "installationSlidesWelcomeTitle": "Snel, gratis en vol nieuwe functies",
   "@installationSlidesWelcomeTitle": {},
-  "recoveryKeyHeader": "Herstelcode opslaan",
+  "recoveryKeyHeader": "De herstelcode opslaan",
   "@recoveryKeyHeader": {},
   "landscapeHeader": "Inloggen bij Landscape",
   "@landscapeHeader": {},
@@ -673,5 +673,19 @@
     }
   },
   "recoveryKeyQrDialogBody": "Scan de QR-code om de herstelcode te kopiëren en op een veilige plek op te slaan, zoals een wachtwoordmanager. U kunt ook een foto maken voor later gebruik.",
-  "@recoveryKeyQrDialogBody": {}
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyExceptionUnknownTitle": "Onbekende fout",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "U hebt geen toestemming om naar die map te schrijven. Probeer een andere locatie of gebruik een andere methode.",
+  "@recoveryKeyExceptionFileSystemBody": {},
+  "recoveryKeyFilePickerTitle": "Herstelcode opslaan",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyFilePickerFilter": "Tekstbestanden",
+  "@recoveryKeyFilePickerFilter": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "Herstelcode kan niet worden opgeslagen op een tijdelijke locatie",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionFileSystemTitle": "Herstelcode niet opgeslagen",
+  "@recoveryKeyExceptionFileSystemTitle": {},
+  "recoveryKeyExceptionDisallowedPathBody": "Probeer een andere locatie, zoals een verwisselbaar station, of gebruik een andere methode.",
+  "@recoveryKeyExceptionDisallowedPathBody": {}
 }
