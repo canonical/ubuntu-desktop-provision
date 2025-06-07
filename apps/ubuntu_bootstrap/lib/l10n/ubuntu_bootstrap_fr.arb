@@ -344,7 +344,7 @@
   "@partitionFormatKeep": {},
   "loadingPageTitle": "Bienvenue à {DISTRO}",
   "@loadingPageTitle": {},
-  "recoveryKeyTitle": "Clé de récupération du TPM",
+  "recoveryKeyTitle": "Clé de secours",
   "@recoveryKeyTitle": {},
   "refreshPageTitle": "Mise à jour disponible",
   "@refreshPageTitle": {},
@@ -558,13 +558,13 @@
   "@autoinstallLandscapeOption": {},
   "autoinstallLandscapeDescription": "Pour les utilisateurs des organisations qui fournissent un fichier autoinstall via Landscape.",
   "@autoinstallLandscapeDescription": {},
-  "recoveryKeyHeader": "Obtenir une clé de récupération",
+  "recoveryKeyHeader": "Sauvegarder votre clé de secours",
   "@recoveryKeyHeader": {},
   "recoveryKeyInfoHeader": "Vous risquez de perdre toutes vos données sans clé de récupération",
   "@recoveryKeyInfoHeader": {},
-  "recoveryKeyStorageAdvice": "Stocker la clé de récupération en lieu sûr. Utilisez-la pour déchiffrer le disque en cas de certains changements du système. Par exemple, vous pourriez en avoir besoin si vous changez les composants de votre ordinateur ou mettez à jour le micrologiciel.",
+  "recoveryKeyStorageAdvice": "Vous devrez fournir cette clé de secours si le déchiffrement échoue au démarrage. Sans cette clé, vous perdrez l’accès à toutes vos données. Enregistrez-la dans un endroit sûr, tel qu'un gestionnaire de mots de passe.",
   "@recoveryKeyStorageAdvice": {},
-  "recoveryKeyConfirmation": "Je comprends que je pourrais perdre toutes mes données si je n’ai pas de clé de récupération",
+  "recoveryKeyConfirmation": "J’ai sauvegardé ma clé de secours en lieu sûr",
   "@recoveryKeyConfirmation": {},
   "landscapeMagicAttachInstructions": "Scanner le code QR ou saisir le code ci-dessous à <a href=\"https://{url}\">{url}</a>",
   "@landscapeMagicAttachInstructions": {},
@@ -687,5 +687,25 @@
   "landscapeConfirmPageSuccessInfoContent": "Vous pouvez consulter ci-dessous le fichier d’installation automatique importé de Landscape.",
   "@landscapeConfirmPageSuccessInfoContent": {},
   "recoveryKeyLinkLabel": "En savoir plus",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTitleBadgeLabel": "Important",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeySaveToFileLabel": "Sauvegarde dans fichier",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "Montrer code QR",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Clé de secours",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Scanner le code QR pour copier la clé de secours et l’enregistrer dans un endroit sûr, comme un gestionnaire de mots de passe. Vous pouvez également prendre une photo pour une utilisation ultérieure.",
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyClipboardNotifiaction": "Copiée dans presse-papiers",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyTextFieldLabel": "Clé de secours",
+  "@recoveryKeyTextFieldLabel": {}
 }
