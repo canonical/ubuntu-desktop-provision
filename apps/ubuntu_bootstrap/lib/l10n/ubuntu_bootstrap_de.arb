@@ -687,5 +687,39 @@
   "landscapeConfirmPageSuccessInfoContent": "Sie können die aus Landscape importierte autoinstall-Datei unten einsehen.",
   "@landscapeConfirmPageSuccessInfoContent": {},
   "recoveryKeyLinkLabel": "Mehr erfahren",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTitleBadgeLabel": "Wichtig",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeyTextFieldLabel": "Wiederherstellungsschlüssel",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeySaveToFileLabel": "In Datei speichern",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "QR-Code anzeigen",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Wiederherstellungsschlüssel",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Scannen Sie den QR-Code, um den Wiederherstellungsschlüssel zu kopieren, und speichern Sie ihn an einem sicheren Ort, z. B. in einem Passwortmanager. Sie können auch ein Foto zur späteren Verwendung machen.",
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyClipboardNotifiaction": "In die Zwischenablage kopiert",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "recoveryKeyExceptionUnknownTitle": "Unbekannter Fehler",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "Sie haben keine Berechtigung, in diesen Ordner zu schreiben. Versuchen Sie es an einem anderen Ort oder mit einer anderen Methode.",
+  "@recoveryKeyExceptionFileSystemBody": {},
+  "recoveryKeyExceptionDisallowedPathBody": "Versuchen Sie es an einem anderen Ort, z. B. auf einem Wechsellaufwerk, oder verwenden Sie eine andere Methode.",
+  "@recoveryKeyExceptionDisallowedPathBody": {},
+  "recoveryKeyFilePickerTitle": "Wiederherstellungsschlüsseldatei speichern",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyFilePickerFilter": "Textdateien",
+  "@recoveryKeyFilePickerFilter": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "Die Wiederherstellungsschlüsseldatei kann nicht an einem temporären Ort gespeichert werden",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionFileSystemTitle": "Wiederherstellungsschlüsseldatei nicht gespeichert",
+  "@recoveryKeyExceptionFileSystemTitle": {}
 }
