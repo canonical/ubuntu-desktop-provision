@@ -701,5 +701,19 @@
   "recoveryKeyTitleBadgeLabel": "Tábhachtach",
   "@recoveryKeyTitleBadgeLabel": {},
   "recoveryKeyQrDialogBody": "Scan an cód QR chun an eochair aisghabhála a chóipeáil agus í a shábháil in áit shábháilte, amhail bainisteoir pasfhocal. Is féidir leat grianghraf a thógáil freisin lena úsáid níos déanaí.",
-  "@recoveryKeyQrDialogBody": {}
+  "@recoveryKeyQrDialogBody": {},
+  "recoveryKeyExceptionFileSystemTitle": "Níor sábháladh comhad eochrach aisghabhála",
+  "@recoveryKeyExceptionFileSystemTitle": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "Ní féidir comhad eochrach aisghabhála a shábháil in áit shealadach",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionUnknownTitle": "Earráid anaithnid",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "Níl cead agat scríobh chuig an bhfillteán sin. Bain triail as suíomh difriúil nó bain úsáid as modh eile.",
+  "@recoveryKeyExceptionFileSystemBody": {},
+  "recoveryKeyExceptionDisallowedPathBody": "Bain triail as suíomh difriúil, amhail tiomántán inbhainte, nó bain úsáid as modh eile.",
+  "@recoveryKeyExceptionDisallowedPathBody": {},
+  "recoveryKeyFilePickerTitle": "Sábháil comhad eochrach aisghabhála",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyFilePickerFilter": "Comhaid téacs",
+  "@recoveryKeyFilePickerFilter": {}
 }
