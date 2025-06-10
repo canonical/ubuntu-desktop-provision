@@ -133,8 +133,10 @@ class _SecurityKeyShowButton extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.all(1.0),
       child: TextButton.icon(
-        icon:
-            Icon(YaruIcons.eye, color: theme.colorScheme.onSecondaryContainer),
+        icon: Icon(
+          showSecurityKey ? YaruIcons.eye : YaruIcons.hide,
+          color: theme.colorScheme.onSecondaryContainer,
+        ),
         label:
             Text(showSecurityKey ? lang.hideSecurityKey : lang.showSecurityKey),
         onPressed: () {
