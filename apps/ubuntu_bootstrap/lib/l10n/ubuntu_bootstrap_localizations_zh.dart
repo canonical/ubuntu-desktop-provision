@@ -275,25 +275,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get offlineWarning => '您当前处于离线状态';
 
   @override
-  String get choosePassphraseTitle => '磁盘密码';
-
-  @override
   String get choosePassphraseHeader => '创建密码';
 
   @override
   String get choosePassphraseBody => '您需要密码来加密文件。在每次启动计算机时都会提示您输入此密码。';
-
-  @override
-  String get choosePassphraseHint => '选择密码';
-
-  @override
-  String get choosePassphraseConfirmHint => '确认密码';
-
-  @override
-  String get choosePassphraseRequired => '需要密码';
-
-  @override
-  String get choosePassphraseMismatch => '密码不匹配';
 
   @override
   String get choosePassphraseInfoHeader => '将您的密码保存在安全的地方';
@@ -302,22 +287,70 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => '如果您丢失了密码，所有数据都将丢失。';
 
   @override
-  String get chooseOptionalPassphraseHeader => '创建密码（可选）';
-
-  @override
-  String get chooseOptionalPassphraseBody => '密码可以在您的硬件遭到损坏时保护您的数据。您每次开机时都需要输入密码。您以后将不能移除它。';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => '将您的密码和恢复密钥保存在安全的地方';
 
   @override
   String get chooseOptionalPassphraseInfoBody => '如果您丢失了密码，您将失去所有的数据。密码不能代替恢复密钥或者用户密码。';
 
   @override
-  String get createPassphrase => '创建密码';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => '确认密码';
+  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
   String get installationTypeTitle => '安装类型';
@@ -1461,25 +1494,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get offlineWarning => '您目前處於離線狀態';
 
   @override
-  String get choosePassphraseTitle => '磁碟密碼';
-
-  @override
   String get choosePassphraseHeader => '建立密碼';
 
   @override
   String get choosePassphraseBody => '您需要一個密碼來加密您的檔案。每次開啟電腦時，系統都會提示您輸入密碼。';
-
-  @override
-  String get choosePassphraseHint => '選擇密碼';
-
-  @override
-  String get choosePassphraseConfirmHint => '確認密碼';
-
-  @override
-  String get choosePassphraseRequired => '需要密碼';
-
-  @override
-  String get choosePassphraseMismatch => '密碼不符合';
 
   @override
   String get choosePassphraseInfoHeader => '將您的密碼存放在安全的地方';
@@ -1488,22 +1506,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get choosePassphraseInfoBody => '如果弄丟密碼，您將會失去所有資料。';
 
   @override
-  String get chooseOptionalPassphraseHeader => '建立密碼（可選）';
-
-  @override
-  String get chooseOptionalPassphraseBody => '即使您的硬體受到攻擊，密碼也能保護您的資料。每次開啟電腦時，您都需要輸入密碼。之後您將無法移除它';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => '將您的密碼和復原金鑰存放在安全的地方';
 
   @override
   String get chooseOptionalPassphraseInfoBody => '如果弄丟密碼，您將會失去所有資料。密碼不能取代復原金鑰或您的使用者密碼。';
-
-  @override
-  String get createPassphrase => '建立密碼';
-
-  @override
-  String get confirmPassphrase => '確認密碼';
 
   @override
   String get installationTypeTitle => '磁碟設定';

@@ -1,80 +1,122 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:yaru/icons.dart';
 
 // TODO: this will need to be conditionally hooked up to the /storage/v2/calculate_entropy
 //       endpoint in Subiquity once it is available
-class PassphraseFormField extends ConsumerWidget {
+class PassphraseFormField extends ConsumerStatefulWidget {
   const PassphraseFormField({super.key, this.fieldWidth});
 
   final double? fieldWidth;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<PassphraseFormField> createState() =>
+      _PassphraseFormFieldState();
+}
+
+class _PassphraseFormFieldState extends ConsumerState<PassphraseFormField> {
+  final _controller = TextEditingController();
+
+  @override
+  void initState() {
+    final model = ref.read(passphraseModelProvider);
+
+    super.initState();
+    _controller.value = _controller.value.copyWith(text: model.passphrase);
+    if (model.passphraseType == PassphraseType.pin) {
+      _controller.addListener(() => _filterDigits(_controller));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final model = ref.watch(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final securityKey = ref.watch(
-      passphraseModelProvider.select((model) => model.passphrase),
-    );
-    final showSecurityKey = ref.watch(
-      passphraseModelProvider.select((model) => model.showPassphrase),
-    );
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
-      labelText: lang.choosePassphraseHint,
-      obscureText: !showSecurityKey,
-      successWidget: securityKey.isNotEmpty ? const SuccessIcon() : null,
-      initialValue: securityKey,
+      controller: _controller,
+      fieldWidth: widget.fieldWidth,
+      labelText: model.passphraseType.localizedChooseHint(lang),
+      obscureText: !model.showPassphrase,
+      successWidget: model.passphrase.isNotEmpty ? const SuccessIcon() : null,
       suffixIcon: const _SecurityKeyShowButton(),
       validator: RequiredValidator(
-        errorText: lang.choosePassphraseRequired,
+        errorText: model.passphraseType.localizedRequiredError(lang),
       ),
       onChanged: (value) {
-        final model = ref.read(passphraseModelProvider);
         model.passphrase = value;
       },
     );
   }
 }
 
-class ConfirmPassphraseFormField extends ConsumerWidget {
+class ConfirmPassphraseFormField extends ConsumerStatefulWidget {
   const ConfirmPassphraseFormField({this.fieldWidth, super.key});
 
   final double? fieldWidth;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConfirmPassphraseFormField> createState() =>
+      _ConfirmPassphraseFormFieldState();
+}
+
+class _ConfirmPassphraseFormFieldState
+    extends ConsumerState<ConfirmPassphraseFormField> {
+  final _controller = TextEditingController();
+
+  @override
+  void initState() {
+    final model = ref.read(passphraseModelProvider);
+
+    super.initState();
+    _controller.value =
+        _controller.value.copyWith(text: model.confirmedPassphrase);
+    if (model.passphraseType == PassphraseType.pin) {
+      _controller.addListener(() => _filterDigits(_controller));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final model = ref.watch(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final securityKey =
-        ref.watch(passphraseModelProvider.select((model) => model.passphrase));
-    final confirmedSecurityKey = ref.watch(
-      passphraseModelProvider.select((model) => model.confirmedPassphrase),
-    );
-    final showSecurityKey = ref
-        .watch(passphraseModelProvider.select((model) => model.showPassphrase));
 
     return ValidatedFormField(
-      fieldWidth: fieldWidth,
-      labelText: lang.choosePassphraseConfirmHint,
-      obscureText: !showSecurityKey,
+      controller: _controller,
+      fieldWidth: widget.fieldWidth,
+      labelText: model.passphraseType.localizedConfirmHint(lang),
+      obscureText: !model.showPassphrase,
       successWidget:
-          confirmedSecurityKey.isNotEmpty ? const SuccessIcon() : null,
-      initialValue: confirmedSecurityKey,
-      autovalidateMode: AutovalidateMode.always,
+          model.confirmedPassphrase.isNotEmpty ? const SuccessIcon() : null,
       validator: EqualValidator(
-        securityKey,
-        errorText: lang.choosePassphraseMismatch,
+        model.passphrase,
+        errorText: model.passphraseType.localizedMismatchError(lang),
       ),
       onChanged: (value) {
-        final model = ref.read(passphraseModelProvider);
         model.confirmedPassphrase = value;
       },
     );
   }
+}
+
+void _filterDigits(TextEditingController controller) {
+  final filteredInput = controller.text.replaceAll(RegExp('[^0-9]'), '');
+  final newSelection = TextSelection(
+    baseOffset: min(controller.selection.baseOffset, filteredInput.length),
+    extentOffset: min(controller.selection.extentOffset, filteredInput.length),
+  );
+  controller.value = controller.value.copyWith(
+    text: filteredInput,
+    selection: newSelection,
+  );
 }
 
 class _SecurityKeyShowButton extends ConsumerWidget {
@@ -91,8 +133,10 @@ class _SecurityKeyShowButton extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.all(1.0),
       child: TextButton.icon(
-        icon:
-            Icon(YaruIcons.eye, color: theme.colorScheme.onSecondaryContainer),
+        icon: Icon(
+          showSecurityKey ? YaruIcons.eye : YaruIcons.hide,
+          color: theme.colorScheme.onSecondaryContainer,
+        ),
         label:
             Text(showSecurityKey ? lang.hideSecurityKey : lang.showSecurityKey),
         onPressed: () {

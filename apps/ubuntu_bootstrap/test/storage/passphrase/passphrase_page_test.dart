@@ -6,6 +6,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
+import 'package:ubuntu_bootstrap/services/storage_service.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -86,28 +87,16 @@ void main() {
     verify(model.savePassphrase()).called(1);
   });
 
-  testWidgets('can skip', (tester) async {
-    final model = buildPassphraseModel(isTpm: true);
+  testWidgets('PIN', (tester) async {
+    final model = buildPassphraseModel(
+      passphrase: '1234',
+      passphraseType: PassphraseType.pin,
+    );
     await tester.pumpApp((_) => buildPage(model));
 
-    expect(find.button(find.ul10n((l10n) => l10n.skipLabel)), isEnabled);
-    expect(find.button(find.nextLabel), findsNothing);
-  });
-
-  testWidgets('tpm can not skip', (tester) async {
-    final model =
-        buildPassphraseModel(isTpm: true, isValid: false, passphrase: 'foo');
-    await tester.pumpApp((_) => buildPage(model));
-
-    expect(find.button(find.ul10n((l10n) => l10n.skipLabel)), findsNothing);
-    expect(find.button(find.nextLabel), isDisabled);
-  });
-
-  testWidgets('luks can not skip', (tester) async {
-    final model = buildPassphraseModel(isTpm: false, isValid: false);
-    await tester.pumpApp((_) => buildPage(model));
-
-    expect(find.button(find.ul10n((l10n) => l10n.skipLabel)), findsNothing);
-    expect(find.button(find.nextLabel), isDisabled);
+    final textField = find.textField('1234');
+    expect(textField, findsOneWidget);
+    await tester.enterText(textField, '4b3kk21');
+    verify(model.passphrase = '4321').called(1);
   });
 }

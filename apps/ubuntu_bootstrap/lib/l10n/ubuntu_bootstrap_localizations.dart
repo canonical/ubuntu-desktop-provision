@@ -719,12 +719,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'You are currently offline'**
   String get offlineWarning;
 
-  /// No description provided for @choosePassphraseTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Disk passphrase'**
-  String get choosePassphraseTitle;
-
   /// No description provided for @choosePassphraseHeader.
   ///
   /// In en, this message translates to:
@@ -734,56 +728,20 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @choosePassphraseBody.
   ///
   /// In en, this message translates to:
-  /// **'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.'**
+  /// **'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.'**
   String get choosePassphraseBody;
-
-  /// No description provided for @choosePassphraseHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Choose a passphrase'**
-  String get choosePassphraseHint;
-
-  /// No description provided for @choosePassphraseConfirmHint.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm the passphrase'**
-  String get choosePassphraseConfirmHint;
-
-  /// No description provided for @choosePassphraseRequired.
-  ///
-  /// In en, this message translates to:
-  /// **'A passphrase is required'**
-  String get choosePassphraseRequired;
-
-  /// No description provided for @choosePassphraseMismatch.
-  ///
-  /// In en, this message translates to:
-  /// **'The passphrases do not match'**
-  String get choosePassphraseMismatch;
 
   /// No description provided for @choosePassphraseInfoHeader.
   ///
   /// In en, this message translates to:
-  /// **'Store your passphrase somewhere safe'**
+  /// **'Make sure to save your passphrase'**
   String get choosePassphraseInfoHeader;
 
   /// No description provided for @choosePassphraseInfoBody.
   ///
   /// In en, this message translates to:
-  /// **'If you lose your passphrase, you will lose all your data.'**
+  /// **'If you lose it, you will lose all your data.'**
   String get choosePassphraseInfoBody;
-
-  /// No description provided for @chooseOptionalPassphraseHeader.
-  ///
-  /// In en, this message translates to:
-  /// **'Create a passphrase (optional)'**
-  String get chooseOptionalPassphraseHeader;
-
-  /// No description provided for @chooseOptionalPassphraseBody.
-  ///
-  /// In en, this message translates to:
-  /// **'A passphrase can help protect your data even if your hardware gets compromised. You will need to enter the passphrase every time you turn on your computer. You will not be able to remove it later'**
-  String get chooseOptionalPassphraseBody;
 
   /// No description provided for @chooseOptionalPassphraseInfoHeader.
   ///
@@ -797,17 +755,125 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.'**
   String get chooseOptionalPassphraseInfoBody;
 
-  /// No description provided for @createPassphrase.
+  /// No description provided for @passphrasePageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Create a passphrase'**
-  String get createPassphrase;
+  /// **'Encryption'**
+  String get passphrasePageTitle;
 
-  /// No description provided for @confirmPassphrase.
+  /// No description provided for @passphrasePageHeaderPassphrase.
   ///
   /// In en, this message translates to:
-  /// **'Confirm the passphrase'**
-  String get confirmPassphrase;
+  /// **'Set an encryption passphrase'**
+  String get passphrasePageHeaderPassphrase;
+
+  /// No description provided for @passphrasePageHeaderPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Set an encryption PIN'**
+  String get passphrasePageHeaderPin;
+
+  /// No description provided for @passphrasePageBodyPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.'**
+  String get passphrasePageBodyPassphrase;
+
+  /// No description provided for @passphrasePageBodyPin.
+  ///
+  /// In en, this message translates to:
+  /// **'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.'**
+  String get passphrasePageBodyPin;
+
+  /// No description provided for @passphrasePageChoosePassphraseHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Passphrase'**
+  String get passphrasePageChoosePassphraseHint;
+
+  /// No description provided for @passphrasePageConfirmPassphraseHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm passphrase'**
+  String get passphrasePageConfirmPassphraseHint;
+
+  /// No description provided for @passphrasePageRequiredPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'A passphrase is required'**
+  String get passphrasePageRequiredPassphrase;
+
+  /// No description provided for @passphrasePageMismatchPassphrase.
+  ///
+  /// In en, this message translates to:
+  /// **'The passphrases do not match'**
+  String get passphrasePageMismatchPassphrase;
+
+  /// No description provided for @passphrasePageChoosePinHint.
+  ///
+  /// In en, this message translates to:
+  /// **'PIN'**
+  String get passphrasePageChoosePinHint;
+
+  /// No description provided for @passphrasePageConfirmPinHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm PIN'**
+  String get passphrasePageConfirmPinHint;
+
+  /// No description provided for @passphrasePageRequiredPin.
+  ///
+  /// In en, this message translates to:
+  /// **'A PIN is required'**
+  String get passphrasePageRequiredPin;
+
+  /// No description provided for @passphrasePageMismatchPin.
+  ///
+  /// In en, this message translates to:
+  /// **'The PINs do not match'**
+  String get passphrasePageMismatchPin;
+
+  /// No description provided for @passphraseTypePassphraseTileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Require a passphrase'**
+  String get passphraseTypePassphraseTileTitle;
+
+  /// No description provided for @passphraseTypePassphraseTileSubTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Most secure. You will need to enter a longer passphrase every time you turn on your computer.'**
+  String get passphraseTypePassphraseTileSubTitle;
+
+  /// No description provided for @passphraseTypePinTileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Require a PIN'**
+  String get passphraseTypePinTileTitle;
+
+  /// No description provided for @passphraseTypePinTileSubTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'More secure. You will need to enter a numeric PIN every time you turn on your computer.'**
+  String get passphraseTypePinTileSubTitle;
+
+  /// No description provided for @passphraseTypeNoneTileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock disk automatically'**
+  String get passphraseTypeNoneTileTitle;
+
+  /// No description provided for @passphraseTypePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Encryption PIN or passphrase'**
+  String get passphraseTypePageHeader;
+
+  /// No description provided for @passphraseTypePageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.'**
+  String get passphraseTypePageBody;
 
   /// No description provided for @installationTypeTitle.
   ///

@@ -275,25 +275,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Du är för närvarande offline';
 
   @override
-  String get choosePassphraseTitle => 'Disk lösenfras';
-
-  @override
   String get choosePassphraseHeader => 'Skapa en lösenfras';
 
   @override
   String get choosePassphraseBody => 'Du behöver en lösenfras för att kryptera dina filer. Du kommer att bli ombedd att ange din lösenfras varje gång du slår på din dator.';
-
-  @override
-  String get choosePassphraseHint => 'Välj en lösenfras';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Bekräfta lösenfrasen';
-
-  @override
-  String get choosePassphraseRequired => 'En lösenfras krävs';
-
-  @override
-  String get choosePassphraseMismatch => 'Lösenfraserna matchar inte';
 
   @override
   String get choosePassphraseInfoHeader => 'Förvara din lösenfras på ett säkert ställe';
@@ -302,22 +287,70 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Om du tappar bort din lösenfras kommer du att förlora all din data.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Skapa en lösenfras (valfritt)';
-
-  @override
-  String get chooseOptionalPassphraseBody => 'En lösenfras kan hjälpa till att skydda dina data även om din hårdvara äventyras. Du måste ange lösenordsfrasen varje gång du slår på din dator. Du kommer inte att kunna ta bort den senare';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => 'Förvara din lösenfras och återställningsnyckel på ett säkert ställe';
 
   @override
   String get chooseOptionalPassphraseInfoBody => 'Om du tappar bort din lösenfras kommer du att förlora all din data. Lösenfrasen ersätter inte återställningsnyckeln eller ditt användarlösenord.';
 
   @override
-  String get createPassphrase => 'Skapa en lösenfras';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => 'Bekräfta lösenfrasen';
+  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
   String get installationTypeTitle => 'Typ av installation';

@@ -275,25 +275,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Tá tú as líne faoi láthair';
 
   @override
-  String get choosePassphraseTitle => 'Pasfhrása diosca';
-
-  @override
   String get choosePassphraseHeader => 'Cruthaigh pasfhrása';
 
   @override
   String get choosePassphraseBody => 'Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.';
-
-  @override
-  String get choosePassphraseHint => 'Roghnaigh pasfhrása';
-
-  @override
-  String get choosePassphraseConfirmHint => 'Deimhnigh an pasfhrása';
-
-  @override
-  String get choosePassphraseRequired => 'Tá pasfhrása de dhíth';
-
-  @override
-  String get choosePassphraseMismatch => 'Ní mheaitseálann na pasfhrásaí';
 
   @override
   String get choosePassphraseInfoHeader => 'Stóráil do phasfhrása áit éigin sábháilte';
@@ -302,22 +287,70 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.';
 
   @override
-  String get chooseOptionalPassphraseHeader => 'Cruthaigh pasfhrása (roghnach)';
-
-  @override
-  String get chooseOptionalPassphraseBody => 'Is féidir le pasfhrása cabhrú le do shonraí a chosaint fiú má chuirtear isteach ar do chrua-earraí. Beidh ort an pasfhrása a chur isteach gach uair a chasann tú ar do ríomhaire. Ní bheidh tú in ann é a bhaint níos déanaí';
-
-  @override
   String get chooseOptionalPassphraseInfoHeader => 'Stóráil do phasfhocal agus eochair athshlánaithe áit éigin sábháilte';
 
   @override
   String get chooseOptionalPassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.';
 
   @override
-  String get createPassphrase => 'Cruthaigh pasfhrása';
+  String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get confirmPassphrase => 'Deimhnigh an pasfhrása';
+  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Require a PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+
+  @override
+  String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
+
+  @override
+  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
   String get installationTypeTitle => 'Socrú diosca';
