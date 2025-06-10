@@ -50,10 +50,10 @@ extension PassphraseTypeL10n on PassphraseType {
         PassphraseType.none => l10n.passphraseTypeNoneTileTitle,
         PassphraseType.pin => l10n.passphraseTypePinTileTitle,
       };
-  String localizedTileSubTitle(UbuntuBootstrapLocalizations l10n) =>
+  String? localizedTileSubTitle(UbuntuBootstrapLocalizations l10n) =>
       switch (this) {
         PassphraseType.passphrase => l10n.passphraseTypePassphraseTileSubTitle,
-        PassphraseType.none => l10n.passphraseTypeNoneTileSubTitle,
+        PassphraseType.none => null,
         PassphraseType.pin => l10n.passphraseTypePinTileSubTitle,
       };
 }

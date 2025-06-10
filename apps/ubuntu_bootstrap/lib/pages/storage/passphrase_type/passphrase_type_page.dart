@@ -39,17 +39,19 @@ class PassphraseTypePage extends ConsumerWidget {
                 PassphraseType.none,
                 PassphraseType.pin,
                 PassphraseType.passphrase,
-              ]
-                  .map(
-                    (type) => OptionButton(
-                      title: Text(type.localizedTileTitle(l10n)),
-                      subtitle: Text(type.localizedTileSubTitle(l10n)),
-                      value: type,
-                      groupValue: model.passphraseType,
-                      onChanged: (type) => model.passphraseType = type!,
-                    ),
-                  )
-                  .withSpacing(kWizardSpacing / 2),
+              ].map(
+                (type) {
+                  final subtitle = type.localizedTileSubTitle(l10n);
+                  return OptionButton(
+                    title: Text(type.localizedTileTitle(l10n)),
+                    subtitle: subtitle != null ? Text(subtitle) : null,
+                    isThreeLines: subtitle != null,
+                    value: type,
+                    groupValue: model.passphraseType,
+                    onChanged: (type) => model.passphraseType = type!,
+                  );
+                },
+              ).withSpacing(kWizardSpacing / 2),
             ],
           ),
         ),

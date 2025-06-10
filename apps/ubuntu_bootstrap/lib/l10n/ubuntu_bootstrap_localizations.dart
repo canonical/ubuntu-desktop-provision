@@ -764,31 +764,31 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphrasePageHeaderPassphrase.
   ///
   /// In en, this message translates to:
-  /// **'Create an encryption passphrase'**
+  /// **'Set an encryption passphrase'**
   String get passphrasePageHeaderPassphrase;
 
   /// No description provided for @passphrasePageHeaderPin.
   ///
   /// In en, this message translates to:
-  /// **'Create an encryption PIN'**
+  /// **'Set an encryption PIN'**
   String get passphrasePageHeaderPin;
 
   /// No description provided for @passphrasePageBodyPassphrase.
   ///
   /// In en, this message translates to:
-  /// **'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to your disk by using your recovery key.'**
+  /// **'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.'**
   String get passphrasePageBodyPassphrase;
 
   /// No description provided for @passphrasePageBodyPin.
   ///
   /// In en, this message translates to:
-  /// **'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to your disk by using your recovery key.'**
+  /// **'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.'**
   String get passphrasePageBodyPin;
 
   /// No description provided for @passphrasePageChoosePassphraseHint.
   ///
   /// In en, this message translates to:
-  /// **'Choose a passphrase'**
+  /// **'Passphrase'**
   String get passphrasePageChoosePassphraseHint;
 
   /// No description provided for @passphrasePageConfirmPassphraseHint.
@@ -812,7 +812,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphrasePageChoosePinHint.
   ///
   /// In en, this message translates to:
-  /// **'Choose a PIN'**
+  /// **'PIN'**
   String get passphrasePageChoosePinHint;
 
   /// No description provided for @passphrasePageConfirmPinHint.
@@ -842,7 +842,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePassphraseTileSubTitle.
   ///
   /// In en, this message translates to:
-  /// **'Most secure. You will need to enter a passphrase every time you turn on your computer.'**
+  /// **'Most secure. You will need to enter a longer passphrase every time you turn on your computer.'**
   String get passphraseTypePassphraseTileSubTitle;
 
   /// No description provided for @passphraseTypePinTileTitle.
@@ -863,22 +863,16 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Unlock disk automatically'**
   String get passphraseTypeNoneTileTitle;
 
-  /// No description provided for @passphraseTypeNoneTileSubTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Most convenient. Make sure not to enable automatic login for any user.'**
-  String get passphraseTypeNoneTileSubTitle;
-
   /// No description provided for @passphraseTypePageHeader.
   ///
   /// In en, this message translates to:
-  /// **'Add an encryption PIN or passphrase'**
+  /// **'Encryption PIN or passphrase'**
   String get passphraseTypePageHeader;
 
   /// No description provided for @passphraseTypePageBody.
   ///
   /// In en, this message translates to:
-  /// **'By default, your computer’s Trusted Platform Module (TPM) unlocks your disk when you start Ubuntu. However, you can also require a PIN or a passphrase to further protect your data. You will be able to change your PIN or passphrase later, but not disable them.'**
+  /// **'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.'**
   String get passphraseTypePageBody;
 
   /// No description provided for @installationTypeTitle.

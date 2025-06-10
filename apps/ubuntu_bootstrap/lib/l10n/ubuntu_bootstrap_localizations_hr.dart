@@ -296,19 +296,19 @@ class UbuntuBootstrapLocalizationsHr extends UbuntuBootstrapLocalizations {
   String get passphrasePageTitle => 'Encryption';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Create an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
 
   @override
-  String get passphrasePageHeaderPin => 'Create an encryption PIN';
+  String get passphrasePageHeaderPin => 'Set an encryption PIN';
 
   @override
-  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to your disk by using your recovery key.';
+  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to your disk by using your recovery key.';
+  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Choose a passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Passphrase';
 
   @override
   String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
@@ -320,7 +320,7 @@ class UbuntuBootstrapLocalizationsHr extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
 
   @override
-  String get passphrasePageChoosePinHint => 'Choose a PIN';
+  String get passphrasePageChoosePinHint => 'PIN';
 
   @override
   String get passphrasePageConfirmPinHint => 'Confirm PIN';
@@ -335,7 +335,7 @@ class UbuntuBootstrapLocalizationsHr extends UbuntuBootstrapLocalizations {
   String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a passphrase every time you turn on your computer.';
+  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
   String get passphraseTypePinTileTitle => 'Require a PIN';
@@ -347,13 +347,10 @@ class UbuntuBootstrapLocalizationsHr extends UbuntuBootstrapLocalizations {
   String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
 
   @override
-  String get passphraseTypeNoneTileSubTitle => 'Most convenient. Make sure not to enable automatic login for any user.';
+  String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
 
   @override
-  String get passphraseTypePageHeader => 'Add an encryption PIN or passphrase';
-
-  @override
-  String get passphraseTypePageBody => 'By default, your computer’s Trusted Platform Module (TPM) unlocks your disk when you start Ubuntu. However, you can also require a PIN or a passphrase to further protect your data. You will be able to change your PIN or passphrase later, but not disable them.';
+  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
   String get installationTypeTitle => 'Disk setup';
