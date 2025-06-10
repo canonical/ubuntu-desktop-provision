@@ -564,7 +564,7 @@
   "@autoinstallDirectFileButtonLabel": {},
   "restartComputer": "Перезапустити комп'ютер",
   "@restartComputer": {},
-  "recoveryKeyConfirmation": "Я зберіг свій ключ відновлення в безпечному місці.",
+  "recoveryKeyConfirmation": "Ключ відновлення збережено в надійному місці",
   "@recoveryKeyConfirmation": {},
   "recoveryKeyInfoHeader": "Без ключа відновлення ви можете втратити всі свої дані",
   "@recoveryKeyInfoHeader": {},
