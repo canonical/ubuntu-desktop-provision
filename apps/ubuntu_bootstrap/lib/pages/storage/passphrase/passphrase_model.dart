@@ -4,32 +4,78 @@ import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+
+final _log = Logger('passphrase_model');
+
+enum Entropy {
+  belowMin,
+  belowOptimal,
+  optimal;
+
+  bool get sufficient => [Entropy.belowOptimal, Entropy.optimal].contains(this);
+
+  static Entropy from(EntropyResponse response) {
+    if (response.minEntropyBits > response.optimalEntropyBits) {
+      _log.info(
+        'received entropy response with minEntropyBits > optimalEntropyBits: $response',
+      );
+    }
+    if (response.entropyBits < response.minEntropyBits) {
+      return Entropy.belowMin;
+    } else if (response.entropyBits < response.optimalEntropyBits) {
+      return Entropy.belowOptimal;
+    }
+    return Entropy.optimal;
+  }
+}
 
 /// Provider for [PassphraseModel].
 final passphraseModelProvider = ChangeNotifierProvider(
-  (_) => PassphraseModel(getService<StorageService>()),
+  (_) => PassphraseModel(
+    getService<StorageService>(),
+    getService<SubiquityClient>(),
+  ),
 );
 
 /// View model for [PassphrasePage].
 class PassphraseModel extends SafeChangeNotifier {
   /// Creates the model with the given client.
-  PassphraseModel(this._service) {
+  PassphraseModel(this._storageService, this._subiquityClient) {
     Listenable.merge([
       _passphrase,
       _confirmedPassphrase,
       _showPassphrase,
+      _entropy,
     ]).addListener(notifyListeners);
   }
 
-  final StorageService _service;
+  final StorageService _storageService;
+  final SubiquityClient _subiquityClient;
 
   final _passphrase = ValueNotifier('');
   final _confirmedPassphrase = ValueNotifier('');
   final _showPassphrase = ValueNotifier(false);
+  final _entropy = ValueNotifier<EntropyResponse?>(null);
 
   /// The current passphrase.
   String get passphrase => _passphrase.value;
-  set passphrase(String value) => _passphrase.value = value;
+  set passphrase(String value) {
+    _passphrase.value = value;
+    if (isTpm) {
+      if (value.isEmpty) {
+        _entropy.value = null;
+        return;
+      }
+      _subiquityClient
+          .calculateEntropyV2(
+            passphrase:
+                passphraseType == PassphraseType.passphrase ? value : null,
+            pin: passphraseType == PassphraseType.pin ? value : null,
+          )
+          .then((response) => _entropy.value = response);
+    }
+  }
 
   /// The confirmed passphrase for validation.
   String get confirmedPassphrase => _confirmedPassphrase.value;
@@ -43,13 +89,18 @@ class PassphraseModel extends SafeChangeNotifier {
   bool get isTpm => [
         GuidedCapability.CORE_BOOT_ENCRYPTED,
         GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
-      ].contains(_service.guidedCapability);
+      ].contains(_storageService.guidedCapability);
 
   /// Whether the current input is valid.
   bool get isValid =>
-      passphrase.isNotEmpty && passphrase == confirmedPassphrase;
+      passphrase.isNotEmpty &&
+      passphrase == confirmedPassphrase &&
+      (entropy?.sufficient ?? false || !isTpm);
 
-  PassphraseType get passphraseType => _service.passphraseType;
+  PassphraseType get passphraseType => _storageService.passphraseType;
+
+  Entropy? get entropy =>
+      _entropy.value != null ? Entropy.from(_entropy.value!) : null;
 
   /// Initializes the model.
   Future<bool> init() async {
@@ -58,7 +109,7 @@ class PassphraseModel extends SafeChangeNotifier {
           GuidedCapability.ZFS_LUKS_KEYSTORE,
           GuidedCapability.CORE_BOOT_ENCRYPTED,
           GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
-        ].contains(_service.guidedCapability) &&
+        ].contains(_storageService.guidedCapability) &&
         passphraseType != PassphraseType.none) {
       await loadPassphrase();
       return true;
@@ -70,25 +121,25 @@ class PassphraseModel extends SafeChangeNotifier {
 
   /// Loads the passphrase from the service.
   Future<void> loadPassphrase() async {
-    var savedPassphrase = _service.passphrase ?? '';
+    var savedPassphrase = _storageService.passphrase ?? '';
     // For PIN: only restore the passphrase if it's numeric
     if (passphraseType == PassphraseType.pin &&
         !RegExp(r'^\d+$').hasMatch(savedPassphrase)) {
       savedPassphrase = '';
     }
-    _passphrase.value = _confirmedPassphrase.value = savedPassphrase;
+    passphrase = _confirmedPassphrase.value = savedPassphrase;
   }
 
   /// Saves the passphrase to the service and clears the local values.
   Future<void> savePassphrase() async {
-    _service.passphrase = passphrase;
+    _storageService.passphrase = passphrase;
     _passphrase.value = '';
     _confirmedPassphrase.value = '';
   }
 
   /// Clears the passphrase in the service and the local values,
   Future<void> clearPassphrase() async {
-    _service.passphrase = null;
+    _storageService.passphrase = null;
     _passphrase.value = '';
     _confirmedPassphrase.value = '';
   }
