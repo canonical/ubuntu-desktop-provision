@@ -1075,8 +1075,9 @@ class ReformatDisk with _$ReformatDisk {
 @freezed
 class EntropyResponse with _$EntropyResponse {
   const factory EntropyResponse({
-    required double entropy,
-    required double minimumRequired,
+    required int entropyBits,
+    required int minEntropyBits,
+    required int optimalEntropyBits,
   }) = _EntropyResponse;
 
   factory EntropyResponse.fromJson(Map<String, dynamic> json) =>
