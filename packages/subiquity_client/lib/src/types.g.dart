@@ -1427,13 +1427,15 @@ Map<String, dynamic> _$$ReformatDiskImplToJson(_$ReformatDiskImpl instance) =>
 _$EntropyResponseImpl _$$EntropyResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$EntropyResponseImpl(
-      entropy: (json['entropy'] as num).toDouble(),
-      minimumRequired: (json['minimum_required'] as num).toDouble(),
+      entropyBits: (json['entropy_bits'] as num).toInt(),
+      minEntropyBits: (json['min_entropy_bits'] as num).toInt(),
+      optimalEntropyBits: (json['optimal_entropy_bits'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$EntropyResponseImplToJson(
         _$EntropyResponseImpl instance) =>
     <String, dynamic>{
-      'entropy': instance.entropy,
-      'minimum_required': instance.minimumRequired,
+      'entropy_bits': instance.entropyBits,
+      'min_entropy_bits': instance.minEntropyBits,
+      'optimal_entropy_bits': instance.optimalEntropyBits,
     };
