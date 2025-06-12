@@ -689,5 +689,9 @@
   "recoveryKeyLinkLabel": "Ne saber mai",
   "@recoveryKeyLinkLabel": {},
   "recoveryKeyTextFieldLabel": "Clau de recuperacion",
-  "@recoveryKeyTextFieldLabel": {}
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeyFilePickerFilter": "Fichièr tèxt",
+  "@recoveryKeyFilePickerFilter": {},
+  "recoveryKeyExceptionUnknownTitle": "Error desconeguda",
+  "@recoveryKeyExceptionUnknownTitle": {}
 }
