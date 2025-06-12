@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -41,19 +41,45 @@ class _PassphraseFormFieldState extends ConsumerState<PassphraseFormField> {
     final model = ref.watch(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
 
-    return ValidatedFormField(
-      controller: _controller,
-      fieldWidth: widget.fieldWidth,
-      labelText: model.passphraseType.localizedChooseHint(lang),
-      obscureText: !model.showPassphrase,
-      successWidget: model.passphrase.isNotEmpty ? const SuccessIcon() : null,
-      suffixIcon: const _SecurityKeyShowButton(),
-      validator: RequiredValidator(
-        errorText: model.passphraseType.localizedRequiredError(lang),
-      ),
-      onChanged: (value) {
-        model.passphrase = value;
-      },
+    final hasTpmLowEntropy =
+        model.isTpm && !(model.entropy?.sufficient ?? false);
+    final hasTpmSufficientEntropy =
+        model.isTpm && (model.entropy?.sufficient ?? false);
+    final isValid = model.passphrase.isNotEmpty && !hasTpmLowEntropy;
+
+    return Row(
+      children: [
+        Expanded(
+          child: TextFormField(
+            controller: _controller,
+            decoration: InputDecoration(
+              labelText: model.passphraseType.localizedChooseHint(lang),
+              suffixIcon: const _SecurityKeyShowButton(),
+              errorText: hasTpmLowEntropy
+                  ? model.entropy?.localize(lang, model.passphraseType)
+                  : null,
+              helperText: hasTpmSufficientEntropy
+                  ? model.entropy?.localize(lang, model.passphraseType)
+                  : null,
+              helperMaxLines: 2,
+              errorMaxLines: 2,
+            ),
+            obscureText: !model.showPassphrase,
+            onChanged: (value) {
+              model.passphrase = value;
+            },
+          ),
+        ),
+        if (isValid)
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Baseline(
+              baseline: 0,
+              baselineType: TextBaseline.alphabetic,
+              child: SuccessIcon(),
+            ),
+          ),
+      ],
     );
   }
 }
