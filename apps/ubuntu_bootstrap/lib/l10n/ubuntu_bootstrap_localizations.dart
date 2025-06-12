@@ -875,6 +875,42 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.'**
   String get passphraseTypePageBody;
 
+  /// No description provided for @passphrasePagePassphraseEntropyBelowMin.
+  ///
+  /// In en, this message translates to:
+  /// **'Weak passphrase, make it longer or more complex'**
+  String get passphrasePagePassphraseEntropyBelowMin;
+
+  /// No description provided for @passphrasePagePassphraseEntropyBelowOptimal.
+  ///
+  /// In en, this message translates to:
+  /// **'Fair passphrase, make it longer or more complex for better security'**
+  String get passphrasePagePassphraseEntropyBelowOptimal;
+
+  /// No description provided for @passphrasePagePassphraseEntropyOptimal.
+  ///
+  /// In en, this message translates to:
+  /// **'Strong passphrase'**
+  String get passphrasePagePassphraseEntropyOptimal;
+
+  /// No description provided for @passphrasePagePinEntropyBelowMin.
+  ///
+  /// In en, this message translates to:
+  /// **'Weak PIN, make it longer or less predictable'**
+  String get passphrasePagePinEntropyBelowMin;
+
+  /// No description provided for @passphrasePagePinEntropyBelowOptimal.
+  ///
+  /// In en, this message translates to:
+  /// **'Fair PIN, make it longer or less predictable for better security'**
+  String get passphrasePagePinEntropyBelowOptimal;
+
+  /// No description provided for @passphrasePagePinEntropyOptimal.
+  ///
+  /// In en, this message translates to:
+  /// **'PIN is long enough'**
+  String get passphrasePagePinEntropyOptimal;
+
   /// No description provided for @installationTypeTitle.
   ///
   /// In en, this message translates to:
