@@ -4,18 +4,29 @@ import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 
-enum Entropy {
+final _log = Logger('passphrase_model');
+
+enum SemanticEntropy {
   belowMin,
+  belowOptimal,
   optimal;
+}
 
-  bool get sufficient => this == Entropy.optimal;
-
-  static Entropy from(EntropyResponse? response) {
-    if (response != null && response.entropy < response.minimumRequired) {
-      return Entropy.belowMin;
+extension EntropyResponseX on EntropyResponse {
+  SemanticEntropy get semanticEntropy {
+    if (minEntropyBits > optimalEntropyBits) {
+      _log.info(
+        'received entropy response with minEntropyBits > optimalEntropyBits: $this',
+      );
     }
-    return Entropy.optimal;
+    if (entropyBits < minEntropyBits) {
+      return SemanticEntropy.belowMin;
+    } else if (entropyBits < optimalEntropyBits) {
+      return SemanticEntropy.belowOptimal;
+    }
+    return SemanticEntropy.optimal;
   }
 }
 
@@ -45,7 +56,7 @@ class PassphraseModel extends SafeChangeNotifier {
   final _passphrase = ValueNotifier('');
   final _confirmedPassphrase = ValueNotifier('');
   final _showPassphrase = ValueNotifier(false);
-  final _entropy = ValueNotifier<Entropy?>(null);
+  final _entropy = ValueNotifier<EntropyResponse?>(null);
 
   /// The current passphrase.
   String get passphrase => _passphrase.value;
@@ -62,7 +73,7 @@ class PassphraseModel extends SafeChangeNotifier {
                 passphraseType == PassphraseType.passphrase ? value : null,
             pin: passphraseType == PassphraseType.pin ? value : null,
           )
-          .then((response) => _entropy.value = Entropy.from(response));
+          .then((response) => _entropy.value = response);
     }
   }
 
@@ -84,11 +95,11 @@ class PassphraseModel extends SafeChangeNotifier {
   bool get isValid =>
       passphrase.isNotEmpty &&
       passphrase == confirmedPassphrase &&
-      (entropy?.sufficient ?? false || !isTpm);
+      (entropy?.success ?? false || !isTpm);
 
   PassphraseType get passphraseType => _storageService.passphraseType;
 
-  Entropy? get entropy => _entropy.value;
+  EntropyResponse? get entropy => _entropy.value;
 
   /// Initializes the model.
   Future<bool> init() async {

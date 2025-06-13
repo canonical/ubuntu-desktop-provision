@@ -41,10 +41,9 @@ class _PassphraseFormFieldState extends ConsumerState<PassphraseFormField> {
     final model = ref.watch(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
 
-    final hasTpmLowEntropy =
-        model.isTpm && !(model.entropy?.sufficient ?? false);
+    final hasTpmLowEntropy = model.isTpm && !(model.entropy?.success ?? false);
     final hasTpmSufficientEntropy =
-        model.isTpm && (model.entropy?.sufficient ?? false);
+        model.isTpm && (model.entropy?.success ?? false);
     final isValid = model.passphrase.isNotEmpty && !hasTpmLowEntropy;
 
     return Row(
@@ -56,10 +55,12 @@ class _PassphraseFormFieldState extends ConsumerState<PassphraseFormField> {
               labelText: model.passphraseType.localizedChooseHint(lang),
               suffixIcon: const _SecurityKeyShowButton(),
               errorText: hasTpmLowEntropy
-                  ? model.entropy?.localize(lang, model.passphraseType)
+                  ? model.entropy?.semanticEntropy
+                      .localize(lang, model.passphraseType)
                   : null,
               helperText: hasTpmSufficientEntropy
-                  ? model.entropy?.localize(lang, model.passphraseType)
+                  ? model.entropy?.semanticEntropy
+                      .localize(lang, model.passphraseType)
                   : null,
               helperMaxLines: 2,
               errorMaxLines: 2,
