@@ -1441,13 +1441,21 @@ Map<String, dynamic> _$$CalculateEntropyRequestImplToJson(
 _$EntropyResponseImpl _$$EntropyResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$EntropyResponseImpl(
-      entropy: (json['entropy'] as num).toDouble(),
-      minimumRequired: (json['minimum_required'] as num).toDouble(),
+      success: json['success'] as bool,
+      entropyBits: (json['entropy_bits'] as num).toInt(),
+      minEntropyBits: (json['min_entropy_bits'] as num).toInt(),
+      optimalEntropyBits: (json['optimal_entropy_bits'] as num).toInt(),
+      failureReasons: (json['failure_reasons'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
     );
 
 Map<String, dynamic> _$$EntropyResponseImplToJson(
         _$EntropyResponseImpl instance) =>
     <String, dynamic>{
-      'entropy': instance.entropy,
-      'minimum_required': instance.minimumRequired,
+      'success': instance.success,
+      'entropy_bits': instance.entropyBits,
+      'min_entropy_bits': instance.minEntropyBits,
+      'optimal_entropy_bits': instance.optimalEntropyBits,
+      'failure_reasons': instance.failureReasons,
     };
