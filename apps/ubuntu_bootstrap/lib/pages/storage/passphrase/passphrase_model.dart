@@ -8,25 +8,25 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 
 final _log = Logger('passphrase_model');
 
-enum Entropy {
+enum SemanticEntropy {
   belowMin,
   belowOptimal,
   optimal;
+}
 
-  bool get sufficient => [Entropy.belowOptimal, Entropy.optimal].contains(this);
-
-  static Entropy from(EntropyResponse response) {
-    if (response.minEntropyBits > response.optimalEntropyBits) {
+extension EntropyResponseX on EntropyResponse {
+  SemanticEntropy get semanticEntropy {
+    if (minEntropyBits > optimalEntropyBits) {
       _log.info(
-        'received entropy response with minEntropyBits > optimalEntropyBits: $response',
+        'received entropy response with minEntropyBits > optimalEntropyBits: $this',
       );
     }
-    if (response.entropyBits < response.minEntropyBits) {
-      return Entropy.belowMin;
-    } else if (response.entropyBits < response.optimalEntropyBits) {
-      return Entropy.belowOptimal;
+    if (entropyBits < minEntropyBits) {
+      return SemanticEntropy.belowMin;
+    } else if (entropyBits < optimalEntropyBits) {
+      return SemanticEntropy.belowOptimal;
     }
-    return Entropy.optimal;
+    return SemanticEntropy.optimal;
   }
 }
 
@@ -95,12 +95,11 @@ class PassphraseModel extends SafeChangeNotifier {
   bool get isValid =>
       passphrase.isNotEmpty &&
       passphrase == confirmedPassphrase &&
-      (entropy?.sufficient ?? false || !isTpm);
+      (entropy?.success ?? false || !isTpm);
 
   PassphraseType get passphraseType => _storageService.passphraseType;
 
-  Entropy? get entropy =>
-      _entropy.value != null ? Entropy.from(_entropy.value!) : null;
+  EntropyResponse? get entropy => _entropy.value;
 
   /// Initializes the model.
   Future<bool> init() async {
