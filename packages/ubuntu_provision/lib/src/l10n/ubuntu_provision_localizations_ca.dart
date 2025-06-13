@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Something went wrong';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected =>
+      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Premeu una de les tecles següents:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Teniu la tecla següent al vostre teclat?';
+  String get keyboardKeyPresentLabel =>
+      'Teniu la tecla següent al vostre teclat?';
 
   @override
   String get themePageTitle => 'Trieu l’aspecte';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader =>
+      'You can always change this later in the appearance settings.';
 
   @override
   String get themeDark => 'Fosc';
@@ -146,7 +149,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get identityAutoLogin => 'Entra de manera automàtica';
 
   @override
-  String get identityRequirePassword => 'Fes que calgui una contrasenya per a entrar';
+  String get identityRequirePassword =>
+      'Fes que calgui una contrasenya per a entrar';
 
   @override
   String get identityRealNameLabel => 'El vostre nom';
@@ -161,7 +165,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'El nom de l\'ordinador';
 
   @override
-  String get identityHostnameInfo => 'El nom que utilitza quan es comunica amb altres ordinadors.';
+  String get identityHostnameInfo =>
+      'El nom que utilitza quan es comunica amb altres ordinadors.';
 
   @override
   String get identityHostnameRequired => 'Cal un nom per a l\'ordinador';
@@ -185,13 +190,15 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'That user name already exists.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved =>
+      'That name is reserved for system usage.';
 
   @override
   String get identityUsernameTooLong => 'Aquest nom és massa llarg.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars =>
+      'That name contains invalid characters.';
 
   @override
   String get identityPasswordLabel => 'Trieu una contrasenya';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo =>
+      'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -256,7 +264,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -277,10 +286,12 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'Connecta a internet';
@@ -289,7 +300,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connect to the internet';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Use wired connection';
@@ -301,7 +313,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Wired connection is turned off';
 
   @override
-  String get networkWiredDisabled => 'Per poder fer servir Ethernet a aquest ordinador, la connexió cablejada ha d\'estar habilitada';
+  String get networkWiredDisabled =>
+      'Per poder fer servir Ethernet a aquest ordinador, la connexió cablejada ha d\'estar habilitada';
 
   @override
   String get networkWiredEnable => 'Enable wired';
@@ -316,7 +329,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'No Wi-Fi devices detected';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled =>
+      'To use Wi-Fi on this computer, wireless networking must be enabled';
 
   @override
   String get networkWifiEnable => 'Enable Wi-Fi';
@@ -340,7 +354,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

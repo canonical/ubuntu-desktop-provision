@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'فروشگاه کاره با ظاهر جدید';
 
   @override
-  String get welcomeStoreSubtitle => 'یافتن نرم‌افزارهای دلخواهتان هرگز بدین سادگی نبوده.';
+  String get welcomeStoreSubtitle =>
+      'یافتن نرم‌افزارهای دلخواهتان هرگز بدین سادگی نبوده.';
 
   @override
   String get welcomeSecurityTitle => 'امنیت بهبود یافته';
 
   @override
-  String get welcomeSecuritySubtitle => 'گزینه‌هایی جدید برای رمزنگاری ZFS یا با پشتیبانی از سخت‌افزار.';
+  String get welcomeSecuritySubtitle =>
+      'گزینه‌هایی جدید برای رمزنگاری ZFS یا با پشتیبانی از سخت‌افزار.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +84,8 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'به کار انداختن خدمات مکانی؟';
 
   @override
-  String get privacyLocationSubtitle => 'می‌گذارد برنامه‌ها مکان جغرافیاییتان را بدانند.\nمی‌توانید هر زماندر تنظیمات سامانه تغییرش دهید.';
+  String get privacyLocationSubtitle =>
+      'می‌گذارد برنامه‌ها مکان جغرافیاییتان را بدانند.\nمی‌توانید هر زماندر تنظیمات سامانه تغییرش دهید.';
 
   @override
   String get privacyLocationEnable => 'خدمات مکانی';
@@ -108,7 +111,8 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'ژتون';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription =>
+      'Get the most comprehensive subscription for open-source software security';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +135,22 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'فعلاً پریده شود';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'You can always enable Ubuntu Pro later via the Software & Updates application.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'به کار انداختن اوبونتوی حرفه‌ای';
+  String get ubuntuProOnBoardingEnableUbuntuPro =>
+      'به کار انداختن اوبونتوی حرفه‌ای';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'اوبونتوی حرفه‌ای اکنون روی این دستگاه به کار افتاده';
+  String get ubuntuProSucessAttachHeader =>
+      'اوبونتوی حرفه‌ای اکنون روی این دستگاه به کار افتاده';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription =>
+      'You can manage your Pro services in the Software & Updates application.';
 }

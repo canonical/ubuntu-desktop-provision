@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get errorPageTitle => '何かがおかしいです';
 
   @override
-  String get errorPageUnexpected => 'すみません、なにかエラーが起きました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。';
+  String get errorPageUnexpected =>
+      'すみません、なにかエラーが起きました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -280,7 +281,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => 'アクティブディレクトリへの接続設定エラー';
 
   @override
-  String get activeDirectoryErrorMessage => '申し訳ありませんが、Active Directoryは現在セットアップできません。システムが稼働したら、<a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> にアクセスしてサポートを受けてください。';
+  String get activeDirectoryErrorMessage =>
+      '申し訳ありませんが、Active Directoryは現在セットアップできません。システムが稼働したら、<a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> にアクセスしてサポートを受けてください。';
 
   @override
   String get networkPageTitle => 'ネットワークに接続';
@@ -289,7 +291,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'インターネットの接続方法を選択してください';
 
   @override
-  String get networkPageBody => 'インターネット接続を行うとインストールの際の互換性チェックと、さまざまなソフトウェアパッケージの取得を改善します。';
+  String get networkPageBody =>
+      'インターネット接続を行うとインストールの際の互換性チェックと、さまざまなソフトウェアパッケージの取得を改善します。';
 
   @override
   String get networkWiredOption => '有線接続を使用';
@@ -301,7 +304,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => '有線接続がオフになっています';
 
   @override
-  String get networkWiredDisabled => 'このコンピューターでイーサネットを使用するには、有線接続を有効にする必要があります';
+  String get networkWiredDisabled =>
+      'このコンピューターでイーサネットを使用するには、有線接続を有効にする必要があります';
 
   @override
   String get networkWiredEnable => '有線接続を有効にする';
@@ -316,7 +320,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Wi-Fi デバイスが見つかりません';
 
   @override
-  String get networkWifiDisabled => 'このコンピューターで Wi-Fi を使用するには、無線ネットワークを有効にする必要があります';
+  String get networkWifiDisabled =>
+      'このコンピューターで Wi-Fi を使用するには、無線ネットワークを有効にする必要があります';
 
   @override
   String get networkWifiEnable => 'Wi-Fi を有効にする';
@@ -340,7 +345,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'ライセンス条項を表示';
 
   @override
-  String get eulaReadAndAcceptTerms => 'マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。';
+  String get eulaReadAndAcceptTerms =>
+      'マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。';
 
   @override
   String get eulaAcceptTerms => 'よく読んで許諾書条件に同意しました';

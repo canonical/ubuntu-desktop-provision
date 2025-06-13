@@ -23,19 +23,22 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'A streamlined start';
 
   @override
-  String get welcomeStartSubtitle => 'Υποστηρίζοντας μια καθαρότερη εμπειρία χρήστη.';
+  String get welcomeStartSubtitle =>
+      'Υποστηρίζοντας μια καθαρότερη εμπειρία χρήστη.';
 
   @override
   String get welcomeStoreTitle => 'Νέα εμφάνιση Κέντρου Λογισμικού';
 
   @override
-  String get welcomeStoreSubtitle => 'Δεν ήταν πότε πιο εύκολο να βρείτε το αγαπημένο σας λογισμικό.';
+  String get welcomeStoreSubtitle =>
+      'Δεν ήταν πότε πιο εύκολο να βρείτε το αγαπημένο σας λογισμικό.';
 
   @override
   String get welcomeSecurityTitle => 'Προχωρημένη Ασφάλεια';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle =>
+      'New options for hardware-backed or ZFS encryption.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Ενεργοποίηση υπηρεσιών τοποθεσίας?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle =>
+      'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
 
   @override
   String get privacyLocationEnable => 'Υπηρεσία τοποθεσίας';
@@ -108,7 +112,8 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription =>
+      'Get the most comprehensive subscription for open-source software security';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +136,21 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Παράλειψη για τώρα';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ενεργοποίηση Ubuntu-Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.';
+  String get ubuntuProSucessAttachDescription =>
+      'Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.';
 }

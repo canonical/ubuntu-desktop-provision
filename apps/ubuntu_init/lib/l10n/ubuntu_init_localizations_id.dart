@@ -23,19 +23,22 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Awal yang dirampingkan';
 
   @override
-  String get welcomeStartSubtitle => 'Mendukung pengalaman penyiapan yang lebih bersih.';
+  String get welcomeStartSubtitle =>
+      'Mendukung pengalaman penyiapan yang lebih bersih.';
 
   @override
   String get welcomeStoreTitle => 'Tampilan baru App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'Tidak pernah lebih mudah untuk menemukan perangkat lunak favorit Anda.';
+  String get welcomeStoreSubtitle =>
+      'Tidak pernah lebih mudah untuk menemukan perangkat lunak favorit Anda.';
 
   @override
   String get welcomeSecurityTitle => 'Keamanan yang ditingkatkan';
 
   @override
-  String get welcomeSecuritySubtitle => 'Opsi baru untuk enkripsi ZFS atau yang didukung perangkat keras.';
+  String get welcomeSecuritySubtitle =>
+      'Opsi baru untuk enkripsi ZFS atau yang didukung perangkat keras.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Fungsikan layanan lokasi?';
 
   @override
-  String get privacyLocationSubtitle => 'Mengizinkan aplikasi mengetahui lokasi geografis Anda.\nAnda dapat mengubah ini kapan pun dalam Pengaturan Sistem.';
+  String get privacyLocationSubtitle =>
+      'Mengizinkan aplikasi mengetahui lokasi geografis Anda.\nAnda dapat mengubah ini kapan pun dalam Pengaturan Sistem.';
 
   @override
   String get privacyLocationEnable => 'Layanan lokasi';
@@ -102,13 +106,15 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Cantolkan mesin ini';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'atau tambahkan suatu token secara manual';
+  String get ubuntuProOrAddTokenManually =>
+      'atau tambahkan suatu token secara manual';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Dapatkan langganan yang paling komprehensif untuk keamanan perangkat lunak sumber terbuka';
+  String get ubuntuProSubscriptionDescription =>
+      'Dapatkan langganan yang paling komprehensif untuk keamanan perangkat lunak sumber terbuka';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +137,21 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Lewati dulu';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Anda selalu dapat mengaktifkan Ubuntu Pro nanti melalui aplikasi Perangkat Lunak & Pembaruan.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Anda selalu dapat mengaktifkan Ubuntu Pro nanti melalui aplikasi Perangkat Lunak & Pembaruan.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Fungsikan Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Cantolkan mesin ini ke suatu langganan Ubuntu Pro untuk pembaruan keamanan pada berbagai paket, hingga 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Cantolkan mesin ini ke suatu langganan Ubuntu Pro untuk pembaruan keamanan pada berbagai paket, hingga 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro kini difungsikan pada mesin ini';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro kini difungsikan pada mesin ini';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Anda dapat mengelola layanan Pro Anda dalam aplikasi Perangkat Lunak & Pembaruan.';
+  String get ubuntuProSucessAttachDescription =>
+      'Anda dapat mengelola layanan Pro Anda dalam aplikasi Perangkat Lunak & Pembaruan.';
 }

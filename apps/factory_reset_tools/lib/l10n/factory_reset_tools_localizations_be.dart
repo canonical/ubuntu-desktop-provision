@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsBe extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Стварыць носьбіт USB для скідання';
 
   @override
-  String get createUsbBody => 'Стварыце носьбіт USB для скідання, аднаўлення сістэмы, а таксама наладжвання ўсталявання Ubuntu.';
+  String get createUsbBody =>
+      'Стварыце носьбіт USB для скідання, аднаўлення сістэмы, а таксама наладжвання ўсталявання Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Выберыце USB-дыск флэш-памяці. Яго аб\'ём павінен складаць не менш за 16 ГБ';
+  String get createUsbListExplanation =>
+      'Выберыце USB-дыск флэш-памяці. Яго аб\'ём павінен складаць не менш за 16 ГБ';
 
   @override
-  String get createUsbWarning => 'Флэш-памяць будзе паўторна адфарматавана і ўсе даныя будуць згублены.';
+  String get createUsbWarning =>
+      'Флэш-памяць будзе паўторна адфарматавана і ўсе даныя будуць згублены.';
 
   @override
   String get resetMediaTitle => 'Носьбіт USB для скідання';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsBe extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Здымнае сховішча не выяўлена';
 
   @override
-  String get noMediaDetectedSubtitle => 'Вам неабходна USB-сховішча для стварэння носьбіта аднаўлення заводскіх налад.';
+  String get noMediaDetectedSubtitle =>
+      'Вам неабходна USB-сховішча для стварэння носьбіта аднаўлення заводскіх налад.';
 
   @override
-  String get factoryResetTitle => 'Выберыце параметры, каб пачаць аднаўленне заводскіх налад';
+  String get factoryResetTitle =>
+      'Выберыце параметры, каб пачаць аднаўленне заводскіх налад';
 
   @override
   String get loadingDrives => 'Пачакайце, пакуль мы атрымаем дыскі.';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsBe extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Носьбіт USB для скідання гатовы';
 
   @override
-  String get resetMediaReadyBody => 'Калі вы захочаце скарыстацца ім, проста ўстаўце USB-дыск у камп\'ютар, а потым перазагрузіце яго і пачніце працэс скідання.';
+  String get resetMediaReadyBody =>
+      'Калі вы захочаце скарыстацца ім, проста ўстаўце USB-дыск у камп\'ютар, а потым перазагрузіце яго і пачніце працэс скідання.';
 
   @override
   String get errorLoadingDrives => 'Узнікла памылка пры атрыманні дыскаў.';

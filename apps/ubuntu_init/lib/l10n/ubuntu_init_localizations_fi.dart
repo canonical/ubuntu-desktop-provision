@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Sovelluskeskuksen uusi ulkoasu';
 
   @override
-  String get welcomeStoreSubtitle => 'Suosikkisovellusten löytäminen ei ole koskaan ollut yhtä helppoa.';
+  String get welcomeStoreSubtitle =>
+      'Suosikkisovellusten löytäminen ei ole koskaan ollut yhtä helppoa.';
 
   @override
   String get welcomeSecurityTitle => 'Kohennettu tietoturva';
 
   @override
-  String get welcomeSecuritySubtitle => 'Uusia asetuksia laitteistopohjaiselle salaukselle ja ZFS-salaukselle.';
+  String get welcomeSecuritySubtitle =>
+      'Uusia asetuksia laitteistopohjaiselle salaukselle ja ZFS-salaukselle.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +84,8 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Otetaanko sijaintipalvelut käyttöön?';
 
   @override
-  String get privacyLocationSubtitle => 'Salli sovellusten paikantaa sijaintisi.\nVoit muuttaa asetusta koska tahansa järjestelmän asetuksista.';
+  String get privacyLocationSubtitle =>
+      'Salli sovellusten paikantaa sijaintisi.\nVoit muuttaa asetusta koska tahansa järjestelmän asetuksista.';
 
   @override
   String get privacyLocationEnable => 'Sijaintipalvelut';
@@ -108,7 +111,8 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Koodi';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Hanki kokonaisvaltainen avoimen lähdekoodin tietoturvapalvelu';
+  String get ubuntuProSubscriptionDescription =>
+      'Hanki kokonaisvaltainen avoimen lähdekoodin tietoturvapalvelu';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +129,28 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Kelvollinen koodi';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Virheellinen koodi, yritä uudelleen';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Virheellinen koodi, yritä uudelleen';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Ohita toistaiseksi';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Voit aina ottaa käyttöön Ubuntu Pron Ohjelmistot ja päivitykset -sovelluksessa.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Voit aina ottaa käyttöön Ubuntu Pron Ohjelmistot ja päivitykset -sovelluksessa.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ota Ubuntu Pro käyttöön';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Liitä tämä kone Ubuntu Pro -tilaukseen saadaksesi tietoturvapäivityksiä laajalle valikoimalle paketteja vuoteen 2032 asti.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Liitä tämä kone Ubuntu Pro -tilaukseen saadaksesi tietoturvapäivityksiä laajalle valikoimalle paketteja vuoteen 2032 asti.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro on nyt käytössä tälle tietokoneelle';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro on nyt käytössä tälle tietokoneelle';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Voit hallita Pro-palveluja Ohjelmistot ja päivitykset -sovelluksessa.';
+  String get ubuntuProSucessAttachDescription =>
+      'Voit hallita Pro-palveluja Ohjelmistot ja päivitykset -sovelluksessa.';
 }

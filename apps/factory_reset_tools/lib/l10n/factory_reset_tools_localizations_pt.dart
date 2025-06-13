@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Create a USB reset media';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody =>
+      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation =>
+      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning =>
+      'The flash drive will be reformatted and all data on the drive will be lost.';
 
   @override
   String get resetMediaTitle => 'USB reset media';
@@ -42,7 +45,8 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'No removable storage is detected';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle =>
+      'You need a USB storage to create a Factory Reset Media.';
 
   @override
   String get factoryResetTitle => 'Select an option to start factory reset';
@@ -54,10 +58,12 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB reset media is ready';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody =>
+      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives =>
+      'An error occurred while fetching the drives.';
 
   @override
   String get resetMediaInitializing => 'Initializing';
@@ -103,8 +109,9 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
-class FactoryResetToolsLocalizationsPtBr extends FactoryResetToolsLocalizationsPt {
-  FactoryResetToolsLocalizationsPtBr(): super('pt_BR');
+class FactoryResetToolsLocalizationsPtBr
+    extends FactoryResetToolsLocalizationsPt {
+  FactoryResetToolsLocalizationsPtBr() : super('pt_BR');
 
   @override
   String get appTitle => 'Ferramentas de redefinição de fábrica';
@@ -125,13 +132,16 @@ class FactoryResetToolsLocalizationsPtBr extends FactoryResetToolsLocalizationsP
   String get createUsbTitle => 'Criar uma mídia de redefinição USB';
 
   @override
-  String get createUsbBody => 'Crie uma mídia de redefinição USB para restaurar o sistema, bem como personalizar suas instalações do Ubuntu.';
+  String get createUsbBody =>
+      'Crie uma mídia de redefinição USB para restaurar o sistema, bem como personalizar suas instalações do Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Selecione uma unidade flash USB. A unidade deve ter **pelo menos 16 GB de espaço.**';
+  String get createUsbListExplanation =>
+      'Selecione uma unidade flash USB. A unidade deve ter **pelo menos 16 GB de espaço.**';
 
   @override
-  String get createUsbWarning => 'A unidade flash será reformatada e todos os dados na unidade serão perdidos.';
+  String get createUsbWarning =>
+      'A unidade flash será reformatada e todos os dados na unidade serão perdidos.';
 
   @override
   String get resetMediaTitle => 'Mídia de redefinição USB';
@@ -140,19 +150,23 @@ class FactoryResetToolsLocalizationsPtBr extends FactoryResetToolsLocalizationsP
   String get noMediaDetected => 'Nenhum armazenamento removível foi detectado';
 
   @override
-  String get noMediaDetectedSubtitle => 'Você precisa de um armazenamento USB para criar uma Mídia de Redefinição de Fábrica.';
+  String get noMediaDetectedSubtitle =>
+      'Você precisa de um armazenamento USB para criar uma Mídia de Redefinição de Fábrica.';
 
   @override
-  String get factoryResetTitle => 'Selecione uma opção para iniciar a redefinição de fábrica';
+  String get factoryResetTitle =>
+      'Selecione uma opção para iniciar a redefinição de fábrica';
 
   @override
-  String get loadingDrives => 'Por favor, aguarde enquanto buscamos as unidades.';
+  String get loadingDrives =>
+      'Por favor, aguarde enquanto buscamos as unidades.';
 
   @override
   String get resetMediaReadyTitle => 'A mídia de redefinição USB está pronta';
 
   @override
-  String get resetMediaReadyBody => 'Quando você quiser usá-la, insira a unidade USB no computador que você deseja redefinir e reinicie-o.';
+  String get resetMediaReadyBody =>
+      'Quando você quiser usá-la, insira a unidade USB no computador que você deseja redefinir e reinicie-o.';
 
   @override
   String get errorLoadingDrives => 'Ocorreu um erro ao buscar as unidades.';

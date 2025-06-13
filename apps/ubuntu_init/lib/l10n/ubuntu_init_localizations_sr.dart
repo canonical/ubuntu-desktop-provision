@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Нова изглед Продавнице Апликација';
 
   @override
-  String get welcomeStoreSubtitle => 'Никада није било лакше пронаћи ваш омиљени софтвер.';
+  String get welcomeStoreSubtitle =>
+      'Никада није било лакше пронаћи ваш омиљени софтвер.';
 
   @override
   String get welcomeSecurityTitle => 'Побољшана безбедност';
 
   @override
-  String get welcomeSecuritySubtitle => 'Нове опције за хардверски подржану или ZFS енкрипцију.';
+  String get welcomeSecuritySubtitle =>
+      'Нове опције за хардверски подржану или ZFS енкрипцију.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +75,8 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Правно обавештење';
 
   @override
-  String get telemetryCollectError => 'Неуспешно прикупљање телеметријских података';
+  String get telemetryCollectError =>
+      'Неуспешно прикупљање телеметријских података';
 
   @override
   String get privacyPageTitle => 'Услуге локације';
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Омогућити услуге локације?';
 
   @override
-  String get privacyLocationSubtitle => 'Дозволите апликацијама да знају вашу географску локацију.\nМожете ово променити у било ком тренутку у Системским подешавањима.';
+  String get privacyLocationSubtitle =>
+      'Дозволите апликацијама да знају вашу географску локацију.\nМожете ово променити у било ком тренутку у Системским подешавањима.';
 
   @override
   String get privacyLocationEnable => 'Услуге локације';
@@ -108,7 +112,8 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Токен';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Добијте најкомплетнију претплату за безбедност софтвера отвореног кода';
+  String get ubuntuProSubscriptionDescription =>
+      'Добијте најкомплетнију претплату за безбедност софтвера отвореног кода';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +130,28 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Важећи токен';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Неважећи токен, покушајте поново';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Неважећи токен, покушајте поново';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Прескочи за сада';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Увек можете омогућити Ubuntu Pro касније преко апликације Софтвер и ажурирања.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Увек можете омогућити Ubuntu Pro касније преко апликације Софтвер и ажурирања.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Омогући Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Повежите овај рачунар са Ubuntu Pro претплатом за безбедносна ажурирања на ширем спектру пакета, до 2032. године.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Повежите овај рачунар са Ubuntu Pro претплатом за безбедносна ажурирања на ширем спектру пакета, до 2032. године.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro је сада омогућен на овом рачунару';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro је сада омогућен на овом рачунару';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Можете управљати својим Pro услугама у апликацији Софтвер и ажурирања.';
+  String get ubuntuProSucessAttachDescription =>
+      'Можете управљати својим Pro услугама у апликацији Софтвер и ажурирања.';
 }

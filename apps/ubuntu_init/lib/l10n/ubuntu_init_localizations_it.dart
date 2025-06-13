@@ -23,19 +23,22 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'A streamlined start';
 
   @override
-  String get welcomeStartSubtitle => 'Supporta un\'esperienza di configurazione più pulita.';
+  String get welcomeStartSubtitle =>
+      'Supporta un\'esperienza di configurazione più pulita.';
 
   @override
   String get welcomeStoreTitle => 'Nuovo look per l\'App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'Non è mai stato così facile trovare il tuo software preferito.';
+  String get welcomeStoreSubtitle =>
+      'Non è mai stato così facile trovare il tuo software preferito.';
 
   @override
   String get welcomeSecurityTitle => 'Maggiore sicurezza';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nuove opzioni per la crittografia basata su hardware o ZFS.';
+  String get welcomeSecuritySubtitle =>
+      'Nuove opzioni per la crittografia basata su hardware o ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +76,8 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Avviso legale';
 
   @override
-  String get telemetryCollectError => 'Impossibile raccogliere i dati di telemetria';
+  String get telemetryCollectError =>
+      'Impossibile raccogliere i dati di telemetria';
 
   @override
   String get privacyPageTitle => 'Servizi di localizzazione';
@@ -82,7 +86,8 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Abilitare i servizi di localizzazione?';
 
   @override
-  String get privacyLocationSubtitle => 'Consenti alle applicazioni di conoscere la tua posizione geografica.\nPuoi modificare questa impostazione in qualsiasi momento nelle impostazioni di sistema.';
+  String get privacyLocationSubtitle =>
+      'Consenti alle applicazioni di conoscere la tua posizione geografica.\nPuoi modificare questa impostazione in qualsiasi momento nelle impostazioni di sistema.';
 
   @override
   String get privacyLocationEnable => 'Servizi di localizzazione';
@@ -102,13 +107,15 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Collega questa macchina';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'oppure aggiungi un token manualmente';
+  String get ubuntuProOrAddTokenManually =>
+      'oppure aggiungi un token manualmente';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Ottieni l\'abbonamento più completo per la sicurezza del software open source';
+  String get ubuntuProSubscriptionDescription =>
+      'Ottieni l\'abbonamento più completo per la sicurezza del software open source';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +138,21 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Salta per ora';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Puoi sempre abilitare Ubuntu Pro in un secondo momento tramite l\'applicazione Software e aggiornamenti.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Puoi sempre abilitare Ubuntu Pro in un secondo momento tramite l\'applicazione Software e aggiornamenti.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Abilita Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Collega questa macchina a un abbonamento Ubuntu Pro per aggiornamenti di sicurezza su una gamma più ampia di pacchetti, fino al 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Collega questa macchina a un abbonamento Ubuntu Pro per aggiornamenti di sicurezza su una gamma più ampia di pacchetti, fino al 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro è ora abilitato su questa macchina';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro è ora abilitato su questa macchina';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Puoi gestire i tuoi servizi Pro nell\'applicazione Software e aggiornamenti.';
+  String get ubuntuProSucessAttachDescription =>
+      'Puoi gestire i tuoi servizi Pro nell\'applicazione Software e aggiornamenti.';
 }

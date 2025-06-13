@@ -23,19 +23,22 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Een optimale start';
 
   @override
-  String get welcomeStartSubtitle => 'Ondersteuning voor een schonere inrichting.';
+  String get welcomeStartSubtitle =>
+      'Ondersteuning voor een schonere inrichting.';
 
   @override
   String get welcomeStoreTitle => 'Nieuw uiterlijk voor de App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'Het was nog nooit zo eenvoudig om uw favoriete software te vinden.';
+  String get welcomeStoreSubtitle =>
+      'Het was nog nooit zo eenvoudig om uw favoriete software te vinden.';
 
   @override
   String get welcomeSecurityTitle => 'Verbeterde beveiliging';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nieuwe opties voor hardwarematige of ZFS-codering.';
+  String get welcomeSecuritySubtitle =>
+      'Nieuwe opties voor hardwarematige of ZFS-codering.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +76,8 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Juridische mededeling';
 
   @override
-  String get telemetryCollectError => 'Fout bij het verzamelen van telemetriegegevens';
+  String get telemetryCollectError =>
+      'Fout bij het verzamelen van telemetriegegevens';
 
   @override
   String get privacyPageTitle => 'Locatie-diensten';
@@ -82,7 +86,8 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Locatie-diensten inschakelen?';
 
   @override
-  String get privacyLocationSubtitle => 'Laat applicaties uw geografische locatie weten.\nU kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.';
+  String get privacyLocationSubtitle =>
+      'Laat applicaties uw geografische locatie weten.\nU kunt dit op elk gewenst moment wijzigen in Systeeminstellingen.';
 
   @override
   String get privacyLocationEnable => 'Locatie-diensten';
@@ -108,7 +113,8 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Neem het meest uitgebreide abonnement voor open-source softwarebeveiliging';
+  String get ubuntuProSubscriptionDescription =>
+      'Neem het meest uitgebreide abonnement voor open-source softwarebeveiliging';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +131,28 @@ class UbuntuInitLocalizationsNl extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Geldig token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Ongeldig token, opnieuw proberen';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Ongeldig token, opnieuw proberen';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Voorlopig overslaan';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Je kunt Ubuntu Pro later altijd inschakelen via de applicatie Software & Updates.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Je kunt Ubuntu Pro later altijd inschakelen via de applicatie Software & Updates.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro activeren';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Deze machine koppelen aan een Ubuntu Pro-abonnement voor beveiligingsupdates op een breder scala aan pakketten, tot 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Deze machine koppelen aan een Ubuntu Pro-abonnement voor beveiligingsupdates op een breder scala aan pakketten, tot 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is nu ingeschakeld op deze machine';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro is nu ingeschakeld op deze machine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'U kunt uw Pro-diensten beheren in de applicatie Software & Updates.';
+  String get ubuntuProSucessAttachDescription =>
+      'U kunt uw Pro-diensten beheren in de applicatie Software & Updates.';
 }

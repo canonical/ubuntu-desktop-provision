@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Створити USB-носій для скидання налаштувань';
 
   @override
-  String get createUsbBody => 'Створити USB-носій для відновлення системи, а також налаштувати ваші установки Ubuntu.';
+  String get createUsbBody =>
+      'Створити USB-носій для відновлення системи, а також налаштувати ваші установки Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Вибрати USB-накопичувач. На диску повинно бути **принаймні 16 ГБ вільного місця.**';
+  String get createUsbListExplanation =>
+      'Вибрати USB-накопичувач. На диску повинно бути **принаймні 16 ГБ вільного місця.**';
 
   @override
-  String get createUsbWarning => 'Флешка буде переформатована і всі дані на ній будуть втрачені.';
+  String get createUsbWarning =>
+      'Флешка буде переформатована і всі дані на ній будуть втрачені.';
 
   @override
   String get resetMediaTitle => 'USB-носій для скидання налаштувань';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Не виявлено знімного накопичувача';
 
   @override
-  String get noMediaDetectedSubtitle => 'Для створення носія зі скиданням до заводських налаштувань вам знадобиться USB-накопичувач.';
+  String get noMediaDetectedSubtitle =>
+      'Для створення носія зі скиданням до заводських налаштувань вам знадобиться USB-накопичувач.';
 
   @override
-  String get factoryResetTitle => 'Виберіть опцію для запуску скидання до заводських налаштувань';
+  String get factoryResetTitle =>
+      'Виберіть опцію для запуску скидання до заводських налаштувань';
 
   @override
   String get loadingDrives => 'Зачекайте, будь ласка, поки ми отримуємо диски.';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB-носій для скидання готовий';
 
   @override
-  String get resetMediaReadyBody => 'Коли ви захочете ним скористатися, вставте USB-накопичувач у комп\'ютер, який ви хочете скинути, і перезапустіть його.';
+  String get resetMediaReadyBody =>
+      'Коли ви захочете ним скористатися, вставте USB-накопичувач у комп\'ютер, який ви хочете скинути, і перезапустіть його.';
 
   @override
   String get errorLoadingDrives => 'Виникла помилка під час отримання дисків.';

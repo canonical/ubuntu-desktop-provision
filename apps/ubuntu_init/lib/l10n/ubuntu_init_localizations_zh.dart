@@ -131,24 +131,27 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => '暂时跳过';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => '您可以稍后在“软件与更新”应用中启用 Ubuntu Pro。';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      '您可以稍后在“软件与更新”应用中启用 Ubuntu Pro。';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => '启用 Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => '将此机器绑定到 Ubuntu Pro 以在 2032 年前获得更多软件安全更新。';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      '将此机器绑定到 Ubuntu Pro 以在 2032 年前获得更多软件安全更新。';
 
   @override
   String get ubuntuProSucessAttachHeader => '此机器现已启用 Ubuntu Pro';
 
   @override
-  String get ubuntuProSucessAttachDescription => '您可以在“软件与更新”应用中管理 Ubuntu Pro 服务。';
+  String get ubuntuProSucessAttachDescription =>
+      '您可以在“软件与更新”应用中管理 Ubuntu Pro 服务。';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
 class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
-  UbuntuInitLocalizationsZhTw(): super('zh_TW');
+  UbuntuInitLocalizationsZhTw() : super('zh_TW');
 
   @override
   String get welcomePageTitle => '歡迎';
@@ -273,17 +276,20 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProOnBoardingSkipForNow => '先暫時跳過';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => '您稍後可以隨時在「軟體與更新」中啟用 Ubuntu Pro。';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      '您稍後可以隨時在「軟體與更新」中啟用 Ubuntu Pro。';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => '啟用 Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => '將這台機器綁定到 Ubuntu Pro 訂閱，以獲得更多軟體包的安全更新，直至 2032 年。';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      '將這台機器綁定到 Ubuntu Pro 訂閱，以獲得更多軟體包的安全更新，直至 2032 年。';
 
   @override
   String get ubuntuProSucessAttachHeader => '此機器已啟用 Ubuntu Pro';
 
   @override
-  String get ubuntuProSucessAttachDescription => '您可以在「軟體與更新」中管理您的 Ubuntu Pro 支援服務。';
+  String get ubuntuProSucessAttachDescription =>
+      '您可以在「軟體與更新」中管理您的 Ubuntu Pro 支援服務。';
 }

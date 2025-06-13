@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsKa extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'USB ჩამოყრის მედიის შექმნა';
 
   @override
-  String get createUsbBody => 'შექმენით USB ჩამოყრის მედია სისტემის აღსადგენად და თქვენი Ububtu-ის დაყენებული ვარიანტის მოსარგებად.';
+  String get createUsbBody =>
+      'შექმენით USB ჩამოყრის მედია სისტემის აღსადგენად და თქვენი Ububtu-ის დაყენებული ვარიანტის მოსარგებად.';
 
   @override
-  String get createUsbListExplanation => 'აირჩიეთ USB ფლეშ-დისკი. დისკზე, **მინიმუმ 16 გბ ადგილი უნდა იყოს.**';
+  String get createUsbListExplanation =>
+      'აირჩიეთ USB ფლეშ-დისკი. დისკზე, **მინიმუმ 16 გბ ადგილი უნდა იყოს.**';
 
   @override
-  String get createUsbWarning => 'ფლეშ-დრაივი დაფორმატდება და ზედ არსებული მონაცემები დაიკარგება.';
+  String get createUsbWarning =>
+      'ფლეშ-დრაივი დაფორმატდება და ზედ არსებული მონაცემები დაიკარგება.';
 
   @override
   String get resetMediaTitle => 'USB ჩამოყრის მედია';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsKa extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'მოხსნადი საცავი აღმოჩენილი არაა';
 
   @override
-  String get noMediaDetectedSubtitle => 'ქარხნულ პარამეტრებზე ჩამოყრის მედის შესაქმნელად USB დისკი გჭირდებათ.';
+  String get noMediaDetectedSubtitle =>
+      'ქარხნულ პარამეტრებზე ჩამოყრის მედის შესაქმნელად USB დისკი გჭირდებათ.';
 
   @override
-  String get factoryResetTitle => 'აირჩიეთ ვარიანტი ქარხნულ პარამეტრებზე ჩამოყრის დასაწყებად';
+  String get factoryResetTitle =>
+      'აირჩიეთ ვარიანტი ქარხნულ პარამეტრებზე ჩამოყრის დასაწყებად';
 
   @override
   String get loadingDrives => 'მოითმინეთ. მიმდინარეობს დისკების გამოთხოვა.';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsKa extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB ჩამოყრის მედია მზადაა';
 
   @override
-  String get resetMediaReadyBody => 'როცა მოგინდებათ, გამოიყენოთ ის, შეაერთეთ USB დისკი კომპიუტერში, რომლის ჩამოყრაც გნებავთ, და გადატვირთეთ ის.';
+  String get resetMediaReadyBody =>
+      'როცა მოგინდებათ, გამოიყენოთ ის, შეაერთეთ USB დისკი კომპიუტერში, რომლის ჩამოყრაც გნებავთ, და გადატვირთეთ ის.';
 
   @override
   String get errorLoadingDrives => 'შეცდომა დისკების გამოთხოვისას.';

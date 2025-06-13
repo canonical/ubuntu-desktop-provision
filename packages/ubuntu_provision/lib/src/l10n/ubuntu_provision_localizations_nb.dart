@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Noe gikk galt';
 
   @override
-  String get errorPageUnexpected => 'Beklager. Finner ikke ut hva feilen er. Etter en omstart kan du starte installasjonsprosessen igjen. Du kan også <a>rapportere en feil</a>.';
+  String get errorPageUnexpected =>
+      'Beklager. Finner ikke ut hva feilen er. Etter en omstart kan du starte installasjonsprosessen igjen. Du kan også <a>rapportere en feil</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Trykk på en av følgende taster:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Finnes følgende tast på tastaturet ditt?';
+  String get keyboardKeyPresentLabel =>
+      'Finnes følgende tast på tastaturet ditt?';
 
   @override
   String get themePageTitle => 'Velg utseende';
 
   @override
-  String get themePageHeader => 'Du kan alltid endre dette senere i utseende-innstillingene.';
+  String get themePageHeader =>
+      'Du kan alltid endre dette senere i utseende-innstillingene.';
 
   @override
   String get themeDark => 'Mørk';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Datamaskinens navn';
 
   @override
-  String get identityHostnameInfo => 'Navn brukt ved kommunikasjon med andre datamaskiner.';
+  String get identityHostnameInfo =>
+      'Navn brukt ved kommunikasjon med andre datamaskiner.';
 
   @override
   String get identityHostnameRequired => 'Et datamaskinsnavn er påkrevd';
@@ -185,7 +189,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Brukernavnet finnes allerede.';
 
   @override
-  String get identityUsernameSystemReserved => 'Navnet er reservert for systembruk.';
+  String get identityUsernameSystemReserved =>
+      'Navnet er reservert for systembruk.';
 
   @override
   String get identityUsernameTooLong => 'Navnet er for langt.';
@@ -215,7 +220,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Bruk Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Du skriver inn domene og andre detaljer i neste steg.';
+  String get identityActiveDirectoryInfo =>
+      'Du skriver inn domene og andre detaljer i neste steg.';
 
   @override
   String get activeDirectoryTitle => 'Sett opp Active Directory';
@@ -256,7 +262,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Slutter med bindestrek (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Inneholder flere gjentagende punktum (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Inneholder flere gjentagende punktum (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Fant ikke domenet';
@@ -277,19 +284,23 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Påkrevd';
 
   @override
-  String get activeDirectoryErrorTitle => 'Kunne ikke sette opp tilkobling til Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Kunne ikke sette opp tilkobling til Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Active Directory kan ikke settes opp for øyeblikket. Når systemet er oppe og går kan du besøke <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for hjelp.';
+  String get activeDirectoryErrorMessage =>
+      'Active Directory kan ikke settes opp for øyeblikket. Når systemet er oppe og går kan du besøke <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for hjelp.';
 
   @override
   String get networkPageTitle => 'Koble til internett';
 
   @override
-  String get networkPageHeader => 'Å koble denne datamaskinen til internett vil hjelpe Ubuntu med å installere all ekstra programvare som trengs og hjelpe deg med å velge tidssone.\n\nKoble til med Ethernet-kabel, eller velg et Wi-Fi-nettverk';
+  String get networkPageHeader =>
+      'Å koble denne datamaskinen til internett vil hjelpe Ubuntu med å installere all ekstra programvare som trengs og hjelpe deg med å velge tidssone.\n\nKoble til med Ethernet-kabel, eller velg et Wi-Fi-nettverk';
 
   @override
-  String get networkPageBody => 'Tilkobling til Internett forbedrer installasjonen med kompatibilitetssjekk og ekstra programvarepakker.';
+  String get networkPageBody =>
+      'Tilkobling til Internett forbedrer installasjonen med kompatibilitetssjekk og ekstra programvarepakker.';
 
   @override
   String get networkWiredOption => 'Bruk kablet nettverktilkobling';
@@ -301,7 +312,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Kablet tilkobling er slått av';
 
   @override
-  String get networkWiredDisabled => 'For å bruke nettverkkabel på denne pcen, må kablet tilkobling være aktivert';
+  String get networkWiredDisabled =>
+      'For å bruke nettverkkabel på denne pcen, må kablet tilkobling være aktivert';
 
   @override
   String get networkWiredEnable => 'Aktivere kablet tilkobling';
@@ -316,7 +328,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Ingen trådløs enheter er oppdaget';
 
   @override
-  String get networkWifiDisabled => 'For å bruke Wi-Fi på denne datamaskinen, må trådløst nettverk være aktivert';
+  String get networkWifiDisabled =>
+      'For å bruke Wi-Fi på denne datamaskinen, må trådløst nettverk være aktivert';
 
   @override
   String get networkWifiEnable => 'Aktivere trådløs';
@@ -340,7 +353,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Vis lisensvilkårene';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'Jeg har lest og godtatt disse vilkårene';

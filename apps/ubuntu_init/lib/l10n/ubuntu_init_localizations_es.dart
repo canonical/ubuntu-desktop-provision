@@ -23,19 +23,23 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Un comienzo simplificado';
 
   @override
-  String get welcomeStartSubtitle => 'A favor de una experiencia de puesta en marcha más prolija.';
+  String get welcomeStartSubtitle =>
+      'A favor de una experiencia de puesta en marcha más prolija.';
 
   @override
-  String get welcomeStoreTitle => 'Un nuevo aspecto para la Tienda de Aplicaciones';
+  String get welcomeStoreTitle =>
+      'Un nuevo aspecto para la Tienda de Aplicaciones';
 
   @override
-  String get welcomeStoreSubtitle => 'Nunca ha sido tan fácil encontrar sus programas favoritos.';
+  String get welcomeStoreSubtitle =>
+      'Nunca ha sido tan fácil encontrar sus programas favoritos.';
 
   @override
   String get welcomeSecurityTitle => 'Mayor seguridad';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nuevas opciones de cifrado por hardware o ZFS.';
+  String get welcomeSecuritySubtitle =>
+      'Nuevas opciones de cifrado por hardware o ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -79,10 +83,12 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get privacyPageTitle => 'Servicios de ubicación';
 
   @override
-  String get privacyLocationTitle => '¿Quiere activar los servicios de ubicación?';
+  String get privacyLocationTitle =>
+      '¿Quiere activar los servicios de ubicación?';
 
   @override
-  String get privacyLocationSubtitle => 'Permita que las aplicaciones conozcan su ubicación geográfica.\nPuede cambiar esto en cualquier momento en la Configuración del sistema.';
+  String get privacyLocationSubtitle =>
+      'Permita que las aplicaciones conozcan su ubicación geográfica.\nPuede cambiar esto en cualquier momento en la Configuración del sistema.';
 
   @override
   String get privacyLocationEnable => 'Servicios de ubicación';
@@ -108,7 +114,8 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Obtenga la suscripción más completa para la seguridad del software de código abierto';
+  String get ubuntuProSubscriptionDescription =>
+      'Obtenga la suscripción más completa para la seguridad del software de código abierto';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +138,21 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Omitir por ahora';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Siempre puede activar Ubuntu Pro más adelante a través de la aplicación Programas y actualizaciones.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Siempre puede activar Ubuntu Pro más adelante a través de la aplicación Programas y actualizaciones.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Activar Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Vincule esta máquina a una suscripción de Ubuntu Pro para recibir actualizaciones de seguridad para una mayor cantidad de paquetes hasta 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Vincule esta máquina a una suscripción de Ubuntu Pro para recibir actualizaciones de seguridad para una mayor cantidad de paquetes hasta 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ya está activado en esta máquina';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro ya está activado en esta máquina';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Puedes administrar tus servicios de Ubuntu Pro en Software y Actualizaciones.';
+  String get ubuntuProSucessAttachDescription =>
+      'Puedes administrar tus servicios de Ubuntu Pro en Software y Actualizaciones.';
 }

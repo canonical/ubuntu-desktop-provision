@@ -23,19 +23,22 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Ein optimierter Start';
 
   @override
-  String get welcomeStartSubtitle => 'Unterstützung einer saubereren Einrichtung.';
+  String get welcomeStartSubtitle =>
+      'Unterstützung einer saubereren Einrichtung.';
 
   @override
   String get welcomeStoreTitle => 'Neues Aussehen des App Store';
 
   @override
-  String get welcomeStoreSubtitle => 'Es war noch nie so einfach, Ihre Lieblingssoftware zu finden.';
+  String get welcomeStoreSubtitle =>
+      'Es war noch nie so einfach, Ihre Lieblingssoftware zu finden.';
 
   @override
   String get welcomeSecurityTitle => 'Erhöhte Sicherheit';
 
   @override
-  String get welcomeSecuritySubtitle => 'Neue Optionen für hardwaregestützte oder ZFS-Verschlüsselung.';
+  String get welcomeSecuritySubtitle =>
+      'Neue Optionen für hardwaregestützte oder ZFS-Verschlüsselung.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +76,8 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Rechtlicher Hinweis';
 
   @override
-  String get telemetryCollectError => 'Fehler bei der Erfassung von Telemetriedaten';
+  String get telemetryCollectError =>
+      'Fehler bei der Erfassung von Telemetriedaten';
 
   @override
   String get privacyPageTitle => 'Standortbezogene Dienste';
@@ -82,7 +86,8 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Standortbezogene Dienste aktivieren?';
 
   @override
-  String get privacyLocationSubtitle => 'Lassen Sie Anwendungen Ihren geografischen Aufenthaltsort kennen.\nSie können dies jederzeit in den Systemeinstellungen ändern.';
+  String get privacyLocationSubtitle =>
+      'Lassen Sie Anwendungen Ihren geografischen Aufenthaltsort kennen.\nSie können dies jederzeit in den Systemeinstellungen ändern.';
 
   @override
   String get privacyLocationEnable => 'Standortbezogene Dienste';
@@ -102,13 +107,15 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Dieses Gerät anbinden';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'oder fügen Sie manuell ein Token hinzu';
+  String get ubuntuProOrAddTokenManually =>
+      'oder fügen Sie manuell ein Token hinzu';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Holen Sie sich das umfassendste Abonnement für die Sicherheit von quelloffener Software';
+  String get ubuntuProSubscriptionDescription =>
+      'Holen Sie sich das umfassendste Abonnement für die Sicherheit von quelloffener Software';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +132,28 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Gültiges Token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Ungültiges Token, erneut versuchen';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Ungültiges Token, erneut versuchen';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Vorerst überspringen';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro aktivieren';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Binden Sie dieses Gerät an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Binden Sie dieses Gerät an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ist jetzt auf diesem Gerät aktiviert';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro ist jetzt auf diesem Gerät aktiviert';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Sie können Ihre Pro-Dienste in der Anwendung Software & Aktualisierungen verwalten.';
+  String get ubuntuProSucessAttachDescription =>
+      'Sie können Ihre Pro-Dienste in der Anwendung Software & Aktualisierungen verwalten.';
 }

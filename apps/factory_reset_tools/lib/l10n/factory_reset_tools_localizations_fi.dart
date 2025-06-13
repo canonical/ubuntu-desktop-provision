@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsFi extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Luo USB-palautusmedia';
 
   @override
-  String get createUsbBody => 'Luo USB-palautusmedia palauttaaksesi järjestelmän tehdasasetuksiin, sekä mukauttaaksesi Ubuntu-asennuksiasi.';
+  String get createUsbBody =>
+      'Luo USB-palautusmedia palauttaaksesi järjestelmän tehdasasetuksiin, sekä mukauttaaksesi Ubuntu-asennuksiasi.';
 
   @override
-  String get createUsbListExplanation => 'Valitse USB-tallennuslaite. Laitteella tulee olla **vähintään 16Gt tilaa.**';
+  String get createUsbListExplanation =>
+      'Valitse USB-tallennuslaite. Laitteella tulee olla **vähintään 16Gt tilaa.**';
 
   @override
-  String get createUsbWarning => 'Tallennuslaite alustetaan uudelleen ja kaikki laitteella jo oleva tieto hävitetään.';
+  String get createUsbWarning =>
+      'Tallennuslaite alustetaan uudelleen ja kaikki laitteella jo oleva tieto hävitetään.';
 
   @override
   String get resetMediaTitle => 'USB-palautusmedia';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsFi extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Irrotettavaa tallennuslaitetta ei havaita';
 
   @override
-  String get noMediaDetectedSubtitle => 'Tarvitset USB-tallennusvälineen luodaksesi tehdasasetuksien palautusmedian.';
+  String get noMediaDetectedSubtitle =>
+      'Tarvitset USB-tallennusvälineen luodaksesi tehdasasetuksien palautusmedian.';
 
   @override
-  String get factoryResetTitle => 'Tee valinta käynnistääksesi tehdasasetuksiin palauttamisen';
+  String get factoryResetTitle =>
+      'Tee valinta käynnistääksesi tehdasasetuksiin palauttamisen';
 
   @override
   String get loadingDrives => 'Odota kun laitteita tutkitaan.';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsFi extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB-palautusmedia valmis';
 
   @override
-  String get resetMediaReadyBody => 'Kun haluat käyttää sitä, liitä USB-tallennuslaite tietokoneeseen jonka haluat palauttaa ja käynnistä kone uudelleen.';
+  String get resetMediaReadyBody =>
+      'Kun haluat käyttää sitä, liitä USB-tallennuslaite tietokoneeseen jonka haluat palauttaa ja käynnistä kone uudelleen.';
 
   @override
   String get errorLoadingDrives => 'Tutkittaessa laitteita tapahtui virhe.';

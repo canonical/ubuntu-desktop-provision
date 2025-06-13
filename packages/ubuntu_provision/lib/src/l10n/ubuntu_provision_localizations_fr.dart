@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Quelque chose s’est mal passé';
 
   @override
-  String get errorPageUnexpected => 'Nous sommes désolés, mais nous ne sommes pas sûrs de l\'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d\'installation. Vous pouvez également <a> signaler le problème</a>.';
+  String get errorPageUnexpected =>
+      'Nous sommes désolés, mais nous ne sommes pas sûrs de l\'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d\'installation. Vous pouvez également <a> signaler le problème</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -102,7 +103,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Sélectionnez la disposition de votre clavier';
 
   @override
-  String get keyboardTestHint => 'Saisissez du texte ici pour tester votre clavier';
+  String get keyboardTestHint =>
+      'Saisissez du texte ici pour tester votre clavier';
 
   @override
   String get keyboardDetectTitle => 'Détecter la disposition du clavier';
@@ -114,16 +116,19 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Sélectionnez votre variante du clavier :';
 
   @override
-  String get keyboardPressKeyLabel => 'Veuillez appuyer sur l’une des touches suivantes :';
+  String get keyboardPressKeyLabel =>
+      'Veuillez appuyer sur l’une des touches suivantes :';
 
   @override
-  String get keyboardKeyPresentLabel => 'Cette touche est-elle présente sur votre clavier ?';
+  String get keyboardKeyPresentLabel =>
+      'Cette touche est-elle présente sur votre clavier ?';
 
   @override
   String get themePageTitle => 'Choisissez votre thème';
 
   @override
-  String get themePageHeader => 'Vous pourrez la changer ultérieurement dans les préférences d’apparence.';
+  String get themePageHeader =>
+      'Vous pourrez la changer ultérieurement dans les préférences d’apparence.';
 
   @override
   String get themeDark => 'Sombre';
@@ -146,7 +151,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityAutoLogin => 'Ouvrir la session automatiquement';
 
   @override
-  String get identityRequirePassword => 'Demander mon mot de passe pour ouvrir une session';
+  String get identityRequirePassword =>
+      'Demander mon mot de passe pour ouvrir une session';
 
   @override
   String get identityRealNameLabel => 'Votre nom';
@@ -161,7 +167,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Le nom de votre ordinateur';
 
   @override
-  String get identityHostnameInfo => 'Le nom qu’il utilise pour communiquer avec d’autres ordinateurs.';
+  String get identityHostnameInfo =>
+      'Le nom qu’il utilise pour communiquer avec d’autres ordinateurs.';
 
   @override
   String get identityHostnameRequired => 'Un nom pour l’ordinateur est requis';
@@ -185,13 +192,15 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Ce nom d’utilisateur existe déjà.';
 
   @override
-  String get identityUsernameSystemReserved => 'Ce nom est réservé pour le système.';
+  String get identityUsernameSystemReserved =>
+      'Ce nom est réservé pour le système.';
 
   @override
   String get identityUsernameTooLong => 'Ce nom est trop long.';
 
   @override
-  String get identityUsernameInvalidChars => 'Ce nom contient des caractères invalides.';
+  String get identityUsernameInvalidChars =>
+      'Ce nom contient des caractères invalides.';
 
   @override
   String get identityPasswordLabel => 'Mot de passe';
@@ -203,7 +212,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityConfirmPasswordLabel => 'Confirmez le mot de passe';
 
   @override
-  String get identityPasswordMismatch => 'Les mots de passe ne correspondent pas';
+  String get identityPasswordMismatch =>
+      'Les mots de passe ne correspondent pas';
 
   @override
   String get identityPasswordShow => 'Montrer';
@@ -215,7 +225,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Utiliser Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Vous saisirez le domaine et d’autres détails à l’étape suivante.';
+  String get identityActiveDirectoryInfo =>
+      'Vous saisirez le domaine et d’autres détails à l’étape suivante.';
 
   @override
   String get activeDirectoryTitle => 'Se connecter à Active Directory';
@@ -229,7 +240,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Tester la connectivité au domaine';
+  String get activeDirectoryTestConnection =>
+      'Tester la connectivité au domaine';
 
   @override
   String get activeDirectoryDomainLabel => 'Domaine';
@@ -250,19 +262,23 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Se termine par un point (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Commence par un trait d’union (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Commence par un trait d’union (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Se termine par un trait d’union (-)';
+  String get activeDirectoryDomainEndHyphen =>
+      'Se termine par un trait d’union (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contient deux points adjacents (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Contient deux points adjacents (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domaine introuvable';
 
   @override
-  String get activeDirectoryAdminLabel => 'Nom d’utilisateur pour rejoindre le domaine';
+  String get activeDirectoryAdminLabel =>
+      'Nom d’utilisateur pour rejoindre le domaine';
 
   @override
   String get activeDirectoryAdminEmpty => 'Obligatoire';
@@ -277,10 +293,12 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Obligatoire';
 
   @override
-  String get activeDirectoryErrorTitle => 'Erreur lors de la configuration de la connexion à Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Erreur lors de la configuration de la connexion à Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Désolé, Active Directory ne peut pas être configuré pour le moment. Une fois que votre système est opérationnel, consultez <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> pour obtenir de l’aide.';
+  String get activeDirectoryErrorMessage =>
+      'Désolé, Active Directory ne peut pas être configuré pour le moment. Une fois que votre système est opérationnel, consultez <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> pour obtenir de l’aide.';
 
   @override
   String get networkPageTitle => 'Connexion Internet';
@@ -289,7 +307,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Connecter à Internet';
 
   @override
-  String get networkPageBody => 'Une connexion Internet améliorera votre installation avec le contrôle de compatibilité et les logiciels supplémentaires.';
+  String get networkPageBody =>
+      'Une connexion Internet améliorera votre installation avec le contrôle de compatibilité et les logiciels supplémentaires.';
 
   @override
   String get networkWiredOption => 'Utiliser une connexion câblée';
@@ -301,7 +320,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'La connexion câblée est désactivée';
 
   @override
-  String get networkWiredDisabled => 'Pour utiliser Ethernet sur cet ordinateur, une connexion câblée doit être activée';
+  String get networkWiredDisabled =>
+      'Pour utiliser Ethernet sur cet ordinateur, une connexion câblée doit être activée';
 
   @override
   String get networkWiredEnable => 'Activer une connexion câblée';
@@ -316,7 +336,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Aucun périphérique Wi-Fi détecté';
 
   @override
-  String get networkWifiDisabled => 'Pour utiliser le Wi-Fi sur cet ordinateur, le réseau sans fil doit être activé';
+  String get networkWifiDisabled =>
+      'Pour utiliser le Wi-Fi sur cet ordinateur, le réseau sans fil doit être activé';
 
   @override
   String get networkWifiEnable => 'Activer le Wi-Fi';
@@ -331,7 +352,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Un nom de réseau est requis';
 
   @override
-  String get networkNoneOption => 'Je ne souhaite pas me connecter à internet pour l’instant';
+  String get networkNoneOption =>
+      'Je ne souhaite pas me connecter à internet pour l’instant';
 
   @override
   String get eulaPageTitle => 'Contrat de Licence';
@@ -340,7 +362,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Examiner les conditions de licence';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Pour continuer de configurer cette machine, vous devez lire et accepter les termes de l\'accord de licence.';
+  String get eulaReadAndAcceptTerms =>
+      'Pour continuer de configurer cette machine, vous devez lire et accepter les termes de l\'accord de licence.';
 
   @override
   String get eulaAcceptTerms => 'J\'ai lu et accepté ces termes';

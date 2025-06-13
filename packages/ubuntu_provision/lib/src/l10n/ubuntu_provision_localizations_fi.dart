@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Jokin meni pieleen';
 
   @override
-  String get errorPageUnexpected => 'Valitettavasti emme ole varmoja, mikä aiheutti ongelman. Voit käynnistää tietokoneen uudelleen ja käynnistää asennuksen uudelleen. Voit myös <a>ilmoittaa kohtaamastasi ongelmasta</a>.';
+  String get errorPageUnexpected =>
+      'Valitettavasti emme ole varmoja, mikä aiheutti ongelman. Voit käynnistää tietokoneen uudelleen ja käynnistää asennuksen uudelleen. Voit myös <a>ilmoittaa kohtaamastasi ongelmasta</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -102,7 +103,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Valitse näppäimistön asettelu';
 
   @override
-  String get keyboardTestHint => 'Kokeile näppäimistön asetuksia kirjoittamalla tähän';
+  String get keyboardTestHint =>
+      'Kokeile näppäimistön asetuksia kirjoittamalla tähän';
 
   @override
   String get keyboardDetectTitle => 'Tunnista näppäimistön asettelu';
@@ -117,13 +119,15 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Paina yhtä seuraavista näppäimistä:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Löytyykö seuraava näppäin näppäimistöstäsi?';
+  String get keyboardKeyPresentLabel =>
+      'Löytyykö seuraava näppäin näppäimistöstäsi?';
 
   @override
   String get themePageTitle => 'Valitse teema';
 
   @override
-  String get themePageHeader => 'Voit vaihtaa ulkoasua milloin tahansa asetusten kautta.';
+  String get themePageHeader =>
+      'Voit vaihtaa ulkoasua milloin tahansa asetusten kautta.';
 
   @override
   String get themeDark => 'Tumma';
@@ -161,7 +165,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Tietokoneen nimi';
 
   @override
-  String get identityHostnameInfo => 'Nimi, jolla tietokone tunnistautuu toisille tietokoneille.';
+  String get identityHostnameInfo =>
+      'Nimi, jolla tietokone tunnistautuu toisille tietokoneille.';
 
   @override
   String get identityHostnameRequired => 'Tietokoneen nimi vaaditaan';
@@ -185,13 +190,15 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Kyseinen käyttäjänimi on jo olemassa.';
 
   @override
-  String get identityUsernameSystemReserved => 'Kyseinen nimi on varattu järjestelmän käytettäväksi.';
+  String get identityUsernameSystemReserved =>
+      'Kyseinen nimi on varattu järjestelmän käytettäväksi.';
 
   @override
   String get identityUsernameTooLong => 'Kyseinen nimi on liian pitkä.';
 
   @override
-  String get identityUsernameInvalidChars => 'Kyseinen nimi sisältää virheellisiä merkkejä.';
+  String get identityUsernameInvalidChars =>
+      'Kyseinen nimi sisältää virheellisiä merkkejä.';
 
   @override
   String get identityPasswordLabel => 'Salasana';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Käytä Active Directorya';
 
   @override
-  String get identityActiveDirectoryInfo => 'Kirjoita toimialue ja muut tiedot seuraavassa vaiheessa.';
+  String get identityActiveDirectoryInfo =>
+      'Kirjoita toimialue ja muut tiedot seuraavassa vaiheessa.';
 
   @override
   String get activeDirectoryTitle => 'Kirjaudu Active Directoryyn';
@@ -229,7 +237,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Testaa toimialueen yhdistettävyyttä';
+  String get activeDirectoryTestConnection =>
+      'Testaa toimialueen yhdistettävyyttä';
 
   @override
   String get activeDirectoryDomainLabel => 'Toimialue';
@@ -256,7 +265,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Päättyy tavuviivaan (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Sisältää lukuisia peräkkäisiä pisteitä (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Sisältää lukuisia peräkkäisiä pisteitä (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Toimialuetta ei löydy';
@@ -277,10 +287,12 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Vaadittu';
 
   @override
-  String get activeDirectoryErrorTitle => 'Virhe määrittäessä yhteyttä Active Directoryyn';
+  String get activeDirectoryErrorTitle =>
+      'Virhe määrittäessä yhteyttä Active Directoryyn';
 
   @override
-  String get activeDirectoryErrorMessage => 'Valitettavasti Active Directorya ei voi määrittää tällä hetkellä. Kun tietokoneesi on valmis ja käynnissä, käy osoitteessa <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> saadaksesi ohjeita.';
+  String get activeDirectoryErrorMessage =>
+      'Valitettavasti Active Directorya ei voi määrittää tällä hetkellä. Kun tietokoneesi on valmis ja käynnissä, käy osoitteessa <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> saadaksesi ohjeita.';
 
   @override
   String get networkPageTitle => 'Yhdistä verkkoon';
@@ -289,7 +301,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Yhdistä internetiin';
 
   @override
-  String get networkPageBody => 'Internetyhteys parantaa asennuskokemusta tarkistamalla yhteensopivuuden ja lisäohjelmistopaketit.';
+  String get networkPageBody =>
+      'Internetyhteys parantaa asennuskokemusta tarkistamalla yhteensopivuuden ja lisäohjelmistopaketit.';
 
   @override
   String get networkWiredOption => 'Käytä langallista yhteyttä';
@@ -301,7 +314,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Langallinen yhteys on kytketty pois päältä';
 
   @override
-  String get networkWiredDisabled => 'Jos haluat käyttää Ethernet-yhteyttä tässä tietokoneessa, langallinen yhteys on otettava käyttöön';
+  String get networkWiredDisabled =>
+      'Jos haluat käyttää Ethernet-yhteyttä tässä tietokoneessa, langallinen yhteys on otettava käyttöön';
 
   @override
   String get networkWiredEnable => 'Ota langallinen yhteys käyttöön';
@@ -316,7 +330,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Wi-Fi-laitteita ei havaittu';
 
   @override
-  String get networkWifiDisabled => 'Jos haluat käyttää Wi-Fi-yhteyttä tällä tietokoneella, langaton verkko on otettava käyttöön';
+  String get networkWifiDisabled =>
+      'Jos haluat käyttää Wi-Fi-yhteyttä tällä tietokoneella, langaton verkko on otettava käyttöön';
 
   @override
   String get networkWifiEnable => 'Ota Wi-Fi käyttöön';
@@ -331,7 +346,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Verkon nimi vaaditaan';
 
   @override
-  String get networkNoneOption => 'En halua muodostaa yhteyttä internetiin juuri nyt';
+  String get networkNoneOption =>
+      'En halua muodostaa yhteyttä internetiin juuri nyt';
 
   @override
   String get eulaPageTitle => 'Lisenssin hyväksyntä';
@@ -340,7 +356,8 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Lue lisenssiehdot';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Sinun täytyy lukea ja hyväksyä lisenssiehdot jatkaaksesi tämän koneen määritystä.';
+  String get eulaReadAndAcceptTerms =>
+      'Sinun täytyy lukea ja hyväksyä lisenssiehdot jatkaaksesi tämän koneen määritystä.';
 
   @override
   String get eulaAcceptTerms => 'Olen lukenut lisenssiehdot ja hyväksyn ne';
