@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Nový vzhled katalogu aplikací';
 
   @override
-  String get welcomeStoreSubtitle => 'Najít vámi oblíbený software nikdy nebylo snazší.';
+  String get welcomeStoreSubtitle =>
+      'Najít vámi oblíbený software nikdy nebylo snazší.';
 
   @override
   String get welcomeSecurityTitle => 'Vylepšené zabezpečení';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nové předvolby pro šifrování s pomocí hardwaru nebo na ZFS.';
+  String get welcomeSecuritySubtitle =>
+      'Nové předvolby pro šifrování s pomocí hardwaru nebo na ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +75,8 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Právní ustanovení';
 
   @override
-  String get telemetryCollectError => 'Nepodařilo se shromáždit telemetrická data';
+  String get telemetryCollectError =>
+      'Nepodařilo se shromáždit telemetrická data';
 
   @override
   String get privacyPageTitle => 'Služby určování polohy';
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Zapnout služby určování polohy?';
 
   @override
-  String get privacyLocationSubtitle => 'Umožněte aplikacím znát vaši zeměpisnou polohu.\nToto je možné kdykoli změnit v Nastavení systému.';
+  String get privacyLocationSubtitle =>
+      'Umožněte aplikacím znát vaši zeměpisnou polohu.\nToto je možné kdykoli změnit v Nastavení systému.';
 
   @override
   String get privacyLocationEnable => 'Služby určování polohy';
@@ -108,7 +112,8 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Získejte nejkomplexnější předplatné pro zabezpečení open-source softwaru';
+  String get ubuntuProSubscriptionDescription =>
+      'Získejte nejkomplexnější předplatné pro zabezpečení open-source softwaru';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +130,28 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Platný token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Neplatný token, zkuste to znovu';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Neplatný token, zkuste to znovu';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Prozatím přeskočit';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Ubuntu Pro můžete kdykoli povolit později prostřednictvím aplikace Software a aktualizace.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Ubuntu Pro můžete kdykoli povolit později prostřednictvím aplikace Software a aktualizace.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Povolit Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Připojte tento počítač k předplatnému Ubuntu Pro pro aktualizace zabezpečení v širší řadě balíčků do roku 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Připojte tento počítač k předplatnému Ubuntu Pro pro aktualizace zabezpečení v širší řadě balíčků do roku 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro je nyní na tomto počítači povoleno';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro je nyní na tomto počítači povoleno';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Své služby Pro můžete spravovat v aplikaci Software a aktualizace.';
+  String get ubuntuProSucessAttachDescription =>
+      'Své služby Pro můžete spravovat v aplikaci Software a aktualizace.';
 }

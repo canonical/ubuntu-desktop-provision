@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsSr extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Креирај USB медиј за ресетовање';
 
   @override
-  String get createUsbBody => 'Креирај USB медиј за ресетовање да бисте вратили систем, као и прилагодили своје Ubuntu инсталације.';
+  String get createUsbBody =>
+      'Креирај USB медиј за ресетовање да бисте вратили систем, као и прилагодили своје Ubuntu инсталације.';
 
   @override
-  String get createUsbListExplanation => 'Изаберите USB флеш диск. Диск мора имати **најмање 16GB простора.**';
+  String get createUsbListExplanation =>
+      'Изаберите USB флеш диск. Диск мора имати **најмање 16GB простора.**';
 
   @override
-  String get createUsbWarning => 'Флеш диск ће бити реформатиран и сви подаци на диску ће бити изгубљени.';
+  String get createUsbWarning =>
+      'Флеш диск ће бити реформатиран и сви подаци на диску ће бити изгубљени.';
 
   @override
   String get resetMediaTitle => 'USB медиј за ресетовање';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsSr extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Није откривен преносиви уређај за складиштење';
 
   @override
-  String get noMediaDetectedSubtitle => 'Потребан вам је USB уређај за складиштење да бисте креирали медиј за фабричко ресетовање.';
+  String get noMediaDetectedSubtitle =>
+      'Потребан вам је USB уређај за складиштење да бисте креирали медиј за фабричко ресетовање.';
 
   @override
-  String get factoryResetTitle => 'Изаберите опцију за покретање фабричког ресетовања';
+  String get factoryResetTitle =>
+      'Изаберите опцију за покретање фабричког ресетовања';
 
   @override
   String get loadingDrives => 'Молимо сачекајте док преузимамо дискове.';
@@ -54,10 +59,12 @@ class FactoryResetToolsLocalizationsSr extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB медиј за ресетовање је спреман';
 
   @override
-  String get resetMediaReadyBody => 'Када желите да га користите, уметните USB диск у рачунар који желите да ресетујете и поново га покрените.';
+  String get resetMediaReadyBody =>
+      'Када желите да га користите, уметните USB диск у рачунар који желите да ресетујете и поново га покрените.';
 
   @override
-  String get errorLoadingDrives => 'Дошло је до грешке приликом преузимања дискова.';
+  String get errorLoadingDrives =>
+      'Дошло је до грешке приликом преузимања дискова.';
 
   @override
   String get resetMediaInitializing => 'Иницијализација';

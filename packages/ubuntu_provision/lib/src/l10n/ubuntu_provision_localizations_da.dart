@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Noget gik galt';
 
   @override
-  String get errorPageUnexpected => 'Vi beklager, men vi ved ikke helt, hvad fejlen er. Du kan genstarte computeren og starte installationsproceduren igen. Du kan også <a>indrapportere problemet</a>.';
+  String get errorPageUnexpected =>
+      'Vi beklager, men vi ved ikke helt, hvad fejlen er. Du kan genstarte computeren og starte installationsproceduren igen. Du kan også <a>indrapportere problemet</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Tryk venligst på en af følgende taster:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Er følgende tast til stede på dit tastatur?';
+  String get keyboardKeyPresentLabel =>
+      'Er følgende tast til stede på dit tastatur?';
 
   @override
   String get themePageTitle => 'Vælg dit tema';
 
   @override
-  String get themePageHeader => 'Du kan altid ændre dette senere i indstillinger for udseende.';
+  String get themePageHeader =>
+      'Du kan altid ændre dette senere i indstillinger for udseende.';
 
   @override
   String get themeDark => 'Mørkt';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Din computers navn';
 
   @override
-  String get identityHostnameInfo => 'Det navn den bruger, når den kommunikerer med andre computere.';
+  String get identityHostnameInfo =>
+      'Det navn den bruger, når den kommunikerer med andre computere.';
 
   @override
   String get identityHostnameRequired => 'Et computernavn er påkrævet';
@@ -185,13 +189,15 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Det brugernavn findes allerede.';
 
   @override
-  String get identityUsernameSystemReserved => 'Det navn er reserveret til systembrug.';
+  String get identityUsernameSystemReserved =>
+      'Det navn er reserveret til systembrug.';
 
   @override
   String get identityUsernameTooLong => 'Det navn er for langt.';
 
   @override
-  String get identityUsernameInvalidChars => 'Det navn indeholder ugyldige tegn.';
+  String get identityUsernameInvalidChars =>
+      'Det navn indeholder ugyldige tegn.';
 
   @override
   String get identityPasswordLabel => 'Adgangskode';
@@ -215,7 +221,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Brug Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Du kan indtaste domæne og andre oplysninger i næste trin.';
+  String get identityActiveDirectoryInfo =>
+      'Du kan indtaste domæne og andre oplysninger i næste trin.';
 
   @override
   String get activeDirectoryTitle => 'Log på Active Directory';
@@ -256,7 +263,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Slutter med bindestreg (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Indeholder flere punktummer (..) efter hinanden';
+  String get activeDirectoryDomainMultipleDots =>
+      'Indeholder flere punktummer (..) efter hinanden';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domæne ikke fundet';
@@ -277,10 +285,12 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Påkrævet';
 
   @override
-  String get activeDirectoryErrorTitle => 'Fejl ved konfiguration af forbindelse til Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Fejl ved konfiguration af forbindelse til Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Beklager, Active Directory kan ikke indstilles i øjeblikket. Når dit system er oppe at køre, så besøg <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for hjælp.';
+  String get activeDirectoryErrorMessage =>
+      'Beklager, Active Directory kan ikke indstilles i øjeblikket. Når dit system er oppe at køre, så besøg <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for hjælp.';
 
   @override
   String get networkPageTitle => 'internetforbindelse';
@@ -289,7 +299,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Forbind til internettet';
 
   @override
-  String get networkPageBody => 'En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.';
+  String get networkPageBody =>
+      'En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.';
 
   @override
   String get networkWiredOption => 'Brug kablet forbindelse';
@@ -301,7 +312,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Kablet forbindelse er slået fra';
 
   @override
-  String get networkWiredDisabled => 'En kablet forbindelse skal være aktiveret for at bruge Ethernet på denne computer';
+  String get networkWiredDisabled =>
+      'En kablet forbindelse skal være aktiveret for at bruge Ethernet på denne computer';
 
   @override
   String get networkWiredEnable => 'Aktivér kablet forbindelse';
@@ -316,13 +328,15 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Ingen wi-fi-enheder registreret';
 
   @override
-  String get networkWifiDisabled => 'For at bruge wi-fi på denne computer skal trådløst netværk være aktiveret';
+  String get networkWifiDisabled =>
+      'For at bruge wi-fi på denne computer skal trådløst netværk være aktiveret';
 
   @override
   String get networkWifiEnable => 'Aktivér wi-fi';
 
   @override
-  String get networkHiddenWifiOption => 'Opret forbindelse til et skjult wi-fi-netværk';
+  String get networkHiddenWifiOption =>
+      'Opret forbindelse til et skjult wi-fi-netværk';
 
   @override
   String get networkHiddenWifiNameLabel => 'Netværksnavn';
@@ -340,7 +354,8 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Gennemse licensbetingelserne';
 
   @override
-  String get eulaReadAndAcceptTerms => 'For at fortsætte med opsætning af denne maskine skal du læse og acceptere betingelserne i licensaftalen.';
+  String get eulaReadAndAcceptTerms =>
+      'For at fortsætte med opsætning af denne maskine skal du læse og acceptere betingelserne i licensaftalen.';
 
   @override
   String get eulaAcceptTerms => 'Jeg har læst og accepterer disse betingelser';

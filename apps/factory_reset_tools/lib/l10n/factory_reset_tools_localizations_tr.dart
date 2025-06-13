@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsTr extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'USB Sıfırlama medyası oluşturun';
 
   @override
-  String get createUsbBody => 'Sistemi eski haline getirmek ve Ubuntu kurulumlarınızı özelleştirmek için bir USB sıfırlama medyası oluşturun.';
+  String get createUsbBody =>
+      'Sistemi eski haline getirmek ve Ubuntu kurulumlarınızı özelleştirmek için bir USB sıfırlama medyası oluşturun.';
 
   @override
-  String get createUsbListExplanation => 'Bir USB flaş belleği seçin. Bu bellekte en az **16 GB** depolama alanı olmalıdır.';
+  String get createUsbListExplanation =>
+      'Bir USB flaş belleği seçin. Bu bellekte en az **16 GB** depolama alanı olmalıdır.';
 
   @override
-  String get createUsbWarning => 'Flaş belleği sıfırlanacak ve içerisindeki bütün veriler kaybolacaktır.';
+  String get createUsbWarning =>
+      'Flaş belleği sıfırlanacak ve içerisindeki bütün veriler kaybolacaktır.';
 
   @override
   String get resetMediaTitle => 'USB sıfırlama medyası';
@@ -42,22 +45,26 @@ class FactoryResetToolsLocalizationsTr extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Çıkarılabilir bir depolama cihazı bulunamadı';
 
   @override
-  String get noMediaDetectedSubtitle => 'Sıfırlama medyası oluşturmak için bir USB depolama cihazına ihtiyacınız var.';
+  String get noMediaDetectedSubtitle =>
+      'Sıfırlama medyası oluşturmak için bir USB depolama cihazına ihtiyacınız var.';
 
   @override
   String get factoryResetTitle => 'Sıfırlamak için bir seçeneği seçin';
 
   @override
-  String get loadingDrives => 'Lütfen depolama cihazlarını algılayana kadar bekleyin.';
+  String get loadingDrives =>
+      'Lütfen depolama cihazlarını algılayana kadar bekleyin.';
 
   @override
   String get resetMediaReadyTitle => 'USB sıfırlama cihazı hazır';
 
   @override
-  String get resetMediaReadyBody => 'Kullanmak istediğinizde, sıfırlayacağınız bilgisayara USB flaş belleği takın ve yeniden başlatın.';
+  String get resetMediaReadyBody =>
+      'Kullanmak istediğinizde, sıfırlayacağınız bilgisayara USB flaş belleği takın ve yeniden başlatın.';
 
   @override
-  String get errorLoadingDrives => 'Depolama cihazlarını algılarken bir hata oluştu.';
+  String get errorLoadingDrives =>
+      'Depolama cihazlarını algılarken bir hata oluştu.';
 
   @override
   String get resetMediaInitializing => 'Initializing';

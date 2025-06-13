@@ -66,6 +66,7 @@ dev_dependencies:
   yaru_test: ^0.3.0
 
 flutter:
+  generate: true
   assets:
     - assets/
     - assets/images/

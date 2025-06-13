@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsKm extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'បង្កើតមេឌៀកំណត់ USB ឡើងវិញ';
 
   @override
-  String get createUsbBody => 'បង្កើតមេឌៀកំណត់ USB ឡើងវិញ ដើម្បីស្ដារប្រព័ន្ធ ក៏ដូចជាការប្ដូរការដំឡើង Ubuntu របស់អ្នកតាមបំណង។';
+  String get createUsbBody =>
+      'បង្កើតមេឌៀកំណត់ USB ឡើងវិញ ដើម្បីស្ដារប្រព័ន្ធ ក៏ដូចជាការប្ដូរការដំឡើង Ubuntu របស់អ្នកតាមបំណង។';
 
   @override
-  String get createUsbListExplanation => 'ជ្រើសរើស USB flash drive ។ ដ្រាយវ៍ត្រូវតែមាន **ទំហំផ្ទុកយ៉ាងហោចណាស់ 16GB។**';
+  String get createUsbListExplanation =>
+      'ជ្រើសរើស USB flash drive ។ ដ្រាយវ៍ត្រូវតែមាន **ទំហំផ្ទុកយ៉ាងហោចណាស់ 16GB។**';
 
   @override
-  String get createUsbWarning => 'ថាសហ្វ្លាសនឹងត្រូវបានធ្វើកំណែទម្រង់ ហើយទិន្នន័យទាំងអស់នៅលើដ្រាយនឹងបាត់បង់។';
+  String get createUsbWarning =>
+      'ថាសហ្វ្លាសនឹងត្រូវបានធ្វើកំណែទម្រង់ ហើយទិន្នន័យទាំងអស់នៅលើដ្រាយនឹងបាត់បង់។';
 
   @override
   String get resetMediaTitle => 'ឧបករណ៍ផ្ទុក USB កំណត់ឡើងវិញ';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsKm extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'មិនបានរកឃើញកន្លែងផ្ទុកដែលអាចដកចេញបានទេ';
 
   @override
-  String get noMediaDetectedSubtitle => 'អ្នកត្រូវការកន្លែងផ្ទុក USB ដើម្បីបង្កើតមេឌៀកំណត់ឡើងវិញពីរោងចក្រ។';
+  String get noMediaDetectedSubtitle =>
+      'អ្នកត្រូវការកន្លែងផ្ទុក USB ដើម្បីបង្កើតមេឌៀកំណត់ឡើងវិញពីរោងចក្រ។';
 
   @override
-  String get factoryResetTitle => 'ជ្រើសរើសជម្រើសមួយដើម្បីចាប់ផ្តើមកំណត់ដូចរោងចក្រឡើងវិញ';
+  String get factoryResetTitle =>
+      'ជ្រើសរើសជម្រើសមួយដើម្បីចាប់ផ្តើមកំណត់ដូចរោងចក្រឡើងវិញ';
 
   @override
   String get loadingDrives => 'សូមរង់ចាំខណៈពេលដែលយើងទៅយកថាស។';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsKm extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'ឧបករណ៍ផ្ទុក USB កំណត់ឡើងវិញគឺរួចរាល់';
 
   @override
-  String get resetMediaReadyBody => 'នៅពេលអ្នកចង់ប្រើវា សូមបញ្ចូល USB drive ទៅក្នុងកុំព្យូទ័រដែលអ្នកចង់កំណត់ឡើងវិញ ហើយចាប់ផ្តើមវាឡើងវិញ។';
+  String get resetMediaReadyBody =>
+      'នៅពេលអ្នកចង់ប្រើវា សូមបញ្ចូល USB drive ទៅក្នុងកុំព្យូទ័រដែលអ្នកចង់កំណត់ឡើងវិញ ហើយចាប់ផ្តើមវាឡើងវិញ។';
 
   @override
   String get errorLoadingDrives => 'កំហុស​មួយ​បាន​កើត​ឡើង​ពេល​ទៅ​យក​ថាស។';

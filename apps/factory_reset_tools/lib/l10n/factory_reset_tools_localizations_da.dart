@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsDa extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Opret USB-gendannelsesmedie';
 
   @override
-  String get createUsbBody => 'Opret et USB-medie, som gendanner systemet og tilpasser dine Ubuntu-installationer.';
+  String get createUsbBody =>
+      'Opret et USB-medie, som gendanner systemet og tilpasser dine Ubuntu-installationer.';
 
   @override
-  String get createUsbListExplanation => 'Vælg et USB-flashdrev. Drevet skal have **mindst 16 GB plads.**';
+  String get createUsbListExplanation =>
+      'Vælg et USB-flashdrev. Drevet skal have **mindst 16 GB plads.**';
 
   @override
-  String get createUsbWarning => 'Flashdrevet vil blive omformateret, og alle data på drevet går tabt.';
+  String get createUsbWarning =>
+      'Flashdrevet vil blive omformateret, og alle data på drevet går tabt.';
 
   @override
   String get resetMediaTitle => 'USB-gendannelsesmedie';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsDa extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Der er ikke fundet noget flytbart lager';
 
   @override
-  String get noMediaDetectedSubtitle => 'Du skal bruge et USB-lager for at oprette et systemgendannelsesmedie.';
+  String get noMediaDetectedSubtitle =>
+      'Du skal bruge et USB-lager for at oprette et systemgendannelsesmedie.';
 
   @override
-  String get factoryResetTitle => 'Vælg en mulighed for at påbegynde systemgendannelse';
+  String get factoryResetTitle =>
+      'Vælg en mulighed for at påbegynde systemgendannelse';
 
   @override
   String get loadingDrives => 'Vent venligst, mens vi henter drevene.';
@@ -54,10 +59,12 @@ class FactoryResetToolsLocalizationsDa extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB-gendannelsesmedie er klart';
 
   @override
-  String get resetMediaReadyBody => 'Når du vil bruge det, så indsæt venligst USB-drevet i den computer, du vil gendanne, og genstart den.';
+  String get resetMediaReadyBody =>
+      'Når du vil bruge det, så indsæt venligst USB-drevet i den computer, du vil gendanne, og genstart den.';
 
   @override
-  String get errorLoadingDrives => 'Der opstod en fejl ved indhentning af drev.';
+  String get errorLoadingDrives =>
+      'Der opstod en fejl ved indhentning af drev.';
 
   @override
   String get resetMediaInitializing => 'Klargør';

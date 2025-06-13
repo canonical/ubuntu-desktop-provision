@@ -133,15 +133,18 @@ import 'factory_reset_tools_localizations_zh.dart';
 /// be consistent with the languages listed in the FactoryResetToolsLocalizations.supportedLocales
 /// property.
 abstract class FactoryResetToolsLocalizations {
-  FactoryResetToolsLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  FactoryResetToolsLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
   static FactoryResetToolsLocalizations of(BuildContext context) {
-    return Localizations.of<FactoryResetToolsLocalizations>(context, FactoryResetToolsLocalizations)!;
+    return Localizations.of<FactoryResetToolsLocalizations>(
+        context, FactoryResetToolsLocalizations)!;
   }
 
-  static const LocalizationsDelegate<FactoryResetToolsLocalizations> delegate = _FactoryResetToolsLocalizationsDelegate();
+  static const LocalizationsDelegate<FactoryResetToolsLocalizations> delegate =
+      _FactoryResetToolsLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -153,7 +156,8 @@ abstract class FactoryResetToolsLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -426,120 +430,272 @@ abstract class FactoryResetToolsLocalizations {
   String get ok;
 }
 
-class _FactoryResetToolsLocalizationsDelegate extends LocalizationsDelegate<FactoryResetToolsLocalizations> {
+class _FactoryResetToolsLocalizationsDelegate
+    extends LocalizationsDelegate<FactoryResetToolsLocalizations> {
   const _FactoryResetToolsLocalizationsDelegate();
 
   @override
   Future<FactoryResetToolsLocalizations> load(Locale locale) {
-    return SynchronousFuture<FactoryResetToolsLocalizations>(lookupFactoryResetToolsLocalizations(locale));
+    return SynchronousFuture<FactoryResetToolsLocalizations>(
+        lookupFactoryResetToolsLocalizations(locale));
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'ug', 'uk', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'am',
+        'ar',
+        'be',
+        'bg',
+        'bn',
+        'bo',
+        'bs',
+        'ca',
+        'cs',
+        'cy',
+        'da',
+        'de',
+        'dz',
+        'el',
+        'en',
+        'eo',
+        'es',
+        'et',
+        'eu',
+        'fa',
+        'fi',
+        'fr',
+        'ga',
+        'gl',
+        'gu',
+        'he',
+        'hi',
+        'hr',
+        'hu',
+        'id',
+        'is',
+        'it',
+        'ja',
+        'ka',
+        'kk',
+        'km',
+        'kn',
+        'ko',
+        'ku',
+        'lo',
+        'lt',
+        'lv',
+        'mk',
+        'ml',
+        'mr',
+        'my',
+        'nb',
+        'ne',
+        'nl',
+        'nn',
+        'oc',
+        'pa',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'se',
+        'si',
+        'sk',
+        'sl',
+        'sq',
+        'sr',
+        'sv',
+        'ta',
+        'te',
+        'tg',
+        'th',
+        'tl',
+        'tr',
+        'ug',
+        'uk',
+        'vi',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_FactoryResetToolsLocalizationsDelegate old) => false;
 }
 
-FactoryResetToolsLocalizations lookupFactoryResetToolsLocalizations(Locale locale) {
-
+FactoryResetToolsLocalizations lookupFactoryResetToolsLocalizations(
+    Locale locale) {
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
-    case 'pt': {
-  switch (locale.countryCode) {
-    case 'BR': return FactoryResetToolsLocalizationsPtBr();
-   }
-  break;
-   }
-    case 'zh': {
-  switch (locale.countryCode) {
-    case 'TW': return FactoryResetToolsLocalizationsZhTw();
-   }
-  break;
-   }
+    case 'pt':
+      {
+        switch (locale.countryCode) {
+          case 'BR':
+            return FactoryResetToolsLocalizationsPtBr();
+        }
+        break;
+      }
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'TW':
+            return FactoryResetToolsLocalizationsZhTw();
+        }
+        break;
+      }
   }
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'am': return FactoryResetToolsLocalizationsAm();
-    case 'ar': return FactoryResetToolsLocalizationsAr();
-    case 'be': return FactoryResetToolsLocalizationsBe();
-    case 'bg': return FactoryResetToolsLocalizationsBg();
-    case 'bn': return FactoryResetToolsLocalizationsBn();
-    case 'bo': return FactoryResetToolsLocalizationsBo();
-    case 'bs': return FactoryResetToolsLocalizationsBs();
-    case 'ca': return FactoryResetToolsLocalizationsCa();
-    case 'cs': return FactoryResetToolsLocalizationsCs();
-    case 'cy': return FactoryResetToolsLocalizationsCy();
-    case 'da': return FactoryResetToolsLocalizationsDa();
-    case 'de': return FactoryResetToolsLocalizationsDe();
-    case 'dz': return FactoryResetToolsLocalizationsDz();
-    case 'el': return FactoryResetToolsLocalizationsEl();
-    case 'en': return FactoryResetToolsLocalizationsEn();
-    case 'eo': return FactoryResetToolsLocalizationsEo();
-    case 'es': return FactoryResetToolsLocalizationsEs();
-    case 'et': return FactoryResetToolsLocalizationsEt();
-    case 'eu': return FactoryResetToolsLocalizationsEu();
-    case 'fa': return FactoryResetToolsLocalizationsFa();
-    case 'fi': return FactoryResetToolsLocalizationsFi();
-    case 'fr': return FactoryResetToolsLocalizationsFr();
-    case 'ga': return FactoryResetToolsLocalizationsGa();
-    case 'gl': return FactoryResetToolsLocalizationsGl();
-    case 'gu': return FactoryResetToolsLocalizationsGu();
-    case 'he': return FactoryResetToolsLocalizationsHe();
-    case 'hi': return FactoryResetToolsLocalizationsHi();
-    case 'hr': return FactoryResetToolsLocalizationsHr();
-    case 'hu': return FactoryResetToolsLocalizationsHu();
-    case 'id': return FactoryResetToolsLocalizationsId();
-    case 'is': return FactoryResetToolsLocalizationsIs();
-    case 'it': return FactoryResetToolsLocalizationsIt();
-    case 'ja': return FactoryResetToolsLocalizationsJa();
-    case 'ka': return FactoryResetToolsLocalizationsKa();
-    case 'kk': return FactoryResetToolsLocalizationsKk();
-    case 'km': return FactoryResetToolsLocalizationsKm();
-    case 'kn': return FactoryResetToolsLocalizationsKn();
-    case 'ko': return FactoryResetToolsLocalizationsKo();
-    case 'ku': return FactoryResetToolsLocalizationsKu();
-    case 'lo': return FactoryResetToolsLocalizationsLo();
-    case 'lt': return FactoryResetToolsLocalizationsLt();
-    case 'lv': return FactoryResetToolsLocalizationsLv();
-    case 'mk': return FactoryResetToolsLocalizationsMk();
-    case 'ml': return FactoryResetToolsLocalizationsMl();
-    case 'mr': return FactoryResetToolsLocalizationsMr();
-    case 'my': return FactoryResetToolsLocalizationsMy();
-    case 'nb': return FactoryResetToolsLocalizationsNb();
-    case 'ne': return FactoryResetToolsLocalizationsNe();
-    case 'nl': return FactoryResetToolsLocalizationsNl();
-    case 'nn': return FactoryResetToolsLocalizationsNn();
-    case 'oc': return FactoryResetToolsLocalizationsOc();
-    case 'pa': return FactoryResetToolsLocalizationsPa();
-    case 'pl': return FactoryResetToolsLocalizationsPl();
-    case 'pt': return FactoryResetToolsLocalizationsPt();
-    case 'ro': return FactoryResetToolsLocalizationsRo();
-    case 'ru': return FactoryResetToolsLocalizationsRu();
-    case 'se': return FactoryResetToolsLocalizationsSe();
-    case 'si': return FactoryResetToolsLocalizationsSi();
-    case 'sk': return FactoryResetToolsLocalizationsSk();
-    case 'sl': return FactoryResetToolsLocalizationsSl();
-    case 'sq': return FactoryResetToolsLocalizationsSq();
-    case 'sr': return FactoryResetToolsLocalizationsSr();
-    case 'sv': return FactoryResetToolsLocalizationsSv();
-    case 'ta': return FactoryResetToolsLocalizationsTa();
-    case 'te': return FactoryResetToolsLocalizationsTe();
-    case 'tg': return FactoryResetToolsLocalizationsTg();
-    case 'th': return FactoryResetToolsLocalizationsTh();
-    case 'tl': return FactoryResetToolsLocalizationsTl();
-    case 'tr': return FactoryResetToolsLocalizationsTr();
-    case 'ug': return FactoryResetToolsLocalizationsUg();
-    case 'uk': return FactoryResetToolsLocalizationsUk();
-    case 'vi': return FactoryResetToolsLocalizationsVi();
-    case 'zh': return FactoryResetToolsLocalizationsZh();
+    case 'am':
+      return FactoryResetToolsLocalizationsAm();
+    case 'ar':
+      return FactoryResetToolsLocalizationsAr();
+    case 'be':
+      return FactoryResetToolsLocalizationsBe();
+    case 'bg':
+      return FactoryResetToolsLocalizationsBg();
+    case 'bn':
+      return FactoryResetToolsLocalizationsBn();
+    case 'bo':
+      return FactoryResetToolsLocalizationsBo();
+    case 'bs':
+      return FactoryResetToolsLocalizationsBs();
+    case 'ca':
+      return FactoryResetToolsLocalizationsCa();
+    case 'cs':
+      return FactoryResetToolsLocalizationsCs();
+    case 'cy':
+      return FactoryResetToolsLocalizationsCy();
+    case 'da':
+      return FactoryResetToolsLocalizationsDa();
+    case 'de':
+      return FactoryResetToolsLocalizationsDe();
+    case 'dz':
+      return FactoryResetToolsLocalizationsDz();
+    case 'el':
+      return FactoryResetToolsLocalizationsEl();
+    case 'en':
+      return FactoryResetToolsLocalizationsEn();
+    case 'eo':
+      return FactoryResetToolsLocalizationsEo();
+    case 'es':
+      return FactoryResetToolsLocalizationsEs();
+    case 'et':
+      return FactoryResetToolsLocalizationsEt();
+    case 'eu':
+      return FactoryResetToolsLocalizationsEu();
+    case 'fa':
+      return FactoryResetToolsLocalizationsFa();
+    case 'fi':
+      return FactoryResetToolsLocalizationsFi();
+    case 'fr':
+      return FactoryResetToolsLocalizationsFr();
+    case 'ga':
+      return FactoryResetToolsLocalizationsGa();
+    case 'gl':
+      return FactoryResetToolsLocalizationsGl();
+    case 'gu':
+      return FactoryResetToolsLocalizationsGu();
+    case 'he':
+      return FactoryResetToolsLocalizationsHe();
+    case 'hi':
+      return FactoryResetToolsLocalizationsHi();
+    case 'hr':
+      return FactoryResetToolsLocalizationsHr();
+    case 'hu':
+      return FactoryResetToolsLocalizationsHu();
+    case 'id':
+      return FactoryResetToolsLocalizationsId();
+    case 'is':
+      return FactoryResetToolsLocalizationsIs();
+    case 'it':
+      return FactoryResetToolsLocalizationsIt();
+    case 'ja':
+      return FactoryResetToolsLocalizationsJa();
+    case 'ka':
+      return FactoryResetToolsLocalizationsKa();
+    case 'kk':
+      return FactoryResetToolsLocalizationsKk();
+    case 'km':
+      return FactoryResetToolsLocalizationsKm();
+    case 'kn':
+      return FactoryResetToolsLocalizationsKn();
+    case 'ko':
+      return FactoryResetToolsLocalizationsKo();
+    case 'ku':
+      return FactoryResetToolsLocalizationsKu();
+    case 'lo':
+      return FactoryResetToolsLocalizationsLo();
+    case 'lt':
+      return FactoryResetToolsLocalizationsLt();
+    case 'lv':
+      return FactoryResetToolsLocalizationsLv();
+    case 'mk':
+      return FactoryResetToolsLocalizationsMk();
+    case 'ml':
+      return FactoryResetToolsLocalizationsMl();
+    case 'mr':
+      return FactoryResetToolsLocalizationsMr();
+    case 'my':
+      return FactoryResetToolsLocalizationsMy();
+    case 'nb':
+      return FactoryResetToolsLocalizationsNb();
+    case 'ne':
+      return FactoryResetToolsLocalizationsNe();
+    case 'nl':
+      return FactoryResetToolsLocalizationsNl();
+    case 'nn':
+      return FactoryResetToolsLocalizationsNn();
+    case 'oc':
+      return FactoryResetToolsLocalizationsOc();
+    case 'pa':
+      return FactoryResetToolsLocalizationsPa();
+    case 'pl':
+      return FactoryResetToolsLocalizationsPl();
+    case 'pt':
+      return FactoryResetToolsLocalizationsPt();
+    case 'ro':
+      return FactoryResetToolsLocalizationsRo();
+    case 'ru':
+      return FactoryResetToolsLocalizationsRu();
+    case 'se':
+      return FactoryResetToolsLocalizationsSe();
+    case 'si':
+      return FactoryResetToolsLocalizationsSi();
+    case 'sk':
+      return FactoryResetToolsLocalizationsSk();
+    case 'sl':
+      return FactoryResetToolsLocalizationsSl();
+    case 'sq':
+      return FactoryResetToolsLocalizationsSq();
+    case 'sr':
+      return FactoryResetToolsLocalizationsSr();
+    case 'sv':
+      return FactoryResetToolsLocalizationsSv();
+    case 'ta':
+      return FactoryResetToolsLocalizationsTa();
+    case 'te':
+      return FactoryResetToolsLocalizationsTe();
+    case 'tg':
+      return FactoryResetToolsLocalizationsTg();
+    case 'th':
+      return FactoryResetToolsLocalizationsTh();
+    case 'tl':
+      return FactoryResetToolsLocalizationsTl();
+    case 'tr':
+      return FactoryResetToolsLocalizationsTr();
+    case 'ug':
+      return FactoryResetToolsLocalizationsUg();
+    case 'uk':
+      return FactoryResetToolsLocalizationsUk();
+    case 'vi':
+      return FactoryResetToolsLocalizationsVi();
+    case 'zh':
+      return FactoryResetToolsLocalizationsZh();
   }
 
   throw FlutterError(
-    'FactoryResetToolsLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'FactoryResetToolsLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

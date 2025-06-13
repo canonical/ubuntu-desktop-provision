@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Appbutik med nyt udseende';
 
   @override
-  String get welcomeStoreSubtitle => 'Det har aldrig været nemmere at finde din yndlingssoftware.';
+  String get welcomeStoreSubtitle =>
+      'Det har aldrig været nemmere at finde din yndlingssoftware.';
 
   @override
   String get welcomeSecurityTitle => 'Forbedret sikkerhed';
 
   @override
-  String get welcomeSecuritySubtitle => 'Nye indstillinger for hardwareunderstøttet eller ZFS-kryptering.';
+  String get welcomeSecuritySubtitle =>
+      'Nye indstillinger for hardwareunderstøttet eller ZFS-kryptering.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +84,8 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Slå lokalitetstjenester til?';
 
   @override
-  String get privacyLocationSubtitle => 'Lad programmer kende din geografiske placering.\nDu kan ændre dette når som helst i Systemindstillinger.';
+  String get privacyLocationSubtitle =>
+      'Lad programmer kende din geografiske placering.\nDu kan ændre dette når som helst i Systemindstillinger.';
 
   @override
   String get privacyLocationEnable => 'Lokalitetstjenester';
@@ -108,7 +111,8 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Få det mest omfattende abonnement på open source-softwaresikkerhed';
+  String get ubuntuProSubscriptionDescription =>
+      'Få det mest omfattende abonnement på open source-softwaresikkerhed';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +135,21 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Spring over indtil videre';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Du kan altid slå Ubuntu Pro til senere via programmet Software og opdateringer.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Du kan altid slå Ubuntu Pro til senere via programmet Software og opdateringer.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Slå Ubuntu Pro til';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Tilknyt denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Tilknyt denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro er nu slået til på denne maskine';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro er nu slået til på denne maskine';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Du kan håndtere dine Pro-tjenester i programmet Software og opdateringer.';
+  String get ubuntuProSucessAttachDescription =>
+      'Du kan håndtere dine Pro-tjenester i programmet Software og opdateringer.';
 }
