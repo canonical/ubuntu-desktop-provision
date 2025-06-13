@@ -23,7 +23,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectHeader => 'Načítať súbor autoinštalácie';
 
   @override
-  String get autoinstallDirectUrlLabel => 'Zadajte URL súboru pre autoinštaláciu:';
+  String get autoinstallDirectUrlLabel =>
+      'Zadajte URL súboru pre autoinštaláciu:';
 
   @override
   String get autoinstallDirectFileLabel => 'Alebo vyberte miestny súbor:';
@@ -44,28 +45,35 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Importovať';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Súbor autoinštalácie nie je dostupný';
+  String get autoinstallDirectErrorNetworkTitle =>
+      'Súbor autoinštalácie nie je dostupný';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Skontrolujte správnosť URL, overte internetové pripojenie alebo to skúste neskôr.';
+  String get autoinstallDirectErrorNetworkBody =>
+      'Skontrolujte správnosť URL, overte internetové pripojenie alebo to skúste neskôr.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná URL';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Skontrolujte, či je URL správna, alebo vyberte miestny súbor.';
+  String get autoinstallDirectErrorInvalidUrlBody =>
+      'Skontrolujte, či je URL správna, alebo vyberte miestny súbor.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Neplatný súbor autoinštalácie';
+  String get autoinstallDirectErrorInvalidContentTitle =>
+      'Neplatný súbor autoinštalácie';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Skontrolujte súbor alebo zadajte iný.';
+  String get autoinstallDirectErrorInvalidContentBody =>
+      'Skontrolujte súbor alebo zadajte iný.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Súbor autoinštalácie nie je čitateľný';
+  String get autoinstallDirectErrorFileSystemTitle =>
+      'Súbor autoinštalácie nie je čitateľný';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Skontrolujte svoje oprávnenia alebo poskytnite iný súbor.';
+  String get autoinstallDirectErrorFileSystemBody =>
+      'Skontrolujte svoje oprávnenia alebo poskytnite iný súbor.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Neznáma chyba';
@@ -79,25 +87,29 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Zadajte autoinstall.yaml URL alebo cestu k miestnemu súboru:';
+  String get autoinstallInstructions =>
+      'Zadajte autoinstall.yaml URL alebo cestu k miestnemu súboru:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktívna inštalácia';
 
   @override
-  String get autoinstallInteractiveDescription => 'Pre používateľov, ktorí chcú byť prevedení inštaláciou krok za krokom.';
+  String get autoinstallInteractiveDescription =>
+      'Pre používateľov, ktorí chcú byť prevedení inštaláciou krok za krokom.';
 
   @override
   String get autoinstallDirectOption => 'Automaticky so súborom autoinštalácie';
 
   @override
-  String get autoinstallDirectDescription => 'Pre skúsených používateľov, ktorí používajú autoinstall.yaml na zabezpečenie konzistentných a opakovateľných nastavení systému.';
+  String get autoinstallDirectDescription =>
+      'Pre skúsených používateľov, ktorí používajú autoinstall.yaml na zabezpečenie konzistentných a opakovateľných nastavení systému.';
 
   @override
   String get autoinstallLandscapeOption => 'Automaticky pomocou Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'Pre používateľov v organizáciách, ktoré poskytujú súbor automatickej inštalácie cez Landscape.';
+  String get autoinstallLandscapeDescription =>
+      'Pre používateľov v organizáciách, ktoré poskytujú súbor automatickej inštalácie cez Landscape.';
 
   @override
   String get changeButtonText => 'Zmeniť';
@@ -132,7 +144,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => 'Opraviť inštaláciu';
 
   @override
-  String get tryOrInstallRepairDescription => 'Opravou preinštalujete všetok nainštalovaný softvér bez toho, aby sa to dotklo dokumentov alebo nastavení.';
+  String get tryOrInstallRepairDescription =>
+      'Opravou preinštalujete všetok nainštalovaný softvér bez toho, aby sa to dotklo dokumentov alebo nastavení.';
 
   @override
   String tryOption(String RELEASE) {
@@ -163,13 +176,16 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Zistené RST';
 
   @override
-  String get rstHeader => 'Ak chcete pokračovať v inštalácii, musíte vypnúť RST';
+  String get rstHeader =>
+      'Ak chcete pokračovať v inštalácii, musíte vypnúť RST';
 
   @override
-  String get rstDisable => 'Váš počítač používa technológiu Intel RST (Rapid Storage Technology). RST môžete zakázať buď:';
+  String get rstDisable =>
+      'Váš počítač používa technológiu Intel RST (Rapid Storage Technology). RST môžete zakázať buď:';
 
   @override
-  String get rstDisableWindows => 'Vo Windowse, ak používate nastavenie duálneho spúšťania s Windowsom';
+  String get rstDisableWindows =>
+      'Vo Windowse, ak používate nastavenie duálneho spúšťania s Windowsom';
 
   @override
   String get rstDisableBios => 'Alebo v nastaveniach BIOSu';
@@ -183,7 +199,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Nastaviť Secure Boot';
 
   @override
-  String get configureSecureBootDescription => 'Vybrali ste nainštalovať ovládač hardvéru, pochádzajúci od tretej strany. Aby to bolo možné, je potrebné vypnúť Secure Boot.\nTo urobíte vytvorením kľúča zabezpečenia a jeho následným zadaním po reštarte systému.';
+  String get configureSecureBootDescription =>
+      'Vybrali ste nainštalovať ovládač hardvéru, pochádzajúci od tretej strany. Aby to bolo možné, je potrebné vypnúť Secure Boot.\nTo urobíte vytvorením kľúča zabezpečenia a jeho následným zadaním po reštarte systému.';
 
   @override
   String get configureSecureBootOption => 'Nastaviť Secure Boot';
@@ -195,16 +212,20 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'Zopakujte zadanie bezpečnostného kľúča';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Zatiaľ neinštalujte softvér ovládača';
+  String get dontInstallDriverSoftwareNow =>
+      'Zatiaľ neinštalujte softvér ovládača';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Je ho možné nainštalovať kedykoľvek neskôr pomocou nástroja Softvér a aktualizácie.';
+  String get dontInstallDriverSoftwareNowDescription =>
+      'Je ho možné nainštalovať kedykoľvek neskôr pomocou nástroja Softvér a aktualizácie.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Je potrebné zadať kľúč zabezpečenia';
+  String get configureSecureBootSecurityKeyRequired =>
+      'Je potrebné zadať kľúč zabezpečenia';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Bezpečnostné kľúče sa nezhodujú';
+  String get secureBootSecurityKeysDontMatch =>
+      'Bezpečnostné kľúče sa nezhodujú';
 
   @override
   String get showSecurityKey => 'Zobraziť';
@@ -216,13 +237,15 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageTitle => 'Aplikácie';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'Aké aplikácie by ste chceli teraz nainštalovať?';
+  String get updatesOtherSoftwarePageDescription =>
+      'Aké aplikácie by ste chceli teraz nainštalovať?';
 
   @override
   String get codecsAndDriversPageTitle => 'Optimalizujte svoj počítač';
 
   @override
-  String get codecsAndDriversPageDescription => 'Nainštalovať odporúčaný proprietárny softvér?';
+  String get codecsAndDriversPageDescription =>
+      'Nainštalovať odporúčaný proprietárny softvér?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -233,40 +256,49 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaNote => 'Zistila sa grafická karta NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'Pre najlepší výkon grafických kariet NVIDIA sa dôrazne odporúča nainštalovať ďalšie ovládače.';
+  String get codecsAndDriversNvidiaBody =>
+      'Pre najlepší výkon grafických kariet NVIDIA sa dôrazne odporúča nainštalovať ďalšie ovládače.';
 
   @override
   String get fullInstallationTitle => 'Rozšírený výber';
 
   @override
-  String get fullInstallationSubtitle => 'Výber vhodný pre režim off-line kancelárske nástroje, pomôcky a webový prehliadač.';
+  String get fullInstallationSubtitle =>
+      'Výber vhodný pre režim off-line kancelárske nástroje, pomôcky a webový prehliadač.';
 
   @override
   String get minimalInstallationTitle => 'Predvolený výber';
 
   @override
-  String get minimalInstallationSubtitle => 'Len to najnutnejšie, webový prehliadač a základné nástroje.';
+  String get minimalInstallationSubtitle =>
+      'Len to najnutnejšie, webový prehliadač a základné nástroje.';
 
   @override
   String get otherOptions => 'Ďalšie možnosti';
 
   @override
-  String get installThirdPartyTitle => 'Nainštalovať ovládače tretích strán pre grafické čipy a adaptéry bezdrôtových Wi-Fi sietí, ako aj dodatočné kodeky multimédií';
+  String get installThirdPartyTitle =>
+      'Nainštalovať ovládače tretích strán pre grafické čipy a adaptéry bezdrôtových Wi-Fi sietí, ako aj dodatočné kodeky multimédií';
 
   @override
-  String get installThirdPartySubtitle => 'Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú proprietárne.';
+  String get installThirdPartySubtitle =>
+      'Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú proprietárne.';
 
   @override
-  String get installDriversTitle => 'Nainštalovať ovládače od tretích strán pre grafické čipy a Wi-Fi sieťové rozhrania';
+  String get installDriversTitle =>
+      'Nainštalovať ovládače od tretích strán pre grafické čipy a Wi-Fi sieťové rozhrania';
 
   @override
-  String get installDriversSubtitle => 'Vrátane ovládačov NVIDIA a ďalších ostatných';
+  String get installDriversSubtitle =>
+      'Vrátane ovládačov NVIDIA a ďalších ostatných';
 
   @override
-  String get installCodecsTitle => 'Stiahnuť a nainštalovať podporu pre ďalšie formáty médií';
+  String get installCodecsTitle =>
+      'Stiahnuť a nainštalovať podporu pre ďalšie formáty médií';
 
   @override
-  String get installCodecsSubtitle => 'Vrátane MP3, MP4, MOV a ďalších ostatných';
+  String get installCodecsSubtitle =>
+      'Vrátane MP3, MP4, MOV a ďalších ostatných';
 
   @override
   String get batteryWarning => 'Počítač nie je pripojený k zdroju napájania.';
@@ -278,19 +310,24 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => 'Vytvorenie prístupovej frázy';
 
   @override
-  String get choosePassphraseBody => 'Na šifrovanie súborov potrebujete prístupovú frázu. Pri každom zapnutí počítača sa zobrazí výzva na zadanie prístupovej frázy.';
+  String get choosePassphraseBody =>
+      'Na šifrovanie súborov potrebujete prístupovú frázu. Pri každom zapnutí počítača sa zobrazí výzva na zadanie prístupovej frázy.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Uložte svoju prístupovú frázu na bezpečné miesto';
+  String get choosePassphraseInfoHeader =>
+      'Uložte svoju prístupovú frázu na bezpečné miesto';
 
   @override
-  String get choosePassphraseInfoBody => 'Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje.';
+  String get choosePassphraseInfoBody =>
+      'Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje.';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto';
+  String get chooseOptionalPassphraseInfoHeader =>
+      'Uložte svoju prístupovú frázu a obnovovací kľúč na bezpečné miesto';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje. Prístupová fráza nenahrádza obnovovací kľúč ani vaše používateľské heslo.';
+  String get chooseOptionalPassphraseInfoBody =>
+      'Ak stratíte svoju prístupovú frázu, prídete o všetky svoje údaje. Prístupová fráza nenahrádza obnovovací kľúč ani vaše používateľské heslo.';
 
   @override
   String get passphrasePageTitle => 'Encryption';
@@ -302,10 +339,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get passphrasePageHeaderPin => 'Set an encryption PIN';
 
   @override
-  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPassphrase =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPin =>
+      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -335,13 +374,15 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
   String get passphraseTypePinTileTitle => 'Require a PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+  String get passphraseTypePinTileSubTitle =>
+      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
 
   @override
   String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
@@ -350,7 +391,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
 
   @override
-  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
+  String get passphraseTypePageBody =>
+      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin => 'Weak passphrase, make it longer or more complex';
@@ -389,10 +431,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'Na tomto počítači sa v súčasnosti nachádza viacero operačných systémov. Čo chcete urobiť?';
+  String get installationTypeMultiOSDetected =>
+      'Na tomto počítači sa v súčasnosti nachádza viacero operačných systémov. Čo chcete urobiť?';
 
   @override
-  String get installationTypeNoOSDetected => 'Na tomto počítači sa teraz nezistil žiadny operačný systém. Čo chcete urobiť?';
+  String get installationTypeNoOSDetected =>
+      'Na tomto počítači sa teraz nezistil žiadny operačný systém. Čo chcete urobiť?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -400,7 +444,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Všetky údaje a oddiely na disku budú vymazané, vrátane operačných systémov.';
+  String get installationTypeEraseInfo =>
+      'Všetky údaje a oddiely na disku budú vymazané, vrátane operačných systémov.';
 
   @override
   String get installationTypeAdvancedLabel => 'Zobraziť rozšírené možnosti...';
@@ -415,7 +460,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Bez šifrovania';
 
   @override
-  String get installationTypeNoneInfo => 'Štandardný súborový systém bez šifrovania.';
+  String get installationTypeNoneInfo =>
+      'Štandardný súborový systém bez šifrovania.';
 
   @override
   String get installationTypeNoneSelected => 'Nič nevybrané';
@@ -430,28 +476,34 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Šifrovať prístupovou frázou';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.';
+  String get installationTypeLVMEncryptionInfo =>
+      'Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'Vybrané LVM a šifrovanie';
+  String get installationTypeLVMEncryptionSelected =>
+      'Vybrané LVM a šifrovanie';
 
   @override
-  String get installationTypeEncryptInfo => 'V nasledujúcom kroku si zvolíte bezpečnostný kľúč.';
+  String get installationTypeEncryptInfo =>
+      'V nasledujúcom kroku si zvolíte bezpečnostný kľúč.';
 
   @override
   String get installationTypeZFS => 'Použiť ZFS bez šifrovania';
 
   @override
-  String get installationTypeZFSEncryption => 'Šifrovať prístupovou frázou v ZFS';
+  String get installationTypeZFSEncryption =>
+      'Šifrovať prístupovou frázou v ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Nativné šifrovanie so ZFS. Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač.';
+  String get installationTypeZFSEncryptionInfo =>
+      'Nativné šifrovanie so ZFS. Budete musieť zadať prístupovú frázu každýkrát, keď zapnete počítač.';
 
   @override
   String get installationTypeZFSSelected => 'Vybrané ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'Vybrané ZFS a šifrovanie';
+  String get installationTypeZFSEncryptionSelected =>
+      'Vybrané ZFS a šifrovanie';
 
   @override
   String get installationTypeTPM => 'Použiť hardvérové šifrovanie';
@@ -523,7 +575,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Začnite od začiatku na vybranom disku.';
+  String get selectGuidedStorageInfo =>
+      'Začnite od začiatku na vybranom disku.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Vybrať jednotku:';
@@ -543,7 +596,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Prideľte miesto na disku potiahnutím rozdeľovača nižšie:';
+  String get installAlongsideSpaceDivider =>
+      'Prideľte miesto na disku potiahnutím rozdeľovača nižšie:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
@@ -572,13 +626,16 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => 'Manuálne rozdelenie';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Prípojné body musia začínať znakom „/“';
+  String get allocateDiskSpaceInvalidMountPointSlash =>
+      'Prípojné body musia začínať znakom „/“';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Prípojné body nemôžu obsahovať medzery';
+  String get allocateDiskSpaceInvalidMountPointSpace =>
+      'Prípojné body nemôžu obsahovať medzery';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
     return '$format nie je podporovaným súborovým systémom pre $mountpoint';
   }
 
@@ -613,7 +670,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationTitle => 'Nový prázdny oddiel';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Vytvorenie novej tabuľky oddielov na celom zariadení z neho odoberie všetky existujúce oddiely. V prípade potreby je možné v tomto kroku ešte túto operáciu vziať späť.';
+  String get newPartitionTableConfirmationMessage =>
+      'Vytvorenie novej tabuľky oddielov na celom zariadení z neho odoberie všetky existujúce oddiely. V prípade potreby je možné v tomto kroku ešte túto operáciu vziať späť.';
 
   @override
   String get tooManyPrimaryPartitions => 'Príliš veľa primárnych oddielov';
@@ -622,7 +680,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get partitionLimitReached => 'Dosiahnutý limit';
 
   @override
-  String get bootLoaderDevice => 'Zariadenie na ktoré nainštalovať zavádzač systému';
+  String get bootLoaderDevice =>
+      'Zariadenie na ktoré nainštalovať zavádzač systému';
 
   @override
   String get partitionCreateTitle => 'Vytvoriť oddiel';
@@ -714,7 +773,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get confirmPartitionsTitle => 'Oddiely';
 
   @override
-  String get confirmPartitionTables => 'Budú zmenené tabuľky rozdelenia na oddiely nasledujúcich zariadení:';
+  String get confirmPartitionTables =>
+      'Budú zmenené tabuľky rozdelenia na oddiely nasledujúcich zariadení:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -783,10 +843,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nZmeny, ktoré vykonáte, sa neuložia.';
+  String get restartWarningBody =>
+      'Reštartujte na dokončenie inštalácie alebo pokračujte v skúšaní.\nZmeny, ktoré vykonáte, sa neuložia.';
 
   @override
-  String get rebootToConfigureWarning => 'Ak chcete pokračovať v procese inštalácie, musíte reštartovať počítač.';
+  String get rebootToConfigureWarning =>
+      'Ak chcete pokračovať v procese inštalácie, musíte reštartovať počítač.';
 
   @override
   String get shutdown => 'Vypnúť';
@@ -801,13 +863,16 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get bitlockerInfoTitle => 'Zistený BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'Jeden alebo viacero oddielov je šifrovaných pomocou BitLockeru.';
+  String get bitlockerInfoDescription =>
+      'Jeden alebo viacero oddielov je šifrovaných pomocou BitLockeru.';
 
   @override
-  String get bitlockerInfoDisable => 'Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.';
+  String get bitlockerInfoDisable =>
+      'Pre inštaláciu vedľa Windowsu vypnite BitLocker v systéme Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows môže po inštalácii pri spustení požadovať obnovovacie kľúče.';
+  String get bitlockerInfoRecovery =>
+      'Windows môže po inštalácii pri spustení požadovať obnovovacie kľúče.';
 
   @override
   String bitlockerInfoInstructions(String url) {
@@ -815,7 +880,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get bitlockerWarningTitle => 'Môžete prísť o všetky svoje údaje bez obnovovacích kľúčov BitLocker';
+  String get bitlockerWarningTitle =>
+      'Môžete prísť o všetky svoje údaje bez obnovovacích kľúčov BitLocker';
 
   @override
   String get restartComputer => 'Reštartovať počítač';
@@ -846,7 +912,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Obsiahnuté:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Rýchle, slobodné a plné nových funkcií';
+  String get installationSlidesWelcomeTitle =>
+      'Rýchle, slobodné a plné nových funkcií';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -859,7 +926,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Všetky aplikácie ktoré potrebujete';
+  String get installationSlidesSoftwareTitle =>
+      'Všetky aplikácie ktoré potrebujete';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -867,7 +935,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Vyvíjajte s najlepším open source';
+  String get installationSlidesDevelopmentTitle =>
+      'Vyvíjajte s najlepším open source';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
@@ -934,10 +1003,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Web Ask Ubuntu pokrýva celú škálu otázok a odpovedí, ďalej na fóre Ubuntu Discourse sú k dispozícii návody a diskusie pre nových aj skúsených používateľov.';
+  String get installationSlidesSupportCommunity =>
+      'Web Ask Ubuntu pokrýva celú škálu otázok a odpovedí, ďalej na fóre Ubuntu Discourse sú k dispozícii návody a diskusie pre nových aj skúsených používateľov.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'Pre firemných používateľov Canonical poskytuje komerčnú podporu, vďaka ktorej je ľahké zaviesť a spravovať Ubuntu na pracovisku.';
+  String get installationSlidesSupportEnterprise =>
+      'Pre firemných používateľov Canonical poskytuje komerčnú podporu, vďaka ktorej je ľahké zaviesť a spravovať Ubuntu na pracovisku.';
 
   @override
   String get installationSlidesSupportResources => 'Užitočné zdroje:';
@@ -946,7 +1017,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportDocumentation => 'Oficiálna dokumentácia';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Podpora 24/7 na podnikovej úrovni s Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro =>
+      'Podpora 24/7 na podnikovej úrovni s Ubuntu Pro';
 
   @override
   String get copyingFiles => 'Kopírovanie súborov…';
@@ -989,7 +1061,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get refreshUpdateNow => 'Aktualizovať teraz';
 
   @override
-  String get refreshInfo => 'Aktualizujte na najnovšiu verziu pre vyššiu spoľahlivosť a viac funkcií.';
+  String get refreshInfo =>
+      'Aktualizujte na najnovšiu verziu pre vyššiu spoľahlivosť a viac funkcií.';
 
   @override
   String get refreshReady => 'Aktualizácia je pripravená';
@@ -1015,7 +1088,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Ak chcete pokračovať, zatvorte prosím inštalátor a znova ho spustite';
+  String get refreshRestart =>
+      'Ak chcete pokračovať, zatvorte prosím inštalátor a znova ho spustite';
 
   @override
   String get refreshCloseLabel => 'Zatvoriť inštalátor';
@@ -1130,16 +1204,19 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get recoveryKeyHeader => 'Získanie obnovovacieho kľúča';
 
   @override
-  String get recoveryKeyInfoHeader => 'Bez obnovovacieho kľúča môžete prísť o všetky svoje údaje';
+  String get recoveryKeyInfoHeader =>
+      'Bez obnovovacieho kľúča môžete prísť o všetky svoje údaje';
 
   @override
   String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Uložte obnovovací kľúč na bezpečné miesto. Použite ho na dešifrovanie disku v prípade určitých zmien v systéme. Napríklad ho môžete potrebovať, ak zmeníte komponenty vo vašom počítači alebo aktualizujete firmvér.';
+  String get recoveryKeyStorageAdvice =>
+      'Uložte obnovovací kľúč na bezpečné miesto. Použite ho na dešifrovanie disku v prípade určitých zmien v systéme. Napríklad ho môžete potrebovať, ak zmeníte komponenty vo vašom počítači alebo aktualizujete firmvér.';
 
   @override
-  String get recoveryKeyConfirmation => 'Rozumiem, že môžem prísť o všetky svoje údaje, ak nebudem mať obnovovací kľúč';
+  String get recoveryKeyConfirmation =>
+      'Rozumiem, že môžem prísť o všetky svoje údaje, ak nebudem mať obnovovací kľúč';
 
   @override
   String get recoveryKeyLinkLabel => 'Zistiť viac';
@@ -1156,25 +1233,30 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+  String get recoveryKeyQrDialogBody =>
+      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle =>
+      'Recovery key file not saved';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+  String get recoveryKeyExceptionDisallowedPathTitle =>
+      'Recovery key file cannot be saved in a temporary location';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
 
   @override
-  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+  String get recoveryKeyExceptionFileSystemBody =>
+      'You do not have permission to write to that folder. Try a different location or use another method.';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      'Try a different location, such as a removable drive, or use another method.';
 
   @override
   String get recoveryKeyFilePickerTitle => 'Save recovery key file';
@@ -1200,7 +1282,8 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Landscape doména (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Zadajte doménu Landscape vašej organizácie na prihlásenie a získanie súboru na automatickú inštaláciu. FQDN vám môže poskytnúť vaše IT oddelenie.';
+  String get landscapeDomainInstructions =>
+      'Zadajte doménu Landscape vašej organizácie na prihlásenie a získanie súboru na automatickú inštaláciu. FQDN vám môže poskytnúť vaše IT oddelenie.';
 
   @override
   String get landscapeDomainTextField => 'Doména Landscape (FQDN)';
@@ -1209,25 +1292,32 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get next => 'Ďalej';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Neplatná doména, prosím skontrolujte ju alebo kontaktujte vaše IT oddelenie';
+  String get landscapeDomainInvalidDomainWarning =>
+      'Neplatná doména, prosím skontrolujte ju alebo kontaktujte vaše IT oddelenie';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Pripojte sa na internet, aby ste mohli pokračovať';
+  String get landscapeDomainNoInternetTitleWarning =>
+      'Pripojte sa na internet, aby ste mohli pokračovať';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet je potrebný na získanie súboru na automatickú inštaláciu z Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      'Internet je potrebný na získanie súboru na automatickú inštaláciu z Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Kód vypršal, prosím skúste to znova';
+  String get landscapeCodeExpiredWarning =>
+      'Kód vypršal, prosím skúste to znova';
 
   @override
-  String get landscapeLoginFailedWarning => 'Prihlásenie zlyhalo, prosím skúste to znova';
+  String get landscapeLoginFailedWarning =>
+      'Prihlásenie zlyhalo, prosím skúste to znova';
 
   @override
-  String get landscapeErrorPageTitle => 'Automatická inštalácia nie je dostupná pre váš účet';
+  String get landscapeErrorPageTitle =>
+      'Automatická inštalácia nie je dostupná pre váš účet';
 
   @override
-  String get landscapeErrorPageBody => 'Kontaktujte svoju IT podporu alebo vyskúšajte inú možnosť inštalácie.';
+  String get landscapeErrorPageBody =>
+      'Kontaktujte svoju IT podporu alebo vyskúšajte inú možnosť inštalácie.';
 
   @override
   String landscapeErrorPageCode(String code) {
@@ -1235,8 +1325,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu bude nainštalované podľa nastavení určených vašou organizáciou';
+  String get landscapeConfirmPageSuccessInfoTitle =>
+      'Ubuntu bude nainštalované podľa nastavení určených vašou organizáciou';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'Nižšie si môžete skontrolovať súbor autoinštalácie importovaný z Landscape.';
+  String get landscapeConfirmPageSuccessInfoContent =>
+      'Nižšie si môžete skontrolovať súbor autoinštalácie importovaný z Landscape.';
 }

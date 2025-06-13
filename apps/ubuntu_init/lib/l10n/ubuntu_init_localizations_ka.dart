@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'ახალი ხედი App Store-სთვის';
 
   @override
-  String get welcomeStoreSubtitle => 'რჩეული პროგრამების ძებნა ასე ადვილი არასდროს ყოფილა.';
+  String get welcomeStoreSubtitle =>
+      'რჩეული პროგრამების ძებნა ასე ადვილი არასდროს ყოფილა.';
 
   @override
   String get welcomeSecurityTitle => 'გაფართოებული უსაფრთხოება';
 
   @override
-  String get welcomeSecuritySubtitle => 'ახალი პარამეტრები აპარატურული ან ZFS დაშიფვრისთვის.';
+  String get welcomeSecuritySubtitle =>
+      'ახალი პარამეტრები აპარატურული ან ZFS დაშიფვრისთვის.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +75,8 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'იურიდიული გაფრთხილება';
 
   @override
-  String get telemetryCollectError => 'ტელემეტრიის მონაცემების შეგროვება ჩავარდა';
+  String get telemetryCollectError =>
+      'ტელემეტრიის მონაცემების შეგროვება ჩავარდა';
 
   @override
   String get privacyPageTitle => 'მდებარეობის სერვისები';
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'ჩავრთო მდებარეობის სერვისები?';
 
   @override
-  String get privacyLocationSubtitle => 'მიეცით აპლიკაციას ნება, თქვენი გეოგრაფიული მდებარეობა გაიგოს.\nამის შეცვლა ნებისმიერ დროს შეგიძლიათ სისტემის მორგების ფანჯარაში.';
+  String get privacyLocationSubtitle =>
+      'მიეცით აპლიკაციას ნება, თქვენი გეოგრაფიული მდებარეობა გაიგოს.\nამის შეცვლა ნებისმიერ დროს შეგიძლიათ სისტემის მორგების ფანჯარაში.';
 
   @override
   String get privacyLocationEnable => 'მდებარეობის სერვისები';
@@ -108,7 +112,8 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'ტოკენი';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'მიიღეთ შესაბამისი გამოწერა ღია კოდის პროგრამების უსაფრთხოებისთვის';
+  String get ubuntuProSubscriptionDescription =>
+      'მიიღეთ შესაბამისი გამოწერა ღია კოდის პროგრამების უსაფრთხოებისთვის';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +130,28 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'სწორი ტოკენი';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'არასწორი ტოკენი. თავიდან სცადეთ';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'არასწორი ტოკენი. თავიდან სცადეთ';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'ახლა გამოტოვება';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Ubuntu Pro-ის ჩართვა ყოველთვის შეგიძლიათ მოგვიანებით, პროგრამებისა და განახლებების აპლიკაციიდან.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Ubuntu Pro-ის ჩართვა ყოველთვის შეგიძლიათ მოგვიანებით, პროგრამებისა და განახლებების აპლიკაციიდან.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro-ის ჩართვა';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'მიამაგრეთ ამ მანქანას Ubuntu Pro-ის გამოწერა, რომ უსაფრთხოდ განაახლოთ უფრო მეტი პროგრამა, 2032-მდე.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'მიამაგრეთ ამ მანქანას Ubuntu Pro-ის გამოწერა, რომ უსაფრთხოდ განაახლოთ უფრო მეტი პროგრამა, 2032-მდე.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ახლა ჩართულია ამ მანქანაზე';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro ახლა ჩართულია ამ მანქანაზე';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'თქვენი Pro-ის სერვისების მართვა პროგრამებისა და განახლებების აპლიკაციაში შეგიძლიათ.';
+  String get ubuntuProSucessAttachDescription =>
+      'თქვენი Pro-ის სერვისების მართვა პროგრამებისა და განახლებების აპლიკაციაში შეგიძლიათ.';
 }

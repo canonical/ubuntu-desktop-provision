@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'משהו השתבש';
 
   @override
-  String get errorPageUnexpected => 'אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר גם <a>לדווח על התקלה</a>.';
+  String get errorPageUnexpected =>
+      'אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר גם <a>לדווח על התקלה</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -123,7 +124,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'נא לבחור את ערכת העיצוב שלך';
 
   @override
-  String get themePageHeader => 'תמיד ניתן לשנות את זה מאוחר יותר בהגדרות המראה.';
+  String get themePageHeader =>
+      'תמיד ניתן לשנות את זה מאוחר יותר בהגדרות המראה.';
 
   @override
   String get themeDark => 'כהה';
@@ -161,7 +163,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'שם המחשב שלך';
 
   @override
-  String get identityHostnameInfo => 'השם שישמש את המחשב בעת תקשורת מול מחשבים אחרים.';
+  String get identityHostnameInfo =>
+      'השם שישמש את המחשב בעת תקשורת מול מחשבים אחרים.';
 
   @override
   String get identityHostnameRequired => 'דרוש שם מחשב';
@@ -215,7 +218,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'להשתמש ב־Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'אפשר למלא את פרטי שם התחום (דומיין) ופרטים נוספים בצעד הבא.';
+  String get identityActiveDirectoryInfo =>
+      'אפשר למלא את פרטי שם התחום (דומיין) ופרטים נוספים בצעד הבא.';
 
   @override
   String get activeDirectoryTitle => 'הגדרת Active Directory';
@@ -277,10 +281,12 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'חובה';
 
   @override
-  String get activeDirectoryErrorTitle => 'שגיאה בהגדרת החיבור ל־Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'שגיאה בהגדרת החיבור ל־Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'אי אפשר להגדיר חיבור ל־Active Directory כרגע, עמך הסליחה. לאחר סיום התקנת המערכת, יש לבקר בכתובת <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> לקבלת עזרה.';
+  String get activeDirectoryErrorMessage =>
+      'אי אפשר להגדיר חיבור ל־Active Directory כרגע, עמך הסליחה. לאחר סיום התקנת המערכת, יש לבקר בכתובת <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> לקבלת עזרה.';
 
   @override
   String get networkPageTitle => 'התחברות לרשת';
@@ -289,7 +295,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'נא להתחבר לאינטרנט';
 
   @override
-  String get networkPageBody => 'חיבור לאינטרנט ישפר את ההתקנה שלך בעזרת בדיקות תאימות וחבילות תוכנה נוספות.';
+  String get networkPageBody =>
+      'חיבור לאינטרנט ישפר את ההתקנה שלך בעזרת בדיקות תאימות וחבילות תוכנה נוספות.';
 
   @override
   String get networkWiredOption => 'להשתמש בחיבור קווי';
@@ -301,7 +308,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'החיבור הקווי מושבת';
 
   @override
-  String get networkWiredDisabled => 'כדי להשתמש בכבל רשת במחשב הזה יש להפעיל את החיבור הקווי';
+  String get networkWiredDisabled =>
+      'כדי להשתמש בכבל רשת במחשב הזה יש להפעיל את החיבור הקווי';
 
   @override
   String get networkWiredEnable => 'להפעיל חיבור קווי';
@@ -316,7 +324,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'לא זוהו התקני רשת אלחוטית';
 
   @override
-  String get networkWifiDisabled => 'כדי להשתמש ברשת אלחוטית במחשב הזה, יש להפעיל את התקשורת האלחוטית';
+  String get networkWifiDisabled =>
+      'כדי להשתמש ברשת אלחוטית במחשב הזה, יש להפעיל את התקשורת האלחוטית';
 
   @override
   String get networkWifiEnable => 'הפעלת רשת אלחוטית';
@@ -340,7 +349,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'סקירת תנאי הרישיון';
 
   @override
-  String get eulaReadAndAcceptTerms => 'כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.';
+  String get eulaReadAndAcceptTerms =>
+      'כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.';
 
   @override
   String get eulaAcceptTerms => 'קראתי והתנאים האלה מקובלים עליי';

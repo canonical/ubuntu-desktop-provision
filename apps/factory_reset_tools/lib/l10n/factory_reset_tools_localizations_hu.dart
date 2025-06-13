@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsHu extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Visszaállítási USB-adathordozó létrehozása';
 
   @override
-  String get createUsbBody => 'Visszaállítási USB-adathordozó létrehozása a rendszer helyreállításához, valamint az Ubuntu-telepítések személyre szabásához.';
+  String get createUsbBody =>
+      'Visszaállítási USB-adathordozó létrehozása a rendszer helyreállításához, valamint az Ubuntu-telepítések személyre szabásához.';
 
   @override
-  String get createUsbListExplanation => 'Válasszon egy USB-meghajtót. A meghajtónak **legalább 16 GB tárhellyel** kell rendelkeznie.';
+  String get createUsbListExplanation =>
+      'Válasszon egy USB-meghajtót. A meghajtónak **legalább 16 GB tárhellyel** kell rendelkeznie.';
 
   @override
-  String get createUsbWarning => 'Az USB-meghajtó újraformázásra kerül, és a meghajtón lévő összes adat el fog veszni.';
+  String get createUsbWarning =>
+      'Az USB-meghajtó újraformázásra kerül, és a meghajtón lévő összes adat el fog veszni.';
 
   @override
   String get resetMediaTitle => 'Visszaállítási USB-adathordozó';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsHu extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Nem észlelhető cserélhető tároló';
 
   @override
-  String get noMediaDetectedSubtitle => 'USB-tárolóra van szükség a gyári visszaállítási adathordozó létrehozásához.';
+  String get noMediaDetectedSubtitle =>
+      'USB-tárolóra van szükség a gyári visszaállítási adathordozó létrehozásához.';
 
   @override
-  String get factoryResetTitle => 'Válasszon egy lehetőséget a gyári visszaállítás indításához';
+  String get factoryResetTitle =>
+      'Válasszon egy lehetőséget a gyári visszaállítás indításához';
 
   @override
   String get loadingDrives => 'Várjon, amíg lekérjük a meghajtókat.';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsHu extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'A visszaállítási USB-adathordozó kész';
 
   @override
-  String get resetMediaReadyBody => 'Ha használni szeretné, akkor helyezze be az USB-meghajtót a visszaállítani kívánt számítógépbe, és indítsa újra.';
+  String get resetMediaReadyBody =>
+      'Ha használni szeretné, akkor helyezze be az USB-meghajtót a visszaállítani kívánt számítógépbe, és indítsa újra.';
 
   @override
   String get errorLoadingDrives => 'Hiba történt a meghajtók lekérése közben.';

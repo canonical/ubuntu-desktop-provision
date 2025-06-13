@@ -18,7 +18,8 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
   String get homeTitle => 'Mida sa sooviksid teha?';
 
   @override
-  String get createResetMedia => 'Loo tehaseseadistuste taastamiseks vajalik andmekandja';
+  String get createResetMedia =>
+      'Loo tehaseseadistuste taastamiseks vajalik andmekandja';
 
   @override
   String get startFactoryReset => 'Alusta tehaseseadistuste taastamist';
@@ -27,34 +28,42 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Loo taastamiseks vajalik andmekandja';
 
   @override
-  String get createUsbBody => 'Loo taastamiseks vajalik USB-põhine mälupulk või ketas, kusjuures saad oma Ubuntu paigaldust ka kohendada.';
+  String get createUsbBody =>
+      'Loo taastamiseks vajalik USB-põhine mälupulk või ketas, kusjuures saad oma Ubuntu paigaldust ka kohendada.';
 
   @override
-  String get createUsbListExplanation => 'Vali USB-põhine andmekandja. Seal peab olema **vähemalt 16 GB vaba ruumi.**';
+  String get createUsbListExplanation =>
+      'Vali USB-põhine andmekandja. Seal peab olema **vähemalt 16 GB vaba ruumi.**';
 
   @override
-  String get createUsbWarning => 'Andmekandja saab olema uuesti vormindatud ja kõik seal leiduvad andmed lähevad jäädavalt kaotsi.';
+  String get createUsbWarning =>
+      'Andmekandja saab olema uuesti vormindatud ja kõik seal leiduvad andmed lähevad jäädavalt kaotsi.';
 
   @override
   String get resetMediaTitle => 'Taastamiseks mõeldud USB-põhine andmekandja';
 
   @override
-  String get noMediaDetected => 'Ühtegi eemaldatavat andmekandjat ei õnnestunud tuvastada';
+  String get noMediaDetected =>
+      'Ühtegi eemaldatavat andmekandjat ei õnnestunud tuvastada';
 
   @override
-  String get noMediaDetectedSubtitle => 'Tehaseseadistuste taastamise tarviku jaoks vajad sa USB-põhist andmekandjat.';
+  String get noMediaDetectedSubtitle =>
+      'Tehaseseadistuste taastamise tarviku jaoks vajad sa USB-põhist andmekandjat.';
 
   @override
-  String get factoryResetTitle => 'Palun tee oma valik alustamiseks tehaseseadistuste taastamisega';
+  String get factoryResetTitle =>
+      'Palun tee oma valik alustamiseks tehaseseadistuste taastamisega';
 
   @override
   String get loadingDrives => 'Palun oota, kuni tuvastan andmekandjaid.';
 
   @override
-  String get resetMediaReadyTitle => 'Taastamiseks mõeldud USB-põhine andmekandja on valmis';
+  String get resetMediaReadyTitle =>
+      'Taastamiseks mõeldud USB-põhine andmekandja on valmis';
 
   @override
-  String get resetMediaReadyBody => 'Kui soovid teda kasutada, siis palun ühenda taastamiseks mõeldud USB-põhine andmekandja arvutiga, kus soovid seda kasutaja ning taaskäivita arvuti.';
+  String get resetMediaReadyBody =>
+      'Kui soovid teda kasutada, siis palun ühenda taastamiseks mõeldud USB-põhine andmekandja arvutiga, kus soovid seda kasutaja ning taaskäivita arvuti.';
 
   @override
   String get errorLoadingDrives => 'Andmekandjate tuvastamisel tekkis viga.';
