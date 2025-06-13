@@ -15887,9 +15887,11 @@ EntropyResponse _$EntropyResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EntropyResponse {
+  bool get success => throw _privateConstructorUsedError;
   int get entropyBits => throw _privateConstructorUsedError;
   int get minEntropyBits => throw _privateConstructorUsedError;
   int get optimalEntropyBits => throw _privateConstructorUsedError;
+  List<String>? get failureReasons => throw _privateConstructorUsedError;
 
   /// Serializes this EntropyResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -15907,7 +15909,12 @@ abstract class $EntropyResponseCopyWith<$Res> {
           EntropyResponse value, $Res Function(EntropyResponse) then) =
       _$EntropyResponseCopyWithImpl<$Res, EntropyResponse>;
   @useResult
-  $Res call({int entropyBits, int minEntropyBits, int optimalEntropyBits});
+  $Res call(
+      {bool success,
+      int entropyBits,
+      int minEntropyBits,
+      int optimalEntropyBits,
+      List<String>? failureReasons});
 }
 
 /// @nodoc
@@ -15925,11 +15932,17 @@ class _$EntropyResponseCopyWithImpl<$Res, $Val extends EntropyResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? success = null,
     Object? entropyBits = null,
     Object? minEntropyBits = null,
     Object? optimalEntropyBits = null,
+    Object? failureReasons = freezed,
   }) {
     return _then(_value.copyWith(
+      success: null == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool,
       entropyBits: null == entropyBits
           ? _value.entropyBits
           : entropyBits // ignore: cast_nullable_to_non_nullable
@@ -15942,6 +15955,10 @@ class _$EntropyResponseCopyWithImpl<$Res, $Val extends EntropyResponse>
           ? _value.optimalEntropyBits
           : optimalEntropyBits // ignore: cast_nullable_to_non_nullable
               as int,
+      failureReasons: freezed == failureReasons
+          ? _value.failureReasons
+          : failureReasons // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ) as $Val);
   }
 }
@@ -15954,7 +15971,12 @@ abstract class _$$EntropyResponseImplCopyWith<$Res>
       __$$EntropyResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int entropyBits, int minEntropyBits, int optimalEntropyBits});
+  $Res call(
+      {bool success,
+      int entropyBits,
+      int minEntropyBits,
+      int optimalEntropyBits,
+      List<String>? failureReasons});
 }
 
 /// @nodoc
@@ -15970,11 +15992,17 @@ class __$$EntropyResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? success = null,
     Object? entropyBits = null,
     Object? minEntropyBits = null,
     Object? optimalEntropyBits = null,
+    Object? failureReasons = freezed,
   }) {
     return _then(_$EntropyResponseImpl(
+      success: null == success
+          ? _value.success
+          : success // ignore: cast_nullable_to_non_nullable
+              as bool,
       entropyBits: null == entropyBits
           ? _value.entropyBits
           : entropyBits // ignore: cast_nullable_to_non_nullable
@@ -15987,6 +16015,10 @@ class __$$EntropyResponseImplCopyWithImpl<$Res>
           ? _value.optimalEntropyBits
           : optimalEntropyBits // ignore: cast_nullable_to_non_nullable
               as int,
+      failureReasons: freezed == failureReasons
+          ? _value._failureReasons
+          : failureReasons // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -15995,23 +16027,37 @@ class __$$EntropyResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EntropyResponseImpl implements _EntropyResponse {
   const _$EntropyResponseImpl(
-      {required this.entropyBits,
+      {required this.success,
+      required this.entropyBits,
       required this.minEntropyBits,
-      required this.optimalEntropyBits});
+      required this.optimalEntropyBits,
+      final List<String>? failureReasons})
+      : _failureReasons = failureReasons;
 
   factory _$EntropyResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$EntropyResponseImplFromJson(json);
 
+  @override
+  final bool success;
   @override
   final int entropyBits;
   @override
   final int minEntropyBits;
   @override
   final int optimalEntropyBits;
+  final List<String>? _failureReasons;
+  @override
+  List<String>? get failureReasons {
+    final value = _failureReasons;
+    if (value == null) return null;
+    if (_failureReasons is EqualUnmodifiableListView) return _failureReasons;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'EntropyResponse(entropyBits: $entropyBits, minEntropyBits: $minEntropyBits, optimalEntropyBits: $optimalEntropyBits)';
+    return 'EntropyResponse(success: $success, entropyBits: $entropyBits, minEntropyBits: $minEntropyBits, optimalEntropyBits: $optimalEntropyBits, failureReasons: $failureReasons)';
   }
 
   @override
@@ -16019,18 +16065,26 @@ class _$EntropyResponseImpl implements _EntropyResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EntropyResponseImpl &&
+            (identical(other.success, success) || other.success == success) &&
             (identical(other.entropyBits, entropyBits) ||
                 other.entropyBits == entropyBits) &&
             (identical(other.minEntropyBits, minEntropyBits) ||
                 other.minEntropyBits == minEntropyBits) &&
             (identical(other.optimalEntropyBits, optimalEntropyBits) ||
-                other.optimalEntropyBits == optimalEntropyBits));
+                other.optimalEntropyBits == optimalEntropyBits) &&
+            const DeepCollectionEquality()
+                .equals(other._failureReasons, _failureReasons));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, entropyBits, minEntropyBits, optimalEntropyBits);
+  int get hashCode => Object.hash(
+      runtimeType,
+      success,
+      entropyBits,
+      minEntropyBits,
+      optimalEntropyBits,
+      const DeepCollectionEquality().hash(_failureReasons));
 
   /// Create a copy of EntropyResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -16051,19 +16105,25 @@ class _$EntropyResponseImpl implements _EntropyResponse {
 
 abstract class _EntropyResponse implements EntropyResponse {
   const factory _EntropyResponse(
-      {required final int entropyBits,
+      {required final bool success,
+      required final int entropyBits,
       required final int minEntropyBits,
-      required final int optimalEntropyBits}) = _$EntropyResponseImpl;
+      required final int optimalEntropyBits,
+      final List<String>? failureReasons}) = _$EntropyResponseImpl;
 
   factory _EntropyResponse.fromJson(Map<String, dynamic> json) =
       _$EntropyResponseImpl.fromJson;
 
+  @override
+  bool get success;
   @override
   int get entropyBits;
   @override
   int get minEntropyBits;
   @override
   int get optimalEntropyBits;
+  @override
+  List<String>? get failureReasons;
 
   /// Create a copy of EntropyResponse
   /// with the given fields replaced by the non-null parameter values.

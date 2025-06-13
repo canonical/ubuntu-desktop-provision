@@ -707,6 +707,19 @@ void main() {
       await testServer.stop();
     });
 
+    test('set storage', () async {
+      final guided = await client.getGuidedStorageV2();
+      final target =
+          guided.targets.whereType<GuidedStorageTargetReformat>().last;
+      final choice = GuidedChoiceV2(
+        target: target,
+        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        sizingPolicy: null,
+      );
+      await client.setGuidedStorageV2(choice);
+      await client.setStorageV2();
+    });
+
     test('entropy checks', () async {
       expect(
         await client.calculateEntropyV2(passphrase: 'foobar'),
@@ -718,17 +731,7 @@ void main() {
       );
     });
 
-    test('set storage and finish installation', () async {
-      final guided = await client.getGuidedStorageV2();
-      final target =
-          guided.targets.whereType<GuidedStorageTargetReformat>().last;
-      final choice = GuidedChoiceV2(
-        target: target,
-        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        sizingPolicy: null,
-      );
-      await client.setGuidedStorageV2(choice);
-      await client.setStorageV2();
+    test('finish installation', () async {
       await client.monitorStatus().firstWhere(
             (status) => status?.state == ApplicationState.NEEDS_CONFIRMATION,
           );
