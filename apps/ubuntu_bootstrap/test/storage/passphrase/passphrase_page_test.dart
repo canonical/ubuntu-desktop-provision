@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
@@ -98,5 +99,113 @@ void main() {
     expect(textField, findsOneWidget);
     await tester.enterText(textField, '4b3kk21');
     verify(model.passphrase = '4321').called(1);
+  });
+
+  group('pin/passphrase entropy', () {
+    for (final testCase in <({
+      String name,
+      PassphraseType passphraseType,
+      EntropyResponse? entropy,
+      bool isTpm,
+      String? Function(UbuntuBootstrapLocalizations) expectedString,
+    })>[
+      (
+        name: 'insufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        entropy: EntropyResponse(
+          success: false,
+          entropyBits: 1,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
+        ),
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyBelowMin,
+      ),
+      (
+        name: 'sufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        entropy: EntropyResponse(
+          success: true,
+          entropyBits: 2,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
+        ),
+        isTpm: true,
+        expectedString: (l10n) =>
+            l10n.passphrasePagePassphraseEntropyBelowOptimal,
+      ),
+      (
+        name: 'more than sufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        entropy: EntropyResponse(
+          success: true,
+          entropyBits: 3,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
+        ),
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyOptimal
+      ),
+      (
+        name: 'insufficient pin',
+        passphraseType: PassphraseType.pin,
+        entropy: EntropyResponse(
+          success: false,
+          entropyBits: 1,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
+        ),
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePinEntropyBelowMin,
+      ),
+      (
+        name: 'sufficient pin',
+        passphraseType: PassphraseType.pin,
+        entropy: EntropyResponse(
+          success: true,
+          entropyBits: 2,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
+        ),
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePinEntropyBelowOptimal,
+      ),
+      (
+        name: 'more than sufficient pin',
+        passphraseType: PassphraseType.pin,
+        entropy: EntropyResponse(
+          success: true,
+          entropyBits: 3,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
+        ),
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePinEntropyOptimal,
+      ),
+      (
+        name: 'no tpm fde',
+        passphraseType: PassphraseType.passphrase,
+        entropy: null,
+        isTpm: false,
+        expectedString: (_) => null,
+      ),
+    ]) {
+      testWidgets(testCase.name, (tester) async {
+        final model = buildPassphraseModel(
+          passphrase: '12345',
+          entropy: testCase.entropy,
+          isTpm: testCase.isTpm,
+          passphraseType: testCase.passphraseType,
+        );
+        await tester.pumpApp((_) => buildPage(model));
+
+        if (testCase.expectedString(tester.lang) != null) {
+          expect(
+            find.text(testCase.expectedString(tester.lang)!),
+            findsOneWidget,
+          );
+        }
+      });
+    }
   });
 }
