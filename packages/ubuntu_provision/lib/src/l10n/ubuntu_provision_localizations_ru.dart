@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Что-то пошло не так';
 
   @override
-  String get errorPageUnexpected => 'Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также Вы можете создать <a>сообщение о проблеме</a>.';
+  String get errorPageUnexpected =>
+      'Сожалеем, но мы не уверены, в чем заключается ошибка. Вы можете попробовать перезагрузить компьютер и начать процесс установки заново. Также Вы можете создать <a>сообщение о проблеме</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -102,7 +103,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Выберите раскладку клавиатуры';
 
   @override
-  String get keyboardTestHint => 'Напечатайте здесь, чтобы проверить свою клавиатуру';
+  String get keyboardTestHint =>
+      'Напечатайте здесь, чтобы проверить свою клавиатуру';
 
   @override
   String get keyboardDetectTitle => 'Определить раскладку клавиатуры';
@@ -117,13 +119,15 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Нажмите одну из следующих клавиш:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Есть ли следующая клавиша на вашей клавиатуре?';
+  String get keyboardKeyPresentLabel =>
+      'Есть ли следующая клавиша на вашей клавиатуре?';
 
   @override
   String get themePageTitle => 'Выберите свою тему';
 
   @override
-  String get themePageHeader => 'Вы всегда можете изменить это позже в настройках внешнего вида.';
+  String get themePageHeader =>
+      'Вы всегда можете изменить это позже в настройках внешнего вида.';
 
   @override
   String get themeDark => 'Тёмный';
@@ -161,7 +165,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Имя компьютера';
 
   @override
-  String get identityHostnameInfo => 'Имя, используемое при общении с другими компьютерами.';
+  String get identityHostnameInfo =>
+      'Имя, используемое при общении с другими компьютерами.';
 
   @override
   String get identityHostnameRequired => 'Требуется имя компьютера';
@@ -185,13 +190,15 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Это имя пользователя уже существует.';
 
   @override
-  String get identityUsernameSystemReserved => 'Это имя зарезервировано для использования системой.';
+  String get identityUsernameSystemReserved =>
+      'Это имя зарезервировано для использования системой.';
 
   @override
   String get identityUsernameTooLong => 'Это имя слишком длинное.';
 
   @override
-  String get identityUsernameInvalidChars => 'Это имя содержит недопустимые символы.';
+  String get identityUsernameInvalidChars =>
+      'Это имя содержит недопустимые символы.';
 
   @override
   String get identityPasswordLabel => 'Пароль';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Использовать Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Вы введёте домен и другие данные на следующем шаге.';
+  String get identityActiveDirectoryInfo =>
+      'Вы введёте домен и другие данные на следующем шаге.';
 
   @override
   String get activeDirectoryTitle => 'Войти в Active Directory';
@@ -250,19 +258,23 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Заканчивается точкой (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Начинается со знака дефиса (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Начинается со знака дефиса (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Заканчивается знаком дефиса (-)';
+  String get activeDirectoryDomainEndHyphen =>
+      'Заканчивается знаком дефиса (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Содержит несколько последовательных точек (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Содержит несколько последовательных точек (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Домен не найден';
 
   @override
-  String get activeDirectoryAdminLabel => 'Пользователь, присоединившийся к домену';
+  String get activeDirectoryAdminLabel =>
+      'Пользователь, присоединившийся к домену';
 
   @override
   String get activeDirectoryAdminEmpty => 'Требуется';
@@ -277,10 +289,12 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Требуется';
 
   @override
-  String get activeDirectoryErrorTitle => 'Ошибка настройки подключения к Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Ошибка настройки подключения к Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Извините, Active Directory не может быть настроен в данный момент. Как только ваша система будет запущена, посетите <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> для получения помощи.';
+  String get activeDirectoryErrorMessage =>
+      'Извините, Active Directory не может быть настроен в данный момент. Как только ваша система будет запущена, посетите <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> для получения помощи.';
 
   @override
   String get networkPageTitle => 'Подключение к сети';
@@ -289,7 +303,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Подключиться к Интернету';
 
   @override
-  String get networkPageBody => 'Подключение к Интернету улучшит процесс установки благодаря проверке совместимости и доступу к дополнительным пакетам программного обеспечения.';
+  String get networkPageBody =>
+      'Подключение к Интернету улучшит процесс установки благодаря проверке совместимости и доступу к дополнительным пакетам программного обеспечения.';
 
   @override
   String get networkWiredOption => 'Использовать проводное подключение';
@@ -301,7 +316,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Проводное подключение отключено';
 
   @override
-  String get networkWiredDisabled => 'Чтобы воспользоваться сетью Интернет на этом компьютере, должно быть включено проводное соединение';
+  String get networkWiredDisabled =>
+      'Чтобы воспользоваться сетью Интернет на этом компьютере, должно быть включено проводное соединение';
 
   @override
   String get networkWiredEnable => 'Включить проводное подключение';
@@ -316,7 +332,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Устройства Wi-Fi не обнаружены';
 
   @override
-  String get networkWifiDisabled => 'Чтобы использовать на этом компьютере Wi-Fi, необходимо включить беспроводную сеть';
+  String get networkWifiDisabled =>
+      'Чтобы использовать на этом компьютере Wi-Fi, необходимо включить беспроводную сеть';
 
   @override
   String get networkWifiEnable => 'Включить Wi-Fi';
@@ -331,7 +348,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Укажите название сети';
 
   @override
-  String get networkNoneOption => 'Прямо сейчас я не хочу подключаться к Интернету';
+  String get networkNoneOption =>
+      'Прямо сейчас я не хочу подключаться к Интернету';
 
   @override
   String get eulaPageTitle => 'Лицензионное соглашение';
@@ -340,7 +358,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Ознакомьтесь с условиями лицензии';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Чтобы продолжить настройку этой системы, Вы должны прочитать и принять условия лицензионного соглашения.';
+  String get eulaReadAndAcceptTerms =>
+      'Чтобы продолжить настройку этой системы, Вы должны прочитать и принять условия лицензионного соглашения.';
 
   @override
   String get eulaAcceptTerms => 'Я прочитал(а) эти условия и принимаю их';

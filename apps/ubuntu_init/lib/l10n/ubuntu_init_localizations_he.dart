@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'חנות יישומים במראה חדש';
 
   @override
-  String get welcomeStoreSubtitle => 'מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.';
+  String get welcomeStoreSubtitle =>
+      'מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.';
 
   @override
   String get welcomeSecurityTitle => 'אבטחה משופרת';
 
   @override
-  String get welcomeSecuritySubtitle => 'אפשרויות חדשות להצפנת ZFS בגיבוי חומרה.';
+  String get welcomeSecuritySubtitle =>
+      'אפשרויות חדשות להצפנת ZFS בגיבוי חומרה.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +84,8 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'להפעיל שירותי מיקום?';
 
   @override
-  String get privacyLocationSubtitle => 'לאפשר ליישומים לדעת מה מיקומך הגאוגרפי.\nאפשר לשנות זאת בכל עת דרך הגדרות המערכת.';
+  String get privacyLocationSubtitle =>
+      'לאפשר ליישומים לדעת מה מיקומך הגאוגרפי.\nאפשר לשנות זאת בכל עת דרך הגדרות המערכת.';
 
   @override
   String get privacyLocationEnable => 'שירותי מיקום';
@@ -108,7 +111,8 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'אסימון';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'קבלת המינוי המקיף ביותר לאבטחה של תוכנה בקוד פתוח';
+  String get ubuntuProSubscriptionDescription =>
+      'קבלת המינוי המקיף ביותר לאבטחה של תוכנה בקוד פתוח';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +135,20 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'לדלג לעת עתה';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'תמיד אפשר להפעיל את Ubuntu Pro בהמשך דרך יישום התוכנה והעדכונים.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'תמיד אפשר להפעיל את Ubuntu Pro בהמשך דרך יישום התוכנה והעדכונים.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'הפעלת Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'אפשר לצרף את המכונה הזאת למינוי Ubuntu Pro לקבלת עדכוני אבטחה ומגוון רחב יותר של חבילות עד 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'אפשר לצרף את המכונה הזאת למינוי Ubuntu Pro לקבלת עדכוני אבטחה ומגוון רחב יותר של חבילות עד 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro מופעל מעתה במכונה הזאת';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'אפשר לנהל את שירותי ה־Pro שלך ביישום התוכנה והעדכונים.';
+  String get ubuntuProSucessAttachDescription =>
+      'אפשר לנהל את שירותי ה־Pro שלך ביישום התוכנה והעדכונים.';
 }
