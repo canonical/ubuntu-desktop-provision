@@ -5,7 +5,7 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.29.2"
+  flutter: ">=3.32.1"
 
 dependencies:
   args: ^2.4.2
@@ -21,15 +21,15 @@ dependencies:
   flutter_riverpod: ^2.5.1
   flutter_svg: ^2.0.10
   handy_window: ^0.4.0
-  intl: ^0.19.0
+  intl: ^0.20.2
   meta: ^1.11.0
   path: ^1.8.3
   retry: ^3.1.2
-  ubuntu_localizations: ^0.5.0
+  ubuntu_localizations: ^0.5.2+2
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
   yaml: ^3.1.2
-  yaru: ^7.0.0
+  yaru: ^8.0.0
 
 dev_dependencies:
   flutter_test:
@@ -41,4 +41,3 @@ flutter:
   assets:
     - assets/
     - assets/images/
-
