@@ -118,14 +118,6 @@ void main() {
       (
         name: 'sufficient passphrase',
         passphraseType: PassphraseType.passphrase,
-        entropy: Entropy.belowOptimal,
-        isTpm: true,
-        expectedString: (l10n) =>
-            l10n.passphrasePagePassphraseEntropyBelowOptimal,
-      ),
-      (
-        name: 'more than sufficient passphrase',
-        passphraseType: PassphraseType.passphrase,
         entropy: Entropy.optimal,
         isTpm: true,
         expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyOptimal
@@ -139,13 +131,6 @@ void main() {
       ),
       (
         name: 'sufficient pin',
-        passphraseType: PassphraseType.pin,
-        entropy: Entropy.belowOptimal,
-        isTpm: true,
-        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyOptimal,
-      ),
-      (
-        name: 'more than sufficient pin',
         passphraseType: PassphraseType.pin,
         entropy: Entropy.optimal,
         isTpm: true,

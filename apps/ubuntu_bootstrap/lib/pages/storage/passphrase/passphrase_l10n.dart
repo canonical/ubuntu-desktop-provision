@@ -8,14 +8,10 @@ extension EntropyL10n on Entropy {
       switch ((this, type)) {
         (Entropy.belowMin, PassphraseType.passphrase) =>
           l10n.passphrasePagePassphraseEntropyBelowMin,
-        (Entropy.belowOptimal, PassphraseType.passphrase) =>
-          l10n.passphrasePagePassphraseEntropyBelowOptimal,
         (Entropy.optimal, PassphraseType.passphrase) =>
           l10n.passphrasePagePassphraseEntropyOptimal,
         (Entropy.belowMin, PassphraseType.pin) =>
           l10n.passphrasePagePinEntropyBelowMin,
-        (Entropy.belowOptimal, PassphraseType.pin) =>
-          l10n.passphrasePagePinEntropyBelowOptimal,
         (Entropy.optimal, PassphraseType.pin) =>
           l10n.passphrasePagePinEntropyOptimal,
         _ => throw _unreachable,
