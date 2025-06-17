@@ -111,9 +111,8 @@ class _FakeStorageResponseV2_7 extends _i1.SmartFake
         );
 }
 
-class _FakeEntropyResponse_8 extends _i1.SmartFake
-    implements _i2.EntropyResponse {
-  _FakeEntropyResponse_8(
+class _FakeAnyStep_8 extends _i1.SmartFake implements _i2.AnyStep {
+  _FakeAnyStep_8(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -122,19 +121,9 @@ class _FakeEntropyResponse_8 extends _i1.SmartFake
         );
 }
 
-class _FakeAnyStep_9 extends _i1.SmartFake implements _i2.AnyStep {
-  _FakeAnyStep_9(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeDriversResponse_10 extends _i1.SmartFake
+class _FakeDriversResponse_9 extends _i1.SmartFake
     implements _i2.DriversResponse {
-  _FakeDriversResponse_10(
+  _FakeDriversResponse_9(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -143,8 +132,8 @@ class _FakeDriversResponse_10 extends _i1.SmartFake
         );
 }
 
-class _FakeCodecsData_11 extends _i1.SmartFake implements _i2.CodecsData {
-  _FakeCodecsData_11(
+class _FakeCodecsData_10 extends _i1.SmartFake implements _i2.CodecsData {
+  _FakeCodecsData_10(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -153,8 +142,8 @@ class _FakeCodecsData_11 extends _i1.SmartFake implements _i2.CodecsData {
         );
 }
 
-class _FakeRefreshStatus_12 extends _i1.SmartFake implements _i2.RefreshStatus {
-  _FakeRefreshStatus_12(
+class _FakeRefreshStatus_11 extends _i1.SmartFake implements _i2.RefreshStatus {
+  _FakeRefreshStatus_11(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -163,8 +152,8 @@ class _FakeRefreshStatus_12 extends _i1.SmartFake implements _i2.RefreshStatus {
         );
 }
 
-class _FakeChange_13 extends _i1.SmartFake implements _i2.Change {
-  _FakeChange_13(
+class _FakeChange_12 extends _i1.SmartFake implements _i2.Change {
+  _FakeChange_12(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -173,9 +162,9 @@ class _FakeChange_13 extends _i1.SmartFake implements _i2.Change {
         );
 }
 
-class _FakeAdConnectionInfo_14 extends _i1.SmartFake
+class _FakeAdConnectionInfo_13 extends _i1.SmartFake
     implements _i2.AdConnectionInfo {
-  _FakeAdConnectionInfo_14(
+  _FakeAdConnectionInfo_13(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -184,8 +173,8 @@ class _FakeAdConnectionInfo_14 extends _i1.SmartFake
         );
 }
 
-class _FakeEndpoint_15 extends _i1.SmartFake implements _i3.Endpoint {
-  _FakeEndpoint_15(
+class _FakeEndpoint_14 extends _i1.SmartFake implements _i3.Endpoint {
+  _FakeEndpoint_14(
     Object parent,
     Invocation parentInvocation,
   ) : super(
@@ -773,7 +762,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
       ) as _i5.Future<String>);
 
   @override
-  _i5.Future<_i2.EntropyResponse> calculateEntropyV2({
+  _i5.Future<_i2.EntropyResponse?> calculateEntropyV2({
     String? passphrase,
     String? pin,
   }) =>
@@ -786,19 +775,8 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
             #pin: pin,
           },
         ),
-        returnValue:
-            _i5.Future<_i2.EntropyResponse>.value(_FakeEntropyResponse_8(
-          this,
-          Invocation.method(
-            #calculateEntropyV2,
-            [],
-            {
-              #passphrase: passphrase,
-              #pin: pin,
-            },
-          ),
-        )),
-      ) as _i5.Future<_i2.EntropyResponse>);
+        returnValue: _i5.Future<_i2.EntropyResponse?>.value(),
+      ) as _i5.Future<_i2.EntropyResponse?>);
 
   @override
   _i5.Future<void> reboot({bool? immediate = false}) => (super.noSuchMethod(
@@ -829,7 +807,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           #getKeyboardStep,
           [step],
         ),
-        returnValue: _i5.Future<_i2.AnyStep>.value(_FakeAnyStep_9(
+        returnValue: _i5.Future<_i2.AnyStep>.value(_FakeAnyStep_8(
           this,
           Invocation.method(
             #getKeyboardStep,
@@ -845,7 +823,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           [],
         ),
         returnValue:
-            _i5.Future<_i2.DriversResponse>.value(_FakeDriversResponse_10(
+            _i5.Future<_i2.DriversResponse>.value(_FakeDriversResponse_9(
           this,
           Invocation.method(
             #getDrivers,
@@ -871,7 +849,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           #getCodecs,
           [],
         ),
-        returnValue: _i5.Future<_i2.CodecsData>.value(_FakeCodecsData_11(
+        returnValue: _i5.Future<_i2.CodecsData>.value(_FakeCodecsData_10(
           this,
           Invocation.method(
             #getCodecs,
@@ -899,7 +877,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           [],
           {#wait: wait},
         ),
-        returnValue: _i5.Future<_i2.RefreshStatus>.value(_FakeRefreshStatus_12(
+        returnValue: _i5.Future<_i2.RefreshStatus>.value(_FakeRefreshStatus_11(
           this,
           Invocation.method(
             #checkRefresh,
@@ -931,7 +909,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           #getRefreshProgress,
           [changeId],
         ),
-        returnValue: _i5.Future<_i2.Change>.value(_FakeChange_13(
+        returnValue: _i5.Future<_i2.Change>.value(_FakeChange_12(
           this,
           Invocation.method(
             #getRefreshProgress,
@@ -956,7 +934,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           [],
         ),
         returnValue:
-            _i5.Future<_i2.AdConnectionInfo>.value(_FakeAdConnectionInfo_14(
+            _i5.Future<_i2.AdConnectionInfo>.value(_FakeAdConnectionInfo_13(
           this,
           Invocation.method(
             #getActiveDirectory,
@@ -1067,7 +1045,7 @@ class MockSubiquityServer extends _i1.Mock implements _i7.SubiquityServer {
   @override
   _i3.Endpoint get endpoint => (super.noSuchMethod(
         Invocation.getter(#endpoint),
-        returnValue: _FakeEndpoint_15(
+        returnValue: _FakeEndpoint_14(
           this,
           Invocation.getter(#endpoint),
         ),
@@ -1087,7 +1065,7 @@ class MockSubiquityServer extends _i1.Mock implements _i7.SubiquityServer {
             #environment: environment,
           },
         ),
-        returnValue: _i5.Future<_i3.Endpoint>.value(_FakeEndpoint_15(
+        returnValue: _i5.Future<_i3.Endpoint>.value(_FakeEndpoint_14(
           this,
           Invocation.method(
             #start,

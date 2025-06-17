@@ -1424,18 +1424,30 @@ Map<String, dynamic> _$$ReformatDiskImplToJson(_$ReformatDiskImpl instance) =>
       'ptable': instance.ptable,
     };
 
+_$CalculateEntropyRequestImpl _$$CalculateEntropyRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CalculateEntropyRequestImpl(
+      passphrase: json['passphrase'] as String?,
+      pin: json['pin'] as String?,
+    );
+
+Map<String, dynamic> _$$CalculateEntropyRequestImplToJson(
+        _$CalculateEntropyRequestImpl instance) =>
+    <String, dynamic>{
+      'passphrase': instance.passphrase,
+      'pin': instance.pin,
+    };
+
 _$EntropyResponseImpl _$$EntropyResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$EntropyResponseImpl(
-      entropyBits: (json['entropy_bits'] as num).toInt(),
-      minEntropyBits: (json['min_entropy_bits'] as num).toInt(),
-      optimalEntropyBits: (json['optimal_entropy_bits'] as num).toInt(),
+      entropy: (json['entropy'] as num).toDouble(),
+      minimumRequired: (json['minimum_required'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$$EntropyResponseImplToJson(
         _$EntropyResponseImpl instance) =>
     <String, dynamic>{
-      'entropy_bits': instance.entropyBits,
-      'min_entropy_bits': instance.minEntropyBits,
-      'optimal_entropy_bits': instance.optimalEntropyBits,
+      'entropy': instance.entropy,
+      'minimum_required': instance.minimumRequired,
     };

@@ -15881,15 +15881,188 @@ abstract class _ReformatDisk implements ReformatDisk {
       throw _privateConstructorUsedError;
 }
 
+CalculateEntropyRequest _$CalculateEntropyRequestFromJson(
+    Map<String, dynamic> json) {
+  return _CalculateEntropyRequest.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CalculateEntropyRequest {
+  String? get passphrase => throw _privateConstructorUsedError;
+  String? get pin => throw _privateConstructorUsedError;
+
+  /// Serializes this CalculateEntropyRequest to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of CalculateEntropyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CalculateEntropyRequestCopyWith<CalculateEntropyRequest> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CalculateEntropyRequestCopyWith<$Res> {
+  factory $CalculateEntropyRequestCopyWith(CalculateEntropyRequest value,
+          $Res Function(CalculateEntropyRequest) then) =
+      _$CalculateEntropyRequestCopyWithImpl<$Res, CalculateEntropyRequest>;
+  @useResult
+  $Res call({String? passphrase, String? pin});
+}
+
+/// @nodoc
+class _$CalculateEntropyRequestCopyWithImpl<$Res,
+        $Val extends CalculateEntropyRequest>
+    implements $CalculateEntropyRequestCopyWith<$Res> {
+  _$CalculateEntropyRequestCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of CalculateEntropyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? passphrase = freezed,
+    Object? pin = freezed,
+  }) {
+    return _then(_value.copyWith(
+      passphrase: freezed == passphrase
+          ? _value.passphrase
+          : passphrase // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pin: freezed == pin
+          ? _value.pin
+          : pin // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CalculateEntropyRequestImplCopyWith<$Res>
+    implements $CalculateEntropyRequestCopyWith<$Res> {
+  factory _$$CalculateEntropyRequestImplCopyWith(
+          _$CalculateEntropyRequestImpl value,
+          $Res Function(_$CalculateEntropyRequestImpl) then) =
+      __$$CalculateEntropyRequestImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? passphrase, String? pin});
+}
+
+/// @nodoc
+class __$$CalculateEntropyRequestImplCopyWithImpl<$Res>
+    extends _$CalculateEntropyRequestCopyWithImpl<$Res,
+        _$CalculateEntropyRequestImpl>
+    implements _$$CalculateEntropyRequestImplCopyWith<$Res> {
+  __$$CalculateEntropyRequestImplCopyWithImpl(
+      _$CalculateEntropyRequestImpl _value,
+      $Res Function(_$CalculateEntropyRequestImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CalculateEntropyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? passphrase = freezed,
+    Object? pin = freezed,
+  }) {
+    return _then(_$CalculateEntropyRequestImpl(
+      passphrase: freezed == passphrase
+          ? _value.passphrase
+          : passphrase // ignore: cast_nullable_to_non_nullable
+              as String?,
+      pin: freezed == pin
+          ? _value.pin
+          : pin // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CalculateEntropyRequestImpl implements _CalculateEntropyRequest {
+  const _$CalculateEntropyRequestImpl({this.passphrase, this.pin});
+
+  factory _$CalculateEntropyRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CalculateEntropyRequestImplFromJson(json);
+
+  @override
+  final String? passphrase;
+  @override
+  final String? pin;
+
+  @override
+  String toString() {
+    return 'CalculateEntropyRequest(passphrase: $passphrase, pin: $pin)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CalculateEntropyRequestImpl &&
+            (identical(other.passphrase, passphrase) ||
+                other.passphrase == passphrase) &&
+            (identical(other.pin, pin) || other.pin == pin));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, passphrase, pin);
+
+  /// Create a copy of CalculateEntropyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CalculateEntropyRequestImplCopyWith<_$CalculateEntropyRequestImpl>
+      get copyWith => __$$CalculateEntropyRequestImplCopyWithImpl<
+          _$CalculateEntropyRequestImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CalculateEntropyRequestImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CalculateEntropyRequest implements CalculateEntropyRequest {
+  const factory _CalculateEntropyRequest(
+      {final String? passphrase,
+      final String? pin}) = _$CalculateEntropyRequestImpl;
+
+  factory _CalculateEntropyRequest.fromJson(Map<String, dynamic> json) =
+      _$CalculateEntropyRequestImpl.fromJson;
+
+  @override
+  String? get passphrase;
+  @override
+  String? get pin;
+
+  /// Create a copy of CalculateEntropyRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CalculateEntropyRequestImplCopyWith<_$CalculateEntropyRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 EntropyResponse _$EntropyResponseFromJson(Map<String, dynamic> json) {
   return _EntropyResponse.fromJson(json);
 }
 
 /// @nodoc
 mixin _$EntropyResponse {
-  int get entropyBits => throw _privateConstructorUsedError;
-  int get minEntropyBits => throw _privateConstructorUsedError;
-  int get optimalEntropyBits => throw _privateConstructorUsedError;
+  double get entropy => throw _privateConstructorUsedError;
+  double get minimumRequired => throw _privateConstructorUsedError;
 
   /// Serializes this EntropyResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -15907,7 +16080,7 @@ abstract class $EntropyResponseCopyWith<$Res> {
           EntropyResponse value, $Res Function(EntropyResponse) then) =
       _$EntropyResponseCopyWithImpl<$Res, EntropyResponse>;
   @useResult
-  $Res call({int entropyBits, int minEntropyBits, int optimalEntropyBits});
+  $Res call({double entropy, double minimumRequired});
 }
 
 /// @nodoc
@@ -15925,23 +16098,18 @@ class _$EntropyResponseCopyWithImpl<$Res, $Val extends EntropyResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? entropyBits = null,
-    Object? minEntropyBits = null,
-    Object? optimalEntropyBits = null,
+    Object? entropy = null,
+    Object? minimumRequired = null,
   }) {
     return _then(_value.copyWith(
-      entropyBits: null == entropyBits
-          ? _value.entropyBits
-          : entropyBits // ignore: cast_nullable_to_non_nullable
-              as int,
-      minEntropyBits: null == minEntropyBits
-          ? _value.minEntropyBits
-          : minEntropyBits // ignore: cast_nullable_to_non_nullable
-              as int,
-      optimalEntropyBits: null == optimalEntropyBits
-          ? _value.optimalEntropyBits
-          : optimalEntropyBits // ignore: cast_nullable_to_non_nullable
-              as int,
+      entropy: null == entropy
+          ? _value.entropy
+          : entropy // ignore: cast_nullable_to_non_nullable
+              as double,
+      minimumRequired: null == minimumRequired
+          ? _value.minimumRequired
+          : minimumRequired // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -15954,7 +16122,7 @@ abstract class _$$EntropyResponseImplCopyWith<$Res>
       __$$EntropyResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int entropyBits, int minEntropyBits, int optimalEntropyBits});
+  $Res call({double entropy, double minimumRequired});
 }
 
 /// @nodoc
@@ -15970,23 +16138,18 @@ class __$$EntropyResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? entropyBits = null,
-    Object? minEntropyBits = null,
-    Object? optimalEntropyBits = null,
+    Object? entropy = null,
+    Object? minimumRequired = null,
   }) {
     return _then(_$EntropyResponseImpl(
-      entropyBits: null == entropyBits
-          ? _value.entropyBits
-          : entropyBits // ignore: cast_nullable_to_non_nullable
-              as int,
-      minEntropyBits: null == minEntropyBits
-          ? _value.minEntropyBits
-          : minEntropyBits // ignore: cast_nullable_to_non_nullable
-              as int,
-      optimalEntropyBits: null == optimalEntropyBits
-          ? _value.optimalEntropyBits
-          : optimalEntropyBits // ignore: cast_nullable_to_non_nullable
-              as int,
+      entropy: null == entropy
+          ? _value.entropy
+          : entropy // ignore: cast_nullable_to_non_nullable
+              as double,
+      minimumRequired: null == minimumRequired
+          ? _value.minimumRequired
+          : minimumRequired // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -15995,23 +16158,19 @@ class __$$EntropyResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EntropyResponseImpl implements _EntropyResponse {
   const _$EntropyResponseImpl(
-      {required this.entropyBits,
-      required this.minEntropyBits,
-      required this.optimalEntropyBits});
+      {required this.entropy, required this.minimumRequired});
 
   factory _$EntropyResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$EntropyResponseImplFromJson(json);
 
   @override
-  final int entropyBits;
+  final double entropy;
   @override
-  final int minEntropyBits;
-  @override
-  final int optimalEntropyBits;
+  final double minimumRequired;
 
   @override
   String toString() {
-    return 'EntropyResponse(entropyBits: $entropyBits, minEntropyBits: $minEntropyBits, optimalEntropyBits: $optimalEntropyBits)';
+    return 'EntropyResponse(entropy: $entropy, minimumRequired: $minimumRequired)';
   }
 
   @override
@@ -16019,18 +16178,14 @@ class _$EntropyResponseImpl implements _EntropyResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EntropyResponseImpl &&
-            (identical(other.entropyBits, entropyBits) ||
-                other.entropyBits == entropyBits) &&
-            (identical(other.minEntropyBits, minEntropyBits) ||
-                other.minEntropyBits == minEntropyBits) &&
-            (identical(other.optimalEntropyBits, optimalEntropyBits) ||
-                other.optimalEntropyBits == optimalEntropyBits));
+            (identical(other.entropy, entropy) || other.entropy == entropy) &&
+            (identical(other.minimumRequired, minimumRequired) ||
+                other.minimumRequired == minimumRequired));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, entropyBits, minEntropyBits, optimalEntropyBits);
+  int get hashCode => Object.hash(runtimeType, entropy, minimumRequired);
 
   /// Create a copy of EntropyResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -16051,19 +16206,16 @@ class _$EntropyResponseImpl implements _EntropyResponse {
 
 abstract class _EntropyResponse implements EntropyResponse {
   const factory _EntropyResponse(
-      {required final int entropyBits,
-      required final int minEntropyBits,
-      required final int optimalEntropyBits}) = _$EntropyResponseImpl;
+      {required final double entropy,
+      required final double minimumRequired}) = _$EntropyResponseImpl;
 
   factory _EntropyResponse.fromJson(Map<String, dynamic> json) =
       _$EntropyResponseImpl.fromJson;
 
   @override
-  int get entropyBits;
+  double get entropy;
   @override
-  int get minEntropyBits;
-  @override
-  int get optimalEntropyBits;
+  double get minimumRequired;
 
   /// Create a copy of EntropyResponse
   /// with the given fields replaced by the non-null parameter values.

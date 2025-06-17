@@ -435,21 +435,22 @@ class SubiquityClient {
     return _receive('getCoreBootRecoveryKeyV2()', request);
   }
 
-  Future<EntropyResponse> calculateEntropyV2({
+  Future<EntropyResponse?> calculateEntropyV2({
     String? passphrase,
     String? pin,
   }) async {
     assert(passphrase == null || pin == null);
-    final params = {
-      if (passphrase != null) 'passphrase': jsonEncode(passphrase),
-      if (pin != null) 'pin': jsonEncode(pin),
-    };
-    final request =
-        await _openUrl('POST', 'storage/v2/calculate_entropy', params);
+    final request = await _openUrl('POST', 'storage/v2/calculate_entropy');
+    request.write(
+      jsonEncode(
+        CalculateEntropyRequest(passphrase: passphrase, pin: pin).toJson(),
+      ),
+    );
     return _receive(
       'calculate_entropy()',
       request,
-      EntropyResponse.fromJson,
+      (Map<String, dynamic>? response) =>
+          response != null ? EntropyResponse.fromJson(response) : null,
     );
   }
 
