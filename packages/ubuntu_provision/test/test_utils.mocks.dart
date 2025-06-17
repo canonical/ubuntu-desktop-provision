@@ -28,6 +28,7 @@ import 'package:ubuntu_flavor/ubuntu_flavor.dart' as _i13;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i4;
 import 'package:ubuntu_utils/ubuntu_utils.dart' as _i21;
 import 'package:vector_graphics/vector_graphics.dart' as _i11;
+import 'package:vector_graphics/vector_graphics_compat.dart' as _i25;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -3312,6 +3313,13 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
         returnValue: _i18.Clip.none,
         returnValueForMissingStub: _i18.Clip.none,
       ) as _i18.Clip);
+
+  @override
+  _i25.RenderingStrategy get renderingStrategy => (super.noSuchMethod(
+        Invocation.getter(#renderingStrategy),
+        returnValue: _i25.RenderingStrategy.raster,
+        returnValueForMissingStub: _i25.RenderingStrategy.raster,
+      ) as _i25.RenderingStrategy);
 
   @override
   _i6.Widget build(_i6.BuildContext? context) => (super.noSuchMethod(
