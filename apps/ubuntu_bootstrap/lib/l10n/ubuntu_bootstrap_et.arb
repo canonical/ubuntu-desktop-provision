@@ -723,5 +723,17 @@
   "passphrasePageRequiredPin": "PIN-kood on vajalik",
   "@passphrasePageRequiredPin": {},
   "passphraseTypePassphraseTileTitle": "Eelda salafraasi kasutamist",
-  "@passphraseTypePassphraseTileTitle": {}
+  "@passphraseTypePassphraseTileTitle": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Salafraas on kehv, palun muuda ta pikemaks ja keerukamaks",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Salafraas on juba täitsa hea, parema turvalisuse nimel palun muuda ta pikemaks ja keerukamaks",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "passphrasePagePassphraseEntropyOptimal": "Salafraas on korralik",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "PIN-kood on kehv, palun muuda ta pikemaks ja vähem ennustatavaks",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowOptimal": "PIN-kood on juba täitsa hea, parema turvalisuse nimel palun muuda ta pikemaks ja vähem ennustatavaks",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "PIN-kood on piisavalt pikk",
+  "@passphrasePagePinEntropyOptimal": {}
 }
