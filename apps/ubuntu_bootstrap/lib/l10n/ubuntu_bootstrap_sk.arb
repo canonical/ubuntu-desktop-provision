@@ -759,5 +759,17 @@
   "passphraseTypePinTileSubTitle": "Bezpečnejšie. Budete musieť zadať číselný PIN zakaždým, keď zapnete počítač.",
   "@passphraseTypePinTileSubTitle": {},
   "passphraseTypePageBody": "Predvolene modul Trusted Platform Module (TPM) odomkne disk pri spustení počítača. Môžete však tiež požadovať PIN alebo prístupovú frázu na zvýšenie ochrany vašich údajov.",
-  "@passphraseTypePageBody": {}
+  "@passphraseTypePageBody": {},
+  "passphrasePagePassphraseEntropyOptimal": "Silná prístupová fráza",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "Slabý PIN, zvoľte dlhší alebo menej predvídateľný",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowOptimal": "Priemerný PIN, pre lepšiu bezpečnosť zvoľte dlhší alebo menej predvídateľný",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "PIN je dostatočne dlhý",
+  "@passphrasePagePinEntropyOptimal": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Slabá prístupová fráza, vytvorte dlhšiu alebo zložitejšiu",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Priemerná prístupová fráza, pre lepšiu bezpečnosť ju vytvorte dlhšiu alebo zložitejšiu",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {}
 }
