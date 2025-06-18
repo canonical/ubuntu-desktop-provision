@@ -761,5 +761,17 @@
   "recoveryKeyQrDialogBody": "Skanna QR-koden för att kopiera återställningsnyckeln och spara den på ett säkert ställe, till exempel i en lösenordshanterare. Du kan också ta ett foto för senare användning.",
   "@recoveryKeyQrDialogBody": {},
   "recoveryKeyClipboardNotifiaction": "Kopierad till urklipp",
-  "@recoveryKeyClipboardNotifiaction": {}
+  "@recoveryKeyClipboardNotifiaction": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Rättvis lösenfras, gör den längre eller mer komplex för bättre säkerhet",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "Svag PIN-kod, gör den längre eller mindre förutsägbar",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowOptimal": "Rättvis PIN-kod, gör den längre eller mindre förutsägbar för bättre säkerhet",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Svag lösenfras, gör den längre eller mer komplex",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePinEntropyOptimal": "PIN-koden är tillräckligt lång",
+  "@passphrasePagePinEntropyOptimal": {},
+  "passphrasePagePassphraseEntropyOptimal": "Stark lösenfras",
+  "@passphrasePagePassphraseEntropyOptimal": {}
 }
