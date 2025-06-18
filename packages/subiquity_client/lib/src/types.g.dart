@@ -1424,6 +1424,20 @@ Map<String, dynamic> _$$ReformatDiskImplToJson(_$ReformatDiskImpl instance) =>
       'ptable': instance.ptable,
     };
 
+_$CalculateEntropyRequestImpl _$$CalculateEntropyRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CalculateEntropyRequestImpl(
+      passphrase: json['passphrase'] as String?,
+      pin: json['pin'] as String?,
+    );
+
+Map<String, dynamic> _$$CalculateEntropyRequestImplToJson(
+        _$CalculateEntropyRequestImpl instance) =>
+    <String, dynamic>{
+      'passphrase': instance.passphrase,
+      'pin': instance.pin,
+    };
+
 _$EntropyResponseImpl _$$EntropyResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$EntropyResponseImpl(

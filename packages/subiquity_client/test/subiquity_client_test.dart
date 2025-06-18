@@ -682,14 +682,7 @@ void main() {
         ],
       );
       client.open(socketPath);
-    });
 
-    tearDownAll(() async {
-      await client.close();
-      await testServer.stop();
-    });
-
-    test('get core boot recovery key v2', () async {
       await client.setVariant(Variant.DESKTOP);
       await client.setSource('ubuntu-desktop');
       await client.markConfigured([
@@ -707,6 +700,14 @@ void main() {
         'network',
         'ubuntu_pro',
       ]);
+    });
+
+    tearDownAll(() async {
+      await client.close();
+      await testServer.stop();
+    });
+
+    test('set storage', () async {
       final guided = await client.getGuidedStorageV2();
       final target =
           guided.targets.whereType<GuidedStorageTargetReformat>().last;
@@ -717,6 +718,31 @@ void main() {
       );
       await client.setGuidedStorageV2(choice);
       await client.setStorageV2();
+    });
+
+    test('failing entropy checks', () async {
+      expect(
+        await client.calculateEntropyV2(passphrase: 'foobar'),
+        isA<EntropyResponse>(),
+      );
+      expect(
+        await client.calculateEntropyV2(pin: '123'),
+        isA<EntropyResponse>(),
+      );
+    });
+
+    test('successful entropy checks', () async {
+      expect(
+        await client.calculateEntropyV2(passphrase: 'foobar12345'),
+        isNull,
+      );
+      expect(
+        await client.calculateEntropyV2(pin: '12345'),
+        isNull,
+      );
+    });
+
+    test('finish installation', () async {
       await client.monitorStatus().firstWhere(
             (status) => status?.state == ApplicationState.NEEDS_CONFIRMATION,
           );
@@ -724,6 +750,9 @@ void main() {
       await client
           .monitorStatus()
           .firstWhere((status) => status?.state == ApplicationState.DONE);
+    });
+
+    test('get core boot recovery key v2', () async {
       final response = await client.getCoreBootRecoveryKeyV2();
       expect(response, isNotEmpty);
     });

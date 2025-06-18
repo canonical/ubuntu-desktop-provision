@@ -435,6 +435,25 @@ class SubiquityClient {
     return _receive('getCoreBootRecoveryKeyV2()', request);
   }
 
+  Future<EntropyResponse?> calculateEntropyV2({
+    String? passphrase,
+    String? pin,
+  }) async {
+    assert(passphrase == null || pin == null);
+    final request = await _openUrl('POST', 'storage/v2/calculate_entropy');
+    request.write(
+      jsonEncode(
+        CalculateEntropyRequest(passphrase: passphrase, pin: pin).toJson(),
+      ),
+    );
+    return _receive(
+      'calculate_entropy()',
+      request,
+      (Map<String, dynamic>? response) =>
+          response != null ? EntropyResponse.fromJson(response) : null,
+    );
+  }
+
   Future<void> reboot({bool immediate = false}) async {
     final params = {
       'mode': jsonEncode('REBOOT'),

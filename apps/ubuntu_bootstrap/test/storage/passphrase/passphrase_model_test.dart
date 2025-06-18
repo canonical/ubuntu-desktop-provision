@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:subiquity_client/subiquity_client.dart';
+import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/services/storage_service.dart';
 
@@ -7,7 +11,13 @@ import 'test_passphrase.dart';
 
 void main() {
   test('notify changes', () {
-    final model = PassphraseModel(MockStorageService());
+    final storageService = MockStorageService();
+    when(storageService.guidedCapability).thenReturn(GuidedCapability.DIRECT);
+
+    final model = PassphraseModel(
+      storageService,
+      MockSubiquityClient(),
+    );
 
     var wasNotified = false;
     model.addListener(() => wasNotified = true);
@@ -29,7 +39,13 @@ void main() {
   });
 
   test('validation', () {
-    final model = PassphraseModel(MockStorageService());
+    final storageService = MockStorageService();
+    when(storageService.guidedCapability).thenReturn(GuidedCapability.DIRECT);
+
+    final model = PassphraseModel(
+      storageService,
+      MockSubiquityClient(),
+    );
     expect(model.isValid, isFalse);
 
     void testValid(
@@ -48,9 +64,13 @@ void main() {
   });
 
   test('save, clear and load passphrase', () async {
-    final service = MockStorageService();
+    final storageService = MockStorageService();
+    when(storageService.guidedCapability).thenReturn(GuidedCapability.DIRECT);
 
-    final model = PassphraseModel(service);
+    final model = PassphraseModel(
+      storageService,
+      MockSubiquityClient(),
+    );
     model.passphrase = 'foo123';
     model.confirmedPassphrase = 'foo123';
 
@@ -58,19 +78,114 @@ void main() {
     expect(model.passphrase, isEmpty);
     expect(model.confirmedPassphrase, isEmpty);
 
-    verify(service.passphrase = 'foo123').called(1);
-    verifyNever(service.setGuidedStorage());
-    when(service.passphrase).thenReturn('bar456');
-    when(service.passphraseType).thenReturn(PassphraseType.passphrase);
+    verify(storageService.passphrase = 'foo123').called(1);
+    verifyNever(storageService.setGuidedStorage());
+    when(storageService.passphrase).thenReturn('bar456');
+    when(storageService.passphraseType).thenReturn(PassphraseType.passphrase);
 
     await model.loadPassphrase();
-    verify(service.passphrase).called(1);
+    verify(storageService.passphrase).called(1);
     expect(model.passphrase, 'bar456');
     expect(model.confirmedPassphrase, 'bar456');
 
     await model.clearPassphrase();
-    verify(service.passphrase = null).called(1);
+    verify(storageService.passphrase = null).called(1);
     expect(model.passphrase, '');
     expect(model.confirmedPassphrase, '');
+  });
+
+  group('pin/passphrase entropy', () {
+    for (final testCase in [
+      (
+        name: 'insufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        entropyResponse: EntropyResponse(
+          entropy: 1,
+          minimumRequired: 2,
+        ),
+        expectedEntropy: Entropy.belowMin,
+      ),
+      (
+        name: 'sufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        entropyResponse: EntropyResponse(
+          entropy: 3,
+          minimumRequired: 2,
+        ),
+        expectedEntropy: Entropy.optimal,
+      ),
+      (
+        name: 'insufficient pin',
+        passphraseType: PassphraseType.pin,
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        entropyResponse: EntropyResponse(
+          entropy: 1,
+          minimumRequired: 2,
+        ),
+        expectedEntropy: Entropy.belowMin,
+      ),
+      (
+        name: 'sufficient pin',
+        passphraseType: PassphraseType.pin,
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        entropyResponse: EntropyResponse(
+          entropy: 3,
+          minimumRequired: 2,
+        ),
+        expectedEntropy: Entropy.optimal,
+      ),
+      (
+        name: 'no tpm fde',
+        passphraseType: PassphraseType.passphrase,
+        guidedCapability: GuidedCapability.LVM_LUKS,
+        entropyResponse: null,
+        expectedEntropy: null,
+      ),
+    ]) {
+      test(testCase.name, () async {
+        const testPin = '12345';
+        const testPassphrase = 'foobar';
+
+        final storageService = MockStorageService();
+        when(storageService.guidedCapability)
+            .thenReturn(testCase.guidedCapability);
+        when(storageService.passphraseType).thenReturn(testCase.passphraseType);
+
+        final subiquityClient = MockSubiquityClient();
+        if (testCase.passphraseType == PassphraseType.passphrase) {
+          when(
+            subiquityClient.calculateEntropyV2(passphrase: testPassphrase),
+          ).thenAnswer((_) async => testCase.entropyResponse!);
+        } else {
+          when(
+            subiquityClient.calculateEntropyV2(pin: testPin),
+          ).thenAnswer((_) async => testCase.entropyResponse!);
+        }
+
+        final model = PassphraseModel(storageService, subiquityClient);
+
+        // Listen to updates from the model
+        final entropyStreamController = StreamController<Entropy?>.broadcast();
+        model.addListener(() => entropyStreamController.add(model.entropy));
+        final future = expectLater(
+          entropyStreamController.stream,
+          emitsInOrder([
+            isNull, // setting the passphrase results in an update without changing the entropy
+            // there's another update in case the entropy isn't null
+            if (testCase.expectedEntropy != null)
+              equals(testCase.expectedEntropy),
+          ]),
+        );
+
+        model.passphrase = testCase.passphraseType == PassphraseType.pin
+            ? testPin
+            : testPassphrase;
+
+        await future;
+        await entropyStreamController.close();
+      });
+    }
   });
 }

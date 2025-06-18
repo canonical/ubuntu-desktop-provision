@@ -16,6 +16,7 @@ PassphraseModel buildPassphraseModel({
   bool? showPassphrase,
   bool? usePassphrase,
   PassphraseType? passphraseType,
+  Entropy? entropy,
 }) {
   final model = MockPassphraseModel();
   when(model.isValid).thenReturn(isValid ?? true);
@@ -25,6 +26,7 @@ PassphraseModel buildPassphraseModel({
   when(model.showPassphrase).thenReturn(showPassphrase ?? false);
   when(model.passphraseType)
       .thenReturn(passphraseType ?? PassphraseType.passphrase);
+  when(model.entropy).thenReturn(entropy);
   when(model.init()).thenAnswer((_) async => usePassphrase ?? true);
   return model;
 }

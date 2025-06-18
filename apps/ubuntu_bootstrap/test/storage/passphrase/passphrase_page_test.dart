@@ -99,4 +99,66 @@ void main() {
     await tester.enterText(textField, '4b3kk21');
     verify(model.passphrase = '4321').called(1);
   });
+
+  group('pin/passphrase entropy', () {
+    for (final testCase in <({
+      String name,
+      PassphraseType passphraseType,
+      Entropy? entropy,
+      bool isTpm,
+      String? Function(UbuntuBootstrapLocalizations) expectedString,
+    })>[
+      (
+        name: 'insufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        entropy: Entropy.belowMin,
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyBelowMin,
+      ),
+      (
+        name: 'sufficient passphrase',
+        passphraseType: PassphraseType.passphrase,
+        entropy: Entropy.optimal,
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyOptimal
+      ),
+      (
+        name: 'insufficient pin',
+        passphraseType: PassphraseType.pin,
+        entropy: Entropy.belowMin,
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyBelowMin,
+      ),
+      (
+        name: 'sufficient pin',
+        passphraseType: PassphraseType.pin,
+        entropy: Entropy.optimal,
+        isTpm: true,
+        expectedString: (l10n) => l10n.passphrasePagePassphraseEntropyOptimal,
+      ),
+      (
+        name: 'no tpm fde',
+        passphraseType: PassphraseType.passphrase,
+        entropy: null,
+        isTpm: false,
+        expectedString: (_) => null,
+      ),
+    ]) {
+      testWidgets(testCase.name, (tester) async {
+        final model = buildPassphraseModel(
+          passphrase: '12345',
+          entropy: testCase.entropy,
+          isTpm: testCase.isTpm,
+        );
+        await tester.pumpApp((_) => buildPage(model));
+
+        if (testCase.expectedString(tester.lang) != null) {
+          expect(
+            find.text(testCase.expectedString(tester.lang)!),
+            findsOneWidget,
+          );
+        }
+      });
+    }
+  });
 }

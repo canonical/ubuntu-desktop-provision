@@ -1073,6 +1073,17 @@ class ReformatDisk with _$ReformatDisk {
 }
 
 @freezed
+class CalculateEntropyRequest with _$CalculateEntropyRequest {
+  const factory CalculateEntropyRequest({
+    String? passphrase,
+    String? pin,
+  }) = _CalculateEntropyRequest;
+
+  factory CalculateEntropyRequest.fromJson(Map<String, dynamic> json) =>
+      _$CalculateEntropyRequestFromJson(json);
+}
+
+@freezed
 class EntropyResponse with _$EntropyResponse {
   const factory EntropyResponse({
     required double entropy,

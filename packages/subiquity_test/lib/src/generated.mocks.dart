@@ -762,6 +762,23 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
       ) as _i5.Future<String>);
 
   @override
+  _i5.Future<_i2.EntropyResponse?> calculateEntropyV2({
+    String? passphrase,
+    String? pin,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #calculateEntropyV2,
+          [],
+          {
+            #passphrase: passphrase,
+            #pin: pin,
+          },
+        ),
+        returnValue: _i5.Future<_i2.EntropyResponse?>.value(),
+      ) as _i5.Future<_i2.EntropyResponse?>);
+
+  @override
   _i5.Future<void> reboot({bool? immediate = false}) => (super.noSuchMethod(
         Invocation.method(
           #reboot,
