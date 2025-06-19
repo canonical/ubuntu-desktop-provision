@@ -761,5 +761,17 @@
   "passphraseTypePinTileSubTitle": "Більш безпечно. Вам потрібно буде вводити цифровий PIN-код кожного разу, коли ви вмикаєте комп'ютер.",
   "@passphraseTypePinTileSubTitle": {},
   "passphrasePageHeaderPassphrase": "Встановити пароль для шифрування",
-  "@passphrasePageHeaderPassphrase": {}
+  "@passphrasePageHeaderPassphrase": {},
+  "passphrasePagePassphraseEntropyOptimal": "Міцний пароль",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowOptimal": "Справедливий PIN-код, зробіть його довшим або менш передбачуваним для кращої безпеки",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "PIN-код достатньо довгий",
+  "@passphrasePagePinEntropyOptimal": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Слабкий пароль, зробіть його довшим або складнішим",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Справедливий пароль, зробіть його довшим або складнішим для кращої безпеки",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "Слабкий PIN-код, зробіть його довшим або менш передбачуваним",
+  "@passphrasePagePinEntropyBelowMin": {}
 }
