@@ -727,5 +727,17 @@
   "passphrasePageChoosePassphraseHint": "Wachtwoordzin",
   "@passphrasePageChoosePassphraseHint": {},
   "passphraseTypePassphraseTileSubTitle": "Meest veilig. Elke keer dat u uw computer inschakelt, moet u een langere wachtwoordzin invoeren.",
-  "@passphraseTypePassphraseTileSubTitle": {}
+  "@passphraseTypePassphraseTileSubTitle": {},
+  "passphrasePagePassphraseEntropyOptimal": "Sterke wachtwoordzin",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "Zwakke pincode, maak het langer of minder voorspelbaar",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowOptimal": "Redelijke pincode, maak het langer of minder voorspelbaar voor betere beveiliging",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "Pincode is niet lang genoeg",
+  "@passphrasePagePinEntropyOptimal": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Zwakke wachtwoordzin, maak het langer of meer complex",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Redelijke wachtwoordzin, maak het langer of meer complex voor betere beveiliging",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {}
 }
