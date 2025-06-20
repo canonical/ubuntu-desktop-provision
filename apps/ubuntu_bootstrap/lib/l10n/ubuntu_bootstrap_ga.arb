@@ -755,5 +755,17 @@
   "passphrasePageConfirmPassphraseHint": "Deimhnigh an frása faire",
   "@passphrasePageConfirmPassphraseHint": {},
   "passphraseTypeNoneTileTitle": "Díghlasáil diosca go huathoibríoch",
-  "@passphraseTypeNoneTileTitle": {}
+  "@passphraseTypeNoneTileTitle": {},
+  "passphrasePagePinEntropyBelowOptimal": "UAP cothrom, déan é níos faide nó níos lú intuartha le haghaidh slándála níos fearr",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "Tá an PIN fada go leor",
+  "@passphrasePagePinEntropyOptimal": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Pasfrása cothrom, déan níos faide nó níos casta é le haghaidh slándála níos fearr",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "passphrasePagePassphraseEntropyOptimal": "Pasfrása láidir",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "UAP lag, déan níos faide nó níos lú intuartha é",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Pasfrása lag, déan níos faide nó níos casta é",
+  "@passphrasePagePassphraseEntropyBelowMin": {}
 }
