@@ -3,5 +3,11 @@
   "close": "Fechar",
   "@close": {},
   "appTitle": "Ferramentas de redefinição de fábrica",
-  "@appTitle": {}
+  "@appTitle": {},
+  "windowTitle": "Ferramentas de redefinição de fábrica",
+  "@windowTitle": {},
+  "homeTitle": "O que você gostaria de fazer?",
+  "@homeTitle": {},
+  "restart": "Reiniciar",
+  "@restart": {}
 }
