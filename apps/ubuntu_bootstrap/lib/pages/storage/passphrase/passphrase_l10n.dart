@@ -3,16 +3,20 @@ import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 
 final _unreachable = Exception('unreachable l10n string');
 
-extension EntropyL10n on Entropy {
+extension EntropyL10n on SemanticEntropy {
   String localize(UbuntuBootstrapLocalizations l10n, PassphraseType type) =>
       switch ((this, type)) {
-        (Entropy.belowMin, PassphraseType.passphrase) =>
+        (SemanticEntropy.belowMin, PassphraseType.passphrase) =>
           l10n.passphrasePagePassphraseEntropyBelowMin,
-        (Entropy.optimal, PassphraseType.passphrase) =>
+        (SemanticEntropy.belowOptimal, PassphraseType.passphrase) =>
+          l10n.passphrasePagePassphraseEntropyBelowOptimal,
+        (SemanticEntropy.optimal, PassphraseType.passphrase) =>
           l10n.passphrasePagePassphraseEntropyOptimal,
-        (Entropy.belowMin, PassphraseType.pin) =>
+        (SemanticEntropy.belowMin, PassphraseType.pin) =>
           l10n.passphrasePagePinEntropyBelowMin,
-        (Entropy.optimal, PassphraseType.pin) =>
+        (SemanticEntropy.belowOptimal, PassphraseType.pin) =>
+          l10n.passphrasePagePinEntropyBelowOptimal,
+        (SemanticEntropy.optimal, PassphraseType.pin) =>
           l10n.passphrasePagePinEntropyOptimal,
         _ => throw _unreachable,
       };
