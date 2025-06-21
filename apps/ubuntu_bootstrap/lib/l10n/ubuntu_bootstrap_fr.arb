@@ -761,5 +761,17 @@
   "recoveryKeyFilePickerTitle": "Sauvegarder fichier clé de secours",
   "@recoveryKeyFilePickerTitle": {},
   "recoveryKeyFilePickerFilter": "Fichiers texte",
-  "@recoveryKeyFilePickerFilter": {}
+  "@recoveryKeyFilePickerFilter": {},
+  "passphrasePagePassphraseEntropyBelowMin": "Phrase de passe faible, faites-la plus longue ou plus complexe",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "Phrase de passe acceptable, rendez-la plus longue ou plus complexe pour une meilleure sécurité",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "passphrasePagePassphraseEntropyOptimal": "Phrase de passe forte",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "Code PIN faible, le rendre plus long ou moins prévisible",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowOptimal": "PIN acceptable, pour une meilleure sécurité le rendre plus long ou moins prévisible",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "PIN suffisamment long",
+  "@passphrasePagePinEntropyOptimal": {}
 }
