@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Új megjelenésű alkalmazásbolt';
 
   @override
-  String get welcomeStoreSubtitle => 'Soha sem volt még ilyen egyszerű megtalálni a kedvenc szoftverét.';
+  String get welcomeStoreSubtitle =>
+      'Soha sem volt még ilyen egyszerű megtalálni a kedvenc szoftverét.';
 
   @override
   String get welcomeSecurityTitle => 'Fokozott biztonság';
 
   @override
-  String get welcomeSecuritySubtitle => 'Új lehetőségek a hardveresen támogatott vagy ZFS titkosításhoz.';
+  String get welcomeSecuritySubtitle =>
+      'Új lehetőségek a hardveresen támogatott vagy ZFS titkosításhoz.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,16 +75,19 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Jogi nyilatkozat';
 
   @override
-  String get telemetryCollectError => 'Nem sikerült összegyűjteni a telemetria adatait';
+  String get telemetryCollectError =>
+      'Nem sikerült összegyűjteni a telemetria adatait';
 
   @override
   String get privacyPageTitle => 'Helymeghatározó szolgáltatások';
 
   @override
-  String get privacyLocationTitle => 'Engedélyezi a helymeghatározó szolgáltatásokat?';
+  String get privacyLocationTitle =>
+      'Engedélyezi a helymeghatározó szolgáltatásokat?';
 
   @override
-  String get privacyLocationSubtitle => 'Tudassa az alkalmazásokkal a földrajzi helyzetét.\nEzt bármikor megváltoztathatja a rendszerbeállításokban.';
+  String get privacyLocationSubtitle =>
+      'Tudassa az alkalmazásokkal a földrajzi helyzetét.\nEzt bármikor megváltoztathatja a rendszerbeállításokban.';
 
   @override
   String get privacyLocationEnable => 'Helymeghatározó szolgáltatások';
@@ -108,7 +113,8 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'A legátfogóbb előfizetés beszerzése a nyílt forráskódú szoftverek biztonságához';
+  String get ubuntuProSubscriptionDescription =>
+      'A legátfogóbb előfizetés beszerzése a nyílt forráskódú szoftverek biztonságához';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +131,29 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Érvényes token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Érvénytelen token, újrapróbálkozás';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Érvénytelen token, újrapróbálkozás';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Kihagyás most';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Később bármikor engedélyezheti az Ubuntu Pro használatát a Szoftverek és frissítések alkalmazáson keresztül.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Később bármikor engedélyezheti az Ubuntu Pro használatát a Szoftverek és frissítések alkalmazáson keresztül.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Az Ubuntu Pro engedélyezése';
+  String get ubuntuProOnBoardingEnableUbuntuPro =>
+      'Az Ubuntu Pro engedélyezése';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Csatolja ezt a gépet egy Ubuntu Pro előfizetéshez, hogy a csomagok szélesebb körére kapjon biztonsági frissítéseket 2032-ig.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Csatolja ezt a gépet egy Ubuntu Pro előfizetéshez, hogy a csomagok szélesebb körére kapjon biztonsági frissítéseket 2032-ig.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Az Ubuntu Pro most már engedélyezve van ezen a gépen';
+  String get ubuntuProSucessAttachHeader =>
+      'Az Ubuntu Pro most már engedélyezve van ezen a gépen';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'A Pro szolgáltatásokat a Szoftverek és frissítések alkalmazásban kezelheti.';
+  String get ubuntuProSucessAttachDescription =>
+      'A Pro szolgáltatásokat a Szoftverek és frissítések alkalmazásban kezelheti.';
 }

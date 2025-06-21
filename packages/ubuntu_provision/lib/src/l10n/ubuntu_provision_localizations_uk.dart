@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Щось пішло не так';
 
   @override
-  String get errorPageUnexpected => 'Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезапустити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
+  String get errorPageUnexpected =>
+      'Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезапустити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -114,7 +115,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Варіант клавіатури:';
 
   @override
-  String get keyboardPressKeyLabel => 'Будь ласка, натисніть одну з цих клавiш:';
+  String get keyboardPressKeyLabel =>
+      'Будь ласка, натисніть одну з цих клавiш:';
 
   @override
   String get keyboardKeyPresentLabel => 'Чи присутня ця клавіша на клавіатурі?';
@@ -123,7 +125,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'Оберіть зовнішній вигляд';
 
   @override
-  String get themePageHeader => 'Ви завжди можете змінити це пізніше в налаштуваннях зовнішнього вигляду.';
+  String get themePageHeader =>
+      'Ви завжди можете змінити це пізніше в налаштуваннях зовнішнього вигляду.';
 
   @override
   String get themeDark => 'Темний';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Iм\'я вашого комп\'ютера';
 
   @override
-  String get identityHostnameInfo => 'Iм\'я, яке використовується для зв\'язку з іншими комп\'ютерами.';
+  String get identityHostnameInfo =>
+      'Iм\'я, яке використовується для зв\'язку з іншими комп\'ютерами.';
 
   @override
   String get identityHostnameRequired => 'Потрібно вказати ім\'я комп\'ютера';
@@ -185,13 +189,15 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Таке ім\'я користувача вже існує.';
 
   @override
-  String get identityUsernameSystemReserved => 'Це ім\'я зарезервоване для використання в системі.';
+  String get identityUsernameSystemReserved =>
+      'Це ім\'я зарезервоване для використання в системі.';
 
   @override
   String get identityUsernameTooLong => 'Це ім\'я занадто довге.';
 
   @override
-  String get identityUsernameInvalidChars => 'Це ім\'я містить недопустимі символи.';
+  String get identityUsernameInvalidChars =>
+      'Це ім\'я містить недопустимі символи.';
 
   @override
   String get identityPasswordLabel => 'Оберіть пароль';
@@ -215,7 +221,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Скористатися Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'На наступному кроці ви введете назву домену та інші подробиці.';
+  String get identityActiveDirectoryInfo =>
+      'На наступному кроці ви введете назву домену та інші подробиці.';
 
   @override
   String get activeDirectoryTitle => 'Налаштування Active Directory';
@@ -256,7 +263,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Закінчується дефісом (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Містить кілька послідовних крапок (.)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Містить кілька послідовних крапок (.)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Домен не знайдено';
@@ -277,10 +285,12 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Обов\'язково заповнити';
 
   @override
-  String get activeDirectoryErrorTitle => 'Помилка при налаштовуванні з\'єднання із Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Помилка при налаштовуванні з\'єднання із Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'На жаль, зараз неможливо налаштувати Active Directory. Коли ваша система буде запущена, відвідайте <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, щоб отримати допомогу.';
+  String get activeDirectoryErrorMessage =>
+      'На жаль, зараз неможливо налаштувати Active Directory. Коли ваша система буде запущена, відвідайте <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, щоб отримати допомогу.';
 
   @override
   String get networkPageTitle => 'З\'єднання з інтернетом';
@@ -289,7 +299,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Під\'єднання до інтернету';
 
   @override
-  String get networkPageBody => 'З\'єднання з інтернетом поліпшить встановлення завдяки перевірці сумісності та додатковим пакункам програмного забезпечення.';
+  String get networkPageBody =>
+      'З\'єднання з інтернетом поліпшить встановлення завдяки перевірці сумісності та додатковим пакункам програмного забезпечення.';
 
   @override
   String get networkWiredOption => 'Використовувати дротове підключення';
@@ -301,7 +312,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Дротове підключення вимкнено';
 
   @override
-  String get networkWiredDisabled => 'Для використання Ethernet на цьому комп\'ютері повинно бути включено дротове підключення';
+  String get networkWiredDisabled =>
+      'Для використання Ethernet на цьому комп\'ютері повинно бути включено дротове підключення';
 
   @override
   String get networkWiredEnable => 'Увімкнути дротове підключення';
@@ -316,13 +328,15 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Не знайдено жодного Wi-Fi пристрою';
 
   @override
-  String get networkWifiDisabled => 'Для використання Wi-Fi на цьому комп\'ютері має бути ввімкнений бездротовий зв’язок';
+  String get networkWifiDisabled =>
+      'Для використання Wi-Fi на цьому комп\'ютері має бути ввімкнений бездротовий зв’язок';
 
   @override
   String get networkWifiEnable => 'Ввімкнути Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Підключитися до прихованої Wi-Fi мережі';
+  String get networkHiddenWifiOption =>
+      'Підключитися до прихованої Wi-Fi мережі';
 
   @override
   String get networkHiddenWifiNameLabel => 'Назва мережі';
@@ -340,7 +354,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Переглянути умови ліцензії';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Щоб продовжити налаштування цього пристрою, ви повинні прочитати та прийняти умови ліцензійної угоди.';
+  String get eulaReadAndAcceptTerms =>
+      'Щоб продовжити налаштування цього пристрою, ви повинні прочитати та прийняти умови ліцензійної угоди.';
 
   @override
   String get eulaAcceptTerms => 'Я прочитав і приймаю ці умови';

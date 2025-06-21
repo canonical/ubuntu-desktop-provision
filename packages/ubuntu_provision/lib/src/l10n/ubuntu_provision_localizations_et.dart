@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Midagi läks valesti';
 
   @override
-  String get errorPageUnexpected => 'Vabandust, aga me ei tea, mis veaga on tegemist. Sa võid proovida, kas arvuti uuesti käivitamine ja paigalduse uuesti alustamine parandab selle vea. Lisaks saad sa veast <a>ka meile teada anda</a>.';
+  String get errorPageUnexpected =>
+      'Vabandust, aga me ei tea, mis veaga on tegemist. Sa võid proovida, kas arvuti uuesti käivitamine ja paigalduse uuesti alustamine parandab selle vea. Lisaks saad sa veast <a>ka meile teada anda</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Vajuta ühte järgnevatest klahvidest:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Kas järgnev klahv leidub klahvistikul?';
+  String get keyboardKeyPresentLabel =>
+      'Kas järgnev klahv leidub klahvistikul?';
 
   @override
   String get themePageTitle => 'Vali kujundus';
 
   @override
-  String get themePageHeader => 'Saad seda alati hiljem muuta välimuse seadistustest.';
+  String get themePageHeader =>
+      'Saad seda alati hiljem muuta välimuse seadistustest.';
 
   @override
   String get themeDark => 'Tume kujundus';
@@ -161,10 +164,12 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Sinu arvuti nimi';
 
   @override
-  String get identityHostnameInfo => 'Selle arvuti nimi teiste arvutitega suhtlemisel.';
+  String get identityHostnameInfo =>
+      'Selle arvuti nimi teiste arvutitega suhtlemisel.';
 
   @override
-  String get identityHostnameRequired => 'Arvuti nime sisestamine on kohustuslik';
+  String get identityHostnameRequired =>
+      'Arvuti nime sisestamine on kohustuslik';
 
   @override
   String get identityHostnameTooLong => 'See arvutinimi on liiga pikk.';
@@ -176,7 +181,8 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get identityUsernameLabel => 'Sinu kasutajanimi';
 
   @override
-  String get identityUsernameRequired => 'Kasutajanime sisestamine on kohustuslik';
+  String get identityUsernameRequired =>
+      'Kasutajanime sisestamine on kohustuslik';
 
   @override
   String get identityInvalidUsername => 'See kasutajanimi on vigane';
@@ -185,13 +191,15 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Selline kasutajanimi on juba olemas.';
 
   @override
-  String get identityUsernameSystemReserved => 'Selline kasutajanimi on reserveeritud vaid operatsioonisüsteemi jaoks.';
+  String get identityUsernameSystemReserved =>
+      'Selline kasutajanimi on reserveeritud vaid operatsioonisüsteemi jaoks.';
 
   @override
   String get identityUsernameTooLong => 'See nimi on liiga pikk.';
 
   @override
-  String get identityUsernameInvalidChars => 'Selles nimes on keelatud tähemärke.';
+  String get identityUsernameInvalidChars =>
+      'Selles nimes on keelatud tähemärke.';
 
   @override
   String get identityPasswordLabel => 'Salasõna';
@@ -212,16 +220,19 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get identityPasswordHide => 'Peida';
 
   @override
-  String get identityActiveDirectoryOption => 'Kasuta Active Directory teenuseid';
+  String get identityActiveDirectoryOption =>
+      'Kasuta Active Directory teenuseid';
 
   @override
-  String get identityActiveDirectoryInfo => 'Sa sisestad domeeni ja muud andmed järgmises sammus.';
+  String get identityActiveDirectoryInfo =>
+      'Sa sisestad domeeni ja muud andmed järgmises sammus.';
 
   @override
   String get activeDirectoryTitle => 'Logi sisse Active Directory teenusega';
 
   @override
-  String get activeDirectoryHeader => 'Kas logime sisse Active Directory teenusega?';
+  String get activeDirectoryHeader =>
+      'Kas logime sisse Active Directory teenusega?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
@@ -256,13 +267,15 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Lõppeb sidekriipsuga (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Sisaldab mitut järjestikku punkti (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Sisaldab mitut järjestikku punkti (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domeeni ei leidu';
 
   @override
-  String get activeDirectoryAdminLabel => 'Kasutajanimi arvuti lisamiseks domeeni';
+  String get activeDirectoryAdminLabel =>
+      'Kasutajanimi arvuti lisamiseks domeeni';
 
   @override
   String get activeDirectoryAdminEmpty => 'Nõutav';
@@ -277,10 +290,12 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Nõutav';
 
   @override
-  String get activeDirectoryErrorTitle => 'Viga Active Directory teenuse ühenduse seadistamisel';
+  String get activeDirectoryErrorTitle =>
+      'Viga Active Directory teenuse ühenduse seadistamisel';
 
   @override
-  String get activeDirectoryErrorMessage => 'Vabandust, Active Directory teenuse ühendust ei õnnestu praegu seadistada. Kui arvuti paigaldus on lõppenud, siis palun loe abiteavet <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> lehelt.';
+  String get activeDirectoryErrorMessage =>
+      'Vabandust, Active Directory teenuse ühendust ei õnnestu praegu seadistada. Kui arvuti paigaldus on lõppenud, siis palun loe abiteavet <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> lehelt.';
 
   @override
   String get networkPageTitle => 'Internetiühendus';
@@ -289,19 +304,22 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Lisa internetiühendus';
 
   @override
-  String get networkPageBody => 'Internetiühendus võimaldab võrgust laadida andmeid ühilduvuskontrolli jaoks ja täiendavaid tarkvarapakette.';
+  String get networkPageBody =>
+      'Internetiühendus võimaldab võrgust laadida andmeid ühilduvuskontrolli jaoks ja täiendavaid tarkvarapakette.';
 
   @override
   String get networkWiredOption => 'Kasuta kaabliga internetiühendust';
 
   @override
-  String get networkWiredNone => 'Ühtegi kaabliga internetiühendust ei õnnestunud tuvastada';
+  String get networkWiredNone =>
+      'Ühtegi kaabliga internetiühendust ei õnnestunud tuvastada';
 
   @override
   String get networkWiredOff => 'Kaabliga internetiühendus on välja lülitatud';
 
   @override
-  String get networkWiredDisabled => 'Kui soovid siin arvutis Etherneti-võrku kasutada, siis kaabliga võrguühendus peab olema sisse lülitatud';
+  String get networkWiredDisabled =>
+      'Kui soovid siin arvutis Etherneti-võrku kasutada, siis kaabliga võrguühendus peab olema sisse lülitatud';
 
   @override
   String get networkWiredEnable => 'Lülita kaabliga internetiühendus sisse';
@@ -316,7 +334,8 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Ühtegi WiFi-võrku ei õnnestunud tuvastada';
 
   @override
-  String get networkWifiDisabled => 'Kui soovid siin arvutis WiFi-võrku kasutada, siis traadita võrguühendus peab olema sisse lülitatud';
+  String get networkWifiDisabled =>
+      'Kui soovid siin arvutis WiFi-võrku kasutada, siis traadita võrguühendus peab olema sisse lülitatud';
 
   @override
   String get networkWifiEnable => 'Lülita WiFi sisse';
@@ -340,8 +359,10 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Tutvu litsentsilepingu tingimustega';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Jätkamaks paigaldust selles arvutis pead sa olema lugenud litsentsilepingut ja nõustunud tema tingimustega.';
+  String get eulaReadAndAcceptTerms =>
+      'Jätkamaks paigaldust selles arvutis pead sa olema lugenud litsentsilepingut ja nõustunud tema tingimustega.';
 
   @override
-  String get eulaAcceptTerms => 'Ma olen lugenud litsentsilepingut ja nõustun tema tingimustega';
+  String get eulaAcceptTerms =>
+      'Ma olen lugenud litsentsilepingut ja nõustun tema tingimustega';
 }

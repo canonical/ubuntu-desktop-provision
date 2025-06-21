@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Ada yang salah';
 
   @override
-  String get errorPageUnexpected => 'Kami minta maaf, tetapi kami tidak yakin apa kesalahannya. Anda dapat mencoba menjalankan ulang komputer Anda dan memulai proses instalasi lagi. Anda juga dapat <a>melaporkan masalah</a>.';
+  String get errorPageUnexpected =>
+      'Kami minta maaf, tetapi kami tidak yakin apa kesalahannya. Anda dapat mencoba menjalankan ulang komputer Anda dan memulai proses instalasi lagi. Anda juga dapat <a>melaporkan masalah</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -114,16 +115,19 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Pilih varian papan ketik Anda:';
 
   @override
-  String get keyboardPressKeyLabel => 'Silakan tekan salah satu tombol berikut:';
+  String get keyboardPressKeyLabel =>
+      'Silakan tekan salah satu tombol berikut:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Apakah tombol berikut ada di papan ketik Anda?';
+  String get keyboardKeyPresentLabel =>
+      'Apakah tombol berikut ada di papan ketik Anda?';
 
   @override
   String get themePageTitle => 'Pilih penampilan Anda';
 
   @override
-  String get themePageHeader => 'Anda selalu dapat mengubahnya nanti di pengaturan tampilan.';
+  String get themePageHeader =>
+      'Anda selalu dapat mengubahnya nanti di pengaturan tampilan.';
 
   @override
   String get themeDark => 'Gelap';
@@ -161,7 +165,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Nama komputer Anda';
 
   @override
-  String get identityHostnameInfo => 'Nama yang digunakannya saat berbicara dengan komputer lain.';
+  String get identityHostnameInfo =>
+      'Nama yang digunakannya saat berbicara dengan komputer lain.';
 
   @override
   String get identityHostnameRequired => 'Sebuah nama komputer diperlukan';
@@ -185,13 +190,15 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Nama pengguna sudah ada.';
 
   @override
-  String get identityUsernameSystemReserved => 'Nama itu dicadangkan untuk penggunaan sistem.';
+  String get identityUsernameSystemReserved =>
+      'Nama itu dicadangkan untuk penggunaan sistem.';
 
   @override
   String get identityUsernameTooLong => 'Nama itu terlalu panjang.';
 
   @override
-  String get identityUsernameInvalidChars => 'Nama itu mengandung karakter yang tidak valid.';
+  String get identityUsernameInvalidChars =>
+      'Nama itu mengandung karakter yang tidak valid.';
 
   @override
   String get identityPasswordLabel => 'Pilih sebuah kata sandi';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Gunakan Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Anda akan memasukkan domain dan rincian lain dalam langkah berikutnya.';
+  String get identityActiveDirectoryInfo =>
+      'Anda akan memasukkan domain dan rincian lain dalam langkah berikutnya.';
 
   @override
   String get activeDirectoryTitle => 'Log masuk ke Active Directory';
@@ -250,13 +258,16 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Berakhir dengan titik (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Mulai dengan tanda sambung (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Mulai dengan tanda sambung (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Berakhir dengan tanda sambung (-)';
+  String get activeDirectoryDomainEndHyphen =>
+      'Berakhir dengan tanda sambung (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Mengandung beberapa titik berurutan (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Mengandung beberapa titik berurutan (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain tidak ditemukan';
@@ -277,10 +288,12 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Dibutuhkan';
 
   @override
-  String get activeDirectoryErrorTitle => 'Galat saat mengonfigurasi koneksi ke Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Galat saat mengonfigurasi koneksi ke Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Maaf, Active Directory tidak dapat disiapkan saat ini. Setelah sistem Anda hidup dan berjalan, kunjungi <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory </a> untuk bantuan.';
+  String get activeDirectoryErrorMessage =>
+      'Maaf, Active Directory tidak dapat disiapkan saat ini. Setelah sistem Anda hidup dan berjalan, kunjungi <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory </a> untuk bantuan.';
 
   @override
   String get networkPageTitle => 'Menyambung ke internet';
@@ -289,7 +302,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Hubungkan ke internet';
 
   @override
-  String get networkPageBody => 'Suatu koneksi internet akan memperbaiki instalasi Anda dengan pemeriksaan kompatibilitas dan paket perangkat lunak ekstra.';
+  String get networkPageBody =>
+      'Suatu koneksi internet akan memperbaiki instalasi Anda dengan pemeriksaan kompatibilitas dan paket perangkat lunak ekstra.';
 
   @override
   String get networkWiredOption => 'Gunakan sambungan kabel';
@@ -301,7 +315,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Koneksi lewat kabel dimatikan';
 
   @override
-  String get networkWiredDisabled => 'Untuk memakai Ethernet pada komputer ini, suatu koneksi lewat kabel mesti difungsikan';
+  String get networkWiredDisabled =>
+      'Untuk memakai Ethernet pada komputer ini, suatu koneksi lewat kabel mesti difungsikan';
 
   @override
   String get networkWiredEnable => 'Fungsikan lewat kabel';
@@ -316,13 +331,15 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Tidak ada peranti Wi-Fi yang terdeteksi';
 
   @override
-  String get networkWifiDisabled => 'Untuk memakai Wi-Fi pada komputer ini, jaringan nirkabel mesti difungsikan';
+  String get networkWifiDisabled =>
+      'Untuk memakai Wi-Fi pada komputer ini, jaringan nirkabel mesti difungsikan';
 
   @override
   String get networkWifiEnable => 'Fungsikan Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Menyambung ke jaringan Wi-Fi tersembunyi';
+  String get networkHiddenWifiOption =>
+      'Menyambung ke jaringan Wi-Fi tersembunyi';
 
   @override
   String get networkHiddenWifiNameLabel => 'Nama jaringan';
@@ -331,7 +348,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Nama jaringan diperlukan';
 
   @override
-  String get networkNoneOption => 'Saya tidak ingin tersambung ke internet saat ini';
+  String get networkNoneOption =>
+      'Saya tidak ingin tersambung ke internet saat ini';
 
   @override
   String get eulaPageTitle => 'Persetujuan lisensi';
@@ -340,8 +358,10 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Tinjau persyaratan lisensi';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Untuk melanjutkan penyiapan mesin ini, Anda harus membaca dan menerima persyaratan perjanjian lisensi.';
+  String get eulaReadAndAcceptTerms =>
+      'Untuk melanjutkan penyiapan mesin ini, Anda harus membaca dan menerima persyaratan perjanjian lisensi.';
 
   @override
-  String get eulaAcceptTerms => 'Saya telah membaca dan menerima syarat-syarat ini';
+  String get eulaAcceptTerms =>
+      'Saya telah membaca dan menerima syarat-syarat ini';
 }

@@ -4,7 +4,7 @@ publish_to: "none"
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.29.2"
+  flutter: ">=3.32.1"
 
 dependencies:
   dbus: ^0.7.10
@@ -25,7 +25,7 @@ dependencies:
   ubuntu_test: ^0.2.2
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
-  yaru: ^7.0.0
+  yaru: ^8.0.0
   yaru_test: ^0.3.1
 
 dev_dependencies:

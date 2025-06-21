@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Quicòm a trucat';
 
   @override
-  String get errorPageUnexpected => 'O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben<a>senhalar l’anomalia</a>.';
+  String get errorPageUnexpected =>
+      'O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben<a>senhalar l’anomalia</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -114,16 +115,19 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Varianta del clavièr :';
 
   @override
-  String get keyboardPressKeyLabel => 'Mercés de quichar una de las tòcas seguentas :';
+  String get keyboardPressKeyLabel =>
+      'Mercés de quichar una de las tòcas seguentas :';
 
   @override
-  String get keyboardKeyPresentLabel => 'La tòca seguenta es presenta sul clavièr ?';
+  String get keyboardKeyPresentLabel =>
+      'La tòca seguenta es presenta sul clavièr ?';
 
   @override
   String get themePageTitle => 'Causissètz vòstre tèma';
 
   @override
-  String get themePageHeader => 'La poiretz cambiar mai tard en anant a las preferéncias d’aparéncia.';
+  String get themePageHeader =>
+      'La poiretz cambiar mai tard en anant a las preferéncias d’aparéncia.';
 
   @override
   String get themeDark => 'Fosc';
@@ -146,7 +150,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityAutoLogin => 'Se connectar automaticament';
 
   @override
-  String get identityRequirePassword => 'Demandar mon senhal per dobrir una session';
+  String get identityRequirePassword =>
+      'Demandar mon senhal per dobrir una session';
 
   @override
   String get identityRealNameLabel => 'Vòstre prenom';
@@ -161,7 +166,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Lo nom de l’ordenador';
 
   @override
-  String get identityHostnameInfo => 'Lo nom qu’utiliza per comunicar amb d’autres ordenadors.';
+  String get identityHostnameInfo =>
+      'Lo nom qu’utiliza per comunicar amb d’autres ordenadors.';
 
   @override
   String get identityHostnameRequired => 'Un nom d’ordenador es requerit';
@@ -185,13 +191,15 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Aqueste nom d’utilizaire existís ja.';
 
   @override
-  String get identityUsernameSystemReserved => 'Aqueste nom es reservat per l’usatge del sistèma.';
+  String get identityUsernameSystemReserved =>
+      'Aqueste nom es reservat per l’usatge del sistèma.';
 
   @override
   String get identityUsernameTooLong => 'Aqueste nom es tròp long.';
 
   @override
-  String get identityUsernameInvalidChars => 'Aqueste nom conten de caractèrs invalids.';
+  String get identityUsernameInvalidChars =>
+      'Aqueste nom conten de caractèrs invalids.';
 
   @override
   String get identityPasswordLabel => 'Causissètz un senhal';
@@ -215,7 +223,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Utilizar Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Picaretz lo domeni e los autres detalhs a l’etapa que ven.';
+  String get identityActiveDirectoryInfo =>
+      'Picaretz lo domeni e los autres detalhs a l’etapa que ven.';
 
   @override
   String get activeDirectoryTitle => 'Configurar Active Directory';
@@ -262,7 +271,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainNotFound => 'Domeni introbable';
 
   @override
-  String get activeDirectoryAdminLabel => 'Nom d’utilizaire per rejónher lo domeni';
+  String get activeDirectoryAdminLabel =>
+      'Nom d’utilizaire per rejónher lo domeni';
 
   @override
   String get activeDirectoryAdminEmpty => 'Obligatòri';
@@ -277,19 +287,23 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Obligatòri';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error en configurant la connexion a l’Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Error en configurant la connexion a l’Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'O planhèm, se pòt pas configurar Active Directory pel moment. Un còp lo sistèma operacional, consultatz <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per d’ajuda.';
+  String get activeDirectoryErrorMessage =>
+      'O planhèm, se pòt pas configurar Active Directory pel moment. Un còp lo sistèma operacional, consultatz <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per d’ajuda.';
 
   @override
   String get networkPageTitle => 'Se connectar a un ret';
 
   @override
-  String get networkPageHeader => 'Connectar aqueste ordenador a internet permetrà a Ubuntu d’installar de logicials suplementaris e de definir vòstre fus orari.\n\nConnectatz un cable Ethernet, o causissètz un ret Wifi';
+  String get networkPageHeader =>
+      'Connectar aqueste ordenador a internet permetrà a Ubuntu d’installar de logicials suplementaris e de definir vòstre fus orari.\n\nConnectatz un cable Ethernet, o causissètz un ret Wifi';
 
   @override
-  String get networkPageBody => 'Una connexion Internet melhorarà l’installacion amb la verificacion de compatibilitat e los paquets logicials addicionals.';
+  String get networkPageBody =>
+      'Una connexion Internet melhorarà l’installacion amb la verificacion de compatibilitat e los paquets logicials addicionals.';
 
   @override
   String get networkWiredOption => 'Utilizar una connexion filara';
@@ -301,7 +315,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'La connexion filara es desactivada';
 
   @override
-  String get networkWiredDisabled => 'Per utilizar l’Ethernet sus aqueste ordenador, una connexion filara deu èsser activada';
+  String get networkWiredDisabled =>
+      'Per utilizar l’Ethernet sus aqueste ordenador, una connexion filara deu èsser activada';
 
   @override
   String get networkWiredEnable => 'Activar la connexion filara';
@@ -316,7 +331,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Cap de periferic Wifi pas detectat';
 
   @override
-  String get networkWifiDisabled => 'Per utilizar lo Wifi sus aqueste ordenador, lo ret sens fial deu èsser activat';
+  String get networkWifiDisabled =>
+      'Per utilizar lo Wifi sus aqueste ordenador, lo ret sens fial deu èsser activat';
 
   @override
   String get networkWifiEnable => 'Activar lo Wifi';
@@ -340,7 +356,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Repassar los tèrmes de licéncia';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Per contunhar la configuracion d’aquesta maquina, devètz legir e acceptar los tèrmes de l’acòrd de la licéncia.';
+  String get eulaReadAndAcceptTerms =>
+      'Per contunhar la configuracion d’aquesta maquina, devètz legir e acceptar los tèrmes de l’acòrd de la licéncia.';
 
   @override
   String get eulaAcceptTerms => 'Ai legit e accèpti aqueste tèrmes';
