@@ -761,5 +761,17 @@
   "recoveryKeyExceptionFileSystemBody": "אין לך הרשאה לכתוב לתיקייה הזאת. נא לנסות מקום אחר או להשתמש בשיטה אחרת.",
   "@recoveryKeyExceptionFileSystemBody": {},
   "passphrasePageBodyPassphrase": "יש למלא את מילת הצופן שלך עם כל הדלקה של המחשב. מילת הצופן הזאת שונה מסיסמת המשתמש שלך. אפשר לשנות אותה אחר כך אבל לא להשבית אותה. אם שכחת את מילת הצופן שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.",
-  "@passphrasePageBodyPassphrase": {}
+  "@passphrasePageBodyPassphrase": {},
+  "passphrasePagePassphraseEntropyBelowMin": "מילת צופן חלשה, נא להאריך או לסבך אותה",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePassphraseEntropyBelowOptimal": "מילת צופן סבירה, נא להאריך או לסבך אותה לשיפור האבטחה",
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "passphrasePagePassphraseEntropyOptimal": "מילת צופן חזקה",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "passphrasePagePinEntropyBelowMin": "קוד אישי חלש, נא להאריך או להפוך אותו לפחות צפוי",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowOptimal": "קוד אישי סביר, נא להאריך או להפוך אותו לפחות צפוי לשיפור האבטחה",
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "passphrasePagePinEntropyOptimal": "הקוד האישי מספיק ארוך",
+  "@passphrasePagePinEntropyOptimal": {}
 }
