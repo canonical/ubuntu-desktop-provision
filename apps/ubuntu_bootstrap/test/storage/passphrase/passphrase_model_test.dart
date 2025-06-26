@@ -97,51 +97,32 @@ void main() {
   group('pin/passphrase entropy', () {
     for (final testCase in [
       (
-        name: 'insufficient passphrase',
+        name: 'tpm fde with passphrase',
         passphraseType: PassphraseType.passphrase,
         guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
         entropyResponse: EntropyResponse(
-          entropy: 1,
-          minimumRequired: 2,
+          success: true,
+          entropyBits: 3,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
         ),
-        expectedEntropy: Entropy.belowMin,
       ),
       (
-        name: 'sufficient passphrase',
-        passphraseType: PassphraseType.passphrase,
-        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        entropyResponse: EntropyResponse(
-          entropy: 3,
-          minimumRequired: 2,
-        ),
-        expectedEntropy: Entropy.optimal,
-      ),
-      (
-        name: 'insufficient pin',
+        name: 'tpm fde with pin',
         passphraseType: PassphraseType.pin,
         guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
         entropyResponse: EntropyResponse(
-          entropy: 1,
-          minimumRequired: 2,
+          success: true,
+          entropyBits: 3,
+          minEntropyBits: 2,
+          optimalEntropyBits: 3,
         ),
-        expectedEntropy: Entropy.belowMin,
-      ),
-      (
-        name: 'sufficient pin',
-        passphraseType: PassphraseType.pin,
-        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        entropyResponse: EntropyResponse(
-          entropy: 3,
-          minimumRequired: 2,
-        ),
-        expectedEntropy: Entropy.optimal,
       ),
       (
         name: 'no tpm fde',
         passphraseType: PassphraseType.passphrase,
         guidedCapability: GuidedCapability.LVM_LUKS,
         entropyResponse: null,
-        expectedEntropy: null,
       ),
     ]) {
       test(testCase.name, () async {
@@ -167,15 +148,16 @@ void main() {
         final model = PassphraseModel(storageService, subiquityClient);
 
         // Listen to updates from the model
-        final entropyStreamController = StreamController<Entropy?>.broadcast();
+        final entropyStreamController =
+            StreamController<EntropyResponse?>.broadcast();
         model.addListener(() => entropyStreamController.add(model.entropy));
         final future = expectLater(
           entropyStreamController.stream,
           emitsInOrder([
             isNull, // setting the passphrase results in an update without changing the entropy
             // there's another update in case the entropy isn't null
-            if (testCase.expectedEntropy != null)
-              equals(testCase.expectedEntropy),
+            if (testCase.entropyResponse != null)
+              equals(testCase.entropyResponse),
           ]),
         );
 

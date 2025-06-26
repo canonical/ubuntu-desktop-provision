@@ -1086,8 +1086,11 @@ class CalculateEntropyRequest with _$CalculateEntropyRequest {
 @freezed
 class EntropyResponse with _$EntropyResponse {
   const factory EntropyResponse({
-    required double entropy,
-    required double minimumRequired,
+    required bool success,
+    required int entropyBits,
+    required int minEntropyBits,
+    required int optimalEntropyBits,
+    List<String>? failureReasons,
   }) = _EntropyResponse;
 
   factory EntropyResponse.fromJson(Map<String, dynamic> json) =>
