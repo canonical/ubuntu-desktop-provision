@@ -56,9 +56,9 @@
   "@reformat": {},
   "failed": "執行命令失敗",
   "@failed": {},
-  "appTitle": "出廠設定還原工具",
+  "appTitle": "恢復出廠設定工具",
   "@appTitle": {},
-  "windowTitle": "出廠設定還原工具",
+  "windowTitle": "恢復出廠設定工具",
   "@windowTitle": {},
   "startFactoryReset": "開始還原出廠設定",
   "@startFactoryReset": {}
