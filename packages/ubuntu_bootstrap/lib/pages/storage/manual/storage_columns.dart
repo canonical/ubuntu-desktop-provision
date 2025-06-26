@@ -9,10 +9,7 @@ import 'package:yaru/icons.dart';
 typedef DiskBuilder = Widget Function(BuildContext context, Disk disk);
 typedef GapBuilder = Widget Function(BuildContext context, Disk disk, Gap gap);
 typedef PartitionBuilder = Widget Function(
-  BuildContext context,
-  Disk disk,
-  Partition partition,
-);
+    BuildContext context, Disk disk, Partition partition);
 
 class StorageColumn {
   const StorageColumn({
@@ -36,12 +33,19 @@ class StorageDeviceColumn extends StorageColumn {
             return Text(lang.diskHeadersDevice);
           },
           diskBuilder: (context, disk) {
-            return Row(
-              children: [
-                const Icon(YaruIcons.drive_harddisk_filled),
-                const SizedBox(width: 16),
-                Text(disk.sysname),
-              ],
+            // Define the full row description for accessibility
+            final rowLabel = "Device ${disk.sysname}, Size ${context.formatByteSize(disk.size)}";
+            return Semantics(
+              label: rowLabel,
+              child: ExcludeSemantics(
+                child: Row(
+                  children: [
+                    const Icon(YaruIcons.drive_harddisk_filled),
+                    const SizedBox(width: 16),
+                    Text(disk.sysname),
+                  ],
+                ),
+              ),
             );
           },
           gapBuilder: (context, disk, gap) {
@@ -49,40 +53,55 @@ class StorageDeviceColumn extends StorageColumn {
             final color = gap.tooManyPrimaryPartitions
                 ? Theme.of(context).disabledColor
                 : null;
-            return Tooltip(
-              message: gap.tooManyPrimaryPartitions
-                  ? lang.tooManyPrimaryPartitions
-                  : '',
-              child: Row(
-                children: [
-                  Icon(
-                    gap.tooManyPrimaryPartitions
-                        ? YaruIcons.drive_harddisk_error
-                        : YaruIcons.drive_harddisk,
-                    color: color,
+            final rowLabel = gap.tooManyPrimaryPartitions
+                ? "Device Free space, Type ${lang.partitionLimitReached}, Size ${context.formatByteSize(gap.size)}"
+                : "Device Free space, Type ${lang.freeDiskSpace}, Size ${context.formatByteSize(gap.size)}";
+            return Semantics(
+              label: rowLabel,
+              child: ExcludeSemantics(
+                child: Tooltip(
+                  message: gap.tooManyPrimaryPartitions
+                      ? lang.tooManyPrimaryPartitions
+                      : '',
+                  child: Row(
+                    children: [
+                      Icon(
+                        gap.tooManyPrimaryPartitions
+                            ? YaruIcons.drive_harddisk_error
+                            : YaruIcons.drive_harddisk,
+                        color: color,
+                      ),
+                      const SizedBox(width: 16),
+                      Text(
+                        gap.tooManyPrimaryPartitions
+                            ? lang.partitionLimitReached
+                            : lang.freeDiskSpace,
+                        style: TextStyle(color: color),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 16),
-                  Text(
-                    gap.tooManyPrimaryPartitions
-                        ? lang.partitionLimitReached
-                        : lang.freeDiskSpace,
-                    style: TextStyle(color: color),
-                  ),
-                ],
+                ),
               ),
             );
           },
           partitionBuilder: (context, disk, partition) {
-            return Row(
-              children: [
-                Icon(
-                  partition.isEncrypted
-                      ? YaruIcons.lock
-                      : YaruIcons.drive_harddisk,
+            final rowLabel =
+                "Device ${partition.sysname}, Type ${PartitionFormat.fromPartition(partition)?.displayName ?? partition.format ?? ''}, Mount point ${partition.mount ?? ''}, Size ${context.formatByteSize(partition.size ?? 0)}, System ${partition.os?.long ?? ''}";
+            return Semantics(
+              label: rowLabel,
+              child: ExcludeSemantics(
+                child: Row(
+                  children: [
+                    Icon(
+                      partition.isEncrypted
+                          ? YaruIcons.lock
+                          : YaruIcons.drive_harddisk,
+                    ),
+                    const SizedBox(width: 16),
+                    Text(partition.sysname),
+                  ],
                 ),
-                const SizedBox(width: 16),
-                Text(partition.sysname),
-              ],
+              ),
             );
           },
         );
@@ -102,10 +121,12 @@ class StorageTypeColumn extends StorageColumn {
             return const SizedBox.shrink();
           },
           partitionBuilder: (context, disk, partition) {
-            return Text(
-              PartitionFormat.fromPartition(partition)?.displayName ??
-                  partition.format ??
-                  '',
+            return ExcludeSemantics(
+              child: Text(
+                PartitionFormat.fromPartition(partition)?.displayName ??
+                    partition.format ??
+                    '',
+              ),
             );
           },
         );
@@ -125,7 +146,9 @@ class StorageMountColumn extends StorageColumn {
             return const SizedBox.shrink();
           },
           partitionBuilder: (context, disk, partition) {
-            return Text(partition.mount ?? '');
+            return ExcludeSemantics(
+              child: Text(partition.mount ?? ''),
+            );
           },
         );
 }
@@ -138,25 +161,31 @@ class StorageSizeColumn extends StorageColumn {
             return Text(lang.diskHeadersSize);
           },
           diskBuilder: (context, disk) {
-            return Text(context.formatByteSize(disk.size));
+            return ExcludeSemantics(
+              child: Text(context.formatByteSize(disk.size)),
+            );
           },
           gapBuilder: (context, disk, gap) {
             final lang = UbuntuBootstrapLocalizations.of(context);
             final color = gap.tooManyPrimaryPartitions
                 ? Theme.of(context).disabledColor
                 : null;
-            return Tooltip(
-              message: gap.tooManyPrimaryPartitions
-                  ? lang.tooManyPrimaryPartitions
-                  : '',
-              child: Text(
-                context.formatByteSize(gap.size),
-                style: TextStyle(color: color),
+            return ExcludeSemantics(
+              child: Tooltip(
+                message: gap.tooManyPrimaryPartitions
+                    ? lang.tooManyPrimaryPartitions
+                    : '',
+                child: Text(
+                  context.formatByteSize(gap.size),
+                  style: TextStyle(color: color),
+                ),
               ),
             );
           },
           partitionBuilder: (context, disk, partition) {
-            return Text(context.formatByteSize(partition.size ?? 0));
+            return ExcludeSemantics(
+              child: Text(context.formatByteSize(partition.size ?? 0)),
+            );
           },
         );
 }
@@ -175,7 +204,9 @@ class StorageSystemColumn extends StorageColumn {
             return const SizedBox.shrink();
           },
           partitionBuilder: (context, disk, partition) {
-            return Text(partition.os?.long ?? '');
+            return ExcludeSemantics(
+              child: Text(partition.os?.long ?? ''),
+            );
           },
         );
 }
@@ -194,17 +225,19 @@ class StorageWipeColumn extends StorageColumn {
             return const SizedBox.shrink();
           },
           partitionBuilder: (context, disk, partition) {
-            return Consumer(
-              builder: (context, ref, child) {
-                final model = ref.read(manualStorageModelProvider);
-                final config = model.originalConfig(partition);
-                final forceWipe = config?.mustWipe(partition.format) ?? true;
-                return Icon(
-                  partition.isWiped || forceWipe
-                      ? YaruIcons.checkbox_checked_filled
-                      : YaruIcons.checkbox,
-                );
-              },
+            return ExcludeSemantics(
+              child: Consumer(
+                builder: (context, ref, child) {
+                  final model = ref.read(manualStorageModelProvider);
+                  final config = model.originalConfig(partition);
+                  final forceWipe = config?.mustWipe(partition.format) ?? true;
+                  return Icon(
+                    partition.isWiped || forceWipe
+                        ? YaruIcons.checkbox_checked_filled
+                        : YaruIcons.checkbox,
+                  );
+                },
+              ),
             );
           },
         );
