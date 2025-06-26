@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'යමක් වැරදී ඇත';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected =>
+      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -123,7 +124,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'ඔබගේ පෙනුම තෝරන්න';
 
   @override
-  String get themePageHeader => 'මෙය පසුව පෙනුම සැකසුම් හරහා වෙනස් කිරීමට හැකිය.';
+  String get themePageHeader =>
+      'මෙය පසුව පෙනුම සැකසුම් හරහා වෙනස් කිරීමට හැකිය.';
 
   @override
   String get themeDark => 'අඳුරු';
@@ -185,7 +187,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'පරිශ්‍රීලක නාමය දැනටමත් පවතී.';
 
   @override
-  String get identityUsernameSystemReserved => 'එම නම පද්ධතියේ භාවිතයට වෙන් කර ඇත.';
+  String get identityUsernameSystemReserved =>
+      'එම නම පද්ධතියේ භාවිතයට වෙන් කර ඇත.';
 
   @override
   String get identityUsernameTooLong => 'නම ඉතා දිගයි.';
@@ -215,7 +218,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'සක්‍රිය නමාවලිය භාවිතා කරන්න';
 
   @override
-  String get identityActiveDirectoryInfo => 'ඔබ ඊළඟ පියවරේ දී වසම සහ අනෙකුත් විස්තර ඇතුල් කරනු ඇත.';
+  String get identityActiveDirectoryInfo =>
+      'ඔබ ඊළඟ පියවරේ දී වසම සහ අනෙකුත් විස්තර ඇතුල් කරනු ඇත.';
 
   @override
   String get activeDirectoryTitle => 'සක්‍රිය නාමාවලියට පිවිසෙන්න';
@@ -256,7 +260,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'ඉරකින් (-) නිමාවෙයි';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'වසම හමු නොවිණි';
@@ -277,10 +282,12 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'වුවමනාය';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'අන්තර්ජාල සම්බන්ධතාව';
@@ -289,7 +296,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'අන්තර්ජාලයට සබඳින්න';
 
   @override
-  String get networkPageBody => 'අන්තර්ජාලයට සබැඳීමෙන් අමතර මෘදුකාංග ඇසුරුම් සමඟ උපාංගයට වඩාත් අනුකූල පරිදි ස්ථාපනය වනු ඇත.';
+  String get networkPageBody =>
+      'අන්තර්ජාලයට සබැඳීමෙන් අමතර මෘදුකාංග ඇසුරුම් සමඟ උපාංගයට වඩාත් අනුකූල පරිදි ස්ථාපනය වනු ඇත.';
 
   @override
   String get networkWiredOption => 'රැහැන් සම්බන්ධතාව භාවිතා කරන්න';
@@ -301,7 +309,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'රැහැන් සම්බන්ධතාව අක්‍රියයි';
 
   @override
-  String get networkWiredDisabled => 'මෙම පරිගණකයේ ඊතර්නෙට් භාවිතයට රැහැන් සම්බන්ධතාවක් සබල කළ යුතුය';
+  String get networkWiredDisabled =>
+      'මෙම පරිගණකයේ ඊතර්නෙට් භාවිතයට රැහැන් සම්බන්ධතාවක් සබල කළ යුතුය';
 
   @override
   String get networkWiredEnable => 'රැහැන් සබල කරන්න';
@@ -316,7 +325,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'කිසිදු වයි-ෆයි උපාංගයක් අනාවරණය වී නැත';
 
   @override
-  String get networkWifiDisabled => 'මෙම පරිගණකයේ වයි-ෆයි භාවිතයට රැහැන් රහිත ජාලකරණය සබල කළ යුතුය';
+  String get networkWifiDisabled =>
+      'මෙම පරිගණකයේ වයි-ෆයි භාවිතයට රැහැන් රහිත ජාලකරණය සබල කළ යුතුය';
 
   @override
   String get networkWifiEnable => 'වයි-ෆයි සබල කරන්න';
@@ -340,7 +350,8 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'බලපත්‍ර නියම සමාලෝචනය කරන්න';
 
   @override
-  String get eulaReadAndAcceptTerms => 'මෙම යන්ත්‍රය දිගටම පිහිටුවීමට ඔබ බලපත්‍ර එකඟතාවේ නියම කියවා පිළිගත යුතුය.';
+  String get eulaReadAndAcceptTerms =>
+      'මෙම යන්ත්‍රය දිගටම පිහිටුවීමට ඔබ බලපත්‍ර එකඟතාවේ නියම කියවා පිළිගත යුතුය.';
 
   @override
   String get eulaAcceptTerms => 'මම මෙම නියම කියවා පිළිගනිමි';

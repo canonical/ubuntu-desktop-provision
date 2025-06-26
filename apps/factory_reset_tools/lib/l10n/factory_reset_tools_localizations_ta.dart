@@ -27,34 +27,42 @@ class FactoryResetToolsLocalizationsTa extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'யூ.எச்.பி மீட்டமை ஊடகத்தை உருவாக்கவும்';
 
   @override
-  String get createUsbBody => 'கணினியை மீட்டெடுக்க யூ.எச்.பி மீட்டமை ஊடகத்தை உருவாக்கவும், அத்துடன் உங்கள் உபுண்டு நிறுவல்களைத் தனிப்பயனாக்கவும்.';
+  String get createUsbBody =>
+      'கணினியை மீட்டெடுக்க யூ.எச்.பி மீட்டமை ஊடகத்தை உருவாக்கவும், அத்துடன் உங்கள் உபுண்டு நிறுவல்களைத் தனிப்பயனாக்கவும்.';
 
   @override
-  String get createUsbListExplanation => 'யூ.எச்.பி ஃபிளாச் டிரைவைத் தேர்ந்தெடுக்கவும். இயக்ககத்தில் ** குறைந்தது 16 சிபி இடம் இருக்க வேண்டும். **';
+  String get createUsbListExplanation =>
+      'யூ.எச்.பி ஃபிளாச் டிரைவைத் தேர்ந்தெடுக்கவும். இயக்ககத்தில் ** குறைந்தது 16 சிபி இடம் இருக்க வேண்டும். **';
 
   @override
-  String get createUsbWarning => 'ஃப்ளாச் இயக்கி மறுவடிவமைக்கப்படும் மற்றும் இயக்ககத்தில் உள்ள அனைத்து தரவும் இழக்கப்படும்.';
+  String get createUsbWarning =>
+      'ஃப்ளாச் இயக்கி மறுவடிவமைக்கப்படும் மற்றும் இயக்ககத்தில் உள்ள அனைத்து தரவும் இழக்கப்படும்.';
 
   @override
   String get resetMediaTitle => 'யூ.எச்.பி மீடியாவை மீட்டமைக்கவும்';
 
   @override
-  String get noMediaDetected => 'நீக்கக்கூடிய சேமிப்பு எதுவும் கண்டறியப்படவில்லை';
+  String get noMediaDetected =>
+      'நீக்கக்கூடிய சேமிப்பு எதுவும் கண்டறியப்படவில்லை';
 
   @override
-  String get noMediaDetectedSubtitle => 'தொழிற்சாலை மீட்டமைப்பு ஊடகத்தை உருவாக்க உங்களுக்கு யூ.எச்.பி சேமிப்பு தேவை.';
+  String get noMediaDetectedSubtitle =>
+      'தொழிற்சாலை மீட்டமைப்பு ஊடகத்தை உருவாக்க உங்களுக்கு யூ.எச்.பி சேமிப்பு தேவை.';
 
   @override
-  String get factoryResetTitle => 'தொழிற்சாலை மீட்டமைப்பைத் தொடங்க ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்';
+  String get factoryResetTitle =>
+      'தொழிற்சாலை மீட்டமைப்பைத் தொடங்க ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
   String get loadingDrives => 'நாங்கள் டிரைவ்களைப் பெறும்போது காத்திருங்கள்.';
 
   @override
-  String get resetMediaReadyTitle => 'யூ.எச்.பி மீட்டமைப்பு மீடியா தயாராக உள்ளது';
+  String get resetMediaReadyTitle =>
+      'யூ.எச்.பி மீட்டமைப்பு மீடியா தயாராக உள்ளது';
 
   @override
-  String get resetMediaReadyBody => 'நீங்கள் அதைப் பயன்படுத்த விரும்பினால், தயவுசெய்து நீங்கள் மீட்டமைக்க விரும்பும் கணினியில் யூ.எச்.பி டிரைவை செருகவும், மறுதொடக்கம் செய்யவும்.';
+  String get resetMediaReadyBody =>
+      'நீங்கள் அதைப் பயன்படுத்த விரும்பினால், தயவுசெய்து நீங்கள் மீட்டமைக்க விரும்பும் கணினியில் யூ.எச்.பி டிரைவை செருகவும், மறுதொடக்கம் செய்யவும்.';
 
   @override
   String get errorLoadingDrives => 'டிரைவ்களைப் பெறும்போது பிழை ஏற்பட்டது.';

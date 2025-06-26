@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Нешто је пошло наопако';
 
   @override
-  String get errorPageUnexpected => 'Жао нам је, али нисмо сигурни у чему је грешка. Можете покушати да поново покренете рачунар и започнете процес инсталације поново. Такође можете <a>пријавити проблем</a>.';
+  String get errorPageUnexpected =>
+      'Жао нам је, али нисмо сигурни у чему је грешка. Можете покушати да поново покренете рачунар и започнете процес инсталације поново. Такође можете <a>пријавити проблем</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -102,7 +103,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Изаберите ваш распоред тастатуре';
 
   @override
-  String get keyboardTestHint => 'Куцајте овде како би испробали вашу тастатуру';
+  String get keyboardTestHint =>
+      'Куцајте овде како би испробали вашу тастатуру';
 
   @override
   String get keyboardDetectTitle => 'Откриј распоред тастатуре';
@@ -114,16 +116,19 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Изаберите варијанту тастатуре:';
 
   @override
-  String get keyboardPressKeyLabel => 'Молимо притисните један од следећих тастера:';
+  String get keyboardPressKeyLabel =>
+      'Молимо притисните један од следећих тастера:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Да ли следећи тастер постоји на вашој тастатури?';
+  String get keyboardKeyPresentLabel =>
+      'Да ли следећи тастер постоји на вашој тастатури?';
 
   @override
   String get themePageTitle => 'Изаберите своју тему';
 
   @override
-  String get themePageHeader => 'Ово увек можете променити касније у подешавањима изгледа.';
+  String get themePageHeader =>
+      'Ово увек можете променити касније у подешавањима изгледа.';
 
   @override
   String get themeDark => 'Тамна';
@@ -161,7 +166,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Име вашег рачунара';
 
   @override
-  String get identityHostnameInfo => 'Име које користи када комуницира са другим рачунарима.';
+  String get identityHostnameInfo =>
+      'Име које користи када комуницира са другим рачунарима.';
 
   @override
   String get identityHostnameRequired => 'Име рачунара је обавезно';
@@ -185,7 +191,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'То корисничко име већ постоји.';
 
   @override
-  String get identityUsernameSystemReserved => 'То име је резервисано за системску употребу.';
+  String get identityUsernameSystemReserved =>
+      'То име је резервисано за системску употребу.';
 
   @override
   String get identityUsernameTooLong => 'То име је предуго.';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Користи Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Унећете домен и друге детаље у следећем кораку.';
+  String get identityActiveDirectoryInfo =>
+      'Унећете домен и друге детаље у следећем кораку.';
 
   @override
   String get activeDirectoryTitle => 'Пријавите се у Active Directory';
@@ -256,7 +264,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Завршава се са цртицом (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Садржи више узастопних тачака (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Садржи више узастопних тачака (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Домен није пронађен';
@@ -277,10 +286,12 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Потребно';
 
   @override
-  String get activeDirectoryErrorTitle => 'Грешка при конфигурисању везе са Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Грешка при конфигурисању везе са Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Жао нам је, Active Directory тренутно не може бити подешен. Када ваш систем буде покренут, посетите <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> за помоћ.';
+  String get activeDirectoryErrorMessage =>
+      'Жао нам је, Active Directory тренутно не може бити подешен. Када ваш систем буде покренут, посетите <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> за помоћ.';
 
   @override
   String get networkPageTitle => 'Интернет веза';
@@ -289,7 +300,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Повежите се на интернет';
 
   @override
-  String get networkPageBody => 'Интернет веза ће побољшати вашу инсталацију провером компатибилности и додатним софтверским пакетима.';
+  String get networkPageBody =>
+      'Интернет веза ће побољшати вашу инсталацију провером компатибилности и додатним софтверским пакетима.';
 
   @override
   String get networkWiredOption => 'Користите жичану везу';
@@ -301,7 +313,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Жичана веза је искључена';
 
   @override
-  String get networkWiredDisabled => 'Да бисте користили Ethernet на овом рачунару, жичана веза мора бити омогућена';
+  String get networkWiredDisabled =>
+      'Да бисте користили Ethernet на овом рачунару, жичана веза мора бити омогућена';
 
   @override
   String get networkWiredEnable => 'Омогући жичану везу';
@@ -316,7 +329,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Није откривен ниједан Wi-Fi уређај';
 
   @override
-  String get networkWifiDisabled => 'Да бисте користили Wi-Fi на овом рачунару, бежично умрежавање мора бити омогућено';
+  String get networkWifiDisabled =>
+      'Да бисте користили Wi-Fi на овом рачунару, бежично умрежавање мора бити омогућено';
 
   @override
   String get networkWifiEnable => 'Омогући Wi-Fi';
@@ -340,7 +354,8 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Прегледајте услове лиценце';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Да бисте наставили са подешавањем овог рачунара, морате прочитати и прихватити услове лиценцног уговора.';
+  String get eulaReadAndAcceptTerms =>
+      'Да бисте наставили са подешавањем овог рачунара, морате прочитати и прихватити услове лиценцног уговора.';
 
   @override
   String get eulaAcceptTerms => 'Прочитао сам и прихватам ове услове';

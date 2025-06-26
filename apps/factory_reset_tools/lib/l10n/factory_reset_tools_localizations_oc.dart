@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Crear un mèdia USB de reïnicializar';
 
   @override
-  String get createUsbBody => 'Crear un mèdia USB per restaurar lo sistèma e personalizar vòstras installacions Ubuntu.';
+  String get createUsbBody =>
+      'Crear un mèdia USB per restaurar lo sistèma e personalizar vòstras installacions Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Seleccionatz una clau USB. Lo lector deu aver **almens 16 Go d’espaci.**';
+  String get createUsbListExplanation =>
+      'Seleccionatz una clau USB. Lo lector deu aver **almens 16 Go d’espaci.**';
 
   @override
-  String get createUsbWarning => 'Lo lector amovible serà reformatat e totas sas donadas seràn perdudas.';
+  String get createUsbWarning =>
+      'Lo lector amovible serà reformatat e totas sas donadas seràn perdudas.';
 
   @override
   String get resetMediaTitle => 'Mèdia de reïnicializacion USB';
@@ -42,22 +45,27 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Cap d’estocatge amovible pas detectat';
 
   @override
-  String get noMediaDetectedSubtitle => 'Avètz mestièr d’un estocatge USB per crear un mèdia de reïnicializacion de fabrica.';
+  String get noMediaDetectedSubtitle =>
+      'Avètz mestièr d’un estocatge USB per crear un mèdia de reïnicializacion de fabrica.';
 
   @override
-  String get factoryResetTitle => 'Seleccionatz una opcion per aviar la reïnicializacion de fabrica';
+  String get factoryResetTitle =>
+      'Seleccionatz una opcion per aviar la reïnicializacion de fabrica';
 
   @override
-  String get loadingDrives => 'Mercés d’esperar pendent que recuperam los lectors.';
+  String get loadingDrives =>
+      'Mercés d’esperar pendent que recuperam los lectors.';
 
   @override
   String get resetMediaReadyTitle => 'Lo mèdia USB es prèst';
 
   @override
-  String get resetMediaReadyBody => 'Quand volètz l’utilizar, inserissètz lo mèdia USB dins l’ordenador que volètz reïnicializar e reaviatz-lo.';
+  String get resetMediaReadyBody =>
+      'Quand volètz l’utilizar, inserissètz lo mèdia USB dins l’ordenador que volètz reïnicializar e reaviatz-lo.';
 
   @override
-  String get errorLoadingDrives => 'Una error s\'es producha pendent la recuperacion dels lectors.';
+  String get errorLoadingDrives =>
+      'Una error s\'es producha pendent la recuperacion dels lectors.';
 
   @override
   String get resetMediaInitializing => 'Inicializacion';

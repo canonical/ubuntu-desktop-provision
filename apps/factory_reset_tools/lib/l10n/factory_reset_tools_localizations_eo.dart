@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Krei restaŭran USB-diskon';
 
   @override
-  String get createUsbBody => 'Krei restaŭran USB-diskon por restaŭri la sistemon kaj agordi viajn instalojn de Ubuntu.';
+  String get createUsbBody =>
+      'Krei restaŭran USB-diskon por restaŭri la sistemon kaj agordi viajn instalojn de Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Elektu USB-diskon, kiu devas havi **almenaŭ 16 gigabajtojn da spaco**.';
+  String get createUsbListExplanation =>
+      'Elektu USB-diskon, kiu devas havi **almenaŭ 16 gigabajtojn da spaco**.';
 
   @override
-  String get createUsbWarning => 'La USB-disko estas restrukturota, kaj ĉiaj datenoj sur la disko estas perdotaj.';
+  String get createUsbWarning =>
+      'La USB-disko estas restrukturota, kaj ĉiaj datenoj sur la disko estas perdotaj.';
 
   @override
   String get resetMediaTitle => 'Restaŭra USB-disko';
@@ -42,7 +45,8 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Ne troviĝis forigebla disko';
 
   @override
-  String get noMediaDetectedSubtitle => 'Necesas USB-disko por krei restaŭran diskon.';
+  String get noMediaDetectedSubtitle =>
+      'Necesas USB-disko por krei restaŭran diskon.';
 
   @override
   String get factoryResetTitle => 'Elektu opcion pri restaŭro al fabrika stato';
@@ -54,7 +58,8 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Restaŭra USB-disko pretas';
 
   @override
-  String get resetMediaReadyBody => 'Kiam vi volas uzi ĝin, bonvolu konekti la USB-diskon al la restaŭrotan komputilon kaj restartigi la komputilon.';
+  String get resetMediaReadyBody =>
+      'Kiam vi volas uzi ĝin, bonvolu konekti la USB-diskon al la restaŭrotan komputilon kaj restartigi la komputilon.';
 
   @override
   String get errorLoadingDrives => 'Okazis eraro dum ŝargado de la diskoj.';

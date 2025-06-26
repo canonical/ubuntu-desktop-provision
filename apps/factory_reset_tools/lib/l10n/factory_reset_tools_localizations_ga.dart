@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Cruthaigh meáin athshocraithe USB';
 
   @override
-  String get createUsbBody => 'Cruthaigh meáin athshocraithe USB chun an córas a athchóiriú, chomh maith le do shuiteálacha Ubuntu a shaincheapadh.';
+  String get createUsbBody =>
+      'Cruthaigh meáin athshocraithe USB chun an córas a athchóiriú, chomh maith le do shuiteálacha Ubuntu a shaincheapadh.';
 
   @override
-  String get createUsbListExplanation => 'Roghnaigh tiomántán USB flash. Caithfidh **16GB ar a laghad de spás a bheith ar an tiomántán.**';
+  String get createUsbListExplanation =>
+      'Roghnaigh tiomántán USB flash. Caithfidh **16GB ar a laghad de spás a bheith ar an tiomántán.**';
 
   @override
-  String get createUsbWarning => 'Déanfar an tiomáint flash a athfhormáidiú agus caillfear na sonraí go léir ar an tiomántán.';
+  String get createUsbWarning =>
+      'Déanfar an tiomáint flash a athfhormáidiú agus caillfear na sonraí go léir ar an tiomántán.';
 
   @override
   String get resetMediaTitle => 'Meáin athshocrú USB';
@@ -42,22 +45,27 @@ class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Ní aimsítear aon stóráil inbhainte';
 
   @override
-  String get noMediaDetectedSubtitle => 'Teastaíonn stór USB uait chun Meáin Athshocraigh Monarcha a chruthú.';
+  String get noMediaDetectedSubtitle =>
+      'Teastaíonn stór USB uait chun Meáin Athshocraigh Monarcha a chruthú.';
 
   @override
-  String get factoryResetTitle => 'Roghnaigh rogha chun athshocrú mhonarcha a thosú';
+  String get factoryResetTitle =>
+      'Roghnaigh rogha chun athshocrú mhonarcha a thosú';
 
   @override
-  String get loadingDrives => 'Fan le do thoil agus muid ag tabhairt na dtiomántáin.';
+  String get loadingDrives =>
+      'Fan le do thoil agus muid ag tabhairt na dtiomántáin.';
 
   @override
   String get resetMediaReadyTitle => 'Tá meáin athshocraithe USB réidh';
 
   @override
-  String get resetMediaReadyBody => 'Nuair is mian leat é a úsáid, cuir isteach an tiomántán USB isteach sa ríomhaire is mian leat a athshocrú agus é a atosú.';
+  String get resetMediaReadyBody =>
+      'Nuair is mian leat é a úsáid, cuir isteach an tiomántán USB isteach sa ríomhaire is mian leat a athshocrú agus é a atosú.';
 
   @override
-  String get errorLoadingDrives => 'Tharla earráid agus na tiomántáin á bhfáil.';
+  String get errorLoadingDrives =>
+      'Tharla earráid agus na tiomántáin á bhfáil.';
 
   @override
   String get resetMediaInitializing => 'Ag tosú';

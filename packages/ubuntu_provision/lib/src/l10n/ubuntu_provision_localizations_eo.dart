@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Io fiaskis';
 
   @override
-  String get errorPageUnexpected => 'Bedaŭrinde, ni ne konas la eraron. Vi povas provi restartigi vian komputilon kaj rekomenci la instalon. Vi ankaŭ povas <a>raporti la problemon</a>.';
+  String get errorPageUnexpected =>
+      'Bedaŭrinde, ni ne konas la eraron. Vi povas provi restartigi vian komputilon kaj rekomenci la instalon. Vi ankaŭ povas <a>raporti la problemon</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Bonvolu premi unu el la jenaj klavoj:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Ĉu la jena klavo troviĝas en via klavaro?';
+  String get keyboardKeyPresentLabel =>
+      'Ĉu la jena klavo troviĝas en via klavaro?';
 
   @override
   String get themePageTitle => 'Elektu vian etoson';
 
   @override
-  String get themePageHeader => 'Vi povas ŝanĝi tion poste per la agordoj pri Aspekto.';
+  String get themePageHeader =>
+      'Vi povas ŝanĝi tion poste per la agordoj pri Aspekto.';
 
   @override
   String get themeDark => 'Malhela';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Nomo de via komputilo';
 
   @override
-  String get identityHostnameInfo => 'La nomo, kiun ĝi uzas por alparoli aliajn komputilojn.';
+  String get identityHostnameInfo =>
+      'La nomo, kiun ĝi uzas por alparoli aliajn komputilojn.';
 
   @override
   String get identityHostnameRequired => 'Nomo de komputilo bezoniĝas';
@@ -185,13 +189,15 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Tiu salutnomo jam ekzistas.';
 
   @override
-  String get identityUsernameSystemReserved => 'Tiu salutnomo estas rezervita por sistema uzado.';
+  String get identityUsernameSystemReserved =>
+      'Tiu salutnomo estas rezervita por sistema uzado.';
 
   @override
   String get identityUsernameTooLong => 'Tiu salutnomo estas tro longa.';
 
   @override
-  String get identityUsernameInvalidChars => 'Tiu salutnomo enhavas nevalidajn signojn.';
+  String get identityUsernameInvalidChars =>
+      'Tiu salutnomo enhavas nevalidajn signojn.';
 
   @override
   String get identityPasswordLabel => 'Elektu pasvorton';
@@ -215,7 +221,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Uzi Aktivan Dosierujon';
 
   @override
-  String get identityActiveDirectoryInfo => 'Vi tajpos la domanion kaj aliajn detalojn dum la sekva paŝo.';
+  String get identityActiveDirectoryInfo =>
+      'Vi tajpos la domanion kaj aliajn detalojn dum la sekva paŝo.';
 
   @override
   String get activeDirectoryTitle => 'Agordi Aktivan Dosierujon';
@@ -250,13 +257,15 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndDot => 'Finiĝas per punkto (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Komenciĝas per dividstreko (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Komenciĝas per dividstreko (-)';
 
   @override
   String get activeDirectoryDomainEndHyphen => 'Finiĝas per dividstreko (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Enhavas plurajn sinsekvajn punktojn (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Enhavas plurajn sinsekvajn punktojn (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domanio ne troviĝis';
@@ -277,10 +286,12 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Deviga';
 
   @override
-  String get activeDirectoryErrorTitle => 'Eraro agordante konekton al Aktiva Dosierujo';
+  String get activeDirectoryErrorTitle =>
+      'Eraro agordante konekton al Aktiva Dosierujo';
 
   @override
-  String get activeDirectoryErrorMessage => 'Pardonu, Aktiva Dosierujo ne estas agordebla nuntempe. Post kiam via sistemo funkcias, vizitu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> por helpo.';
+  String get activeDirectoryErrorMessage =>
+      'Pardonu, Aktiva Dosierujo ne estas agordebla nuntempe. Post kiam via sistemo funkcias, vizitu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> por helpo.';
 
   @override
   String get networkPageTitle => 'Konekti al reto';
@@ -289,7 +300,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Konekti al Interreto';
 
   @override
-  String get networkPageBody => 'Interreta konekto plibonigos vian instalon per kontrolado de kongrueco kaj pliaj programoj.';
+  String get networkPageBody =>
+      'Interreta konekto plibonigos vian instalon per kontrolado de kongrueco kaj pliaj programoj.';
 
   @override
   String get networkWiredOption => 'Uzi dratan konekton';
@@ -301,7 +313,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Drataj retoj estas malŝaltitaj';
 
   @override
-  String get networkWiredDisabled => 'Por uzi Eterreton kun ĉi tiu komputilo, vi devas ebligi dratajn retojn';
+  String get networkWiredDisabled =>
+      'Por uzi Eterreton kun ĉi tiu komputilo, vi devas ebligi dratajn retojn';
 
   @override
   String get networkWiredEnable => 'Ebligi dratajn retojn';
@@ -316,7 +329,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Neniu sendratreta aparato troviĝis';
 
   @override
-  String get networkWifiDisabled => 'Por uzi sendratajn retojn kun ĉi tiu komputilo, vi devas ebligi sendratajn retojn';
+  String get networkWifiDisabled =>
+      'Por uzi sendratajn retojn kun ĉi tiu komputilo, vi devas ebligi sendratajn retojn';
 
   @override
   String get networkWifiEnable => 'Ebligi sendratajn retojn';
@@ -340,7 +354,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Reviziu la licencajn kondiĉojn';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Por agordi ĉi tiun komputilon, vi devas legi kaj akcepti la licencajn kondiĉojn.';
+  String get eulaReadAndAcceptTerms =>
+      'Por agordi ĉi tiun komputilon, vi devas legi kaj akcepti la licencajn kondiĉojn.';
 
   @override
   String get eulaAcceptTerms => 'Mi legis kaj akceptas la jenajn kondiĉojn';

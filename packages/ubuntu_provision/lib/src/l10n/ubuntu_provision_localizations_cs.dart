@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Něco se pokazilo';
 
   @override
-  String get errorPageUnexpected => 'Je nám líto, ale nejsme si jisti, v čem je chyba. Můžete zkusit restartovat počítač a spustit proces instalace znovu. Můžete také <a>problém nahlásit</a>.';
+  String get errorPageUnexpected =>
+      'Je nám líto, ale nejsme si jisti, v čem je chyba. Můžete zkusit restartovat počítač a spustit proces instalace znovu. Můžete také <a>problém nahlásit</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -114,16 +115,19 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Vyberte variantu své klávesnice:';
 
   @override
-  String get keyboardPressKeyLabel => 'Stiskněte některou z následujících kláves:';
+  String get keyboardPressKeyLabel =>
+      'Stiskněte některou z následujících kláves:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Máte na klávesnici následující klávesu?';
+  String get keyboardKeyPresentLabel =>
+      'Máte na klávesnici následující klávesu?';
 
   @override
   String get themePageTitle => 'Zvolte si motiv vzhledu';
 
   @override
-  String get themePageHeader => 'Toto je pak možné kdykoli změnit v nastavení vzhledu.';
+  String get themePageHeader =>
+      'Toto je pak možné kdykoli změnit v nastavení vzhledu.';
 
   @override
   String get themeDark => 'Tmavý';
@@ -161,7 +165,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Název pro váš počítač';
 
   @override
-  String get identityHostnameInfo => 'Tento název slouží při komunikaci s ostatními počítači.';
+  String get identityHostnameInfo =>
+      'Tento název slouží při komunikaci s ostatními počítači.';
 
   @override
   String get identityHostnameRequired => 'Je třeba zadat název pro počítač';
@@ -185,13 +190,15 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Toto uživatelské jméno už existuje.';
 
   @override
-  String get identityUsernameSystemReserved => 'Toto jméno je vyhrazeno pro využití systémem.';
+  String get identityUsernameSystemReserved =>
+      'Toto jméno je vyhrazeno pro využití systémem.';
 
   @override
   String get identityUsernameTooLong => 'Toto jméno je příliš dlouhé.';
 
   @override
-  String get identityUsernameInvalidChars => 'Toto jméno obsahuje neplatné znaky.';
+  String get identityUsernameInvalidChars =>
+      'Toto jméno obsahuje neplatné znaky.';
 
   @override
   String get identityPasswordLabel => 'Heslo';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Použít Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'V dalším kroku zadáte doménu a další podrobnosti.';
+  String get identityActiveDirectoryInfo =>
+      'V dalším kroku zadáte doménu a další podrobnosti.';
 
   @override
   String get activeDirectoryTitle => 'Přihlásit se do Active Directory';
@@ -256,13 +264,15 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Končí pomlčkou (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Obsahuje několik teček za sebou (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Obsahuje několik teček za sebou (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Doména nenalezena';
 
   @override
-  String get activeDirectoryAdminLabel => 'Uživatel s oprávněním pro přidání do domény';
+  String get activeDirectoryAdminLabel =>
+      'Uživatel s oprávněním pro přidání do domény';
 
   @override
   String get activeDirectoryAdminEmpty => 'Vyžadováno';
@@ -277,10 +287,12 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Vyžadováno';
 
   @override
-  String get activeDirectoryErrorTitle => 'Chyba při nastavování připojení k Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Chyba při nastavování připojení k Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Bohužel se teď nedaří Active Directory nastavit. Po spuštění nového systému navštivte <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získáte další informace.';
+  String get activeDirectoryErrorMessage =>
+      'Bohužel se teď nedaří Active Directory nastavit. Po spuštění nového systému navštivte <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získáte další informace.';
 
   @override
   String get networkPageTitle => 'Připojení k síti';
@@ -289,7 +301,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Připojit k internetu';
 
   @override
-  String get networkPageBody => 'Připojení k internetu vylepší instalaci kontrolou kompatibility a dodatečnými softwarovými balíčky.';
+  String get networkPageBody =>
+      'Připojení k internetu vylepší instalaci kontrolou kompatibility a dodatečnými softwarovými balíčky.';
 
   @override
   String get networkWiredOption => 'Použít drátové připojení';
@@ -301,7 +314,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Drátové připojení je vypnuto';
 
   @override
-  String get networkWiredDisabled => 'Aby na tomto počítači bylo možné použít rozhraní Ethernet, je třeba zapnout drátové připojení';
+  String get networkWiredDisabled =>
+      'Aby na tomto počítači bylo možné použít rozhraní Ethernet, je třeba zapnout drátové připojení';
 
   @override
   String get networkWiredEnable => 'Zapnout drátové';
@@ -316,7 +330,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Nezjištěna žádná zařízení Wi-Fi';
 
   @override
-  String get networkWifiDisabled => 'Aby na tomto počítači bylo možné použít rozhraní Wi-Fi, je třeba zapnout bezdrátové připojení';
+  String get networkWifiDisabled =>
+      'Aby na tomto počítači bylo možné použít rozhraní Wi-Fi, je třeba zapnout bezdrátové připojení';
 
   @override
   String get networkWifiEnable => 'Zapnout Wi-Fi';
@@ -340,8 +355,10 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Přečtěte si licenční podmínky';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Chcete-li pokračovat v nastavování tohoto počítače, musíte si přečíst a přijmout podmínky licenční smlouvy.';
+  String get eulaReadAndAcceptTerms =>
+      'Chcete-li pokračovat v nastavování tohoto počítače, musíte si přečíst a přijmout podmínky licenční smlouvy.';
 
   @override
-  String get eulaAcceptTerms => 'Přečetl(a) jsem si tyto podmínky a souhlasím s nimi';
+  String get eulaAcceptTerms =>
+      'Přečetl(a) jsem si tyto podmínky a souhlasím s nimi';
 }
