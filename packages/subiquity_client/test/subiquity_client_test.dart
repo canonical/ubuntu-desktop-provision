@@ -720,25 +720,14 @@ void main() {
       await client.setStorageV2();
     });
 
-    test('failing entropy checks', () async {
+    test('entropy checks', () async {
       expect(
         await client.calculateEntropyV2(passphrase: 'foobar'),
         isA<EntropyResponse>(),
       );
       expect(
-        await client.calculateEntropyV2(pin: '123'),
-        isA<EntropyResponse>(),
-      );
-    });
-
-    test('successful entropy checks', () async {
-      expect(
-        await client.calculateEntropyV2(passphrase: 'foobar12345'),
-        isNull,
-      );
-      expect(
         await client.calculateEntropyV2(pin: '12345'),
-        isNull,
+        isA<EntropyResponse>(),
       );
     });
 

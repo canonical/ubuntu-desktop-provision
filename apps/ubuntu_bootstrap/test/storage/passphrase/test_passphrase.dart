@@ -1,5 +1,6 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 
@@ -16,7 +17,7 @@ PassphraseModel buildPassphraseModel({
   bool? showPassphrase,
   bool? usePassphrase,
   PassphraseType? passphraseType,
-  Entropy? entropy,
+  EntropyResponse? entropy,
 }) {
   final model = MockPassphraseModel();
   when(model.isValid).thenReturn(isValid ?? true);
