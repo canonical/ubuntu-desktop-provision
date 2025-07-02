@@ -74,10 +74,10 @@ packages:
     dependency: "direct main"
     description:
       name: async
-      sha256: d2872f9c19731c2e5f10444b14686eb7cc85c76274bd6c16e1816bff9a3bab63
+      sha256: "758e6d74e971c3e5aceb4110bfd6698efc7f501675bcfe0c775459a8140750eb"
       url: "https://pub.dev"
     source: hosted
-    version: "2.12.0"
+    version: "2.13.0"
   barcode:
     dependency: transitive
     description:
@@ -306,10 +306,10 @@ packages:
     dependency: "direct main"
     description:
       name: fake_async
-      sha256: "6a95e56b2449df2273fd8c45a662d6947ce1ebb7aafe80e550a3f68297f3cacc"
+      sha256: "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.2"
+    version: "1.3.3"
   ffi:
     dependency: transitive
     description:
@@ -605,10 +605,10 @@ packages:
     dependency: "direct main"
     description:
       name: intl
-      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      sha256: "3df61194eb431efc39c4ceba583b95633a403f46c9fd341e550ce0bfa50e9aa5"
       url: "https://pub.dev"
     source: hosted
-    version: "0.19.0"
+    version: "0.20.2"
   io:
     dependency: transitive
     description:
@@ -659,10 +659,10 @@ packages:
     dependency: transitive
     description:
       name: leak_tracker
-      sha256: c35baad643ba394b40aac41080300150a4f08fd0fd6a10378f8f7c6bc161acec
+      sha256: "6bb818ecbdffe216e81182c2f0714a2e62b593f4a4f13098713ff1685dfb6ab0"
       url: "https://pub.dev"
     source: hosted
-    version: "10.0.8"
+    version: "10.0.9"
   leak_tracker_flutter_testing:
     dependency: transitive
     description:
@@ -1034,10 +1034,10 @@ packages:
     dependency: "direct main"
     description:
       name: safe_change_notifier
-      sha256: e7cce266bfede647355866fa3bd054feda57c220d2383f4203f28d4dcdb3b82e
+      sha256: de542ff5b3dc2bff1b4ae3349992c22c7162e2c87c6c0e52db7ae9402a2e15d0
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.0"
+    version: "0.4.0+1"
   screen_retriever:
     dependency: transitive
     description:
@@ -1237,8 +1237,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/timezone_map"
-      ref: "55c3a2ac"
-      resolved-ref: "55c3a2ac2cfc26a5ff9cf00fee745e619aebc054"
+      ref: "82318b76081ed09db8351a055f11f63b70b7eaa4"
+      resolved-ref: "82318b76081ed09db8351a055f11f63b70b7eaa4"
       url: "https://github.com/canonical/ubuntu-flutter-plugins.git"
     source: git
     version: "0.1.0"
@@ -1293,10 +1293,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_localizations
-      sha256: "29cab840b42f7dcecd2eaadcb97116e8604fe1700118769a5500ba7132aba25b"
+      sha256: "05b50217c9ba39c088e41d4494210b12f94701f1f5d4c6fa5faad46a19be0de9"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.2+1"
+    version: "0.5.2+2"
   ubuntu_logger:
     dependency: "direct main"
     description:
@@ -1354,10 +1354,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_widgets
-      sha256: "55a569992f39fd6e8a3116becf9cda988e4d551f85b86f4862852cebdf44b20f"
+      sha256: "7c4e6c230327cb73dc66dc07953609a67adb5c42096c280a00e0dda31bfca55d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.2"
+    version: "0.7.2+1"
   ubuntu_wizard:
     dependency: "direct main"
     description:
@@ -1489,10 +1489,10 @@ packages:
     dependency: transitive
     description:
       name: vm_service
-      sha256: "0968250880a6c5fe7edc067ed0a13d4bae1577fe2771dcf3010d52c4a9d3ca14"
+      sha256: ddfa8d30d89985b96407efce8acbdd124701f96741f2d981ca860662f1c0dc02
       url: "https://pub.dev"
     source: hosted
-    version: "14.3.1"
+    version: "15.0.0"
   watcher:
     dependency: transitive
     description:
@@ -1529,10 +1529,10 @@ packages:
     dependency: transitive
     description:
       name: webdriver
-      sha256: "3d773670966f02a646319410766d3b5e1037efb7f07cc68f844d5e06cd4d61c8"
+      sha256: "2f3a14ca026957870cfd9c635b83507e0e51d8091568e90129fbf805aba7cade"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.4"
+    version: "3.1.0"
   window_manager:
     dependency: transitive
     description:
@@ -1585,18 +1585,18 @@ packages:
     dependency: "direct main"
     description:
       name: yaru
-      sha256: f149399d81ecd3d20bfcc79afd5ddd9bcd7e4c901d5e602a8577fe59c71c8617
+      sha256: d9149e87ddcbabd6214fe629bfd0b6a94b9d81ca55a5618949ffc47a3d8a7b69
       url: "https://pub.dev"
     source: hosted
-    version: "7.0.0"
+    version: "8.0.0"
   yaru_test:
     dependency: "direct dev"
     description:
       name: yaru_test
-      sha256: "24d704350c2c0fb03a68fde697e9671a0497ba4b43f7c56659455b950bb6b2e7"
+      sha256: d4249bbd5e0b62c0774afe575785c075b8ff7053cd7d85065da5ad0a309e0226
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.1"
+    version: "0.3.2"
   yaru_window:
     dependency: transitive
     description:
@@ -1638,5 +1638,5 @@ packages:
     source: hosted
     version: "0.0.3+1"
 sdks:
-  dart: ">=3.7.0 <4.0.0"
-  flutter: ">=3.29.2"
+  dart: ">=3.8.0 <4.0.0"
+  flutter: ">=3.32.1"

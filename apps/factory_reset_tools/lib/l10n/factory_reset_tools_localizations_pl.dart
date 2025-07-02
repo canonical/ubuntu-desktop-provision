@@ -21,19 +21,23 @@ class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   String get createResetMedia => 'Utwórz nośnik przywracania';
 
   @override
-  String get startFactoryReset => 'Rozpocznij przywracanie ustawień fabrycznych';
+  String get startFactoryReset =>
+      'Rozpocznij przywracanie ustawień fabrycznych';
 
   @override
   String get createUsbTitle => 'Utwórz nośnik USB przywracania';
 
   @override
-  String get createUsbBody => 'Utwórz nośnik USB przywracania, aby przywrócić system, a także dostosować instalacje Ubuntu.';
+  String get createUsbBody =>
+      'Utwórz nośnik USB przywracania, aby przywrócić system, a także dostosować instalacje Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Wybierz dysk flash USB. Dysk musi mieć **co najmniej 16 GB przestrzeni.**';
+  String get createUsbListExplanation =>
+      'Wybierz dysk flash USB. Dysk musi mieć **co najmniej 16 GB przestrzeni.**';
 
   @override
-  String get createUsbWarning => 'Dysk flash zostanie sformatowany ponownie, a wszystkie zapisane na nim dane zostaną utracone.';
+  String get createUsbWarning =>
+      'Dysk flash zostanie sformatowany ponownie, a wszystkie zapisane na nim dane zostaną utracone.';
 
   @override
   String get resetMediaTitle => 'Nośnik USB przywracania';
@@ -42,10 +46,12 @@ class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Nie wykryto nośnika wymiennego';
 
   @override
-  String get noMediaDetectedSubtitle => 'Aby utworzyć nośnik przywracania ustawień fabrycznych, potrzebujesz pamięci USB.';
+  String get noMediaDetectedSubtitle =>
+      'Aby utworzyć nośnik przywracania ustawień fabrycznych, potrzebujesz pamięci USB.';
 
   @override
-  String get factoryResetTitle => 'Wybierz opcję, aby rozpocząć przywracanie ustawień fabrycznych';
+  String get factoryResetTitle =>
+      'Wybierz opcję, aby rozpocząć przywracanie ustawień fabrycznych';
 
   @override
   String get loadingDrives => 'Poczekaj, aż wykryjemy dyski.';
@@ -54,7 +60,8 @@ class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Nośnik USB przywracania jest gotowy';
 
   @override
-  String get resetMediaReadyBody => 'Jeśli chcesz z niego skorzystać, włóż dysk USB do komputera, który chcesz przywrócić, i uruchom go ponownie.';
+  String get resetMediaReadyBody =>
+      'Jeśli chcesz z niego skorzystać, włóż dysk USB do komputera, który chcesz przywrócić, i uruchom go ponownie.';
 
   @override
   String get errorLoadingDrives => 'Wystąpił błąd podczas wykrywania dysków.';

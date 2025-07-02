@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Chuaigh rud éigin mícheart';
 
   @override
-  String get errorPageUnexpected => 'Tá brón orainn, ach níl muid cinnte cad é an earráid. Is féidir leat do ríomhaire a atosú agus an próiseas suiteála a thosú arís. Is féidir leat <a>an cheist a thuairisciú</a> freisin.';
+  String get errorPageUnexpected =>
+      'Tá brón orainn, ach níl muid cinnte cad é an earráid. Is féidir leat do ríomhaire a atosú agus an próiseas suiteála a thosú arís. Is féidir leat <a>an cheist a thuairisciú</a> freisin.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Brúigh cheann de na heochracha se:';
 
   @override
-  String get keyboardKeyPresentLabel => 'An bhfuil an eochair seo ann ar do mhéarchlár?';
+  String get keyboardKeyPresentLabel =>
+      'An bhfuil an eochair seo ann ar do mhéarchlár?';
 
   @override
   String get themePageTitle => 'Roghnaigh do théama';
 
   @override
-  String get themePageHeader => 'Is féidir leat é seo a athrú i gcónaí níos déanaí sna socruithe láithris.';
+  String get themePageHeader =>
+      'Is féidir leat é seo a athrú i gcónaí níos déanaí sna socruithe láithris.';
 
   @override
   String get themeDark => 'Dorcha';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Ainm do ríomhaire';
 
   @override
-  String get identityHostnameInfo => 'An t-ainm a úsáideann sé nuair a labhraíonn sé le ríomhairí eile.';
+  String get identityHostnameInfo =>
+      'An t-ainm a úsáideann sé nuair a labhraíonn sé le ríomhairí eile.';
 
   @override
   String get identityHostnameRequired => 'Tá ainm ríomhaire de dhíth';
@@ -182,16 +186,19 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityInvalidUsername => 'Tá an t-ainm úsáideora neamhbhailí';
 
   @override
-  String get identityUsernameInUse => 'Tá an t-ainm úsáideora sin ann cheana féin.';
+  String get identityUsernameInUse =>
+      'Tá an t-ainm úsáideora sin ann cheana féin.';
 
   @override
-  String get identityUsernameSystemReserved => 'Tá an t-ainm sin curtha in áirithe d\'úsáid an chórais.';
+  String get identityUsernameSystemReserved =>
+      'Tá an t-ainm sin curtha in áirithe d\'úsáid an chórais.';
 
   @override
   String get identityUsernameTooLong => 'Tá an t-ainm sin rófhada.';
 
   @override
-  String get identityUsernameInvalidChars => 'Tá carachtair neamhbhailí san ainm sin.';
+  String get identityUsernameInvalidChars =>
+      'Tá carachtair neamhbhailí san ainm sin.';
 
   @override
   String get identityPasswordLabel => 'Pasfhocal';
@@ -215,7 +222,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Úsáid Comhadlann Ghníomhach';
 
   @override
-  String get identityActiveDirectoryInfo => 'Iontrálfaidh tú sonraí fearainn agus sonraí eile sa chéad chéim eile.';
+  String get identityActiveDirectoryInfo =>
+      'Iontrálfaidh tú sonraí fearainn agus sonraí eile sa chéad chéim eile.';
 
   @override
   String get activeDirectoryTitle => 'Logáil isteach i Active Directory';
@@ -253,10 +261,12 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainStartHyphen => 'Tosaíonn sé le fleiscín (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Críochnaíonn sé le fleiscín (-)';
+  String get activeDirectoryDomainEndHyphen =>
+      'Críochnaíonn sé le fleiscín (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Tá poncanna seicheamhacha iolracha ann (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Tá poncanna seicheamhacha iolracha ann (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Fearann gan aimsiú';
@@ -277,10 +287,12 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Riachtanach';
 
   @override
-  String get activeDirectoryErrorTitle => 'Earráid agus nasc le Active Directory á chumrú';
+  String get activeDirectoryErrorTitle =>
+      'Earráid agus nasc le Active Directory á chumrú';
 
   @override
-  String get activeDirectoryErrorMessage => 'Ár leithscéal, ní féidir Eolaire Gníomhach a shocrú faoi láthair. Nuair a bheidh do chóras curtha i bhfeidhm, tabhair cuairt ar <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> chun cabhair a fháil.';
+  String get activeDirectoryErrorMessage =>
+      'Ár leithscéal, ní féidir Eolaire Gníomhach a shocrú faoi láthair. Nuair a bheidh do chóras curtha i bhfeidhm, tabhair cuairt ar <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> chun cabhair a fháil.';
 
   @override
   String get networkPageTitle => 'Nasc Idirlín';
@@ -289,7 +301,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Ceangail leis an idirlíon';
 
   @override
-  String get networkPageBody => 'Feabhsóidh nasc idirlín do shuiteáil le seiceáil comhoiriúnachta agus pacáistí bogearraí breise.';
+  String get networkPageBody =>
+      'Feabhsóidh nasc idirlín do shuiteáil le seiceáil comhoiriúnachta agus pacáistí bogearraí breise.';
 
   @override
   String get networkWiredOption => 'Úsáid nasc sreinge';
@@ -301,7 +314,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Tá nasc sreinge casta as';
 
   @override
-  String get networkWiredDisabled => 'Chun Ethernet a úsáid ar an ríomhaire seo, ní mór nasc sreinge a chumasú';
+  String get networkWiredDisabled =>
+      'Chun Ethernet a úsáid ar an ríomhaire seo, ní mór nasc sreinge a chumasú';
 
   @override
   String get networkWiredEnable => 'Cumasaigh sreangú';
@@ -316,7 +330,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Níor aimsíodh aon ghléas Wi-Fi';
 
   @override
-  String get networkWifiDisabled => 'Chun Wi-Fi a úsáid ar an ríomhaire seo, ní mór líonrú gan sreang a chumasú';
+  String get networkWifiDisabled =>
+      'Chun Wi-Fi a úsáid ar an ríomhaire seo, ní mór líonrú gan sreang a chumasú';
 
   @override
   String get networkWifiEnable => 'Cumasaigh Wi-Fi';
@@ -337,10 +352,12 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get eulaPageTitle => 'Comhaontú ceadúnais';
 
   @override
-  String get eulaReviewTerms => 'Athbhreithniú a dhéanamh ar théarmaí an cheadúnais';
+  String get eulaReviewTerms =>
+      'Athbhreithniú a dhéanamh ar théarmaí an cheadúnais';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Chun leanúint ar aghaidh ag bunú an mheaisín seo, ní mór duit téarmaí an chomhaontaithe ceadúnais a léamh agus glacadh leo.';
+  String get eulaReadAndAcceptTerms =>
+      'Chun leanúint ar aghaidh ag bunú an mheaisín seo, ní mór duit téarmaí an chomhaontaithe ceadúnais a léamh agus glacadh leo.';
 
   @override
   String get eulaAcceptTerms => 'Léigh mé agus glacaim leis na téarmaí seo';

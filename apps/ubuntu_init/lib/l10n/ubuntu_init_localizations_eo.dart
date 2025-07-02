@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Novaspekta Programvendejo';
 
   @override
-  String get welcomeStoreSubtitle => 'La plej facila kielo trovi viajn preferatajn programojn.';
+  String get welcomeStoreSubtitle =>
+      'La plej facila kielo trovi viajn preferatajn programojn.';
 
   @override
   String get welcomeSecurityTitle => 'Plifortikigita sekureco';
 
   @override
-  String get welcomeSecuritySubtitle => 'Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.';
+  String get welcomeSecuritySubtitle =>
+      'Novaj opcioj pri aparato-baza aŭ ZFS-baza ĉifrado.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +75,8 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Jura avizo';
 
   @override
-  String get telemetryCollectError => 'Malsukcesis kolekti telemetriajn datenojn';
+  String get telemetryCollectError =>
+      'Malsukcesis kolekti telemetriajn datenojn';
 
   @override
   String get privacyPageTitle => 'Lokado-servo';
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Ĉu ŝalti lokado-servon?';
 
   @override
-  String get privacyLocationSubtitle => 'Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.';
+  String get privacyLocationSubtitle =>
+      'Sciigi vian geografian lokon al programoj.\nVi povas ŝanĝi ĉi tiun agordon iam ajn en Agordoj.';
 
   @override
   String get privacyLocationEnable => 'Lokado-servo';
@@ -108,7 +112,8 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Ĵetono';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Abonu la plej ampleksan protekton pri malfermitkodaj programoj';
+  String get ubuntuProSubscriptionDescription =>
+      'Abonu la plej ampleksan protekton pri malfermitkodaj programoj';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +136,21 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => 'Preterpasi portempe';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Vi povas ŝalti Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Vi povas ŝalti Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ŝalti Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Alkroĉu ĉi tiun komputilon al abono de Ubuntu Pro por sekurigaj ĝisdatigoj pri vasta gamo da pakoj ĝis 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Alkroĉu ĉi tiun komputilon al abono de Ubuntu Pro por sekurigaj ĝisdatigoj pri vasta gamo da pakoj ĝis 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro estas nun ŝaltita sur ĉi tiu komputilo';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro estas nun ŝaltita sur ĉi tiu komputilo';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Vi povas administri viajn servojn de Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».';
+  String get ubuntuProSucessAttachDescription =>
+      'Vi povas administri viajn servojn de Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».';
 }

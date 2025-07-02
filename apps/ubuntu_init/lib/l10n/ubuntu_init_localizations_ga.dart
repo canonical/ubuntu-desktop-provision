@@ -23,19 +23,22 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Tús sruthlínithe';
 
   @override
-  String get welcomeStartSubtitle => 'Ag tacú le heispéireas socraithe níos glaine.';
+  String get welcomeStartSubtitle =>
+      'Ag tacú le heispéireas socraithe níos glaine.';
 
   @override
   String get welcomeStoreTitle => 'App Store cuma nua';
 
   @override
-  String get welcomeStoreSubtitle => 'Ní raibh sé riamh níos éasca teacht ar na bogearraí is fearr leat.';
+  String get welcomeStoreSubtitle =>
+      'Ní raibh sé riamh níos éasca teacht ar na bogearraí is fearr leat.';
 
   @override
   String get welcomeSecurityTitle => 'Slándála feabhsaithe';
 
   @override
-  String get welcomeSecuritySubtitle => 'Roghanna nua le haghaidh criptithe crua-earraí nó ZFS.';
+  String get welcomeSecuritySubtitle =>
+      'Roghanna nua le haghaidh criptithe crua-earraí nó ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Cumasaigh seirbhísí suímh?';
 
   @override
-  String get privacyLocationSubtitle => 'Cuir do shuíomh geografach in iúl d’fheidhmchláir.\nIs féidir leat é seo a athrú am ar bith i Socruithe an Chórais.';
+  String get privacyLocationSubtitle =>
+      'Cuir do shuíomh geografach in iúl d’fheidhmchláir.\nIs féidir leat é seo a athrú am ar bith i Socruithe an Chórais.';
 
   @override
   String get privacyLocationEnable => 'Seirbhísí suímh';
@@ -102,13 +106,15 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Ceangail an meaisín seo';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'nó cuir comhartha isteach de láimh';
+  String get ubuntuProOrAddTokenManually =>
+      'nó cuir comhartha isteach de láimh';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Comhartha';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Faigh an síntiús is cuimsithí le haghaidh slándáil bogearraí foinse oscailte';
+  String get ubuntuProSubscriptionDescription =>
+      'Faigh an síntiús is cuimsithí le haghaidh slándáil bogearraí foinse oscailte';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +131,28 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Comhartha bailí';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Comhartha neamhbhailí, bain triail eile as';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Comhartha neamhbhailí, bain triail eile as';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Scipeáil go fóill';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Is féidir leat Ubuntu Pro a chumasú i gcónaí níos déanaí tríd an bhfeidhmchlár Bogearraí & Nuashonruithe.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Is féidir leat Ubuntu Pro a chumasú i gcónaí níos déanaí tríd an bhfeidhmchlár Bogearraí & Nuashonruithe.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Cumasaigh Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Ceangail an meaisín seo le síntiús Ubuntu Pro le haghaidh nuashonruithe slándála ar raon níos leithne pacáistí, go dtí 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Ceangail an meaisín seo le síntiús Ubuntu Pro le haghaidh nuashonruithe slándála ar raon níos leithne pacáistí, go dtí 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Tá Ubuntu Pro cumasaithe sa mheaisín seo anois';
+  String get ubuntuProSucessAttachHeader =>
+      'Tá Ubuntu Pro cumasaithe sa mheaisín seo anois';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Is féidir leat do sheirbhísí Pro a bhainistiú san fheidhmchlár Bogearraí & Nuashonruithe.';
+  String get ubuntuProSucessAttachDescription =>
+      'Is féidir leat do sheirbhísí Pro a bhainistiú san fheidhmchlár Bogearraí & Nuashonruithe.';
 }
