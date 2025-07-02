@@ -7,8 +7,7 @@ import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_widgets/ubuntu_widgets.dart';
-import 'package:yaru/icons.dart';
+import 'package:yaru/yaru.dart';
 
 // TODO: this will need to be conditionally hooked up to the /storage/v2/calculate_entropy
 //       endpoint in Subiquity once it is available
@@ -45,39 +44,47 @@ class _PassphraseFormFieldState extends ConsumerState<PassphraseFormField> {
     final hasTpmSufficientEntropy =
         model.isTpm && (model.entropy?.success ?? false);
     final isValid = model.passphrase.isNotEmpty && !hasTpmLowEntropy;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
-          child: TextFormField(
-            controller: _controller,
-            decoration: InputDecoration(
-              labelText: model.passphraseType.localizedChooseHint(lang),
-              suffixIcon: const _SecurityKeyShowButton(),
-              errorText: hasTpmLowEntropy
-                  ? model.entropy?.semanticEntropy
-                      .localize(lang, model.passphraseType)
-                  : null,
-              helperText: hasTpmSufficientEntropy
-                  ? model.entropy?.semanticEntropy
-                      .localize(lang, model.passphraseType)
-                  : null,
-              helperMaxLines: 2,
-              errorMaxLines: 2,
-            ),
-            obscureText: !model.showPassphrase,
-            onChanged: (value) {
-              model.passphrase = value;
+          child: Focus(
+            onFocusChange: (hasFocus) {
+              if (!hasFocus) {
+                model.setPassphraseAndEntropy(_controller.text);
+              }
             },
+            child: TextFormField(
+              controller: _controller,
+              decoration: InputDecoration(
+                labelText: model.passphraseType.localizedChooseHint(lang),
+                suffixIcon: const _SecurityKeyShowButton(),
+                errorText: hasTpmLowEntropy
+                    ? model.entropy?.semanticEntropy
+                        .localize(lang, model.passphraseType)
+                    : null,
+                helperText: hasTpmSufficientEntropy
+                    ? model.entropy?.semanticEntropy
+                        .localize(lang, model.passphraseType)
+                    : null,
+                helperMaxLines: 2,
+                errorMaxLines: 2,
+              ),
+              obscureText: !model.showPassphrase,
+              onChanged: (value) {
+                model.setPassphraseAndEntropy(value, debounce: true);
+              },
+            ),
           ),
         ),
-        if (isValid)
+        if (model.passphrase.isNotEmpty)
           Padding(
-            padding: const EdgeInsets.only(left: 10.0),
-            child: Baseline(
-              baseline: 0,
-              baselineType: TextBaseline.alphabetic,
-              child: SuccessIcon(),
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+            child: Icon(
+              isValid ? Icons.check_circle : YaruIcons.error_filled,
+              color: isValid ? colorScheme.success : colorScheme.error,
             ),
           ),
       ],
@@ -115,21 +122,46 @@ class _ConfirmPassphraseFormFieldState
   Widget build(BuildContext context) {
     final model = ref.watch(passphraseModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
+    final isValid = model.passphrase == model.confirmedPassphrase &&
+        model.confirmedPassphrase.isNotEmpty;
+    final colorScheme = Theme.of(context).colorScheme;
 
-    return ValidatedFormField(
-      controller: _controller,
-      fieldWidth: widget.fieldWidth,
-      labelText: model.passphraseType.localizedConfirmHint(lang),
-      obscureText: !model.showPassphrase,
-      successWidget:
-          model.confirmedPassphrase.isNotEmpty ? const SuccessIcon() : null,
-      validator: EqualValidator(
-        model.passphrase,
-        errorText: model.passphraseType.localizedMismatchError(lang),
-      ),
-      onChanged: (value) {
-        model.confirmedPassphrase = value;
-      },
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Focus(
+            onFocusChange: (hasFocus) {
+              if (!hasFocus) {
+                model.setConfirmedPassphrase(_controller.text);
+              }
+            },
+            child: TextFormField(
+              controller: _controller,
+              decoration: InputDecoration(
+                labelText: model.passphraseType.localizedConfirmHint(lang),
+                errorText: !isValid && model.confirmedPassphrase.isNotEmpty
+                    ? model.passphraseType.localizedMismatchError(lang)
+                    : null,
+              ),
+              obscureText: !model.showPassphrase,
+              onChanged: (value) {
+                model.setConfirmedPassphrase(value, debounce: true);
+              },
+              onEditingComplete: () =>
+                  model.setConfirmedPassphrase(_controller.value.text),
+            ),
+          ),
+        ),
+        if (model.confirmedPassphrase.isNotEmpty)
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 8.0),
+            child: Icon(
+              isValid ? Icons.check_circle : YaruIcons.error_filled,
+              color: isValid ? colorScheme.success : colorScheme.error,
+            ),
+          ),
+      ],
     );
   }
 }

@@ -43,15 +43,6 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
       ) as String);
 
   @override
-  set passphrase(String? value) => super.noSuchMethod(
-        Invocation.setter(
-          #passphrase,
-          value,
-        ),
-        returnValueForMissingStub: null,
-      );
-
-  @override
   String get confirmedPassphrase => (super.noSuchMethod(
         Invocation.getter(#confirmedPassphrase),
         returnValue: _i3.dummyValue<String>(
@@ -59,15 +50,6 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
           Invocation.getter(#confirmedPassphrase),
         ),
       ) as String);
-
-  @override
-  set confirmedPassphrase(String? value) => super.noSuchMethod(
-        Invocation.setter(
-          #confirmedPassphrase,
-          value,
-        ),
-        returnValueForMissingStub: null,
-      );
 
   @override
   bool get showPassphrase => (super.noSuchMethod(
@@ -113,6 +95,34 @@ class MockPassphraseModel extends _i1.Mock implements _i2.PassphraseModel {
         Invocation.getter(#isDisposed),
         returnValue: false,
       ) as bool);
+
+  @override
+  void setPassphraseAndEntropy(
+    String? passphrase, {
+    bool? debounce = false,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPassphraseAndEntropy,
+          [passphrase],
+          {#debounce: debounce},
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void setConfirmedPassphrase(
+    String? value, {
+    bool? debounce = false,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setConfirmedPassphrase,
+          [value],
+          {#debounce: debounce},
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
   _i5.Future<bool> init() => (super.noSuchMethod(
