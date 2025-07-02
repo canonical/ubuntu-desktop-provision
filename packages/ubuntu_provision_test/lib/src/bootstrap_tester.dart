@@ -447,7 +447,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
       passphrase,
     );
 
-    await pumpAndSettle();
+    await pumpAndSettle(const Duration(milliseconds: 500));
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);

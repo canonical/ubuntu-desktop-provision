@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
@@ -58,28 +60,50 @@ class PassphraseModel extends SafeChangeNotifier {
   final _showPassphrase = ValueNotifier(false);
   final _entropy = ValueNotifier<EntropyResponse?>(null);
 
+  static const _debounceDuration = Duration(milliseconds: 500);
+  Timer? _updateEntropyTimer;
+  Timer? _confirmPassphraseTimer;
+
   /// The current passphrase.
   String get passphrase => _passphrase.value;
-  set passphrase(String value) {
-    _passphrase.value = value;
-    if (isTpm) {
-      if (value.isEmpty) {
-        _entropy.value = null;
-        return;
-      }
-      _subiquityClient
-          .calculateEntropyV2(
-            passphrase:
-                passphraseType == PassphraseType.passphrase ? value : null,
-            pin: passphraseType == PassphraseType.pin ? value : null,
-          )
-          .then((response) => _entropy.value = response);
-    }
+  void setPassphraseAndEntropy(
+    String passphrase, {
+    bool debounce = false,
+  }) {
+    _updateEntropyTimer?.cancel();
+    _updateEntropyTimer = Timer(
+      debounce && passphrase.isNotEmpty ? _debounceDuration : Duration.zero,
+      () {
+        _passphrase.value = passphrase;
+        if (isTpm) {
+          if (_passphrase.value.isEmpty) {
+            _entropy.value = null;
+            return;
+          }
+          _subiquityClient
+              .calculateEntropyV2(
+                passphrase: passphraseType == PassphraseType.passphrase
+                    ? _passphrase.value
+                    : null,
+                pin: passphraseType == PassphraseType.pin
+                    ? _passphrase.value
+                    : null,
+              )
+              .then((response) => _entropy.value = response);
+        }
+      },
+    );
   }
 
   /// The confirmed passphrase for validation.
   String get confirmedPassphrase => _confirmedPassphrase.value;
-  set confirmedPassphrase(String value) => _confirmedPassphrase.value = value;
+  void setConfirmedPassphrase(String value, {bool debounce = false}) {
+    _confirmPassphraseTimer?.cancel();
+    _confirmPassphraseTimer = Timer(
+      debounce && value.isNotEmpty ? _debounceDuration : Duration.zero,
+      () => _confirmedPassphrase.value = value,
+    );
+  }
 
   /// Defines if the passphrase is shown.
   bool get showPassphrase => _showPassphrase.value;
@@ -126,7 +150,7 @@ class PassphraseModel extends SafeChangeNotifier {
         !RegExp(r'^\d+$').hasMatch(savedPassphrase)) {
       savedPassphrase = '';
     }
-    passphrase = _confirmedPassphrase.value = savedPassphrase;
+    setPassphraseAndEntropy(_confirmedPassphrase.value = savedPassphrase);
   }
 
   /// Saves the passphrase to the service and clears the local values.

@@ -303,7 +303,7 @@ packages:
     source: hosted
     version: "2.1.1"
   fake_async:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: fake_async
       sha256: "6a95e56b2449df2273fd8c45a662d6947ce1ebb7aafe80e550a3f68297f3cacc"

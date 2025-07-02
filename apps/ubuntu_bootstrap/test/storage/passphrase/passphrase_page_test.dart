@@ -36,7 +36,7 @@ void main() {
     final textField = find.textField('foo');
     expect(textField, findsOneWidget);
     await tester.enterText(textField, 'bar');
-    verify(model.passphrase = 'bar').called(1);
+    verify(model.setPassphraseAndEntropy('bar', debounce: true)).called(1);
   });
 
   testWidgets('passphrase confirmation', (tester) async {
@@ -47,9 +47,9 @@ void main() {
     final textFields = find.textField('foo');
     expect(textFields, findsNWidgets(2));
     await tester.enterText(textFields.first, 'bar');
-    verify(model.passphrase = 'bar').called(1);
+    verify(model.setPassphraseAndEntropy('bar', debounce: true)).called(1);
     await tester.enterText(textFields.last, 'bar');
-    verify(model.confirmedPassphrase = 'bar').called(1);
+    verify(model.setConfirmedPassphrase('bar', debounce: true)).called(1);
   });
 
   testWidgets('valid input', (tester) async {
@@ -98,7 +98,7 @@ void main() {
     final textField = find.textField('1234');
     expect(textField, findsOneWidget);
     await tester.enterText(textField, '4b3kk21');
-    verify(model.passphrase = '4321').called(1);
+    verify(model.setPassphraseAndEntropy('4321', debounce: true)).called(1);
   });
 
   group('pin/passphrase entropy', () {
