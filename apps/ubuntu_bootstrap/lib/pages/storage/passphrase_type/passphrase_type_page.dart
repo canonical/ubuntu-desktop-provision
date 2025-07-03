@@ -37,7 +37,8 @@ class PassphraseTypePage extends ConsumerWidget {
               const SizedBox(height: kWizardSpacing),
               ...[
                 PassphraseType.none,
-                PassphraseType.pin,
+                // TODO: restore PIN option once support for it lands in snapd
+                // PassphraseType.pin,
                 PassphraseType.passphrase,
               ].map(
                 (type) {
