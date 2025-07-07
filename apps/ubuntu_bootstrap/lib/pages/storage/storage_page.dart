@@ -121,7 +121,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             ),
             subtitle: Text(
               lang.installationTypeAlongsideInfo(flavor.displayName),
-              style: theme.textTheme.bodySmall!.copyWith(
+              style: theme.textTheme.bodyMedium!.copyWith(
                 color: canInstallAlongside ? null : theme.disabledColor,
               ),
             ),
@@ -166,7 +166,6 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             title: Text(lang.installationTypeManual),
             subtitle: Text(
               lang.installationTypeManualInfo(flavor.displayName),
-              style: theme.textTheme.bodySmall,
             ),
           ),
       ].withSpacing(kWizardSpacing / 2),
@@ -226,12 +225,13 @@ class _WarningSubtitle extends ConsumerWidget {
     return RichText(
       text: TextSpan(
         text: UbuntuLocalizations.of(context).warningLabel,
-        style: theme.textTheme.bodySmall!.copyWith(
+        style: theme.textTheme.bodyMedium!.copyWith(
           fontWeight: FontWeight.bold,
+          color: theme.colorScheme.error,
         ),
         children: <TextSpan>[
-          TextSpan(text: ': ', style: theme.textTheme.bodySmall),
-          TextSpan(text: text, style: theme.textTheme.bodySmall),
+          TextSpan(text: ': ', style: theme.textTheme.bodyMedium),
+          TextSpan(text: text, style: theme.textTheme.bodyMedium),
         ],
       ),
     );
