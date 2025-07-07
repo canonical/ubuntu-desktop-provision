@@ -5,8 +5,8 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
 
 export 'storage_model.dart'
     show
@@ -169,7 +169,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
               style: theme.textTheme.bodySmall,
             ),
           ),
-      ],
+      ].withSpacing(kWizardSpacing / 2),
     );
   }
 }
@@ -202,11 +202,9 @@ class _InstallationTypeTile extends ConsumerWidget {
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: Material(
-        child: YaruRadioListTile(
+        child: OptionButton<StorageType?>(
           title: title,
           subtitle: subtitle,
-          contentPadding: kWizardTilePadding,
-          isThreeLine: true,
           value: storageType,
           groupValue: model.type,
           onChanged: enabled ? onChanged : null,
