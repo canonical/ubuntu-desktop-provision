@@ -394,19 +394,23 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
       'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin => 'Weak passphrase, make it longer or more complex';
+  String get passphrasePagePassphraseEntropyBelowMin =>
+      'Weak passphrase, make it longer or more complex';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowOptimal => 'Fair passphrase, make it longer or more complex for better security';
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      'Fair passphrase, make it longer or more complex for better security';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
 
   @override
-  String get passphrasePagePinEntropyBelowMin => 'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin =>
+      'Weak PIN, make it longer or less predictable';
 
   @override
-  String get passphrasePagePinEntropyBelowOptimal => 'Fair PIN, make it longer or less predictable for better security';
+  String get passphrasePagePinEntropyBelowOptimal =>
+      'Fair PIN, make it longer or less predictable for better security';
 
   @override
   String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
