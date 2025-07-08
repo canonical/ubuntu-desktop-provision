@@ -919,5 +919,6 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} ne estas taŭga dosiersistemo por {mountpoint}"
 }

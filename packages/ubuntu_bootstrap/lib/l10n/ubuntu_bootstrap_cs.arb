@@ -1,6 +1,6 @@
 {
   "@@locale": "cs",
-  "installDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Mělo by být hned hotové.",
+  "installDescription": "Nainstalovat {RELEASE} vedle (nebo namísto) stávajícího operačního systému. Nebude to zdlouhavé.",
   "@installDescription": {
     "type": "text",
     "placeholders": {
@@ -40,11 +40,11 @@
       "url": {}
     }
   },
-  "rstTitle": "RST je zapnuté",
+  "rstTitle": "Zjištěno RST",
   "@rstTitle": {},
   "rstDescription": "Na tomto počítači je zapnutá technologie Intel RST (Rapit Storage Technology). Aby bylo možné {DISTRO} nainstalovat, je třeba ve Windows funkci RST vypnout.",
   "@rstDescription": {},
-  "rstInstructions": "Ohledně pokynů naskenujte QR kód na jiném zařízení (třeba telefonu) nebo jděte na: <a href=\"https://{url}\">{url}</a>",
+  "rstInstructions": "Pro pokyny naskenujte QR kód na jiném zařízení (třeba telefonu) nebo navštivte: <a href=\"https://{url}\">{url}</a>",
   "@rstInstructions": {
     "type": "text",
     "placeholders": {
@@ -53,21 +53,21 @@
   },
   "configureSecureBootTitle": "Nastavit Secure Boot",
   "@configureSecureBootTitle": {},
-  "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardware, pocházející od třetí strany. Aby to bylo možné,\nje zapotřebí vypnout Secure Boot. To uděláte vytvořením klíče zabezpečení a jeho\nnásledným zadáním po restartu systému.",
+  "configureSecureBootDescription": "Zvolili jste nainstalovat ovladač hardwaru pocházející od třetí strany. K tomu je nutné\nvypnout Secure Boot. Musíte si teď proto zvolit klíč zabezpečení a zadat ho po restartu systému.",
   "@configureSecureBootDescription": {},
   "configureSecureBootOption": "Nastavit Secure Boot",
   "@configureSecureBootOption": {},
   "chooseSecurityKey": "Zvolte si klíč zabezpečení",
   "@chooseSecurityKey": {},
-  "confirmSecurityKey": "Zopakujte zadání klíče zabezpečení (prevence překlepu)",
+  "confirmSecurityKey": "Zopakujte klíč zabezpečení",
   "@confirmSecurityKey": {},
-  "dontInstallDriverSoftwareNow": "Nyní ovladač ještě neinstalovat",
+  "dontInstallDriverSoftwareNow": "Zatím ještě ovladač neinstalovat",
   "@dontInstallDriverSoftwareNow": {},
-  "dontInstallDriverSoftwareNowDescription": "Je možné ho nainstalovat kdykoli později pomocí nástroje „Software a aktualizace“.",
+  "dontInstallDriverSoftwareNowDescription": "Můžete ho později nainstalovat pomocí nástroje Software a aktualizace.",
   "@dontInstallDriverSoftwareNowDescription": {},
   "configureSecureBootSecurityKeyRequired": "Je třeba zadat klíč zabezpečení",
   "@configureSecureBootSecurityKeyRequired": {},
-  "secureBootSecurityKeysDontMatch": "Do každé z kolonek pro klíč zabezpečení jste napsali něco jiného",
+  "secureBootSecurityKeysDontMatch": "Klíče zabezpečení se liší",
   "@secureBootSecurityKeysDontMatch": {},
   "updatesOtherSoftwarePageTitle": "Aplikace a aktualizace",
   "@updatesOtherSoftwarePageTitle": {},
@@ -75,9 +75,9 @@
   "@updatesOtherSoftwarePageDescription": {},
   "otherOptions": "Další možnosti",
   "@otherOptions": {},
-  "installThirdPartyTitle": "Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových (Wi-Fi) sítí, stejně tak dodatečné kodeky multimédií",
+  "installThirdPartyTitle": "Nainstalovat ovladače třetích stran pro grafické čipy a adaptéry bezdrátových sítí (Wi-Fi), a také dodatečné kodeky multimédií",
   "@installThirdPartyTitle": {},
-  "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání, obsažených v dokumentaci k němu. Některý je proprietární.",
+  "installThirdPartySubtitle": "Tento software je předmětem licenčních ujednání obsažených v dokumentaci k němu. Některá jsou proprietární.",
   "@installThirdPartySubtitle": {},
   "installationTypeTitle": "Nastavení disku",
   "@installationTypeTitle": {},
@@ -88,7 +88,7 @@
       "os": {}
     }
   },
-  "installationTypeNoOSDetected": "Na tomto počítači nyní nebyl zjištěn žádný operační systém. Co si přejete udělat?",
+  "installationTypeNoOSDetected": "Na tomto počítači nebyl zjištěn žádný operační systém. Co si přejete udělat?",
   "@installationTypeNoOSDetected": {},
   "installationTypeAdvancedLabel": "Pokročilé funkce…",
   "@installationTypeAdvancedLabel": {},
@@ -113,7 +113,7 @@
       "os": {}
     }
   },
-  "installationTypeReinstallWarning": "<font color=\"{color}\">VAROVÁNÍ:</font> Toto smaže veškeré aplikace, dokumenty, fotky, hudbu (a všechny ostatní soubory), nacházející se v rámci {os}.",
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Varování:</font> Tímto se smažou veškeré aplikace, dokumenty, fotky, hudba a všechny ostatní soubory v systému {os}.",
   "@installationTypeReinstallWarning": {
     "type": "text",
     "placeholders": {
@@ -131,15 +131,15 @@
   },
   "installationTypeAlongsideInfo": "Dokumenty, hudba a ostatní osobní soubory zůstanou zachovány. Pokaždé, když počítač spustíte z vypnutého stavu (tedy nikoli uspání), budete si moci zvolit který operační systém spustit.",
   "@installationTypeAlongsideInfo": {},
-  "installationTypeManual": "Ruční rozdělení na oddíly",
+  "installationTypeManual": "Ruční instalace",
   "@installationTypeManual": {},
   "selectGuidedStorageDropdownLabel": "Vyberte jednotku:",
   "@selectGuidedStorageDropdownLabel": {},
-  "selectGuidedStorageInfoLabel": "Bude použit celý disk:",
+  "selectGuidedStorageInfoLabel": "Použije se celý disk:",
   "@selectGuidedStorageInfoLabel": {},
   "selectGuidedStorageInstallNow": "Nainstalovat nyní",
   "@selectGuidedStorageInstallNow": {},
-  "allocateDiskSpace": "Ruční rozdělení",
+  "allocateDiskSpace": "Ruční dělení",
   "@allocateDiskSpace": {},
   "confirmInstallButton": "Instalace",
   "@confirmInstallButton": {},
@@ -159,9 +159,9 @@
   "@diskHeadersFormat": {},
   "freeDiskSpace": "Volné místo",
   "@freeDiskSpace": {},
-  "newPartitionTable": "Nová tabulka rozdělení na oddíly",
+  "newPartitionTable": "Nová tabulka dělení oddílů",
   "@newPartitionTable": {},
-  "bootLoaderDevice": "Zařízení na které nainstalovat zavaděč systému",
+  "bootLoaderDevice": "Zařízení kam nainstalovat zavaděč systému",
   "@bootLoaderDevice": {},
   "partitionCreateTitle": "Vytvořit oddíl",
   "@partitionCreateTitle": {},
@@ -183,7 +183,7 @@
   "@partitionTypeLogical": {},
   "partitionTypePrimary": "Primární",
   "@partitionTypePrimary": {},
-  "partitionTypeLabel": "Zadejte typ pro nový oddíl:",
+  "partitionTypeLabel": "Typ nového oddílu:",
   "@partitionTypeLabel": {},
   "partitionSizeLabel": "Velikost:",
   "@partitionSizeLabel": {},
@@ -207,7 +207,7 @@
   "@installationCompleteTitle": {},
   "confirmPartitionChanges": "Budou provedeny následující změny na oddílech:",
   "@confirmPartitionChanges": {},
-  "confirmPartitionTables": "Budou změněny tabulky rozdělení na oddíly následujících zařízení:",
+  "confirmPartitionTables": "Tabulky dělení oddílů se na následujících zařízení změní:",
   "@confirmPartitionTables": {},
   "confirmHeader": "Zkontrolujte své volby",
   "@confirmHeader": {},
@@ -241,7 +241,7 @@
       "RELEASE": {}
     }
   },
-  "tryDescription": "Můžete si vyzkoušet {RELEASE} aniž by se v počítači cokoli měnilo.",
+  "tryDescription": "Můžete si {RELEASE} vyzkoušet, aniž by se v počítači cokoli změnilo.",
   "@tryDescription": {
     "type": "text",
     "placeholders": {
@@ -269,7 +269,7 @@
       "DISTRO": {}
     }
   },
-  "installationTypeManualInfo": "Pro pokročilé uživatele, kteří hledají přizpůsobené nastavení disků.",
+  "installationTypeManualInfo": "Pro pokročilé uživatele, kteří chtějí nastavení disků upravit vlastnoručně.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -278,7 +278,7 @@
   },
   "newPartitionTableConfirmationTitle": "Nový prázdný oddíl",
   "@newPartitionTableConfirmationTitle": {},
-  "newPartitionTableConfirmationMessage": "Vytvoření nové tabulky oddílů na celém zařízení z něj odebere veškeré stávající oddíly. V případě potřeby lze v tomto kroku ještě tuto operaci vzít zpět (ovšem po zapsání změn už pak ne).",
+  "newPartitionTableConfirmationMessage": "Vytvoření nové tabulky oddílů na celém zařízení odebere veškeré stávající oddíly. V tomto kroku ještě lze tuto operaci vzít zpět.",
   "@newPartitionTableConfirmationMessage": {},
   "onBatteryWarning": "<font color=\"{color}\">Upozornění:</font> Počítač není připojen k napájení ze zásuvky.",
   "@onBatteryWarning": {
@@ -295,7 +295,7 @@
       "os2": {}
     }
   },
-  "installationTypeMultiOSDetected": "Na tomto počítači se v současnosti nachází vícero operačních systémů. Co si přejete udělat?",
+  "installationTypeMultiOSDetected": "Na tomto počítači se už nachází několik operačních systémů. Co si přejete udělat?",
   "@installationTypeMultiOSDetected": {},
   "copyingFiles": "Kopírování souborů…",
   "@copyingFiles": {},
@@ -324,7 +324,7 @@
   "@notEnoughDiskSpaceTitle": {},
   "installationTypeLVMEncryptionSelected": "Vybráno LVM a šifrování",
   "@installationTypeLVMEncryptionSelected": {},
-  "installAlongsideHiddenPartitions": "{num} menších oddílů skryto. Pokud potřebujete mít nad procesem více kontroly, použijte <a href=\"{url}\">nástroj pro pokročilou správu oddílů</a>",
+  "installAlongsideHiddenPartitions": "{num} menších oddílů skryto. Pokud potřebujete postup více upravit, použijte <a href=\"{url}\">nástroj pro pokročilou správu oddílů</a>",
   "@installAlongsideHiddenPartitions": {
     "type": "text",
     "placeholders": {
@@ -358,7 +358,7 @@
       "mount": {}
     }
   },
-  "showSecurityKey": "Zobrazit klíč zabezpečení",
+  "showSecurityKey": "Zobrazit",
   "@showSecurityKey": {},
   "installationTypeAlongsideMulti": "Nainstalovat {product} vedle nich",
   "@installationTypeAlongsideMulti": {
@@ -399,15 +399,15 @@
       "format": {}
     }
   },
-  "installDriversTitle": "Nainstalovat ovladače od třetích stran pro grafické čipy a Wi-Fi síťová rozhraní",
+  "installDriversTitle": "Nainstalovat ovladače od třetích stran pro grafické čipy a síťová rozhraní Wi-Fi",
   "@installDriversTitle": {},
-  "installCodecsTitle": "Stáhnout a nainstalovat podporu pro další formáty médií",
+  "installCodecsTitle": "Stáhnout a nainstalovat podporu pro další multimediální formáty",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "Včetně, ale nejen MP3, MP4, MOV a podobné",
+  "installCodecsSubtitle": "Obsahuje mimo jiné MP3, MP4, MOV a podobné",
   "@installCodecsSubtitle": {},
-  "installDriversSubtitle": "Včetně, ale nejen, ovladačů NVIDIA a podobných",
+  "installDriversSubtitle": "Obsahuje mimo jiné ovladače NVIDIA a podobné",
   "@installDriversSubtitle": {},
-  "offlineWarning": "V tu chvíli nejste připojení k Internetu",
+  "offlineWarning": "Nejste připojení k Internetu",
   "@offlineWarning": {},
   "restartNow": "Restartovat nyní",
   "@restartNow": {},
@@ -432,16 +432,16 @@
   "@confirmPartitionsTitle": {},
   "installationSlidesAvailable": "K dispozici:",
   "@installationSlidesAvailable": {},
-  "installationSlidesWelcomeBody": "Ať už jste vývojáři, tvůrci, hráči či správci, naleznete zde nové nástroje zvyšující vaši produktivitu a vylepšující váš dojem z používání {RELEASE}.",
+  "installationSlidesWelcomeBody": "Ať už jste vývojáři, tvůrci, hráči či správci, v {RELEASE} naleznete nové nástroje, které vám zvýší produktivitu a zpříjemní používání systému.",
   "@installationSlidesWelcomeBody": {
     "type": "text",
     "placeholders": {
       "RELEASE": {}
     }
   },
-  "installationSlidesSoftwareTitle": "Všechny aplikace které potřebujete",
+  "installationSlidesSoftwareTitle": "Všechny aplikace, které potřebujete",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesSoftwareBody": "Instalujte, spravujte a aktualizujte vámi používané aplikace v Ubuntu Software, obsahujícího tisíce aplikací jak ze Snap Store, tak z archivu balíčků {DISTRO}.",
+  "installationSlidesSoftwareBody": "V Centru aplikací můžete instalovat, spravovat a aktualizovat všechny aplikace, včetně tisíců aplikací z obchodu Snap i z archivu {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
@@ -461,14 +461,14 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityLts": "Všechna {DISTRO} LTS vydání dostávají po dobu pěti let opravy zabezpečení s tím, že je možné prodloužit na deset let předplatným Ubuntu Pro.",
+  "installationSlidesSecurityLts": "Všechna vydání {DISTRO} LTS dostávají opravy zabezpečení po dobu pěti let, nebo prodloužené na deset let předplatným Ubuntu Pro.",
   "@installationSlidesSecurityLts": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesProductivityBody": "{DISTRO} Desktop obsahuje LibreOffice – sadu open source aplikaci, kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop obsahuje LibreOffice – sadu open source aplikací kompatibilní s Microsoft Office pro dokumenty, tabulky a prezentace. Jsou též k dispozici oblíbené nástroje pro spolupráci.",
   "@installationSlidesProductivityBody": {
     "type": "text",
     "placeholders": {
@@ -488,7 +488,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSupportCommunity": "Web Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.",
+  "installationSlidesSupportCommunity": "Stránka Ask Ubuntu pokrývá celou škálu otázek a odpovědí, dále na fóru Ubuntu Discourse jsou k dispozici návody a diskuze pro nové i pokročilé uživatele.",
   "@installationSlidesSupportCommunity": {},
   "installationSlidesSupportEnterprise": "Pro firemní uživatele Canonical poskytuje komerční podporu, díky které je snadné zavést a spravovat Ubuntu na pracovišti.",
   "@installationSlidesSupportEnterprise": {},
@@ -496,7 +496,7 @@
   "@installationSlidesSupportResources": {},
   "installationSlidesSupportDocumentation": "Oficiální dokumentace",
   "@installationSlidesSupportDocumentation": {},
-  "installationSlidesSupportUbuntuPro": "Podpora 24/7 na podnikové úrovni s Ubuntu Pro",
+  "installationSlidesSupportUbuntuPro": "Nepřetržitá podpora na podnikové úrovni s Ubuntu Pro",
   "@installationSlidesSupportUbuntuPro": {},
   "notEnoughDiskSpaceRequired": "Vyžadováno:",
   "@notEnoughDiskSpaceRequired": {},
@@ -509,7 +509,7 @@
   },
   "installationSlidesIncluded": "Obsaženo:",
   "@installationSlidesIncluded": {},
-  "installationSlidesWelcomeTitle": "Rychlé, svobodné a plné nových funkcí",
+  "installationSlidesWelcomeTitle": "Rychlé, bezplatné a plné nových funkcí",
   "@installationSlidesWelcomeTitle": {},
   "installationSlidesWelcomeHeader": "Nejnovější verze {DISTRO} usnadňuje používání počítače víc než kdy dříve.",
   "@installationSlidesWelcomeHeader": {
@@ -520,7 +520,7 @@
   },
   "installationSlidesCreativityTitle": "Buďte tvořivější",
   "@installationSlidesCreativityTitle": {},
-  "installationSlidesDevelopmentBody": "{DISTRO} je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci / strojové učení, stejně tak pro devops a správu systémů. Každé vydání {DISTRO} obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí.",
+  "installationSlidesDevelopmentBody": "{DISTRO} je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci (AI/ML), a také pro devops a správu systémů. Každé vydání {DISTRO} obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí (IDE).",
   "@installationSlidesDevelopmentBody": {
     "type": "text",
     "placeholders": {
@@ -534,7 +534,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingBody": "{DISTRO} podporuje nejnovější ovladače od NVIDIA (to stejné ty z Mesa), což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na {DISTRO} prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.",
+  "installationSlidesGamingBody": "{DISTRO} podporuje nejnovější ovladače NVIDIA a Mesa, což zlepšuje výkon a kompatibilitu. Tisíce her pro Windows skvěle fungují na {DISTRO} prostřednictvím aplikací jako je Steam, bez potřeby něco dále nastavovat.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
@@ -543,7 +543,7 @@
   },
   "installationSlidesProductivityTitle": "Zvyšte svou produktivitu",
   "@installationSlidesProductivityTitle": {},
-  "installationSlidesAccessibilityBody": "V srdci filozofie {DISTRO} je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění hendikepovaným a možnosti změnit jazyk, barvy a velikost textu rozhraní, {DISTRO} činí používání počítače snadné – ať už jste kdokoli a žijete kdekoli.",
+  "installationSlidesAccessibilityBody": "V jádru filozofie {DISTRO} je myšlenka, že počítače jsou pro všechny. Díky pokročilým nástrojům pro zpřístupnění a možnostem změnit jazyk, barvy a velikost textu rozhraní usnadňuje {DISTRO} používání počítače, ať už jste kdokoli a kdekoli.",
   "@installationSlidesAccessibilityBody": {
     "type": "text",
     "placeholders": {
@@ -565,7 +565,7 @@
   "@rstHeader": {},
   "restartIntoWindowsTitle": "Restartovat do Windows?",
   "@restartIntoWindowsTitle": {},
-  "restartIntoWindowsDescription": "Opravdu chcete váš počítač restartovat? Pokud poté budete chtít dokončit instalaci {DISTRO}, bude třeba znovu spustit instalaci {DISTRO}.",
+  "restartIntoWindowsDescription": "Opravdu chcete počítač restartovat? Pokud pak budete chtít instalaci {DISTRO} dokončit, bude třeba instalaci {DISTRO} spustit znovu.",
   "@restartIntoWindowsDescription": {
     "type": "text",
     "placeholders": {
@@ -574,7 +574,7 @@
   },
   "bitlockerHeader": "Aby bylo možné pokračovat, vypněte BitLocker",
   "@bitlockerHeader": {},
-  "allocateDiskSpaceInvalidMountPointSlash": "Je třeba, aby přípojné body začínaly na „/“ (dopředné lomítko)",
+  "allocateDiskSpaceInvalidMountPointSlash": "Je třeba, aby přípojné body začínaly na „/“",
   "@allocateDiskSpaceInvalidMountPointSlash": {},
   "allocateDiskSpaceInvalidMountPointSpace": "Přípojné body nemohou obsahovat mezery",
   "@allocateDiskSpaceInvalidMountPointSpace": {},
@@ -615,7 +615,7 @@
   },
   "installationTypeTPM": "Zapnout na hardware založené šifrování celého disku",
   "@installationTypeTPM": {},
-  "installationTypeTPMSelected": "TPM vybráno",
+  "installationTypeTPMSelected": "Vybráno TPM",
   "@installationTypeTPMSelected": {},
   "refreshPageTitle": "Je k dispozici aktualizace",
   "@refreshPageTitle": {},
@@ -634,7 +634,7 @@
       "version": {}
     }
   },
-  "refreshSnapCheckRerefresh": "Zjišťování opětovného znovunačítání {snap}…",
+  "refreshSnapCheckRerefresh": "Kontrola opětovného znovunačítání {snap}…",
   "@refreshSnapCheckRerefresh": {
     "type": "text",
     "placeholders": {
@@ -671,7 +671,7 @@
       "snap": {}
     }
   },
-  "refreshSnapStartServices": "Start služeb {snap}…",
+  "refreshSnapStartServices": "Spouštění služeb {snap}…",
   "@refreshSnapStartServices": {
     "type": "text",
     "placeholders": {
@@ -706,7 +706,7 @@
       "snap": {}
     }
   },
-  "refreshSnapUnlink": "Rušení odkazování na {snap}…",
+  "refreshSnapUnlink": "Rušení odkazů na {snap}…",
   "@refreshSnapUnlink": {
     "type": "text",
     "placeholders": {
@@ -720,7 +720,7 @@
       "snap": {}
     }
   },
-  "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů pro spouštění jádra systému {snap}…",
+  "refreshSnapUpdateKernelCommandLine": "Aktualizace parametrů {snap} pro spouštění jádra systému…",
   "@refreshSnapUpdateKernelCommandLine": {
     "type": "text",
     "placeholders": {
@@ -780,15 +780,15 @@
       "color": {}
     }
   },
-  "fullInstallationSubtitle": "Výběr kancelářských nástrojů, pomůcek a webového prohlížeče vhodných pro režim offline.",
+  "fullInstallationSubtitle": "Výběr webového prohlížeče, kancelářských nástrojů a pomůcek nevyžadujících internet.",
   "@fullInstallationSubtitle": {},
-  "minimalInstallationTitle": "Výchozí instalace",
+  "minimalInstallationTitle": "Výchozí výběr",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Pouze nezbytné, webový prohlížeč a základní nástroje.",
+  "minimalInstallationSubtitle": "Jen to nejnutnější, webový prohlížeč a základní nástroje.",
   "@minimalInstallationSubtitle": {},
-  "fullInstallationTitle": "Plná instalace",
+  "fullInstallationTitle": "Rozšířená instalace",
   "@fullInstallationTitle": {},
-  "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být krok za krokem provedeni instalací.",
+  "autoinstallInteractiveDescription": "Pro uživatele, kteří chtějí být instalací provedeni krok za krokem.",
   "@autoinstallInteractiveDescription": {},
   "autoinstallTitle": "Typ instalace",
   "@autoinstallTitle": {},
@@ -810,7 +810,7 @@
   "@autoinstallAutomatedDescription": {},
   "warningLabel": "Varování:",
   "@warningLabel": {},
-  "tryOrInstallHeader": "Co chcete dělat s {DISTRO}?",
+  "tryOrInstallHeader": "Co chcete s {DISTRO} udělat?",
   "@tryOrInstallHeader": {
     "placeholders": {
       "DISTRO": {
@@ -820,7 +820,7 @@
   },
   "hideSecurityKey": "Skrýt",
   "@hideSecurityKey": {},
-  "codecsAndDriversPageTitle": "Optimalizovat váš počítač",
+  "codecsAndDriversPageTitle": "Optimalizovat počítač",
   "@codecsAndDriversPageTitle": {},
   "codecsAndDriversPageDescription": "Instalovat doporučený proprietární software?",
   "@codecsAndDriversPageDescription": {},
@@ -860,7 +860,7 @@
   "@createPassphrase": {},
   "confirmPassphrase": "Potvrdit přístupové heslo",
   "@confirmPassphrase": {},
-  "installationTypeHeader": "Jak chcete nainstalovat {DISTRO}?",
+  "installationTypeHeader": "Jak chcete {DISTRO} nainstalovat?",
   "@installationTypeHeader": {
     "placeholders": {
       "DISTRO": {
@@ -891,13 +891,13 @@
       }
     }
   },
-  "selectGuidedStorageInfo": "Začněte od začátku na zvoleném disku.",
+  "selectGuidedStorageInfo": "Začněte na zvoleném disku od nuly.",
   "@selectGuidedStorageInfo": {},
   "selectGuidedStorageDriveDropdownLabel": "Vyberte disk:",
   "@selectGuidedStorageDriveDropdownLabel": {},
   "selectGuidedStoragePartitionDropdownLabel": "Vyberte oddíl:",
   "@selectGuidedStoragePartitionDropdownLabel": {},
-  "guidedStoragePageHeader": "Vyberte, kam nainstalovat {DISTRO}",
+  "guidedStoragePageHeader": "Vyberte, kam {DISTRO} nainstalovat",
   "@guidedStoragePageHeader": {
     "placeholders": {
       "DISTRO": {
@@ -933,7 +933,7 @@
   "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "Ovladače",
   "@confirmProprietarySoftwareDrivers": {},
-  "rebootToConfigure": "**{system}** byl zkopírován na disk",
+  "rebootToConfigure": "**{system}** bylo zkopírováno na disk",
   "@rebootToConfigure": {
     "placeholders": {
       "system": {
@@ -941,7 +941,7 @@
       }
     }
   },
-  "restartWarningBody": "Restartujte pro dokončení instalace nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.",
+  "restartWarningBody": "Restartujte, aby se dokončila instalace, nebo pokračujte v testování.\nŽádné změny, které provedete, nebudou uloženy.",
   "@restartWarningBody": {},
   "rebootToConfigureWarning": "Chcete-li pokračovat v procesu instalace, musíte počítač restartovat.",
   "@rebootToConfigureWarning": {},
@@ -957,12 +957,13 @@
   "@refreshCloseLabel": {},
   "validate": "Ověřit",
   "@validate": {},
-  "notEnoughDiskSpaceBody": "Vybraný disk nemá dostatek místa pro instalaci {DISTRO}. Ukončete instalační program, abyste uvolnili místo, nebo vyberte jiný disk.",
+  "notEnoughDiskSpaceBody": "Vybraný disk nemá pro instalaci {DISTRO} dostatek místa. Ukončete instalační program a uvolněte místo, nebo vyberte jiný disk.",
   "@notEnoughDiskSpaceBody": {
     "placeholders": {
       "DISTRO": {
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} není podporovaný souborový systém pro {mountpoint}"
 }

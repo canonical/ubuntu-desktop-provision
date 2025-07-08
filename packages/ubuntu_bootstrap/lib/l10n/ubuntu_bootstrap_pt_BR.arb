@@ -755,7 +755,7 @@
   },
   "autoinstallInteractiveOption": "Instalação interativa",
   "@autoinstallInteractiveOption": {},
-  "autoinstallInstructions": "Entre a URL para o autoinstall.yaml:",
+  "autoinstallInstructions": "Insira a URL para o autoinstall.yaml ou o caminho do arquivo local:",
   "@autoinstallInstructions": {},
   "refreshReady": "Atualização pronta",
   "@refreshReady": {},

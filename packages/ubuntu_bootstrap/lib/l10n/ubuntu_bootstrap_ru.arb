@@ -914,5 +914,6 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} не является поддерживаемой файловой системой для {mountpoint}"
 }

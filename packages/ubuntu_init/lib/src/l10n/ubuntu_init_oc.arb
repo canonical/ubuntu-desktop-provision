@@ -1,7 +1,7 @@
 {
   "welcomePageTitle": "Benvengut",
   "@welcomePageTitle": {},
-  "telemetryDescription": "Partejatz de donadas anonimas amb {distro} perque poscam melhorar vòstra experiéncia.",
+  "telemetryDescription": "Ajudatz-nos a melhorar {distro} en partejant amb nosautres las donadas de vòstre sistèma. Aquò inclutz causas coma lo modèl de vòstra maqina, los logicials installats e l’emplaçament que causiguèretz per la zòna orària.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -42,7 +42,7 @@
   "@welcomeStoreTitle": {},
   "welcomeSecurityTitle": "Seguretat renfortida",
   "@welcomeSecurityTitle": {},
-  "telemetryReportLabel": "Detalhs del rapòrt",
+  "telemetryReportLabel": "Veire lo primièr rapòrt",
   "@telemetryReportLabel": {},
   "telemetryLabelOn": "Òc, partejar las donadas sistèma amb la còla de {distro}",
   "@telemetryLabelOn": {
@@ -88,5 +88,11 @@
   "ubuntuProSucessAttachHeader": "Ubuntu Pro es ara activat sus aquesta maquina",
   "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "Podètz gerir los servicis Pro dins l'aplicacion Logicial e mesas a jorn.",
-  "@ubuntuProSucessAttachDescription": {}
+  "@ubuntuProSucessAttachDescription": {},
+  "telemetryCollectError": "Fracàs de la collècta de donadas de telemetria",
+  "ubuntuProSubscriptionDescription": "Soscrivètz a l’abonament amb la melhora seguretat dels logicials liures",
+  "ubuntuProSubscriptionFreeForPersonalUse": "Totjorn gratuit per un usatge personal. 30 jorns d’ensag per las entrepresas. <a href=\"https://{url}\">Ne saber mai</a>",
+  "ubuntuProMagicAttachInstructions": "Ligason magica amb aqueste còdi sus <a href=\"https://{url}\">{url}</a>",
+  "ubuntuProOnBoardingSkipForNowDescription": "Podètz totjorn activar Ubuntu Pro mai tard dins l’aplicacion Logicials e mesas a jorn.",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Ligatz aquesta maquina a un abonament Ubuntu Pro per de mesas a jorn de seguretat sus un grand nombre de paquets, fins a 2032."
 }

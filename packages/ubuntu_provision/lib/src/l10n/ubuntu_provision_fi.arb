@@ -237,5 +237,6 @@
   "eulaReadAndAcceptTerms": "Sinun täytyy lukea ja hyväksyä lisenssiehdot jatkaaksesi tämän koneen määritystä.",
   "@eulaReadAndAcceptTerms": {},
   "eulaReviewTerms": "Lue lisenssiehdot",
-  "@eulaReviewTerms": {}
+  "@eulaReviewTerms": {},
+  "errorPageUbuntuBug": "Suorita komento <pre>sudo ubuntu-bug {SNAP}</pre> päätteessä tai komentokonsolissa (Alt+F2) lähettääksesi automaattisen virheraportin, joka sisältää myös virheenjäljitystiedot."
 }

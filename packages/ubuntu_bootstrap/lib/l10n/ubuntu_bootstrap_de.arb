@@ -920,5 +920,6 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} ist ein nicht unterstütztes Dateisystem für {mountpoint}"
 }

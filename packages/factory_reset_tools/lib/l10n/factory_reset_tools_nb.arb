@@ -1,3 +1,20 @@
 {
-  "@@locale": "nb"
+  "@@locale": "nb",
+  "resetMediaReadyTitle": "USB-tilbakestillingsmedia er klar",
+  "resetMediaFailed": "Mislyktes",
+  "ok": "OK",
+  "appTitle": "Verktøy for fabrikktilbakestilling",
+  "homeTitle": "Hva ønsker du å gjøre?",
+  "windowTitle": "Verktøy for fabrikktilbakestilling",
+  "createResetMedia": "Opprett tilbakestillingsmedia",
+  "close": "Lukk",
+  "resetMediaTitle": "USB-tilbakestillingsmedia",
+  "resetMediaFinished": "Fullført",
+  "resetMediaCopying": "Kopierer …",
+  "error": "Feil",
+  "loading": "Laster inn …",
+  "resetMediaFinalizing": "Fullfører …",
+  "warning": "Advarsel",
+  "restore": "Gjenopprett",
+  "reformat": "Reformater"
 }
