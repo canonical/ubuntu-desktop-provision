@@ -14,23 +14,23 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Налаштуйте $DISTRO відповідно до ваших потреб перед початком роботи. Ви можете змінити їх пізніше в Налаштуваннях системи.';
+    return 'Налаштуйте $DISTRO відповідно до ваших потреб перед початком роботи. Ви можете змінити це пізніше в Налаштуваннях системи.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Бачачи';
+  String get accessibilitySeeingLabel => 'Зір';
 
   @override
-  String get accessibilityHearingLabel => 'Чути';
+  String get accessibilityHearingLabel => 'Слух';
 
   @override
-  String get accessibilityTypingLabel => 'Друкуючи';
+  String get accessibilityTypingLabel => 'Введення';
 
   @override
   String get accessibilityPointingLabel => 'Наведення та клацання';
 
   @override
-  String get accessibilityZoomLabel => 'Зум';
+  String get accessibilityZoomLabel => 'Масштабування';
 
   @override
   String get accessibilityHighContrastLabel => 'Висока контрастність';
@@ -39,10 +39,10 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Великий текст';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Зменшити анімацію';
+  String get accessibilityReduceAnimationLabel => 'Скоротити анімацію';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Зчитувач з екрану';
+  String get accessibilityScreenReaderLabel => 'Зчитувач з екрана';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Візуальні попередження';
@@ -57,13 +57,13 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get accessibilityMouseKeysLabel => 'Клавіші миші';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Настільний зум';
+  String get accessibilityDesktopZoomLabel => 'Масштабування стільниці';
 
   @override
   String get errorPageTitle => 'Щось пішло не так';
 
   @override
-  String get errorPageUnexpected => 'Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезавантажити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
+  String get errorPageUnexpected => 'Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезапустити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -95,7 +95,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Розкладка клавіатури';
 
   @override
-  String get keyboardHeader => 'Оберіть розкладку клавіатури:';
+  String get keyboardHeader => 'Виберіть розкладку клавіатури';
 
   @override
   String get keyboardTestHint => 'Введіть що-небудь, щоб перевірити клавіатуру';
@@ -279,13 +279,13 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'На жаль, зараз неможливо налаштувати Active Directory. Коли ваша система буде запущена, відвідайте <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, щоб отримати допомогу.';
 
   @override
-  String get networkPageTitle => 'Підключитись до інтернету';
+  String get networkPageTitle => 'З\'єднання з інтернетом';
 
   @override
-  String get networkPageHeader => 'Підключення цього комп\'ютера до Інтернету допоможе Ubuntu встановити необхідне додаткове програмне забезпечення та вибрати часовий пояс.\n\nПідключіться за допомогою кабелю Ethernet або виберіть Wi-Fi мережу';
+  String get networkPageHeader => 'Під\'єднання до інтернету';
 
   @override
-  String get networkPageBody => 'Під\'єднання до Інтернету покращить вашу інсталяцію завдяки перевірці сумісності та додатковим пакетам програмного забезпечення.';
+  String get networkPageBody => 'З\'єднання з інтернетом поліпшить встановлення завдяки перевірці сумісності та додатковим пакункам програмного забезпечення.';
 
   @override
   String get networkWiredOption => 'Використовувати дротове підключення';

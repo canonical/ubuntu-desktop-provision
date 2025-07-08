@@ -5,29 +5,29 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Ubuntu töölauaversiooni paigaldaja';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Paigalda $RELEASE';
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Paigalduse tüüp';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Kuidas sa sooviksid ${DISTRO}t paigaldada?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'Sisesta autoinstall.yaml faili võrguaadress või vali kohalik asukoht:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Interaktiivne paigaldus';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'Kasutajatele, kes soovivad sammhaaval juhendamist paigalduse ajal.';
 
   @override
   String get autoinstallAutomatedOption => 'Automated installation';
@@ -36,67 +36,67 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get autoinstallAutomatedDescription => 'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'Muuda';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'Lõpeta paigaldus';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Tere tulemast, see on $DISTRO';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO on ettevalmistamisel…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Hoiatus:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return '$DISTRO - proovi või paigalda';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Mida sa sooviksid teha ${DISTRO}ga?';
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'Paranda paigaldus';
 
   @override
-  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'Parandamise käigus paigaldatakse kogu senipaigaldatud tarkvara uuesti, kuid nii dokumendid kui seadistused jäävad muutmata.';
 
   @override
   String tryOption(String RELEASE) {
-    return 'Try $RELEASE';
+    return 'Proovi ${RELEASE}t';
   }
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'Sa võid proovida ${RELEASE}t ilma arvutisse muudatusi tegemata.';
   }
 
   @override
   String installOption(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Paigalda $RELEASE';
   }
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'Paigalda $RELEASE hetkel arvutis olemasoleva operatsioonisüsteemi kõrvale või asemele. Selleks ei tohiks liiga palju aega kuluda.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'Huvi korral saad lugeda ka <a href=\"$url\">selle versiooni väljalasketeadet</a>.';
   }
 
   @override
-  String get rstTitle => 'RST detected';
+  String get rstTitle => 'RST on kasutusel';
 
   @override
   String get rstHeader => 'Turn off RST to continue';
@@ -108,109 +108,109 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'Skaneerides QR-koodi mõne muu seadmega leiad teemakohase juhendi. Või lihtsalt vaata veebilehte <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'Seadista Secure Booti';
 
   @override
-  String get configureSecureBootDescription => 'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+  String get configureSecureBootDescription => 'Sa oled otsustanud paigaldada kolmandate osapoolte draiverite tarkvara. See aga eeldab, et Secure Boot on välja lülitatud.\nSelleks palun loo nüüd turvavõti ning sisesta see süsteemi uuesti käivitamisel.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'Seadista Secure Booti';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'Vali turvavõti';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'Korda turvavõtit';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Don\'t install the driver software for now';
+  String get dontInstallDriverSoftwareNow => 'Ära esialgu paigalda draiveri tarkvara';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'You can install it later from Software & Updates.';
+  String get dontInstallDriverSoftwareNowDescription => 'Sa saad ta alati hiljem paigaldada rakendusest „Tarkvara ja uuendused“.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'Turvavõti on kohustuslik';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'Turvavõtmed ei klapi omavahel';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'Näita';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Peida';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'Rakendused';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'What apps would you like to install to start with?';
+  String get updatesOtherSoftwarePageDescription => 'Mis rakendusi sa tahaksid paigaldamisel lisada?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimeeri oma arvutit';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Kas soovid paigaldada ka soovituslikku suletud ja omanduslikku tarkvara?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO distributsioonis vaikimisi ei leidu suletud ja omanduslikku tarkvara. Küll aga mõne sellise täiendava tarkvarapaketi lisamine võib sinu arvuti jõudlust parandada.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Tuvastasime NVIDIA graafikakaardi';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Tagamaks parimat jõudlust NVIDIA graafikakaartidega, soovitame täiendavate draiverite paigaldamist.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Laiendatud valik';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'Vallasrežiimisõbralik kontoritarkvara, tarvikud, mängud ja veebibrauser.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Vaikimisi valik';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'Vaid põhilised töövahendid, veebibrauser ja tarvikud.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'Muud valikud';
 
   @override
-  String get installThirdPartyTitle => 'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+  String get installThirdPartyTitle => 'Paigalda kolmandate osapoolte loodud tarkvara graafika- ja WiFi-kaardi jaoks ning teegid täiendavate meediavormingute kasutamiseks';
 
   @override
-  String get installThirdPartySubtitle => 'This software is subject to license terms included with its documentation. Some are proprietary.';
+  String get installThirdPartySubtitle => 'Selle tarkvara kasutamine on võimalik nende dokumentatsioonis näidatud litsentsitingimustele. Osa sellest tarkvarast on suletud ja omanduslik tarkvara.';
 
   @override
-  String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
+  String get installDriversTitle => 'Paigalda kolmandate osapoolte tarkvara graafika- ja WiFi-kaardi jaoks';
 
   @override
-  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
+  String get installDriversSubtitle => 'Sealhulgas, aga mitte ainult, NVIDIA dariverid ja muu sarnane';
 
   @override
-  String get installCodecsTitle => 'Download and install support for additional media formats';
+  String get installCodecsTitle => 'Laadi alla ja paigalda täiendavate meediavormingute tugi';
 
   @override
-  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
+  String get installCodecsSubtitle => 'Sealhulgas, aga mitte ainult, MP3, MP4, MOV ja muu sarnase tugi';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'See arvuti pole ühendatud vooluvõrku.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Sa hetkel pole võrgus';
 
   @override
   String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Loo salafraas';
 
   @override
   String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
@@ -240,32 +240,32 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'Kettaseadistus';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Kuidas sa tahad $DISTRO paigaldada?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'Selles arvutis on juba on olemas $os. Mida sa tahad teha?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'Selles arvutis on juba on olemas $os1 ja $os2. Mida sa tahad teha?';
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'This computer currently has multiple operating systems on it. What would you like to do?';
+  String get installationTypeMultiOSDetected => 'Selles arvutis on juba on olemas üsna mitu operatsioonisüsteemi. Mida sa tahad teha?';
 
   @override
-  String get installationTypeNoOSDetected => 'This computer currently has no detected operating systems. What would you like to do?';
+  String get installationTypeNoOSDetected => 'Selles arvutis on pole olemas ühtegi tuvastatavat operatsioonisüsteemi. Mida sa tahad teha?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Kustuta ja vorminda ketas ning paigaldada $DISTRO';
   }
 
   @override
@@ -278,28 +278,28 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Advanced features';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Katseline';
 
   @override
   String get installationTypeNone => 'None';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'Ühtegi pole valitud';
 
   @override
   String get installationTypeLVM => 'Use LVM';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'LVM on valitud';
 
   @override
   String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
+  String get installationTypeLVMEncryptionSelected => 'Krüptitud LVM on valitud';
 
   @override
-  String get installationTypeEncryptInfo => 'You will choose a security key in the next step.';
+  String get installationTypeEncryptInfo => 'Krüptovõtme saad sisestada järgmises sammus.';
 
   @override
   String get installationTypeZFS => 'Erase disk and use ZFS';
@@ -308,10 +308,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS on valitud';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'Krüptitud ZFS on valitud';
 
   @override
   String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
@@ -322,26 +322,26 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM on valitud';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return 'Kustuta $os ja paigalda uuesti';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">Hoiatus:</font> järgnevaga kustutad kõik $os operatsioonisüsteemi programmid, dokumendid, fotod, muusika ja kõik muud failid.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return 'Paigalda $product kõrvuti operatsioonisüsteemiga $os';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return 'Paigalda $product kõrvuti operatsioonisüsteemidega $os1 ja $os2';
   }
 
   @override
@@ -351,176 +351,176 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'Paigalda $product kõrvuti olemasolevate partitsioonidega';
   }
 
   @override
   String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'Käsitsi paigaldus';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'Sobib asjatundjatele, kes soovivad kettaid kohandada vastavalt oma üksikasjalikele eelistustele.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Kustuta ja vorminda ketas ning paigaldada $DISTRO';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Alusta valitud kettaga nullist.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Vali ketas:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Vali partitsioon:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'Kasuta kogu ketast:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'Paiglada nüüd';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Vali, kuhu soovid $DISTRO paigaldada';
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Allocate drive space by dragging the divider below:';
+  String get installAlongsideSpaceDivider => 'Eralda vajalik kettaruum nihutades märkejoont järgneval skeemil:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num väiksem(at) partitsioon(i) on peidetud, detailsemaks halduseks kasuta <a href=\"$url\">üksikasjalikku partitsioonide loojat</a>';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Muuda partitsiooni suurust';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Eralda andmeruumi';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'Failid';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'Partitsioon:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'Suurus:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'Saadaval:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Käsitsi partitsioneerimine';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Haakepunkti alguses peab olema kaldkriips „/“';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Haakepunktis ei tohi olla tühikuid';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format pole toetatud failisüsteem „$mountpoint“ haakepunkti jaoks';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'Seade';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'Tüüp';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'Haakepunkt';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'Suurus';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'Kasutusel';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'Süsteem';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'Vorming';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'Vaba ruum';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'Uus kettajaotustabel';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Uus tühi partitsioon';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+  String get newPartitionTableConfirmationMessage => 'Uue kettajaotustabeli (partitsioonitabeli) loomine kogu seadmele eemaldab kõik senised partitsioonid. Seda tegevust ei saa hiljem tagasi pöörata.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'Liiga palju primaarseid partitsioone';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Ülempiir on käes';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'Seade alglaaduri paigaldamiseks';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'Loo partitsioon';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'Muuda partitsiooni';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'Suurus:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'Uue partitsiooni tüüp:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'Primaarne partitsioon';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'Loogiline partitsioon';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'Uue partitsiooni asukoht:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'Selle andmeruumi alguses';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'Selle andmeruumi lõpus';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Kasutusel kui:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Jäta vormindamata';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Kasuta $format vormindust';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'Vorminda partitsioon';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'Haakepunkt:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'Valmis paigaldamiseks';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Vaata oma valikud üle';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -532,37 +532,37 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Pole kasutusel';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Seadmed';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Rakendused';
 
   @override
   String get confirmEntryDiskSetup => 'Disk setup';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Ketta krüptimine';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Paigaldusmeedia';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Suletud lähtekoodiga tarkvara';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Üldine';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Turvalisus ja muu';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Partitsioonid';
 
   @override
-  String get confirmPartitionTables => 'The partition tables of the following devices are changed:';
+  String get confirmPartitionTables => 'Järgnevate seadmete partitsioonitabelid on muudetud:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -598,49 +598,49 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Koodekid';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Koodekid ja draiverid';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Draiverid';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Paigalda';
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'Paigaldamine on lõppenud';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system on paigaldatud ja valmis kasutamiseks';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** on kopeeritud andmekandjale';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Käivita uuesti kui $system';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'Paigaldamise lõpetamiseks käivita arvuti või jätka testimist.\nViimasel juhul jäävad sinu tehtud muudatused salvestamata.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'Paigaldusprotsessi jätkamiseks pead arvuti uuesti käivitama.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'Seiska';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Taaskäivita kohe';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Jätka proovisessioni';
 
   @override
   String get bitlockerTitle => 'BitLocker is enabled';
@@ -659,300 +659,300 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Taaskäivita arvuti ja laadi Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Kas taaskäivitame arvuti ja laadime Windowsi?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'Kas sa oled kindel, et soovid arvuti uuesti käivitada? Lõpetamaks $DISTRO paigaldust, pead tema paigalduse hiljem uuesti alustama.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Tere tulemast - see on $RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Saadaval:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'Sisaldab:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'Kiire, vaba ja paljude uute võimalustega';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return '$DISTRO viimane versioon teeb arvutikasutuse lihtsamaks, kui ealeski varem.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Olenemata sellest, kas sa oled arendaja, sisulooja, arvutimängude huviline või süsteemihaldur, siis $RELEASE versioonis leidub uusi töövahendeid, mis parandavad sinu tõhusust ja kasutuskogemust.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'Kõik rakendused, mida sa vajad';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Paigalda, halda ja uuenda kõiki oma rakendusi Ubuntu Tarkvarast, sealhulgas tuhandeid rakendusi, mis leiduvad nii Snap Store\'is kui $DISTRO distributsiooni arhiivis.';
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Develop with the best of open source';
+  String get installationSlidesDevelopmentTitle => 'Arenda parimate avatud lähtekoodil põhinevate töövahenditega';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return '$DISTRO on ideaalne tööjaam rakenduste või veebiteenuste arendusteks, andmeteaduse ja tehisintellektiga seotud tööde jaoks ning loomulikult devopsi ja süsteemihalduse jaoks. Iga $DISTRO viimane versioon sisaldab uusimaid arendustarvikuid ning toetab kõiki suurimaid lõimitud arenduskeskondi.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Lase loovusel lennata';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Kas sa oled animatsioonide tegija, kujundaja, videolooja või mänguarendaja, siis $DISTRO toetab sinu töövoogu nii avatud lähtekoodil põhineva, kui valdkonnale omase tarkvara ja rakendustega.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Suurepärane mängimiseks';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return 'Parema jõudluse ja ühilduvuse nimel toetab $DISTRO uusimaid NVIDIA ja Mesa draivereid. Steami ja muude sarnaste rakenduste abil on tuhanded Windowsi mängud sobilikud $DISTRO jaoks ilma täiendava seadistamiseta.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Privaatne ja turvaline';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return '$DISTRO valikus leiduvad kõik töövahendid püsimaks tänapäevases võrgumaailmas privaatsena ja turvalisena. Sisseehitatud tulemüür ja VPN-ide tugi ning pinu privaatsuskeskseid rakendusi tagavad, et sul on täielik kontroll oma andmete üle.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'Kõikide $DISTRO LTS-versioonidega kaasneb viieaastane turvaparanduste tugi, mida Ubuntu Pro tellimusega on võimalik pikendada kümne aastani.';
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Power up your productivity';
+  String get installationSlidesProductivityTitle => 'Tõhusam töökorraldus';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO töölaual leidub LibreOffice, mis on Microsoft Office\'iga ühilduv avatud lähtekoodil põhinev kontoritarkvarapakett tekstitöötluse, tabelarvutuse ja esitluste jaoks. Lisaks on olemas paljud laialt kasutusel olevad ühistöörakendused.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Hõlbustus ja ligipääs kõigile';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return '$DISTRO filosoofia põhineb arusaamal, et arvutid sobivad kõigile. Laia valiku hõlbustustarvikute ning võimaluste abil kohendada keelt, värve ja teksti suurust tagab $DISTRO arvutikasutuse mugavuse kõigile, kes iganes te pole või kus iganes te ka ei viibi.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'Ekraanivaate ettelugeja Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'Erinevate keelte tugi';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Abiteave ja kasutajatugi';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return '$DISTRO ametlik dokumentatsioon leidub nii võrgus, kui doki abiteave ikooni kaudu.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+  String get installationSlidesSupportCommunity => 'Ask Ubuntu veebisaidist leiad laias valikus küsimusi koos vastustega ning Ubuntu Discourse\'i põhine kogukonnafoorum sisaldab juhendeid ja vestlusi nii uutele, kui kogenud kasutajatele.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+  String get installationSlidesSupportEnterprise => 'Suurklientidele ja äriklientidele pakub Canonical teenusepõhist kasutajatuge, mis teeb töökohal Ubuntu turvalise kasutuselevõtmise ja haldamise lihtsaks.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Kasulikku teavet leiad siit:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Ametlik dokumentatsioon';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => 'Ubuntu Pro tellimusega suurfirmade tasemel 24/7 tugi';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'Kopeerin faile…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'Paigaldan süsteemi…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'Seadistan süsteemi…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'Paigaldamine ei õnnestunud';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'Pole piisavalt kettaruumi';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return '$DISTRO paigaldamiseks pole piisavalt kettaruumi';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Valitud andmekandjal pole piisavalt ruumi $DISTRO paigaldamiseks. Palun välju paigaldajast ning lisa piisavalt ruumi või vali mõni muu andmekandja.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Saadaval:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Vaja:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Uuendus on saadaval';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Paigaldajale on saadaval uuendus';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Uuenda kohe';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'Parema töökindluse ja lisafunktsionaalsuste nimel uuenda viimase versioonini.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Uuendus on valmis';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return '$snap paketi praegune versioon on $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Uuenda versioonini $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'Praegune versioon $version ongi kõige uuem.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return 'Uuendan paketi andmeid: $snap...';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => 'Jätkamaks palun sulge paigaldusrakendus ning käivita ta uuesti';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Sulge paigaldusrakendus';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Kontrollime, et $snap paketi eeldused oleks täidetud...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'Uuendan paketti: $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Kontrollime paketi täiendava uuenduse vajadust: $snap...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return 'Valmistan paketti ette: $snap...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'Laadime paketti alla: $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'Valideerime paketti: $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'Haagime paketti: $snap...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'Peatan paketi teenuseid: $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'Eemaldan paketi aliasi: $snap...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'Eemaldan paketi linke: $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'Uuendan paketi komponente: $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Uuendan paketi käsurida süsteemi tuuma jaoks: $snap...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'Kopeerin paketi andmeid: $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Seadistan paketi turvaprofiile: $snap...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'Lingime paketti: $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Ühendan paketi pistikuid ja slotte: $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Seadistan paketi automaatseid aliasi: $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'Seadistan paketi aliasi: $snap...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'Käivitan paketi teenuseid: $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Eemaldan paketi paigaldusandmeid: $snap...';
   }
 
   @override

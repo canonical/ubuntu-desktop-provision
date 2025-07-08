@@ -26,7 +26,7 @@ class FactoryResetToolsLocalizationsPl extends FactoryResetToolsLocalizations {
   String get createUsbBody => 'Utwórz nośnik USB przywracania, aby przywrócić system, a także dostosować instalacje Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Wybierz dysk flash USB. Dysk musi mieć **co najmniej 16 GB przestrzeni.**';
+  String get createUsbListExplanation => 'Wybierz dysk flash USB. Dysk musi mieć **co najmniej 16 GB przestrzeni.**';
 
   @override
   String get createUsbWarning => 'Dysk flash zostanie sformatowany ponownie, a wszystkie zapisane na nim dane zostaną utracone.';

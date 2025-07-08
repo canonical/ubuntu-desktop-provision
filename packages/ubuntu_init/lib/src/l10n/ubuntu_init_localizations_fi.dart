@@ -118,7 +118,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachError => 'Virheellinen koodi';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Virheellinen koodi';
+  String get ubuntuProTokenAttachSucess => 'Kelvollinen koodi';
 
   @override
   String get ubuntuProTokenAttachErrorVariant => 'Virheellinen koodi, yritä uudelleen';

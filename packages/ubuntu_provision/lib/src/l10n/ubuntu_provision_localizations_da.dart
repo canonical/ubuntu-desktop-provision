@@ -67,7 +67,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Hvis du vil sende en automatisk fejlrapport med relevante fejlfindingsoplysninger, skal du køre <pre>sudo ubuntu-bug $SNAP</pre> i en terminal eller fra kommandokonsollen (Alt+F2).';
   }
 
   @override
@@ -98,28 +98,28 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Vælg din tastaturopsætning';
 
   @override
-  String get keyboardTestHint => 'Tast her, for at afprøve dit tastatur';
+  String get keyboardTestHint => 'Skriv her for at afprøve dit tastatur';
 
   @override
-  String get keyboardDetectTitle => 'Opfang tastaturopsætning';
+  String get keyboardDetectTitle => 'Registrér tastaturopsætning';
 
   @override
-  String get keyboardDetectButton => 'Opfang';
+  String get keyboardDetectButton => 'Registrér';
 
   @override
-  String get keyboardVariantLabel => 'Tastaturvariant:';
+  String get keyboardVariantLabel => 'Vælg din tastaturvariant:';
 
   @override
   String get keyboardPressKeyLabel => 'Tryk venligst på en af følgende taster:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Er følgende tast tilstede på dit tastatur?';
+  String get keyboardKeyPresentLabel => 'Er følgende tast til stede på dit tastatur?';
 
   @override
-  String get themePageTitle => 'Vælg til tema';
+  String get themePageTitle => 'Vælg dit tema';
 
   @override
-  String get themePageHeader => 'Du kan altid ændre dette senere, i indstillinger for udseende.';
+  String get themePageHeader => 'Du kan altid ændre dette senere i indstillinger for udseende.';
 
   @override
   String get themeDark => 'Mørkt';
@@ -136,13 +136,13 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Vælg dit sprog:';
 
   @override
-  String get identityPageTitle => 'Indstil din konto';
+  String get identityPageTitle => 'Opret din konto';
 
   @override
   String get identityAutoLogin => 'Log ind automatisk';
 
   @override
-  String get identityRequirePassword => 'Kræv min adgangskode, for at logge ind';
+  String get identityRequirePassword => 'Kræv min adgangskode for at logge ind';
 
   @override
   String get identityRealNameLabel => 'Dit navn';
@@ -157,7 +157,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Din computers navn';
 
   @override
-  String get identityHostnameInfo => 'Det navn den bruger, når den snakker med andre computere.';
+  String get identityHostnameInfo => 'Det navn den bruger, når den kommunikerer med andre computere.';
 
   @override
   String get identityHostnameRequired => 'Et computernavn er påkrævet';
@@ -169,7 +169,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'Computernavnet er ugyldigt';
 
   @override
-  String get identityUsernameLabel => 'Vælg et brugernavn';
+  String get identityUsernameLabel => 'Dit brugernavn';
 
   @override
   String get identityUsernameRequired => 'Et brugernavn er påkrævet';
@@ -190,13 +190,13 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'Det navn indeholder ugyldige tegn.';
 
   @override
-  String get identityPasswordLabel => 'Vælg en adgangskode';
+  String get identityPasswordLabel => 'Adgangskode';
 
   @override
   String get identityPasswordRequired => 'En adgangskode er påkrævet';
 
   @override
-  String get identityConfirmPasswordLabel => 'Bekræft din adgangskode';
+  String get identityConfirmPasswordLabel => 'Bekræft adgangskode';
 
   @override
   String get identityPasswordMismatch => 'Adgangskoderne stemmer ikke overens';
@@ -208,16 +208,16 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityPasswordHide => 'Skjul';
 
   @override
-  String get identityActiveDirectoryOption => 'Brug Aktiv Sti';
+  String get identityActiveDirectoryOption => 'Brug Active Directory';
 
   @override
   String get identityActiveDirectoryInfo => 'Du kan indtaste domæne og andre oplysninger i næste trin.';
 
   @override
-  String get activeDirectoryTitle => 'Konfigurér Aktiv Sti';
+  String get activeDirectoryTitle => 'Log på Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log ind i Active Directory?';
+  String get activeDirectoryHeader => 'Log på Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
@@ -252,7 +252,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Slutter med bindestreg (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Indeholder flere punktummer (.) i streg';
+  String get activeDirectoryDomainMultipleDots => 'Indeholder flere punktummer (..) efter hinanden';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domæne ikke fundet';
@@ -273,16 +273,16 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Påkrævet';
 
   @override
-  String get activeDirectoryErrorTitle => 'Fejl ved konfiguration af forbindelse til Aktiv Sti';
+  String get activeDirectoryErrorTitle => 'Fejl ved konfiguration af forbindelse til Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Beklager, Aktiv Sti kan ikke indstilles i øjeblikket. Når først dit system er oppe at køre, så besøg <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for hjælp.';
+  String get activeDirectoryErrorMessage => 'Beklager, Active Directory kan ikke indstilles i øjeblikket. Når dit system er oppe at køre, så besøg <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for hjælp.';
 
   @override
-  String get networkPageTitle => 'Opret forbindelse til et netværk';
+  String get networkPageTitle => 'internetforbindelse';
 
   @override
-  String get networkPageHeader => 'Forbind til internet';
+  String get networkPageHeader => 'Forbind til internettet';
 
   @override
   String get networkPageBody => 'En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.';
@@ -291,34 +291,34 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkWiredOption => 'Brug kablet forbindelse';
 
   @override
-  String get networkWiredNone => 'Ingen kablet forbindelse opfanget';
+  String get networkWiredNone => 'Ingen kablet forbindelse registreret';
 
   @override
   String get networkWiredOff => 'Kablet forbindelse er slået fra';
 
   @override
-  String get networkWiredDisabled => 'En kablet forbindelse skal være aktiveret, for at bruge Ethernet på denne computer';
+  String get networkWiredDisabled => 'En kablet forbindelse skal være aktiveret for at bruge Ethernet på denne computer';
 
   @override
-  String get networkWiredEnable => 'Aktivér kablet';
+  String get networkWiredEnable => 'Aktivér kablet forbindelse';
 
   @override
-  String get networkWifiOption => 'Opret forbindelse til et WiFi-netværk';
+  String get networkWifiOption => 'Opret forbindelse til et wi-fi-netværk';
 
   @override
   String get networkWifiOff => 'Trådløst netværk deaktiveret';
 
   @override
-  String get networkWifiNone => 'Ingen WiFi-enheder opfanget';
+  String get networkWifiNone => 'Ingen wi-fi-enheder registreret';
 
   @override
-  String get networkWifiDisabled => 'For at bruge WiFi på denne computer skal trådløst netværk være aktiveret';
+  String get networkWifiDisabled => 'For at bruge wi-fi på denne computer skal trådløst netværk være aktiveret';
 
   @override
-  String get networkWifiEnable => 'Aktivér WiFi';
+  String get networkWifiEnable => 'Aktivér wi-fi';
 
   @override
-  String get networkHiddenWifiOption => 'Opret forbindelse til et skjult WiFi-netværk';
+  String get networkHiddenWifiOption => 'Opret forbindelse til et skjult wi-fi-netværk';
 
   @override
   String get networkHiddenWifiNameLabel => 'Netværksnavn';
@@ -327,7 +327,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Et netværksnavn er påkrævet';
 
   @override
-  String get networkNoneOption => 'Jeg vil ikke oprette forbindelse til internettet lige nu';
+  String get networkNoneOption => 'Opret ikke forbindelse til internettet';
 
   @override
   String get eulaPageTitle => 'Licensaftale';
@@ -336,7 +336,7 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Gennemse licensbetingelserne';
 
   @override
-  String get eulaReadAndAcceptTerms => 'For at fortsætte med opsætning af denne maskine, skal du læse og acceptere betingelserne i licensaftalen.';
+  String get eulaReadAndAcceptTerms => 'For at fortsætte med opsætning af denne maskine skal du læse og acceptere betingelserne i licensaftalen.';
 
   @override
   String get eulaAcceptTerms => 'Jeg har læst og accepterer disse betingelser';

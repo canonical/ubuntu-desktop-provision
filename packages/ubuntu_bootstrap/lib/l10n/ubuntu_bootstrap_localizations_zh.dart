@@ -24,7 +24,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallInstructions => '输入 autoinstall.yaml 的 URL：';
 
   @override
-  String get autoinstallInteractiveOption => '交互安装';
+  String get autoinstallInteractiveOption => '交互式安装';
 
   @override
   String get autoinstallInteractiveDescription => '适用于希望在逐步引导下完成安装的用户。';
@@ -56,7 +56,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return '试用或安装$DISTRO';
+    return '试用或安装 $DISTRO';
   }
 
   @override
@@ -108,7 +108,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return '有关说明，请在另一台设备上扫描QR码或访问：<a href=\"https://$url\">$url</a>';
+    return '有关说明，请在另一台设备上扫描二维码或访问：<a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => '包括但不限于 MP3、MP4、MOV 及类似格式的编解码器';
 
   @override
-  String get batteryWarning => '计算机未连接到外部电源。';
+  String get batteryWarning => '计算机未连接到电源适配器。';
 
   @override
   String get offlineWarning => '您当前处于离线状态';
@@ -265,7 +265,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeErase(String DISTRO) {
-    return '擦除磁盘并安装$DISTRO';
+    return '擦除磁盘并安装 $DISTRO';
   }
 
   @override
@@ -308,7 +308,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryption => '擦除硬盘，并使用加密的 ZFS';
 
   @override
-  String get installationTypeZFSSelected => '已选择 ZFS';
+  String get installationTypeZFSSelected => '已选择配置 ZFS';
 
   @override
   String get installationTypeZFSEncryptionSelected => '已选择使用加密 ZFS';
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format 不是 $mountpoint 支持的文件系统';
   }
 
   @override
@@ -461,7 +461,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationTitle => '新建空分区';
 
   @override
-  String get newPartitionTableConfirmationMessage => '在整个设备上创建一个新的分区表，将删除其当前所有的分区。如果需要的话，这个操作可以被撤销。';
+  String get newPartitionTableConfirmationMessage => '在整个设备上创建一个新的分区表，将删除其当前所有的分区。此操作可在需要时随时撤销。';
 
   @override
   String get tooManyPrimaryPartitions => '主分区过多';
@@ -628,7 +628,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => '重新启动以完成安装，也可以继续测试。\n您做出的任何更改都不会被保存。';
+  String get restartWarningBody => '重新启动以完成安装，也可以继续试用。\n您做出的任何更改都不会被保存。';
 
   @override
   String get rebootToConfigureWarning => '您需要重新启动计算机，以继续完成安装。';
@@ -685,7 +685,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return '$DISTRO 最新版本的推出，让计算机的使用变得前所未有的容易。';
+    return '$DISTRO 的全新版本将让您的计算机变得更加易于使用。';
   }
 
   @override
@@ -702,7 +702,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => '利用最好的开源进行开发';
+  String get installationSlidesDevelopmentTitle => '利用最好的开源软件进行开发';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
@@ -718,7 +718,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesGamingTitle => '非常适合游戏';
+  String get installationSlidesGamingTitle => '出色的游戏体验';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
@@ -755,7 +755,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca屏幕阅读器';
+  String get installationSlidesAccessibilityOrca => 'Orca 屏幕阅读器';
 
   @override
   String get installationSlidesAccessibilityLanguages => '语言支持';
@@ -765,7 +765,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return '$DISTRO 的官方文档可以通过在线方式或者在Dock中的帮助图标获取。';
+    return '$DISTRO 的官方文档可以通过在线方式或者在 Dock 中的帮助图标获取。';
   }
 
   @override
@@ -907,7 +907,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return '正在更新 $snap 资产…';
+    return '正在更新 $snap 资源…';
   }
 
   @override
@@ -1118,7 +1118,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get updatesOtherSoftwarePageTitle => '應用程式與更新';
 
   @override
-  String get updatesOtherSoftwarePageDescription => '你首先想安裝些什麼程式？';
+  String get updatesOtherSoftwarePageDescription => '您想先安裝哪些應用程式？';
 
   @override
   String get codecsAndDriversPageTitle => '最佳化您的電腦';
@@ -1180,7 +1180,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get choosePassphraseTitle => '磁碟解密密語';
 
   @override
-  String get choosePassphraseHeader => '創建一個密語';
+  String get choosePassphraseHeader => '建立密碼';
 
   @override
   String get choosePassphraseBody => '您需要一個密語來加密您的檔案。您會於每次啟動您的電腦時被要求輸入您的解密密語。';
@@ -1210,7 +1210,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmPassphrase => '確認您的密語輸入正確';
 
   @override
-  String get installationTypeTitle => '安裝磁碟設定';
+  String get installationTypeTitle => '磁碟設定';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -1396,6 +1396,11 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get allocateDiskSpaceInvalidMountPointSpace => '掛載點不可包含空白字元';
 
   @override
+  String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
+    return '$format 不是 $mountpoint 支援的檔案系統';
+  }
+
+  @override
   String get diskHeadersDevice => '裝置';
 
   @override
@@ -1485,7 +1490,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmPageTitle => '準備開始安裝';
 
   @override
-  String get confirmHeader => '審閱您的選擇';
+  String get confirmHeader => '檢視您的選擇';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -1503,7 +1508,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get confirmDevicesTitle => '裝置';
 
   @override
-  String get confirmEntryApplications => '應用軟體';
+  String get confirmEntryApplications => '應用程式';
 
   @override
   String get confirmEntryDiskSetup => '磁碟設定';
@@ -1593,7 +1598,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get restartWarningBody => '重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所作的變更將不會被保存。';
+  String get restartWarningBody => '重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所做的變更將不會被保存。';
 
   @override
   String get rebootToConfigureWarning => '您必須重新啟動電腦以繼續您的安裝流程。';
@@ -1663,7 +1668,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return '在 Ubuntu 軟體中心安裝、管理和更新您的所有應用軟體，包括來自 Snap Store 和 $DISTRO 軟體庫的上千個應用軟體。';
+    return '在 Ubuntu 軟體中心安裝、管理和更新您的所有應用程式，包括來自 Snap Store 和 $DISTRO 軟體庫的上千個應用程式。';
   }
 
   @override

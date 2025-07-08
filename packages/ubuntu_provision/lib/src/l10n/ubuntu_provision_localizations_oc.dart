@@ -14,7 +14,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personalizatz $DISTRO coma vos fa mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.';
+    return 'Personalizatz $DISTRO coma avètz mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.';
   }
 
   @override
@@ -67,7 +67,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Per mandar un rapòrt d\'error automatizat qu’inclutz d\'informacions de desbugatge pertinentas, executatz <pre>sudo ubuntu-bug $SNAP</pre> dins un terminal, o dempuèi la consòla de comanda (Alt+F2).';
   }
 
   @override
@@ -196,7 +196,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityPasswordRequired => 'Un senhal es requerit';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirmar lo senhal';
+  String get identityConfirmPasswordLabel => 'Confirmatz lo senhal';
 
   @override
   String get identityPasswordMismatch => 'Los senhals correspondon pas';

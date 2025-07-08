@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Įdiegimo tipas';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -24,7 +24,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Interaktyvus įdiegimas';
 
   @override
   String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Įspėjimas:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Rodyti saugumo raktą';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Slėpti';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Programos ir atnaujinimai';
@@ -154,7 +154,7 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversPageTitle => 'Optimise your computer';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'Įdiegti rekomenduojamą nuosavybinę programinę įrangą?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -162,10 +162,10 @@ class UbuntuBootstrapLocalizationsLt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Aptikta „NVIDIA“ grafikos plokštė';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'Geriausiam „NVIDIA“ grafikos plokštės našumui pasiekti, yra primygtinai rekomenduojama įdiegti papildomas tvarkykles.';
 
   @override
   String get fullInstallationTitle => 'Extended selection';

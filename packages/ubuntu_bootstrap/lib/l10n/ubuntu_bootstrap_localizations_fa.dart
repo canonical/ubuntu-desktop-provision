@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => '‫ورود نشانی ‏autoinstall.yaml‬:';
+  String get autoinstallInstructions => '‫ورود نشانی ‏autoinstall.yaml‬ یا مسیر پروندهٔ محلی:';
 
   @override
   String get autoinstallInteractiveOption => 'نصب تعاملی';
@@ -162,7 +162,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'کارت گرافیک انویدیا تشخیص داده شد';
 
   @override
   String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
@@ -171,13 +171,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get fullInstallationTitle => 'گسترش گزینش';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'گزینشی برون‌خط از ابزاهای اداری، ابزارها و مرورگر وب.';
 
   @override
   String get minimalInstallationTitle => 'گزینش پیش‌فرض';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'فقط واجبات. مرورگر وب و ابزارهای پایه.';
 
   @override
   String get otherOptions => 'دیگر گزینه‌ها';
@@ -192,16 +192,16 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'نصب نرم‌افزارهای سوم‌شخص برای سخت‌افزارهای وای‌فای و گرافیک';
 
   @override
-  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
+  String get installDriversSubtitle => 'از جمله گرداننده‌های انویدیا و مشابه آن‌ها';
 
   @override
   String get installCodecsTitle => 'بارگیری و نصب پشتیبانی برای قالب‌های رسانه‌ای بیش‌تر';
 
   @override
-  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
+  String get installCodecsSubtitle => 'از جمله MP3،‌ MP4، MOV و مشابه این‌ها';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'رایانه به منبع نیرو وصل نشده است.';
 
   @override
   String get offlineWarning => 'در حال حاضر برون‌خطید';
@@ -311,7 +311,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'استفاده از ZFS گزیده شد';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'رمزنگاری و ZFS گزیده';
 
   @override
   String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
@@ -507,7 +507,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'رها کردن قالب بندی به صورت $format';
   }
 
   @override
@@ -631,7 +631,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'برای ادامهٔ فرایند نصب باید رایانه را دوباره آغاز کنید.';
 
   @override
   String get shutdown => 'خاموش کردن';
@@ -796,7 +796,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'نصب شکست خورد';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'فضای ناکافی';
+  String get notEnoughDiskSpaceTitle => 'فضای دیسک ناکافی';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
@@ -818,13 +818,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get refreshPageTitle => 'به‌روز رسانی موجود';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'به‌روز رسانی‌ای برای نصب کننده موجود است';
 
   @override
   String get refreshUpdateNow => 'اکنون به‌روز شود';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'به‌روز رسانی به جدیدترین نگارش برای قابلیت اطمینان بهبود یافته و ویژگی‌های بیش‌تر.';
 
   @override
   String get refreshReady => 'به‌روز رسانی آماده';
@@ -836,7 +836,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'به‌روز رسانی به نگارش $version';
   }
 
   @override
@@ -850,7 +850,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => 'لطفاً نصب کننده را بسته و برای ادامه دوباره اجرا کنید';
 
   @override
   String get refreshCloseLabel => 'بستن نصب کننده';
@@ -867,7 +867,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'بررسی کردن تازه‌سازی دوبارهٔ $snap…';
   }
 
   @override
@@ -892,12 +892,12 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'متوقّف کردن خدمت‌های $snap…';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'برداشتن نام‌های مستعار $snap…';
   }
 
   @override
@@ -907,7 +907,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'به‌روز کردن محتویات $snap…';
   }
 
   @override
@@ -917,7 +917,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'رونشوت برداشتن از داده‌های $snap…';
   }
 
   @override
@@ -937,22 +937,22 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'تنظیم کردن خودکار نام‌های مستعار $snap…';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'برپا کردن نام‌های مستعار $snap…';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'آغاز کردن خدمت‌های $snap…';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'پاک کردن $snap…';
   }
 
   @override
