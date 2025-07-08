@@ -196,7 +196,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     );
 
     if (type != null) {
-      await tapRadio<StorageType>(type);
+      await tapRadio<StorageType?>(type);
       await pump();
     }
     await pumpAndSettle();

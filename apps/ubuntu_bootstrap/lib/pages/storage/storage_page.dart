@@ -5,8 +5,8 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:yaru/yaru.dart';
 
 export 'storage_model.dart'
     show
@@ -121,7 +121,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             ),
             subtitle: Text(
               lang.installationTypeAlongsideInfo(flavor.displayName),
-              style: theme.textTheme.bodySmall!.copyWith(
+              style: theme.textTheme.bodyMedium!.copyWith(
                 color: canInstallAlongside ? null : theme.disabledColor,
               ),
             ),
@@ -166,10 +166,9 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             title: Text(lang.installationTypeManual),
             subtitle: Text(
               lang.installationTypeManualInfo(flavor.displayName),
-              style: theme.textTheme.bodySmall,
             ),
           ),
-      ],
+      ].withSpacing(kWizardSpacing / 2),
     );
   }
 }
@@ -202,11 +201,9 @@ class _InstallationTypeTile extends ConsumerWidget {
     return Align(
       alignment: AlignmentDirectional.centerStart,
       child: Material(
-        child: YaruRadioListTile(
+        child: OptionButton<StorageType?>(
           title: title,
           subtitle: subtitle,
-          contentPadding: kWizardTilePadding,
-          isThreeLine: true,
           value: storageType,
           groupValue: model.type,
           onChanged: enabled ? onChanged : null,
@@ -228,12 +225,13 @@ class _WarningSubtitle extends ConsumerWidget {
     return RichText(
       text: TextSpan(
         text: UbuntuLocalizations.of(context).warningLabel,
-        style: theme.textTheme.bodySmall!.copyWith(
+        style: theme.textTheme.bodyMedium!.copyWith(
           fontWeight: FontWeight.bold,
+          color: theme.colorScheme.error,
         ),
         children: <TextSpan>[
-          TextSpan(text: ': ', style: theme.textTheme.bodySmall),
-          TextSpan(text: text, style: theme.textTheme.bodySmall),
+          TextSpan(text: ': ', style: theme.textTheme.bodyMedium),
+          TextSpan(text: text, style: theme.textTheme.bodyMedium),
         ],
       ),
     );
