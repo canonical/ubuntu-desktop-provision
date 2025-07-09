@@ -65,17 +65,17 @@ Translations are managed using [Weblate](https://hosted.weblate.org/projects/ubu
 ### Importing new translations from the `main` branch
 
 With the help of `scripts/update-translations` it is possible to import updated translations from a different branch. It follows this logic:
-For each `.arb` file in the target directory (typically the git worktree of this branch), iterate through all the translation strings. For each string
-* Compare the English originals in the target directory and the source directory (the git worktree of the branch from which we want to import new translations)
+For each `.arb` file in the target directory (typically the git work tree of this branch), iterate through all the translation strings. For each string
+* Compare the English originals in the target directory and the source directory (the git work tree of the branch from which we want to import new translations)
 * If the English originals are the same, update the translation in the target directory with that from the source directory
 * Otherwise keep the old translation
 
-Starting in a worktree of the current branch (`ubuntu/24.04`), translations from `main` can be imported by running:
+Starting in a work tree of the current branch (`ubuntu/24.04`), translations from `main` can be imported by running:
 ```sh
 git worktree add ../ubuntu-desktop-provision-main main
 ./scripts/update-translations -t . -s ../ubuntu-desktop-provision-main
 ```
-Since the script is mostly agnostic to the directory structure and simply uses globs to find the `.arb` files, it's important to not use nested worktrees.
+Since the script is mostly agnostic to the directory structure and simply uses globs to find the `.arb` files, it's important to not use nested work trees.
 
 ## Contributing to the code
 
