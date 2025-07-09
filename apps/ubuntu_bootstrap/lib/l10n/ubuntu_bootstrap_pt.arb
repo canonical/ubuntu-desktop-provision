@@ -588,6 +588,8 @@
   "@passphrasePageChoosePassphraseHint": {},
   "passphrasePageConfirmPassphraseHint": "Confirmar frase passe",
   "@passphrasePageConfirmPassphraseHint": {},
-  "passphrasePageRequiredPassphrase": "É necessária uma frase passe",
-  "@passphrasePageRequiredPassphrase": {}
+  "passphrasePageRequiredPassphrase": "Frase passe obrigatória",
+  "@passphrasePageRequiredPassphrase": {},
+  "passphrasePageMismatchPassphrase": "A frase passe não coincide",
+  "@passphrasePageMismatchPassphrase": {}
 }
