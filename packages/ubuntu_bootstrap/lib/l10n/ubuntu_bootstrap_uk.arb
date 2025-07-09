@@ -13,7 +13,7 @@
   "@changeButtonText": {},
   "welcome": "Ласкаво просимо",
   "@welcome": {},
-  "tryOrInstallTitle": "Спробувати або встановити",
+  "tryOrInstallTitle": "Спробувати або встановити {DISTRO}",
   "@tryOrInstallTitle": {},
   "tryOrInstallRepairOption": "Виправити встановлення",
   "@tryOrInstallRepairOption": {},
@@ -128,7 +128,7 @@
   },
   "partitionErase": "Відформатувати розділ",
   "@partitionErase": {},
-  "confirmHeader": "Якщо ви продовжите, перелічені нижче зміни будуть записані на диски. Ви зможете внести подальші зміни вручну.",
+  "confirmHeader": "Переглянути свій вибір",
   "@confirmHeader": {},
   "partitionMountPointLabel": "Точка монтування:",
   "@partitionMountPointLabel": {},
@@ -166,7 +166,7 @@
   "@restartIntoWindows": {},
   "installDriversTitle": "Встановити стороннє програмне забезпечення для графіки та обладнання Wi-Fi",
   "@installDriversTitle": {},
-  "installDriversSubtitle": "Ці драйвери підпадають під дію ліцензійних умов, включених до їх документації. Вони є пропрієтарними..",
+  "installDriversSubtitle": "Включаючи, але не обмежуючись драйверами NVIDIA та подібними",
   "@installDriversSubtitle": {},
   "installationTypeDualOSDetected": "На цьому комп'ютері зараз знаходяться {os1} та {os2}. Що ви хочете зробити?",
   "@installationTypeDualOSDetected": {
@@ -368,7 +368,7 @@
   "@updatesOtherSoftwarePageTitle": {},
   "installCodecsTitle": "Встановити підтримку додаткових медіа-форматів",
   "@installCodecsTitle": {},
-  "installCodecsSubtitle": "На це програмне забезпечення поширюються ліцензійні умови, що додаються до його документації. Деякі з них є пропрієтарними.",
+  "installCodecsSubtitle": "Включаючи, але не обмежуючись MP3, MP4, MOV та подібними",
   "@installCodecsSubtitle": {},
   "installationTypeAdvancedTitle": "Додаткові можливості",
   "@installationTypeAdvancedTitle": {},
@@ -388,7 +388,7 @@
       "product": {}
     }
   },
-  "installationTypeManualInfo": "Ви можете створити або змінити розмір розділів самостійно, або вибрати кілька розділів для {DISTRO}",
+  "installationTypeManualInfo": "Для досвідчених користувачів, які шукають індивідуальні налаштування дисків.",
   "@installationTypeManualInfo": {
     "type": "text",
     "placeholders": {
@@ -455,7 +455,7 @@
       }
     }
   },
-  "installationSlidesSoftwareTitle": "Усі необхідні застосунки",
+  "installationSlidesSoftwareTitle": "Усі необхідні вам застосунки",
   "@installationSlidesSoftwareTitle": {},
   "restartIntoWindowsTitle": "Перезапустити у Windows?",
   "@restartIntoWindowsTitle": {},
@@ -496,7 +496,7 @@
       }
     }
   },
-  "hideSecurityKey": "Приховати",
+  "hideSecurityKey": "Сховати",
   "@hideSecurityKey": {},
   "rebootToConfigureWarning": "Щоб продовжити процес встановлення, потрібно перезапустити комп'ютер.",
   "@rebootToConfigureWarning": {},
@@ -510,7 +510,7 @@
       }
     }
   },
-  "installationSlidesCreativityBody": "Якщо ви аніматор, дизайнер, творець відео або розробник ігор, ви можете легко перенести свої робочі процеси в {DISTRO} з підтримкою програмного забезпечення та застосунків з відкритим кодом і галузевих стандартів.",
+  "installationSlidesCreativityBody": "Якщо ви аніматор, дизайнер, відеоредактор або розробник ігор, ви можете з легкістю перенести свої робочі процеси в {DISTRO} з підтримкою програмного забезпечення з відкритим кодом та галузевих стандартів.",
   "@installationSlidesCreativityBody": {
     "placeholders": {
       "DISTRO": {
@@ -601,7 +601,7 @@
       }
     }
   },
-  "autoinstallTitle": "Тип установки",
+  "autoinstallTitle": "Тип встановлення",
   "@autoinstallTitle": {},
   "autoinstallHeader": "Як ви хочете встановити {DISTRO}?",
   "@autoinstallHeader": {
@@ -613,9 +613,9 @@
   },
   "autoinstallInstructions": "Введіть URL-адресу autoinstall.yaml або шлях до локального файлу:",
   "@autoinstallInstructions": {},
-  "autoinstallInteractiveOption": "Інтерактивна інсталяція",
+  "autoinstallInteractiveOption": "Інтерактивне встановлення",
   "@autoinstallInteractiveOption": {},
-  "autoinstallInteractiveDescription": "Для користувачів, які хочуть отримати покрокову інструкцію по встановленню.",
+  "autoinstallInteractiveDescription": "Для користувачів, які хочуть отримати покрокову інструкцію зі встановлення.",
   "@autoinstallInteractiveDescription": {},
   "autoinstallAutomatedOption": "Автоматизована установка",
   "@autoinstallAutomatedOption": {},
@@ -631,11 +631,11 @@
       }
     }
   },
-  "codecsAndDriversPageTitle": "Оптимізувати ваш комп'ютер",
+  "codecsAndDriversPageTitle": "Оптимізуйте свій комп'ютер",
   "@codecsAndDriversPageTitle": {},
-  "codecsAndDriversPageDescription": "Встановити рекомендоване пропрієтарне програмне забезпечення?",
+  "codecsAndDriversPageDescription": "Встановити рекомендоване власницьке програмне забезпечення?",
   "@codecsAndDriversPageDescription": {},
-  "codecsAndDriversPageBody": "{DISTRO} за замовчуванням постачається без пропрієтарного програмного забезпечення. Встановлення додаткового програмного забезпечення може покращити продуктивність вашого комп'ютера.",
+  "codecsAndDriversPageBody": "{DISTRO} усталено постачається без власницького програмного забезпечення. Встановлення додаткового програмного забезпечення може підвищити швидкодію вашого комп'ютера.",
   "@codecsAndDriversPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -645,7 +645,7 @@
   },
   "codecsAndDriversNvidiaNote": "Виявлено відеокарту NVIDIA",
   "@codecsAndDriversNvidiaNote": {},
-  "codecsAndDriversNvidiaBody": "Для найкращої продуктивності відеокарт NVIDIA наполегливо рекомендується встановити додаткові драйвери.",
+  "codecsAndDriversNvidiaBody": "Для найкращої швидкодії відеокарт NVIDIA наполегливо радимо встановити додаткові драйвери.",
   "@codecsAndDriversNvidiaBody": {},
   "batteryWarning": "Комп'ютер не підключено до джерела живлення.",
   "@batteryWarning": {},
@@ -769,7 +769,7 @@
       }
     }
   },
-  "installationSlidesSoftwareBody": "Встановлюйте, керуйте та оновлюйте всі ваші застосунки у програмному забезпеченні Ubuntu, включно з тисячами застосунків зі Snap Store та архіву {DISTRO}.",
+  "installationSlidesSoftwareBody": "Встановлюйте, оновлюйте усі свої застосунки та керуйте ними в Ubuntu Software, включно з тисячами застосунків зі Snap Store та архіву {DISTRO}.",
   "@installationSlidesSoftwareBody": {
     "placeholders": {
       "DISTRO": {
@@ -779,7 +779,7 @@
   },
   "installationSlidesDevelopmentTitle": "Розробляйте з найкращим відкритим кодом",
   "@installationSlidesDevelopmentTitle": {},
-  "installationSlidesDevelopmentBody": "{DISTRO} - ідеальна робоча станція для розробки застосунків і веброзробки, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск {DISTRO} містить найновіші набори інструментів і підтримує всі основні IDE.",
+  "installationSlidesDevelopmentBody": "{DISTRO} — ідеальна робоча станція для розробки застосунків та веб, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск {DISTRO} містить найновіші набори інструментів та підтримує усі основні IDE.",
   "@installationSlidesDevelopmentBody": {
     "placeholders": {
       "DISTRO": {
@@ -789,7 +789,7 @@
   },
   "installationSlidesGamingTitle": "Чудово підходить для ігор",
   "@installationSlidesGamingTitle": {},
-  "installationSlidesGamingBody": "{DISTRO} підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово відтворюються на {DISTRO} через такі застосунки, як Steam, без додаткових налаштувань.",
+  "installationSlidesGamingBody": "{DISTRO} підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово запускаються на {DISTRO} через такі застосунки як Steam без додаткових налаштувань.",
   "@installationSlidesGamingBody": {
     "placeholders": {
       "DISTRO": {
@@ -817,7 +817,7 @@
   },
   "installationSlidesProductivityTitle": "Підвищуйте свою продуктивність",
   "@installationSlidesProductivityTitle": {},
-  "installationSlidesProductivityBody": "До складу {DISTRO} для комп'ютерів входить LibreOffice, набір сумісних з Microsoft Office застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями. Також доступні популярні інструменти для спільної роботи.",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop містить LibreOffice — набір застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями, сумісними з Microsoft Office. Також доступні популярні інструменти для спільної роботи.",
   "@installationSlidesProductivityBody": {
     "placeholders": {
       "DISTRO": {
@@ -1006,5 +1006,6 @@
     }
   },
   "validate": "Підтвердити",
-  "@validate": {}
+  "@validate": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} не є підтримуваною файловою системою для {mountpoint}"
 }

@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Helfen Sie uns, $distro zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Computermodell, installierte Software und der Ort, den Sie für Ihre Zeitzone gewählt haben.';
+    return 'Helfen Sie uns, $distro zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Gerätemodell, installierte Software und der Ort, den Sie für Ihre Zeitzone ausgewählt haben.';
   }
 
   @override
@@ -95,7 +95,7 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Diese Maschine anbinden';
+  String get ubuntuProHeader => 'Dieses Gerät anbinden';
 
   @override
   String get ubuntuProOrAddTokenManually => 'oder fügen Sie manuell ein Token hinzu';
@@ -133,10 +133,10 @@ class UbuntuInitLocalizationsDe extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro aktivieren';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Binden Sie diesen Rechner an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Binden Sie dieses Gerät an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ist jetzt auf dieser Maschine aktiviert';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ist jetzt auf diesem Gerät aktiviert';
 
   @override
   String get ubuntuProSucessAttachDescription => 'Sie können Ihre Pro-Dienste in der Anwendung Software & Aktualisierungen verwalten.';

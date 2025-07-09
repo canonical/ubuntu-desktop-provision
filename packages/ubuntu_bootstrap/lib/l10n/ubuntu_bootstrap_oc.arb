@@ -58,7 +58,7 @@
   "@diskHeadersDevice": {},
   "diskHeadersType": "Tipe",
   "@diskHeadersType": {},
-  "diskHeadersMountPoint": "Punt de montatge",
+  "diskHeadersMountPoint": "Ponch de montatge",
   "@diskHeadersMountPoint": {},
   "diskHeadersSize": "Talha",
   "@diskHeadersSize": {},
@@ -98,11 +98,11 @@
   "@partitionFormatNone": {},
   "partitionErase": "Formatar la particion",
   "@partitionErase": {},
-  "partitionMountPointLabel": "Punt de montatge :",
+  "partitionMountPointLabel": "Ponch de montatge :",
   "@partitionMountPointLabel": {},
   "confirmPageTitle": "Lèst per installacion",
   "@confirmPageTitle": {},
-  "confirmHeader": "Se contunhatz, las modificacions çai-jos seràn escritas suls disques. Poiretz realizar de cambiaments mai tard a la man.",
+  "confirmHeader": "Se contunhatz, las modificacions çai-jos seràn escrichas suls disques. Poiretz realizar de cambiaments mai tard a la man.",
   "@confirmHeader": {},
   "confirmPartitionTables": "Las taulas de particions dels periferics seguents seràn modificadas :",
   "@confirmPartitionTables": {},
@@ -297,7 +297,7 @@
   "@installAlongsideSize": {},
   "installAlongsideAvailable": "Disponible :",
   "@installAlongsideAvailable": {},
-  "notEnoughDiskSpaceTitle": "Pas pro d’espaci",
+  "notEnoughDiskSpaceTitle": "Pas pro d’espaci disc",
   "@notEnoughDiskSpaceTitle": {},
   "installingSystem": "Installacion del sistèma…",
   "@installingSystem": {},
@@ -362,7 +362,7 @@
   "@installCodecsTitle": {},
   "installDriversSubtitle": "Aquestes pilòts son someses a de licéncias que son inclusas dins lor documentacion. Son proprietaris.",
   "@installDriversSubtitle": {},
-  "installCodecsSubtitle": "Aqueste logicial es somés a de tèrmes de licéncia incluses dins sa documentacion. Certans son proprietaris.",
+  "installCodecsSubtitle": "Inclutz sens se limitar als MP3, MP4, MOV e similars.",
   "@installCodecsSubtitle": {},
   "restartNow": "Reaviar ara",
   "@restartNow": {},
@@ -403,7 +403,7 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesSoftwareTitle": "Totas las aplicacions que vos fan mestièr",
+  "installationSlidesSoftwareTitle": "Totas las aplicacions qu’avètz mestièr",
   "@installationSlidesSoftwareTitle": {},
   "installationSlidesSoftwareBody": "Installatz, gerissètz e metatz a jorn vòstras aplicacions dins Ubuntu Software, incluses milierats d’aplicacions venent de Snap Store e dels archius {DISTRO}.",
   "@installationSlidesSoftwareBody": {
@@ -484,14 +484,14 @@
       "DISTRO": {}
     }
   },
-  "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièra pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
+  "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièrs pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
   "@installationSlidesGamingBody": {
     "type": "text",
     "placeholders": {
       "DISTRO": {}
     }
   },
-  "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas que vos fa mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
+  "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas qu’avètz mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
   "@installationSlidesSecurityBody": {
     "type": "text",
     "placeholders": {
@@ -551,7 +551,7 @@
   "@fullInstallationSubtitle": {},
   "minimalInstallationTitle": "Installacion per defaut",
   "@minimalInstallationTitle": {},
-  "minimalInstallationSubtitle": "Sonque çò essencials, lo navegador web e los utilitaris basics.",
+  "minimalInstallationSubtitle": "Sonque çò essencial, lo navegador web e los utilitaris basics.",
   "@minimalInstallationSubtitle": {},
   "installationTypeTPMSelected": "TPM seleccionat",
   "@installationTypeTPMSelected": {},
@@ -648,7 +648,7 @@
   },
   "refreshRestart": "Mercés de reaviar l’installador.",
   "@refreshRestart": {},
-  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml :",
+  "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveOption": "Installacion interactiva",
   "@autoinstallInteractiveOption": {},
@@ -743,5 +743,32 @@
   "codecsAndDriversPageDescription": "Installar los logicials proprietaris recomandats ?",
   "@codecsAndDriversPageDescription": {},
   "autoinstallInteractiveDescription": "Pels utilizaires que vòlon una guida estapa per tapa pendent l'installacion.",
-  "@autoinstallInteractiveDescription": {}
+  "@autoinstallInteractiveDescription": {},
+  "codecsAndDriversPageBody": "{DISTRO} es fornit sens logicial proprietaris per defaut. L’installacion de logicials suplementaris pòt melhorar la performança de l’ordenador.",
+  "selectGuidedStoragePartitionDropdownLabel": "Seleccionatz la particion :",
+  "codecsAndDriversNvidiaNote": "Carta grafica NVIDIA detectada",
+  "codecsAndDriversNvidiaBody": "Per de melhoras performanças de las cartas graficas NVIDIA, l’installacion de pilòts addicionals es recomandada.",
+  "installationTypeExperimental": "Experimental",
+  "installationTypeZFSEncryptionSelected": "ZFS e chiframent seleccionats",
+  "selectGuidedStorageInfo": "Començatz a partir de zèro sul disc seleccionat.",
+  "guidedStoragePageHeader": "Causissètz ont installar {DISTRO}",
+  "rebootToConfigure": "**{system}** copiat sul disc",
+  "restartWarningBody": "Tornatz aviar per acabar l'installacion o contunhatz d’ensajar.\nTotas las modificacions que faretz seràn pas enregistradas.",
+  "rebootToConfigureWarning": "Devètz reaviar l’ordenador per contunhar lo processús d’installacion.",
+  "refreshSnapAutoConnect": "Connexions a las fichas e fendas de {snap}...",
+  "notEnoughDiskSpaceBody": "Lo disc seleccionat pas pro d’espaci disc per installar {DISTRO}. Quitatz l’installador per liberar d’espaci o seleccionatz-ne un autre.",
+  "refreshSnapPrerequisites": "Verificacion dels prerequesits de {snap}...",
+  "confirmProprietarySoftwareCodecs": "Codècs",
+  "confirmProprietarySoftwareCodecsDrivers": "Codècs e pilòts",
+  "refreshSnapUpdateKernelCommandLine": "Actualizacion de la linha de comanda del nuclèu {snap}...",
+  "refreshHeader": "Una mesa a jorn es disponibla per l’installador",
+  "refreshInfo": "Metètz a jorn cap a la darrièra version per una fisabilitat melhorada e mai de foncionalitats.",
+  "refreshSnapRemoveAliases": "Supression dels àlias de {snap}...",
+  "refreshSnapUnlink": "Desligament {snap}...",
+  "refreshSnapUpdateAssets": "Actualizacion dels items {snap}...",
+  "refreshSnapSetupProfiles": "Parametratge dels perfils de seguretat de {snap}...",
+  "refreshSnapLink": "Ligament de {snap}...",
+  "refreshSnapSetAutoAliases": "Parametratge automatic dels àlias de {snap}...",
+  "refreshSnapSetupAliases": "Parametratge dels àlias de {snap}...",
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} es pas un sistèma de fichièrs compatible amb {mountpoint}"
 }

@@ -187,5 +187,11 @@
   "errorPageShowLog": "Günlüğü görüntüle",
   "@errorPageShowLog": {},
   "errorPageHideLog": "Günlüğü gizle",
-  "@errorPageHideLog": {}
+  "@errorPageHideLog": {},
+  "accessibilitySeeingLabel": "Görme",
+  "accessibilityHearingLabel": "Duyma",
+  "accessibilityTypingLabel": "Yazma",
+  "accessibilityPointingLabel": "İşaretleme ve tıklama",
+  "accessibilityVisualAlertsLabel": "Görsel uyarılar",
+  "accessibilityReduceAnimationLabel": "Animasyonu azalt"
 }

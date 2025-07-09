@@ -22,7 +22,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get welcomeStartSubtitle => 'Velorganiseret opsætning.';
 
   @override
-  String get welcomeStoreTitle => 'Appstore med nyt udseende';
+  String get welcomeStoreTitle => 'Appbutik med nyt udseende';
 
   @override
   String get welcomeStoreSubtitle => 'Det har aldrig været nemmere at finde din yndlingssoftware.';
@@ -53,7 +53,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Ja, del systemdata med $distro-gruppen';
+    return 'Ja, del systemdata med holdet bag $distro';
   }
 
   @override
@@ -69,7 +69,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Juridisk information';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Kunne ikke indsamle telemetridata';
 
   @override
   String get privacyPageTitle => 'Lokalitetstjenester';
@@ -95,7 +95,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Tilslut denne maskine';
+  String get ubuntuProHeader => 'Tilknyt denne maskine';
 
   @override
   String get ubuntuProOrAddTokenManually => 'eller tilføj token manuelt';
@@ -104,15 +104,15 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Få det mest omfattende abonnement oå open source-softwaresikkerhed';
+  String get ubuntuProSubscriptionDescription => 'Få det mest omfattende abonnement på open source-softwaresikkerhed';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Altid gratis til personlib brug. 30-dages prøveabonnement til firmaer. <a href=\"https://$url\">Mere info</a>';
+    return 'Altid gratis til personligt brug. 30-dages prøveabonnement til firmaer. <a href=\"https://$url\">Mere info</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Tilslut';
+  String get ubuntuProTokenAttachButton => 'Tilknyt';
 
   @override
   String get ubuntuProTokenAttachError => 'Ugyldigt token';
@@ -133,7 +133,7 @@ class UbuntuInitLocalizationsDa extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Slå Ubuntu Pro til';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Tilslut denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Tilknyt denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro er nu slået til på denne maskine';

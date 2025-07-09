@@ -237,5 +237,6 @@
   "eulaReadAndAcceptTerms": "Para continuar configurando esta máquina, você deve ler e aceitar os termos do contrato de licença.",
   "@eulaReadAndAcceptTerms": {},
   "eulaAcceptTerms": "Li e aceito estes termos",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "errorPageUbuntuBug": "Para enviar um relatório de bug automatizado incluindo informações de depuração relevantes, execute <pre>sudo ubuntu-bug {SNAP}</pre> em um terminal ou no console de comando (Alt+F2)."
 }

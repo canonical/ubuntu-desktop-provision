@@ -5,7 +5,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop-ის დამყენებელი';
+  String get appTitle => 'Ubuntu Desktop-ის დაყენების პროგრამა';
 
   @override
   String windowTitle(String RELEASE) {
@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'დაყენების ტიპი';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -24,7 +24,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'ინტერაქტიური დაყენება';
 
   @override
   String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
@@ -52,7 +52,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'გაფრთხილება:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -112,13 +112,13 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'Secure Boot-ის მორგება';
 
   @override
   String get configureSecureBootDescription => 'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'Secure Boot-ის მორგება';
 
   @override
   String get chooseSecurityKey => 'Choose a security key';
@@ -139,19 +139,19 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'ჩვენება';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'დამალვა';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'აპლიკაციები';
 
   @override
   String get updatesOtherSoftwarePageDescription => 'What apps would you like to install to start with?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'თქვენი კომპიუტერის ოპტიმიზაცია';
 
   @override
   String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
@@ -168,19 +168,19 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'გაფართოებული არჩევანი';
 
   @override
   String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'ნაგულისხმევი არჩევანი';
 
   @override
   String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'სხვა პარამეტრები';
 
   @override
   String get installThirdPartyTitle => 'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
@@ -210,7 +210,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'საკვანძო ფრაზის შექმნა';
 
   @override
   String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
@@ -240,7 +240,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Confirm the passphrase';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'დისკის მორგება';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -278,19 +278,19 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'Advanced features';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'ექსპერიმენტული';
 
   @override
   String get installationTypeNone => 'არც-ერთი';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'არჩეული არაფერია';
 
   @override
   String get installationTypeLVM => 'Use LVM';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'არჩეულია LVM';
 
   @override
   String get installationTypeLVMEncryption => 'Use LVM and encryption';
@@ -308,7 +308,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'არჩეულია ZFS';
 
   @override
   String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
@@ -322,7 +322,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'არჩეულია TPM';
 
   @override
   String installationTypeReinstall(String os) {
@@ -358,7 +358,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'ხელით დაყენება';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
@@ -374,16 +374,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'აირჩიეთ დისკი:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'აირჩიეთ დანაყოფი:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'დაყენება ახლა';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
@@ -399,10 +399,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'დანაყოფის ზომის შეცვლა';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'ადგილის გამოყოფა';
 
   @override
   String get installAlongsideFiles => 'ფაილები';
@@ -417,7 +417,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installAlongsideAvailable => 'ხელმისაწვდომი:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'ხელით დაყოფა';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
@@ -437,7 +437,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get diskHeadersType => 'ტიპი';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'მიმაგრების წერტილი';
 
   @override
   String get diskHeadersSize => 'ზომა';
@@ -452,13 +452,13 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get diskHeadersFormat => 'ფორმატი';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'თავისუფალი ადგილი';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'ახალი დანაყოფების ცხრილი';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'ახალი ცარიელი დანაყოფი';
 
   @override
   String get newPartitionTableConfirmationMessage => 'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
@@ -467,16 +467,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get tooManyPrimaryPartitions => 'Too many primary partitions';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'ზღვარი მიღწეულია';
 
   @override
   String get bootLoaderDevice => 'Device for boot loader installation';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'დანაყოფის შექმნა';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'დანაყოფის ჩასწორება';
 
   @override
   String get partitionSizeLabel => 'ზომა:';
@@ -500,10 +500,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get partitionLocationEnd => 'End of this space';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'გამოიყენება, როგორც:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'დაუფორმატებლად დატოვება';
 
   @override
   String partitionFormatKeep(String format) {
@@ -511,16 +511,16 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'დანაყოფის დაფორმატება';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'მიმაგრების წერტილი:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'დაყენებისთვის მზადაა';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'გადახედეთ თქენს არჩევანს';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -532,31 +532,31 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'არცერთი';
 
   @override
   String get confirmDevicesTitle => 'მოწყობილობები';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'აპლიკაციები';
 
   @override
   String get confirmEntryDiskSetup => 'Disk setup';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'დისკის დაშიფვრა';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'დაყენების დისკი';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'ფასიანი პროგრამები';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'ზოგადი';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'უსაფრთხოება & მეტი';
 
   @override
   String get confirmPartitionsTitle => 'დანაყოფები';
@@ -598,19 +598,19 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'კოდეკები';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'კოდეკები და დრაივერები';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'დრაივერები';
 
   @override
   String get confirmInstallButton => 'დაყენება';
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'დაყენება დასრულდა';
 
   @override
   String readyToUse(String system) {
@@ -624,7 +624,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return '$system-ში გადატვირთვა';
   }
 
   @override
@@ -634,13 +634,13 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'გამორთვა';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'გადატვირთვა ახლავე';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'შემოწმების გაგრძელება';
 
   @override
   String get bitlockerTitle => 'BitLocker is enabled';
@@ -659,10 +659,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Windows-ში გადატვირთვა';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'გადავიტვირთო Windows-ში?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
@@ -671,7 +671,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'მოგესალმებათ $RELEASE';
   }
 
   @override
@@ -710,7 +710,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'განავრცეთ თქვენი კრეატიულობა';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
@@ -718,7 +718,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'საუკეთესო თამაშებისთვის';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
@@ -726,7 +726,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'კონფიდენციალური და უსაფრთხო';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
@@ -747,7 +747,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'წვდომა ყველასთვის';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
@@ -755,13 +755,13 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'ეკრანის წამკითხავი Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'ენის მხარდაჭერა';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'დახმარება და მხარდაჭერა';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
@@ -775,25 +775,25 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'სასარგებლო რესურსები:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'ოფიციალური დოკუმენტაცია';
 
   @override
   String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'ფაილების კოპირება…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'მიმდინარეობს სისტემის დაყენება…';
 
   @override
   String get configuringSystem => 'Setting up the system…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'დაყენება ჩავარდა';
 
   @override
   String get notEnoughDiskSpaceTitle => 'Not enough disk space';
@@ -815,19 +815,19 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'აუცილებელია:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'ხელმისაწვდომია განახლებები';
 
   @override
   String get refreshHeader => 'An update is available for the installer';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'განახლება ახლა';
 
   @override
   String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'განახლება მზადაა';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -846,68 +846,68 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap-ის განახლება...';
   }
 
   @override
   String get refreshRestart => 'Please close the installer and relaunch to continue';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'დაყენების პროგრამის დახურვა';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap-ის მოთხოვნების გადამოწმება...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap-ის მონაცემების განახლება...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '$snap-ის მონაცემების განახლების შემოწმება...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap-ის მომზადება...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap-ის გადმოწერა...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap-ის გადამოწმება...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '$snap-ის მიმაგრება...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap-ის სერვისების გაჩერება...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap-ის ფსევდონიმების წაშლა...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap-ის მოხსნა...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap-ის მონაცემების განახლება...';
   }
 
   @override
@@ -917,7 +917,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap-ის მონაცემების კოპირება...';
   }
 
   @override
@@ -927,7 +927,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '$snap-ის მიერთება...';
   }
 
   @override
@@ -947,12 +947,12 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap-ის სერვისების გაშვება...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap-ის მოსუფთავება...';
   }
 
   @override

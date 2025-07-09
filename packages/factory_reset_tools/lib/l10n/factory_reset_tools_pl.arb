@@ -32,7 +32,7 @@
   "@startFactoryReset": {},
   "createResetMedia": "Utwórz nośnik przywracania",
   "@createResetMedia": {},
-  "createUsbListExplanation": "Wybierz dysk flash USB. Dysk musi mieć **co najmniej 16 GB przestrzeni.**",
+  "createUsbListExplanation": "Wybierz dysk flash USB. Dysk musi mieć **co najmniej 16 GB przestrzeni.**",
   "@createUsbListExplanation": {},
   "resetMediaTitle": "Nośnik USB przywracania",
   "@resetMediaTitle": {},

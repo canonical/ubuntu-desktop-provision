@@ -3,5 +3,6 @@
   "close": "වසන්න",
   "@close": {},
   "restart": "යළි අරඹන්න",
-  "@restart": {}
+  "@restart": {},
+  "homeTitle": "ඔබ කිරීමට කැමති කුමක්ද?"
 }

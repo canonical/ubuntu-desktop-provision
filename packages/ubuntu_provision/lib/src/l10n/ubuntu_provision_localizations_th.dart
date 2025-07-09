@@ -80,22 +80,22 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'ปิด';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'เลือกเขตเวลาของคุณ';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'ตำแหน่งที่ตั้ง';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'เขตเวลา';
 
   @override
   String get keyboardTitle => 'ผังแป้นพิมพ์';
 
   @override
-  String get keyboardHeader => 'เลือกผังแป้นพิมพ์ของคุณ:';
+  String get keyboardHeader => 'เลือกผังแป้นพิมพ์ของคุณ';
 
   @override
   String get keyboardTestHint => 'พิมพ์ที่นี่ เพื่อทดสอบแป้นพิมพ์ของคุณ (กด Alt+Shift เพื่อสลับภาษา)';
@@ -104,10 +104,10 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'ตรวจหาผังแป้นพิมพ์';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'ตรวจหา';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'เลือกรูปแบบแป้นพิมพ์ของคุณ:';
 
   @override
   String get keyboardPressKeyLabel => 'โปรดกดปุ่มใดปุ่มหนึ่งในรายการนี้:';
@@ -116,7 +116,7 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get keyboardKeyPresentLabel => 'ปุ่มดังกล่าวมีอยู่บนแป้นพิมพ์หรือไม่?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'เลือกชุดตกแต่งของคุณ';
 
   @override
   String get themePageHeader => 'You can always change this later in the appearance settings.';
@@ -133,79 +133,79 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'เลือกภาษาของคุณ:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'สร้างบัญชีของคุณ';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'เข้าระบบอัตโนมัติ';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'ต้องป้อนรหัสผ่านเพื่อเข้าระบบ';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'ชื่อของคุณ';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'ต้องป้อนชื่อด้วย';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'ชื่อนั้นยาวเกินไป';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'ชื่อคอมพิวเตอร์ของคุณ';
 
   @override
-  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo => 'ชื่อที่เครื่องใช้เมื่อติดต่อกับคอมพิวเตอร์เครื่องอื่น';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'ต้องป้อนชื่อคอมพิวเตอร์ด้วย';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'ชื่อคอมพิวเตอร์นั้นยาวเกินไป';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'ชื่อคอมพิวเตอร์นั้นใช้ไม่ได้';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'ชื่อผู้ใช้ของคุณ';
 
   @override
   String get identityUsernameRequired => 'A username is required';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'ชื่อผู้ใช้นั้นใช้ไม่ได้';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'ชื่อผู้ใช้นั้นมีอยู่แล้ว';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'ชื่อนั้นสงวนไว้สำหรับใช้โดยระบบ';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'ชื่อนั้นยาวเกินไป';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'ชื่อนั้นมีอักขระที่ใช้ไม่ได้';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'รหัสผ่าน';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'ต้องป้อนรหัสผ่านด้วย';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'ยืนยันรหัสผ่าน';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'รหัสผ่านไม่ตรงกัน';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'แสดง';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'ซ่อน';
 
   @override
   String get identityActiveDirectoryOption => 'Use Active Directory';
@@ -279,55 +279,55 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'การเชื่อมต่ออินเทอร์เน็ต';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'เชื่อมต่อกับอินเทอร์เน็ต';
 
   @override
   String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'ใช้การเชื่อมต่อแบบโยงสาย';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'ไม่พบการเชื่อมต่อแบบโยงสาย';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'การเชื่อมต่อแบบโยงสายปิดอยู่';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'เมื่อต้องการใช้อีเทอร์เน็ตกับคอมพิวเตอร์เครื่องนี้ จะต้องเปิดใช้การเชื่อมต่อแบบโยงสาย';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'เปิดใช้การเชื่อมต่อแบบโยงสาย';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'เชื่อมต่อกับเครือข่าย Wi-Fi';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'ระบบเครือข่ายแบบไร้สายปิดใช้อยู่';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'ไม่พบอุปกรณ์ Wi-Fi';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'เมื่อต้องการใช้ Wi-Fi กับคอมพิวเตอร์เครื่องนี้ จะต้องเปิดใช้ระบบเครือข่ายแบบไร้สาย';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'เปิดใช้ Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'เชื่อมต่อกับเครือข่าย Wi-Fi ที่ซ่อนอยู่';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'ชื่อเครือข่าย';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'ต้องป้อนชื่อเครือข่ายด้วย';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'ไม่ต้องเชื่อมต่อกับอินเทอร์เน็ต';
 
   @override
   String get eulaPageTitle => 'License agreement';

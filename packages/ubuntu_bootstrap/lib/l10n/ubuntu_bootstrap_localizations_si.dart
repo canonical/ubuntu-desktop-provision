@@ -17,17 +17,17 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'ඔබ $DISTRO ස්ථාපනයට කැමති කෙසේද?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'ස්වයංස්ථාපනය.yaml හි ඒ.ස.නි. හෝ ස්ථානීය ගොනුවේ පෙත ලියන්න:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'අන්‍යෝන්‍ය ස්ථාපනය';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'ස්ථාපනයේ දී පියවරෙන් පියවර මඟ පෙන්වීම සඳහා කැමති පරිශ්‍රීලකයින්ට.';
 
   @override
   String get autoinstallAutomatedOption => 'Automated installation';
@@ -43,16 +43,16 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO වෙත පිළිගනිමු';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO සූදානම් වෙමින්…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'අවවාදයයි:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
@@ -61,7 +61,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '$DISTRO සඳහා විකල්පයක් තෝරන්න';
   }
 
   @override
@@ -142,42 +142,42 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'ආරක්‍ෂණ යතුර පෙන්වන්න';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'සඟවන්න';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'යාවත්කාල හා වෙනත් මෘදුකාංග';
+  String get updatesOtherSoftwarePageTitle => 'යෙදුම්';
 
   @override
   String get updatesOtherSoftwarePageDescription => 'ස්ථාපනයට කැමති යෙදුම් මොනවාද?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'පරිගණකය ප්‍රශස්ත කරන්න';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'නිර්දේශිත ස්වාම්‍ය මෘදුකාංග ස්ථාපනය කරන්නද?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'පෙරනිමි පරිදි ස්වාම්‍ය මෘදුකාංග රහිතව $DISTRO නිකුත් කරයි. අතිරේක මෘදුකාංග ස්ථාපනයෙන් ඔබගේ පරිගණකයේ කාර්ය සාධනය ඉහළ නංවාලීමට හැකිය.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA චිත්‍රක පතක් අනාවරණය විය';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'NVIDIA චිත්‍රක පත් වල හොඳම කාර්ය සාධනය සඳහා අතිරේක ධාවක ස්ථාපනයට තරයේ නිර්දේශ කෙරේ.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'විස්තීරණ තේරීම';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'කාර්යාල මෙවලම්, උපයෝග සහ අතිරික්සුවක් සහිත මාර්ග අපගත හිතකාමී තේරීමකි.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'පෙරනිමි තේරීම';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'අත්‍යවශ්‍ය අතිරික්සුව සහ මූලික උපයෝග පමණි.';
 
   @override
   String get otherOptions => 'වෙනත් විකල්ප';
@@ -201,7 +201,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installCodecsSubtitle => 'මෙම මෘදුකාංගය එහි ප්‍රලේඛනයෙහි ඇතුළත් බලපත්‍ර නියම වලට යටත් වේ. ඇතැම් දෑ ස්වාම්‍යයි.';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'පරිගණකය විදුලි බලයට සම්බන්ධ කර නැත.';
 
   @override
   String get offlineWarning => 'ඔබ දැනට මාර්ගඅපගතයි';
@@ -244,7 +244,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'ඔබ $DISTRO ස්ථාපනයට කැමති කෙසේද?';
   }
 
   @override
@@ -265,7 +265,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'තැටිය මකාදමා $DISTRO ස්ථාපනය කරන්න';
+    return 'තැටිය මකා $DISTRO ස්ථාපනය කරන්න';
   }
 
   @override
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'වැඩිදුර විශේෂාංග';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'පරීක්‍ෂාත්මක';
 
   @override
   String get installationTypeNone => 'කිසිවක් නැත';
@@ -311,7 +311,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS තෝරා ඇත';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZFS හා සංකේතනය තෝරා ඇත';
 
   @override
   String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
@@ -322,7 +322,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM තෝරා ඇත';
 
   @override
   String installationTypeReinstall(String os) {
@@ -351,33 +351,33 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'අන් පංගුවලට පසකින් $product ස්ථාපනය කරන්න';
+    return 'අනෙක් පංගු වලට පසකින් $product ස්ථාපනය කරන්න';
   }
 
   @override
   String get installationTypeAlongsideInfo => 'ලේඛන, ගීත සහ අනෙකුත් පෞද්. ගොනු රඳවා ගැනෙයි. පරිගණකය ආරම්භ වන සැමවිට අවශ්‍ය මෙහෙයුම් පද්ධතිය තේරීමට හැකිය.';
 
   @override
-  String get installationTypeManual => 'වෙන යමක්';
+  String get installationTypeManual => 'අතින් ස්ථාපනය';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'ඔබටම පංගු සෑදීමට හෝ යළි ප්‍රමාණනයට, හෝ $DISTRO සඳහා පංගු කිහිපයක් තේරීමට හැකිය';
+    return 'තැටි(ය) අභිරුචිකරණයට වුවමනා ප්‍රගත පරිශ්‍රීලකයින්ට.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'තැටිය මකාදමා $DISTRO ස්ථාපනය කරන්න';
+    return 'තැටිය මකා $DISTRO ස්ථාපනය කරන්න';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'ඔබගේ තැටියේ මුල සිට අරඹන්න.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'පංගුව තෝරන්න:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'සමස්ත තැටිය භාවිතා වනු ඇත:';
@@ -387,7 +387,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '$DISTRO ස්ථාපනය කළ යුතු තැන තෝරන්න';
   }
 
   @override
@@ -417,7 +417,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installAlongsideAvailable => 'තිබේ:';
 
   @override
-  String get allocateDiskSpace => 'තැටියේ ඉඩ වෙන් කරන්න';
+  String get allocateDiskSpace => 'අතින් පංගුකරණය';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
@@ -458,10 +458,10 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get newPartitionTable => 'නව පංගු වගුවක්';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'මෙම උපාංගයෙහි නව හිස් පංගු වගුවක් සාදන්නද?';
+  String get newPartitionTableConfirmationTitle => 'නව හිස් පංගුවක්';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'ඔබ පංගුකරණයට සමස්ත උපාංගයක් තෝරාගෙන ඇත. ඔබ එහි නව පංගු වගුවක් සෑදීමට ගියහොත්, පවතින සියළුම පංගු ඉවත් කෙරෙනු ඇත.\n\nඔබට අවශ්‍ය නම් මෙම මෙහෙයුම පසුව අහෝසි කිරීමට හැකිය.';
+  String get newPartitionTableConfirmationMessage => 'සමස්ත උපාංගයට නව පංගු වගුවක් සෑදීමේ දී වත්මන් සියළුම පංගු ඉවත් කෙරෙනු ඇත. මෙම මෙහෙයුම අප්‍රතිවර්ත්‍යයි.';
 
   @override
   String get tooManyPrimaryPartitions => 'ප්‍රාථමික පංගු බොහෝය';
@@ -470,7 +470,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get partitionLimitReached => 'සීමාවට ළඟා විය';
 
   @override
-  String get bootLoaderDevice => 'ඇරඹුම්කාරකය ස්ථාපනයට උපාංගය';
+  String get bootLoaderDevice => 'ඇරඹුම්කාරකය ස්ථාපනය සඳහා උපාංගය';
 
   @override
   String get partitionCreateTitle => 'පංගුව සාදන්න';
@@ -507,7 +507,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return '$format ලෙස පවිත්‍රව තබන්න';
   }
 
   @override
@@ -520,7 +520,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'වෙනස්කම් තැටියට ලියන්න';
 
   @override
-  String get confirmHeader => 'ඔබ ඉදිරියට ගියහොත්, පහත ලැයිස්තුගත වෙනස්කම් තැටියට ලියනු ඇත. ඔබට අතින් තවත් වෙනස්කම් සිදු කිරීමට හැකි වනු ඇත.';
+  String get confirmHeader => 'ඔබගේ තේරීම් සමාලෝචනය කරන්න';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -532,37 +532,37 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'කිසිවක් නැත';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'උපාංග';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'යෙදුම්';
 
   @override
   String get confirmEntryDiskSetup => 'තැටිය පිහිටුවීම';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'තැටිය සංකේතනය';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'ස්ථාපන තැටිය';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'ස්වාම්‍ය මෘදුකාංග';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'ප්‍රධාන';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'ආරක්‍ෂාව හා වෙනත්';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'පංගු';
 
   @override
-  String get confirmPartitionTables => 'පහත උපාංගවල පංගු වගු වෙනස් වේ:';
+  String get confirmPartitionTables => 'පහත උපාංග වල පංගු වගු වෙනස් වේ:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -604,7 +604,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'ධාවක';
 
   @override
   String get confirmInstallButton => 'ස්ථාපනය අරඹන්න';
@@ -628,7 +628,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'ස්ථාපනය නිමාවට යළි අරඹන්න හෝ දිගටම අත්හදා බලන්න.\nඔබගේ කිසිදු වෙනස්කමක් සුරැකෙන්නේ නැත.';
 
   @override
   String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
@@ -662,7 +662,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get restartIntoWindows => 'වින්ඩෝස් වෙත යළි අරඹන්න';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'වින්ඩෝස් වෙත යළි අරඹන්න ද?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
@@ -671,21 +671,21 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return '$RELEASE වෙත පිළිගනිමු';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'තිබේ:';
 
   @override
   String get installationSlidesIncluded => 'Included:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'වේගවත්, නොමිලේ සහ බොහෝ නවීන විශේෂාංග';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'නවතම $DISTRO අනුවාදය අන් කවරදාටත් වඩා පරිගණක භාවිතය පහසු කරයි.';
   }
 
   @override
@@ -694,7 +694,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'ඔබට වුවමනා සියලුම මෘදුකාංග';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -755,13 +755,13 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'ඔර්කා තිර කියවනය';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'භාෂා සහාය';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'උදව් හා සහාය';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
@@ -775,7 +775,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'ප්‍රයෝජනවත් සම්පත්:';
 
   @override
   String get installationSlidesSupportDocumentation => 'නිල ප්‍රලේඛනය';
@@ -809,25 +809,25 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'තිබේ:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'වුවමනාය:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'යාවත්කාල තිබේ';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'ස්ථාපකය සඳහා යාවත්කාලයක් තිබේ';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'යාවත්කාල කරන්න';
 
   @override
   String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'යාවත්කාලය සූදානම්';
 
   @override
   String refreshCurrent(String snap, String version) {
@@ -846,14 +846,14 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap යාවත්කාල වෙමින්...';
   }
 
   @override
   String get refreshRestart => 'Please close the installer and relaunch to continue';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'ස්ථාපකය වසන්න';
 
   @override
   String refreshSnapPrerequisites(String snap) {
@@ -862,7 +862,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap නැවුම් වෙමින්...';
   }
 
   @override
@@ -872,17 +872,17 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap සූදානම් වෙමින්...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap බාගැනෙමින්...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap වලංගු වෙමින්...';
   }
 
   @override
@@ -892,7 +892,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap සේවා නවත්වමින්...';
   }
 
   @override
@@ -917,7 +917,7 @@ class UbuntuBootstrapLocalizationsSi extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap දත්ත පිටපත් වෙමින්...';
   }
 
   @override

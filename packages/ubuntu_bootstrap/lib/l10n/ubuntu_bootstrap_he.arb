@@ -20,7 +20,7 @@
   "@changeButtonText": {},
   "tryDescription": "אפשר להתנסות ב־{RELEASE} מבלי לערוך שינויים במחשב שלך.",
   "@tryDescription": {},
-  "appTitle": "אשף התקנת אובונטו לשולחן עבודה",
+  "appTitle": "תוכנית התקנת שולחן עבודה אובונטו",
   "@appTitle": {},
   "windowTitle": "להתקין את {RELEASE}",
   "@windowTitle": {},
@@ -127,7 +127,7 @@
   "@installThirdPartyTitle": {},
   "installThirdPartySubtitle": "התכניות האלו כפופות לתנאי אישוי שנכללים בתיעוד שלהן. חלקן קנייניות.",
   "@installThirdPartySubtitle": {},
-  "installationTypeTitle": "סוג ההתקנה",
+  "installationTypeTitle": "הקמת הכונן",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "במחשב זה מותקנת כרגע {os}. מה לעשות?",
   "@installationTypeOSDetected": {
@@ -919,5 +919,6 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} היא אינה מערכת קבצים נתמכת עבור {mountpoint}"
 }

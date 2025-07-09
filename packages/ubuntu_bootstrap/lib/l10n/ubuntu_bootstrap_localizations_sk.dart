@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Zadajte autoinstall.yaml URL alebo cestu k lokálnemu súboru:';
+  String get autoinstallInstructions => 'Zadajte autoinstall.yaml URL alebo cestu k miestnemu súboru:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktívna inštalácia';
@@ -108,7 +108,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'Ohľadne pokynov naskenujte QR kód na inom zariadení alebo choďte na: <a href=\"https://$url\">$url</a>';
+    return 'Pre inštrukcie naskenujte QR kód na inom zariadení alebo navštívte: <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -158,7 +158,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO sa štandardne dodáva bez proprietárneho softvéru. Inštalácia dodatočného softvéru môže zlepšiť výkon vášho počítača.';
+    return '$DISTRO sa štandardne dodáva bez proprietárneho softvéru. Inštalácia ďalšieho softvéru môže zlepšiť výkon vášho počítača.';
   }
 
   @override
@@ -186,7 +186,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installThirdPartyTitle => 'Nainštalovať ovládače tretích strán pre grafické čipy a adaptéry bezdrôtových Wi-Fi sietí, ako aj dodatočné kodeky multimédií';
 
   @override
-  String get installThirdPartySubtitle => 'Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú poprietárne.';
+  String get installThirdPartySubtitle => 'Tento softvér podlieha licenčným podmienkam, ktoré sú súčasťou jeho dokumentácie. Niektoré sú proprietárne.';
 
   @override
   String get installDriversTitle => 'Nainštalovať ovládače od tretích strán pre grafické čipy a Wi-Fi sieťové rozhrania';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Pre pokročilých používateľov, ktorí hľadajú prispôsobené nastavenia disku.';
+    return 'Pre skúsených používateľov, ktorí hľadajú prispôsobené nastavenia disku.';
   }
 
   @override
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format nie je podporovaným súborovým systémom pre $mountpoint';
   }
 
   @override
@@ -730,7 +730,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO poskytuje všetky nástroje, ktoré sú potrebné na ochranu súkromia a bezpečné používanie Internetu. Vďaka vstavanej bráne firewall, podpore VPN a radu aplikácií zameraných na ochranu súkromia máte svoje dáta plne pod kontrolou.';
+    return '$DISTRO poskytuje všetky nástroje, ktoré sú potrebné na ochranu súkromia a bezpečné používanie internetu. Vďaka vstavanej bráne firewall, podpore VPN a rade aplikácií zameraných na ochranu súkromia máte svoje údaje plne pod kontrolou.';
   }
 
   @override
@@ -765,11 +765,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Oficiálna dokumentácia k $DISTRO je k dispozícii online aj cez ikonu Pomocník na paneli.';
+    return 'Oficiálna dokumentácia $DISTRO je k dispozícii online aj cez ikonu Pomocník v doku.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Web Ask Ubuntu pokrýva celú škálu otázok a odpovedí, ďalej na fóre Ubuntu Discourse sú k dispozícii návody a diskusie pre nových aj pokročilých používateľov.';
+  String get installationSlidesSupportCommunity => 'Web Ask Ubuntu pokrýva celú škálu otázok a odpovedí, ďalej na fóre Ubuntu Discourse sú k dispozícii návody a diskusie pre nových aj skúsených používateľov.';
 
   @override
   String get installationSlidesSupportEnterprise => 'Pre firemných používateľov Canonical poskytuje komerčnú podporu, vďaka ktorej je ľahké zaviesť a spravovať Ubuntu na pracovisku.';

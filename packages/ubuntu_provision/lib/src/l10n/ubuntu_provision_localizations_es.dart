@@ -30,7 +30,7 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get accessibilityPointingLabel => 'Señalar y pulsar';
 
   @override
-  String get accessibilityZoomLabel => 'Zum';
+  String get accessibilityZoomLabel => 'Ampliación';
 
   @override
   String get accessibilityHighContrastLabel => 'Contraste alto';
@@ -57,7 +57,7 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get accessibilityMouseKeysLabel => 'Teclas de ratón';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Zum de escritorio';
+  String get accessibilityDesktopZoomLabel => 'Ampliación de escritorio';
 
   @override
   String get errorPageTitle => 'Se produjo un problema';

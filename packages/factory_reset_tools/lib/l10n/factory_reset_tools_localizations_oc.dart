@@ -5,58 +5,58 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsOc([String locale = 'oc']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Aisinas de reïnicializacion de fabrica';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Aisinas de reïnicializacion de fabrica';
 
   @override
   String get homeTitle => 'De qué volètz far ?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Crear un mèdia de reïnicializacion';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Aviar la reïnicializacion de fabrica';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Crear un mèdia USB de reïnicializar';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Crear un mèdia USB per restaurar lo sistèma e personalizar vòstras installacions Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Seleccionatz una clau USB. Lo lector deu aver **almens 16 Go d’espaci.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Lo lector amovible serà reformatat e totas sas donadas seràn perdudas.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Mèdia de reïnicializacion USB';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Cap d’estocatge amovible pas detectat';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Avètz mestièr d’un estocatge USB per crear un mèdia de reïnicializacion de fabrica.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Seleccionatz una opcion per aviar la reïnicializacion de fabrica';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Mercés d’esperar pendent que recuperam los lectors.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Lo mèdia USB es prèst';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Quand volètz l’utilizar, inserissètz lo mèdia USB dins l’ordenador que volètz reïnicializar e reaviatz-lo.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Una error s\'es producha pendent la recuperacion dels lectors.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Inicializacion';
 
   @override
   String get resetMediaCopying => 'Còpia';
@@ -86,10 +86,10 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
   String get restart => 'Reaviar';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Reformatar';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Fracàs de l’execucion de la comanda';
 
   @override
   String get close => 'Tampar';

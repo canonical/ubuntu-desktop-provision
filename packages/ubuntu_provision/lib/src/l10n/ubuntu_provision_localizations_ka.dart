@@ -5,82 +5,82 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsKa([String locale = 'ka']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'წვდომადობა';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'წვდომადობა $DISTRO-ში';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'მოარგეთ $DISTRO თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, სისტემის მორგების ფანჯარაში შეგეძლებათ.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'მხედველობა';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'სმენა';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'კრეფა';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'დამიზნება და დაწკაპუნება';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'გადიდება';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'მაღალი კონტრასტი';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'დიდი ტექსტი';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'ანიმაციის შემცირება';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'ეკრანის წამკითხავი';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'ვიზუალური გაფრთხილებები';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'წებოვანი ღილაკები';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'ნელი ღილაკები';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'თაგუნას ღილაკები';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'სამუშაო მაგიდის გადიდება';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'რაღაც არასწორია';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'უკაცრავად, მაგრამ ჩვენ არ ვართ დარწმუნებული, რა მოხდა. სცადეთ, გადატვირთოთ კომპიუტერი და დაყენების პროცესი თავიდან დაიწყოთ. ასევე შეგიძლიათ, <a>შეცდომის შესახებ მოგვწეროთ</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'იმისათვის, რომ გააგზავნოთ ანგარიში შესაბამისი გამართვის ინფორმაციით, გაუვთ <pre>sudo ububuntu-log $SNAP</pre> ტერმინალში ან ბრძანების სტრიქონში (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'ჟურნალის ჩვენება';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'ჟურნალის დამალვა';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'გადატვირთვა';
 
   @override
-  String get close => 'Close';
+  String get close => 'დახურვა';
 
   @override
   String get timezonePageTitle => 'აირჩიეთ თქვენი დროის სარტყელი';
@@ -92,16 +92,16 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get timezoneTimezoneLabel => 'დროის სარტყელი';
 
   @override
-  String get keyboardTitle => 'კლავიატური განლაგება';
+  String get keyboardTitle => 'კლავიატურის განლაგება';
 
   @override
   String get keyboardHeader => 'აირჩიეთ თქვენი კლავიატურის განლაგება';
 
   @override
-  String get keyboardTestHint => 'კლავიატურის დასატესტად აქ აკრიფეთ';
+  String get keyboardTestHint => 'კლავიატურის შესამოწმებლად აკრიფეთ აქ';
 
   @override
-  String get keyboardDetectTitle => 'კლავიატური განლაგების აღმოჩენა';
+  String get keyboardDetectTitle => 'კლავიატურის განლაგების დადგენა';
 
   @override
   String get keyboardDetectButton => 'აღმოჩენა';
@@ -119,7 +119,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'აირჩიეთ თქვენი თემა';
 
   @override
-  String get themePageHeader => 'ამისი შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
+  String get themePageHeader => 'ამის შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
 
   @override
   String get themeDark => 'მუქი';
@@ -129,17 +129,17 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'მოგესალმებით $DISTRO';
+    return 'მოგესალმებათ $DISTRO';
   }
 
   @override
   String get localeHeader => 'აირჩიეთ თქვენი ენა:';
 
   @override
-  String get identityPageTitle => 'მოირგეთ თქვენი ანგარიში';
+  String get identityPageTitle => 'შექმენით თქვენი ანგარიში';
 
   @override
-  String get identityAutoLogin => 'ავტომატურად შესვლა';
+  String get identityAutoLogin => 'ავტომატური შესვლა';
 
   @override
   String get identityRequirePassword => 'შესასვლელად პაროლის მოთხოვნა';
@@ -166,13 +166,13 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityHostnameTooLong => 'კომპიუტერის სახელი ძალიან გრძელია.';
 
   @override
-  String get identityInvalidHostname => 'კომპუტერის სახელი არასწორია';
+  String get identityInvalidHostname => 'კომპიუტერის სახელი არასწორია';
 
   @override
-  String get identityUsernameLabel => 'აირჩიეთ მომხმარებლის სახელი';
+  String get identityUsernameLabel => 'თქვენი მომხმარებლის სახელი';
 
   @override
-  String get identityUsernameRequired => 'მოხმარებლის სახელი აუცილებელია';
+  String get identityUsernameRequired => 'მომხმარებლის სახელი აუცილებელია';
 
   @override
   String get identityInvalidUsername => 'მომხმარებლის სახელი არასწორია';
@@ -190,7 +190,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityUsernameInvalidChars => 'სახელი არასწორ სიმბოლოებს შეიცავს.';
 
   @override
-  String get identityPasswordLabel => 'აირჩიეთ პაროლი';
+  String get identityPasswordLabel => 'პაროლი';
 
   @override
   String get identityPasswordRequired => 'პაროლი აუცილებელია';
@@ -214,18 +214,18 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryInfo => 'დომენს და სხვა დეტალებს შემდეგ ნაბიჯში შეიყვანთ.';
 
   @override
-  String get activeDirectoryTitle => 'Active Directory-ის მორგება';
+  String get activeDirectoryTitle => 'Active Directory-ში შესვლა';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'შეხვალთ Active Directory-ში?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTROმზადაა, რომ შეერწყას Active Directory-ს უფრო ადვილად სამართავად.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'დომენთან მიერთების დატესტვა';
+  String get activeDirectoryTestConnection => 'დომენთან მიერთების შემოწმება';
 
   @override
   String get activeDirectoryDomainLabel => 'დომენი';
@@ -276,16 +276,16 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => 'Active Directory-სთან კავშირის დამყარების შეცდომა';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'უკაცრავად, მაგრამ ამჟამად Active Directory-ის მორგება შეუძლებელია. როცა სისტემას ბოლომდე ჩატვირთავთ, დახმარებისთვის ეწვიეთ ვებგვერდს <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>.';
 
   @override
-  String get networkPageTitle => 'ქსელთან მიერთება';
+  String get networkPageTitle => 'ინტერნეტკავშირი';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'ინტერნეტთან დაკავშირება';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'ინტერნეტთან კავშირი გააუმჯობესებს თქვენს დაყენებულ ოპერაციული სისტემის თავსებადობის გაუმჯობესებითა და დამატებითი პროგრამებით.';
 
   @override
   String get networkWiredOption => 'მავთულიანი მიერთების გამოყენება';
@@ -294,10 +294,10 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkWiredNone => 'მავთულიანი ქსელი აღმოჩენილი არაა';
 
   @override
-  String get networkWiredOff => 'მავთულიანი მიერთება გაითიშა';
+  String get networkWiredOff => 'მავთულიანი მიერთება გამორთულია';
 
   @override
-  String get networkWiredDisabled => 'ამ კომპიუტერზე Ethernet-ის გამოსაყენებლად, აუცილებელია სადენიანი ქსელი ჩართოთ';
+  String get networkWiredDisabled => 'ამ კომპიუტერზე, Ethernet-ის გამოსაყენებლად, აუცილებელია, სადენიანი ქსელი ჩართოთ';
 
   @override
   String get networkWiredEnable => 'მავთულიანი მიერთების ჩართვა';
@@ -306,7 +306,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkWifiOption => 'Wi-Fi ქსელთან მიერთება';
 
   @override
-  String get networkWifiOff => 'უსადენო ქსელი გაითიშა';
+  String get networkWifiOff => 'უსადენო ქსელი გათიშულია';
 
   @override
   String get networkWifiNone => 'Wi-Fi მოწყობილობები აღმოჩენილი არაა';
@@ -330,14 +330,14 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'ინტერნეტთან მიერთება ჯერ არ მინდა';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'სალიცენზი შეთანხმება';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'ლიცენზიის პირობების მიმოხილვა';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'მანქანის მორგების გასაგრძელებლად ლიცენზიის პირობებს უნდა დაეთანხმოთ.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'წავიკითხე და ვეთანხმები ამ პირობებს';
 }

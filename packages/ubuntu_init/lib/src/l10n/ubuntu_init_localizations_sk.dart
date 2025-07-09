@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Pomôžte nám zlepšiť $distro zdieľaním svojich systémových údajov s nami. To zahŕňa aj veci, ako je model vášho počítača, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.';
+    return 'Pomôžte nám zlepšiť $distro zdieľaním svojich systémových údajov s nami. To zahŕňa veci, ako je model vášho zariadenia, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.';
   }
 
   @override
@@ -95,10 +95,10 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Pripojiť tento počítač';
+  String get ubuntuProHeader => 'Pripojiť toto zariadenie';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'alebo pridať token ručne';
+  String get ubuntuProOrAddTokenManually => 'alebo pridať token manuálne';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
@@ -133,10 +133,10 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Povoliť Ubuntu Pro';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Pripojte tento počítač k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Pripojte toto zariadenie k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro je teraz povolené v tomto počítači';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro je teraz povolené v tomto zariadení';
 
   @override
   String get ubuntuProSucessAttachDescription => 'Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.';

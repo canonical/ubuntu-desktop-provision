@@ -104,7 +104,7 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Jeton';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Abonnez vous à la meilleure des sécurités pour les logiciels libres';
+  String get ubuntuProSubscriptionDescription => 'Abonnez-vous à la meilleure des sécurités pour les logiciels libres';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {

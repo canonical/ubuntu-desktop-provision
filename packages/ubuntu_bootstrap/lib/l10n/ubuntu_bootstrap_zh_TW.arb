@@ -55,7 +55,7 @@
   "@installCodecsSubtitle": {},
   "offlineWarning": "您目前處於離線狀態",
   "@offlineWarning": {},
-  "installationTypeTitle": "安裝磁碟設定",
+  "installationTypeTitle": "磁碟設定",
   "@installationTypeTitle": {},
   "installationTypeOSDetected": "本電腦目前已安裝了 {os}，請問您想要怎麼處理？",
   "@installationTypeOSDetected": {
@@ -157,7 +157,7 @@
       "color": {}
     }
   },
-  "updatesOtherSoftwarePageDescription": "你首先想安裝些什麼程式？",
+  "updatesOtherSoftwarePageDescription": "您想先安裝哪些應用程式？",
   "@updatesOtherSoftwarePageDescription": {},
   "tryOrInstallReleaseNotesLabel": "您也可以閱覽<a href=\"{url}\">產品發布說明</a>。",
   "@tryOrInstallReleaseNotesLabel": {
@@ -552,7 +552,7 @@
   "@confirmPageTitle": {},
   "confirmPartitionsTitle": "分割區",
   "@confirmPartitionsTitle": {},
-  "confirmHeader": "審閱您的選擇",
+  "confirmHeader": "檢視您的選擇",
   "@confirmHeader": {},
   "confirmPartitionTables": "下列裝置的分割區將被修改：",
   "@confirmPartitionTables": {},
@@ -687,7 +687,7 @@
   },
   "installationSlidesSoftwareTitle": "包含您需要的所有應用程式",
   "@installationSlidesSoftwareTitle": {},
-  "installationSlidesSoftwareBody": "在 Ubuntu 軟體中心安裝、管理和更新您的所有應用軟體，包括來自 Snap Store 和 {DISTRO} 軟體庫的上千個應用軟體。",
+  "installationSlidesSoftwareBody": "在 Ubuntu 軟體中心安裝、管理和更新您的所有應用程式，包括來自 Snap Store 和 {DISTRO} 軟體庫的上千個應用程式。",
   "@installationSlidesSoftwareBody": {
     "type": "text",
     "placeholders": {
@@ -829,7 +829,7 @@
   },
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
-  "choosePassphraseHeader": "創建一個密語",
+  "choosePassphraseHeader": "建立密碼",
   "@choosePassphraseHeader": {},
   "choosePassphraseBody": "您需要一個密語來加密您的檔案。您會於每次啟動您的電腦時被要求輸入您的解密密語。",
   "@choosePassphraseBody": {},
@@ -923,7 +923,7 @@
   "@confirmDiskEncryptionTPM": {},
   "confirmDiskEncryptionNone": "無",
   "@confirmDiskEncryptionNone": {},
-  "confirmEntryApplications": "應用軟體",
+  "confirmEntryApplications": "應用程式",
   "@confirmEntryApplications": {},
   "confirmEntryDiskSetup": "磁碟設定",
   "@confirmEntryDiskSetup": {},
@@ -957,7 +957,7 @@
   "@refreshUpdateNow": {},
   "validate": "驗證",
   "@validate": {},
-  "restartWarningBody": "重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所作的變更將不會被保存。",
+  "restartWarningBody": "重新啟動電腦以完成安裝或是繼續您的測試。\n任何您所做的變更將不會被保存。",
   "@restartWarningBody": {},
   "notEnoughDiskSpaceBody": "您選擇的磁碟沒有足夠空間安裝 {DISTRO}。結束安裝程式以挪出更多空間或是選擇另一個磁碟進行安裝。",
   "@notEnoughDiskSpaceBody": {
@@ -972,5 +972,6 @@
   "refreshCloseLabel": "關閉安裝程式",
   "@refreshCloseLabel": {},
   "refreshInfo": "更新到最新版本以得到改善的可靠性與更多功能。",
-  "@refreshInfo": {}
+  "@refreshInfo": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} 不是 {mountpoint} 支援的檔案系統"
 }

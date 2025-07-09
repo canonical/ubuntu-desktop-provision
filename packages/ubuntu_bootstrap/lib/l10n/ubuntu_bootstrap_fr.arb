@@ -1,6 +1,6 @@
 {
   "@@locale": "fr",
-  "appTitle": "Programme d’installation du bureau Ubuntu",
+  "appTitle": "Programme d’installation de Ubuntu Desktop",
   "@appTitle": {},
   "windowTitle": "Installer {RELEASE}",
   "@windowTitle": {},
@@ -649,7 +649,7 @@
       }
     }
   },
-  "autoinstallInstructions": "Entrez l'URL du autoinstall.yaml :",
+  "autoinstallInstructions": "Saisir l’URL du fichier autoinstall.yaml ou le chemin d’accès local :",
   "@autoinstallInstructions": {},
   "autoinstallInteractiveDescription": "Pour les utilisateurs qui veulent être guidés étape par étape à travers l'installation.",
   "@autoinstallInteractiveDescription": {},
@@ -917,5 +917,6 @@
     }
   },
   "recoveryKeyCommand": "Vous pouvez accéder à votre clé de récupération après l'installation avec la commande suivante :",
-  "@recoveryKeyCommand": {}
+  "@recoveryKeyCommand": {},
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} n’est pas un système de fichiers supporté pour {mountpoint}"
 }

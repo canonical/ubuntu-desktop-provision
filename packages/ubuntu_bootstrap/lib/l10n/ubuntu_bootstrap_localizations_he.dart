@@ -5,7 +5,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get appTitle => 'אשף התקנת אובונטו לשולחן עבודה';
+  String get appTitle => 'תוכנית התקנת שולחן עבודה אובונטו';
 
   @override
   String windowTitle(String RELEASE) {
@@ -240,7 +240,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'אישור מילת הצופן';
 
   @override
-  String get installationTypeTitle => 'סוג ההתקנה';
+  String get installationTypeTitle => 'הקמת הכונן';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format היא אינה מערכת קבצים נתמכת עבור $mountpoint';
   }
 
   @override

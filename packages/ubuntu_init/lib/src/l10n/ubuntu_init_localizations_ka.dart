@@ -9,135 +9,135 @@ class UbuntuInitLocalizationsKa extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'მოგესალმებათ $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'რამე ახალი?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'დაოპტიმიზებული გაშვება';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'უფრო სუფთად მორგების მხარდაჭერა.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'ახალი ხედი App Store-სთვის';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'რჩეული პროგრამების ძებნა ასე ადვილი არასდროს ყოფილა.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'გაფართოებული უსაფრთხოება';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'ახალი პარამეტრები აპარატურული ან ZFS დაშიფვრისთვის.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">ცვლილებების ჟურნალის ნახვა</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'ტელემეტრია';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return 'დაგვეხმარეთ $distro-ის გაუმჯობესებაში';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'დაგვეხმარეთ, $distro უკეთესი გავხადოთ, თქვენი სისტემის მონაცემების გაზიარებით. ეს შეიცავს ისეთ მონაცემებს, როგორიცაა თქვენი მანქანის მოდელი, დაყენებული პროგრამები და მდებარეობა, რომელიც დროის სარტყლისთვის აირჩიეთ.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'დიახ, გავაზიარებ სისტემის მონაცემებს $distro-ის გუნდთან';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'არა, არ გავაზიარებ სისტემის მონაცემებს';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'პირველი ანგარიშის ჩვენება';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'ანგარიშის დეტალები';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'იურიდიული გაფრთხილება';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'ტელემეტრიის მონაცემების შეგროვება ჩავარდა';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'მდებარეობის სერვისები';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'ჩავრთო მდებარეობის სერვისები?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'მიეცით აპლიკაციას ნება, თქვენი გეოგრაფიული მდებარეობა გაიგოს.\nამის შეცვლა ნებისმიერ დროს შეგიძლიათ სისტემის მორგების ფანჯარაში.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'მდებარეობის სერვისები';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'მონაცემების კონფიდენციალობა';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'მიაბით ჯადოსნურად ამ კოდით მისამართზე <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'ამ მანქანის მიმაგრება';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'ან დაამატეთ ტოკენი ხელით';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'ტოკენი';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'მიიღეთ შესაბამისი გამოწერა ღია კოდის პროგრამების უსაფრთხოებისთვის';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'ყოველთვის უფასო პირადი მოხმარებისთვის. 30-დღიანი გამოსაცდელი პერიოდი საწარმოებისთვის. <a href=\"https://$url\">გაიგეთ მეტი</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'მიმაგრება';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'არასწორი ტოკენი';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'სწორი ტოკენი';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'არასწორი ტოკენი. თავიდან სცადეთ';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'ახლა გამოტოვება';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Ubuntu Pro-ის ჩართვა ყოველთვის შეგიძლიათ მოგვიანებით, პროგრამებისა და განახლებების აპლიკაციიდან.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro-ის ჩართვა';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'მიამაგრეთ ამ მანქანას Ubuntu Pro-ის გამოწერა, რომ უსაფრთხოდ განაახლოთ უფრო მეტი პროგრამა, 2032-მდე.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro ახლა ჩართულია ამ მანქანაზე';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'თქვენი Pro-ის სერვისების მართვა პროგრამებისა და განახლებების აპლიკაციაში შეგიძლიათ.';
 }

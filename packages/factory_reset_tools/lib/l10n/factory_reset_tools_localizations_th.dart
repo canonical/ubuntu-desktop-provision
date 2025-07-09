@@ -92,7 +92,7 @@ class FactoryResetToolsLocalizationsTh extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'ปิด';
 
   @override
   String get ok => 'OK';

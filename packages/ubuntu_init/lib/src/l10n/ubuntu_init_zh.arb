@@ -66,5 +66,22 @@
   "privacyPageTitle": "位置信息服务",
   "@privacyPageTitle": {},
   "privacyLocationTitle": "启用位置信息服务吗？",
-  "@privacyLocationTitle": {}
+  "@privacyLocationTitle": {},
+  "telemetryCollectError": "未能收集遥测数据",
+  "ubuntuProHeader": "绑定本机",
+  "ubuntuProOrAddTokenManually": "或手动添加令牌",
+  "ubuntuProTokenTextfieldHint": "令牌",
+  "ubuntuProSubscriptionFreeForPersonalUse": "个人使用永远免费。企业可获得 30 天免费试用。<a href=\"https://{url}\">了解更多</a>",
+  "ubuntuProTokenAttachButton": "绑定",
+  "ubuntuProTokenAttachError": "令牌无效",
+  "ubuntuProTokenAttachSucess": "令牌有效",
+  "ubuntuProTokenAttachErrorVariant": "令牌无效，请重试",
+  "ubuntuProSubscriptionDescription": "为开源软件安全获取最为包罗万象的订阅",
+  "ubuntuProOnBoardingSkipForNow": "暂时跳过",
+  "ubuntuProOnBoardingSkipForNowDescription": "您可以稍后在“软件与更新”应用中启用 Ubuntu Pro。",
+  "ubuntuProOnBoardingEnableUbuntuPro": "启用 Ubuntu Pro",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "将此机器绑定到 Ubuntu Pro 以在 2032 年前获得更多软件安全更新。",
+  "ubuntuProSucessAttachHeader": "此机器现已启用 Ubuntu Pro",
+  "ubuntuProSucessAttachDescription": "您可以在“软件与更新”应用中管理 Ubuntu Pro 服务。",
+  "ubuntuProMagicAttachInstructions": "在 <a href=\"https://{url}\">{url}</a> 用此代码将系统绑定到 Ubuntu Pro"
 }

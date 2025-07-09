@@ -66,5 +66,8 @@
   "privacyLocationSubtitle": "La programmer få tilgang til din geografiske plassering.\nDu kan endre dette når som helst i systeminnstillingene.",
   "@privacyLocationSubtitle": {},
   "privacyLocationEnable": "Posisjoneringstjenster",
-  "@privacyLocationEnable": {}
+  "@privacyLocationEnable": {},
+  "ubuntuProTokenTextfieldHint": "Symbol",
+  "ubuntuProTokenAttachError": "Ugyldig symbol",
+  "ubuntuProTokenAttachSucess": "Gyldig symbol"
 }
