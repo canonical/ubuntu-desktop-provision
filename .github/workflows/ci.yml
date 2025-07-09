@@ -312,12 +312,6 @@ jobs:
           go install github.com/AlekSi/gocov-xml@latest
           gocov convert /tmp/coverage.out | gocov-xml > coverage/report_co.xml
 
-      - name: Cleanup
-        run: |
-          melos clean
-          melos exec -c 1 flutter clean
-          rm -rf .fvm
-
       - name: Upload coverage reports
         uses: actions/upload-artifact@v4
         with:
