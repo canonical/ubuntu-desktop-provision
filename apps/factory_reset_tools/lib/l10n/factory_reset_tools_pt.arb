@@ -9,5 +9,21 @@
   "homeTitle": "O que você gostaria de fazer?",
   "@homeTitle": {},
   "restart": "Reiniciar",
-  "@restart": {}
+  "@restart": {},
+  "createUsbTitle": "Criar uma unidade USB de reiniciar",
+  "@createUsbTitle": {},
+  "createUsbBody": "Crie uma unidade USB de reiniciar para restaurar o sistema, bem como personalizar as suas instalações Ubuntu.",
+  "@createUsbBody": {},
+  "createUsbListExplanation": "Selecione uma unidade USB. A unidade deve ter **pelo menos 16GB de espaço**.",
+  "@createUsbListExplanation": {},
+  "createUsbWarning": "A pen será reformatada e todos os dados na unidade estarão perdidos.",
+  "@createUsbWarning": {},
+  "resetMediaTitle": "Unidade USB de reiniciar",
+  "@resetMediaTitle": {},
+  "noMediaDetected": "Nenhum armazenamento removível detetado",
+  "@noMediaDetected": {},
+  "noMediaDetectedSubtitle": "Precisa de um armazenamento USB para criar a \"Unidade de Reiniciar de Fábrica\".",
+  "@noMediaDetectedSubtitle": {},
+  "factoryResetTitle": "Selecione uma opção para iniciar o reiniciar de fábrica.",
+  "@factoryResetTitle": {}
 }
