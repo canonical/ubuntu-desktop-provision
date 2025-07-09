@@ -580,6 +580,14 @@
   "@rstDisableBios": {},
   "passphrasePageTitle": "Encriptação",
   "@passphrasePageTitle": {},
-  "passphrasePageHeaderPassphrase": "Defina uma frase passe da ecnriptação",
-  "@passphrasePageHeaderPassphrase": {}
+  "passphrasePageHeaderPassphrase": "Defina uma frase passe da encriptação",
+  "@passphrasePageHeaderPassphrase": {},
+  "passphrasePageHeaderPin": "Defina um CÓDIGO da encriptação",
+  "@passphrasePageHeaderPin": {},
+  "passphrasePageChoosePassphraseHint": "Frase passe",
+  "@passphrasePageChoosePassphraseHint": {},
+  "passphrasePageConfirmPassphraseHint": "Confirmar frase passe",
+  "@passphrasePageConfirmPassphraseHint": {},
+  "passphrasePageRequiredPassphrase": "É necessária uma frase passe",
+  "@passphrasePageRequiredPassphrase": {}
 }
