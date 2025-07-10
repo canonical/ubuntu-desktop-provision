@@ -12,7 +12,7 @@
   "@createUsbTitle": {},
   "noMediaDetected": "Nezjištěno žádné vyměnitelné úložiště",
   "@noMediaDetected": {},
-  "createUsbListExplanation": "Vyberte USB flash disk. Na disku musí být **alespoň 16 GB místa.**",
+  "createUsbListExplanation": "Vyberte USB flash disk. Je třeba, aby na něm bylo **alespoň 16 GB místa.**",
   "@createUsbListExplanation": {},
   "resetMediaReadyTitle": "USB médium pro resetování je připraveno",
   "@resetMediaReadyTitle": {},
