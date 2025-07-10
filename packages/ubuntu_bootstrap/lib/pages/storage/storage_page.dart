@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -12,8 +13,11 @@ import 'package:yaru/yaru.dart';
 export 'storage_model.dart' show StorageType;
 
 /// Select between guided and manual partitioning.
-class StoragePage extends ConsumerWidget with ProvisioningPage {
-  StoragePage({super.key});
+class StoragePage extends ConsumerStatefulWidget with ProvisioningPage {
+  const StoragePage({super.key});
+
+  @override
+  ConsumerState<StoragePage> createState() => _StoragePageState();
 
   @override
   Future<bool> load(BuildContext context, WidgetRef ref) {
@@ -42,80 +46,191 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
         return lang.installationTypeAlongsideMulti(product);
     }
   }
+}
+
+class _StoragePageState extends ConsumerState<StoragePage> {
+  // Focus nodes for each installation type
+  final Map<StorageType, FocusNode> _focusNodes = {
+    StorageType.alongside: FocusNode(),
+    StorageType.erase: FocusNode(),
+    StorageType.manual: FocusNode(),
+  };
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  void initState() {
+    super.initState();
+    
+    // Enable semantics and announce page on load
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      
+      // Ensure semantics are enabled for Orca
+      WidgetsBinding.instance.ensureSemantics();
+      
+      // Announce welcome message
+      final lang = UbuntuBootstrapLocalizations.of(context);
+      final flavor = ref.read(flavorProvider);
+      final model = ref.read(storageModelProvider);
+      
+      SemanticsService.announce(
+        'How do you want to install ${flavor.displayName}? ${lang.installationTypeHeader(flavor.displayName)}. Choose your installation type.',
+        TextDirection.ltr,
+      );
+      
+      // Announce available options
+      Future.delayed(const Duration(milliseconds: 700), () {
+        if (!mounted) return;
+        
+        final options = <String>[];
+        if (model.canInstallAlongside || model.hasBitLocker) {
+          options.add('Install alongside existing operating system');
+        }
+        if (model.canEraseDisk) {
+          options.add('Erase disk and install ${flavor.displayName}');
+        }
+        if (model.canManualPartition) {
+          options.add('Manual partitioning');
+        }
+        
+        if (options.isNotEmpty) {
+          SemanticsService.announce(
+            'Available options: ${options.join(", ")}',
+            TextDirection.ltr,
+          );
+        }
+      });
+      
+      // Set initial focus on first available option
+      Future.delayed(const Duration(milliseconds: 500), () {
+        if (!mounted) return;
+        
+        if ((model.canInstallAlongside || model.hasBitLocker) && _focusNodes[StorageType.alongside] != null) {
+          _focusNodes[StorageType.alongside]!.requestFocus();
+        } else if (model.canEraseDisk && _focusNodes[StorageType.erase] != null) {
+          _focusNodes[StorageType.erase]!.requestFocus();
+        } else if (model.canManualPartition && _focusNodes[StorageType.manual] != null) {
+          _focusNodes[StorageType.manual]!.requestFocus();
+        }
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    for (var node in _focusNodes.values) {
+      node.dispose();
+    }
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
 
-    return HorizontalPage(
-      windowTitle: lang.installationTypeTitle,
-      title: lang.installationTypeHeader(flavor.displayName),
-      bottomBar: WizardBar(
-        leading: const BackWizardButton(),
-        trailing: [
-          NextWizardButton(
-            onNext: model.save,
-            enabled: model.canEraseDisk ||
-                model.canInstallAlongside ||
-                model.canManualPartition,
-            // If the user returns back to select another installation type, the
-            // previously configured storage must be reset to make all guided
-            // partitioning targets available.
-            onReturn: model.resetStorage,
+    return Semantics(
+      label: 'Storage configuration page',
+      child: HorizontalPage(
+        windowTitle: lang.installationTypeTitle,
+        title: lang.installationTypeHeader(flavor.displayName),
+        bottomBar: WizardBar(
+          leading: Semantics(
+            button: true,
+            label: 'Back button',
+            child: const BackWizardButton(),
           ),
-        ],
-      ),
-      children: [
-        if (model.canInstallAlongside || model.hasBitLocker)
-          _InstallationTypeTile(
-            storageType: StorageType.alongside,
-            title: Text(
-              formatAlongside(
-                lang,
-                ref.watch(flavorProvider).displayName,
-                model.existingOS ?? [],
+          trailing: [
+            Semantics(
+              button: true,
+              label: 'Next button ${(model.canEraseDisk || model.canInstallAlongside || model.canManualPartition) ? "enabled" : "disabled"}',
+              enabled: model.canEraseDisk || model.canInstallAlongside || model.canManualPartition,
+              child: NextWizardButton(
+                onNext: () async {
+                  final typeLabel = model.type == StorageType.alongside ? 'alongside installation' 
+                      : model.type == StorageType.erase ? 'erase disk installation'
+                      : 'manual partitioning';
+                  SemanticsService.announce(
+                    'Proceeding with $typeLabel',
+                    TextDirection.ltr,
+                  );
+                  await model.save();
+                },
+                enabled: model.canEraseDisk ||
+                    model.canInstallAlongside ||
+                    model.canManualPartition,
+                onReturn: model.resetStorage,
               ),
             ),
-            subtitle: Text(lang.installationTypeAlongsideInfo),
-          ),
-        if (model.canEraseDisk) ...[
-          _InstallationTypeTile(
-            storageType: StorageType.erase,
-            title: Text(lang.installationTypeErase(flavor.displayName)),
-            subtitle: Text(lang.installationTypeEraseInfo),
-            trailing: model.hasAdvancedFeatures
-                ? Padding(
-                    padding: const EdgeInsets.only(top: kWizardSpacing),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        OutlinedButton(
-                          onPressed: model.type == StorageType.erase
-                              ? () => showAdvancedFeaturesDialog(context, model)
-                              : null,
-                          child: Text(lang.installationTypeAdvancedLabel),
-                        ),
-                        const SizedBox(width: kWizardSpacing),
-                        Flexible(
-                          child: Text(
-                            model.guidedCapability?.localize(lang) ?? '',
+          ],
+        ),
+        children: [
+          if (model.canInstallAlongside || model.hasBitLocker)
+            _AccessibleInstallationTypeTile(
+              focusNode: _focusNodes[StorageType.alongside]!,
+              storageType: StorageType.alongside,
+              title: Text(
+                StoragePage.formatAlongside(
+                  lang,
+                  ref.watch(flavorProvider).displayName,
+                  model.existingOS ?? [],
+                ),
+              ),
+              subtitle: Text(lang.installationTypeAlongsideInfo),
+            ),
+          if (model.canEraseDisk) ...[
+            _AccessibleInstallationTypeTile(
+              focusNode: _focusNodes[StorageType.erase]!,
+              storageType: StorageType.erase,
+              title: Text(lang.installationTypeErase(flavor.displayName)),
+              subtitle: Text(lang.installationTypeEraseInfo),
+              trailing: model.hasAdvancedFeatures
+                  ? Padding(
+                      padding: const EdgeInsets.only(top: kWizardSpacing),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Semantics(
+                            button: true,
+                            label: 'Advanced features button ${model.type == StorageType.erase ? "enabled" : "disabled"}',
+                            enabled: model.type == StorageType.erase,
+                            child: OutlinedButton(
+                              onPressed: model.type == StorageType.erase
+                                  ? () {
+                                      SemanticsService.announce(
+                                        'Opening advanced features dialog',
+                                        TextDirection.ltr,
+                                      );
+                                      showAdvancedFeaturesDialog(context, model);
+                                    }
+                                  : null,
+                              child: Text(lang.installationTypeAdvancedLabel),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                : null,
-          ),
+                          const SizedBox(width: kWizardSpacing),
+                          Flexible(
+                            child: Semantics(
+                              label: 'Selected feature: ${model.guidedCapability?.localize(lang) ?? "None"}',
+                              child: Text(
+                                model.guidedCapability?.localize(lang) ?? '',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : null,
+            ),
+          ],
+          if (model.canManualPartition)
+            _AccessibleInstallationTypeTile(
+              focusNode: _focusNodes[StorageType.manual]!,
+              storageType: StorageType.manual,
+              title: Text(lang.installationTypeManual),
+              subtitle: Text(lang.installationTypeManualInfo(flavor.displayName)),
+            ),
         ],
-        if (model.canManualPartition)
-          _InstallationTypeTile(
-            storageType: StorageType.manual,
-            title: Text(lang.installationTypeManual),
-            subtitle: Text(lang.installationTypeManualInfo(flavor.displayName)),
-          ),
-      ],
+      ),
     );
   }
 }
@@ -146,14 +261,16 @@ extension _OsProberList on List<OsProber> {
       length > 1 && length != map((os) => os.long).toSet().length;
 }
 
-class _InstallationTypeTile extends ConsumerWidget {
-  const _InstallationTypeTile({
+class _AccessibleInstallationTypeTile extends ConsumerWidget {
+  const _AccessibleInstallationTypeTile({
+    required this.focusNode,
     required this.storageType,
     required this.title,
     this.subtitle,
     this.trailing,
   });
 
+  final FocusNode focusNode;
   final StorageType storageType;
   final Widget title;
   final Widget? subtitle;
@@ -162,20 +279,51 @@ class _InstallationTypeTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
+    final isSelected = model.type == storageType;
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: YaruRadioListTile(
-        title: title,
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [subtitle, trailing].whereNotNull().toList(),
+      child: Focus(
+        focusNode: focusNode,
+        onFocusChange: (hasFocus) {
+          if (hasFocus) {
+            final titleText = (title as Text).data ?? '';
+            final subtitleText = subtitle != null ? (subtitle as Text).data ?? '' : '';
+            final status = isSelected ? 'Currently selected' : 'Not selected';
+            
+            SemanticsService.announce(
+              '$titleText. $subtitleText. $status',
+              TextDirection.ltr,
+            );
+          }
+        },
+        child: Semantics(
+          checked: isSelected,
+          label: '${(title as Text).data}. ${subtitle != null ? (subtitle as Text).data : ""}',
+          hint: 'Radio button',
+          child: YaruRadioListTile(
+            title: title,
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [subtitle, trailing].whereNotNull().toList(),
+            ),
+            contentPadding: kWizardTilePadding,
+            isThreeLine: true,
+            value: storageType,
+            groupValue: model.type,
+            onChanged: (value) {
+              model.type = value;
+              
+              final typeLabel = value == StorageType.alongside ? 'Install alongside existing OS' 
+                  : value == StorageType.erase ? 'Erase disk and install'
+                  : 'Manual partitioning';
+              SemanticsService.announce(
+                '$typeLabel selected',
+                TextDirection.ltr,
+              );
+            },
+          ),
         ),
-        contentPadding: kWizardTilePadding,
-        isThreeLine: true,
-        value: storageType,
-        groupValue: model.type,
-        onChanged: (value) => model.type = value,
       ),
     );
   }
