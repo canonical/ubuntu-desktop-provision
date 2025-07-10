@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get errorPageTitle => '出问题了';
 
   @override
-  String get errorPageUnexpected => '很抱歉，但我们不确定问题所在。您可以尝试重新启动计算机，并再次启动安装进程。您也可以<a>报告问题</a>。';
+  String get errorPageUnexpected =>
+      '很抱歉，但我们不确定问题所在。您可以尝试重新启动计算机，并再次启动安装进程。您也可以<a>报告问题</a>。';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -280,7 +281,8 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => '配置活动目录时出错';
 
   @override
-  String get activeDirectoryErrorMessage => '抱歉，活动目录目前无法设置。系统启动并运行后，请访问 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 寻求帮助。';
+  String get activeDirectoryErrorMessage =>
+      '抱歉，活动目录目前无法设置。系统启动并运行后，请访问 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 寻求帮助。';
 
   @override
   String get networkPageTitle => '连接到互联网';
@@ -348,7 +350,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
 class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
-  UbuntuProvisionLocalizationsZhTw(): super('zh_TW');
+  UbuntuProvisionLocalizationsZhTw() : super('zh_TW');
 
   @override
   String get accessibilityPageTitle => '無障礙功能';
@@ -409,7 +411,8 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get errorPageTitle => '發生錯誤';
 
   @override
-  String get errorPageUnexpected => '很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。';
+  String get errorPageUnexpected =>
+      '很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -622,7 +625,8 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get activeDirectoryErrorTitle => '在配置 Active Directory 連線時發生錯誤';
 
   @override
-  String get activeDirectoryErrorMessage => '抱歉，無法立即設定 Active Directory。當您的系統安裝完成時，請造訪 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 以取得協助。';
+  String get activeDirectoryErrorMessage =>
+      '抱歉，無法立即設定 Active Directory。當您的系統安裝完成時，請造訪 <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> 以取得協助。';
 
   @override
   String get networkPageTitle => '網路連線';

@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Vytvořit USB médium pro resetování';
 
   @override
-  String get createUsbBody => 'Vytvořte USB médium pro obnovení systému a také přizpůsobení instalací Ubuntu.';
+  String get createUsbBody =>
+      'Vytvořte USB médium pro obnovení systému a také přizpůsobení instalací Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Vyberte USB flash disk. Na disku musí být **alespoň 16 GB místa.**';
+  String get createUsbListExplanation =>
+      'Vyberte USB flash disk. Na disku musí být **alespoň 16 GB místa.**';
 
   @override
-  String get createUsbWarning => 'Flash disk bude přeformátován a všechna data na disku budou ztracena.';
+  String get createUsbWarning =>
+      'Flash disk bude přeformátován a všechna data na disku budou ztracena.';
 
   @override
   String get resetMediaTitle => 'USB médium pro resetování';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Nezjištěno žádné vyměnitelné úložiště';
 
   @override
-  String get noMediaDetectedSubtitle => 'K vytvoření média pro obnovení do výchozího nastavení potřebujete úložiště USB.';
+  String get noMediaDetectedSubtitle =>
+      'K vytvoření média pro obnovení do výchozího nastavení potřebujete úložiště USB.';
 
   @override
-  String get factoryResetTitle => 'Vyberte možnost pro zahájení obnovy do výchozího nastavení';
+  String get factoryResetTitle =>
+      'Vyberte možnost pro zahájení obnovy do výchozího nastavení';
 
   @override
   String get loadingDrives => 'Počkejte prosím, než načteme disky.';
@@ -54,7 +59,8 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'USB médium pro resetování je připraveno';
 
   @override
-  String get resetMediaReadyBody => 'Pokud jej chcete použít, vložte USB disk do počítače, který chcete obnovit, a restartujte jej.';
+  String get resetMediaReadyBody =>
+      'Pokud jej chcete použít, vložte USB disk do počítače, který chcete obnovit, a restartujte jej.';
 
   @override
   String get errorLoadingDrives => 'Při načítání disků došlo k chybě.';

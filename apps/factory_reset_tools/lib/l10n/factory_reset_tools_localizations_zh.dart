@@ -103,8 +103,9 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
-class FactoryResetToolsLocalizationsZhTw extends FactoryResetToolsLocalizationsZh {
-  FactoryResetToolsLocalizationsZhTw(): super('zh_TW');
+class FactoryResetToolsLocalizationsZhTw
+    extends FactoryResetToolsLocalizationsZh {
+  FactoryResetToolsLocalizationsZhTw() : super('zh_TW');
 
   @override
   String get appTitle => '出廠設定還原工具';
@@ -128,7 +129,8 @@ class FactoryResetToolsLocalizationsZhTw extends FactoryResetToolsLocalizationsZ
   String get createUsbBody => '建立 USB 還原媒體以還原系統，並自訂您的 Ubuntu 安裝。';
 
   @override
-  String get createUsbListExplanation => '選擇一個 USB 隨身碟。該隨身碟必須有 **至少 16GB 的空間。**';
+  String get createUsbListExplanation =>
+      '選擇一個 USB 隨身碟。該隨身碟必須有 **至少 16GB 的空間。**';
 
   @override
   String get createUsbWarning => '隨身碟將被重新格式化，碟上的所有資料將會遺失。';

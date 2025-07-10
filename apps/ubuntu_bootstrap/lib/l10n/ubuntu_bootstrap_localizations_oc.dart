@@ -23,7 +23,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectHeader => 'Importar fichièr autoinstall';
 
   @override
-  String get autoinstallDirectUrlLabel => 'Podètz picar l’URL d’un fichièr autoinstall :';
+  String get autoinstallDirectUrlLabel =>
+      'Podètz picar l’URL d’un fichièr autoinstall :';
 
   @override
   String get autoinstallDirectFileLabel => 'O seleccionatz un fichièr local :';
@@ -44,28 +45,35 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Importar';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Fichièr autoinstall non accessible';
+  String get autoinstallDirectErrorNetworkTitle =>
+      'Fichièr autoinstall non accessible';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Verificatz que l\'URL es corrècta, provatz la connexion Internet, o ensajatz mai tard.';
+  String get autoinstallDirectErrorNetworkBody =>
+      'Verificatz que l\'URL es corrècta, provatz la connexion Internet, o ensajatz mai tard.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'URL invalida';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Verificatz que l\'URL es corrècta o seleccionatz un fichièr local.';
+  String get autoinstallDirectErrorInvalidUrlBody =>
+      'Verificatz que l\'URL es corrècta o seleccionatz un fichièr local.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Fichièr autoinstall invalid';
+  String get autoinstallDirectErrorInvalidContentTitle =>
+      'Fichièr autoinstall invalid';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Verificatz lo fichièr o fornissètz-ne un autre.';
+  String get autoinstallDirectErrorInvalidContentBody =>
+      'Verificatz lo fichièr o fornissètz-ne un autre.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Fichièr autoinstall illegible';
+  String get autoinstallDirectErrorFileSystemTitle =>
+      'Fichièr autoinstall illegible';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Verificatz las permissions o fornissètz un fichièr diferent.';
+  String get autoinstallDirectErrorFileSystemBody =>
+      'Verificatz las permissions o fornissètz un fichièr diferent.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Error desconeguda';
@@ -79,25 +87,29 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :';
+  String get autoinstallInstructions =>
+      'Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :';
 
   @override
   String get autoinstallInteractiveOption => 'Installacion interactiva';
 
   @override
-  String get autoinstallInteractiveDescription => 'Pels utilizaires que vòlon una guida estapa per tapa pendent l\'installacion.';
+  String get autoinstallInteractiveDescription =>
+      'Pels utilizaires que vòlon una guida estapa per tapa pendent l\'installacion.';
 
   @override
   String get autoinstallDirectOption => 'Automatizat amb fichièr autoinstall';
 
   @override
-  String get autoinstallDirectDescription => 'Pels utilizaires avançats qu’an un autoinstall.yaml per de configuracions de sistèma coerentas e reproductiblas.';
+  String get autoinstallDirectDescription =>
+      'Pels utilizaires avançats qu’an un autoinstall.yaml per de configuracions de sistèma coerentas e reproductiblas.';
 
   @override
   String get autoinstallLandscapeOption => 'Aitomatizat ambé Landscape';
 
   @override
-  String get autoinstallLandscapeDescription => 'Pels utilizaires d’organizacions que fornisson un fichièr autoinstal via Landscape.';
+  String get autoinstallLandscapeDescription =>
+      'Pels utilizaires d’organizacions que fornisson un fichièr autoinstal via Landscape.';
 
   @override
   String get changeButtonText => 'Modificar';
@@ -132,7 +144,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => 'Reparar l’installacion';
 
   @override
-  String get tryOrInstallRepairDescription => 'La reparacion tornarà installar totes los logicials installats en servant los documents e los paramètres.';
+  String get tryOrInstallRepairDescription =>
+      'La reparacion tornarà installar totes los logicials installats en servant los documents e los paramètres.';
 
   @override
   String tryOption(String RELEASE) {
@@ -163,13 +176,16 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RST es activat';
 
   @override
-  String get rstHeader => 'Devètz desactivar lo RST per contunhar l’installacion';
+  String get rstHeader =>
+      'Devètz desactivar lo RST per contunhar l’installacion';
 
   @override
-  String get rstDisable => 'Vòstre ordenador utiliza Intel RST (Rapid Storage Technology). Podètz desactivar RST dins :';
+  String get rstDisable =>
+      'Vòstre ordenador utiliza Intel RST (Rapid Storage Technology). Podètz desactivar RST dins :';
 
   @override
-  String get rstDisableWindows => 'Windows, s’utilizatz una configuracion mantun sistèma operatiu amb Windows';
+  String get rstDisableWindows =>
+      'Windows, s’utilizatz una configuracion mantun sistèma operatiu amb Windows';
 
   @override
   String get rstDisableBios => 'Los paramètres del BIOS';
@@ -183,7 +199,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Configurar l’amorçatge segur';
 
   @override
-  String get configureSecureBootDescription => 'Avètz causit d’installar de pilòts tèrces. Aquò requerís la desactivacion de l’amorçatge segur.\nPer aquò far, devètz causir una clau de seguretat ara, e la picar quand lo sistèma avia.';
+  String get configureSecureBootDescription =>
+      'Avètz causit d’installar de pilòts tèrces. Aquò requerís la desactivacion de l’amorçatge segur.\nPer aquò far, devètz causir una clau de seguretat ara, e la picar quand lo sistèma avia.';
 
   @override
   String get configureSecureBootOption => 'Configurar l’amorçatge segur';
@@ -195,16 +212,20 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'Confirmat la clau de seguretat';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Installar pas lo logicial pilòt pel moment';
+  String get dontInstallDriverSoftwareNow =>
+      'Installar pas lo logicial pilòt pel moment';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Lo podètz installar mai tard de Logicials e Mesas a jorn estant.';
+  String get dontInstallDriverSoftwareNowDescription =>
+      'Lo podètz installar mai tard de Logicials e Mesas a jorn estant.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'La clau de seguretat es requerida';
+  String get configureSecureBootSecurityKeyRequired =>
+      'La clau de seguretat es requerida';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Las claus de seguretat correspondon pas';
+  String get secureBootSecurityKeysDontMatch =>
+      'Las claus de seguretat correspondon pas';
 
   @override
   String get showSecurityKey => 'Mostrar la clau de seguretat';
@@ -216,13 +237,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageTitle => 'Aplicacions e mesas a jorn';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'Quinas aplicacions volètz installar per començar ?';
+  String get updatesOtherSoftwarePageDescription =>
+      'Quinas aplicacions volètz installar per començar ?';
 
   @override
   String get codecsAndDriversPageTitle => 'Optimizatz vòstre ordenador';
 
   @override
-  String get codecsAndDriversPageDescription => 'Installar los logicials proprietaris recomandats ?';
+  String get codecsAndDriversPageDescription =>
+      'Installar los logicials proprietaris recomandats ?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -233,43 +256,53 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaNote => 'Carta grafica NVIDIA detectada';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'Per de melhoras performanças de las cartas graficas NVIDIA, l’installacion de pilòts addicionals es recomandada.';
+  String get codecsAndDriversNvidiaBody =>
+      'Per de melhoras performanças de las cartas graficas NVIDIA, l’installacion de pilòts addicionals es recomandada.';
 
   @override
   String get fullInstallationTitle => 'Installacion complèta';
 
   @override
-  String get fullInstallationSubtitle => 'Una seleccion d’aisinas de burotica, utilitaris, navegador web e jòcs fòra connexion.';
+  String get fullInstallationSubtitle =>
+      'Una seleccion d’aisinas de burotica, utilitaris, navegador web e jòcs fòra connexion.';
 
   @override
   String get minimalInstallationTitle => 'Installacion per defaut';
 
   @override
-  String get minimalInstallationSubtitle => 'Sonque çò essencial, lo navegador web e los utilitaris basics.';
+  String get minimalInstallationSubtitle =>
+      'Sonque çò essencial, lo navegador web e los utilitaris basics.';
 
   @override
   String get otherOptions => 'Autras opcions';
 
   @override
-  String get installThirdPartyTitle => 'Installar de logicials tèrces pel material grafic e Wi-Fi e dels formats de mèdia suplementaris';
+  String get installThirdPartyTitle =>
+      'Installar de logicials tèrces pel material grafic e Wi-Fi e dels formats de mèdia suplementaris';
 
   @override
-  String get installThirdPartySubtitle => 'Aqueste logicial es somés a de tèrmes de licéncia incluses dins sa documentacion. Certans son proprietaris.';
+  String get installThirdPartySubtitle =>
+      'Aqueste logicial es somés a de tèrmes de licéncia incluses dins sa documentacion. Certans son proprietaris.';
 
   @override
-  String get installDriversTitle => 'Installar de logicials tèrces pel material grafic e Wi-Fi';
+  String get installDriversTitle =>
+      'Installar de logicials tèrces pel material grafic e Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Aquestes pilòts son someses a de licéncias que son inclusas dins lor documentacion. Son proprietaris.';
+  String get installDriversSubtitle =>
+      'Aquestes pilòts son someses a de licéncias que son inclusas dins lor documentacion. Son proprietaris.';
 
   @override
-  String get installCodecsTitle => 'Telecargar e installar la presa en carga addicionala pels formats multimèdia';
+  String get installCodecsTitle =>
+      'Telecargar e installar la presa en carga addicionala pels formats multimèdia';
 
   @override
-  String get installCodecsSubtitle => 'Inclutz sens se limitar als MP3, MP4, MOV e similars.';
+  String get installCodecsSubtitle =>
+      'Inclutz sens se limitar als MP3, MP4, MOV e similars.';
 
   @override
-  String get batteryWarning => 'L’ordenador es pas branca a una font d’alimentacion.';
+  String get batteryWarning =>
+      'L’ordenador es pas branca a una font d’alimentacion.';
 
   @override
   String get offlineWarning => 'Sètz fòra linha';
@@ -278,19 +311,24 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => 'Crear un senhal';
 
   @override
-  String get choosePassphraseBody => 'Avètz besonh d\'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu\'aviatz vòstre ordenador.';
+  String get choosePassphraseBody =>
+      'Avètz besonh d\'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu\'aviatz vòstre ordenador.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Gardatz vòstra frasa secrèta en luòc segur';
+  String get choosePassphraseInfoHeader =>
+      'Gardatz vòstra frasa secrèta en luòc segur';
 
   @override
-  String get choosePassphraseInfoBody => 'Se perdètz vòstra frasa secrèta, perdretz totas vòstras donadas.';
+  String get choosePassphraseInfoBody =>
+      'Se perdètz vòstra frasa secrèta, perdretz totas vòstras donadas.';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Gardatz vòstra frasa secrèta e clau de recuperacion en luòc segur';
+  String get chooseOptionalPassphraseInfoHeader =>
+      'Gardatz vòstra frasa secrèta e clau de recuperacion en luòc segur';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de recuperacion o lo senhal utilizaire.';
+  String get chooseOptionalPassphraseInfoBody =>
+      'Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de recuperacion o lo senhal utilizaire.';
 
   @override
   String get passphrasePageTitle => 'Encryption';
@@ -302,10 +340,12 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get passphrasePageHeaderPin => 'Set an encryption PIN';
 
   @override
-  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPassphrase =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPin =>
+      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -335,13 +375,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
   String get passphraseTypePinTileTitle => 'Require a PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+  String get passphraseTypePinTileSubTitle =>
+      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
 
   @override
   String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
@@ -350,22 +392,27 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
 
   @override
-  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
+  String get passphraseTypePageBody =>
+      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin => 'Weak passphrase, make it longer or more complex';
+  String get passphrasePagePassphraseEntropyBelowMin =>
+      'Weak passphrase, make it longer or more complex';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowOptimal => 'Fair passphrase, make it longer or more complex for better security';
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      'Fair passphrase, make it longer or more complex for better security';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
 
   @override
-  String get passphrasePagePinEntropyBelowMin => 'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin =>
+      'Weak PIN, make it longer or less predictable';
 
   @override
-  String get passphrasePagePinEntropyBelowOptimal => 'Fair PIN, make it longer or less predictable for better security';
+  String get passphrasePagePinEntropyBelowOptimal =>
+      'Fair PIN, make it longer or less predictable for better security';
 
   @override
   String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
@@ -389,10 +436,12 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'Aqueste ordenador es installat amb mantun sistèma operatiu. De qué volètz far ?';
+  String get installationTypeMultiOSDetected =>
+      'Aqueste ordenador es installat amb mantun sistèma operatiu. De qué volètz far ?';
 
   @override
-  String get installationTypeNoOSDetected => 'Aqueste ordenador possedís pas cap de sistèma operatiu detectat actualament. De qué volètz far ?';
+  String get installationTypeNoOSDetected =>
+      'Aqueste ordenador possedís pas cap de sistèma operatiu detectat actualament. De qué volètz far ?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -400,13 +449,16 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Totas las donadas sul disc seràn espotidas, tanben los sistèmas operatius.';
+  String get installationTypeEraseInfo =>
+      'Totas las donadas sul disc seràn espotidas, tanben los sistèmas operatius.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Mostrar las opcions avançadas...';
+  String get installationTypeAdvancedLabel =>
+      'Mostrar las opcions avançadas...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Chiframent e sistèma de fichièrs';
+  String get installationTypeAdvancedTitle =>
+      'Chiframent e sistèma de fichièrs';
 
   @override
   String get installationTypeExperimental => 'Experimental';
@@ -415,7 +467,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Cap de chiframent';
 
   @override
-  String get installationTypeNoneInfo => 'Sistèma de fichièrs estandard sens chiframent.';
+  String get installationTypeNoneInfo =>
+      'Sistèma de fichièrs estandard sens chiframent.';
 
   @override
   String get installationTypeNoneSelected => 'Cap pas seleccionat';
@@ -430,28 +483,34 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Chifrar amb frasa secrèta';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Deuretz picar una frasa secrèta cada còp qu\'alucatz l\'ordenador. Emplega lo chiframent LUKS amb LVM.';
+  String get installationTypeLVMEncryptionInfo =>
+      'Deuretz picar una frasa secrèta cada còp qu\'alucatz l\'ordenador. Emplega lo chiframent LUKS amb LVM.';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM e chiframent seleccionats';
+  String get installationTypeLVMEncryptionSelected =>
+      'LVM e chiframent seleccionats';
 
   @override
-  String get installationTypeEncryptInfo => 'Causiretz una clau de seguretat a l’etapa seguenta.';
+  String get installationTypeEncryptInfo =>
+      'Causiretz una clau de seguretat a l’etapa seguenta.';
 
   @override
   String get installationTypeZFS => 'Utilizar ZFS sens chiframent';
 
   @override
-  String get installationTypeZFSEncryption => 'Chifrar amb una frasa secrèta en utilizant ZFS';
+  String get installationTypeZFSEncryption =>
+      'Chifrar amb una frasa secrèta en utilizant ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Chiframent natiu amb ZDS. Deuretz picar un senhal cada còp qu’alucaretz l’ordenador.';
+  String get installationTypeZFSEncryptionInfo =>
+      'Chiframent natiu amb ZDS. Deuretz picar un senhal cada còp qu’alucaretz l’ordenador.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS seleccionat';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS e chiframent seleccionats';
+  String get installationTypeZFSEncryptionSelected =>
+      'ZFS e chiframent seleccionats';
 
   @override
   String get installationTypeTPM => 'Utilizar lo chiframent material';
@@ -523,13 +582,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Començatz a partir de zèro sul disc seleccionat.';
+  String get selectGuidedStorageInfo =>
+      'Començatz a partir de zèro sul disc seleccionat.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Seleccionatz le disc :';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Seleccionatz la particion :';
+  String get selectGuidedStoragePartitionDropdownLabel =>
+      'Seleccionatz la particion :';
 
   @override
   String get selectGuidedStorageInfoLabel => 'Lo disc entièr serà utilizat :';
@@ -543,7 +604,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Alogatz l’espaci disc en desplaçant lo separador çai-jos :';
+  String get installAlongsideSpaceDivider =>
+      'Alogatz l’espaci disc en desplaçant lo separador çai-jos :';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
@@ -572,13 +634,16 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => 'Particionament manual';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Los ponches de montatge devon començar per « / »';
+  String get allocateDiskSpaceInvalidMountPointSlash =>
+      'Los ponches de montatge devon començar per « / »';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Los ponches de montatge pòdon pas conténer cap d’espaci';
+  String get allocateDiskSpaceInvalidMountPointSpace =>
+      'Los ponches de montatge pòdon pas conténer cap d’espaci';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
     return '$format es pas un sistèma de fichièrs compatible amb $mountpoint';
   }
 
@@ -613,7 +678,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationTitle => 'Particion novèla voida';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'La creacion d’una taula de particions novèla sus un periferic entièr suprimirà totas sas particions actualas. Poiretz anullar aquesta operacion mai tard s\'o volètz.';
+  String get newPartitionTableConfirmationMessage =>
+      'La creacion d’una taula de particions novèla sus un periferic entièr suprimirà totas sas particions actualas. Poiretz anullar aquesta operacion mai tard s\'o volètz.';
 
   @override
   String get tooManyPrimaryPartitions => 'Tròp de particions primàrias';
@@ -622,7 +688,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get partitionLimitReached => 'Limit atenh';
 
   @override
-  String get bootLoaderDevice => 'Periferic per l’installacion del gestionari d’aviada';
+  String get bootLoaderDevice =>
+      'Periferic per l’installacion del gestionari d’aviada';
 
   @override
   String get partitionCreateTitle => 'Crear una particion';
@@ -672,7 +739,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Lèst per installacion';
 
   @override
-  String get confirmHeader => 'Se contunhatz, las modificacions çai-jos seràn escrichas suls disques. Poiretz realizar de cambiaments mai tard a la man.';
+  String get confirmHeader =>
+      'Se contunhatz, las modificacions çai-jos seràn escrichas suls disques. Poiretz realizar de cambiaments mai tard a la man.';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -714,7 +782,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get confirmPartitionsTitle => 'Particions';
 
   @override
-  String get confirmPartitionTables => 'Las taulas de particions dels periferics seguents seràn modificadas :';
+  String get confirmPartitionTables =>
+      'Las taulas de particions dels periferics seguents seràn modificadas :';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -783,10 +852,12 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Tornatz aviar per acabar l\'installacion o contunhatz d’ensajar.\nTotas las modificacions que faretz seràn pas enregistradas.';
+  String get restartWarningBody =>
+      'Tornatz aviar per acabar l\'installacion o contunhatz d’ensajar.\nTotas las modificacions que faretz seràn pas enregistradas.';
 
   @override
-  String get rebootToConfigureWarning => 'Devètz reaviar l’ordenador per contunhar lo processús d’installacion.';
+  String get rebootToConfigureWarning =>
+      'Devètz reaviar l’ordenador per contunhar lo processús d’installacion.';
 
   @override
   String get shutdown => 'Atudar';
@@ -801,13 +872,16 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get bitlockerInfoTitle => 'BitLocker detectat';
 
   @override
-  String get bitlockerInfoDescription => 'Una o mai d\'una particion son chifrada amb BitLocker.';
+  String get bitlockerInfoDescription =>
+      'Una o mai d\'una particion son chifrada amb BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'Per installar a costat de Windows, desactivatz BitLocker dins Windows.';
+  String get bitlockerInfoDisable =>
+      'Per installar a costat de Windows, desactivatz BitLocker dins Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Windows poiriá demandar de claus de recuperacion a l’aviada aprèp l’installacion.';
+  String get bitlockerInfoRecovery =>
+      'Windows poiriá demandar de claus de recuperacion a l’aviada aprèp l’installacion.';
 
   @override
   String bitlockerInfoInstructions(String url) {
@@ -815,7 +889,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get bitlockerWarningTitle => 'Riscatz de pèrdre totas vòstras donadas sens las claus de recuperacion BitLocker';
+  String get bitlockerWarningTitle =>
+      'Riscatz de pèrdre totas vòstras donadas sens las claus de recuperacion BitLocker';
 
   @override
   String get restartComputer => 'Reaviar l\'ordenador';
@@ -846,7 +921,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Inclús :';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Rapid, gratuit e plen de foncionalitats novèlas';
+  String get installationSlidesWelcomeTitle =>
+      'Rapid, gratuit e plen de foncionalitats novèlas';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -859,7 +935,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Totas las aplicacions qu’avètz mestièr';
+  String get installationSlidesSoftwareTitle =>
+      'Totas las aplicacions qu’avètz mestièr';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -867,7 +944,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Desvolopatz amb çò melhor del monde liure';
+  String get installationSlidesDevelopmentTitle =>
+      'Desvolopatz amb çò melhor del monde liure';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
@@ -875,7 +953,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Melhoratz vòstra creativitat';
+  String get installationSlidesCreativityTitle =>
+      'Melhoratz vòstra creativitat';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
@@ -904,7 +983,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Aumentatz vòstra productivitat';
+  String get installationSlidesProductivityTitle =>
+      'Aumentatz vòstra productivitat';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -923,7 +1003,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityOrca => 'Lector d’ecran Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Presa en carga lingüistica';
+  String get installationSlidesAccessibilityLanguages =>
+      'Presa en carga lingüistica';
 
   @override
   String get installationSlidesSupportTitle => 'Ajuda e assisténcia';
@@ -934,10 +1015,12 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu cobrís una larga plaja de questions e responsas e lo Discourse d’Ubuntu provesís de guidas e de discussions pels nòuvenguts e los utilizaires experimentats.';
+  String get installationSlidesSupportCommunity =>
+      'Ask Ubuntu cobrís una larga plaja de questions e responsas e lo Discourse d’Ubuntu provesís de guidas e de discussions pels nòuvenguts e los utilizaires experimentats.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'Per las entrepresas Canonical fornís una assisténcia comerciala per facilitar l’integracion e la gestion d’Ubuntu en tota seguretat al lòc de trabalh.';
+  String get installationSlidesSupportEnterprise =>
+      'Per las entrepresas Canonical fornís una assisténcia comerciala per facilitar l’integracion e la gestion d’Ubuntu en tota seguretat al lòc de trabalh.';
 
   @override
   String get installationSlidesSupportResources => 'Ressorsas utilas :';
@@ -946,7 +1029,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportDocumentation => 'Documentacion oficiala';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Assisténcia professionala disponibla 24h de 24h e 7 jorns de 7 amb Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro =>
+      'Assisténcia professionala disponibla 24h de 24h e 7 jorns de 7 amb Ubuntu Pro';
 
   @override
   String get copyingFiles => 'Còpia dels fichièrs…';
@@ -989,7 +1073,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get refreshUpdateNow => 'Actualizar ara';
 
   @override
-  String get refreshInfo => 'Metètz a jorn cap a la darrièra version per una fisabilitat melhorada e mai de foncionalitats.';
+  String get refreshInfo =>
+      'Metètz a jorn cap a la darrièra version per una fisabilitat melhorada e mai de foncionalitats.';
 
   @override
   String get refreshReady => 'Mesa a jorn prèsta';
@@ -1130,16 +1215,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get recoveryKeyHeader => 'Obténer una clau de recuperacion';
 
   @override
-  String get recoveryKeyInfoHeader => 'Poiriatz pèrdre totas vòstras donadas sens una clau de recuperacion';
+  String get recoveryKeyInfoHeader =>
+      'Poiriatz pèrdre totas vòstras donadas sens una clau de recuperacion';
 
   @override
   String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.';
+  String get recoveryKeyStorageAdvice =>
+      'Gardatz la clau de recuperacion en luòc segur. Utilizatz-la per deschifrar lo disc en cas de cambiament de sistèma. Per exemple, vos poiriá far mestièr se modificatz los compausants de l’ordenador o actualizatz lo micrologicial.';
 
   @override
-  String get recoveryKeyConfirmation => 'Compreni que pòdi pèrdre totas mas donadas s\'ai pas de clau de recuperacion';
+  String get recoveryKeyConfirmation =>
+      'Compreni que pòdi pèrdre totas mas donadas s\'ai pas de clau de recuperacion';
 
   @override
   String get recoveryKeyLinkLabel => 'Learn more';
@@ -1156,25 +1244,30 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+  String get recoveryKeyQrDialogBody =>
+      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle =>
+      'Recovery key file not saved';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+  String get recoveryKeyExceptionDisallowedPathTitle =>
+      'Recovery key file cannot be saved in a temporary location';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
 
   @override
-  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+  String get recoveryKeyExceptionFileSystemBody =>
+      'You do not have permission to write to that folder. Try a different location or use another method.';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      'Try a different location, such as a removable drive, or use another method.';
 
   @override
   String get recoveryKeyFilePickerTitle => 'Save recovery key file';
@@ -1200,7 +1293,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Domeni Landscape (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Fornissètz lo domeni Landscape de vòstra organizacion per vos i connectar e recuperar lo fichièr autoinstall. Podètz obténer lo FQDN al prèp de vòstra assisténcia informatica.';
+  String get landscapeDomainInstructions =>
+      'Fornissètz lo domeni Landscape de vòstra organizacion per vos i connectar e recuperar lo fichièr autoinstall. Podètz obténer lo FQDN al prèp de vòstra assisténcia informatica.';
 
   @override
   String get landscapeDomainTextField => 'Domeni Landscape (FQDN)';
@@ -1209,25 +1303,32 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get next => 'Seguent';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Domeni invalid, volgatz verificar o contactar l\'assisténcia informatica';
+  String get landscapeDomainInvalidDomainWarning =>
+      'Domeni invalid, volgatz verificar o contactar l\'assisténcia informatica';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Connectatz-vos a Internet per contunhar';
+  String get landscapeDomainNoInternetTitleWarning =>
+      'Connectatz-vos a Internet per contunhar';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internet es necessari per recuperar lo fichièr de Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      'Internet es necessari per recuperar lo fichièr de Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Còdi expirat, volgatz tornar ensajar';
+  String get landscapeCodeExpiredWarning =>
+      'Còdi expirat, volgatz tornar ensajar';
 
   @override
-  String get landscapeLoginFailedWarning => 'Fracàs de la connexion, volgatz tornar ensajar';
+  String get landscapeLoginFailedWarning =>
+      'Fracàs de la connexion, volgatz tornar ensajar';
 
   @override
-  String get landscapeErrorPageTitle => 'Installacion automatica indisponibla per vòstre compte';
+  String get landscapeErrorPageTitle =>
+      'Installacion automatica indisponibla per vòstre compte';
 
   @override
-  String get landscapeErrorPageBody => 'Contactatz vòstra assisténcia informatica p ensajatz una opcion d\'installacion diferenta.';
+  String get landscapeErrorPageBody =>
+      'Contactatz vòstra assisténcia informatica p ensajatz una opcion d\'installacion diferenta.';
 
   @override
   String landscapeErrorPageCode(String code) {
@@ -1235,8 +1336,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu s\'installarà amb la configuracion provesida per vòstra organizacion';
+  String get landscapeConfirmPageSuccessInfoTitle =>
+      'Ubuntu s\'installarà amb la configuracion provesida per vòstra organizacion';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'Podètz repassar lo fichièr d\'autoinstall importat de Landscape çai jos.';
+  String get landscapeConfirmPageSuccessInfoContent =>
+      'Podètz repassar lo fichièr d\'autoinstall importat de Landscape çai jos.';
 }

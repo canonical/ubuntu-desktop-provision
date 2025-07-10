@@ -47,7 +47,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorNetworkTitle => '自动安装文件不可达';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => '请检查 URL 是否正确，测试您的网络连接，或者稍后再试。';
+  String get autoinstallDirectErrorNetworkBody =>
+      '请检查 URL 是否正确，测试您的网络连接，或者稍后再试。';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => '无效的 URL';
@@ -91,7 +92,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectOption => '由自动安装文件自动化';
 
   @override
-  String get autoinstallDirectDescription => '给那些为持续和可重复系统配置而拥有 autoinstall.yaml 的高级用户。';
+  String get autoinstallDirectDescription =>
+      '给那些为持续和可重复系统配置而拥有 autoinstall.yaml 的高级用户。';
 
   @override
   String get autoinstallLandscapeOption => '由 Landscape 自动化';
@@ -132,7 +134,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => '修复安装';
 
   @override
-  String get tryOrInstallRepairDescription => '修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。';
+  String get tryOrInstallRepairDescription =>
+      '修复选项将在保留个人数据和设置的情况下重新安装所有已安装的软件。';
 
   @override
   String tryOption(String RELEASE) {
@@ -183,7 +186,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => '配置安全启动';
 
   @override
-  String get configureSecureBootDescription => '您已选择安装第三方驱动。这需要关闭安全启动。\n为此，您需要立即选择一个安全密钥，并在系统重新启动时输入。';
+  String get configureSecureBootDescription =>
+      '您已选择安装第三方驱动。这需要关闭安全启动。\n为此，您需要立即选择一个安全密钥，并在系统重新启动时输入。';
 
   @override
   String get configureSecureBootOption => '配置安全启动';
@@ -290,7 +294,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get chooseOptionalPassphraseInfoHeader => '将您的密码和恢复密钥保存在安全的地方';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => '如果您丢失了密码，您将失去所有的数据。密码不能代替恢复密钥或者用户密码。';
+  String get chooseOptionalPassphraseInfoBody =>
+      '如果您丢失了密码，您将失去所有的数据。密码不能代替恢复密钥或者用户密码。';
 
   @override
   String get passphrasePageTitle => 'Encryption';
@@ -302,10 +307,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get passphrasePageHeaderPin => 'Set an encryption PIN';
 
   @override
-  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPassphrase =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPin =>
+      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -335,13 +342,15 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
   String get passphraseTypePinTileTitle => 'Require a PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+  String get passphraseTypePinTileSubTitle =>
+      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
 
   @override
   String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
@@ -350,22 +359,27 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
 
   @override
-  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
+  String get passphraseTypePageBody =>
+      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin => 'Weak passphrase, make it longer or more complex';
+  String get passphrasePagePassphraseEntropyBelowMin =>
+      'Weak passphrase, make it longer or more complex';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowOptimal => 'Fair passphrase, make it longer or more complex for better security';
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      'Fair passphrase, make it longer or more complex for better security';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
 
   @override
-  String get passphrasePagePinEntropyBelowMin => 'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin =>
+      'Weak PIN, make it longer or less predictable';
 
   @override
-  String get passphrasePagePinEntropyBelowOptimal => 'Fair PIN, make it longer or less predictable for better security';
+  String get passphrasePagePinEntropyBelowOptimal =>
+      'Fair PIN, make it longer or less predictable for better security';
 
   @override
   String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
@@ -430,7 +444,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => '用密码加密';
 
   @override
-  String get installationTypeLVMEncryptionInfo => '您每次打开计算机都将需要输入密码。这将同 LVM 一同使用 LUKS 加密。';
+  String get installationTypeLVMEncryptionInfo =>
+      '您每次打开计算机都将需要输入密码。这将同 LVM 一同使用 LUKS 加密。';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
@@ -445,7 +460,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryption => '使用 ZFS 密码加密';
 
   @override
-  String get installationTypeZFSEncryptionInfo => '使用 ZFS 进行本地加密。您每次打开计算机时都将需要输入密码。';
+  String get installationTypeZFSEncryptionInfo =>
+      '使用 ZFS 进行本地加密。您每次打开计算机时都将需要输入密码。';
 
   @override
   String get installationTypeZFSSelected => '已选择配置 ZFS';
@@ -578,7 +594,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpaceInvalidMountPointSpace => '挂载点不可带有空格';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
     return '$format 不是 $mountpoint 支持的文件系统';
   }
 
@@ -613,7 +630,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationTitle => '新建空分区';
 
   @override
-  String get newPartitionTableConfirmationMessage => '在整个设备上创建一个新的分区表，将删除其当前所有的分区。此操作可在需要时随时撤销。';
+  String get newPartitionTableConfirmationMessage =>
+      '在整个设备上创建一个新的分区表，将删除其当前所有的分区。此操作可在需要时随时撤销。';
 
   @override
   String get tooManyPrimaryPartitions => '主分区过多';
@@ -934,10 +952,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu 覆盖了各种问题和回答，而 Ubuntu Discourse 为新手和有经验的用户提供指南和讨论。';
+  String get installationSlidesSupportCommunity =>
+      'Ask Ubuntu 覆盖了各种问题和回答，而 Ubuntu Discourse 为新手和有经验的用户提供指南和讨论。';
 
   @override
-  String get installationSlidesSupportEnterprise => '对于企业用户，Canonical 提供商业支持，以便在工作场所轻松安全地使用和管理 Ubuntu。';
+  String get installationSlidesSupportEnterprise =>
+      '对于企业用户，Canonical 提供商业支持，以便在工作场所轻松安全地使用和管理 Ubuntu。';
 
   @override
   String get installationSlidesSupportResources => '有用的资源：';
@@ -946,7 +966,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportDocumentation => '官方文档';
 
   @override
-  String get installationSlidesSupportUbuntuPro => '使用 Ubuntu Pro 可享受企业级 7*24 支持服务';
+  String get installationSlidesSupportUbuntuPro =>
+      '使用 Ubuntu Pro 可享受企业级 7*24 支持服务';
 
   @override
   String get copyingFiles => '正在复制文件……';
@@ -1136,7 +1157,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyStorageAdvice => '将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。';
+  String get recoveryKeyStorageAdvice =>
+      '将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。';
 
   @override
   String get recoveryKeyConfirmation => '我明白我可能会在没有恢复密钥的情况下丢失所有数据';
@@ -1156,25 +1178,30 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+  String get recoveryKeyQrDialogBody =>
+      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle =>
+      'Recovery key file not saved';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+  String get recoveryKeyExceptionDisallowedPathTitle =>
+      'Recovery key file cannot be saved in a temporary location';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
 
   @override
-  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+  String get recoveryKeyExceptionFileSystemBody =>
+      'You do not have permission to write to that folder. Try a different location or use another method.';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      'Try a different location, such as a removable drive, or use another method.';
 
   @override
   String get recoveryKeyFilePickerTitle => 'Save recovery key file';
@@ -1200,7 +1227,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Landscape domain (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => '提供您组织的 Landscape 域来登录并获取自动安装文件。您可以从您的技术支持处获取 FQDN。';
+  String get landscapeDomainInstructions =>
+      '提供您组织的 Landscape 域来登录并获取自动安装文件。您可以从您的技术支持处获取 FQDN。';
 
   @override
   String get landscapeDomainTextField => 'Landscape 域 (FQDN)';
@@ -1215,7 +1243,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get landscapeDomainNoInternetTitleWarning => '连接到互联网来继续';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => '必须连接到互联网以从 Landscape 获取自动安装文件';
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      '必须连接到互联网以从 Landscape 获取自动安装文件';
 
   @override
   String get landscapeCodeExpiredWarning => '代码已过期，请重试';
@@ -1224,10 +1253,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => '登录失败，请重试';
 
   @override
-  String get landscapeErrorPageTitle => 'Automated install is not available for your account';
+  String get landscapeErrorPageTitle =>
+      'Automated install is not available for your account';
 
   @override
-  String get landscapeErrorPageBody => 'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody =>
+      'Contact your IT support or try a different installation option.';
 
   @override
   String landscapeErrorPageCode(String code) {
@@ -1235,15 +1266,17 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle =>
+      'Ubuntu will install with the configuration provided by your organization';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'You can review the autoinstall file imported from Landscape below.';
+  String get landscapeConfirmPageSuccessInfoContent =>
+      'You can review the autoinstall file imported from Landscape below.';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
 class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
-  UbuntuBootstrapLocalizationsZhTw(): super('zh_TW');
+  UbuntuBootstrapLocalizationsZhTw() : super('zh_TW');
 
   @override
   String get appTitle => 'Ubuntu 桌面版安裝程式';
@@ -1328,13 +1361,15 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get autoinstallDirectOption => '透過自動安裝檔實現自動化';
 
   @override
-  String get autoinstallDirectDescription => '對於擁有 autoinstall.yaml 的進階使用者，可以獲得一致且可重複的系統設定。';
+  String get autoinstallDirectDescription =>
+      '對於擁有 autoinstall.yaml 的進階使用者，可以獲得一致且可重複的系統設定。';
 
   @override
   String get autoinstallLandscapeOption => '使用 Landscape 實現自動化';
 
   @override
-  String get autoinstallLandscapeDescription => '供給透過 Landscape 提供自動安裝檔的組織中使用者。';
+  String get autoinstallLandscapeDescription =>
+      '供給透過 Landscape 提供自動安裝檔的組織中使用者。';
 
   @override
   String get changeButtonText => '變更';
@@ -1420,7 +1455,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get configureSecureBootTitle => '設定安全開機 (Secure Boot)';
 
   @override
-  String get configureSecureBootDescription => '您已經選擇安裝第三方驅動，本功能需要關閉安全開機 (Secure Boot) 才能使用。\n為此您需要在此輸入一個安全密鑰，並在系統重啟時輸入。';
+  String get configureSecureBootDescription =>
+      '您已經選擇安裝第三方驅動，本功能需要關閉安全開機 (Secure Boot) 才能使用。\n為此您需要在此輸入一個安全密鑰，並在系統重啟時輸入。';
 
   @override
   String get configureSecureBootOption => '設定安全開機 (Secure Boot)';
@@ -1470,7 +1506,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get codecsAndDriversNvidiaNote => '偵測到 NVIDIA 顯示界面';
 
   @override
-  String get codecsAndDriversNvidiaBody => '強烈建議安裝額外的驅動程式以在 NVIDIA 顯示界面上實現最佳效能。';
+  String get codecsAndDriversNvidiaBody =>
+      '強烈建議安裝額外的驅動程式以在 NVIDIA 顯示界面上實現最佳效能。';
 
   @override
   String get fullInstallationTitle => '完整安裝';
@@ -1527,7 +1564,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get chooseOptionalPassphraseInfoHeader => '將您的密碼和復原金鑰存放在安全的地方';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => '如果弄丟密碼，您將會失去所有資料。密碼不能取代復原金鑰或您的使用者密碼。';
+  String get chooseOptionalPassphraseInfoBody =>
+      '如果弄丟密碼，您將會失去所有資料。密碼不能取代復原金鑰或您的使用者密碼。';
 
   @override
   String get installationTypeTitle => '磁碟設定';
@@ -1589,7 +1627,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeLVMEncryption => '使用密碼加密';
 
   @override
-  String get installationTypeLVMEncryptionInfo => '每次開啟電腦時，您都需要輸入密碼。這使用 LVM 的 LUKS 加密。';
+  String get installationTypeLVMEncryptionInfo =>
+      '每次開啟電腦時，您都需要輸入密碼。這使用 LVM 的 LUKS 加密。';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已選用 LVM 及加密';
@@ -1604,7 +1643,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeZFSEncryption => '使用 ZFS 以密碼加密';
 
   @override
-  String get installationTypeZFSEncryptionInfo => '使用 ZFS 進行原生加密。每次開啟電腦時，您都需要輸入密碼。';
+  String get installationTypeZFSEncryptionInfo =>
+      '使用 ZFS 進行原生加密。每次開啟電腦時，您都需要輸入密碼。';
 
   @override
   String get installationTypeZFSSelected => '已選用 ZFS';
@@ -1737,7 +1777,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get allocateDiskSpaceInvalidMountPointSpace => '掛載點不可包含空白字元';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
     return '$format 不是 $mountpoint 支援的檔案系統';
   }
 
@@ -1772,7 +1813,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get newPartitionTableConfirmationTitle => '新建分割區';
 
   @override
-  String get newPartitionTableConfirmationMessage => '在整個硬碟上建立新分割表會移除目前所有的分割區，本操作若有需要可以復原。';
+  String get newPartitionTableConfirmationMessage =>
+      '在整個硬碟上建立新分割表會移除目前所有的分割區，本操作若有需要可以復原。';
 
   @override
   String get tooManyPrimaryPartitions => '主要分割區過多';
@@ -1963,7 +2005,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get bitlockerInfoDescription => '一個或多個磁碟分割區已使用 BitLocker 加密。';
 
   @override
-  String get bitlockerInfoDisable => '若要與 Windows 並存的方式安裝，請停用 Windows 中的 BitLocker。';
+  String get bitlockerInfoDisable =>
+      '若要與 Windows 並存的方式安裝，請停用 Windows 中的 BitLocker。';
 
   @override
   String get bitlockerInfoRecovery => '安裝完成後，Windows 可能會在開機時要求復原金鑰。';
@@ -2093,10 +2136,12 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu 含括了各式各樣的問題與回答，而 Ubuntu Discourse 則可為新手與有經驗的使用者提供指南與討論。';
+  String get installationSlidesSupportCommunity =>
+      'Ask Ubuntu 含括了各式各樣的問題與回答，而 Ubuntu Discourse 則可為新手與有經驗的使用者提供指南與討論。';
 
   @override
-  String get installationSlidesSupportEnterprise => 'Canonical 對企業用戶提供商業支援，以便在工作場所輕鬆、安全的安裝與管理 Ubuntu。';
+  String get installationSlidesSupportEnterprise =>
+      'Canonical 對企業用戶提供商業支援，以便在工作場所輕鬆、安全的安裝與管理 Ubuntu。';
 
   @override
   String get installationSlidesSupportResources => '有用資源：';
@@ -2289,7 +2334,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get recoveryKeyInfoHeader => '如果沒有復原金鑰，您可能會遺失所有資料';
 
   @override
-  String get recoveryKeyStorageAdvice => '將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。';
+  String get recoveryKeyStorageAdvice =>
+      '將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。';
 
   @override
   String get recoveryKeyConfirmation => '我知道如果沒有復原金鑰，我可能會遺失所有資料';
@@ -2312,7 +2358,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get landscapeDomainHintText => 'Landscape 網域 (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => '提供您組織的 Landscape 網域以登入並獲取自動安裝檔案。您可以從 IT 支援取得 FQDN。';
+  String get landscapeDomainInstructions =>
+      '提供您組織的 Landscape 網域以登入並獲取自動安裝檔案。您可以從 IT 支援取得 FQDN。';
 
   @override
   String get landscapeDomainTextField => 'Landscape 網域 (FQDN)';
@@ -2327,7 +2374,8 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get landscapeDomainNoInternetTitleWarning => '連線至網際網路以繼續';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => '需要透過網際網路從 Landscape 取得自動安裝檔案';
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      '需要透過網際網路從 Landscape 取得自動安裝檔案';
 
   @override
   String get landscapeCodeExpiredWarning => '代碼已過期，請重試';
@@ -2350,5 +2398,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu 將以您的組織所提供的配置安裝';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => '您可以在下方檢視從 Landscape 匯入的自動安裝檔案。';
+  String get landscapeConfirmPageSuccessInfoContent =>
+      '您可以在下方檢視從 Landscape 匯入的自動安裝檔案。';
 }

@@ -321,36 +321,43 @@ class _PartitionMountField extends StatelessWidget {
       child: ValueListenableBuilder<PartitionFormat?>(
         valueListenable: partitionFormat,
         builder: (context, format, child) {
-          return YaruAutocomplete<String>(
-            initialValue: initialMount != null
-                ? TextEditingValue(text: initialMount!)
-                : null,
-            optionsBuilder: (value) => DefaultMountPoint.paths()
-                .where((path) => path.startsWith(value.text)),
-            onSelected: (option) {
-              if (option != DefaultMountPoint.home.path) {
-                partitionFormat.value = partitionFormat.value ??
-                    (originalPartition != null
-                        ? PartitionFormat.fromPartition(originalPartition!)
-                        : null);
-              }
-              partitionMount.value = option;
-            },
-            fieldViewBuilder:
-                (context, textEditingController, focusNode, onFieldSubmitted) {
-              return TextFormField(
-                enabled: format != PartitionFormat.none &&
-                    format != PartitionFormat.swap,
-                controller: textEditingController,
-                focusNode: focusNode,
-                onChanged: (value) => partitionMount.value = value,
-                onFieldSubmitted: (_) => onFieldSubmitted(),
-                autovalidateMode: AutovalidateMode.always,
-                validator: (value) =>
-                    _validateMountedPartition(value!, partitionFormat.value)
-                        .localize(lang),
-              );
-            },
+          return Semantics(
+            container: true,
+            child: YaruAutocomplete<String>(
+              initialValue: initialMount != null
+                  ? TextEditingValue(text: initialMount!)
+                  : null,
+              optionsBuilder: (value) => DefaultMountPoint.paths()
+                  .where((path) => path.startsWith(value.text)),
+              onSelected: (option) {
+                if (option != DefaultMountPoint.home.path) {
+                  partitionFormat.value = partitionFormat.value ??
+                      (originalPartition != null
+                          ? PartitionFormat.fromPartition(originalPartition!)
+                          : null);
+                }
+                partitionMount.value = option;
+              },
+              fieldViewBuilder: (
+                context,
+                textEditingController,
+                focusNode,
+                onFieldSubmitted,
+              ) {
+                return TextFormField(
+                  enabled: format != PartitionFormat.none &&
+                      format != PartitionFormat.swap,
+                  controller: textEditingController,
+                  focusNode: focusNode,
+                  onChanged: (value) => partitionMount.value = value,
+                  onFieldSubmitted: (_) => onFieldSubmitted(),
+                  autovalidateMode: AutovalidateMode.always,
+                  validator: (value) =>
+                      _validateMountedPartition(value!, partitionFormat.value)
+                          .localize(lang),
+                );
+              },
+            ),
           );
         },
       ),

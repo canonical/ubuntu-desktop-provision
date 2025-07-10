@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'ایجاد رسانهٔ بازنشانی یواس‌بی';
 
   @override
-  String get createUsbBody => 'ایجاد رسانهٔ بازنشانی یواس‌بی برای بازگردانی سامانه به همراه سفارشی سازی نصب‌های اوبونتو.';
+  String get createUsbBody =>
+      'ایجاد رسانهٔ بازنشانی یواس‌بی برای بازگردانی سامانه به همراه سفارشی سازی نصب‌های اوبونتو.';
 
   @override
-  String get createUsbListExplanation => 'گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید **کمینه ۱۶ گ‌ب** فضا داشته باشد';
+  String get createUsbListExplanation =>
+      'گزینش راه‌انداز گردانندهٔ فلش یواس‌بی. گرداننده باید **کمینه ۱۶ گ‌ب** فضا داشته باشد';
 
   @override
-  String get createUsbWarning => 'گردانندهٔ فلش باید دوباره قالب‌بندی شده که همهٔ داده‌های رویش از دست خواهند رفت.';
+  String get createUsbWarning =>
+      'گردانندهٔ فلش باید دوباره قالب‌بندی شده که همهٔ داده‌های رویش از دست خواهند رفت.';
 
   @override
   String get resetMediaTitle => 'رسانهٔ بازنشانی یواس‌بی';
@@ -42,7 +45,8 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'رسانهٔ برداشتنی تشخیص داده نشد';
 
   @override
-  String get noMediaDetectedSubtitle => 'برای ایجاد رسانهٔ بازنشانی کارخانه نیاز به ذخیره‌ساز یواس‌بی دارید.';
+  String get noMediaDetectedSubtitle =>
+      'برای ایجاد رسانهٔ بازنشانی کارخانه نیاز به ذخیره‌ساز یواس‌بی دارید.';
 
   @override
   String get factoryResetTitle => 'گزینش گزینه‌ای برای آغاز بازنشانی کارخانه';
@@ -54,7 +58,8 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'رسانهٔ بازنشانی یواس‌بی آماده است';
 
   @override
-  String get resetMediaReadyBody => 'هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره آغازش کنید.';
+  String get resetMediaReadyBody =>
+      'هنگام استفاده لطفاً گردانندهٔ یواس‌بی را در رایانه‌ای که می‌خواهید بازنشانی کنید قرار داده و دوباره آغازش کنید.';
 
   @override
   String get errorLoadingDrives => 'هنگام واکشی راه‌اندازها خطایی رخ داد.';
