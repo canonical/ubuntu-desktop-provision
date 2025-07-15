@@ -48,7 +48,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(Object distro) {
-    return 'هم‌رسانی ناشناس داده‌ها با $distro برای بهبود تجربه‌تان.';
+    return 'کمک در بهبود $distro با هم‌رسانی داده‌های سامانه‌تان. این داده‌ها شامل چیزهایی چون مدل دستگاهتان، نرم‌افزارهای نصب شده و مکانی که برای منطقهٔ زمانیتان گزیده‌اید هستند.';
   }
 
   @override
@@ -60,16 +60,16 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'نه. داده‌های سامانه هم‌رسانی نشوند';
 
   @override
-  String get telemetryReportLabel => 'گزارش کردن جزییات';
+  String get telemetryReportLabel => 'نمایش نخستین گزارش';
 
   @override
   String get telemetryReportTitle => 'جزییات گزارش';
 
   @override
-  String get telemetryLegalLabel => 'حقوقی';
+  String get telemetryLegalLabel => 'یادداشت حقوقی';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'شکست در جمع‌آوری داده‌های دورسنجی';
 
   @override
   String get privacyPageTitle => 'خدمات مکانی';
@@ -88,20 +88,20 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'پیوستن جادویی با این کد در <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'اوبونتوی حرفه‌ای';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'پیوستن این دستگاه';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'یا افزودن دستی ژتون';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'ژتون';
 
   @override
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
@@ -112,31 +112,31 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'پیوست';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'ژتون نامعتبر';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'ژتون معتبر';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'ژتون نامعتبر. تلاش دوباره';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'فعلاً پریده شود';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'به کار انداختن اوبونتوی حرفه‌ای';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'اوبونتوی حرفه‌ای اکنون روی این دستگاه به کار افتاده';
 
   @override
   String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';

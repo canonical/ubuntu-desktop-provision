@@ -101,7 +101,7 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get ubuntuProOrAddTokenManually => 'or add a token manually';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Symbol';
 
   @override
   String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
@@ -115,10 +115,10 @@ class UbuntuInitLocalizationsNb extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachButton => 'Attach';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Ugyldig symbol';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Gyldig symbol';
 
   @override
   String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';

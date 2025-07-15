@@ -14,7 +14,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'පිහිටුවීමට පෙර ඔබගේ අවශ්‍යතා සඳහා $DISTRO අභිරුචිකරණය කරන්න. ඔබට ඒවා පසුව වෙනස් කිරීමට හැකිය.';
   }
 
   @override
@@ -33,25 +33,25 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get accessibilityZoomLabel => 'විශාලනය';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'ඉහළ පිළිසැසඳුම';
 
   @override
   String get accessibilityLargeTextLabel => 'විශාල පෙළ';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'අවම සජීවකරණ';
 
   @override
   String get accessibilityScreenReaderLabel => 'තිරය කියවනය';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'දෘශ්‍ය ඇඟවීම්';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'රැඳවුම් යතුරු';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'ප්‍රමාද යතුරු';
 
   @override
   String get accessibilityMouseKeysLabel => 'මූසික යතුරු';
@@ -83,7 +83,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get close => 'වසන්න';
 
   @override
-  String get timezonePageTitle => 'ඔබ කොහිද?';
+  String get timezonePageTitle => 'වේලා කලාපය තෝරන්න';
 
   @override
   String get timezoneLocationLabel => 'ස්ථානය';
@@ -95,7 +95,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'යතුරුපුවරුවේ පිරිසැලසුම';
 
   @override
-  String get keyboardHeader => 'ඔබගේ යතුරුපුවරු පිරිසැලසුම තෝරන්න:';
+  String get keyboardHeader => 'ඔබගේ යතුරුපුවරු පිරිසැලසුම තෝරන්න';
 
   @override
   String get keyboardTestHint => 'ඔබගේ යතුරුපුවරුව පරීක්‍ෂාවට මෙතැන ලියන්න';
@@ -136,7 +136,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get localeHeader => 'ඔබගේ භාෂාව තෝරන්න:';
 
   @override
-  String get identityPageTitle => 'ඔබ කවුද?';
+  String get identityPageTitle => 'ඔබගේ ගිණුම සාදන්න';
 
   @override
   String get identityAutoLogin => 'ස්වයංක්‍රීයව පිවිසෙන්න';
@@ -169,7 +169,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'පරිගණකයේ නම වැරදිය';
 
   @override
-  String get identityUsernameLabel => 'පරිශ්‍රීලක නාමයක් තෝරන්න';
+  String get identityUsernameLabel => 'ඔබගේ පරිශ්‍රීලක නාමය';
 
   @override
   String get identityUsernameRequired => 'පරිශ්‍රීලක නාමයක් වුවමනාය';
@@ -211,17 +211,17 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'සක්‍රිය නමාවලිය භාවිතා කරන්න';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'ඔබ ඊළඟ පියවරේ දී වසම සහ අනෙකුත් විස්තර ඇතුල් කරනු ඇත.';
 
   @override
   String get activeDirectoryTitle => 'සක්‍රිය නාමාවලියට පිවිසෙන්න';
 
   @override
-  String get activeDirectoryHeader => 'සක්‍රිය නාමාවලියට පිවිසෙන්න ද?';
+  String get activeDirectoryHeader => 'සක්‍රිය නාමාවලියට පිවිසෙනවා ද?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'පහසුවෙන් පරිපාලනය සඳහා සක්‍රිය නාමාවලිය සමඟ බාධාවකින් තොරව අනුකලනයට $DISTRO නිර්මාණය කර ඇත.';
   }
 
   @override
@@ -258,7 +258,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainNotFound => 'වසම හමු නොවිණි';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'වසමට එක්වන පරිශ්‍රීලකයා';
 
   @override
   String get activeDirectoryAdminEmpty => 'වුවමනාය';
@@ -279,28 +279,28 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'අන්තර්ජාලයට සබඳින්න';
+  String get networkPageTitle => 'අන්තර්ජාල සම්බන්ධතාව';
 
   @override
-  String get networkPageHeader => 'මෙම පරිගණකය අන්තර්ජාලයට සම්බන්ධ කිරීමෙන් උබුන්ටු සඳහා අවශ්‍ය ඕනෑම අමතර මෘදුකාංගයක් ස්ථාපනයට මෙන්ම ඔබගේ වේලා කලාපය තෝරා ගැනීමට හැකිය.\n\nඊතර්නෙට් රැහැන සම්බන්ධ කරන්න හෝ වයි-ෆයි ජාලයක් තෝරන්න';
+  String get networkPageHeader => 'අන්තර්ජාලයට සබඳින්න';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'අන්තර්ජාලයට සබැඳීමෙන් අමතර මෘදුකාංග ඇසුරුම් සමඟ උපාංගයට වඩාත් අනුකූල පරිදි ස්ථාපනය වනු ඇත.';
 
   @override
-  String get networkWiredOption => 'රැහැන් සම්බන්ධතාවය යොදාගන්න';
+  String get networkWiredOption => 'රැහැන් සම්බන්ධතාව භාවිතා කරන්න';
 
   @override
-  String get networkWiredNone => 'රැහැන් සම්බන්ධතාවයක් අනාවරණය නොවිණි';
+  String get networkWiredNone => 'රැහැන් සම්බන්ධතාවක් අනාවරණය නොවිණි';
 
   @override
-  String get networkWiredOff => 'රැහැන් සම්බන්ධතාවය අක්‍රියයි';
+  String get networkWiredOff => 'රැහැන් සම්බන්ධතාව අක්‍රියයි';
 
   @override
-  String get networkWiredDisabled => 'මෙම පරිගණකයේ ඊතර්නෙට් භාවිතයට, රැහැන්ගත සම්බන්ධතාවයක් සබල කළ යුතුය';
+  String get networkWiredDisabled => 'මෙම පරිගණකයේ ඊතර්නෙට් භාවිතයට රැහැන් සම්බන්ධතාවක් සබල කළ යුතුය';
 
   @override
-  String get networkWiredEnable => 'රැහැන්ගත සබල කරන්න';
+  String get networkWiredEnable => 'රැහැන් සබල කරන්න';
 
   @override
   String get networkWifiOption => 'වයි-ෆයි ජාලයකට සබඳින්න';
@@ -312,7 +312,7 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'කිසිදු වයි-ෆයි උපාංගයක් අනාවරණය වී නැත';
 
   @override
-  String get networkWifiDisabled => 'මෙම පරිගණකයේ වයි-ෆයි භාවිතයට, රැහැන් රහිත ජාලකරණය සබල කළ යුතුය';
+  String get networkWifiDisabled => 'මෙම පරිගණකයේ වයි-ෆයි භාවිතයට රැහැන් රහිත ජාලකරණය සබල කළ යුතුය';
 
   @override
   String get networkWifiEnable => 'වයි-ෆයි සබල කරන්න';
@@ -324,20 +324,20 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameLabel => 'ජාලයේ නම';
 
   @override
-  String get networkHiddenWifiNameRequired => 'ජාල නාමයක් වුවමනාය';
+  String get networkHiddenWifiNameRequired => 'ජාලයේ නම වුවමනාය';
 
   @override
-  String get networkNoneOption => 'දැන් අන්තර්ජාලයට සම්බන්ධ වීමට අවශ්‍ය නැත';
+  String get networkNoneOption => 'අන්තර්ජාලයට සම්බන්ධ නොවේ';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'බලපත්‍ර එකඟතාව';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'බලපත්‍ර නියම සමාලෝචනය කරන්න';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'මෙම යන්ත්‍රය දිගටම පිහිටුවීමට ඔබ බලපත්‍ර එකඟතාවේ නියම කියවා පිළිගත යුතුය.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'මම මෙම නියම කියවා පිළිගනිමි';
 }

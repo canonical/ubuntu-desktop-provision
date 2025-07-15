@@ -1,1 +1,24 @@
-{}
+{
+  "welcomePageTitle": "ආයුබෝවන්",
+  "welcomeWhatsNew": "අළුත් දෑ",
+  "telemetryHeader": "{distro} වැඩිදියුණුවට සහාය වන්න",
+  "privacyPageTitle": "ස්ථාන සේවා",
+  "telemetryLegalLabel": "නෛතික දැන්වීම",
+  "telemetryReportLabel": "පළමු වාර්තාව පෙන්වන්න",
+  "ubuntuProPageTitle": "උබුන්ටු ප්‍රෝ",
+  "ubuntuProOnBoardingSkipForNow": "දැනට මඟහරින්න",
+  "ubuntuProOnBoardingEnableUbuntuPro": "උබුන්ටු ප්‍රෝ සබල කරන්න",
+  "welcomePageHeader": "{distro} වෙත පිළිගනිමු",
+  "welcomeChangelogLabel": "<a href=\"{url}\"> වෙනස්කම් සටහන බලන්න </a>",
+  "privacyLocationEnable": "ස්ථාන සේවා",
+  "telemetryLabelOff": "පද්ධතියේ දත්ත යවන්න එපා",
+  "telemetryLabelOn": "පද්ධතියේ දත්ත {distro} වෙත යවන්න",
+  "telemetryDescription": "ඔබගේ පද්ධතියේ දත්ත බෙදාගෙන {distro} වැඩිදියුණුවට උදව් කරන්න. මෙයට යන්ත්‍රයේ මාදිළිය, ස්ථාපිත මෘදුකාංග සහ ඔබ වේලා කලාපය සඳහා තේරූ ස්ථානය වැනි දෑ ඇතුළත් වේ.",
+  "telemetryReportTitle": "වාර්තාවේ විස්තර",
+  "privacyLocationTitle": "ස්ථාන සේවාව සබල කරනවා ද?",
+  "privacyPolicyLink": "දත්ත රහස්‍යතාව",
+  "ubuntuProHeader": "මෙම යන්ත්‍රය අමුණන්න",
+  "ubuntuProTokenAttachButton": "අමුණන්න",
+  "ubuntuProSucessAttachHeader": "මෙම යන්ත්‍රයට දැන් උබුන්ටු ප්‍රෝ සබල කර ඇත",
+  "ubuntuProSucessAttachDescription": "ඔබගේ ආධික්‍ය සේවා මෘදුකාංග හා යාවත්කාල යෙදුමෙන් කළමනාකරණයට හැකිය."
+}

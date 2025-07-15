@@ -589,5 +589,12 @@
     "placeholders": {
       "color": {}
     }
-  }
+  },
+  "autoinstallTitle": "Įdiegimo tipas",
+  "autoinstallInteractiveOption": "Interaktyvus įdiegimas",
+  "warningLabel": "Įspėjimas:",
+  "hideSecurityKey": "Slėpti",
+  "codecsAndDriversPageDescription": "Įdiegti rekomenduojamą nuosavybinę programinę įrangą?",
+  "codecsAndDriversNvidiaNote": "Aptikta „NVIDIA“ grafikos plokštė",
+  "codecsAndDriversNvidiaBody": "Geriausiam „NVIDIA“ grafikos plokštės našumui pasiekti, yra primygtinai rekomenduojama įdiegti papildomas tvarkykles."
 }

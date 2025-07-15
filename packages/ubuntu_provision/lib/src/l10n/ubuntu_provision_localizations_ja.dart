@@ -178,7 +178,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityInvalidUsername => 'このユーザー名は使用できません';
 
   @override
-  String get identityUsernameInUse => 'そのユーザー名は既に存在します。';
+  String get identityUsernameInUse => 'そのユーザー名はすでに存在します。';
 
   @override
   String get identityUsernameSystemReserved => 'その名前はシステムが使用するため、予約されています。';
@@ -333,7 +333,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get eulaPageTitle => 'ライセンスの同意';
 
   @override
-  String get eulaReviewTerms => '許諾書条件を表示';
+  String get eulaReviewTerms => 'ライセンス条項を表示';
 
   @override
   String get eulaReadAndAcceptTerms => 'マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。';

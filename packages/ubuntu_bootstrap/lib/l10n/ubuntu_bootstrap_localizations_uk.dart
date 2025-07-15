@@ -13,7 +13,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Тип установки';
+  String get autoinstallTitle => 'Тип встановлення';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -24,10 +24,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get autoinstallInstructions => 'Введіть URL-адресу autoinstall.yaml або шлях до локального файлу:';
 
   @override
-  String get autoinstallInteractiveOption => 'Інтерактивна інсталяція';
+  String get autoinstallInteractiveOption => 'Інтерактивне встановлення';
 
   @override
-  String get autoinstallInteractiveDescription => 'Для користувачів, які хочуть отримати покрокову інструкцію по встановленню.';
+  String get autoinstallInteractiveDescription => 'Для користувачів, які хочуть отримати покрокову інструкцію зі встановлення.';
 
   @override
   String get autoinstallAutomatedOption => 'Автоматизована установка';
@@ -56,7 +56,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Спробувати або встановити';
+    return 'Спробувати або встановити $DISTRO';
   }
 
   @override
@@ -142,7 +142,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get showSecurityKey => 'Показати ключ безпеки';
 
   @override
-  String get hideSecurityKey => 'Приховати';
+  String get hideSecurityKey => 'Сховати';
 
   @override
   String get updatesOtherSoftwarePageTitle => 'Оновлення та інше програмне забезпечення';
@@ -151,21 +151,21 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageDescription => 'Які програми ви хотіли б встановити для початку?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Оптимізувати ваш комп\'ютер';
+  String get codecsAndDriversPageTitle => 'Оптимізуйте свій комп\'ютер';
 
   @override
-  String get codecsAndDriversPageDescription => 'Встановити рекомендоване пропрієтарне програмне забезпечення?';
+  String get codecsAndDriversPageDescription => 'Встановити рекомендоване власницьке програмне забезпечення?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO за замовчуванням постачається без пропрієтарного програмного забезпечення. Встановлення додаткового програмного забезпечення може покращити продуктивність вашого комп\'ютера.';
+    return '$DISTRO усталено постачається без власницького програмного забезпечення. Встановлення додаткового програмного забезпечення може підвищити швидкодію вашого комп\'ютера.';
   }
 
   @override
   String get codecsAndDriversNvidiaNote => 'Виявлено відеокарту NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'Для найкращої продуктивності відеокарт NVIDIA наполегливо рекомендується встановити додаткові драйвери.';
+  String get codecsAndDriversNvidiaBody => 'Для найкращої швидкодії відеокарт NVIDIA наполегливо радимо встановити додаткові драйвери.';
 
   @override
   String get fullInstallationTitle => 'Повна установка';
@@ -192,13 +192,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installDriversTitle => 'Встановити стороннє програмне забезпечення для графіки та обладнання Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Ці драйвери підпадають під дію ліцензійних умов, включених до їх документації. Вони є пропрієтарними..';
+  String get installDriversSubtitle => 'Включаючи, але не обмежуючись драйверами NVIDIA та подібними';
 
   @override
   String get installCodecsTitle => 'Встановити підтримку додаткових медіа-форматів';
 
   @override
-  String get installCodecsSubtitle => 'На це програмне забезпечення поширюються ліцензійні умови, що додаються до його документації. Деякі з них є пропрієтарними.';
+  String get installCodecsSubtitle => 'Включаючи, але не обмежуючись MP3, MP4, MOV та подібними';
 
   @override
   String get batteryWarning => 'Комп\'ютер не підключено до джерела живлення.';
@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Ви можете створити або змінити розмір розділів самостійно, або вибрати кілька розділів для $DISTRO';
+    return 'Для досвідчених користувачів, які шукають індивідуальні налаштування дисків.';
   }
 
   @override
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format не є підтримуваною файловою системою для $mountpoint';
   }
 
   @override
@@ -520,7 +520,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Записати зміни на диск';
 
   @override
-  String get confirmHeader => 'Якщо ви продовжите, перелічені нижче зміни будуть записані на диски. Ви зможете внести подальші зміни вручну.';
+  String get confirmHeader => 'Переглянути свій вибір';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -694,11 +694,11 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Усі необхідні застосунки';
+  String get installationSlidesSoftwareTitle => 'Усі необхідні вам застосунки';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Встановлюйте, керуйте та оновлюйте всі ваші застосунки у програмному забезпеченні Ubuntu, включно з тисячами застосунків зі Snap Store та архіву $DISTRO.';
+    return 'Встановлюйте, оновлюйте усі свої застосунки та керуйте ними в Ubuntu Software, включно з тисячами застосунків зі Snap Store та архіву $DISTRO.';
   }
 
   @override
@@ -706,7 +706,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO - ідеальна робоча станція для розробки застосунків і веброзробки, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск $DISTRO містить найновіші набори інструментів і підтримує всі основні IDE.';
+    return '$DISTRO — ідеальна робоча станція для розробки застосунків та веб, науки про дані та AI/ML, а також для devops та адміністрування. Кожен випуск $DISTRO містить найновіші набори інструментів та підтримує усі основні IDE.';
   }
 
   @override
@@ -714,7 +714,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Якщо ви аніматор, дизайнер, творець відео або розробник ігор, ви можете легко перенести свої робочі процеси в $DISTRO з підтримкою програмного забезпечення та застосунків з відкритим кодом і галузевих стандартів.';
+    return 'Якщо ви аніматор, дизайнер, відеоредактор або розробник ігор, ви можете з легкістю перенести свої робочі процеси в $DISTRO з підтримкою програмного забезпечення з відкритим кодом та галузевих стандартів.';
   }
 
   @override
@@ -722,7 +722,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово відтворюються на $DISTRO через такі застосунки, як Steam, без додаткових налаштувань.';
+    return '$DISTRO підтримує найновіші драйвери NVIDIA та Mesa для поліпшення швидкодії та сумісності. Тисячі ігор для Windows чудово запускаються на $DISTRO через такі застосунки як Steam без додаткових налаштувань.';
   }
 
   @override
@@ -743,7 +743,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return 'До складу $DISTRO для комп\'ютерів входить LibreOffice, набір сумісних з Microsoft Office застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями. Також доступні популярні інструменти для спільної роботи.';
+    return '$DISTRO Desktop містить LibreOffice — набір застосунків з відкритим кодом для роботи з документами, електронними таблицями та презентаціями, сумісними з Microsoft Office. Також доступні популярні інструменти для спільної роботи.';
   }
 
   @override

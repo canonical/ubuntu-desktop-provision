@@ -5,139 +5,139 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'வரவேற்கிறோம்';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return '$distro க்கு வருக';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'புதியது என்ன?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'ஒரு நெறிப்படுத்தப்பட்ட தொடக்க';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'தூய்மையான அமைப்பு அனுபவத்தை ஆதரிக்கிறது.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'புதிய தோற்ற ஆப் கடை';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'உங்களுக்கு பிடித்த மென்பொருளை கண்டுபிடிப்பது ஒருபோதும் எளிதாக இல்லை.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'மேம்பட்ட பாதுகாப்பு';
 
   @override
-  String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
+  String get welcomeSecuritySubtitle => 'வன்பொருள் உதவி அல்லது ZFS குறியாக்கத்திற்கான புதிய விருப்பங்கள்.';
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href = \"$url\"> சேஞ்ச்லாக் காண்க </a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'டெலிமெட்ரி';
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return '$distro ஐ மேம்படுத்த உதவுங்கள்';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'உங்கள் கணினி தரவை எங்களுடன் பகிர்வதன் மூலம் $distro ஐ மேம்படுத்த எங்களுக்கு உதவுங்கள். உங்கள் இயந்திர மாதிரி, நிறுவப்பட்ட மென்பொருள் மற்றும் உங்கள் நேர மண்டலத்திற்காக நீங்கள் தேர்ந்தெடுத்த இடம் போன்ற விசயங்கள் இதில் அடங்கும்.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'ஆம், கணினி தரவை $distro குழுவுடன் பகிர்ந்து கொள்ளுங்கள்';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'இல்லை, கணினி தரவைப் பகிர வேண்டாம்';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'முதல் அறிக்கையைக் காட்டு';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'அறிக்கையிடல் விவரங்கள்';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'சட்ட அறிவிப்பு';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'டெலிமெட்ரி தரவை சேகரிப்பதில் தோல்வி';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'இருப்பிட சேவைகள்';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'இருப்பிட சேவைகளை இயக்கவா?';
 
   @override
-  String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+  String get privacyLocationSubtitle => 'பயன்பாடுகள் உங்கள் புவியியல் இருப்பிடத்தை அறியட்டும்.\n கணினி அமைப்புகளில் எப்போது வேண்டுமானாலும் இதை மாற்றலாம்.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'இருப்பிட சேவைகள்';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'தரவு தனியுரிமை';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'இந்த குறியீட்டைக் கொண்டு <a href = \"https: // $url\"> $url </a> இல் மேசிக் இணைக்கவும்';
   }
 
   @override
-  String get ubuntuProPageTitle => 'Ubuntu Pro';
+  String get ubuntuProPageTitle => 'உபுண்டு புரோ';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'இந்த இயந்திரத்தை இணைக்கவும்';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'அல்லது ஒரு கிள்ளாக்கை கைமுறையாக சேர்க்கவும்';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'கிள்ளாக்கு';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Get the most comprehensive subscription for open-source software security';
+  String get ubuntuProSubscriptionDescription => 'திறந்த மூல மென்பொருள் பாதுகாப்பிற்கான மிக விரிவான சந்தாவைப் பெறுங்கள்';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'தனிப்பட்ட பயன்பாட்டிற்கு எப்போதும் இலவசம். நிறுவனங்களுக்கான 30 நாட்கள் சோதனை. <a href = \"https: // $url\"> மேலும் அறிக </a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'இணைக்கவும்';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'தவறான கிள்ளாக்கு';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'செல்லுபடியாகும் கிள்ளாக்கு';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant => 'தவறான கிள்ளாக்கு, மீண்டும் முயற்சிக்கவும்';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'இப்போதைக்கு தவிர்க்கவும்';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'மென்பொருள் மற்றும் புதுப்பிப்புகள் பயன்பாடு வழியாக நீங்கள் எப்போதும் உபுண்டு புரோவை இயக்கலாம்.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'உபுண்டு புரோவை இயக்கவும்';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription => '2032 வரை, பரந்த அளவிலான தொகுப்புகளில் பாதுகாப்பு புதுப்பிப்புகளுக்காக இந்த இயந்திரத்தை உபுண்டு புரோ சந்தாவுடன் இணைக்கவும்.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'உபுண்டு புரோ இப்போது இந்த கணினியில் இயக்கப்பட்டிருக்கிறது';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'மென்பொருள் மற்றும் புதுப்பிப்புகள் பயன்பாட்டில் உங்கள் புரோ சேவைகளை நிர்வகிக்கலாம்.';
 }

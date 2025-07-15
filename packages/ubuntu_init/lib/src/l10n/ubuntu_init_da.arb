@@ -40,7 +40,7 @@
       "distro": {}
     }
   },
-  "telemetryLabelOn": "Ja, del systemdata med {distro}-gruppen",
+  "telemetryLabelOn": "Ja, del systemdata med holdet bag {distro}",
   "@telemetryLabelOn": {
     "type": "text",
     "placeholders": {
@@ -65,9 +65,9 @@
   "@privacyPolicyLink": {},
   "ubuntuProPageTitle": "Ubuntu Pro",
   "@ubuntuProPageTitle": {},
-  "welcomeStoreTitle": "Appstore med nyt udseende",
+  "welcomeStoreTitle": "Appbutik med nyt udseende",
   "@welcomeStoreTitle": {},
-  "ubuntuProHeader": "Tilslut denne maskine",
+  "ubuntuProHeader": "Tilknyt denne maskine",
   "@ubuntuProHeader": {},
   "ubuntuProOrAddTokenManually": "eller tilføj token manuelt",
   "@ubuntuProOrAddTokenManually": {},
@@ -75,20 +75,20 @@
   "@ubuntuProTokenAttachSucess": {},
   "ubuntuProTokenAttachError": "Ugyldigt token",
   "@ubuntuProTokenAttachError": {},
-  "ubuntuProSubscriptionFreeForPersonalUse": "Altid gratis til personlib brug. 30-dages prøveabonnement til firmaer. <a href=\"https://{url}\">Mere info</a>",
+  "ubuntuProSubscriptionFreeForPersonalUse": "Altid gratis til personligt brug. 30-dages prøveabonnement til firmaer. <a href=\"https://{url}\">Mere info</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
       "url": {}
     }
   },
-  "ubuntuProSubscriptionDescription": "Få det mest omfattende abonnement oå open source-softwaresikkerhed",
+  "ubuntuProSubscriptionDescription": "Få det mest omfattende abonnement på open source-softwaresikkerhed",
   "@ubuntuProSubscriptionDescription": {},
   "ubuntuProSucessAttachDescription": "Du kan håndtere dine Pro-tjenester i programmet Software og opdateringer.",
   "@ubuntuProSucessAttachDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro er nu slået til på denne maskine",
   "@ubuntuProSucessAttachHeader": {},
-  "ubuntuProOnBoardingEnableUbuntuProDescription": "Tilslut denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Tilknyt denne maskine til et Ubuntu Pro-abonnement for at få sikkerhedsopdateringer til en bredere vifte af pakker indtil 2032.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Slå Ubuntu Pro til",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
@@ -107,6 +107,7 @@
   },
   "ubuntuProTokenTextfieldHint": "Token",
   "@ubuntuProTokenTextfieldHint": {},
-  "ubuntuProTokenAttachButton": "Tilslut",
-  "@ubuntuProTokenAttachButton": {}
+  "ubuntuProTokenAttachButton": "Tilknyt",
+  "@ubuntuProTokenAttachButton": {},
+  "telemetryCollectError": "Kunne ikke indsamle telemetridata"
 }

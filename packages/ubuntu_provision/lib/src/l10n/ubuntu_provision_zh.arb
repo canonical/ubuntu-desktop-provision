@@ -237,5 +237,6 @@
   "eulaReviewTerms": "查看许可条款",
   "@eulaReviewTerms": {},
   "eulaAcceptTerms": "我已阅读并同意这些条款",
-  "@eulaAcceptTerms": {}
+  "@eulaAcceptTerms": {},
+  "errorPageUbuntuBug": "若要发送包含有关调试信息的自动化错误报告，请在终端中或从命令控制台（Alt+F2）执行 <pre>sudo ubuntu-bug {SNAP}</pre>。"
 }

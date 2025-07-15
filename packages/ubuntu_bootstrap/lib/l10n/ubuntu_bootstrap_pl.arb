@@ -58,7 +58,7 @@
   },
   "diskHeadersFormat": "Formatowanie",
   "@diskHeadersFormat": {},
-  "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
+  "installationTypeEncryptInfo": "Klucz bezpieczeństwa zostanie wybrany w następnym kroku.",
   "@installationTypeEncryptInfo": {},
   "installationTypeZFS": "Wymaż dysk i użyj ZFS",
   "@installationTypeZFS": {},
@@ -919,5 +919,6 @@
         "type": "String"
       }
     }
-  }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} nie jest obsługiwanym systemem plików dla {mountpoint}"
 }

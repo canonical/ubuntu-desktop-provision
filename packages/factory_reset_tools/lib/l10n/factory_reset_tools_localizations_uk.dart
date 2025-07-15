@@ -5,10 +5,10 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsUk([String locale = 'uk']) : super(locale);
 
   @override
-  String get appTitle => 'Інструменти для скидання до заводських налаштувань';
+  String get appTitle => 'Інструменти скидання до заводських налаштувань';
 
   @override
-  String get windowTitle => 'Інструменти для скидання до заводських налаштувань';
+  String get windowTitle => 'Інструменти скидання до заводських налаштувань';
 
   @override
   String get homeTitle => 'Що б ви хотіли зробити?';
@@ -35,7 +35,7 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   String get resetMediaTitle => 'USB-носій для скидання налаштувань';
 
   @override
-  String get noMediaDetected => 'Знімний накопичувач не виявлено';
+  String get noMediaDetected => 'Не виявлено знімного накопичувача';
 
   @override
   String get noMediaDetectedSubtitle => 'Для створення носія зі скиданням до заводських налаштувань вам знадобиться USB-накопичувач.';
@@ -44,13 +44,13 @@ class FactoryResetToolsLocalizationsUk extends FactoryResetToolsLocalizations {
   String get factoryResetTitle => 'Виберіть опцію для запуску скидання до заводських налаштувань';
 
   @override
-  String get loadingDrives => 'Зачекайте, будь ласка, поки ми принесемо диски.';
+  String get loadingDrives => 'Зачекайте, будь ласка, поки ми отримуємо диски.';
 
   @override
   String get resetMediaReadyTitle => 'USB-носій для скидання готовий';
 
   @override
-  String get resetMediaReadyBody => 'Коли ви захочете скористатися цим, вставте USB-накопичувач у комп\'ютер, який ви хочете перезавантажити, і перезавантажте його.';
+  String get resetMediaReadyBody => 'Коли ви захочете ним скористатися, вставте USB-накопичувач у комп\'ютер, який ви хочете скинути, і перезапустіть його.';
 
   @override
   String get errorLoadingDrives => 'Виникла помилка під час отримання дисків.';

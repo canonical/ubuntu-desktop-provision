@@ -5,97 +5,97 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSr([String locale = 'sr']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Приступачност';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Приступачност у $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Прилагодите $DISTRO својим потребама пре него што подесите. Можете их касније променити у Системским подешавањима.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Вид';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Слух';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Куцање';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Показивање и кликање';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Зум';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Висок контраст';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Велики текст';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Смањи анимацију';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Читач екрана';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Визуелна обавештења';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Лепљиви тастери';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Спори тастери';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Тастери миша';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Зум радне површине';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Нешто је пошло наопако';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected => 'Жао нам је, али нисмо сигурни у чему је грешка. Можете покушати да поново покренете рачунар и започнете процес инсталације поново. Такође можете <a>пријавити проблем</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Да бисте послали аутоматизовани извештај о грешци који укључује релевантне информације за отклањање грешака, покрените <pre>sudo ubuntu-bug $SNAP</pre> у терминалу, или са конзоле (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Прикажи дневник';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Сакриј дневник';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Поново покрени';
 
   @override
-  String get close => 'Close';
+  String get close => 'Затвори';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'Изаберите своју временску зону';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'Локација';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'Временска зона';
 
   @override
   String get keyboardTitle => 'Распоред тастатуре';
 
   @override
-  String get keyboardHeader => 'Изаберите ваш распоред тастатуре:';
+  String get keyboardHeader => 'Изаберите ваш распоред тастатуре';
 
   @override
   String get keyboardTestHint => 'Куцајте овде како би испробали вашу тастатуру';
@@ -104,10 +104,10 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'Откриј распоред тастатуре';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'Откриј';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'Изаберите варијанту тастатуре:';
 
   @override
   String get keyboardPressKeyLabel => 'Молимо притисните један од следећих тастера:';
@@ -116,228 +116,228 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get keyboardKeyPresentLabel => 'Да ли следећи тастер постоји на вашој тастатури?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'Изаберите своју тему';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader => 'Ово увек можете променити касније у подешавањима изгледа.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'Тамна';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'Светла';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Добродошли у $DISTRO';
   }
 
   @override
   String get localeHeader => 'Изаберите ваш језик:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'Направите свој налог';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'Аутоматски се пријави';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'Захтевај моју лозинку за пријаву';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'Ваше име';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'Име је обавезно';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'То име је предуго.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'Име вашег рачунара';
 
   @override
-  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo => 'Име које користи када комуницира са другим рачунарима.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'Име рачунара је обавезно';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'То име рачунара је предуго.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'Име рачунара је неважеће';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'Ваше корисничко име';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'Корисничко име је обавезно';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'Корисничко име је неважеће';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'То корисничко име већ постоји.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved => 'То име је резервисано за системску употребу.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'То име је предуго.';
 
   @override
-  String get identityUsernameInvalidChars => 'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'То име садржи неважеће знакове.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'Лозинка';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'Потребна је лозинка';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'Потврдите лозинку';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'Лозинке се не поклапају';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'Прикажи';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Сакриј';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Користи Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo => 'Унећете домен и друге детаље у следећем кораку.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'Пријавите се у Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Пријавите се у Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO је дизајниран да се беспрекорно интегрише са Active Directory ради лакше администрације.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'Тестирајте повезаност домена';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Домен';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Потребно';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Превише дуго';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Неисправни знакови';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Почиње са тачком (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Завршава се са тачком (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'Почиње са цртицом (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'Завршава се са цртицом (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots => 'Садржи више узастопних тачака (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Домен није пронађен';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'Корисник за придруживање домену';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Потребно';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Неисправни знакови';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Лозинка';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Потребно';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle => 'Грешка при конфигурисању везе са Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage => 'Жао нам је, Active Directory тренутно не може бити подешен. Када ваш систем буде покренут, посетите <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> за помоћ.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'Интернет веза';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'Повежите се на интернет';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody => 'Интернет веза ће побољшати вашу инсталацију провером компатибилности и додатним софтверским пакетима.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'Користите жичану везу';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'Није откривена жичана веза';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'Жичана веза је искључена';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled => 'Да бисте користили Ethernet на овом рачунару, жичана веза мора бити омогућена';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'Омогући жичану везу';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'Повежите се на Wi-Fi мрежу';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'Бежично умрежавање је онемогућено';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'Није откривен ниједан Wi-Fi уређај';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled => 'Да бисте користили Wi-Fi на овом рачунару, бежично умрежавање мора бити омогућено';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'Омогући Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'Повежите се на скривену Wi-Fi мрежу';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'Назив мреже';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'Потребан је назив мреже';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'Не повезујте се на интернет';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Лиценцни уговор';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Прегледајте услове лиценце';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms => 'Да бисте наставили са подешавањем овог рачунара, морате прочитати и прихватити услове лиценцног уговора.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Прочитао сам и прихватам ове услове';
 }

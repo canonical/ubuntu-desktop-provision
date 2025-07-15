@@ -21,13 +21,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Masukkan URL atau jalur berkas lokal autoinstall.yaml:';
+  String get autoinstallInstructions => 'Masukkan URL atau path berkas lokal autoinstall.yaml:';
 
   @override
-  String get autoinstallInteractiveOption => 'Pemasangan Interaktif';
+  String get autoinstallInteractiveOption => 'Instalasi interaktif';
 
   @override
-  String get autoinstallInteractiveDescription => 'Untuk pengguna yang ingin melalui pemasangan terpandu langkah demi langkah.';
+  String get autoinstallInteractiveDescription => 'Untuk pengguna yang ingin melalui instalasi terpandu langkah demi langkah.';
 
   @override
   String get autoinstallAutomatedOption => 'Pemasang Otomatis';
@@ -56,7 +56,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Coba atau pasang';
+    return 'Coba atau pasang $DISTRO';
   }
 
   @override
@@ -68,7 +68,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => 'Perbaiki instalasi';
 
   @override
-  String get tryOrInstallRepairDescription => 'Perbaikan akan memasang ulang semua perangkat lunak yang dipasang tanpa menyentuh dokumen atau pengaturan.';
+  String get tryOrInstallRepairDescription => 'Memperbaiki akan memasang ulang semua perangkat lunak yang dipasang tanpa menyentuh dokumen atau pengaturan.';
 
   @override
   String tryOption(String RELEASE) {
@@ -96,7 +96,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'Matikan RST';
+  String get rstTitle => 'RST terdeteksi';
 
   @override
   String get rstHeader => 'Nonaktifkan RST untuk melanjutkan';
@@ -139,13 +139,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'Kunci keamanan tidak cocok';
 
   @override
-  String get showSecurityKey => 'Tampilkan kunci keamanan';
+  String get showSecurityKey => 'Tampilkan';
 
   @override
   String get hideSecurityKey => 'Sembunyikan';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Pembaruan dan perangkat lunak lainnya';
+  String get updatesOtherSoftwarePageTitle => 'Aplikasi';
 
   @override
   String get updatesOtherSoftwarePageDescription => 'Aplikasi apa yang ingin Anda pasang untuk memulai?';
@@ -168,16 +168,16 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaBody => 'Untuk performa kartu grafis NVIDIA terbaik, memasang driver tambahan sangat direkomendasikan.';
 
   @override
-  String get fullInstallationTitle => 'Pemilihan luas';
+  String get fullInstallationTitle => 'Pemilihan yang diperluas';
 
   @override
-  String get fullInstallationSubtitle => 'Pilihan yang ramah luring alat kerja kantor, alat dan browser.';
+  String get fullInstallationSubtitle => 'Pilihan yang ramah luring atas alat kerja kantor, utilitas, dan peramban web.';
 
   @override
-  String get minimalInstallationTitle => 'PIlihan default';
+  String get minimalInstallationTitle => 'Pilihan baku';
 
   @override
-  String get minimalInstallationSubtitle => 'Hanya yang penting, browser web dan utilitas dasar.';
+  String get minimalInstallationSubtitle => 'Hanya yang esensial, peramban web, dan utilitas dasar.';
 
   @override
   String get otherOptions => 'Opsi lain';
@@ -240,7 +240,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get confirmPassphrase => 'Konfirmasikan frasa sandi';
 
   @override
-  String get installationTypeTitle => 'Tipe instalasi';
+  String get installationTypeTitle => 'Penyiapan disk';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -311,7 +311,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSSelected => 'ZFS dipilih';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS dan enkripsi terpilih';
+  String get installationTypeZFSEncryptionSelected => 'ZFS dan enkripsi dipilih';
 
   @override
   String get installationTypeTPM => 'Aktifkan enkripsi disk penuh yang didukung perangkat keras';
@@ -358,11 +358,11 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeAlongsideInfo => 'Dokumen, musik, dan berkas-berkas pribadi lain akan disimpan. Anda dapat memilih sistem operasi yang Anda inginkan setiap kali komputer dinyalakan.';
 
   @override
-  String get installationTypeManual => 'Sesuatu yang lain';
+  String get installationTypeManual => 'Instalasi manual';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Anda dapat membuat atau mengubah ukuran partisi sendiri, atau memilih beberapa partisi untuk $DISTRO';
+    return 'Untuk pengguna tingkat lanjut yang mencari pengaturan disk yang disesuaikan.';
   }
 
   @override
@@ -383,7 +383,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfoLabel => 'Seluruh disk akan digunakan:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Pasang Sekarang';
+  String get selectGuidedStorageInstallNow => 'Pasang sekarang';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
@@ -417,17 +417,17 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installAlongsideAvailable => 'Tersedia:';
 
   @override
-  String get allocateDiskSpace => 'Alokasikan ruang disk';
+  String get allocateDiskSpace => 'Pemartisian manual';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Titik pasang harus dimulai dengan \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'Titik kait harus diawali dengan \"/\"';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Titik pemasangan tidak dapat mengandung spasi';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'Titik kait tidak boleh mengandung spasi';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format bukan suatu sistem berkas yang didukung untuk $mountpoint';
   }
 
   @override
@@ -458,13 +458,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get newPartitionTable => 'Tabel partisi baru';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'Buat suatu tabel partisi baru yang kosong pada peranti ini?';
+  String get newPartitionTableConfirmationTitle => 'Partisi kosong baru';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Anda telah memilih seluruh peranti untuk dipartisi. Bila Anda melanjutkan membuat suatu tabel partisi baru pada peranti ini, maka semua partisi saat ini akan dihapus.\n\nPerhatikan bahwa Anda akan dapat membatalkan operasi ini nanti bila Anda mau.';
+  String get newPartitionTableConfirmationMessage => 'Membuat tabel partisi baru di seluruh perangkat akan menghapus semua partisi saat ini. Operasi ini tidak bisa dibatalkan jika diperlukan.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Terlalu banyak partisi utama';
+  String get tooManyPrimaryPartitions => 'Terlalu banyak partisi primer';
 
   @override
   String get partitionLimitReached => 'Batas tercapai';
@@ -517,10 +517,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get partitionMountPointLabel => 'Titik kait:';
 
   @override
-  String get confirmPageTitle => 'Tulis perubahan ke disk';
+  String get confirmPageTitle => 'Siap memasang';
 
   @override
-  String get confirmHeader => 'Jika Anda melanjutkan, perubahan yang tercantum di bawah ini akan ditulis ke disk. Anda akan dapat membuat perubahan lebih lanjut secara manual.';
+  String get confirmHeader => 'Tinjau pilihan Anda';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -532,7 +532,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'Tidak ada';
+  String get confirmDiskEncryptionNone => 'Nihil';
 
   @override
   String get confirmDevicesTitle => 'Perangkat';
@@ -607,14 +607,14 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get confirmProprietarySoftwareDrivers => 'Driver';
 
   @override
-  String get confirmInstallButton => 'Mulai Memasang';
+  String get confirmInstallButton => 'Pasang';
 
   @override
   String get installationCompleteTitle => 'Instalasi selesai';
 
   @override
   String readyToUse(String system) {
-    return '$system telah terpasang dan siap digunakan.';
+    return '$system telah terpasang dan siap digunakan';
   }
 
   @override
@@ -666,7 +666,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Apakah Anda yakin ingin memulai ulang komputer? Anda perlu memulai ulang instalasi $DISTRO nanti untuk menyelesaikan instalasi $DISTRO.';
+    return 'Anda yakin ingin memulai ulang komputer? Anda perlu memulai ulang instalasi $DISTRO nanti untuk menyelesaikan instalasi $DISTRO.';
   }
 
   @override
@@ -681,7 +681,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Termasuk:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Cepat, gratis dan penuh fitur baru';
+  String get installationSlidesWelcomeTitle => 'Cepat, bebas, dan penuh fitur baru';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -690,7 +690,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Baik Anda seorang pengembang, kreator, gamer atau administrator Anda dapat selalu menemukan alat baru untuk meningkatkan produktivitas Anda dan meningkatkan pengalaman $RELEASE Anda.';
+    return 'Baik Anda seorang pengembang, kreator, gamer, atau administrator Anda dapat selalu menemukan alat baru untuk meningkatkan produktivitas Anda dan meningkatkan pengalaman $RELEASE Anda.';
   }
 
   @override
@@ -698,7 +698,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Pasang, kelola dan perbarui semua aplikasi Anda di Ubuntu Software, termasuk ribuan aplikasi dari Snap Store dan arsip $DISTRO.';
+    return 'Pasang, kelola, dan perbarui semua aplikasi Anda di Perangkat Lunak Ubuntu, termasuk ribuan aplikasi dari Snap Store dan arsip $DISTRO.';
   }
 
   @override
@@ -706,7 +706,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO adalah stasiun kerja yang ideal untuk pengembangan aplikasi dan web, data science dan AI/ML serta DevOps dan administrasi. Setiap rilis $DISTRO berisi alat terbaru dan dukungan untuk semua IDE utama.';
+    return '$DISTRO adalah stasiun kerja yang ideal untuk pengembangan aplikasi dan web, data science dan AI/ML, maupun DevOps dan administrasi. Setiap rilis $DISTRO berisi alat terbaru dan dukungan untuk semua IDE utama.';
   }
 
   @override
@@ -714,7 +714,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Jika Anda seorang animator, desainer, kreator video atau pengembang game sangat mudah untuk membawa alur kerja Anda ke $DISTRO dengan dukungan untuk sumber terbuka dan standar industri perangkat lunak dan aplikasi.';
+    return 'Jika Anda seorang animator, desainer, kreator video atau pengembang game, sangat mudah untuk membawa alur kerja Anda ke $DISTRO dengan dukungan untuk sumber terbuka dan standar industri perangkat lunak dan aplikasi.';
   }
 
   @override
@@ -722,7 +722,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO mendukung driver terbaru NVIDIA dan Mesa untuk meningkatkan performa dan kompatibilitas. Ribuan judul Windows dapat dimainkan dengan baik pada $DISTRO melalui aplikasi seperti Stream tanpa konfigurasi tambahan.';
+    return '$DISTRO mendukung driver terbaru NVIDIA dan Mesa untuk meningkatkan performa dan kompatibilitas. Ribuan judul Windows dapat dimainkan dengan baik pada $DISTRO melalui aplikasi seperti Steam tanpa konfigurasi tambahan.';
   }
 
   @override
@@ -730,12 +730,12 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO menyediakan semua alat yang Anda butuhkan untuk online secara pribadi dan aman. Dengan firewall dan dukungan VPN bawaan serta sejumlah aplikasi yang berfokus pada privasi Anda untuk memastikan Anda tetap mendapatkan dukungan penuh terhadap data Anda.';
+    return '$DISTRO menyediakan semua alat yang Anda butuhkan untuk daring secara pribadi dan aman. Dengan firewall dan dukungan VPN bawaan serta sejumlah aplikasi yang berfokus pada privasi Anda untuk memastikan Anda tetap mengendalikan sepenuhnya data Anda.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'Semua rilis LTS $DISTRO dilengkapi dengan tambalan keamanan selama 5 tahun, diperpanjang hingga 10 tahun dengan langganan Ubuntu Pro.';
+    return 'Semua rilis LTS $DISTRO dilengkapi dengan patch keamanan selama lima tahun, diperpanjang hingga sepuluh tahun dengan langganan Ubuntu Pro.';
   }
 
   @override
@@ -743,7 +743,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop dilengkapi dengan LibreOffice, sebuah aplikasi sumber terbuka yang kompatibel dengan Microsoft Office untuk dokumen, spreadsheet, dan presentasi. Alat kolaborasi popular juga tersedia.';
+    return '$DISTRO Desktop dilengkapi dengan LibreOffice, sebuah keluarga aplikasi sumber terbuka yang kompatibel dengan Microsoft Office untuk dokumen, spreadsheet, dan presentasi. Alat kolaborasi populer juga tersedia.';
   }
 
   @override
@@ -751,7 +751,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'Inti dari filosofi $DISTRO adalah percaya bahwa komputasi untuk semua orang. Dengan alat aksesibilitas lanjutan dan opsi untuk mengubah bahasa, warna dan ukuran teks, $DISTRO membuat komputasi menjadi lebih mudah - siapa pun dan di mana pun Anda berada.';
+    return 'Inti dari filosofi $DISTRO adalah percaya bahwa komputasi itu untuk semua orang. Dengan alat aksesibilitas lanjutan dan opsi untuk mengubah bahasa, warna dan ukuran teks, $DISTRO membuat komputasi menjadi lebih mudah - siapa pun dan di mana pun Anda berada.';
   }
 
   @override
@@ -761,15 +761,15 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityLanguages => 'Dukungan bahasa';
 
   @override
-  String get installationSlidesSupportTitle => 'Bantuan dan Dukungan';
+  String get installationSlidesSupportTitle => 'Bantuan dan dukungan';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Dokumentasi resmi $DISTRO tersedia secara online dan melalui ikon Bantuan pada dok.';
+    return 'Dokumentasi resmi $DISTRO tersedia secara daring dan melalui ikon Bantuan pada dok.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu memiliki sejumlah pertanyaan dan bantuan dan Ubuntu Discourse menyediakan panduan dan diskusi untuk pengguna baru dan lanjutan.';
+  String get installationSlidesSupportCommunity => 'Ask Ubuntu mencakup sejumlah pertanyaan dan bantuan dan Ubuntu Discourse menyediakan panduan dan diskusi untuk pengguna baru dan tingkat lanjut.';
 
   @override
   String get installationSlidesSupportEnterprise => 'Untuk pengguna perusahaan, Canonical menyediakan dukungan komersial untuk memudahkan untuk melakukan onboarding dan mengelola Ubuntu dengan aman dalam tempat kerja.';
@@ -841,7 +841,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpToDate(String version) {
-    return 'Versi saat ini $version sudah terbaru.';
+    return 'Versi saat ini $version sudah mutakhir.';
   }
 
   @override
@@ -862,7 +862,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Menyegarkan ulang $snap...';
+    return 'Menyegarkan $snap...';
   }
 
   @override
@@ -887,7 +887,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Memasang $snap...';
+    return 'Mengait $snap...';
   }
 
   @override

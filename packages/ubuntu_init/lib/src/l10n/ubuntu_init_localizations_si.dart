@@ -5,15 +5,15 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsSi([String locale = 'si']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'ආයුබෝවන්';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return '$distro වෙත පිළිගනිමු';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'අළුත් දෑ';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
@@ -35,7 +35,7 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
 
   @override
   String welcomeChangelogLabel(Object url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\"> වෙනස්කම් සටහන බලන්න </a>';
   }
 
   @override
@@ -43,48 +43,48 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
 
   @override
   String telemetryHeader(Object distro) {
-    return 'Help improve $distro';
+    return '$distro වැඩිදියුණුවට සහාය වන්න';
   }
 
   @override
   String telemetryDescription(Object distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'ඔබගේ පද්ධතියේ දත්ත බෙදාගෙන $distro වැඩිදියුණුවට උදව් කරන්න. මෙයට යන්ත්‍රයේ මාදිළිය, ස්ථාපිත මෘදුකාංග සහ ඔබ වේලා කලාපය සඳහා තේරූ ස්ථානය වැනි දෑ ඇතුළත් වේ.';
   }
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'පද්ධතියේ දත්ත $distro වෙත යවන්න';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'පද්ධතියේ දත්ත යවන්න එපා';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'පළමු වාර්තාව පෙන්වන්න';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'වාර්තාවේ විස්තර';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'නෛතික දැන්වීම';
 
   @override
   String get telemetryCollectError => 'Failed to collect telemetry data';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'ස්ථාන සේවා';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'ස්ථාන සේවාව සබල කරනවා ද?';
 
   @override
   String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'ස්ථාන සේවා';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'දත්ත රහස්‍යතාව';
 
   @override
   String ubuntuProMagicAttachInstructions(Object url) {
@@ -92,10 +92,10 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
   }
 
   @override
-  String get ubuntuProPageTitle => 'Ubuntu Pro';
+  String get ubuntuProPageTitle => 'උබුන්ටු ප්‍රෝ';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'මෙම යන්ත්‍රය අමුණන්න';
 
   @override
   String get ubuntuProOrAddTokenManually => 'or add a token manually';
@@ -112,7 +112,7 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'අමුණන්න';
 
   @override
   String get ubuntuProTokenAttachError => 'Invalid token';
@@ -124,20 +124,20 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'දැනට මඟහරින්න';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'උබුන්ටු ප්‍රෝ සබල කරන්න';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'මෙම යන්ත්‍රයට දැන් උබුන්ටු ප්‍රෝ සබල කර ඇත';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'ඔබගේ ආධික්‍ය සේවා මෘදුකාංග හා යාවත්කාල යෙදුමෙන් කළමනාකරණයට හැකිය.';
 }

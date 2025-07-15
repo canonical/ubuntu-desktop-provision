@@ -74,7 +74,7 @@
       "url": {}
     }
   },
-  "ubuntuProSucessAttachDescription": "Puede gestionar sus servicios Pro en la aplicación Programas y actualizaciones.",
+  "ubuntuProSucessAttachDescription": "Puedes administrar tus servicios de Ubuntu Pro en Software y Actualizaciones.",
   "@ubuntuProSucessAttachDescription": {},
   "ubuntuProHeader": "Conecte esta máquina",
   "@ubuntuProHeader": {},
@@ -82,9 +82,9 @@
   "@ubuntuProOrAddTokenManually": {},
   "ubuntuProTokenTextfieldHint": "Token",
   "@ubuntuProTokenTextfieldHint": {},
-  "ubuntuProSubscriptionDescription": "Consiga la suscripción más completa para la seguridad del software de código abierto",
+  "ubuntuProSubscriptionDescription": "Obtenga la suscripción más completa para la seguridad del software de código abierto",
   "@ubuntuProSubscriptionDescription": {},
-  "ubuntuProSubscriptionFreeForPersonalUse": "Siempre gratuito para uso personal. 30 días de prueba para empresas. <a href=\"https://{url}\">Más información</a>",
+  "ubuntuProSubscriptionFreeForPersonalUse": "Siempre gratuito para uso personal. Prueba de 30 días para empresas.<a href=\"https://{url}\"> Más información</a>",
   "@ubuntuProSubscriptionFreeForPersonalUse": {
     "type": "text",
     "placeholders": {
@@ -105,10 +105,10 @@
   "@ubuntuProOnBoardingSkipForNowDescription": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Activar Ubuntu Pro",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
-  "ubuntuProOnBoardingEnableUbuntuProDescription": "Conecte esta máquina a una suscripción de Ubuntu Pro para obtener actualizaciones de seguridad en una gama más amplia de paquetes, hasta 2032.",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Vincule esta máquina a una suscripción de Ubuntu Pro para recibir actualizaciones de seguridad para una mayor cantidad de paquetes hasta 2032.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "ubuntuProSucessAttachHeader": "Ubuntu Pro ya está activado en esta máquina",
   "@ubuntuProSucessAttachHeader": {},
-  "telemetryCollectError": "No se pudieron recopilar datos de telemetría",
+  "telemetryCollectError": "Error al recopilar datos de telemetría",
   "@telemetryCollectError": {}
 }

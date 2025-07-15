@@ -5,30 +5,30 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Καλώς Ήρθατε';
 
   @override
   String welcomePageHeader(Object distro) {
-    return 'Welcome to $distro';
+    return 'Καλώς Ήρθατε στο $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'Τι νέο υπάρχει?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'Υποστηρίζοντας μια καθαρότερη εμπειρία χρήστη.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Νέα εμφάνιση Κέντρου Λογισμικού';
 
   @override
-  String get welcomeStoreSubtitle => 'It\'s never been easier to find your favourite software.';
+  String get welcomeStoreSubtitle => 'Δεν ήταν πότε πιο εύκολο να βρείτε το αγαπημένο σας λογισμικό.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Προχωρημένη Ασφάλεια';
 
   @override
   String get welcomeSecuritySubtitle => 'New options for hardware-backed or ZFS encryption.';
@@ -53,35 +53,35 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
 
   @override
   String telemetryLabelOn(Object distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Ναι,μοιραστείτε δεδομένα συστήματος με την ομάδα $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Όχι,δεν μοιράζεστε δεδομένα συστήματος';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'Δείξε πρώτη αναφορά';
 
   @override
   String get telemetryReportTitle => 'Reporting details';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'Νομική λεπτομέρεια';
 
   @override
   String get telemetryCollectError => 'Failed to collect telemetry data';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Υπηρεσίες τοποθεσίας';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Ενεργοποίηση υπηρεσιών τοποθεσίας?';
 
   @override
   String get privacyLocationSubtitle => 'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Υπηρεσία τοποθεσίας';
 
   @override
   String get privacyPolicyLink => 'Data Privacy';
@@ -108,7 +108,7 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(Object url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Πάντα δωρεάν για προσωπική χρήση.30 ημέρες για επιχειρήσεις.<a href=\"https://$url\">Μάθετε περισσότερα</a>';
   }
 
   @override
@@ -124,20 +124,20 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Παράλειψη για τώρα';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'You can always enable Ubuntu Pro later via the Software & Updates application.';
+  String get ubuntuProOnBoardingSkipForNowDescription => 'Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ενεργοποίηση Ubuntu-Pro';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro is now enabled in this machine';
+  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'You can manage your Pro services in the Software & Updates application.';
+  String get ubuntuProSucessAttachDescription => 'Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.';
 }

@@ -5,95 +5,95 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEt([String locale = 'et']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Tehaseseadistuste taastamise tarvikud';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Tehaseseadistuste taastamise tarvikud';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Mida sa sooviksid teha?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Loo tehaseseadistuste taastamiseks vajalik andmekandja';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Alusta tehaseseadistuste taastamist';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Loo taastamiseks vajalik andmekandja';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Loo taastamiseks vajalik USB-põhine mälupulk või ketas, kusjuures saad oma Ubuntu paigaldust ka kohendada.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Vali USB-põhine andmekandja. Seal peab olema **vähemalt 16 GB vaba ruumi.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Andmekandja saab olema uuesti vormindatud ja kõik seal leiduvad andmed lähevad jäädavalt kaotsi.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Taastamiseks mõeldud USB-põhine andmekandja';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Ühtegi eemaldatavat andmekandjat ei õnnestunud tuvastada';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Tehaseseadistuste taastamise tarviku jaoks vajad sa USB-põhist andmekandjat.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Palun tee oma valik alustamiseks tehaseseadistuste taastamisega';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Palun oota, kuni tuvastan andmekandjaid.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Taastamiseks mõeldud USB-põhine andmekandja on valmis';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Kui soovid teda kasutada, siis palun ühenda taastamiseks mõeldud USB-põhine andmekandja arvutiga, kus soovid seda kasutaja ning taaskäivita arvuti.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Andmekandjate tuvastamisel tekkis viga.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Valmendan protsessi';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopeerime';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Lõpetan protsessi tööd';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Lõpetatud';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Tegevus ebaõnnestus';
 
   @override
-  String get error => 'Error';
+  String get error => 'Viga';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Laadime...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Hoiatus';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Taasta';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Käivita arvuti uuesti';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Vorminda uuesti';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Käsu käivitamine ei õnnestunud';
 
   @override
-  String get close => 'Close';
+  String get close => 'Sulge';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Sobib';
 }

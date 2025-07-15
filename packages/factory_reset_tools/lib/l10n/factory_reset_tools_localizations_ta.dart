@@ -5,95 +5,95 @@ class FactoryResetToolsLocalizationsTa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'தொழிற்சாலை மீட்டமைப்பு கருவிகள்';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'தொழிற்சாலை மீட்டமைப்பு கருவிகள்';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'நீங்கள் என்ன செய்ய விரும்புகிறீர்கள்?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'மீட்டமை ஊடகத்தை உருவாக்கவும்';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'தொழிற்சாலை மீட்டமைப்பைத் தொடங்கவும்';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'யூ.எச்.பி மீட்டமை ஊடகத்தை உருவாக்கவும்';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'கணினியை மீட்டெடுக்க யூ.எச்.பி மீட்டமை ஊடகத்தை உருவாக்கவும், அத்துடன் உங்கள் உபுண்டு நிறுவல்களைத் தனிப்பயனாக்கவும்.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'யூ.எச்.பி ஃபிளாச் டிரைவைத் தேர்ந்தெடுக்கவும். இயக்ககத்தில் ** குறைந்தது 16 சிபி இடம் இருக்க வேண்டும். **';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'ஃப்ளாச் இயக்கி மறுவடிவமைக்கப்படும் மற்றும் இயக்ககத்தில் உள்ள அனைத்து தரவும் இழக்கப்படும்.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'யூ.எச்.பி மீடியாவை மீட்டமைக்கவும்';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'நீக்கக்கூடிய சேமிப்பு எதுவும் கண்டறியப்படவில்லை';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'தொழிற்சாலை மீட்டமைப்பு ஊடகத்தை உருவாக்க உங்களுக்கு யூ.எச்.பி சேமிப்பு தேவை.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'தொழிற்சாலை மீட்டமைப்பைத் தொடங்க ஒரு விருப்பத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'நாங்கள் டிரைவ்களைப் பெறும்போது காத்திருங்கள்.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'யூ.எச்.பி மீட்டமைப்பு மீடியா தயாராக உள்ளது';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'நீங்கள் அதைப் பயன்படுத்த விரும்பினால், தயவுசெய்து நீங்கள் மீட்டமைக்க விரும்பும் கணினியில் யூ.எச்.பி டிரைவை செருகவும், மறுதொடக்கம் செய்யவும்.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'டிரைவ்களைப் பெறும்போது பிழை ஏற்பட்டது.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'துவக்குதல்';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'நகலெடுக்கும்';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'இறுதி';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'முடிந்தது';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'தோல்வியுற்றது';
 
   @override
-  String get error => 'Error';
+  String get error => 'பிழை';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ஏற்றுகிறது ...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'எச்சரிக்கை';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'மீட்டமை';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'மறுதொடக்கம்';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'மறுவடிவமைப்பு';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'கட்டளையை இயக்குவதில் தோல்வி';
 
   @override
-  String get close => 'Close';
+  String get close => 'மூடு';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'சரி';
 }

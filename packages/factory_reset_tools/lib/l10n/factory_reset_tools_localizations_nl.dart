@@ -5,91 +5,91 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Wat zou u willen doen?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Herstelmedia aanmaken';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Terugzetten naar fabrieksinstellingen starten';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Een herstel-USB aanmaken';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Een herstel-USB aanmaken om het systeem te herstellen en uw Ubuntu-installaties aan te passen.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Selecteer een USB-flashstation. De schijf moet **minstens 16 GB ruimte hebben.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'De flashdrive wordt opnieuw geformatteerd en alle gegevens op de schijf gaan verloren.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Herstel-USB';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Geen verwisselbare opslag gedetecteerd';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Een USB-opslag is vereist om een medium voor systeemherstel te maken.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Selecteer een optie om de fabrieksinstellingen te herstellen';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Een ogenblik geduld terwijl de schijven worden uitgelezen.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Herstel-USB is klaar';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Om deze te gebruiken, plaatst u het USB-station in de computer die u wilt herstellen en start u deze opnieuw op.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Er is een fout opgetreden bij het inlezen van de schijven.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Initialiseren';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopiëren';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Voltooien';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Voltooid';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Mislukt';
 
   @override
-  String get error => 'Error';
+  String get error => 'Fout';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Laden…';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Waarschuwing';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Herstellen';
 
   @override
   String get restart => 'Herstarten';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Opnieuw formatteren';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Opdracht niet kunnen uitvoeren';
 
   @override
   String get close => 'Sluiten';

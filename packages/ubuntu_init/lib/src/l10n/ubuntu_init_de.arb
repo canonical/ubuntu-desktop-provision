@@ -37,7 +37,7 @@
       "distro": {}
     }
   },
-  "telemetryDescription": "Helfen Sie uns, {distro} zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Computermodell, installierte Software und der Ort, den Sie für Ihre Zeitzone gewählt haben.",
+  "telemetryDescription": "Helfen Sie uns, {distro} zu verbessern, indem Sie Ihre Systemdaten mit uns teilen. Dazu gehören Dinge wie Ihr Gerätemodell, installierte Software und der Ort, den Sie für Ihre Zeitzone ausgewählt haben.",
   "@telemetryDescription": {
     "type": "text",
     "placeholders": {
@@ -79,9 +79,9 @@
   "@ubuntuProOnBoardingSkipForNow": {},
   "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pro aktivieren",
   "@ubuntuProOnBoardingEnableUbuntuPro": {},
-  "ubuntuProSucessAttachHeader": "Ubuntu Pro ist jetzt auf dieser Maschine aktiviert",
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro ist jetzt auf diesem Gerät aktiviert",
   "@ubuntuProSucessAttachHeader": {},
-  "ubuntuProHeader": "Diese Maschine anbinden",
+  "ubuntuProHeader": "Dieses Gerät anbinden",
   "@ubuntuProHeader": {},
   "ubuntuProTokenTextfieldHint": "Token",
   "@ubuntuProTokenTextfieldHint": {},
@@ -100,7 +100,7 @@
   },
   "ubuntuProOnBoardingSkipForNowDescription": "Sie können Ubuntu Pro jederzeit später über die Anwendung Software & Aktualisierungen aktivieren.",
   "@ubuntuProOnBoardingSkipForNowDescription": {},
-  "ubuntuProOnBoardingEnableUbuntuProDescription": "Binden Sie diesen Rechner an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.",
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Binden Sie dieses Gerät an ein Ubuntu Pro-Abonnement an, um Sicherheitsaktualisierungen für eine größere Anzahl von Paketen bis 2032 zu erhalten.",
   "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
   "telemetryCollectError": "Fehler bei der Erfassung von Telemetriedaten",
   "@telemetryCollectError": {},

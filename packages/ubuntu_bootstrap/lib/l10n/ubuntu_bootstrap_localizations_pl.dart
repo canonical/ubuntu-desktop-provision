@@ -299,7 +299,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryptionSelected => 'Wybrano LVM i szyfrowanie';
 
   @override
-  String get installationTypeEncryptInfo => 'Klucz bezpieczeństwa zostanie wybrany w następnym kroku.';
+  String get installationTypeEncryptInfo => 'Klucz bezpieczeństwa zostanie wybrany w następnym kroku.';
 
   @override
   String get installationTypeZFS => 'Wymaż dysk i użyj ZFS';
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format nie jest obsługiwanym systemem plików dla $mountpoint';
   }
 
   @override

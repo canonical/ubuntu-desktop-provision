@@ -18,16 +18,16 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Görme';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Duyma';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Yazma';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'İşaretleme ve tıklama';
 
   @override
   String get accessibilityZoomLabel => 'Yakınlaştırma';
@@ -39,13 +39,13 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Large text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Animasyonu azalt';
 
   @override
   String get accessibilityScreenReaderLabel => 'Ekran okuyucusu';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Görsel uyarılar';
 
   @override
   String get accessibilityStickKeysLabel => 'Yapışkan tuşlar';

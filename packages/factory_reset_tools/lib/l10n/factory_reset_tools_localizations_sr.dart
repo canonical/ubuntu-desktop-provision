@@ -5,95 +5,95 @@ class FactoryResetToolsLocalizationsSr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsSr([String locale = 'sr']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Алатке за фабричко ресетовање';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Алатке за фабричко ресетовање';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Шта желите да урадите?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Креирај медиј за ресетовање';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Покрени фабричко ресетовање';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Креирај USB медиј за ресетовање';
 
   @override
-  String get createUsbBody => 'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+  String get createUsbBody => 'Креирај USB медиј за ресетовање да бисте вратили систем, као и прилагодили своје Ubuntu инсталације.';
 
   @override
-  String get createUsbListExplanation => 'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+  String get createUsbListExplanation => 'Изаберите USB флеш диск. Диск мора имати **најмање 16GB простора.**';
 
   @override
-  String get createUsbWarning => 'The flash drive will be reformatted and all data on the drive will be lost.';
+  String get createUsbWarning => 'Флеш диск ће бити реформатиран и сви подаци на диску ће бити изгубљени.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB медиј за ресетовање';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Није откривен преносиви уређај за складиштење';
 
   @override
-  String get noMediaDetectedSubtitle => 'You need a USB storage to create a Factory Reset Media.';
+  String get noMediaDetectedSubtitle => 'Потребан вам је USB уређај за складиштење да бисте креирали медиј за фабричко ресетовање.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle => 'Изаберите опцију за покретање фабричког ресетовања';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Молимо сачекајте док преузимамо дискове.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB медиј за ресетовање је спреман';
 
   @override
-  String get resetMediaReadyBody => 'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+  String get resetMediaReadyBody => 'Када желите да га користите, уметните USB диск у рачунар који желите да ресетујете и поново га покрените.';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Дошло је до грешке приликом преузимања дискова.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Иницијализација';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Копирање';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Финализација';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Завршено';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Неуспешно';
 
   @override
-  String get error => 'Error';
+  String get error => 'Грешка';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Учитавање...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Упозорење';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Враћање';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Поново покрени';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Реформатирај';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Неуспешно покретање команде';
 
   @override
-  String get close => 'Close';
+  String get close => 'Затвори';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'У реду';
 }

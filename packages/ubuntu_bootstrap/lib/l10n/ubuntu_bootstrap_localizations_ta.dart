@@ -5,7 +5,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'உபுண்டு பணிமேடை நிறுவி';
 
   @override
   String windowTitle(String RELEASE) {
@@ -13,21 +13,21 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'நிறுவல் வகை';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return '$DISTRO ஐ எவ்வாறு நிறுவ விரும்புகிறீர்கள்?';
   }
 
   @override
-  String get autoinstallInstructions => 'Enter the autoinstall.yaml URL or local file path:';
+  String get autoinstallInstructions => 'AutoInstall.yaml முகவரி அல்லது உள்ளக கோப்பு பாதையை உள்ளிடவும்:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'ஊடாடும் நிறுவல்';
 
   @override
-  String get autoinstallInteractiveDescription => 'For users who want to be guided step by step through the installation.';
+  String get autoinstallInteractiveDescription => 'நிறுவலின் மூலம் படிப்படியாக வழிநடத்த விரும்பும் பயனர்களுக்கு.';
 
   @override
   String get autoinstallAutomatedOption => 'Automated installation';
@@ -39,36 +39,36 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get changeButtonText => 'மாற்று';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'நிறுவலை விட்டு';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO வருக';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'எச்சரிக்கை:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'சோதி அல்லது நிறுவு';
+    return '$DISTRO முயற்சி அல்லது நிறுவு';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '$DISTRO உடன் நீங்கள் என்ன செய்ய விரும்புகிறீர்கள்?';
   }
 
   @override
   String get tryOrInstallRepairOption => 'நிறுவலை பழுதுபார்';
 
   @override
-  String get tryOrInstallRepairDescription => 'Repairing will reinstall all installed software without touching documents or settings.';
+  String get tryOrInstallRepairDescription => 'பழுதுபார்ப்பு ஆவணங்கள் அல்லது அமைப்புகளைத் தொடாமல் நிறுவப்பட்ட அனைத்து மென்பொருளையும் மீண்டும் நிறுவும்.';
 
   @override
   String tryOption(String RELEASE) {
@@ -87,12 +87,12 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'உங்கள் தற்போதைய இயக்க முறைமையுடன் (அல்லது அதற்கு பதிலாக) $RELEASE ஐ நிறுவவும். இது அதிக நேரம் எடுக்கக்கூடாது.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'நீங்கள் <a href = \"$url\"> வெளியீட்டு குறிப்புகள் </a> ஐப் படிக்க விரும்பலாம்.';
   }
 
   @override
@@ -108,109 +108,109 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'வழிமுறைகளுக்கு, QR குறியீட்டை மற்றொரு சாதனத்தில் ச்கேன் செய்யுங்கள் அல்லது பார்வையிடவும்: <a href = \"https: // $url\"> $url </a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'பாதுகாப்பான துவக்கத்தை உள்ளமைக்கவும்';
 
   @override
-  String get configureSecureBootDescription => 'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+  String get configureSecureBootDescription => 'மூன்றாம் தரப்பு இயக்கி மென்பொருளை நிறுவ நீங்கள் தேர்ந்தெடுத்துள்ளீர்கள். இதற்கு பாதுகாப்பான துவக்கத்தை அணைக்க வேண்டும்.\n இதைச் செய்ய, நீங்கள் இப்போது ஒரு பாதுகாப்பு விசையைத் தேர்வு செய்ய வேண்டும், மேலும் கணினி மறுதொடக்கம் செய்யும்போது அதை உள்ளிடவும்.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'பாதுகாப்பான துவக்கத்தை உள்ளமைக்கவும்';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'பாதுகாப்பு விசையைத் தேர்வுசெய்க';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'பாதுகாப்பு விசையை உறுதிப்படுத்தவும்';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Don\'t install the driver software for now';
+  String get dontInstallDriverSoftwareNow => 'இப்போது இயக்கி மென்பொருளை நிறுவ வேண்டாம்';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'You can install it later from Software & Updates.';
+  String get dontInstallDriverSoftwareNowDescription => 'மென்பொருள் மற்றும் புதுப்பிப்புகளிலிருந்து அதை பின்னர் நிறுவலாம்.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'பாதுகாப்பு விசை தேவை';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'பாதுகாப்பு விசைகள் பொருந்தவில்லை';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'காட்டு';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'மறை';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'பயன்பாடுகள்';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'What apps would you like to install to start with?';
+  String get updatesOtherSoftwarePageDescription => 'தொடங்க என்ன பயன்பாடுகளை நிறுவ விரும்புகிறீர்கள்?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'உங்கள் கணினியை மேம்படுத்தவும்';
 
   @override
-  String get codecsAndDriversPageDescription => 'Install recommended proprietary software?';
+  String get codecsAndDriversPageDescription => 'பரிந்துரைக்கப்பட்ட தனியுரிம மென்பொருளை நிறுவவா?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO முன்னிருப்பாக தனியுரிம மென்பொருள் இல்லாத கப்பல்கள். கூடுதல் மென்பொருளை நிறுவுவது உங்கள் கணினியின் செயல்திறனை மேம்படுத்தலாம்.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'என்விடியா கிராபிக்ச் அட்டை கண்டறியப்பட்டது';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+  String get codecsAndDriversNvidiaBody => 'என்விடியா கிராஃபிக் கார்டுகளின் சிறந்த செயல்திறனுக்காக, கூடுதல் இயக்கிகளை நிறுவுவது கடுமையாக பரிந்துரைக்கப்படுகிறது.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'நீட்டிக்கப்பட்ட தேர்வு';
 
   @override
-  String get fullInstallationSubtitle => 'An offline-friendly selection of office tools, utilities and web browser.';
+  String get fullInstallationSubtitle => 'அலுவலக கருவிகள், பயன்பாடுகள் மற்றும் வலை உலாவியின் இணைப்பில்லாத நட்பு தேர்வு.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'இயல்புநிலை தேர்வு';
 
   @override
-  String get minimalInstallationSubtitle => 'Just the essentials, web browser and basic utilities.';
+  String get minimalInstallationSubtitle => 'அத்தியாவசியங்கள், வலை உலாவி மற்றும் அடிப்படை பயன்பாடுகள்.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'பிற விருப்பங்கள்';
 
   @override
-  String get installThirdPartyTitle => 'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+  String get installThirdPartyTitle => 'கிராபிக்ச் மற்றும் வைஃபை வன்பொருள் மற்றும் கூடுதல் ஊடக வடிவங்களுக்காக மூன்றாம் தரப்பு மென்பொருளை நிறுவவும்';
 
   @override
-  String get installThirdPartySubtitle => 'This software is subject to license terms included with its documentation. Some are proprietary.';
+  String get installThirdPartySubtitle => 'இந்த மென்பொருள் அதன் ஆவணங்களுடன் சேர்க்கப்பட்ட உரிம விதிமுறைகளுக்கு உட்பட்டது. சில தனியுரிமமானவை.';
 
   @override
-  String get installDriversTitle => 'Install third-party software for graphics and Wi-Fi hardware';
+  String get installDriversTitle => 'கிராபிக்ச் மற்றும் வைஃபை வன்பொருளுக்காக மூன்றாம் தரப்பு மென்பொருளை நிறுவவும்';
 
   @override
-  String get installDriversSubtitle => 'Including but not limited to NVIDIA drivers and similar';
+  String get installDriversSubtitle => 'என்விடியா டிரைவர்கள் மற்றும் ஒத்ததாக இல்லை';
 
   @override
-  String get installCodecsTitle => 'Download and install support for additional media formats';
+  String get installCodecsTitle => 'கூடுதல் ஊடக வடிவங்களுக்கான ஆதரவைப் பதிவிறக்கி நிறுவவும்';
 
   @override
-  String get installCodecsSubtitle => 'Including but not limited to MP3, MP4, MOV and similar';
+  String get installCodecsSubtitle => 'எம்பி 3, எம்பி 4, மூவ் மற்றும் ஒத்ததாக இல்லை';
 
   @override
-  String get batteryWarning => 'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'கணினி ஒரு ஆற்றல் மூலத்தில் செருகப்படவில்லை.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'நீங்கள் தற்போது ஆஃப்லைனில் இருக்கிறீர்கள்';
 
   @override
   String get choosePassphraseTitle => 'Disk passphrase';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'ஒரு கடவுச்சொல்லை உருவாக்கவும்';
 
   @override
   String get choosePassphraseBody => 'You need a passphrase to encrypt your files. You will be prompted for your passphrase every time you turn on your computer.';
@@ -244,28 +244,28 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return '$DISTRO ஐ எவ்வாறு நிறுவ விரும்புகிறீர்கள்?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'இந்த கணினி தற்போது அதில் $os உள்ளது. நீங்கள் என்ன செய்ய விரும்புகிறீர்கள்?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'இந்த கணினி தற்போது அதில் $os1 மற்றும் $os2 உள்ளது. நீங்கள் என்ன செய்ய விரும்புகிறீர்கள்?';
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'This computer currently has multiple operating systems on it. What would you like to do?';
+  String get installationTypeMultiOSDetected => 'இந்த கணினி தற்போது பல இயக்க முறைமைகளைக் கொண்டுள்ளது. நீங்கள் என்ன செய்ய விரும்புகிறீர்கள்?';
 
   @override
   String get installationTypeNoOSDetected => 'இந்த கணினியில் தற்போது எந்த இயங்கு தளங்களும் கண்டறியப்படவில்லை.என்ன செய்ய விரும்புகிறீர்கள்?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'வட்டை அழித்து $DISTRO நிறுவவும்';
   }
 
   @override
@@ -278,7 +278,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedTitle => 'மேம்பட்ட அம்சங்கள்';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'சோதனை';
 
   @override
   String get installationTypeNone => 'எதுவும் இல்லை';
@@ -290,16 +290,16 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVM => 'Use LVM';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'எல்விஎம் தேர்ந்தெடுக்கப்பட்டது';
 
   @override
   String get installationTypeLVMEncryption => 'Use LVM and encryption';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM and encryption selected';
+  String get installationTypeLVMEncryptionSelected => 'எல்விஎம் மற்றும் குறியாக்கம் தேர்ந்தெடுக்கப்பட்டது';
 
   @override
-  String get installationTypeEncryptInfo => 'You will choose a security key in the next step.';
+  String get installationTypeEncryptInfo => 'அடுத்த கட்டத்தில் பாதுகாப்பு விசையை நீங்கள் தேர்வு செய்வீர்கள்.';
 
   @override
   String get installationTypeZFS => 'Erase disk and use ZFS';
@@ -308,10 +308,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryption => 'Erase disk and use ZFS with encryption';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS தேர்ந்தெடுக்கப்பட்டது';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS and encryption selected';
+  String get installationTypeZFSEncryptionSelected => 'ZF கள் மற்றும் குறியாக்கம் தேர்ந்தெடுக்கப்பட்டது';
 
   @override
   String get installationTypeTPM => 'Enable hardware-backed full disk encryption';
@@ -322,26 +322,26 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'டிபிஎம் தேர்ந்தெடுக்கப்பட்டது';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return '$os ஐ அழித்து மீண்டும் நிறுவவும்';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color = \"$color\"> எச்சரிக்கை: </font> இது உங்கள் $os நிரல்கள், ஆவணங்கள், புகைப்படங்கள், இசை மற்றும் வேறு எந்த கோப்புகளையும் நீக்கும்.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return '$os பக்கதில் $product நிறுவு';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return '$os1 மற்றும் $os2 பக்கத்தில் $product நிறுவு';
   }
 
   @override
@@ -351,93 +351,93 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'பிற பகிர்வுகளுடன் $product ஐ நிறுவவும்';
   }
 
   @override
   String get installationTypeAlongsideInfo => 'You can choose your operating system during boot.';
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'கையேடு நிறுவல்';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'தனிப்பயனாக்கப்பட்ட வட்டு அமைப்புகளைத் தேடும் மேம்பட்ட பயனர்களுக்கு.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'வட்டை அழித்து $DISTRO நிறுவவும்';
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'நீங்கள் தேர்ந்தெடுத்த வட்டில் புதிதாகத் தொடங்கவும்.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'டிரைவைத் தேர்ந்தெடுக்கவும்:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'பகிர்வைத் தேர்ந்தெடுக்கவும்:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'முழு வட்டு பயன்படுத்தப்படும்:';
 
   @override
   String get selectGuidedStorageInstallNow => 'இப்போது நிறுவு';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '$DISTRO ஐ எங்கு நிறுவ வேண்டும் என்பதைத் தேர்வுசெய்க';
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Allocate drive space by dragging the divider below:';
+  String get installAlongsideSpaceDivider => 'கீழே உள்ள வகுப்பாளரை இழுப்பதன் மூலம் இயக்கி இடத்தை ஒதுக்கவும்:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num சிறிய பகிர்வுகள் மறைக்கப்பட்டுள்ளன, மேலும் கட்டுப்பாட்டுக்கு <a href = \"$url\"> மேம்பட்ட பகிர்வு கருவி </a> ஐப் பயன்படுத்தவும்';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'பகிர்வு மறுஅளவிடுதல்';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'இடத்தை ஒதுக்கவும்';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'கோப்புகள்';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'பகிர்வு:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'அளவு:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'கிடைக்கிறது:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'கையேடு பகிர்வு';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Mount points must start with \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash => 'மவுண்ட் புள்ளிகள் \"/\" உடன் தொடங்க வேண்டும்';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Mount points cannot contain spaces';
+  String get allocateDiskSpaceInvalidMountPointSpace => 'மவுண்ட் புள்ளிகளில் இடைவெளிகளைக் கொண்டிருக்க முடியாது';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$mountpoint-க்கு $format என்பது ஆதரிக்கப்படும் கோப்பு முறைமை அல்ல';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'சாதனம்';
 
   @override
   String get diskHeadersType => 'வகை';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'மவுண்ட் புள்ளி';
 
   @override
   String get diskHeadersSize => 'அளவு';
@@ -449,7 +449,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get diskHeadersSystem => 'கணினி';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'வடிவம்';
 
   @override
   String get freeDiskSpace => 'காலி இடம்';
@@ -458,19 +458,19 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get newPartitionTable => 'புதிய பகிர்வு அட்டவணை';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'புதிய வெற்று பகிர்வு';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+  String get newPartitionTableConfirmationMessage => 'ஒரு முழு சாதனத்திலும் புதிய பகிர்வு அட்டவணையை உருவாக்குவது அதன் தற்போதைய பகிர்வுகள் அனைத்தையும் அகற்றும். தேவைப்பட்டால் இந்த செயல்பாட்டை செயல்தவிர்க்கலாம்.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'பல முதன்மை பகிர்வுகள்';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'வரம்பு எட்டப்பட்டது';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'துவக்க ஏற்றி நிறுவலுக்கான சாதனம்';
 
   @override
   String get partitionCreateTitle => 'பகிர்வை உருவாக்கு';
@@ -482,13 +482,13 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get partitionSizeLabel => 'அளவு:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'புதிய பகிர்வுக்கு தட்டச்சு செய்க:';
 
   @override
   String get partitionTypePrimary => 'முதன்மை';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'தர்க்கரீதியான';
 
   @override
   String get partitionLocationLabel => 'புதிய பகிர்வுக்கான இடம்:';
@@ -503,66 +503,66 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get partitionFormatLabel => 'பயன்படுத்தப்பட்ட அளவு:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'முறையிடாமல் விடுங்கள்';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'வடிவமைக்க $format ஆக விடுங்கள்';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'பகிர்வை வடிவமைக்கவும்';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'மவுண்ட் புள்ளி:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'நிறுவ தயாராக உள்ளது';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'உங்கள் தேர்வுகளை மதிப்பாய்வு செய்யவும்';
 
   @override
-  String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
+  String get confirmDiskEncryptionLVM => 'லக்ச் (எல்விஎம்)';
 
   @override
-  String get confirmDiskEncryptionZFS => 'LUKS (ZFS)';
+  String get confirmDiskEncryptionZFS => 'லுக்ச் (ZFS)';
 
   @override
-  String get confirmDiskEncryptionTPM => 'TPM';
+  String get confirmDiskEncryptionTPM => 'டிபிஎம்';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'எதுவுமில்லை';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'சாதனங்கள்';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'பயன்பாடுகள்';
 
   @override
   String get confirmEntryDiskSetup => 'Disk setup';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'வட்டு குறியாக்கம்';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'நிறுவல் வட்டு';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'தனியுரிம மென்பொருள்';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'பொது';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'பாதுகாப்பு மற்றும் பல';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'பகிர்வுகள்';
 
   @override
-  String get confirmPartitionTables => 'The partition tables of the following devices are changed:';
+  String get confirmPartitionTables => 'பின்வரும் சாதனங்களின் பகிர்வு அட்டவணைகள் மாற்றப்பட்டுள்ளன:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -598,49 +598,49 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'கோடெக்குகள்';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'கோடெக்குகள் மற்றும் இயக்கிகள்';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'ஓட்டுநர்கள்';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'நிறுவவும்';
 
   @override
   String get installationCompleteTitle => 'நிறுவல் முடிவுற்றது';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system நிறுவப்பட்டு பயன்படுத்த தயாராக உள்ளது';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '** $system ** வட்டில் நகலெடுக்கப்பட்டுள்ளது';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return '$system இல் மீண்டும் துவக்கவும்';
   }
 
   @override
-  String get restartWarningBody => 'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+  String get restartWarningBody => 'நிறுவலை முடிக்க மறுதொடக்கம் செய்யுங்கள் அல்லது சோதனையைத் தொடரவும்.\n நீங்கள் செய்யும் எந்த மாற்றங்களும் சேமிக்கப்படாது.';
 
   @override
-  String get rebootToConfigureWarning => 'You have to restart the computer to continue the installation process.';
+  String get rebootToConfigureWarning => 'நிறுவல் செயல்முறையைத் தொடர நீங்கள் கணினியை மறுதொடக்கம் செய்ய வேண்டும்.';
 
   @override
-  String get shutdown => 'Shut Down';
+  String get shutdown => 'மூடு';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'இப்போது மறுதொடக்கம் செய்யுங்கள்';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'சோதனை தொடரவும்';
 
   @override
   String get bitlockerTitle => 'BitLocker is enabled';
@@ -659,300 +659,300 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'சன்னல்களில் மறுதொடக்கம் செய்யுங்கள்';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'சன்னல்களில் மறுதொடக்கம் செய்யவா?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'உங்கள் கணினியை மறுதொடக்கம் செய்ய விரும்புகிறீர்களா? நிறுவலை முடிக்க $DISTRO நிறுவலை நீங்கள் மறுதொடக்கம் செய்ய வேண்டும்.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return '$RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'கிடைக்கிறது:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'சேர்க்கப்பட்டுள்ளது:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, free and full of new features';
+  String get installationSlidesWelcomeTitle => 'வேகமான, இலவச மற்றும் புதிய நற்பொருத்தங்கள் நிறைந்தவை';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return '$DISTRO இன் சமீபத்திய பதிப்பு கணினிமயமாக்கலை முன்னெப்போதையும் விட எளிதாக்குகிறது.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'நீங்கள் ஒரு டெவலப்பர், படைப்பாளர், விளையாட்டாளர் அல்லது நிர்வாகியாக இருந்தாலும் சரி, உங்கள் உற்பத்தித்திறனை மேம்படுத்தவும் உங்கள் அனுபவத்தை மேம்படுத்தவும் $RELEASE இல் புதிய கருவிகளைக் காண்பீர்கள்.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle => 'உங்களுக்கு தேவையான அனைத்து பயன்பாடுகளும்';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'உங்கள் எல்லா பயன்பாடுகளையும் உபுண்டு மென்பொருளில் நிறுவவும், நிர்வகிக்கவும் புதுப்பிக்கவும், ச்னாப் கடை மற்றும் $DISTRO காப்பகம் இரண்டிலிருந்தும் ஆயிரக்கணக்கான பயன்பாடுகள் அடங்கும்.';
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Develop with the best of open source';
+  String get installationSlidesDevelopmentTitle => 'சிறந்த திறந்த மூலத்துடன் உருவாகிறது';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return '$DISTRO என்பது பயன்பாடு அல்லது வலை வளர்ச்சி, தரவு அறிவியல் மற்றும் AI/ML மற்றும் டெவொப்ச் மற்றும் நிர்வாகத்திற்கான சிறந்த பணிநிலையம். ஒவ்வொரு $DISTRO வெளியீட்டில் அண்மைக் கால கருவித்தொகுப்புகள் உள்ளன மற்றும் அனைத்து முக்கிய ஐடிகளையும் ஆதரிக்கிறது.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'உங்கள் படைப்பாற்றலை மேம்படுத்தவும்';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'நீங்கள் ஒரு அனிமேட்டர், வடிவமைப்பாளர், வீடியோ படைப்பாளர் அல்லது விளையாட்டு உருவாக்குநராக இருந்தால், திறந்த மூல மற்றும் தொழில்துறை தரநிலை மென்பொருள் மற்றும் பயன்பாடுகளுக்கான ஆதரவுடன் உங்கள் பணிப்பாய்வுகளை $DISTRO க்குக் கொண்டு வருவது எளிது.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'கேமிங்கிற்கு சிறந்தது';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return 'செயல்திறன் மற்றும் இணக்கத்தன்மையை மேம்படுத்த $DISTRO சமீபத்திய NVIDIA மற்றும் Mesa இயக்கிகளை ஆதரிக்கிறது. கூடுதல் உள்ளமைவு இல்லாமல் Steam போன்ற பயன்பாடுகள் வழியாக ஆயிரக்கணக்கான Windows தலைப்புகள் $DISTRO இல் சிறப்பாக இயங்குகின்றன.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'தனிப்பட்ட மற்றும் பாதுகாப்பான';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return 'ஆன்லைனில் தனிப்பட்டதாகவும் பாதுகாப்பாகவும் இருக்க உங்களுக்குத் தேவையான அனைத்து கருவிகளையும் $DISTRO வழங்குகிறது. உள்ளமைக்கப்பட்ட ஃபயர்வால் மற்றும் VPN ஆதரவு மற்றும் உங்கள் தரவின் முழு கட்டுப்பாட்டிலும் நீங்கள் இருப்பதை உறுதிசெய்ய ஏராளமான தனியுரிமை மையப்படுத்தப்பட்ட பயன்பாடுகளுடன்.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'அனைத்து $DISTRO lts வெளியீடுகளும் ஐந்து வருட பாதுகாப்பு ஒட்டுதல் சேர்க்கப்பட்டுள்ளன, இது உபுண்டு புரோ சந்தாவுடன் பத்து ஆண்டுகள் வரை நீண்டுள்ளது.';
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Power up your productivity';
+  String get installationSlidesProductivityTitle => 'உங்கள் உற்பத்தித்திறனை அதிகரிக்கும்';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO டெச்க்டாப்பில் ஆவணங்கள், விரிதாள்கள் மற்றும் விளக்கக்காட்சிகளுக்கான நுண்மென் ஆபிச் இணக்கமான திறந்த மூல பயன்பாடுகளின் தொகுப்பான லிப்ரே ஆபிச் அடங்கும். பிரபலமான ஒத்துழைப்பு கருவிகளும் கிடைக்கின்றன.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'அனைவருக்கும் அணுகல்';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return '$DISTRO தத்துவத்தின் இதயத்தில், கம்ப்யூட்டிங் என்பது அனைவருக்கும் உள்ளது என்ற நம்பிக்கை. மொழி, வண்ணங்கள் மற்றும் உரை அளவை மாற்ற மேம்பட்ட அணுகல் கருவிகள் மற்றும் விருப்பங்களுடன், $DISTRO கம்ப்யூட்டிங் எளிதாக்குகிறது - யாராக இருந்தாலும், எங்கிருந்தாலும்.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'ஓர்கா திரை ரீடர்';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'மொழி உதவி';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'உதவி மற்றும் உதவி';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'அதிகாரப்பூர்வ $DISTRO ஆவணங்கள் ஆன்லைனில் மற்றும் கப்பல்துறையில் உதவி படவுரு வழியாக கிடைக்கின்றன.';
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+  String get installationSlidesSupportCommunity => 'உபுண்டு கேளுங்கள் பலவிதமான கேள்விகள் மற்றும் பதில்களை உள்ளடக்கியது மற்றும் உபுண்டு சொற்பொழிவு புதிய மற்றும் பட்டறிவு வாய்ந்த பயனர்களுக்கான வழிகாட்டிகளையும் விவாதங்களையும் வழங்குகிறது.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+  String get installationSlidesSupportEnterprise => 'நிறுவன பயனர்களுக்கு கேனோனிகல் வணிக ஆதரவை வழங்குகிறது, இது உபுண்டுவை பணியிடத்தில் பாதுகாப்பாக கையகப்படுத்தவும் நிர்வகிக்கவும் எளிதாக்குகிறது.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'பயனுள்ள வளங்கள்:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'அதிகாரப்பூர்வ ஆவணங்கள்';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Enterprise-grade 24/7 support with Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro => 'நிறுவன-வகுப்பு 24/7 உபுண்டு புரோவுடன் உதவி';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'கோப்புகளை நகலெடுக்கும்…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'கணினியை நிறுவுதல்…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'கணினியை அமைத்தல்…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'நிறுவல் தோல்வியடைந்தது';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'போதுமான வட்டு இடம் இல்லை';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return '$DISTRO நிறுவ போதுமான வட்டு இடம் இல்லை';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'தேர்ந்தெடுக்கப்பட்ட வட்டுக்கு $DISTRO நிறுவ போதுமான வட்டு இடம் இல்லை. இடத்தைக் கிடைக்க நிறுவலை விட்டு வெளியேறவும் அல்லது மற்றொரு வட்டு தேர்ந்தெடுக்கவும்.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'கிடைக்கிறது:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'தேவை:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'புதுப்பிப்பு கிடைக்கிறது';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'நிறுவிக்கு ஒரு புதுப்பிப்பு கிடைக்கிறது';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'இப்போது புதுப்பிக்கவும்';
 
   @override
-  String get refreshInfo => 'Update to the latest version for improved reliability and more features.';
+  String get refreshInfo => 'மேம்பட்ட நம்பகத்தன்மை மற்றும் கூடுதல் அம்சங்களுக்கான அண்மைக் கால பதிப்பைப் புதுப்பிக்கவும்.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'புதுப்பிப்பு ஆயத்தம்';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'தற்போதைய $snap பதிப்பு $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'பதிப்பு $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'தற்போதைய பதிப்பு $version புதுப்பித்த நிலையில் உள்ளது.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return 'புதுப்பித்தல் $snap ...';
   }
 
   @override
-  String get refreshRestart => 'Please close the installer and relaunch to continue';
+  String get refreshRestart => 'தொடர நிறுவி மூடி, தொடர மறுகட்டமைக்கவும்';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'நிறுவியை மூடு';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap முன்நிபந்தனைகளை உறுதி செய்தல் ...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'புத்துணர்ச்சி $snap ...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'சரிபார்க்கிறது $snap மறு-மறுபிரவேசம் ...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap தயாரித்தல் ...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'பதிவிறக்கம் $snap ...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'சரிபார்க்கும் $snap ...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'பெருகிவரும் $snap ...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'நிறுத்துதல் $snap சேவைகள் ...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap மாற்றுப்பெயர்களை நீக்குதல் ...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap ...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'புதுப்பித்தல் $snap சொத்துக்கள் ...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'புதுப்பித்தல் $snap கர்னல் கட்டளை வரி ...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'நகலெடுப்பது $snap தரவு ...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap பாதுகாப்பு சுயவிவரங்களை அமைத்தல் ...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'இணைத்தல் $snap ...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap செருகிகள் மற்றும் இடங்களை இணைக்கிறது ...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'தானியங்கி $snap மாற்றுப்பெயர்களை அமைத்தல் ...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap மாற்றுப்பெயர்களை அமைத்தல் ...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'தொடங்கி $snap சேவைகள் ...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap ...';
   }
 
   @override

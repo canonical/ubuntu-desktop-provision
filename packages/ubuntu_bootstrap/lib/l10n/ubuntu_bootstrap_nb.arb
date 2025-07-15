@@ -651,5 +651,13 @@
     }
   },
   "installationSlidesGamingTitle": "Passer for spilling",
-  "@installationSlidesGamingTitle": {}
+  "@installationSlidesGamingTitle": {},
+  "refreshUpdating": "Oppgraderer {snap} …",
+  "refreshSnapCleanup": "Rydder opp {snap} …",
+  "installationSlidesSoftwareTitle": "Alle programmene du trenger",
+  "refreshUpdateNow": "Oppgrader nå",
+  "refreshReady": "Oppgradering klar",
+  "refreshCurrent": "Nåværende {snap}-versjon er {version}.",
+  "refreshInstall": "Oppgrader til versjon {version}",
+  "refreshSnapMount": "Monterer {snap} …"
 }

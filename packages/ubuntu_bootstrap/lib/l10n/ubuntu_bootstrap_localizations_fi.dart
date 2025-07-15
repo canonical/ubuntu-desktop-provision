@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Kirjoita autoinstall.yaml-tiedoston verkko-osoite:';
+  String get autoinstallInstructions => 'Kirjoita autoinstall.yaml-tiedoston verkko-osoite tai paikallinen polku:';
 
   @override
   String get autoinstallInteractiveOption => 'Vuorovaikutteinen asennus';
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format ei ole tuettu tiedostojärjestelmä kohteelle $mountpoint';
   }
 
   @override

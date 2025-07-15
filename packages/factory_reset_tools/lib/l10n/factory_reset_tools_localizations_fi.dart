@@ -5,10 +5,10 @@ class FactoryResetToolsLocalizationsFi extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get appTitle => 'Tehdasetuksiin palautuksen työkalut';
+  String get appTitle => 'Tehdasasetusten palautustyökalut';
 
   @override
-  String get windowTitle => 'Tehdasetuksiin palautuksen työkalut';
+  String get windowTitle => 'Tehdasasetusten palautustyökalut';
 
   @override
   String get homeTitle => 'Mitä haluaisit tehdä?';

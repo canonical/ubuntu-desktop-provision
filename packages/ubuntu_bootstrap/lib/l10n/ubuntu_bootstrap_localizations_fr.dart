@@ -5,7 +5,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appTitle => 'Programme d’installation du bureau Ubuntu';
+  String get appTitle => 'Programme d’installation de Ubuntu Desktop';
 
   @override
   String windowTitle(String RELEASE) {
@@ -21,7 +21,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Entrez l\'URL du autoinstall.yaml :';
+  String get autoinstallInstructions => 'Saisir l’URL du fichier autoinstall.yaml ou le chemin d’accès local :';
 
   @override
   String get autoinstallInteractiveOption => 'Installation interactive';
@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(Object format, Object mountpoint) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format n’est pas un système de fichiers supporté pour $mountpoint';
   }
 
   @override

@@ -77,10 +77,10 @@ class UbuntuProvisionLocalizationsKm extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Hide log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'ចាប់ផ្ដើមឡើងវិញ';
 
   @override
-  String get close => 'Close';
+  String get close => 'បិទ';
 
   @override
   String get timezonePageTitle => 'Select your timezone';
