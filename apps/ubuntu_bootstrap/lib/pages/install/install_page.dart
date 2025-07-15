@@ -75,27 +75,29 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
       title: YaruWindowTitleBar(
         title: Text(model.productInfo.toString()),
       ),
-      content: Stack(
-        children: [
-          SlideView(
-            controller: _slideController,
-            interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
-            slides: htmlSlides,
-          ),
-          Positioned.fill(
-            child: AnimatedOpacity(
-              curve: Curves.easeIn,
-              duration: const Duration(milliseconds: 150),
-              opacity: model.isLogVisible ? 1 : 0,
-              child: AnimatedSlide(
+      content: ExcludeFocus(
+        child: Stack(
+          children: [
+            SlideView(
+              controller: _slideController,
+              interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
+              slides: htmlSlides,
+            ),
+            Positioned.fill(
+              child: AnimatedOpacity(
                 curve: Curves.easeIn,
                 duration: const Duration(milliseconds: 150),
-                offset: Offset(0, model.isLogVisible ? 0 : 1),
-                child: JournalView(journal: model.log),
+                opacity: model.isLogVisible ? 1 : 0,
+                child: AnimatedSlide(
+                  curve: Curves.easeIn,
+                  duration: const Duration(milliseconds: 150),
+                  offset: Offset(0, model.isLogVisible ? 0 : 1),
+                  child: JournalView(journal: model.log),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       bottomBar: ValueListenableBuilder(
         valueListenable: _slideController,
@@ -121,6 +123,7 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                 YaruIcons.terminal,
                 color:
                     model.isLogVisible ? Theme.of(context).primaryColor : null,
+                semanticLabel: lang.toggleLogsSemanticLabel,
               ),
               onPressed: model.toggleLogVisibility,
             ),
@@ -130,21 +133,33 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                   onPressed: _slideController.value > 0
                       ? () => --_slideController.value
                       : null,
-                  icon: const Icon(YaruIcons.pan_start),
+                  icon: Icon(
+                    YaruIcons.pan_start,
+                    semanticLabel: lang.previousSlideSemanticLabel,
+                  ),
                 ),
                 const SizedBox(width: 10),
                 IconButton(
                   onPressed: model.togglePlaying,
                   icon: model.isPlaying
-                      ? const Icon(YaruIcons.media_pause)
-                      : const Icon(YaruIcons.media_play),
+                      ? Icon(
+                          YaruIcons.media_pause,
+                          semanticLabel: lang.pauseSlideshowSemanticLabel,
+                        )
+                      : Icon(
+                          YaruIcons.media_play,
+                          semanticLabel: lang.playSlideshowSemanticLabel,
+                        ),
                 ),
                 const SizedBox(width: 10),
                 IconButton(
                   onPressed: _slideController.value < htmlSlides.length - 1
                       ? () => ++_slideController.value
                       : null,
-                  icon: const Icon(YaruIcons.pan_end),
+                  icon: Icon(
+                    YaruIcons.pan_end,
+                    semanticLabel: lang.nextSlideSemanticLabel,
+                  ),
                 ),
               ],
             ),

@@ -1032,6 +1032,21 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
       '24/7 ondersteuning op bedrijfsniveau met Ubuntu Pro';
 
   @override
+  String get nextSlideSemanticLabel => 'Next slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Previous slide';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Play slideshow';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Toggle install logs';
+
+  @override
   String get copyingFiles => 'Bestanden kopiëren…';
 
   @override

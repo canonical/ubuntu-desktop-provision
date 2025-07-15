@@ -1034,6 +1034,21 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
       'Assistance professionnelle 24h/24 et 7j/7 avec Ubuntu Pro';
 
   @override
+  String get nextSlideSemanticLabel => 'Next slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Previous slide';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Play slideshow';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Toggle install logs';
+
+  @override
   String get copyingFiles => 'Copie des fichiers…';
 
   @override

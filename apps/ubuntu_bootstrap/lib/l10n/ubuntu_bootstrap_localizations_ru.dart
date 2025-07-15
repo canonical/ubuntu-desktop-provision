@@ -1026,6 +1026,21 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Поддержка корпоративных пользователей в режиме 24/7 в Ubuntu Pro';
 
   @override
+  String get nextSlideSemanticLabel => 'Next slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Previous slide';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Play slideshow';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Toggle install logs';
+
+  @override
   String get copyingFiles => 'Копирование файлов…';
 
   @override

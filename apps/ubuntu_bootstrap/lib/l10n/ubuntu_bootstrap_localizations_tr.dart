@@ -1025,6 +1025,21 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
       'Ubuntu Pro ile kurumsal sınıf 7/24 destek';
 
   @override
+  String get nextSlideSemanticLabel => 'Next slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Previous slide';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Play slideshow';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Toggle install logs';
+
+  @override
   String get copyingFiles => 'Dosyalar kopyalanıyor…';
 
   @override

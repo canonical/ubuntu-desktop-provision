@@ -1020,6 +1020,21 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
       'پشتیبانی ردهٔ تجاری ۲۴/۷ با Pro اوبونتو';
 
   @override
+  String get nextSlideSemanticLabel => 'Next slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Previous slide';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Play slideshow';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Toggle install logs';
+
+  @override
   String get copyingFiles => 'رونوشت کردن پرونده‌ها…';
 
   @override
