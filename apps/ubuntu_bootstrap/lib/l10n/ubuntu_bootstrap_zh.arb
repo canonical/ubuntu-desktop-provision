@@ -610,7 +610,7 @@
   "@installationTypeEraseAndInstall": {},
   "recoveryKeyConfirmation": "我明白我可能会在没有恢复密钥的情况下丢失所有数据",
   "@recoveryKeyConfirmation": {},
-  "autoinstallLandscapeDescription": "给通过 Landscape 提供自动安装文件的组织内用户。",
+  "autoinstallLandscapeDescription": "适用于通过 Landscape 提供自动安装文件的组织用户。",
   "@autoinstallLandscapeDescription": {},
   "landscapeCodeExpiredWarning": "代码已过期，请重试",
   "@landscapeCodeExpiredWarning": {},
@@ -659,5 +659,9 @@
   "landscapeLoginFailedWarning": "登录失败，请重试",
   "@landscapeLoginFailedWarning": {},
   "bitlockerInfoTitle": "已检测到 BitLocker",
-  "@bitlockerInfoTitle": {}
+  "@bitlockerInfoTitle": {},
+  "recoveryKeyExceptionFileSystemTitle": "恢复密钥文件未保存",
+  "@recoveryKeyExceptionFileSystemTitle": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "恢复密钥文件不能保存到临时位置。",
+  "@recoveryKeyExceptionDisallowedPathTitle": {}
 }
