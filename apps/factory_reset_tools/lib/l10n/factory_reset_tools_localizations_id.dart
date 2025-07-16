@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsId extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Membuat suatu media reset USB';
 
   @override
-  String get createUsbBody => 'Membuat suatu media reset USB untuk memulihkan sistem, maupun untuk menyesuaikan instalasi Ubuntu Anda.';
+  String get createUsbBody =>
+      'Membuat suatu media reset USB untuk memulihkan sistem, maupun untuk menyesuaikan instalasi Ubuntu Anda.';
 
   @override
-  String get createUsbListExplanation => 'Pilih sebuah flash drive USB. Drive harus memiliki **setidaknya ruang 16GB.**';
+  String get createUsbListExplanation =>
+      'Pilih sebuah flash drive USB. Drive harus memiliki **setidaknya ruang 16GB.**';
 
   @override
-  String get createUsbWarning => 'Flash drive akan diformat ulang dan semua data di drive akan hilang.';
+  String get createUsbWarning =>
+      'Flash drive akan diformat ulang dan semua data di drive akan hilang.';
 
   @override
   String get resetMediaTitle => 'Media reset USB';
@@ -42,7 +45,8 @@ class FactoryResetToolsLocalizationsId extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Tidak ada penyimpanan lepasan yang terdeteksi';
 
   @override
-  String get noMediaDetectedSubtitle => 'Anda perlu suatu penyimpanan USB untuk membuat sebuah Media Reset Pabrik.';
+  String get noMediaDetectedSubtitle =>
+      'Anda perlu suatu penyimpanan USB untuk membuat sebuah Media Reset Pabrik.';
 
   @override
   String get factoryResetTitle => 'Pilih suatu opsi untuk memulai reset pabrik';
@@ -54,7 +58,8 @@ class FactoryResetToolsLocalizationsId extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Media reset USB siap';
 
   @override
-  String get resetMediaReadyBody => 'Ketika Anda ingin menggunakannya, tancapkan USB drive ke komputer yang ingin Anda reset dan jalankan ulang itu.';
+  String get resetMediaReadyBody =>
+      'Ketika Anda ingin menggunakannya, tancapkan USB drive ke komputer yang ingin Anda reset dan jalankan ulang itu.';
 
   @override
   String get errorLoadingDrives => 'Kesalahan terjadi saat mengambil drive.';

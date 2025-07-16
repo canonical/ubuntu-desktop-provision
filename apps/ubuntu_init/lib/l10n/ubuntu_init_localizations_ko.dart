@@ -82,7 +82,8 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get privacyLocationTitle => '위치 서비스를 활성화할까요?';
 
   @override
-  String get privacyLocationSubtitle => '애플리케이션이 사용자의 위치를 알 수 있도록 합니다.\n언제든지 시스템 설정에서 변경할 수 있습니다.';
+  String get privacyLocationSubtitle =>
+      '애플리케이션이 사용자의 위치를 알 수 있도록 합니다.\n언제든지 시스템 설정에서 변경할 수 있습니다.';
 
   @override
   String get privacyLocationEnable => '위치 서비스';
@@ -108,7 +109,8 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => '토큰';
 
   @override
-  String get ubuntuProSubscriptionDescription => '오픈소스 소프트웨어 보안을 위한 가장 믿음직한 구독을 신청하세요';
+  String get ubuntuProSubscriptionDescription =>
+      '오픈소스 소프트웨어 보안을 위한 가장 믿음직한 구독을 신청하세요';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -131,17 +133,20 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   String get ubuntuProOnBoardingSkipForNow => '지금은 건너뛰기';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => '나중에 소프트웨어 및 업데이트 애플리케이션에서 언제든지 Ubuntu Pro를 활성화할 수 있습니다.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      '나중에 소프트웨어 및 업데이트 애플리케이션에서 언제든지 Ubuntu Pro를 활성화할 수 있습니다.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro 활성화';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => '2032년까지 더 다양한 패키지에 대한 보안 업데이트를 받으려면 Ubuntu Pro 구독에 이 컴퓨터를 연결하세요.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      '2032년까지 더 다양한 패키지에 대한 보안 업데이트를 받으려면 Ubuntu Pro 구독에 이 컴퓨터를 연결하세요.';
 
   @override
   String get ubuntuProSucessAttachHeader => 'Ubuntu Pro가 이 기기에서 활성화되어 있습니다';
 
   @override
-  String get ubuntuProSucessAttachDescription => '소프트웨어 및 업데이트 애플리케이션에서 Ubuntu Pro 서비스를 관리할 수 있습니다.';
+  String get ubuntuProSucessAttachDescription =>
+      '소프트웨어 및 업데이트 애플리케이션에서 Ubuntu Pro 서비스를 관리할 수 있습니다.';
 }

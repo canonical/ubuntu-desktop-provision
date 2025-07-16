@@ -20,10 +20,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectTitle => 'Suiteáil uathoibrithe';
 
   @override
-  String get autoinstallDirectHeader => 'Iompórtáil comhad a shuiteáil uathoibríoch';
+  String get autoinstallDirectHeader =>
+      'Iompórtáil comhad a shuiteáil uathoibríoch';
 
   @override
-  String get autoinstallDirectUrlLabel => 'Is féidir leat URL an chomhaid uathshuiteála a chur isteach:';
+  String get autoinstallDirectUrlLabel =>
+      'Is féidir leat URL an chomhaid uathshuiteála a chur isteach:';
 
   @override
   String get autoinstallDirectFileLabel => 'Nó roghnaigh comhad áitiúil:';
@@ -44,28 +46,35 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Iompórtáil';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Níl an comhad uathshuiteála inrochtana';
+  String get autoinstallDirectErrorNetworkTitle =>
+      'Níl an comhad uathshuiteála inrochtana';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Seiceáil go bhfuil an URL i gceart, déan do nasc idirlín a thástáil, nó bain triail eile as ar ball.';
+  String get autoinstallDirectErrorNetworkBody =>
+      'Seiceáil go bhfuil an URL i gceart, déan do nasc idirlín a thástáil, nó bain triail eile as ar ball.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'URL neamhbhailí';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Seiceáil go bhfuil an URL ceart nó roghnaigh comhad áitiúil.';
+  String get autoinstallDirectErrorInvalidUrlBody =>
+      'Seiceáil go bhfuil an URL ceart nó roghnaigh comhad áitiúil.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Comhad uathshuiteála neamhbhailí';
+  String get autoinstallDirectErrorInvalidContentTitle =>
+      'Comhad uathshuiteála neamhbhailí';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Seiceáil an comhad nó cuir ceann eile ar fáil.';
+  String get autoinstallDirectErrorInvalidContentBody =>
+      'Seiceáil an comhad nó cuir ceann eile ar fáil.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Níl an comhad uathshuiteála inléite';
+  String get autoinstallDirectErrorFileSystemTitle =>
+      'Níl an comhad uathshuiteála inléite';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Seiceáil do cheadanna nó cuir comhad eile ar fáil.';
+  String get autoinstallDirectErrorFileSystemBody =>
+      'Seiceáil do cheadanna nó cuir comhad eile ar fáil.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Earráid anaithnid';
@@ -79,25 +88,29 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Iontráil URL autoinstall.yaml nó cosán comhaid logánta:';
+  String get autoinstallInstructions =>
+      'Iontráil URL autoinstall.yaml nó cosán comhaid logánta:';
 
   @override
   String get autoinstallInteractiveOption => 'Suiteáil idirghníomhach';
 
   @override
-  String get autoinstallInteractiveDescription => 'D\'úsáideoirí ar mian leo a bheith treoraithe céim ar chéim tríd an tsuiteáil.';
+  String get autoinstallInteractiveDescription =>
+      'D\'úsáideoirí ar mian leo a bheith treoraithe céim ar chéim tríd an tsuiteáil.';
 
   @override
   String get autoinstallDirectOption => 'Uathoibríoch le comhad uathshuiteála';
 
   @override
-  String get autoinstallDirectDescription => 'Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.';
+  String get autoinstallDirectDescription =>
+      'Le haghaidh úsáideoirí ardleibhéil a bhfuil autoinstall.yaml le haghaidh socruithe córais comhsheasmhach agus in-athdhéanta.';
 
   @override
   String get autoinstallLandscapeOption => 'Uathoibrithe le Tírdhreach';
 
   @override
-  String get autoinstallLandscapeDescription => 'D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.';
+  String get autoinstallLandscapeDescription =>
+      'D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.';
 
   @override
   String get changeButtonText => 'Athrú';
@@ -132,7 +145,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => 'Suiteáil deisiúcháin';
 
   @override
-  String get tryOrInstallRepairDescription => 'Beidh deisiú reinstall gach bogearraí suiteáilte gan teagmháil doiciméid nó suímh.';
+  String get tryOrInstallRepairDescription =>
+      'Beidh deisiú reinstall gach bogearraí suiteáilte gan teagmháil doiciméid nó suímh.';
 
   @override
   String tryOption(String RELEASE) {
@@ -163,13 +177,16 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Braitheadh RST';
 
   @override
-  String get rstHeader => 'Ní mór duit RST a dhíchumasú chun leanúint leis an tsuiteáil';
+  String get rstHeader =>
+      'Ní mór duit RST a dhíchumasú chun leanúint leis an tsuiteáil';
 
   @override
-  String get rstDisable => 'Úsáideann do ríomhaire Intel RST (Teicneolaíocht Stórála Mear). Is féidir leat RST a dhíchumasú ceachtar i:';
+  String get rstDisable =>
+      'Úsáideann do ríomhaire Intel RST (Teicneolaíocht Stórála Mear). Is féidir leat RST a dhíchumasú ceachtar i:';
 
   @override
-  String get rstDisableWindows => 'Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows';
+  String get rstDisableWindows =>
+      'Windows, má tá tú ag baint úsáide as socrú tosaithe dé le Windows';
 
   @override
   String get rstDisableBios => 'Socruithe BIOS';
@@ -183,7 +200,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Cumraigh Tosaithe Slán';
 
   @override
-  String get configureSecureBootDescription => 'Roghnaigh tú bogearraí tiománaí tríú páirtí a shuiteáil. Éilíonn sé seo Tosaithe Slán a chasadh as.\nChun seo a dhéanamh, ní mór duit eochair slándála a roghnú anois, agus é a chur isteach nuair a thosaíonn an córas.';
+  String get configureSecureBootDescription =>
+      'Roghnaigh tú bogearraí tiománaí tríú páirtí a shuiteáil. Éilíonn sé seo Tosaithe Slán a chasadh as.\nChun seo a dhéanamh, ní mór duit eochair slándála a roghnú anois, agus é a chur isteach nuair a thosaíonn an córas.';
 
   @override
   String get configureSecureBootOption => 'Cumraigh Tosaithe Slán';
@@ -195,16 +213,20 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'Deimhnigh an eochair slándála';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Ná suiteáil na bogearraí tiománaí anois';
+  String get dontInstallDriverSoftwareNow =>
+      'Ná suiteáil na bogearraí tiománaí anois';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Is féidir leat é a shuiteáil níos déanaí ó Bogearraí & Nuashonruithe.';
+  String get dontInstallDriverSoftwareNowDescription =>
+      'Is féidir leat é a shuiteáil níos déanaí ó Bogearraí & Nuashonruithe.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Tá eochair shlándála de dhíth';
+  String get configureSecureBootSecurityKeyRequired =>
+      'Tá eochair shlándála de dhíth';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Ní mheaitseálann eochracha slándála';
+  String get secureBootSecurityKeysDontMatch =>
+      'Ní mheaitseálann eochracha slándála';
 
   @override
   String get showSecurityKey => 'Taispeáin';
@@ -216,13 +238,15 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageTitle => 'Iarratais';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'Cad iad na feidhmchláir ar mhaith leat a shuiteáil chun tosú leo?';
+  String get updatesOtherSoftwarePageDescription =>
+      'Cad iad na feidhmchláir ar mhaith leat a shuiteáil chun tosú leo?';
 
   @override
   String get codecsAndDriversPageTitle => 'Optamaigh do ríomhaire';
 
   @override
-  String get codecsAndDriversPageDescription => 'Suiteáil bogearraí dílseánaigh molta?';
+  String get codecsAndDriversPageDescription =>
+      'Suiteáil bogearraí dílseánaigh molta?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -233,43 +257,52 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaNote => 'Braitheadh cárta grafaicí NVIDIA';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'Maidir leis an bhfeidhmíocht is fearr de chártaí grafacha NVIDIA, moltar go láidir tiománaithe breise a shuiteáil.';
+  String get codecsAndDriversNvidiaBody =>
+      'Maidir leis an bhfeidhmíocht is fearr de chártaí grafacha NVIDIA, moltar go láidir tiománaithe breise a shuiteáil.';
 
   @override
   String get fullInstallationTitle => 'Roghnúchán breisithe';
 
   @override
-  String get fullInstallationSubtitle => 'Rogha as líne d\'uirlisí oifige, fóntais agus brabhsálaí gréasáin.';
+  String get fullInstallationSubtitle =>
+      'Rogha as líne d\'uirlisí oifige, fóntais agus brabhsálaí gréasáin.';
 
   @override
   String get minimalInstallationTitle => 'Roghnú réamhshocraithe';
 
   @override
-  String get minimalInstallationSubtitle => 'Díreach na essentials, brabhsálaí gréasáin agus fóntais bhunúsacha.';
+  String get minimalInstallationSubtitle =>
+      'Díreach na essentials, brabhsálaí gréasáin agus fóntais bhunúsacha.';
 
   @override
   String get otherOptions => 'Roghanna eile';
 
   @override
-  String get installThirdPartyTitle => 'Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi, chomh maith le formáidí meáin breise';
+  String get installThirdPartyTitle =>
+      'Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi, chomh maith le formáidí meáin breise';
 
   @override
-  String get installThirdPartySubtitle => 'Tá an bogearraí seo faoi réir téarmaí ceadúnais san áireamh lena dhoiciméadú. Tá cuid acu dílsithe.';
+  String get installThirdPartySubtitle =>
+      'Tá an bogearraí seo faoi réir téarmaí ceadúnais san áireamh lena dhoiciméadú. Tá cuid acu dílsithe.';
 
   @override
-  String get installDriversTitle => 'Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi';
+  String get installDriversTitle =>
+      'Suiteáil bogearraí tríú páirtí le haghaidh grafaicí agus crua-earraí Wi-Fi';
 
   @override
-  String get installDriversSubtitle => 'Lena n-áirítear tiománaithe NVIDIA agus tiománaithe';
+  String get installDriversSubtitle =>
+      'Lena n-áirítear tiománaithe NVIDIA agus tiománaithe';
 
   @override
-  String get installCodecsTitle => 'Íoslódáil agus suiteáil tacaíocht le haghaidh formáidí meáin breise';
+  String get installCodecsTitle =>
+      'Íoslódáil agus suiteáil tacaíocht le haghaidh formáidí meáin breise';
 
   @override
   String get installCodecsSubtitle => 'Lena n-áirítear MP3, MP4, MOV agus';
 
   @override
-  String get batteryWarning => 'Níl an ríomhaire plugáilte isteach i bhfoinse cumhachta.';
+  String get batteryWarning =>
+      'Níl an ríomhaire plugáilte isteach i bhfoinse cumhachta.';
 
   @override
   String get offlineWarning => 'Tá tú as líne faoi láthair';
@@ -278,19 +311,24 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => 'Cruthaigh pasfhrása';
 
   @override
-  String get choosePassphraseBody => 'Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.';
+  String get choosePassphraseBody =>
+      'Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Stóráil do phasfhrása áit éigin sábháilte';
+  String get choosePassphraseInfoHeader =>
+      'Stóráil do phasfhrása áit éigin sábháilte';
 
   @override
-  String get choosePassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.';
+  String get choosePassphraseInfoBody =>
+      'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Stóráil do phasfhocal agus eochair athshlánaithe áit éigin sábháilte';
+  String get chooseOptionalPassphraseInfoHeader =>
+      'Stóráil do phasfhocal agus eochair athshlánaithe áit éigin sábháilte';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.';
+  String get chooseOptionalPassphraseInfoBody =>
+      'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.';
 
   @override
   String get passphrasePageTitle => 'Encryption';
@@ -302,10 +340,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get passphrasePageHeaderPin => 'Set an encryption PIN';
 
   @override
-  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPassphrase =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPin =>
+      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -335,13 +375,15 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
   String get passphraseTypePinTileTitle => 'Require a PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+  String get passphraseTypePinTileSubTitle =>
+      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
 
   @override
   String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
@@ -350,22 +392,27 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
 
   @override
-  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
+  String get passphraseTypePageBody =>
+      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin => 'Weak passphrase, make it longer or more complex';
+  String get passphrasePagePassphraseEntropyBelowMin =>
+      'Weak passphrase, make it longer or more complex';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowOptimal => 'Fair passphrase, make it longer or more complex for better security';
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      'Fair passphrase, make it longer or more complex for better security';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
 
   @override
-  String get passphrasePagePinEntropyBelowMin => 'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin =>
+      'Weak PIN, make it longer or less predictable';
 
   @override
-  String get passphrasePagePinEntropyBelowOptimal => 'Fair PIN, make it longer or less predictable for better security';
+  String get passphrasePagePinEntropyBelowOptimal =>
+      'Fair PIN, make it longer or less predictable for better security';
 
   @override
   String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
@@ -389,10 +436,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'Tá córais oibriúcháin éagsúla ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
+  String get installationTypeMultiOSDetected =>
+      'Tá córais oibriúcháin éagsúla ar an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
 
   @override
-  String get installationTypeNoOSDetected => 'Níl aon chórais oibriúcháin aimsithe ag an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
+  String get installationTypeNoOSDetected =>
+      'Níl aon chórais oibriúcháin aimsithe ag an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -400,7 +449,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.';
+  String get installationTypeEraseInfo =>
+      'Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.';
 
   @override
   String get installationTypeAdvancedLabel => 'Taispeáin ardroghanna...';
@@ -415,7 +465,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Gan criptiú';
 
   @override
-  String get installationTypeNoneInfo => 'Córas comhad caighdeánach gan criptiú.';
+  String get installationTypeNoneInfo =>
+      'Córas comhad caighdeánach gan criptiú.';
 
   @override
   String get installationTypeNoneSelected => 'Níl aon cheann roghnaithe';
@@ -430,28 +481,34 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Criptigh le pasfhrása';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.';
+  String get installationTypeLVMEncryptionInfo =>
+      'Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM agus criptiú roghnaithe';
+  String get installationTypeLVMEncryptionSelected =>
+      'LVM agus criptiú roghnaithe';
 
   @override
-  String get installationTypeEncryptInfo => 'Roghnóidh tú eochair slándála sa chéad chéim eile.';
+  String get installationTypeEncryptInfo =>
+      'Roghnóidh tú eochair slándála sa chéad chéim eile.';
 
   @override
   String get installationTypeZFS => 'Bain úsáid as ZFS gan criptiú';
 
   @override
-  String get installationTypeZFSEncryption => 'Criptigh le pasfhrása ag baint úsáide as ZFS';
+  String get installationTypeZFSEncryption =>
+      'Criptigh le pasfhrása ag baint úsáide as ZFS';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Criptiú dúchasach le ZFS. Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl.';
+  String get installationTypeZFSEncryptionInfo =>
+      'Criptiú dúchasach le ZFS. Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS roghnaithe';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS agus criptiú roghnaithe';
+  String get installationTypeZFSEncryptionSelected =>
+      'ZFS agus criptiú roghnaithe';
 
   @override
   String get installationTypeTPM => 'Bain úsáid as criptiúchán crua-earraí';
@@ -523,7 +580,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Tosaigh ón tús ar do dhiosca roghnaithe.';
+  String get selectGuidedStorageInfo =>
+      'Tosaigh ón tús ar do dhiosca roghnaithe.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Roghnaigh tiomántán:';
@@ -543,7 +601,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Leithdháileadh spás tiomána tríd an roinnteoir a tharraingt thíos:';
+  String get installAlongsideSpaceDivider =>
+      'Leithdháileadh spás tiomána tríd an roinnteoir a tharraingt thíos:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
@@ -551,7 +610,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideResizePartition => 'Athraigh méid na críochdheighilte';
+  String get installAlongsideResizePartition =>
+      'Athraigh méid na críochdheighilte';
 
   @override
   String get installAlongsideAllocateSpace => 'Spás a leithdháileadh';
@@ -572,13 +632,16 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => 'Deighilt láimhe';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Ní mór pointí Mount tús a chur le \"/\"';
+  String get allocateDiskSpaceInvalidMountPointSlash =>
+      'Ní mór pointí Mount tús a chur le \"/\"';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Ní féidir spásanna a bheith i bpointí feistithe';
+  String get allocateDiskSpaceInvalidMountPointSpace =>
+      'Ní féidir spásanna a bheith i bpointí feistithe';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
     return 'Ní córas comhaid tacaithe é $format do $mountpoint';
   }
 
@@ -610,13 +673,16 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get newPartitionTable => 'Tábla nua críochdheighilte';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'Críochdheighilt fholamh nua';
+  String get newPartitionTableConfirmationTitle =>
+      'Críochdheighilt fholamh nua';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Beidh Cruthú tábla laindéal nua ar gléas ar fad a bhaint gach ceann de na Deighiltí atá ann faoi láthair. Is féidir an oibríocht seo a chealú más gá.';
+  String get newPartitionTableConfirmationMessage =>
+      'Beidh Cruthú tábla laindéal nua ar gléas ar fad a bhaint gach ceann de na Deighiltí atá ann faoi láthair. Is féidir an oibríocht seo a chealú más gá.';
 
   @override
-  String get tooManyPrimaryPartitions => 'An iomarca críochdheighiltí bunscoile';
+  String get tooManyPrimaryPartitions =>
+      'An iomarca críochdheighiltí bunscoile';
 
   @override
   String get partitionLimitReached => 'Teorainn bainte amach';
@@ -714,7 +780,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get confirmPartitionsTitle => 'Deighiltí';
 
   @override
-  String get confirmPartitionTables => 'Athraítear táblaí críochdheighilte na ngléasanna seo a leanas:';
+  String get confirmPartitionTables =>
+      'Athraítear táblaí críochdheighilte na ngléasanna seo a leanas:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -725,7 +792,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get confirmProprietarySoftwareCodecs => 'CodecsName';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs agus tiománaithe';
+  String get confirmProprietarySoftwareCodecsDrivers =>
+      'Codecs agus tiománaithe';
 
   @override
   String get confirmProprietarySoftwareDrivers => 'Tiománaithe';
@@ -783,10 +851,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Atosaigh chun an tsuiteáil a chríochnú nó leanúint ar aghaidh leis an tástáil.\nNí shábhálfar aon athruithe a dhéanann tú.';
+  String get restartWarningBody =>
+      'Atosaigh chun an tsuiteáil a chríochnú nó leanúint ar aghaidh leis an tástáil.\nNí shábhálfar aon athruithe a dhéanann tú.';
 
   @override
-  String get rebootToConfigureWarning => 'Caithfidh tú an ríomhaire a atosú chun leanúint leis an bpróiseas suiteála.';
+  String get rebootToConfigureWarning =>
+      'Caithfidh tú an ríomhaire a atosú chun leanúint leis an bpróiseas suiteála.';
 
   @override
   String get shutdown => 'Múch';
@@ -801,13 +871,16 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get bitlockerInfoTitle => 'Braitheadh BitLocker';
 
   @override
-  String get bitlockerInfoDescription => 'Tá deighilt amháin nó níos mó criptithe le BitLocker.';
+  String get bitlockerInfoDescription =>
+      'Tá deighilt amháin nó níos mó criptithe le BitLocker.';
 
   @override
-  String get bitlockerInfoDisable => 'Chun é a shuiteáil taobh le Windows, díchumasaigh BitLocker i Windows.';
+  String get bitlockerInfoDisable =>
+      'Chun é a shuiteáil taobh le Windows, díchumasaigh BitLocker i Windows.';
 
   @override
-  String get bitlockerInfoRecovery => 'Féadfaidh Windows eochracha athshlánaithe a iarraidh ar an tosaithe tar éis na suiteála.';
+  String get bitlockerInfoRecovery =>
+      'Féadfaidh Windows eochracha athshlánaithe a iarraidh ar an tosaithe tar éis na suiteála.';
 
   @override
   String bitlockerInfoInstructions(String url) {
@@ -815,7 +888,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get bitlockerWarningTitle => 'Seans go gcaillfidh tú do shonraí go léir gan eochracha athshlánaithe BitLocker';
+  String get bitlockerWarningTitle =>
+      'Seans go gcaillfidh tú do shonraí go léir gan eochracha athshlánaithe BitLocker';
 
   @override
   String get restartComputer => 'Atosaigh ríomhaire';
@@ -846,7 +920,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'San áireamh:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Fast, saor in aisce agus lán de ghnéithe nua';
+  String get installationSlidesWelcomeTitle =>
+      'Fast, saor in aisce agus lán de ghnéithe nua';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -859,7 +934,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Na hiarratais go léir a theastaíonn uait';
+  String get installationSlidesSoftwareTitle =>
+      'Na hiarratais go léir a theastaíonn uait';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -867,7 +943,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Forbairt leis an chuid is fearr de fhoinse oscailte';
+  String get installationSlidesDevelopmentTitle =>
+      'Forbairt leis an chuid is fearr de fhoinse oscailte';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
@@ -875,7 +952,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Feabhas a chur ar do chruthaitheacht';
+  String get installationSlidesCreativityTitle =>
+      'Feabhas a chur ar do chruthaitheacht';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
@@ -904,7 +982,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Cumhacht suas do tháirgiúlacht';
+  String get installationSlidesProductivityTitle =>
+      'Cumhacht suas do tháirgiúlacht';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -934,10 +1013,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Clúdaíonn Ask Ubuntu raon ceisteanna agus freagraí agus soláthraíonn Dioscúrsa Ubuntu treoracha agus plé d\'úsáideoirí nua agus a bhfuil taithí acu.';
+  String get installationSlidesSupportCommunity =>
+      'Clúdaíonn Ask Ubuntu raon ceisteanna agus freagraí agus soláthraíonn Dioscúrsa Ubuntu treoracha agus plé d\'úsáideoirí nua agus a bhfuil taithí acu.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'D\'úsáideoirí fiontair soláthraíonn Canonical tacaíocht tráchtála chun é a dhéanamh éasca le dul ar bord agus Ubuntu a bhainistiú go daingean san ionad oibre.';
+  String get installationSlidesSupportEnterprise =>
+      'D\'úsáideoirí fiontair soláthraíonn Canonical tacaíocht tráchtála chun é a dhéanamh éasca le dul ar bord agus Ubuntu a bhainistiú go daingean san ionad oibre.';
 
   @override
   String get installationSlidesSupportResources => 'Acmhainní cabhracha:';
@@ -946,7 +1027,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportDocumentation => 'Doiciméid oifigiúla';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Tacaíocht fiontar-grád 24 / 7 le Ubuntu Pro';
+  String get installationSlidesSupportUbuntuPro =>
+      'Tacaíocht fiontar-grád 24 / 7 le Ubuntu Pro';
 
   @override
   String get copyingFiles => 'Comhaid á gcóipeáil…';
@@ -989,7 +1071,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get refreshUpdateNow => 'Nuashonraigh anois';
 
   @override
-  String get refreshInfo => 'Nuashonrú ar an leagan is déanaí le haghaidh iontaofacht níos fearr agus gnéithe níos mó.';
+  String get refreshInfo =>
+      'Nuashonrú ar an leagan is déanaí le haghaidh iontaofacht níos fearr agus gnéithe níos mó.';
 
   @override
   String get refreshReady => 'Nuashonraigh réidh';
@@ -1015,7 +1098,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Dún an suiteálaí agus athsheoladh chun leanúint ar aghaidh';
+  String get refreshRestart =>
+      'Dún an suiteálaí agus athsheoladh chun leanúint ar aghaidh';
 
   @override
   String get refreshCloseLabel => 'Dún an suiteálaí';
@@ -1130,16 +1214,19 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get recoveryKeyHeader => 'Faigh eochair athshlánaithe';
 
   @override
-  String get recoveryKeyInfoHeader => 'Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe';
+  String get recoveryKeyInfoHeader =>
+      'Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe';
 
   @override
   String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b\'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.';
+  String get recoveryKeyStorageAdvice =>
+      'Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b\'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.';
 
   @override
-  String get recoveryKeyConfirmation => 'Tuigim go mb\'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam';
+  String get recoveryKeyConfirmation =>
+      'Tuigim go mb\'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam';
 
   @override
   String get recoveryKeyLinkLabel => 'Foghlaim níos mó';
@@ -1156,25 +1243,30 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+  String get recoveryKeyQrDialogBody =>
+      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle =>
+      'Recovery key file not saved';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+  String get recoveryKeyExceptionDisallowedPathTitle =>
+      'Recovery key file cannot be saved in a temporary location';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
 
   @override
-  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+  String get recoveryKeyExceptionFileSystemBody =>
+      'You do not have permission to write to that folder. Try a different location or use another method.';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      'Try a different location, such as a removable drive, or use another method.';
 
   @override
   String get recoveryKeyFilePickerTitle => 'Save recovery key file';
@@ -1200,7 +1292,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHintText => 'Fearann tírdhreacha (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.';
+  String get landscapeDomainInstructions =>
+      'Cuir fearann Tírdhreacha d’eagraíochta ar fáil chun logáil isteach agus chun comhad uathshuiteála a fháil. Is féidir leat an FQDN a fháil ó do thacaíocht TF.';
 
   @override
   String get landscapeDomainTextField => 'Fearann tírdhreacha (FQDN)';
@@ -1209,25 +1302,32 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get next => 'Ar aghaidh';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Fearann neamhbhailí, seiceáil le do thoil nó déan teagmháil le do thacaíocht TF';
+  String get landscapeDomainInvalidDomainWarning =>
+      'Fearann neamhbhailí, seiceáil le do thoil nó déan teagmháil le do thacaíocht TF';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Ceangail leis an idirlíon chun leanúint ar aghaidh';
+  String get landscapeDomainNoInternetTitleWarning =>
+      'Ceangail leis an idirlíon chun leanúint ar aghaidh';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Tá gá leis an Idirlíon chun an comhad uathshuiteála a fháil ó Landscape';
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      'Tá gá leis an Idirlíon chun an comhad uathshuiteála a fháil ó Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Chuaigh an cód in éag, bain triail eile as';
+  String get landscapeCodeExpiredWarning =>
+      'Chuaigh an cód in éag, bain triail eile as';
 
   @override
-  String get landscapeLoginFailedWarning => 'Theip ar logáil isteach, bain triail eile as';
+  String get landscapeLoginFailedWarning =>
+      'Theip ar logáil isteach, bain triail eile as';
 
   @override
-  String get landscapeErrorPageTitle => 'Níl suiteáil uathoibrithe ar fáil le do chuntas';
+  String get landscapeErrorPageTitle =>
+      'Níl suiteáil uathoibrithe ar fáil le do chuntas';
 
   @override
-  String get landscapeErrorPageBody => 'Déan teagmháil le do thacaíocht TF nó bain triail as rogha suiteála eile.';
+  String get landscapeErrorPageBody =>
+      'Déan teagmháil le do thacaíocht TF nó bain triail as rogha suiteála eile.';
 
   @override
   String landscapeErrorPageCode(String code) {
@@ -1235,8 +1335,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Suiteáilfidh Ubuntu leis an gcumraíocht a sholáthraíonn d\'eagraíocht';
+  String get landscapeConfirmPageSuccessInfoTitle =>
+      'Suiteáilfidh Ubuntu leis an gcumraíocht a sholáthraíonn d\'eagraíocht';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.';
+  String get landscapeConfirmPageSuccessInfoContent =>
+      'Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.';
 }

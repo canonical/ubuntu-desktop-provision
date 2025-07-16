@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Crear un medio USB de restablecimiento';
 
   @override
-  String get createUsbBody => 'Cree un medio USB de restablecimiento para restaurar el sistema y personalizar sus instalaciones de Ubuntu.';
+  String get createUsbBody =>
+      'Cree un medio USB de restablecimiento para restaurar el sistema y personalizar sus instalaciones de Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Seleccione una unidad de almacenamiento USB. La unidad debe tener **al menos 16 GB de espacio.**';
+  String get createUsbListExplanation =>
+      'Seleccione una unidad de almacenamiento USB. La unidad debe tener **al menos 16 GB de espacio.**';
 
   @override
-  String get createUsbWarning => 'La unidad de almacenamiento se dará formato y se perderán todos los datos que contenga.';
+  String get createUsbWarning =>
+      'La unidad de almacenamiento se dará formato y se perderán todos los datos que contenga.';
 
   @override
   String get resetMediaTitle => 'Soporte USB de restablecimiento';
@@ -42,22 +45,27 @@ class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'No se detectó ningún almacenamiento extraíble';
 
   @override
-  String get noMediaDetectedSubtitle => 'Necesita un almacenamiento USB para crear un medio de restablecimiento de fábrica.';
+  String get noMediaDetectedSubtitle =>
+      'Necesita un almacenamiento USB para crear un medio de restablecimiento de fábrica.';
 
   @override
-  String get factoryResetTitle => 'Seleccione una opción para comenzar el restablecimiento de fábrica';
+  String get factoryResetTitle =>
+      'Seleccione una opción para comenzar el restablecimiento de fábrica';
 
   @override
   String get loadingDrives => 'Espere mientras se recuperan las unidades.';
 
   @override
-  String get resetMediaReadyTitle => 'El soporte USB de restablecimiento está preparado';
+  String get resetMediaReadyTitle =>
+      'El soporte USB de restablecimiento está preparado';
 
   @override
-  String get resetMediaReadyBody => 'Cuando necesite usar la unidad USB, insértela en el equipo que quiera restablecer y reinícielo.';
+  String get resetMediaReadyBody =>
+      'Cuando necesite usar la unidad USB, insértela en el equipo que quiera restablecer y reinícielo.';
 
   @override
-  String get errorLoadingDrives => 'Se produjo un error al recuperar las unidades.';
+  String get errorLoadingDrives =>
+      'Se produjo un error al recuperar las unidades.';
 
   @override
   String get resetMediaInitializing => 'Inicializando';

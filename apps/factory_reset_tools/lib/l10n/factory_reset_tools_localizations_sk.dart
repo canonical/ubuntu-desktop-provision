@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Vytvoriť USB obnovovacie médium';
 
   @override
-  String get createUsbBody => 'Vytvorte USB médium na obnovenie systému ako aj prispôsobenie inštalácií Ubuntu.';
+  String get createUsbBody =>
+      'Vytvorte USB médium na obnovenie systému ako aj prispôsobenie inštalácií Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Vyberte USB pamäťovú jednotku. Na disku musí byť **aspoň 16 GB voľného miesta.**';
+  String get createUsbListExplanation =>
+      'Vyberte USB pamäťovú jednotku. Na disku musí byť **aspoň 16 GB voľného miesta.**';
 
   @override
-  String get createUsbWarning => 'Pamäťová jednotka bude preformátovaná a všetky údaje na jednotke sa stratia.';
+  String get createUsbWarning =>
+      'Pamäťová jednotka bude preformátovaná a všetky údaje na jednotke sa stratia.';
 
   @override
   String get resetMediaTitle => 'USB obnovovacie médium';
@@ -42,10 +45,12 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Nenašla sa žiadna vymeniteľná jednotka';
 
   @override
-  String get noMediaDetectedSubtitle => 'Na vytvorenie obnovovacieho média je potrebná USB jednotka.';
+  String get noMediaDetectedSubtitle =>
+      'Na vytvorenie obnovovacieho média je potrebná USB jednotka.';
 
   @override
-  String get factoryResetTitle => 'Vyberte možnosť spustenia obnovenia nastavení';
+  String get factoryResetTitle =>
+      'Vyberte možnosť spustenia obnovenia nastavení';
 
   @override
   String get loadingDrives => 'Prosím, počkajte, načítavajú sa jednotky.';
@@ -54,10 +59,12 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Obnovovacie médium USB je pripravené';
 
   @override
-  String get resetMediaReadyBody => 'Keď ho chcete použiť, prosím vložte USB disk do počítača, ktorí chcete obnoviť a reštartujte ho.';
+  String get resetMediaReadyBody =>
+      'Keď ho chcete použiť, prosím vložte USB disk do počítača, ktorí chcete obnoviť a reštartujte ho.';
 
   @override
-  String get errorLoadingDrives => 'Pri načítavaní jednotiek sa vyskytla chyba.';
+  String get errorLoadingDrives =>
+      'Pri načítavaní jednotiek sa vyskytla chyba.';
 
   @override
   String get resetMediaInitializing => 'Inicializuje sa';

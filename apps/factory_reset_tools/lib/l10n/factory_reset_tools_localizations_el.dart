@@ -27,13 +27,16 @@ class FactoryResetToolsLocalizationsEl extends FactoryResetToolsLocalizations {
   String get createUsbTitle => 'Δημιουργήστε μέσο επαναφοράς';
 
   @override
-  String get createUsbBody => 'Δημιουργήστε ένα μέσο επαναφοράς το συστήματος έτσι ώστε να διαχειριστείτε την εγκατάσταση Ubuntu.';
+  String get createUsbBody =>
+      'Δημιουργήστε ένα μέσο επαναφοράς το συστήματος έτσι ώστε να διαχειριστείτε την εγκατάσταση Ubuntu.';
 
   @override
-  String get createUsbListExplanation => 'Διαλέξτε ένα μέσο επαναφοράς δίσκου.Ο δίσκος πρέπει να είναι τουλάχιστον 16 GB';
+  String get createUsbListExplanation =>
+      'Διαλέξτε ένα μέσο επαναφοράς δίσκου.Ο δίσκος πρέπει να είναι τουλάχιστον 16 GB';
 
   @override
-  String get createUsbWarning => 'Ο δίσκος θα μορφοποιηθεί και τα δεδομένα θα χαθούν.';
+  String get createUsbWarning =>
+      'Ο δίσκος θα μορφοποιηθεί και τα δεδομένα θα χαθούν.';
 
   @override
   String get resetMediaTitle => 'Μέσο επαναφοράς';
@@ -45,7 +48,8 @@ class FactoryResetToolsLocalizationsEl extends FactoryResetToolsLocalizations {
   String get noMediaDetectedSubtitle => 'Χρειάζεστε μια μονάδα δίσκου.';
 
   @override
-  String get factoryResetTitle => 'Επιλέξτε μια επιλογή εργοστασιακής επαναφοράς';
+  String get factoryResetTitle =>
+      'Επιλέξτε μια επιλογή εργοστασιακής επαναφοράς';
 
   @override
   String get loadingDrives => 'Please wait while we fetch the drives.';
@@ -54,10 +58,12 @@ class FactoryResetToolsLocalizationsEl extends FactoryResetToolsLocalizations {
   String get resetMediaReadyTitle => 'Η μονάδα δίσκου είναι έτοιμη';
 
   @override
-  String get resetMediaReadyBody => 'Όταν θέλετε να το χρησιμοποιήσετε τοποθετήστε την μονάδα δίσκου στον υπολογιστή σας και κάντε επανεκκίνηση';
+  String get resetMediaReadyBody =>
+      'Όταν θέλετε να το χρησιμοποιήσετε τοποθετήστε την μονάδα δίσκου στον υπολογιστή σας και κάντε επανεκκίνηση';
 
   @override
-  String get errorLoadingDrives => 'An error occurred while fetching the drives.';
+  String get errorLoadingDrives =>
+      'An error occurred while fetching the drives.';
 
   @override
   String get resetMediaInitializing => 'Φόρτωση';

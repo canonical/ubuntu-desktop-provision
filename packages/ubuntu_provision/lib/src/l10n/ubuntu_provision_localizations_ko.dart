@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get errorPageTitle => '알 수 없는 오류가 발생했습니다';
 
   @override
-  String get errorPageUnexpected => '죄송합니다, 알 수 없는 오류가 발생했습니다. 컴퓨터를 다시 시작하고 설치 과정을 다시 시작해 보세요. 또한 <a>이 문제를 제보할 수</a> 있습니다.';
+  String get errorPageUnexpected =>
+      '죄송합니다, 알 수 없는 오류가 발생했습니다. 컴퓨터를 다시 시작하고 설치 과정을 다시 시작해 보세요. 또한 <a>이 문제를 제보할 수</a> 있습니다.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -280,7 +281,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get activeDirectoryErrorTitle => '액티브 디렉토리 연결을 구성하던 중 오류가 발생했습니다';
 
   @override
-  String get activeDirectoryErrorMessage => '죄송합니다, 현재 액티브 디렉토리를 설정할 수 없습니다. 시스템이 준비되면, <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>에 방문하셔서 도움을 받으시기 바랍니다.';
+  String get activeDirectoryErrorMessage =>
+      '죄송합니다, 현재 액티브 디렉토리를 설정할 수 없습니다. 시스템이 준비되면, <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>에 방문하셔서 도움을 받으시기 바랍니다.';
 
   @override
   String get networkPageTitle => '인터넷 연결';
@@ -289,7 +291,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkPageHeader => '인터넷에 연결하기';
 
   @override
-  String get networkPageBody => '인터넷에 연결하면 호환성 체크와 추가 소프트웨어 패키지 등 설치 경험을 향상시킬 수 있습니다.';
+  String get networkPageBody =>
+      '인터넷에 연결하면 호환성 체크와 추가 소프트웨어 패키지 등 설치 경험을 향상시킬 수 있습니다.';
 
   @override
   String get networkWiredOption => '유선 연결 사용';
@@ -301,7 +304,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkWiredOff => '유선 연결이 꺼져 있음';
 
   @override
-  String get networkWiredDisabled => '이 컴퓨터에서 이더넷 연결을 사용하려면, 유선 연결이 반드시 활성화되어야 합니다';
+  String get networkWiredDisabled =>
+      '이 컴퓨터에서 이더넷 연결을 사용하려면, 유선 연결이 반드시 활성화되어야 합니다';
 
   @override
   String get networkWiredEnable => '유선 연결 활성화';
@@ -316,7 +320,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get networkWifiNone => '감지된 Wi-Fi 장치가 없음';
 
   @override
-  String get networkWifiDisabled => '이 컴퓨터에서 Wi-Fi를 사용하려면, 무선 네트워킹이 반드시 활성화 되어야 합니다';
+  String get networkWifiDisabled =>
+      '이 컴퓨터에서 Wi-Fi를 사용하려면, 무선 네트워킹이 반드시 활성화 되어야 합니다';
 
   @override
   String get networkWifiEnable => 'Wi-Fi 활성화';
@@ -340,7 +345,8 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

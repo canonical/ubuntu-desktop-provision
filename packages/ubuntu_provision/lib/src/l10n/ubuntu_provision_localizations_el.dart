@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Κάτι πήγε στραβά';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected =>
+      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -102,7 +103,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'Επιλογή διάταξης πληκτρολογίου:';
 
   @override
-  String get keyboardTestHint => 'Πληκτρολογήστε εδώ για να δοκιμάσετε το πληκτρολόγιό σας';
+  String get keyboardTestHint =>
+      'Πληκτρολογήστε εδώ για να δοκιμάσετε το πληκτρολόγιό σας';
 
   @override
   String get keyboardDetectTitle => 'Εντοπισμός διάταξης πληκτρολογίου';
@@ -114,16 +116,19 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Select your keyboard variant:';
 
   @override
-  String get keyboardPressKeyLabel => 'Παρακαλώ πιέστε ένα από τα ακόλουθα πλήκτρα:';
+  String get keyboardPressKeyLabel =>
+      'Παρακαλώ πιέστε ένα από τα ακόλουθα πλήκτρα:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Υπάρχει στο πληκτρολόγιό σας το ακόλουθο πλήκτρο;';
+  String get keyboardKeyPresentLabel =>
+      'Υπάρχει στο πληκτρολόγιό σας το ακόλουθο πλήκτρο;';
 
   @override
   String get themePageTitle => 'Επιλέξτε το θέμα σας';
 
   @override
-  String get themePageHeader => 'Μπορείτε πάντα να το αλλάξετε στις ρυθμίσεις εμφάνισης.';
+  String get themePageHeader =>
+      'Μπορείτε πάντα να το αλλάξετε στις ρυθμίσεις εμφάνισης.';
 
   @override
   String get themeDark => 'Σκοτεινό';
@@ -161,13 +166,15 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'Το όνομα του υπολογιστή σας';
 
   @override
-  String get identityHostnameInfo => 'The name it uses when it talks to other computers.';
+  String get identityHostnameInfo =>
+      'The name it uses when it talks to other computers.';
 
   @override
   String get identityHostnameRequired => 'A computer name is required';
 
   @override
-  String get identityHostnameTooLong => 'Αυτό το όνομα υπολογιστή είναι πολύ μακρύ.';
+  String get identityHostnameTooLong =>
+      'Αυτό το όνομα υπολογιστή είναι πολύ μακρύ.';
 
   @override
   String get identityInvalidHostname => 'Το όνομα υπολογιστή είναι άκυρο';
@@ -185,13 +192,15 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Το όνομα χρήστη υπάρχει ήδη.';
 
   @override
-  String get identityUsernameSystemReserved => 'That name is reserved for system usage.';
+  String get identityUsernameSystemReserved =>
+      'That name is reserved for system usage.';
 
   @override
   String get identityUsernameTooLong => 'Αυτό το όνομα είναι πολύ μακρύ.';
 
   @override
-  String get identityUsernameInvalidChars => 'Το όνομα περιέχει λανθασμένους χαρακτήρες.';
+  String get identityUsernameInvalidChars =>
+      'Το όνομα περιέχει λανθασμένους χαρακτήρες.';
 
   @override
   String get identityPasswordLabel => 'Κωδικός';
@@ -215,7 +224,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo =>
+      'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -256,7 +266,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -277,10 +288,12 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'Σύνδεση Διαδικτύου';
@@ -289,7 +302,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Σύνδεση στο Διαδίκτυο';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'Χρησιμοποιήστε Ethernet';
@@ -301,7 +315,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Η σύνδεση Ethernet είναι απενεργοποιημένη';
 
   @override
-  String get networkWiredDisabled => 'To use Ethernet on this computer, a wired connection must be enabled';
+  String get networkWiredDisabled =>
+      'To use Ethernet on this computer, a wired connection must be enabled';
 
   @override
   String get networkWiredEnable => 'Enable wired';
@@ -316,7 +331,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'No Wi-Fi devices detected';
 
   @override
-  String get networkWifiDisabled => 'To use Wi-Fi on this computer, wireless networking must be enabled';
+  String get networkWifiDisabled =>
+      'To use Wi-Fi on this computer, wireless networking must be enabled';
 
   @override
   String get networkWifiEnable => 'Ενεργοποίηση Wi-Fi';
@@ -340,7 +356,8 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'Έχω διαβάσει και έχω αποδεχτεί τους όρους';

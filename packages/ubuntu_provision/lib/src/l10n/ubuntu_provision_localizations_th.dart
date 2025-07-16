@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Something went wrong';
 
   @override
-  String get errorPageUnexpected => 'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+  String get errorPageUnexpected =>
+      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -102,7 +103,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get keyboardHeader => 'เลือกผังแป้นพิมพ์ของคุณ';
 
   @override
-  String get keyboardTestHint => 'พิมพ์ที่นี่ เพื่อทดสอบแป้นพิมพ์ของคุณ (กด Alt+Shift เพื่อสลับภาษา)';
+  String get keyboardTestHint =>
+      'พิมพ์ที่นี่ เพื่อทดสอบแป้นพิมพ์ของคุณ (กด Alt+Shift เพื่อสลับภาษา)';
 
   @override
   String get keyboardDetectTitle => 'ตรวจหาผังแป้นพิมพ์';
@@ -123,7 +125,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get themePageTitle => 'เลือกชุดตกแต่งของคุณ';
 
   @override
-  String get themePageHeader => 'You can always change this later in the appearance settings.';
+  String get themePageHeader =>
+      'You can always change this later in the appearance settings.';
 
   @override
   String get themeDark => 'Dark';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'ชื่อคอมพิวเตอร์ของคุณ';
 
   @override
-  String get identityHostnameInfo => 'ชื่อที่เครื่องใช้เมื่อติดต่อกับคอมพิวเตอร์เครื่องอื่น';
+  String get identityHostnameInfo =>
+      'ชื่อที่เครื่องใช้เมื่อติดต่อกับคอมพิวเตอร์เครื่องอื่น';
 
   @override
   String get identityHostnameRequired => 'ต้องป้อนชื่อคอมพิวเตอร์ด้วย';
@@ -185,7 +189,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'ชื่อผู้ใช้นั้นมีอยู่แล้ว';
 
   @override
-  String get identityUsernameSystemReserved => 'ชื่อนั้นสงวนไว้สำหรับใช้โดยระบบ';
+  String get identityUsernameSystemReserved =>
+      'ชื่อนั้นสงวนไว้สำหรับใช้โดยระบบ';
 
   @override
   String get identityUsernameTooLong => 'ชื่อนั้นยาวเกินไป';
@@ -215,7 +220,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Use Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'You\'ll enter domain and other details in the next step.';
+  String get identityActiveDirectoryInfo =>
+      'You\'ll enter domain and other details in the next step.';
 
   @override
   String get activeDirectoryTitle => 'Log into Active Directory';
@@ -256,7 +262,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Contains multiple sequenced dots (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Contains multiple sequenced dots (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domain not found';
@@ -277,10 +284,12 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Required';
 
   @override
-  String get activeDirectoryErrorTitle => 'Error configuring connection to Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Error configuring connection to Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
   String get networkPageTitle => 'การเชื่อมต่ออินเทอร์เน็ต';
@@ -289,7 +298,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'เชื่อมต่อกับอินเทอร์เน็ต';
 
   @override
-  String get networkPageBody => 'An internet connection will improve your installation with compatibility check and extra software packages.';
+  String get networkPageBody =>
+      'An internet connection will improve your installation with compatibility check and extra software packages.';
 
   @override
   String get networkWiredOption => 'ใช้การเชื่อมต่อแบบโยงสาย';
@@ -301,7 +311,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'การเชื่อมต่อแบบโยงสายปิดอยู่';
 
   @override
-  String get networkWiredDisabled => 'เมื่อต้องการใช้อีเทอร์เน็ตกับคอมพิวเตอร์เครื่องนี้ จะต้องเปิดใช้การเชื่อมต่อแบบโยงสาย';
+  String get networkWiredDisabled =>
+      'เมื่อต้องการใช้อีเทอร์เน็ตกับคอมพิวเตอร์เครื่องนี้ จะต้องเปิดใช้การเชื่อมต่อแบบโยงสาย';
 
   @override
   String get networkWiredEnable => 'เปิดใช้การเชื่อมต่อแบบโยงสาย';
@@ -316,13 +327,15 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'ไม่พบอุปกรณ์ Wi-Fi';
 
   @override
-  String get networkWifiDisabled => 'เมื่อต้องการใช้ Wi-Fi กับคอมพิวเตอร์เครื่องนี้ จะต้องเปิดใช้ระบบเครือข่ายแบบไร้สาย';
+  String get networkWifiDisabled =>
+      'เมื่อต้องการใช้ Wi-Fi กับคอมพิวเตอร์เครื่องนี้ จะต้องเปิดใช้ระบบเครือข่ายแบบไร้สาย';
 
   @override
   String get networkWifiEnable => 'เปิดใช้ Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'เชื่อมต่อกับเครือข่าย Wi-Fi ที่ซ่อนอยู่';
+  String get networkHiddenWifiOption =>
+      'เชื่อมต่อกับเครือข่าย Wi-Fi ที่ซ่อนอยู่';
 
   @override
   String get networkHiddenWifiNameLabel => 'ชื่อเครือข่าย';
@@ -340,7 +353,8 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Review the license terms';
 
   @override
-  String get eulaReadAndAcceptTerms => 'To continue setting up this machine, you must read and accept the license agreement terms.';
+  String get eulaReadAndAcceptTerms =>
+      'To continue setting up this machine, you must read and accept the license agreement terms.';
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';

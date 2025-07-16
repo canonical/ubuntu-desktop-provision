@@ -20,10 +20,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectTitle => 'Automaatne paigaldus';
 
   @override
-  String get autoinstallDirectHeader => 'Impordi automaatse paigalduse juhtfail';
+  String get autoinstallDirectHeader =>
+      'Impordi automaatse paigalduse juhtfail';
 
   @override
-  String get autoinstallDirectUrlLabel => 'Sa võid sisestada automaatse paigalduse juhtfaili võrguaadressi:';
+  String get autoinstallDirectUrlLabel =>
+      'Sa võid sisestada automaatse paigalduse juhtfaili võrguaadressi:';
 
   @override
   String get autoinstallDirectFileLabel => 'Või vali fail kohalikust seadmest:';
@@ -44,28 +46,35 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectImportButtonLabel => 'Impordi';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle => 'Automaatse paigalduse juhtfail pole leitav';
+  String get autoinstallDirectErrorNetworkTitle =>
+      'Automaatse paigalduse juhtfail pole leitav';
 
   @override
-  String get autoinstallDirectErrorNetworkBody => 'Palun kontrolli, et võrguaadress oleks õige ja võrguühendus toimib või proovi hiljem uuesti.';
+  String get autoinstallDirectErrorNetworkBody =>
+      'Palun kontrolli, et võrguaadress oleks õige ja võrguühendus toimib või proovi hiljem uuesti.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'Vigane võrguaadress';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlBody => 'Palun kontrolli, kas võrguaadress on korrektne või vali kohalik fail.';
+  String get autoinstallDirectErrorInvalidUrlBody =>
+      'Palun kontrolli, kas võrguaadress on korrektne või vali kohalik fail.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle => 'Vigane automaatse paigalduse juhtfail';
+  String get autoinstallDirectErrorInvalidContentTitle =>
+      'Vigane automaatse paigalduse juhtfail';
 
   @override
-  String get autoinstallDirectErrorInvalidContentBody => 'Kontrolli, kas fail on korrektne või asenda ta mõne muu failiga.';
+  String get autoinstallDirectErrorInvalidContentBody =>
+      'Kontrolli, kas fail on korrektne või asenda ta mõne muu failiga.';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => 'Automaatse paigalduse juhtfail pole loetav';
+  String get autoinstallDirectErrorFileSystemTitle =>
+      'Automaatse paigalduse juhtfail pole loetav';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody => 'Kontrolli vajalikke õigusi või otsi mõni muu fail.';
+  String get autoinstallDirectErrorFileSystemBody =>
+      'Kontrolli vajalikke õigusi või otsi mõni muu fail.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Tundmatu viga';
@@ -79,25 +88,30 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallInstructions => 'Sisesta autoinstall.yaml faili võrguaadress või vali kohalik asukoht:';
+  String get autoinstallInstructions =>
+      'Sisesta autoinstall.yaml faili võrguaadress või vali kohalik asukoht:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktiivne paigaldus';
 
   @override
-  String get autoinstallInteractiveDescription => 'Kasutajatele, kes soovivad sammhaaval juhendamist paigalduse ajal.';
+  String get autoinstallInteractiveDescription =>
+      'Kasutajatele, kes soovivad sammhaaval juhendamist paigalduse ajal.';
 
   @override
   String get autoinstallDirectOption => 'Juhtfailipõhine automaatne paigaldus';
 
   @override
-  String get autoinstallDirectDescription => 'Asjatundjatele, kes soovivad kasutada autoinstall.yaml faili järjekindlate ja korratavate paigalduste jaoks.';
+  String get autoinstallDirectDescription =>
+      'Asjatundjatele, kes soovivad kasutada autoinstall.yaml faili järjekindlate ja korratavate paigalduste jaoks.';
 
   @override
-  String get autoinstallLandscapeOption => 'Landscape\'i põhine automaatne paigaldus';
+  String get autoinstallLandscapeOption =>
+      'Landscape\'i põhine automaatne paigaldus';
 
   @override
-  String get autoinstallLandscapeDescription => 'Kasutajatele organisatsioonides, kus on olemas Landscape\'i põhine automaatse paigalduse teenus.';
+  String get autoinstallLandscapeDescription =>
+      'Kasutajatele organisatsioonides, kus on olemas Landscape\'i põhine automaatse paigalduse teenus.';
 
   @override
   String get changeButtonText => 'Muuda';
@@ -132,7 +146,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get tryOrInstallRepairOption => 'Paranda paigaldus';
 
   @override
-  String get tryOrInstallRepairDescription => 'Parandamise käigus paigaldatakse kogu senipaigaldatud tarkvara uuesti, kuid nii dokumendid kui seadistused jäävad muutmata.';
+  String get tryOrInstallRepairDescription =>
+      'Parandamise käigus paigaldatakse kogu senipaigaldatud tarkvara uuesti, kuid nii dokumendid kui seadistused jäävad muutmata.';
 
   @override
   String tryOption(String RELEASE) {
@@ -166,10 +181,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get rstHeader => 'Paigaldusega jätkamiseks pead RST välja lülitama';
 
   @override
-  String get rstDisable => 'Sinu arvutis on kasutusel Inteli RST (Rapid Storage Technology). Sa võid RST välja lülitada kas:';
+  String get rstDisable =>
+      'Sinu arvutis on kasutusel Inteli RST (Rapid Storage Technology). Sa võid RST välja lülitada kas:';
 
   @override
-  String get rstDisableWindows => 'Windowsist, kui kasutad arvutis mitut operatsioonisüsteemi, millest üks on Windows';
+  String get rstDisableWindows =>
+      'Windowsist, kui kasutad arvutis mitut operatsioonisüsteemi, millest üks on Windows';
 
   @override
   String get rstDisableBios => 'BIOSi seadistustest';
@@ -183,7 +200,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get configureSecureBootTitle => 'Seadista Secure Booti';
 
   @override
-  String get configureSecureBootDescription => 'Sa oled otsustanud paigaldada kolmandate osapoolte draiverite tarkvara. See aga eeldab, et Secure Boot on välja lülitatud.\nSelleks palun loo nüüd turvavõti ning sisesta see süsteemi uuesti käivitamisel.';
+  String get configureSecureBootDescription =>
+      'Sa oled otsustanud paigaldada kolmandate osapoolte draiverite tarkvara. See aga eeldab, et Secure Boot on välja lülitatud.\nSelleks palun loo nüüd turvavõti ning sisesta see süsteemi uuesti käivitamisel.';
 
   @override
   String get configureSecureBootOption => 'Seadista Secure Booti';
@@ -195,13 +213,16 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'Korda turvavõtit';
 
   @override
-  String get dontInstallDriverSoftwareNow => 'Ära esialgu paigalda draiveri tarkvara';
+  String get dontInstallDriverSoftwareNow =>
+      'Ära esialgu paigalda draiveri tarkvara';
 
   @override
-  String get dontInstallDriverSoftwareNowDescription => 'Sa saad ta alati hiljem paigaldada rakendusest „Tarkvara ja uuendused“.';
+  String get dontInstallDriverSoftwareNowDescription =>
+      'Sa saad ta alati hiljem paigaldada rakendusest „Tarkvara ja uuendused“.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired => 'Turvavõti on kohustuslik';
+  String get configureSecureBootSecurityKeyRequired =>
+      'Turvavõti on kohustuslik';
 
   @override
   String get secureBootSecurityKeysDontMatch => 'Turvavõtmed ei klapi omavahel';
@@ -216,13 +237,15 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get updatesOtherSoftwarePageTitle => 'Rakendused';
 
   @override
-  String get updatesOtherSoftwarePageDescription => 'Mis rakendusi sa tahaksid paigaldamisel lisada?';
+  String get updatesOtherSoftwarePageDescription =>
+      'Mis rakendusi sa tahaksid paigaldamisel lisada?';
 
   @override
   String get codecsAndDriversPageTitle => 'Optimeeri oma arvutit';
 
   @override
-  String get codecsAndDriversPageDescription => 'Kas soovid paigaldada ka soovituslikku suletud ja omanduslikku tarkvara?';
+  String get codecsAndDriversPageDescription =>
+      'Kas soovid paigaldada ka soovituslikku suletud ja omanduslikku tarkvara?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -233,40 +256,49 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get codecsAndDriversNvidiaNote => 'Tuvastasime NVIDIA graafikakaardi';
 
   @override
-  String get codecsAndDriversNvidiaBody => 'Tagamaks parimat jõudlust NVIDIA graafikakaartidega, soovitame täiendavate draiverite paigaldamist.';
+  String get codecsAndDriversNvidiaBody =>
+      'Tagamaks parimat jõudlust NVIDIA graafikakaartidega, soovitame täiendavate draiverite paigaldamist.';
 
   @override
   String get fullInstallationTitle => 'Laiendatud valik';
 
   @override
-  String get fullInstallationSubtitle => 'Vallasrežiimisõbralik kontoritarkvara, tarvikud, mängud ja veebibrauser.';
+  String get fullInstallationSubtitle =>
+      'Vallasrežiimisõbralik kontoritarkvara, tarvikud, mängud ja veebibrauser.';
 
   @override
   String get minimalInstallationTitle => 'Vaikimisi valik';
 
   @override
-  String get minimalInstallationSubtitle => 'Vaid põhilised töövahendid, veebibrauser ja tarvikud.';
+  String get minimalInstallationSubtitle =>
+      'Vaid põhilised töövahendid, veebibrauser ja tarvikud.';
 
   @override
   String get otherOptions => 'Muud valikud';
 
   @override
-  String get installThirdPartyTitle => 'Paigalda kolmandate osapoolte loodud tarkvara graafika- ja WiFi-kaardi jaoks ning teegid täiendavate meediavormingute kasutamiseks';
+  String get installThirdPartyTitle =>
+      'Paigalda kolmandate osapoolte loodud tarkvara graafika- ja WiFi-kaardi jaoks ning teegid täiendavate meediavormingute kasutamiseks';
 
   @override
-  String get installThirdPartySubtitle => 'Selle tarkvara kasutamine on võimalik nende dokumentatsioonis näidatud litsentsitingimustele. Osa sellest tarkvarast on suletud ja omanduslik tarkvara.';
+  String get installThirdPartySubtitle =>
+      'Selle tarkvara kasutamine on võimalik nende dokumentatsioonis näidatud litsentsitingimustele. Osa sellest tarkvarast on suletud ja omanduslik tarkvara.';
 
   @override
-  String get installDriversTitle => 'Paigalda kolmandate osapoolte tarkvara graafika- ja WiFi-kaardi jaoks';
+  String get installDriversTitle =>
+      'Paigalda kolmandate osapoolte tarkvara graafika- ja WiFi-kaardi jaoks';
 
   @override
-  String get installDriversSubtitle => 'Sealhulgas, aga mitte ainult, NVIDIA dariverid ja muu sarnane';
+  String get installDriversSubtitle =>
+      'Sealhulgas, aga mitte ainult, NVIDIA dariverid ja muu sarnane';
 
   @override
-  String get installCodecsTitle => 'Laadi alla ja paigalda täiendavate meediavormingute tugi';
+  String get installCodecsTitle =>
+      'Laadi alla ja paigalda täiendavate meediavormingute tugi';
 
   @override
-  String get installCodecsSubtitle => 'Sealhulgas, aga mitte ainult, MP3, MP4, MOV ja muu sarnase tugi';
+  String get installCodecsSubtitle =>
+      'Sealhulgas, aga mitte ainult, MP3, MP4, MOV ja muu sarnase tugi';
 
   @override
   String get batteryWarning => 'See arvuti pole ühendatud vooluvõrku.';
@@ -278,19 +310,24 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => 'Loo salafraas';
 
   @override
-  String get choosePassphraseBody => 'Vajad salafraasi failide krüptimiseks. Pead selle sisestama igal arvuti käivituskorral.';
+  String get choosePassphraseBody =>
+      'Vajad salafraasi failide krüptimiseks. Pead selle sisestama igal arvuti käivituskorral.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Salvesta salafraas turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
+  String get choosePassphraseInfoHeader =>
+      'Salvesta salafraas turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
 
   @override
-  String get choosePassphraseInfoBody => 'Kui unustad salafraasi siis kaotad ligipääsu kõikidele oma andmetele.';
+  String get choosePassphraseInfoBody =>
+      'Kui unustad salafraasi siis kaotad ligipääsu kõikidele oma andmetele.';
 
   @override
-  String get chooseOptionalPassphraseInfoHeader => 'Salvesta salafraas ja taastevõti turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
+  String get chooseOptionalPassphraseInfoHeader =>
+      'Salvesta salafraas ja taastevõti turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
 
   @override
-  String get chooseOptionalPassphraseInfoBody => 'Kui unustad salafraasi, siis kaotad ligipääsu oma andmetele. Salafraas ei asenda taastevõtit ega kasutajakonto salasõna.';
+  String get chooseOptionalPassphraseInfoBody =>
+      'Kui unustad salafraasi, siis kaotad ligipääsu oma andmetele. Salafraas ei asenda taastevõtit ega kasutajakonto salasõna.';
 
   @override
   String get passphrasePageTitle => 'Encryption';
@@ -302,10 +339,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get passphrasePageHeaderPin => 'Set an encryption PIN';
 
   @override
-  String get passphrasePageBodyPassphrase => 'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPassphrase =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageBodyPin => 'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+  String get passphrasePageBodyPin =>
+      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -335,13 +374,15 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle => 'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
   String get passphraseTypePinTileTitle => 'Require a PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle => 'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+  String get passphraseTypePinTileSubTitle =>
+      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
 
   @override
   String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
@@ -350,22 +391,27 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get passphraseTypePageHeader => 'Encryption PIN or passphrase';
 
   @override
-  String get passphraseTypePageBody => 'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
+  String get passphraseTypePageBody =>
+      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. However, you can also require a PIN or a passphrase to further protect your data.';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin => 'Weak passphrase, make it longer or more complex';
+  String get passphrasePagePassphraseEntropyBelowMin =>
+      'Weak passphrase, make it longer or more complex';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowOptimal => 'Fair passphrase, make it longer or more complex for better security';
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      'Fair passphrase, make it longer or more complex for better security';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
 
   @override
-  String get passphrasePagePinEntropyBelowMin => 'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin =>
+      'Weak PIN, make it longer or less predictable';
 
   @override
-  String get passphrasePagePinEntropyBelowOptimal => 'Fair PIN, make it longer or less predictable for better security';
+  String get passphrasePagePinEntropyBelowOptimal =>
+      'Fair PIN, make it longer or less predictable for better security';
 
   @override
   String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
@@ -389,10 +435,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeMultiOSDetected => 'Selles arvutis on juba on olemas üsna mitu operatsioonisüsteemi. Mida sa tahad teha?';
+  String get installationTypeMultiOSDetected =>
+      'Selles arvutis on juba on olemas üsna mitu operatsioonisüsteemi. Mida sa tahad teha?';
 
   @override
-  String get installationTypeNoOSDetected => 'Selles arvutis on pole olemas ühtegi tuvastatavat operatsioonisüsteemi. Mida sa tahad teha?';
+  String get installationTypeNoOSDetected =>
+      'Selles arvutis on pole olemas ühtegi tuvastatavat operatsioonisüsteemi. Mida sa tahad teha?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -400,7 +448,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => 'Kõik andmed ja partitsioonid sellelt kettalt saavad järgnevaga kustutatud, sealhulgas operatsioonisüsteemid.';
+  String get installationTypeEraseInfo =>
+      'Kõik andmed ja partitsioonid sellelt kettalt saavad järgnevaga kustutatud, sealhulgas operatsioonisüsteemid.';
 
   @override
   String get installationTypeAdvancedLabel => 'Näita lisavalikuid...';
@@ -415,7 +464,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Krüptimata';
 
   @override
-  String get installationTypeNoneInfo => 'Standardne failisüsteem ilma krüptimiseta.';
+  String get installationTypeNoneInfo =>
+      'Standardne failisüsteem ilma krüptimiseta.';
 
   @override
   String get installationTypeNoneSelected => 'Ühtegi pole valitud';
@@ -430,28 +480,34 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Krüpti salafraasiga';
 
   @override
-  String get installationTypeLVMEncryptionInfo => 'Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel LUKS ja LVM.';
+  String get installationTypeLVMEncryptionInfo =>
+      'Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel LUKS ja LVM.';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'Krüptitud LVM on valitud';
+  String get installationTypeLVMEncryptionSelected =>
+      'Krüptitud LVM on valitud';
 
   @override
-  String get installationTypeEncryptInfo => 'Krüptovõtme saad sisestada järgmises sammus.';
+  String get installationTypeEncryptInfo =>
+      'Krüptovõtme saad sisestada järgmises sammus.';
 
   @override
   String get installationTypeZFS => 'Kasuta ilma krüptimata ZFS-i';
 
   @override
-  String get installationTypeZFSEncryption => 'Krüpti salafraasiga kasutades ZFS failisüsteemi';
+  String get installationTypeZFSEncryption =>
+      'Krüpti salafraasiga kasutades ZFS failisüsteemi';
 
   @override
-  String get installationTypeZFSEncryptionInfo => 'Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel ZFS-i sisseehitatud liidestus.';
+  String get installationTypeZFSEncryptionInfo =>
+      'Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel ZFS-i sisseehitatud liidestus.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS on valitud';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'Krüptitud ZFS on valitud';
+  String get installationTypeZFSEncryptionSelected =>
+      'Krüptitud ZFS on valitud';
 
   @override
   String get installationTypeTPM => 'Kasuta raudvarapõhist krüptimist';
@@ -543,7 +599,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installAlongsideSpaceDivider => 'Eralda vajalik kettaruum nihutades märkejoont järgneval skeemil:';
+  String get installAlongsideSpaceDivider =>
+      'Eralda vajalik kettaruum nihutades märkejoont järgneval skeemil:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
@@ -572,13 +629,16 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get allocateDiskSpace => 'Käsitsi partitsioneerimine';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSlash => 'Haakepunkti alguses peab olema kaldkriips „/“';
+  String get allocateDiskSpaceInvalidMountPointSlash =>
+      'Haakepunkti alguses peab olema kaldkriips „/“';
 
   @override
-  String get allocateDiskSpaceInvalidMountPointSpace => 'Haakepunktis ei tohi olla tühikuid';
+  String get allocateDiskSpaceInvalidMountPointSpace =>
+      'Haakepunktis ei tohi olla tühikuid';
 
   @override
-  String allocateDiskSpaceInvalidMountPointFormat(String mountpoint, String format) {
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
     return '$format pole toetatud failisüsteem „$mountpoint“ haakepunkti jaoks';
   }
 
@@ -613,7 +673,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get newPartitionTableConfirmationTitle => 'Uus tühi partitsioon';
 
   @override
-  String get newPartitionTableConfirmationMessage => 'Uue kettajaotustabeli (partitsioonitabeli) loomine kogu seadmele eemaldab kõik senised partitsioonid. Seda tegevust ei saa hiljem tagasi pöörata.';
+  String get newPartitionTableConfirmationMessage =>
+      'Uue kettajaotustabeli (partitsioonitabeli) loomine kogu seadmele eemaldab kõik senised partitsioonid. Seda tegevust ei saa hiljem tagasi pöörata.';
 
   @override
   String get tooManyPrimaryPartitions => 'Liiga palju primaarseid partitsioone';
@@ -714,7 +775,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get confirmPartitionsTitle => 'Partitsioonid';
 
   @override
-  String get confirmPartitionTables => 'Järgnevate seadmete partitsioonitabelid on muudetud:';
+  String get confirmPartitionTables =>
+      'Järgnevate seadmete partitsioonitabelid on muudetud:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -783,10 +845,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => 'Paigaldamise lõpetamiseks käivita arvuti või jätka testimist.\nViimasel juhul jäävad sinu tehtud muudatused salvestamata.';
+  String get restartWarningBody =>
+      'Paigaldamise lõpetamiseks käivita arvuti või jätka testimist.\nViimasel juhul jäävad sinu tehtud muudatused salvestamata.';
 
   @override
-  String get rebootToConfigureWarning => 'Paigaldusprotsessi jätkamiseks pead arvuti uuesti käivitama.';
+  String get rebootToConfigureWarning =>
+      'Paigaldusprotsessi jätkamiseks pead arvuti uuesti käivitama.';
 
   @override
   String get shutdown => 'Seiska';
@@ -801,13 +865,16 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get bitlockerInfoTitle => 'Tuvastasime BitLockeri';
 
   @override
-  String get bitlockerInfoDescription => 'Üks või enam partitsiooni on krüptitud BitLockeriga.';
+  String get bitlockerInfoDescription =>
+      'Üks või enam partitsiooni on krüptitud BitLockeriga.';
 
   @override
-  String get bitlockerInfoDisable => 'Paigaldamaks kõrvuti Windowsiga, palun lülita BitLocker Windowsist välja.';
+  String get bitlockerInfoDisable =>
+      'Paigaldamaks kõrvuti Windowsiga, palun lülita BitLocker Windowsist välja.';
 
   @override
-  String get bitlockerInfoRecovery => 'Peale paigaldamist võib Windows järgmisel alglaadimisel küsida taastevõtmeid.';
+  String get bitlockerInfoRecovery =>
+      'Peale paigaldamist võib Windows järgmisel alglaadimisel küsida taastevõtmeid.';
 
   @override
   String bitlockerInfoInstructions(String url) {
@@ -815,7 +882,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get bitlockerWarningTitle => 'Ilma BitLockeri taastevõtmeteta võid kaotada ligipääsu kõikidele oma andmetele';
+  String get bitlockerWarningTitle =>
+      'Ilma BitLockeri taastevõtmeteta võid kaotada ligipääsu kõikidele oma andmetele';
 
   @override
   String get restartComputer => 'Taaskäivita arvuti';
@@ -827,7 +895,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get restartIntoWindows => 'Taaskäivita arvuti ja laadi Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Kas taaskäivitame arvuti ja laadime Windowsi?';
+  String get restartIntoWindowsTitle =>
+      'Kas taaskäivitame arvuti ja laadime Windowsi?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
@@ -846,7 +915,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationSlidesIncluded => 'Sisaldab:';
 
   @override
-  String get installationSlidesWelcomeTitle => 'Kiire, vaba ja paljude uute võimalustega';
+  String get installationSlidesWelcomeTitle =>
+      'Kiire, vaba ja paljude uute võimalustega';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -859,7 +929,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'Kõik rakendused, mida sa vajad';
+  String get installationSlidesSoftwareTitle =>
+      'Kõik rakendused, mida sa vajad';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
@@ -867,7 +938,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => 'Arenda parimate avatud lähtekoodil põhinevate töövahenditega';
+  String get installationSlidesDevelopmentTitle =>
+      'Arenda parimate avatud lähtekoodil põhinevate töövahenditega';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
@@ -912,7 +984,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Hõlbustus ja ligipääs kõigile';
+  String get installationSlidesAccessibilityTitle =>
+      'Hõlbustus ja ligipääs kõigile';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
@@ -920,10 +993,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Ekraanivaate ettelugeja Orca';
+  String get installationSlidesAccessibilityOrca =>
+      'Ekraanivaate ettelugeja Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Erinevate keelte tugi';
+  String get installationSlidesAccessibilityLanguages =>
+      'Erinevate keelte tugi';
 
   @override
   String get installationSlidesSupportTitle => 'Abiteave ja kasutajatugi';
@@ -934,19 +1009,24 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesSupportCommunity => 'Ask Ubuntu veebisaidist leiad laias valikus küsimusi koos vastustega ning Ubuntu Discourse\'i põhine kogukonnafoorum sisaldab juhendeid ja vestlusi nii uutele, kui kogenud kasutajatele.';
+  String get installationSlidesSupportCommunity =>
+      'Ask Ubuntu veebisaidist leiad laias valikus küsimusi koos vastustega ning Ubuntu Discourse\'i põhine kogukonnafoorum sisaldab juhendeid ja vestlusi nii uutele, kui kogenud kasutajatele.';
 
   @override
-  String get installationSlidesSupportEnterprise => 'Suurklientidele ja äriklientidele pakub Canonical teenusepõhist kasutajatuge, mis teeb töökohal Ubuntu turvalise kasutuselevõtmise ja haldamise lihtsaks.';
+  String get installationSlidesSupportEnterprise =>
+      'Suurklientidele ja äriklientidele pakub Canonical teenusepõhist kasutajatuge, mis teeb töökohal Ubuntu turvalise kasutuselevõtmise ja haldamise lihtsaks.';
 
   @override
-  String get installationSlidesSupportResources => 'Kasulikku teavet leiad siit:';
+  String get installationSlidesSupportResources =>
+      'Kasulikku teavet leiad siit:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Ametlik dokumentatsioon';
+  String get installationSlidesSupportDocumentation =>
+      'Ametlik dokumentatsioon';
 
   @override
-  String get installationSlidesSupportUbuntuPro => 'Ubuntu Pro tellimusega suurfirmade tasemel 24/7 tugi';
+  String get installationSlidesSupportUbuntuPro =>
+      'Ubuntu Pro tellimusega suurfirmade tasemel 24/7 tugi';
 
   @override
   String get copyingFiles => 'Kopeerin faile…';
@@ -989,7 +1069,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get refreshUpdateNow => 'Uuenda kohe';
 
   @override
-  String get refreshInfo => 'Parema töökindluse ja lisafunktsionaalsuste nimel uuenda viimase versioonini.';
+  String get refreshInfo =>
+      'Parema töökindluse ja lisafunktsionaalsuste nimel uuenda viimase versioonini.';
 
   @override
   String get refreshReady => 'Uuendus on valmis';
@@ -1015,7 +1096,8 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Jätkamaks palun sulge paigaldusrakendus ning käivita ta uuesti';
+  String get refreshRestart =>
+      'Jätkamaks palun sulge paigaldusrakendus ning käivita ta uuesti';
 
   @override
   String get refreshCloseLabel => 'Sulge paigaldusrakendus';
@@ -1130,16 +1212,19 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get recoveryKeyHeader => 'Loo endale taastevõti';
 
   @override
-  String get recoveryKeyInfoHeader => 'Ilma taastevõtmeta võid kaotada ligipääsu kõikidele oma andmetele';
+  String get recoveryKeyInfoHeader =>
+      'Ilma taastevõtmeta võid kaotada ligipääsu kõikidele oma andmetele';
 
   @override
   String get recoveryKeyTextFieldLabel => 'Recovery key';
 
   @override
-  String get recoveryKeyStorageAdvice => 'Hoia taastevõtit turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis. Mõnede süsteemimuudatuste puhul pead teda kasutama andmekandja dekrüptimiseks. Näiteks võib teda vaja olla, kui muudad oma arvuti raudvaralisi komponente või uuendad püsivara.';
+  String get recoveryKeyStorageAdvice =>
+      'Hoia taastevõtit turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis. Mõnede süsteemimuudatuste puhul pead teda kasutama andmekandja dekrüptimiseks. Näiteks võib teda vaja olla, kui muudad oma arvuti raudvaralisi komponente või uuendad püsivara.';
 
   @override
-  String get recoveryKeyConfirmation => 'Ma mõistan, et ilma taastevõtmeta võin kaotada ligipääsu kõikidele oma andmetele';
+  String get recoveryKeyConfirmation =>
+      'Ma mõistan, et ilma taastevõtmeta võin kaotada ligipääsu kõikidele oma andmetele';
 
   @override
   String get recoveryKeyLinkLabel => 'Lisateave';
@@ -1156,25 +1241,30 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyQrDialogBody => 'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+  String get recoveryKeyQrDialogBody =>
+      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle => 'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle =>
+      'Recovery key file not saved';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathTitle => 'Recovery key file cannot be saved in a temporary location';
+  String get recoveryKeyExceptionDisallowedPathTitle =>
+      'Recovery key file cannot be saved in a temporary location';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
 
   @override
-  String get recoveryKeyExceptionFileSystemBody => 'You do not have permission to write to that folder. Try a different location or use another method.';
+  String get recoveryKeyExceptionFileSystemBody =>
+      'You do not have permission to write to that folder. Try a different location or use another method.';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathBody => 'Try a different location, such as a removable drive, or use another method.';
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      'Try a different location, such as a removable drive, or use another method.';
 
   @override
   String get recoveryKeyFilePickerTitle => 'Save recovery key file';
@@ -1194,13 +1284,15 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get landscapeHeader => 'Logi sisse Landscape\'i teenusesse';
 
   @override
-  String get landscapeDomainHeader => 'Sisesta Landscape\'i domeen (FQDN ehk täielik domeeninimi)';
+  String get landscapeDomainHeader =>
+      'Sisesta Landscape\'i domeen (FQDN ehk täielik domeeninimi)';
 
   @override
   String get landscapeDomainHintText => 'Landscape\'i domeen (FQDN)';
 
   @override
-  String get landscapeDomainInstructions => 'Logimaks oma organisatsiooni Landscape\'i teenusesse ja laadimaks automaatse paigalduse juhtfaili, sisesta domeeni nimi. Täieliku domeeninime saad oma IT-kasutajatoelt.';
+  String get landscapeDomainInstructions =>
+      'Logimaks oma organisatsiooni Landscape\'i teenusesse ja laadimaks automaatse paigalduse juhtfaili, sisesta domeeni nimi. Täieliku domeeninime saad oma IT-kasutajatoelt.';
 
   @override
   String get landscapeDomainTextField => 'Landscape\'i domeen (FQDN)';
@@ -1209,25 +1301,31 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get next => 'Edasi';
 
   @override
-  String get landscapeDomainInvalidDomainWarning => 'Vigane domeen. Palun kontrolli tema õigsust või küsi abi oma IT-kasutajatoelt';
+  String get landscapeDomainInvalidDomainWarning =>
+      'Vigane domeen. Palun kontrolli tema õigsust või küsi abi oma IT-kasutajatoelt';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning => 'Jätkamiseks lisa internetiühendus';
+  String get landscapeDomainNoInternetTitleWarning =>
+      'Jätkamiseks lisa internetiühendus';
 
   @override
-  String get landscapeDomainNoInternetDescriptionWarning => 'Internetiühendus on vajalik automaatse paigalduse juhtfaili laadimiseks Landscape\'i teenusest';
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      'Internetiühendus on vajalik automaatse paigalduse juhtfaili laadimiseks Landscape\'i teenusest';
 
   @override
   String get landscapeCodeExpiredWarning => 'Kood aegus, palun proovi uuesti';
 
   @override
-  String get landscapeLoginFailedWarning => 'Sisselogimine ei õnnestunud, palun proovi uuesti';
+  String get landscapeLoginFailedWarning =>
+      'Sisselogimine ei õnnestunud, palun proovi uuesti';
 
   @override
-  String get landscapeErrorPageTitle => 'Sinu kasutajakonto jaoks pole automaatne paigaldus saadaval';
+  String get landscapeErrorPageTitle =>
+      'Sinu kasutajakonto jaoks pole automaatne paigaldus saadaval';
 
   @override
-  String get landscapeErrorPageBody => 'Küsi abi oma IT-kasutajatoelt või proovi mõnda muud paigaldusviisi.';
+  String get landscapeErrorPageBody =>
+      'Küsi abi oma IT-kasutajatoelt või proovi mõnda muud paigaldusviisi.';
 
   @override
   String landscapeErrorPageCode(String code) {
@@ -1235,8 +1333,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu jätkab paigaldust sinu organisatsiooni poolt etteantud seadistuste alusel';
+  String get landscapeConfirmPageSuccessInfoTitle =>
+      'Ubuntu jätkab paigaldust sinu organisatsiooni poolt etteantud seadistuste alusel';
 
   @override
-  String get landscapeConfirmPageSuccessInfoContent => 'Landscape\'i teenusest imporditud automaatse paigalduse juhtfaili sisu saad vaadata alljärgnevalt.';
+  String get landscapeConfirmPageSuccessInfoContent =>
+      'Landscape\'i teenusest imporditud automaatse paigalduse juhtfaili sisu saad vaadata alljärgnevalt.';
 }

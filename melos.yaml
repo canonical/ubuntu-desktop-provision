@@ -10,7 +10,7 @@ command:
     runPubGetInParallel: false
     environment:
       sdk: ">=3.0.0 <4.0.0"
-      flutter: ">=3.29.2"
+      flutter: ">=3.32.1"
 
     dependencies:
       args: ^2.4.2
@@ -30,7 +30,7 @@ command:
       grpc: ^4.0.1
       gsettings: ^0.2.8
       handy_window: ^0.4.0
-      intl: ^0.19.0
+      intl: ^0.20.2
       json_annotation: ^4.9.0
       meta: ^1.11.0
       nm: ^0.5.0
@@ -42,7 +42,7 @@ command:
       split_view: ^3.2.1
       stdlibc: ^0.1.4
       ubuntu_flavor: ^0.4.0
-      ubuntu_localizations: ^0.5.0
+      ubuntu_localizations: ^0.5.2+2
       ubuntu_logger: ^0.1.1
       ubuntu_service: ^0.3.1
       ubuntu_session: ^0.0.4
@@ -54,7 +54,7 @@ command:
       xdg_directories: ^1.0.4
       xdg_locale: ^0.0.1
       yaml: ^3.1.2
-      yaru: ^7.0.0
+      yaru: ^8.0.0
       yaru_window: ^0.2.1
 
     dev_dependencies:

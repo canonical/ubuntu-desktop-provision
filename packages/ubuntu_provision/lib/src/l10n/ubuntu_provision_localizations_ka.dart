@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'რაღაც არასწორია';
 
   @override
-  String get errorPageUnexpected => 'უკაცრავად, მაგრამ ჩვენ არ ვართ დარწმუნებული, რა მოხდა. სცადეთ, გადატვირთოთ კომპიუტერი და დაყენების პროცესი თავიდან დაიწყოთ. ასევე შეგიძლიათ, <a>შეცდომის შესახებ მოგვწეროთ</a>.';
+  String get errorPageUnexpected =>
+      'უკაცრავად, მაგრამ ჩვენ არ ვართ დარწმუნებული, რა მოხდა. სცადეთ, გადატვირთოთ კომპიუტერი და დაყენების პროცესი თავიდან დაიწყოთ. ასევე შეგიძლიათ, <a>შეცდომის შესახებ მოგვწეროთ</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'დააწექით ერთ-ერთ შემდეგ ღილაკს:';
 
   @override
-  String get keyboardKeyPresentLabel => 'აქვს თქვენს კლავიატურას შემდეგი ღილაკი?';
+  String get keyboardKeyPresentLabel =>
+      'აქვს თქვენს კლავიატურას შემდეგი ღილაკი?';
 
   @override
   String get themePageTitle => 'აირჩიეთ თქვენი თემა';
 
   @override
-  String get themePageHeader => 'ამის შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
+  String get themePageHeader =>
+      'ამის შეცვლა გარეგნობის პარამეტრებში ყოველთვის შეგიძლიათ.';
 
   @override
   String get themeDark => 'მუქი';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
 
   @override
-  String get identityHostnameInfo => 'სახელი, რომელსაც ის იყენებს, როცა სხვა კომპიუტერებს ელაპარაკება.';
+  String get identityHostnameInfo =>
+      'სახელი, რომელსაც ის იყენებს, როცა სხვა კომპიუტერებს ელაპარაკება.';
 
   @override
   String get identityHostnameRequired => 'კომპიუტერის სახელი აუცილებელია';
@@ -185,13 +189,15 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'ეს მომხმარებლის სახელი უკვე არსებობს.';
 
   @override
-  String get identityUsernameSystemReserved => 'სახელი დაცულია სისტემური გამოყენებისთვის.';
+  String get identityUsernameSystemReserved =>
+      'სახელი დაცულია სისტემური გამოყენებისთვის.';
 
   @override
   String get identityUsernameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
-  String get identityUsernameInvalidChars => 'სახელი არასწორ სიმბოლოებს შეიცავს.';
+  String get identityUsernameInvalidChars =>
+      'სახელი არასწორ სიმბოლოებს შეიცავს.';
 
   @override
   String get identityPasswordLabel => 'პაროლი';
@@ -215,7 +221,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityActiveDirectoryOption => 'Active Directory-ის გამოყენება';
 
   @override
-  String get identityActiveDirectoryInfo => 'დომენს და სხვა დეტალებს შემდეგ ნაბიჯში შეიყვანთ.';
+  String get identityActiveDirectoryInfo =>
+      'დომენს და სხვა დეტალებს შემდეგ ნაბიჯში შეიყვანთ.';
 
   @override
   String get activeDirectoryTitle => 'Active Directory-ში შესვლა';
@@ -256,7 +263,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'სრულდება ტირეთი (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'შეიცავს ერთზე მეტ მიმდევრობით წერტილს (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'შეიცავს ერთზე მეტ მიმდევრობით წერტილს (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'დომენი ვერ ვიპოვე';
@@ -277,10 +285,12 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'აუცილებელია';
 
   @override
-  String get activeDirectoryErrorTitle => 'Active Directory-სთან კავშირის დამყარების შეცდომა';
+  String get activeDirectoryErrorTitle =>
+      'Active Directory-სთან კავშირის დამყარების შეცდომა';
 
   @override
-  String get activeDirectoryErrorMessage => 'უკაცრავად, მაგრამ ამჟამად Active Directory-ის მორგება შეუძლებელია. როცა სისტემას ბოლომდე ჩატვირთავთ, დახმარებისთვის ეწვიეთ ვებგვერდს <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>.';
+  String get activeDirectoryErrorMessage =>
+      'უკაცრავად, მაგრამ ამჟამად Active Directory-ის მორგება შეუძლებელია. როცა სისტემას ბოლომდე ჩატვირთავთ, დახმარებისთვის ეწვიეთ ვებგვერდს <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>.';
 
   @override
   String get networkPageTitle => 'ინტერნეტკავშირი';
@@ -289,7 +299,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'ინტერნეტთან დაკავშირება';
 
   @override
-  String get networkPageBody => 'ინტერნეტთან კავშირი გააუმჯობესებს თქვენს დაყენებულ ოპერაციული სისტემის თავსებადობის გაუმჯობესებითა და დამატებითი პროგრამებით.';
+  String get networkPageBody =>
+      'ინტერნეტთან კავშირი გააუმჯობესებს თქვენს დაყენებულ ოპერაციული სისტემის თავსებადობის გაუმჯობესებითა და დამატებითი პროგრამებით.';
 
   @override
   String get networkWiredOption => 'მავთულიანი მიერთების გამოყენება';
@@ -301,7 +312,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'მავთულიანი მიერთება გამორთულია';
 
   @override
-  String get networkWiredDisabled => 'ამ კომპიუტერზე, Ethernet-ის გამოსაყენებლად, აუცილებელია, სადენიანი ქსელი ჩართოთ';
+  String get networkWiredDisabled =>
+      'ამ კომპიუტერზე, Ethernet-ის გამოსაყენებლად, აუცილებელია, სადენიანი ქსელი ჩართოთ';
 
   @override
   String get networkWiredEnable => 'მავთულიანი მიერთების ჩართვა';
@@ -316,7 +328,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Wi-Fi მოწყობილობები აღმოჩენილი არაა';
 
   @override
-  String get networkWifiDisabled => 'ამ კომპიუტერზე Wi-Fi-ის გამოსაყენებლად უსადენო ქსელის ჩართვა აუცილებელია';
+  String get networkWifiDisabled =>
+      'ამ კომპიუტერზე Wi-Fi-ის გამოსაყენებლად უსადენო ქსელის ჩართვა აუცილებელია';
 
   @override
   String get networkWifiEnable => 'Wi-Fi-ის ჩართვა';
@@ -340,7 +353,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'ლიცენზიის პირობების მიმოხილვა';
 
   @override
-  String get eulaReadAndAcceptTerms => 'მანქანის მორგების გასაგრძელებლად ლიცენზიის პირობებს უნდა დაეთანხმოთ.';
+  String get eulaReadAndAcceptTerms =>
+      'მანქანის მორგების გასაგრძელებლად ლიცენზიის პირობებს უნდა დაეთანხმოთ.';
 
   @override
   String get eulaAcceptTerms => 'წავიკითხე და ვეთანხმები ამ პირობებს';

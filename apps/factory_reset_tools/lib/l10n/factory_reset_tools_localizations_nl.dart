@@ -9,10 +9,12 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get appTitle => 'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
+  String get appTitle =>
+      'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
 
   @override
-  String get windowTitle => 'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
+  String get windowTitle =>
+      'Hulpmiddelen terugzetten naar de fabrieksinstellingen';
 
   @override
   String get homeTitle => 'Wat zou u willen doen?';
@@ -21,19 +23,23 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get createResetMedia => 'Herstelmedia aanmaken';
 
   @override
-  String get startFactoryReset => 'Terugzetten naar fabrieksinstellingen starten';
+  String get startFactoryReset =>
+      'Terugzetten naar fabrieksinstellingen starten';
 
   @override
   String get createUsbTitle => 'Een herstel-USB aanmaken';
 
   @override
-  String get createUsbBody => 'Een herstel-USB aanmaken om het systeem te herstellen en uw Ubuntu-installaties aan te passen.';
+  String get createUsbBody =>
+      'Een herstel-USB aanmaken om het systeem te herstellen en uw Ubuntu-installaties aan te passen.';
 
   @override
-  String get createUsbListExplanation => 'Selecteer een USB-flashstation. De schijf moet **minstens 16 GB ruimte hebben.**';
+  String get createUsbListExplanation =>
+      'Selecteer een USB-flashstation. De schijf moet **minstens 16 GB ruimte hebben.**';
 
   @override
-  String get createUsbWarning => 'De flashdrive wordt opnieuw geformatteerd en alle gegevens op de schijf gaan verloren.';
+  String get createUsbWarning =>
+      'De flashdrive wordt opnieuw geformatteerd en alle gegevens op de schijf gaan verloren.';
 
   @override
   String get resetMediaTitle => 'Herstel-USB';
@@ -42,22 +48,27 @@ class FactoryResetToolsLocalizationsNl extends FactoryResetToolsLocalizations {
   String get noMediaDetected => 'Geen verwisselbare opslag gedetecteerd';
 
   @override
-  String get noMediaDetectedSubtitle => 'Een USB-opslag is vereist om een medium voor systeemherstel te maken.';
+  String get noMediaDetectedSubtitle =>
+      'Een USB-opslag is vereist om een medium voor systeemherstel te maken.';
 
   @override
-  String get factoryResetTitle => 'Selecteer een optie om de fabrieksinstellingen te herstellen';
+  String get factoryResetTitle =>
+      'Selecteer een optie om de fabrieksinstellingen te herstellen';
 
   @override
-  String get loadingDrives => 'Een ogenblik geduld terwijl de schijven worden uitgelezen.';
+  String get loadingDrives =>
+      'Een ogenblik geduld terwijl de schijven worden uitgelezen.';
 
   @override
   String get resetMediaReadyTitle => 'Herstel-USB is klaar';
 
   @override
-  String get resetMediaReadyBody => 'Om deze te gebruiken, plaatst u het USB-station in de computer die u wilt herstellen en start u deze opnieuw op.';
+  String get resetMediaReadyBody =>
+      'Om deze te gebruiken, plaatst u het USB-station in de computer die u wilt herstellen en start u deze opnieuw op.';
 
   @override
-  String get errorLoadingDrives => 'Er is een fout opgetreden bij het inlezen van de schijven.';
+  String get errorLoadingDrives =>
+      'Er is een fout opgetreden bij het inlezen van de schijven.';
 
   @override
   String get resetMediaInitializing => 'Initialiseren';

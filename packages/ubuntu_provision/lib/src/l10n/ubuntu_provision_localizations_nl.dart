@@ -67,7 +67,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get errorPageTitle => 'Er ging iets fout';
 
   @override
-  String get errorPageUnexpected => 'Het spijt ons, maar we weten niet wat de fout is. U kunt proberen de computer te herstarten en opnieuw te beginnen met de installatie. U kan ook <a>het probleem melden</a>.';
+  String get errorPageUnexpected =>
+      'Het spijt ons, maar we weten niet wat de fout is. U kunt proberen de computer te herstarten en opnieuw te beginnen met de installatie. U kan ook <a>het probleem melden</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -117,13 +118,15 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get keyboardPressKeyLabel => 'Duw op een van de volgende toetsen:';
 
   @override
-  String get keyboardKeyPresentLabel => 'Staat volgende toets op uw toetsenbord?';
+  String get keyboardKeyPresentLabel =>
+      'Staat volgende toets op uw toetsenbord?';
 
   @override
   String get themePageTitle => 'Kies uw thema';
 
   @override
-  String get themePageHeader => 'U kan het thema later altijd veranderen in de weergave-instellingen.';
+  String get themePageHeader =>
+      'U kan het thema later altijd veranderen in de weergave-instellingen.';
 
   @override
   String get themeDark => 'Donker';
@@ -161,7 +164,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get identityHostnameLabel => 'De naam van de computer';
 
   @override
-  String get identityHostnameInfo => 'De naam die het gebruikt om te praten met andere computers.';
+  String get identityHostnameInfo =>
+      'De naam die het gebruikt om te praten met andere computers.';
 
   @override
   String get identityHostnameRequired => 'Een naam voor de computer is nodig';
@@ -185,7 +189,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'Die gebruikersnaam bestaat al.';
 
   @override
-  String get identityUsernameSystemReserved => 'Die naam wordt gereserveerd door het systeem.';
+  String get identityUsernameSystemReserved =>
+      'Die naam wordt gereserveerd door het systeem.';
 
   @override
   String get identityUsernameTooLong => 'Die naam is te lang.';
@@ -212,10 +217,12 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get identityPasswordHide => 'Verbergen';
 
   @override
-  String get identityActiveDirectoryOption => 'Maak gebruik van Active Directory';
+  String get identityActiveDirectoryOption =>
+      'Maak gebruik van Active Directory';
 
   @override
-  String get identityActiveDirectoryInfo => 'Het domein en andere details kan u invullen in de volgende stap.';
+  String get identityActiveDirectoryInfo =>
+      'Het domein en andere details kan u invullen in de volgende stap.';
 
   @override
   String get activeDirectoryTitle => 'Inloggen bij Active Directory';
@@ -256,7 +263,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEndHyphen => 'Eindigt met een streepje (-)';
 
   @override
-  String get activeDirectoryDomainMultipleDots => 'Bevat meerdere punten achter elkaar (..)';
+  String get activeDirectoryDomainMultipleDots =>
+      'Bevat meerdere punten achter elkaar (..)';
 
   @override
   String get activeDirectoryDomainNotFound => 'Domein niet gevonden';
@@ -277,10 +285,12 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => 'Vereist';
 
   @override
-  String get activeDirectoryErrorTitle => 'Fout bij het configureren van de verbinding met Active Directory';
+  String get activeDirectoryErrorTitle =>
+      'Fout bij het configureren van de verbinding met Active Directory';
 
   @override
-  String get activeDirectoryErrorMessage => 'Sorry, Active Directory kan niet worden ingesteld op dit moment. Zodra het systeem volledig geïnstalleerd is, bezoek <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> om hulp te krijgen.';
+  String get activeDirectoryErrorMessage =>
+      'Sorry, Active Directory kan niet worden ingesteld op dit moment. Zodra het systeem volledig geïnstalleerd is, bezoek <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> om hulp te krijgen.';
 
   @override
   String get networkPageTitle => 'Internetverbinding';
@@ -289,7 +299,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get networkPageHeader => 'Verbind met het internet';
 
   @override
-  String get networkPageBody => 'Een internetverbinding zorgt ervoor dat de installatie slaagt op meer computers en dat er meer software geïnstalleerd kan worden.';
+  String get networkPageBody =>
+      'Een internetverbinding zorgt ervoor dat de installatie slaagt op meer computers en dat er meer software geïnstalleerd kan worden.';
 
   @override
   String get networkWiredOption => 'Gebruik een bekabelde verbinding';
@@ -301,7 +312,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get networkWiredOff => 'Bekabelde verbindingen staan uit';
 
   @override
-  String get networkWiredDisabled => 'Om Ethernet te gebruiken op deze computer, moeten bekabelde verbindingen aan staan';
+  String get networkWiredDisabled =>
+      'Om Ethernet te gebruiken op deze computer, moeten bekabelde verbindingen aan staan';
 
   @override
   String get networkWiredEnable => 'Bekabeld aanzetten';
@@ -316,19 +328,22 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get networkWifiNone => 'Geen wifi-apparaten gevonden';
 
   @override
-  String get networkWifiDisabled => 'Om wifi te gebruiken op deze computer, moeten draadloze verbindingen aan staan';
+  String get networkWifiDisabled =>
+      'Om wifi te gebruiken op deze computer, moeten draadloze verbindingen aan staan';
 
   @override
   String get networkWifiEnable => 'Wifi aanzetten';
 
   @override
-  String get networkHiddenWifiOption => 'Verbind met een verborgen wifi-netwerk';
+  String get networkHiddenWifiOption =>
+      'Verbind met een verborgen wifi-netwerk';
 
   @override
   String get networkHiddenWifiNameLabel => 'Naam van het netwerk';
 
   @override
-  String get networkHiddenWifiNameRequired => 'De naam van het netwerk is vereist';
+  String get networkHiddenWifiNameRequired =>
+      'De naam van het netwerk is vereist';
 
   @override
   String get networkNoneOption => 'Verbind je niet met het internet';
@@ -340,7 +355,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get eulaReviewTerms => 'Bekijk de gebruiksrechtovereenkomsten';
 
   @override
-  String get eulaReadAndAcceptTerms => 'Om dit apparaat verder in te stellen, moet u de gebruiksrechtovereenkomsten lezen en accepteren.';
+  String get eulaReadAndAcceptTerms =>
+      'Om dit apparaat verder in te stellen, moet u de gebruiksrechtovereenkomsten lezen en accepteren.';
 
   @override
   String get eulaAcceptTerms => 'Ik heb deze regels gelezen en ga akkoord';

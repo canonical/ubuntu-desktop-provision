@@ -29,13 +29,15 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get welcomeStoreTitle => 'Rakendustepoe uus välimus';
 
   @override
-  String get welcomeStoreSubtitle => 'Sinu lemmikrakenduste leidmine pole kunagi olnud nii lihtne.';
+  String get welcomeStoreSubtitle =>
+      'Sinu lemmikrakenduste leidmine pole kunagi olnud nii lihtne.';
 
   @override
   String get welcomeSecurityTitle => 'Parem turvalisus';
 
   @override
-  String get welcomeSecuritySubtitle => 'Uued raudvara- või ZFSi-põhise krüptimise valikud.';
+  String get welcomeSecuritySubtitle =>
+      'Uued raudvara- või ZFSi-põhise krüptimise valikud.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,7 +75,8 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Juriidiline märkus';
 
   @override
-  String get telemetryCollectError => 'Telemeetriaandmete kogumine ei õnnestunud';
+  String get telemetryCollectError =>
+      'Telemeetriaandmete kogumine ei õnnestunud';
 
   @override
   String get privacyPageTitle => 'Asukohateenused';
@@ -82,7 +85,8 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get privacyLocationTitle => 'Kas lülitame asukohateenused sisse?';
 
   @override
-  String get privacyLocationSubtitle => 'Sellega lubad rakendustel teada sinu geograafilist asukohta.\nSeda saad süsteemi seadistustest alati muuta.';
+  String get privacyLocationSubtitle =>
+      'Sellega lubad rakendustel teada sinu geograafilist asukohta.\nSeda saad süsteemi seadistustest alati muuta.';
 
   @override
   String get privacyLocationEnable => 'Asukohateenused';
@@ -108,7 +112,8 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get ubuntuProTokenTextfieldHint => 'Ligipääsutunnus';
 
   @override
-  String get ubuntuProSubscriptionDescription => 'Võta kasutusele kõige mitmekülgsem avatud lähtekoodiga tarkvara turvalahendus';
+  String get ubuntuProSubscriptionDescription =>
+      'Võta kasutusele kõige mitmekülgsem avatud lähtekoodiga tarkvara turvalahendus';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -125,23 +130,28 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Kehtiv ligipääsutunnus';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Vigane ligipääsutunnus, proovi uuesti';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Vigane ligipääsutunnus, proovi uuesti';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Jäta praegu vahele';
 
   @override
-  String get ubuntuProOnBoardingSkipForNowDescription => 'Hiljem saad sa alati Ubuntu Pro kasutusele võtta rakenduses „Tarkvara ja uuendused“.';
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Hiljem saad sa alati Ubuntu Pro kasutusele võtta rakenduses „Tarkvara ja uuendused“.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro => 'Võta Ubuntu Pro kasutusele';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuProDescription => 'Lisa see arvuti või seade Ubuntu Pro tellimusele, mis tagab paljude pakettide turvauuendused kuni 2032. aastani.';
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Lisa see arvuti või seade Ubuntu Pro tellimusele, mis tagab paljude pakettide turvauuendused kuni 2032. aastani.';
 
   @override
-  String get ubuntuProSucessAttachHeader => 'Ubuntu Pro on nüüd selles arvutis või seadmes kasutusel';
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro on nüüd selles arvutis või seadmes kasutusel';
 
   @override
-  String get ubuntuProSucessAttachDescription => 'Sa võid hallata oma Ubuntu Pro teenuseid rakenduses „Tarkvara ja uuendused“.';
+  String get ubuntuProSucessAttachDescription =>
+      'Sa võid hallata oma Ubuntu Pro teenuseid rakenduses „Tarkvara ja uuendused“.';
 }

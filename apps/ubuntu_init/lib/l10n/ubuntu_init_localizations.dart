@@ -133,15 +133,18 @@ import 'ubuntu_init_localizations_zh.dart';
 /// be consistent with the languages listed in the UbuntuInitLocalizations.supportedLocales
 /// property.
 abstract class UbuntuInitLocalizations {
-  UbuntuInitLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  UbuntuInitLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
   static UbuntuInitLocalizations of(BuildContext context) {
-    return Localizations.of<UbuntuInitLocalizations>(context, UbuntuInitLocalizations)!;
+    return Localizations.of<UbuntuInitLocalizations>(
+        context, UbuntuInitLocalizations)!;
   }
 
-  static const LocalizationsDelegate<UbuntuInitLocalizations> delegate = _UbuntuInitLocalizationsDelegate();
+  static const LocalizationsDelegate<UbuntuInitLocalizations> delegate =
+      _UbuntuInitLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -153,7 +156,8 @@ abstract class UbuntuInitLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -486,120 +490,271 @@ abstract class UbuntuInitLocalizations {
   String get ubuntuProSucessAttachDescription;
 }
 
-class _UbuntuInitLocalizationsDelegate extends LocalizationsDelegate<UbuntuInitLocalizations> {
+class _UbuntuInitLocalizationsDelegate
+    extends LocalizationsDelegate<UbuntuInitLocalizations> {
   const _UbuntuInitLocalizationsDelegate();
 
   @override
   Future<UbuntuInitLocalizations> load(Locale locale) {
-    return SynchronousFuture<UbuntuInitLocalizations>(lookupUbuntuInitLocalizations(locale));
+    return SynchronousFuture<UbuntuInitLocalizations>(
+        lookupUbuntuInitLocalizations(locale));
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['am', 'ar', 'be', 'bg', 'bn', 'bo', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ku', 'lo', 'lt', 'lv', 'mk', 'ml', 'mr', 'my', 'nb', 'ne', 'nl', 'nn', 'oc', 'pa', 'pl', 'pt', 'ro', 'ru', 'se', 'si', 'sk', 'sl', 'sq', 'sr', 'sv', 'ta', 'te', 'tg', 'th', 'tl', 'tr', 'ug', 'uk', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'am',
+        'ar',
+        'be',
+        'bg',
+        'bn',
+        'bo',
+        'bs',
+        'ca',
+        'cs',
+        'cy',
+        'da',
+        'de',
+        'dz',
+        'el',
+        'en',
+        'eo',
+        'es',
+        'et',
+        'eu',
+        'fa',
+        'fi',
+        'fr',
+        'ga',
+        'gl',
+        'gu',
+        'he',
+        'hi',
+        'hr',
+        'hu',
+        'id',
+        'is',
+        'it',
+        'ja',
+        'ka',
+        'kk',
+        'km',
+        'kn',
+        'ko',
+        'ku',
+        'lo',
+        'lt',
+        'lv',
+        'mk',
+        'ml',
+        'mr',
+        'my',
+        'nb',
+        'ne',
+        'nl',
+        'nn',
+        'oc',
+        'pa',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'se',
+        'si',
+        'sk',
+        'sl',
+        'sq',
+        'sr',
+        'sv',
+        'ta',
+        'te',
+        'tg',
+        'th',
+        'tl',
+        'tr',
+        'ug',
+        'uk',
+        'vi',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_UbuntuInitLocalizationsDelegate old) => false;
 }
 
 UbuntuInitLocalizations lookupUbuntuInitLocalizations(Locale locale) {
-
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
-    case 'pt': {
-  switch (locale.countryCode) {
-    case 'BR': return UbuntuInitLocalizationsPtBr();
-   }
-  break;
-   }
-    case 'zh': {
-  switch (locale.countryCode) {
-    case 'TW': return UbuntuInitLocalizationsZhTw();
-   }
-  break;
-   }
+    case 'pt':
+      {
+        switch (locale.countryCode) {
+          case 'BR':
+            return UbuntuInitLocalizationsPtBr();
+        }
+        break;
+      }
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'TW':
+            return UbuntuInitLocalizationsZhTw();
+        }
+        break;
+      }
   }
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'am': return UbuntuInitLocalizationsAm();
-    case 'ar': return UbuntuInitLocalizationsAr();
-    case 'be': return UbuntuInitLocalizationsBe();
-    case 'bg': return UbuntuInitLocalizationsBg();
-    case 'bn': return UbuntuInitLocalizationsBn();
-    case 'bo': return UbuntuInitLocalizationsBo();
-    case 'bs': return UbuntuInitLocalizationsBs();
-    case 'ca': return UbuntuInitLocalizationsCa();
-    case 'cs': return UbuntuInitLocalizationsCs();
-    case 'cy': return UbuntuInitLocalizationsCy();
-    case 'da': return UbuntuInitLocalizationsDa();
-    case 'de': return UbuntuInitLocalizationsDe();
-    case 'dz': return UbuntuInitLocalizationsDz();
-    case 'el': return UbuntuInitLocalizationsEl();
-    case 'en': return UbuntuInitLocalizationsEn();
-    case 'eo': return UbuntuInitLocalizationsEo();
-    case 'es': return UbuntuInitLocalizationsEs();
-    case 'et': return UbuntuInitLocalizationsEt();
-    case 'eu': return UbuntuInitLocalizationsEu();
-    case 'fa': return UbuntuInitLocalizationsFa();
-    case 'fi': return UbuntuInitLocalizationsFi();
-    case 'fr': return UbuntuInitLocalizationsFr();
-    case 'ga': return UbuntuInitLocalizationsGa();
-    case 'gl': return UbuntuInitLocalizationsGl();
-    case 'gu': return UbuntuInitLocalizationsGu();
-    case 'he': return UbuntuInitLocalizationsHe();
-    case 'hi': return UbuntuInitLocalizationsHi();
-    case 'hr': return UbuntuInitLocalizationsHr();
-    case 'hu': return UbuntuInitLocalizationsHu();
-    case 'id': return UbuntuInitLocalizationsId();
-    case 'is': return UbuntuInitLocalizationsIs();
-    case 'it': return UbuntuInitLocalizationsIt();
-    case 'ja': return UbuntuInitLocalizationsJa();
-    case 'ka': return UbuntuInitLocalizationsKa();
-    case 'kk': return UbuntuInitLocalizationsKk();
-    case 'km': return UbuntuInitLocalizationsKm();
-    case 'kn': return UbuntuInitLocalizationsKn();
-    case 'ko': return UbuntuInitLocalizationsKo();
-    case 'ku': return UbuntuInitLocalizationsKu();
-    case 'lo': return UbuntuInitLocalizationsLo();
-    case 'lt': return UbuntuInitLocalizationsLt();
-    case 'lv': return UbuntuInitLocalizationsLv();
-    case 'mk': return UbuntuInitLocalizationsMk();
-    case 'ml': return UbuntuInitLocalizationsMl();
-    case 'mr': return UbuntuInitLocalizationsMr();
-    case 'my': return UbuntuInitLocalizationsMy();
-    case 'nb': return UbuntuInitLocalizationsNb();
-    case 'ne': return UbuntuInitLocalizationsNe();
-    case 'nl': return UbuntuInitLocalizationsNl();
-    case 'nn': return UbuntuInitLocalizationsNn();
-    case 'oc': return UbuntuInitLocalizationsOc();
-    case 'pa': return UbuntuInitLocalizationsPa();
-    case 'pl': return UbuntuInitLocalizationsPl();
-    case 'pt': return UbuntuInitLocalizationsPt();
-    case 'ro': return UbuntuInitLocalizationsRo();
-    case 'ru': return UbuntuInitLocalizationsRu();
-    case 'se': return UbuntuInitLocalizationsSe();
-    case 'si': return UbuntuInitLocalizationsSi();
-    case 'sk': return UbuntuInitLocalizationsSk();
-    case 'sl': return UbuntuInitLocalizationsSl();
-    case 'sq': return UbuntuInitLocalizationsSq();
-    case 'sr': return UbuntuInitLocalizationsSr();
-    case 'sv': return UbuntuInitLocalizationsSv();
-    case 'ta': return UbuntuInitLocalizationsTa();
-    case 'te': return UbuntuInitLocalizationsTe();
-    case 'tg': return UbuntuInitLocalizationsTg();
-    case 'th': return UbuntuInitLocalizationsTh();
-    case 'tl': return UbuntuInitLocalizationsTl();
-    case 'tr': return UbuntuInitLocalizationsTr();
-    case 'ug': return UbuntuInitLocalizationsUg();
-    case 'uk': return UbuntuInitLocalizationsUk();
-    case 'vi': return UbuntuInitLocalizationsVi();
-    case 'zh': return UbuntuInitLocalizationsZh();
+    case 'am':
+      return UbuntuInitLocalizationsAm();
+    case 'ar':
+      return UbuntuInitLocalizationsAr();
+    case 'be':
+      return UbuntuInitLocalizationsBe();
+    case 'bg':
+      return UbuntuInitLocalizationsBg();
+    case 'bn':
+      return UbuntuInitLocalizationsBn();
+    case 'bo':
+      return UbuntuInitLocalizationsBo();
+    case 'bs':
+      return UbuntuInitLocalizationsBs();
+    case 'ca':
+      return UbuntuInitLocalizationsCa();
+    case 'cs':
+      return UbuntuInitLocalizationsCs();
+    case 'cy':
+      return UbuntuInitLocalizationsCy();
+    case 'da':
+      return UbuntuInitLocalizationsDa();
+    case 'de':
+      return UbuntuInitLocalizationsDe();
+    case 'dz':
+      return UbuntuInitLocalizationsDz();
+    case 'el':
+      return UbuntuInitLocalizationsEl();
+    case 'en':
+      return UbuntuInitLocalizationsEn();
+    case 'eo':
+      return UbuntuInitLocalizationsEo();
+    case 'es':
+      return UbuntuInitLocalizationsEs();
+    case 'et':
+      return UbuntuInitLocalizationsEt();
+    case 'eu':
+      return UbuntuInitLocalizationsEu();
+    case 'fa':
+      return UbuntuInitLocalizationsFa();
+    case 'fi':
+      return UbuntuInitLocalizationsFi();
+    case 'fr':
+      return UbuntuInitLocalizationsFr();
+    case 'ga':
+      return UbuntuInitLocalizationsGa();
+    case 'gl':
+      return UbuntuInitLocalizationsGl();
+    case 'gu':
+      return UbuntuInitLocalizationsGu();
+    case 'he':
+      return UbuntuInitLocalizationsHe();
+    case 'hi':
+      return UbuntuInitLocalizationsHi();
+    case 'hr':
+      return UbuntuInitLocalizationsHr();
+    case 'hu':
+      return UbuntuInitLocalizationsHu();
+    case 'id':
+      return UbuntuInitLocalizationsId();
+    case 'is':
+      return UbuntuInitLocalizationsIs();
+    case 'it':
+      return UbuntuInitLocalizationsIt();
+    case 'ja':
+      return UbuntuInitLocalizationsJa();
+    case 'ka':
+      return UbuntuInitLocalizationsKa();
+    case 'kk':
+      return UbuntuInitLocalizationsKk();
+    case 'km':
+      return UbuntuInitLocalizationsKm();
+    case 'kn':
+      return UbuntuInitLocalizationsKn();
+    case 'ko':
+      return UbuntuInitLocalizationsKo();
+    case 'ku':
+      return UbuntuInitLocalizationsKu();
+    case 'lo':
+      return UbuntuInitLocalizationsLo();
+    case 'lt':
+      return UbuntuInitLocalizationsLt();
+    case 'lv':
+      return UbuntuInitLocalizationsLv();
+    case 'mk':
+      return UbuntuInitLocalizationsMk();
+    case 'ml':
+      return UbuntuInitLocalizationsMl();
+    case 'mr':
+      return UbuntuInitLocalizationsMr();
+    case 'my':
+      return UbuntuInitLocalizationsMy();
+    case 'nb':
+      return UbuntuInitLocalizationsNb();
+    case 'ne':
+      return UbuntuInitLocalizationsNe();
+    case 'nl':
+      return UbuntuInitLocalizationsNl();
+    case 'nn':
+      return UbuntuInitLocalizationsNn();
+    case 'oc':
+      return UbuntuInitLocalizationsOc();
+    case 'pa':
+      return UbuntuInitLocalizationsPa();
+    case 'pl':
+      return UbuntuInitLocalizationsPl();
+    case 'pt':
+      return UbuntuInitLocalizationsPt();
+    case 'ro':
+      return UbuntuInitLocalizationsRo();
+    case 'ru':
+      return UbuntuInitLocalizationsRu();
+    case 'se':
+      return UbuntuInitLocalizationsSe();
+    case 'si':
+      return UbuntuInitLocalizationsSi();
+    case 'sk':
+      return UbuntuInitLocalizationsSk();
+    case 'sl':
+      return UbuntuInitLocalizationsSl();
+    case 'sq':
+      return UbuntuInitLocalizationsSq();
+    case 'sr':
+      return UbuntuInitLocalizationsSr();
+    case 'sv':
+      return UbuntuInitLocalizationsSv();
+    case 'ta':
+      return UbuntuInitLocalizationsTa();
+    case 'te':
+      return UbuntuInitLocalizationsTe();
+    case 'tg':
+      return UbuntuInitLocalizationsTg();
+    case 'th':
+      return UbuntuInitLocalizationsTh();
+    case 'tl':
+      return UbuntuInitLocalizationsTl();
+    case 'tr':
+      return UbuntuInitLocalizationsTr();
+    case 'ug':
+      return UbuntuInitLocalizationsUg();
+    case 'uk':
+      return UbuntuInitLocalizationsUk();
+    case 'vi':
+      return UbuntuInitLocalizationsVi();
+    case 'zh':
+      return UbuntuInitLocalizationsZh();
   }
 
   throw FlutterError(
-    'UbuntuInitLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'UbuntuInitLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }
