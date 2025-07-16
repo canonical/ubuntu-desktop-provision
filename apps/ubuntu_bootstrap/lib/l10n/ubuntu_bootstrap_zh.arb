@@ -662,6 +662,14 @@
   "@bitlockerInfoTitle": {},
   "recoveryKeyExceptionFileSystemTitle": "恢复密钥文件未保存",
   "@recoveryKeyExceptionFileSystemTitle": {},
-  "recoveryKeyExceptionDisallowedPathTitle": "恢复密钥文件不能保存到临时位置。",
-  "@recoveryKeyExceptionDisallowedPathTitle": {}
+  "recoveryKeyExceptionDisallowedPathTitle": "恢复密钥文件不能保存到临时位置",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "recoveryKeyExceptionUnknownTitle": "未知错误",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyExceptionFileSystemBody": "您没有写入该文件夹的权限，请尝试其他位置或使用其他方法。",
+  "@recoveryKeyExceptionFileSystemBody": {},
+  "recoveryKeyFilePickerTitle": "保存恢复密钥文件",
+  "@recoveryKeyFilePickerTitle": {},
+  "recoveryKeyFilePickerFilter": "文本文件",
+  "@recoveryKeyFilePickerFilter": {}
 }
