@@ -148,13 +148,13 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Kurulum tamamlandı",
   "@installationCompleteTitle": {},
-  "readyToUse": "{sistem} kuruldu ve kullanıma hazır",
+  "readyToUse": "{system} kuruldu ve kullanıma hazır",
   "@readyToUse": {},
   "shutdown": "Kapat",
   "@shutdown": {},
   "bitlockerTitle": "BitLocker aktif",
   "@bitlockerTitle": {},
-  "restartIntoWindows": "Windows'a yeniden başlat",
+  "restartIntoWindows": "Windows'u yeniden başlat",
   "@restartIntoWindows": {},
   "installationTypeErase": "Diski silin ve {DISTRO} yükleyin",
   "@installationTypeErase": {},
@@ -212,7 +212,7 @@
   "@installAlongsideAvailable": {},
   "confirmPartitionFormat": "<b>{sysname}</b> bölümü <b>{format}</b> olarak biçimlendirildi",
   "@confirmPartitionFormat": {},
-  "restartInto": "{system} ile yeniden başlat",
+  "restartInto": "{system}'i yeniden başlat",
   "@restartInto": {},
   "installAlongsideSize": "Boyut:",
   "@installAlongsideSize": {},
@@ -759,5 +759,39 @@
         "type": "String"
       }
     }
-  }
+  },
+  "rebootToConfigure": "**{system}** diske kopyalandı",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Kurulumu tamamlamak veya teste devam etmek için yeniden başlatın.\nYaptığınız değişiklikler kaydedilmeyecektir.",
+  "@restartWarningBody": {},
+  "rebootToConfigureWarning": "Kurulum işlemine devam edebilmek için bilgisayarınızı yeniden başlatmanız gerekmektedir.",
+  "@rebootToConfigureWarning": {},
+  "bitlockerInfoTitle": "BitLocker algılandı",
+  "@bitlockerInfoTitle": {},
+  "bitlockerInfoDescription": "Bir veya daha fazla bölüm BitLocker ile şifrelenmiştir.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "Windows'un yanına kurulum yapmak için Windows'ta BitLocker'ı devre dışı bırakın.",
+  "@bitlockerInfoDisable": {},
+  "bitlockerInfoRecovery": "Windows, kurulumdan sonra önyükleme sırasında kurtarma anahtarları isteyebilir.",
+  "@bitlockerInfoRecovery": {},
+  "bitlockerInfoInstructions": "Talimatlar için <a href=\"{url}\">BitLocker kılavuzunu</a> ziyaret edin.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "BitLocker kurtarma anahtarları olmadan tüm verilerinizi kaybedebilirsiniz",
+  "@bitlockerWarningTitle": {},
+  "restartComputer": "Bilgisayarı yeniden başlat",
+  "@restartComputer": {},
+  "restartComputerTitle": "Bilgisayar yeniden başlatılsın mı?",
+  "@restartComputerTitle": {}
 }
