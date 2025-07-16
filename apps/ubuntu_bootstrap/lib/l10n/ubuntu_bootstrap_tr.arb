@@ -592,6 +592,10 @@
   "@passphrasePageRequiredPin": {},
   "passphrasePageMismatchPin": "PIN'ler eşleşmiyor",
   "@passphrasePageMismatchPin": {},
-  "passphraseTypePassphraseTileTitle": "Bir parola gerektir",
-  "@passphraseTypePassphraseTileTitle": {}
+  "passphraseTypePassphraseTileTitle": "Bir parola gereklidir",
+  "@passphraseTypePassphraseTileTitle": {},
+  "passphraseTypePassphraseTileSubTitle": "En güvenlisi. Bilgisayarınızı her açtığınızda daha uzun bir parola girmeniz gerekecek.",
+  "@passphraseTypePassphraseTileSubTitle": {},
+  "passphraseTypePinTileTitle": "PIN gerektir",
+  "@passphraseTypePinTileTitle": {}
 }
