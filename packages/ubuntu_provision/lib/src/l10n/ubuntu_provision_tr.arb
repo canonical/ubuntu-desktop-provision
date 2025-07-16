@@ -194,5 +194,51 @@
   "accessibilityVisualAlertsLabel": "Görsel uyarılar",
   "@accessibilityVisualAlertsLabel": {},
   "accessibilityReduceAnimationLabel": "Animasyonu azalt",
-  "@accessibilityReduceAnimationLabel": {}
+  "@accessibilityReduceAnimationLabel": {},
+  "accessibilityPageHeader": "{DISTRO} erişilebilirlik",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Kurulumdan önce {DISTRO}'yu ihtiyaçlarınıza göre özelleştirin. Bunları daha sonra Sistem Ayarları'ndan değiştirebilirsiniz.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityLargeTextLabel": "Büyük metin",
+  "@accessibilityLargeTextLabel": {},
+  "accessibilitySlowKeysLabel": "Yavaş tuşlar",
+  "@accessibilitySlowKeysLabel": {},
+  "accessibilityDesktopZoomLabel": "Masaüstü yakınlaştırma",
+  "@accessibilityDesktopZoomLabel": {},
+  "errorPageUnexpected": "Üzgünüz, ancak hatanın ne olduğundan emin değiliz. Bilgisayarınızı yeniden başlatıp yükleme işlemini tekrar başlatabilirsiniz. Ayrıca <a>sorunu bildirebilirsiniz</a>.",
+  "@errorPageUnexpected": {},
+  "errorPageUbuntuBug": "İlgili hata ayıklama bilgilerini içeren otomatik bir hata raporu göndermek için lütfen bir terminalde veya komut konsolundan (Alt+F2) <pre>sudo ubuntu-bug {SNAP}</pre> komutunu çalıştırın.",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryHeader": "Active Directory'ye giriş yapılsın mı?",
+  "@activeDirectoryHeader": {},
+  "activeDirectoryInfo": "{DISTRO}, daha kolay yönetim için Active Directory ile kusursuz bir şekilde entegre olacak şekilde tasarlanmıştır.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageBody": "İnternet bağlantısı, uyumluluk kontrolü ve ekstra yazılım paketleri ile kurulumunuzu iyileştirecektir.",
+  "@networkPageBody": {},
+  "eulaReadAndAcceptTerms": "Bu makineyi kurmaya devam etmek için lisans sözleşmesinin şartlarını okuyup kabul etmeniz gerekir.",
+  "@eulaReadAndAcceptTerms": {}
 }
