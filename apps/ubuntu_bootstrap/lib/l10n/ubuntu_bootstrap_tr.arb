@@ -64,7 +64,7 @@
   "@installationTypeTitle": {},
   "diskHeadersDevice": "Cihaz",
   "@diskHeadersDevice": {},
-  "allocateDiskSpace": "Elle biçimlendirme",
+  "allocateDiskSpace": "Manuel bölümlendirme",
   "@allocateDiskSpace": {},
   "newPartitionTable": "Yeni bölüm tablosu",
   "@newPartitionTable": {},
@@ -98,11 +98,11 @@
   "@installationTypeNoOSDetected": {},
   "installationTypeAlongside": "{product} ürününü {os} yanına yükleyin",
   "@installationTypeAlongside": {},
-  "installationTypeManual": "Elle bölümlendirme",
+  "installationTypeManual": "Manuel kurulum",
   "@installationTypeManual": {},
   "selectGuidedStorageDropdownLabel": "Sürücü seçin:",
   "@selectGuidedStorageDropdownLabel": {},
-  "selectGuidedStorageInfoLabel": "Bütün disk kullanılacaktır:",
+  "selectGuidedStorageInfoLabel": "Tüm disk kullanılacaktır:",
   "@selectGuidedStorageInfoLabel": {},
   "updatesOtherSoftwarePageTitle": "Uygulamalar",
   "@updatesOtherSoftwarePageTitle": {},
@@ -148,7 +148,7 @@
   "@confirmPartitionChanges": {},
   "installationCompleteTitle": "Kurulum tamamlandı",
   "@installationCompleteTitle": {},
-  "readyToUse": "{system} kuruldu ve kullanıma hazır",
+  "readyToUse": "{sistem} kuruldu ve kullanıma hazır",
   "@readyToUse": {},
   "shutdown": "Kapat",
   "@shutdown": {},
@@ -158,7 +158,7 @@
   "@restartIntoWindows": {},
   "installationTypeErase": "Diski silin ve {DISTRO} yükleyin",
   "@installationTypeErase": {},
-  "selectGuidedStoragePageTitle": "Diski sil ve {DISTRO} kur",
+  "selectGuidedStoragePageTitle": "Diski silin ve {DISTRO} yükleyin",
   "@selectGuidedStoragePageTitle": {},
   "installationTypeOSDetected": "Bu bilgisayarda şu anda {os} yüklü. Ne yapmak istersiniz?",
   "@installationTypeOSDetected": {},
@@ -172,25 +172,25 @@
   "@configuringSystem": {},
   "installationFailed": "Kurulum başarısız oldu",
   "@installationFailed": {},
-  "newPartitionTableConfirmationMessage": "Cihazın tamamında yeni bir bölüm tablosu oluşturmak var olan bölümleri siler. Bu işlem gerekirse geri alınabilir.",
+  "newPartitionTableConfirmationMessage": "Bir cihazın tamamında yeni bir bölüm tablosu oluşturmak, cihazın tüm mevcut bölümlerini kaldırır. Gerekirse bu işlem geri alınabilir.",
   "@newPartitionTableConfirmationMessage": {},
-  "installAlongsideSpaceDivider": "Aşağıdaki ayırıcıyı sürükleyerek sürücü alanı ayır:",
+  "installAlongsideSpaceDivider": "Aşağıdaki ayırıcıyı sürükleyerek sürücü alanını ayırın:",
   "@installAlongsideSpaceDivider": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">Uyarı:</font> Bu, tüm {os} programlarınızı, belgelerinizi, fotoğraflarınızı, müziklerinizi ve diğer dosyalarınızı silecektir.",
   "@installationTypeReinstallWarning": {},
-  "installationTypeManualInfo": "Bölümleri kendiniz oluşturabilir veya yeniden boyutlandırabilir ya da {DISTRO} için birden çok bölüm seçebilirsiniz",
+  "installationTypeManualInfo": "Özelleştirilmiş disk kurulumları arayan ileri düzey kullanıcılar için.",
   "@installationTypeManualInfo": {},
-  "installationTypeAlongsideMulti": "{Ürünü} mevcut işletim sistemleriyle birlikte yükleyin",
+  "installationTypeAlongsideMulti": "{product} mevcut işletim sistemleriyle birlikte yükleyin",
   "@installationTypeAlongsideMulti": {},
   "installAlongsideResizePartition": "Bölümü yeniden boyutlandır",
   "@installAlongsideResizePartition": {},
   "installAlongsideAllocateSpace": "Alan ayır",
   "@installAlongsideAllocateSpace": {},
-  "installAlongsideHiddenPartitions": "{num} küçük bölüm gizli, daha fazla denetim için <a href=\"{url}\">gelişmiş bölümleme aracını</a> kullanın",
+  "installAlongsideHiddenPartitions": "{num} daha küçük bölüm gizlidir, daha fazla kontrol için <a href=\"{url}\">gelişmiş bölümlendirme aracını</a> kullanın",
   "@installAlongsideHiddenPartitions": {},
   "installAlongsidePartition": "Bölüm:",
   "@installAlongsidePartition": {},
-  "installationTypeAlongsideInfo": "Belgeler, müzik ve diğer kişisel dosyalar korunacak. Bilgisayar her başlatıldığında hangi işletim sistemini istediğinizi seçebilirsiniz.",
+  "installationTypeAlongsideInfo": "Yeniden boyutlandırılacak ve {product} için alan oluşturulacak bölümü seçin. Önyükleme sırasında işletim sisteminizi seçebilirsiniz.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeDualOSDetected": "Bu bilgisayarda şu anda {os1} ve {os2} yüklü. Ne yapmak istersiniz?",
   "@installationTypeDualOSDetected": {},
@@ -202,7 +202,7 @@
   "@confirmPartitionTables": {},
   "confirmPartitionResize": "<b>{sysname}</b> bölümü <b>{oldsize}</b> boyutundan <b>{newsize}</b> boyutuna yeniden boyutlandırıldı",
   "@confirmPartitionResize": {},
-  "confirmHeader": "Devam ederseniz, aşağıda listelenen değişiklikler disklere yazılacak. Daha fazla değişikliği elle yapabileceksiniz.",
+  "confirmHeader": "Seçimlerinizi gözden geçirin",
   "@confirmHeader": {},
   "copyingFiles": "Dosyalar kopyalanıyor…",
   "@copyingFiles": {},
@@ -254,7 +254,7 @@
   "@partitionLimitReached": {},
   "offlineWarning": "Şu anda çevrimdışısınız",
   "@offlineWarning": {},
-  "partitionFormatNone": "Biçimlendirilmemiş bırak",
+  "partitionFormatNone": "Biçimlendirilmemiş olarak bırak",
   "@partitionFormatNone": {},
   "installationSlidesTitle": "{RELEASE} sürümüne hoş geldiniz",
   "@installationSlidesTitle": {},
@@ -268,7 +268,7 @@
   "@loadingHeader": {},
   "confirmDevicesTitle": "Aygıtlar",
   "@confirmDevicesTitle": {},
-  "confirmPartitionsTitle": "Disk bölümleri",
+  "confirmPartitionsTitle": "Bölümler",
   "@confirmPartitionsTitle": {},
   "installationSlidesAvailable": "Mevcut:",
   "@installationSlidesAvailable": {},
@@ -436,9 +436,9 @@
   "@confirmSectionGeneralTitle": {},
   "confirmSectionSecurityAndMoreTitle": "Güvenlik ve daha fazlası",
   "@confirmSectionSecurityAndMoreTitle": {},
-  "confirmProprietarySoftwareCodecs": "Kod çözücüler",
+  "confirmProprietarySoftwareCodecs": "Kodekler",
   "@confirmProprietarySoftwareCodecs": {},
-  "confirmProprietarySoftwareCodecsDrivers": "Kod çözücüler & sürücüler",
+  "confirmProprietarySoftwareCodecsDrivers": "Kodekler ve sürücüler",
   "@confirmProprietarySoftwareCodecsDrivers": {},
   "confirmProprietarySoftwareDrivers": "Sürücüler",
   "@confirmProprietarySoftwareDrivers": {},
@@ -651,6 +651,111 @@
         "type": "String"
       },
       "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "{os}'u silin ve {product}'ı yükleyin",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Mevcut {os} kurulumundaki tüm dosyalar ve veriler kalıcı olarak silinecektir.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Seçtiğiniz diskte sıfırdan başlayın.",
+  "@selectGuidedStorageInfo": {},
+  "selectGuidedStorageDriveDropdownLabel": "Sürücüyü seçin:",
+  "@selectGuidedStorageDriveDropdownLabel": {},
+  "selectGuidedStoragePartitionDropdownLabel": "Bölüm seçin:",
+  "@selectGuidedStoragePartitionDropdownLabel": {},
+  "guidedStoragePageHeader": "{DISTRO}'nun nereye yükleneceğini seçin",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "{format}, {mountpoint} için desteklenen bir dosya sistemi değildir",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "@confirmDiskEncryptionLVM": {},
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "@confirmDiskEncryptionZFS": {},
+  "confirmEntryDiskSetup": "Kurulum türü",
+  "@confirmEntryDiskSetup": {},
+  "confirmEntryProprietarySoftware": "Tescilli yazılım",
+  "@confirmEntryProprietarySoftware": {},
+  "confirmTableErased": "Silinmiş",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "Değişmemiş",
+  "@confirmTableUnchanged": {},
+  "confirmTableResized": "{oldsize} boyutundan {newsize} boyutuna yeniden boyutlandırıldı",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "{mountpoint} için kullanılan {format} olarak oluşturuldu ve biçimlendirildi",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "{mountpoint} için kullanılan {format} olarak biçimlendirildi",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "{mountpoint} için kullanılır",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "{format} olarak biçimlendirildi",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
         "type": "String"
       }
     }
