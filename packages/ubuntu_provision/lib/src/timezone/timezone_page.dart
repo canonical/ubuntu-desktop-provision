@@ -102,12 +102,16 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
           ),
           const SizedBox(height: kWizardSpacing),
           Expanded(
-            child: TimezoneMap(
-              size: TimezoneMapSize.medium,
-              offset: model.selectedLocation?.offset,
-              marker: model.selectedLocation?.coordinates,
-              onPressed: (coordinates) =>
-                  model.searchMap(coordinates).then(model.selectLocation),
+            child: Semantics(
+              label: model.selectedLocation?.name,
+              button: true,
+              child: TimezoneMap(
+                size: TimezoneMapSize.medium,
+                offset: model.selectedLocation?.offset,
+                marker: model.selectedLocation?.coordinates,
+                onPressed: (coordinates) =>
+                    model.searchMap(coordinates).then(model.selectLocation),
+              ),
             ),
           ),
         ],
