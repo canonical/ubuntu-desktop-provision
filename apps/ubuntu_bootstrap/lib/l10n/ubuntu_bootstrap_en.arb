@@ -1012,5 +1012,7 @@
   "landscapeConfirmPageSuccessInfoTitle": "Ubuntu will install with the configuration provided by your organization",
   "@landscapeConfirmPageSuccessInfoTitle": {},
   "landscapeConfirmPageSuccessInfoContent": "You can review the autoinstall file imported from Landscape below.",
-  "@landscapeConfirmPageSuccessInfoContent": {}
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "successIconSemanticLabel": "Success",
+  "errorIconSemanticLabel": "Error"
 }

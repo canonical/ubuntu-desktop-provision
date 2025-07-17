@@ -1358,4 +1358,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Az alábbiakban áttekintheti a Landscape-ből importált automatikus telepítőfájlt.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

@@ -2397,6 +2397,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'You can review the autoinstall file imported from Landscape below.'**
   String get landscapeConfirmPageSuccessInfoContent;
+
+  /// No description provided for @successIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Success'**
+  String get successIconSemanticLabel;
+
+  /// No description provided for @errorIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get errorIconSemanticLabel;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate

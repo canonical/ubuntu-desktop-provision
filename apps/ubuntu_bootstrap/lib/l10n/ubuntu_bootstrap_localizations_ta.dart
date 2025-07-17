@@ -1360,4 +1360,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'கீழே உள்ள நிலப்பரப்பில் இருந்து இறக்குமதி செய்யப்பட்ட ஆட்டோஇன்ச்டால் கோப்பை நீங்கள் மதிப்பாய்வு செய்யலாம்.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

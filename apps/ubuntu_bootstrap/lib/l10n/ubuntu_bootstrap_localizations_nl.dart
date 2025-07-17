@@ -1358,4 +1358,10 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Je kunt het automatische installatiebestand dat uit Landscape is geïmporteerd hieronder bekijken.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

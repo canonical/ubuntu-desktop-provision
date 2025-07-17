@@ -1287,6 +1287,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'You can review the autoinstall file imported from Landscape below.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

@@ -30,7 +30,9 @@ class SecurityKeyFormField extends ConsumerWidget {
         validator: RequiredValidator(
           errorText: lang.configureSecureBootSecurityKeyRequired,
         ),
-        successWidget: const SuccessIcon(),
+        successWidget: SuccessIcon(
+          semanticLabel: lang.successIconSemanticLabel,
+        ),
       ),
     );
   }
@@ -57,8 +59,11 @@ class SecurityKeyConfirmFormField extends ConsumerWidget {
         enabled: model.areTextFieldsEnabled,
         initialValue: model.confirmKey,
         onChanged: model.setConfirmKey,
-        successWidget:
-            model.securityKey.isNotEmpty ? const SuccessIcon() : null,
+        successWidget: model.securityKey.isNotEmpty
+            ? SuccessIcon(
+                semanticLabel: lang.successIconSemanticLabel,
+              )
+            : null,
         validator: EqualValidator(
           model.securityKey,
           errorText: lang.secureBootSecurityKeysDontMatch,
