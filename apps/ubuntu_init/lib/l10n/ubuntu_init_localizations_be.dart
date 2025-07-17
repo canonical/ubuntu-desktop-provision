@@ -153,4 +153,7 @@ class UbuntuInitLocalizationsBe extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Вы заўсёды можаце кіраваць сваімі службамі Ubuntu Pro у праграме «Праграмнае забеспячэнне і абнаўленні».';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

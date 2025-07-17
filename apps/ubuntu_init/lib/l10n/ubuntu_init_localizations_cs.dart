@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Své služby Pro můžete spravovat v aplikaci Software a aktualizace.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

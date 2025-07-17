@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Sa võid hallata oma Ubuntu Pro teenuseid rakenduses „Tarkvara ja uuendused“.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

@@ -147,6 +147,9 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       '您可以在“软件与更新”应用中管理 Ubuntu Pro 服务。';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

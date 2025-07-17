@@ -149,4 +149,7 @@ class UbuntuInitLocalizationsKo extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       '소프트웨어 및 업데이트 애플리케이션에서 Ubuntu Pro 서비스를 관리할 수 있습니다.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

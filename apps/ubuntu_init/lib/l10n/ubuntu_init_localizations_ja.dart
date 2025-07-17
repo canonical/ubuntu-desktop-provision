@@ -149,4 +149,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       '「ソフトウェアとアップデート」アプリでProサービスを設定できます。';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

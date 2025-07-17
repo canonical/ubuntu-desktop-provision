@@ -44,7 +44,9 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SuccessIcon(),
+                    SuccessIcon(
+                      semanticLabel: l10n.successIconSemanticLabel,
+                    ),
                     const SizedBox(width: kWizardSpacing / 2),
                     Flexible(
                       child: Column(

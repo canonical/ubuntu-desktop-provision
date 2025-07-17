@@ -155,4 +155,7 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Podètz gerir los servicis Pro dins l\'aplicacion Logicial e mesas a jorn.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

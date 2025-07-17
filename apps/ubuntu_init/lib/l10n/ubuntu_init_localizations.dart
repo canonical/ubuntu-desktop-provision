@@ -488,6 +488,12 @@ abstract class UbuntuInitLocalizations {
   /// In en, this message translates to:
   /// **'You can manage your Pro services in the Software & Updates application.'**
   String get ubuntuProSucessAttachDescription;
+
+  /// No description provided for @successIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Success'**
+  String get successIconSemanticLabel;
 }
 
 class _UbuntuInitLocalizationsDelegate

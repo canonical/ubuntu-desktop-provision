@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsSr extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Можете управљати својим Pro услугама у апликацији Софтвер и ажурирања.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

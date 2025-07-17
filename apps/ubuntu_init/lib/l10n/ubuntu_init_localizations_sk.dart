@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

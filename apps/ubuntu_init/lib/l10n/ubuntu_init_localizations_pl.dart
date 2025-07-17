@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Usługami Pro możesz zarządzać w aplikacji Oprogramowanie i aktualizacje.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

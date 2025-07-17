@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'மென்பொருள் மற்றும் புதுப்பிப்புகள் பயன்பாட்டில் உங்கள் புரோ சேவைகளை நிர்வகிக்கலாம்.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }
