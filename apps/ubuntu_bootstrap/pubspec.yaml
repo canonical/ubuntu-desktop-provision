@@ -52,7 +52,7 @@ dependencies:
   ubuntu_provision: ^0.1.0
   ubuntu_service: ^0.3.1
   ubuntu_utils: ^0.1.0
-  ubuntu_widgets: ^0.7.1
+  ubuntu_widgets: ^0.7.3
   ubuntu_wizard: ^0.1.0
   xdg_desktop_portal: ^0.1.13
   yaml: ^3.1.2
