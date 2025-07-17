@@ -780,6 +780,8 @@
   "@previousSlideSemanticLabel": {},
   "pauseSlideshowSemanticLabel": "Ĉesigi foliumadon",
   "@pauseSlideshowSemanticLabel": {},
-  "playSlideshowSemanticLabel": "Foliumi tra paĝoj",
-  "@playSlideshowSemanticLabel": {}
+  "playSlideshowSemanticLabel": "Foliumi paĝojn",
+  "@playSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Baskuligi instalan protokolon",
+  "@toggleLogsSemanticLabel": {}
 }
