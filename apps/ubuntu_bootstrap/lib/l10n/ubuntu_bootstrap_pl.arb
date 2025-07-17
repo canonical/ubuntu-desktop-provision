@@ -773,5 +773,15 @@
   "passphrasePagePassphraseEntropyBelowOptimal": "Wystarczające hasło, wydłuż je lub zwiększ złożoność, aby zwiększyć bezpieczeństwo",
   "@passphrasePagePassphraseEntropyBelowOptimal": {},
   "passphrasePagePinEntropyBelowOptimal": "Wystarczający kod PIN, uczyń go dłuższym lub mniej przewidywalnym, aby zapewnić większe bezpieczeństwo",
-  "@passphrasePagePinEntropyBelowOptimal": {}
+  "@passphrasePagePinEntropyBelowOptimal": {},
+  "nextSlideSemanticLabel": "Następny slajd",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Poprzedni slajd",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Odtwórz pokaz slajdów",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Wstrzymaj pokaz slajdów",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Przełącz dzienniki instalacji",
+  "@toggleLogsSemanticLabel": {}
 }
