@@ -361,4 +361,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => 'Léigh mé agus glacaim leis na téarmaí seo';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

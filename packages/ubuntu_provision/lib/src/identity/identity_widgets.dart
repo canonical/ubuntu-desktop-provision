@@ -20,7 +20,9 @@ class RealNameFormField extends ConsumerWidget {
     return ValidatedFormField(
       autofocus: true,
       labelText: lang.identityRealNameLabel,
-      successWidget: const SuccessIcon(),
+      successWidget: SuccessIcon(
+        semanticLabel: lang.successIconSemanticLabel,
+      ),
       initialValue: realName,
       validator: MultiValidator([
         RequiredValidator(
@@ -51,7 +53,9 @@ class HostnameFormField extends ConsumerWidget {
 
     return ValidatedFormField(
       labelText: lang.identityHostnameLabel,
-      successWidget: const SuccessIcon(),
+      successWidget: SuccessIcon(
+        semanticLabel: lang.successIconSemanticLabel,
+      ),
       initialValue: hostname,
       validator: MultiValidator([
         RequiredValidator(
@@ -107,7 +111,9 @@ class UsernameFormField extends ConsumerWidget {
 
     return ValidatedFormField(
       labelText: lang.identityUsernameLabel,
-      successWidget: const SuccessIcon(),
+      successWidget: SuccessIcon(
+        semanticLabel: lang.successIconSemanticLabel,
+      ),
       initialValue: username,
       validator: MultiValidator([
         RequiredValidator(
@@ -182,8 +188,11 @@ class ConfirmPasswordFormField extends ConsumerWidget {
     return ValidatedFormField(
       obscureText: !showPassword,
       labelText: lang.identityConfirmPasswordLabel,
-      successWidget:
-          password.isNotEmpty ? const SuccessIcon() : const SizedBox(),
+      successWidget: password.isNotEmpty
+          ? SuccessIcon(
+              semanticLabel: lang.successIconSemanticLabel,
+            )
+          : const SizedBox(),
       initialValue: confirmedPassword,
       autovalidateMode: AutovalidateMode.always,
       validator: EqualValidator(

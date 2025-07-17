@@ -896,6 +896,12 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'I have read and accept these terms'**
   String get eulaAcceptTerms;
+
+  /// No description provided for @successIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Success'**
+  String get successIconSemanticLabel;
 }
 
 class _UbuntuProvisionLocalizationsDelegate

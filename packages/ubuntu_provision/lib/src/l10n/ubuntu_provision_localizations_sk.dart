@@ -365,4 +365,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   @override
   String get eulaAcceptTerms =>
       'Prečítal(a) som si tieto podmienky a súhlasím s nimi';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

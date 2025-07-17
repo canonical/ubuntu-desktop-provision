@@ -360,4 +360,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => 'Ik heb deze regels gelezen en ga akkoord';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

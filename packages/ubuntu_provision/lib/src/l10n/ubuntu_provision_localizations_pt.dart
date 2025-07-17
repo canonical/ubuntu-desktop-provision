@@ -361,6 +361,9 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => 'I have read and accept these terms';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

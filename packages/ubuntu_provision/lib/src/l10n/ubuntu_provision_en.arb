@@ -143,5 +143,6 @@
   "eulaPageTitle": "License agreement",
   "eulaReviewTerms": "Review the license terms",
   "eulaReadAndAcceptTerms": "To continue setting up this machine, you must read and accept the license agreement terms.",
-  "eulaAcceptTerms": "I have read and accept these terms"
+  "eulaAcceptTerms": "I have read and accept these terms",
+  "successIconSemanticLabel": "Success"
 }

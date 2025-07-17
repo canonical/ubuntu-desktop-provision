@@ -25,7 +25,9 @@ class DomainNameFormField extends ConsumerWidget {
       autofocus: true,
       labelText: lang.activeDirectoryDomainLabel,
       initialValue: domainName,
-      successWidget: const SuccessIcon(),
+      successWidget: SuccessIcon(
+        semanticLabel: lang.successIconSemanticLabel,
+      ),
       validator: CallbackValidator(
         (_) =>
             validation == null ||
@@ -54,7 +56,9 @@ class AdminNameFormField extends ConsumerWidget {
     return ValidatedFormField(
       labelText: lang.activeDirectoryAdminLabel,
       initialValue: adminName,
-      successWidget: const SuccessIcon(),
+      successWidget: SuccessIcon(
+        semanticLabel: lang.successIconSemanticLabel,
+      ),
       validator: CallbackValidator(
         (_) => validation == AdAdminNameValidation.OK,
         errorText: validation?.localize(context) ?? '',
@@ -81,8 +85,11 @@ class PasswordFormField extends ConsumerWidget {
     return ValidatedFormField(
       labelText: lang.activeDirectoryPasswordLabel,
       obscureText: !showPassword,
-      successWidget:
-          password.isNotEmpty ? const SuccessIcon() : const SizedBox(),
+      successWidget: password.isNotEmpty
+          ? SuccessIcon(
+              semanticLabel: lang.successIconSemanticLabel,
+            )
+          : const SizedBox(),
       initialValue: password,
       suffixIcon: ShowPasswordButton(
         value: showPassword,
