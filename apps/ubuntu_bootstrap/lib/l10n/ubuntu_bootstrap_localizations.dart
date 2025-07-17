@@ -1900,6 +1900,36 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Enterprise-grade 24/7 support with Ubuntu Pro'**
   String get installationSlidesSupportUbuntuPro;
 
+  /// No description provided for @nextSlideSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Next slide'**
+  String get nextSlideSemanticLabel;
+
+  /// No description provided for @previousSlideSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous slide'**
+  String get previousSlideSemanticLabel;
+
+  /// No description provided for @playSlideshowSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Play slideshow'**
+  String get playSlideshowSemanticLabel;
+
+  /// No description provided for @pauseSlideshowSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause slideshow'**
+  String get pauseSlideshowSemanticLabel;
+
+  /// No description provided for @toggleLogsSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Toggle install logs'**
+  String get toggleLogsSemanticLabel;
+
   /// No description provided for @copyingFiles.
   ///
   /// In en, this message translates to:

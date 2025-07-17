@@ -1036,6 +1036,21 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'நிறுவன-வகுப்பு 24/7 உபுண்டு புரோவுடன் உதவி';
 
   @override
+  String get nextSlideSemanticLabel => 'Next slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Previous slide';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Play slideshow';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Toggle install logs';
+
+  @override
   String get copyingFiles => 'கோப்புகளை நகலெடுக்கும்…';
 
   @override
