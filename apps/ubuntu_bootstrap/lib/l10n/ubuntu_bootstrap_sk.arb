@@ -771,5 +771,15 @@
   "passphrasePagePassphraseEntropyBelowMin": "Slabá prístupová fráza, vytvorte dlhšiu alebo zložitejšiu",
   "@passphrasePagePassphraseEntropyBelowMin": {},
   "passphrasePagePassphraseEntropyBelowOptimal": "Priemerná prístupová fráza, pre lepšiu bezpečnosť ju vytvorte dlhšiu alebo zložitejšiu",
-  "@passphrasePagePassphraseEntropyBelowOptimal": {}
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "nextSlideSemanticLabel": "Ďalší snímok",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Predchádzajúci snímok",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Spustiť prezentáciu",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Pozastaviť prezentáciu",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Prepínať zobrazenie inštalačných záznamov",
+  "@toggleLogsSemanticLabel": {}
 }
