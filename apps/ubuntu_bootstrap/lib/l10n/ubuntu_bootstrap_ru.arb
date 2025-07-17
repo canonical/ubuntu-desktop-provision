@@ -773,5 +773,15 @@
   "passphrasePagePinEntropyBelowOptimal": "Подходящий PIN-код, но для большей безопасности можете сделать его длиннее или менее предсказуемым",
   "@passphrasePagePinEntropyBelowOptimal": {},
   "passphrasePageBodyPassphrase": "Каждый раз при включении компьютера вам нужно будет вводить свою парольную фразу. Эта парольная фраза отличается от вашего пароля пользователя. Вы сможете изменить её позже, но не отключить. Если вы забудете свою парольную фразу, то сможете восстановить доступ к диску, используя ключ восстановления.",
-  "@passphrasePageBodyPassphrase": {}
+  "@passphrasePageBodyPassphrase": {},
+  "nextSlideSemanticLabel": "Следующий слайд",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Предыдущий слайд",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Начать показ слайдов",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Приостановить показ слайдов",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Включить ведение журнала установки",
+  "@toggleLogsSemanticLabel": {}
 }
