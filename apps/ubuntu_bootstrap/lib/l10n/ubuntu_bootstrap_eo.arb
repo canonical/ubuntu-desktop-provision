@@ -773,5 +773,13 @@
   "passphraseTypePinTileTitle": "Postuli PIN",
   "@passphraseTypePinTileTitle": {},
   "passphrasePageBodyPin": "Vi devos tajpi vian PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian PIN, vi povos atingi la diskon per la restaŭra ŝlosilo.",
-  "@passphrasePageBodyPin": {}
+  "@passphrasePageBodyPin": {},
+  "nextSlideSemanticLabel": "Sekva paĝo",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Antaŭa paĝo",
+  "@previousSlideSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Ĉesigi foliumadon",
+  "@pauseSlideshowSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Aŭtomata foliumado",
+  "@playSlideshowSemanticLabel": {}
 }
