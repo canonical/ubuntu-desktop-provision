@@ -24,6 +24,9 @@ class LoadingPage extends ConsumerWidget with ProvisioningPage {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.loadingPageTitle(flavor.displayName)),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.center,

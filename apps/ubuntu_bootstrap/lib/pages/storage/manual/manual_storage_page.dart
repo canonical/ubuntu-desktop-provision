@@ -69,6 +69,9 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.allocateDiskSpace),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
