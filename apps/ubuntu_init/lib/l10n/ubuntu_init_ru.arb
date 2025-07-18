@@ -80,5 +80,7 @@
   "ubuntuProMagicAttachInstructions": "Быстрое подключение с помощью этого кода на <a href=\"https://{url}\">{url}</a>",
   "@ubuntuProMagicAttachInstructions": {},
   "telemetryCollectError": "Не удалось собрать данные телеметрии",
-  "@telemetryCollectError": {}
+  "@telemetryCollectError": {},
+  "successIconSemanticLabel": "Успех",
+  "@successIconSemanticLabel": {}
 }
