@@ -735,5 +735,19 @@
   "passphrasePagePinEntropyBelowOptimal": "PIN-kood on juba täitsa hea, parema turvalisuse nimel palun muuda ta pikemaks ja vähem ennustatavaks",
   "@passphrasePagePinEntropyBelowOptimal": {},
   "passphrasePagePinEntropyOptimal": "PIN-kood on piisavalt pikk",
-  "@passphrasePagePinEntropyOptimal": {}
+  "@passphrasePagePinEntropyOptimal": {},
+  "successIconSemanticLabel": "Õnnestus",
+  "@successIconSemanticLabel": {},
+  "nextSlideSemanticLabel": "Järgmine slaid",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Eelmine slaid",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Käivita slaidiprogramm",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Peata slaidiprogramm",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Näita paigalduslogisid või peida nad",
+  "@toggleLogsSemanticLabel": {},
+  "errorIconSemanticLabel": "Viga",
+  "@errorIconSemanticLabel": {}
 }
