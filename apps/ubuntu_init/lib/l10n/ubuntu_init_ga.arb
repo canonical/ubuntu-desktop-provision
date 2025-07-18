@@ -80,5 +80,7 @@
   "telemetryReportLabel": "Taispeáin an chéad tuairisc",
   "@telemetryReportLabel": {},
   "telemetryLegalLabel": "Fógra dlíthiúil",
-  "@telemetryLegalLabel": {}
+  "@telemetryLegalLabel": {},
+  "successIconSemanticLabel": "Rath",
+  "@successIconSemanticLabel": {}
 }
