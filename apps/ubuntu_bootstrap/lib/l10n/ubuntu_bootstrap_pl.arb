@@ -783,5 +783,9 @@
   "pauseSlideshowSemanticLabel": "Wstrzymaj pokaz slajdów",
   "@pauseSlideshowSemanticLabel": {},
   "toggleLogsSemanticLabel": "Przełącz dzienniki instalacji",
-  "@toggleLogsSemanticLabel": {}
+  "@toggleLogsSemanticLabel": {},
+  "successIconSemanticLabel": "Powodzenie",
+  "@successIconSemanticLabel": {},
+  "errorIconSemanticLabel": "Błąd",
+  "@errorIconSemanticLabel": {}
 }
