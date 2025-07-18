@@ -25,7 +25,7 @@ dependencies:
   ubuntu_test: ^0.2.2
   ubuntu_utils: ^0.1.0
   ubuntu_wizard: ^0.1.0
-  yaru: ^8.0.0
+  yaru: ^8.1.0
   yaru_test: ^0.3.1
 
 dev_dependencies:
