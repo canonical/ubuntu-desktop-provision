@@ -781,5 +781,9 @@
   "pauseSlideshowSemanticLabel": "Pozastaviť prezentáciu",
   "@pauseSlideshowSemanticLabel": {},
   "toggleLogsSemanticLabel": "Prepínať zobrazenie inštalačných záznamov",
-  "@toggleLogsSemanticLabel": {}
+  "@toggleLogsSemanticLabel": {},
+  "successIconSemanticLabel": "Úspech",
+  "@successIconSemanticLabel": {},
+  "errorIconSemanticLabel": "Chyba",
+  "@errorIconSemanticLabel": {}
 }
