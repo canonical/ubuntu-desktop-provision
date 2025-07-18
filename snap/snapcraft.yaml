@@ -31,7 +31,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 5c13df17c303d8e53c877d7b13466bba2a944ba7
+    source-commit: &commit-ref d4cab303e518c08fedb7fcd4d6838b5512b4f505
     source-type: git
     override-build: |
       set -eux
