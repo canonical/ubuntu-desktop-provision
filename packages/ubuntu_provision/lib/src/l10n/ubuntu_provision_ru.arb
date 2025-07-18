@@ -216,5 +216,7 @@
   "eulaReadAndAcceptTerms": "Чтобы продолжить настройку этой системы, Вы должны прочитать и принять условия лицензионного соглашения.",
   "@eulaReadAndAcceptTerms": {},
   "errorPageUbuntuBug": "Чтобы отправлять автоматические отчёты об ошибках, включая соответствующую отладочную информацию, запустите <pre>sudo ubuntu-bug {SNAP}</pre> в терминале или из командной консоли (Alt+F2).",
-  "@errorPageUbuntuBug": {}
+  "@errorPageUbuntuBug": {},
+  "successIconSemanticLabel": "Успех",
+  "@successIconSemanticLabel": {}
 }
