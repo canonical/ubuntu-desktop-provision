@@ -156,4 +156,13 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
 
   @override
   String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }

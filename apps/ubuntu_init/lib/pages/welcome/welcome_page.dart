@@ -24,6 +24,9 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(l10n.welcomePageTitle),
+        closeSemanticLabel: l10n.closeIconSemanticLabel,
+        maximizeSemanticLabel: l10n.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: l10n.minimizeIconSemanticLabel,
       ),
       content: ListView(
         children: [
