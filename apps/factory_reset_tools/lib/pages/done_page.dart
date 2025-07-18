@@ -15,7 +15,12 @@ class DonePage extends ConsumerWidget {
     final theme = Theme.of(context);
 
     return WizardPage(
-      title: YaruWindowTitleBar(title: Text(lang.windowTitle)),
+      title: YaruWindowTitleBar(
+        title: Text(lang.windowTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
+      ),
       content: Row(
         children: [
           const Spacer(),

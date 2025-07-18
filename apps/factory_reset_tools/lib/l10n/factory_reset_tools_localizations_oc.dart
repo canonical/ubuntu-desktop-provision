@@ -108,4 +108,13 @@ class FactoryResetToolsLocalizationsOc extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => 'Validar';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }
