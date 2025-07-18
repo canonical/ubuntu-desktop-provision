@@ -27,6 +27,9 @@ class _SecureBootPageState extends ConsumerState<SecureBootPage> {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.configureSecureBootTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
       header: Text(lang.configureSecureBootDescription),
       content: LayoutBuilder(
