@@ -783,5 +783,9 @@
   "pauseSlideshowSemanticLabel": "Приостановить показ слайдов",
   "@pauseSlideshowSemanticLabel": {},
   "toggleLogsSemanticLabel": "Включить ведение журнала установки",
-  "@toggleLogsSemanticLabel": {}
+  "@toggleLogsSemanticLabel": {},
+  "successIconSemanticLabel": "Успех",
+  "@successIconSemanticLabel": {},
+  "errorIconSemanticLabel": "Ошибка",
+  "@errorIconSemanticLabel": {}
 }
