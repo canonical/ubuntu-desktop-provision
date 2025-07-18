@@ -773,5 +773,7 @@
   "passphrasePagePinEntropyOptimal": "PIN-koden är tillräckligt lång",
   "@passphrasePagePinEntropyOptimal": {},
   "passphrasePagePassphraseEntropyOptimal": "Stark lösenfras",
-  "@passphrasePagePassphraseEntropyOptimal": {}
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "successIconSemanticLabel": "Lyckats",
+  "@successIconSemanticLabel": {}
 }
