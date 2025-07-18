@@ -739,5 +739,15 @@
   "passphrasePagePassphraseEntropyBelowMin": "Zwakke wachtwoordzin, maak het langer of meer complex",
   "@passphrasePagePassphraseEntropyBelowMin": {},
   "passphrasePagePassphraseEntropyBelowOptimal": "Redelijke wachtwoordzin, maak het langer of meer complex voor betere beveiliging",
-  "@passphrasePagePassphraseEntropyBelowOptimal": {}
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "nextSlideSemanticLabel": "Volgende dia",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Vorige dia",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Diapresentatie afspelen",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Diapresentatie pauzeren",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Installatielogboeken wisselen",
+  "@toggleLogsSemanticLabel": {}
 }
