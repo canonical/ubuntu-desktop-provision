@@ -106,4 +106,13 @@ class FactoryResetToolsLocalizationsCa extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => 'D\'acord';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }

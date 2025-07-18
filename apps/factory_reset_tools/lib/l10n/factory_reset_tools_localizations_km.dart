@@ -106,4 +106,13 @@ class FactoryResetToolsLocalizationsKm extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => 'យល់ព្រម';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }

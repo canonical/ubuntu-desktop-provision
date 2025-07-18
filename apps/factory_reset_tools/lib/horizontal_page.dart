@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -84,9 +85,15 @@ class HorizontalPage extends StatelessWidget {
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
     const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
+    final lang = FactoryResetToolsLocalizations.of(context);
 
     return WizardPage(
-      title: YaruWindowTitleBar(title: Text(windowTitle)),
+      title: YaruWindowTitleBar(
+        title: Text(windowTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
+      ),
       content: Padding(
         padding: adjustedPadding,
         child: Row(

@@ -106,4 +106,13 @@ class FactoryResetToolsLocalizationsKa extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => 'დიახ';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }

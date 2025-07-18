@@ -106,6 +106,15 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => 'OK';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
