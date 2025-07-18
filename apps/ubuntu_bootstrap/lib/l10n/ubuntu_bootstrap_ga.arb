@@ -767,5 +767,19 @@
   "passphrasePagePinEntropyBelowMin": "UAP lag, déan níos faide nó níos lú intuartha é",
   "@passphrasePagePinEntropyBelowMin": {},
   "passphrasePagePassphraseEntropyBelowMin": "Pasfrása lag, déan níos faide nó níos casta é",
-  "@passphrasePagePassphraseEntropyBelowMin": {}
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "successIconSemanticLabel": "Rath",
+  "@successIconSemanticLabel": {},
+  "nextSlideSemanticLabel": "An chéad sleamhnán eile",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Sleamhnán roimhe seo",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Seinn sleamhnán",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Sos an taispeántas sleamhnán",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Logaí suiteála a scoránaigh",
+  "@toggleLogsSemanticLabel": {},
+  "errorIconSemanticLabel": "Earráid",
+  "@errorIconSemanticLabel": {}
 }
