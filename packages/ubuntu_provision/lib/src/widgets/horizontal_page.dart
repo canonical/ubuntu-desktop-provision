@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/l10n.dart';
 import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -90,9 +91,15 @@ class HorizontalPage extends ConsumerWidget {
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
     const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
+    final lang = UbuntuProvisionLocalizations.of(context);
 
     return WizardPage(
-      title: YaruWindowTitleBar(title: Text(windowTitle)),
+      title: YaruWindowTitleBar(
+        title: Text(windowTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
+      ),
       content: Padding(
         padding: adjustedPadding,
         child: Row(
