@@ -25,7 +25,12 @@ class DonePage extends ConsumerWidget with ProvisioningPage {
         model.provisioningMode == ProvisioningMode.coreDesktop;
 
     return WizardPage(
-      title: YaruWindowTitleBar(title: Text(lang.installationCompleteTitle)),
+      title: YaruWindowTitleBar(
+        title: Text(lang.installationCompleteTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
+      ),
       content: Row(
         children: [
           const Spacer(),

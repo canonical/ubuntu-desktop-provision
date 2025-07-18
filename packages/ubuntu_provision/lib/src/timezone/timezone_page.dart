@@ -36,6 +36,9 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(lang.timezonePageTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
       contentPadding: EdgeInsets.zero,
       content: Column(

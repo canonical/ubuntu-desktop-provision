@@ -23,6 +23,9 @@ class UbuntuProSuccessAttachPage extends ConsumerWidget with ProvisioningPage {
     return WizardPage(
       title: YaruWindowTitleBar(
         title: Text(l10n.ubuntuProPageTitle),
+        closeSemanticLabel: l10n.closeIconSemanticLabel,
+        maximizeSemanticLabel: l10n.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: l10n.minimizeIconSemanticLabel,
       ),
       content: Center(
         child: SingleChildScrollView(

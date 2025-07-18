@@ -46,6 +46,9 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
       contentPadding: EdgeInsets.zero,
       title: YaruWindowTitleBar(
         title: Text(lang.errorPageTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
       content: Stack(
         children: [

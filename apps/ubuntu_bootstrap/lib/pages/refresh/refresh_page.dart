@@ -28,6 +28,9 @@ class RefreshPage extends ConsumerWidget with ProvisioningPage {
         style: model.state.busy
             ? YaruTitleBarStyle.undecorated
             : YaruTitleBarStyle.normal,
+        closeSemanticLabel: l10n.closeIconSemanticLabel,
+        maximizeSemanticLabel: l10n.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: l10n.minimizeIconSemanticLabel,
       ),
       content: RefreshView(
         state: model.state,
