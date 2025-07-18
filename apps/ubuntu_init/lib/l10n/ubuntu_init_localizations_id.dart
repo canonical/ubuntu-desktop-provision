@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Anda dapat mengelola layanan Pro Anda dalam aplikasi Perangkat Lunak & Pembaruan.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

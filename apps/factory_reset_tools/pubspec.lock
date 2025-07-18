@@ -613,10 +613,10 @@ packages:
     dependency: transitive
     description:
       name: ubuntu_widgets
-      sha256: "7c4e6c230327cb73dc66dc07953609a67adb5c42096c280a00e0dda31bfca55d"
+      sha256: "2bee8f081b62fd10ce18f4799f1ae293e28056c5d3b7ae5c299572eb31a9d0d0"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.2+1"
+    version: "0.7.3"
   ubuntu_wizard:
     dependency: "direct main"
     description:
@@ -628,10 +628,10 @@ packages:
     dependency: transitive
     description:
       name: url_launcher
-      sha256: "9d06212b1362abc2f0f0d78e6f09f726608c74e3b9462e8368bb03314aa8d603"
+      sha256: f6a7e5c4835bb4e3026a04793a4199ca2d14c739ec378fdfe23fc8075d0439f8
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.1"
+    version: "6.3.2"
   url_launcher_android:
     dependency: transitive
     description:

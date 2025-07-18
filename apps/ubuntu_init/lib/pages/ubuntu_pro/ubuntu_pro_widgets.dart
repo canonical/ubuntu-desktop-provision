@@ -20,7 +20,9 @@ class TokenTextField extends ConsumerWidget {
           ? Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const SuccessIcon(),
+                SuccessIcon(
+                  semanticLabel: l10n.successIconSemanticLabel,
+                ),
                 const SizedBox(width: kWizardSpacing / 4),
                 Text(
                   l10n.ubuntuProTokenAttachSucess,

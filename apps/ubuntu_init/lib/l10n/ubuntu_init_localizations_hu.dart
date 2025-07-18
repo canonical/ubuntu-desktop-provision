@@ -156,4 +156,7 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'A Pro szolgáltatásokat a Szoftverek és frissítések alkalmazásban kezelheti.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

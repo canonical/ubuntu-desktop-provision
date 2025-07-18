@@ -155,4 +155,7 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Is féidir leat do sheirbhísí Pro a bhainistiú san fheidhmchlár Bogearraí & Nuashonruithe.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

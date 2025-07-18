@@ -1350,4 +1350,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Nižšie si môžete skontrolovať súbor autoinštalácie importovaný z Landscape.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

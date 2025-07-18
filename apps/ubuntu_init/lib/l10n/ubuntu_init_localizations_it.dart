@@ -155,4 +155,7 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Puoi gestire i tuoi servizi Pro nell\'applicazione Software e aggiornamenti.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

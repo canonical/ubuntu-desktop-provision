@@ -1347,4 +1347,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Du kan granska autoinstallationsfilen som importeras från Landscape nedan.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

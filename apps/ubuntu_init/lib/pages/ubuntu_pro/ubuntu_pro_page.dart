@@ -135,7 +135,10 @@ class UbuntuProPage extends ConsumerWidget with ProvisioningPage {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  const SuccessIcon(),
+                                  SuccessIcon(
+                                    semanticLabel:
+                                        l10n.successIconSemanticLabel,
+                                  ),
                                   const SizedBox(width: kWizardSpacing / 4),
                                   Expanded(
                                     child: Text(

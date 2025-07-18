@@ -154,4 +154,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Вы можете управлять услугами Pro в приложении «Программы и обновления».';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

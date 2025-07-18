@@ -1351,4 +1351,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Vi povas revizii la aŭtomatan instalan dosieron el Landscape ĉi-sube.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

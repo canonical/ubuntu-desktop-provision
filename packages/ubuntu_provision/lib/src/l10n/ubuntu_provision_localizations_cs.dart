@@ -361,4 +361,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   @override
   String get eulaAcceptTerms =>
       'Přečetl(a) jsem si tyto podmínky a souhlasím s nimi';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

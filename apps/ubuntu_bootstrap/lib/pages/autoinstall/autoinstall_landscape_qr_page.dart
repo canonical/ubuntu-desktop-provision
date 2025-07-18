@@ -98,7 +98,9 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
                         service.AuthenticationStatus.errorCodeExpired => Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const ErrorIcon(),
+                              ErrorIcon(
+                                semanticLabel: l10n.errorIconSemanticLabel,
+                              ),
                               const SizedBox(width: kWizardSpacing / 4),
                               Text(
                                 l10n.landscapeCodeExpiredWarning,
@@ -118,7 +120,9 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
                         _ => Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const ErrorIcon(),
+                              ErrorIcon(
+                                semanticLabel: l10n.errorIconSemanticLabel,
+                              ),
                               const SizedBox(width: kWizardSpacing / 4),
                               Text(
                                 l10n.landscapeLoginFailedWarning,

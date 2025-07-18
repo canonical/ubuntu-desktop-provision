@@ -1356,4 +1356,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

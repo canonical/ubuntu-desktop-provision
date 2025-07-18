@@ -153,4 +153,7 @@ class UbuntuInitLocalizationsEo extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Vi povas administri viajn servojn de Ubuntu Pro per la programo «Programaroj kaj Ĝisdatigoj».';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

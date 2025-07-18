@@ -1355,4 +1355,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Puede revisar el archivo autoinstall importado desde Landscape a continuación.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

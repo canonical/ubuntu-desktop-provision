@@ -1351,6 +1351,12 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'You can review the autoinstall file imported from Landscape below.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

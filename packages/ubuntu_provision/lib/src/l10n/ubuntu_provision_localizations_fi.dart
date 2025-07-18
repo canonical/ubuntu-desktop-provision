@@ -361,4 +361,7 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => 'Olen lukenut lisenssiehdot ja hyväksyn ne';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

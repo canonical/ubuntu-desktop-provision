@@ -154,6 +154,9 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Pode gerir os seus serviços Pro na aplicação Software e Atualizações.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

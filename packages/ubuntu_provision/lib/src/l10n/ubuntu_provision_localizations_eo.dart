@@ -359,4 +359,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => 'Mi legis kaj akceptas la jenajn kondiĉojn';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

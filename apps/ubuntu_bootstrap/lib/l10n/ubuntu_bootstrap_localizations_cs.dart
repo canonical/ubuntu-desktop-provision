@@ -1346,4 +1346,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       'Níže si můžete prohlédnout soubor s nastaveními pro automatickou instalaci, načtený z Landscape.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get errorIconSemanticLabel => 'Error';
 }

@@ -346,6 +346,9 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaAcceptTerms => '我已阅读并同意这些条款';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

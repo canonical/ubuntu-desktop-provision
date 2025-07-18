@@ -152,4 +152,7 @@ class UbuntuInitLocalizationsSi extends UbuntuInitLocalizations {
   @override
   String get ubuntuProSucessAttachDescription =>
       'ඔබගේ ආධික්‍ය සේවා මෘදුකාංග හා යාවත්කාල යෙදුමෙන් කළමනාකරණයට හැකිය.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
 }

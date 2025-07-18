@@ -121,5 +121,6 @@
   "ubuntuProSucessAttachHeader": "Ubuntu Pro is now enabled in this machine",
   "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "You can manage your Pro services in the Software & Updates application.",
-  "@ubuntuProSucessAttachDescription": {}
+  "@ubuntuProSucessAttachDescription": {},
+  "successIconSemanticLabel": "Success"
 }
