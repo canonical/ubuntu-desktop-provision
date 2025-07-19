@@ -216,5 +216,7 @@
   "eulaReadAndAcceptTerms": "Chcete-li pokračovat v nastavování tohoto počítače, musíte si přečíst a přijmout podmínky licenční smlouvy.",
   "@eulaReadAndAcceptTerms": {},
   "errorPageUbuntuBug": "Chcete-li odeslat automatické hlášení chyb včetně příslušných ladicích informací, zadejte prosím do terminálu nebo do příkazové konzole (Alt+F2) příkaz <pre>sudo ubuntu-bug {SNAP}</pre>.",
-  "@errorPageUbuntuBug": {}
+  "@errorPageUbuntuBug": {},
+  "successIconSemanticLabel": "Úspěch",
+  "@successIconSemanticLabel": {}
 }
