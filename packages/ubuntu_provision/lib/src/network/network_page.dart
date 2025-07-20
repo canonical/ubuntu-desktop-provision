@@ -51,14 +51,13 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
     
     // Enable semantics and announce page on load
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // Ensure semantics are enabled for Orca
-      WidgetsBinding.instance.ensureSemantics();
-      
-      // Announce welcome message
+      // Get localization
       final lang = NetworkLocalizations.of(context);
-      SemanticsService.announce(
-        lang.networkPageWelcome(lang.networkPageHeader, lang.networkPageBody),
-        TextDirection.ltr,
+      
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.networkPageHeader,
+        subtitle: lang.networkPageBody,
       );
       
       // Set initial focus on ethernet option

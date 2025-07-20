@@ -468,6 +468,9 @@ class _AccessibleExpandableState extends State<AccessibleExpandable> {
 
 /// Page announcer utility for consistent page loading announcements
 class PageAnnouncer {
+  // Store the semantics handle so we can dispose it later
+  static SemanticsHandle? _semanticsHandle;
+  
   static void announcePageLoad({
     required String title,
     String? subtitle,
@@ -481,7 +484,8 @@ class PageAnnouncer {
     
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // Ensure semantics are enabled
-      WidgetsBinding.instance.ensureSemantics();
+      _semanticsHandle?.dispose();
+      _semanticsHandle = WidgetsBinding.instance.ensureSemantics();
       
       // Initial announcement
       DebouncedAnnouncer.announce(message);
@@ -493,6 +497,12 @@ class PageAnnouncer {
         });
       }
     });
+  }
+  
+  /// Dispose the semantics handle to prevent leaks
+  static void dispose() {
+    _semanticsHandle?.dispose();
+    _semanticsHandle = null;
   }
 }
 

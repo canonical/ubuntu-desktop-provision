@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_provision/src/accessibility/accessibility_widgets.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -17,6 +18,9 @@ void main() {
   tearDown(() async {
     await resetAllServices();
     rootBundle.clear();
+    // Dispose any active SemanticsHandle
+    PageAnnouncer.dispose();
+    DebouncedAnnouncer.dispose();
   });
 
   testWidgets('init', (tester) async {

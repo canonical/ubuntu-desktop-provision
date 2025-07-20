@@ -35,24 +35,21 @@ class _CodecsAndDriversPageState extends ConsumerState<CodecsAndDriversPage> {
   void initState() {
     super.initState();
     
-    // Enable semantics and announce page on load
+    // Announce page on load
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled for Orca
-      WidgetsBinding.instance.ensureSemantics();
-      
-      // Announce welcome message
       final lang = UbuntuBootstrapLocalizations.of(context);
-      final flavor = ref.read(flavorProvider);
       final model = ref.read(sourceModelProvider);
       
-      SemanticsService.announce(
-        'Optimise your computer. Install recommended proprietary software? ${lang.codecsAndDriversPageDescription}. ${lang.codecsAndDriversPageBody(flavor.displayName)}',
-        TextDirection.ltr,
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.codecsAndDriversPageTitle,
+        subtitle: lang.codecsAndDriversPageDescription,
+        instructions: lang.codecsAndDriversPageInstructions,
       );
       
-      // Set initial focus on first checkbox
+      // Set focus on first checkbox
       Future.delayed(const Duration(milliseconds: 500), () {
         if (mounted) {
           _driversFocusNode.requestFocus();
@@ -64,7 +61,7 @@ class _CodecsAndDriversPageState extends ConsumerState<CodecsAndDriversPage> {
         Future.delayed(const Duration(milliseconds: 800), () {
           if (mounted) {
             SemanticsService.announce(
-              'Warning: You are running on battery power. Connecting to a power source is recommended',
+              lang.sourceBatteryWarning,
               TextDirection.ltr,
             );
           }

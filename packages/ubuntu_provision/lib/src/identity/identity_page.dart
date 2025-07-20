@@ -33,31 +33,21 @@ class _IdentityPageState extends ConsumerState<IdentityPage> {
   void initState() {
     super.initState();
     
-    // Announce the page when it loads
+    // Announce page on load
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled
-      WidgetsBinding.instance.ensureSemantics();
-      
       final lang = IdentityLocalizations.of(context);
       
-      // Request focus to ensure Orca is active
-      _initialFocusNode.requestFocus();
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.identityPageTitle,
+        subtitle: lang.identityPageDescription,
+        instructions: lang.identityPageInstructions,
+      );
       
-      // Main announcement with delay to ensure Orca catches it
-      Future.delayed(const Duration(milliseconds: 100), () {
-        if (!mounted) return;
-        
-        SemanticsService.announce(
-          'Create your account page. ${lang.identityPageTitle}. Please fill in your personal information to create a user account.',
-          TextDirection.ltr,
-          assertiveness: Assertiveness.assertive,
-        );
-      });
-      
-      // Set focus on first form field after announcement
-      Future.delayed(const Duration(milliseconds: 600), () {
+      // Set focus on first field
+      Future.delayed(const Duration(milliseconds: 500), () {
         if (mounted) {
           _realNameFocusNode.requestFocus();
         }

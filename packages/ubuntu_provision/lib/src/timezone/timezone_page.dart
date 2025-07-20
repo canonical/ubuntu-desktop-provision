@@ -49,40 +49,32 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled
-      WidgetsBinding.instance.ensureSemantics();
-      
       final lang = TimezoneLocalizations.of(context);
       final model = ref.read(timezoneModelProvider);
+      
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.timezonePageTitle,
+        instructions: lang.timezonePageInstructions(lang.timezonePageTitle),
+      );
       
       // Request focus to ensure Orca is active
       _initialFocusNode.requestFocus();
       
-      // Main announcement with delay to ensure Orca catches it
-      Future.delayed(const Duration(milliseconds: 100), () {
-        if (!mounted) return;
-        
-        SemanticsService.announce(
-          lang.timezonePageInstructions(lang.timezonePageTitle),
-          TextDirection.ltr,
-          assertiveness: Assertiveness.assertive,
-        );
-        
-        // Announce current selection if any
-        if (model.selectedLocation != null) {
-          Future.delayed(const Duration(milliseconds: 600), () {
-            if (!mounted) return;
-            
-            final location = TimezonePage.formatLocation(model.selectedLocation);
-            final timezone = TimezonePage.formatTimezone(model.selectedLocation);
-            
-            SemanticsService.announce(
-              lang.timezoneCurrentSelection(location, timezone),
-              TextDirection.ltr,
-            );
-          });
-        }
-      });
+      // Announce current selection if any
+      if (model.selectedLocation != null) {
+        Future.delayed(const Duration(milliseconds: 600), () {
+          if (!mounted) return;
+          
+          final location = TimezonePage.formatLocation(model.selectedLocation);
+          final timezone = TimezonePage.formatTimezone(model.selectedLocation);
+          
+          SemanticsService.announce(
+            lang.timezoneCurrentSelection(location, timezone),
+            TextDirection.ltr,
+          );
+        });
+      }
       
       // Set focus on location field after announcement
       Future.delayed(const Duration(milliseconds: 800), () {

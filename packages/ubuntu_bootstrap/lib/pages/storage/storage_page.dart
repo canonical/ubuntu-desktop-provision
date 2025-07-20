@@ -60,45 +60,20 @@ class _StoragePageState extends ConsumerState<StoragePage> {
   void initState() {
     super.initState();
     
-    // Enable semantics and announce page on load
+    // Announce the page when it loads
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled for Orca
-      WidgetsBinding.instance.ensureSemantics();
-      
-      // Announce welcome message
       final lang = UbuntuBootstrapLocalizations.of(context);
       final flavor = ref.read(flavorProvider);
       final model = ref.read(storageModelProvider);
       
-      SemanticsService.announce(
-        'How do you want to install ${flavor.displayName}? ${lang.installationTypeHeader(flavor.displayName)}. Choose your installation type.',
-        TextDirection.ltr,
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.installationTypeTitle,
+        subtitle: lang.installationTypeHeader(flavor.displayName),
+        instructions: lang.storagePageInstructions,
       );
-      
-      // Announce available options
-      Future.delayed(const Duration(milliseconds: 700), () {
-        if (!mounted) return;
-        
-        final options = <String>[];
-        if (model.canInstallAlongside || model.hasBitLocker) {
-          options.add('Install alongside existing operating system');
-        }
-        if (model.canEraseDisk) {
-          options.add('Erase disk and install ${flavor.displayName}');
-        }
-        if (model.canManualPartition) {
-          options.add('Manual partitioning');
-        }
-        
-        if (options.isNotEmpty) {
-          SemanticsService.announce(
-            'Available options: ${options.join(", ")}',
-            TextDirection.ltr,
-          );
-        }
-      });
       
       // Set initial focus on first available option
       Future.delayed(const Duration(milliseconds: 500), () {

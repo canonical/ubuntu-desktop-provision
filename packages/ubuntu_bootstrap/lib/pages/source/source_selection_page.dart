@@ -41,16 +41,14 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled for Orca
-      WidgetsBinding.instance.ensureSemantics();
-      
-      // Announce welcome message
+      // Get localizations and model
       final lang = UbuntuBootstrapLocalizations.of(context);
       final model = ref.read(sourceModelProvider);
       
-      SemanticsService.announce(
-        lang.sourcePageWelcome(lang.updatesOtherSoftwarePageDescription),
-        TextDirection.ltr,
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.updatesOtherSoftwarePageTitle,
+        subtitle: lang.updatesOtherSoftwarePageDescription,
       );
       
       // Create focus nodes for each source

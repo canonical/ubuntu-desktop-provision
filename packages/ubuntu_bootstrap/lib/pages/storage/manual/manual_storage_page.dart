@@ -43,34 +43,20 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled
-      WidgetsBinding.instance.ensureSemantics();
-      
       final lang = UbuntuBootstrapLocalizations.of(context);
       
-      // Request focus to ensure Orca is active
-      _initialFocusNode.requestFocus();
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.manualPartitioningTitle,
+        subtitle: lang.manualPartitioningDescription,
+        instructions: lang.manualPartitioningInstructions,
+      );
       
-      // Announce with delay to ensure Orca catches it
-      Future.delayed(const Duration(milliseconds: 100), () {
-        if (!mounted) return;
-        
-        SemanticsService.announce(
-          'Manual Partitioning. ${lang.allocateDiskSpace}. Configure your disk partitions manually.',
-          TextDirection.ltr,
-          assertiveness: Assertiveness.assertive,
-        );
-      });
-      
-      // Additional information after a brief pause
-      Future.delayed(const Duration(milliseconds: 800), () {
-        if (!mounted) return;
-        
-        final diskCount = _model.disks.length;
-        SemanticsService.announce(
-          'Found $diskCount ${diskCount == 1 ? "disk" : "disks"} available for partitioning',
-          TextDirection.ltr,
-        );
+      // Set focus on first element
+      Future.delayed(const Duration(milliseconds: 500), () {
+        if (mounted) {
+          _initialFocusNode.requestFocus();
+        }
       });
     });
   }

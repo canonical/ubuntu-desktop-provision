@@ -43,24 +43,13 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       
-      // Ensure semantics are enabled
-      WidgetsBinding.instance.ensureSemantics();
-      
       final lang = UbuntuBootstrapLocalizations.of(context);
       
-      // Request focus to ensure Orca is active
-      _initialFocusNode.requestFocus();
-      
-      // Main announcement with delay to ensure Orca catches it
-      Future.delayed(const Duration(milliseconds: 100), () {
-        if (!mounted) return;
-        
-        SemanticsService.announce(
-          lang.confirmPageWelcome(lang.confirmHeader),
-          TextDirection.ltr,
-          assertiveness: Assertiveness.assertive,
-        );
-      });
+      // Use PageAnnouncer for consistent semantics handling
+      PageAnnouncer.announcePageLoad(
+        title: lang.confirmHeader,
+        instructions: lang.confirmReviewChoices,
+      );
       
       // Announce summary after a delay
       Future.delayed(const Duration(milliseconds: 800), () {
