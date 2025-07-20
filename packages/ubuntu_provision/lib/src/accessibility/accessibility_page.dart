@@ -47,7 +47,7 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
       // Delayed instructions announcement to ensure it's picked up by Orca
       Future.delayed(const Duration(milliseconds: 300), () {
         SemanticsService.announce(
-          'Accessibility options page. Tab to arrows beside each section to expand or collapse them.',
+          lang.accessibilityOptionsPageInstructions,
           TextDirection.ltr,
         );
       });
@@ -87,16 +87,17 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
     
     // Multiple announcement approaches to ensure screen readers catch it
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      final status = isExpanded ? lang.accessibilityExpandAction : lang.accessibilityCollapseAction;
       // First immediate announcement
       SemanticsService.announce(
-        '$sectionName section ${isExpanded ? 'expanded' : 'collapsed'}',
+        lang.accessibilitySectionStatus(sectionName, status),
         TextDirection.ltr,
       );
       
       // Second delayed announcement for redundancy
       Future.delayed(const Duration(milliseconds: 300), () {
         SemanticsService.announce(
-          '$sectionName section ${isExpanded ? 'expanded' : 'collapsed'}',
+          lang.accessibilitySectionStatus(sectionName, status),
           TextDirection.ltr,
         );
       });
@@ -116,27 +117,27 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
         0, 
         YaruIcons.eye, 
         lang.accessibilitySeeingLabel,
-        'Vision accessibility options',
+        lang.accessibilityVisionOptions,
         [
           _AccessibilityListTile(
             id: AccessibilityOption.highContrast,
             title: lang.accessibilityHighContrastLabel,
-            description: 'Increases color contrast for better visibility',
+            description: lang.accessibilityHighContrastDescription,
           ),
           _AccessibilityListTile(
             id: AccessibilityOption.largeText,
             title: lang.accessibilityLargeTextLabel,
-            description: 'Makes text larger and easier to read',
+            description: lang.accessibilityLargeTextDescription,
           ),
           _AccessibilityListTile(
             id: AccessibilityOption.reduceAnimation,
             title: lang.accessibilityReduceAnimationLabel,
-            description: 'Reduces or eliminates animation effects',
+            description: lang.accessibilityReduceAnimationDescription,
           ),
           _AccessibilityListTile(
             id: AccessibilityOption.screenReader,
             title: lang.accessibilityScreenReaderLabel,
-            description: 'Reads screen content aloud',
+            description: lang.accessibilityScreenReaderDescription,
           ),
         ],
       ),
@@ -145,12 +146,12 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
         1, 
         YaruIcons.headphones, 
         lang.accessibilityHearingLabel,
-        'Hearing accessibility options',
+        lang.accessibilityHearingOptions,
         [
           _AccessibilityListTile(
             id: AccessibilityOption.visualAlerts,
             title: lang.accessibilityVisualAlertsLabel,
-            description: 'Shows visual notifications for audio alerts',
+            description: lang.accessibilityVisualAlertsDescription,
           ),
         ],
       ),
@@ -159,17 +160,17 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
         2, 
         YaruIcons.keyboard, 
         lang.accessibilityTypingLabel,
-        'Typing accessibility options',
+        lang.accessibilityTypingOptions,
         [
           _AccessibilityListTile(
             id: AccessibilityOption.stickyKeys,
             title: lang.accessibilityStickKeysLabel,
-            description: 'Allows pressing key combinations one key at a time',
+            description: lang.accessibilityStickKeysDescription,
           ),
           _AccessibilityListTile(
             id: AccessibilityOption.slowKeys,
             title: lang.accessibilitySlowKeysLabel,
-            description: 'Adds a delay between key press and acceptance',
+            description: lang.accessibilitySlowKeysDescription,
           ),
         ],
       ),
@@ -178,12 +179,12 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
         3, 
         YaruIcons.mouse, 
         lang.accessibilityPointingLabel,
-        'Mouse accessibility options',
+        lang.accessibilityMouseOptions,
         [
           _AccessibilityListTile(
             id: AccessibilityOption.mouseKeys,
             title: lang.accessibilityMouseKeysLabel,
-            description: 'Control the mouse pointer with the keyboard',
+            description: lang.accessibilityMouseKeysDescription,
           ),
         ],
       ),
@@ -192,12 +193,12 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
         4, 
         YaruIcons.magnifying_glass, 
         lang.accessibilityZoomLabel,
-        'Screen magnification options',
+        lang.accessibilityZoomOptions,
         [
           _AccessibilityListTile(
             id: AccessibilityOption.desktopZoom,
             title: lang.accessibilityDesktopZoomLabel,
-            description: 'Magnifies portions of the screen',
+            description: lang.accessibilityDesktopZoomDescription,
           ),
         ],
       ),
@@ -248,6 +249,7 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
     List<Widget> children,
   ) {
     final theme = Theme.of(context);
+    final lang = UbuntuProvisionLocalizations.of(context);
     
     return Column(
       children: [
@@ -274,8 +276,10 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 // Announce when the arrow receives focus
+                final action = _expandedSections[index] ? 
+                  lang.accessibilityCollapseAction : lang.accessibilityExpandAction;
                 SemanticsService.announce(
-                  'Arrow for $title section. Press Enter to ${_expandedSections[index] ? 'collapse' : 'expand'}.',
+                  lang.accessibilityArrowHint(title, action),
                   TextDirection.ltr,
                 );
               }
@@ -295,7 +299,7 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
               onEnter: (_) {
                 // Announce when mouse hovers over the arrow
                 SemanticsService.announce(
-                  'Arrow for $title section',
+                  lang.accessibilityArrowButtonLabel(title),
                   TextDirection.ltr,
                 );
               },
@@ -304,8 +308,9 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
                 enabled: true,
                 focused: true,
                 focusable: true,
-                label: 'Arrow for $title section',
-                hint: 'Press Enter to ${_expandedSections[index] ? 'collapse' : 'expand'}',
+                label: lang.accessibilityArrowButtonLabel(title),
+                hint: lang.accessibilityArrowButtonHint(_expandedSections[index] ? 
+                  lang.accessibilityCollapseAction : lang.accessibilityExpandAction),
                 onTap: () {
                   setState(() {
                     _expandedSections[index] = !_expandedSections[index];
@@ -345,11 +350,11 @@ class _AccessibilityPageState extends ConsumerState<AccessibilityPage> {
           child: Semantics(
             container: true,
             explicitChildNodes: true,
-            label: '$title options',
+            label: lang.accessibilitySectionOptions(title),
             onDidGainAccessibilityFocus: () {
               if (_expandedSections[index]) {
                 SemanticsService.announce(
-                  '$title section options. Use Tab to navigate through options.',
+                  lang.accessibilitySectionOptions(title),
                   TextDirection.ltr,
                 );
               }
@@ -368,7 +373,7 @@ class _AccessibilityListTile extends ConsumerWidget {
   const _AccessibilityListTile({
     required this.id,
     required this.title,
-    this.description = '',
+    required this.description,
   });
 
   final AccessibilityOption id;
@@ -380,6 +385,7 @@ class _AccessibilityListTile extends ConsumerWidget {
     final model = ref.watch(accessibilityModelProvider);
     final isEnabled = model.activeOptions.contains(id);
     final theme = Theme.of(context);
+    final lang = UbuntuProvisionLocalizations.of(context);
 
     return Column(
       children: [
@@ -388,8 +394,10 @@ class _AccessibilityListTile extends ConsumerWidget {
         MouseRegion(
           onEnter: (_) {
             // Announce on hover
+            final status = isEnabled ? 
+              lang.accessibilityOptionEnabled : lang.accessibilityOptionDisabled;
             SemanticsService.announce(
-              '$title option, ${isEnabled ? 'enabled' : 'disabled'}',
+              lang.accessibilityOptionStatus(title, status),
               TextDirection.ltr,
             );
           },
@@ -397,8 +405,10 @@ class _AccessibilityListTile extends ConsumerWidget {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 // Announce when focus arrives on option
+                final status = isEnabled ? 
+                  lang.accessibilityOptionEnabled : lang.accessibilityOptionDisabled;
                 SemanticsService.announce(
-                  '$title option, currently ${isEnabled ? 'enabled' : 'disabled'}. ${description}. Press Space to toggle.',
+                  lang.accessibilityOptionInstructions(title, status, description),
                   TextDirection.ltr,
                 );
               }
@@ -407,7 +417,8 @@ class _AccessibilityListTile extends ConsumerWidget {
               // Set focused to ensure it's read by screen readers
               focused: true,
               toggled: isEnabled,
-              label: '$title, ${isEnabled ? 'enabled' : 'disabled'}',
+              label: lang.accessibilityOptionStatus(title, isEnabled ? 
+                lang.accessibilityOptionEnabled : lang.accessibilityOptionDisabled),
               hint: description.isNotEmpty ? description : null,
               // Use button and toggled together
               button: true,
@@ -440,18 +451,19 @@ class _AccessibilityListTile extends ConsumerWidget {
                   model.toggleOption(id);
                   
                   // Multiple announcements to ensure screen readers catch it
-                  final newState = !isEnabled ? 'enabled' : 'disabled';
+                  final newState = !isEnabled ? 
+                    lang.accessibilityOptionEnabled : lang.accessibilityOptionDisabled;
                   
                   // First immediate announcement
                   SemanticsService.announce(
-                    '$title $newState',
+                    lang.accessibilityOptionStatus(title, newState),
                     TextDirection.ltr,
                   );
                   
                   // Second delayed announcement for redundancy
                   Future.delayed(const Duration(milliseconds: 200), () {
                     SemanticsService.announce(
-                      '$title $newState',
+                      lang.accessibilityOptionStatus(title, newState),
                       TextDirection.ltr,
                     );
                   });

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 /// Constants for accessibility features
 class AccessibilityConstants {
@@ -140,6 +141,7 @@ class _AccessibleDropdownState<T> extends State<AccessibleDropdown<T>> {
     final currentValue = widget.value != null 
         ? widget.itemBuilder(widget.value as T)
         : (widget.items.isNotEmpty ? widget.itemBuilder(widget.items[0]) : '');
+    final lang = UbuntuProvisionLocalizations.of(context);
 
     return KeyboardListener(
       focusNode: _focusNode,
@@ -194,8 +196,9 @@ class _AccessibleDropdownState<T> extends State<AccessibleDropdown<T>> {
       if (_currentIndex < 0) _currentIndex = 0;
     });
     
+    final lang = UbuntuProvisionLocalizations.of(context);
     DebouncedAnnouncer.announce(
-      'Dropdown opened. Use arrow keys to navigate',
+      lang.accessibilityDropdownOpened,
     );
 
     final RenderBox button = context.findRenderObject() as RenderBox;
@@ -234,8 +237,9 @@ class _AccessibleDropdownState<T> extends State<AccessibleDropdown<T>> {
 
     if (selected != null) {
       widget.onChanged(selected);
+      final lang = UbuntuProvisionLocalizations.of(context);
       DebouncedAnnouncer.announce(
-        'Selected ${widget.itemBuilder(selected)}',
+        lang.accessibilityDropdownSelected(widget.itemBuilder(selected)),
       );
     }
   }
@@ -265,6 +269,7 @@ class AccessibleOptionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isSelected = value == groupValue;
+    final lang = UbuntuProvisionLocalizations.of(context);
     
     return MouseRegion(
       onEnter: (_) {
@@ -278,7 +283,7 @@ class AccessibleOptionButton extends StatelessWidget {
         button: true,
         checked: isSelected,
         label: semanticLabel ?? '',
-        hint: description ?? 'Radio button',
+        hint: description ?? lang.accessibilityRadioButtonHint,
         onTap: onChanged != null ? () => onChanged!(value) : null,
         child: InkWell(
           onTap: onChanged != null ? () => onChanged!(value) : null,
@@ -373,14 +378,19 @@ class _AccessibleExpandableState extends State<AccessibleExpandable> {
     widget.onExpansionChanged?.call(_isExpanded);
     
     if (widget.sectionName != null) {
+      final lang = UbuntuProvisionLocalizations.of(context);
+      final status = _isExpanded ? lang.accessibilityExpandAction : lang.accessibilityCollapseAction;
       DebouncedAnnouncer.announce(
-        '${widget.sectionName} section ${_isExpanded ? 'expanded' : 'collapsed'}',
+        lang.accessibilitySectionStatus(widget.sectionName!, status),
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final lang = UbuntuProvisionLocalizations.of(context);
+    final expandAction = _isExpanded ? lang.accessibilityCollapseAction : lang.accessibilityExpandAction;
+    
     return Column(
       children: [
         Semantics(
@@ -388,8 +398,8 @@ class _AccessibleExpandableState extends State<AccessibleExpandable> {
           expanded: _isExpanded,
           label: widget.sectionName != null 
               ? '${widget.sectionName} section header'
-              : 'Expandable section header',
-          hint: 'Press to ${_isExpanded ? 'collapse' : 'expand'}',
+              : lang.accessibilityExpandableSectionHeader,
+          hint: lang.accessibilityExpandableHint(expandAction),
           onTap: _toggleExpansion,
           child: InkWell(
             onTap: _toggleExpansion,
@@ -403,7 +413,7 @@ class _AccessibleExpandableState extends State<AccessibleExpandable> {
                     onFocusChange: (hasFocus) {
                       if (hasFocus && widget.sectionName != null) {
                         DebouncedAnnouncer.announce(
-                          'Arrow for ${widget.sectionName} section. Press Enter to ${_isExpanded ? 'collapse' : 'expand'}.',
+                          lang.accessibilityArrowHint(widget.sectionName!, expandAction),
                         );
                       }
                     },
@@ -416,7 +426,7 @@ class _AccessibleExpandableState extends State<AccessibleExpandable> {
                     },
                     child: Semantics(
                       button: true,
-                      label: 'Expand/collapse arrow',
+                      label: lang.accessibilityExpandCollapseArrow,
                       child: Container(
                         padding: const EdgeInsets.all(4),
                         decoration: BoxDecoration(
@@ -444,8 +454,8 @@ class _AccessibleExpandableState extends State<AccessibleExpandable> {
               ? Semantics(
                   container: true,
                   label: widget.sectionName != null 
-                      ? '${widget.sectionName} options'
-                      : 'Expanded content',
+                      ? lang.accessibilitySectionOptions(widget.sectionName!)
+                      : lang.accessibilityExpandedContent,
                   child: widget.child,
                 )
               : const SizedBox.shrink(),

@@ -31,6 +31,119 @@
   "accessibilitySlowKeysLabel": "Slow keys",
   "accessibilityMouseKeysLabel": "Mouse keys",
   "accessibilityDesktopZoomLabel": "Desktop zoom",
+  
+  "accessibilityOptionsPageInstructions": "Accessibility options page. Tab to arrows beside each section to expand or collapse them.",
+  "accessibilityArrowButtonLabel": "Arrow for {section} section",
+  "@accessibilityArrowButtonLabel": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityArrowButtonHint": "Press Enter to {action}",
+  "@accessibilityArrowButtonHint": {
+    "placeholders": {
+      "action": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityExpandAction": "expand",
+  "accessibilityCollapseAction": "collapse",
+  "accessibilityOptionStatus": "{option} option, {status}",
+  "@accessibilityOptionStatus": {
+    "placeholders": {
+      "option": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityOptionEnabled": "enabled",
+  "accessibilityOptionDisabled": "disabled",
+  "accessibilityOptionInstructions": "{option} option, currently {status}. {description}. Press Space to toggle.",
+  "@accessibilityOptionInstructions": {
+    "placeholders": {
+      "option": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityDropdownOpened": "Dropdown opened. Use arrow keys to navigate",
+  "accessibilityDropdownSelected": "Selected {option}",
+  "@accessibilityDropdownSelected": {
+    "placeholders": {
+      "option": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityRadioButtonHint": "Radio button",
+  "accessibilitySectionStatus": "{section} section {status}",
+  "@accessibilitySectionStatus": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityExpandableSectionHeader": "Expandable section header",
+  "accessibilityExpandableHint": "Press to {action}",
+  "@accessibilityExpandableHint": {
+    "placeholders": {
+      "action": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityArrowHint": "Arrow for {section} section. Press Enter to {action}.",
+  "@accessibilityArrowHint": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      },
+      "action": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityExpandCollapseArrow": "Expand/collapse arrow",
+  "accessibilitySectionOptions": "{section} options",
+  "@accessibilitySectionOptions": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityExpandedContent": "Expanded content",
+  "accessibilityVisionOptions": "Vision accessibility options",
+  "accessibilityHighContrastDescription": "Increases color contrast for better visibility",
+  "accessibilityLargeTextDescription": "Makes text larger and easier to read",
+  "accessibilityReduceAnimationDescription": "Reduces or eliminates animation effects",
+  "accessibilityScreenReaderDescription": "Reads screen content aloud",
+  "accessibilityHearingOptions": "Hearing accessibility options",
+  "accessibilityVisualAlertsDescription": "Shows visual notifications for audio alerts",
+  "accessibilityTypingOptions": "Typing accessibility options",
+  "accessibilityStickKeysDescription": "Allows pressing key combinations one key at a time",
+  "accessibilitySlowKeysDescription": "Adds a delay between key press and acceptance",
+  "accessibilityMouseOptions": "Mouse accessibility options",
+  "accessibilityMouseKeysDescription": "Control the mouse pointer with the keyboard",
+  "accessibilityZoomOptions": "Screen magnification options",
+  "accessibilityDesktopZoomDescription": "Magnifies portions of the screen",
+  
   "errorPageTitle": "Something went wrong",
   "errorPageUnexpected": "We're sorry, but we're not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.",
   "errorPageUbuntuBug": "To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug {SNAP}</pre> in a terminal, or from the command console (Alt+F2).",
@@ -56,6 +169,50 @@
   "keyboardVariantLabel": "Select your keyboard variant:",
   "keyboardPressKeyLabel": "Please press one of the following keys:",
   "keyboardKeyPresentLabel": "Is the following key present on your keyboard?",
+  
+  "keyboardDetectButtonHint": "Press to detect keyboard layout",
+  "keyboardDetectingMessage": "Detecting keyboard layout",
+  "keyboardLayoutSelectedMessage": "Selected layout {layoutName}",
+  "@keyboardLayoutSelectedMessage": {
+    "placeholders": {
+      "layoutName": {
+        "type": "String"
+      }
+    }
+  },
+  "keyboardLayoutListLabel": "Keyboard layout selection list",
+  "keyboardLayoutItemLabel": "{layoutName} {selectionStatus}",
+  "@keyboardLayoutItemLabel": {
+    "placeholders": {
+      "layoutName": {
+        "type": "String"
+      },
+      "selectionStatus": {
+        "type": "String"
+      }
+    }
+  },
+  "keyboardLayoutSelected": "selected",
+  "keyboardLayoutNotSelected": "",
+  "keyboardVariantSectionLabel": "Keyboard variant",
+  "keyboardVariantDropdownLabel": "Keyboard variant",
+  "keyboardVariantSelectedMessage": "Selected variant {variantName}",
+  "@keyboardVariantSelectedMessage": {
+    "placeholders": {
+      "variantName": {
+        "type": "String"
+      }
+    }
+  },
+  "keyboardTestFieldLabel": "Keyboard test field {hint}",
+  "@keyboardTestFieldLabel": {
+    "placeholders": {
+      "hint": {
+        "type": "String"
+      }
+    }
+  },
+  
   "themePageTitle": "Choose your theme",
   "themePageHeader": "You can always change this later in the appearance settings.",
   "themeDark": "Dark",
