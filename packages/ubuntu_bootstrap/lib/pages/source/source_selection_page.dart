@@ -1,3 +1,5 @@
+// Copyright (C) 2025 Akshay Waghmare under the supervision of Zendalona
+
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

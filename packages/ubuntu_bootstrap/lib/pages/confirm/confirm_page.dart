@@ -1,3 +1,5 @@
+// Copyright (C) 2025 Akshay Waghmare under the supervision of Zendalona
+
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
