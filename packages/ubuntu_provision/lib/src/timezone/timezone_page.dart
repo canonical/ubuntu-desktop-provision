@@ -63,7 +63,7 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
         if (!mounted) return;
         
         SemanticsService.announce(
-          'Select your timezone. ${lang.timezonePageTitle}. You can search for a city or timezone, or click on the map.',
+          lang.timezonePageInstructions(lang.timezonePageTitle),
           TextDirection.ltr,
           assertiveness: Assertiveness.assertive,
         );
@@ -77,7 +77,7 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
             final timezone = TimezonePage.formatTimezone(model.selectedLocation);
             
             SemanticsService.announce(
-              'Currently selected: $location, $timezone',
+              lang.timezoneCurrentSelection(location, timezone),
               TextDirection.ltr,
             );
           });
@@ -109,12 +109,12 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
     return Focus(
       focusNode: _initialFocusNode,
       child: Semantics(
-        label: 'Select your timezone page',
+        label: lang.timezonePageAccessibilityLabel,
         container: true,
         child: WizardPage(
           title: YaruWindowTitleBar(
             title: Semantics(
-              label: 'Select your timezone. ${lang.timezonePageTitle}',
+              label: lang.timezonePageHeaderAccessibility(lang.timezonePageTitle),
               header: true,
               child: Text(lang.timezonePageTitle),
             ),
@@ -128,9 +128,9 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                 hidden: true,
                 child: Container(
                   height: 0,
-                  child: const Text(
-                    'Select your timezone',
-                    style: TextStyle(fontSize: 0),
+                  child: Text(
+                    lang.timezonePageTitle,
+                    style: const TextStyle(fontSize: 0),
                   ),
                 ),
               ),
@@ -140,8 +140,8 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                   children: <Widget>[
                     Expanded(
                       child: Semantics(
-                        label: 'Location search field',
-                        hint: 'Type to search for a city',
+                        label: lang.timezoneLocationFieldLabel,
+                        hint: lang.timezoneLocationFieldHint,
                         textField: true,
                         child: YaruAutocomplete<GeoLocation>(
                           initialValue: TextEditingValue(
@@ -172,7 +172,7 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                             model.selectLocation(location);
                             if (mounted) {
                               SemanticsService.announce(
-                                'Selected location: ${TimezonePage.formatLocation(location)}',
+                                lang.timezoneSelectedLocation(TimezonePage.formatLocation(location)),
                                 TextDirection.ltr,
                               );
                             }
@@ -183,8 +183,8 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                     const SizedBox(width: kWizardSpacing),
                     Expanded(
                       child: Semantics(
-                        label: 'Timezone search field',
-                        hint: 'Type to search for a timezone',
+                        label: lang.timezoneTimezoneFieldLabel,
+                        hint: lang.timezoneTimezoneFieldHint,
                         textField: true,
                         child: YaruAutocomplete<GeoLocation>(
                           initialValue: TextEditingValue(
@@ -215,7 +215,7 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                             model.selectTimezone(location);
                             if (mounted) {
                               SemanticsService.announce(
-                                'Selected timezone: ${TimezonePage.formatTimezone(location)}',
+                                lang.timezoneSelectedTimezone(TimezonePage.formatTimezone(location)),
                                 TextDirection.ltr,
                               );
                             }
@@ -229,8 +229,8 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
               const SizedBox(height: kWizardSpacing),
               Expanded(
                 child: Semantics(
-                  label: 'Timezone map. Click on the map to select your location',
-                  hint: 'Interactive world map for timezone selection',
+                  label: lang.timezoneMapLabel,
+                  hint: lang.timezoneMapHint,
                   child: TimezoneMap(
                     size: TimezoneMapSize.medium,
                     offset: model.selectedLocation?.offset,
@@ -240,7 +240,7 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                           model.selectLocation(location);
                           if (mounted && location != null) {
                             SemanticsService.announce(
-                              'Selected ${TimezonePage.formatLocation(location)} from map',
+                              lang.timezoneSelectedFromMap(TimezonePage.formatLocation(location)),
                               TextDirection.ltr,
                             );
                           }
@@ -253,15 +253,15 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
           bottomBar: WizardBar(
             leading: Semantics(
               button: true,
-              label: 'Back button',
+              label: lang.backButtonLabel,
               child: const BackWizardButton(),
             ),
             trailing: [
               Semantics(
                 button: true,
                 label: model.selectedLocation?.timezone != null
-                    ? 'Next button'
-                    : 'Next button, disabled. Please select a timezone',
+                    ? lang.nextButtonLabel
+                    : lang.nextButtonDisabledLabel,
                 enabled: model.selectedLocation?.timezone != null,
                 child: NextWizardButton(
                   onNext: () async {
@@ -269,7 +269,7 @@ class _TimezonePageState extends ConsumerState<TimezonePage> {
                       final location = TimezonePage.formatLocation(model.selectedLocation);
                       final timezone = TimezonePage.formatTimezone(model.selectedLocation);
                       SemanticsService.announce(
-                        'Saving timezone: $location, $timezone',
+                        lang.timezoneSaving(location, timezone),
                         TextDirection.ltr,
                       );
                     }

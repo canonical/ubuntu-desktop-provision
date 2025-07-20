@@ -161,6 +161,91 @@
   "timezonePageTitle": "Select your timezone",
   "timezoneLocationLabel": "Location",
   "timezoneTimezoneLabel": "Timezone",
+  
+  "timezonePageAccessibilityLabel": "Select your timezone page",
+  "timezonePageHeaderAccessibility": "Select your timezone. {pageTitle}",
+  "@timezonePageHeaderAccessibility": {
+    "placeholders": {
+      "pageTitle": {
+        "type": "String"
+      }
+    }
+  },
+  "timezonePageInstructions": "Select your timezone. {pageTitle}. You can search for a city or timezone, or click on the map.",
+  "@timezonePageInstructions": {
+    "placeholders": {
+      "pageTitle": {
+        "type": "String"
+      }
+    }
+  },
+  "timezoneCurrentSelection": "Currently selected: {location}, {timezone}",
+  "@timezoneCurrentSelection": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      },
+      "timezone": {
+        "type": "String"
+      }
+    }
+  },
+  "timezoneLocationFieldLabel": "Location search field",
+  "timezoneLocationFieldHint": "Type to search for a city",
+  "timezoneTimezoneFieldLabel": "Timezone search field",
+  "timezoneTimezoneFieldHint": "Type to search for a timezone",
+  "timezoneMapLabel": "Timezone map. Click on the map to select your location",
+  "timezoneMapHint": "Interactive world map for timezone selection",
+  "timezoneSelectedLocation": "Selected location: {location}",
+  "@timezoneSelectedLocation": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "timezoneSelectedTimezone": "Selected timezone: {timezone}",
+  "@timezoneSelectedTimezone": {
+    "placeholders": {
+      "timezone": {
+        "type": "String"
+      }
+    }
+  },
+  "timezoneSelectedFromMap": "Selected {location} from map",
+  "@timezoneSelectedFromMap": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "timezoneSaving": "Saving timezone: {location}, {timezone}",
+  "@timezoneSaving": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      },
+      "timezone": {
+        "type": "String"
+      }
+    }
+  },
+  "backButtonLabel": "Back button",
+  "nextButtonLabel": "Next button",
+  "nextButtonDisabledLabel": "Next button, disabled. Please select a timezone",
+  
+  "localeLanguageSelectionLabel": "Language selection - Use arrow keys to navigate on this list. Press Home to go to the first item, End to go to the last item.",
+  "localeLanguageSelected": "Selected",
+  "localeLanguageSelectedAnnouncement": "{languageName} selected",
+  "@localeLanguageSelectedAnnouncement": {
+    "placeholders": {
+      "languageName": {
+        "type": "String"
+      }
+    }
+  },
+  
   "keyboardTitle": "Keyboard layout",
   "keyboardHeader": "Select your keyboard layout",
   "keyboardTestHint": "Type here to test your keyboard",

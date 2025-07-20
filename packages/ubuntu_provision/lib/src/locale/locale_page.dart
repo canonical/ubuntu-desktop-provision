@@ -65,9 +65,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
           child: FocusTraversalGroup(
             child: Semantics(
               // Semantic label for screen readers
-              label:
-                  "Language selection - Use arrow keys to navigate on this list. "
-                  "Press Home to go to the first item, End to go to the last item. on this",
+              label: lang.localeLanguageSelectionLabel,
               excludeSemantics: false,
               child: Focus(
                 focusNode: listFocusNode,
@@ -116,7 +114,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
                       value:
                           '${model.language(index)}, item ${index + 1} of ${model.languageCount}',
                       increasedValue:
-                          index == model.selectedIndex ? 'Selected' : null,
+                          index == model.selectedIndex ? lang.localeLanguageSelected : null,
                       child: ListTile(
                         key: ValueKey(index),
                         title: Text(model.language(index)),
