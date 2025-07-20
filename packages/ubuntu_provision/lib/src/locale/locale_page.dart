@@ -9,6 +9,8 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:flutter/semantics.dart';
 
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
+
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
@@ -140,5 +142,3 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     );
   }
 }
-
-final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();

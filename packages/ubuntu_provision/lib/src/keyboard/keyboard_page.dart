@@ -8,6 +8,8 @@ import 'package:ubuntu_provision/src/accessibility/accessibility_widgets.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
+
 class KeyboardPage extends ConsumerStatefulWidget with ProvisioningPage {
   const KeyboardPage({super.key});
 
@@ -257,5 +259,3 @@ class AccessibleListWidget extends StatelessWidget {
     );
   }
 }
-
-final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();

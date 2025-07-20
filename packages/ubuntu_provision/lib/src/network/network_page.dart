@@ -13,6 +13,8 @@ import 'package:yaru/constants.dart';
 
 export 'connect_model.dart' show ConnectMode;
 
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
+
 /// https://github.com/canonical/ubuntu-desktop-installer/issues/30
 class NetworkPage extends ConsumerStatefulWidget with ProvisioningPage {
   NetworkPage({super.key});
@@ -348,5 +350,3 @@ class AccessibleRadioListTile<T> extends StatelessWidget {
     );
   }
 }
-
-final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
