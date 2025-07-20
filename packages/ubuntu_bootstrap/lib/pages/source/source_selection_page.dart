@@ -47,7 +47,7 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
       final model = ref.read(sourceModelProvider);
       
       SemanticsService.announce(
-        'What apps would you like to install to start with? ${lang.updatesOtherSoftwarePageDescription}',
+        lang.sourcePageWelcome(lang.updatesOtherSoftwarePageDescription),
         TextDirection.ltr,
       );
       
@@ -70,7 +70,7 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
         Future.delayed(const Duration(milliseconds: 800), () {
           if (mounted) {
             SemanticsService.announce(
-              'Warning: You are running on battery power. Connecting to a power source is recommended',
+              lang.sourceBatteryWarning,
               TextDirection.ltr,
             );
           }
@@ -98,15 +98,18 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
     }
 
     return Semantics(
-      label: 'Software selection page',
+      label: lang.sourcePageAccessibilityLabel,
       child: HorizontalPage(
         windowTitle: lang.updatesOtherSoftwarePageTitle,
         title: lang.updatesOtherSoftwarePageDescription,
         snackBar: model.onBattery ? OnBatterySnackBar() : null,
         isNextEnabled: model.sourceId != null,
         onNext: () async {
+          final installType = model.sourceId?.contains('minimal') ?? false ? 
+            lang.sourceInstallationTypeMinimal : lang.sourceInstallationTypeFull;
+          
           SemanticsService.announce(
-            'Proceeding with ${model.sourceId?.contains('minimal') ?? false ? "minimal" : "full"} installation',
+            lang.sourceInstallationProceedingWith(installType),
             TextDirection.ltr,
           );
           
@@ -118,7 +121,7 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
         children: [
           // Add a semantic container for the options
           Semantics(
-            label: 'Installation options. Use arrow keys to navigate between options',
+            label: lang.sourceOptionsLabel,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: model.sources
@@ -138,7 +141,13 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
                         onFocusChange: (hasFocus) {
                           if (hasFocus && mounted) {
                             SemanticsService.announce(
-                              '${source.localizedTitle(lang)}. ${source.localizedSubtitle(lang)}. ${isSelected ? "Currently selected" : "Not selected"}. Option ${index + 1} of ${model.sources.length}',
+                              lang.sourceOptionDetails(
+                                source.localizedTitle(lang),
+                                source.localizedSubtitle(lang),
+                                isSelected ? lang.sourceOptionCurrentlySelected : lang.sourceOptionNotSelected,
+                                index + 1,
+                                model.sources.length
+                              ),
                               TextDirection.ltr,
                             );
                           }
@@ -146,12 +155,15 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
                         child: Semantics(
                           button: true,
                           checked: isSelected,
-                          label: '${source.localizedTitle(lang)}. ${source.localizedSubtitle(lang)}',
-                          hint: 'Radio button option ${index + 1} of ${model.sources.length}',
+                          label: lang.sourceOptionLabel(
+                            source.localizedTitle(lang),
+                            source.localizedSubtitle(lang)
+                          ),
+                          hint: lang.sourceOptionHint(index + 1, model.sources.length),
                           onTap: () {
                             model.setSourceId(source.id);
                             SemanticsService.announce(
-                              '${source.localizedTitle(lang)} selected',
+                              lang.sourceOptionSelected(source.localizedTitle(lang)),
                               TextDirection.ltr,
                             );
                           },
@@ -163,7 +175,7 @@ class _SourceSelectionPageState extends ConsumerState<SourceSelectionPage> {
                             onChanged: (value) {
                               model.setSourceId(value);
                               SemanticsService.announce(
-                                '${source.localizedTitle(lang)} selected',
+                                lang.sourceOptionSelected(source.localizedTitle(lang)),
                                 TextDirection.ltr,
                               );
                             },

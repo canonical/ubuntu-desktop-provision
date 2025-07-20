@@ -54,7 +54,7 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
         if (!mounted) return;
         
         SemanticsService.announce(
-          'Review your choices. ${lang.confirmHeader}. Please review all your installation settings before proceeding.',
+          lang.confirmPageWelcome(lang.confirmHeader),
           TextDirection.ltr,
           assertiveness: Assertiveness.assertive,
         );
@@ -150,7 +150,7 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
     } else if (sourceModel.installDrivers) {
       summary.write(lang.confirmProprietarySoftwareDrivers);
     } else {
-      summary.write('None');
+      summary.write(lang.confirmProprietarySoftwareNone);
     }
     
     SemanticsService.announce(
@@ -176,7 +176,7 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
     return Focus(
       focusNode: _initialFocusNode,
       child: Semantics(
-        label: 'Review your choices page',
+        label: lang.confirmPageAccessibilityLabel,
         container: true,
         child: HorizontalPage(
           windowTitle: lang.confirmPageTitle,
@@ -184,19 +184,19 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
           bottomBar: WizardBar(
             leading: Semantics(
               button: true,
-              label: 'Back button',
+              label: lang.backButtonLabel,
               child: const BackWizardButton(),
             ),
             trailing: [
               Semantics(
                 button: true,
-                label: 'Install now button. This will start the installation',
+                label: lang.confirmInstallButtonLabel,
                 child: NextWizardButton(
                   highlighted: true,
                   label: lang.confirmInstallButton,
                   onNext: () {
                     SemanticsService.announce(
-                      'Starting installation. Please wait.',
+                      lang.confirmStartingInstallation,
                       TextDirection.ltr,
                     );
                     // start installation after the page transition (#1393)
@@ -216,16 +216,16 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
               hidden: true,
               child: Container(
                 height: 0,
-                child: const Text(
-                  'Review your choices',
-                  style: TextStyle(fontSize: 0),
+                child: Text(
+                  lang.confirmReviewChoices,
+                  style: const TextStyle(fontSize: 0),
                 ),
               ),
             ),
             Focus(
               focusNode: _contentFocusNode,
               child: Semantics(
-                label: 'Installation summary',
+                label: lang.confirmSummaryLabel,
                 container: true,
                 focusable: true,
                 child: YaruBorderContainer(
@@ -238,7 +238,7 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
                           builder: (_, fileContentSnapShot) {
                             if (fileContentSnapShot.hasData) {
                               return Semantics(
-                                label: 'Autoinstall configuration',
+                                label: lang.confirmAutoinstallConfig,
                                 child: Text(fileContentSnapShot.data ?? ''),
                               );
                             } else if (fileContentSnapShot.hasError) {
@@ -279,7 +279,7 @@ class _ConfirmPageState extends ConsumerState<ConfirmPage> {
                             ),
                             const SizedBox(height: kWizardSpacing / 2),
                             Semantics(
-                              label: 'Partition changes list',
+                              label: lang.confirmPartitionChangesLabel,
                               container: true,
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
@@ -602,7 +602,7 @@ class _ProprietarySoftware extends ConsumerWidget {
         (codecs: true, drivers: false) => lang.confirmProprietarySoftwareCodecs,
         (codecs: false, drivers: true) =>
           lang.confirmProprietarySoftwareDrivers,
-        _ => 'None',
+        _ => lang.confirmProprietarySoftwareNone,
       },
     );
   }

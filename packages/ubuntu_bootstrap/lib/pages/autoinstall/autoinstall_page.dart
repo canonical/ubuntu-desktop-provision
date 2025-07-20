@@ -39,9 +39,9 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
     final flavor = ref.read(flavorProvider);
     
     PageAnnouncer.announcePageLoad(
-      title: 'Welcome to installation method page',
+      title: lang.autoinstallPageTitle,
       subtitle: lang.autoinstallHeader(flavor.displayName),
-      instructions: 'Choose your way of installation',
+      instructions: lang.autoinstallPageInstructions,
     );
     
     // Set initial focus
@@ -66,14 +66,14 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
     final flavor = ref.watch(flavorProvider);
 
     return Semantics(
-      label: 'Installation method selection page',
+      label: lang.autoinstallPageAccessibilityLabel,
       child: HorizontalPage(
         windowTitle: lang.autoinstallTitle,
         title: lang.autoinstallHeader(flavor.displayName),
         bottomBar: WizardBar(
           leading: Semantics(
             button: true,
-            label: 'Back button',
+            label: lang.backButtonLabel,
             child: const BackWizardButton(),
           ),
           trailing: [
@@ -82,19 +82,20 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
                     focusNode: _validateButtonFocusNode,
                     child: Semantics(
                       button: true,
-                      label: 'Validate button ${model.state.isLoading ? "validating" : ""}',
+                      label: lang.autoinstallValidateButtonLabel(model.state.isLoading ? 
+                        lang.autoinstallValidating : ""),
                       enabled: !model.state.hasError && model.url.isNotEmpty,
                       child: _ValidateButton(model: model),
                     ),
                   )
                 : Semantics(
                     button: true,
-                    label: 'Next button',
+                    label: UbuntuLocalizations.of(context).nextLabel,
                     child: WizardButton(
                       label: UbuntuLocalizations.of(context).nextLabel,
                       onActivated: () {
                         SemanticsService.announce(
-                          'Proceeding to next page',
+                          UbuntuLocalizations.of(context).nextLabel,
                           TextDirection.ltr,
                         );
                         Wizard.of(context).next();
@@ -110,7 +111,10 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 SemanticsService.announce(
-                  'Interactive installation option ${!model.autoinstall ? "selected" : "not selected"}. ${lang.autoinstallInteractiveDescription}',
+                  lang.autoinstallInteractiveOptionStatus(
+                    !model.autoinstall ? lang.autoinstallOptionSelected : lang.autoinstallOptionNotSelected,
+                    lang.autoinstallInteractiveDescription
+                  ),
                   TextDirection.ltr,
                 );
               }
@@ -124,7 +128,7 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
               description: lang.autoinstallInteractiveDescription,
               onChanged: (value) {
                 ref.read(autoinstallModelProvider).autoinstall = value ?? false;
-                DebouncedAnnouncer.announce('Interactive installation selected');
+                DebouncedAnnouncer.announce(lang.autoinstallInteractiveSelected);
               },
             ),
           ),
@@ -137,7 +141,10 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 SemanticsService.announce(
-                  'Automated installation option ${model.autoinstall ? "selected" : "not selected"}. ${lang.autoinstallAutomatedDescription}',
+                  lang.autoinstallInteractiveOptionStatus(
+                    model.autoinstall ? lang.autoinstallOptionSelected : lang.autoinstallOptionNotSelected,
+                    lang.autoinstallAutomatedDescription
+                  ),
                   TextDirection.ltr,
                 );
               }
@@ -152,7 +159,7 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
               onChanged: (value) {
                 ref.read(autoinstallModelProvider).autoinstall = value ?? false;
                 DebouncedAnnouncer.announce(
-                  'Automated installation selected. Please provide autoinstall configuration URL',
+                  lang.autoinstallAutomatedSelected,
                 );
                 // Move focus to URL field when automated is selected
                 if (value == true) {
@@ -177,7 +184,7 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
                 height: model.autoinstall ? 160 : 0,
                 child: Semantics(
                   container: true,
-                  label: 'Autoinstall configuration section',
+                  label: lang.autoinstallConfigSectionLabel,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -192,15 +199,15 @@ class _AutoinstallPageState extends ConsumerState<AutoinstallPage> {
                         onFocusChange: (hasFocus) {
                           if (hasFocus) {
                             SemanticsService.announce(
-                              'Autoinstall configuration URL field. Enter the URL or file path',
+                              lang.autoinstallUrlFieldLabel,
                               TextDirection.ltr,
                             );
                           }
                         },
                         child: Semantics(
                           textField: true,
-                          label: 'Autoinstall configuration URL',
-                          hint: 'Enter URL or file path',
+                          label: lang.autoinstallUrlLabel,
+                          hint: lang.autoinstallUrlHint,
                           child: TextFormField(
                             initialValue: model.url,
                             onChanged: (value) {
@@ -284,7 +291,7 @@ class _ValidateButton extends StatelessWidget {
       ),
                             onPressed: !model.state.hasError && model.url.isNotEmpty 
           ? () {
-              DebouncedAnnouncer.announce('Validating autoinstall configuration');
+              DebouncedAnnouncer.announce(lang.autoinstallValidatingMessage);
               model.apply();
             }
           : null,

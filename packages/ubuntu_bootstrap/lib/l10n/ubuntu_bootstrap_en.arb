@@ -23,6 +23,40 @@
   "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
   "autoinstallAutomatedOption": "Automated installation",
   "autoinstallAutomatedDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
+
+  "autoinstallPageTitle": "Welcome to installation method page",
+  "autoinstallPageInstructions": "Choose your way of installation",
+  "autoinstallPageAccessibilityLabel": "Installation method selection page",
+  "autoinstallInteractiveOptionStatus": "Interactive installation option {status}. {description}",
+  "@autoinstallInteractiveOptionStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      },
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallOptionSelected": "selected",
+  "autoinstallOptionNotSelected": "not selected",
+  "autoinstallInteractiveSelected": "Interactive installation selected",
+  "autoinstallAutomatedSelected": "Automated installation selected. Please provide autoinstall configuration URL",
+  "autoinstallConfigSectionLabel": "Autoinstall configuration section",
+  "autoinstallUrlFieldLabel": "Autoinstall configuration URL field. Enter the URL or file path",
+  "autoinstallUrlLabel": "Autoinstall configuration URL",
+  "autoinstallUrlHint": "Enter URL or file path",
+  "autoinstallValidateButtonLabel": "Validate button {status}",
+  "@autoinstallValidateButtonLabel": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallValidating": "validating",
+  "autoinstallValidatingMessage": "Validating autoinstall configuration",
+
   "changeButtonText": "Change",
   "quitButtonText": "Quit installation",
   "loadingPageTitle": "Welcome to {DISTRO}",
@@ -389,8 +423,27 @@
   },
   "partitionErase": "Format the partition",
   "partitionMountPointLabel": "Mount point:",
-  "confirmPageTitle": "Ready to install",
-  "confirmHeader": "Review your choices",
+ "confirmPageTitle": "Ready to install",
+  "confirmHeader": "Review your choices"
+
+  "confirmPageAccessibilityLabel": "Review your choices page",
+  "confirmPageWelcome": "Review your choices. {header}. Please review all your installation settings before proceeding.",
+  "@confirmPageWelcome": {
+    "placeholders": {
+      "header": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmStartingInstallation": "Starting installation. Please wait.",
+  "confirmReviewChoices": "Review your choices",
+  "confirmSummaryLabel": "Installation summary",
+  "confirmAutoinstallConfig": "Autoinstall configuration",
+  "confirmPartitionChangesLabel": "Partition changes list",
+  "confirmInstallButtonLabel": "Install now button. This will start the installation",
+  "confirmProprietarySoftwareNone": "None",
+  "backButtonLabel": "Back button",
+
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "confirmDiskEncryptionZFS": "LUKS (ZFS)",
   "confirmDiskEncryptionTPM": "TPM",
@@ -892,5 +945,79 @@
       }
     }
   },
-  "validate": "Validate"
+  "validate": "Validate",
+
+  "sourcePageAccessibilityLabel": "Software selection page",
+  "sourcePageWelcome": "What apps would you like to install to start with? {description}",
+  "@sourcePageWelcome": {
+    "placeholders": {
+      "description": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceBatteryWarning": "Warning: You are running on battery power. Connecting to a power source is recommended",
+  "sourceInstallationTypeMinimal": "minimal",
+  "sourceInstallationTypeFull": "full",
+  "sourceInstallationProceedingWith": "Proceeding with {type} installation",
+  "@sourceInstallationProceedingWith": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceOptionsLabel": "Installation options. Use arrow keys to navigate between options",
+  "sourceOptionDetails": "{title}. {subtitle}. {status}. Option {current} of {total}",
+  "@sourceOptionDetails": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "subtitle": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      },
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "sourceOptionCurrentlySelected": "Currently selected",
+  "sourceOptionNotSelected": "Not selected",
+  "sourceOptionLabel": "{title}. {subtitle}",
+  "@sourceOptionLabel": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "subtitle": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceOptionHint": "Radio button option {current} of {total}",
+  "@sourceOptionHint": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "sourceOptionSelected": "{title} selected",
+  "@sourceOptionSelected": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  }
 }
