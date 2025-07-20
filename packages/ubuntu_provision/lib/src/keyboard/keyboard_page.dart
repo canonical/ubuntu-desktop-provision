@@ -36,14 +36,16 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
     super.initState();
     
     // Announce page load using shared utility
-    final lang = KeyboardLocalizations.of(context);
-    PageAnnouncer.announcePageLoad(
-      title: lang.keyboardTitle,
-      subtitle: lang.keyboardHeader,
-    );
-    
-    // Set initial focus
-    AccessibleFocusManager.requestFocusWithDelay(_layoutListFocusNode);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final lang = KeyboardLocalizations.of(context);
+      PageAnnouncer.announcePageLoad(
+        title: lang.keyboardTitle,
+        subtitle: lang.keyboardHeader,
+      );
+      
+      // Set initial focus
+      AccessibleFocusManager.requestFocusWithDelay(_layoutListFocusNode);
+    });
   }
   
   @override
@@ -70,14 +72,14 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
           ? Semantics(
               button: true,
               label: lang.keyboardDetectButton,
-              hint: 'Press to detect keyboard layout',
+              hint: lang.keyboardDetectButtonHint,
               child: Focus(
                 focusNode: _detectButtonFocusNode,
                 child: OutlinedButton(
                   onPressed: () async {
                     // Announce the action
                     SemanticsService.announce(
-                      'Detecting keyboard layout',
+                      lang.keyboardDetectingMessage,
                       TextDirection.ltr,
                     );
                     
@@ -91,7 +93,7 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
                       // Announce the selection
                       if (model.selectedLayoutIndex >= 0) {
                         SemanticsService.announce(
-                          'Selected layout ${model.layoutName(model.selectedLayoutIndex)}',
+                          lang.keyboardLayoutSelectedMessage(model.layoutName(model.selectedLayoutIndex)),
                           TextDirection.ltr,
                         );
                       }
@@ -114,7 +116,7 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
         Expanded(
           child: Semantics(
             container: true,
-            label: 'Keyboard layout selection list',
+            label: lang.keyboardLayoutListLabel,
             child: Focus(
               focusNode: _layoutListFocusNode,
               child: AccessibleListWidget(
@@ -125,12 +127,15 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
                   model.selectLayout(index);
                   // Announce selection change
                   SemanticsService.announce(
-                    'Selected ${model.layoutName(index)}',
+                    lang.keyboardLayoutSelectedMessage(model.layoutName(index)),
                     TextDirection.ltr,
                   );
                 },
                 itemBuilder: (context, index) => Semantics(
-                  label: '${model.layoutName(index)} ${index == model.selectedLayoutIndex ? "selected" : ""}',
+                  label: lang.keyboardLayoutItemLabel(
+                    model.layoutName(index),
+                    index == model.selectedLayoutIndex ? lang.keyboardLayoutSelected : lang.keyboardLayoutNotSelected
+                  ),
                   selected: index == model.selectedLayoutIndex,
                   child: ListTile(
                     key: ValueKey(index),
@@ -154,7 +159,7 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
         
         // 2. Variant Selection - Orca Compatible
         Semantics(
-          label: 'Keyboard variant',
+          label: lang.keyboardVariantSectionLabel,
           child: Row(
             children: [
               Text(lang.keyboardVariantLabel),
@@ -162,18 +167,20 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
               Expanded(
                 child: Focus(
                   focusNode: _variantDropdownFocusNode,
-                                  child: AccessibleDropdown<int>(
-                  value: model.selectedVariantIndex,
-                  items: List.generate(model.variantCount, (index) => index),
-                  itemBuilder: (index) => model.variantName(index),
-                  label: 'Keyboard variant',
-                  onChanged: (index) {
-                    if (index != null) {
-                      model.selectVariant(index);
-                      DebouncedAnnouncer.announce('Selected variant ${model.variantName(index)}');
-                    }
-                  },
-                ),
+                  child: AccessibleDropdown<int>(
+                    value: model.selectedVariantIndex,
+                    items: List.generate(model.variantCount, (index) => index),
+                    itemBuilder: (index) => model.variantName(index),
+                    label: lang.keyboardVariantDropdownLabel,
+                    onChanged: (index) {
+                      if (index != null) {
+                        model.selectVariant(index);
+                        DebouncedAnnouncer.announce(
+                          lang.keyboardVariantSelectedMessage(model.variantName(index))
+                        );
+                      }
+                    },
+                  ),
                 ),
               ),
             ],
@@ -187,7 +194,7 @@ class _KeyboardPageState extends ConsumerState<KeyboardPage> {
         // 3. Test Field with accessibility
         Semantics(
           textField: true,
-          label: 'Keyboard test field ${lang.keyboardTestHint}',
+          label: lang.keyboardTestFieldLabel(lang.keyboardTestHint),
           child: Focus(
             focusNode: _testFieldFocusNode,
             child: TextField(
