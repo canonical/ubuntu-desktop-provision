@@ -53,7 +53,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
       // Announce welcome message
       final lang = NetworkLocalizations.of(context);
       SemanticsService.announce(
-        'Welcome to network page. ${lang.networkPageHeader}. ${lang.networkPageBody}',
+        lang.networkPageWelcome(lang.networkPageHeader, lang.networkPageBody),
         TextDirection.ltr,
       );
       
@@ -80,7 +80,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
 
     return Semantics(
-      label: 'Network configuration page',
+      label: lang.networkPageAccessibilityLabel,
       child: HorizontalPage(
         windowTitle: lang.networkPageTitle,
         title: lang.networkPageHeader,
@@ -88,13 +88,14 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
         bottomBar: WizardBar(
           leading: Semantics(
             button: true,
-            label: 'Back button',
+            label: lang.backButtonLabel,
             child: const BackWizardButton(),
           ),
           trailing: [
             Semantics(
               button: true,
-              label: 'Connect button ${model.isConnecting ? "connecting" : ""}',
+              label: lang.networkConnectButtonLabel(model.isConnecting ? 
+                lang.networkConnectButtonConnecting : lang.networkConnectButtonNotConnecting),
               enabled: !model.isConnecting,
               child: WizardButton(
                 label: UbuntuLocalizations.of(context).connectLabel,
@@ -102,7 +103,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
                 visible: model.isEnabled && model.canConnect,
                 onActivated: () {
                   SemanticsService.announce(
-                    'Connecting to network',
+                    lang.networkConnecting,
                     TextDirection.ltr,
                   );
                   model.connect();
@@ -111,7 +112,8 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
             ),
             Semantics(
               button: true,
-              label: 'Next button ${!model.isEnabled || model.isConnected ? "enabled" : "disabled"}',
+              label: lang.networkNextButtonLabel(!model.isEnabled || model.isConnected ? 
+                lang.networkNextButtonEnabled : lang.networkNextButtonDisabled),
               enabled: model.isEnabled && !model.isConnecting && model.isConnected,
               child: NextWizardButton(
                 enabled: model.isEnabled && !model.isConnecting && model.isConnected,
@@ -139,22 +141,23 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 SemanticsService.announce(
-                  'Ethernet option ${model.connectMode == ConnectMode.ethernet ? "selected" : "not selected"}',
+                  lang.networkEthernetOptionStatus(model.connectMode == ConnectMode.ethernet ? 
+                    lang.networkOptionSelected : lang.networkOptionNotSelected),
                   TextDirection.ltr,
                 );
               }
             },
             child: Semantics(
               checked: model.connectMode == ConnectMode.ethernet,
-              label: 'Use wired connection',
-              hint: 'Radio button',
+              label: lang.networkEthernetOptionLabel,
+              hint: lang.networkRadioButtonHint,
               child: AccessibleRadioListTile<ConnectMode>(
                 title: EthernetRadioButton(
                   value: model.connectMode,
                   onChanged: (_) {
                     model.selectConnectMode(ConnectMode.ethernet);
                     SemanticsService.announce(
-                      'Ethernet selected',
+                      lang.networkEthernetSelected,
                       TextDirection.ltr,
                     );
                   },
@@ -164,7 +167,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
                 onChanged: (_) {
                   model.selectConnectMode(ConnectMode.ethernet);
                   SemanticsService.announce(
-                    'Ethernet selected',
+                    lang.networkEthernetSelected,
                     TextDirection.ltr,
                   );
                 },
@@ -183,22 +186,23 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 SemanticsService.announce(
-                  'WiFi option ${model.connectMode == ConnectMode.wifi ? "selected" : "not selected"}',
+                  lang.networkWifiOptionStatus(model.connectMode == ConnectMode.wifi ? 
+                    lang.networkOptionSelected : lang.networkOptionNotSelected),
                   TextDirection.ltr,
                 );
               }
             },
             child: Semantics(
               checked: model.connectMode == ConnectMode.wifi,
-              label: 'Connect to WiFi network',
-              hint: 'Radio button',
+              label: lang.networkWifiOptionLabel,
+              hint: lang.networkRadioButtonHint,
               child: AccessibleRadioListTile<ConnectMode>(
                 title: WifiRadioButton(
                   value: model.connectMode,
                   onChanged: (_) {
                     model.selectConnectMode(ConnectMode.wifi);
                     SemanticsService.announce(
-                      'WiFi selected',
+                      lang.networkWifiSelected,
                       TextDirection.ltr,
                     );
                   },
@@ -208,7 +212,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
                 onChanged: (_) {
                   model.selectConnectMode(ConnectMode.wifi);
                   SemanticsService.announce(
-                    'WiFi selected',
+                    lang.networkWifiSelected,
                     TextDirection.ltr,
                   );
                 },
@@ -217,14 +221,14 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
           ),
           
           Semantics(
-            label: 'WiFi networks list',
+            label: lang.networkWifiListLabel,
             child: WifiView(
               expanded: model.connectMode == ConnectMode.wifi,
               onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
               onSelected: (_, __) {
                 model.selectConnectMode(ConnectMode.wifi);
                 SemanticsService.announce(
-                  'WiFi network selected',
+                  lang.networkWifiNetworkSelected,
                   TextDirection.ltr,
                 );
               },
@@ -238,22 +242,23 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 SemanticsService.announce(
-                  'Hidden WiFi option ${model.connectMode == ConnectMode.hiddenWifi ? "selected" : "not selected"}',
+                  lang.networkHiddenWifiOptionStatus(model.connectMode == ConnectMode.hiddenWifi ? 
+                    lang.networkOptionSelected : lang.networkOptionNotSelected),
                   TextDirection.ltr,
                 );
               }
             },
             child: Semantics(
               checked: model.connectMode == ConnectMode.hiddenWifi,
-              label: 'Connect to hidden WiFi network',
-              hint: 'Radio button',
+              label: lang.networkHiddenWifiOptionLabel,
+              hint: lang.networkRadioButtonHint,
               child: AccessibleRadioListTile<ConnectMode>(
                 title: HiddenWifiRadioButton(
                   value: model.connectMode,
                   onChanged: (_) {
                     model.selectConnectMode(ConnectMode.hiddenWifi);
                     SemanticsService.announce(
-                      'Hidden WiFi selected',
+                      lang.networkHiddenWifiSelected,
                       TextDirection.ltr,
                     );
                   },
@@ -263,7 +268,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
                 onChanged: (_) {
                   model.selectConnectMode(ConnectMode.hiddenWifi);
                   SemanticsService.announce(
-                    'Hidden WiFi selected',
+                    lang.networkHiddenWifiSelected,
                     TextDirection.ltr,
                   );
                 },
@@ -281,22 +286,23 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
             onFocusChange: (hasFocus) {
               if (hasFocus) {
                 SemanticsService.announce(
-                  'No connection option ${model.connectMode == ConnectMode.none ? "selected" : "not selected"}',
+                  lang.networkNoConnectOptionStatus(model.connectMode == ConnectMode.none ? 
+                    lang.networkOptionSelected : lang.networkOptionNotSelected),
                   TextDirection.ltr,
                 );
               }
             },
             child: Semantics(
               checked: model.connectMode == ConnectMode.none,
-              label: 'Continue without network',
-              hint: 'Radio button',
+              label: lang.networkNoConnectOptionLabel,
+              hint: lang.networkRadioButtonHint,
               child: AccessibleRadioListTile<ConnectMode>(
                 title: NoConnectView(
                   value: model.connectMode,
                   onChanged: (_) {
                     model.selectConnectMode(ConnectMode.none);
                     SemanticsService.announce(
-                      'Continue without network selected',
+                      lang.networkNoConnectSelected,
                       TextDirection.ltr,
                     );
                   },
@@ -306,7 +312,7 @@ class _NetworkPageState extends ConsumerState<NetworkPage> {
                 onChanged: (_) {
                   model.selectConnectMode(ConnectMode.none);
                   SemanticsService.announce(
-                    'Continue without network selected',
+                    lang.networkNoConnectSelected,
                     TextDirection.ltr,
                   );
                 },

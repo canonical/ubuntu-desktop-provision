@@ -382,6 +382,86 @@
   "networkHiddenWifiNameLabel": "Network name",
   "networkHiddenWifiNameRequired": "A network name is required",
   "networkNoneOption": "Do not connect to the internet",
+  
+  "networkPageWelcome": "Welcome to network page. {header}. {body}",
+  "@networkPageWelcome": {
+    "placeholders": {
+      "header": {
+        "type": "String"
+      },
+      "body": {
+        "type": "String"
+      }
+    }
+  },
+  "networkPageAccessibilityLabel": "Network configuration page",
+  "networkConnectButtonLabel": "Connect button {status}",
+  "@networkConnectButtonLabel": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "networkConnectButtonConnecting": "connecting",
+  "networkConnectButtonNotConnecting": "",
+  "networkConnecting": "Connecting to network",
+  "networkNextButtonLabel": "Next button {status}",
+  "@networkNextButtonLabel": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "networkNextButtonEnabled": "enabled",
+  "networkNextButtonDisabled": "disabled",
+  "networkEthernetOptionStatus": "Ethernet option {status}",
+  "@networkEthernetOptionStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "networkOptionSelected": "selected",
+  "networkOptionNotSelected": "not selected",
+  "networkEthernetOptionLabel": "Use wired connection",
+  "networkRadioButtonHint": "Radio button",
+  "networkEthernetSelected": "Ethernet selected",
+  "networkWifiOptionStatus": "WiFi option {status}",
+  "@networkWifiOptionStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "networkWifiOptionLabel": "Connect to WiFi network",
+  "networkWifiSelected": "WiFi selected",
+  "networkWifiListLabel": "WiFi networks list",
+  "networkWifiNetworkSelected": "WiFi network selected",
+  "networkHiddenWifiOptionStatus": "Hidden WiFi option {status}",
+  "@networkHiddenWifiOptionStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "networkHiddenWifiOptionLabel": "Connect to hidden WiFi network",
+  "networkHiddenWifiSelected": "Hidden WiFi selected",
+  "networkNoConnectOptionStatus": "No connection option {status}",
+  "@networkNoConnectOptionStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "networkNoConnectOptionLabel": "Continue without network",
+  "networkNoConnectSelected": "Continue without network selected",
+  
   "eulaPageTitle": "License agreement",
   "eulaReviewTerms": "Review the license terms",
   "eulaReadAndAcceptTerms": "To continue setting up this machine, you must read and accept the license agreement terms.",
