@@ -424,9 +424,8 @@
   "partitionErase": "Format the partition",
   "partitionMountPointLabel": "Mount point:",
  "confirmPageTitle": "Ready to install",
-  "confirmHeader": "Review your choices"
-
-  "confirmPageAccessibilityLabel": "Review your choices page",
+"confirmHeader": "Review your choices",
+"confirmPageAccessibilityLabel": "Review your choices page",
   "confirmPageWelcome": "Review your choices. {header}. Please review all your installation settings before proceeding.",
   "@confirmPageWelcome": {
     "placeholders": {
