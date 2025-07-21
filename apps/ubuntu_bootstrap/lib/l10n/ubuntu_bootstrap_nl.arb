@@ -749,5 +749,9 @@
   "pauseSlideshowSemanticLabel": "Diapresentatie pauzeren",
   "@pauseSlideshowSemanticLabel": {},
   "toggleLogsSemanticLabel": "Installatielogboeken wisselen",
-  "@toggleLogsSemanticLabel": {}
+  "@toggleLogsSemanticLabel": {},
+  "successIconSemanticLabel": "Succes",
+  "@successIconSemanticLabel": {},
+  "errorIconSemanticLabel": "Fout",
+  "@errorIconSemanticLabel": {}
 }
