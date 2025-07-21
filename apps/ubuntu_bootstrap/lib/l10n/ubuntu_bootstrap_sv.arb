@@ -775,5 +775,17 @@
   "passphrasePagePassphraseEntropyOptimal": "Stark lösenfras",
   "@passphrasePagePassphraseEntropyOptimal": {},
   "successIconSemanticLabel": "Lyckats",
-  "@successIconSemanticLabel": {}
+  "@successIconSemanticLabel": {},
+  "nextSlideSemanticLabel": "Nästa bild",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "Föregående bild",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "Visa bildspel",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "Pausa bildspel",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "Växla installationsloggar",
+  "@toggleLogsSemanticLabel": {},
+  "errorIconSemanticLabel": "Fel",
+  "@errorIconSemanticLabel": {}
 }
