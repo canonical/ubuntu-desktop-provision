@@ -222,5 +222,7 @@
         "type": "String"
       }
     }
-  }
+  },
+  "successIconSemanticLabel": "Menestys",
+  "@successIconSemanticLabel": {}
 }
