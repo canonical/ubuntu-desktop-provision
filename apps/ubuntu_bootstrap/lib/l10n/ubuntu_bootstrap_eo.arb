@@ -783,5 +783,9 @@
   "playSlideshowSemanticLabel": "Foliumi paĝojn",
   "@playSlideshowSemanticLabel": {},
   "toggleLogsSemanticLabel": "Baskuligi instalan protokolon",
-  "@toggleLogsSemanticLabel": {}
+  "@toggleLogsSemanticLabel": {},
+  "successIconSemanticLabel": "Sukceso",
+  "@successIconSemanticLabel": {},
+  "errorIconSemanticLabel": "Eraro",
+  "@errorIconSemanticLabel": {}
 }
