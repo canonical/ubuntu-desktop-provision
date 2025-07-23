@@ -1,3 +1,5 @@
 {
-  "@@locale": "gl"
+  "@@locale": "gl",
+  "close": "Pechar",
+  "@close": {}
 }
