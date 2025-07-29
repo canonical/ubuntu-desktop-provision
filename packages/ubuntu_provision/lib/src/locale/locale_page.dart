@@ -1,11 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
 
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
@@ -24,6 +27,9 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
+
+    // Create focus node for the language list
+    final listFocusNode = FocusNode();
 
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
@@ -46,27 +52,67 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       ),
       children: [
         Expanded(
-          child: ListWidget.builder(
-            selectedIndex: model.selectedIndex,
-            itemCount: model.languageCount,
-            itemBuilder: (context, index) => ListTile(
-              key: ValueKey(index),
-              title: Text(model.language(index)),
-              selected: index == model.selectedIndex,
-              onTap: () => model.selectLanguage(index),
+          child: FocusTraversalGroup(
+            child: Semantics(
+              label: lang.localeHeader,
+              hint: 'Use arrow keys to navigate, Enter to select, Tab to move to Next button',
+              child: Focus(
+                focusNode: listFocusNode,
+                autofocus: true,
+                onKeyEvent: (node, event) {
+                  if (event is KeyDownEvent) {
+                    // Handle Home key - go to first item
+                    if (event.logicalKey == LogicalKeyboardKey.home) {
+                      model.selectLanguage(0);
+                      return KeyEventResult.handled;
+                    }
+                    
+                    // Handle End key - go to last item
+                    if (event.logicalKey == LogicalKeyboardKey.end) {
+                      model.selectLanguage(model.languageCount - 1);
+                      return KeyEventResult.handled;
+                    }
+                    
+                    // Handle Tab navigation
+                    if (event.logicalKey == LogicalKeyboardKey.tab) {
+                      if (HardwareKeyboard.instance.isShiftPressed) {
+                        // Shift+Tab - let default behavior handle it
+                        return KeyEventResult.skipRemainingHandlers;
+                      } else {
+                        // Tab - move to Next button
+                        nextFocusNode.requestFocus();
+                        return KeyEventResult.handled;
+                      }
+                    }
+                  }
+                  return KeyEventResult.ignored;
+                },
+                child: ListWidget.builder(
+                  selectedIndex: model.selectedIndex,
+                  itemCount: model.languageCount,
+                  itemBuilder: (context, index) => Semantics(
+                    selected: index == model.selectedIndex,
+                    value: '${model.language(index)}, ${index + 1} of ${model.languageCount}',
+                    child: ListTile(
+                      key: ValueKey(index),
+                      title: Text(model.language(index)),
+                      selected: index == model.selectedIndex,
+                      onTap: () => model.selectLanguage(index),
+                    ),
+                  ),
+                  tabFocusNode: nextFocusNode,
+                  onKeySearch: (value) {
+                    final index = model.searchLanguage(value);
+                    if (index != -1) {
+                      model.selectLanguage(index);
+                    }
+                  },
+                ),
+              ),
             ),
-            tabFocusNode: nextFocusNode,
-            onKeySearch: (value) {
-              final index = model.searchLanguage(value);
-              if (index != -1) {
-                model.selectLanguage(index);
-              }
-            },
           ),
         ),
       ],
     );
   }
 }
-
-final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
