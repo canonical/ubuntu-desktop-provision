@@ -771,5 +771,19 @@
     }
   },
   "passphrasePagePassphraseEntropyBelowOptimal": "公平的密碼，將它變得更長或更複雜，以提高安全性",
-  "@passphrasePagePassphraseEntropyBelowOptimal": {}
+  "@passphrasePagePassphraseEntropyBelowOptimal": {},
+  "successIconSemanticLabel": "成功",
+  "@successIconSemanticLabel": {},
+  "nextSlideSemanticLabel": "下一頁",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "前一頁",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "播放幻燈片",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "暫停播放幻燈片",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "切換安裝記錄",
+  "@toggleLogsSemanticLabel": {},
+  "errorIconSemanticLabel": "錯誤",
+  "@errorIconSemanticLabel": {}
 }
