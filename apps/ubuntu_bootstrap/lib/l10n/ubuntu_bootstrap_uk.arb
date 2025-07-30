@@ -700,15 +700,15 @@
   "@recoveryKeyClipboardNotifiaction": {},
   "recoveryKeyExceptionFileSystemTitle": "Файл ключа відновлення не збережено",
   "@recoveryKeyExceptionFileSystemTitle": {},
-  "recoveryKeyExceptionDisallowedPathTitle": "Файл ключа відновлення не можна зберегти в тимчасовому місці",
+  "recoveryKeyExceptionDisallowedPathTitle": "Файл ключа відновлення не можна зберегти у тимчасовому розташуванні",
   "@recoveryKeyExceptionDisallowedPathTitle": {},
   "recoveryKeyExceptionUnknownTitle": "Невідома помилка",
   "@recoveryKeyExceptionUnknownTitle": {},
-  "recoveryKeyExceptionFileSystemBody": "Ви не маєте дозволу на запис у цю теку. Спробуйте інше місце або скористайтеся іншим методом.",
+  "recoveryKeyExceptionFileSystemBody": "У вас немає дозволу на запис до цієї папки. Спробуйте інше розташування або використайте інший спосіб.",
   "@recoveryKeyExceptionFileSystemBody": {},
   "recoveryKeyFilePickerTitle": "Зберегти файл ключа відновлення",
   "@recoveryKeyFilePickerTitle": {},
-  "recoveryKeyFilePickerFilter": "Текстові файли",
+  "recoveryKeyFilePickerFilter": "Текстовий файл",
   "@recoveryKeyFilePickerFilter": {},
   "recoveryKeyQrDialogBody": "Відскануйте QR-код, щоб скопіювати ключ відновлення, і збережіть його в безпечному місці, наприклад, у менеджері паролів. Ви також можете сфотографувати його для подальшого використання.",
   "@recoveryKeyQrDialogBody": {},
@@ -720,7 +720,7 @@
       }
     }
   },
-  "recoveryKeyExceptionDisallowedPathBody": "Спробуйте інше місце, наприклад знімний диск, або скористайтеся іншим методом.",
+  "recoveryKeyExceptionDisallowedPathBody": "Спробуйте інше розташування, наприклад, змінний диск, або використайте інший метод.",
   "@recoveryKeyExceptionDisallowedPathBody": {},
   "passphrasePageTitle": "Шифрування",
   "@passphrasePageTitle": {},
@@ -773,5 +773,7 @@
   "passphrasePagePassphraseEntropyBelowOptimal": "Достатній пароль, зробіть його довшим або складнішим для кращої безпеки",
   "@passphrasePagePassphraseEntropyBelowOptimal": {},
   "passphrasePagePinEntropyBelowMin": "Слабкий PIN-код, зробіть його довшим або менш передбачуваним",
-  "@passphrasePagePinEntropyBelowMin": {}
+  "@passphrasePagePinEntropyBelowMin": {},
+  "successIconSemanticLabel": "Успішно",
+  "@successIconSemanticLabel": {}
 }
