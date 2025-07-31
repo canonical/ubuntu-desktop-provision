@@ -1,3 +1,7 @@
 {
-  "@@locale": "ar"
+  "@@locale": "ar",
+  "restart": "أعِد التشغيل",
+  "@restart": {},
+  "close": "أغلِق",
+  "@close": {}
 }
