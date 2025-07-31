@@ -159,7 +159,7 @@
   "@identityConfirmPasswordLabel": {},
   "identityPasswordMismatch": "كلمتا السر لا تتطابقان",
   "@identityPasswordMismatch": {},
-  "identityPasswordShow": "أظهر",
+  "identityPasswordShow": "اعرض",
   "@identityPasswordShow": {},
   "identityPasswordHide": "أخفِ",
   "@identityPasswordHide": {},
@@ -240,5 +240,7 @@
   "eulaAcceptTerms": "قرأت الشروط ووافقت عليها",
   "@eulaAcceptTerms": {},
   "successIconSemanticLabel": "اكتمل",
-  "@successIconSemanticLabel": {}
+  "@successIconSemanticLabel": {},
+  "activeDirectoryAdminLabel": "المستخدم",
+  "@activeDirectoryAdminLabel": {}
 }
