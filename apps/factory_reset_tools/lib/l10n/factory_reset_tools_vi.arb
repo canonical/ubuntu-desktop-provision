@@ -1,3 +1,5 @@
 {
-  "@@locale": "vi"
+  "@@locale": "vi",
+  "appTitle": "Công cụ khôi phục cài đặt gốc",
+  "@appTitle": {}
 }
