@@ -737,5 +737,7 @@
   "recoveryKeyFilePickerTitle": "மீட்பு விசை கோப்பை சேமிக்கவும்",
   "@recoveryKeyFilePickerTitle": {},
   "recoveryKeyFilePickerFilter": "உரை கோப்புகள்",
-  "@recoveryKeyFilePickerFilter": {}
+  "@recoveryKeyFilePickerFilter": {},
+  "successIconSemanticLabel": "வெற்றி",
+  "@successIconSemanticLabel": {}
 }
