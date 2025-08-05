@@ -28,7 +28,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
 
-    // Create focus node for the language list
+    // Create focus node for the language list to enable circular navigation
     final listFocusNode = FocusNode();
 
     return HorizontalPage(
@@ -39,14 +39,26 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       nextFocusNode: nextFocusNode,
       bottomBar: WizardBar(
         trailing: [
-          NextWizardButton(
-            focusNode: nextFocusNode,
-            onNext: () async {
-              final locale = model.locale(model.selectedIndex);
-              await model.applyLocale(locale);
-              await tryGetService<TelemetryService>()
-                  ?.addMetric('Language', locale.languageCode);
+          Focus(
+            onKeyEvent: (node, event) {
+              if (event is KeyDownEvent &&
+                  event.logicalKey == LogicalKeyboardKey.tab &&
+                  !HardwareKeyboard.instance.isShiftPressed) {
+                // Tab from Next button goes back to list
+                listFocusNode.requestFocus();
+                return KeyEventResult.handled;
+              }
+              return KeyEventResult.ignored;
             },
+            child: NextWizardButton(
+              focusNode: nextFocusNode,
+              onNext: () async {
+                final locale = model.locale(model.selectedIndex);
+                await model.applyLocale(locale);
+                await tryGetService<TelemetryService>()
+                    ?.addMetric('Language', locale.languageCode);
+              },
+            ),
           ),
         ],
       ),
@@ -55,58 +67,29 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
           child: FocusTraversalGroup(
             child: Semantics(
               label: lang.localeHeader,
-              hint: 'Use arrow keys to navigate, Enter to select, Tab to move to Next button',
               child: Focus(
                 focusNode: listFocusNode,
-                autofocus: true,
-                onKeyEvent: (node, event) {
-                  if (event is KeyDownEvent) {
-                    // Handle Home key - go to first item
-                    if (event.logicalKey == LogicalKeyboardKey.home) {
-                      model.selectLanguage(0);
-                      return KeyEventResult.handled;
-                    }
-                    
-                    // Handle End key - go to last item
-                    if (event.logicalKey == LogicalKeyboardKey.end) {
-                      model.selectLanguage(model.languageCount - 1);
-                      return KeyEventResult.handled;
-                    }
-                    
-                    // Handle Tab navigation
-                    if (event.logicalKey == LogicalKeyboardKey.tab) {
-                      if (HardwareKeyboard.instance.isShiftPressed) {
-                        // Shift+Tab - let default behavior handle it
-                        return KeyEventResult.skipRemainingHandlers;
-                      } else {
-                        // Tab - move to Next button
-                        nextFocusNode.requestFocus();
-                        return KeyEventResult.handled;
-                      }
-                    }
-                  }
-                  return KeyEventResult.ignored;
-                },
                 child: ListWidget.builder(
                   selectedIndex: model.selectedIndex,
                   itemCount: model.languageCount,
-                  itemBuilder: (context, index) => Semantics(
-                    selected: index == model.selectedIndex,
-                    value: '${model.language(index)}, ${index + 1} of ${model.languageCount}',
-                    child: ListTile(
-                      key: ValueKey(index),
-                      title: Text(model.language(index)),
-                      selected: index == model.selectedIndex,
-                      onTap: () => model.selectLanguage(index),
-                    ),
-                  ),
                   tabFocusNode: nextFocusNode,
-                  onKeySearch: (value) {
-                    final index = model.searchLanguage(value);
-                    if (index != -1) {
-                      model.selectLanguage(index);
-                    }
-                  },
+                itemBuilder: (context, index) => Semantics(
+                  selected: index == model.selectedIndex,
+                  value:
+                      '${model.language(index)}, ${index + 1} of ${model.languageCount}',
+                  child: ListTile(
+                    key: ValueKey(index),
+                    title: Text(model.language(index)),
+                    selected: index == model.selectedIndex,
+                    onTap: () => model.selectLanguage(index),
+                  ),
+                ),
+                onKeySearch: (value) {
+                  final index = model.searchLanguage(value);
+                  if (index != -1) {
+                    model.selectLanguage(index);
+                  }
+                },
                 ),
               ),
             ),
