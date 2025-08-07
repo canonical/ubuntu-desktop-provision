@@ -1,3 +1,9 @@
+provd (0.1.6~ppa1) questing; urgency=medium
+
+  * Implement telemetry.v2 service
+
+ -- Kat Kuo <kat.kuo@canonical.com>  Thu, 07 Aug 2025 13:49:44 -0400
+
 provd (0.1.5~ppa2) noble; urgency=medium
 
   * Remove Ubuntu Pro and Chmod services

@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/telemetry"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/telemetry/v1"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/testutils"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
 	"github.com/stretchr/testify/require"

@@ -142,6 +142,15 @@ telemetry.TelemetryService:
           isclientstream: false
           isserverstream: false
     metadata: protos/telemetry.proto
+telemetry.v2.TelemetryService:
+    methods:
+        - name: Collect
+          isclientstream: false
+          isserverstream: false
+        - name: SetConsent
+          isclientstream: false
+          isserverstream: false
+    metadata: protos/v2/telemetry.proto
 timezone.TimezoneService:
     methods:
         - name: GetTimezone
