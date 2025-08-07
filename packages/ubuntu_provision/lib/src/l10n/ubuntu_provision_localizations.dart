@@ -902,6 +902,24 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'Success'**
   String get successIconSemanticLabel;
+
+  /// No description provided for @closeIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get closeIconSemanticLabel;
+
+  /// No description provided for @maximizeIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximize'**
+  String get maximizeIconSemanticLabel;
+
+  /// No description provided for @minimizeIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimize'**
+  String get minimizeIconSemanticLabel;
 }
 
 class _UbuntuProvisionLocalizationsDelegate

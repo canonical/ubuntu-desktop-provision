@@ -73,7 +73,12 @@ class _CreationProgressPageState extends ConsumerState<CreationProgressPage> {
     }
 
     return WizardPage(
-      title: YaruWindowTitleBar(title: Text(lang.resetMediaTitle)),
+      title: YaruWindowTitleBar(
+        title: Text(lang.resetMediaTitle),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
+      ),
       content: Row(
         children: [
           const Spacer(),
