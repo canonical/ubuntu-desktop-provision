@@ -3,6 +3,9 @@
 
 export GOFLAGS := --mod=vendor -buildmode=pie
 
+# Workaround for github.com/linuxdeepin/go-gir # See https://github.com/linuxdeepin/go-gir/pull/49
+export CC=gcc-14
+
 # We are getting an issue for embedding in GOPATH mode which don’t copy none .go file.
 export GO111MODULE := on
 export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
