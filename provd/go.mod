@@ -9,7 +9,7 @@ require (
 	github.com/spf13/viper v1.20.1
 	github.com/stretchr/testify v1.10.0
 	github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19
-	github.com/ubuntu/ubuntu-insights/insights v0.3.1-0.20250807162404-d74c9e1245cf
+	github.com/ubuntu/ubuntu-insights/insights v0.4.0
 	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac
 	google.golang.org/grpc v1.74.2
 	google.golang.org/protobuf v1.36.7
@@ -20,7 +20,7 @@ require (
 	github.com/BurntSushi/toml v1.5.0 // indirect
 	github.com/go-viper/mapstructure/v2 v2.3.0 // indirect
 	github.com/pkg/errors v0.8.1 // indirect
-	github.com/ubuntu/ubuntu-insights/common v0.0.0-20250627183928-38f4a1b709cd // indirect
+	github.com/ubuntu/ubuntu-insights/common v0.3.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )
 

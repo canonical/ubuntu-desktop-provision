@@ -74,10 +74,10 @@ github.com/subosito/gotenv v1.6.0 h1:9NlTDc1FTs4qu0DDq7AEtTPNw6SVm7uBMsUCUjABIf8
 github.com/subosito/gotenv v1.6.0/go.mod h1:Dk4QP5c2W3ibzajGcXpNraDfq2IrhjMIvMSWPKKo0FU=
 github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19 h1:IP8p46//e//o0KPZdAzl+WF1DdRKHXfkbB+sQDCAlkw=
 github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19/go.mod h1:PUpwIgUuCQyuCz/gwiq6WYbo7IvtXXd8JqL01ez+jZE=
-github.com/ubuntu/ubuntu-insights/common v0.0.0-20250627183928-38f4a1b709cd h1:QDn3zyf+qXVgz9uDrwkyJmeBM2g3IxqGTXW44E8FDH8=
-github.com/ubuntu/ubuntu-insights/common v0.0.0-20250627183928-38f4a1b709cd/go.mod h1:Xyi34TiWUpW1T8BL9BRvWITGm9pXf2Aw+Okwc5UdOjs=
-github.com/ubuntu/ubuntu-insights/insights v0.3.1-0.20250807162404-d74c9e1245cf h1:Io6+Gnns6Lc4PFFnblAkZxJryvbdjkeLnDMFFCLgUJU=
-github.com/ubuntu/ubuntu-insights/insights v0.3.1-0.20250807162404-d74c9e1245cf/go.mod h1:qtOh0+1bcP1mKDXfnW9QM2fXeb53rFPLUuXB2/2b7TY=
+github.com/ubuntu/ubuntu-insights/common v0.3.0 h1:ybVzo24GGzveOHQT9OoO1lKU006UgETfhm38LzJJwFo=
+github.com/ubuntu/ubuntu-insights/common v0.3.0/go.mod h1:Xyi34TiWUpW1T8BL9BRvWITGm9pXf2Aw+Okwc5UdOjs=
+github.com/ubuntu/ubuntu-insights/insights v0.4.0 h1:PyA8IMGQ+vorehxAwYldEnfB8VvkwH88Idr3AQsPfCc=
+github.com/ubuntu/ubuntu-insights/insights v0.4.0/go.mod h1:9dmNmrI95/rB4lvzwqpmTFbeFOS8zFXuJ/z/4A/RiGA=
 github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac h1:w8/ullxXcbVscMoDk2C7e4eMvimRnrBfhLSZGtuvdRg=
 github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac/go.mod h1:+kTYKcCrcrX8W2/scrDwXO3tyUpe/WZ7fCFDMrTMb7U=
 go.opentelemetry.io/auto/sdk v1.1.0 h1:cH53jehLUN6UFLY71z+NDOiNJqDdPRaXzTel0sJySYA=
