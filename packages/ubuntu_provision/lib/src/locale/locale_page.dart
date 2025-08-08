@@ -75,8 +75,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
                   tabFocusNode: nextFocusNode,
                   itemBuilder: (context, index) => Semantics(
                     selected: index == model.selectedIndex,
-                    value:
-                        '${model.language(index)}, ${index + 1} of ${model.languageCount}',
+                    value: model.language(index),
                     child: ListTile(
                       key: ValueKey(index),
                       title: Text(model.language(index)),
