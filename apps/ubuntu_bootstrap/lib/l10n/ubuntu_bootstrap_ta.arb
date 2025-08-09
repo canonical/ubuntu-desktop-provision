@@ -739,5 +739,17 @@
   "recoveryKeyFilePickerFilter": "உரை கோப்புகள்",
   "@recoveryKeyFilePickerFilter": {},
   "successIconSemanticLabel": "வெற்றி",
-  "@successIconSemanticLabel": {}
+  "@successIconSemanticLabel": {},
+  "nextSlideSemanticLabel": "அடுத்த ச்லைடு",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "முந்தைய ச்லைடு",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "ச்லைடுசோ விளையாடுங்கள்",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "ச்லைடுசோ இடைநிறுத்தம்",
+  "@pauseSlideshowSemanticLabel": {},
+  "toggleLogsSemanticLabel": "பதிவுகளை நிறுவவும்",
+  "@toggleLogsSemanticLabel": {},
+  "errorIconSemanticLabel": "பிழை",
+  "@errorIconSemanticLabel": {}
 }
