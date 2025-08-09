@@ -1,11 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
 
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
@@ -25,6 +28,9 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
 
+    // Create focus node for the language list to enable circular navigation
+    final listFocusNode = FocusNode();
+
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
@@ -33,40 +39,62 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       nextFocusNode: nextFocusNode,
       bottomBar: WizardBar(
         trailing: [
-          NextWizardButton(
-            focusNode: nextFocusNode,
-            onNext: () async {
-              final locale = model.locale(model.selectedIndex);
-              await model.applyLocale(locale);
-              await tryGetService<TelemetryService>()
-                  ?.addMetric('Language', locale.languageCode);
+          Focus(
+            onKeyEvent: (node, event) {
+              if (event is KeyDownEvent &&
+                  event.logicalKey == LogicalKeyboardKey.tab &&
+                  !HardwareKeyboard.instance.isShiftPressed) {
+                // Tab from Next button goes back to list
+                listFocusNode.requestFocus();
+                return KeyEventResult.handled;
+              }
+              return KeyEventResult.ignored;
             },
+            child: NextWizardButton(
+              focusNode: nextFocusNode,
+              onNext: () async {
+                final locale = model.locale(model.selectedIndex);
+                await model.applyLocale(locale);
+                await tryGetService<TelemetryService>()
+                    ?.addMetric('Language', locale.languageCode);
+              },
+            ),
           ),
         ],
       ),
       children: [
         Expanded(
-          child: ListWidget.builder(
-            selectedIndex: model.selectedIndex,
-            itemCount: model.languageCount,
-            itemBuilder: (context, index) => ListTile(
-              key: ValueKey(index),
-              title: Text(model.language(index)),
-              selected: index == model.selectedIndex,
-              onTap: () => model.selectLanguage(index),
+          child: FocusTraversalGroup(
+            child: Semantics(
+              label: lang.localeHeader,
+              child: Focus(
+                focusNode: listFocusNode,
+                child: ListWidget.builder(
+                  selectedIndex: model.selectedIndex,
+                  itemCount: model.languageCount,
+                  tabFocusNode: nextFocusNode,
+                  itemBuilder: (context, index) => Semantics(
+                    selected: index == model.selectedIndex,
+                    value: model.language(index),
+                    child: ListTile(
+                      key: ValueKey(index),
+                      title: Text(model.language(index)),
+                      selected: index == model.selectedIndex,
+                      onTap: () => model.selectLanguage(index),
+                    ),
+                  ),
+                  onKeySearch: (value) {
+                    final index = model.searchLanguage(value);
+                    if (index != -1) {
+                      model.selectLanguage(index);
+                    }
+                  },
+                ),
+              ),
             ),
-            tabFocusNode: nextFocusNode,
-            onKeySearch: (value) {
-              final index = model.searchLanguage(value);
-              if (index != -1) {
-                model.selectLanguage(index);
-              }
-            },
           ),
         ),
       ],
     );
   }
 }
-
-final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
