@@ -14,7 +14,7 @@ class UbuntuProvisionLocalizationsEn extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set ups. You can change them later in System Settings.';
+    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
   }
 
   @override
