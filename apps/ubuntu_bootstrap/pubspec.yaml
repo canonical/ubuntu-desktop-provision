@@ -48,7 +48,7 @@ dependencies:
       ref: 82318b76081ed09db8351a055f11f63b70b7eaa4
   ubuntu_flavor: ^0.4.0
   ubuntu_localizations: ^0.5.2+2
-  ubuntu_logger: ^0.1.1
+  ubuntu_logger: ^0.2.0
   ubuntu_provision: ^0.1.0
   ubuntu_service: ^0.3.1
   ubuntu_utils: ^0.1.0
