@@ -42,7 +42,7 @@
   "@resetMediaInitializing": {},
   "resetMediaCopying": "正在复制",
   "@resetMediaCopying": {},
-  "homeTitle": "君欲何为？",
+  "homeTitle": "您想要做什么？",
   "@homeTitle": {},
   "createUsbBody": "创建可用于恢复系统的 USB 恢复介质，同时您可以自定义您的 Ubuntu 安装配置。",
   "@createUsbBody": {},
