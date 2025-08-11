@@ -74,9 +74,9 @@
   "@installationTypeErase": {},
   "installationTypeNoOSDetected": "این رایانه هم‌اکنون دارای هیچ سیستم‌عامل شناخته‌شده‌ای نیست. می‌خواهید چه کنید؟",
   "@installationTypeNoOSDetected": {},
-  "installationTypeNone": "هیچ‌کدام",
+  "installationTypeNone": "بدون رمزنگاری",
   "@installationTypeNone": {},
-  "installationTypeAdvancedTitle": "ویژگی‌های پیش‌رفته",
+  "installationTypeAdvancedTitle": "رمزنگاری و سامانهٔ پرونده",
   "@installationTypeAdvancedTitle": {},
   "installationTypeLVMEncryptionSelected": "استفاده از LVM و رمزنگاری گزیده شد",
   "@installationTypeLVMEncryptionSelected": {},
@@ -86,7 +86,7 @@
   "@installingSystem": {},
   "installationTypeZFSSelected": "استفاده از ZFS گزیده شد",
   "@installationTypeZFSSelected": {},
-  "installationTypeZFS": "آزمایشی: پاک کردن دیسک و استفاده از ZFS",
+  "installationTypeZFS": "استفاده از ZFS بدون رمزنگاری",
   "@installationTypeZFS": {},
   "diskHeadersSystem": "سامانه",
   "@diskHeadersSystem": {},
@@ -94,7 +94,7 @@
   "@diskHeadersFormat": {},
   "diskHeadersMountPoint": "نقطهٔ سوار شدن",
   "@diskHeadersMountPoint": {},
-  "rstHeader": "برای ادامه RST را خاموش کنید",
+  "rstHeader": "برای ادامه باید RST را خاموش کنید",
   "@rstHeader": {},
   "installationTypeLVMSelected": "استفاده از LVM گزیده شد",
   "@installationTypeLVMSelected": {},
@@ -126,7 +126,7 @@
   "@installationSlidesSecurityLts": {},
   "installationSlidesAccessibilityLanguages": "پشتیبانی زبان",
   "@installationSlidesAccessibilityLanguages": {},
-  "installationSlidesSupportTitle": "راهنمایی و پشتیبانی",
+  "installationSlidesSupportTitle": "کمک و پشتیبانی",
   "@installationSlidesSupportTitle": {},
   "installationSlidesSupportHeader": "مستندات رسمی {DISTRO} هم به صورت برخط و هم از نقشک راهنما در داک موجودند.",
   "@installationSlidesSupportHeader": {},
@@ -240,7 +240,7 @@
   "@installationTypeAlongsideDual": {},
   "partitionLocationLabel": "مکان افراز جدید:",
   "@partitionLocationLabel": {},
-  "installationTypeAlongsideMulti": "نصب {product} کنارشان",
+  "installationTypeAlongsideMulti": "نصب {product} در کنار سیستم‌عامل‌های موجود",
   "@installationTypeAlongsideMulti": {},
   "installationTypeReinstallWarning": "<font color=\"{color}\">هشدار:</font> این کار تمامی برنامه‌ها، سندها، نگاره‌ها، آهنگ‌ها و هر پروندهٔ دیگری روی {os} را حذف خواهد کرد.",
   "@installationTypeReinstallWarning": {},
@@ -258,11 +258,11 @@
   "@showSecurityKey": {},
   "diskHeadersDevice": "افزاره",
   "@diskHeadersDevice": {},
-  "installationTypeTitle": "گونهٔ نصب",
+  "installationTypeTitle": "برپایی دیسک",
   "@installationTypeTitle": {},
   "installationTypeDualOSDetected": "این رایانه اکنون {os1} و {os2} را دارد. می‌خواهید چه کنید؟",
   "@installationTypeDualOSDetected": {},
-  "installationTypeAdvancedLabel": "ویژگی‌های پیش‌رفته…",
+  "installationTypeAdvancedLabel": "نمایش ویژگی‌های پیش‌رفته…",
   "@installationTypeAdvancedLabel": {},
   "installationTypeNoneSelected": "هیچ‌کدام گزیده نشدند",
   "@installationTypeNoneSelected": {},
@@ -270,7 +270,7 @@
   "@installationTypeEncrypt": {},
   "installationTypeAlongsideUnknown": "نصب {product} کنار دیگر افرازها",
   "@installationTypeAlongsideUnknown": {},
-  "installationTypeAlongsideInfo": "سندها، آهنگ‌ها و دیگرپرونده‌های شخصی حفظ خواهند شد. هر بار که رایانه روشن می‌شود می‌توانید بگزینید که کدام سیستم‌عامل را می‌خواهید.",
+  "installationTypeAlongsideInfo": "گزینش افرازی برای تغییر اندازه و ایجاد فضا برای {product}. هنگام راه‌اندازی می‌توانید سیستم‌عاملتان را بگزینید.",
   "@installationTypeAlongsideInfo": {},
   "installationTypeReinstall": "پاک کردن {os} و نصب دوباره",
   "@installationTypeReinstall": {},
@@ -306,7 +306,7 @@
   "@partitionFormatLabel": {},
   "loadingPageTitle": "به {DISTRO} خوش آمدید",
   "@loadingPageTitle": {},
-  "installationTypeTPMSelected": "TPM گزیده",
+  "installationTypeTPMSelected": "TPM گزیده شد",
   "@installationTypeTPMSelected": {},
   "refreshUpdating": "به روز رساندن {snap}…",
   "@refreshUpdating": {},
@@ -348,13 +348,13 @@
   "@choosePassphraseHint": {},
   "createPassphrase": "ایجاد عبارت عبور",
   "@createPassphrase": {},
-  "installationTypeLVM": "استفاده از LVM",
+  "installationTypeLVM": "استفاده از LVM بدون رمزنگاری",
   "@installationTypeLVM": {},
   "confirmDiskEncryptionLVM": "LUKS (LVM)",
   "@confirmDiskEncryptionLVM": {},
   "confirmDiskEncryptionZFS": "LUKS (ZFS)",
   "@confirmDiskEncryptionZFS": {},
-  "confirmEntryDiskSetup": "برپایی دیسک",
+  "confirmEntryDiskSetup": "گونهٔ نصب",
   "@confirmEntryDiskSetup": {},
   "confirmSectionGeneralTitle": "عمومی",
   "@confirmSectionGeneralTitle": {},
@@ -374,7 +374,7 @@
   "@refreshCloseLabel": {},
   "validate": "اعتبارسنجی",
   "@validate": {},
-  "recoveryKeyTitle": "کلید بازیابی TPM",
+  "recoveryKeyTitle": "کلید بازیابی",
   "@recoveryKeyTitle": {},
   "autoinstallTitle": "گونهٔ نصب",
   "@autoinstallTitle": {},
@@ -436,11 +436,11 @@
   "@fullInstallationSubtitle": {},
   "installCodecsSubtitle": "از جمله MP3،‌ MP4، MOV و مشابه این‌ها",
   "@installCodecsSubtitle": {},
-  "choosePassphraseInfoBody": "اگر عبارت عبورتان را گم کنید، همهٔ داده‌هایتان از دست خواهد رفت.",
+  "choosePassphraseInfoBody": "اگر گمش کنید همهٔ داده‌هایتان را از دست خواهید داد.",
   "@choosePassphraseInfoBody": {},
-  "installationTypeLVMEncryption": "استفاده از LVM و رمزنگاری",
+  "installationTypeLVMEncryption": "رمزنگاری با عبارت عبور",
   "@installationTypeLVMEncryption": {},
-  "installationTypeZFSEncryptionSelected": "رمزنگاری و ZFS گزیده",
+  "installationTypeZFSEncryptionSelected": "رمزنگاری و ZFS گزیده شد",
   "@installationTypeZFSEncryptionSelected": {},
   "refreshHeader": "به‌روز رسانی‌ای برای نصب کننده موجود است",
   "@refreshHeader": {},
@@ -459,5 +459,392 @@
   "refreshSnapSetAutoAliases": "تنظیم کردن خودکار نام‌های مستعار {snap}…",
   "@refreshSnapSetAutoAliases": {},
   "refreshSnapSetupAliases": "برپا کردن نام‌های مستعار {snap}…",
-  "@refreshSnapSetupAliases": {}
+  "@refreshSnapSetupAliases": {},
+  "successIconSemanticLabel": "موفّقیت",
+  "@successIconSemanticLabel": {},
+  "autoinstallDirectImportButtonLabel": "درون‌ریزی",
+  "@autoinstallDirectImportButtonLabel": {},
+  "next": "بعدی",
+  "@next": {},
+  "confirmTableErased": "پاک شده",
+  "@confirmTableErased": {},
+  "confirmTableUnchanged": "بدون تغییر",
+  "@confirmTableUnchanged": {},
+  "recoveryKeyTitleBadgeLabel": "مهم",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "passphrasePageTitle": "رمزنگاری",
+  "@passphrasePageTitle": {},
+  "passphrasePageChoosePassphraseHint": "عبارت عبور",
+  "@passphrasePageChoosePassphraseHint": {},
+  "passphrasePageChoosePinHint": "پین",
+  "@passphrasePageChoosePinHint": {},
+  "errorIconSemanticLabel": "خطا",
+  "@errorIconSemanticLabel": {},
+  "autoinstallDirectTitle": "نصب خودکار",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileButtonLabel": "گزینش پرونده…",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "گزینش پرونده",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "پرونده‌های YAML",
+  "@autoinstallDirectFilePickerFilterLabel": {},
+  "autoinstallDirectFileClearButtonLabel": "پاک‌سازی پرونده",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectErrorInvalidUrlTitle": "نشانی نامعتبر",
+  "@autoinstallDirectErrorInvalidUrlTitle": {},
+  "autoinstallDirectErrorUnkownTitle": "خطای ناشناخته",
+  "@autoinstallDirectErrorUnkownTitle": {},
+  "landscapePageTitle": "نصب خودکار",
+  "@landscapePageTitle": {},
+  "restartComputer": "آغاز دوبارهٔ رایانه",
+  "@restartComputer": {},
+  "restartComputerTitle": "آغاز دوبارهٔ رایانه؟",
+  "@restartComputerTitle": {},
+  "bitlockerInfoTitle": "بیت‌لاکر تشخیص داده شد",
+  "@bitlockerInfoTitle": {},
+  "recoveryKeyLinkLabel": "دانستن بیش‌تر",
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTextFieldLabel": "کلید بازیابی",
+  "@recoveryKeyTextFieldLabel": {},
+  "recoveryKeyExceptionUnknownTitle": "خطای ناشناخته",
+  "@recoveryKeyExceptionUnknownTitle": {},
+  "recoveryKeyFilePickerFilter": "پرونده‌های متنی",
+  "@recoveryKeyFilePickerFilter": {},
+  "passphrasePageConfirmPassphraseHint": "تأیید عبارت عبور",
+  "@passphrasePageConfirmPassphraseHint": {},
+  "passphrasePageConfirmPinHint": "تأیید پین",
+  "@passphrasePageConfirmPinHint": {},
+  "passphrasePagePassphraseEntropyOptimal": "عبارت عبور قوی",
+  "@passphrasePagePassphraseEntropyOptimal": {},
+  "nextSlideSemanticLabel": "صفحهٔ بعدی",
+  "@nextSlideSemanticLabel": {},
+  "previousSlideSemanticLabel": "صفحهٔ پیشین",
+  "@previousSlideSemanticLabel": {},
+  "playSlideshowSemanticLabel": "پخش نمایش صفحه‌ها",
+  "@playSlideshowSemanticLabel": {},
+  "pauseSlideshowSemanticLabel": "مکث نمایش صفحه‌ها",
+  "@pauseSlideshowSemanticLabel": {},
+  "installationTypeTPM": "استفاده از رمزنگاری سخت‌افزاری",
+  "@installationTypeTPM": {},
+  "autoinstallDirectHeader": "درون‌ریزی پروندهٔ نصب خودکار",
+  "@autoinstallDirectHeader": {},
+  "autoinstallDirectErrorInvalidContentTitle": "پروندهٔ نصب خودکار نامعتبر",
+  "@autoinstallDirectErrorInvalidContentTitle": {},
+  "autoinstallLandscapeOption": "خودکار شده با لندسکیپ",
+  "@autoinstallLandscapeOption": {},
+  "landscapeDomainTextField": "دامنهٔ لندسکیپ",
+  "@landscapeDomainTextField": {},
+  "rstDisableBios": "تنظیمات بایوس",
+  "@rstDisableBios": {},
+  "confirmTableMounted": "استفاده شده برای {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "قالب‌بندی شده به صورت {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainHintText": "دامنهٔ لندسکیپ",
+  "@landscapeDomainHintText": {},
+  "landscapeErrorPageCode": "کد خطا: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeySaveToFileLabel": "ذخیره در پرونده",
+  "@recoveryKeySaveToFileLabel": {},
+  "recoveryKeyShowQrCodeLabel": "نمایش کد پاس",
+  "@recoveryKeyShowQrCodeLabel": {},
+  "recoveryKeyClipboardNotifiaction": "در تخته‌گیره رونوشت شد",
+  "@recoveryKeyClipboardNotifiaction": {},
+  "passphraseTypePassphraseTileTitle": "نیازمند عبارت عبور",
+  "@passphraseTypePassphraseTileTitle": {},
+  "passphraseTypePinTileTitle": "نیازمند پین",
+  "@passphraseTypePinTileTitle": {},
+  "passphraseTypeNoneTileTitle": "قفل‌گشایی خودکار دیسک",
+  "@passphraseTypeNoneTileTitle": {},
+  "toggleLogsSemanticLabel": "تغییر وضعیت گزارش‌های نصب",
+  "@toggleLogsSemanticLabel": {},
+  "autoinstallDirectOption": "خودکار شده با پروندهٔ نصب خودکار",
+  "@autoinstallDirectOption": {},
+  "landscapeHeader": "ورود به لندسکیپ",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "ورود دامنهٔ لندسکیپ",
+  "@landscapeDomainHeader": {},
+  "recoveryKeyHeader": "ذخیرهٔ کلید بازیابیتان",
+  "@recoveryKeyHeader": {},
+  "recoveryKeyFilePickerTitle": "ذخیرهٔ پروندهٔ کلید بازیابی",
+  "@recoveryKeyFilePickerTitle": {},
+  "passphrasePageHeaderPassphrase": "تنظیم عبارت عبور رمزنگاری",
+  "@passphrasePageHeaderPassphrase": {},
+  "passphrasePageHeaderPin": "تنظیم پین رمزنگاری",
+  "@passphrasePageHeaderPin": {},
+  "passphrasePageRequiredPassphrase": "نیازمند عبارت عبور",
+  "@passphrasePageRequiredPassphrase": {},
+  "passphrasePageRequiredPin": "نیازمند پین",
+  "@passphrasePageRequiredPin": {},
+  "passphraseTypePageHeader": "عبارت عبور یا پین رمزنگاری",
+  "@passphraseTypePageHeader": {},
+  "passphrasePagePinEntropyOptimal": "پین به قدر کافی بلند است",
+  "@passphrasePagePinEntropyOptimal": {},
+  "guidedStoragePageHeader": "گزینش مکان نصب {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointSpace": "نقطه‌های سوار شدن نمی‌توانند شامل فاصله باشند",
+  "@allocateDiskSpaceInvalidMountPointSpace": {},
+  "refreshSnapUpdateKernelCommandLine": "به‌روز کردن خط فرمان کرنل {snap}…",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "برپا کردن نماگرهای امنیتی {snap}…",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "وصل کردن کلید و پریزهای {snap}…",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "پاک کردن {os} و نصب {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectFileLabel": "یا گزینش پروندهٔ محلی:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectErrorNetworkTitle": "پروندهٔ نصب خودکار قابل دسترسی نیست",
+  "@autoinstallDirectErrorNetworkTitle": {},
+  "autoinstallDirectErrorFileSystemTitle": "پروندهٔ نصب خودکار قابل خواندن نیست",
+  "@autoinstallDirectErrorFileSystemTitle": {},
+  "landscapeCodeExpiredWarning": "کد منقضی شد. تلاش دوباره",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "ورود شکست خورد. تلاش دوباره",
+  "@landscapeLoginFailedWarning": {},
+  "installationTypeNoneInfo": "سامانهٔ پروندهٔ استاندارد بدون رمزنگاری.",
+  "@installationTypeNoneInfo": {},
+  "confirmTableResized": "اندازه از {oldsize} به {newsize} تغییر کرده",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogTitle": "میزکار {DISTRO} - کلید بازیابی",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyExceptionFileSystemTitle": "پروندهٔ کلید بازیابی ذخیره نشد",
+  "@recoveryKeyExceptionFileSystemTitle": {},
+  "passphrasePageMismatchPassphrase": "عبارت‌های عبور مطابق نیستند",
+  "@passphrasePageMismatchPassphrase": {},
+  "passphrasePageMismatchPin": "پین‌ها مطابق نیستند",
+  "@passphrasePageMismatchPin": {},
+  "choosePassphraseInfoHeader": "از ذخیرهٔ عبارت عبورتان مطمئن شوید",
+  "@choosePassphraseInfoHeader": {},
+  "installationTypeZFSEncryption": "رمزنگاری با عبارت عبور با استفاده از ZFS",
+  "@installationTypeZFSEncryption": {},
+  "allocateDiskSpaceInvalidMountPointSlash": "نقطه‌های سوار کردن باید با «/» آغاز شوند",
+  "@allocateDiskSpaceInvalidMountPointSlash": {},
+  "installationTypeEraseInfo": "همهٔ داده‌ها و افزارهای روی دیسم پاک خواهند شد. از جمله سیستم‌عامل‌ها.",
+  "@installationTypeEraseInfo": {},
+  "installationTypeHeader": "می‌خواهید {DISTRO} را چگونه نصب کنید؟",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVMEncryptionInfo": "هربار که می‌خواهید رایانه‌تان را روشن کنید باید عبارت عبور را وارد کنید. این عبارت از رمزنگاری LUKS با LVM استفاده می‌کند.",
+  "@installationTypeLVMEncryptionInfo": {},
+  "installationTypeZFSEncryptionInfo": "رمزنگاری بومی ZFS. باید هربار که رایانه‌تان را روشن می‌کنید عبارت عبوری وارد کنید.",
+  "@installationTypeZFSEncryptionInfo": {},
+  "installationTypeTPMInfo": "پیش از انتخاب این گزینه <a href=\"{url}\">دربارهٔ رمزنگاری TPM بخوانید</a>. ممکن است با سخت‌افزارتان یا ارائه‌های آیندهٔ {DISTRO} کار نکند.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshCurrent": "نگارش کنونی {snap}: {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "نگارش کنونی ({version}) به‌روز است.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeDomainNoInternetTitleWarning": "وصل شدن به اینترنت برای ادامه",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "confirmTableFormattedMounted": "قالب بسته به {format} استفاده شده برای {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "آغاز از ابتدا روی دیسک گزیده‌تان.",
+  "@selectGuidedStorageInfo": {},
+  "rebootToConfigure": "**{system}** روی دیسک رونوشت شد",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyConfirmation": "کلید بازیابیم را جایی امن ذخیره کردم",
+  "@recoveryKeyConfirmation": {},
+  "bitlockerInfoInstructions": "برای دستورالعمل‌ها <a href=\"{url}\">راهنمای بیت‌لاکر</a> را ببینید.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceInvalidMountPointFormat": "قالب {format} برای {mountpoint} پشتیبانی نمی‌شود",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectErrorInvalidContentBody": "پرونده را بررسی کرده یا پروندهٔ دیگری فراهم کنید.",
+  "@autoinstallDirectErrorInvalidContentBody": {},
+  "autoinstallDirectErrorFileSystemBody": "اجازه‌هایتان را بررسی کرده یا پروندهٔ دیگری فراهم کنید.",
+  "@autoinstallDirectErrorFileSystemBody": {},
+  "chooseOptionalPassphraseInfoHeader": "عبارت عبور و کلید بازیابیتان را در جایی امن ذخیره کنید",
+  "@chooseOptionalPassphraseInfoHeader": {},
+  "bitlockerInfoDescription": "یکی یا چندتا از افرازهایتان با بیت‌لاکر رمزنگاری شده.",
+  "@bitlockerInfoDescription": {},
+  "bitlockerInfoDisable": "برای نصب کنار ویندوز، بیت‌لاکر را در ویندوز از کار بیندازید.",
+  "@bitlockerInfoDisable": {},
+  "confirmTableCreatedFormattedMounted": "ایجاد شد و به قالب {format} برای {mountpoint} درآمد",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeErrorPageTitle": "نصب خودکار برای حسابتان موجود نیست",
+  "@landscapeErrorPageTitle": {},
+  "passphrasePagePassphraseEntropyBelowMin": "عبارت عبور ضعیف. طولانی‌تر یا پیچیده‌ترش کنید",
+  "@passphrasePagePassphraseEntropyBelowMin": {},
+  "passphrasePagePinEntropyBelowMin": "پین ضعیف. طولانی‌تر یا پیچیده‌ترش کنید",
+  "@passphrasePagePinEntropyBelowMin": {},
+  "autoinstallDirectUrlLabel": "می‌توانید نشانی پروندهٔ نصب خودکار را وارد کنید:",
+  "@autoinstallDirectUrlLabel": {},
+  "landscapeDomainInvalidDomainWarning": "دامنه نامعتبر. بررسیش کرده یا با پشتیبانی تماس بگیرید",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "bitlockerInfoRecovery": "ممکن است ویندوز در راه‌اندازی پس از نصب درخواست کلید بازیابی کند.",
+  "@bitlockerInfoRecovery": {},
+  "autoinstallDirectErrorInvalidUrlBody": "درستی نشانی را بررسی کرده یا پرونده‌ای محلی بگزینید.",
+  "@autoinstallDirectErrorInvalidUrlBody": {},
+  "landscapeDomainNoInternetDescriptionWarning": "برای واکشی پروندهٔ نصب خودکار از لندسکیپ نیاز به اینترنت است",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "recoveryKeyInfoHeader": "بدون کلید بازیابی ممکن است همهٔ داده‌هایتان را از دست بدهید",
+  "@recoveryKeyInfoHeader": {},
+  "bitlockerWarningTitle": "بدون کلید بازیابی بیت‌لاکر ممکن است همهٔ داده‌هایتان را از دست بدهید",
+  "@bitlockerWarningTitle": {},
+  "landscapeErrorPageBody": "با پشتیبانی تماس گرفته یا گزینهٔ نصبی متفاوت را بیازمایید.",
+  "@landscapeErrorPageBody": {},
+  "landscapeConfirmPageSuccessInfoTitle": "اوبونتو با پیکربندی‌های فراهم شده از سوی سازمانتان نصب خواهد شد",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "می‌توانید پروندهٔ نصب خودکار درون‌ریخته از لندسکیپ را در زیر بازبینی کنید.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "recoveryKeyExceptionDisallowedPathTitle": "کلید بازیابی نتوانست در مکان موقّتی ذخیره شود",
+  "@recoveryKeyExceptionDisallowedPathTitle": {},
+  "autoinstallDirectErrorNetworkBody": "درستی نشانی را بررسی کنید؛ اینترنتتان را آزموده یا دوباره تلاش کنید.",
+  "@autoinstallDirectErrorNetworkBody": {},
+  "autoinstallInteractiveDescription": "برای کاربرانی که می‌خواهید گام به گام در مسیر نصب راهنمایی شوند.",
+  "@autoinstallInteractiveDescription": {},
+  "autoinstallDirectDescription": "برای کاربران پیشرفته‌ای که پروندهٔ autoinstall.yaml را برای برپایی سامانهٔ تکرارپذیر و یکنواخت دارند.",
+  "@autoinstallDirectDescription": {},
+  "autoinstallLandscapeDescription": "برای کاربرانی در سازمان‌هایی که پروندهٔ نصب خودکار را با لندسکیپ فراهم می‌کنند.",
+  "@autoinstallLandscapeDescription": {},
+  "rstDisable": "رایانه‌تان از RST (فناوری ذخیره‌ساز سریع) اینتل استفاده می‌کند. می‌توانید در این جاها از کار بیندازیدش:",
+  "@rstDisable": {},
+  "rstDisableWindows": "ویندوز. در صورت استفاده از راه‌اندازی دوگانه با ویندوز",
+  "@rstDisableWindows": {},
+  "codecsAndDriversPageBody": "به صورت پیش‌گزیده هیج نرم‌افزار غیرآزادی در {DISTRO} وجود ندارد. نصب کردن نرم‌افزارهای اضافی می‌تواند کارایی رایانه‌تان را تغییر دهد.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaBody": "می‌توانید راه‌اندازهای اضافی را برای کارت‌های گرافیکی انویدیا نصب کنید.",
+  "@codecsAndDriversNvidiaBody": {},
+  "installThirdPartySubtitle": "این نرم‌افزار مشمول شرایط پروانه‌هایی است که در مستنداتش ذکر شده. برخی از آن‌ها مالکیتی هستند.",
+  "@installThirdPartySubtitle": {}
 }
