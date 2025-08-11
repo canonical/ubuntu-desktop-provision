@@ -128,5 +128,9 @@
   "eulaAcceptTerms": "Έχω διαβάσει και έχω αποδεχτεί τους όρους",
   "@eulaAcceptTerms": {},
   "accessibilityTypingLabel": "Πληκτρολόγηση",
-  "@accessibilityTypingLabel": {}
+  "@accessibilityTypingLabel": {},
+  "accessibilitySeeingLabel": "Βλέποντας",
+  "@accessibilitySeeingLabel": {},
+  "accessibilityHearingLabel": "Ακούγοντας",
+  "@accessibilityHearingLabel": {}
 }
