@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
@@ -28,9 +27,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
 
-    // Create focus node for the language list to enable circular navigation
-    final listFocusNode = FocusNode();
-
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
       title: lang.localeHeader,
@@ -52,34 +48,29 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       ),
       children: [
         Expanded(
-          child: FocusTraversalGroup(
-            child: Semantics(
-              label: lang.localeHeader,
-              child: Focus(
-                focusNode: listFocusNode,
-                child: ListWidget.builder(
-                  selectedIndex: model.selectedIndex,
-                  itemCount: model.languageCount,
-                  tabFocusNode: nextFocusNode,
-                  itemBuilder: (context, index) => Semantics(
-                    selected: index == model.selectedIndex,
-                    value: model.language(index),
-                    button: true,
-                    child: ListTile(
-                      key: ValueKey(index),
-                      title: Text(model.language(index)),
-                      selected: index == model.selectedIndex,
-                      onTap: () => model.selectLanguage(index),
-                    ),
-                  ),
-                  onKeySearch: (value) {
-                    final index = model.searchLanguage(value);
-                    if (index != -1) {
-                      model.selectLanguage(index);
-                    }
-                  },
+          child: Semantics(
+            label: lang.localeHeader,
+            child: ListWidget.builder(
+              selectedIndex: model.selectedIndex,
+              itemCount: model.languageCount,
+              tabFocusNode: nextFocusNode,
+              itemBuilder: (context, index) => Semantics(
+                selected: index == model.selectedIndex,
+                value: model.language(index),
+                button: true,
+                child: ListTile(
+                  key: ValueKey(index),
+                  title: Text(model.language(index)),
+                  selected: index == model.selectedIndex,
+                  onTap: () => model.selectLanguage(index),
                 ),
               ),
+              onKeySearch: (value) {
+                final index = model.searchLanguage(value);
+                if (index != -1) {
+                  model.selectLanguage(index);
+                }
+              },
             ),
           ),
         ),
