@@ -122,5 +122,8 @@
   "@ubuntuProSucessAttachHeader": {},
   "ubuntuProSucessAttachDescription": "You can manage your Pro services in the Software & Updates application.",
   "@ubuntuProSucessAttachDescription": {},
-  "successIconSemanticLabel": "Success"
+  "successIconSemanticLabel": "Success",
+  "closeIconSemanticLabel": "Close",
+  "maximizeIconSemanticLabel": "Maximize",
+  "minimizeIconSemanticLabel": "Minimize"
 }

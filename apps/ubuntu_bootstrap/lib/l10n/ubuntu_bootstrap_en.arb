@@ -1014,5 +1014,8 @@
   "landscapeConfirmPageSuccessInfoContent": "You can review the autoinstall file imported from Landscape below.",
   "@landscapeConfirmPageSuccessInfoContent": {},
   "successIconSemanticLabel": "Success",
-  "errorIconSemanticLabel": "Error"
+  "errorIconSemanticLabel": "Error",
+  "closeIconSemanticLabel": "Close",
+  "maximizeIconSemanticLabel": "Maximize",
+  "minimizeIconSemanticLabel": "Minimize"
 }

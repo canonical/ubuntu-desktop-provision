@@ -100,6 +100,15 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => '好';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

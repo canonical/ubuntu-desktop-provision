@@ -29,5 +29,8 @@
   "reformat": "Reformat",
   "failed": "Failed to run command",
   "close": "Close",
-  "ok": "OK"
+  "ok": "OK",
+  "closeIconSemanticLabel": "Close",
+  "maximizeIconSemanticLabel": "Maximize",
+  "minimizeIconSemanticLabel": "Minimize"
 }

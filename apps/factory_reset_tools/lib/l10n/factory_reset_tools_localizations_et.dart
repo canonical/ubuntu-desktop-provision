@@ -109,4 +109,13 @@ class FactoryResetToolsLocalizationsEt extends FactoryResetToolsLocalizations {
 
   @override
   String get ok => 'Sobib';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }

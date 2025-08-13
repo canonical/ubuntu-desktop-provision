@@ -1324,4 +1324,13 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get errorIconSemanticLabel => 'Error';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximize';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimize';
 }

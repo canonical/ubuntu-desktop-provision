@@ -74,6 +74,9 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
       contentPadding: EdgeInsets.zero,
       title: YaruWindowTitleBar(
         title: Text(model.productInfo.toString()),
+        closeSemanticLabel: lang.closeIconSemanticLabel,
+        maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
+        minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
       content: ExcludeFocus(
         child: Stack(
