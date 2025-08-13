@@ -39,26 +39,14 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       nextFocusNode: nextFocusNode,
       bottomBar: WizardBar(
         trailing: [
-          Focus(
-            onKeyEvent: (node, event) {
-              if (event is KeyDownEvent &&
-                  event.logicalKey == LogicalKeyboardKey.tab &&
-                  !HardwareKeyboard.instance.isShiftPressed) {
-                // Tab from Next button goes back to list
-                listFocusNode.requestFocus();
-                return KeyEventResult.handled;
-              }
-              return KeyEventResult.ignored;
+          NextWizardButton(
+            focusNode: nextFocusNode,
+            onNext: () async {
+              final locale = model.locale(model.selectedIndex);
+              await model.applyLocale(locale);
+              await tryGetService<TelemetryService>()
+                  ?.addMetric('Language', locale.languageCode);
             },
-            child: NextWizardButton(
-              focusNode: nextFocusNode,
-              onNext: () async {
-                final locale = model.locale(model.selectedIndex);
-                await model.applyLocale(locale);
-                await tryGetService<TelemetryService>()
-                    ?.addMetric('Language', locale.languageCode);
-              },
-            ),
           ),
         ],
       ),
@@ -76,6 +64,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
                   itemBuilder: (context, index) => Semantics(
                     selected: index == model.selectedIndex,
                     value: model.language(index),
+                    button: true,
                     child: ListTile(
                       key: ValueKey(index),
                       title: Text(model.language(index)),
