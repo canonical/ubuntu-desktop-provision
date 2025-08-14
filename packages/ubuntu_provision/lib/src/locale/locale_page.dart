@@ -26,7 +26,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
-    
+
     // Create focus node for the language list to enable proper tab navigation
     final listFocusNode = FocusNode();
 
