@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check if CLA signed
-        uses: canonical/has-signed-canonical-cla@v1
-        with:
-          exempted-bots: dependabot,github-actions,renovate
+        uses: canonical/has-signed-canonical-cla@v2
 
   labeler:
     permissions:
