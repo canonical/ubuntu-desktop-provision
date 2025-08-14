@@ -26,6 +26,9 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(localeModelProvider);
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
+    
+    // Create focus node for the language list to enable proper tab navigation
+    final listFocusNode = FocusNode();
 
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
@@ -35,14 +38,16 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       nextFocusNode: nextFocusNode,
       bottomBar: WizardBar(
         trailing: [
-          NextWizardButton(
+          Focus(
             focusNode: nextFocusNode,
-            onNext: () async {
-              final locale = model.locale(model.selectedIndex);
-              await model.applyLocale(locale);
-              await tryGetService<TelemetryService>()
-                  ?.addMetric('Language', locale.languageCode);
-            },
+            child: NextWizardButton(
+              onNext: () async {
+                final locale = model.locale(model.selectedIndex);
+                await model.applyLocale(locale);
+                await tryGetService<TelemetryService>()
+                    ?.addMetric('Language', locale.languageCode);
+              },
+            ),
           ),
         ],
       ),
@@ -50,27 +55,30 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
         Expanded(
           child: Semantics(
             label: lang.localeHeader,
-            child: ListWidget.builder(
-              selectedIndex: model.selectedIndex,
-              itemCount: model.languageCount,
-              tabFocusNode: nextFocusNode,
-              itemBuilder: (context, index) => Semantics(
-                selected: index == model.selectedIndex,
-                value: model.language(index),
-                button: true,
-                child: ListTile(
-                  key: ValueKey(index),
-                  title: Text(model.language(index)),
+            child: Focus(
+              focusNode: listFocusNode,
+              child: ListWidget.builder(
+                selectedIndex: model.selectedIndex,
+                itemCount: model.languageCount,
+                tabFocusNode: nextFocusNode,
+                itemBuilder: (context, index) => Semantics(
                   selected: index == model.selectedIndex,
-                  onTap: () => model.selectLanguage(index),
+                  value: model.language(index),
+                  button: true,
+                  child: ListTile(
+                    key: ValueKey(index),
+                    title: Text(model.language(index)),
+                    selected: index == model.selectedIndex,
+                    onTap: () => model.selectLanguage(index),
+                  ),
                 ),
+                onKeySearch: (value) {
+                  final index = model.searchLanguage(value);
+                  if (index != -1) {
+                    model.selectLanguage(index);
+                  }
+                },
               ),
-              onKeySearch: (value) {
-                final index = model.searchLanguage(value);
-                if (index != -1) {
-                  model.selectLanguage(index);
-                }
-              },
             ),
           ),
         ),
