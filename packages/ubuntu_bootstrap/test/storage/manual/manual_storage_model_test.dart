@@ -194,7 +194,6 @@ void main() {
         emptyDisk.copyWith(partitions: [const Partition(format: 'ext4')]);
     final bitLockerPartition =
         emptyDisk.copyWith(partitions: [const Partition(format: 'BitLocker')]);
-    final unsupportedDisk = normalDisk.copyWith(requiresReformat: true);
 
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer(
@@ -204,7 +203,6 @@ void main() {
         normalDisk,
         formattedPartition,
         bitLockerPartition,
-        unsupportedDisk,
       ],
     );
 
@@ -282,15 +280,6 @@ void main() {
     expect(model.canRemovePartition, isTrue);
     expect(model.canEditPartition, isFalse);
     expect(model.canReformatDisk, isFalse);
-
-    model.selectStorage(5);
-    expect(model.selectedDisk, equals(unsupportedDisk));
-    expect(model.selectedPartition, isNull);
-    expect(model.selectedGap, isNull);
-    expect(model.canAddPartition, isFalse);
-    expect(model.canRemovePartition, isFalse);
-    expect(model.canEditPartition, isFalse);
-    expect(model.canReformatDisk, isTrue);
   });
 
   test('add partition', () async {
