@@ -19,9 +19,8 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TelemetryServiceClient interface {
-	Collect(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CollectResponse, error)
-	CollectAndSend(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*SendResponse, error)
-	SendDecline(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*SendResponse, error)
+	Collect(ctx context.Context, in *CollectRequest, opts ...grpc.CallOption) (*CollectResponse, error)
+	SetConsent(ctx context.Context, in *SetConsentRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type telemetryServiceClient struct {
@@ -32,27 +31,18 @@ func NewTelemetryServiceClient(cc grpc.ClientConnInterface) TelemetryServiceClie
 	return &telemetryServiceClient{cc}
 }
 
-func (c *telemetryServiceClient) Collect(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CollectResponse, error) {
+func (c *telemetryServiceClient) Collect(ctx context.Context, in *CollectRequest, opts ...grpc.CallOption) (*CollectResponse, error) {
 	out := new(CollectResponse)
-	err := c.cc.Invoke(ctx, "/telemetry.TelemetryService/Collect", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/telemetry.v2.TelemetryService/Collect", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *telemetryServiceClient) CollectAndSend(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*SendResponse, error) {
-	out := new(SendResponse)
-	err := c.cc.Invoke(ctx, "/telemetry.TelemetryService/CollectAndSend", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *telemetryServiceClient) SendDecline(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*SendResponse, error) {
-	out := new(SendResponse)
-	err := c.cc.Invoke(ctx, "/telemetry.TelemetryService/SendDecline", in, out, opts...)
+func (c *telemetryServiceClient) SetConsent(ctx context.Context, in *SetConsentRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, "/telemetry.v2.TelemetryService/SetConsent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -63,9 +53,8 @@ func (c *telemetryServiceClient) SendDecline(ctx context.Context, in *emptypb.Em
 // All implementations must embed UnimplementedTelemetryServiceServer
 // for forward compatibility
 type TelemetryServiceServer interface {
-	Collect(context.Context, *emptypb.Empty) (*CollectResponse, error)
-	CollectAndSend(context.Context, *emptypb.Empty) (*SendResponse, error)
-	SendDecline(context.Context, *emptypb.Empty) (*SendResponse, error)
+	Collect(context.Context, *CollectRequest) (*CollectResponse, error)
+	SetConsent(context.Context, *SetConsentRequest) (*emptypb.Empty, error)
 	mustEmbedUnimplementedTelemetryServiceServer()
 }
 
@@ -73,14 +62,11 @@ type TelemetryServiceServer interface {
 type UnimplementedTelemetryServiceServer struct {
 }
 
-func (UnimplementedTelemetryServiceServer) Collect(context.Context, *emptypb.Empty) (*CollectResponse, error) {
+func (UnimplementedTelemetryServiceServer) Collect(context.Context, *CollectRequest) (*CollectResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Collect not implemented")
 }
-func (UnimplementedTelemetryServiceServer) CollectAndSend(context.Context, *emptypb.Empty) (*SendResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CollectAndSend not implemented")
-}
-func (UnimplementedTelemetryServiceServer) SendDecline(context.Context, *emptypb.Empty) (*SendResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SendDecline not implemented")
+func (UnimplementedTelemetryServiceServer) SetConsent(context.Context, *SetConsentRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SetConsent not implemented")
 }
 func (UnimplementedTelemetryServiceServer) mustEmbedUnimplementedTelemetryServiceServer() {}
 
@@ -96,7 +82,7 @@ func RegisterTelemetryServiceServer(s grpc.ServiceRegistrar, srv TelemetryServic
 }
 
 func _TelemetryService_Collect_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(emptypb.Empty)
+	in := new(CollectRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -105,46 +91,28 @@ func _TelemetryService_Collect_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/telemetry.TelemetryService/Collect",
+		FullMethod: "/telemetry.v2.TelemetryService/Collect",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TelemetryServiceServer).Collect(ctx, req.(*emptypb.Empty))
+		return srv.(TelemetryServiceServer).Collect(ctx, req.(*CollectRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TelemetryService_CollectAndSend_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(emptypb.Empty)
+func _TelemetryService_SetConsent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetConsentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(TelemetryServiceServer).CollectAndSend(ctx, in)
+		return srv.(TelemetryServiceServer).SetConsent(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/telemetry.TelemetryService/CollectAndSend",
+		FullMethod: "/telemetry.v2.TelemetryService/SetConsent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TelemetryServiceServer).CollectAndSend(ctx, req.(*emptypb.Empty))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _TelemetryService_SendDecline_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(emptypb.Empty)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(TelemetryServiceServer).SendDecline(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/telemetry.TelemetryService/SendDecline",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(TelemetryServiceServer).SendDecline(ctx, req.(*emptypb.Empty))
+		return srv.(TelemetryServiceServer).SetConsent(ctx, req.(*SetConsentRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -153,7 +121,7 @@ func _TelemetryService_SendDecline_Handler(srv interface{}, ctx context.Context,
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TelemetryService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "telemetry.TelemetryService",
+	ServiceName: "telemetry.v2.TelemetryService",
 	HandlerType: (*TelemetryServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -161,14 +129,10 @@ var TelemetryService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _TelemetryService_Collect_Handler,
 		},
 		{
-			MethodName: "CollectAndSend",
-			Handler:    _TelemetryService_CollectAndSend_Handler,
-		},
-		{
-			MethodName: "SendDecline",
-			Handler:    _TelemetryService_SendDecline_Handler,
+			MethodName: "SetConsent",
+			Handler:    _TelemetryService_SetConsent_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "protos/telemetry.proto",
+	Metadata: "protos/v2/telemetry.proto",
 }
