@@ -27,8 +27,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
     final lang = LocaleLocalizations.of(context);
     final nextFocusNode = ref.watch(_nextFocusNodeProvider);
 
-    // Create focus node for the language list to enable proper tab navigation
-    final listFocusNode = FocusNode();
 
     return HorizontalPage(
       windowTitle: lang.localePageTitle(flavor.displayName),
@@ -56,7 +54,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
           child: Semantics(
             label: lang.localeHeader,
             child: Focus(
-              focusNode: listFocusNode,
               child: ListWidget.builder(
                 selectedIndex: model.selectedIndex,
                 itemCount: model.languageCount,
