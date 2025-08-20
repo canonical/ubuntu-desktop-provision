@@ -129,7 +129,7 @@ code format.
 
 Do note that the HTML supported in these “html” files is far from the full standard, so we recommend that you use one of
 the templates provided as the default slides:
-https://github.com/canonical/ubuntu-desktop-provision/tree/main/packages/ubuntu_bootstrap/assets/slides
+https://github.com/canonical/ubuntu-desktop-provision/tree/main/apps/ubuntu_bootstrap/assets/slides
 
 ### EULA
 
