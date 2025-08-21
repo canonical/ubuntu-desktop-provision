@@ -65,23 +65,26 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
           ),
         ),
         const SizedBox(height: kWizardSpacing),
-        Row(
-          children: [
-            Text(lang.keyboardVariantLabel),
-            const SizedBox(width: kWizardSpacing),
-            Expanded(
-              child: MenuButtonBuilder<int>(
-                selected: model.selectedVariantIndex,
-                values: List.generate(model.variantCount, (index) => index),
-                itemBuilder: (context, index, child) {
-                  return index < 0 || index >= model.variantCount
-                      ? const SizedBox.shrink()
-                      : Text(model.variantName(index));
-                },
-                onSelected: model.selectVariant,
+        Semantics(
+          container: true,
+          child: Row(
+            children: [
+              Text(lang.keyboardVariantLabel),
+              const SizedBox(width: kWizardSpacing),
+              Expanded(
+                child: MenuButtonBuilder<int>(
+                  selected: model.selectedVariantIndex,
+                  values: List.generate(model.variantCount, (index) => index),
+                  itemBuilder: (context, index, child) {
+                    return index < 0 || index >= model.variantCount
+                        ? const SizedBox.shrink()
+                        : Text(model.variantName(index));
+                  },
+                  onSelected: model.selectVariant,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         const SizedBox(height: kWizardSpacing),
         const Divider(height: 1),
