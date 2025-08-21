@@ -88,7 +88,7 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
         const SizedBox(height: kWizardSpacing),
         TextField(
           decoration: InputDecoration(
-            hintText: lang.keyboardTestHint,
+            labelText: lang.keyboardTestHint,
           ),
         ),
       ],
