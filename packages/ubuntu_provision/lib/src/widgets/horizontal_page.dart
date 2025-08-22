@@ -197,9 +197,13 @@ class _Headline extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: Text(
-              title,
-              style: theme.textTheme.titleLarge,
+            child: Semantics(
+              focused: true,
+              header: true,
+              child: Text(
+                title,
+                style: theme.textTheme.titleLarge,
+              ),
             ),
           ),
           if (trailingTitleWidget != null) trailingTitleWidget!,

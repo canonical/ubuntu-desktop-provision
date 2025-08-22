@@ -45,62 +45,66 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
         children: <Widget>[
           Padding(
             padding: kWizardPadding,
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: YaruAutocomplete<GeoLocation>(
-                    initialValue: TextEditingValue(
-                      text: formatLocation(model.selectedLocation),
+            child: Semantics(
+              label: lang.timezonePageTitle,
+              header: true,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: YaruAutocomplete<GeoLocation>(
+                      initialValue: TextEditingValue(
+                        text: formatLocation(model.selectedLocation),
+                      ),
+                      fieldViewBuilder:
+                          (context, editor, focusNode, onSubmitted) {
+                        if (!focusNode.hasFocus) {
+                          editor.text = formatLocation(model.selectedLocation);
+                        }
+                        return TextFormField(
+                          focusNode: focusNode,
+                          controller: editor,
+                          decoration: InputDecoration(
+                            labelText: lang.timezoneLocationLabel,
+                          ),
+                          onFieldSubmitted: (value) => onSubmitted(),
+                        );
+                      },
+                      displayStringForOption: formatLocation,
+                      optionsBuilder: (value) {
+                        return model.searchLocation(value.text);
+                      },
+                      onSelected: model.selectLocation,
                     ),
-                    fieldViewBuilder:
-                        (context, editor, focusNode, onSubmitted) {
-                      if (!focusNode.hasFocus) {
-                        editor.text = formatLocation(model.selectedLocation);
-                      }
-                      return TextFormField(
-                        focusNode: focusNode,
-                        controller: editor,
-                        decoration: InputDecoration(
-                          labelText: lang.timezoneLocationLabel,
-                        ),
-                        onFieldSubmitted: (value) => onSubmitted(),
-                      );
-                    },
-                    displayStringForOption: formatLocation,
-                    optionsBuilder: (value) {
-                      return model.searchLocation(value.text);
-                    },
-                    onSelected: model.selectLocation,
                   ),
-                ),
-                const SizedBox(width: kWizardSpacing),
-                Expanded(
-                  child: YaruAutocomplete<GeoLocation>(
-                    initialValue: TextEditingValue(
-                      text: formatTimezone(model.selectedLocation),
+                  const SizedBox(width: kWizardSpacing),
+                  Expanded(
+                    child: YaruAutocomplete<GeoLocation>(
+                      initialValue: TextEditingValue(
+                        text: formatTimezone(model.selectedLocation),
+                      ),
+                      fieldViewBuilder:
+                          (context, editor, focusNode, onFieldSubmitted) {
+                        if (!focusNode.hasFocus) {
+                          editor.text = formatTimezone(model.selectedLocation);
+                        }
+                        return TextFormField(
+                          focusNode: focusNode,
+                          controller: editor,
+                          decoration: InputDecoration(
+                            labelText: lang.timezoneTimezoneLabel,
+                          ),
+                          onFieldSubmitted: (value) => onFieldSubmitted(),
+                        );
+                      },
+                      displayStringForOption: formatTimezone,
+                      optionsBuilder: (value) {
+                        return model.searchTimezone(value.text);
+                      },
+                      onSelected: model.selectTimezone,
                     ),
-                    fieldViewBuilder:
-                        (context, editor, focusNode, onFieldSubmitted) {
-                      if (!focusNode.hasFocus) {
-                        editor.text = formatTimezone(model.selectedLocation);
-                      }
-                      return TextFormField(
-                        focusNode: focusNode,
-                        controller: editor,
-                        decoration: InputDecoration(
-                          labelText: lang.timezoneTimezoneLabel,
-                        ),
-                        onFieldSubmitted: (value) => onFieldSubmitted(),
-                      );
-                    },
-                    displayStringForOption: formatTimezone,
-                    optionsBuilder: (value) {
-                      return model.searchTimezone(value.text);
-                    },
-                    onSelected: model.selectTimezone,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           const SizedBox(height: kWizardSpacing),
