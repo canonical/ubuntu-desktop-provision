@@ -84,6 +84,7 @@ scripts:
         '**/*.mocks.dart' \
         '**/l10n/*.dart' \
         '**/*.pb*.dart' \
+        --ignore-errors unused \
         -o coverage/lcov.info
 
   # format all packages' files except for generated files
