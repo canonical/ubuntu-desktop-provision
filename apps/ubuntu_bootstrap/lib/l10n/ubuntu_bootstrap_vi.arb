@@ -1,5 +1,9 @@
 {
   "@@locale": "vi",
   "welcome": "Chào mừng",
-  "changeButtonText": "Thay đổi"
+  "@welcome": {},
+  "changeButtonText": "Thay đổi",
+  "@changeButtonText": {},
+  "appTitle": "Bộ cài đặt Ubuntu cho desktop",
+  "@appTitle": {}
 }
