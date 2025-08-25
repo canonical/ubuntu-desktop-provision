@@ -7,6 +7,8 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
+final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
+
 class LocalePage extends ConsumerWidget with ProvisioningPage {
   const LocalePage({super.key});
 
@@ -33,40 +35,50 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
       nextFocusNode: nextFocusNode,
       bottomBar: WizardBar(
         trailing: [
-          NextWizardButton(
+          Focus(
             focusNode: nextFocusNode,
-            onNext: () async {
-              final locale = model.locale(model.selectedIndex);
-              await model.applyLocale(locale);
-              await tryGetService<TelemetryService>()
-                  ?.addMetric('Language', locale.languageCode);
-            },
+            child: NextWizardButton(
+              onNext: () async {
+                final locale = model.locale(model.selectedIndex);
+                await model.applyLocale(locale);
+                await tryGetService<TelemetryService>()
+                    ?.addMetric('Language', locale.languageCode);
+              },
+            ),
           ),
         ],
       ),
       children: [
         Expanded(
-          child: ListWidget.builder(
-            selectedIndex: model.selectedIndex,
-            itemCount: model.languageCount,
-            itemBuilder: (context, index) => ListTile(
-              key: ValueKey(index),
-              title: Text(model.language(index)),
-              selected: index == model.selectedIndex,
-              onTap: () => model.selectLanguage(index),
+          child: Semantics(
+            label: lang.localeHeader,
+            child: Focus(
+              child: ListWidget.builder(
+                selectedIndex: model.selectedIndex,
+                itemCount: model.languageCount,
+                tabFocusNode: nextFocusNode,
+                itemBuilder: (context, index) => Semantics(
+                  selected: index == model.selectedIndex,
+                  value: model.language(index),
+                  button: true,
+                  child: ListTile(
+                    key: ValueKey(index),
+                    title: Text(model.language(index)),
+                    selected: index == model.selectedIndex,
+                    onTap: () => model.selectLanguage(index),
+                  ),
+                ),
+                onKeySearch: (value) {
+                  final index = model.searchLanguage(value);
+                  if (index != -1) {
+                    model.selectLanguage(index);
+                  }
+                },
+              ),
             ),
-            tabFocusNode: nextFocusNode,
-            onKeySearch: (value) {
-              final index = model.searchLanguage(value);
-              if (index != -1) {
-                model.selectLanguage(index);
-              }
-            },
           ),
         ),
       ],
     );
   }
 }
-
-final _nextFocusNodeProvider = ProvisioningPage.createNextFocusNodeProvider();
