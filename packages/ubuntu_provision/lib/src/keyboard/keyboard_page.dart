@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/widgets/themed_list_tile.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -50,10 +51,10 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
             selectedIndex: model.selectedLayoutIndex,
             itemCount: model.layoutCount,
             tabFocusNode: nextFocusNode,
-            itemBuilder: (context, index) => ListTile(
-              key: ValueKey(index),
+            itemBuilder: (context, index) => ThemedListTile(
+              index: index,
               title: Text(model.layoutName(index)),
-              selected: index == model.selectedLayoutIndex,
+              selectedIndex: model.selectedLayoutIndex,
               onTap: () => model.selectLayout(index),
             ),
             onKeySearch: (value) {

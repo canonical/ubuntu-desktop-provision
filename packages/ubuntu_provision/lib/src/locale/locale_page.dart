@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/src/widgets/themed_list_tile.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -49,14 +50,14 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
           child: ListWidget.builder(
             selectedIndex: model.selectedIndex,
             itemCount: model.languageCount,
-            itemBuilder: (context, index) => ListTile(
-              key: ValueKey(index),
+            itemBuilder: (context, index) => ThemedListTile(
+              index: index,
+              selectedIndex: model.selectedIndex,
+              onTap: () => model.selectLanguage(index),
               title: Text(
                 model.language(index),
                 locale: model.locale(index),
               ),
-              selected: index == model.selectedIndex,
-              onTap: () => model.selectLanguage(index),
             ),
             tabFocusNode: nextFocusNode,
             onKeySearch: (value) {
