@@ -12,10 +12,12 @@ import (
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/privacy"
-	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/telemetry"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/telemetry/v1"
+	telemetryV2 "github.com/canonical/ubuntu-desktop-provision/provd/internal/services/telemetry/v2"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/timezone"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/user"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
+	pbV2 "github.com/canonical/ubuntu-desktop-provision/provd/protos/v2"
 	"github.com/godbus/dbus/v5"
 	"github.com/ubuntu/decorate"
 	"google.golang.org/grpc"
@@ -32,6 +34,7 @@ type Manager struct {
 	timezoneService      timezone.Service
 	accessibilityService accessibility.Service
 	telemetryService     telemetry.Service
+	telemetryServiceV2   telemetryV2.Service
 	gdmService           *gdm.Service
 	bus                  *dbus.Conn
 }
@@ -94,6 +97,11 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		return nil, status.Errorf(codes.Internal, "failed to create telemetry service: %s", err)
 	}
 
+	telemetryServiceV2, err := telemetryV2.New()
+	if err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create telemetry v2 service: %s", err)
+	}
+
 	return &Manager{
 		userService:          *userService,
 		localeService:        *localeService,
@@ -102,6 +110,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		timezoneService:      *timezoneService,
 		accessibilityService: *accessibilityService,
 		telemetryService:     *telemetryService,
+		telemetryServiceV2:   *telemetryServiceV2,
 		gdmService:           gdmService,
 		bus:                  bus,
 	}, nil
@@ -124,6 +133,8 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	if m.gdmService != nil {
 		pb.RegisterGdmServiceServer(grpcServer, m.gdmService)
 	}
+
+	pbV2.RegisterTelemetryServiceServer(grpcServer, &m.telemetryServiceV2)
 
 	return grpcServer
 }

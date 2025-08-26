@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package telemetry.v2;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto/v2;proto";
+
+import "google/protobuf/empty.proto";
+
+service TelemetryService {
+  rpc Collect(CollectRequest) returns (CollectResponse);
+  rpc SetConsent(SetConsentRequest) returns (google.protobuf.Empty);
+}
+
+message CollectRequest {
+  string sourceMetricsPath = 1;
+  bool dryRun = 2;
+}
+
+message CollectResponse {
+  enum CollectResponseType {
+    SUCCESS = 0;
+    SOURCE_METRICS_ERROR = 1;
+    UNKNOWN_ERROR = 2;
+  }
+  string metrics = 1;
+  CollectResponseType type = 2;
+}
+
+message SetConsentRequest {
+  bool state = 1;
+}
