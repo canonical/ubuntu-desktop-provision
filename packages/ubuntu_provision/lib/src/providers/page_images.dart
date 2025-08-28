@@ -57,7 +57,7 @@ class PageImages {
 
   Brightness _brightness;
   bool get isDarkMode => _brightness == Brightness.dark;
-  final String _darkModePrefix = 'dark_';
+  final String _darkModeSuffix = '-dark';
   UbuntuFlavor _flavor;
 
   @visibleForTesting
@@ -66,40 +66,37 @@ class PageImages {
   /// Gets the image for the given page name, remember that the [pageName]
   /// should be on the enum format. for example 'tryOrInstall`.
   Widget? get(String pageName) {
-    final image = images[pageName];
-    if (image == null) {
-      return null;
-    }
     return isDarkMode
-        ? images['$_darkModePrefix$pageName'] ?? images[pageName]
+        ? images['$pageName$_darkModeSuffix'] ?? images[pageName]
         : images[pageName];
   }
 
   Future<void> preCache() async {
     final loadFutures = <Future<void>>[];
     pageConfigService.pages.forEach((pageName, config) {
-      final imageConfig = config.image;
-      if (imageConfig == null) return;
-
-      try {
-        final isAsset = imageConfig.startsWith('assets/');
-        if (isAsset) {
-          loadFutures.add(
-            _loadAsset(
-              'packages/ubuntu_provision/$imageConfig',
-              pageName,
-            ).catchError((_) {
-              throw _PageImageNotFoundException(
-                'Could not read from $imageConfig',
-              );
-            }),
-          );
-        } else {
-          loadFutures.add(_loadFile(imageConfig, pageName));
+      for (final path in [config.image, config.imageDark].nonNulls) {
+        try {
+          final name =
+              path == config.imageDark ? '$pageName$_darkModeSuffix' : pageName;
+          final isAsset = path.startsWith('assets/');
+          if (isAsset) {
+            loadFutures.add(
+              _loadAsset(
+                'packages/ubuntu_provision/$path',
+                name,
+              ).catchError((_) {
+                throw _PageImageNotFoundException(
+                  'Could not read from $path',
+                );
+              }),
+            );
+          } else {
+            loadFutures.add(_loadFile(path, name));
+          }
+          // ignore: avoid_catches_without_on_clauses
+        } catch (e) {
+          _log.error('Error loading image for $pageName from $path: $e');
         }
-        // ignore: avoid_catches_without_on_clauses
-      } catch (e) {
-        _log.error('Error loading image for $pageName from $imageConfig: $e');
       }
     });
 
@@ -171,7 +168,7 @@ class PageImages {
         ),
       );
 
-      images[darkMode ? '$_darkModePrefix$pageName' : pageName] = image;
+      images[darkMode ? '$pageName$_darkModeSuffix' : pageName] = image;
     }
   }
 
