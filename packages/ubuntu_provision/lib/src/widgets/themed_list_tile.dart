@@ -54,7 +54,6 @@ class _ThemedListTileState extends State<ThemedListTile> {
         title: widget.title,
         selected: widget.selected,
         onTap: widget.onTap,
-        hoverColor: theme.colorScheme.onSurface.copyWith(alpha: 0.35),
         selectedColor: theme.textTheme.bodyMedium?.color,
         focusColor: Colors.transparent,
         selectedTileColor: Colors.transparent,
