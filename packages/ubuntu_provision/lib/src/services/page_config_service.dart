@@ -66,6 +66,7 @@ class PageConfigService {
 abstract class PageConfigEntry with _$PageConfigEntry {
   const factory PageConfigEntry({
     String? image,
+    String? imageDark,
     @Default(true) bool visible,
   }) = _PageConfigEntry;
   factory PageConfigEntry.fromJson(Map<String, dynamic> json) =>

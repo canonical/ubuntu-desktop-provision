@@ -15,6 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PageConfigEntry {
   String? get image;
+  String? get imageDark;
   bool get visible;
 
   /// Create a copy of PageConfigEntry
@@ -34,16 +35,18 @@ mixin _$PageConfigEntry {
         (other.runtimeType == runtimeType &&
             other is PageConfigEntry &&
             (identical(other.image, image) || other.image == image) &&
+            (identical(other.imageDark, imageDark) ||
+                other.imageDark == imageDark) &&
             (identical(other.visible, visible) || other.visible == visible));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, image, visible);
+  int get hashCode => Object.hash(runtimeType, image, imageDark, visible);
 
   @override
   String toString() {
-    return 'PageConfigEntry(image: $image, visible: $visible)';
+    return 'PageConfigEntry(image: $image, imageDark: $imageDark, visible: $visible)';
   }
 }
 
@@ -53,7 +56,7 @@ abstract mixin class $PageConfigEntryCopyWith<$Res> {
           PageConfigEntry value, $Res Function(PageConfigEntry) _then) =
       _$PageConfigEntryCopyWithImpl;
   @useResult
-  $Res call({String? image, bool visible});
+  $Res call({String? image, String? imageDark, bool visible});
 }
 
 /// @nodoc
@@ -70,12 +73,17 @@ class _$PageConfigEntryCopyWithImpl<$Res>
   @override
   $Res call({
     Object? image = freezed,
+    Object? imageDark = freezed,
     Object? visible = null,
   }) {
     return _then(_self.copyWith(
       image: freezed == image
           ? _self.image
           : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageDark: freezed == imageDark
+          ? _self.imageDark
+          : imageDark // ignore: cast_nullable_to_non_nullable
               as String?,
       visible: null == visible
           ? _self.visible
@@ -178,13 +186,14 @@ extension PageConfigEntryPatterns on PageConfigEntry {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String? image, bool visible)? $default, {
+    TResult Function(String? image, String? imageDark, bool visible)?
+        $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _PageConfigEntry() when $default != null:
-        return $default(_that.image, _that.visible);
+        return $default(_that.image, _that.imageDark, _that.visible);
       case _:
         return orElse();
     }
@@ -205,12 +214,12 @@ extension PageConfigEntryPatterns on PageConfigEntry {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String? image, bool visible) $default,
+    TResult Function(String? image, String? imageDark, bool visible) $default,
   ) {
     final _that = this;
     switch (_that) {
       case _PageConfigEntry():
-        return $default(_that.image, _that.visible);
+        return $default(_that.image, _that.imageDark, _that.visible);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -230,12 +239,12 @@ extension PageConfigEntryPatterns on PageConfigEntry {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(String? image, bool visible)? $default,
+    TResult? Function(String? image, String? imageDark, bool visible)? $default,
   ) {
     final _that = this;
     switch (_that) {
       case _PageConfigEntry() when $default != null:
-        return $default(_that.image, _that.visible);
+        return $default(_that.image, _that.imageDark, _that.visible);
       case _:
         return null;
     }
@@ -245,12 +254,14 @@ extension PageConfigEntryPatterns on PageConfigEntry {
 /// @nodoc
 @JsonSerializable()
 class _PageConfigEntry implements PageConfigEntry {
-  const _PageConfigEntry({this.image, this.visible = true});
+  const _PageConfigEntry({this.image, this.imageDark, this.visible = true});
   factory _PageConfigEntry.fromJson(Map<String, dynamic> json) =>
       _$PageConfigEntryFromJson(json);
 
   @override
   final String? image;
+  @override
+  final String? imageDark;
   @override
   @JsonKey()
   final bool visible;
@@ -276,16 +287,18 @@ class _PageConfigEntry implements PageConfigEntry {
         (other.runtimeType == runtimeType &&
             other is _PageConfigEntry &&
             (identical(other.image, image) || other.image == image) &&
+            (identical(other.imageDark, imageDark) ||
+                other.imageDark == imageDark) &&
             (identical(other.visible, visible) || other.visible == visible));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, image, visible);
+  int get hashCode => Object.hash(runtimeType, image, imageDark, visible);
 
   @override
   String toString() {
-    return 'PageConfigEntry(image: $image, visible: $visible)';
+    return 'PageConfigEntry(image: $image, imageDark: $imageDark, visible: $visible)';
   }
 }
 
@@ -297,7 +310,7 @@ abstract mixin class _$PageConfigEntryCopyWith<$Res>
       __$PageConfigEntryCopyWithImpl;
   @override
   @useResult
-  $Res call({String? image, bool visible});
+  $Res call({String? image, String? imageDark, bool visible});
 }
 
 /// @nodoc
@@ -314,12 +327,17 @@ class __$PageConfigEntryCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   $Res call({
     Object? image = freezed,
+    Object? imageDark = freezed,
     Object? visible = null,
   }) {
     return _then(_PageConfigEntry(
       image: freezed == image
           ? _self.image
           : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageDark: freezed == imageDark
+          ? _self.imageDark
+          : imageDark // ignore: cast_nullable_to_non_nullable
               as String?,
       visible: null == visible
           ? _self.visible
