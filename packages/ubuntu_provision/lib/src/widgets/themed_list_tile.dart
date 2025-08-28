@@ -33,9 +33,8 @@ class _ThemedListTileState extends State<ThemedListTile> {
 
     return AnimatedContainer(
       duration: kThemeAnimationDuration,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(kYaruContainerRadius)),
-        border: BoxBorder.all(
+      foregroundDecoration: BoxDecoration(
+        border: Border.all(
           color: _focused ? theme.primaryColor : Colors.transparent,
           width: 2,
           strokeAlign: -2,
@@ -56,7 +55,9 @@ class _ThemedListTileState extends State<ThemedListTile> {
         onTap: widget.onTap,
         selectedColor: theme.textTheme.bodyMedium?.color,
         focusColor: Colors.transparent,
+        visualDensity: VisualDensity.compact,
         selectedTileColor: Colors.transparent,
+        shape: Border(),
       ),
     );
   }
