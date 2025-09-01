@@ -2,6 +2,7 @@ export 'package:ubuntu_service/ubuntu_service.dart';
 
 export 'services/active_directory_service.dart';
 export 'services/autoinstall_service.dart';
+export 'services/environment_variable_service.dart';
 export 'services/gnome_accessibility_service.dart';
 export 'services/identity_service.dart';
 export 'services/installer_service.dart';
