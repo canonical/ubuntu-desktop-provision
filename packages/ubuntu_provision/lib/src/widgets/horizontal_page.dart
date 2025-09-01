@@ -110,7 +110,7 @@ class HorizontalPage extends ConsumerWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (image != null) image,
+                    if (image != null) Flexible(child: image),
                     if (imageTitleWidget != null) ...[
                       const SizedBox(height: kWizardSpacing),
                       imageTitleWidget!,
