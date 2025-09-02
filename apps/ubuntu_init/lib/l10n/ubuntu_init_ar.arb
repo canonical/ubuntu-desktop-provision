@@ -1,4 +1,10 @@
 {
-  "successIconSemanticLabel": "اكتمل",
-  "@successIconSemanticLabel": {}
+    "successIconSemanticLabel": "اكتمل",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "أغلِق",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "كبِّر",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "صغِّر",
+    "@minimizeIconSemanticLabel": {}
 }
