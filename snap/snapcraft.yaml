@@ -98,7 +98,7 @@ parts:
     plugin: nil
     source: https://github.com/canonical/probert.git
     source-type: git
-    source-commit: 36086af03fc4941a8ac219648ce77401743f3ae0
+    source-commit: d5a067e79a49fb05117069da106c552c03e9623e
     override-build: *pyinstall
     build-packages:
       - build-essential
