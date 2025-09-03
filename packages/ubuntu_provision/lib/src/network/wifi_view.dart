@@ -5,6 +5,7 @@ import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_tile.dart';
 import 'package:ubuntu_provision/src/network/wifi_model.dart';
+import 'package:ubuntu_provision/src/widgets/themed_list_tile.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -201,7 +202,7 @@ class WifiListTile extends ConsumerWidget {
 
     final accessPoints = <Widget>[
       for (final accessPoint in device.accessPoints)
-        ListTile(
+        ThemedListTile(
           key: ValueKey(accessPoint.name),
           title: Text(accessPoint.name),
           leading: _leadingIcon(accessPoint, device, iconSize),
