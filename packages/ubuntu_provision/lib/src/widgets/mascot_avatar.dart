@@ -4,7 +4,7 @@ class MascotAvatar extends StatelessWidget {
   const MascotAvatar({
     super.key,
     this.image,
-    this.size = const Size.square(160),
+    this.size = const Size.square(240),
     this.progress = 0,
   });
 

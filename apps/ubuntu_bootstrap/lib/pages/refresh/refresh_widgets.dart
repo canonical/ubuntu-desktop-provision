@@ -33,12 +33,12 @@ class RefreshView extends ConsumerWidget {
     final l10n = UbuntuBootstrapLocalizations.of(context);
     return Column(
       children: [
-        const Spacer(),
+        const Flexible(child: SizedBox(height: 24)),
         MascotAvatar(
           image: pageImages.get(InstallationStep.refresh.name),
           progress: state.progress,
         ),
-        const SizedBox(height: 8),
+        const Flexible(child: SizedBox(height: 24)),
         Visibility(
           maintainSize: true,
           maintainState: true,
@@ -51,7 +51,6 @@ class RefreshView extends ConsumerWidget {
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
-        const Spacer(),
         Text(
           state.whenOrNull(
                 status: (_) => l10n.refreshHeader,
@@ -60,7 +59,7 @@ class RefreshView extends ConsumerWidget {
               '',
           style: Theme.of(context).textTheme.titleLarge,
         ),
-        const SizedBox(height: kWizardSpacing / 2),
+        const Flexible(child: SizedBox(height: kWizardSpacing / 2)),
         Text(
           state.when(
             checking: () => '',
@@ -75,7 +74,7 @@ class RefreshView extends ConsumerWidget {
             error: (error) => error.toString(),
           ),
         ),
-        const SizedBox(height: kWizardSpacing),
+        const Flexible(child: SizedBox(height: kWizardSpacing)),
         Visibility(
           maintainSize: true,
           maintainState: true,
