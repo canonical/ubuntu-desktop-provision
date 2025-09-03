@@ -85,9 +85,11 @@ extension WizardThemeDataX on ThemeData {
         }),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: colorScheme.onSurface),
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: errorColor),
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
         ),
         fillColor: colorScheme.surface,
         hoverColor: colorScheme.surface,
@@ -114,14 +116,6 @@ extension WizardThemeDataX on ThemeData {
 
   ThemeData _customizeShapes() {
     return copyWith(
-      inputDecorationTheme: inputDecorationTheme.copyWith(
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kYaruButtonRadius),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kYaruButtonRadius),
-        ),
-      ),
       sliderTheme: sliderTheme.copyWith(
         valueIndicatorShape: const RectangularSliderValueIndicatorShape(),
       ),
