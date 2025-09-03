@@ -101,12 +101,17 @@ Future<void> runInstallerApp(
   // Conditional registration if not already registered by flavors or tests. All services must be
   // registered here or their respective providers will fail to find them when building models.
   tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
-  tryRegisterService<LandscapeBackendService>(
-    () => LandscapeBackendService(
-      port: 50051,
-      useTls: false,
-    ),
+  tryRegisterService<EnvironmentVariableService>(
+    EnvironmentVariableService.new,
   );
+  tryRegisterService<LandscapeBackendService>(() {
+    final envService = getService<EnvironmentVariableService>();
+    envService.load();
+    return LandscapeBackendService(
+      port: 50051,
+      useTls: envService.landscapeClientUseTls,
+    );
+  });
   tryRegisterService<ActiveDirectoryService>(
     () => SubiquityActiveDirectoryService(getService<SubiquityClient>()),
   );
