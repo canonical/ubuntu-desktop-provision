@@ -207,32 +207,47 @@ class ConfirmPasswordFormField extends ConsumerWidget {
   }
 }
 
-class ShowPasswordButton extends StatelessWidget {
+class ShowPasswordButton extends StatefulWidget {
   const ShowPasswordButton({
-    required this.value,
     required this.onChanged,
+    required this.value,
     super.key,
   });
 
-  final bool value;
   final ValueChanged<bool> onChanged;
+  final bool value;
+
+  @override
+  State<ShowPasswordButton> createState() => _ShowPasswordButtonState();
+}
+
+class _ShowPasswordButtonState extends State<ShowPasswordButton> {
+  bool _focused = false;
 
   @override
   Widget build(BuildContext context) {
     final lang = IdentityLocalizations.of(context);
-    final inputTheme = Theme.of(context).inputDecorationTheme;
-    final borderSide = inputTheme.border?.borderSide ?? BorderSide.none;
     final rtl = Directionality.of(context) == TextDirection.rtl;
+    final theme = Theme.of(context);
 
-    return Container(
+    return AnimatedContainer(
+      duration: kThemeAnimationDuration,
       margin: const EdgeInsets.all(1),
       decoration: BoxDecoration(
-        border: Border(
-          left: rtl ? BorderSide.none : borderSide,
-          right: rtl ? borderSide : BorderSide.none,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(kYaruButtonRadius),
+          bottomRight: Radius.circular(kYaruButtonRadius),
+        ),
+        border: BoxBorder.all(
+          color: _focused ? theme.primaryColor : Colors.transparent,
+          width: 2,
+          strokeAlign: 1,
         ),
       ),
       child: FilledButton.icon(
+        onFocusChange: (value) => setState(() {
+          _focused = value;
+        }),
         style: FilledButton.styleFrom(
           side: BorderSide.none,
           shape: RoundedRectangleBorder(
@@ -246,11 +261,11 @@ class ShowPasswordButton extends StatelessWidget {
           // avoid increasing the size of the input field
           minimumSize: Size.zero,
         ),
-        onPressed: () => onChanged(!value),
-        icon: Icon(value ? YaruIcons.hide : YaruIcons.eye),
+        onPressed: () => widget.onChanged(!widget.value),
+        icon: Icon(widget.value ? YaruIcons.hide : YaruIcons.eye),
         // build both labels to avoid size changes
         label: IndexedStack(
-          index: value ? 1 : 0,
+          index: widget.value ? 1 : 0,
           children: [
             Text(lang.identityPasswordShow),
             Text(lang.identityPasswordHide),
