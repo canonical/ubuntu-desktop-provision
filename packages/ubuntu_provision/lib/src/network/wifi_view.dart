@@ -203,7 +203,7 @@ class WifiListTile extends ConsumerWidget {
     final accessPoints = <Widget>[
       for (final accessPoint in device.accessPoints)
         ThemedListTile(
-          valueKey: ValueKey(accessPoint.name),
+          key: ValueKey(accessPoint.name),
           title: Text(accessPoint.name),
           leading: _leadingIcon(accessPoint, device, iconSize),
           selected: selected && device.isSelectedAccessPoint(accessPoint),

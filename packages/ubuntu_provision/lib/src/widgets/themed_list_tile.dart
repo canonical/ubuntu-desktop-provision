@@ -3,7 +3,6 @@ import 'package:yaru/yaru.dart';
 
 class ThemedListTile extends StatefulWidget {
   const ThemedListTile({
-    required this.valueKey,
     required this.selected,
     required this.title,
     super.key,
@@ -12,7 +11,6 @@ class ThemedListTile extends StatefulWidget {
     this.trailing,
   });
 
-  final ValueKey<dynamic> valueKey;
   final bool selected;
   final Widget title;
 
@@ -41,7 +39,6 @@ class _ThemedListTileState extends State<ThemedListTile> {
         ),
       ),
       child: ListTile(
-        key: widget.valueKey,
         onFocusChange: (value) => setState(() {
           _focused = value;
         }),

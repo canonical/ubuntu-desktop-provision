@@ -51,7 +51,7 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
             selectedIndex: model.selectedIndex,
             itemCount: model.languageCount,
             itemBuilder: (context, index) => ThemedListTile(
-              valueKey: ValueKey(index),
+              key: ValueKey(index),
               selected: index == model.selectedIndex,
               onTap: () => model.selectLanguage(index),
               title: Text(

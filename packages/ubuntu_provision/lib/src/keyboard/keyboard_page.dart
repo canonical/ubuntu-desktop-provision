@@ -52,7 +52,7 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
             itemCount: model.layoutCount,
             tabFocusNode: nextFocusNode,
             itemBuilder: (context, index) => ThemedListTile(
-              valueKey: ValueKey(index),
+              key: ValueKey(index),
               title: Text(model.layoutName(index)),
               selected: index == model.selectedLayoutIndex,
               onTap: () => model.selectLayout(index),
