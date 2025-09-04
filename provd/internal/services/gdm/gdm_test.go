@@ -84,9 +84,10 @@ func TestLaunchDesktopSession(t *testing.T) {
 			t.Cleanup(testutils.StartLocalSystemBus())
 
 			client := newGdmClient(t)
-			if tc.username == "" {
+			switch tc.username {
+			case "":
 				tc.username = "myuser"
-			} else if tc.username == "-" {
+			case "-":
 				tc.username = ""
 			}
 
