@@ -106,15 +106,17 @@ func TestSetInputSources(t *testing.T) {
 			}
 
 			client := newKeyboardClient(t, opts...)
-			if tc.variant == "" {
+			switch tc.variant {
+			case "":
 				tc.variant = "ok"
-			} else if tc.variant == "-" {
+			case "-":
 				tc.variant = ""
 			}
 
-			if tc.layout == "" {
+			switch tc.layout {
+			case "":
 				tc.layout = "ok"
-			} else if tc.layout == "-" {
+			case "-":
 				tc.layout = ""
 			}
 
@@ -264,15 +266,17 @@ func TestSetKeyboard(t *testing.T) {
 
 			client := newKeyboardClient(t, opts...)
 
-			if tc.variant == "" {
+			switch tc.variant {
+			case "":
 				tc.variant = "ok"
-			} else if tc.variant == "-" {
+			case "-":
 				tc.variant = ""
 			}
 
-			if tc.layout == "" {
+			switch tc.layout {
+			case "":
 				tc.layout = "ok"
-			} else if tc.layout == "-" {
+			case "-":
 				tc.layout = ""
 			}
 
