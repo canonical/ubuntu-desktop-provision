@@ -38,13 +38,13 @@ class OptionButton<T> extends StatelessWidget {
           color: isSelected ? colorScheme.primary : theme.dividerColor,
         ),
         borderRadius: kWizardBorderRadius,
-        child: YaruRadioListTile<T>(
-          title: DefaultTextStyle(
-            style: Theme.of(context)
-                .textTheme
-                .titleMedium!
-                .copyWith(fontWeight: FontWeight.bold),
-            child: Wrap(
+        child: ListTileTheme.merge(
+          titleTextStyle: Theme.of(context)
+              .textTheme
+              .titleMedium!
+              .copyWith(fontWeight: FontWeight.bold),
+          child: YaruRadioListTile<T>(
+            title: Wrap(
               alignment: WrapAlignment.spaceBetween,
               children: [
                 title,
@@ -53,13 +53,13 @@ class OptionButton<T> extends StatelessWidget {
                 ],
               ],
             ),
+            subtitle: subtitle,
+            contentPadding: kWizardTilePadding,
+            isThreeLine: isThreeLines,
+            value: value,
+            groupValue: groupValue,
+            onChanged: onChanged,
           ),
-          subtitle: subtitle,
-          contentPadding: kWizardTilePadding,
-          isThreeLine: isThreeLines,
-          value: value,
-          groupValue: groupValue,
-          onChanged: onChanged,
         ),
       ),
     );
