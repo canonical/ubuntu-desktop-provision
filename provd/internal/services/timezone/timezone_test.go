@@ -140,9 +140,10 @@ func TestSetTimezone(t *testing.T) {
 
 			client := newTimezoneClient(t, opts...)
 
-			if tc.timezone == "" {
+			switch tc.timezone {
+			case "":
 				tc.timezone = "Africa/Johannesburg"
-			} else if tc.timezone == "-" {
+			case "-":
 				tc.timezone = ""
 			}
 

@@ -180,24 +180,26 @@ func TestCreateUser(t *testing.T) {
 			}
 			client := newUserClient(t, opts...)
 
-			if tc.username == "" {
+			switch tc.username {
+			case "":
 				tc.username = "ok"
-			} else if tc.username == "-" {
+			case "-":
 				tc.username = ""
 			}
 
-			if tc.realName == "" {
+			switch tc.realName {
+			case "":
 				tc.realName = "ok"
-			} else if tc.realName == "-" {
+			case "-":
 				tc.realName = ""
 			}
 
-			if tc.hostname == "" {
+			switch tc.hostname {
+			case "":
 				tc.hostname = "ok"
-			} else if tc.hostname == "-" {
+			case "-":
 				tc.hostname = ""
 			}
-
 			if tc.password == "" {
 				tc.password = "ok"
 			}
@@ -271,9 +273,10 @@ func TestValidateUsername(t *testing.T) {
 
 			client := newUserClient(t)
 
-			if tc.username == "" {
+			switch tc.username {
+			case "":
 				tc.username = "mock-user"
-			} else if tc.username == "-" {
+			case "-":
 				tc.username = ""
 			}
 
