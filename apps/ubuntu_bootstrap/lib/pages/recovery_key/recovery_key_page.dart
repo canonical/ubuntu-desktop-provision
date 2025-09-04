@@ -13,7 +13,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
-const fdeLink =
+const _fdeLink =
     'https://canonical-ubuntu-desktop-documentation.readthedocs-hosted.com/en/latest/explanation/hardware-backed-disk-encryption/#recovery-key';
 const defaultRecoveryKeyFileName = 'recovery-key.txt';
 
@@ -72,7 +72,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           children: [
             Text(l10n.recoveryKeyStorageAdvice),
             Html(
-              data: '<a href="$fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
+              data: '<a href="$_fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
               style: {
                 'body': Style(margin: Margins.zero),
                 'a': Style(

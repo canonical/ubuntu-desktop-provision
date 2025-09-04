@@ -10,7 +10,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const fdeLink =
+const _fdeLink =
     'https://canonical-ubuntu-desktop-documentation.readthedocs-hosted.com/en/latest/explanation/hardware-backed-disk-encryption/#encryption-passphrase';
 
 class PassphraseTypePage extends ConsumerWidget {
@@ -40,7 +40,7 @@ class PassphraseTypePage extends ConsumerWidget {
             children: [
               Text(l10n.passphraseTypePageBody),
               Html(
-                data: '<a href="$fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
+                data: '<a href="$_fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
                 style: {
                   'body': Style(margin: Margins.zero),
                   'a': Style(
