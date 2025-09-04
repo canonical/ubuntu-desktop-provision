@@ -191,7 +191,7 @@ class _SecurityKeyShowButton extends ConsumerWidget {
 
     return Padding(
       padding: const EdgeInsets.all(1.0),
-      child: TextButton.icon(
+      child: FilledButton.icon(
         icon: Icon(
           showSecurityKey ? YaruIcons.hide : YaruIcons.eye,
           color: theme.colorScheme.onSecondaryContainer,
@@ -201,13 +201,11 @@ class _SecurityKeyShowButton extends ConsumerWidget {
         onPressed: () {
           ref.read(passphraseModelProvider).showPassphrase = !showSecurityKey;
         },
-        style: TextButton.styleFrom(
-          foregroundColor: theme.colorScheme.onSecondaryContainer,
-          backgroundColor: theme.colorScheme.primaryContainer,
+        style: FilledButton.styleFrom(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
-              topRight: Radius.circular(4.0),
-              bottomRight: Radius.circular(4.0),
+              topRight: Radius.circular(kYaruButtonRadius),
+              bottomRight: Radius.circular(kYaruButtonRadius),
             ),
           ),
         ),
