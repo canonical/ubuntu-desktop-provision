@@ -152,6 +152,12 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
             ),
           ].withSpacing(kWizardSpacing / 2),
         ),
+        if (model.error != null)
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.danger,
+            title: Text(model.error!.localizedTitle(l10n)),
+            child: Text(model.error!.localizedBody(l10n)),
+          ),
         YaruCheckButton(
           title: Text(
             l10n.recoveryKeyConfirmation,
@@ -162,12 +168,6 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           value: model.confirmed,
           onChanged: model.setConfirmed,
         ),
-        if (model.error != null)
-          YaruInfoBox(
-            yaruInfoType: YaruInfoType.danger,
-            title: Text(model.error!.localizedTitle(l10n)),
-            child: Text(model.error!.localizedBody(l10n)),
-          ),
       ].withSpacing(kWizardSpacing),
     );
   }
