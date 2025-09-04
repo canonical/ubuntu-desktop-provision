@@ -14,7 +14,7 @@ import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
 const fdeLink =
-    'https://discourse.ubuntu.com/t/hardware-backed-encryption-and-recovery-keys-in-ubuntu-desktop/58243';
+    'https://canonical-ubuntu-desktop-documentation.readthedocs-hosted.com/en/latest/explanation/hardware-backed-disk-encryption/#recovery-key';
 const defaultRecoveryKeyFileName = 'recovery-key.txt';
 
 class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
