@@ -97,6 +97,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
                 suffixIcon: YaruIconButton(
                   icon: const Icon(YaruIcons.copy, size: 16),
                   onPressed: () => saveToClipboard(context, model.recoveryKey),
+                  tooltip: UbuntuLocalizations.of(context).copyLabel,
                 ),
                 suffixIconConstraints: BoxConstraints(
                   maxWidth: 32,
