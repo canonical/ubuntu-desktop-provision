@@ -13,8 +13,8 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:xdg_desktop_portal/xdg_desktop_portal.dart';
 import 'package:yaru/yaru.dart';
 
-const fdeLink =
-    'https://discourse.ubuntu.com/t/hardware-backed-encryption-and-recovery-keys-in-ubuntu-desktop/58243';
+const _fdeLink =
+    'https://canonical-ubuntu-desktop-documentation.readthedocs-hosted.com/en/latest/explanation/hardware-backed-disk-encryption/#recovery-key';
 const defaultRecoveryKeyFileName = 'recovery-key.txt';
 
 class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
@@ -72,7 +72,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           children: [
             Text(l10n.recoveryKeyStorageAdvice),
             Html(
-              data: '<a href="$fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
+              data: '<a href="$_fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
               style: {
                 'body': Style(margin: Margins.zero),
                 'a': Style(
@@ -97,6 +97,7 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
                 suffixIcon: YaruIconButton(
                   icon: const Icon(YaruIcons.copy, size: 16),
                   onPressed: () => saveToClipboard(context, model.recoveryKey),
+                  tooltip: UbuntuLocalizations.of(context).copyLabel,
                 ),
                 suffixIconConstraints: BoxConstraints(
                   maxWidth: 32,
@@ -151,6 +152,12 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
             ),
           ].withSpacing(kWizardSpacing / 2),
         ),
+        if (model.error != null)
+          YaruInfoBox(
+            yaruInfoType: YaruInfoType.danger,
+            title: Text(model.error!.localizedTitle(l10n)),
+            child: Text(model.error!.localizedBody(l10n)),
+          ),
         YaruCheckButton(
           title: Text(
             l10n.recoveryKeyConfirmation,
@@ -161,12 +168,6 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
           value: model.confirmed,
           onChanged: model.setConfirmed,
         ),
-        if (model.error != null)
-          YaruInfoBox(
-            yaruInfoType: YaruInfoType.danger,
-            title: Text(model.error!.localizedTitle(l10n)),
-            child: Text(model.error!.localizedBody(l10n)),
-          ),
       ].withSpacing(kWizardSpacing),
     );
   }

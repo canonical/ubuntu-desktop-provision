@@ -181,8 +181,11 @@ class TpmOption extends ConsumerWidget {
                 flex: 100,
                 child: Text(lang.installationTypeTPM),
               ),
-              InfoBadge(
-                title: experimentalBadgeText,
+              Opacity(
+                opacity: model.currentTargetSupportsTpm ? 1.0 : 0.5,
+                child: InfoBadge(
+                  title: experimentalBadgeText,
+                ),
               ),
             ].withSpacing(kWizardSpacing / 2),
           ),
