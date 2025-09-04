@@ -5,16 +5,16 @@ void main() {
   test('default values', () {
     final environmentVariableService = EnvironmentVariableService();
     environmentVariableService.load();
-    expect(environmentVariableService.landscapeClientUseTls, isFalse);
+    expect(environmentVariableService.landscapeClientUseTls, isTrue);
   });
 
   test('custom values', () {
     final environmentVariableService = EnvironmentVariableService(
       env: {
-        'LANDSCAPE_CLIENT_USE_TLS': 'true',
+        'LANDSCAPE_CLIENT_USE_TLS': 'false',
       },
     );
     environmentVariableService.load();
-    expect(environmentVariableService.landscapeClientUseTls, isTrue);
+    expect(environmentVariableService.landscapeClientUseTls, isFalse);
   });
 }
