@@ -7,11 +7,11 @@ class EnvironmentVariableService {
       : _env = env ?? Platform.environment;
   final Map<String, String> _env;
 
-  bool _landscapeClientUseTls = false;
+  bool _landscapeClientUseTls = true;
 
   void load() {
     _landscapeClientUseTls =
-        _env['LANDSCAPE_CLIENT_USE_TLS']?.toLowerCase() == 'true';
+        _env['LANDSCAPE_CLIENT_USE_TLS']?.toLowerCase() != 'false';
   }
 
   bool get landscapeClientUseTls => _landscapeClientUseTls;
