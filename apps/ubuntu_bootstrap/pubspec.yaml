@@ -65,7 +65,7 @@ dev_dependencies:
   freezed: ^2.4.6
   integration_test:
     sdk: flutter
-  mockito: 5.4.4
+  mockito: 5.5.1
   riverpod_generator: ^2.6.3
   subiquity_test: ^0.1.0
   translations_cleaner: ^0.0.5
