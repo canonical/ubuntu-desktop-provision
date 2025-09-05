@@ -86,5 +86,7 @@
     "maximizeIconSemanticLabel": "最大化",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "最小化",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "successIconSemanticLabel": "成功",
+    "@successIconSemanticLabel": {}
 }
