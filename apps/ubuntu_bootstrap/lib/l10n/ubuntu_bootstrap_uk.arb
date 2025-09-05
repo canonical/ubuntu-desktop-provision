@@ -740,7 +740,7 @@
     "@passphraseTypePassphraseTileTitle": {},
     "passphraseTypeNoneTileTitle": "Розблокувати диск автоматично",
     "@passphraseTypeNoneTileTitle": {},
-    "passphraseTypePageHeader": "Шифрувальний PIN-код або парольна фраза",
+    "passphraseTypePageHeader": "Додаткова безпека",
     "@passphraseTypePageHeader": {},
     "passphraseTypePinTileTitle": "Вимагати PIN-код",
     "@passphraseTypePinTileTitle": {},
@@ -756,7 +756,7 @@
     "@passphrasePageMismatchPin": {},
     "passphraseTypePassphraseTileSubTitle": "Найбільш безпечно. Вам потрібно буде вводити довшу парольну фразу кожного разу, коли ви вмикаєте комп'ютер.",
     "@passphraseTypePassphraseTileSubTitle": {},
-    "passphraseTypePageBody": "За замовчуванням, модуль Trusted Platform Module (TPM) комп'ютера розблоковує диск під час запуску. Однак ви також можете вимагати введення PIN-коду або парольної фрази для додаткового захисту своїх даних.",
+    "passphraseTypePageBody": "За замовчуванням, модуль Trusted Platform Module (TPM) комп'ютера розблоковує диск під час запуску. Також ви маєте опцію додаткового захисту своїх даних.",
     "@passphraseTypePageBody": {},
     "passphraseTypePinTileSubTitle": "Більш безпечно. Вам потрібно буде вводити цифровий PIN-код кожного разу, коли ви вмикаєте комп'ютер.",
     "@passphraseTypePinTileSubTitle": {},
@@ -789,5 +789,9 @@
     "errorIconSemanticLabel": "Помилка",
     "@errorIconSemanticLabel": {},
     "closeIconSemanticLabel": "Закрити",
-    "@closeIconSemanticLabel": {}
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "Розгорнути",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "Згорнути",
+    "@minimizeIconSemanticLabel": {}
 }
