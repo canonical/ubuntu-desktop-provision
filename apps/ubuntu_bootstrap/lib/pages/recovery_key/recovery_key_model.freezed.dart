@@ -122,8 +122,8 @@ class _$RecoveryKeyExceptionDisallowedPathImpl
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', 'RecoveryKeyException.disallowedPath'));
+    properties
+      ..add(DiagnosticsProperty('type', 'RecoveryKeyException.disallowedPath'));
   }
 
   @override
@@ -250,7 +250,7 @@ class _$RecoveryKeyExceptionFileSystemImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'RecoveryKeyException.fileSystem'));
+      ..add(DiagnosticsProperty('type', 'RecoveryKeyException.fileSystem'));
   }
 
   @override
