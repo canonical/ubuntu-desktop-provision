@@ -42,6 +42,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - run: |
           sudo apt update
           sudo apt install -y clang cmake curl gsettings-desktop-schemas libgtk-3-dev ninja-build pkg-config unzip
@@ -76,6 +77,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
         run: |
           sudo apt update
@@ -118,6 +120,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - run: sudo apt update
       - run: sudo apt install -y clang cmake curl gsettings-desktop-schemas libgtk-3-dev ninja-build pkg-config unzip
       - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
@@ -175,6 +178,7 @@ jobs:
           submodules: recursive
       - uses: asdf-vm/actions/install@v3
       - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
         run: |
           sudo apt update && sudo apt install lcov
@@ -202,6 +206,7 @@ jobs:
     name: "Go: Code sanity"
     runs-on: ubuntu-24.04
     steps:
+      - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -223,6 +228,7 @@ jobs:
     name: "Go: Tests"
     runs-on: ubuntu-24.04
     steps:
+      - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
         run: |
           sudo apt-get update
