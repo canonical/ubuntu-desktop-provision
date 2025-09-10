@@ -56,7 +56,8 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
             ),
             color: Theme.of(context).colorScheme.onSurface,
             barcode: Barcode.qrCode(),
-            data: '${model.domainUrl}?magic-attach-code=${model.userCode}',
+            data:
+                '${model.domainUrl}/attach?magic-attach-code=${model.userCode}',
             width: 200,
             height: 200,
           ),
@@ -68,7 +69,7 @@ class AutoinstallLandscapeQrPage extends ConsumerWidget with ProvisioningPage {
           children: [
             Html(
               data: l10n.landscapeMagicAttachInstructions(
-                model.domainUrl.replaceFirst('https://', ''),
+                '${model.domainUrl}/attach'.replaceFirst('https://', ''),
               ),
               style: {
                 'body':
