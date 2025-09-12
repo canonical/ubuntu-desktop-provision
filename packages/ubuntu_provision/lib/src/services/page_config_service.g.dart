@@ -10,6 +10,7 @@ _$PageConfigEntryImpl _$$PageConfigEntryImplFromJson(
         Map<String, dynamic> json) =>
     _$PageConfigEntryImpl(
       image: json['image'] as String?,
+      imageDark: json['image-dark'] as String?,
       visible: json['visible'] as bool? ?? true,
     );
 
@@ -17,6 +18,7 @@ Map<String, dynamic> _$$PageConfigEntryImplToJson(
         _$PageConfigEntryImpl instance) =>
     <String, dynamic>{
       'image': instance.image,
+      'image-dark': instance.imageDark,
       'visible': instance.visible,
     };
 
