@@ -1,9 +1,27 @@
 {
   "@@locale": "el",
   "windowTitle": "Εγκατάσταση του {RELEASE}",
+  "@windowTitle": {},
   "tryOption": "Δοκιμάστε το {RELEASE}",
+  "@tryOption": {},
   "installOption": "Εγκατάσταση του {RELEASE}",
+  "@installOption": {},
   "rstTitle": "Απενεργοποίηση του RST",
+  "@rstTitle": {},
   "tryOrInstallReleaseNotesLabel": "Ίσως θέλετε να διαβάσετε τις <a href=\"{url}\">σημειώσεις έκδοσης</a>.",
-  "welcome": "Καλωσορίσατε"
+  "@tryOrInstallReleaseNotesLabel": {},
+  "welcome": "Καλωσορίσατε",
+  "@welcome": {},
+  "autoinstallDirectTitle": "Αυτοματοποιημένη εγκατάσταση",
+  "@autoinstallDirectTitle": {},
+  "autoinstallDirectFileLabel": "'Η επιλογή τοπικού αρχείου:",
+  "@autoinstallDirectFileLabel": {},
+  "autoinstallDirectFileButtonLabel": "Επιλογή αρχείου...",
+  "@autoinstallDirectFileButtonLabel": {},
+  "autoinstallDirectFileClearButtonLabel": "Εκκαθάριση αρχείου",
+  "@autoinstallDirectFileClearButtonLabel": {},
+  "autoinstallDirectFilePickerTitle": "Επιλογή αρχείου",
+  "@autoinstallDirectFilePickerTitle": {},
+  "autoinstallDirectFilePickerFilterLabel": "YAML αρχεία",
+  "@autoinstallDirectFilePickerFilterLabel": {}
 }

@@ -774,5 +774,7 @@
   "autoinstallDirectFileLabel": "Tai valita paikallisen tiedoston:",
   "@autoinstallDirectFileLabel": {},
   "autoinstallDirectFileButtonLabel": "Valitse tiedosto...",
-  "@autoinstallDirectFileButtonLabel": {}
+  "@autoinstallDirectFileButtonLabel": {},
+  "successIconSemanticLabel": "Menestys",
+  "@successIconSemanticLabel": {}
 }
