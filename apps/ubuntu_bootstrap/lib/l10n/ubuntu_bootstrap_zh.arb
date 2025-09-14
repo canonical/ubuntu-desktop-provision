@@ -408,7 +408,7 @@
     "@recoveryKeyWarning": {},
     "validate": "验证",
     "@validate": {},
-    "recoveryKeyTitle": "TPM 恢复密钥",
+    "recoveryKeyTitle": "恢复密钥",
     "@recoveryKeyTitle": {},
     "recoveryKeyCommand": "要获取恢复密钥，完成安装，重新启动计算机，然后在终端内执行此命令：",
     "@recoveryKeyCommand": {},
@@ -450,7 +450,7 @@
     "@confirmEntryDiskEncryption": {},
     "confirmEntryInstallationDisk": "安装磁盘",
     "@confirmEntryInstallationDisk": {},
-    "confirmEntryDiskSetup": "磁盘配置",
+    "confirmEntryDiskSetup": "安装类型",
     "@confirmEntryDiskSetup": {},
     "confirmSectionGeneralTitle": "一般",
     "@confirmSectionGeneralTitle": {},
@@ -550,7 +550,7 @@
     "@bitlockerInfoRecovery": {},
     "autoinstallLandscapeOption": "由 Landscape 自动化",
     "@autoinstallLandscapeOption": {},
-    "recoveryKeyHeader": "获取恢复密钥",
+    "recoveryKeyHeader": "保存恢复密钥",
     "@recoveryKeyHeader": {},
     "recoveryKeyInfoHeader": "没有恢复密钥，您可能丢失所有数据",
     "@recoveryKeyInfoHeader": {},
@@ -608,7 +608,7 @@
     "@installationTypeLVMEncryptionInfo": {},
     "installationTypeEraseAndInstall": "擦除 {os} 并安装 {product}",
     "@installationTypeEraseAndInstall": {},
-    "recoveryKeyConfirmation": "我明白我可能会在没有恢复密钥的情况下丢失所有数据",
+    "recoveryKeyConfirmation": "我把恢复密钥保存在了安全的地方",
     "@recoveryKeyConfirmation": {},
     "autoinstallLandscapeDescription": "适用于通过 Landscape 提供自动安装文件的组织用户。",
     "@autoinstallLandscapeDescription": {},
@@ -616,7 +616,7 @@
     "@landscapeCodeExpiredWarning": {},
     "recoveryKeyInfoBody": "在您登入 {distro} 时立刻获取恢复密钥并将其存储在安全的地方。",
     "@recoveryKeyInfoBody": {},
-    "recoveryKeyStorageAdvice": "将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。",
+    "recoveryKeyStorageAdvice": "若启动时解密失败，您将需要提供此恢复密钥。没有密钥，您就无法访问您的任何数据。将其保存在安全的地方，例如密码管理器中。",
     "@recoveryKeyStorageAdvice": {},
     "next": "下一步",
     "@next": {},
@@ -710,7 +710,7 @@
     "@passphrasePageChoosePassphraseHint": {},
     "passphrasePageRequiredPassphrase": "需要一个密码",
     "@passphrasePageRequiredPassphrase": {},
-    "passphraseTypePageBody": "在默认下，电脑的信任平台模块（TPM）将会在开机的时候解锁磁盘。然而，您也可以需要一个PIN或者密码来进一步保护您的数据。",
+    "passphraseTypePageBody": "默认情况下，计算机的可信平台模块（TPM）会在开机时解锁磁盘。您也有其他选项来进一步保护您的数据。",
     "@passphraseTypePageBody": {},
     "passphrasePagePassphraseEntropyBelowMin": "弱密码，请使其更长或者更复杂",
     "@passphrasePagePassphraseEntropyBelowMin": {},
@@ -729,5 +729,112 @@
     "confirmTableErased": "擦除",
     "@confirmTableErased": {},
     "confirmTableUnchanged": "未保存",
-    "@confirmTableUnchanged": {}
+    "@confirmTableUnchanged": {},
+    "confirmTableResized": "从 {oldsize} 调整为 {newsize}",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "已创建并格式化为 {format} 用于 {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "格式化为 {format} 用于 {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "用于 {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "格式化为 {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "nextSlideSemanticLabel": "下一页",
+    "@nextSlideSemanticLabel": {},
+    "previousSlideSemanticLabel": "上一页",
+    "@previousSlideSemanticLabel": {},
+    "playSlideshowSemanticLabel": "播放幻灯片",
+    "@playSlideshowSemanticLabel": {},
+    "pauseSlideshowSemanticLabel": "暂停幻灯片放映",
+    "@pauseSlideshowSemanticLabel": {},
+    "recoveryKeyTitleBadgeLabel": "重要",
+    "@recoveryKeyTitleBadgeLabel": {},
+    "recoveryKeyTextFieldLabel": "恢复密钥",
+    "@recoveryKeyTextFieldLabel": {},
+    "recoveryKeyLinkLabel": "了解更多",
+    "@recoveryKeyLinkLabel": {},
+    "recoveryKeySaveToFileLabel": "保存至文件",
+    "@recoveryKeySaveToFileLabel": {},
+    "recoveryKeyShowQrCodeLabel": "显示二维码",
+    "@recoveryKeyShowQrCodeLabel": {},
+    "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - 恢复密钥",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "扫描二维码复制恢复密钥并将其保存至安全的地方，例如密码管理器中。您也可以拍下照片以备以后使用。",
+    "@recoveryKeyQrDialogBody": {},
+    "recoveryKeyClipboardNotifiaction": "已复制至剪贴板",
+    "@recoveryKeyClipboardNotifiaction": {},
+    "landscapeDomainHintText": "Landscape 域 (FQDN)",
+    "@landscapeDomainHintText": {},
+    "landscapeErrorPageTitle": "自动安装不适用于您的账户",
+    "@landscapeErrorPageTitle": {},
+    "landscapeErrorPageBody": "联系您的技术支持或尝试其他安装选项。",
+    "@landscapeErrorPageBody": {},
+    "landscapeErrorPageCode": "错误码：{code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu 将按您组织提供的配置进行安装",
+    "@landscapeConfirmPageSuccessInfoTitle": {},
+    "landscapeConfirmPageSuccessInfoContent": "您可以在下面查看从 Landscape 导入的自动安装文件。",
+    "@landscapeConfirmPageSuccessInfoContent": {},
+    "successIconSemanticLabel": "成功",
+    "@successIconSemanticLabel": {},
+    "errorIconSemanticLabel": "错误",
+    "@errorIconSemanticLabel": {},
+    "closeIconSemanticLabel": "关闭",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "最大化",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "最小化",
+    "@minimizeIconSemanticLabel": {}
 }
