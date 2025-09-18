@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_dialogs.dart';
@@ -28,13 +30,15 @@ class ActiveDirectoryPage extends ConsumerWidget with ProvisioningPage {
             onNext: () async {
               final model = ref.read(activeDirectoryModelProvider);
               await model.save();
-              await model.getJoinResult().then((result) {
-                if (context.mounted &&
-                    (result == AdJoinResult.JOIN_ERROR ||
-                        result == AdJoinResult.PAM_ERROR)) {
-                  showActiveDirectoryErrorDialog(context);
-                }
-              });
+              unawaited(
+                model.getJoinResult().then((result) {
+                  if (context.mounted &&
+                      (result == AdJoinResult.JOIN_ERROR ||
+                          result == AdJoinResult.PAM_ERROR)) {
+                    showActiveDirectoryErrorDialog(context);
+                  }
+                }),
+              );
             },
           ),
         ],
