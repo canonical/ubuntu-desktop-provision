@@ -166,8 +166,12 @@ parts:
       fi
 
       craftctl default
-      FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
-      git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+      # FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
+      # git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+      git clone -b linux-backport-rendering-3-35 --depth 1 https://github.com/robert-ancell/flutter.git
+      cd flutter
+      git tag 3.35.2
+      cd -
     override-build: |
       mkdir -p $CRAFT_PART_INSTALL/usr/bin
       mkdir -p $CRAFT_PART_INSTALL/usr/libexec
