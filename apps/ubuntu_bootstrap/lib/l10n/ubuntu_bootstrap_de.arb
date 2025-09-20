@@ -789,5 +789,9 @@
     "maximizeIconSemanticLabel": "Maximieren",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimieren",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "playSlideshowSemanticLabel": "Bildschirmpräsentation abspielen",
+    "@playSlideshowSemanticLabel": {},
+    "pauseSlideshowSemanticLabel": "Präsentation anhalten",
+    "@pauseSlideshowSemanticLabel": {}
 }
