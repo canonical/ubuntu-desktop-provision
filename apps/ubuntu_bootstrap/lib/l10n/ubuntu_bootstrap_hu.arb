@@ -720,7 +720,7 @@
     "@recoveryKeyExceptionFileSystemBody": {},
     "recoveryKeyFilePickerTitle": "Helyreállítási kulcs fájljának mentése",
     "@recoveryKeyFilePickerTitle": {},
-    "recoveryKeyFilePickerFilter": "Szövegfájlok",
+    "recoveryKeyFilePickerFilter": "Szöveges fájlok",
     "@recoveryKeyFilePickerFilter": {},
     "successIconSemanticLabel": "Sikeres",
     "@successIconSemanticLabel": {},
