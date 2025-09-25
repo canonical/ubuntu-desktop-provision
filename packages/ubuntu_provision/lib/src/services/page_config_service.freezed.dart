@@ -21,6 +21,7 @@ PageConfigEntry _$PageConfigEntryFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PageConfigEntry {
   String? get image => throw _privateConstructorUsedError;
+  String? get imageDark => throw _privateConstructorUsedError;
   bool get visible => throw _privateConstructorUsedError;
 
   /// Serializes this PageConfigEntry to a JSON map.
@@ -39,7 +40,7 @@ abstract class $PageConfigEntryCopyWith<$Res> {
           PageConfigEntry value, $Res Function(PageConfigEntry) then) =
       _$PageConfigEntryCopyWithImpl<$Res, PageConfigEntry>;
   @useResult
-  $Res call({String? image, bool visible});
+  $Res call({String? image, String? imageDark, bool visible});
 }
 
 /// @nodoc
@@ -58,12 +59,17 @@ class _$PageConfigEntryCopyWithImpl<$Res, $Val extends PageConfigEntry>
   @override
   $Res call({
     Object? image = freezed,
+    Object? imageDark = freezed,
     Object? visible = null,
   }) {
     return _then(_value.copyWith(
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageDark: freezed == imageDark
+          ? _value.imageDark
+          : imageDark // ignore: cast_nullable_to_non_nullable
               as String?,
       visible: null == visible
           ? _value.visible
@@ -81,7 +87,7 @@ abstract class _$$PageConfigEntryImplCopyWith<$Res>
       __$$PageConfigEntryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? image, bool visible});
+  $Res call({String? image, String? imageDark, bool visible});
 }
 
 /// @nodoc
@@ -98,12 +104,17 @@ class __$$PageConfigEntryImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? image = freezed,
+    Object? imageDark = freezed,
     Object? visible = null,
   }) {
     return _then(_$PageConfigEntryImpl(
       image: freezed == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imageDark: freezed == imageDark
+          ? _value.imageDark
+          : imageDark // ignore: cast_nullable_to_non_nullable
               as String?,
       visible: null == visible
           ? _value.visible
@@ -116,7 +127,8 @@ class __$$PageConfigEntryImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PageConfigEntryImpl implements _PageConfigEntry {
-  const _$PageConfigEntryImpl({this.image, this.visible = true});
+  const _$PageConfigEntryImpl(
+      {this.image, this.imageDark, this.visible = true});
 
   factory _$PageConfigEntryImpl.fromJson(Map<String, dynamic> json) =>
       _$$PageConfigEntryImplFromJson(json);
@@ -124,12 +136,14 @@ class _$PageConfigEntryImpl implements _PageConfigEntry {
   @override
   final String? image;
   @override
+  final String? imageDark;
+  @override
   @JsonKey()
   final bool visible;
 
   @override
   String toString() {
-    return 'PageConfigEntry(image: $image, visible: $visible)';
+    return 'PageConfigEntry(image: $image, imageDark: $imageDark, visible: $visible)';
   }
 
   @override
@@ -138,12 +152,14 @@ class _$PageConfigEntryImpl implements _PageConfigEntry {
         (other.runtimeType == runtimeType &&
             other is _$PageConfigEntryImpl &&
             (identical(other.image, image) || other.image == image) &&
+            (identical(other.imageDark, imageDark) ||
+                other.imageDark == imageDark) &&
             (identical(other.visible, visible) || other.visible == visible));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, image, visible);
+  int get hashCode => Object.hash(runtimeType, image, imageDark, visible);
 
   /// Create a copy of PageConfigEntry
   /// with the given fields replaced by the non-null parameter values.
@@ -163,14 +179,18 @@ class _$PageConfigEntryImpl implements _PageConfigEntry {
 }
 
 abstract class _PageConfigEntry implements PageConfigEntry {
-  const factory _PageConfigEntry({final String? image, final bool visible}) =
-      _$PageConfigEntryImpl;
+  const factory _PageConfigEntry(
+      {final String? image,
+      final String? imageDark,
+      final bool visible}) = _$PageConfigEntryImpl;
 
   factory _PageConfigEntry.fromJson(Map<String, dynamic> json) =
       _$PageConfigEntryImpl.fromJson;
 
   @override
   String? get image;
+  @override
+  String? get imageDark;
   @override
   bool get visible;
 

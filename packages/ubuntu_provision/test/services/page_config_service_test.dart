@@ -14,6 +14,7 @@ pages:
     visible: false
   network:
     image: "/foo/bar/network.png"
+    dark: "/foo/bar/network-dark.png"
 ''';
     final service = PageConfigService(
       config: createMockConfigService(config: config),
@@ -25,6 +26,7 @@ pages:
     expect(pages['welcome']?.visible, isNull);
     expect(pages['network']?.visible, isTrue);
     expect(pages['network']?.image, equals('/foo/bar/network.png'));
+    expect(pages['network']?.imageDark, equals('/foo/bar/network-dark.png'));
   });
 
   test('allowed pages can be hidden', () async {
