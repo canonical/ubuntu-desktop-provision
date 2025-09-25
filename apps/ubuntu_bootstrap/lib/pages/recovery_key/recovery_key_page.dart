@@ -109,7 +109,6 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
               maxLines: 2,
               style: TextStyle(
                 inherit: false,
-                fontFamily: 'Ubuntu Mono',
                 fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
                 textBaseline: TextBaseline.alphabetic,
                 color: Theme.of(context).colorScheme.onSurface,
@@ -203,16 +202,7 @@ class _RecoveryKeyDialog extends ConsumerWidget {
               width: 200,
               height: 200,
             ),
-            Text(
-              recoveryKey,
-              style: TextStyle(
-                inherit: false,
-                fontFamily: 'Ubuntu Mono',
-                fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
-                textBaseline: TextBaseline.alphabetic,
-                color: Theme.of(context).colorScheme.onSurface,
-              ),
-            ),
+            Text(recoveryKey),
           ],
         ),
       ),
