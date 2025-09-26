@@ -64,7 +64,7 @@ parts:
 
       dart pub global activate melos
       dart pub global run melos bootstrap
-      cd packages/factory_reset_tools
+      cd apps/factory_reset_tools
       flutter build linux --release -v
       cp -r build/linux/*/release/bundle/* $CRAFT_PART_INSTALL/bin/
 
@@ -80,12 +80,12 @@ parts:
       dart pub global activate melos
       dart pub global run melos bootstrap
 
-      pushd packages/factory_reset_tools
+      pushd apps/factory_reset_tools
       dart compile exe -o factory-reset-tools-cli lib/dbus/cmdline.dart
       cp factory-reset-tools-cli $CRAFT_PART_INSTALL/bin/
       popd
 
-      pushd packages/factory_reset_tools/lib/dbus/polkit_agent_helper
+      pushd apps/factory_reset_tools/lib/dbus/polkit_agent_helper
       make helper.so
       cp helper.so $CRAFT_PART_INSTALL/bin/polkit_agent_helper/
       popd
