@@ -1,5 +1,9 @@
 #include "my_application.h"
 
+#ifdef GDK_WINDOWING_WAYLAND
+#include <gdk/gdkwayland.h>
+#endif
+
 #include <flutter_linux/flutter_linux.h>
 #include <handy.h>
 
@@ -19,6 +23,15 @@ static void my_application_get_workarea(GtkWindow* window,
   GdkMonitor* monitor =
       gdk_display_get_monitor_at_window(gdk_display, gdk_window);
   gdk_monitor_get_workarea(monitor, workarea);
+#if GTK_CHECK_VERSION(3, 24, 9) && !GTK_CHECK_VERSION(3, 24, 42) && defined (GDK_WINDOWING_WAYLAND)
+  if (GDK_IS_WAYLAND_DISPLAY (gdk_display)) {
+    // Workaround for https://gitlab.gnome.org/GNOME/gtk/-/issues/2599
+    // Fixed in GTK 3.24.42
+    int scale_factor = gdk_window_get_scale_factor(gdk_window);
+    workarea->width /= scale_factor;
+    workarea->height /= scale_factor;
+  }
+#endif
 
   // gdk_monitor_get_workarea() is not reliable early on startup. compare the
   // reported workarea to the full geometry and subtract some margins if the
@@ -26,6 +39,15 @@ static void my_application_get_workarea(GtkWindow* window,
   // excluded.
   GdkRectangle geometry;
   gdk_monitor_get_geometry(monitor, &geometry);
+#if GTK_CHECK_VERSION(3, 24, 9) && !GTK_CHECK_VERSION(3, 24, 42) && defined (GDK_WINDOWING_WAYLAND)
+  if (GDK_IS_WAYLAND_DISPLAY (gdk_display)) {
+    // Workaround for https://gitlab.gnome.org/GNOME/gtk/-/issues/2599
+    // Fixed in GTK 3.24.42
+    int scale_factor = gdk_window_get_scale_factor(gdk_window);
+    geometry.width /= scale_factor;
+    geometry.height /= scale_factor;
+  }
+#endif
   if (workarea->width == geometry.width &&
       workarea->height == geometry.height) {
     // by default, the dock is ~90px wide and the top bar is ~30px high.
@@ -45,7 +67,7 @@ static gboolean my_application_fit_to_workarea(GtkWindow* window) {
   gboolean fits_workarea =
       window_width <= workarea.width && window_height <= workarea.height;
   if (!fits_workarea) {
-    gtk_window_fullscreen(window);
+    gtk_window_maximize(window);
   }
   return fits_workarea;
 }
