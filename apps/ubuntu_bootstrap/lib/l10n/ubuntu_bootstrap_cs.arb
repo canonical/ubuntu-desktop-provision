@@ -712,13 +712,13 @@
     "@passphraseTypePinTileTitle": {},
     "passphraseTypeNoneTileTitle": "Odemykat disk automaticky",
     "@passphraseTypeNoneTileTitle": {},
-    "passphraseTypePageHeader": "PIN k šifrování nebo šifrovací heslo",
+    "passphraseTypePageHeader": "Dodatečné zabezpečení",
     "@passphraseTypePageHeader": {},
     "recoveryKeyFilePickerTitle": "Uložit soubor se záchranným klíčem",
     "@recoveryKeyFilePickerTitle": {},
     "recoveryKeyFilePickerFilter": "Textové soubory",
     "@recoveryKeyFilePickerFilter": {},
-    "passphraseTypePageBody": "Ve výchozím stavu bude disk před spouštěním systému odemčen pomocí hesla uloženého v TPM (Trusted Platform Module) modulu počítače. Nicméně je také možné vyžadovat PIN kód nebo rozšifrovávací heslo a chránit tak vaše data ještě lépe.",
+    "passphraseTypePageBody": "Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.",
     "@passphraseTypePageBody": {},
     "passphrasePageRequiredPin": "Je zapotřebí zadat PIN kód",
     "@passphrasePageRequiredPin": {},
@@ -787,5 +787,11 @@
     "toggleLogsSemanticLabel": "Vyp/zap. zaznamenávání událostí při instalaci",
     "@toggleLogsSemanticLabel": {},
     "errorIconSemanticLabel": "Chyba",
-    "@errorIconSemanticLabel": {}
+    "@errorIconSemanticLabel": {},
+    "closeIconSemanticLabel": "Zavřít",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "Maximalizovat",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "Minimalizovat",
+    "@minimizeIconSemanticLabel": {}
 }
