@@ -214,5 +214,7 @@
     "activeDirectoryAdminInvalidChars": "Caràcters no vàlids",
     "@activeDirectoryAdminInvalidChars": {},
     "activeDirectoryPasswordLabel": "Contrasenya",
-    "@activeDirectoryPasswordLabel": {}
+    "@activeDirectoryPasswordLabel": {},
+    "activeDirectoryPasswordEmpty": "Obligatori",
+    "@activeDirectoryPasswordEmpty": {}
 }
