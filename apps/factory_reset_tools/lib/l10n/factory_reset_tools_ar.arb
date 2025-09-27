@@ -1,3 +1,13 @@
 {
-  "@@locale": "ar"
+    "@@locale": "ar",
+    "restart": "أعِد التشغيل",
+    "@restart": {},
+    "close": "أغلِق",
+    "@close": {},
+    "closeIconSemanticLabel": "أغلِق",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "كبِّر",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "صغِّر",
+    "@minimizeIconSemanticLabel": {}
 }
