@@ -367,4 +367,10 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
 
   @override
   String get minimizeIconSemanticLabel => 'صغِّر';
+
+  @override
+  String get expandIconSemanticLabel => 'Expand';
+
+  @override
+  String get collapseIconSemanticLabel => 'Collapse';
 }
