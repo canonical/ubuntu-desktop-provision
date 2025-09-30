@@ -217,7 +217,7 @@
     "@eulaAcceptTerms": {},
     "errorPageUbuntuBug": "Per mandar un rapòrt d'error automatizat qu’inclutz d'informacions de desbugatge pertinentas, executatz <pre>sudo ubuntu-bug {SNAP}</pre> dins un terminal, o dempuèi la consòla de comanda (Alt+F2).",
     "@errorPageUbuntuBug": {},
-    "successIconSemanticLabel": "Succès",
+    "successIconSemanticLabel": "Capitada",
     "@successIconSemanticLabel": {},
     "closeIconSemanticLabel": "Tampar",
     "@closeIconSemanticLabel": {},
