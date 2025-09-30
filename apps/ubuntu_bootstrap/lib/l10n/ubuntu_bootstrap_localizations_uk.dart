@@ -313,15 +313,15 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Щоб зашифрувати ваші файли, вам потрібна парольна фраза. Вам буде запропоновано ввести парольну фразу щоразу, коли ви вмикатимете комп\'ютер.';
+      'Вам потрібно буде вводити пароль кожного разу, коли ви вмикаєте комп\'ютер. Цей пароль відрізняється від вашого пароля користувача.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Зберігайте свою парольну фразу в безпечному місці';
+      'Обов\'язково збережіть свою парольну фразу';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Якщо ви втратите парольну фразу, ви втратите всі свої дані.';
+      'Якщо ви його загубите, ви втратите всі свої дані.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -332,91 +332,93 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Якщо ви втратите парольну фразу, ви втратите всі свої дані. Парольна фраза не замінює ключ відновлення або пароль користувача.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Шифрування';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Встановити пароль для шифрування';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Встановити PIN-код для шифрування';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Вам потрібно буде вводити пароль кожного разу, коли ви вмикаєте комп\'ютер. Цей пароль відрізняється від вашого пароля користувача. Ви зможете змінити його пізніше, але не зможете вимкнути. Якщо ви забули пароль, ви можете відновити доступ до диска за допомогою ключа відновлення.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Вам потрібно буде вводити PIN-код кожного разу, коли ви вмикаєте комп\'ютер. Цей PIN-код відрізняється від вашого пароля користувача. Ви зможете змінити його пізніше, але не зможете вимкнути. Якщо ви забули PIN-код, ви можете відновити доступ до диска за допомогою ключа відновлення.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Парольна фраза';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'Підтвердити парольну фразу';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Необхідна парольна фраза';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Парольні фрази не збігаються';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'PIN-код';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Підтвердьте PIN-код';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Необхідний PIN-код';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN-коди не збігаються';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Вимагати парольну фразу';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Найбільш безпечно. Вам потрібно буде вводити довшу парольну фразу кожного разу, коли ви вмикаєте комп\'ютер.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Вимагати PIN-код';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Більш безпечно. Вам потрібно буде вводити цифровий PIN-код кожного разу, коли ви вмикаєте комп\'ютер.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Розблокувати диск автоматично';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Додаткова безпека';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'За замовчуванням, модуль Trusted Platform Module (TPM) комп\'ютера розблоковує диск під час запуску. Також ви маєте опцію додаткового захисту своїх даних.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Слабкий пароль, зробіть його довшим або складнішим';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Достатній пароль, зробіть його довшим або складнішим для кращої безпеки';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Надійна парольна фраза';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Слабкий PIN-код, зробіть його довшим або менш передбачуваним';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Достатній PIN-код, зробіть його довшим або менш передбачуваним для кращої безпеки';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN-код достатньо довгий';
 
   @override
   String get installationTypeTitle => 'Тип встановлення';
@@ -1028,19 +1030,19 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Підтримка корпоративного рівня 24/7 з Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Наступний слайд';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Попередній слайд';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Почати показ слайдів';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Призупинити показ слайдів';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Записати журнали встановлення';
 
   @override
   String get copyingFiles => 'Копіювання файлів…';
@@ -1217,74 +1219,74 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Ключ відновлення TPM';
+  String get recoveryKeyTitle => 'Ключ відновлення';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Важливо';
 
   @override
-  String get recoveryKeyHeader => 'Отримати ключ відновлення';
+  String get recoveryKeyHeader => 'Збережіть свій ключ відновлення';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Без ключа відновлення ви можете втратити всі свої дані';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Ключ відновлення';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Зберігайте ключ відновлення в надійному місці. Використовуйте його, щоб розшифрувати диск у разі певних змін у системі. Наприклад, він може знадобитися, якщо ви заміните компоненти в комп\'ютері або оновите прошивку.';
+      'Ви повинні будете ввести цей ключ відновлення, якщо розшифрування не вдасться під час запуску. Без цього ключа ви втратите доступ до всіх своїх даних. Збережіть його в безпечному місці, наприклад, у менеджері паролів.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Я розумію, що можу втратити всі свої дані, якщо у мене немає ключа відновлення';
+      'Ключ відновлення збережено в надійному місці';
 
   @override
   String get recoveryKeyLinkLabel => 'Докладніше';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Зберегти у файл';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Показати QR-код';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Десктоп - Ключ відновлення';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Відскануйте QR-код, щоб скопіювати ключ відновлення, і збережіть його в безпечному місці, наприклад, у менеджері паролів. Ви також можете сфотографувати його для подальшого використання.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Скопійовано в буфер обміну';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Файл ключа відновлення не збережено';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Файл ключа відновлення не можна зберегти у тимчасовому розташуванні';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Невідома помилка';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'У вас немає дозволу на запис до цієї теки. Спробуйте інше розташування або використайте інший спосіб.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Спробуйте інше розташування, наприклад, змінний диск, або використайте інший метод.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'Зберегти файл ключа відновлення';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Текстовий файл';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1355,17 +1357,17 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Нижче ви можете переглянути файл автоматичного встановлення, імпортований з Landscape.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Успішно';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Помилка';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Закрити';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Розгорнути';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Згорнути';
 }

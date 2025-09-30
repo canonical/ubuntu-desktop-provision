@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsUk extends UbuntuInitLocalizations {
       'Ви можете керувати Pro-послугами у Програмах та оновленні.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Успішно';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Закрити';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Розгорнути';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Згорнути';
 }

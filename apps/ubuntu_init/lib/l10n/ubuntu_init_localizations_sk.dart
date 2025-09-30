@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
       'Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Úspech';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zavrieť';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizovať';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizovať';
 }

@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsId extends UbuntuInitLocalizations {
       'Anda dapat mengelola layanan Pro Anda dalam aplikasi Perangkat Lunak & Pembaruan.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sukses';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tutup';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimalkan';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalkan';
 }

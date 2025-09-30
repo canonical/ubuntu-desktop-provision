@@ -348,16 +348,16 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => '我已阅读并同意这些条款';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => '成功';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '关闭';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -702,4 +702,16 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get eulaAcceptTerms => '我已閱讀並接受這些條款';
+
+  @override
+  String get successIconSemanticLabel => '成功';
+
+  @override
+  String get closeIconSemanticLabel => '關閉';
+
+  @override
+  String get maximizeIconSemanticLabel => '最大化';
+
+  @override
+  String get minimizeIconSemanticLabel => '最小化';
 }

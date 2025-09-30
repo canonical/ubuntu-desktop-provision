@@ -9,10 +9,10 @@ class FactoryResetToolsLocalizationsTr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get appTitle => 'Sıfırlama araçları';
+  String get appTitle => 'Fabrika ayarlarına sıfırlama araçları';
 
   @override
-  String get windowTitle => 'Sıfırlama Araçları';
+  String get windowTitle => 'Fabrika ayarlarına sıfırlama araçları';
 
   @override
   String get homeTitle => 'Ne yapmak istersiniz?';
@@ -67,46 +67,46 @@ class FactoryResetToolsLocalizationsTr extends FactoryResetToolsLocalizations {
       'Depolama cihazlarını algılarken bir hata oluştu.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Başlatılıyor';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopyalanıyor';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Sonlandırılıyor';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Bitti';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Başarısız oldu';
 
   @override
-  String get error => 'Error';
+  String get error => 'Hata';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Yükleniyor...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Uyarı';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Eski haline getir';
 
   @override
   String get restart => 'Yeniden Başlat';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Yeniden biçimlendir';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Komut çalıştırılamadı';
 
   @override
   String get close => 'Kapat';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'TAMAM';
 
   @override
   String get closeIconSemanticLabel => 'Close';

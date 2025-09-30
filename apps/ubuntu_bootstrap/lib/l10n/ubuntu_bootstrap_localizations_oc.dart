@@ -1234,7 +1234,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Poiriatz pèrdre totas vòstras donadas sens una clau de recuperacion';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Clau de recuperacion';
 
   @override
   String get recoveryKeyStorageAdvice =>
@@ -1245,7 +1245,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Compreni que pòdi pèrdre totas mas donadas s\'ai pas de clau de recuperacion';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Ne saber mai';
 
   @override
   String get recoveryKeySaveToFileLabel => 'Save to file';
@@ -1274,7 +1274,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Recovery key file cannot be saved in a temporary location';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Error desconeguda';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
@@ -1288,7 +1288,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get recoveryKeyFilePickerTitle => 'Save recovery key file';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Fichièr tèxt';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

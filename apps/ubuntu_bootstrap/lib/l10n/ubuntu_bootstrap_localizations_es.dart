@@ -1218,20 +1218,20 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Clave de recuperación para el TPM';
+  String get recoveryKeyTitle => 'Clave de recuperación';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Importante';
 
   @override
-  String get recoveryKeyHeader => 'Obtenga una clave de recuperación';
+  String get recoveryKeyHeader => 'Guarda tu clave de recuperación';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Puede perder todos sus datos sin una clave de recuperación';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Clave de recuperación';
 
   @override
   String get recoveryKeyStorageAdvice =>

@@ -80,5 +80,7 @@
   "ubuntuProSucessAttachDescription": "Voit hallita Pro-palveluja Ohjelmistot ja päivitykset -sovelluksessa.",
   "@ubuntuProSucessAttachDescription": {},
   "telemetryCollectError": "Telemetriatietojen keräys epäonnistui",
-  "@telemetryCollectError": {}
+  "@telemetryCollectError": {},
+  "successIconSemanticLabel": "Menestys",
+  "@successIconSemanticLabel": {}
 }

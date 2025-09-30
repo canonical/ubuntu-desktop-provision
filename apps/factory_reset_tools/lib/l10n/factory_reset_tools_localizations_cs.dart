@@ -32,11 +32,11 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
 
   @override
   String get createUsbListExplanation =>
-      'Vyberte USB flash disk. Na disku musí být **alespoň 16 GB místa.**';
+      'Vyberte USB flash disk. Je třeba, aby na něm bylo **alespoň 16 GB místa.**';
 
   @override
   String get createUsbWarning =>
-      'Flash disk bude přeformátován a všechna data na disku budou ztracena.';
+      'Flash disk bude přeformátován a všechna data na něm budou ztracena.';
 
   @override
   String get resetMediaTitle => 'USB médium pro resetování';
@@ -46,21 +46,21 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
 
   @override
   String get noMediaDetectedSubtitle =>
-      'K vytvoření média pro obnovení do výchozího nastavení potřebujete úložiště USB.';
+      'K vytvoření média pro obnovení do výchozího nastavení potřebujete USB úložiště.';
 
   @override
   String get factoryResetTitle =>
       'Vyberte možnost pro zahájení obnovy do výchozího nastavení';
 
   @override
-  String get loadingDrives => 'Počkejte prosím, než načteme disky.';
+  String get loadingDrives => 'Vyčkejte, než budou načteny disky.';
 
   @override
   String get resetMediaReadyTitle => 'USB médium pro resetování je připraveno';
 
   @override
   String get resetMediaReadyBody =>
-      'Pokud jej chcete použít, vložte USB disk do počítače, který chcete obnovit, a restartujte jej.';
+      'Pokud ho chcete použít, vložte USB disk do počítače, který chcete vrátit na výchozí a ten zrestartujte.';
 
   @override
   String get errorLoadingDrives => 'Při načítání disků došlo k chybě.';
@@ -108,11 +108,11 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get ok => 'OK';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zavřít';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizovat';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizovat';
 }

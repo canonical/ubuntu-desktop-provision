@@ -9,10 +9,10 @@ class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsGa([String locale = 'ga']) : super(locale);
 
   @override
-  String get appTitle => 'Uirlisí monarchan athshocrú';
+  String get appTitle => 'Uirlisí athshocraithe monarchan';
 
   @override
-  String get windowTitle => 'Uirlisí monarchan athshocrú';
+  String get windowTitle => 'Uirlisí athshocraithe monarchan';
 
   @override
   String get homeTitle => 'Céard ba mhaith leat a dhéanamh?';
@@ -71,7 +71,7 @@ class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   String get resetMediaInitializing => 'Ag tosú';
 
   @override
-  String get resetMediaCopying => 'Cóipeáil';
+  String get resetMediaCopying => 'Ag cóipeáil';
 
   @override
   String get resetMediaFinalizing => 'Ag críochnú';
@@ -110,11 +110,11 @@ class FactoryResetToolsLocalizationsGa extends FactoryResetToolsLocalizations {
   String get ok => 'Ceart go leor';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Dún';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Uasmhéadaigh';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Íoslaghdaigh';
 }

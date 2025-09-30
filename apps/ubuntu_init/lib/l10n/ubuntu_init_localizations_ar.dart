@@ -154,14 +154,14 @@ class UbuntuInitLocalizationsAr extends UbuntuInitLocalizations {
       'You can manage your Pro services in the Software & Updates application.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'اكتمل';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'أغلِق';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'كبِّر';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'صغِّر';
 }

@@ -100,7 +100,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Tangentbordslayout';
 
   @override
-  String get keyboardHeader => 'Välj din tangentbordslayout:';
+  String get keyboardHeader => 'Välj din tangentbordslayout';
 
   @override
   String get keyboardTestHint => 'Skriv här för att testa ditt tangentbord';
@@ -298,8 +298,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Anslut till ett nätverk';
 
   @override
-  String get networkPageHeader =>
-      'Att ansluta den här datorn till internet hjälper Ubuntu att installera all extra programvara som behövs och hjälpa dig att välja din tidszon.\n\nAnslut med Ethernet-kabel eller välj ett Wi-Fi-nätverk';
+  String get networkPageHeader => 'Anslut till internet';
 
   @override
   String get networkPageBody =>
@@ -363,14 +362,14 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Jag har läst och accepterar dessa villkor';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Lyckats';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Stäng';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximera';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimera';
 }

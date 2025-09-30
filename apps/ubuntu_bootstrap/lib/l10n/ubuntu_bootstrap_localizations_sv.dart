@@ -311,15 +311,14 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Du behöver en lösenfras för att kryptera dina filer. Du kommer att bli ombedd att ange din lösenfras varje gång du slår på din dator.';
+      'Du måste ange ditt lösenord varje gång du startar datorn. Lösenordet skiljer sig från ditt användarlösenord.';
 
   @override
-  String get choosePassphraseInfoHeader =>
-      'Förvara din lösenfras på ett säkert ställe';
+  String get choosePassphraseInfoHeader => 'Se till att spara din lösenfras';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Om du tappar bort din lösenfras kommer du att förlora all din data.';
+      'Om du förlorar den, förlorar du all din data.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -330,91 +329,94 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Om du tappar bort din lösenfras kommer du att förlora all din data. Lösenfrasen ersätter inte återställningsnyckeln eller ditt användarlösenord.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Kryptering';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Ställ in en krypteringslösenfras';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Ställ in en krypterings-PIN';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Du måste ange din lösenfras varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer din lösenfras kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Du måste ange din PIN-kod varje gång du startar datorn. Denna PIN-kod skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer din PIN-kod kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Lösenfras';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Bekräfta lösenfras';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'En lösenfras krävs';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'Lösenordsfraserna matchar inte';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'PIN-kod';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Bekräfta PIN-kod';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'En PIN-kod krävs';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN-koderna matchar inte';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Kräv en lösenfras';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Mest säker. Du måste ange en längre lösenfras varje gång du startar datorn.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Kräv en PIN-kod';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Mer säker. Du måste ange en numerisk PIN-kod varje gång du slår på datorn.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Lås upp disk automatiskt';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Ytterligare säkerhet';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Som standard låser datorns Trusted Platform Module (TPM) upp disken under uppstart. Du har också alternativ för att ytterligare skydda din data.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Svag lösenfras, gör den längre eller mer komplex';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Rättvis lösenfras, gör den längre eller mer komplex för bättre säkerhet';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Stark lösenfras';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Svag PIN-kod, gör den längre eller mindre förutsägbar';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Rättvis PIN-kod, gör den längre eller mindre förutsägbar för bättre säkerhet';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal =>
+      'PIN-koden är tillräckligt lång';
 
   @override
   String get installationTypeTitle => 'Typ av installation';
@@ -1021,19 +1023,19 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Support i företagsklass 24/7 med Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Nästa bild';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Föregående bild';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Visa bildspel';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Pausa bildspel';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Växla installationsloggar';
 
   @override
   String get copyingFiles => 'Kopierar filer…';
@@ -1211,74 +1213,74 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM återställningsnyckel';
+  String get recoveryKeyTitle => 'Återställningsnyckel';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Viktigt';
 
   @override
-  String get recoveryKeyHeader => 'Skaffa en återställningsnyckel';
+  String get recoveryKeyHeader => 'Spara din återställningsnyckel';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Du kan förlora all din data utan en återställningsnyckel';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Återställningsnyckel';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Förvara återställningsnyckeln på ett säkert ställe. Använd den för att dekryptera disken vid vissa systemändringar. Du kan till exempel behöva det om du byter komponenter i din dator eller uppdaterar fast programvara.';
+      'Du måste ange denna återställningsnyckel om dekrypteringen misslyckas under uppstarten. Utan nyckeln förlorar du åtkomst till all din data. Spara den någonstans säkert, till exempel i en lösenordshanterare.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Jag förstår att jag kan förlora all min data om jag inte har en återställningsnyckel';
+      'Jag har sparat min återställningsnyckel någonstans säkert';
 
   @override
   String get recoveryKeyLinkLabel => 'Läs mer';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Spara till fil';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Visa QR-kod';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO skrivbord - Återställningsnyckel';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Skanna QR-koden för att kopiera återställningsnyckeln och spara den på ett säkert ställe, till exempel i en lösenordshanterare. Du kan också ta ett foto för senare användning.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Kopierad till urklipp';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Återställningsnyckelfil sparades inte';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Återställningsnyckelfil kan inte sparas på en temporär plats';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Okänt fel';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Du har inte behörighet att skriva till den mappen. Försök med en annan plats eller använd en annan metod.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Försök med en annan plats, till exempel en flyttbar enhet, eller använd en annan metod.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'Spara återställningsnyckelfil';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Text filer';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1349,17 +1351,17 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Du kan granska autoinstallationsfilen som importeras från Landscape nedan.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Lyckats';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Fel';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Stäng';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximera';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimera';
 }

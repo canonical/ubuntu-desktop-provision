@@ -15,7 +15,7 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
   String get windowTitle => '恢复出厂设置工具';
 
   @override
-  String get homeTitle => '君欲何为？';
+  String get homeTitle => '您想要做什么？';
 
   @override
   String get createResetMedia => '创建恢复介质';
@@ -102,13 +102,13 @@ class FactoryResetToolsLocalizationsZh extends FactoryResetToolsLocalizations {
   String get ok => '好';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '关闭';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -117,10 +117,10 @@ class FactoryResetToolsLocalizationsZhTw
   FactoryResetToolsLocalizationsZhTw() : super('zh_TW');
 
   @override
-  String get appTitle => '出廠設定還原工具';
+  String get appTitle => '出廠重置工具';
 
   @override
-  String get windowTitle => '出廠設定還原工具';
+  String get windowTitle => '出廠重置工具';
 
   @override
   String get homeTitle => '您想要進行什麼操作？';
@@ -209,4 +209,13 @@ class FactoryResetToolsLocalizationsZhTw
 
   @override
   String get ok => '確定';
+
+  @override
+  String get closeIconSemanticLabel => '關閉';
+
+  @override
+  String get maximizeIconSemanticLabel => '最大化';
+
+  @override
+  String get minimizeIconSemanticLabel => '最小化';
 }

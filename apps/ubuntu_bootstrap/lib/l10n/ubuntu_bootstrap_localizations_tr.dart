@@ -17,17 +17,17 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Otomatik kurulum';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Otomatik kurulum dosyasını içe aktar';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'Otomatik kurulum dosyasının URL\'sini girebilirsiniz:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Veya yerel bir dosya seçin:';
 
   @override
   String get autoinstallDirectFileButtonLabel => 'Dosya seç...';
@@ -46,70 +46,71 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'Otomatik kurulum dosyasına ulaşılamıyor';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'URL\'nin doğru olduğundan emin olun, internet bağlantınızı test edin veya daha sonra deneyin.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'Geçersiz URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'URL\'nin doğru olduğundan emin olun veya yerel bir dosya seçin.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'Geçersiz otomatik kurulum dosyası';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'Dosyayı kontrol edin veya farklı bir dosya sağlayın.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'Otomatik yükleme dosyası okunamıyor';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'İzinlerinizi kontrol edin veya farklı bir dosya sağlayın.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Bilinmeyen hata';
 
   @override
   String get autoinstallTitle => 'Yükleme türü';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return '$DISTRO\'yu nasıl kurmak istersiniz?';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'autoinstall.yaml URL\'sini veya yerel dosya yolunu girin:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Etkileşimli kurulum';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'Kurulumda adım adım rehberlik almak isteyen kullanıcılar için.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption =>
+      'Otomatik kurulum dosyasıyla otomatikleştirildi';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'Tutarlı ve tekrarlanabilir sistem kurulumları için autoinstall.yaml dosyasına sahip ileri düzey kullanıcılar için.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Landscape ile Otomatikleştirilmiş';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Landscape aracılığıyla otomatik kurulum dosyası sağlayan kuruluşlardaki kullanıcılar için.';
 
   @override
   String get changeButtonText => 'Değiştir';
@@ -137,7 +138,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '$DISTRO ile ne yapmak istiyorsunuz?';
   }
 
   @override
@@ -145,7 +146,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get tryOrInstallRepairDescription =>
-      'Tamir etme seçeneği, tüm yazılımlarınızı tekrardan kuracak ve belgeleriniz ile ayarlarınıza dokunmayacaktır.';
+      'Onarma, belgelere veya ayarlara dokunmadan tüm yüklü yazılımları yeniden yükleyecektir.';
 
   @override
   String tryOption(String RELEASE) {
@@ -173,21 +174,22 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST etkin';
+  String get rstTitle => 'RST tespit edildi';
 
   @override
-  String get rstHeader => 'Devam etmek için RST\'yi kapatın';
+  String get rstHeader =>
+      'Kuruluma devam etmek için RST\'yi devre dışı bırakmalısınız';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'Bilgisayarınız Intel RST (Hızlı Depolama Teknolojisi) kullanıyor. RST\'yi şu şekilde devre dışı bırakabilirsiniz:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      'Windows, Windows ile çift önyükleme kurulumu kullanıyorsanız';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOS ayarları';
 
   @override
   String rstInstructions(String url) {
@@ -226,13 +228,13 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
       'Güvenlik anahtarları uyuşmamaktadır';
 
   @override
-  String get showSecurityKey => 'Güvenlik anahtarını göster';
+  String get showSecurityKey => 'Göster';
 
   @override
   String get hideSecurityKey => 'Gizle';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Uygulamalar ve güncellemeler';
+  String get updatesOtherSoftwarePageTitle => 'Uygulamalar';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
@@ -243,11 +245,11 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'Önerilen özel yazılım kurulsun mu?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO varsayılan olarak herhangi bir özel yazılımla birlikte gelmez. Ek yazılım yüklemek bilgisayarınızın performansını artırabilir.';
   }
 
   @override
@@ -255,230 +257,232 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'NVIDIA grafik kartlarının en iyi performansı için ek sürücülerin yüklenmesi tavsiye edilir.';
+      'NVIDIA ekran kartlarının en iyi performansı için ek sürücülerin yüklenmesi şiddetle önerilir.';
 
   @override
-  String get fullInstallationTitle => 'Tam kurulum';
+  String get fullInstallationTitle => 'Genişletilmiş seçim';
 
   @override
   String get fullInstallationSubtitle =>
-      'Ofis araçları, yardımcı araçlar, web tarayıcısı ve oyunlardan oluşan çevrimdışı dostu bir seçim.';
+      'Ofis araçları, yardımcı programlar ve web tarayıcısının çevrimdışı kullanıma uygun bir seçkisi.';
 
   @override
-  String get minimalInstallationTitle => 'Öntanımlı kurulum';
+  String get minimalInstallationTitle => 'Varsayılan seçim';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Yalnızca gerekli olanlar, web tarayıcısı ve temel yardımcı araçlar.';
+      'Sadece temel gereksinimler, web tarayıcısı ve temel yardımcı programlar.';
 
   @override
   String get otherOptions => 'Diğer seçenekler';
 
   @override
   String get installThirdPartyTitle =>
-      'Grafikler ve Wi-Fi donanımı için üçüncü taraf yazılımların yanı sıra ek medya biçimlerini de kur';
+      'Grafik ve Wi-Fi donanımı için üçüncü taraf yazılımların yanı sıra ek medya formatlarını yükleyin';
 
   @override
   String get installThirdPartySubtitle =>
-      'Bu yazılım, belgeleriyle birlikte verilen lisans koşullarına tabidir. Bazıları tescillidir.';
+      'Bu yazılım, belgelerinde yer alan lisans koşullarına tabidir. Bazıları tescillidir.';
 
   @override
   String get installDriversTitle =>
-      'Grafik ve Wi-Fi donanımı için üçüncü taraf yazılımları kur';
+      'Grafik ve Wi-Fi donanımı için üçüncü taraf yazılımları yükleyin';
 
   @override
   String get installDriversSubtitle =>
-      'Bu sürücüler, belgeleriyle birlikte verilen lisans koşullarına tabidir. Sahipli ürünlerdir.';
+      'NVIDIA sürücüleri ve benzerleri dahil ancak bunlarla sınırlı olmamak üzere';
 
   @override
-  String get installCodecsTitle => 'Ek ortam biçimleri desteğini indir ve kur';
+  String get installCodecsTitle =>
+      'Ek medya biçimleri için desteği indirin ve yükleyin';
 
   @override
   String get installCodecsSubtitle =>
-      'Bu yazılım, belgeleriyle birlikte verilen lisans koşullarına tabidir. Bazıları sahiplidir.';
+      'MP3, MP4, MOV ve benzeri formatlar dahil ancak bunlarla sınırlı olmamak üzere';
 
   @override
-  String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Bilgisayar bir güç kaynağına bağlı değil.';
 
   @override
-  String get offlineWarning => 'Şu anda çevrimdışısın';
+  String get offlineWarning => 'Şu anda çevrimdışısınız';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Bir parola oluşturun';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'Bilgisayarınızı her açtığınızda parolanızı girmeniz gerekecektir. Bu parola, kullanıcı parolanızdan farklıdır.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader =>
+      'Parolanızı kaydettiğinizden emin olun';
 
   @override
   String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+      'Kaybederseniz tüm verilerinizi kaybedersiniz.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'Parolanızı ve kurtarma anahtarınızı güvenli bir yerde saklayın';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'Parolanızı kaybederseniz, tüm verilerinizi kaybedersiniz. Parola, kurtarma anahtarınızın veya kullanıcı parolanızın yerine geçmez.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Şifreleme';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Bir şifreleme parolası ayarlayın';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Şifreleme PIN\'i ayarlayın';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Bilgisayarınızı her açtığınızda parolanızı girmeniz gerekecektir. Bu parola, kullanıcı parolanızdan farklıdır. Parolanızı daha sonra değiştirebilirsiniz, ancak devre dışı bırakamazsınız. Parolanızı unutursanız, kurtarma anahtarını kullanarak diske yeniden erişebilirsiniz.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Bilgisayarınızı her açtığınızda PIN kodunuzu girmeniz gerekecektir. Bu PIN, kullanıcı parolanızdan farklıdır. Daha sonra değiştirebilirsiniz, ancak devre dışı bırakamazsınız. PIN kodunuzu unutursanız, kurtarma anahtarını kullanarak diske tekrar erişebilirsiniz.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Parola';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Parolayı onayla';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Bir parola gereklidir';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Parolalar eşleşmiyor';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'PIN\'i onayla';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Bir PIN gereklidir';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN\'ler eşleşmiyor';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Bir parola gereklidir';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'En güvenlisi. Bilgisayarınızı her açtığınızda daha uzun bir parola girmeniz gerekecek.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'PIN gereklidir';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Daha güvenli. Bilgisayarınızı her açtığınızda sayısal bir PIN girmeniz gerekecek.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'Diskin otomatik olarak kilidini aç';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Şifreleme PIN\'i veya parola ifadesi';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Varsayılan olarak, bilgisayarın Güvenilir Platform Modülü (TPM), başlatma sırasında diskin kilidini açacaktır. Ancak, verilerinizi daha fazla korumak için bir PIN veya parola da isteyebilirsiniz.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Zayıf parola cümlesi, daha uzun veya daha karmaşık hale getirin';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Güçlü bir parola kullanın, daha iyi güvenlik için daha uzun veya daha karmaşık hale getirin';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Güçlü parola';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Zayıf PIN, daha uzun veya daha az tahmin edilebilir hale getirin';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Güçlü PIN kullanın, daha iyi güvenlik için daha uzun veya daha az tahmin edilebilir hale getirin';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN yeterince uzun';
 
   @override
-  String get installationTypeTitle => 'Kurulum türü';
+  String get installationTypeTitle => 'Disk kurulumu';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return '$DISTRO\'yu nasıl kurmak istiyorsunuz?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'Bu bilgisayarda şu anda $os var. Ne yapmak istersiniz?';
+    return 'Bu bilgisayarda şu anda $os yüklü. Ne yapmak istersiniz?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'Bu bilgisayarda şu anda $os1 ve $os2 var. Ne yapmak istersiniz?';
+    return 'Bu bilgisayarda şu anda $os1 ve $os2 yüklü. Ne yapmak istersiniz?';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'Bu bilgisayar şu an birden fazla işletim sistemi var. Ne yapmak istersiniz?';
+      'Bu bilgisayarda şu anda birden fazla işletim sistemi yüklü. Ne yapmak istersiniz?';
 
   @override
   String get installationTypeNoOSDetected =>
-      'Bu bilgisayarda herhangi bir işletim sistemi tespit edilmedi. Ne yapmak istersiniz?';
+      'Bu bilgisayarda şu anda algılanan bir işletim sistemi yok. Ne yapmak istersiniz?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Diski sil ve $DISTRO kur';
+    return 'Diski silin ve $DISTRO yükleyin';
   }
 
   @override
   String get installationTypeEraseInfo =>
-      'All data and partitions on the disk will be erased, including operating systems.';
+      'Disk üzerindeki tüm veriler ve bölümler, işletim sistemleri de dahil olmak üzere silinecektir.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Gelişmiş özellikler...';
+  String get installationTypeAdvancedLabel => 'Gelişmiş seçenekleri göster...';
 
   @override
-  String get installationTypeAdvancedTitle => 'İleri seviye özellikler';
+  String get installationTypeAdvancedTitle => 'Şifreleme ve dosya sistemi';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Deneysel';
 
   @override
-  String get installationTypeNone => 'Hiçbiri';
+  String get installationTypeNone => 'Şifreleme yok';
 
   @override
-  String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+  String get installationTypeNoneInfo => 'Şifrelemesiz standart dosya sistemi.';
 
   @override
   String get installationTypeNoneSelected => 'Hiçbiri seçilmedi';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM => 'LVM\'yi şifreleme olmadan kullanın';
 
   @override
   String get installationTypeLVMSelected => 'LVM seçildi';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption => 'Bir parola ile şifreleyin';
 
   @override
   String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+      'Bilgisayarınızı her açtığınızda bir parola girmeniz gerekecektir. Bu, LVM ile LUKS şifrelemesini kullanır.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -486,33 +490,32 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeEncryptInfo =>
-      'Bir sonraki adımda güvenlik anahtarı seçeceksiniz.';
+      'Bir sonraki adımda güvenlik anahtarını seçeceksiniz.';
 
   @override
-  String get installationTypeZFS => 'DENEYSEL: Diski sil ve ZFS kullan';
+  String get installationTypeZFS => 'Şifreleme olmadan ZFS kullanın';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Encrypt with a passphrase using ZFS';
+      'ZFS kullanarak bir parola ile şifreleme';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'ZFS ile yerel şifreleme. Bilgisayarınızı her açtığınızda bir parola girmeniz gerekecektir.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS seçildi';
 
   @override
   String get installationTypeZFSEncryptionSelected =>
-      'ZFS and encryption selected';
+      'ZFS ve şifreleme seçildi';
 
   @override
-  String get installationTypeTPM =>
-      'DENEYSEL: Donanım destekli tam disk şifrelemeyi etkinleştir';
+  String get installationTypeTPM => 'Donanım destekli şifrelemeyi kullanın';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
+    return 'Bu seçeneği seçmeden önce <a href=\"$url\">TPM şifrelemesi hakkında bilgi edinin</a>. Bu, donanımınız veya gelecekteki $DISTRO sürümleriyle çalışmayabilir.';
   }
 
   @override
@@ -525,22 +528,22 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Uyarı:</font> Bu, tüm $os programlarını, belgeleri, fotoğrafları, müzikleri ve diğer dosyaları siler.';
+    return '<font color=\"$color\">Uyarı:</font> Bu, tüm $os programlarınızı, belgelerinizi, fotoğraflarınızı, müziklerinizi ve diğer dosyalarınızı silecektir.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return '$product işletims sistemini $os yanına kur';
+    return '$product ürününü $os yanına yükleyin';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return '$product işletim sistemini $os1 ve $os2 yanına kur';
+    return '$product ürününü $os1 ve $os2 yanına kur';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return '$product işletim sistemini onların yanına kur';
+    return '$product mevcut işletim sistemleriyle birlikte yükleyin';
   }
 
   @override
@@ -550,60 +553,59 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Belgeler, müzik ve diğer kişisel dosyalar korunacak. Bilgisayar her başlatıldığında hangi işletim sistemini istediğinizi seçebilirsiniz.';
+    return 'Yeniden boyutlandırılacak ve $product için alan oluşturulacak bölümü seçin. Önyükleme sırasında işletim sisteminizi seçebilirsiniz.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '$os\'u silin ve $product\'ı yükleyin';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Mevcut $os kurulumundaki tüm dosyalar ve veriler kalıcı olarak silinecektir.';
   }
 
   @override
-  String get installationTypeManual => 'Elle bölümlendirme';
+  String get installationTypeManual => 'Manuel kurulum';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Bölümleri kendiniz oluşturabilir veya yeniden boyutlandırabilir ya da $DISTRO için birden çok bölüm seçebilirsiniz';
+    return 'Özelleştirilmiş disk kurulumları arayan ileri düzey kullanıcılar için.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Diski sil ve $DISTRO kur';
+    return 'Diski silin ve $DISTRO yükleyin';
   }
 
   @override
-  String get selectGuidedStorageInfo =>
-      'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Seçtiğiniz diskte sıfırdan başlayın.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Sürücüyü seçin:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Bölüm seçin:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'Bütün disk kullanılacaktır:';
+  String get selectGuidedStorageInfoLabel => 'Tüm disk kullanılacaktır:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Şimdi kur';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '$DISTRO\'nun nereye yükleneceğini seçin';
   }
 
   @override
   String get installAlongsideSpaceDivider =>
-      'Aşağıdaki ayırıcıyı sürükleyerek sürücü alanı ayır:';
+      'Aşağıdaki ayırıcıyı sürükleyerek sürücü alanını ayırın:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num küçük bölüm gizli, daha fazla denetim için <a href=\"$url\">gelişmiş bölümleme aracını</a> kullanın';
+    return '$num daha küçük bölüm gizlidir, daha fazla kontrol için <a href=\"$url\">gelişmiş bölümlendirme aracını</a> kullanın';
   }
 
   @override
@@ -625,7 +627,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installAlongsideAvailable => 'Kullanılabilir:';
 
   @override
-  String get allocateDiskSpace => 'Elle biçimlendirme';
+  String get allocateDiskSpace => 'Manuel bölümlendirme';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash =>
@@ -638,7 +640,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format, $mountpoint için desteklenen bir dosya sistemi değildir';
   }
 
   @override
@@ -673,7 +675,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Cihazın tamamında yeni bir bölüm tablosu oluşturmak var olan bölümleri siler. Bu işlem gerekirse geri alınabilir.';
+      'Bir cihazın tamamında yeni bir bölüm tablosu oluşturmak, cihazın tüm mevcut bölümlerini kaldırır. Gerekirse bu işlem geri alınabilir.';
 
   @override
   String get tooManyPrimaryPartitions => 'Çok fazla birincil bölüm';
@@ -715,7 +717,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get partitionFormatLabel => 'Kullanılan:';
 
   @override
-  String get partitionFormatNone => 'Biçimlendirilmemiş bırak';
+  String get partitionFormatNone => 'Biçimlendirilmemiş olarak bırak';
 
   @override
   String partitionFormatKeep(String format) {
@@ -732,8 +734,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Kuruluma hazır';
 
   @override
-  String get confirmHeader =>
-      'Devam ederseniz, aşağıda listelenen değişiklikler disklere yazılacak. Daha fazla değişikliği elle yapabileceksiniz.';
+  String get confirmHeader => 'Seçimlerinizi gözden geçirin';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -754,7 +755,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Uygulamalar';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'Kurulum türü';
 
   @override
   String get confirmEntryDiskEncryption => 'Disk şifreleme';
@@ -763,7 +764,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmEntryInstallationDisk => 'Kurulum diski';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Tescilli yazılım';
 
   @override
   String get confirmSectionGeneralTitle => 'Genel';
@@ -772,7 +773,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmSectionSecurityAndMoreTitle => 'Güvenlik ve daha fazlası';
 
   @override
-  String get confirmPartitionsTitle => 'Disk bölümleri';
+  String get confirmPartitionsTitle => 'Bölümler';
 
   @override
   String get confirmPartitionTables =>
@@ -784,11 +785,10 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Kod çözücüler';
+  String get confirmProprietarySoftwareCodecs => 'Kodekler';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers =>
-      'Kod çözücüler & sürücüler';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Kodekler ve sürücüler';
 
   @override
   String get confirmProprietarySoftwareDrivers => 'Sürücüler';
@@ -797,34 +797,34 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'Kur';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Silinmiş';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Değişmemiş';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return '$oldsize boyutundan $newsize boyutuna yeniden boyutlandırıldı';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return '$mountpoint için kullanılan $format olarak oluşturuldu ve biçimlendirildi';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '$mountpoint için kullanılan $format olarak biçimlendirildi';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return '$mountpoint için kullanılır';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return '$format olarak biçimlendirildi';
   }
 
   @override
@@ -837,21 +837,21 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** diske kopyalandı';
   }
 
   @override
   String restartInto(String system) {
-    return '$system ile yeniden başlat';
+    return '$system\'i yeniden başlat';
   }
 
   @override
   String get restartWarningBody =>
-      'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+      'Kurulumu tamamlamak veya teste devam etmek için yeniden başlatın.\nYaptığınız değişiklikler kaydedilmeyecektir.';
 
   @override
   String get rebootToConfigureWarning =>
-      'You have to restart the computer to continue the installation process.';
+      'Kurulum işlemine devam edebilmek için bilgisayarınızı yeniden başlatmanız gerekmektedir.';
 
   @override
   String get shutdown => 'Kapat';
@@ -863,34 +863,34 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Test etmeye devam et';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker algılandı';
 
   @override
   String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+      'Bir veya daha fazla bölüm BitLocker ile şifrelenmiştir.';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'Windows\'un yanına kurulum yapmak için Windows\'ta BitLocker\'ı devre dışı bırakın.';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'Windows, kurulumdan sonra önyükleme sırasında kurtarma anahtarları isteyebilir.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Talimatlar için <a href=\"$url\">BitLocker kılavuzunu</a> ziyaret edin.';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'BitLocker kurtarma anahtarları olmadan tüm verilerinizi kaybedebilirsiniz';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Bilgisayarı yeniden başlat';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Bilgisayar yeniden başlatılsın mı?';
 
   @override
   String get restartIntoWindows => 'Windows\'a yeniden başlat';
@@ -900,7 +900,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Bilgisayarınızı yeniden başlatmak istediğinizden emin misiniz? $DISTRO kurulumunu tamamlamak için $DISTRO kurulumunu daha sonra yeniden başlatmanız gerekecektir.';
+    return 'Bilgisayarınızı yeniden başlatmak istediğinizden emin misiniz? $DISTRO kurulumunu tamamlamak için daha sonra $DISTRO kurulumunu yeniden başlatmanız gerekecektir.';
   }
 
   @override
@@ -925,7 +925,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Geliştirici, içerik üreticisi, sanatçı, oyuncu ya da sistem yöneticisi olun fark etmez, $RELEASE sürümünde verimliliğinizi arttıracak ve deneyiminizi iyileştirecek yeni araçlar bulacaksınız.';
+    return 'İster geliştirici, ister içerik oluşturucu, ister oyuncu veya yönetici olun, $RELEASE sürümünde üretkenliğinizi artıracak ve deneyiminizi zenginleştirecek yeni araçlar bulacaksınız.';
   }
 
   @override
@@ -939,7 +939,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Açık kaynağın en iyisi ile geliştir';
+      'Açık kaynağın en iyileriyle geliştir';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
@@ -947,12 +947,11 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle =>
-      'Yaratıcılığınızı zenginleştirin';
+  String get installationSlidesCreativityTitle => 'Yaratıcılığınızı geliştirin';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Bir animatör, tasarımcı, video üreticisi ya da oyun geliştiricisiyseniz, açık kaynak ve endüstri standardı yazılım ve uygulama desteği ile iş akışlarınızı $DISTRO dağıtımına taşımak çok kolay.';
+    return 'Eğer bir animatör, tasarımcı, video yapımcısı veya oyun geliştiricisiyseniz, açık kaynaklı ve endüstri standardı yazılım ve uygulamalara destek sağlayan iş akışlarınızı $DISTRO\'ya taşımanız kolaydır.';
   }
 
   @override
@@ -960,7 +959,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO performansı ve uyumluluğu artırmak için en yeni NVIDIA ve Mesa sürücülerini destekler. Binlerce Windows oyunu, Steam gibi uygulamalar aracılığıyla $DISTRO üstünde, ek yapılandırma gerektirmeden harika bir şekilde oynatılır.';
+    return '$DISTRO, performans ve uyumluluğu artırmak için en yeni NVIDIA ve Mesa sürücülerini destekler. Binlerce Windows oyunu, Steam gibi uygulamalar aracılığıyla ek bir yapılandırmaya gerek kalmadan $DISTRO üzerinde harika bir şekilde oynanabilir.';
   }
 
   @override
@@ -968,20 +967,20 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO çevrimiçi ortamda gizli ve güvende kalmak için ihtiyacınız olan tüm araçları sağlar. Yerleşik güvenlik duvarı ve VPN desteğinin yanı sıra verilerinizin tam kontrolünü sağlamak için bir dizi gizlilik merkezli uygulama da sağlar.';
+    return '$DISTRO, çevrimiçi ortamda gizliliğinizi ve güvenliğinizi korumanız için ihtiyacınız olan tüm araçları sunar. Dahili güvenlik duvarı ve VPN desteğinin yanı sıra, verilerinizin tam kontrolünü elinizde tutmanızı sağlayan çok sayıda gizlilik odaklı uygulama sunar.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'Tüm $DISTRO LTS sürümleri, Ubuntu Pro aboneliği ile on yıla kadar uzanan beş yıllık güvenlik yaması ile birlikte gelir.';
+    return 'Tüm $DISTRO LTS sürümleri beş yıllık güvenlik yamasıyla birlikte gelir ve Ubuntu Pro aboneliğiyle bu süre on yıla kadar uzayabilir.';
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Verimliliğinizi artırın';
+  String get installationSlidesProductivityTitle => 'Üretkenliğinizi artırın';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Masaüstü, belgeler, elektronik tablolar ve sunumlar için Microsoft Office uyumlu açık kaynak uygulamaları paketi olan LibreOffice\'i içerir. Popüler işbirliği araçları da mevcuttur.';
+    return '$DISTRO Masaüstü, belgeler, elektronik tablolar ve sunumlar için Microsoft Office uyumlu açık kaynaklı uygulamalardan oluşan bir paket olan LibreOffice\'i içerir. Popüler iş birliği araçları da mevcuttur.';
   }
 
   @override
@@ -989,7 +988,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return '$DISTRO felsefesinin temelinde bilgisayarın herkes için olduğu inancı yatmaktadır. Gelişmiş erişilebilirlik araçları ve dili, renkleri ve metin boyutunu değiştirme seçenekleriyle $DISTRO, kim ve nerede olursanız olun bilgisayar kullanmayı kolaylaştırır.';
+    return '$DISTRO felsefesinin merkezinde, bilişimin herkes için olduğuna dair inanç yatar. Gelişmiş erişilebilirlik araçları ve dil, renk ve metin boyutunu değiştirme seçenekleriyle $DISTRO, kim olursanız olun ve nerede olursanız olun bilişimi kolaylaştırır.';
   }
 
   @override
@@ -999,20 +998,20 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityLanguages => 'Dil desteği';
 
   @override
-  String get installationSlidesSupportTitle => 'Yardım ve Destek';
+  String get installationSlidesSupportTitle => 'Yardım ve destek';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Resmi $DISTRO belgelerine hem çevrimiçi olarak hem de rıhtımdaki Yardım simgesi aracılığıyla ulaşabilirsiniz.';
+    return 'Resmi $DISTRO dokümantasyonu hem çevrimiçi olarak hem de dock\'taki Yardım simgesi aracılığıyla kullanılabilir.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ubuntu\'ya Sor çeşitli soru ve yanıtlarını kapsar. Ubuntu Discourse yeni ve deneyimli kullanıcılar için kılavuzlar ve tartışmalar sunar.';
+      'Ask Ubuntu, çeşitli soru ve yanıtları kapsar ve Ubuntu Discourse, yeni ve deneyimli kullanıcılar için kılavuzlar ve tartışmalar sağlar.';
 
   @override
   String get installationSlidesSupportEnterprise =>
-      'Kurumsal kullanıcılar için Canonical, Ubuntu\'nun işyerinde güvenli bir şekilde kurulmasını ve yönetilmesini kolaylaştırmak için ticari destek sağlar.';
+      'Kurumsal kullanıcılar için Canonical, işyerinde Ubuntu\'yu güvenli bir şekilde kullanmayı ve yönetmeyi kolaylaştırmak amacıyla ticari destek sağlıyor.';
 
   @override
   String get installationSlidesSupportResources => 'Yararlı kaynaklar:';
@@ -1022,7 +1021,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationSlidesSupportUbuntuPro =>
-      'Ubuntu Pro ile kurumsal sınıf 7/24 destek';
+      'Ubuntu Pro ile kurumsal düzeyde 7/24 destek';
 
   @override
   String get nextSlideSemanticLabel => 'Next slide';
@@ -1061,7 +1060,7 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Seçilen diskte $DISTRO\'yu yüklemek için yeterli disk alanı yok. Alanı açmak için yükleyiciden çıkın veya başka bir disk seçin.';
   }
 
   @override
@@ -1071,34 +1070,34 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Gerekli:';
 
   @override
-  String get refreshPageTitle => 'Güncelleme var';
+  String get refreshPageTitle => 'Güncelleme mevcut';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'Yükleyici için bir güncelleme mevcut';
 
   @override
   String get refreshUpdateNow => 'Şimdi güncelle';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'Gelişmiş güvenilirlik ve daha fazla özellik için en son sürüme güncelleyin.';
 
   @override
   String get refreshReady => 'Güncelleme hazır';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'Geçerli $snap sürümü: $version.';
+    return 'Şu anki $snap sürümü $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Şu sürüme güncelle: $version';
+    return '$version sürümüne güncelle';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'Geçerli sürüm $version güncel.';
+    return 'Mevcut sürüm $version günceldir.';
   }
 
   @override
@@ -1107,7 +1106,8 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Kurucuyu yeniden başlatın.';
+  String get refreshRestart =>
+      'Lütfen yükleyiciyi kapatın ve devam etmek için yeniden başlatın';
 
   @override
   String get refreshCloseLabel => 'Yükleyiciyi kapat';
@@ -1213,140 +1213,143 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM kurtarma anahtarı';
+  String get recoveryKeyTitle => 'Kurtarma anahtarı';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Önemli';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'Kurtarma anahtarınızı kaydedin';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+      'Kurtarma anahtarınız olmadan tüm verilerinizi kaybedebilirsiniz';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Kurtarma anahtarı';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      'Başlatma sırasında şifre çözme işlemi başarısız olursa, bu kurtarma anahtarını sağlamanız gerekecektir. Anahtar olmadan tüm verilerinize erişiminizi kaybedersiniz. Anahtarınızı parola yöneticisi gibi güvenli bir yerde saklayın.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+      'Kurtarma anahtarımı güvenli bir yere kaydettim';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Daha fazla bilgi edin';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Dosyaya kaydet';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'QR kodunu göster';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Masaüstü - Kurtarma anahtarı';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Kurtarma anahtarını kopyalamak ve şifre yöneticisi gibi güvenli bir yere kaydetmek için QR kodunu tarayın. Ayrıca daha sonra kullanmak üzere fotoğrafını da çekebilirsiniz.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Panoya kopyalandı';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Kurtarma anahtarı dosyası kaydedilmedi';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Kurtarma anahtarı dosyası geçici bir konuma kaydedilemez';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Bilinmeyen hata';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Bu klasöre yazma izniniz yok. Farklı bir konum deneyin veya başka bir yöntem kullanın.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Çıkarılabilir bir sürücü gibi farklı bir konum deneyin veya başka bir yöntem kullanın.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Kurtarma anahtarı dosyasını kaydedin';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Metin dosyaları';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'QR kodunu tarayın veya aşağıdaki kodu <a href=\"https://$url\">$url</a> adresine girin';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Otomatik kurulum';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Landscape\'e giriş yapın';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Landscape etki alanını girin (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape etki alanı (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'Giriş yapmak ve otomatik yükleme dosyasını almak için kuruluşunuzun Landscape etki alanını belirtin. Tam alan adını (FQDN) BT destek ekibinizden alabilirsiniz.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape etki alanı (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Sonraki';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      'Geçersiz alan adı, lütfen kontrol edin veya BT desteğinizle iletişime geçin';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+      'Devam etmek için internete bağlanın';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'Otomatik kurulum dosyasını Landscape\'ten almak için internete ihtiyaç var';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning =>
+      'Kodun süresi doldu, lütfen tekrar deneyin';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning =>
+      'Giriş başarısız oldu, lütfen tekrar deneyin';
 
   @override
   String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+      'Hesabınız için otomatik kurulum mevcut değil';
 
   @override
   String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+      'BT desteğinizle iletişime geçin veya farklı bir kurulum seçeneği deneyin.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Hata kodu: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'Ubuntu, kuruluşunuz tarafından sağlanan yapılandırmayla kurulacaktır';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'Aşağıda Landscape\'ten içe aktarılan otomatik kurulum dosyasını inceleyebilirsiniz.';
 
   @override
   String get successIconSemanticLabel => 'Success';

@@ -149,16 +149,16 @@ class UbuntuInitLocalizationsZh extends UbuntuInitLocalizations {
       '您可以在“软件与更新”应用中管理 Ubuntu Pro 服务。';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => '成功';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '关闭';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -304,4 +304,16 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   @override
   String get ubuntuProSucessAttachDescription =>
       '您可以在「軟體與更新」中管理您的 Ubuntu Pro 支援服務。';
+
+  @override
+  String get successIconSemanticLabel => '成功';
+
+  @override
+  String get closeIconSemanticLabel => '關閉';
+
+  @override
+  String get maximizeIconSemanticLabel => '最大化';
+
+  @override
+  String get minimizeIconSemanticLabel => '最小化';
 }

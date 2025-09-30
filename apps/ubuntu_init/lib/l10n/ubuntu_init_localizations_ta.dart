@@ -156,7 +156,7 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
       'மென்பொருள் மற்றும் புதுப்பிப்புகள் பயன்பாட்டில் உங்கள் புரோ சேவைகளை நிர்வகிக்கலாம்.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'வெற்றி';
 
   @override
   String get closeIconSemanticLabel => 'Close';

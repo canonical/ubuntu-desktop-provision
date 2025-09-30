@@ -392,7 +392,7 @@
   "@refreshUpdating": {},
   "refreshRestart": "Cierre el instalador y vuelva a iniciarlo para continuar",
   "@refreshRestart": {},
-  "recoveryKeyTitle": "Clave de recuperación para el TPM",
+  "recoveryKeyTitle": "Clave de recuperación",
   "@recoveryKeyTitle": {},
   "recoveryKeyWarning": "<font color=\"{color}\">Advertencia:</font> Si pierdes esta clave de seguridad, se perderán todos los datos. Si lo necesitas, anota tu clave y guárdala en un lugar seguro.",
   "@recoveryKeyWarning": {},
@@ -660,7 +660,7 @@
   "@confirmTableUnchanged": {},
   "confirmTableMounted": "Utilizado para {mountpoint}",
   "@confirmTableMounted": {},
-  "recoveryKeyHeader": "Obtenga una clave de recuperación",
+  "recoveryKeyHeader": "Guarda tu clave de recuperación",
   "@recoveryKeyHeader": {},
   "landscapeDomainHintText": "Dominio Landscape (FQDN)",
   "@landscapeDomainHintText": {},
@@ -687,5 +687,9 @@
   "landscapeDomainInstructions": "Proporcione su dominio de Landscape de la organización para acceder y obtener un archivo de auto-instalación. Puede obtener es FQDN desde su proveedor IT.",
   "@landscapeDomainInstructions": {},
   "recoveryKeyLinkLabel": "Saber más",
-  "@recoveryKeyLinkLabel": {}
+  "@recoveryKeyLinkLabel": {},
+  "recoveryKeyTitleBadgeLabel": "Importante",
+  "@recoveryKeyTitleBadgeLabel": {},
+  "recoveryKeyTextFieldLabel": "Clave de recuperación",
+  "@recoveryKeyTextFieldLabel": {}
 }

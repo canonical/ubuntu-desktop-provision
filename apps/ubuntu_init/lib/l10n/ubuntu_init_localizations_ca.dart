@@ -76,7 +76,8 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
   String get telemetryLegalLabel => 'Informació legal';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError =>
+      'Ha fallat la col·lecció de dades de telemetria';
 
   @override
   String get privacyPageTitle => 'Serveis d’ubicació';

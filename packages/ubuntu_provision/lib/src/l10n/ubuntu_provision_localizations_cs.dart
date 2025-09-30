@@ -233,7 +233,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO je pro snadnější správu navrženo, aby se hladce propojovalo se službou Active Directory.';
+    return '$DISTRO je pro snadnější správu navrženo tak, aby se hladce propojovalo se službou Active Directory.';
   }
 
   @override
@@ -292,17 +292,17 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryErrorMessage =>
-      'Bohužel se teď nedaří Active Directory nastavit. Po spuštění nového systému navštivte <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získáte další informace.';
+      'Žel se teď nedaří nastavit pro Active Directory. Po spuštění nového systému navštivte <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>, kde získáte další informace.';
 
   @override
-  String get networkPageTitle => 'Připojení k síti';
+  String get networkPageTitle => 'Připojení k Internetu';
 
   @override
-  String get networkPageHeader => 'Připojit k internetu';
+  String get networkPageHeader => 'Připojit k Internetu';
 
   @override
   String get networkPageBody =>
-      'Připojení k internetu vylepší instalaci kontrolou kompatibility a dodatečnými softwarovými balíčky.';
+      'Připojení k Internetu vylepší instalaci kontrolou kompatibility a dodatečnými softwarovými balíčky.';
 
   @override
   String get networkWiredOption => 'Použít drátové připojení';
@@ -356,21 +356,21 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'Chcete-li pokračovat v nastavování tohoto počítače, musíte si přečíst a přijmout podmínky licenční smlouvy.';
+      'Pokud chcete pokračovat v nastavování tohoto počítače, je třeba si přečíst a přijmout podmínky licenční smlouvy.';
 
   @override
   String get eulaAcceptTerms =>
       'Přečetl(a) jsem si tyto podmínky a souhlasím s nimi';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Úspěch';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zavřít';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizovat';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizovat';
 }

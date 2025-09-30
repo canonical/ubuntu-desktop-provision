@@ -361,14 +361,14 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Mi legis kaj akceptas la jenajn kondiĉojn';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sukceso';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fermi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimumigi';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimumigi';
 }

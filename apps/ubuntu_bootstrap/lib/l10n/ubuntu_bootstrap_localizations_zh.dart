@@ -99,7 +99,8 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallLandscapeOption => '由 Landscape 自动化';
 
   @override
-  String get autoinstallLandscapeDescription => '给通过 Landscape 提供自动安装文件的组织内用户。';
+  String get autoinstallLandscapeDescription =>
+      '适用于通过 Landscape 提供自动安装文件的组织用户。';
 
   @override
   String get changeButtonText => '更改';
@@ -282,10 +283,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => '创建密码';
 
   @override
-  String get choosePassphraseBody => '您需要密码来加密文件。在每次启动计算机时都会提示您输入此密码。';
+  String get choosePassphraseBody => '每次启动计算机时您都将需要输入密码。此密码与您的用户密码不同。';
 
   @override
-  String get choosePassphraseInfoHeader => '将您的密码保存在安全的地方';
+  String get choosePassphraseInfoHeader => '请务必保存好您的密码';
 
   @override
   String get choosePassphraseInfoBody => '如果您丢失了密码，所有数据都将丢失。';
@@ -298,94 +299,91 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       '如果您丢失了密码，您将失去所有的数据。密码不能代替恢复密钥或者用户密码。';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => '加密';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => '设置一个加密密码';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => '设置一个加密PIN';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      '您将会在任何时候键入一个密码以打开您的电脑。密码会与您的用户密码不一样。您将可以在以后更改它，但是不能禁用它。如果您忘记了你们的密码，您可以用恢复密钥重新获得访问磁盘的权限。';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      '您将会在任何时候键入一个PIN以打开您的电脑。PIN会与您的用户密码不一样。您将可以在以后更改它，但是不能禁用它。如果您忘记了你们的密码，您可以用恢复密钥重新获得访问磁盘的权限。';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => '密码';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => '确认密码';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => '需要一个密码';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => '密码不匹配';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => '确认PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => '需要一个PIN';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN不匹配';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => '需要一个密码';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      '最安全。您将会在任何时候需要输入一个更长的密码以打开您的电脑。';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => '需要一个PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+  String get passphraseTypePinTileSubTitle => '最安全。您将会在任何时候需要输入一个数字PIN以打开您的电脑。';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => '自动解锁磁盘';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => '加密PIN或者密码';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      '默认情况下，计算机的可信平台模块（TPM）会在开机时解锁磁盘。您也有其他选项来进一步保护您的数据。';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+  String get passphrasePagePassphraseEntropyBelowMin => '弱密码，请使其更长或者更复杂';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      '公平的密码，请使它更长或者更复杂以为了更好的安全';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => '强密码';
 
   @override
-  String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin => '弱密码，请使它更长或者更难以猜测';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      '公平的PIN，请使它变得更长或者更难以猜测以更好的安全';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN已经足够长';
 
   @override
-  String get installationTypeTitle => '安装类型';
+  String get installationTypeTitle => '磁盘设置';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -711,7 +709,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => '应用程序';
 
   @override
-  String get confirmEntryDiskSetup => '磁盘配置';
+  String get confirmEntryDiskSetup => '安装类型';
 
   @override
   String get confirmEntryDiskEncryption => '磁盘加密';
@@ -752,34 +750,34 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => '安装';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => '擦除';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => '未保存';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return '从 $oldsize 调整为 $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return '已创建并格式化为 $format 用于 $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '格式化为 $format 用于 $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return '用于 $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return '格式化为 $format';
   }
 
   @override
@@ -970,16 +968,16 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       '使用 Ubuntu Pro 可享受企业级 7*24 支持服务';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => '下一页';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => '上一页';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => '播放幻灯片';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => '暂停幻灯片放映';
 
   @override
   String get toggleLogsSemanticLabel => 'Toggle install logs';
@@ -1157,72 +1155,70 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM 恢复密钥';
+  String get recoveryKeyTitle => '恢复密钥';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => '重要';
 
   @override
-  String get recoveryKeyHeader => '获取恢复密钥';
+  String get recoveryKeyHeader => '保存恢复密钥';
 
   @override
   String get recoveryKeyInfoHeader => '没有恢复密钥，您可能丢失所有数据';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => '恢复密钥';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      '将恢复密钥存储在安全的地方。当系统发生某些更改时用其解密磁盘。例如，您可能在更改计算机组件或者进行固件更新时需要它。';
+      '若启动时解密失败，您将需要提供此恢复密钥。没有密钥，您就无法访问您的任何数据。将其保存在安全的地方，例如密码管理器中。';
 
   @override
-  String get recoveryKeyConfirmation => '我明白我可能会在没有恢复密钥的情况下丢失所有数据';
+  String get recoveryKeyConfirmation => '我把恢复密钥保存在了安全的地方';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => '了解更多';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => '保存至文件';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => '显示二维码';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Desktop - 恢复密钥';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      '扫描二维码复制恢复密钥并将其保存至安全的地方，例如密码管理器中。您也可以拍下照片以备以后使用。';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => '已复制至剪贴板';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle => '恢复密钥文件未保存';
 
   @override
-  String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+  String get recoveryKeyExceptionDisallowedPathTitle => '恢复密钥文件不能保存到临时位置';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => '未知错误';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      '您没有写入该文件夹的权限，请尝试其他位置或使用其他方法。';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      '尝试一个不同的地址，例如可移动磁盘，或者用其他的方式。';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => '保存恢复密钥文件';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => '文本文件';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1239,7 +1235,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get landscapeDomainHeader => '输入 Landscape 域 (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape 域 (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
@@ -1268,40 +1264,37 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get landscapeLoginFailedWarning => '登录失败，请重试';
 
   @override
-  String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => '自动安装不适用于您的账户';
 
   @override
-  String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => '联系您的技术支持或尝试其他安装选项。';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return '错误码：$code';
   }
 
   @override
-  String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+  String get landscapeConfirmPageSuccessInfoTitle => 'Ubuntu 将按您组织提供的配置进行安装';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      '您可以在下面查看从 Landscape 导入的自动安装文件。';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => '成功';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => '错误';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '关闭';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -1582,13 +1575,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get choosePassphraseHeader => '建立密碼';
 
   @override
-  String get choosePassphraseBody => '您需要一個密碼來加密您的檔案。每次開啟電腦時，系統都會提示您輸入密碼。';
+  String get choosePassphraseBody => '每次開啟電腦時，您都需要輸入密碼。此密碼與您的使用者密碼不同。';
 
   @override
-  String get choosePassphraseInfoHeader => '將您的密碼存放在安全的地方';
+  String get choosePassphraseInfoHeader => '請務必儲存密碼';
 
   @override
-  String get choosePassphraseInfoBody => '如果弄丟密碼，您將會失去所有資料。';
+  String get choosePassphraseInfoBody => '如果弄丟它，您將失去所有資料。';
 
   @override
   String get chooseOptionalPassphraseInfoHeader => '將您的密碼和復原金鑰存放在安全的地方';
@@ -1596,6 +1589,89 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String get chooseOptionalPassphraseInfoBody =>
       '如果弄丟密碼，您將會失去所有資料。密碼不能取代復原金鑰或您的使用者密碼。';
+
+  @override
+  String get passphrasePageTitle => '加密';
+
+  @override
+  String get passphrasePageHeaderPassphrase => '設定加密密碼';
+
+  @override
+  String get passphrasePageHeaderPin => '設定加密 PIN 碼';
+
+  @override
+  String get passphrasePageBodyPassphrase =>
+      '每次開啟電腦時，您都需要輸入密碼。此密碼與您的使用者密碼不同。您稍後可以變更它，但無法停用它。如果您忘記密碼，您可以使用復原金鑰重新存取磁碟。';
+
+  @override
+  String get passphrasePageBodyPin =>
+      '每次開啟電腦時，您都需要輸入 PIN 碼。此 PIN 碼與您的使用者密碼不同。您稍後可以變更它，但無法停用。如果您忘記 PIN 碼，您可以使用復原金鑰重新存取磁碟。';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => '密碼';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => '確認密碼';
+
+  @override
+  String get passphrasePageRequiredPassphrase => '需要輸入密碼';
+
+  @override
+  String get passphrasePageMismatchPassphrase => '密碼不符合';
+
+  @override
+  String get passphrasePageChoosePinHint => 'PIN 碼';
+
+  @override
+  String get passphrasePageConfirmPinHint => '確認 PIN 碼';
+
+  @override
+  String get passphrasePageRequiredPin => '需要輸入 PIN 碼';
+
+  @override
+  String get passphrasePageMismatchPin => 'PIN 碼不符合';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => '需要密碼';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle => '最安全。每次開啟電腦時，您都需要輸入較長的密碼。';
+
+  @override
+  String get passphraseTypePinTileTitle => '需要 PIN 碼';
+
+  @override
+  String get passphraseTypePinTileSubTitle => '更安全。每次開啟電腦時，您都需要輸入數字 PIN 碼。';
+
+  @override
+  String get passphraseTypeNoneTileTitle => '自動解鎖磁碟';
+
+  @override
+  String get passphraseTypePageHeader => '加密 PIN 碼或密碼';
+
+  @override
+  String get passphraseTypePageBody =>
+      '預設情況下，電腦的 Trusted Platform Module (TPM) 會在啟動時解除鎖定磁碟。不過，您也可以要求輸入 PIN 碼或密碼，以進一步保護資料。';
+
+  @override
+  String get passphrasePagePassphraseEntropyBelowMin => '密碼薄弱，請使其更長或更複雜';
+
+  @override
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      '公平的密碼，將它變得更長或更複雜，以提高安全性';
+
+  @override
+  String get passphrasePagePassphraseEntropyOptimal => '強大的密碼';
+
+  @override
+  String get passphrasePagePinEntropyBelowMin => '較弱的 PIN 碼，使其較長或較難預測';
+
+  @override
+  String get passphrasePagePinEntropyBelowOptimal =>
+      '公平的 PIN 碼，使其更長或更不易預測，以提高安全性';
+
+  @override
+  String get passphrasePagePinEntropyOptimal => 'PIN 碼夠長';
 
   @override
   String get installationTypeTitle => '磁碟設定';
@@ -2183,6 +2259,21 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationSlidesSupportUbuntuPro => 'Ubuntu Pro 的 24/7 全天候企業級支援';
 
   @override
+  String get nextSlideSemanticLabel => '下一頁';
+
+  @override
+  String get previousSlideSemanticLabel => '前一頁';
+
+  @override
+  String get playSlideshowSemanticLabel => '播放幻燈片';
+
+  @override
+  String get pauseSlideshowSemanticLabel => '暫停播放幻燈片';
+
+  @override
+  String get toggleLogsSemanticLabel => '切換安裝記錄';
+
+  @override
   String get copyingFiles => '正在複製檔案…';
 
   @override
@@ -2355,20 +2446,70 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM 復原密鑰';
+  String get recoveryKeyTitle => '復原金鑰';
 
   @override
-  String get recoveryKeyHeader => '取得復原金鑰';
+  String get recoveryKeyTitleBadgeLabel => '重要';
+
+  @override
+  String get recoveryKeyHeader => '儲存您的復原金鑰';
 
   @override
   String get recoveryKeyInfoHeader => '如果沒有復原金鑰，您可能會遺失所有資料';
 
   @override
-  String get recoveryKeyStorageAdvice =>
-      '將復原金鑰存放在安全的地方。在發生某些系統變更時，使用它來解密磁碟。例如，如果您變更電腦中的零件或更新韌體，您可能需要它。';
+  String get recoveryKeyTextFieldLabel => '復原金鑰';
 
   @override
-  String get recoveryKeyConfirmation => '我知道如果沒有復原金鑰，我可能會遺失所有資料';
+  String get recoveryKeyStorageAdvice =>
+      '如果啟動時解密失敗，您需要提供此復原金鑰。沒有金鑰，您將無法存取所有資料。請將它保存在安全的地方，例如密碼管理器。';
+
+  @override
+  String get recoveryKeyConfirmation => '我將我的復原金鑰保存在安全的地方';
+
+  @override
+  String get recoveryKeyLinkLabel => '了解更多';
+
+  @override
+  String get recoveryKeySaveToFileLabel => '儲存至檔案';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => '顯示 QR code';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO 桌面 - 復原金鑰';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody =>
+      '掃描 QR code 以複製復原金鑰，並將其保存到安全的地方，例如密碼管理器。您也可以拍張照片以供日後使用。';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction => '已複製到剪貼簿中';
+
+  @override
+  String get recoveryKeyExceptionFileSystemTitle => '未儲存復原金鑰檔案';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathTitle => '復原金鑰檔案無法儲存於暫存位置';
+
+  @override
+  String get recoveryKeyExceptionUnknownTitle => '未知錯誤';
+
+  @override
+  String get recoveryKeyExceptionFileSystemBody =>
+      '您沒有寫入該資料夾的權限。請嘗試不同的位置或使用其他方法。';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      '嘗試不同的位置，例如卸除式磁碟機，或使用其他方法。';
+
+  @override
+  String get recoveryKeyFilePickerTitle => '儲存復原金鑰檔案';
+
+  @override
+  String get recoveryKeyFilePickerFilter => '文字檔';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -2430,4 +2571,19 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
       '您可以在下方檢視從 Landscape 匯入的自動安裝檔案。';
+
+  @override
+  String get successIconSemanticLabel => '成功';
+
+  @override
+  String get errorIconSemanticLabel => '錯誤';
+
+  @override
+  String get closeIconSemanticLabel => '關閉';
+
+  @override
+  String get maximizeIconSemanticLabel => '最大化';
+
+  @override
+  String get minimizeIconSemanticLabel => '最小化';
 }

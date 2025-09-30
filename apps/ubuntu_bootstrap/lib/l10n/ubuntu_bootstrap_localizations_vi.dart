@@ -9,7 +9,7 @@ class UbuntuBootstrapLocalizationsVi extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Bộ cài đặt Ubuntu cho desktop';
 
   @override
   String windowTitle(String RELEASE) {

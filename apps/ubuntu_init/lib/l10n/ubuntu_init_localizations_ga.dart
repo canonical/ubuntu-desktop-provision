@@ -55,7 +55,7 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Cabhraigh linn $distro a fheabhsú trí shonraí do chórais a roinnt linn. Áiríonn sé seo rudaí cosúil le do mhúnla meaisín, bogearraí suiteáilte agus an suíomh a roghnaigh tú do do chrios ama.';
+    return 'Cabhraigh linn $distro a fheabhsú trí shonraí do chórais a roinnt linn. Áiríonn sé seo rudaí cosúil le do mhúnla meaisín, bogearraí suiteáilte agus an suíomh a roghnaigh tú le do chrios ama.';
   }
 
   @override
@@ -157,14 +157,14 @@ class UbuntuInitLocalizationsGa extends UbuntuInitLocalizations {
       'Is féidir leat do sheirbhísí Pro a bhainistiú san fheidhmchlár Bogearraí & Nuashonruithe.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Rath';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Dún';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Uasmhéadaigh';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Íoslaghdaigh';
 }

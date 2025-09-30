@@ -55,7 +55,7 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Deneyiminizi geliştirebilmemiz için verileri $distro ile anonim olarak paylaşın.';
+    return 'Sistem verilerinizi bizimle paylaşarak $distro\'yu geliştirmemize yardımcı olun. Bu veriler arasında makine modeliniz, yüklü yazılımlarınız ve saat diliminiz için seçtiğiniz konum gibi bilgiler yer alır.';
   }
 
   @override
@@ -73,10 +73,10 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
   String get telemetryReportTitle => 'Raporlama ayrıntıları';
 
   @override
-  String get telemetryLegalLabel => 'Yasal';
+  String get telemetryLegalLabel => 'Yasal uyarı';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Telemetri verileri toplanamadı';
 
   @override
   String get privacyPageTitle => 'Konum hizmetleri';
@@ -96,63 +96,65 @@ class UbuntuInitLocalizationsTr extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Bu kodla <a href=\"https://$url\">$url</a> adresindeki sihirli bağlantıyı kullanın';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Bu makineyi takın';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually =>
+      'veya bir belirteci manuel olarak ekleyin';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Jeton';
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Get the most comprehensive subscription for open-source software security';
+      'Açık kaynaklı yazılım güvenliği için en kapsamlı aboneliği edinin';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Kişisel kullanım için her zaman ücretsiz. Kurumsal kullanım için 30 günlük deneme. <a href=\"https://$url\">Daha fazla bilgi edinin</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Ekle';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Geçersiz jeton';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Geçerli jeton';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Geçersiz jeton, yeniden deneyin';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Şimdilik atla';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'You can always enable Ubuntu Pro later via the Software & Updates application.';
+      'Ubuntu Pro\'yu daha sonra istediğiniz zaman Yazılım ve Güncellemeler uygulaması üzerinden etkinleştirebilirsiniz.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro\'yu etkinleştir';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+      'Bu makineyi 2032 yılına kadar daha geniş bir paket yelpazesindeki güvenlik güncellemelerinden yararlanmak için Ubuntu Pro aboneliğine bağlayın.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
-      'Ubuntu Pro is now enabled in this machine';
+      'Ubuntu Pro artık bu makinede etkinleştirildi';
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'You can manage your Pro services in the Software & Updates application.';
+      'Pro servislerinizi Yazılım ve Güncellemeler uygulamasından yönetebilirsiniz.';
 
   @override
   String get successIconSemanticLabel => 'Success';

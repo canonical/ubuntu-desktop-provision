@@ -9,7 +9,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get appTitle => '우분투 데스크톱 인스톨러';
+  String get appTitle => '우분투 데스크톱 설치 관리자';
 
   @override
   String windowTitle(String RELEASE) {
@@ -20,10 +20,10 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectTitle => '자동화된 설치';
 
   @override
-  String get autoinstallDirectHeader => '자동으로 설치된 파일을 가져옵니다.';
+  String get autoinstallDirectHeader => '자동 설치 정의 파일을 가져옵니다';
 
   @override
-  String get autoinstallDirectUrlLabel => '자동으로 설치된 파일의 경로를 입력 해주세요:';
+  String get autoinstallDirectUrlLabel => '자동 설치 정의 파일의 URL을 입력할 수도 있습니다:';
 
   @override
   String get autoinstallDirectFileLabel => '혹은 로컬 파일을 선택하세요:';
@@ -32,35 +32,33 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => '파일을 선택하세요...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => '파일 선택 해제';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => '파일 선택';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML 파일';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => '불러오기';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => '자동 설치 정의 파일을 찾을 수 없습니다';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'URL이 올바른지, 인터넷에 연결되어 있는지 확인하거나 나중에 다시 시도하십시오.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => '올바르지 않은 URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'URL이 올바른지 확인하거나 로컬 파일을 선택하십시오.';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => '올바르지 않은 자동 설치 정의 파일';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
@@ -1229,29 +1227,28 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle => '복구 키 파일 저장되지 않음';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      '복구 키 파일을 임시 경로에 저장할 수 없음';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => '알 수 없는 오류';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      '해당 폴더에 쓰기 권한이 없습니다. 다른 경로를 사용하거나 다른 방법을 시도해 보십시오.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      '이동식 저장소 등의 다른 경로를 지정하거나 다른 방법을 이용하십시오.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => '복구 키 파일 저장';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => '텍스트 파일';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

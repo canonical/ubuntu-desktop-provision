@@ -109,11 +109,11 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get ok => 'OK';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Stäng';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximera';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimera';
 }

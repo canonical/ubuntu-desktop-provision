@@ -17,99 +17,99 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Instal·lació automatitzada';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Importa el fitxer autoinstall';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'Podeu introduir l\'URL d\'un fitxer autoinstall:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'O seleccioneu un fitxer local:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Seleccioneu el fitxer...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Esborra el fitxer';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Trieu el fitxer';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'Fitxers YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Importa';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'El fitxer autoinstall no és accessible';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'Comproveu si l\'URL és correcte, proveu la connexió a Internet, o proveu més tard.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL no vàlida';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'Comproveu que l\'URL sigui correcta o seleccioneu un fitxer local.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'Fitxer autoinstall invàlid';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'Comproveu el fitxer o proveu-ne un altre.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'No es pot llegir el fitxer autoinstall';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'Comproveu els permisos o proporcioneu un fitxer diferent.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Error desconegut';
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Tipus d\'instal·lació';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Com us agradaria instal·lar $DISTRO?';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'Entreu l\'autoinstall.yaml URL o un camí de fitxer local:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Instal·lació Interactiva';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'Per als usuaris que vulguin una guia pas a pas durant la instal·lació.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'Automatitzat amb fitxer autoinstall';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'Per a usuaris avançats que tinguin una autoinstall.yaml per a configuracions de sistema consistents i repetibles.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Automatitzat amb el Landscape';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Per als usuaris en organitzacions que proporcionen un fitxer autoinstall mitjançant Landscape.';
 
   @override
   String get changeButtonText => 'Canvia';
@@ -119,25 +119,25 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Us donem la benvinguda a $DISTRO';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return 'S\'està preparant $DISTRO…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Advertiment:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Prova o instal·la';
+    return 'Prova o instal·la $DISTRO';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Què voleu fer amb $DISTRO?';
   }
 
   @override
@@ -173,21 +173,21 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'Desactiva la RST.';
+  String get rstTitle => 'S\'ha detectat RST';
 
   @override
-  String get rstHeader => 'You must disable RST to continue installation';
+  String get rstHeader => 'Heu de desactivar RST per continuar la instal·lació';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'El vostre ordinador utilitza Intel RST (tecnologia d\'emmagatzematge ràpid). Podeu desactivar RST o bé a:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      'Windows, si utilitzeu una configuració d\'arrencada dual amb Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'La configuració de BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -212,11 +212,11 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get dontInstallDriverSoftwareNow =>
-      'Don\'t install the driver software for now';
+      'No instal·leu el programari del controlador per ara';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'You can install it later from Software & Updates.';
+      'El podeu instal·lar més tard des de Programari i Actualitzacions.';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
@@ -227,10 +227,10 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Les claus de seguretat no coincideixen';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'Mostra';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Amaga';
 
   @override
   String get updatesOtherSoftwarePageTitle =>
@@ -241,187 +241,192 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Quines aplicacions us agradaria instal·lar per començar?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimitzeu el vostre ordinador';
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'Voleu instal·lar programari propietari recomanat?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO es distribueix sense programari privat per defecte. La instal·lació de programari addicional pot millorar el rendiment del vostre ordinador.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote =>
+      'S\'ha detectat una targeta gràfica NVIDIA';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+      'Per al millor rendiment de les targetes gràfiques NVIDIA és molt recomanable instal·lar controladors addicionals.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Selecció ampliada';
 
   @override
   String get fullInstallationSubtitle =>
-      'An offline-friendly selection of office tools, utilities and web browser.';
+      'Una selecció d’eines d’oficina, utilitats i navegador web per a ús fàcil fora de línia.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Selecció predeterminada';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Just the essentials, web browser and basic utilities.';
+      'Només els imprescindibles, el navegador web i les utilitats bàsiques.';
 
   @override
   String get otherOptions => 'Altres opcions';
 
   @override
   String get installThirdPartyTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+      'Instal·leu programari de tercers per a gràfics i maquinari Wi-Fi, així com formats de mitjans addicionals';
 
   @override
   String get installThirdPartySubtitle =>
-      'This software is subject to license terms included with its documentation. Some are proprietary.';
+      'Aquest programari està subjecte als terminis de llicència inclosos amb la seva documentació. Alguns són propietaris.';
 
   @override
   String get installDriversTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware';
+      'Instal·leu el programari de tercers per a gràfics i maquinari Wi-Fi';
 
   @override
   String get installDriversSubtitle =>
-      'Including but not limited to NVIDIA drivers and similar';
+      'Incloent-hi però no limitat a controladors NVIDIA i similars';
 
   @override
   String get installCodecsTitle =>
-      'Download and install support for additional media formats';
+      'Descàrrega i instal·lació de suport per a formats de mitjans addicionals';
 
   @override
   String get installCodecsSubtitle =>
-      'Including but not limited to MP3, MP4, MOV and similar';
+      'Incloent-hi però no limitat a MP3, MP4, MOV i similars';
 
   @override
   String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+      'L\'ordinador no està connectat a una font d\'alimentació.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Actualment esteu fora de línia';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Crea una contrasenya';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'Haureu d\'introduir la vostra contrasenya cada vegada que engegueu l\'ordinador. Aquesta contrasenya és diferent de la vostra contrasenya d\'usuari.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader =>
+      'Assegureu-vos de guardar la vostra contrasenya';
 
   @override
   String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+      'Si la perdeu, perdreu totes les vostres dades.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'Emmagatzemeu la contrasenya i la clau de recuperació en algun lloc segur';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'Si perdeu la vostra contrasenya, perdreu totes les vostres dades. La contrasenya no substitueix la clau de recuperació o la contrasenya d\'usuari.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Encriptació';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Estableix una contrasenya d\'encriptació';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Establiu un PIN d\'encriptació';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Cada vegada que engegueu l\'ordinador haureu d\'introduir la contrasenya. Aquesta contrasenya és diferent de la vostra contrasenya d\'usuari. Podreu canviar-la més tard, però no desactivar-la. Si us oblideu de la contrasenya, podeu recuperar l\'accés al disc usant la clau de recuperació.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Cal que introduïu el PIN cada vegada que engegueu el vostre ordinador. Aquest PIN és diferent de la vostra contrasenya d\'usuari. Podràs canviar-lo més tard, però no desactivar-lo. Si us oblideu el vostre PIN, podeu recuperar l\'accés al disc mitjançant la clau de recuperació.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Contrasenya';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Confirma la contrasenya';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Es requereix una contrasenya';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'Les contrasenyes no concorden';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Confirma el PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Es requereix un PIN';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'Els PIN no concorden';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Requereix una contrasenya';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'El més segur. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya més llarga.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Requereix un PIN';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'El més segur. S\'ha d\'introduir un PIN numèric cada vegada que engegueu l\'ordinador.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'Desbloqueja el disc automàticament';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Seguretat addicional';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Per defecte, el mòdul de plataforma de confiança de l\'ordinador (TPM) desbloquejarà el disc durant l\'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Contrasenya feble, feu-la més llarga i més complexa';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Contrasenya suficient, feu-la més llarga o més complexa per a més seguretat';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Contrasenya forta';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'PIN feble, feu-lo més fort o menys predictible';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'PIN suficient, feu-lo més llarg o menys predictible per a una seguretat millor';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'EL PIN és suficientment llarg';
 
   @override
-  String get installationTypeTitle => 'Tipus d\'instal·lació';
+  String get installationTypeTitle => 'Configuració del disc';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Com voleu instal·lar $DISTRO?';
   }
 
   @override
@@ -444,125 +449,128 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Esborreu el disc i instal·leu $DISTRO';
   }
 
   @override
   String get installationTypeEraseInfo =>
-      'All data and partitions on the disk will be erased, including operating systems.';
+      'Totes les dades i particions del disc seran esborrades, incloent-hi els sistemes operatius.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Característiques avançades…';
+  String get installationTypeAdvancedLabel =>
+      'Mostra les característiques avançades…';
 
   @override
-  String get installationTypeAdvancedTitle => 'Característiques avançades';
+  String get installationTypeAdvancedTitle =>
+      'Encriptació i sistema de fitxers';
 
   @override
   String get installationTypeExperimental => 'Experimental';
 
   @override
-  String get installationTypeNone => 'Cap';
+  String get installationTypeNone => 'Sense encriptació';
 
   @override
   String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+      'Sistema de fitxers estàndard sense encriptació.';
 
   @override
   String get installationTypeNoneSelected => 'Cap seleccionat';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM => 'Useu LVM sense encriptació';
 
   @override
   String get installationTypeLVMSelected => 'Seleccionat LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption => 'Encripta amb una contrasenya';
 
   @override
   String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+      'Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya. Això utilitza l\'encriptació LUKS amb LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
-      'LVM and encryption selected';
+      'Seleccionats LVM i encriptació';
 
   @override
   String get installationTypeEncryptInfo =>
       'En el pas següent triareu la clau de seguretat.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption';
+  String get installationTypeZFS => 'Usa ZFS sense encriptació';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Encrypt with a passphrase using ZFS';
+      'Encripta amb una contrasenya usant ZFS';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'Encriptació nativa amb ZVS. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya.';
 
   @override
   String get installationTypeZFSSelected => 'Seleccionat ZFS';
 
   @override
   String get installationTypeZFSEncryptionSelected =>
-      'ZFS and encryption selected';
+      'ZFS i encriptació seleccionats';
 
   @override
-  String get installationTypeTPM => 'Use hardware-backed encryption';
+  String get installationTypeTPM =>
+      'Utilitza l\'encriptació amb suport de maquinari';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
+    return '<a href=\"$url\">Llegiu sobre l\'encriptació TPM</a> abans de triar aquesta opció. Això pot no funcionar amb el vostre maquinari o version futures de $DISTRO.';
   }
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM seleccionat';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return 'Esborra $os i reinstal·la';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\"> Atenció:</font> Això eliminarà tots els programes, documents, fotos, música i qualsevol altre fitxer de $os.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return 'Instal·leu $product al costat de $os';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return 'Instal·leu $product juntament amb $os1 i $os2';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside existing operating systems';
+    return 'Instal·leu $product al costat dels sistemes operatius existents';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'Instal·leu $product al costat d\'altres particions';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Els documents, la música i la resta de fitxers personals es conservaran. Podreu triar quin sistema operatiu voleu utilitzar cada cop que engegueu l\'ordinador.';
+    return 'Seleccioneu una partició per redimensionar i crear espai per a $product. Podeu triar el vostre sistema operatiu durant l\'arrencada.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Esborra $os i instal·la $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Tots els fitxers i dades de la instal·lació existent de $os seran esborrats permanentment.';
   }
 
   @override
@@ -570,23 +578,24 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'Per a usuaris avançats que busquen configuracions de disc personalitzades.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Esborra el disc i instal·la \$$DISTRO';
   }
 
   @override
   String get selectGuidedStorageInfo =>
-      'Start from scratch on your selected disk.';
+      'Comença des de zero al disc seleccionat.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Seleccioneu la unitat:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel =>
+      'Seleccioneu la partició:';
 
   @override
   String get selectGuidedStorageInfoLabel => 'S\'utilitzarà el disc sencer:';
@@ -596,7 +605,7 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Trieu on instal·lar $DISTRO';
   }
 
   @override
@@ -605,14 +614,14 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num les particions més petites s\'amaguen, utilitzeu l\'eina de particions <a href=\"$url\">avançada</a> per a més control';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Redimensiona la partició';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Assigna espai';
 
   @override
   String get installAlongsideFiles => 'Fitxers';
@@ -627,20 +636,20 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get installAlongsideAvailable => 'Disponible:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Partició manual';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash =>
-      'Mount points must start with \"/\"';
+      'Els punts de muntatge han de començar amb \"/\"';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
-      'Mount points cannot contain spaces';
+      'Els punts de muntatge no poden contenir espais';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format no és un sistema de fitxers compatible amb $mountpoint';
   }
 
   @override
@@ -671,20 +680,21 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get newPartitionTable => 'Taula de particions nova';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Nova partició buida';
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+      'La creació d\'una nova taula de particions per a un dispositiu complet eliminarà totes les particions actuals. Aquesta operació es pot desfer si és necessari.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'Massa particions primàries';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Límit assolit';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice =>
+      'Dispositiu per a la instal·lació del carregador d\'arrencada';
 
   @override
   String get partitionCreateTitle => 'Crea una partició';
@@ -714,14 +724,14 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get partitionLocationEnd => 'Final d\'aquest espai';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Usat com:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Deixa sense formatar';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Deixa format com $format';
   }
 
   @override
@@ -731,10 +741,10 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get partitionMountPointLabel => 'Punt de muntatge:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'A punt per instal·lar';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Reviseu les vostres eleccions';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -746,38 +756,38 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Cap';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Dispositius';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Aplicacions';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'Tipus d\'instal·lació';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Encriptació de disc';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Disc d\'Instal·lació';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Programari propietari';
 
   @override
   String get confirmSectionGeneralTitle => 'General';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Seguretat i més';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Particions';
 
   @override
   String get confirmPartitionTables =>
-      'The partition tables of the following devices are changed:';
+      'Les taules de partició dels dispositius següents es canvien:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -785,46 +795,46 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Còdecs';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'Còdecs i controladors';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Controladors';
 
   @override
   String get confirmInstallButton => 'Comença a instal·lar';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Esborrat';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Sense canvis';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Redimensionat de $oldsize a $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Creat i formatat com $format utilitzat per a $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Formatat com $format utilitzat per a $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Utilitzat per a $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Formatat com $format';
   }
 
   @override
@@ -832,211 +842,213 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system està instal·lat i a punt per utilitzar';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** s\'ha copiat al disc';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Reinicia a $system';
   }
 
   @override
   String get restartWarningBody =>
-      'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+      'Reinicia la instal·lació o continua provant.\nEls canvis que feu no es guardaran.';
 
   @override
   String get rebootToConfigureWarning =>
-      'You have to restart the computer to continue the installation process.';
+      'Heu de reiniciar l\'ordinador per continuar el procés d\'instal·lació.';
 
   @override
   String get shutdown => 'Atura';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Reinicia ara';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Continua la prova';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'S\'ha detectat el BitLocker';
 
   @override
   String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+      'Una o més particions estan encriptades amb el BitLocker.';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'Per instal·lar al costat de Windows, desactiveu BitLocker a Windows.';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'Windows pot sol·licitar claus de recuperació en l\'arrencada després de la instal·lació.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Per obtenir instruccions, visiteu la guia <a href=\"$url\">BitLocker</a>.';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'Podeu perdre totes les vostres dades sense claus de recuperació de BitLocker';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Reinicia l\'ordinador';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Voleu reiniciar l\'ordinador?';
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Reiniciar a WIndows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Voleu reiniciar a Windows?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'Segur que voleu reiniciar l\'ordinador? Haureu de reiniciar la instal·lació $DISTRO més tard per finalitzar la instal·lació de $DISTRO.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Us donem la benvinguda a $RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Disponible:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'Inclòs:';
 
   @override
   String get installationSlidesWelcomeTitle =>
-      'Fast, free and full of new features';
+      'Ràpid, gratuït i ple de novetats';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'L\'última versió de $DISTRO fa que la informàtica sigui més fàcil que mai.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Tant si feu desenvolupament, creació, jocs o administració trobareu eines noves per millorar la vostra productivitat i realçar la vostra experiència dins $RELEASE.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle =>
+      'Totes les aplicacions que us calen';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Instal·leu, gestioneu i actualitzeu totes les vostres aplicacions a Programari de l\'Ubuntu, incloent-hi milers d\'aplicacions tant de la Snap Store com dels dipòsits de $DISTRO.';
   }
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Develop with the best of open source';
+      'Desenvolupeu amb el millor de codi obert';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return '$DISTRO és l\'estació de treball ideal per al desenvolupament d\'aplicacions o web, ciència de dades i AI /ML, així com operacions de desenvolupament i administració. Totes les versions $DISTRO inclouen les últimes cadenes d\'eines i suporten tots els IDE principals.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Potencieu la creativitat';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Si feu animació, disseny, creació de vídeo o desenvolupament de jocs, és fàcil mantenir els vostres fluxos de treball a $DISTRO amb suport per a programari i aplicacions de codi obert amb estàndard industrial.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Genial per jugar';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return '$DISTRO suporta els últims controladors NVIDIA i Mesa per millorar el rendiment i la compatibilitat. Milers de títols del Windows es poden jugar perfectament a $DISTRO mitjançant aplicacions com Steam sense cap configuració addicional.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Privat i segur';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return '$DISTRO ofereix totes les eines necessàries per la privacitat i seguretat a Internet. Amb suport incorporat de tallafocs i VPN i un munt d\'aplicacions centrades en la privacitat per assegurar que teniu control ple de les vostres dades.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'Tots els llançaments $DISTRO LTS vénen amb cinc anys de pegats de seguretat inclosos, que s\'estén a deu anys amb una subscripció d\'Ubuntu Pro.';
   }
 
   @override
   String get installationSlidesProductivityTitle =>
-      'Power up your productivity';
+      'Incrementeu la vostra productivitat';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO L\'escriptori inclou LibreOffice, un conjunt d\'aplicacions de codi obert compatibles amb Microsoft Office per a documents, fulls de càlcul i presentacions. També hi ha eines de col·laboració populars.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Accés per a tothom';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return 'En el cor de la filosofia $DISTRO hi ha la creença que la informàtica és per a tothom. Amb les eines avançades per a l\'accessibilitat i les opcions per canviar la llengua, l\'esquema de colors i la mida del text, $DISTRO fa que la informàtica sigui fàcil, tant se val qui sigueu i on estigueu.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca Screen Reader';
+  String get installationSlidesAccessibilityOrca => 'Lector de pantalla Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages =>
+      'Compatibilitat lingüística';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Ajuda i assistència';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'La documentació oficial $DISTRO està disponible tant en línia com a través de la icona Ajuda de l\'acoblador.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+      'Ask Ubuntu cobreix una sèrie de preguntes i respostes i l\'Ubuntu Discourse proporciona guies i discussions per a usuaris nous i experimentats.';
 
   @override
   String get installationSlidesSupportEnterprise =>
-      'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+      'Per a usuaris corporatius Canonical proveeix suport comercial per facilitar l\'adopció i gestió de l\'Ubuntu al lloc de treball.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Recursos útils:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Documentació oficial';
 
   @override
   String get installationSlidesSupportUbuntuPro =>
-      'Enterprise-grade 24/7 support with Ubuntu Pro';
+      'Suport 24/7 de nivell empresarial amb Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Diapositiva següent';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Diapositiva anterior';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Presentació de diapositives';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Pausa la presentació';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Commuta els registres d\'instal·lació';
 
   @override
   String get copyingFiles => 'S’estan copiant els fitxers…';
@@ -1051,315 +1063,318 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get installationFailed => 'Ha fallat la instal·lació';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'No hi ha prou espai al disc';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'No hi ha prou espai de disc per instal·lar $DISTRO';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'El disc seleccionat no té prou espai per instal·lar $DISTRO. Sortiu de l\'instal·lador per fer més espai o seleccioneu un altre disc.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Disponible:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Requerit:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Actualització disponible';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader =>
+      'Hi ha una actualització disponible per a l\'instal·lador';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Actualitza ara';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'Actualitza a l\'ultima versió per a una fiabilitat millorada i més característiques.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Actualització a punt';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'La versió actual de $snap és $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Actualització a la versió $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'La versió actual $version està actualitzada.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return 'S\'està actualitzant $snap...';
   }
 
   @override
   String get refreshRestart =>
-      'Please close the installer and relaunch to continue';
+      'Si us plau, tanqueu l\'instal·lador i rellançeu per continuar';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Tanca l\'instal·lador';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Assegurant els prerequisits de $snap...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'S\'està actualitzant $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'S\'està comprovant l\'actualització de $snap...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return 'S\'està preparant $snap...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'S\'està descarregant $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'S\'està validant $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'S\'està muntant $snap...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'S\'estan aturant els serveis $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'S\'estan eliminant els àlies de $snap...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'S\'està desvinculant $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'S\'estan actualitzant els recursos de $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'S\'està actualitzant la línia d\'ordre del nucli de $snap...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'S\'estan copiant les dades de $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'S\'estan establint els perfils de seguretat de $snap...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'S\'està enllaçant $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'S\'estan connectant les connexions i dispositius de $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'S\'estan establint els àlies automàtics de $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'S\'estan establint els àlies de $snap...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'S\'estan iniciant els serveis de $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'S\'està netejant $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'Recovery key';
+  String get recoveryKeyTitle => 'Clau de recuperació';
 
   @override
   String get recoveryKeyTitleBadgeLabel => 'Important';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'Deseu la vostra clau de recuperació';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+      'Podeu perdre totes les vostres dades sense clau de recuperació';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Clau de recuperació';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      'Us caldrà proporcionar aquesta clau de recuperació si la desencriptació falla durant l\'arrencada. Sense la clau, perdreu l’accés a totes les vostres dades. Deseu-la en un lloc segur, com ara un gestor de contrasenyes.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+      'He guardat la meva clau de recuperació en algun lloc segur';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Més informació';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Desa a un fitxer';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Mostra el codi QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Escriptori - Clau de recuperació';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Escanegeu el codi QR per copiar la clau de recuperació i guardar-la en algun lloc segur, com ara un gestor de contrasenyes. També podeu fer una foto per a un ús futur.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Copiat al portaretalls';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'No s\'ha desat la clau de recuperació';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'El fitxer clau de recuperació no es pot desar en una ubicació temporal';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Error desconegut';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'No teniu permís per escriure a aquesta carpeta. Proveu un lloc diferent o un altre mètode.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Proveu una ubicació diferent, com ara una unitat extraïble o utilitzeu un altre mètode.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Desa el fitxer de clau de recuperació';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Fitxers de text';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Escanegeu el codi QR o introduïu el codi següent a <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Instal·lació automatitzada';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Inicieu sessió a Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Entreu el domini de Landscape (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Domini de Landscape (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'Proporcioneu el domini de Landscape de la vostra organització per iniciar sessió i obtenir un fitxer autoinstall. Podeu obtenir el FQDN del vostre suport informàtic.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Domini de Landscape (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Seguent';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      'Domini invàlid, si us plau comproveu-ho o contacteu el vostre suport informàtic';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+      'Connecta\'t a Internet per continuar';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'Cal Internet per obtenir l\'arxiu autoinstall de Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Codi caducat, torneu-ho a provar';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning =>
+      'Inici de sessió fallit, si us plau torneu a provar';
 
   @override
   String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+      'La instal·lació automatitzada no està disponible per al vostre compte';
 
   @override
   String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+      'Contacteu el vostre suport informàtic o proveu una opció d\'instal·lació diferent.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Codi d\'error: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'L\'Ubuntu s\'instal·larà amb la configuració proporcionada per la vostra organització';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'Podeu revisar el fitxer autoinstall importat de Landscape a sota.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Èxit';
 
   @override
   String get errorIconSemanticLabel => 'Error';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tanca';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximitza';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimitza';
 }

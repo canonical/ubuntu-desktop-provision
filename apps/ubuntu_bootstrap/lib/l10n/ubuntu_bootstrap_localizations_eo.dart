@@ -312,14 +312,14 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Vi devas havi pasfrazon por ĉifri viajn dosierojn. Vi devos tajpi vian pasfrazon ĉiujn fojojn, kiam via komputilo startos.';
+      'Vi devos tajpi vian pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Konservu vian pasfrazon ie sekure';
+  String get choosePassphraseInfoHeader => 'Certe konservu vian pasfrazon';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Se vi forgesos vian pasfrazon, vi perdos ĉiom da viaj datenoj.';
+      'Se vi perdos ĝin, vi perdos ĉiom da viaj datenoj.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -330,91 +330,91 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Se vi perdos vian pasfrazon, vi perdos ĉiom da viaj datenoj. La pasfrazo ne anstataŭigas la restaŭran ŝlosilon nek la pasvorton de la uzanto.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Ĉifrado';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Krei ĉifran pasfrazon';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Krei ĉifran PIN';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Vi devos tajpi vian pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian pasfrazon, vi povos atingi la diskon per la restaŭra ŝlosilo.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Vi devos tajpi vian PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian PIN, vi povos atingi la diskon per la restaŭra ŝlosilo.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Pasfrazo';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Konfirmu pasfrazon';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Pasfrazo necesas';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'La pasfrazoj ne kongruas';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Konfirmi PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PIN estas postulata';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'La PIN-oj ne kongruas';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Postuli pasfrazon';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Plej sekura. Vi devos tajpi longan pasfrazon por startigi vian komputilon.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Postuli PIN';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Pli sekura. Vi devos tajpi numeran PIN por startigi vian komputilon.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Malŝlosi diskon aŭtomate';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Plia sekureco';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Apriore, la Fidata Platforma Modulo (TPM) de la komputilo malŝlosos la diskon dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'La pasfrazo estas tro malforta; plilongigu aŭ kompliku ĝin';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'La pasfrazo estas malforteta; por pli da sekureco, plilongigu aŭ kompliku ĝin';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Forta pasfrazo';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'PIN estas malforta; plilongigu aŭ kompliku ĝin';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'PIN estas malforteta; por pli da sekureco, plilongigu aŭ kompliku ĝin';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN esta sufiĉe longa';
 
   @override
   String get installationTypeTitle => 'Agordado de disko';
@@ -1023,19 +1023,19 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Entreprene taŭga subteno ĉiutage ĉiuhore per Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Sekva paĝo';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Antaŭa paĝo';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Foliumi paĝojn';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Ĉesigi foliumadon';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Baskuligi instalan protokolon';
 
   @override
   String get copyingFiles => 'Kopiante dosierojn…';
@@ -1212,74 +1212,75 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Ŝlosilo por aparato-baza ĉifrado';
+  String get recoveryKeyTitle => 'Restaŭra ŝlosilo';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Grave';
 
   @override
-  String get recoveryKeyHeader => 'Akiri restaŭran ŝlosilon';
+  String get recoveryKeyHeader => 'Konservu vian restaŭran ŝlosilon';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Vi eble perdos ĉiom da viaj datenoj sen restaŭra ŝlosilo';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Restaŭra ŝlosilo';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Konservu la restaŭran ŝlosilon ie sekure. Uzu ĝin por malĉifri la diskon por kelkaj sistemaj ŝanĝoj. Ekzemple, oni bezonos ĝin, se oni ŝanĝos la komponantojn de via komputilo aŭ ĝisdatigos la mikroprogramaron.';
+      'Vi devos provizi ĉi tiun restaŭran ŝlosilon, se ĉifrado malsukcesas dum starto. Se la ŝlosilo mankos, vi perdos ĉiom da viaj datenoj. Konservu ĝin en sekura loko kiel ekzemple pasvortadministrilo.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Mi komprenas, ke mi povos perdi ĉiom da miaj datenoj, se mi ne havos restaŭran ŝlosilon';
+      'Mi konservis mian restaŭran ŝlosilon en sekura loko';
 
   @override
   String get recoveryKeyLinkLabel => 'Lerni plu';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Konservi en dosieron';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Montri QR-kodon';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Desktop – Restaŭra ŝlosilo';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Skanu la QR-kodon por kopii la restaŭran ŝlosilon kaj konservu ĝin en sekura loko kiel ekzemple pasvortadministrilo. Vi ankaŭ povas foti ĝin por posta uzado.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Kopiite en tondujon';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Dosiero de restaŭra ŝlosilo ne konserviĝis';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Oni ne konservu la dosieron de restaŭra ŝlosilo en provizoran lokon';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Nekonata eraro';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Vi ne rajtas skribi en tiun dosierujon. Provu alian lokon, aŭ uzu alian metodon.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Provu alian lokon, ekzemple poŝmemorilon, aŭ uzu alian metodon.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Konservi dosieron de restaŭra ŝlosilo';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Tekstaj dosieroj';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1353,17 +1354,17 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Vi povas revizii la aŭtomatan instalan dosieron el Landscape ĉi-sube.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sukceso';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Eraro';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fermi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimumigi';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimumigi';
 }

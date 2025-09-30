@@ -314,15 +314,15 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Jelmondatra van szüksége a fájlok titkosításához. A számítógép bekapcsolásakor minden alkalommal meg kell adnia a jelmondatot.';
+      'Meg kell adnia a jelmondatát minden alkalommal, amikor bekapcsolja a számítógépet. Ez a jelmondat eltér a felhasználói jelszavától.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Tárolja a jelmondatát biztonságos helyen';
+      'Győződjön meg arról, hogy elmentette-e a jelmondatot';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Ha elveszíti a jelmondatát, akkor elveszíti az összes adatát.';
+      'Ha elveszíti, akkor elveszíti az összes adatát.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -333,91 +333,93 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Ha elveszíti a jelmondatát, akkor elveszíti az összes adatát. A jelszó nem helyettesíti a helyreállítási kulcsot vagy a felhasználói jelszavát.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Titkosítás';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Titkosítási jelmondat beállítása';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Titkosítási PIN-kód beállítása';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Meg kell adnia a jelmondatát minden alkalommal, amikor bekapcsolja a számítógépet. Ez a jelmondat eltér a felhasználói jelszavától. Később megváltoztathatja, de nem tilthatja le. Ha elfelejti a jelmondatát, akkor a helyreállítási kulcs használatával szerezheti vissza a hozzáférést a lemezhez.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Meg kell adnia a PIN-kódját minden alkalommal, amikor bekapcsolja a számítógépet. Ez a PIN-kód eltér a felhasználói jelszavától. Később megváltoztathatja, de nem tilthatja le. Ha elfelejti a PIN-kódját, akkor a helyreállítási kulcs használatával szerezheti vissza a hozzáférést a lemezhez.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Jelmondat';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Jelmondat megerősítése';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase =>
+      'A jelmondat megadása kötelező';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'A jelmondatok nem egyeznek';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'PIN-kód';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'PIN-kód megerősítése';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PIN-kód szükséges';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'A PIN-kódok nem egyeznek';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Jelmondat megkövetelése';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'A legbiztonságosabb. Hosszabb jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'PIN-kód megkövetelése';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Biztonságosabb. Számokból álló PIN-kódot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Lemez automatikus feloldása';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'További biztonság';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Alapértelmezetten a számítógép platformmegbízhatósági modulja (TPM) feloldja a lemezt az indítás során. Az adatok további védelmére is vannak lehetőségek.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Gyenge jelmondat, növelje meg a hosszát vagy tegye bonyolultabbá';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Megfelelő jelmondat, de a nagyobb biztonság érdekében növelje meg a hosszát vagy tegye bonyolultabbá';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Erős jelmondat';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Gyenge PIN-kód, növelje meg a hosszát vagy tegye kevésbé kiszámíthatóvá';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Megfelelő PIN-kód, de a nagyobb biztonság érdekében növelje meg a hosszát vagy tegye kevésbé kiszámíthatóvá';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'A PIN-kód elég hosszú';
 
   @override
   String get installationTypeTitle => 'Lemez beállítása';
@@ -1034,19 +1036,20 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Vállalati szintű 24/7 támogatás Ubuntu Pro előfizetéssel';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Következő dia';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Előző dia';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Diavetítés lejátszása';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Diavetítés szüneteltetése';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel =>
+      'Telepítési naplók be- vagy kikapcsolása';
 
   @override
   String get copyingFiles => 'Fájlok másolása…';
@@ -1223,74 +1226,75 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM helyreállítási kulcs';
+  String get recoveryKeyTitle => 'Helyreállítási kulcs';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Fontos';
 
   @override
-  String get recoveryKeyHeader => 'Helyreállítási kulcs beszerzése';
+  String get recoveryKeyHeader => 'Helyreállítási kulcs mentése';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Helyreállítási kulcs nélkül elveszítheti az összes adatát';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Helyreállítási kulcs';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Tárolja a helyreállítási kulcsot biztonságos helyen. Használja azt a lemez bizonyos rendszerváltozások esetén történő visszafejtéséhez. Például szüksége lehet rá, ha megváltoztatja a számítógépben lévő alkatrészeket vagy frissíti a belső vezérlőprogramot.';
+      'Akkor kell megadnia ezt a helyreállítási kulcsot, ha a visszafejtés nem sikerül az indítás során. A kulcs nélkül elveszíti a hozzáférést az összes adatához. Mentse el biztonságos helyre, például jelszókezelőbe.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Megértem, hogy elveszíthetem az összes adatomat, ha nincs helyreállítási kulcsom';
+      'Elmentettem a helyreállítási kulcsomat egy biztonságos helyre';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Tudjon meg többet';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Mentés fájlba';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'QR-kód megjelenítése';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO asztal – helyreállítási kulcs';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Olvassa be a QR-kódot a helyreállítási kulcs másolásához, és mentse el biztonságos helyre, például jelszókezelőbe. Fényképet is készíthet a későbbi használathoz.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Vágólapra másolva';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'A helyreállítási kulcs fájlja nincs elmentve';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'A helyreállítási kulcs fájlját nem lehet ideiglenes helyre menteni';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Ismeretlen hiba';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Nincs jogosultsága az adott mappába való íráshoz. Próbáljon egy másik helyet, vagy használjon más módszert.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Próbáljon egy másik helyet, például egy cserélhető meghajtót, vagy használjon más módszert.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Helyreállítási kulcs fájljának mentése';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Szöveges fájlok';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1360,17 +1364,17 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Az alábbiakban áttekintheti a Landscape-ből importált automatikus telepítőfájlt.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sikeres';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Hiba';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Bezárás';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizálás';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizálás';
 }

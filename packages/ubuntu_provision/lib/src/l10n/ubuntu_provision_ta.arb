@@ -216,5 +216,7 @@
   "eulaAcceptTerms": "இந்த விதிமுறைகளைப் படித்து ஏற்றுக்கொண்டேன்",
   "@eulaAcceptTerms": {},
   "identityHostnameTooLong": "அந்த கணினி பெயர் மிக நீளமானது.",
-  "@identityHostnameTooLong": {}
+  "@identityHostnameTooLong": {},
+  "successIconSemanticLabel": "வெற்றி",
+  "@successIconSemanticLabel": {}
 }

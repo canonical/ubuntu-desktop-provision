@@ -313,15 +313,15 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'உங்கள் கோப்புகளை குறியாக்க உங்களுக்கு ஒரு கடவுச்சொல் தேவை. உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் உங்கள் கடவுச்சொற்றுக்கு கேட்கப்படுவீர்கள்.';
+      'உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் உங்கள் கடவுச்சொற்றாக்கப்பட வேண்டும். இந்த கடவுச்சொல் உங்கள் பயனர் கடவுச்சொல்லிலிருந்து வேறுபட்டது.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'உங்கள் கடவுச்சொல் எங்காவது பாதுகாப்பாக சேமிக்கவும்';
+      'உங்கள் கடவுச்சொல் சேமிப்பதை உறுதிசெய்க';
 
   @override
   String get choosePassphraseInfoBody =>
-      'உங்கள் கடவுச்சொல் இழந்தால், உங்கள் எல்லா தரவையும் இழப்பீர்கள்.';
+      'நீங்கள் அதை இழந்தால், உங்கள் எல்லா தரவையும் இழப்பீர்கள்.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -332,91 +332,94 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'உங்கள் கடவுச்சொல் இழந்தால், உங்கள் எல்லா தரவையும் இழப்பீர்கள். பாச்ஃபிரேச் மீட்பு விசை அல்லது உங்கள் பயனர் கடவுச்சொல்லை மாற்றாது.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'குறியாக்கம்';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'ஒரு குறியாக்க பாச்ஃபிரேசை அமைக்கவும்';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'ஒரு குறியாக்க முள் அமைக்கவும்';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் உங்கள் கடவுச்சொற்றாக்கப்பட வேண்டும். இந்த கடவுச்சொல் உங்கள் பயனர் கடவுச்சொல்லிலிருந்து வேறுபட்டது. நீங்கள் அதை பின்னர் மாற்ற முடியும், ஆனால் அதை முடக்க முடியாது. உங்கள் கடவுச்சொல் மறந்துவிட்டால், மீட்பு விசையைப் பயன்படுத்தி வட்டுக்கான அணுகலை மீண்டும் பெறலாம்.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் உங்கள் முள் உள்ளிட வேண்டும். இந்த முள் உங்கள் பயனர் கடவுச்சொல்லிலிருந்து வேறுபட்டது. நீங்கள் அதை பின்னர் மாற்ற முடியும், ஆனால் அதை முடக்க முடியாது. உங்கள் முள் ஐ மறந்துவிட்டால், மீட்பு விசையைப் பயன்படுத்தி வட்டுக்கான அணுகலை மீண்டும் பெறலாம்.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'கடவுச்சொற்றொடர்';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'பாச்ஃபிரேசை உறுதிப்படுத்தவும்';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'ஒரு கடவுச்சொல் தேவை';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'கடவுச்சொற்றொடர்கள் பொருந்தவில்லை';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'முள்';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'முள் உறுதிப்படுத்தவும்';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'ஒரு முள் தேவை';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'ஊசிகள் பொருந்தவில்லை';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'கடவுச்சொற்றொடர் தேவை';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'மிகவும் பாதுகாப்பானது. உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் நீங்கள் நீண்ட கடவுச்சொற்றாக்க வேண்டும்.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'ஒரு முள் தேவை';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'மிகவும் பாதுகாப்பானது. உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் நீங்கள் ஒரு எண் முள் உள்ளிட வேண்டும்.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'வட்டு தானாக திறக்கவும்';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'குறியாக்க முள் அல்லது கடவுச்சொல்';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (டிபிஎம்) தொடக்கத்தின் போது வட்டைத் திறக்கும். இருப்பினும், உங்கள் தரவைப் பாதுகாக்க ஒரு முள் அல்லது கடவுச்சொல் தேவைப்படலாம்.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'பலவீனமான கடவுச்சொல், அதை நீண்டதாகவோ அல்லது சிக்கலானதாகவோ செய்யுங்கள்';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'நியாயமான பாச்ஃபிரேச், சிறந்த பாதுகாப்பிற்காக நீண்ட அல்லது மிகவும் சிக்கலானதாக மாற்றவும்';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'வலுவான கடவுச்சொற்றொடர்';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'பலவீனமான முள், நீண்டதாகவோ அல்லது குறைவாகவோ கணிக்கக்கூடியதாக மாற்றவும்';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'நியாயமான முள், சிறந்த பாதுகாப்பிற்கு நீண்டதாகவோ அல்லது குறைவாகவோ கணிக்கக்கூடியதாக மாற்றவும்';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'முள் நீண்டது';
 
   @override
   String get installationTypeTitle => 'நிறுவல் வகை';
@@ -1036,19 +1039,19 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'நிறுவன-வகுப்பு 24/7 உபுண்டு புரோவுடன் உதவி';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'அடுத்த ச்லைடு';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'முந்தைய ச்லைடு';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'ச்லைடுசோ விளையாடுங்கள்';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'ச்லைடுசோ இடைநிறுத்தம்';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'பதிவுகளை நிறுவவும்';
 
   @override
   String get copyingFiles => 'கோப்புகளை நகலெடுக்கும்…';
@@ -1224,74 +1227,75 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'டிபிஎம் மீட்பு விசை';
+  String get recoveryKeyTitle => 'மீட்பு விசை';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'முக்கியமானது';
 
   @override
-  String get recoveryKeyHeader => 'மீட்பு விசையைப் பெறுங்கள்';
+  String get recoveryKeyHeader => 'உங்கள் மீட்பு விசையை சேமிக்கவும்';
 
   @override
   String get recoveryKeyInfoHeader =>
       'மீட்பு விசை இல்லாமல் உங்கள் எல்லா தரவையும் இழக்க நேரிடும்';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'மீட்பு விசை';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'மீட்பு விசையை எங்காவது பாதுகாப்பாக சேமிக்கவும். சில கணினி மாற்றங்கள் ஏற்பட்டால் வட்டு மறைகுறியாக்க இதைப் பயன்படுத்தவும். எடுத்துக்காட்டாக, உங்கள் கணினியில் உள்ள கூறுகளை மாற்றினால் அல்லது ஃபார்ம்வேரைப் புதுப்பித்தால் உங்களுக்குத் தேவைப்படலாம்.';
+      'தொடக்கத்தின் போது மறைகுறியாக்கம் தோல்வியுற்றால் இந்த மீட்பு விசையை நீங்கள் வழங்க வேண்டும். விசை இல்லாமல், உங்கள் எல்லா தரவிற்கும் அணுகலை இழப்பீர்கள். கடவுச்சொல் நிர்வாகி போன்ற எங்காவது பாதுகாப்பாக சேமிக்கவும்.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'என்னிடம் மீட்பு விசை இல்லையென்றால் எனது எல்லா தரவையும் இழக்க நேரிடும் என்பதை நான் புரிந்துகொள்கிறேன்';
+      'எனது மீட்பு விசையை எங்காவது பாதுகாப்பாக சேமித்தேன்';
 
   @override
   String get recoveryKeyLinkLabel => 'மேலும் அறிக';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'கோப்பில் சேமிக்கவும்';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'QR குறியீட்டைக் காட்டு';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO டெச்க்டாப் - மீட்பு விசை';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'மீட்பு விசையை நகலெடுக்க QR குறியீட்டை வருடு செய்து கடவுச்சொல் நிர்வாகி போன்ற எங்காவது பாதுகாப்பாக சேமிக்கவும். பின்னர் பயன்படுத்த நீங்கள் ஒரு புகைப்படத்தையும் எடுக்கலாம்.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction =>
+      'இடைநிலைப்பலகைக்கு நகலெடுக்கப்பட்டது';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'மீட்பு விசை கோப்பு சேமிக்கப்படவில்லை';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'மீட்பு முக்கிய கோப்பை தற்காலிக இடத்தில் சேமிக்க முடியாது';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'தெரியாத பிழை';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'அந்த கோப்புறையில் எழுத உங்களுக்கு இசைவு இல்லை. வேறு இடத்தை முயற்சிக்கவும் அல்லது மற்றொரு முறையைப் பயன்படுத்தவும்.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'நீக்கக்கூடிய இயக்கி போன்ற வேறு இடத்தை முயற்சிக்கவும் அல்லது மற்றொரு முறையைப் பயன்படுத்தவும்.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'மீட்பு விசை கோப்பை சேமிக்கவும்';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'உரை கோப்புகள்';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1362,10 +1366,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'கீழே உள்ள நிலப்பரப்பில் இருந்து இறக்குமதி செய்யப்பட்ட ஆட்டோஇன்ச்டால் கோப்பை நீங்கள் மதிப்பாய்வு செய்யலாம்.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'வெற்றி';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'பிழை';
 
   @override
   String get closeIconSemanticLabel => 'Close';

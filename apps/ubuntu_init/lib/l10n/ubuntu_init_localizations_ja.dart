@@ -151,14 +151,14 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
       '「ソフトウェアとアップデート」アプリでProサービスを設定できます。';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => '成功';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '閉じる';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }

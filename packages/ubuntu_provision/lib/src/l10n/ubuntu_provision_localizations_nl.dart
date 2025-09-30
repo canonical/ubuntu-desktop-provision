@@ -362,14 +362,14 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Ik heb deze regels gelezen en ga akkoord';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Succes';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Sluiten';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximaliseren';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimaliseren';
 }

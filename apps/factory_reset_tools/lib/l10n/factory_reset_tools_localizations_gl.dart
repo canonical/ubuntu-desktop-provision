@@ -102,7 +102,7 @@ class FactoryResetToolsLocalizationsGl extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'Pechar';
 
   @override
   String get ok => 'OK';

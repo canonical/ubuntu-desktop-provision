@@ -13,12 +13,12 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO erişilebilirlik';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Kurulumdan önce $DISTRO\'yu ihtiyaçlarınıza göre özelleştirin. Bunları daha sonra Sistem Ayarları\'ndan değiştirebilirsiniz.';
   }
 
   @override
@@ -40,7 +40,7 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get accessibilityHighContrastLabel => 'Yüksek karşıtlık';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Büyük metin';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Animasyonu azalt';
@@ -55,24 +55,24 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get accessibilityStickKeysLabel => 'Yapışkan tuşlar';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Yavaş tuşlar';
 
   @override
   String get accessibilityMouseKeysLabel => 'Fare tuşları';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Masaüstü yakınlaştırma';
 
   @override
   String get errorPageTitle => 'Bir sorun oluştu';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+      'Üzgünüz, ancak hatanın ne olduğundan emin değiliz. Bilgisayarınızı yeniden başlatıp yükleme işlemini tekrar başlatabilirsiniz. Ayrıca <a>sorunu bildirebilirsiniz</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'İlgili hata ayıklama bilgilerini içeren otomatik bir hata raporu göndermek için lütfen bir terminalde veya komut konsolundan (Alt+F2) <pre>sudo ubuntu-bug $SNAP</pre> komutunu çalıştırın.';
   }
 
   @override
@@ -229,11 +229,11 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Active Directory\'yi Yapılandır';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Active Directory\'ye giriş yapılsın mı?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO, daha kolay yönetim için Active Directory ile kusursuz bir şekilde entegre olacak şekilde tasarlanmıştır.';
   }
 
   @override
@@ -301,7 +301,7 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'İnternet bağlantısı, uyumluluk kontrolü ve ekstra yazılım paketleri ile kurulumunuzu iyileştirecektir.';
 
   @override
   String get networkWiredOption => 'Kablolu bağlantı kullan';
@@ -355,7 +355,7 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'Bu makineyi kurmaya devam etmek için lisans sözleşmesinin şartlarını okuyup kabul etmeniz gerekir.';
 
   @override
   String get eulaAcceptTerms => 'Koşulları okudum ve kabul ediyorum';

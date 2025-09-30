@@ -93,7 +93,7 @@ class FactoryResetToolsLocalizationsAr extends FactoryResetToolsLocalizations {
   String get restore => 'Restore';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'أعِد التشغيل';
 
   @override
   String get reformat => 'Reformat';
@@ -102,17 +102,17 @@ class FactoryResetToolsLocalizationsAr extends FactoryResetToolsLocalizations {
   String get failed => 'Failed to run command';
 
   @override
-  String get close => 'Close';
+  String get close => 'أغلِق';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'أغلِق';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'كبِّر';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'صغِّر';
 }

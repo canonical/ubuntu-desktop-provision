@@ -9,97 +9,99 @@ class FactoryResetToolsLocalizationsCa extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsCa([String locale = 'ca']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Eines de restabliment de fàbrica';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Eines de restabliment de fàbrica';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Què voleu fer?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Crea un mitjà de restabliment';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Inicia el restabliment de fàbrica';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Crea un mitjà USB de restabliment';
 
   @override
   String get createUsbBody =>
-      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+      'Creeu un mitjà USB de restabliment per restaurar el sistema i personalitzar les seves instal·lacions de l\'Ubuntu.';
 
   @override
   String get createUsbListExplanation =>
-      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+      'Seleccioneu una unitat d\'emmagatzematge USB. La unitat ha de tenir **almenys 16 GB d\'espai.**';
 
   @override
   String get createUsbWarning =>
-      'The flash drive will be reformatted and all data on the drive will be lost.';
+      'Es reformatarà la unitat d\'emmagatzematge i es perdran totes les dades que contingui.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Suport USB de restabliment';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'No es va detectar cap unitat extraïble';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'You need a USB storage to create a Factory Reset Media.';
+      'Cal un emmagatzematge USB per crear un mitjà de restabliment de fàbrica.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle =>
+      'Seleccioneu una opció per començar el restabliment de fàbrica';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Espereu mentre es recuperen les unitats.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle =>
+      'El suport USB de restabliment està preparat';
 
   @override
   String get resetMediaReadyBody =>
-      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+      'Quan us calgui usar la unitat USB, inseriu-la a l\'equip que vulgueu restablit i reinicieu-lo.';
 
   @override
   String get errorLoadingDrives =>
-      'An error occurred while fetching the drives.';
+      'S\'ha produït un error en recuperar les unitats.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'S\'està inicialitzant';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Copiant';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'S\'està finalitzant';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Finalitzat';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'S\'ha produït una fallada';
 
   @override
   String get error => 'Error';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'S\'està carregant...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Advertiment';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Restaura';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Reinicia';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Reformata';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'No s\'ha pogut executar l\'ordre';
 
   @override
   String get close => 'Tanca';
@@ -108,11 +110,11 @@ class FactoryResetToolsLocalizationsCa extends FactoryResetToolsLocalizations {
   String get ok => 'D\'acord';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tanca';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximitza';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimitza';
 }

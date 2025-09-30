@@ -22,13 +22,13 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Βλέποντας';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Ακούγοντας';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Πληκτρολόγηση';
 
   @override
   String get accessibilityPointingLabel => 'Pointing and clicking';

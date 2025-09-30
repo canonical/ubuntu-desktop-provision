@@ -107,11 +107,11 @@ class FactoryResetToolsLocalizationsRu extends FactoryResetToolsLocalizations {
   String get ok => 'ОК';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Закрыть';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Развернуть';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Свернуть';
 }
