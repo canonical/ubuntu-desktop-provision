@@ -311,11 +311,11 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Vajad salafraasi failide krüptimiseks. Pead selle sisestama igal arvuti käivituskorral.';
+      'Pead selle salafraasi sisestama igal arvuti käivituskorral. Salafraas ei ole sama, kui sinu salasõna.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Salvesta salafraas turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
+      'Palun salvesta salafraas turvaliselt, näiteks digitaalses salasõnalaekas või vana kooli seifis';
 
   @override
   String get choosePassphraseInfoBody =>
@@ -330,91 +330,93 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Kui unustad salafraasi, siis kaotad ligipääsu oma andmetele. Salafraas ei asenda taastevõtit ega kasutajakonto salasõna.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Krüptimine';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Seadista krüptimise salafraas';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Seadista krüptimise PIN-kood';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Pead selle salafraasi sisestama igal arvuti käivituskorral. See salafraas ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta, kuid mitte välja lülitada. Kui peaksid salafraasi unustama, siis saad ligipääsu andmekandjale taastada taastevõtmega.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Pead selle PIN-koodi sisestama igal arvuti käivituskorral. See PIN-kood ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta, kuid mitte välja lülitada. Kui peaksid PIN-koodi unustama, siis saad ligipääsu andmekandjale taastada taastevõtmega.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Salafraas';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Korda salafraasi';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Salafraas on nõutav';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'Salafraasid ei klapi omavahel';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'PIN-kood';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Korda PIN-koodi';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PIN-kood on vajalik';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN-koodid ei klapi omavahel';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Eelda salafraasi kasutamist';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Kõige turvalisem. Igal arvuti sisselülitamisel pead sisestama salafraasi.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Eelda PIN-koodi kasutamist';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Turvalisem, kui muidu. Igal arvuti sisselülitamisel pead sisestama numbritest koosneva PIN-koodi.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'Eemalda andmekandja lukustus automaatselt';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Täiendav turvalisus';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Vaikimisi eemaldab selle arvuti Trusted Platform Module (TPM) lukustuse automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Salafraas on kehv, palun muuda ta pikemaks ja keerukamaks';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Salafraas on juba täitsa hea, parema turvalisuse nimel palun muuda ta pikemaks ja keerukamaks';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Salafraas on korralik';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'PIN-kood on kehv, palun muuda ta pikemaks ja vähem ennustatavaks';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'PIN-kood on juba täitsa hea, parema turvalisuse nimel palun muuda ta pikemaks ja vähem ennustatavaks';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN-kood on piisavalt pikk';
 
   @override
   String get installationTypeTitle => 'Kettaseadistus';
@@ -1029,19 +1031,19 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Ubuntu Pro tellimusega suurfirmade tasemel 24/7 tugi';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Järgmine slaid';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Eelmine slaid';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Käivita slaidiprogramm';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Peata slaidiprogramm';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Näita paigalduslogisid või peida nad';
 
   @override
   String get copyingFiles => 'Kopeerin faile…';
@@ -1149,7 +1151,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Haagime paketti: $snap...';
+    return 'Haagin paketti: $snap...';
   }
 
   @override
@@ -1218,74 +1220,74 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM-i taastevõti';
+  String get recoveryKeyTitle => 'Taastevõti';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Oluline';
 
   @override
-  String get recoveryKeyHeader => 'Loo endale taastevõti';
+  String get recoveryKeyHeader => 'Salvesta oma taastevõti';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Ilma taastevõtmeta võid kaotada ligipääsu kõikidele oma andmetele';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Taastevõti';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Hoia taastevõtit turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis. Mõnede süsteemimuudatuste puhul pead teda kasutama andmekandja dekrüptimiseks. Näiteks võib teda vaja olla, kui muudad oma arvuti raudvaralisi komponente või uuendad püsivara.';
+      'Kui dekrüptimine käivitamisel ei õnnestunud, siis pead sisestama selle taastevõtme. Ilma selle taastevõtmeta kaotad ligipääsu kõikidele oma andmetele. Hoia taastevõtit turvaliselt kas moodsas digitaalses salasõnalaekas või vana kooli seifis.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Ma mõistan, et ilma taastevõtmeta võin kaotada ligipääsu kõikidele oma andmetele';
+      'Ma olen oma taastevõtme turvaliselt salvestanud';
 
   @override
   String get recoveryKeyLinkLabel => 'Lisateave';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Salvesta failina';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Näita QR-koodi';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO töölaud - taastevõti';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Taastevõtme kopeerimiseks ja turvaliseks talletamiseks skaneeri seda QR-koodi. Turvaliseks salvestamiseks sobib digitaalne salasõnahaldur. Hilisemaks töötlemiseks võid teda pildistada.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Kopeeritud lõikelauale';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Taastevõtme fail pole salvestatud';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Taastevõtit ei saa salvestada ajutisse asukohta';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Tundmatu viga';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Sul puuduvad õigused sellesse kausta kirjutamiseks. Proovi muud asukohta või kasuta muud meetodit.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Proovi kasutada muud asukohta, näiteks eemaldatavat andmekandjat või muud meetodit.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'Salvesta taastevõti failina';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Tekstifailid';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1356,17 +1358,17 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Landscape\'i teenusest imporditud automaatse paigalduse juhtfaili sisu saad vaadata alljärgnevalt.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Õnnestus';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Viga';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Sulge';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimeeri';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimeeri';
 }

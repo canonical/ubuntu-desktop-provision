@@ -17,66 +17,62 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => '自動インストール';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => '自動インストールファイルのインポート';
 
   @override
-  String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+  String get autoinstallDirectUrlLabel => '自動インストールファイルのURLを入力してください:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'またはファイルを選択してください:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'ファイルの選択...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'ファイルの選択解除';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'ファイルの選択';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAMLファイル';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'インポート';
 
   @override
-  String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+  String get autoinstallDirectErrorNetworkTitle => '自動インストールファイルに到達できません';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'URLが正しいか確認するか、インターネット接続をテストするか、後ほど試してください。';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => '無効なURL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'URLあるいはローカルファイルの選択が正しいか確認してください。';
 
   @override
-  String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+  String get autoinstallDirectErrorInvalidContentTitle => '無効な自動インストールファイル';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'ファイルを確認するか別なものを選択してください。';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+  String get autoinstallDirectErrorFileSystemTitle => '自動インストールファイルが読み込めません';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'パーミッションを確認するか別なものを選択してください。';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => '不明なエラー';
 
   @override
   String get autoinstallTitle => 'インストールの種類';
@@ -98,18 +94,18 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       'インストール中ガイドに従ってインストールしたいユーザー向けです。';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => '自動インストールファイルによる自動化';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      '一貫性と再現性を確保したシステムセットアップのためautoinstall.yamlを使用する上級ユーザー向けです。';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Landscapeによる自動化';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Landscape経由で自動インストールファイルが提供されている、組織に所属しているユーザー向けです。';
 
   @override
   String get changeButtonText => '変更';
@@ -164,7 +160,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return '現在の OS と一緒に (または代わりに) $RELEASE をインストールします。あまり時間がかからないはずです。';
+    return '現在の OS と共存して (または代わりに) $RELEASE をインストールします。あまり時間がかからないはずです。';
   }
 
   @override
@@ -176,18 +172,17 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'RSTを検出';
 
   @override
-  String get rstHeader => '続行するにはRSTをオフにしてください';
+  String get rstHeader => '続行するにはRSTを無効にしてください';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'このPCではIntel RST (Rapid Storage Technology)を使用しています。RSTを無効にしてください:';
 
   @override
-  String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+  String get rstDisableWindows => 'Windowsでデュアルブートしている場合';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOSの設定';
 
   @override
   String rstInstructions(String url) {
@@ -301,108 +296,107 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'ファイルを暗号化するパスフレーズが必要です。コンピューターの電源を入れるたびに毎回パスフレーズを入力します。';
+      'コンピューターの電源を入れるたびに毎回パスフレーズを入力します。パスフレーズはユーザーのパスワードとは異なります。';
 
   @override
   String get choosePassphraseInfoHeader => '確実にパスフレーズを保存してください';
 
   @override
-  String get choosePassphraseInfoBody => 'もしパスフレーズを失うと、すべてのデータが消失します。';
+  String get choosePassphraseInfoBody => 'もし失くすと、すべてのデータを失います。';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'パスフレーズとリカバリーキーをどこか安全なところに保存';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'パスフレーズを失うと、すべてのデータを失います。パスフレーズはリカバリーキーやユーザーのパスワードで代替することはできません。';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => '暗号化';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => '暗号化パスフレーズを設定';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => '暗号化PINを設定';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'PCの電源を入れるたびにパスフレーズを入力する必要があります。パスフレーズはユーザーのパスワードとは異なります。後ほど変更はできますが、無効にはできません。パスフレーズを忘れてしまうと、リカバリーキーを使用してディスクにアクセスすることになります。';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'PCの電源を入れるたびにPINを入力する必要があります。PINはユーザーのパスワードとは異なります。後ほど変更はできますが、無効にはできません。PINを忘れてしまうと、リカバリーキーを使用してディスクにアクセスすることになります。';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'パスフレーズ';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'パスフレーズの確認';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'パスフレーズを入力してください';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'パスフレーズが一致しません';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'PINの確認';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PINを入力してください';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PINが一致しません';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'パスフレーズが必要です';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      '最も安全です。PCの電源を入れるたびに長いパスフレーズを入力することになります。';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'PINが必要です';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'かなり安全です。PCの電源を入れるたびにPIN番号を入力することになります。';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'ディスクの暗号化を自動解除';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => '追加のセキュリティ';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      '既定では、このPCのTPMが起動時にディスクの暗号化を解除します。データ保護のため追加のオプションもあります。';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      '弱いパスフレーズ。長くするかもっと複雑にしてください';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      '妥当なパスフレーズ。長くするかもっと複雑にするとさらにセキュアになります';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => '強いパスフレーズ';
 
   @override
-  String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+  String get passphrasePagePinEntropyBelowMin => '弱いPIN。長くするか、予想しにくいものにしてください';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      '妥当なPIN。長くするか予想しにくいものにするとさらにセキュアになります';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PINは充分に長いです';
 
   @override
   String get installationTypeTitle => 'ディスクのセットアップ';
@@ -436,39 +430,38 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeEraseInfo => '選択したディスクにクリーンな状態でインストールします。';
+  String get installationTypeEraseInfo => 'OSを含むすべてのデータとパーティションは削除されます。';
 
   @override
-  String get installationTypeAdvancedLabel => '高度な機能…';
+  String get installationTypeAdvancedLabel => '高度な機能を表示…';
 
   @override
-  String get installationTypeAdvancedTitle => '高度な機能';
+  String get installationTypeAdvancedTitle => '暗号化とファイルシステム';
 
   @override
   String get installationTypeExperimental => '実験的';
 
   @override
-  String get installationTypeNone => 'なし';
+  String get installationTypeNone => '暗号化しない';
 
   @override
-  String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+  String get installationTypeNoneInfo => '暗号化しない標準的なファイルシステムです。';
 
   @override
   String get installationTypeNoneSelected => '何も選択していません';
 
   @override
-  String get installationTypeLVM => 'LVMを使用';
+  String get installationTypeLVM => '暗号化なしでLVMを使用';
 
   @override
   String get installationTypeLVMSelected => 'LVM を選択';
 
   @override
-  String get installationTypeLVMEncryption => 'LVMと暗号化を使用';
+  String get installationTypeLVMEncryption => 'パスフレーズで暗号化';
 
   @override
   String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+      'PCの電源を入れるたびにパスフレーズの入力が必要です。LVMのLUKS暗号化を使用します。';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVMと暗号化を選択';
@@ -477,14 +470,14 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeEncryptInfo => 'セキュリティキーは次のステップで選択します。';
 
   @override
-  String get installationTypeZFS => 'ディスクを消去して ZFS を使用';
+  String get installationTypeZFS => '暗号化なしでZFS を使用';
 
   @override
-  String get installationTypeZFSEncryption => 'ディスクを消去してZFSを暗号化';
+  String get installationTypeZFSEncryption => 'ZFSを使用してパスフレーズによる暗号化';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'ZFSによるネイティブな暗号化です。PCの電源を入れるたびにパスフレーズの入力が必要です。';
 
   @override
   String get installationTypeZFSSelected => 'ZFS を選択';
@@ -493,11 +486,11 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'ZFSと暗号化を選択';
 
   @override
-  String get installationTypeTPM => 'ハードウェアベースのディスク全体暗号化';
+  String get installationTypeTPM => 'ハードウェアベースのディスク暗号化を使用';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'これは実験的な機能です。 このハードウェアまたは将来の $DISTRO リリースでは動作しなくなるかもしれません。このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。';
+    return 'このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。このハードウェアまたは将来の $DISTRO リリースでは動作しなくなるかもしれません。';
   }
 
   @override
@@ -520,32 +513,32 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return '$os1と$os2と並んで$productをインストールする';
+    return '$os1と$os2を共存して$productをインストールする';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'それと並んで$productをインストールする';
+    return '既存のOSと共存して$productをインストールする';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return '$productを他のパーティションと並べてインストールする';
+    return '$productを他のパーティションと共存してインストールする';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'ファイルは削除されません。コンピュータを起動する際に、どのOSで起動するか選択できます。';
+    return '$productをインストールするため、サイズ変更と余白作成を実施するパーティションを選択してください。コンピュータを起動する際に、どのOSで起動するか選択できます。';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '$os を削除し、 $product をインストール';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return '既存の $os 用のファイルとデータはすべて恒久的に削除されます。';
   }
 
   @override
@@ -621,7 +614,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$mountpoint の $format はサポートされていないファイルシステムです';
   }
 
   @override
@@ -736,7 +729,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'アプリケーション';
 
   @override
-  String get confirmEntryDiskSetup => 'ディスクのセットアップ';
+  String get confirmEntryDiskSetup => 'インストールの種類';
 
   @override
   String get confirmEntryDiskEncryption => 'ディスクの暗号化';
@@ -777,34 +770,34 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get confirmInstallButton => 'インストール';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => '消去';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => '変更なし';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return '$oldsize から $newsize へサイズ変更';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return '$mountpoint 用を $format で作成とフォーマット';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '$mountpoint 用を $format でフォーマット済';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return '$mountpoint 用';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return '$format でフォーマット済';
   }
 
   @override
@@ -842,34 +835,33 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get continueTesting => '試用を継続する';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker検出';
 
   @override
-  String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+  String get bitlockerInfoDescription => 'BitLockerで暗号化されたパーティションがあります。';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'Windowsと共存してインストールするには、WindowsのBitLockerを解除してください。';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'Windowsがインストール後の起動時にリカバリーキーを要求するかもしれません。';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return '詳細な説明は <a href=\"$url\">BitLockerガイド</a> をご覧ください。';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'BitLockerリカバリーキーがないとすべてのデータを失うことになるかもしれません';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'PCの再起動';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'PCを再起動しますか？';
 
   @override
   String get restartIntoWindows => '再起動して Windows を使用';
@@ -999,19 +991,19 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationSlidesSupportUbuntuPro => 'Ubuntu Proで24時間365日サポート';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => '次のスライド';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => '前のスライド';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'スライドショーの再生';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'スライドショーの停止';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'インストールログの表示切替';
 
   @override
   String get copyingFiles => 'ファイルをコピーしています…';
@@ -1186,153 +1178,147 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPMリカバリーキー';
+  String get recoveryKeyTitle => 'リカバリーキー';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => '重要';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'リカバリーキーを保存してください';
 
   @override
-  String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+  String get recoveryKeyInfoHeader => 'リカバリーキーがないとすべてのデータを失うことになるかもしれません';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'リカバリーキー';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      '起動時に暗号化の解除に失敗した場合、このリカバリーキーを使用することがあります。このキーを失くすと、すべてのデータにアクセスできなくなります。キーはパスワードマネージャーなどどこか安全なところに保存してください。';
 
   @override
-  String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+  String get recoveryKeyConfirmation => 'どこか安全なところにリカバリーキーを保存します';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => '追加情報';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'ファイルに保存';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'QRコードを表示';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO デスクトップ - リカバリーキー';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'QRコードをスキャンしてリカバリーキーをコピーし、パスワードマネージャーなどどこか安全なところに保存してください。後のために写真を撮っておくのもいいでしょう。';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'クリップボードにコピー';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle => 'リカバリーキーファイルが保存できませんでした';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'リカバリーキーファイルが一時場所に保存できませんでした';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => '不明なエラー';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'フォルダーに保存する権限がありません。別の場所にするか、他の方法にしてください。';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'USBメモリーなど別の場所に保存するか、他の方法にしてください。';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'リカバリーキーファイルの保存';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'テキストファイル';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'QRコードをスキャンするか、 <a href=\"https://$url\"> にあるコードを入力してください';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => '自動インストール';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Landscapeにログイン';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Landscapeのドメイン(FQDN)を入力してください';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscapeドメイン(FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'ログインと自動インストールファイルの取得のため、組織のLandscapeドメインを入力してください。ITサポートからFQDNを取得できます。';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscapeドメイン(FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => '次';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      '無効なドメインです。再確認するか、ITサポートに連絡してください';
 
   @override
-  String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+  String get landscapeDomainNoInternetTitleWarning => '継続するにはインターネット接続が必要です';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'Landscapeから自動インストールファイルを取得するのにインターネットが必要です';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'コードの期限が切れました。やり直してください';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'ログインに失敗しました。やり直してください';
 
   @override
-  String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+  String get landscapeErrorPageTitle => 'このアカウントでは自動インストールは実行できません';
 
   @override
-  String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+  String get landscapeErrorPageBody => 'ITサポートに連絡するか、他のインストールオプションにしてください。';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'エラーコード: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'Ubuntuは組織に提供された設定でインストールされます';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'Landscapeから取り込んだ自動インストールファイルは以下でプレビューできます。';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => '成功';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'エラー';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '閉じる';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }

@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsPl extends UbuntuInitLocalizations {
       'Usługami Pro możesz zarządzać w aplikacji Oprogramowanie i aktualizacje.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Powodzenie';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zamknij';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksymalizuj';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizuj';
 }

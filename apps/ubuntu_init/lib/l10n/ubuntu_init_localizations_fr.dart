@@ -155,14 +155,14 @@ class UbuntuInitLocalizationsFr extends UbuntuInitLocalizations {
       'Vous pouvez gérer vos services Pro dans l\'application Logiciels & Mises à jour.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Succès';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fermer';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximiser';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimiser';
 }

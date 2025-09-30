@@ -112,11 +112,11 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Get the most comprehensive subscription for open-source software security';
+      'گرفتن جامع‌ترین اشتراک امنیتی نرم‌افزارهای آزاد';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'همواره رایگان برای استفادهٔ شخصی. آزمایش ۳۰ روزه برای کسب‌وکارها. <a href=\"https://$url\">بیش‌تر بدانید</a>';
   }
 
   @override
@@ -136,7 +136,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'You can always enable Ubuntu Pro later via the Software & Updates application.';
+      'همواره می‌توانید اوبونتوی حرفه‌ای را در برنامهٔ نرم‌افزارها و به‌روز رسانی‌ها به کار بیندازید.';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuPro =>
@@ -144,7 +144,7 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+      'وصل کردن این دستگاه به اشتراک اوبونتوی حرفه‌ای برای به‌روز رسانی‌های امنیتی روی بازهٔ وسیعی از بسته‌ها تا ۲۰۳۲.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
@@ -152,10 +152,10 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'You can manage your Pro services in the Software & Updates application.';
+      'می‌توانید خدمات حرفه‌ایتان را در برنامهٔ نرم‌افزارها و به‌روز رسانی‌ها مدیریت کنید.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'موفّقیت';
 
   @override
   String get closeIconSemanticLabel => 'Close';

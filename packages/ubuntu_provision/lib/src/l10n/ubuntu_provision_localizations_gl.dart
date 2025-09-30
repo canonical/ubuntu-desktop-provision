@@ -85,7 +85,7 @@ class UbuntuProvisionLocalizationsGl extends UbuntuProvisionLocalizations {
   String get restart => 'Restart';
 
   @override
-  String get close => 'Close';
+  String get close => 'Pechar';
 
   @override
   String get timezonePageTitle => 'Select your timezone';

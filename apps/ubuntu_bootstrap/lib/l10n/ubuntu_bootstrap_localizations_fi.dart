@@ -1349,7 +1349,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Voit käydä läpi Landscapesta tuodun autoinstall-tiedoston sisältöä alla.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Menestys';
 
   @override
   String get errorIconSemanticLabel => 'Error';

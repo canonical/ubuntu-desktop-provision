@@ -72,7 +72,7 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'برای فرستادن گزارش اشکالی خودکار شامل اطّلاعات اشکال‌زدایی، لطفاً <pre>sudo ubuntu-bug $SNAP</pre> را در شبیه‌ساز پایانه یا کنسول فرمان (دگرساز+F2) اجرا کنید.';
   }
 
   @override
@@ -100,7 +100,7 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'چیدمان صفحه‌کلید';
 
   @override
-  String get keyboardHeader => 'گزینش چیدمان صفحه‌کلیدتان:';
+  String get keyboardHeader => 'گزینش چیدمان صفحه‌کلیدتان';
 
   @override
   String get keyboardTestHint => 'برای آزمایش صفحه‌کلیدتان، این‌جا بنویسید';
@@ -295,8 +295,7 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'وصل شدن به شبکه';
 
   @override
-  String get networkPageHeader =>
-      'وصل کردن این رایانه به اینترنت می‌گذارد اوبونتو هر نرم‌افزار اضافی مورد نیازی را نصب کرده و به گزینش ناحیهٔ زمانیتان کمک می‌کند.\n\nبا کابل اترنت وصل شده یا شبکهٔ وای‌فای‌ای را برگزینید';
+  String get networkPageHeader => 'وصل شدن به اینترنت';
 
   @override
   String get networkPageBody =>
@@ -347,20 +346,20 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'من نمی‌خواهم همین حالا به اینترنت متّصل شوم';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'توافق‌نامهٔ پروانه';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'بازبینی شرایط خدمت';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'برای ادامهٔ برپایی این دستگاه باید شرایط توافق‌نامهٔ پروانه را خوانده و بپذیرید.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'این شرایط را خوانده و می‌پذیرم';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'موفّقیت';
 
   @override
   String get closeIconSemanticLabel => 'Close';

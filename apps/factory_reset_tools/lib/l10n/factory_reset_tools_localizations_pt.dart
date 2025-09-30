@@ -12,94 +12,96 @@ class FactoryResetToolsLocalizationsPt extends FactoryResetToolsLocalizations {
   String get appTitle => 'Ferramentas de redefinição de fábrica';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Ferramentas de redefinição de fábrica';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'O que gostaria de fazer?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Criar unidade de redefinição';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Iniciar redefinição de fábrica';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Criar uma unidade USB de redefinição';
 
   @override
   String get createUsbBody =>
-      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+      'Crie uma unidade USB de redefinição para restaurar o sistema, bem como personalizar as suas instalações Ubuntu.';
 
   @override
   String get createUsbListExplanation =>
-      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+      'Selecione uma unidade USB. A unidade deve ter **pelo menos 16GB de espaço**.';
 
   @override
   String get createUsbWarning =>
-      'The flash drive will be reformatted and all data on the drive will be lost.';
+      'A pen será reformatada e todos os dados na unidade estarão perdidos.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Unidade USB de redefinição';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Nenhum armazenamento removível detetado';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'You need a USB storage to create a Factory Reset Media.';
+      'Precisa de um armazenamento USB para criar a \"Unidade de Redefinição de Fábrica\".';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle =>
+      'Selecione uma opção para iniciar a redefinição de fábrica';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives =>
+      'Por favor, aguarde enquanto nós obtemos as unidades.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'A unidade USB de redefinição está pronta';
 
   @override
   String get resetMediaReadyBody =>
-      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+      'Quando a quiser utilizar, por favor, insira a unidade USB no computador que pretende reiniciar e reinicie-o.';
 
   @override
   String get errorLoadingDrives =>
-      'An error occurred while fetching the drives.';
+      'Ocorreu um erro enquanto obtinha as unidades.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'A inicializar';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'A copiar';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'A finalizar';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Terminado';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Falhou';
 
   @override
-  String get error => 'Error';
+  String get error => 'Erro';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'A carregar...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Aviso';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Restaurar';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Reiniciar';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Reformatar';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Não foi possível executar o comando';
 
   @override
   String get close => 'Fechar';

@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
       'Du kan hantera dina Pro-tjänster med programmet Programvara och uppdateringar.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Lyckats';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Stäng';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximera';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimera';
 }

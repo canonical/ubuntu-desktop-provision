@@ -13,76 +13,76 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Acessibilidade em$DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Personalize $DISTRO de acordo com suas necessidades antes da configuração. Você pode alterá-lo posteriormente nas Configurações do Sistema.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Vendo';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Audição';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Digitando';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Apontando e clicando';
 
   @override
   String get accessibilityZoomLabel => 'Zoom';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Alto contraste';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Texto caixa alta';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Reduzir animação';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Leitor de tela';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Alertas visuais';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Teclas de aderência';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Teclas lentas';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Teclas do mouse';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Zoom na área de trabalho';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Algo deu errado';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+      'Lamentamos, mas não sabemos qual é o erro. Você pode tentar reiniciar o computador e iniciar o processo de instalação novamente. Você também pode <a>relatar o problema</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Para enviar um relatório de bug automatizado incluindo informações de depuração relevantes, execute <pre>sudo ubuntu-bug $SNAP</pre> em um terminal ou no console de comando (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Mostrar log';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Esconder log';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Reiniciar';
 
   @override
   String get close => 'Fechar';
@@ -100,7 +100,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Disposição do teclado';
 
   @override
-  String get keyboardHeader => 'Escolha a disposição do seu teclado:';
+  String get keyboardHeader => 'Selecione o layout do seu teclado';
 
   @override
   String get keyboardTestHint => 'Digite aqui para testar o seu teclado';
@@ -230,11 +230,11 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Configurar o Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Fazer login no Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO foi projetado para integrar-se perfeitamente ao Active Directory para facilitar a administração.';
   }
 
   @override
@@ -298,12 +298,11 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Ligar a uma rede';
 
   @override
-  String get networkPageHeader =>
-      'Ao ligar este computador à Internet irá ajudar o Ubuntu a instalar qualquer software extra necessário e ajudá-lo com o seu fuso horário.\n\nLigar por cabo de rede, ou escolha uma rede Wi-Fi';
+  String get networkPageHeader => 'Conecte à internet';
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'Uma conexão com a Internet melhorará sua instalação com verificação de compatibilidade e pacotes de software extras.';
 
   @override
   String get networkWiredOption => 'Usar uma ligação por cabo de rede';
@@ -350,17 +349,17 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Não pretendo ligar à Internet por agora';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Contrato de licença';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Revise os termos da licença';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'Para continuar configurando esta máquina, você deve ler e aceitar os termos do contrato de licença.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Li e aceito estes termos';
 
   @override
   String get successIconSemanticLabel => 'Success';

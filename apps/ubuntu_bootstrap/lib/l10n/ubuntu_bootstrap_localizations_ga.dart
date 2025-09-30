@@ -84,7 +84,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'Conas ba mhaith leat ${DISTRO}a shuiteáil?';
+    return 'Conas ba mhaith leat $DISTRO a shuiteáil?';
   }
 
   @override
@@ -298,7 +298,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Íoslódáil agus suiteáil tacaíocht le haghaidh formáidí meáin breise';
 
   @override
-  String get installCodecsSubtitle => 'Lena n-áirítear MP3, MP4, MOV agus';
+  String get installCodecsSubtitle =>
+      'Lena n-áirítear ach gan a bheith teoranta dóibh MP3, MP4, MOV agus a leithéidí';
 
   @override
   String get batteryWarning =>
@@ -312,15 +313,14 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Teastaíonn pasfhrása uait chun do chomhaid a chriptiú. Iarrfar ort do phasfhrása gach uair a chasann tú ar do ríomhaire.';
+      'Beidh ort do phasfhocal a iontráil gach uair a chasann tú ar do ríomhaire. Tá an pasfhocal seo difriúil ó do phasfhocal úsáideora.';
 
   @override
-  String get choosePassphraseInfoHeader =>
-      'Stóráil do phasfhrása áit éigin sábháilte';
+  String get choosePassphraseInfoHeader => 'Bí cinnte do phasfhocal a shábháil';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir.';
+      'Má chailleann tú é, caillfidh tú do chuid sonraí go léir.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -331,98 +331,99 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Má chailleann tú do phasfhrása, caillfidh tú do shonraí go léir. Ní thagann an pasfhrása in ionad na heochrach athshlánaithe ná do phasfhocal úsáideora.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Criptiú';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Socraigh frása faire criptithe';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Socraigh UAP criptithe';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Beidh ort do phasfhocal a iontráil gach uair a chasann tú ar do ríomhaire. Tá an pasfhocal seo difriúil ó do phasfhocal úsáideora. Beidh tú in ann é a athrú níos déanaí, ach ní bheidh tú in ann é a dhíchumasú. Má dhéanann tú dearmad ar do phasfhocal, is féidir leat rochtain a fháil ar an diosca arís trí úsáid a bhaint as an eochair aisghabhála.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Beidh ort do UAP a iontráil gach uair a chasann tú ar do ríomhaire. Tá an UAP seo difriúil ó do phasfhocal úsáideora. Beidh tú in ann é a athrú níos déanaí, ach ní bheidh tú in ann é a dhíchumasú. Má dhéanann tú dearmad ar do UAP, is féidir leat rochtain a fháil ar an diosca arís trí úsáid a bhaint as an eochair aisghabhála.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Pasfrása';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Deimhnigh an frása faire';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Tá frása faire ag teastáil';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Ní hionann na frásaí faire';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'UAP';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Deimhnigh an UAP';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Tá UAP ag teastáil';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'Ní hionann na UAPanna';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Éiligh frása faire';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Is sláine. Beidh ort frása faire níos faide a iontráil gach uair a chasann tú ar do ríomhaire.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Éiligh UAP';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Níos sláine. Beidh ort UAP uimhriúil a iontráil gach uair a chasann tú ar do ríomhaire.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'Díghlasáil diosca go huathoibríoch';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Slándáil bhreise';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'De réir réamhshocraithe, díghlasálfaidh Modúl Ardáin Iontaofa (TPM) an ríomhaire an diosca le linn tosaithe. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Pasfrása lag, déan níos faide nó níos casta é';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Pasfrása cothrom, déan níos faide nó níos casta é le haghaidh slándála níos fearr';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Pasfrása láidir';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'UAP lag, déan níos faide nó níos lú intuartha é';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'UAP cothrom, déan é níos faide nó níos lú intuartha le haghaidh slándála níos fearr';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'Tá an PIN fada go leor';
 
   @override
   String get installationTypeTitle => 'Socrú diosca';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'Conas is mian leat ${DISTRO}a shuiteáil?';
+    return 'Conas is mian leat $DISTRO a shuiteáil?';
   }
 
   @override
@@ -930,7 +931,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Cibé an forbróir, cruthaitheoir, gamer nó riarthóir tú gheobhaidh tú uirlisí nua chun do tháirgiúlacht a fheabhsú agus do thaithí i ${RELEASE}a fheabhsú.';
+    return 'Cibé an forbróir, cruthaitheoir, cluichire nó riarthóir tú gheobhaidh tú uirlisí nua chun do tháirgiúlacht a fheabhsú agus do thaithí i $RELEASE a fheabhsú.';
   }
 
   @override
@@ -1031,19 +1032,19 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Tacaíocht fiontar-grád 24 / 7 le Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'An chéad sleamhnán eile';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Sleamhnán roimhe seo';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Seinn sleamhnán';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Sos an taispeántas sleamhnán';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Logaí suiteála a scoránaigh';
 
   @override
   String get copyingFiles => 'Comhaid á gcóipeáil…';
@@ -1109,7 +1110,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshUpdating(String snap) {
-    return '$snapá nuashonrú...';
+    return '$snap á nuashonrú...';
   }
 
   @override
@@ -1220,74 +1221,76 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Eochair aisghabhála TPM';
+  String get recoveryKeyTitle => 'Eochair aisghabhála';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Tábhachtach';
 
   @override
-  String get recoveryKeyHeader => 'Faigh eochair athshlánaithe';
+  String get recoveryKeyHeader => 'Sábháil d\'eochair aisghabhála';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Seans go gcaillfidh tú do shonraí go léir gan eochair athshlánaithe';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Eochair aisghabhála';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Stóráil an eochair athshlánaithe áit éigin sábháilte. Úsáid é chun an diosca a dhíchriptiú i gcás athruithe córais áirithe. Mar shampla, b\'fhéidir go mbeadh sé ag teastáil uait má athraíonn tú na comhpháirteanna i do ríomhaire nó má nuashonraíonn tú firmware.';
+      'Beidh ort an eochair aisghabhála seo a sholáthar má theipeann ar an díchriptiú le linn an tosaithe. Gan an eochair, caillfidh tú rochtain ar do chuid sonraí go léir. Sábháil é in áit shábháilte, amhail bainisteoir pasfhocal.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Tuigim go mb\'fhéidir go gcaillfidh mé mo chuid sonraí go léir mura bhfuil eochair athshlánaithe agam';
+      'Shábháil mé m\'eochair aisghabhála in áit shábháilte';
 
   @override
   String get recoveryKeyLinkLabel => 'Foghlaim níos mó';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Sábháil chuig comhad';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Taispeáin cód QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return 'Deasc $DISTRO - Eochair aisghabhála';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Scan an cód QR chun an eochair aisghabhála a chóipeáil agus í a shábháil in áit shábháilte, amhail bainisteoir pasfhocal. Is féidir leat grianghraf a thógáil freisin lena úsáid níos déanaí.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction =>
+      'Cóipeáilte chuig an ghearrthaisce';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Níor sábháladh comhad eochrach aisghabhála';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Ní féidir comhad eochrach aisghabhála a shábháil in áit shealadach';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Earráid anaithnid';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Níl cead agat scríobh chuig an bhfillteán sin. Bain triail as suíomh difriúil nó bain úsáid as modh eile.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Bain triail as suíomh difriúil, amhail tiomántán inbhainte, nó bain úsáid as modh eile.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Sábháil comhad eochrach aisghabhála';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Comhaid téacs';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1358,17 +1361,17 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Is féidir leat athbhreithniú a dhéanamh ar an gcomhad uathshuiteála a allmhairítear ó Landscape thíos.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Rath';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Earráid';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Dún';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Uasmhéadaigh';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Íoslaghdaigh';
 }

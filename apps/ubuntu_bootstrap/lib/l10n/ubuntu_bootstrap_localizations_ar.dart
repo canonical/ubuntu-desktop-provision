@@ -9,15 +9,15 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'مثبت سطح مكتب أوبونتو';
+  String get appTitle => 'منصِّب سطح مكتب Ubuntu';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'تثبيت $RELEASE';
+    return 'تنصيب $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'تنصيب آلي';
 
   @override
   String get autoinstallDirectHeader => 'Import autoinstall file';
@@ -124,7 +124,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'يجري إعداد $DISTRO …';
+    return 'يحضَّؤ $DISTRO…';
   }
 
   @override
@@ -1067,17 +1067,17 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Required:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'يتوفر تحديث';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'يتوفر تحديث للمنصِّب';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'حدِّث الآن';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'حدِّث إلى آخر إصدار من أجل استقرارية محسنة ومزايا إضافية.';
 
   @override
   String get refreshReady => 'Update ready';
@@ -1304,7 +1304,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   String get landscapeDomainTextField => 'Landscape domain (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'التالي';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
@@ -1346,17 +1346,17 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
       'You can review the autoinstall file imported from Landscape below.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'اكتمل';
 
   @override
   String get errorIconSemanticLabel => 'Error';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'أغلِق';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'كبِّر';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'صغِّر';
 }

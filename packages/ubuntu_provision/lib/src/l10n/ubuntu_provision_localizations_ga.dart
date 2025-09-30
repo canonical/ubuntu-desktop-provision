@@ -363,14 +363,14 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Léigh mé agus glacaim leis na téarmaí seo';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Rath';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Dún';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Uasmhéadaigh';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Íoslaghdaigh';
 }

@@ -369,14 +369,14 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'J\'ai lu et accepté ces termes';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Succès';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fermer';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximiser';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimiser';
 }

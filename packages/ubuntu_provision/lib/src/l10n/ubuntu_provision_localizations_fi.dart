@@ -363,7 +363,7 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Olen lukenut lisenssiehdot ja hyväksyn ne';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Menestys';
 
   @override
   String get closeIconSemanticLabel => 'Close';

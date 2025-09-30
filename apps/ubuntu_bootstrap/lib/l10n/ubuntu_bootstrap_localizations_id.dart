@@ -310,15 +310,15 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Anda perlu frasa sandi untuk mengenkripsi berkas Anda. Anda akan diminta untuk frasa sandi Anda setiap kali Anda menyalakan komputer Anda.';
+      'Anda perlu memasukkan frasa sandi Anda setiap kali Anda menyalakan komputer Anda. Frasa sandi ini berbeda dengan kata sandi pengguna Anda.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Simpan frasa sandi Anda di suatu tempat yang aman';
+      'Pastikan Anda menyimpan frasa sandi Anda';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda.';
+      'Jika Anda kehilangan itu, Anda akan kehilangan semua data Anda.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -329,91 +329,93 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Jika Anda kehilangan frasa sandi Anda, Anda akan kehilangan semua data Anda. Frasa sandi tidak menggantikan kunci pemulihan atau kata sandi pengguna Anda.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Enkripsi';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Menata suatu frasa sandi enkripsi';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Menata PIN enkripsi';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Anda harus memasukkan kata sandi Anda setiap kali Anda menyalakan komputer Anda. Frasa sandi ini berbeda dari kata sandi pengguna Anda. Anda akan dapat mengubahnya nanti, tetapi tidak menonaktifkannya. Jika Anda lupa kata sandi Anda, Anda dapat mengakses kembali ke disk dengan menggunakan kunci pemulihan.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Anda harus memasukkan PIN Anda setiap kali Anda menyalakan komputer Anda. PIN ini berbeda dari kata sandi pengguna Anda. Anda akan dapat mengubahnya nanti, tetapi tidak menonaktifkannya. Jika Anda lupa PIN Anda, Anda dapat mengakses kembali ke disk dengan menggunakan kunci pemulihan.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Frasa sandi';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Konfirmasikan frasa sandi';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Frasa sandi diperlukan';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Frasa sandi tidak cocok';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Konfirmasi PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PIN diperlukan';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN tidak cocok';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle =>
+      'Memerlukan suatu frasa sandi';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Paling aman. Anda harus memasukkan frasa sandi yang lebih panjang setiap kali Anda menyalakan komputer Anda.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Memerlukan PIN';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Lebih aman. Anda harus memasukkan PIN numerik setiap kali Anda menyalakan komputer Anda.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Buka kunci disk secara otomatis';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Keamanan tambahan';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Secara baku, Trusted Platform Module (TPM) komputer akan membuka kunci disk selama awal mula. Anda juga punya opsi untuk melindungi data Anda lebih lanjut.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Frasa sandi lemah, buat itu lebih panjang atau lebih rumit';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Frasa sandi lumayan, buat itu lebih panjang atau lebih rumit untuk keamanan yang lebih baik';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Frasa sandi yang kuat';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'PIN lemah, buat itu lebih panjang atau kurang dapat ditebak';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'PIN lumayan, buat itu lebih panjang atau kurang dapat ditebak untuk keamanan yang lebih baik';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN cukup panjang';
 
   @override
   String get installationTypeTitle => 'Penyiapan disk';
@@ -1025,19 +1027,19 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Dukungan tingkat perusahaan 24/7 dengan Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Salindia selanjutnya';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Salindia sebelumnya';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Mainkan pertunjukan salindia';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Jedakan pertunjukan salindia';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Jungkitkan log instalasi';
 
   @override
   String get copyingFiles => 'Menyalin berkas…';
@@ -1214,74 +1216,74 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Kunci pemulihan TPM';
+  String get recoveryKeyTitle => 'Kunci pemulihan';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Penting';
 
   @override
-  String get recoveryKeyHeader => 'Dapatkan kunci pemulihan';
+  String get recoveryKeyHeader => 'Simpan kunci pemulihan Anda';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Anda bisa kehilangan semua data Anda tanpa kunci pemulihan';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Kunci pemulihan';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Simpan kunci pemulihan di suatu tempat aman. Gunakan untuk mengenkripsi disk jika terjadi perubahan sistem tertentu. Misalnya, Anda mungkin perlu jika Anda mengubah komponen di komputer atau memperbarui firmware.';
+      'Anda akan perlu memberikan kunci pemulihan ini jika dekripsi gagal selama awal mula. Tanpa kunci, Anda akan kehilangan akses ke semua data Anda. Simpan di suatu tempat aman, seperti pengelola kata sandi.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Saya mengerti saya mungkin kehilangan semua data saya jika saya tidak memiliki kunci pemulihan';
+      'Saya menyimpan kunci pemulihan saya di suatu tempat aman';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Pelajari lebih lanjut';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Simpan ke berkas';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Tampilkan kode QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Desktop - Kunci Pemulihan';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Pindai kode QR untuk menyalin kunci pemulihan dan simpan itu di suatu tempat aman, seperti pengelola kata sandi. Anda juga dapat mengambil foto untuk penggunaan nanti.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Disalin ke papan klip';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Berkas kunci pemulihan tidak disimpan';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Berkas kunci pemulihan tidak dapat disimpan di lokasi sementara';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Galat tak dikenal';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Anda tidak memiliki izin untuk menulis ke folder tersebut. Coba lokasi lain atau gunakan metode lain.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Cobalah lokasi lain, seperti drive lepas pasang, atau gunakan metode lain.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'Simpan berkas kunci pemulihan';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Berkas teks';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1352,17 +1354,17 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Anda dapat meninjau berkas autoinstall yang diimpor dari Landscape di bawah ini.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sukses';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Galat';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tutup';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimalkan';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalkan';
 }

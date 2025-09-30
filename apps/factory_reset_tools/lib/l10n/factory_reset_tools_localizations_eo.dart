@@ -107,11 +107,11 @@ class FactoryResetToolsLocalizationsEo extends FactoryResetToolsLocalizations {
   String get ok => 'Bone';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fermi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimumigi';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimumigi';
 }

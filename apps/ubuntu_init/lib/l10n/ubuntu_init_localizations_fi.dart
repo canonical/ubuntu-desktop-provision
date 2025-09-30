@@ -155,7 +155,7 @@ class UbuntuInitLocalizationsFi extends UbuntuInitLocalizations {
       'Voit hallita Pro-palveluja Ohjelmistot ja päivitykset -sovelluksessa.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Menestys';
 
   @override
   String get closeIconSemanticLabel => 'Close';

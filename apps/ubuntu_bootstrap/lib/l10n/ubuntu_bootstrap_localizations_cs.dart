@@ -17,14 +17,14 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automatická instalace';
+  String get autoinstallDirectTitle => 'Automatizovaná instalace';
 
   @override
-  String get autoinstallDirectHeader => 'Importovat soubor autoinstall';
+  String get autoinstallDirectHeader => 'Naimportovat soubor autoinstall';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'Můžete zadat adresu URL souboru autoinstall:';
+      'Můžete zadat URL adresu souboru autoinstall:';
 
   @override
   String get autoinstallDirectFileLabel => 'Nebo vyberte místní soubor:';
@@ -42,15 +42,15 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFilePickerFilterLabel => 'Soubory YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Importovat';
+  String get autoinstallDirectImportButtonLabel => 'Naimportovat';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'K souboru autoinstall nelze přistoupit';
+      'K souboru autoinstall se nebylo možné dostat';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Zkontrolujte správnost adresy URL, otestujte připojení k internetu nebo to zkuste později.';
+      'Zkontrolujte správnost URL adresy, otestujte připojení k Internetu nebo to zkuste později.';
 
   @override
   String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná adresa URL';
@@ -106,7 +106,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Pro pokročilé uživatele, kteří mají soubor autoinstall.yaml pro konzistentní a opakovatelné nastavení systému.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automatizováno podle Landscape';
+  String get autoinstallLandscapeOption => 'Automatizováno z Landscape';
 
   @override
   String get autoinstallLandscapeDescription =>
@@ -177,7 +177,8 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Zjištěno RST';
 
   @override
-  String get rstHeader => 'Aby mohla instalace pokračovat, musíte RST vypnout';
+  String get rstHeader =>
+      'Aby mohla instalace pokračovat, je třeba RST vypnout';
 
   @override
   String get rstDisable =>
@@ -200,7 +201,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get configureSecureBootDescription =>
-      'Zvolili jste nainstalovat ovladač hardwaru pocházející od třetí strany. K tomu je nutné\nvypnout Secure Boot. Musíte si teď proto zvolit klíč zabezpečení a zadat ho po restartu systému.';
+      'Zvolili jste nainstalovat ovladač hardwaru pocházející od třetí strany. K tomu je nutné\nvypnout Secure Boot. Je třeba si teď proto zvolit klíč zabezpečení a zadat ho po restartu systému.';
 
   @override
   String get configureSecureBootOption => 'Nastavit Secure Boot';
@@ -243,7 +244,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Instalovat doporučený proprietární software?';
+      'Nainstalovat doporučený proprietární software?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
@@ -263,7 +264,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get fullInstallationSubtitle =>
-      'Výběr webového prohlížeče, kancelářských nástrojů a pomůcek nevyžadujících internet.';
+      'Výběr webového prohlížeče, kancelářských nástrojů a pomůcek nevyžadujících Internet.';
 
   @override
   String get minimalInstallationTitle => 'Výchozí výběr';
@@ -310,113 +311,116 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'K šifrování souborů potřebujete přístupové heslo. Při každém zapnutí vás počítač vyzve k zadání tohoto hesla.';
+      'Rozšifrovávací heslo bude třeba zadávat pokaždé, když počítač zapnete/restartujete. Je třeba, aby se lišilo od hesla, kterým se hlásíte do operačního systému.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Přístupové heslo si uložte na bezpečném místě';
+      'Rozšifrovávací heslo si rozhodně zabezpečeně poznamenejte někam mimo počítač';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Pokud ztratíte přístupové heslo, ztratíte i všechna data.';
+      'Pokud ho totiž zapomenete, nedostanete se ke svým datům => přijdete o ně.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Uložte si přístupové heslo a klíč pro obnovení na bezpečném místě';
+      'Uložte si přístupové heslo a záchranný klíč na bezpečném místě';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'Pokud ztratíte přístupové heslo, ztratíte i všechna data. Přístupové heslo nenahrazuje klíč pro obnovení ani vaše uživatelské heslo.';
+      'Pokud ztratíte přístupové heslo, ztratíte i všechna data. Přístupové heslo nenahrazuje záchranný klíč ani vaše uživatelské heslo.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Šifrování';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Nastavit šifrovací heslo';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Nastavit PIN k šifrování';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete/restartujete. Je třeba, aby nebylo stejné, jako heslo, kterým se hlásíte do systému. Následně je možné ho i měnit, ale už ho nepůjde zrušit. V případě, že rozšifrovávací heslo ztratíte, je možné znovuzískat přístup k disku pomocí záchranného klíče.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'PIN kód bude třeba zadávat pokaždé, když zapnete/restartujete počítač. Není to to samé, co heslo do systému. Později ho bude možné změnit, ale už ne zrušit. Pokud PIN kód zapomenete, je možné znovuzískat přístup k disku pomocí záchranného klíče.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Šifrovací heslo';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'Potvrdit zadání šifrovacího hesla';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase =>
+      'Je zapotřebí zadat šifrovací heslo';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'Zadání šifrovacího hesla se neshodují';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'PIN kód';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Potvrzení zadání PIN kódu';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Je zapotřebí zadat PIN kód';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'Zadání PIN kódu se neshodují';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Vyžadovat šifrovací heslo';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Nejlépe zabezpečené. Při každém zapnutí/restartu počítače bude třeba zadat delší rozšifrovávací heslo.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Vyžadovat PIN kód';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Bezpečnější. Při každém zapnutí/restartu počítače bude třeba zadat číselný PIN kód.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Odemykat disk automaticky';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Dodatečné zabezpečení';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Snadno prolomitelná heslová fráze – prodlužte jí a/nebo přidejte na komplexitě';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Přijatelná heslová fráze – zlepšete zabezpečení jejím prodloužením a/nebo přidáním komplexity';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Odolná heslová fráze';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Snadno prolomitelný PIN – prodlužte ho a/nebo upravte tak, aby bylo těžší ho uhodnout';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Přijatelný PIN – zlepšete zabezpečení jeho prodloužením a/nebo ho upravte tak, aby bylo těžší ho uhodnout';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN je dostatečně dlouhý';
 
   @override
-  String get installationTypeTitle => 'Nastavení disku';
+  String get installationTypeTitle => 'Uspořádání disku';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -481,7 +485,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeLVMEncryptionInfo =>
-      'Při každém zapnutí počítače budete muset zadat přístupové heslo. Používá se šifrování LUKS s LVM.';
+      'Při každém zapnutí počítače bude třeba zadat přístupové heslo. Používá se šifrování LUKS s LVM.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybráno LVM a šifrování';
@@ -508,7 +512,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeZFSEncryptionSelected => 'Vybráno ZFS a šifrování';
 
   @override
-  String get installationTypeTPM => 'Použít hardwarové šifrování';
+  String get installationTypeTPM => 'Použít šifrování obsluhované hardwarem';
 
   @override
   String installationTypeTPMInfo(String DISTRO, String url) {
@@ -525,7 +529,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Varování:</font> Tímto se smažou veškeré aplikace, dokumenty, fotky, hudba a všechny ostatní soubory v systému $os.';
+    return '<font color=\"$color\">Varování:</font> Tímto budou smazány veškeré aplikace, dokumenty, fotky, hudba a všechny ostatní soubory v systému $os.';
   }
 
   @override
@@ -560,7 +564,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'Všechny soubory a data ze stávající instalace $os budou trvale smazány.';
+    return 'Všechny soubory a data ze stávající instalace $os budou nevratně smazány.';
   }
 
   @override
@@ -577,7 +581,8 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get selectGuidedStorageInfo => 'Začněte na zvoleném disku od nuly.';
+  String get selectGuidedStorageInfo =>
+      'Začít na vámi zvoleném disku, jako by byl prázdný.';
 
   @override
   String get selectGuidedStorageDriveDropdownLabel => 'Vyberte disk:';
@@ -586,7 +591,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get selectGuidedStoragePartitionDropdownLabel => 'Vyberte oddíl:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'Použije se celý disk:';
+  String get selectGuidedStorageInfoLabel => 'Bude použit celý disk:';
 
   @override
   String get selectGuidedStorageInstallNow => 'Nainstalovat nyní';
@@ -767,14 +772,14 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get confirmSectionGeneralTitle => 'Obecné';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Bezpečnost a další';
+  String get confirmSectionSecurityAndMoreTitle => 'Zabezpečení a další';
 
   @override
   String get confirmPartitionsTitle => 'Oddíly';
 
   @override
   String get confirmPartitionTables =>
-      'Tabulky dělení oddílů se na následujících zařízení změní:';
+      'Budou změněny tabulky dělení na oddíly na následujících zařízeních:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -848,7 +853,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get rebootToConfigureWarning =>
-      'Chcete-li pokračovat v procesu instalace, musíte počítač restartovat.';
+      'Pokud chcete v instalaci pokračovat, je třeba počítač zrestartovat.';
 
   @override
   String get shutdown => 'Vypnout';
@@ -973,7 +978,8 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesProductivityTitle => 'Zvyšte svou produktivitu';
+  String get installationSlidesProductivityTitle =>
+      'Zlepšete svou produktivitu';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -1021,19 +1027,20 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Nepřetržitá podpora na podnikové úrovni s Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Další stránka';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Předchozí stránka';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Přehrát prezentaci';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Pozastavit prezentaci';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel =>
+      'Vyp/zap. zaznamenávání událostí při instalaci';
 
   @override
   String get copyingFiles => 'Kopírování souborů…';
@@ -1211,74 +1218,74 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Obnovovací klíč k TPM';
+  String get recoveryKeyTitle => 'Záchranný klíč';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Důležité';
 
   @override
-  String get recoveryKeyHeader => 'Získat obnovovací klíč';
+  String get recoveryKeyHeader => 'Uložte si svůj záchranný klíč';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Bez klíče pro obnovení můžete přijít o všechna data';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Záchranný klíč';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Uložte si klíč pro obnovení na bezpečném místě. Použijte jej k dešifrování disku v případě určitých systémových změn. Můžete jej například potřebovat, pokud měníte součásti v počítači nebo aktualizujete firmware.';
+      'Tento záchranný klíč budete potřebovat v případě, že se rozšifrování před spouštěním systému nebude dařit. Bez tohoto klíče byste ztratili přístup ke všem svým datům. Uložte si ho někde bezpečně, například do správce hesel (ovšem (i) mimo počítač!).';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Rozumím, že pokud nebudu mít klíč pro obnovení, mohu ztratit všechna svá data';
+      'Uložil/a jsem si svůj záchranný klíč někde bezpečně (mimo počítač)';
 
   @override
   String get recoveryKeyLinkLabel => 'Dozvědět se více';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Uložit do souboru';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Zobrazit QR kód';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Desktop – záchranný klíč';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Naskenujte QR kód a zkopírujte si tak záchranný klíč, který si někam bezpečně uložte, například do správce hesel. Je také možné si ho alespoň vyfotit.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Zkopírováno do schránky';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Soubor se záchranným klíčem neuložen';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Soubor se záchranným klíčem nebylo možné uložit do dočasného umístění';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Neznámá chyba';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Nemáte oprávnění zapisovat do této složky. Zkuste jiné umístění nebo použijte jinou metodu.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Zkuste jiné umístění, jako například vyjímatelný disk, nebo použijte jinou metodu.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'Uložit soubor se záchranným klíčem';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Textové soubory';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1309,22 +1316,23 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Neplatná doména, zkontrolujte nebo kontaktujte IT podporu';
+      'Neplatná doména – zkontrolujte nebo se obraťte IT podporu';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Chcete-li pokračovat, připojte se k internetu';
+      'Pokud chcete pokračovat, připojte se k Internetu';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'K načtení souboru autoinstall z Landscape je potřeba internet';
+      'K načtení souboru autoinstall z Landscape je zapotřebí Internet';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Kód vypršel, zkuste to znovu';
+  String get landscapeCodeExpiredWarning =>
+      'Platnost kódu skončila – zkuste to znovu s jiným';
 
   @override
   String get landscapeLoginFailedWarning =>
-      'Přihlášení se nezdařilo, zkuste to znovu';
+      'Přihlášení se nezdařilo – zkuste to znovu';
 
   @override
   String get landscapeErrorPageTitle =>
@@ -1348,17 +1356,17 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Níže si můžete prohlédnout soubor s nastaveními pro automatickou instalaci, načtený z Landscape.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Úspěch';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Chyba';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zavřít';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizovat';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizovat';
 }

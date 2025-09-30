@@ -367,14 +367,14 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
       'Ma olen lugenud litsentsilepingut ja nõustun tema tingimustega';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Õnnestus';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Sulge';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimeeri';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimeeri';
 }

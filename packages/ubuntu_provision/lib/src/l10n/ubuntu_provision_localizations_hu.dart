@@ -364,14 +364,14 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Elolvastam és elfogadom ezeket a feltételeket';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sikeres';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Bezárás';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizálás';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizálás';
 }

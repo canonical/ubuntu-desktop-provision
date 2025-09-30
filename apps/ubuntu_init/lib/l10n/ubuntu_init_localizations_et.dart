@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsEt extends UbuntuInitLocalizations {
       'Sa võid hallata oma Ubuntu Pro teenuseid rakenduses „Tarkvara ja uuendused“.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Õnnestus';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Sulge';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maksimeeri';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimeeri';
 }

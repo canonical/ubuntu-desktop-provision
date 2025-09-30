@@ -9,7 +9,7 @@ class FactoryResetToolsLocalizationsVi extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Công cụ khôi phục cài đặt gốc';
 
   @override
   String get windowTitle => 'Factory reset tools';

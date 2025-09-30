@@ -307,15 +307,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'צריך מילת צופן כדי להצפין את הקבצים שלך. תופיע בקשה למילוי מילת הצופן עם כל הפעלה של המחשב.';
+      'יש להקליד את מילת הצופן שלך עם כל הדלקה של המחשב שלך. מילת הצופן הזאת שונה מסיסמת המשתמש שלך.';
 
   @override
-  String get choosePassphraseInfoHeader =>
-      'נא לאחסן את מילת הצופן שלך במקום בטוח';
+  String get choosePassphraseInfoHeader => 'נא לשמור את מילת הצופן שלך';
 
   @override
-  String get choosePassphraseInfoBody =>
-      'אובדן מילת הצופן יוביל לאובדן המידע שלך.';
+  String get choosePassphraseInfoBody => 'אובדן שלה יוביל לאובדן המידע שלך.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -326,91 +324,91 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'אובדן מילת הצופן שלך תוביל לאובדן כל הנתונים שלך. מילת הצופן אינה מחליפה את קוד השחזור או את הסיסמה שלך.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'הצפנה';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'הגדרת מילת צופן להצפנה';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'הגדרת קוד הצפנה אישי';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'יש למלא את מילת הצופן שלך עם כל הדלקה של המחשב. מילת הצופן הזאת שונה מסיסמת המשתמש שלך. אפשר לשנות אותה אחר כך אבל לא להשבית אותה. אם שכחת את מילת הצופן שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'יש להקליד קוד אישי עם כל הדלקה של המחשב. הקוד האישי הזה שונה מסיסמת המשתמש שלך. אפשר לשנות אותו בהמשך אך לא להשבית אותו. אם שכחת את הקוד האישי שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'מילת צופן';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'אישור מילת צופן';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'דרושה מילת צופן';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'מילות הצופן לא תואמות';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'קוד אישי';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'אישור קוד אישי';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'דרוש קוד אישי';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'הקודים האישיים לא תואמים';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'לדרוש מילת צופן';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'הכי מאובטח. יש למלא מילת צופן ארוכה עם כל הדלקה של המחשב שלך.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'לדרוש קוד אישי';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'מאובטח יותר. יש להקליד קוד אישי מספרי עם כל הדלקה של המחשב שלך.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'לשחרר את נעילת הכונן אוטומטית';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'אבטחה נוספת';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'כברירת מחדל, מודול הפלטפורמה המאובטחת (TPM) ישחרר את נעילת הכונן בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'מילת צופן חלשה, נא להאריך או לסבך אותה';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'מילת צופן סבירה, נא להאריך או לסבך אותה לשיפור האבטחה';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'מילת צופן חזקה';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'קוד אישי חלש, נא להאריך או להפוך אותו לפחות צפוי';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'קוד אישי סביר, נא להאריך או להפוך אותו לפחות צפוי לשיפור האבטחה';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'הקוד האישי מספיק ארוך';
 
   @override
   String get installationTypeTitle => 'הקמת הכונן';
@@ -1012,19 +1010,19 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'תמיכה 24/7 ברמה תעשייתית עם אובונטו פרו';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'השקופית הבאה';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'השקופית הקודמת';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'הפעלת המצגת';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'השהיית המצגת';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'החלפת מצב יומני התקנה';
 
   @override
   String get copyingFiles => 'קבצים מועתקים…';
@@ -1201,74 +1199,72 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'מפתח שחזור TPM';
+  String get recoveryKeyTitle => 'מפתח שחזור';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'חשוב';
 
   @override
-  String get recoveryKeyHeader => 'קבלת קוד שחזור';
+  String get recoveryKeyHeader => 'לשמור את מפתח השחזור שלך';
 
   @override
   String get recoveryKeyInfoHeader =>
       'הנתונים שלך עלולים ללכת לאיבוד ללא מפתח שחזור';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'מפתח שחזור';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'יש לאחסן את מפתח השחזור במקום אחר. אפשר להשתמש בו כדי להצפין את הכונן במקרה של שינויים מסוימים במערכת. למשל, יכול להיות שהוא נחוץ במקרה של שינוי הרכיבים במחשב שלך או שדרוג קושחה.';
+      'את המפתח הזה צריך לספק אם פענוח ההצפנה נכשל במהלך העלייה. ללא המפתח, הגישה שלך לכל הנתונים שלך תלך לאיבוד. כדאי לשמור אותו במקום בטוח, כגון מנהל סיסמאות.';
 
   @override
-  String get recoveryKeyConfirmation =>
-      'ברור לי שכל הנתונים שלי יאבדו אם אין לי מפתח שחזור';
+  String get recoveryKeyConfirmation => 'שמרתי את מפתח השחזור שלי במקום בטוח';
 
   @override
   String get recoveryKeyLinkLabel => 'מידע נוסף';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'שמירה לקובץ';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'הצגת קוד QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO לשולחן העבודה - מפתח שחזור';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'יש לסרוק את קוד ה־QR כדי להעתיק את מפתח השחזור ולשמור אותו במקום בטוח כגון מנהל סיסמאות. אפשר גם לצלם אותו לשימוש עתידי.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'הועתק ללוח הגזירים';
 
   @override
-  String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+  String get recoveryKeyExceptionFileSystemTitle => 'קובץ מפתח השחזור לא נשמר';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'לא ניתן לשמור את קובץ מפתח השחזור במקום זמני';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'שגיאה לא ידועה';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'אין לך הרשאה לכתוב לתיקייה הזאת. נא לנסות מקום אחר או להשתמש בשיטה אחרת.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'נא לנסות מקום אחר כגון כונן נתיק או להשתמש בשיטה אחרת.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'שמירת קובץ מפתח שחזור';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'קובצי טקסט';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1336,17 +1332,17 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'אפשר לסקור את קובץ ההתקנה האוטומטית (autoinstall) מ־Landscape להלן.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'הצליח';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'שגיאה';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'סגירה';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'הגדלה';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'מזעור';
 }

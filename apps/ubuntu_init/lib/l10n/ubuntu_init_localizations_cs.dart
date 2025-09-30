@@ -37,7 +37,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String get welcomeSecuritySubtitle =>
-      'Nové předvolby pro šifrování s pomocí hardwaru nebo na ZFS.';
+      'Nové možnosti šifrování – klíčem uloženým v hardware, dále také nově pro ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -131,7 +131,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProTokenAttachErrorVariant =>
-      'Neplatný token, zkuste to znovu';
+      'Neplatný token – zkuste ho zadat znovu';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => 'Prozatím přeskočit';
@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
       'Své služby Pro můžete spravovat v aplikaci Software a aktualizace.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Úspěch';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zavřít';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizovat';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizovat';
 }

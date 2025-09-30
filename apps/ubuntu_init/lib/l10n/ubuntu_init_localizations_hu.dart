@@ -158,14 +158,14 @@ class UbuntuInitLocalizationsHu extends UbuntuInitLocalizations {
       'A Pro szolgáltatásokat a Szoftverek és frissítések alkalmazásban kezelheti.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sikeres';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Bezárás';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximalizálás';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimalizálás';
 }

@@ -117,7 +117,7 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Всегда бесплатно для личного использования. 30-дневный пробный период для коммерческих целей. <a href=\"https://$url\">Узнать больше</a>';
+    return 'Всегда бесплатно для личного использования. 30-дневный пробный период для коммерческих целей. <a href=\"https://$url\">Подробнее</a>';
   }
 
   @override
@@ -156,14 +156,14 @@ class UbuntuInitLocalizationsRu extends UbuntuInitLocalizations {
       'Вы можете управлять услугами Pro в приложении «Программы и обновления».';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Успех';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Закрыть';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Развернуть';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Свернуть';
 }

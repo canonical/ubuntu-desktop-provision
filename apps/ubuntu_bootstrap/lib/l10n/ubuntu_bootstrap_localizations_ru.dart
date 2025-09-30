@@ -138,7 +138,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'Что вы хотите сделать с $DISTRO?';
+    return 'Что хотите сделать с $DISTRO?';
   }
 
   @override
@@ -181,14 +181,14 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get rstDisable =>
-      'На вашем компьютере используется технология Intel RST (технология быстрого хранения). Вы можете отключить RST в:';
+      'На вашем компьютере используется Intel RST (технология быстрого хранения). Вы можете отключить RST через:';
 
   @override
   String get rstDisableWindows =>
       'Windows, если у вас установлено несколько операционных систем, включая Windows';
 
   @override
-  String get rstDisableBios => 'Настройках BIOS';
+  String get rstDisableBios => 'Настройки BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -237,7 +237,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get updatesOtherSoftwarePageDescription =>
-      'Какие приложения вы хотели бы установить для начала?';
+      'Какие приложения хотели бы установить для начала?';
 
   @override
   String get codecsAndDriversPageTitle => 'Оптимизируйте свой компьютер';
@@ -310,15 +310,15 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Для шифрования файлов необходима парольная фраза. При каждом включении компьютера Вам будет предложено ввести её.';
+      'Каждый раз при включении компьютера вам нужно будет вводить свою парольную фразу. Эта парольная фраза отличается от вашего пароля пользователя.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Сохраните свою парольную фразу в надёжном месте';
+      'Убедитесь, что вы сохранили свою парольную фразу';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Если вы потеряете парольную фразу, то потеряете все свои данные.';
+      'Если вы потеряете её, то потеряете все свои данные.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -329,91 +329,94 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Если потеряете парольную фразу, Вы потеряете все свои данные. Парольная фраза не заменяет ключ восстановления или пароль пользователя.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Шифрование';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Установить парольную фразу шифрования';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Установить PIN-код шифрования';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Каждый раз при включении компьютера вам нужно будет вводить свою парольную фразу. Эта парольная фраза отличается от вашего пароля пользователя. Вы сможете изменить её позже, но не отключить. Если вы забудете свою парольную фразу, то сможете восстановить доступ к диску, используя ключ восстановления.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Каждый раз при включении компьютера вам нужно будет вводить свой PIN-код. Этот PIN-код отличается от вашего пароля пользователя. Вы сможете изменить его позже, но не отключить. Если вы забудете свой PIN-код, то сможете восстановить доступ к диску, используя ключ восстановления.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Парольная фраза';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'Подтвердить парольную фразу';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Требуется парольная фраза';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Парольные фразы не совпадают';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Подтвердить PIN-код';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Требуется PIN-код';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN-коды не совпадают';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Требовать парольную фразу';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Наиболее безопасно. Вам придётся вводить более длинную парольную фразу каждый раз при включении компьютера.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Требовать PIN-код';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Наиболее безопасно. Вам придется вводить числовой PIN-код каждый раз при включении компьютера.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Разблокировать диск автоматически';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Дополнительная безопасность';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'По умолчанию Trusted Platform Module (TPM) компьютера разблокирует диск во время запуска. Однако у вас есть и другие варианты дополнительной защиты своих данных.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Слабая парольная фраза, сделайте её длиннее или сложнее';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Подходящая парольная фраза, но для большей безопасности можете сделать её длиннее или более сложной';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal =>
+      'Надежная парольная фраза';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Слабый PIN-код, сделайте его длиннее или менее предсказуемым';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Подходящий PIN-код, но для большей безопасности можете сделать его длиннее или менее предсказуемым';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN-код достаточно длинный';
 
   @override
   String get installationTypeTitle => 'Настройка диска';
@@ -425,21 +428,21 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'На этом компьютере установлена операционная система $os. Что вы хотите сделать?';
+    return 'На этом компьютере установлена операционная система $os. Что хотите сделать?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'На этом компьютере установлены $os1 и $os2. Что вы хотите сделать?';
+    return 'На этом компьютере установлены $os1 и $os2. Что хотите сделать?';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'На этом компьютере установлено несколько операционных систем. Что вы хотите сделать?';
+      'На этом компьютере установлено несколько операционных систем. Что хотите сделать?';
 
   @override
   String get installationTypeNoOSDetected =>
-      'На этом компьютере не обнаружено установленных операционных систем. Что вы хотите сделать?';
+      'На этом компьютере не обнаружено установленных операционных систем. Что хотите сделать?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -730,7 +733,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get partitionMountPointLabel => 'Точка монтирования:';
 
   @override
-  String get confirmPageTitle => 'Готово к установке';
+  String get confirmPageTitle => 'Всё готово к установке';
 
   @override
   String get confirmHeader => 'Просмотрите свой выбор';
@@ -808,22 +811,22 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Создано и отформатировано как $format, использовано для $mountpoint';
+    return 'Создан и отформатирован как $format, использован для $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Отформатировано как $format, использовано для $mountpoint';
+    return 'Отформатирован как $format, использован для $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Использовано для $mountpoint';
+    return 'Использован для $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Отформатировано как $format';
+    return 'Отформатирован как $format';
   }
 
   @override
@@ -915,7 +918,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationSlidesWelcomeTitle =>
-      'Быстрая, свободная и полная новых возможностей';
+      'Скорость, безопасность и новые функции';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
@@ -1026,19 +1029,19 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Поддержка корпоративных пользователей в режиме 24/7 в Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Следующий слайд';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Предыдущий слайд';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Начать показ слайдов';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Приостановить показ слайдов';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Включить ведение журнала установки';
 
   @override
   String get copyingFiles => 'Копирование файлов…';
@@ -1215,74 +1218,75 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Ключ восстановления TPM';
+  String get recoveryKeyTitle => 'Ключ восстановления';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Важное';
 
   @override
-  String get recoveryKeyHeader => 'Получить ключ восстановления';
+  String get recoveryKeyHeader => 'Сохранить ваш ключ восстановления';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Без ключа восстановления вы можете потерять все свои данные';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Ключ восстановления';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Храните ключ восстановления в безопасном месте. Используйте его для расшифровки диска в случае некоторых изменений в системе. Например, он может понадобиться при замене компонентов в компьютере или обновлении прошивки.';
+      'Вам нужно будет предоставить этот ключ восстановления, если во время запуска не удаётся провести расшифровку. Без ключа вы потеряете доступ ко всем своим данным. Сохраните его в безопасном месте, например, в менеджере паролей.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Я понимаю, что могу потерять все свои данные, если у меня нет ключа восстановления';
+      'Я сохранил свой ключ восстановления в безопасном месте';
 
   @override
-  String get recoveryKeyLinkLabel => 'Узнать больше';
+  String get recoveryKeyLinkLabel => 'Подробнее';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Сохранить в файл';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Показать QR-код';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Desktop - Ключ восстановления';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Отсканируйте QR-код, чтобы скопировать ключ восстановления и сохранить его в безопасном месте, например, в менеджере паролей. Также вы можете сделать фотографию и использовать её позже.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Скопировано в буфер обмена';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Файл ключа восстановления не сохранён';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Файл ключа восстановления не может быть сохранён во временном месте';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Неизвестная ошибка';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'У вас нет разрешения на запись в эту папку. Попробуйте другое место или воспользуйтесь другим способом.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Попробуйте иное место, например съёмный диск, или воспользуйтесь другим способом.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Сохранить файл ключа восстановления';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Текстовые файлы';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1353,17 +1357,17 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Ниже вы можете просмотреть файл автоматической установки, импортированный из Landscape.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Успех';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Ошибка';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Закрыть';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Развернуть';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Свернуть';
 }

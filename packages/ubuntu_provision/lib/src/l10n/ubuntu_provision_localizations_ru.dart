@@ -144,7 +144,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Выберите язык:';
 
   @override
-  String get identityPageTitle => 'Создание своей учётной записи';
+  String get identityPageTitle => 'Создание учётной записи';
 
   @override
   String get identityAutoLogin => 'Входить в систему автоматически';
@@ -365,14 +365,14 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Я прочитал(а) эти условия и принимаю их';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Успех';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Закрыть';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Развернуть';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Свернуть';
 }

@@ -17,7 +17,7 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Αυτοματοποιημένη εγκατάσταση';
 
   @override
   String get autoinstallDirectHeader => 'Import autoinstall file';
@@ -27,19 +27,19 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'You can enter the URL of an autoinstall file:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => '\'Η επιλογή τοπικού αρχείου:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Επιλογή αρχείου...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Εκκαθάριση αρχείου';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Επιλογή αρχείου';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML αρχεία';
 
   @override
   String get autoinstallDirectImportButtonLabel => 'Import';

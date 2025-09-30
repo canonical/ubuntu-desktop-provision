@@ -42,7 +42,7 @@ class UbuntuInitLocalizationsEl extends UbuntuInitLocalizations {
 
   @override
   String welcomeChangelogLabel(String url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Εμφάνιση Αρχείου Καταγραφής</a>';
   }
 
   @override

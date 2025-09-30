@@ -368,14 +368,14 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
       'Ich habe diese Bedingungen gelesen und akzeptiere sie';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Erfolg';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Schließen';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximieren';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimieren';
 }

@@ -153,14 +153,14 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
       'אפשר לנהל את שירותי ה־Pro שלך ביישום התוכנה והעדכונים.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'הצליח';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'סגירה';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'הגדלה';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'מזעור';
 }
