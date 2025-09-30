@@ -135,7 +135,7 @@ parts:
     source-type: git
     organize:
       # note that the filename polkit interface takes is "${plug_name}.*.policy"
-      packages/factory_reset_tools/data/polkit-com-canonical-oem-factory-reset-tools.x.policy: meta/polkit/
+      apps/factory_reset_tools/data/polkit-com-canonical-oem-factory-reset-tools.x.policy: meta/polkit/
 
   # copied from fwupd
   # https://github.com/fwupd/fwupd/blob/main/contrib/snap/snapcraft.yaml
