@@ -937,7 +937,7 @@
     "@passphrasePagePinEntropyBelowMin": {},
     "passphrasePagePinEntropyBelowOptimal": "PIN suficient, feu-lo més llarg o menys predictible per a una seguretat millor",
     "@passphrasePagePinEntropyBelowOptimal": {},
-    "passphrasePagePinEntropyOptimal": "EL PIN és suficientment llarg",
+    "passphrasePagePinEntropyOptimal": "El PIN és suficientment llarg",
     "@passphrasePagePinEntropyOptimal": {},
     "installationTypeHeader": "Com voleu instal·lar {DISTRO}?",
     "@installationTypeHeader": {
