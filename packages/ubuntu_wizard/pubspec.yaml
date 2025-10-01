@@ -14,7 +14,7 @@ dependencies:
   ubuntu_localizations: ^0.5.2+2
   ubuntu_widgets: ^0.7.3
   wizard_router: ^1.2.0
-  yaru: ^8.3.0
+  yaru: 8.2.0
 
 
 dev_dependencies:
