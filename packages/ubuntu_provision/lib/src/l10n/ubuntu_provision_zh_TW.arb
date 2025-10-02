@@ -224,5 +224,9 @@
     "maximizeIconSemanticLabel": "最大化",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "最小化",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "展開",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "收合",
+    "@collapseIconSemanticLabel": {}
 }
