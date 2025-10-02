@@ -372,4 +372,10 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
 
   @override
   String get minimizeIconSemanticLabel => 'Minimaliseren';
+
+  @override
+  String get expandIconSemanticLabel => 'Expand';
+
+  @override
+  String get collapseIconSemanticLabel => 'Collapse';
 }

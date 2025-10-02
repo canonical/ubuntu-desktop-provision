@@ -32,6 +32,12 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
         const SizedBox(height: kWizardSpacing),
         YaruExpansionPanel(
           shrinkWrap: true,
+          expandIconBuilder: (isExpanded) => Icon(
+            YaruIcons.pan_end,
+            semanticLabel: isExpanded
+                ? lang.collapseIconSemanticLabel
+                : lang.expandIconSemanticLabel,
+          ),
           headers: [
             YaruTile(
               leading: const Icon(YaruIcons.eye),

@@ -147,5 +147,7 @@
   "successIconSemanticLabel": "Success",
   "closeIconSemanticLabel": "Close",
   "maximizeIconSemanticLabel": "Maximize",
-  "minimizeIconSemanticLabel": "Minimize"
+  "minimizeIconSemanticLabel": "Minimize",
+  "expandIconSemanticLabel": "Expand",
+  "collapseIconSemanticLabel": "Collapse"
 }

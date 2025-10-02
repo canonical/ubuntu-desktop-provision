@@ -358,6 +358,12 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
   @override
   String get minimizeIconSemanticLabel => '最小化';
+
+  @override
+  String get expandIconSemanticLabel => 'Expand';
+
+  @override
+  String get collapseIconSemanticLabel => 'Collapse';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

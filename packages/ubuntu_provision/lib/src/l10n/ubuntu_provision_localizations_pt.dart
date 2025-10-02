@@ -372,6 +372,12 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get minimizeIconSemanticLabel => 'Minimize';
+
+  @override
+  String get expandIconSemanticLabel => 'Expand';
+
+  @override
+  String get collapseIconSemanticLabel => 'Collapse';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

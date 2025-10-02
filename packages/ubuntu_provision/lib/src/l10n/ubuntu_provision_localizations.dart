@@ -920,6 +920,18 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'Minimize'**
   String get minimizeIconSemanticLabel;
+
+  /// No description provided for @expandIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Expand'**
+  String get expandIconSemanticLabel;
+
+  /// No description provided for @collapseIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Collapse'**
+  String get collapseIconSemanticLabel;
 }
 
 class _UbuntuProvisionLocalizationsDelegate
