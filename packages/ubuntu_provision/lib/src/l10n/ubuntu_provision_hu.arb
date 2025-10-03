@@ -224,5 +224,9 @@
     "maximizeIconSemanticLabel": "Maximalizálás",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalizálás",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "Kinyitás",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "Összecsukás",
+    "@collapseIconSemanticLabel": {}
 }
