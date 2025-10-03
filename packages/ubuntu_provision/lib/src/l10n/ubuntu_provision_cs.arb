@@ -224,5 +224,9 @@
     "maximizeIconSemanticLabel": "Maximalizovat",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalizovat",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "Rozbalit",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "Sbalit",
+    "@collapseIconSemanticLabel": {}
 }
