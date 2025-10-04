@@ -224,5 +224,9 @@
     "maximizeIconSemanticLabel": "Maximera",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimera",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "Expandera",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "Fäll ihop",
+    "@collapseIconSemanticLabel": {}
 }
