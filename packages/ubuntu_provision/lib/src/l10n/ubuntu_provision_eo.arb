@@ -224,5 +224,9 @@
     "minimizeIconSemanticLabel": "Minimumigi",
     "@minimizeIconSemanticLabel": {},
     "closeIconSemanticLabel": "Fermi",
-    "@closeIconSemanticLabel": {}
+    "@closeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "Malkaŝi",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "Kaŝi",
+    "@collapseIconSemanticLabel": {}
 }
