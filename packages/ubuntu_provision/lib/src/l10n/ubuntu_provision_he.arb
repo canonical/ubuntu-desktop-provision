@@ -224,5 +224,9 @@
     "maximizeIconSemanticLabel": "הגדלה",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "מזעור",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "הרחבה",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "צמצום",
+    "@collapseIconSemanticLabel": {}
 }
