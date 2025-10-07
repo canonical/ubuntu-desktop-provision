@@ -594,7 +594,7 @@
     "@passphrasePageRequiredPassphrase": {},
     "passphrasePageRequiredPin": "نیازمند پین",
     "@passphrasePageRequiredPin": {},
-    "passphraseTypePageHeader": "عبارت عبور یا پین رمزنگاری",
+    "passphraseTypePageHeader": "امنیت اضافی",
     "@passphraseTypePageHeader": {},
     "passphrasePagePinEntropyOptimal": "پین به قدر کافی بلند است",
     "@passphrasePagePinEntropyOptimal": {},
@@ -846,5 +846,11 @@
     "codecsAndDriversNvidiaBody": "می‌توانید راه‌اندازهای اضافی را برای کارت‌های گرافیکی انویدیا نصب کنید.",
     "@codecsAndDriversNvidiaBody": {},
     "installThirdPartySubtitle": "این نرم‌افزار مشمول شرایط پروانه‌هایی است که در مستنداتش ذکر شده. برخی از آن‌ها مالکیتی هستند.",
-    "@installThirdPartySubtitle": {}
+    "@installThirdPartySubtitle": {},
+    "closeIconSemanticLabel": "بستن",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "بیشینه",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "کمینه",
+    "@minimizeIconSemanticLabel": {}
 }
