@@ -224,5 +224,9 @@
     "closeIconSemanticLabel": "Fermer",
     "@closeIconSemanticLabel": {},
     "maximizeIconSemanticLabel": "Maximiser",
-    "@maximizeIconSemanticLabel": {}
+    "@maximizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "Étendre",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "Réduire",
+    "@collapseIconSemanticLabel": {}
 }
