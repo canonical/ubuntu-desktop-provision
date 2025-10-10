@@ -1,9 +1,13 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:diacritic/diacritic.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:path/path.dart' as p;
+import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/locale/locale_model.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 
 import 'test_locale.dart';
 
@@ -14,7 +18,8 @@ void main() {
     final sound = MockSoundService();
 
     final model = LocaleModel(locale: locale, sound: sound);
-    await model.init();
+
+    await model.init(Directory.systemTemp.path);
     expect(model.languageCount, greaterThan(1));
     expect(model.selectedIndex, isPositive);
 
@@ -29,7 +34,7 @@ void main() {
     final sound = MockSoundService();
 
     final model = LocaleModel(locale: locale, sound: sound);
-    await model.init();
+    await model.init(Directory.systemTemp.path);
 
     final languages = List.generate(model.languageCount, model.language);
     expect(languages.length, greaterThan(1));
@@ -44,13 +49,15 @@ void main() {
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
 
+    final tempDir = Directory.systemTemp;
+
     final model = LocaleModel(locale: locale, sound: sound);
-    await model.init();
+    await model.init(tempDir.path);
     expect(model.languageCount, greaterThan(1));
     expect(model.selectedIndex, isPositive);
 
     // falls back to the base locale (en_US)
-    await model.selectLocale(const Locale('foo'));
+    await model.selectLocale(const Locale('foo'), tempDir.path);
     expect(model.locale(model.selectedIndex), equals(const Locale('en', 'US')));
 
     final firstLocale = model.locale(0);
@@ -63,6 +70,7 @@ void main() {
         countryCode: lastLocale.countryCode,
         scriptCode: 'bar',
       ),
+      tempDir.path,
     );
     expect(model.selectedIndex, equals(model.languageCount - 1));
   });
@@ -82,18 +90,40 @@ void main() {
     final sound = MockSoundService();
 
     final model = LocaleModel(locale: locale, sound: sound);
+    final mockAccessibilityService = MockAccessibilityService();
+    registerMockService<AccessibilityService>(mockAccessibilityService);
+    when(mockAccessibilityService.getScreenReader()).thenAnswer((_) {
+      return Future(() => false);
+    });
 
     var wasNotified = false;
     model.addListener(() => wasNotified = true);
 
+    final tempDir = Directory.systemTemp;
+    final overrideFile = File(
+      p.join(
+        tempDir.path,
+        '.config/systemd/user/orca.service.d/override.conf',
+      ),
+    );
+    var doExist = await overrideFile.exists();
+    if (doExist) {
+      await overrideFile.delete();
+      doExist = await overrideFile.exists();
+    }
+    expect(doExist, isFalse);
+
     expect(model.selectedIndex, isZero);
-    await model.selectLanguage(0);
+    await model.selectLanguage(0, tempDir.path);
     expect(model.selectedIndex, isZero);
     expect(wasNotified, isFalse);
 
-    await model.selectLanguage(1);
+    expect(await overrideFile.exists(), isFalse);
+
+    await model.selectLanguage(1, tempDir.path);
     expect(model.selectedIndex, equals(1));
     expect(wasNotified, isTrue);
+    expect(await overrideFile.exists(), isFalse);
   });
 
   test('search language', () async {
@@ -101,13 +131,32 @@ void main() {
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
 
+    final tempDir = Directory.systemTemp;
+    final overrideFile = File(
+      p.join(
+        tempDir.path,
+        '.config/systemd/user/orca.service.d/override.conf',
+      ),
+    );
+    var doExist = await overrideFile.exists();
+    if (doExist) {
+      await overrideFile.delete();
+      doExist = await overrideFile.exists();
+    }
+    expect(await overrideFile.exists(), isFalse);
+
     final model = LocaleModel(locale: locale, sound: sound);
-    await model.init();
+    await model.init(tempDir.path);
 
     final english = model.searchLanguage('eng');
     expect(model.language(english), equals('English'));
-    await model.selectLanguage(english);
+    await model.selectLanguage(english, tempDir.path);
     expect(model.searchLanguage('eng'), english);
+
+    expect(await overrideFile.exists(), isFalse);
+    final contents = await overrideFile.readAsString();
+    expect(contents, equals('[Service]\nEnvironment="LANG=en_US.UTF-8"\n'));
+    await overrideFile.delete();
 
     // next language with the same prefix
     final spanish = model.searchLanguage('e');
@@ -116,12 +165,18 @@ void main() {
     // case-insensitive
     final french = model.searchLanguage('FRA');
     expect(model.language(french), equals('Français'));
-    await model.selectLanguage(french);
+    await model.selectLanguage(french, tempDir.path);
+
+    expect(await overrideFile.exists(), isTrue);
+    await overrideFile.delete();
 
     // wrap around
     final danish = model.searchLanguage('d');
     expect(model.language(danish), equals('Dansk'));
-    await model.selectLanguage(danish);
+    await model.selectLanguage(danish, tempDir.path);
+
+    expect(await overrideFile.exists(), isTrue);
+    await overrideFile.delete();
 
     // ignores diacritics
     final icelandic = model.searchLanguage('is');
