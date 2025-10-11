@@ -829,7 +829,7 @@
     "@landscapeDomainInstructions": {},
     "landscapeDomainTextField": "Landscapeドメイン(FQDN)",
     "@landscapeDomainTextField": {},
-    "next": "次",
+    "next": "次へ",
     "@next": {},
     "landscapeDomainInvalidDomainWarning": "無効なドメインです。再確認するか、ITサポートに連絡してください",
     "@landscapeDomainInvalidDomainWarning": {},
