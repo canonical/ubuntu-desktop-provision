@@ -224,5 +224,9 @@
     "maximizeIconSemanticLabel": "Maksimalkan",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalkan",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "expandIconSemanticLabel": "Perluas",
+    "@expandIconSemanticLabel": {},
+    "collapseIconSemanticLabel": "Kuncupkan",
+    "@collapseIconSemanticLabel": {}
 }
