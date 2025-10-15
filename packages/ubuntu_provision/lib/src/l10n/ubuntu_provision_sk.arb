@@ -201,7 +201,7 @@
     "@accessibilityPageBody": {},
     "accessibilityHearingLabel": "Sluch",
     "@accessibilityHearingLabel": {},
-    "errorPageUnexpected": "Ľutujeme, ale nie sme si istí, v čom je chyba. Skúste reštartovať počítač a znova spustiť proces inštalácie. Prípadne môžete <a>nahlásiť problém</a>.",
+    "errorPageUnexpected": "Ľutujeme, ale nevieme, čo spôsobilo chybu. Skúste reštartovať počítač a znova spustiť proces inštalácie. Prípadne môžete <a>nahlásiť problém</a>.",
     "@errorPageUnexpected": {},
     "activeDirectoryInfo": "{DISTRO} je navrhnuté tak, aby sa bezproblémovo integrovalo s Active Directory pre jednoduchšiu správu.",
     "@activeDirectoryInfo": {},
