@@ -765,5 +765,13 @@
     "recoveryKeyClipboardNotifiaction": "Copiada al quichapapièrs",
     "@recoveryKeyClipboardNotifiaction": {},
     "recoveryKeyFilePickerTitle": "Salvar lo fichièr de clau de recuperacion",
-    "@recoveryKeyFilePickerTitle": {}
+    "@recoveryKeyFilePickerTitle": {},
+    "recoveryKeyExceptionFileSystemTitle": "Fichièr de clau de recuperacion non salvagardat",
+    "@recoveryKeyExceptionFileSystemTitle": {},
+    "recoveryKeyExceptionDisallowedPathTitle": "Lo fichièr de clau de recuperacion se pòt pas enregistrar dins un emplaçament temporari",
+    "@recoveryKeyExceptionDisallowedPathTitle": {},
+    "recoveryKeyExceptionFileSystemBody": "Avètz pas l’autorizacion d’escriure dins aqueste dossièr. Ensajatz un luòc diferent o un autre metòde.",
+    "@recoveryKeyExceptionFileSystemBody": {},
+    "recoveryKeyExceptionDisallowedPathBody": "Ensajatz un emplaçament diferent, coma un lector amovible o un utilizatz un autre metòde.",
+    "@recoveryKeyExceptionDisallowedPathBody": {}
 }
