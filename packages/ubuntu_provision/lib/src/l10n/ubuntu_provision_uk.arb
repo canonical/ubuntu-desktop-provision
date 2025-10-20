@@ -225,8 +225,8 @@
     "@minimizeIconSemanticLabel": {},
     "closeIconSemanticLabel": "Закрити",
     "@closeIconSemanticLabel": {},
-    "expandIconSemanticLabel": "Розширити",
+    "expandIconSemanticLabel": "Розгорнути",
     "@expandIconSemanticLabel": {},
-    "collapseIconSemanticLabel": "Скоротити",
+    "collapseIconSemanticLabel": "Згорнути",
     "@collapseIconSemanticLabel": {}
 }
