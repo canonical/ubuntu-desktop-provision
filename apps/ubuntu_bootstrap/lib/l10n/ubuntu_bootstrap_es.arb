@@ -791,5 +791,7 @@
     "passphraseTypePassphraseTileSubTitle": "Lo más seguro. Cada vez que encienda el ordenador, tendrá que introducir una contraseña más larga.",
     "@passphraseTypePassphraseTileSubTitle": {},
     "passphraseTypePinTileTitle": "Necesitar un PIN",
-    "@passphraseTypePinTileTitle": {}
+    "@passphraseTypePinTileTitle": {},
+    "passphraseTypePageBody": "Por defecto, el módulo de plataforma de confianza del ordenador (TPM) desbloqueará el disco durante el arranque. También tiene opciones para proteger sus datos de forma adicional.",
+    "@passphraseTypePageBody": {}
 }
