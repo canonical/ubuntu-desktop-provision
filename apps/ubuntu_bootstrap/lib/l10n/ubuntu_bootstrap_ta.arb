@@ -554,7 +554,7 @@
     "@confirmProprietarySoftwareCodecs": {},
     "confirmProprietarySoftwareCodecsDrivers": "கோடெக்குகள் மற்றும் இயக்கிகள்",
     "@confirmProprietarySoftwareCodecsDrivers": {},
-    "shutdown": "மூடு",
+    "shutdown": "நிறுத்தி மூடு",
     "@shutdown": {},
     "restartNow": "இப்போது மறுதொடக்கம் செய்யுங்கள்",
     "@restartNow": {},
@@ -688,9 +688,9 @@
     "@passphraseTypePinTileSubTitle": {},
     "passphraseTypeNoneTileTitle": "வட்டு தானாக திறக்கவும்",
     "@passphraseTypeNoneTileTitle": {},
-    "passphraseTypePageHeader": "குறியாக்க முள் அல்லது கடவுச்சொல்",
+    "passphraseTypePageHeader": "கூடுதல் பாதுகாப்பு",
     "@passphraseTypePageHeader": {},
-    "passphraseTypePageBody": "இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (டிபிஎம்) தொடக்கத்தின் போது வட்டைத் திறக்கும். இருப்பினும், உங்கள் தரவைப் பாதுகாக்க ஒரு முள் அல்லது கடவுச்சொல் தேவைப்படலாம்.",
+    "passphraseTypePageBody": "இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (TPM) துவக்கத்தின் போது வட்டைத் திறக்கும். உங்கள் தரவை மேலும் பாதுகாப்பதற்கான விருப்பங்களும் உள்ளன.",
     "@passphraseTypePageBody": {},
     "passphrasePagePassphraseEntropyBelowMin": "பலவீனமான கடவுச்சொல், அதை நீண்டதாகவோ அல்லது சிக்கலானதாகவோ செய்யுங்கள்",
     "@passphrasePagePassphraseEntropyBelowMin": {},
@@ -751,5 +751,11 @@
     "toggleLogsSemanticLabel": "பதிவுகளை நிறுவவும்",
     "@toggleLogsSemanticLabel": {},
     "errorIconSemanticLabel": "பிழை",
-    "@errorIconSemanticLabel": {}
+    "@errorIconSemanticLabel": {},
+    "closeIconSemanticLabel": "மூடு",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "பெரியதுபடுத்து",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "சிறியதாக்கு",
+    "@minimizeIconSemanticLabel": {}
 }
