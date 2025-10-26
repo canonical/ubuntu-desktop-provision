@@ -52,7 +52,7 @@
     "@reboot": {},
     "failed": "Zlyhalo spustenie príkazu",
     "@failed": {},
-    "windowTitle": "Obnovenie výrobných nastavení",
+    "windowTitle": "Obnova výrobných nastavení",
     "@windowTitle": {},
     "createUsbBody": "Vytvorte USB médium na obnovenie systému a prispôsobenie inštalácií Ubuntu.",
     "@createUsbBody": {},
