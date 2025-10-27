@@ -15,7 +15,7 @@ dependencies:
   path: ^1.8.3
   ubuntu_localizations: ^0.5.2+2
   ubuntu_logger: ^0.1.1
-  ubuntu_service: ^0.3.1
+  ubuntu_service: 0.4.0+1
   ubuntu_wizard: ^0.1.0
   url_launcher: ^6.2.5
   yaml: ^3.1.2

@@ -50,7 +50,7 @@ dependencies:
   ubuntu_localizations: ^0.5.2+2
   ubuntu_logger: ^0.1.1
   ubuntu_provision: ^0.1.0
-  ubuntu_service: ^0.3.1
+  ubuntu_service: 0.4.0+1
   ubuntu_utils: ^0.1.0
   ubuntu_widgets: ^0.7.3
   ubuntu_wizard: ^0.1.0
