@@ -587,5 +587,7 @@
     "autoinstallDirectErrorInvalidContentBody": "파일을 확인하거나 다른 파일을 제공하시오.",
     "@autoinstallDirectErrorInvalidContentBody": {},
     "autoinstallDirectErrorFileSystemBody": "권한을 확인하거나 다른 파일을 제공하시오.",
-    "@autoinstallDirectErrorFileSystemBody": {}
+    "@autoinstallDirectErrorFileSystemBody": {},
+    "autoinstallDirectErrorUnkownTitle": "알 수 없는 오류",
+    "@autoinstallDirectErrorUnkownTitle": {}
 }
