@@ -584,6 +584,8 @@
     "@autoinstallDirectErrorInvalidUrlBody": {},
     "autoinstallDirectErrorInvalidContentTitle": "올바르지 않은 자동 설치 정의 파일",
     "@autoinstallDirectErrorInvalidContentTitle": {},
-    "autoinstallDirectErrorInvalidContentBody": "파일을 확인하거나 다른 파일을 제공하세요.",
-    "@autoinstallDirectErrorInvalidContentBody": {}
+    "autoinstallDirectErrorInvalidContentBody": "파일을 확인하거나 다른 파일을 제공하시오.",
+    "@autoinstallDirectErrorInvalidContentBody": {},
+    "autoinstallDirectErrorFileSystemBody": "권한을 확인하거나 다른 파일을 제공하시오.",
+    "@autoinstallDirectErrorFileSystemBody": {}
 }
