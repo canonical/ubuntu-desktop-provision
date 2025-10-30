@@ -595,5 +595,7 @@
     "autoinstallLandscapeOption": "Landscape로 자동화된 기능입니다",
     "@autoinstallLandscapeOption": {},
     "autoinstallLandscapeDescription": "Landscape를 통해 autoinstall 파일을 제공하는 조직의 사용자용입니다.",
-    "@autoinstallLandscapeDescription": {}
+    "@autoinstallLandscapeDescription": {},
+    "autoinstallDirectErrorFileSystemTitle": "Autoinstall 파일을 불러올 수 없습니다",
+    "@autoinstallDirectErrorFileSystemTitle": {}
 }
