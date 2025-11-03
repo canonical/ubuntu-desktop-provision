@@ -1,6 +1,11 @@
+import 'dart:io';
 import 'dart:ui';
 
+import 'package:file/file.dart';
+import 'package:file/local.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:meta/meta.dart';
+import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
@@ -24,11 +29,23 @@ class LocaleModel extends SafeChangeNotifier {
   LocaleModel({
     required LocaleService locale,
     required SoundService? sound,
+    @visibleForTesting FileSystem? fileSystem,
+    @visibleForTesting
+    Future<ProcessResult> Function(String, List<String>)? runProcess,
+    @visibleForTesting Map<String, String>? env,
   })  : _locale = locale,
-        _sound = sound;
+        _sound = sound,
+        _fs = fileSystem ?? LocalFileSystem(),
+        _runProcess = runProcess ?? Process.run,
+        _env = env ?? Platform.environment;
 
   final LocaleService _locale;
   final SoundService? _sound;
+  final FileSystem _fs;
+  final Future<ProcessResult> Function(String, List<String>) _runProcess;
+  final Map<String, String> _env;
+  static const orcaOverrideFilePath =
+      '.config/systemd/user/orca.service.d/override.conf';
 
   /// The index of the currently selected language and locale.
   int get selectedIndex => _selectedIndex;
@@ -44,8 +61,21 @@ class LocaleModel extends SafeChangeNotifier {
     final locale = _languageList.elementAtOrNull(index)?.locale;
     if (locale != null) {
       _log.info('Selected $locale as UI language');
+      await _setOrcaLanguage(locale);
     }
     return initDefaultLocale(locale.toString()).then((_) => notifyListeners());
+  }
+
+  Future<void> _setOrcaLanguage(Locale locale) async {
+    _log.info('updating orca language');
+    final localeValue = '${locale.languageCode}_${locale.countryCode}.UTF-8';
+    final orcaOverrideFile = await _fs
+        .file(p.join(_env['HOME'] ?? '/home/ubuntu', orcaOverrideFilePath))
+        .create(recursive: true);
+    await orcaOverrideFile
+        .writeAsString('[Service]\nEnvironment="LANG=$localeValue"\n');
+    await _runProcess('systemctl', ['--user', 'daemon-reload']);
+    await _runProcess('systemctl', ['--user', 'try-restart', 'orca']);
   }
 
   var _languageList = <LocalizedLanguage>[];
