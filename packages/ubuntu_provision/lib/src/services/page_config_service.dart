@@ -112,7 +112,7 @@ class PageConfigEntryConverter
     final objects = <String, dynamic>{};
     for (final entry in pages.entries) {
       final kebabCaseKey = entry.key.toKebabCase;
-      if (entry.value.image != null) {
+      if (entry.value.image != null || entry.value.imageDark != null) {
         objects[kebabCaseKey] = entry.value.toJson();
       } else {
         objects[kebabCaseKey] = entry.value.visible;
