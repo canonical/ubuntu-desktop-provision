@@ -14,7 +14,7 @@ pages:
     visible: false
   network:
     image: "/foo/bar/network.png"
-    dark: "/foo/bar/network-dark.png"
+    image-dark: "/foo/bar/network-dark.png"
 ''';
     final service = PageConfigService(
       config: createMockConfigService(config: config),
@@ -75,10 +75,11 @@ MockConfigService createMockConfigService({
   when(mock.get('mode')).thenAnswer(
     (_) async => mode != null ? mode.name : ProvisioningMode.standard.name,
   );
-  when(mock.get('pages')).thenAnswer(
-    (_) async => config == '' ? null : yaml?.toMap(),
-  );
-  when(mock.provisioningMode)
-      .thenAnswer((_) async => mode ?? ProvisioningMode.standard);
+  when(
+    mock.get('pages'),
+  ).thenAnswer((_) async => config == '' ? null : yaml?.toMap());
+  when(
+    mock.provisioningMode,
+  ).thenAnswer((_) async => mode ?? ProvisioningMode.standard);
   return mock;
 }
