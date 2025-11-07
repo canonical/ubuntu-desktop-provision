@@ -821,7 +821,7 @@
     "@passphraseTypeNoneTileTitle": {},
     "passphraseTypePageHeader": "Lisäturvaa",
     "@passphraseTypePageHeader": {},
-    "passphraseTypePageBody": "Tietokoneen TPM-moduuli (Trusted Platform Module) avaa levyn lukituksen oletuksena käynnistettäessä. On myös mahdolista turvata tietoja ylimääräisillä keinoilla.",
+    "passphraseTypePageBody": "Tietokoneen TPM-moduuli (Trusted Platform Module) avaa lukituksen oletusarvoisesti käynnistettäessä. On myös mahdollista turvata tietoja lisätoimin.",
     "@passphraseTypePageBody": {},
     "passphrasePagePassphraseEntropyBelowMin": "Heikko tunnuslause, syötä pidempi tai monimutkaisempi",
     "@passphrasePagePassphraseEntropyBelowMin": {},
@@ -835,9 +835,9 @@
     "@passphrasePagePinEntropyBelowOptimal": {},
     "passphrasePagePinEntropyOptimal": "PIN-koodi on riittävän pitkä",
     "@passphrasePagePinEntropyOptimal": {},
-    "nextSlideSemanticLabel": "Seuraava kuva",
+    "nextSlideSemanticLabel": "Seuraava dia",
     "@nextSlideSemanticLabel": {},
-    "previousSlideSemanticLabel": "Edellinen kuva",
+    "previousSlideSemanticLabel": "Edellinen dia",
     "@previousSlideSemanticLabel": {},
     "playSlideshowSemanticLabel": "Toista kuvasarja",
     "@playSlideshowSemanticLabel": {},
@@ -847,7 +847,7 @@
     "@recoveryKeyTextFieldLabel": {},
     "recoveryKeyShowQrCodeLabel": "Näytä QR-koodi",
     "@recoveryKeyShowQrCodeLabel": {},
-    "recoveryKeyQrDialogTitle": "{DISTRO}-työpöytä -palautusavain",
+    "recoveryKeyQrDialogTitle": "{DISTRO}-työpöytä - palautusavain",
     "@recoveryKeyQrDialogTitle": {
         "placeholders": {
             "DISTRO": {
