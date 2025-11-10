@@ -745,5 +745,10 @@ void main() {
       final response = await client.getCoreBootRecoveryKeyV2();
       expect(response, isNotEmpty);
     });
+
+    test('get core boot encryption features v2', () async {
+      final response = await client.getCoreBootEncryptionFeaturesV2();
+      expect(response, isList);
+    });
   });
 }
