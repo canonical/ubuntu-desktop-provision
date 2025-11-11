@@ -10,11 +10,15 @@ export 'test_passphrase_type.mocks.dart';
 @GenerateMocks([PassphraseTypeModel])
 PassphraseTypeModel buildPassphraseTypeModel({
   PassphraseType? passphraseType,
+  Set<PassphraseType>? supportedTypes,
   bool useTpm = false,
 }) {
   final model = MockPassphraseTypeModel();
   when(model.passphraseType)
       .thenReturn(passphraseType ?? PassphraseType.passphrase);
-  when(model.init()).thenReturn(useTpm);
+  when(model.supportedTypes).thenReturn(
+    supportedTypes ?? {PassphraseType.none, PassphraseType.passphrase},
+  );
+  when(model.init()).thenAnswer((_) async => useTpm);
   return model;
 }
