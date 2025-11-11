@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart';
-import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -16,7 +15,7 @@ const _fdeLink =
 class PassphraseTypePage extends ConsumerWidget {
   const PassphraseTypePage({super.key});
 
-  static Future<bool> load(WidgetRef ref) async =>
+  static Future<bool> load(WidgetRef ref) =>
       ref.read(passphraseTypeModelProvider).init();
 
   @override
@@ -52,12 +51,7 @@ class PassphraseTypePage extends ConsumerWidget {
                 onLinkTap: (url, __, ___) => launchUrl(url!),
               ),
               const SizedBox(height: kWizardSpacing),
-              ...[
-                PassphraseType.none,
-                // TODO: restore PIN option once support for it lands in snapd
-                // PassphraseType.pin,
-                PassphraseType.passphrase,
-              ].map(
+              ...model.supportedTypes.map(
                 (type) {
                   final subtitle = type.localizedTileSubTitle(l10n);
                   return OptionButton(
