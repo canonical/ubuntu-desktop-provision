@@ -778,7 +778,7 @@
     "@recoveryKeyExceptionDisallowedPathTitle": {},
     "recoveryKeyExceptionUnknownTitle": "Error desconocido",
     "@recoveryKeyExceptionUnknownTitle": {},
-    "recoveryKeyExceptionDisallowedPathBody": "Pruebe una ubicación diferente, como una unidad extraíble, o use otro método.",
+    "recoveryKeyExceptionDisallowedPathBody": "Pruebe una lugar diferente, como una unidad extraíble, o use otro método.",
     "@recoveryKeyExceptionDisallowedPathBody": {},
     "errorIconSemanticLabel": "Error",
     "@errorIconSemanticLabel": {},
