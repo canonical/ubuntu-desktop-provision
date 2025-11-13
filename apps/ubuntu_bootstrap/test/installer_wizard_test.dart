@@ -542,7 +542,7 @@ extension on WidgetTester {
 
     registerMockService<PowerService>(MockPowerService());
 
-    final refresh = MockRefreshService();
+    final refresh = createMockRefreshService();
     when(refresh.state).thenReturn(
       const RefreshState.status(
         RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),

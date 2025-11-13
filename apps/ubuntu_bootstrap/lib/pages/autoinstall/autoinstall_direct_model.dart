@@ -12,7 +12,7 @@ part 'autoinstall_direct_model.g.dart';
 final _log = Logger('autoinstall_model');
 
 @freezed
-class AutoinstallDirectState with _$AutoinstallDirectState {
+abstract class AutoinstallDirectState with _$AutoinstallDirectState {
   factory AutoinstallDirectState({
     @Default('') String url,
     Uri? localPath,

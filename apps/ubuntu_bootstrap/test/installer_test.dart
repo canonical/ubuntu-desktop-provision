@@ -16,6 +16,7 @@ import 'package:yaru_test/yaru_test.dart';
 
 import 'autoinstall/test_autoinstall.dart';
 import 'install/test_install.dart';
+import 'refresh/test_refresh.dart';
 
 void main() {
   setUp(() {
@@ -79,7 +80,7 @@ void main() {
     ).thenAnswer((_) async => endpoint);
     registerMockService<SubiquityServer>(server);
 
-    final refresh = MockRefreshService();
+    final refresh = createMockRefreshService();
     when(refresh.state).thenReturn(const RefreshState.checking());
     when(refresh.stateChanged).thenAnswer((_) => const Stream.empty());
     when(refresh.check()).thenAnswer((_) async => const RefreshState.done());
@@ -128,7 +129,7 @@ extension on WidgetTester {
     when(installer.hasRoute(any)).thenReturn(true);
     when(installer.monitorStatus()).thenAnswer((_) => Stream.value(status));
 
-    final refresh = MockRefreshService();
+    final refresh = createMockRefreshService();
     when(refresh.state).thenReturn(
       const RefreshState.status(
         RefreshStatus(availability: RefreshCheckState.UNAVAILABLE),

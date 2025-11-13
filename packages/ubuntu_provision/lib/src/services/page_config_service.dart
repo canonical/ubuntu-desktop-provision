@@ -63,7 +63,7 @@ class PageConfigService {
 }
 
 @freezed
-class PageConfigEntry with _$PageConfigEntry {
+abstract class PageConfigEntry with _$PageConfigEntry {
   const factory PageConfigEntry({
     String? image,
     @Default(true) bool visible,
@@ -73,7 +73,7 @@ class PageConfigEntry with _$PageConfigEntry {
 }
 
 @freezed
-class PageConfig with _$PageConfig {
+abstract class PageConfig with _$PageConfig {
   const factory PageConfig({
     @Default({}) @PageConfigEntryConverter() Map<String, PageConfigEntry> pages,
   }) = _PageConfig;

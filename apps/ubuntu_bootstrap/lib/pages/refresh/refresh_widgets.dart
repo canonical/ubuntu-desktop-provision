@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:ubuntu_bootstrap/app/installation_step.dart';
-import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
 import 'package:ubuntu_bootstrap/pages/refresh/refresh_x.dart';
+import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -52,11 +52,11 @@ class RefreshView extends ConsumerWidget {
           ),
         ),
         Text(
-          state.whenOrNull(
-                status: (_) => l10n.refreshHeader,
-                done: () => l10n.refreshReady,
-              ) ??
-              '',
+          switch (state) {
+            RefreshStateStatus() => l10n.refreshHeader,
+            RefreshStateDone() => l10n.refreshReady,
+            _ => ''
+          },
           style: Theme.of(context).textTheme.titleLarge,
         ),
         const Flexible(child: SizedBox(height: kWizardSpacing / 2)),

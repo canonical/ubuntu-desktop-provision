@@ -61,7 +61,7 @@ enum ErrorReportKind {
 }
 
 @freezed
-class ErrorReportRef with _$ErrorReportRef {
+abstract class ErrorReportRef with _$ErrorReportRef {
   const factory ErrorReportRef({
     required ErrorReportState state,
     required String base,
@@ -75,7 +75,7 @@ class ErrorReportRef with _$ErrorReportRef {
 }
 
 @freezed
-class NonReportableError with _$NonReportableError {
+abstract class NonReportableError with _$NonReportableError {
   const factory NonReportableError({
     required String cause,
     required String message,
@@ -101,7 +101,7 @@ enum ApplicationState {
 }
 
 @freezed
-class ApplicationStatus with _$ApplicationStatus {
+abstract class ApplicationStatus with _$ApplicationStatus {
   const factory ApplicationStatus({
     required ApplicationState state,
     required String confirmingTty,
@@ -125,7 +125,7 @@ enum PasswordKind {
 }
 
 @freezed
-class KeyFingerprint with _$KeyFingerprint {
+abstract class KeyFingerprint with _$KeyFingerprint {
   const factory KeyFingerprint({
     required String keytype,
     required String fingerprint,
@@ -136,7 +136,7 @@ class KeyFingerprint with _$KeyFingerprint {
 }
 
 @freezed
-class LiveSessionSSHInfo with _$LiveSessionSSHInfo {
+abstract class LiveSessionSSHInfo with _$LiveSessionSSHInfo {
   const factory LiveSessionSSHInfo({
     required String username,
     required PasswordKind passwordKind,
@@ -157,7 +157,7 @@ enum RefreshCheckState {
 }
 
 @freezed
-class RefreshStatus with _$RefreshStatus {
+abstract class RefreshStatus with _$RefreshStatus {
   const factory RefreshStatus({
     required RefreshCheckState availability,
     @Default('') String currentSnapVersion,
@@ -169,7 +169,7 @@ class RefreshStatus with _$RefreshStatus {
 }
 
 @Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
-class AnyStep with _$AnyStep {
+abstract class AnyStep with _$AnyStep {
   @FreezedUnionValue('StepPressKey')
   @JsonMapConverter()
   const factory AnyStep.stepPressKey({
@@ -195,7 +195,7 @@ class AnyStep with _$AnyStep {
 }
 
 @freezed
-class KeyboardSetting with _$KeyboardSetting {
+abstract class KeyboardSetting with _$KeyboardSetting {
   const factory KeyboardSetting({
     required String layout,
     @Default('') String variant,
@@ -207,7 +207,7 @@ class KeyboardSetting with _$KeyboardSetting {
 }
 
 @freezed
-class KeyboardVariant with _$KeyboardVariant {
+abstract class KeyboardVariant with _$KeyboardVariant {
   const factory KeyboardVariant({
     required String code,
     required String name,
@@ -218,7 +218,7 @@ class KeyboardVariant with _$KeyboardVariant {
 }
 
 @freezed
-class KeyboardLayout with _$KeyboardLayout {
+abstract class KeyboardLayout with _$KeyboardLayout {
   const factory KeyboardLayout({
     required String code,
     required String name,
@@ -230,7 +230,7 @@ class KeyboardLayout with _$KeyboardLayout {
 }
 
 @freezed
-class KeyboardSetup with _$KeyboardSetup {
+abstract class KeyboardSetup with _$KeyboardSetup {
   const factory KeyboardSetup({
     required KeyboardSetting setting,
     required List<KeyboardLayout> layouts,
@@ -241,7 +241,7 @@ class KeyboardSetup with _$KeyboardSetup {
 }
 
 @freezed
-class SourceSelection with _$SourceSelection {
+abstract class SourceSelection with _$SourceSelection {
   const factory SourceSelection({
     required String name,
     required String description,
@@ -256,7 +256,7 @@ class SourceSelection with _$SourceSelection {
 }
 
 @freezed
-class SourceSelectionAndSetting with _$SourceSelectionAndSetting {
+abstract class SourceSelectionAndSetting with _$SourceSelectionAndSetting {
   const factory SourceSelectionAndSetting({
     required List<SourceSelection> sources,
     required String currentId,
@@ -268,7 +268,7 @@ class SourceSelectionAndSetting with _$SourceSelectionAndSetting {
 }
 
 @freezed
-class ZdevInfo with _$ZdevInfo {
+abstract class ZdevInfo with _$ZdevInfo {
   const factory ZdevInfo({
     required String id,
     required String type,
@@ -293,7 +293,7 @@ enum PackageInstallState {
 }
 
 @freezed
-class NetworkStatus with _$NetworkStatus {
+abstract class NetworkStatus with _$NetworkStatus {
   const factory NetworkStatus({
     required List<NetDevInfo> devices,
     required PackageInstallState wlanSupportInstallState,
@@ -304,7 +304,7 @@ class NetworkStatus with _$NetworkStatus {
 }
 
 @freezed
-class IdentityData with _$IdentityData {
+abstract class IdentityData with _$IdentityData {
   const factory IdentityData({
     @Default('') String realname,
     @Default('') String username,
@@ -325,7 +325,7 @@ enum UsernameValidation {
 }
 
 @freezed
-class SSHData with _$SSHData {
+abstract class SSHData with _$SSHData {
   const factory SSHData({
     required bool installServer,
     required bool allowPw,
@@ -337,7 +337,7 @@ class SSHData with _$SSHData {
 }
 
 @freezed
-class SSHIdentity with _$SSHIdentity {
+abstract class SSHIdentity with _$SSHIdentity {
   const factory SSHIdentity({
     required String keyType,
     required String key,
@@ -356,7 +356,7 @@ enum SSHFetchIdStatus {
 }
 
 @freezed
-class SSHFetchIdResponse with _$SSHFetchIdResponse {
+abstract class SSHFetchIdResponse with _$SSHFetchIdResponse {
   const factory SSHFetchIdResponse({
     required SSHFetchIdStatus status,
     required List<SSHIdentity>? identities,
@@ -374,7 +374,7 @@ enum SnapCheckState {
 }
 
 @freezed
-class ChannelSnapInfo with _$ChannelSnapInfo {
+abstract class ChannelSnapInfo with _$ChannelSnapInfo {
   const factory ChannelSnapInfo({
     required String channelName,
     required String revision,
@@ -389,7 +389,7 @@ class ChannelSnapInfo with _$ChannelSnapInfo {
 }
 
 @freezed
-class SnapInfo with _$SnapInfo {
+abstract class SnapInfo with _$SnapInfo {
   const factory SnapInfo({
     required String name,
     @Default('') String summary,
@@ -407,7 +407,7 @@ class SnapInfo with _$SnapInfo {
 }
 
 @freezed
-class DriversResponse with _$DriversResponse {
+abstract class DriversResponse with _$DriversResponse {
   const factory DriversResponse({
     required bool install,
     required List<String>? drivers,
@@ -420,7 +420,7 @@ class DriversResponse with _$DriversResponse {
 }
 
 @freezed
-class OEMResponse with _$OEMResponse {
+abstract class OEMResponse with _$OEMResponse {
   const factory OEMResponse({
     required List<String>? metapackages,
   }) = _OEMResponse;
@@ -430,7 +430,7 @@ class OEMResponse with _$OEMResponse {
 }
 
 @freezed
-class CodecsData with _$CodecsData {
+abstract class CodecsData with _$CodecsData {
   const factory CodecsData({
     required bool install,
   }) = _CodecsData;
@@ -440,7 +440,7 @@ class CodecsData with _$CodecsData {
 }
 
 @freezed
-class DriversPayload with _$DriversPayload {
+abstract class DriversPayload with _$DriversPayload {
   const factory DriversPayload({
     required bool install,
   }) = _DriversPayload;
@@ -450,7 +450,7 @@ class DriversPayload with _$DriversPayload {
 }
 
 @freezed
-class SnapSelection with _$SnapSelection {
+abstract class SnapSelection with _$SnapSelection {
   const factory SnapSelection({
     required String name,
     required String channel,
@@ -462,7 +462,7 @@ class SnapSelection with _$SnapSelection {
 }
 
 @freezed
-class SnapListResponse with _$SnapListResponse {
+abstract class SnapListResponse with _$SnapListResponse {
   const factory SnapListResponse({
     required SnapCheckState status,
     @Default([]) List<SnapInfo> snaps,
@@ -474,7 +474,7 @@ class SnapListResponse with _$SnapListResponse {
 }
 
 @freezed
-class TimeZoneInfo with _$TimeZoneInfo {
+abstract class TimeZoneInfo with _$TimeZoneInfo {
   const factory TimeZoneInfo({
     required String timezone,
     required bool fromGeoip,
@@ -485,7 +485,7 @@ class TimeZoneInfo with _$TimeZoneInfo {
 }
 
 @freezed
-class UbuntuProInfo with _$UbuntuProInfo {
+abstract class UbuntuProInfo with _$UbuntuProInfo {
   const factory UbuntuProInfo({
     required String token,
   }) = _UbuntuProInfo;
@@ -495,7 +495,7 @@ class UbuntuProInfo with _$UbuntuProInfo {
 }
 
 @freezed
-class UbuntuProResponse with _$UbuntuProResponse {
+abstract class UbuntuProResponse with _$UbuntuProResponse {
   const factory UbuntuProResponse({
     required String token,
     required bool hasNetwork,
@@ -513,7 +513,7 @@ enum UbuntuProCheckTokenStatus {
 }
 
 @freezed
-class UbuntuProGeneralInfo with _$UbuntuProGeneralInfo {
+abstract class UbuntuProGeneralInfo with _$UbuntuProGeneralInfo {
   const factory UbuntuProGeneralInfo({
     required int? eolEsmYear,
     required int universePackages,
@@ -525,7 +525,7 @@ class UbuntuProGeneralInfo with _$UbuntuProGeneralInfo {
 }
 
 @freezed
-class UPCSInitiateResponse with _$UPCSInitiateResponse {
+abstract class UPCSInitiateResponse with _$UPCSInitiateResponse {
   const factory UPCSInitiateResponse({
     required String userCode,
     required int validitySeconds,
@@ -541,7 +541,7 @@ enum UPCSWaitStatus {
 }
 
 @freezed
-class UPCSWaitResponse with _$UPCSWaitResponse {
+abstract class UPCSWaitResponse with _$UPCSWaitResponse {
   const factory UPCSWaitResponse({
     required UPCSWaitStatus status,
     required String? contractToken,
@@ -552,7 +552,7 @@ class UPCSWaitResponse with _$UPCSWaitResponse {
 }
 
 @freezed
-class UbuntuProService with _$UbuntuProService {
+abstract class UbuntuProService with _$UbuntuProService {
   const factory UbuntuProService({
     required String name,
     required String description,
@@ -564,7 +564,7 @@ class UbuntuProService with _$UbuntuProService {
 }
 
 @freezed
-class UbuntuProSubscription with _$UbuntuProSubscription {
+abstract class UbuntuProSubscription with _$UbuntuProSubscription {
   const factory UbuntuProSubscription({
     required String contractName,
     required String accountName,
@@ -577,7 +577,7 @@ class UbuntuProSubscription with _$UbuntuProSubscription {
 }
 
 @freezed
-class UbuntuProCheckTokenAnswer with _$UbuntuProCheckTokenAnswer {
+abstract class UbuntuProCheckTokenAnswer with _$UbuntuProCheckTokenAnswer {
   const factory UbuntuProCheckTokenAnswer({
     required UbuntuProCheckTokenStatus status,
     required UbuntuProSubscription? subscription,
@@ -604,7 +604,7 @@ enum TaskStatus {
 }
 
 @freezed
-class TaskProgress with _$TaskProgress {
+abstract class TaskProgress with _$TaskProgress {
   const factory TaskProgress({
     @Default('') String label,
     @Default(0) int done,
@@ -616,7 +616,7 @@ class TaskProgress with _$TaskProgress {
 }
 
 @freezed
-class Task with _$Task {
+abstract class Task with _$Task {
   const factory Task({
     required String id,
     required String kind,
@@ -629,7 +629,7 @@ class Task with _$Task {
 }
 
 @freezed
-class Change with _$Change {
+abstract class Change with _$Change {
   const factory Change({
     required String id,
     required String kind,
@@ -658,7 +658,7 @@ enum MirrorCheckStatus {
 }
 
 @freezed
-class MirrorCheckResponse with _$MirrorCheckResponse {
+abstract class MirrorCheckResponse with _$MirrorCheckResponse {
   const factory MirrorCheckResponse({
     required String url,
     required MirrorCheckStatus status,
@@ -670,7 +670,7 @@ class MirrorCheckResponse with _$MirrorCheckResponse {
 }
 
 @freezed
-class MirrorPost with _$MirrorPost {
+abstract class MirrorPost with _$MirrorPost {
   const factory MirrorPost({
     String? elected,
     List<String>? candidates,
@@ -688,7 +688,7 @@ enum MirrorPostResponse {
 }
 
 @freezed
-class MirrorGet with _$MirrorGet {
+abstract class MirrorGet with _$MirrorGet {
   const factory MirrorGet({
     required bool relevant,
     required String? elected,
@@ -708,7 +708,7 @@ enum MirrorSelectionFallback {
 }
 
 @freezed
-class AdConnectionInfo with _$AdConnectionInfo {
+abstract class AdConnectionInfo with _$AdConnectionInfo {
   const factory AdConnectionInfo({
     @Default('') String adminName,
     @Default('') String domainName,
@@ -765,7 +765,7 @@ enum Bootloader {
 }
 
 @freezed
-class OsProber with _$OsProber {
+abstract class OsProber with _$OsProber {
   const factory OsProber({
     required String long,
     required String label,
@@ -779,7 +779,7 @@ class OsProber with _$OsProber {
 }
 
 @Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
-class PartitionOrGap with _$PartitionOrGap {
+abstract class PartitionOrGap with _$PartitionOrGap {
   @FreezedUnionValue('Partition')
   const factory PartitionOrGap.partition({
     int? size,
@@ -815,7 +815,7 @@ class PartitionOrGap with _$PartitionOrGap {
 }
 
 @freezed
-class ZFS with _$ZFS {
+abstract class ZFS with _$ZFS {
   const factory ZFS({
     required String volume,
     Map<String, dynamic>? properties,
@@ -825,7 +825,7 @@ class ZFS with _$ZFS {
 }
 
 @freezed
-class ZPool with _$ZPool {
+abstract class ZPool with _$ZPool {
   const factory ZPool({
     required String pool,
     required String mountpoint,
@@ -844,7 +844,7 @@ enum GapUsable {
 }
 
 @freezed
-class Disk with _$Disk {
+abstract class Disk with _$Disk {
   const factory Disk({
     required String id,
     required String label,
@@ -889,7 +889,7 @@ enum GuidedDisallowedCapabilityReason {
 }
 
 @freezed
-class GuidedDisallowedCapability with _$GuidedDisallowedCapability {
+abstract class GuidedDisallowedCapability with _$GuidedDisallowedCapability {
   const factory GuidedDisallowedCapability({
     required GuidedCapability capability,
     required GuidedDisallowedCapabilityReason reason,
@@ -901,7 +901,7 @@ class GuidedDisallowedCapability with _$GuidedDisallowedCapability {
 }
 
 @freezed
-class StorageResponse with _$StorageResponse {
+abstract class StorageResponse with _$StorageResponse {
   const factory StorageResponse({
     required ProbeStatus status,
     ErrorReportRef? errorReport,
@@ -917,7 +917,7 @@ class StorageResponse with _$StorageResponse {
 }
 
 @freezed
-class StorageResponseV2 with _$StorageResponseV2 {
+abstract class StorageResponseV2 with _$StorageResponseV2 {
   const factory StorageResponseV2({
     required ProbeStatus status,
     ErrorReportRef? errorReport,
@@ -937,7 +937,7 @@ enum SizingPolicy {
 }
 
 @freezed
-class GuidedResizeValues with _$GuidedResizeValues {
+abstract class GuidedResizeValues with _$GuidedResizeValues {
   const factory GuidedResizeValues({
     required int installMax,
     required int minimum,
@@ -950,7 +950,7 @@ class GuidedResizeValues with _$GuidedResizeValues {
 }
 
 @Freezed(unionKey: '\$type', unionValueCase: FreezedUnionCase.pascal)
-class GuidedStorageTarget with _$GuidedStorageTarget {
+abstract class GuidedStorageTarget with _$GuidedStorageTarget {
   @FreezedUnionValue('GuidedStorageTargetReformat')
   const factory GuidedStorageTarget.reformat({
     required String diskId,
@@ -998,7 +998,7 @@ class GuidedStorageTarget with _$GuidedStorageTarget {
 }
 
 @freezed
-class RecoveryKey with _$RecoveryKey {
+abstract class RecoveryKey with _$RecoveryKey {
   const factory RecoveryKey({
     String? liveLocation,
     String? backupLocation,
@@ -1009,7 +1009,7 @@ class RecoveryKey with _$RecoveryKey {
 }
 
 @freezed
-class GuidedChoiceV2 with _$GuidedChoiceV2 {
+abstract class GuidedChoiceV2 with _$GuidedChoiceV2 {
   const factory GuidedChoiceV2({
     required GuidedStorageTarget target,
     required GuidedCapability capability,
@@ -1026,7 +1026,7 @@ class GuidedChoiceV2 with _$GuidedChoiceV2 {
 }
 
 @freezed
-class GuidedStorageResponseV2 with _$GuidedStorageResponseV2 {
+abstract class GuidedStorageResponseV2 with _$GuidedStorageResponseV2 {
   const factory GuidedStorageResponseV2({
     required ProbeStatus status,
     ErrorReportRef? errorReport,
@@ -1039,7 +1039,7 @@ class GuidedStorageResponseV2 with _$GuidedStorageResponseV2 {
 }
 
 @freezed
-class AddPartitionV2 with _$AddPartitionV2 {
+abstract class AddPartitionV2 with _$AddPartitionV2 {
   const factory AddPartitionV2({
     required String diskId,
     required Partition partition,
@@ -1051,7 +1051,7 @@ class AddPartitionV2 with _$AddPartitionV2 {
 }
 
 @freezed
-class ModifyPartitionV2 with _$ModifyPartitionV2 {
+abstract class ModifyPartitionV2 with _$ModifyPartitionV2 {
   const factory ModifyPartitionV2({
     required String diskId,
     required Partition partition,
@@ -1062,7 +1062,7 @@ class ModifyPartitionV2 with _$ModifyPartitionV2 {
 }
 
 @freezed
-class ReformatDisk with _$ReformatDisk {
+abstract class ReformatDisk with _$ReformatDisk {
   const factory ReformatDisk({
     required String diskId,
     String? ptable,
@@ -1073,7 +1073,7 @@ class ReformatDisk with _$ReformatDisk {
 }
 
 @freezed
-class CalculateEntropyRequest with _$CalculateEntropyRequest {
+abstract class CalculateEntropyRequest with _$CalculateEntropyRequest {
   const factory CalculateEntropyRequest({
     String? passphrase,
     String? pin,
@@ -1084,7 +1084,7 @@ class CalculateEntropyRequest with _$CalculateEntropyRequest {
 }
 
 @freezed
-class EntropyResponse with _$EntropyResponse {
+abstract class EntropyResponse with _$EntropyResponse {
   const factory EntropyResponse({
     required bool success,
     required int entropyBits,
@@ -1095,6 +1095,11 @@ class EntropyResponse with _$EntropyResponse {
 
   factory EntropyResponse.fromJson(Map<String, dynamic> json) =>
       _$EntropyResponseFromJson(json);
+}
+
+enum CoreBootEncryptionFeatures {
+  PASSPHRASE_AUTH,
+  PIN_AUTH,
 }
 
 // END GENERATED CODE
