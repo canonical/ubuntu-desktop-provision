@@ -216,7 +216,7 @@ class ClassGenerator(ast.NodeVisitor):
         properties = "\n    ".join(str(property) for property in self.properties)
         return f"""
 @freezed
-class {self.name} with _${self.name} {{
+abstract class {self.name} with _${self.name} {{
   {annotations}const factory {self.name}({{
     {properties}
   }}) = _{self.name};
@@ -336,7 +336,7 @@ class UnionGenerator(ast.NodeVisitor):
         classes = "".join(self._format(c) for c in self.classes)
         return f"""
 @Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
-class {self.name} with _${self.name} {{
+abstract class {self.name} with _${self.name} {{
 {classes}
   factory {self.name}.fromJson(Map<String, dynamic> json) => _${self.name}FromJson(json);
 }}

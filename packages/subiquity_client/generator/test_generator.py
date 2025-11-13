@@ -39,7 +39,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     required bool boolean,
     required int integer,
@@ -63,7 +63,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     required bool? boolean,
     required int? integer,
@@ -87,7 +87,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     @Default(false) bool boolean,
     @Default(1) int integer,
@@ -112,7 +112,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     @Default(123) int foo,
     @Default('foo') String bar,
@@ -132,7 +132,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     @Default(false) bool fooBar,
   }) = _TestClass;
@@ -158,7 +158,7 @@ TestUnion = Union[Foo, Bar, BazQux]
 """)
         self.assertEqual(generator.to_dart(), """
 @Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
-class TestUnion with _$TestUnion {
+abstract class TestUnion with _$TestUnion {
 
   @FreezedUnionValue('Foo')
   const factory TestUnion.foo({
@@ -194,7 +194,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
-class FooOrBarBaz with _$FooOrBarBaz {
+abstract class FooOrBarBaz with _$FooOrBarBaz {
 
   @FreezedUnionValue('Foo')
   const factory FooOrBarBaz.foo({
@@ -210,7 +210,7 @@ class FooOrBarBaz with _$FooOrBarBaz {
 }
 
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     required FooOrBarBaz foo,
   }) = _TestClass;
@@ -233,7 +233,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
-class TestUnion with _$TestUnion {
+abstract class TestUnion with _$TestUnion {
 
   @FreezedUnionValue('TestUnionFoo')
   const factory TestUnion.foo({
@@ -249,7 +249,7 @@ class TestUnion with _$TestUnion {
 }
 
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     required TestUnion foo,
   }) = _TestClass;
@@ -266,7 +266,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   const factory TestClass({
     required DateTime fooBar,
   }) = _TestClass;
@@ -284,7 +284,7 @@ class TestClass:
 """)
         self.assertEqual(generator.to_dart(), """
 @freezed
-class TestClass with _$TestClass {
+abstract class TestClass with _$TestClass {
   @JsonMapConverter()
   const factory TestClass({
     required Map<int, int> foo,
@@ -308,7 +308,7 @@ TestUnion = Union[Foo, Bar]
 """)
         self.assertEqual(generator.to_dart(), """
 @Freezed(unionKey: '\\$type', unionValueCase: FreezedUnionCase.pascal)
-class TestUnion with _$TestUnion {
+abstract class TestUnion with _$TestUnion {
 
   @FreezedUnionValue('Foo')
   @JsonMapConverter()
