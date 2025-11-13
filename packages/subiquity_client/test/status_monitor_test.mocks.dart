@@ -23,6 +23,7 @@ import 'package:mockito/src/dummies.dart' as _i5;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
+// ignore_for_file: invalid_use_of_internal_member
 
 class _FakeDuration_0 extends _i1.SmartFake implements Duration {
   _FakeDuration_0(
@@ -141,46 +142,46 @@ class MockHttpClient extends _i1.Mock implements _i2.HttpClient {
       ) as bool);
 
   @override
-  set idleTimeout(Duration? _idleTimeout) => super.noSuchMethod(
+  set idleTimeout(Duration? value) => super.noSuchMethod(
         Invocation.setter(
           #idleTimeout,
-          _idleTimeout,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set connectionTimeout(Duration? _connectionTimeout) => super.noSuchMethod(
+  set connectionTimeout(Duration? value) => super.noSuchMethod(
         Invocation.setter(
           #connectionTimeout,
-          _connectionTimeout,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set maxConnectionsPerHost(int? _maxConnectionsPerHost) => super.noSuchMethod(
+  set maxConnectionsPerHost(int? value) => super.noSuchMethod(
         Invocation.setter(
           #maxConnectionsPerHost,
-          _maxConnectionsPerHost,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set autoUncompress(bool? _autoUncompress) => super.noSuchMethod(
+  set autoUncompress(bool? value) => super.noSuchMethod(
         Invocation.setter(
           #autoUncompress,
-          _autoUncompress,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set userAgent(String? _userAgent) => super.noSuchMethod(
+  set userAgent(String? value) => super.noSuchMethod(
         Invocation.setter(
           #userAgent,
-          _userAgent,
+          value,
         ),
         returnValueForMissingStub: null,
       );
@@ -668,18 +669,6 @@ class MockHttpClientRequest extends _i1.Mock implements _i2.HttpClientRequest {
       ) as int);
 
   @override
-  int get contentLength => (super.noSuchMethod(
-        Invocation.getter(#contentLength),
-        returnValue: 0,
-      ) as int);
-
-  @override
-  bool get bufferOutput => (super.noSuchMethod(
-        Invocation.getter(#bufferOutput),
-        returnValue: false,
-      ) as bool);
-
-  @override
   String get method => (super.noSuchMethod(
         Invocation.getter(#method),
         returnValue: _i5.dummyValue<String>(
@@ -696,6 +685,18 @@ class MockHttpClientRequest extends _i1.Mock implements _i2.HttpClientRequest {
           Invocation.getter(#uri),
         ),
       ) as Uri);
+
+  @override
+  int get contentLength => (super.noSuchMethod(
+        Invocation.getter(#contentLength),
+        returnValue: 0,
+      ) as int);
+
+  @override
+  bool get bufferOutput => (super.noSuchMethod(
+        Invocation.getter(#bufferOutput),
+        returnValue: false,
+      ) as bool);
 
   @override
   _i2.HttpHeaders get headers => (super.noSuchMethod(
@@ -723,46 +724,46 @@ class MockHttpClientRequest extends _i1.Mock implements _i2.HttpClientRequest {
       ) as _i4.Future<_i2.HttpClientResponse>);
 
   @override
-  set persistentConnection(bool? _persistentConnection) => super.noSuchMethod(
+  set persistentConnection(bool? value) => super.noSuchMethod(
         Invocation.setter(
           #persistentConnection,
-          _persistentConnection,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set followRedirects(bool? _followRedirects) => super.noSuchMethod(
+  set followRedirects(bool? value) => super.noSuchMethod(
         Invocation.setter(
           #followRedirects,
-          _followRedirects,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set maxRedirects(int? _maxRedirects) => super.noSuchMethod(
+  set maxRedirects(int? value) => super.noSuchMethod(
         Invocation.setter(
           #maxRedirects,
-          _maxRedirects,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set contentLength(int? _contentLength) => super.noSuchMethod(
+  set contentLength(int? value) => super.noSuchMethod(
         Invocation.setter(
           #contentLength,
-          _contentLength,
+          value,
         ),
         returnValueForMissingStub: null,
       );
 
   @override
-  set bufferOutput(bool? _bufferOutput) => super.noSuchMethod(
+  set bufferOutput(bool? value) => super.noSuchMethod(
         Invocation.setter(
           #bufferOutput,
-          _bufferOutput,
+          value,
         ),
         returnValueForMissingStub: null,
       );
@@ -777,10 +778,10 @@ class MockHttpClientRequest extends _i1.Mock implements _i2.HttpClientRequest {
       ) as _i3.Encoding);
 
   @override
-  set encoding(_i3.Encoding? _encoding) => super.noSuchMethod(
+  set encoding(_i3.Encoding? value) => super.noSuchMethod(
         Invocation.setter(
           #encoding,
-          _encoding,
+          value,
         ),
         returnValueForMissingStub: null,
       );

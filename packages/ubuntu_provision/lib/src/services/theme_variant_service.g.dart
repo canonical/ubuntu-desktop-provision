@@ -6,14 +6,13 @@ part of 'theme_variant_service.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ThemeConfigImpl _$$ThemeConfigImplFromJson(Map<String, dynamic> json) =>
-    _$ThemeConfigImpl(
+_ThemeConfig _$ThemeConfigFromJson(Map<String, dynamic> json) => _ThemeConfig(
       accentColor: json['accent-color'] as String?,
       elevatedButtonColor: json['elevated-button-color'] as String?,
       elevatedButtonTextColor: json['elevated-button-text-color'] as String?,
     );
 
-Map<String, dynamic> _$$ThemeConfigImplToJson(_$ThemeConfigImpl instance) =>
+Map<String, dynamic> _$ThemeConfigToJson(_ThemeConfig instance) =>
     <String, dynamic>{
       'accent-color': instance.accentColor,
       'elevated-button-color': instance.elevatedButtonColor,

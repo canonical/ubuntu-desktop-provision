@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,134 +9,30 @@ part of 'page_config_service.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-PageConfigEntry _$PageConfigEntryFromJson(Map<String, dynamic> json) {
-  return _PageConfigEntry.fromJson(json);
-}
 
 /// @nodoc
 mixin _$PageConfigEntry {
-  String? get image => throw _privateConstructorUsedError;
-  bool get visible => throw _privateConstructorUsedError;
-
-  /// Serializes this PageConfigEntry to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String? get image;
+  bool get visible;
 
   /// Create a copy of PageConfigEntry
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $PageConfigEntryCopyWith<PageConfigEntry> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+      _$PageConfigEntryCopyWithImpl<PageConfigEntry>(
+          this as PageConfigEntry, _$identity);
 
-/// @nodoc
-abstract class $PageConfigEntryCopyWith<$Res> {
-  factory $PageConfigEntryCopyWith(
-          PageConfigEntry value, $Res Function(PageConfigEntry) then) =
-      _$PageConfigEntryCopyWithImpl<$Res, PageConfigEntry>;
-  @useResult
-  $Res call({String? image, bool visible});
-}
-
-/// @nodoc
-class _$PageConfigEntryCopyWithImpl<$Res, $Val extends PageConfigEntry>
-    implements $PageConfigEntryCopyWith<$Res> {
-  _$PageConfigEntryCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? image = freezed,
-    Object? visible = null,
-  }) {
-    return _then(_value.copyWith(
-      image: freezed == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String?,
-      visible: null == visible
-          ? _value.visible
-          : visible // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$PageConfigEntryImplCopyWith<$Res>
-    implements $PageConfigEntryCopyWith<$Res> {
-  factory _$$PageConfigEntryImplCopyWith(_$PageConfigEntryImpl value,
-          $Res Function(_$PageConfigEntryImpl) then) =
-      __$$PageConfigEntryImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String? image, bool visible});
-}
-
-/// @nodoc
-class __$$PageConfigEntryImplCopyWithImpl<$Res>
-    extends _$PageConfigEntryCopyWithImpl<$Res, _$PageConfigEntryImpl>
-    implements _$$PageConfigEntryImplCopyWith<$Res> {
-  __$$PageConfigEntryImplCopyWithImpl(
-      _$PageConfigEntryImpl _value, $Res Function(_$PageConfigEntryImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? image = freezed,
-    Object? visible = null,
-  }) {
-    return _then(_$PageConfigEntryImpl(
-      image: freezed == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String?,
-      visible: null == visible
-          ? _value.visible
-          : visible // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$PageConfigEntryImpl implements _PageConfigEntry {
-  const _$PageConfigEntryImpl({this.image, this.visible = true});
-
-  factory _$PageConfigEntryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PageConfigEntryImplFromJson(json);
-
-  @override
-  final String? image;
-  @override
-  @JsonKey()
-  final bool visible;
-
-  @override
-  String toString() {
-    return 'PageConfigEntry(image: $image, visible: $visible)';
-  }
+  /// Serializes this PageConfigEntry to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PageConfigEntryImpl &&
+            other is PageConfigEntry &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.visible, visible) || other.visible == visible));
   }
@@ -145,115 +41,343 @@ class _$PageConfigEntryImpl implements _PageConfigEntry {
   @override
   int get hashCode => Object.hash(runtimeType, image, visible);
 
-  /// Create a copy of PageConfigEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PageConfigEntryImplCopyWith<_$PageConfigEntryImpl> get copyWith =>
-      __$$PageConfigEntryImplCopyWithImpl<_$PageConfigEntryImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PageConfigEntryImplToJson(
-      this,
-    );
+  String toString() {
+    return 'PageConfigEntry(image: $image, visible: $visible)';
   }
 }
 
-abstract class _PageConfigEntry implements PageConfigEntry {
-  const factory _PageConfigEntry({final String? image, final bool visible}) =
-      _$PageConfigEntryImpl;
+/// @nodoc
+abstract mixin class $PageConfigEntryCopyWith<$Res> {
+  factory $PageConfigEntryCopyWith(
+          PageConfigEntry value, $Res Function(PageConfigEntry) _then) =
+      _$PageConfigEntryCopyWithImpl;
+  @useResult
+  $Res call({String? image, bool visible});
+}
 
-  factory _PageConfigEntry.fromJson(Map<String, dynamic> json) =
-      _$PageConfigEntryImpl.fromJson;
+/// @nodoc
+class _$PageConfigEntryCopyWithImpl<$Res>
+    implements $PageConfigEntryCopyWith<$Res> {
+  _$PageConfigEntryCopyWithImpl(this._self, this._then);
+
+  final PageConfigEntry _self;
+  final $Res Function(PageConfigEntry) _then;
+
+  /// Create a copy of PageConfigEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? image = freezed,
+    Object? visible = null,
+  }) {
+    return _then(_self.copyWith(
+      image: freezed == image
+          ? _self.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      visible: null == visible
+          ? _self.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [PageConfigEntry].
+extension PageConfigEntryPatterns on PageConfigEntry {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_PageConfigEntry value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfigEntry() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_PageConfigEntry value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfigEntry():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_PageConfigEntry value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfigEntry() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String? image, bool visible)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfigEntry() when $default != null:
+        return $default(_that.image, _that.visible);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String? image, bool visible) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfigEntry():
+        return $default(_that.image, _that.visible);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(String? image, bool visible)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfigEntry() when $default != null:
+        return $default(_that.image, _that.visible);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _PageConfigEntry implements PageConfigEntry {
+  const _PageConfigEntry({this.image, this.visible = true});
+  factory _PageConfigEntry.fromJson(Map<String, dynamic> json) =>
+      _$PageConfigEntryFromJson(json);
 
   @override
-  String? get image;
+  final String? image;
   @override
-  bool get visible;
+  @JsonKey()
+  final bool visible;
 
   /// Create a copy of PageConfigEntry
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PageConfigEntryImplCopyWith<_$PageConfigEntryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  _$PageConfigEntryCopyWith<_PageConfigEntry> get copyWith =>
+      __$PageConfigEntryCopyWithImpl<_PageConfigEntry>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$PageConfigEntryToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _PageConfigEntry &&
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.visible, visible) || other.visible == visible));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, image, visible);
+
+  @override
+  String toString() {
+    return 'PageConfigEntry(image: $image, visible: $visible)';
+  }
 }
 
-PageConfig _$PageConfigFromJson(Map<String, dynamic> json) {
-  return _PageConfig.fromJson(json);
+/// @nodoc
+abstract mixin class _$PageConfigEntryCopyWith<$Res>
+    implements $PageConfigEntryCopyWith<$Res> {
+  factory _$PageConfigEntryCopyWith(
+          _PageConfigEntry value, $Res Function(_PageConfigEntry) _then) =
+      __$PageConfigEntryCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String? image, bool visible});
+}
+
+/// @nodoc
+class __$PageConfigEntryCopyWithImpl<$Res>
+    implements _$PageConfigEntryCopyWith<$Res> {
+  __$PageConfigEntryCopyWithImpl(this._self, this._then);
+
+  final _PageConfigEntry _self;
+  final $Res Function(_PageConfigEntry) _then;
+
+  /// Create a copy of PageConfigEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? image = freezed,
+    Object? visible = null,
+  }) {
+    return _then(_PageConfigEntry(
+      image: freezed == image
+          ? _self.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
+      visible: null == visible
+          ? _self.visible
+          : visible // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 mixin _$PageConfig {
   @PageConfigEntryConverter()
-  Map<String, PageConfigEntry> get pages => throw _privateConstructorUsedError;
-
-  /// Serializes this PageConfig to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, PageConfigEntry> get pages;
 
   /// Create a copy of PageConfig
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PageConfigCopyWith<PageConfig> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PageConfigCopyWith<$Res> {
-  factory $PageConfigCopyWith(
-          PageConfig value, $Res Function(PageConfig) then) =
-      _$PageConfigCopyWithImpl<$Res, PageConfig>;
-  @useResult
-  $Res call({@PageConfigEntryConverter() Map<String, PageConfigEntry> pages});
-}
-
-/// @nodoc
-class _$PageConfigCopyWithImpl<$Res, $Val extends PageConfig>
-    implements $PageConfigCopyWith<$Res> {
-  _$PageConfigCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $PageConfigCopyWith<PageConfig> get copyWith =>
+      _$PageConfigCopyWithImpl<PageConfig>(this as PageConfig, _$identity);
+
+  /// Serializes this PageConfig to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? pages = null,
-  }) {
-    return _then(_value.copyWith(
-      pages: null == pages
-          ? _value.pages
-          : pages // ignore: cast_nullable_to_non_nullable
-              as Map<String, PageConfigEntry>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is PageConfig &&
+            const DeepCollectionEquality().equals(other.pages, pages));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(pages));
+
+  @override
+  String toString() {
+    return 'PageConfig(pages: $pages)';
   }
 }
 
 /// @nodoc
-abstract class _$$PageConfigImplCopyWith<$Res>
-    implements $PageConfigCopyWith<$Res> {
-  factory _$$PageConfigImplCopyWith(
-          _$PageConfigImpl value, $Res Function(_$PageConfigImpl) then) =
-      __$$PageConfigImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $PageConfigCopyWith<$Res> {
+  factory $PageConfigCopyWith(
+          PageConfig value, $Res Function(PageConfig) _then) =
+      _$PageConfigCopyWithImpl;
   @useResult
   $Res call({@PageConfigEntryConverter() Map<String, PageConfigEntry> pages});
 }
 
 /// @nodoc
-class __$$PageConfigImplCopyWithImpl<$Res>
-    extends _$PageConfigCopyWithImpl<$Res, _$PageConfigImpl>
-    implements _$$PageConfigImplCopyWith<$Res> {
-  __$$PageConfigImplCopyWithImpl(
-      _$PageConfigImpl _value, $Res Function(_$PageConfigImpl) _then)
-      : super(_value, _then);
+class _$PageConfigCopyWithImpl<$Res> implements $PageConfigCopyWith<$Res> {
+  _$PageConfigCopyWithImpl(this._self, this._then);
+
+  final PageConfig _self;
+  final $Res Function(PageConfig) _then;
 
   /// Create a copy of PageConfig
   /// with the given fields replaced by the non-null parameter values.
@@ -262,25 +386,187 @@ class __$$PageConfigImplCopyWithImpl<$Res>
   $Res call({
     Object? pages = null,
   }) {
-    return _then(_$PageConfigImpl(
+    return _then(_self.copyWith(
       pages: null == pages
-          ? _value._pages
+          ? _self.pages
           : pages // ignore: cast_nullable_to_non_nullable
               as Map<String, PageConfigEntry>,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [PageConfig].
+extension PageConfigPatterns on PageConfig {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_PageConfig value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfig() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_PageConfig value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfig():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_PageConfig value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfig() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            @PageConfigEntryConverter() Map<String, PageConfigEntry> pages)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfig() when $default != null:
+        return $default(_that.pages);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            @PageConfigEntryConverter() Map<String, PageConfigEntry> pages)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfig():
+        return $default(_that.pages);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            @PageConfigEntryConverter() Map<String, PageConfigEntry> pages)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _PageConfig() when $default != null:
+        return $default(_that.pages);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 @JsonSerializable()
-class _$PageConfigImpl implements _PageConfig {
-  const _$PageConfigImpl(
+class _PageConfig implements PageConfig {
+  const _PageConfig(
       {@PageConfigEntryConverter()
       final Map<String, PageConfigEntry> pages = const {}})
       : _pages = pages;
-
-  factory _$PageConfigImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PageConfigImplFromJson(json);
+  factory _PageConfig.fromJson(Map<String, dynamic> json) =>
+      _$PageConfigFromJson(json);
 
   final Map<String, PageConfigEntry> _pages;
   @override
@@ -292,16 +578,26 @@ class _$PageConfigImpl implements _PageConfig {
     return EqualUnmodifiableMapView(_pages);
   }
 
+  /// Create a copy of PageConfig
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'PageConfig(pages: $pages)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$PageConfigCopyWith<_PageConfig> get copyWith =>
+      __$PageConfigCopyWithImpl<_PageConfig>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$PageConfigToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PageConfigImpl &&
+            other is _PageConfig &&
             const DeepCollectionEquality().equals(other._pages, _pages));
   }
 
@@ -310,38 +606,44 @@ class _$PageConfigImpl implements _PageConfig {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_pages));
 
-  /// Create a copy of PageConfig
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$PageConfigImplCopyWith<_$PageConfigImpl> get copyWith =>
-      __$$PageConfigImplCopyWithImpl<_$PageConfigImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PageConfigImplToJson(
-      this,
-    );
+  String toString() {
+    return 'PageConfig(pages: $pages)';
   }
 }
 
-abstract class _PageConfig implements PageConfig {
-  const factory _PageConfig(
-      {@PageConfigEntryConverter()
-      final Map<String, PageConfigEntry> pages}) = _$PageConfigImpl;
-
-  factory _PageConfig.fromJson(Map<String, dynamic> json) =
-      _$PageConfigImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$PageConfigCopyWith<$Res>
+    implements $PageConfigCopyWith<$Res> {
+  factory _$PageConfigCopyWith(
+          _PageConfig value, $Res Function(_PageConfig) _then) =
+      __$PageConfigCopyWithImpl;
   @override
-  @PageConfigEntryConverter()
-  Map<String, PageConfigEntry> get pages;
+  @useResult
+  $Res call({@PageConfigEntryConverter() Map<String, PageConfigEntry> pages});
+}
+
+/// @nodoc
+class __$PageConfigCopyWithImpl<$Res> implements _$PageConfigCopyWith<$Res> {
+  __$PageConfigCopyWithImpl(this._self, this._then);
+
+  final _PageConfig _self;
+  final $Res Function(_PageConfig) _then;
 
   /// Create a copy of PageConfig
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PageConfigImplCopyWith<_$PageConfigImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? pages = null,
+  }) {
+    return _then(_PageConfig(
+      pages: null == pages
+          ? _self._pages
+          : pages // ignore: cast_nullable_to_non_nullable
+              as Map<String, PageConfigEntry>,
+    ));
+  }
 }
+
+// dart format on

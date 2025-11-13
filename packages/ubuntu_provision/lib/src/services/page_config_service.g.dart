@@ -6,29 +6,26 @@ part of 'page_config_service.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PageConfigEntryImpl _$$PageConfigEntryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PageConfigEntryImpl(
+_PageConfigEntry _$PageConfigEntryFromJson(Map<String, dynamic> json) =>
+    _PageConfigEntry(
       image: json['image'] as String?,
       visible: json['visible'] as bool? ?? true,
     );
 
-Map<String, dynamic> _$$PageConfigEntryImplToJson(
-        _$PageConfigEntryImpl instance) =>
+Map<String, dynamic> _$PageConfigEntryToJson(_PageConfigEntry instance) =>
     <String, dynamic>{
       'image': instance.image,
       'visible': instance.visible,
     };
 
-_$PageConfigImpl _$$PageConfigImplFromJson(Map<String, dynamic> json) =>
-    _$PageConfigImpl(
+_PageConfig _$PageConfigFromJson(Map<String, dynamic> json) => _PageConfig(
       pages: json['pages'] == null
           ? const {}
           : const PageConfigEntryConverter()
               .fromJson(json['pages'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$PageConfigImplToJson(_$PageConfigImpl instance) =>
+Map<String, dynamic> _$PageConfigToJson(_PageConfig instance) =>
     <String, dynamic>{
       'pages': const PageConfigEntryConverter().toJson(instance.pages),
     };

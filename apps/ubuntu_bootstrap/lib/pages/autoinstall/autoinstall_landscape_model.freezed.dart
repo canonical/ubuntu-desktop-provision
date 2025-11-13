@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,112 +9,72 @@ part of 'autoinstall_landscape_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LandscapeData {
-  String get userCode => throw _privateConstructorUsedError;
-  String get token => throw _privateConstructorUsedError;
-  AuthenticationStatus get authenticationStatus =>
-      throw _privateConstructorUsedError;
-  String get autoinstall => throw _privateConstructorUsedError;
-  String get domainUrl => throw _privateConstructorUsedError;
-  bool get isLoading => throw _privateConstructorUsedError;
-  bool get unretriableError => throw _privateConstructorUsedError;
-  Object? get error => throw _privateConstructorUsedError;
+  String get userCode;
+  String get token;
+  AuthenticationStatus get authenticationStatus;
+  String get autoinstall;
+  String get domainUrl;
+  bool get isLoading;
+  bool get unretriableError;
+  Object? get error;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LandscapeDataCopyWith<LandscapeData> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LandscapeDataCopyWith<$Res> {
-  factory $LandscapeDataCopyWith(
-          LandscapeData value, $Res Function(LandscapeData) then) =
-      _$LandscapeDataCopyWithImpl<$Res, LandscapeData>;
-  @useResult
-  $Res call(
-      {String userCode,
-      String token,
-      AuthenticationStatus authenticationStatus,
-      String autoinstall,
-      String domainUrl,
-      bool isLoading,
-      bool unretriableError,
-      Object? error});
-}
-
-/// @nodoc
-class _$LandscapeDataCopyWithImpl<$Res, $Val extends LandscapeData>
-    implements $LandscapeDataCopyWith<$Res> {
-  _$LandscapeDataCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of LandscapeData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $LandscapeDataCopyWith<LandscapeData> get copyWith =>
+      _$LandscapeDataCopyWithImpl<LandscapeData>(
+          this as LandscapeData, _$identity);
+
   @override
-  $Res call({
-    Object? userCode = null,
-    Object? token = null,
-    Object? authenticationStatus = null,
-    Object? autoinstall = null,
-    Object? domainUrl = null,
-    Object? isLoading = null,
-    Object? unretriableError = null,
-    Object? error = freezed,
-  }) {
-    return _then(_value.copyWith(
-      userCode: null == userCode
-          ? _value.userCode
-          : userCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      token: null == token
-          ? _value.token
-          : token // ignore: cast_nullable_to_non_nullable
-              as String,
-      authenticationStatus: null == authenticationStatus
-          ? _value.authenticationStatus
-          : authenticationStatus // ignore: cast_nullable_to_non_nullable
-              as AuthenticationStatus,
-      autoinstall: null == autoinstall
-          ? _value.autoinstall
-          : autoinstall // ignore: cast_nullable_to_non_nullable
-              as String,
-      domainUrl: null == domainUrl
-          ? _value.domainUrl
-          : domainUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      unretriableError: null == unretriableError
-          ? _value.unretriableError
-          : unretriableError // ignore: cast_nullable_to_non_nullable
-              as bool,
-      error: freezed == error ? _value.error : error,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LandscapeData &&
+            (identical(other.userCode, userCode) ||
+                other.userCode == userCode) &&
+            (identical(other.token, token) || other.token == token) &&
+            (identical(other.authenticationStatus, authenticationStatus) ||
+                other.authenticationStatus == authenticationStatus) &&
+            (identical(other.autoinstall, autoinstall) ||
+                other.autoinstall == autoinstall) &&
+            (identical(other.domainUrl, domainUrl) ||
+                other.domainUrl == domainUrl) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.unretriableError, unretriableError) ||
+                other.unretriableError == unretriableError) &&
+            const DeepCollectionEquality().equals(other.error, error));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      userCode,
+      token,
+      authenticationStatus,
+      autoinstall,
+      domainUrl,
+      isLoading,
+      unretriableError,
+      const DeepCollectionEquality().hash(error));
+
+  @override
+  String toString() {
+    return 'LandscapeData(userCode: $userCode, token: $token, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
   }
 }
 
 /// @nodoc
-abstract class _$$LandscapeDataImplCopyWith<$Res>
-    implements $LandscapeDataCopyWith<$Res> {
-  factory _$$LandscapeDataImplCopyWith(
-          _$LandscapeDataImpl value, $Res Function(_$LandscapeDataImpl) then) =
-      __$$LandscapeDataImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $LandscapeDataCopyWith<$Res> {
+  factory $LandscapeDataCopyWith(
+          LandscapeData value, $Res Function(LandscapeData) _then) =
+      _$LandscapeDataCopyWithImpl;
   @useResult
   $Res call(
       {String userCode,
@@ -128,12 +88,12 @@ abstract class _$$LandscapeDataImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LandscapeDataImplCopyWithImpl<$Res>
-    extends _$LandscapeDataCopyWithImpl<$Res, _$LandscapeDataImpl>
-    implements _$$LandscapeDataImplCopyWith<$Res> {
-  __$$LandscapeDataImplCopyWithImpl(
-      _$LandscapeDataImpl _value, $Res Function(_$LandscapeDataImpl) _then)
-      : super(_value, _then);
+class _$LandscapeDataCopyWithImpl<$Res>
+    implements $LandscapeDataCopyWith<$Res> {
+  _$LandscapeDataCopyWithImpl(this._self, this._then);
+
+  final LandscapeData _self;
+  final $Res Function(LandscapeData) _then;
 
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
@@ -149,44 +109,252 @@ class __$$LandscapeDataImplCopyWithImpl<$Res>
     Object? unretriableError = null,
     Object? error = freezed,
   }) {
-    return _then(_$LandscapeDataImpl(
+    return _then(_self.copyWith(
       userCode: null == userCode
-          ? _value.userCode
+          ? _self.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
               as String,
       token: null == token
-          ? _value.token
+          ? _self.token
           : token // ignore: cast_nullable_to_non_nullable
               as String,
       authenticationStatus: null == authenticationStatus
-          ? _value.authenticationStatus
+          ? _self.authenticationStatus
           : authenticationStatus // ignore: cast_nullable_to_non_nullable
               as AuthenticationStatus,
       autoinstall: null == autoinstall
-          ? _value.autoinstall
+          ? _self.autoinstall
           : autoinstall // ignore: cast_nullable_to_non_nullable
               as String,
       domainUrl: null == domainUrl
-          ? _value.domainUrl
+          ? _self.domainUrl
           : domainUrl // ignore: cast_nullable_to_non_nullable
               as String,
       isLoading: null == isLoading
-          ? _value.isLoading
+          ? _self.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       unretriableError: null == unretriableError
-          ? _value.unretriableError
+          ? _self.unretriableError
           : unretriableError // ignore: cast_nullable_to_non_nullable
               as bool,
-      error: freezed == error ? _value.error : error,
+      error: freezed == error ? _self.error : error,
     ));
   }
 }
 
+/// Adds pattern-matching-related methods to [LandscapeData].
+extension LandscapeDataPatterns on LandscapeData {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_LandscapeData value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LandscapeData() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_LandscapeData value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LandscapeData():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_LandscapeData value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LandscapeData() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String userCode,
+            String token,
+            AuthenticationStatus authenticationStatus,
+            String autoinstall,
+            String domainUrl,
+            bool isLoading,
+            bool unretriableError,
+            Object? error)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _LandscapeData() when $default != null:
+        return $default(
+            _that.userCode,
+            _that.token,
+            _that.authenticationStatus,
+            _that.autoinstall,
+            _that.domainUrl,
+            _that.isLoading,
+            _that.unretriableError,
+            _that.error);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String userCode,
+            String token,
+            AuthenticationStatus authenticationStatus,
+            String autoinstall,
+            String domainUrl,
+            bool isLoading,
+            bool unretriableError,
+            Object? error)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LandscapeData():
+        return $default(
+            _that.userCode,
+            _that.token,
+            _that.authenticationStatus,
+            _that.autoinstall,
+            _that.domainUrl,
+            _that.isLoading,
+            _that.unretriableError,
+            _that.error);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            String userCode,
+            String token,
+            AuthenticationStatus authenticationStatus,
+            String autoinstall,
+            String domainUrl,
+            bool isLoading,
+            bool unretriableError,
+            Object? error)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _LandscapeData() when $default != null:
+        return $default(
+            _that.userCode,
+            _that.token,
+            _that.authenticationStatus,
+            _that.autoinstall,
+            _that.domainUrl,
+            _that.isLoading,
+            _that.unretriableError,
+            _that.error);
+      case _:
+        return null;
+    }
+  }
+}
+
 /// @nodoc
 
-class _$LandscapeDataImpl extends _LandscapeData {
-  _$LandscapeDataImpl(
+class _LandscapeData extends LandscapeData {
+  _LandscapeData(
       {this.userCode = '',
       this.token = '',
       this.authenticationStatus = AuthenticationStatus.authenticationPending,
@@ -221,16 +389,19 @@ class _$LandscapeDataImpl extends _LandscapeData {
   @override
   final Object? error;
 
+  /// Create a copy of LandscapeData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'LandscapeData(userCode: $userCode, token: $token, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$LandscapeDataCopyWith<_LandscapeData> get copyWith =>
+      __$LandscapeDataCopyWithImpl<_LandscapeData>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LandscapeDataImpl &&
+            other is _LandscapeData &&
             (identical(other.userCode, userCode) ||
                 other.userCode == userCode) &&
             (identical(other.token, token) || other.token == token) &&
@@ -259,48 +430,85 @@ class _$LandscapeDataImpl extends _LandscapeData {
       unretriableError,
       const DeepCollectionEquality().hash(error));
 
+  @override
+  String toString() {
+    return 'LandscapeData(userCode: $userCode, token: $token, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$LandscapeDataCopyWith<$Res>
+    implements $LandscapeDataCopyWith<$Res> {
+  factory _$LandscapeDataCopyWith(
+          _LandscapeData value, $Res Function(_LandscapeData) _then) =
+      __$LandscapeDataCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String userCode,
+      String token,
+      AuthenticationStatus authenticationStatus,
+      String autoinstall,
+      String domainUrl,
+      bool isLoading,
+      bool unretriableError,
+      Object? error});
+}
+
+/// @nodoc
+class __$LandscapeDataCopyWithImpl<$Res>
+    implements _$LandscapeDataCopyWith<$Res> {
+  __$LandscapeDataCopyWithImpl(this._self, this._then);
+
+  final _LandscapeData _self;
+  final $Res Function(_LandscapeData) _then;
+
   /// Create a copy of LandscapeData
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LandscapeDataImplCopyWith<_$LandscapeDataImpl> get copyWith =>
-      __$$LandscapeDataImplCopyWithImpl<_$LandscapeDataImpl>(this, _$identity);
+  $Res call({
+    Object? userCode = null,
+    Object? token = null,
+    Object? authenticationStatus = null,
+    Object? autoinstall = null,
+    Object? domainUrl = null,
+    Object? isLoading = null,
+    Object? unretriableError = null,
+    Object? error = freezed,
+  }) {
+    return _then(_LandscapeData(
+      userCode: null == userCode
+          ? _self.userCode
+          : userCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      token: null == token
+          ? _self.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      authenticationStatus: null == authenticationStatus
+          ? _self.authenticationStatus
+          : authenticationStatus // ignore: cast_nullable_to_non_nullable
+              as AuthenticationStatus,
+      autoinstall: null == autoinstall
+          ? _self.autoinstall
+          : autoinstall // ignore: cast_nullable_to_non_nullable
+              as String,
+      domainUrl: null == domainUrl
+          ? _self.domainUrl
+          : domainUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      isLoading: null == isLoading
+          ? _self.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      unretriableError: null == unretriableError
+          ? _self.unretriableError
+          : unretriableError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      error: freezed == error ? _self.error : error,
+    ));
+  }
 }
 
-abstract class _LandscapeData extends LandscapeData {
-  factory _LandscapeData(
-      {final String userCode,
-      final String token,
-      final AuthenticationStatus authenticationStatus,
-      final String autoinstall,
-      final String domainUrl,
-      final bool isLoading,
-      final bool unretriableError,
-      final Object? error}) = _$LandscapeDataImpl;
-  _LandscapeData._() : super._();
-
-  @override
-  String get userCode;
-  @override
-  String get token;
-  @override
-  AuthenticationStatus get authenticationStatus;
-  @override
-  String get autoinstall;
-  @override
-  String get domainUrl;
-  @override
-  bool get isLoading;
-  @override
-  bool get unretriableError;
-  @override
-  Object? get error;
-
-  /// Create a copy of LandscapeData
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LandscapeDataImplCopyWith<_$LandscapeDataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

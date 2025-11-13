@@ -3,12 +3,13 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i4;
-import 'dart:ui' as _i5;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart' as _i3;
-import 'package:ubuntu_bootstrap/services.dart' as _i2;
+import 'package:mockito/src/dummies.dart' as _i4;
+import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart' as _i2;
+import 'package:ubuntu_bootstrap/services.dart' as _i3;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -24,32 +25,22 @@ import 'package:ubuntu_bootstrap/services.dart' as _i2;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-class _FakeRefreshState_0 extends _i1.SmartFake implements _i2.RefreshState {
-  _FakeRefreshState_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
 /// A class which mocks [RefreshModel].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
+class MockRefreshModel extends _i1.Mock implements _i2.RefreshModel {
   MockRefreshModel() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.RefreshState get state => (super.noSuchMethod(
+  _i3.RefreshState get state => (super.noSuchMethod(
         Invocation.getter(#state),
-        returnValue: _FakeRefreshState_0(
+        returnValue: _i4.dummyValue<_i3.RefreshState>(
           this,
           Invocation.getter(#state),
         ),
-      ) as _i2.RefreshState);
+      ) as _i3.RefreshState);
 
   @override
   bool get hasListeners => (super.noSuchMethod(
@@ -58,61 +49,62 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
       ) as bool);
 
   @override
-  _i4.Future<bool> init() => (super.noSuchMethod(
+  _i5.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i4.Future<bool>.value(false),
-      ) as _i4.Future<bool>);
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
 
   @override
-  _i4.Future<void> dispose() => (super.noSuchMethod(
+  _i5.Future<void> dispose() => (super.noSuchMethod(
         Invocation.method(
           #dispose,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  _i4.Future<_i2.RefreshState> check() => (super.noSuchMethod(
+  _i5.Future<_i3.RefreshState> check() => (super.noSuchMethod(
         Invocation.method(
           #check,
           [],
         ),
-        returnValue: _i4.Future<_i2.RefreshState>.value(_FakeRefreshState_0(
+        returnValue:
+            _i5.Future<_i3.RefreshState>.value(_i4.dummyValue<_i3.RefreshState>(
           this,
           Invocation.method(
             #check,
             [],
           ),
         )),
-      ) as _i4.Future<_i2.RefreshState>);
+      ) as _i5.Future<_i3.RefreshState>);
 
   @override
-  _i4.Future<void> refresh() => (super.noSuchMethod(
+  _i5.Future<void> refresh() => (super.noSuchMethod(
         Invocation.method(
           #refresh,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  _i4.Future<void> quit() => (super.noSuchMethod(
+  _i5.Future<void> quit() => (super.noSuchMethod(
         Invocation.method(
           #quit,
           [],
         ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
 
   @override
-  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -121,7 +113,7 @@ class MockRefreshModel extends _i1.Mock implements _i3.RefreshModel {
       );
 
   @override
-  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],
