@@ -152,8 +152,8 @@ class SlidesModel {
 
 extension on AssetBundle {
   Future<bool> exists(String assetName) async {
-    final manifestContent = await rootBundle.loadString('AssetManifest.json');
-    final manifestMap = json.decode(manifestContent) as Map<String, dynamic>;
-    return manifestMap.containsKey(assetName);
+    final assetManifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+    final assets = assetManifest.listAssets();
+    return assets.contains(assetName);
   }
 }
