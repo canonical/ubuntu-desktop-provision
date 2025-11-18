@@ -1,6 +1,7 @@
 pages:
   locale:
     image: "assets/images/logo-light.svg"
+    image-dark: "assets/images/logo-dark.svg"
   accessibility:
     image: "assets/images/accessibility.svg"
   try-or-install:
