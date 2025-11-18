@@ -134,7 +134,7 @@ class StorageModel extends SafeChangeNotifier {
 
   /// The TPM info URL.
   final String tpmInfoUrl =
-      'https://canonical-ubuntu-desktop-documentation.readthedocs-hosted.com/en/latest/explanation/hardware-backed-disk-encryption/';
+      'https://documentation.ubuntu.com/desktop/en/latest/explanation/hardware-backed-disk-encryption/';
 
   /// A list of existing OS installations or null if not detected.
   List<OsProber>? get existingOS => _storage.existingOS;
