@@ -1,14 +1,15 @@
 import 'package:collection/collection.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 
-import 'package:ubuntu_bootstrap/pages/refresh/refresh_model.dart';
+import 'package:ubuntu_bootstrap/services.dart';
 
 extension RefreshStateX on RefreshState {
-  double? get progress => maybeWhen(
-        progress: (change) => change.progress,
-        checking: () => null,
-        orElse: () => 0,
-      );
+  void foo() {}
+  double? get progress => switch (this) {
+        RefreshStateProgress(:final change) => change.progress,
+        RefreshStateChecking() => null,
+        _ => 0,
+      };
 }
 
 extension ChangeX on Change {

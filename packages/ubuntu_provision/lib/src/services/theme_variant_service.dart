@@ -10,7 +10,7 @@ part 'theme_variant_service.g.dart';
 final _log = Logger('theme_variant');
 
 @freezed
-class ThemeConfig with _$ThemeConfig {
+abstract class ThemeConfig with _$ThemeConfig {
   const factory ThemeConfig({
     String? accentColor,
     String? elevatedButtonColor,

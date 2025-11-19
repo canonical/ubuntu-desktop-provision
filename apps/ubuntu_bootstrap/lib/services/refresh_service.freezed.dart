@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,155 +9,156 @@ part of 'refresh_service.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RefreshState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() checking,
-    required TResult Function(RefreshStatus status) status,
-    required TResult Function(Change change) progress,
-    required TResult Function() done,
-    required TResult Function(Object? error) error,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? checking,
-    TResult? Function(RefreshStatus status)? status,
-    TResult? Function(Change change)? progress,
-    TResult? Function()? done,
-    TResult? Function(Object? error)? error,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? checking,
-    TResult Function(RefreshStatus status)? status,
-    TResult Function(Change change)? progress,
-    TResult Function()? done,
-    TResult Function(Object? error)? error,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RefreshChecking value) checking,
-    required TResult Function(_RefreshStatus value) status,
-    required TResult Function(_RefreshProgress value) progress,
-    required TResult Function(_RefreshDone value) done,
-    required TResult Function(_RefreshError value) error,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RefreshChecking value)? checking,
-    TResult? Function(_RefreshStatus value)? status,
-    TResult? Function(_RefreshProgress value)? progress,
-    TResult? Function(_RefreshDone value)? done,
-    TResult? Function(_RefreshError value)? error,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RefreshChecking value)? checking,
-    TResult Function(_RefreshStatus value)? status,
-    TResult Function(_RefreshProgress value)? progress,
-    TResult Function(_RefreshDone value)? done,
-    TResult Function(_RefreshError value)? error,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RefreshStateCopyWith<$Res> {
-  factory $RefreshStateCopyWith(
-          RefreshState value, $Res Function(RefreshState) then) =
-      _$RefreshStateCopyWithImpl<$Res, RefreshState>;
-}
-
-/// @nodoc
-class _$RefreshStateCopyWithImpl<$Res, $Val extends RefreshState>
-    implements $RefreshStateCopyWith<$Res> {
-  _$RefreshStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-abstract class _$$RefreshCheckingImplCopyWith<$Res> {
-  factory _$$RefreshCheckingImplCopyWith(_$RefreshCheckingImpl value,
-          $Res Function(_$RefreshCheckingImpl) then) =
-      __$$RefreshCheckingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$RefreshCheckingImplCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshCheckingImpl>
-    implements _$$RefreshCheckingImplCopyWith<$Res> {
-  __$$RefreshCheckingImplCopyWithImpl(
-      _$RefreshCheckingImpl _value, $Res Function(_$RefreshCheckingImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$RefreshCheckingImpl extends _RefreshChecking {
-  const _$RefreshCheckingImpl() : super._();
-
-  @override
-  String toString() {
-    return 'RefreshState.checking()';
-  }
-
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RefreshCheckingImpl);
+        (other.runtimeType == runtimeType && other is RefreshState);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
+  String toString() {
+    return 'RefreshState()';
+  }
+}
+
+/// @nodoc
+class $RefreshStateCopyWith<$Res> {
+  $RefreshStateCopyWith(RefreshState _, $Res Function(RefreshState) __);
+}
+
+/// Adds pattern-matching-related methods to [RefreshState].
+extension RefreshStatePatterns on RefreshState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() checking,
-    required TResult Function(RefreshStatus status) status,
-    required TResult Function(Change change) progress,
-    required TResult Function() done,
-    required TResult Function(Object? error) error,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RefreshStateChecking value)? checking,
+    TResult Function(RefreshStateStatus value)? status,
+    TResult Function(RefreshStateProgress value)? progress,
+    TResult Function(RefreshStateDone value)? done,
+    TResult Function(RefreshStateError value)? error,
+    required TResult orElse(),
   }) {
-    return checking();
+    final _that = this;
+    switch (_that) {
+      case RefreshStateChecking() when checking != null:
+        return checking(_that);
+      case RefreshStateStatus() when status != null:
+        return status(_that);
+      case RefreshStateProgress() when progress != null:
+        return progress(_that);
+      case RefreshStateDone() when done != null:
+        return done(_that);
+      case RefreshStateError() when error != null:
+        return error(_that);
+      case _:
+        return orElse();
+    }
   }
 
-  @override
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? checking,
-    TResult? Function(RefreshStatus status)? status,
-    TResult? Function(Change change)? progress,
-    TResult? Function()? done,
-    TResult? Function(Object? error)? error,
+  TResult map<TResult extends Object?>({
+    required TResult Function(RefreshStateChecking value) checking,
+    required TResult Function(RefreshStateStatus value) status,
+    required TResult Function(RefreshStateProgress value) progress,
+    required TResult Function(RefreshStateDone value) done,
+    required TResult Function(RefreshStateError value) error,
   }) {
-    return checking?.call();
+    final _that = this;
+    switch (_that) {
+      case RefreshStateChecking():
+        return checking(_that);
+      case RefreshStateStatus():
+        return status(_that);
+      case RefreshStateProgress():
+        return progress(_that);
+      case RefreshStateDone():
+        return done(_that);
+      case RefreshStateError():
+        return error(_that);
+    }
   }
 
-  @override
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(RefreshStateChecking value)? checking,
+    TResult? Function(RefreshStateStatus value)? status,
+    TResult? Function(RefreshStateProgress value)? progress,
+    TResult? Function(RefreshStateDone value)? done,
+    TResult? Function(RefreshStateError value)? error,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case RefreshStateChecking() when checking != null:
+        return checking(_that);
+      case RefreshStateStatus() when status != null:
+        return status(_that);
+      case RefreshStateProgress() when progress != null:
+        return progress(_that);
+      case RefreshStateDone() when done != null:
+        return done(_that);
+      case RefreshStateError() when error != null:
+        return error(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? checking,
@@ -167,63 +168,154 @@ class _$RefreshCheckingImpl extends _RefreshChecking {
     TResult Function(Object? error)? error,
     required TResult orElse(),
   }) {
-    if (checking != null) {
-      return checking();
+    final _that = this;
+    switch (_that) {
+      case RefreshStateChecking() when checking != null:
+        return checking();
+      case RefreshStateStatus() when status != null:
+        return status(_that.status);
+      case RefreshStateProgress() when progress != null:
+        return progress(_that.change);
+      case RefreshStateDone() when done != null:
+        return done();
+      case RefreshStateError() when error != null:
+        return error(_that.error);
+      case _:
+        return orElse();
     }
-    return orElse();
   }
 
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RefreshChecking value) checking,
-    required TResult Function(_RefreshStatus value) status,
-    required TResult Function(_RefreshProgress value) progress,
-    required TResult Function(_RefreshDone value) done,
-    required TResult Function(_RefreshError value) error,
-  }) {
-    return checking(this);
-  }
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
 
-  @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RefreshChecking value)? checking,
-    TResult? Function(_RefreshStatus value)? status,
-    TResult? Function(_RefreshProgress value)? progress,
-    TResult? Function(_RefreshDone value)? done,
-    TResult? Function(_RefreshError value)? error,
+  TResult when<TResult extends Object?>({
+    required TResult Function() checking,
+    required TResult Function(RefreshStatus status) status,
+    required TResult Function(Change change) progress,
+    required TResult Function() done,
+    required TResult Function(Object? error) error,
   }) {
-    return checking?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RefreshChecking value)? checking,
-    TResult Function(_RefreshStatus value)? status,
-    TResult Function(_RefreshProgress value)? progress,
-    TResult Function(_RefreshDone value)? done,
-    TResult Function(_RefreshError value)? error,
-    required TResult orElse(),
-  }) {
-    if (checking != null) {
-      return checking(this);
+    final _that = this;
+    switch (_that) {
+      case RefreshStateChecking():
+        return checking();
+      case RefreshStateStatus():
+        return status(_that.status);
+      case RefreshStateProgress():
+        return progress(_that.change);
+      case RefreshStateDone():
+        return done();
+      case RefreshStateError():
+        return error(_that.error);
     }
-    return orElse();
   }
-}
 
-abstract class _RefreshChecking extends RefreshState {
-  const factory _RefreshChecking() = _$RefreshCheckingImpl;
-  const _RefreshChecking._() : super._();
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? checking,
+    TResult? Function(RefreshStatus status)? status,
+    TResult? Function(Change change)? progress,
+    TResult? Function()? done,
+    TResult? Function(Object? error)? error,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case RefreshStateChecking() when checking != null:
+        return checking();
+      case RefreshStateStatus() when status != null:
+        return status(_that.status);
+      case RefreshStateProgress() when progress != null:
+        return progress(_that.change);
+      case RefreshStateDone() when done != null:
+        return done();
+      case RefreshStateError() when error != null:
+        return error(_that.error);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class _$$RefreshStatusImplCopyWith<$Res> {
-  factory _$$RefreshStatusImplCopyWith(
-          _$RefreshStatusImpl value, $Res Function(_$RefreshStatusImpl) then) =
-      __$$RefreshStatusImplCopyWithImpl<$Res>;
+
+class RefreshStateChecking extends RefreshState {
+  const RefreshStateChecking() : super._();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is RefreshStateChecking);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'RefreshState.checking()';
+  }
+}
+
+/// @nodoc
+
+class RefreshStateStatus extends RefreshState {
+  const RefreshStateStatus(this.status) : super._();
+
+  final RefreshStatus status;
+
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RefreshStateStatusCopyWith<RefreshStateStatus> get copyWith =>
+      _$RefreshStateStatusCopyWithImpl<RefreshStateStatus>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is RefreshStateStatus &&
+            (identical(other.status, status) || other.status == status));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, status);
+
+  @override
+  String toString() {
+    return 'RefreshState.status(status: $status)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RefreshStateStatusCopyWith<$Res>
+    implements $RefreshStateCopyWith<$Res> {
+  factory $RefreshStateStatusCopyWith(
+          RefreshStateStatus value, $Res Function(RefreshStateStatus) _then) =
+      _$RefreshStateStatusCopyWithImpl;
   @useResult
   $Res call({RefreshStatus status});
 
@@ -231,23 +323,22 @@ abstract class _$$RefreshStatusImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$RefreshStatusImplCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshStatusImpl>
-    implements _$$RefreshStatusImplCopyWith<$Res> {
-  __$$RefreshStatusImplCopyWithImpl(
-      _$RefreshStatusImpl _value, $Res Function(_$RefreshStatusImpl) _then)
-      : super(_value, _then);
+class _$RefreshStateStatusCopyWithImpl<$Res>
+    implements $RefreshStateStatusCopyWith<$Res> {
+  _$RefreshStateStatusCopyWithImpl(this._self, this._then);
+
+  final RefreshStateStatus _self;
+  final $Res Function(RefreshStateStatus) _then;
 
   /// Create a copy of RefreshState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? status = null,
   }) {
-    return _then(_$RefreshStatusImpl(
+    return _then(RefreshStateStatus(
       null == status
-          ? _value.status
+          ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
               as RefreshStatus,
     ));
@@ -258,144 +349,50 @@ class __$$RefreshStatusImplCopyWithImpl<$Res>
   @override
   @pragma('vm:prefer-inline')
   $RefreshStatusCopyWith<$Res> get status {
-    return $RefreshStatusCopyWith<$Res>(_value.status, (value) {
-      return _then(_value.copyWith(status: value));
+    return $RefreshStatusCopyWith<$Res>(_self.status, (value) {
+      return _then(_self.copyWith(status: value));
     });
   }
 }
 
 /// @nodoc
 
-class _$RefreshStatusImpl extends _RefreshStatus {
-  const _$RefreshStatusImpl(this.status) : super._();
+class RefreshStateProgress extends RefreshState {
+  const RefreshStateProgress(this.change) : super._();
 
-  @override
-  final RefreshStatus status;
+  final Change change;
 
-  @override
-  String toString() {
-    return 'RefreshState.status(status: $status)';
-  }
+  /// Create a copy of RefreshState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RefreshStateProgressCopyWith<RefreshStateProgress> get copyWith =>
+      _$RefreshStateProgressCopyWithImpl<RefreshStateProgress>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RefreshStatusImpl &&
-            (identical(other.status, status) || other.status == status));
+            other is RefreshStateProgress &&
+            (identical(other.change, change) || other.change == change));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status);
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
-      __$$RefreshStatusImplCopyWithImpl<_$RefreshStatusImpl>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, change);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() checking,
-    required TResult Function(RefreshStatus status) status,
-    required TResult Function(Change change) progress,
-    required TResult Function() done,
-    required TResult Function(Object? error) error,
-  }) {
-    return status(this.status);
+  String toString() {
+    return 'RefreshState.progress(change: $change)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? checking,
-    TResult? Function(RefreshStatus status)? status,
-    TResult? Function(Change change)? progress,
-    TResult? Function()? done,
-    TResult? Function(Object? error)? error,
-  }) {
-    return status?.call(this.status);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? checking,
-    TResult Function(RefreshStatus status)? status,
-    TResult Function(Change change)? progress,
-    TResult Function()? done,
-    TResult Function(Object? error)? error,
-    required TResult orElse(),
-  }) {
-    if (status != null) {
-      return status(this.status);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RefreshChecking value) checking,
-    required TResult Function(_RefreshStatus value) status,
-    required TResult Function(_RefreshProgress value) progress,
-    required TResult Function(_RefreshDone value) done,
-    required TResult Function(_RefreshError value) error,
-  }) {
-    return status(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RefreshChecking value)? checking,
-    TResult? Function(_RefreshStatus value)? status,
-    TResult? Function(_RefreshProgress value)? progress,
-    TResult? Function(_RefreshDone value)? done,
-    TResult? Function(_RefreshError value)? error,
-  }) {
-    return status?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RefreshChecking value)? checking,
-    TResult Function(_RefreshStatus value)? status,
-    TResult Function(_RefreshProgress value)? progress,
-    TResult Function(_RefreshDone value)? done,
-    TResult Function(_RefreshError value)? error,
-    required TResult orElse(),
-  }) {
-    if (status != null) {
-      return status(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _RefreshStatus extends RefreshState {
-  const factory _RefreshStatus(final RefreshStatus status) =
-      _$RefreshStatusImpl;
-  const _RefreshStatus._() : super._();
-
-  RefreshStatus get status;
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RefreshStatusImplCopyWith<_$RefreshStatusImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RefreshProgressImplCopyWith<$Res> {
-  factory _$$RefreshProgressImplCopyWith(_$RefreshProgressImpl value,
-          $Res Function(_$RefreshProgressImpl) then) =
-      __$$RefreshProgressImplCopyWithImpl<$Res>;
+abstract mixin class $RefreshStateProgressCopyWith<$Res>
+    implements $RefreshStateCopyWith<$Res> {
+  factory $RefreshStateProgressCopyWith(RefreshStateProgress value,
+          $Res Function(RefreshStateProgress) _then) =
+      _$RefreshStateProgressCopyWithImpl;
   @useResult
   $Res call({Change change});
 
@@ -403,23 +400,22 @@ abstract class _$$RefreshProgressImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$RefreshProgressImplCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshProgressImpl>
-    implements _$$RefreshProgressImplCopyWith<$Res> {
-  __$$RefreshProgressImplCopyWithImpl(
-      _$RefreshProgressImpl _value, $Res Function(_$RefreshProgressImpl) _then)
-      : super(_value, _then);
+class _$RefreshStateProgressCopyWithImpl<$Res>
+    implements $RefreshStateProgressCopyWith<$Res> {
+  _$RefreshStateProgressCopyWithImpl(this._self, this._then);
+
+  final RefreshStateProgress _self;
+  final $Res Function(RefreshStateProgress) _then;
 
   /// Create a copy of RefreshState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? change = null,
   }) {
-    return _then(_$RefreshProgressImpl(
+    return _then(RefreshStateProgress(
       null == change
-          ? _value.change
+          ? _self.change
           : change // ignore: cast_nullable_to_non_nullable
               as Change,
     ));
@@ -430,311 +426,51 @@ class __$$RefreshProgressImplCopyWithImpl<$Res>
   @override
   @pragma('vm:prefer-inline')
   $ChangeCopyWith<$Res> get change {
-    return $ChangeCopyWith<$Res>(_value.change, (value) {
-      return _then(_value.copyWith(change: value));
+    return $ChangeCopyWith<$Res>(_self.change, (value) {
+      return _then(_self.copyWith(change: value));
     });
   }
 }
 
 /// @nodoc
 
-class _$RefreshProgressImpl extends _RefreshProgress {
-  const _$RefreshProgressImpl(this.change) : super._();
-
-  @override
-  final Change change;
-
-  @override
-  String toString() {
-    return 'RefreshState.progress(change: $change)';
-  }
+class RefreshStateDone extends RefreshState {
+  const RefreshStateDone() : super._();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RefreshProgressImpl &&
-            (identical(other.change, change) || other.change == change));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, change);
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RefreshProgressImplCopyWith<_$RefreshProgressImpl> get copyWith =>
-      __$$RefreshProgressImplCopyWithImpl<_$RefreshProgressImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() checking,
-    required TResult Function(RefreshStatus status) status,
-    required TResult Function(Change change) progress,
-    required TResult Function() done,
-    required TResult Function(Object? error) error,
-  }) {
-    return progress(change);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? checking,
-    TResult? Function(RefreshStatus status)? status,
-    TResult? Function(Change change)? progress,
-    TResult? Function()? done,
-    TResult? Function(Object? error)? error,
-  }) {
-    return progress?.call(change);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? checking,
-    TResult Function(RefreshStatus status)? status,
-    TResult Function(Change change)? progress,
-    TResult Function()? done,
-    TResult Function(Object? error)? error,
-    required TResult orElse(),
-  }) {
-    if (progress != null) {
-      return progress(change);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RefreshChecking value) checking,
-    required TResult Function(_RefreshStatus value) status,
-    required TResult Function(_RefreshProgress value) progress,
-    required TResult Function(_RefreshDone value) done,
-    required TResult Function(_RefreshError value) error,
-  }) {
-    return progress(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RefreshChecking value)? checking,
-    TResult? Function(_RefreshStatus value)? status,
-    TResult? Function(_RefreshProgress value)? progress,
-    TResult? Function(_RefreshDone value)? done,
-    TResult? Function(_RefreshError value)? error,
-  }) {
-    return progress?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RefreshChecking value)? checking,
-    TResult Function(_RefreshStatus value)? status,
-    TResult Function(_RefreshProgress value)? progress,
-    TResult Function(_RefreshDone value)? done,
-    TResult Function(_RefreshError value)? error,
-    required TResult orElse(),
-  }) {
-    if (progress != null) {
-      return progress(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _RefreshProgress extends RefreshState {
-  const factory _RefreshProgress(final Change change) = _$RefreshProgressImpl;
-  const _RefreshProgress._() : super._();
-
-  Change get change;
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RefreshProgressImplCopyWith<_$RefreshProgressImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$RefreshDoneImplCopyWith<$Res> {
-  factory _$$RefreshDoneImplCopyWith(
-          _$RefreshDoneImpl value, $Res Function(_$RefreshDoneImpl) then) =
-      __$$RefreshDoneImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$RefreshDoneImplCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshDoneImpl>
-    implements _$$RefreshDoneImplCopyWith<$Res> {
-  __$$RefreshDoneImplCopyWithImpl(
-      _$RefreshDoneImpl _value, $Res Function(_$RefreshDoneImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$RefreshDoneImpl extends _RefreshDone {
-  const _$RefreshDoneImpl() : super._();
-
-  @override
-  String toString() {
-    return 'RefreshState.done()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RefreshDoneImpl);
+        (other.runtimeType == runtimeType && other is RefreshStateDone);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() checking,
-    required TResult Function(RefreshStatus status) status,
-    required TResult Function(Change change) progress,
-    required TResult Function() done,
-    required TResult Function(Object? error) error,
-  }) {
-    return done();
+  String toString() {
+    return 'RefreshState.done()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? checking,
-    TResult? Function(RefreshStatus status)? status,
-    TResult? Function(Change change)? progress,
-    TResult? Function()? done,
-    TResult? Function(Object? error)? error,
-  }) {
-    return done?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? checking,
-    TResult Function(RefreshStatus status)? status,
-    TResult Function(Change change)? progress,
-    TResult Function()? done,
-    TResult Function(Object? error)? error,
-    required TResult orElse(),
-  }) {
-    if (done != null) {
-      return done();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RefreshChecking value) checking,
-    required TResult Function(_RefreshStatus value) status,
-    required TResult Function(_RefreshProgress value) progress,
-    required TResult Function(_RefreshDone value) done,
-    required TResult Function(_RefreshError value) error,
-  }) {
-    return done(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RefreshChecking value)? checking,
-    TResult? Function(_RefreshStatus value)? status,
-    TResult? Function(_RefreshProgress value)? progress,
-    TResult? Function(_RefreshDone value)? done,
-    TResult? Function(_RefreshError value)? error,
-  }) {
-    return done?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RefreshChecking value)? checking,
-    TResult Function(_RefreshStatus value)? status,
-    TResult Function(_RefreshProgress value)? progress,
-    TResult Function(_RefreshDone value)? done,
-    TResult Function(_RefreshError value)? error,
-    required TResult orElse(),
-  }) {
-    if (done != null) {
-      return done(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _RefreshDone extends RefreshState {
-  const factory _RefreshDone() = _$RefreshDoneImpl;
-  const _RefreshDone._() : super._();
 }
 
 /// @nodoc
-abstract class _$$RefreshErrorImplCopyWith<$Res> {
-  factory _$$RefreshErrorImplCopyWith(
-          _$RefreshErrorImpl value, $Res Function(_$RefreshErrorImpl) then) =
-      __$$RefreshErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Object? error});
-}
 
-/// @nodoc
-class __$$RefreshErrorImplCopyWithImpl<$Res>
-    extends _$RefreshStateCopyWithImpl<$Res, _$RefreshErrorImpl>
-    implements _$$RefreshErrorImplCopyWith<$Res> {
-  __$$RefreshErrorImplCopyWithImpl(
-      _$RefreshErrorImpl _value, $Res Function(_$RefreshErrorImpl) _then)
-      : super(_value, _then);
+class RefreshStateError extends RefreshState {
+  const RefreshStateError([this.error]) : super._();
+
+  final Object? error;
 
   /// Create a copy of RefreshState
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = freezed,
-  }) {
-    return _then(_$RefreshErrorImpl(
-      freezed == error ? _value.error : error,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$RefreshErrorImpl extends _RefreshError {
-  const _$RefreshErrorImpl([this.error]) : super._();
-
-  @override
-  final Object? error;
-
-  @override
-  String toString() {
-    return 'RefreshState.error(error: $error)';
-  }
+  $RefreshStateErrorCopyWith<RefreshStateError> get copyWith =>
+      _$RefreshStateErrorCopyWithImpl<RefreshStateError>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RefreshErrorImpl &&
+            other is RefreshStateError &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
@@ -742,104 +478,40 @@ class _$RefreshErrorImpl extends _RefreshError {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(error));
 
+  @override
+  String toString() {
+    return 'RefreshState.error(error: $error)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $RefreshStateErrorCopyWith<$Res>
+    implements $RefreshStateCopyWith<$Res> {
+  factory $RefreshStateErrorCopyWith(
+          RefreshStateError value, $Res Function(RefreshStateError) _then) =
+      _$RefreshStateErrorCopyWithImpl;
+  @useResult
+  $Res call({Object? error});
+}
+
+/// @nodoc
+class _$RefreshStateErrorCopyWithImpl<$Res>
+    implements $RefreshStateErrorCopyWith<$Res> {
+  _$RefreshStateErrorCopyWithImpl(this._self, this._then);
+
+  final RefreshStateError _self;
+  final $Res Function(RefreshStateError) _then;
+
   /// Create a copy of RefreshState
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
   @pragma('vm:prefer-inline')
-  _$$RefreshErrorImplCopyWith<_$RefreshErrorImpl> get copyWith =>
-      __$$RefreshErrorImplCopyWithImpl<_$RefreshErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() checking,
-    required TResult Function(RefreshStatus status) status,
-    required TResult Function(Change change) progress,
-    required TResult Function() done,
-    required TResult Function(Object? error) error,
+  $Res call({
+    Object? error = freezed,
   }) {
-    return error(this.error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? checking,
-    TResult? Function(RefreshStatus status)? status,
-    TResult? Function(Change change)? progress,
-    TResult? Function()? done,
-    TResult? Function(Object? error)? error,
-  }) {
-    return error?.call(this.error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? checking,
-    TResult Function(RefreshStatus status)? status,
-    TResult Function(Change change)? progress,
-    TResult Function()? done,
-    TResult Function(Object? error)? error,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(this.error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_RefreshChecking value) checking,
-    required TResult Function(_RefreshStatus value) status,
-    required TResult Function(_RefreshProgress value) progress,
-    required TResult Function(_RefreshDone value) done,
-    required TResult Function(_RefreshError value) error,
-  }) {
-    return error(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RefreshChecking value)? checking,
-    TResult? Function(_RefreshStatus value)? status,
-    TResult? Function(_RefreshProgress value)? progress,
-    TResult? Function(_RefreshDone value)? done,
-    TResult? Function(_RefreshError value)? error,
-  }) {
-    return error?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RefreshChecking value)? checking,
-    TResult Function(_RefreshStatus value)? status,
-    TResult Function(_RefreshProgress value)? progress,
-    TResult Function(_RefreshDone value)? done,
-    TResult Function(_RefreshError value)? error,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(this);
-    }
-    return orElse();
+    return _then(RefreshStateError(
+      freezed == error ? _self.error : error,
+    ));
   }
 }
 
-abstract class _RefreshError extends RefreshState {
-  const factory _RefreshError([final Object? error]) = _$RefreshErrorImpl;
-  const _RefreshError._() : super._();
-
-  Object? get error;
-
-  /// Create a copy of RefreshState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RefreshErrorImplCopyWith<_$RefreshErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

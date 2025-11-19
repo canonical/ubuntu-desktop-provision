@@ -15,7 +15,7 @@ enum AutoinstallType {
 }
 
 @freezed
-class AutoinstallState with _$AutoinstallState {
+abstract class AutoinstallState with _$AutoinstallState {
   factory AutoinstallState({
     required AutoinstallType type,
   }) = _AutoinstallState;

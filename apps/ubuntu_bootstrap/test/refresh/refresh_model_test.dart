@@ -13,7 +13,7 @@ void main() async {
   test('state listener', () async {
     final controller = StreamController<RefreshState>(sync: true);
 
-    final service = MockRefreshService();
+    final service = createMockRefreshService();
     when(service.state).thenReturn(checking);
     when(service.stateChanged).thenAnswer((_) => controller.stream);
     when(service.check()).thenAnswer((_) async => checking);
@@ -34,7 +34,7 @@ void main() async {
   });
 
   test('refresh', () async {
-    final service = MockRefreshService();
+    final service = createMockRefreshService();
 
     final model = RefreshModel(service);
     await model.refresh();

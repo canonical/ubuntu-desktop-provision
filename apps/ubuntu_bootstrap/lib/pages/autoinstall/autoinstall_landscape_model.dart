@@ -15,7 +15,7 @@ part 'autoinstall_landscape_model.g.dart';
 final _log = Logger('landscape_model');
 
 @freezed
-class LandscapeData with _$LandscapeData {
+abstract class LandscapeData with _$LandscapeData {
   factory LandscapeData({
     @Default('') String userCode,
     @Default('') String token,

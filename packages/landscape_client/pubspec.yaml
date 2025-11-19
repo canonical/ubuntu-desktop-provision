@@ -4,7 +4,7 @@ version: 0.0.1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.32.1"
+  flutter: ">=3.38.1"
 
 dependencies:
   grpc: ^4.0.1
@@ -12,6 +12,6 @@ dependencies:
   landscape_stubs: ^0.0.1
 
 dev_dependencies:
-  mockito: 5.4.4
+  mockito: ^5.4.4
   build_runner: ^2.4.8
   test: any

@@ -12,24 +12,28 @@ part 'refresh_service.freezed.dart';
 final _log = Logger('refresh');
 
 @freezed
-class RefreshState with _$RefreshState {
+sealed class RefreshState with _$RefreshState {
   const RefreshState._();
-  const factory RefreshState.checking() = _RefreshChecking;
-  const factory RefreshState.status(RefreshStatus status) = _RefreshStatus;
-  const factory RefreshState.progress(Change change) = _RefreshProgress;
-  const factory RefreshState.done() = _RefreshDone;
-  const factory RefreshState.error([Object? error]) = _RefreshError;
+  const factory RefreshState.checking() = RefreshStateChecking;
+  const factory RefreshState.status(RefreshStatus status) = RefreshStateStatus;
+  const factory RefreshState.progress(Change change) = RefreshStateProgress;
+  const factory RefreshState.done() = RefreshStateDone;
+  const factory RefreshState.error([Object? error]) = RefreshStateError;
 
-  bool get available => maybeWhen(
-        status: (s) => s.availability == RefreshCheckState.AVAILABLE,
-        orElse: () => false,
-      );
-  bool get busy => maybeWhen(progress: (c) => !c.ready, orElse: () => false);
-  bool get ready => maybeWhen(
-        progress: (c) => c.ready,
-        done: () => true,
-        orElse: () => false,
-      );
+  bool get available => switch (this) {
+        RefreshStateStatus(:final status) =>
+          status.availability == RefreshCheckState.AVAILABLE,
+        _ => false,
+      };
+  bool get busy => switch (this) {
+        RefreshStateProgress(:final change) => !change.ready,
+        _ => false,
+      };
+  bool get ready => switch (this) {
+        RefreshStateProgress(:final change) => change.ready,
+        RefreshStateDone() => true,
+        _ => false,
+      };
 }
 
 class RefreshService {
