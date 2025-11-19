@@ -360,7 +360,9 @@ void main() {
       await tester.testNetworkPage(mode: ConnectMode.none);
       await tester.testRefreshPage();
       await tester.testAutoinstallPage();
-      await tester.testSourceSelectionPage();
+      await tester.testSourceSelectionPage(
+        sourceId: 'src-prefer-encrypted-passphrase',
+      );
       await tester.testCodecsAndDriversPage();
 
       await tester.testStoragePage(
@@ -393,8 +395,6 @@ void main() {
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       );
     },
-    // TODO: re-enable once this can be tested in subiquity's dry-run mode
-    skip: true,
   );
 
   testWidgets(
@@ -422,7 +422,9 @@ void main() {
       await tester.testNetworkPage(mode: ConnectMode.none);
       await tester.testRefreshPage();
       await tester.testAutoinstallPage();
-      await tester.testSourceSelectionPage();
+      await tester.testSourceSelectionPage(
+        sourceId: 'src-prefer-encrypted-passphrase-pin',
+      );
       await tester.testCodecsAndDriversPage();
 
       await tester.testStoragePage(
@@ -458,8 +460,6 @@ void main() {
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       );
     },
-    // TODO: re-enable once PIN support lands in snapd
-    skip: true,
   );
 
   testWidgets('manual partitioning', (tester) async {
