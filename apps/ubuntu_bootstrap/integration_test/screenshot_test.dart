@@ -383,14 +383,22 @@ Future<void> main() async {
       await tester.runApp(
         () => runInstallerApp(
           [
+            '--source-catalog=examples/sources/tpm.yaml',
             '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+            '--',
+            '--bootloader=uefi',
           ],
           theme: currentTheme,
         ),
       );
       await tester.pumpAndSettle();
 
-      await tester.jumpToStorageWizard();
+      await tester.jumpToPage(InstallationStep.sourceSelection.route);
+      await tester.testSourceSelectionPage(
+        sourceId: 'src-prefer-encrypted-passphrase-pin',
+      );
+      await tester.pumpAndSettle();
+      await tester.jumpToPage(InstallationStep.storage.route);
       await tester.pumpAndSettle();
 
       await tester.testStoragePage(
@@ -406,8 +414,6 @@ Future<void> main() async {
       );
     },
     variant: themeVariant,
-    // TODO: re-enable once this can be tested in subiquity's dry-run mode
-    skip: true,
   );
 
   testWidgets(
