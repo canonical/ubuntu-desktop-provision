@@ -129,7 +129,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     expect(find.titleBar(l10n.updatesOtherSoftwarePageTitle), findsOneWidget);
 
     if (sourceId != null) {
-      await tapRadio<String>(sourceId);
+      final radio = find.radio<String?>(sourceId);
+      await ensureVisible(radio);
+      await tap(radio);
     }
     await pumpAndSettle();
 

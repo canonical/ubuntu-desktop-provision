@@ -649,6 +649,17 @@ class MockStorageService extends _i1.Mock implements _i12.StorageService {
           ),
         )),
       ) as _i8.Future<String>);
+
+  @override
+  _i8.Future<List<_i4.CoreBootEncryptionFeatures>>
+      getCoreBootEncryptionFeatures() => (super.noSuchMethod(
+            Invocation.method(
+              #getCoreBootEncryptionFeatures,
+              [],
+            ),
+            returnValue: _i8.Future<List<_i4.CoreBootEncryptionFeatures>>.value(
+                <_i4.CoreBootEncryptionFeatures>[]),
+          ) as _i8.Future<List<_i4.CoreBootEncryptionFeatures>>);
 }
 
 /// A class which mocks [PageImages].

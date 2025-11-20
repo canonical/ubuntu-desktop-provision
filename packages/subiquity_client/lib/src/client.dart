@@ -454,6 +454,20 @@ class SubiquityClient {
     );
   }
 
+  Future<List<CoreBootEncryptionFeatures>>
+      getCoreBootEncryptionFeaturesV2() async {
+    final request =
+        await _openUrl('GET', 'storage/v2/core_boot_encryption_features');
+    return _receive(
+      'getCoreBootEncryptionFeaturesV2',
+      request,
+      (List<Object?> values) => values
+          .cast<String>()
+          .map(CoreBootEncryptionFeatures.values.byName)
+          .toList(),
+    );
+  }
+
   Future<void> reboot({bool immediate = false}) async {
     final params = {
       'mode': jsonEncode('REBOOT'),

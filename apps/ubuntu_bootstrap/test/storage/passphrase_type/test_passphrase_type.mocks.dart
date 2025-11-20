@@ -3,7 +3,8 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:ui' as _i4;
+import 'dart:async' as _i4;
+import 'dart:ui' as _i5;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart'
@@ -34,6 +35,12 @@ class MockPassphraseTypeModel extends _i1.Mock
   }
 
   @override
+  Set<_i3.PassphraseType> get supportedTypes => (super.noSuchMethod(
+        Invocation.getter(#supportedTypes),
+        returnValue: <_i3.PassphraseType>{},
+      ) as Set<_i3.PassphraseType>);
+
+  @override
   _i3.PassphraseType get passphraseType => (super.noSuchMethod(
         Invocation.getter(#passphraseType),
         returnValue: _i3.PassphraseType.passphrase,
@@ -61,16 +68,16 @@ class MockPassphraseTypeModel extends _i1.Mock
       ) as bool);
 
   @override
-  bool init() => (super.noSuchMethod(
+  _i4.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: false,
-      ) as bool);
+        returnValue: _i4.Future<bool>.value(false),
+      ) as _i4.Future<bool>);
 
   @override
-  void addListener(_i4.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -79,7 +86,7 @@ class MockPassphraseTypeModel extends _i1.Mock
       );
 
   @override
-  void removeListener(_i4.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

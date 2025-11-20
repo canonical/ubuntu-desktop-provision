@@ -209,4 +209,9 @@ class StorageService {
   Future<String> getCoreBootRecoveryKey() {
     return _client.getCoreBootRecoveryKeyV2();
   }
+
+  /// Returns the list of supported TPM/FDE encryption methods
+  Future<List<CoreBootEncryptionFeatures>> getCoreBootEncryptionFeatures() {
+    return _client.getCoreBootEncryptionFeaturesV2();
+  }
 }
