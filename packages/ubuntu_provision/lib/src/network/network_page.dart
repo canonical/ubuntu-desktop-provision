@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/connect_view.dart';
 import 'package:ubuntu_provision/src/network/ethernet_view.dart';
@@ -11,6 +12,8 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/constants.dart';
 
 export 'connect_model.dart' show ConnectMode;
+
+final _log = Logger('network_page');
 
 /// https://github.com/canonical/ubuntu-desktop-installer/issues/30
 class NetworkPage extends ConsumerWidget with ProvisioningPage {
@@ -34,15 +37,21 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(networkModelProvider);
     final lang = NetworkLocalizations.of(context);
 
+    _log.debug(
+      'isEnabled: ${model.isEnabled}, canConnect: ${model.canConnect}, isConnected: ${model.isConnected}, isConnecting: ${model.isConnecting}',
+    );
+
     // Explicitly exchange the buttons depending on the model state to make sure we don't get stuck in a loading state
     final Widget button;
     if (model.isEnabled && model.canConnect) {
+      _log.debug('showing \'connect\' button');
       button = WizardButton(
         label: UbuntuLocalizations.of(context).connectLabel,
         enabled: !model.isConnecting,
         onActivated: model.connect,
       );
     } else {
+      _log.debug('showing \'next\' button');
       button = NextWizardButton(
         enabled: model.isEnabled && !model.isConnecting && model.isConnected,
         // suspend network activity when proceeding on the next page
