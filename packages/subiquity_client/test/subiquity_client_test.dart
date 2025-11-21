@@ -751,4 +751,65 @@ void main() {
       expect(response, isList);
     });
   });
+
+  group('tpm fde action api', () {
+    setUpAll(() async {
+      final subiquityPath = await getSubiquityPath();
+      final endpoint = await defaultEndpoint(ServerMode.DRY_RUN);
+      final process = SubiquityProcess.python(
+        'subiquity.cmd.server',
+        serverMode: ServerMode.DRY_RUN,
+        subiquityPath: subiquityPath,
+        environment: {'SUBIQUITY_REPLAY_TIMESCALE': '100'},
+      );
+      testServer = SubiquityServer(
+        process: process,
+        endpoint: endpoint,
+      );
+      client = SubiquityClient();
+      final socketPath = await testServer.start(
+        args: [
+          '--machine-config=examples/machines/simple.json',
+          '--source-catalog=examples/sources/tpm.yaml',
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+          '--storage-version=2',
+          '--bootloader=uefi',
+        ],
+      );
+      client.open(socketPath);
+
+      await client.setVariant(Variant.DESKTOP);
+      await client.setSource('src-defective');
+      await client.markConfigured([
+        'locale',
+        'keyboard',
+        'mirror',
+        'proxy',
+        'ssh',
+        'snaplist',
+        'identity',
+        'timezone',
+        'drivers',
+        'codecs',
+        'snaplist',
+        'network',
+        'ubuntu_pro',
+      ]);
+    });
+
+    tearDownAll(() async {
+      await client.close();
+      await testServer.stop();
+    });
+
+    test('set storage', () async {
+      final guided = await client.getGuidedStorageV2();
+      final target =
+          guided.targets.whereType<GuidedStorageTargetReformat>().last;
+      final disallowedCapability = target.disallowed.first;
+      await client.coreBootFixEncryptionSupportV2(
+        disallowedCapability.errors!.first.actions.first,
+      );
+    });
+  });
 }
