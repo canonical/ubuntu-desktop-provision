@@ -987,6 +987,89 @@ Map<String, dynamic> _$DiskToJson(_Disk instance) => <String, dynamic>{
       'requires_reformat': instance.requiresReformat,
     };
 
+_CoreBootEncryptionSupportError _$CoreBootEncryptionSupportErrorFromJson(
+        Map<String, dynamic> json) =>
+    _CoreBootEncryptionSupportError(
+      kind: $enumDecode(_$CoreBootAvailabilityErrorKindEnumMap, json['kind']),
+      message: json['message'] as String,
+      actions: (json['actions'] as List<dynamic>)
+          .map((e) => $enumDecode(_$CoreBootFixActionEnumMap, e))
+          .toList(),
+    );
+
+Map<String, dynamic> _$CoreBootEncryptionSupportErrorToJson(
+        _CoreBootEncryptionSupportError instance) =>
+    <String, dynamic>{
+      'kind': _$CoreBootAvailabilityErrorKindEnumMap[instance.kind]!,
+      'message': instance.message,
+      'actions':
+          instance.actions.map((e) => _$CoreBootFixActionEnumMap[e]!).toList(),
+    };
+
+const _$CoreBootAvailabilityErrorKindEnumMap = {
+  CoreBootAvailabilityErrorKind.INTERNAL: 'INTERNAL',
+  CoreBootAvailabilityErrorKind.SHUTDOWN_REQUIRED: 'SHUTDOWN_REQUIRED',
+  CoreBootAvailabilityErrorKind.REBOOT_REQUIRED: 'REBOOT_REQUIRED',
+  CoreBootAvailabilityErrorKind.UNEXPECTED_ACTION: 'UNEXPECTED_ACTION',
+  CoreBootAvailabilityErrorKind.MISSING_ARGUMENT: 'MISSING_ARGUMENT',
+  CoreBootAvailabilityErrorKind.INVALID_ARGUMENT: 'INVALID_ARGUMENT',
+  CoreBootAvailabilityErrorKind.ACTION_FAILED: 'ACTION_FAILED',
+  CoreBootAvailabilityErrorKind.RUNNING_IN_VM: 'RUNNING_IN_VM',
+  CoreBootAvailabilityErrorKind.SYSTEM_NOT_EFI: 'SYSTEM_NOT_EFI',
+  CoreBootAvailabilityErrorKind.EFI_VARIABLE_ACCESS: 'EFI_VARIABLE_ACCESS',
+  CoreBootAvailabilityErrorKind.NO_SUITABLE_TPM2_DEVICE:
+      'NO_SUITABLE_TPM2_DEVICE',
+  CoreBootAvailabilityErrorKind.TPM_DEVICE_FAILURE: 'TPM_DEVICE_FAILURE',
+  CoreBootAvailabilityErrorKind.TPM_DEVICE_DISABLED: 'TPM_DEVICE_DISABLED',
+  CoreBootAvailabilityErrorKind.TPM_HIERARCHIES_OWNED: 'TPM_HIERARCHIES_OWNED',
+  CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT:
+      'TPM_DEVICE_LOCKOUT_LOCKED_OUT',
+  CoreBootAvailabilityErrorKind.INSUFFICIENT_TPM_STORAGE:
+      'INSUFFICIENT_TPM_STORAGE',
+  CoreBootAvailabilityErrorKind.NO_SUITABLE_PCR_BANK: 'NO_SUITABLE_PCR_BANK',
+  CoreBootAvailabilityErrorKind.MEASURED_BOOT: 'MEASURED_BOOT',
+  CoreBootAvailabilityErrorKind.EMPTY_PCR_BANKS: 'EMPTY_PCR_BANKS',
+  CoreBootAvailabilityErrorKind.TPM_COMMAND_FAILED: 'TPM_COMMAND_FAILED',
+  CoreBootAvailabilityErrorKind.INVALID_TPM_RESPONSE: 'INVALID_TPM_RESPONSE',
+  CoreBootAvailabilityErrorKind.TPM_COMMUNICATION: 'TPM_COMMUNICATION',
+  CoreBootAvailabilityErrorKind.UNSUPPORTED_PLATFORM: 'UNSUPPORTED_PLATFORM',
+  CoreBootAvailabilityErrorKind.UEFI_DEBUGGING_ENABLED:
+      'UEFI_DEBUGGING_ENABLED',
+  CoreBootAvailabilityErrorKind.INSUFFICIENT_DMA_PROTECTION:
+      'INSUFFICIENT_DMA_PROTECTION',
+  CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU: 'NO_KERNEL_IOMMU',
+  CoreBootAvailabilityErrorKind.TPM_STARTUP_LOCALITY_NOT_PROTECTED:
+      'TPM_STARTUP_LOCALITY_NOT_PROTECTED',
+  CoreBootAvailabilityErrorKind.HOST_SECURITY: 'HOST_SECURITY',
+  CoreBootAvailabilityErrorKind.PCR_UNUSABLE: 'PCR_UNUSABLE',
+  CoreBootAvailabilityErrorKind.PCR_UNSUPPORTED: 'PCR_UNSUPPORTED',
+  CoreBootAvailabilityErrorKind.VAR_SUPPLIED_DRIVERS_PRESENT:
+      'VAR_SUPPLIED_DRIVERS_PRESENT',
+  CoreBootAvailabilityErrorKind.SYS_PREP_APPLICATIONS_PRESENT:
+      'SYS_PREP_APPLICATIONS_PRESENT',
+  CoreBootAvailabilityErrorKind.ABSOLUTE_PRESENT: 'ABSOLUTE_PRESENT',
+  CoreBootAvailabilityErrorKind.INVALID_SECURE_BOOT_MODE:
+      'INVALID_SECURE_BOOT_MODE',
+  CoreBootAvailabilityErrorKind.WEAK_SECURE_BOOT_ALGORITHM_DETECTED:
+      'WEAK_SECURE_BOOT_ALGORITHM_DETECTED',
+  CoreBootAvailabilityErrorKind.PRE_OS_DIGEST_VERIFICATION_DETECTED:
+      'PRE_OS_DIGEST_VERIFICATION_DETECTED',
+};
+
+const _$CoreBootFixActionEnumMap = {
+  CoreBootFixAction.REBOOT: 'REBOOT',
+  CoreBootFixAction.SHUTDOWN: 'SHUTDOWN',
+  CoreBootFixAction.REBOOT_TO_FW_SETTINGS: 'REBOOT_TO_FW_SETTINGS',
+  CoreBootFixAction.CONTACT_OEM: 'CONTACT_OEM',
+  CoreBootFixAction.CONTACT_OS_VENDOR: 'CONTACT_OS_VENDOR',
+  CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE: 'ENABLE_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE:
+      'ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE: 'CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM: 'CLEAR_TPM',
+  CoreBootFixAction.PROCEED: 'PROCEED',
+};
+
 _GuidedDisallowedCapability _$GuidedDisallowedCapabilityFromJson(
         Map<String, dynamic> json) =>
     _GuidedDisallowedCapability(
@@ -994,6 +1077,10 @@ _GuidedDisallowedCapability _$GuidedDisallowedCapabilityFromJson(
       reason: $enumDecode(
           _$GuidedDisallowedCapabilityReasonEnumMap, json['reason']),
       message: json['message'] as String?,
+      errors: (json['errors'] as List<dynamic>?)
+          ?.map((e) => CoreBootEncryptionSupportError.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$GuidedDisallowedCapabilityToJson(
@@ -1002,6 +1089,7 @@ Map<String, dynamic> _$GuidedDisallowedCapabilityToJson(
       'capability': _$GuidedCapabilityEnumMap[instance.capability]!,
       'reason': _$GuidedDisallowedCapabilityReasonEnumMap[instance.reason]!,
       'message': instance.message,
+      'errors': instance.errors?.map((e) => e.toJson()).toList(),
     };
 
 const _$GuidedCapabilityEnumMap = {
@@ -1390,4 +1478,18 @@ Map<String, dynamic> _$EntropyResponseToJson(_EntropyResponse instance) =>
       'min_entropy_bits': instance.minEntropyBits,
       'optimal_entropy_bits': instance.optimalEntropyBits,
       'failure_reasons': instance.failureReasons,
+    };
+
+_CoreBootFixEncryptionSupport _$CoreBootFixEncryptionSupportFromJson(
+        Map<String, dynamic> json) =>
+    _CoreBootFixEncryptionSupport(
+      action: $enumDecode(_$CoreBootFixActionEnumMap, json['action']),
+      systemLabel: json['system_label'] as String?,
+    );
+
+Map<String, dynamic> _$CoreBootFixEncryptionSupportToJson(
+        _CoreBootFixEncryptionSupport instance) =>
+    <String, dynamic>{
+      'action': _$CoreBootFixActionEnumMap[instance.action]!,
+      'system_label': instance.systemLabel,
     };

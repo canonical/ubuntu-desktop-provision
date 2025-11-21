@@ -18679,10 +18679,371 @@ class __$DiskCopyWithImpl<$Res> implements _$DiskCopyWith<$Res> {
 }
 
 /// @nodoc
+mixin _$CoreBootEncryptionSupportError {
+  CoreBootAvailabilityErrorKind get kind;
+  String get message;
+  List<CoreBootFixAction> get actions;
+
+  /// Create a copy of CoreBootEncryptionSupportError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CoreBootEncryptionSupportErrorCopyWith<CoreBootEncryptionSupportError>
+      get copyWith => _$CoreBootEncryptionSupportErrorCopyWithImpl<
+              CoreBootEncryptionSupportError>(
+          this as CoreBootEncryptionSupportError, _$identity);
+
+  /// Serializes this CoreBootEncryptionSupportError to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CoreBootEncryptionSupportError &&
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.message, message) || other.message == message) &&
+            const DeepCollectionEquality().equals(other.actions, actions));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, kind, message, const DeepCollectionEquality().hash(actions));
+
+  @override
+  String toString() {
+    return 'CoreBootEncryptionSupportError(kind: $kind, message: $message, actions: $actions)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CoreBootEncryptionSupportErrorCopyWith<$Res> {
+  factory $CoreBootEncryptionSupportErrorCopyWith(
+          CoreBootEncryptionSupportError value,
+          $Res Function(CoreBootEncryptionSupportError) _then) =
+      _$CoreBootEncryptionSupportErrorCopyWithImpl;
+  @useResult
+  $Res call(
+      {CoreBootAvailabilityErrorKind kind,
+      String message,
+      List<CoreBootFixAction> actions});
+}
+
+/// @nodoc
+class _$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
+    implements $CoreBootEncryptionSupportErrorCopyWith<$Res> {
+  _$CoreBootEncryptionSupportErrorCopyWithImpl(this._self, this._then);
+
+  final CoreBootEncryptionSupportError _self;
+  final $Res Function(CoreBootEncryptionSupportError) _then;
+
+  /// Create a copy of CoreBootEncryptionSupportError
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? kind = null,
+    Object? message = null,
+    Object? actions = null,
+  }) {
+    return _then(_self.copyWith(
+      kind: null == kind
+          ? _self.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as CoreBootAvailabilityErrorKind,
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      actions: null == actions
+          ? _self.actions
+          : actions // ignore: cast_nullable_to_non_nullable
+              as List<CoreBootFixAction>,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [CoreBootEncryptionSupportError].
+extension CoreBootEncryptionSupportErrorPatterns
+    on CoreBootEncryptionSupportError {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_CoreBootEncryptionSupportError value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootEncryptionSupportError() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_CoreBootEncryptionSupportError value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootEncryptionSupportError():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_CoreBootEncryptionSupportError value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootEncryptionSupportError() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(CoreBootAvailabilityErrorKind kind, String message,
+            List<CoreBootFixAction> actions)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootEncryptionSupportError() when $default != null:
+        return $default(_that.kind, _that.message, _that.actions);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(CoreBootAvailabilityErrorKind kind, String message,
+            List<CoreBootFixAction> actions)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootEncryptionSupportError():
+        return $default(_that.kind, _that.message, _that.actions);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(CoreBootAvailabilityErrorKind kind, String message,
+            List<CoreBootFixAction> actions)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootEncryptionSupportError() when $default != null:
+        return $default(_that.kind, _that.message, _that.actions);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _CoreBootEncryptionSupportError
+    implements CoreBootEncryptionSupportError {
+  const _CoreBootEncryptionSupportError(
+      {required this.kind,
+      required this.message,
+      required final List<CoreBootFixAction> actions})
+      : _actions = actions;
+  factory _CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootEncryptionSupportErrorFromJson(json);
+
+  @override
+  final CoreBootAvailabilityErrorKind kind;
+  @override
+  final String message;
+  final List<CoreBootFixAction> _actions;
+  @override
+  List<CoreBootFixAction> get actions {
+    if (_actions is EqualUnmodifiableListView) return _actions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_actions);
+  }
+
+  /// Create a copy of CoreBootEncryptionSupportError
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CoreBootEncryptionSupportErrorCopyWith<_CoreBootEncryptionSupportError>
+      get copyWith => __$CoreBootEncryptionSupportErrorCopyWithImpl<
+          _CoreBootEncryptionSupportError>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CoreBootEncryptionSupportErrorToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _CoreBootEncryptionSupportError &&
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.message, message) || other.message == message) &&
+            const DeepCollectionEquality().equals(other._actions, _actions));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, kind, message,
+      const DeepCollectionEquality().hash(_actions));
+
+  @override
+  String toString() {
+    return 'CoreBootEncryptionSupportError(kind: $kind, message: $message, actions: $actions)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$CoreBootEncryptionSupportErrorCopyWith<$Res>
+    implements $CoreBootEncryptionSupportErrorCopyWith<$Res> {
+  factory _$CoreBootEncryptionSupportErrorCopyWith(
+          _CoreBootEncryptionSupportError value,
+          $Res Function(_CoreBootEncryptionSupportError) _then) =
+      __$CoreBootEncryptionSupportErrorCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {CoreBootAvailabilityErrorKind kind,
+      String message,
+      List<CoreBootFixAction> actions});
+}
+
+/// @nodoc
+class __$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
+    implements _$CoreBootEncryptionSupportErrorCopyWith<$Res> {
+  __$CoreBootEncryptionSupportErrorCopyWithImpl(this._self, this._then);
+
+  final _CoreBootEncryptionSupportError _self;
+  final $Res Function(_CoreBootEncryptionSupportError) _then;
+
+  /// Create a copy of CoreBootEncryptionSupportError
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? kind = null,
+    Object? message = null,
+    Object? actions = null,
+  }) {
+    return _then(_CoreBootEncryptionSupportError(
+      kind: null == kind
+          ? _self.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as CoreBootAvailabilityErrorKind,
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      actions: null == actions
+          ? _self._actions
+          : actions // ignore: cast_nullable_to_non_nullable
+              as List<CoreBootFixAction>,
+    ));
+  }
+}
+
+/// @nodoc
 mixin _$GuidedDisallowedCapability {
   GuidedCapability get capability;
   GuidedDisallowedCapabilityReason get reason;
   String? get message;
+  List<CoreBootEncryptionSupportError>? get errors;
 
   /// Create a copy of GuidedDisallowedCapability
   /// with the given fields replaced by the non-null parameter values.
@@ -18704,16 +19065,18 @@ mixin _$GuidedDisallowedCapability {
             (identical(other.capability, capability) ||
                 other.capability == capability) &&
             (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            const DeepCollectionEquality().equals(other.errors, errors));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, capability, reason, message);
+  int get hashCode => Object.hash(runtimeType, capability, reason, message,
+      const DeepCollectionEquality().hash(errors));
 
   @override
   String toString() {
-    return 'GuidedDisallowedCapability(capability: $capability, reason: $reason, message: $message)';
+    return 'GuidedDisallowedCapability(capability: $capability, reason: $reason, message: $message, errors: $errors)';
   }
 }
 
@@ -18726,7 +19089,8 @@ abstract mixin class $GuidedDisallowedCapabilityCopyWith<$Res> {
   $Res call(
       {GuidedCapability capability,
       GuidedDisallowedCapabilityReason reason,
-      String? message});
+      String? message,
+      List<CoreBootEncryptionSupportError>? errors});
 }
 
 /// @nodoc
@@ -18745,6 +19109,7 @@ class _$GuidedDisallowedCapabilityCopyWithImpl<$Res>
     Object? capability = null,
     Object? reason = null,
     Object? message = freezed,
+    Object? errors = freezed,
   }) {
     return _then(_self.copyWith(
       capability: null == capability
@@ -18759,6 +19124,10 @@ class _$GuidedDisallowedCapabilityCopyWithImpl<$Res>
           ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
+      errors: freezed == errors
+          ? _self.errors
+          : errors // ignore: cast_nullable_to_non_nullable
+              as List<CoreBootEncryptionSupportError>?,
     ));
   }
 }
@@ -18856,15 +19225,19 @@ extension GuidedDisallowedCapabilityPatterns on GuidedDisallowedCapability {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(GuidedCapability capability,
-            GuidedDisallowedCapabilityReason reason, String? message)?
+    TResult Function(
+            GuidedCapability capability,
+            GuidedDisallowedCapabilityReason reason,
+            String? message,
+            List<CoreBootEncryptionSupportError>? errors)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _GuidedDisallowedCapability() when $default != null:
-        return $default(_that.capability, _that.reason, _that.message);
+        return $default(
+            _that.capability, _that.reason, _that.message, _that.errors);
       case _:
         return orElse();
     }
@@ -18885,14 +19258,18 @@ extension GuidedDisallowedCapabilityPatterns on GuidedDisallowedCapability {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(GuidedCapability capability,
-            GuidedDisallowedCapabilityReason reason, String? message)
+    TResult Function(
+            GuidedCapability capability,
+            GuidedDisallowedCapabilityReason reason,
+            String? message,
+            List<CoreBootEncryptionSupportError>? errors)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _GuidedDisallowedCapability():
-        return $default(_that.capability, _that.reason, _that.message);
+        return $default(
+            _that.capability, _that.reason, _that.message, _that.errors);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -18912,14 +19289,18 @@ extension GuidedDisallowedCapabilityPatterns on GuidedDisallowedCapability {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(GuidedCapability capability,
-            GuidedDisallowedCapabilityReason reason, String? message)?
+    TResult? Function(
+            GuidedCapability capability,
+            GuidedDisallowedCapabilityReason reason,
+            String? message,
+            List<CoreBootEncryptionSupportError>? errors)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _GuidedDisallowedCapability() when $default != null:
-        return $default(_that.capability, _that.reason, _that.message);
+        return $default(
+            _that.capability, _that.reason, _that.message, _that.errors);
       case _:
         return null;
     }
@@ -18930,7 +19311,11 @@ extension GuidedDisallowedCapabilityPatterns on GuidedDisallowedCapability {
 @JsonSerializable()
 class _GuidedDisallowedCapability implements GuidedDisallowedCapability {
   const _GuidedDisallowedCapability(
-      {required this.capability, required this.reason, this.message});
+      {required this.capability,
+      required this.reason,
+      this.message,
+      final List<CoreBootEncryptionSupportError>? errors})
+      : _errors = errors;
   factory _GuidedDisallowedCapability.fromJson(Map<String, dynamic> json) =>
       _$GuidedDisallowedCapabilityFromJson(json);
 
@@ -18940,6 +19325,15 @@ class _GuidedDisallowedCapability implements GuidedDisallowedCapability {
   final GuidedDisallowedCapabilityReason reason;
   @override
   final String? message;
+  final List<CoreBootEncryptionSupportError>? _errors;
+  @override
+  List<CoreBootEncryptionSupportError>? get errors {
+    final value = _errors;
+    if (value == null) return null;
+    if (_errors is EqualUnmodifiableListView) return _errors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Create a copy of GuidedDisallowedCapability
   /// with the given fields replaced by the non-null parameter values.
@@ -18965,16 +19359,18 @@ class _GuidedDisallowedCapability implements GuidedDisallowedCapability {
             (identical(other.capability, capability) ||
                 other.capability == capability) &&
             (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            const DeepCollectionEquality().equals(other._errors, _errors));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, capability, reason, message);
+  int get hashCode => Object.hash(runtimeType, capability, reason, message,
+      const DeepCollectionEquality().hash(_errors));
 
   @override
   String toString() {
-    return 'GuidedDisallowedCapability(capability: $capability, reason: $reason, message: $message)';
+    return 'GuidedDisallowedCapability(capability: $capability, reason: $reason, message: $message, errors: $errors)';
   }
 }
 
@@ -18990,7 +19386,8 @@ abstract mixin class _$GuidedDisallowedCapabilityCopyWith<$Res>
   $Res call(
       {GuidedCapability capability,
       GuidedDisallowedCapabilityReason reason,
-      String? message});
+      String? message,
+      List<CoreBootEncryptionSupportError>? errors});
 }
 
 /// @nodoc
@@ -19009,6 +19406,7 @@ class __$GuidedDisallowedCapabilityCopyWithImpl<$Res>
     Object? capability = null,
     Object? reason = null,
     Object? message = freezed,
+    Object? errors = freezed,
   }) {
     return _then(_GuidedDisallowedCapability(
       capability: null == capability
@@ -19023,6 +19421,10 @@ class __$GuidedDisallowedCapabilityCopyWithImpl<$Res>
           ? _self.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
+      errors: freezed == errors
+          ? _self._errors
+          : errors // ignore: cast_nullable_to_non_nullable
+              as List<CoreBootEncryptionSupportError>?,
     ));
   }
 }
@@ -24539,6 +24941,328 @@ class __$EntropyResponseCopyWithImpl<$Res>
           ? _self._failureReasons
           : failureReasons // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$CoreBootFixEncryptionSupport {
+  CoreBootFixAction get action;
+  String? get systemLabel;
+
+  /// Create a copy of CoreBootFixEncryptionSupport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CoreBootFixEncryptionSupportCopyWith<CoreBootFixEncryptionSupport>
+      get copyWith => _$CoreBootFixEncryptionSupportCopyWithImpl<
+              CoreBootFixEncryptionSupport>(
+          this as CoreBootFixEncryptionSupport, _$identity);
+
+  /// Serializes this CoreBootFixEncryptionSupport to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CoreBootFixEncryptionSupport &&
+            (identical(other.action, action) || other.action == action) &&
+            (identical(other.systemLabel, systemLabel) ||
+                other.systemLabel == systemLabel));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, action, systemLabel);
+
+  @override
+  String toString() {
+    return 'CoreBootFixEncryptionSupport(action: $action, systemLabel: $systemLabel)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CoreBootFixEncryptionSupportCopyWith<$Res> {
+  factory $CoreBootFixEncryptionSupportCopyWith(
+          CoreBootFixEncryptionSupport value,
+          $Res Function(CoreBootFixEncryptionSupport) _then) =
+      _$CoreBootFixEncryptionSupportCopyWithImpl;
+  @useResult
+  $Res call({CoreBootFixAction action, String? systemLabel});
+}
+
+/// @nodoc
+class _$CoreBootFixEncryptionSupportCopyWithImpl<$Res>
+    implements $CoreBootFixEncryptionSupportCopyWith<$Res> {
+  _$CoreBootFixEncryptionSupportCopyWithImpl(this._self, this._then);
+
+  final CoreBootFixEncryptionSupport _self;
+  final $Res Function(CoreBootFixEncryptionSupport) _then;
+
+  /// Create a copy of CoreBootFixEncryptionSupport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? action = null,
+    Object? systemLabel = freezed,
+  }) {
+    return _then(_self.copyWith(
+      action: null == action
+          ? _self.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      systemLabel: freezed == systemLabel
+          ? _self.systemLabel
+          : systemLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [CoreBootFixEncryptionSupport].
+extension CoreBootFixEncryptionSupportPatterns on CoreBootFixEncryptionSupport {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_CoreBootFixEncryptionSupport value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixEncryptionSupport() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_CoreBootFixEncryptionSupport value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixEncryptionSupport():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_CoreBootFixEncryptionSupport value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixEncryptionSupport() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(CoreBootFixAction action, String? systemLabel)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixEncryptionSupport() when $default != null:
+        return $default(_that.action, _that.systemLabel);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(CoreBootFixAction action, String? systemLabel) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixEncryptionSupport():
+        return $default(_that.action, _that.systemLabel);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(CoreBootFixAction action, String? systemLabel)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixEncryptionSupport() when $default != null:
+        return $default(_that.action, _that.systemLabel);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _CoreBootFixEncryptionSupport implements CoreBootFixEncryptionSupport {
+  const _CoreBootFixEncryptionSupport({required this.action, this.systemLabel});
+  factory _CoreBootFixEncryptionSupport.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixEncryptionSupportFromJson(json);
+
+  @override
+  final CoreBootFixAction action;
+  @override
+  final String? systemLabel;
+
+  /// Create a copy of CoreBootFixEncryptionSupport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CoreBootFixEncryptionSupportCopyWith<_CoreBootFixEncryptionSupport>
+      get copyWith => __$CoreBootFixEncryptionSupportCopyWithImpl<
+          _CoreBootFixEncryptionSupport>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CoreBootFixEncryptionSupportToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _CoreBootFixEncryptionSupport &&
+            (identical(other.action, action) || other.action == action) &&
+            (identical(other.systemLabel, systemLabel) ||
+                other.systemLabel == systemLabel));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, action, systemLabel);
+
+  @override
+  String toString() {
+    return 'CoreBootFixEncryptionSupport(action: $action, systemLabel: $systemLabel)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$CoreBootFixEncryptionSupportCopyWith<$Res>
+    implements $CoreBootFixEncryptionSupportCopyWith<$Res> {
+  factory _$CoreBootFixEncryptionSupportCopyWith(
+          _CoreBootFixEncryptionSupport value,
+          $Res Function(_CoreBootFixEncryptionSupport) _then) =
+      __$CoreBootFixEncryptionSupportCopyWithImpl;
+  @override
+  @useResult
+  $Res call({CoreBootFixAction action, String? systemLabel});
+}
+
+/// @nodoc
+class __$CoreBootFixEncryptionSupportCopyWithImpl<$Res>
+    implements _$CoreBootFixEncryptionSupportCopyWith<$Res> {
+  __$CoreBootFixEncryptionSupportCopyWithImpl(this._self, this._then);
+
+  final _CoreBootFixEncryptionSupport _self;
+  final $Res Function(_CoreBootFixEncryptionSupport) _then;
+
+  /// Create a copy of CoreBootFixEncryptionSupport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? action = null,
+    Object? systemLabel = freezed,
+  }) {
+    return _then(_CoreBootFixEncryptionSupport(
+      action: null == action
+          ? _self.action
+          : action // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      systemLabel: freezed == systemLabel
+          ? _self.systemLabel
+          : systemLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
