@@ -13,6 +13,7 @@ export 'manual/test_manual_storage.dart';
 export 'passphrase/test_passphrase.dart';
 export 'passphrase_type/test_passphrase_type.dart';
 export 'test_storage.mocks.dart';
+export 'tpm_action/test_tpm_action.dart';
 
 @GenerateMocks([StorageModel])
 StorageModel buildStorageModel({

@@ -27,6 +27,7 @@ import 'package:ubuntu_bootstrap/pages/storage/guided_resize/guided_resize_model
 import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_model.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -151,6 +152,7 @@ void main() {
     final notEnoughDiskSpaceModel = buildNotEnoughDiskSpaceModel();
     final secureBootModel = buildSecureBootModel();
     final storageModel = buildStorageModel();
+    final tpmActionModel = buildTpmActionModel();
     final guidedReformatModel = buildGuidedReformatModel();
     final passphraseTypeModel = buildPassphraseTypeModel();
     final passphraseModel = buildPassphraseModel(usePassphrase: false);
@@ -186,6 +188,7 @@ void main() {
               .overrideWith((_) => notEnoughDiskSpaceModel),
           secureBootModelProvider.overrideWith((_) => secureBootModel),
           storageModelProvider.overrideWith((_) => storageModel),
+          tpmActionModelProvider.overrideWith((_) => tpmActionModel),
           guidedReformatModelProvider.overrideWith((_) => guidedReformatModel),
           passphraseTypeModelProvider.overrideWith((_) => passphraseTypeModel),
           passphraseModelProvider.overrideWith((_) => passphraseModel),
@@ -348,6 +351,7 @@ void main() {
         buildStorageModel(type: StorageType.alongside, hasBitLocker: true);
     final guidedResizeModel =
         buildGuidedResizeModel(isUsed: true, hasBitLocker: true);
+    final tpmActionModel = buildTpmActionModel();
 
     final storage = MockStorageService();
     when(storage.guidedTarget).thenReturn(null);
@@ -363,6 +367,7 @@ void main() {
           localeModelProvider.overrideWith((_) => localeModel),
           storageModelProvider.overrideWith((_) => storageModel),
           guidedResizeModelProvider.overrideWith((_) => guidedResizeModel),
+          tpmActionModelProvider.overrideWith((_) => tpmActionModel),
         ],
         child: tester.buildTestWizard(),
       ),
