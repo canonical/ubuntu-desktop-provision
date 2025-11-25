@@ -764,6 +764,18 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
       ) as _i5.Future<String>);
 
   @override
+  _i5.Future<void> coreBootFixEncryptionSupportV2(
+          _i2.CoreBootFixAction? action) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #coreBootFixEncryptionSupportV2,
+          [action],
+        ),
+        returnValue: _i5.Future<void>.value(),
+        returnValueForMissingStub: _i5.Future<void>.value(),
+      ) as _i5.Future<void>);
+
+  @override
   _i5.Future<_i2.EntropyResponse?> calculateEntropyV2({
     String? passphrase,
     String? pin,
