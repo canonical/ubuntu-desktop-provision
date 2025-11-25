@@ -2427,6 +2427,300 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Minimize'**
   String get minimizeIconSemanticLabel;
+
+  /// No description provided for @tpmActionPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hardware-backed encryption'**
+  String get tpmActionPageTitle;
+
+  /// No description provided for @tpmActionBadgeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Action required'**
+  String get tpmActionBadgeLabel;
+
+  /// No description provided for @tpmActionDetailsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Technical details'**
+  String get tpmActionDetailsLabel;
+
+  /// No description provided for @tpmActionErrorKindInternal.
+  ///
+  /// In en, this message translates to:
+  /// **'Internal'**
+  String get tpmActionErrorKindInternal;
+
+  /// No description provided for @tpmActionErrorKindShutdownRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Shutdown Required'**
+  String get tpmActionErrorKindShutdownRequired;
+
+  /// No description provided for @tpmActionErrorKindRebootRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Reboot Required'**
+  String get tpmActionErrorKindRebootRequired;
+
+  /// No description provided for @tpmActionErrorKindUnexpectedAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Unexpected Action'**
+  String get tpmActionErrorKindUnexpectedAction;
+
+  /// No description provided for @tpmActionErrorKindMissingArgument.
+  ///
+  /// In en, this message translates to:
+  /// **'Missing Argument'**
+  String get tpmActionErrorKindMissingArgument;
+
+  /// No description provided for @tpmActionErrorKindInvalidArgument.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid Argument'**
+  String get tpmActionErrorKindInvalidArgument;
+
+  /// No description provided for @tpmActionErrorKindActionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Action Failed'**
+  String get tpmActionErrorKindActionFailed;
+
+  /// No description provided for @tpmActionErrorKindRunningInVm.
+  ///
+  /// In en, this message translates to:
+  /// **'Running In VM'**
+  String get tpmActionErrorKindRunningInVm;
+
+  /// No description provided for @tpmActionErrorKindSystemNotEfi.
+  ///
+  /// In en, this message translates to:
+  /// **'System Not EFI'**
+  String get tpmActionErrorKindSystemNotEfi;
+
+  /// No description provided for @tpmActionErrorKindEfiVariableAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'EFI Variable Access'**
+  String get tpmActionErrorKindEfiVariableAccess;
+
+  /// No description provided for @tpmActionErrorKindNoSuitableTpm2Device.
+  ///
+  /// In en, this message translates to:
+  /// **'No Suitable TPM2 Device'**
+  String get tpmActionErrorKindNoSuitableTpm2Device;
+
+  /// No description provided for @tpmActionErrorKindTpmDeviceFailure.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM Device Failure'**
+  String get tpmActionErrorKindTpmDeviceFailure;
+
+  /// No description provided for @tpmActionErrorKindTpmDeviceDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM Device Disabled'**
+  String get tpmActionErrorKindTpmDeviceDisabled;
+
+  /// No description provided for @tpmActionErrorKindTpmHierarchiesOwned.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM Hierarchies Owned'**
+  String get tpmActionErrorKindTpmHierarchiesOwned;
+
+  /// No description provided for @tpmActionErrorKindTpmDeviceLockoutLockedOut.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM Device Lockout Locked Out'**
+  String get tpmActionErrorKindTpmDeviceLockoutLockedOut;
+
+  /// No description provided for @tpmActionErrorKindInsufficientTpmStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient TPM Storage'**
+  String get tpmActionErrorKindInsufficientTpmStorage;
+
+  /// No description provided for @tpmActionErrorKindNoSuitablePcrBank.
+  ///
+  /// In en, this message translates to:
+  /// **'NoSuitable PCR Bank'**
+  String get tpmActionErrorKindNoSuitablePcrBank;
+
+  /// No description provided for @tpmActionErrorKindMeasuredBoot.
+  ///
+  /// In en, this message translates to:
+  /// **'Measured Boot'**
+  String get tpmActionErrorKindMeasuredBoot;
+
+  /// No description provided for @tpmActionErrorKindEmptyPcrBanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Empty PCR Banks'**
+  String get tpmActionErrorKindEmptyPcrBanks;
+
+  /// No description provided for @tpmActionErrorKindTpmCommandFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM Command Failed'**
+  String get tpmActionErrorKindTpmCommandFailed;
+
+  /// No description provided for @tpmActionErrorKindInvalidTpmResponse.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid TPM Response'**
+  String get tpmActionErrorKindInvalidTpmResponse;
+
+  /// No description provided for @tpmActionErrorKindTpmCommunication.
+  ///
+  /// In en, this message translates to:
+  /// **'TPM Communication'**
+  String get tpmActionErrorKindTpmCommunication;
+
+  /// No description provided for @tpmActionErrorKindUnsupportedPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'Unsupported Platform'**
+  String get tpmActionErrorKindUnsupportedPlatform;
+
+  /// No description provided for @tpmActionErrorKindUefiDebuggingEnabled.
+  ///
+  /// In en, this message translates to:
+  /// **'UEFI Debugging Enabled'**
+  String get tpmActionErrorKindUefiDebuggingEnabled;
+
+  /// No description provided for @tpmActionErrorKindInsufficientDmaProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Insufficient DMA Protection'**
+  String get tpmActionErrorKindInsufficientDmaProtection;
+
+  /// No description provided for @tpmActionErrorKindNoKernelIommu.
+  ///
+  /// In en, this message translates to:
+  /// **'No Kernel IOMMU'**
+  String get tpmActionErrorKindNoKernelIommu;
+
+  /// No description provided for @tpmActionErrorKindTpmStartupLocalityNotProtected.
+  ///
+  /// In en, this message translates to:
+  /// **'Tpm Startup Locality Not Protected'**
+  String get tpmActionErrorKindTpmStartupLocalityNotProtected;
+
+  /// No description provided for @tpmActionErrorKindHostSecurity.
+  ///
+  /// In en, this message translates to:
+  /// **'Host Security'**
+  String get tpmActionErrorKindHostSecurity;
+
+  /// No description provided for @tpmActionErrorKindPcrUnusable.
+  ///
+  /// In en, this message translates to:
+  /// **'PCR Unusable'**
+  String get tpmActionErrorKindPcrUnusable;
+
+  /// No description provided for @tpmActionErrorKindPcrUnsupported.
+  ///
+  /// In en, this message translates to:
+  /// **'PCR Unsupported'**
+  String get tpmActionErrorKindPcrUnsupported;
+
+  /// No description provided for @tpmActionErrorKindVarSuppliedDriversPresent.
+  ///
+  /// In en, this message translates to:
+  /// **'Var Supplied Drivers Present'**
+  String get tpmActionErrorKindVarSuppliedDriversPresent;
+
+  /// No description provided for @tpmActionErrorKindSysPrepApplicationsPresent.
+  ///
+  /// In en, this message translates to:
+  /// **'Sys Prep Applications Present'**
+  String get tpmActionErrorKindSysPrepApplicationsPresent;
+
+  /// No description provided for @tpmActionErrorKindAbsolutePresent.
+  ///
+  /// In en, this message translates to:
+  /// **'Absolute Present'**
+  String get tpmActionErrorKindAbsolutePresent;
+
+  /// No description provided for @tpmActionErrorKindInvalidSecureBootMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid SecureBoot Mode'**
+  String get tpmActionErrorKindInvalidSecureBootMode;
+
+  /// No description provided for @tpmActionErrorKindWeakSecureBootAlgorithmDetected.
+  ///
+  /// In en, this message translates to:
+  /// **'Weak SecureBoot Algorithm Detected'**
+  String get tpmActionErrorKindWeakSecureBootAlgorithmDetected;
+
+  /// No description provided for @tpmActionErrorKindPreOsDigestVerificationDetected.
+  ///
+  /// In en, this message translates to:
+  /// **'Pre Os Digest Verification Detected'**
+  String get tpmActionErrorKindPreOsDigestVerificationDetected;
+
+  /// No description provided for @tpmActionFixActionReboot.
+  ///
+  /// In en, this message translates to:
+  /// **'Reboot'**
+  String get tpmActionFixActionReboot;
+
+  /// No description provided for @tpmActionFixActionShutdown.
+  ///
+  /// In en, this message translates to:
+  /// **'Shutdown'**
+  String get tpmActionFixActionShutdown;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Reboot To FW Settings'**
+  String get tpmActionFixActionRebootToFwSettings;
+
+  /// No description provided for @tpmActionFixActionContactOem.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact OEM'**
+  String get tpmActionFixActionContactOem;
+
+  /// No description provided for @tpmActionFixActionContactOsVendor.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact OS Vendor'**
+  String get tpmActionFixActionContactOsVendor;
+
+  /// No description provided for @tpmActionFixActionEnableTpmViaFirmware.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable TPM Via Firmware'**
+  String get tpmActionFixActionEnableTpmViaFirmware;
+
+  /// No description provided for @tpmActionFixActionEnableAndClearTpmViaFirmware.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable And Clear TPM Via Firmware'**
+  String get tpmActionFixActionEnableAndClearTpmViaFirmware;
+
+  /// No description provided for @tpmActionFixActionClearTpmViaFirmware.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear TPM Via Firmware'**
+  String get tpmActionFixActionClearTpmViaFirmware;
+
+  /// No description provided for @tpmActionFixActionClearTpm.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear TPM'**
+  String get tpmActionFixActionClearTpm;
+
+  /// No description provided for @tpmActionFixActionProceed.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed'**
+  String get tpmActionFixActionProceed;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate
