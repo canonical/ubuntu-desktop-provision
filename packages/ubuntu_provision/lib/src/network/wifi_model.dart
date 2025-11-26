@@ -79,15 +79,16 @@ class WifiModel extends NetworkDeviceModel<WifiDevice> {
   }
 
   @override
-  Future<void> connect() {
+  Future<void> connect() async {
     final device = selectedDevice!;
     final accessPoint = device.selectedAccessPoint!;
     log.debug('Connect $device to $accessPoint');
-    return service.addAndActivateConnection(
+    final connection = await service.addAndActivateConnection(
       connection: <String, Map<String, DBusValue>>{},
       device: device.device,
       accessPoint: accessPoint.accessPoint,
     );
+    log.debug('connection: $connection, state: ${connection.state}');
   }
 
   @override
@@ -185,10 +186,17 @@ class WifiDevice extends NetworkDevice {
   @override
   bool get isActive => super.isActive && activeAccessPoint != null;
 
-  bool get _isConnected =>
-      isActive &&
-      _selectedAccessPoint != null &&
-      _selectedAccessPoint!.name == activeAccessPoint?.name;
+  bool get _isConnected {
+    log.debug(
+      'wifi - isActive: $isActive, selected AP: ${_selectedAccessPoint?.name}, active AP: ${activeAccessPoint?.name}',
+    );
+    log.debug(
+      'wifi - selected AP SSID: ${_selectedAccessPoint?.ssid}, active AP SSID: ${activeAccessPoint?.ssid}',
+    );
+    return isActive &&
+        _selectedAccessPoint != null &&
+        _selectedAccessPoint!.name == activeAccessPoint?.name;
+  }
 
   List<AccessPoint> get accessPoints => _accessPoints;
 

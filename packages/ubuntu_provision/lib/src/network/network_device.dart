@@ -83,6 +83,7 @@ abstract class NetworkDeviceModel<T extends NetworkDevice>
     _devices = devices;
     _selectedDevice ??= findActiveDevice();
     log.debug('Update devices: $_devices');
+    log.debug('Selected device: $_selectedDevice');
     notifyListeners();
   }
 
