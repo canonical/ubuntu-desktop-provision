@@ -3,6 +3,8 @@ import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_page.dart';
+import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_x.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/src/wizard_tester.dart';
@@ -404,6 +406,30 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
     await tapNext();
     await pumpAndSettle();
+  }
+
+  Future<void> testTpmActionPage({
+    CoreBootFixAction? action,
+    String? screenshot,
+  }) async {
+    await pumpUntilPage(TpmActionPage);
+
+    final context = element(find.byType(TpmActionPage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(
+      find.titleBar(l10n.installationTypeAdvancedTitle),
+      findsOneWidget,
+    );
+
+    if (screenshot != null) {
+      await takeScreenshot(screenshot);
+    }
+
+    if (action != null) {
+      await tapButton(action.localize(l10n));
+      await pump();
+    }
   }
 
   Future<void> testPassphraseTypePage({
