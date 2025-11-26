@@ -573,5 +573,15 @@
     "passphraseTypePinTileTitle": "Richiedi un PIN",
     "@passphraseTypePinTileTitle": {},
     "passphraseTypePinTileSubTitle": "Più sicuro. Dovrai inserire un PIN numerico ogni volta che accendi il computer.",
-    "@passphraseTypePinTileSubTitle": {}
+    "@passphraseTypePinTileSubTitle": {},
+    "passphraseTypePageBody": "Per impostazione predefinita, il Trusted Platform Module (TPM) del computer sbloccherà il disco all'avvio. Sono disponibili anche opzioni per proteggere ulteriormente i dati.",
+    "@passphraseTypePageBody": {},
+    "passphrasePagePassphraseEntropyBelowMin": "Frase segreta debole, rendila più lunga o più complessa",
+    "@passphrasePagePassphraseEntropyBelowMin": {},
+    "passphrasePagePassphraseEntropyBelowOptimal": "Frase segreta sufficiente, rendila più lunga o più complessa per una maggiore sicurezza",
+    "@passphrasePagePassphraseEntropyBelowOptimal": {},
+    "passphrasePagePassphraseEntropyOptimal": "Frase segreta complessa",
+    "@passphrasePagePassphraseEntropyOptimal": {},
+    "passphrasePagePinEntropyBelowMin": "PIN poco sicuro, rendilo più lungo o meno prevedibile",
+    "@passphrasePagePinEntropyBelowMin": {}
 }
