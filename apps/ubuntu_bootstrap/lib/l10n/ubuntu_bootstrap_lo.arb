@@ -1,3 +1,1284 @@
 {
-  "@@locale": "lo"
+    "@@locale": "lo",
+    "appTitle": "ຕົວຕິດຕັ້ງ Ubuntu Desktop",
+    "@appTitle": {},
+    "windowTitle": "ຕິດຕັ້ງ {RELEASE}",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "ການຕິດຕັ້ງແບບອັດຕະໂນມັດ",
+    "@autoinstallDirectTitle": {},
+    "autoinstallDirectHeader": "ນຳເຂົ້າໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດ",
+    "@autoinstallDirectHeader": {},
+    "autoinstallDirectUrlLabel": "ທ່ານສາມາດປ້ອນ URL ຂອງໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດ:",
+    "@autoinstallDirectUrlLabel": {},
+    "autoinstallDirectFileLabel": "ຫຼື ເລືອກໄຟລ໌ໃນເຄື່ອງ:",
+    "@autoinstallDirectFileLabel": {},
+    "autoinstallDirectFileButtonLabel": "ເລືອກໄຟລ໌...",
+    "@autoinstallDirectFileButtonLabel": {},
+    "autoinstallDirectFileClearButtonLabel": "ລ້າງໄຟລ໌",
+    "@autoinstallDirectFileClearButtonLabel": {},
+    "autoinstallDirectFilePickerTitle": "ເລືອກໄຟລ໌",
+    "@autoinstallDirectFilePickerTitle": {},
+    "autoinstallDirectFilePickerFilterLabel": "ໄຟລ໌ YAML",
+    "@autoinstallDirectFilePickerFilterLabel": {},
+    "autoinstallDirectImportButtonLabel": "ນຳເຂົ້າ",
+    "@autoinstallDirectImportButtonLabel": {},
+    "autoinstallDirectErrorNetworkTitle": "ບໍ່ສາມາດເຂົ້າເຖິງໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດໄດ້",
+    "@autoinstallDirectErrorNetworkTitle": {},
+    "autoinstallDirectErrorNetworkBody": "ກວດເບິ່ງວ່າ URL ຖືກຕ້ອງ, ທົດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ຫຼື ລອງໃໝ່ພາຍຫຼັງ.",
+    "@autoinstallDirectErrorNetworkBody": {},
+    "autoinstallDirectErrorInvalidUrlTitle": "URL ບໍ່ຖືກຕ້ອງ",
+    "@autoinstallDirectErrorInvalidUrlTitle": {},
+    "autoinstallDirectErrorInvalidUrlBody": "ກວດເບິ່ງວ່າ URL ຖືກຕ້ອງ ຫຼື ເລືອກໄຟລ໌ໃນເຄື່ອງ.",
+    "@autoinstallDirectErrorInvalidUrlBody": {},
+    "autoinstallDirectErrorInvalidContentTitle": "ໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດບໍ່ຖືກຕ້ອງ",
+    "@autoinstallDirectErrorInvalidContentTitle": {},
+    "autoinstallDirectErrorInvalidContentBody": "ກວດເບິ່ງໄຟລ໌ ຫຼື ໃຊ້ໄຟລ໌ອື່ນ.",
+    "@autoinstallDirectErrorInvalidContentBody": {},
+    "autoinstallDirectErrorFileSystemTitle": "ບໍ່ສາມາດອ່ານໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດໄດ້",
+    "@autoinstallDirectErrorFileSystemTitle": {},
+    "autoinstallDirectErrorFileSystemBody": "ກວດເບິ່ງສິດຂອງທ່ານ ຫຼື ໃຊ້ໄຟລ໌ອື່ນ.",
+    "@autoinstallDirectErrorFileSystemBody": {},
+    "autoinstallDirectErrorUnkownTitle": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ຈັກ",
+    "@autoinstallDirectErrorUnkownTitle": {},
+    "autoinstallTitle": "ປະເພດຂອງການຕິດຕັ້ງ",
+    "@autoinstallTitle": {},
+    "autoinstallHeader": "ທ່ານຕ້ອງການຕິດຕັ້ງ {DISTRO} ແນວໃດ?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "ປ້ອນ URL ຂອງ autoinstall.yaml ຫຼື ທີ່ຢູ່ໄຟລ໌ໃນເຄື່ອງ:",
+    "@autoinstallInstructions": {},
+    "autoinstallInteractiveOption": "ການຕິດຕັ້ງແບບໂຕ້ຕອບ",
+    "@autoinstallInteractiveOption": {},
+    "autoinstallInteractiveDescription": "ສຳລັບຜູ້ໃຊ້ທີ່ຕ້ອງການຄຳແນະນຳເທື່ອລະຂັ້ນຕອນໃນການຕິດຕັ້ງ.",
+    "@autoinstallInteractiveDescription": {},
+    "autoinstallDirectOption": "ອັດຕະໂນມັດດ້ວຍໄຟລ໌ autoinstall",
+    "@autoinstallDirectOption": {},
+    "autoinstallDirectDescription": "ສຳລັບຜູ້ໃຊ້ຂັ້ນສູງທີ່ມີ autoinstall.yaml ເພື່ອການຕິດຕັ້ງລະບົບທີ່ສອດຄ່ອງ ແລະ ເຮັດຊ້ຳໄດ້.",
+    "@autoinstallDirectDescription": {},
+    "autoinstallLandscapeOption": "ອັດຕະໂນມັດດ້ວຍ Landscape",
+    "@autoinstallLandscapeOption": {},
+    "autoinstallLandscapeDescription": "ສຳລັບຜູ້ໃຊ້ໃນອົງກອນທີ່ໃຫ້ບໍລິການໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດຜ່ານ Landscape.",
+    "@autoinstallLandscapeDescription": {},
+    "changeButtonText": "ປ່ຽນ",
+    "@changeButtonText": {},
+    "quitButtonText": "ອອກຈາກການຕິດຕັ້ງ",
+    "@quitButtonText": {},
+    "loadingPageTitle": "ຍິນດີຕ້ອນຮັບສູ່ {DISTRO}",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "ກຳລັງກະກຽມ {DISTRO}…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "ຄຳເຕືອນ:",
+    "@warningLabel": {},
+    "tryOrInstallTitle": "ທົດລອງໃຊ້ ຫຼື ຕິດຕັ້ງ {DISTRO}",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "ທ່ານຕ້ອງການເຮັດຫຍັງກັບ {DISTRO}?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "ສ້ອມແປງການຕິດຕັ້ງ",
+    "@tryOrInstallRepairOption": {},
+    "tryOrInstallRepairDescription": "ການສ້ອມແປງຈະຕິດຕັ້ງຊອບແວທັງໝົດຄືນໃໝ່ ໂດຍບໍ່ສົ່ງຜົນກະທົບຕໍ່ເອກະສານ ຫຼື ການຕັ້ງຄ່າຕ່າງໆ.",
+    "@tryOrInstallRepairDescription": {},
+    "tryOption": "ທົດລອງໃຊ້ {RELEASE}",
+    "@tryOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryDescription": "ທ່ານສາມາດທົດລອງໃຊ້ {RELEASE} ໂດຍບໍ່ຕ້ອງປ່ຽນແປງຂໍ້ມູນໃດໆໃນຄອມພິວເຕີຂອງທ່ານ.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installOption": "ຕິດຕັ້ງ {RELEASE}",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "ຕິດຕັ້ງ {RELEASE} ຄຽງຄູ່ (ຫຼື ແທນທີ່) ລະບົບປະຕິບັດການປະຈຸບັນຂອງທ່ານ. ຂັ້ນຕອນນີ້ຈະໃຊ້ເວລາບໍ່ດົນ.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "ທ່ານອາດຈະຕ້ອງການອ່ານ <a href=\"{url}\">ບັນທຶກການປ່ອຍລຸ້ນໃໝ່</a>.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "ກວດພົບ RST",
+    "@rstTitle": {},
+    "rstHeader": "ທ່ານຕ້ອງປິດ RST ເພື່ອສືບຕໍ່ການຕິດຕັ້ງ",
+    "@rstHeader": {},
+    "rstDisable": "ຄອມພິວເຕີຂອງທ່ານໃຊ້ Intel RST (Rapid Storage Technology). ທ່ານສາມາດປິດ RST ໄດ້ໃນ:",
+    "@rstDisable": {},
+    "rstDisableWindows": "Windows, ຖ້າຫາກທ່ານໃຊ້ລະບົບ dual boot ຄຽງຄູ່ກັບ Windows",
+    "@rstDisableWindows": {},
+    "rstDisableBios": "ການຕັ້ງຄ່າ BIOS",
+    "@rstDisableBios": {},
+    "rstInstructions": "ສຳລັບຄຳແນະນຳ, ໃຫ້ສະແກນ QR code ໃນອຸປະກອນອື່ນ ຫຼື ເຂົ້າໄປທີ່: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "ຕັ້ງຄ່າ Secure Boot",
+    "@configureSecureBootTitle": {},
+    "configureSecureBootDescription": "ທ່ານໄດ້ເລືອກຕິດຕັ້ງໄດຣເວີຈາກພາກສ່ວນທີສາມ. ສິ່ງນີ້ຮຽກຮ້ອງໃຫ້ປິດ Secure Boot.\nເພື່ອເຮັດສິ່ງນີ້, ທ່ານຕ້ອງເລືອກຄີຄວາມປອດໄພໃນຕອນນີ້, ແລະ ປ້ອນມັນໃສ່ເມື່ອລະບົບເລີ່ມຕົ້ນໃໝ່.",
+    "@configureSecureBootDescription": {},
+    "configureSecureBootOption": "ຕັ້ງຄ່າ Secure Boot",
+    "@configureSecureBootOption": {},
+    "chooseSecurityKey": "ເລືອກຄີຄວາມປອດໄພ",
+    "@chooseSecurityKey": {},
+    "confirmSecurityKey": "ຢືນຢັນຄີຄວາມປອດໄພ",
+    "@confirmSecurityKey": {},
+    "dontInstallDriverSoftwareNow": "ຍັງບໍ່ຕ້ອງຕິດຕັ້ງໄດຣເວີໃນຕອນນີ້",
+    "@dontInstallDriverSoftwareNow": {},
+    "dontInstallDriverSoftwareNowDescription": "ທ່ານສາມາດຕິດຕັ້ງມັນພາຍຫຼັງໄດ້ຈາກ Software & Updates.",
+    "@dontInstallDriverSoftwareNowDescription": {},
+    "configureSecureBootSecurityKeyRequired": "ຕ້ອງການຄີຄວາມປອດໄພ",
+    "@configureSecureBootSecurityKeyRequired": {},
+    "secureBootSecurityKeysDontMatch": "ຄີຄວາມປອດໄພບໍ່ກົງກັນ",
+    "@secureBootSecurityKeysDontMatch": {},
+    "showSecurityKey": "ສະແດງ",
+    "@showSecurityKey": {},
+    "hideSecurityKey": "ເຊື່ອງ",
+    "@hideSecurityKey": {},
+    "updatesOtherSoftwarePageTitle": "ແອັບພລິເຄຊັນ",
+    "@updatesOtherSoftwarePageTitle": {},
+    "updatesOtherSoftwarePageDescription": "ທ່ານຕ້ອງການຕິດຕັ້ງແອັບໃດແດ່ເພື່ອເລີ່ມຕົ້ນ?",
+    "@updatesOtherSoftwarePageDescription": {},
+    "codecsAndDriversPageTitle": "ປັບປຸງຄອມພິວເຕີຂອງທ່ານ",
+    "@codecsAndDriversPageTitle": {},
+    "codecsAndDriversPageDescription": "ຕິດຕັ້ງຊອບແວທີ່ເປັນກຳມະສິດ (proprietary) ທີ່ແນະນຳບໍ່?",
+    "@codecsAndDriversPageDescription": {},
+    "codecsAndDriversPageBody": "{DISTRO} ບໍ່ໄດ້ມາພ້ອມກັບຊອບແວທີ່ເປັນກຳມະສິດໂດຍຄ່າເລີ່ມຕົ້ນ. ການຕິດຕັ້ງ ຊອບແວເພີ່ມເຕີມອາດຊ່ວຍປັບປຸງປະສິດທິພາບຄອມພິວເຕີຂອງທ່ານໄດ້.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "ກວດພົບກາດຈໍ NVIDIA",
+    "@codecsAndDriversNvidiaNote": {},
+    "codecsAndDriversNvidiaBody": "ເພື່ອປະສິດທິພາບທີ່ດີທີ່ສຸດຂອງກາດຈໍ NVIDIA, ແນະນຳຢ່າງຍິ່ງໃຫ້ຕິດຕັ້ງ ໄດຣເວີເພີ່ມເຕີມ.",
+    "@codecsAndDriversNvidiaBody": {},
+    "fullInstallationTitle": "ການເລືອກແບບຂະຫຍາຍ",
+    "@fullInstallationTitle": {},
+    "fullInstallationSubtitle": "ຊຸດເຄື່ອງມືສຳນັກງານ, ຢູທິລິຕີ້ ແລະ ເວັບບຣາວເຊີ ທີ່ເໝາະກັບການໃຊ້ງານແບບອອບໄລນ໌.",
+    "@fullInstallationSubtitle": {},
+    "minimalInstallationTitle": "ການເລືອກແບບມາດຕະຖານ",
+    "@minimalInstallationTitle": {},
+    "minimalInstallationSubtitle": "ສະເພາະສິ່ງທີ່ຈຳເປັນ, ເວັບບຣາວເຊີ ແລະ ຢູທິລິຕີ້ພື້ນຖານ.",
+    "@minimalInstallationSubtitle": {},
+    "otherOptions": "ຕົວເລືອກອື່ນໆ",
+    "@otherOptions": {},
+    "installThirdPartyTitle": "ຕິດຕັ້ງຊອບແວຈາກພາກສ່ວນທີສາມສຳລັບກາດຈໍ ແລະ ຮາດແວ Wi-Fi, ລວມທັງ ຮູບແບບມີເດຍເພີ່ມເຕີມ",
+    "@installThirdPartyTitle": {},
+    "installThirdPartySubtitle": "ຊອບແວນີ້ຂຶ້ນກັບເງື່ອນໄຂໃບອະນຸຍາດທີ່ລວມຢູ່ໃນເອກະສານຂອງມັນ. ບາງອັນເປັນກຳມະສິດສະເພາະ.",
+    "@installThirdPartySubtitle": {},
+    "installDriversTitle": "ຕິດຕັ້ງຊອບແວພາກສ່ວນທີສາມສຳລັບກາດຈໍ ແລະ ຮາດແວ Wi-Fi",
+    "@installDriversTitle": {},
+    "installDriversSubtitle": "ລວມເຖິງແຕ່ບໍ່ຈຳກັດພຽງໄດຣເວີ NVIDIA ແລະ ສິ່ງທີ່ຄ້າຍຄືກັນ",
+    "@installDriversSubtitle": {},
+    "installCodecsTitle": "ດາວໂຫຼດ ແລະ ຕິດຕັ້ງສ່ວນຮອງຮັບສຳລັບຮູບແບບມີເດຍເພີ່ມເຕີມ",
+    "@installCodecsTitle": {},
+    "installCodecsSubtitle": "ລວມເຖິງແຕ່ບໍ່ຈຳກັດພຽງ MP3, MP4, MOV ແລະ ສິ່ງທີ່ຄ້າຍຄືກັນ",
+    "@installCodecsSubtitle": {},
+    "batteryWarning": "ຄອມພິວເຕີບໍ່ໄດ້ສຽບສາຍສາກ.",
+    "@batteryWarning": {},
+    "offlineWarning": "ຕອນນີ້ທ່ານກຳລັງອອບໄລນ໌ຢູ່",
+    "@offlineWarning": {},
+    "choosePassphraseHeader": "ສ້າງວະລີຜ່ານ (Passphrase)",
+    "@choosePassphraseHeader": {},
+    "choosePassphraseBody": "ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານຂອງທ່ານທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. ວະລີຜ່ານນີ້ແຕກຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ (User password) ຂອງທ່ານ.",
+    "@choosePassphraseBody": {},
+    "choosePassphraseInfoHeader": "ກະລຸນາບັນທຶກວະລີຜ່ານຂອງທ່ານໄວ້ໃຫ້ດີ",
+    "@choosePassphraseInfoHeader": {},
+    "choosePassphraseInfoBody": "ຖ້າທ່ານເຮັດມັນເສຍ, ທ່ານຈະສູນເສຍຂໍ້ມູນທັງໝົດ.",
+    "@choosePassphraseInfoBody": {},
+    "chooseOptionalPassphraseInfoHeader": "ເກັບວະລີຜ່ານ ແລະ ຄີກູ້ຄືນຂອງທ່ານໄວ້ໃນບ່ອນທີ່ປອດໄພ",
+    "@chooseOptionalPassphraseInfoHeader": {},
+    "chooseOptionalPassphraseInfoBody": "ຖ້າທ່ານເຮັດວະລີຜ່ານເສຍ, ທ່ານຈະສູນເສຍຂໍ້ມູນທັງໝົດ. ວະລີຜ່ານ ບໍ່ໄດ້ທົດແທນຄີກູ້ຄືນ ຫຼື ລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ.",
+    "@chooseOptionalPassphraseInfoBody": {},
+    "passphrasePageTitle": "ການເຂົ້າລະຫັດ",
+    "@passphrasePageTitle": {},
+    "passphrasePageHeaderPassphrase": "ຕັ້ງຄ່າວະລີຜ່ານການເຂົ້າລະຫັດ",
+    "@passphrasePageHeaderPassphrase": {},
+    "passphrasePageHeaderPin": "ຕັ້ງຄ່າ PIN ການເຂົ້າລະຫັດ",
+    "@passphrasePageHeaderPin": {},
+    "passphrasePageBodyPassphrase": "ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. ວະລີຜ່ານນີ້ຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນພາຍຫຼັງໄດ້, ແຕ່ບໍ່ສາມາດປິດການໃຊ້ງານມັນໄດ້. ຖ້າທ່ານລືມວະລີຜ່ານ, ທ່ານສາມາດເຂົ້າເຖິງດິດຄືນໄດ້ໂດຍການໃຊ້ຄີກູ້ຄືນ.",
+    "@passphrasePageBodyPassphrase": {},
+    "passphrasePageBodyPin": "ທ່ານຈະຕ້ອງປ້ອນ PIN ທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. PIN ນີ້ຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນພາຍຫຼັງໄດ້, ແຕ່ບໍ່ສາມາດປິດການໃຊ້ງານມັນໄດ້. ຖ້າທ່ານລືມ PIN, ທ່ານສາມາດເຂົ້າເຖິງດິດຄືນໄດ້ໂດຍການໃຊ້ຄີກູ້ຄືນ.",
+    "@passphrasePageBodyPin": {},
+    "passphrasePageChoosePassphraseHint": "ວະລີຜ່ານ",
+    "@passphrasePageChoosePassphraseHint": {},
+    "passphrasePageConfirmPassphraseHint": "ຢືນຢັນວະລີຜ່ານ",
+    "@passphrasePageConfirmPassphraseHint": {},
+    "passphrasePageRequiredPassphrase": "ຈຳເປັນຕ້ອງມີວະລີຜ່ານ",
+    "@passphrasePageRequiredPassphrase": {},
+    "passphrasePageMismatchPassphrase": "ວະລີຜ່ານບໍ່ກົງກັນ",
+    "@passphrasePageMismatchPassphrase": {},
+    "passphrasePageChoosePinHint": "PIN",
+    "@passphrasePageChoosePinHint": {},
+    "passphrasePageConfirmPinHint": "ຢືນຢັນ PIN",
+    "@passphrasePageConfirmPinHint": {},
+    "passphrasePageRequiredPin": "ຈຳເປັນຕ້ອງມີ PIN",
+    "@passphrasePageRequiredPin": {},
+    "passphrasePageMismatchPin": "PIN ບໍ່ກົງກັນ",
+    "@passphrasePageMismatchPin": {},
+    "passphraseTypePassphraseTileTitle": "ຕ້ອງການວະລີຜ່ານ",
+    "@passphraseTypePassphraseTileTitle": {},
+    "passphraseTypePassphraseTileSubTitle": "ປອດໄພທີ່ສຸດ. ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທີ່ຍາວກວ່າທຸກຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີ.",
+    "@passphraseTypePassphraseTileSubTitle": {},
+    "passphraseTypePinTileTitle": "ຕ້ອງການ PIN",
+    "@passphraseTypePinTileTitle": {},
+    "passphraseTypePinTileSubTitle": "ປອດໄພກວ່າ. ທ່ານຈະຕ້ອງປ້ອນລະຫັດ PIN ຕົວເລກທຸກຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີ.",
+    "@passphraseTypePinTileSubTitle": {},
+    "passphraseTypeNoneTileTitle": "ປົດລັອກດິດໂດຍອັດຕະໂນມັດ",
+    "@passphraseTypeNoneTileTitle": {},
+    "passphraseTypePageHeader": "ຄວາມປອດໄພເພີ່ມເຕີມ",
+    "@passphraseTypePageHeader": {},
+    "passphraseTypePageBody": "ໂດຍຄ່າເລີ່ມຕົ້ນ, Trusted Platform Module (TPM) ຂອງຄອມພິວເຕີຈະປົດລັອກ ດິດໃນລະຫວ່າງການເລີ່ມຕົ້ນ. ທ່ານຍັງມີທາງເລືອກໃນການປົກປ້ອງຂໍ້ມູນຂອງທ່ານເພີ່ມເຕີມ.",
+    "@passphraseTypePageBody": {},
+    "passphrasePagePassphraseEntropyBelowMin": "ວະລີຜ່ານອ່ອນແອ, ກະລຸນາເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຊັບຊ້ອນກວ່ານີ້",
+    "@passphrasePagePassphraseEntropyBelowMin": {},
+    "passphrasePagePassphraseEntropyBelowOptimal": "ວະລີຜ່ານພໍໃຊ້ໄດ້, ເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຊັບຊ້ອນກວ່ານີ້ເພື່ອຄວາມປອດໄພທີ່ດີກວ່າ",
+    "@passphrasePagePassphraseEntropyBelowOptimal": {},
+    "passphrasePagePassphraseEntropyOptimal": "ວະລີຜ່ານທີ່ແຂງແກ່ນ",
+    "@passphrasePagePassphraseEntropyOptimal": {},
+    "passphrasePagePinEntropyBelowMin": "PIN ອ່ອນແອ, ເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຄາດເດົາໄດ້ຍາກຂຶ້ນ",
+    "@passphrasePagePinEntropyBelowMin": {},
+    "passphrasePagePinEntropyBelowOptimal": "PIN ພໍໃຊ້ໄດ້, ເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຄາດເດົາໄດ້ຍາກຂຶ້ນເພື່ອຄວາມປອດໄພທີ່ດີກວ່າ",
+    "@passphrasePagePinEntropyBelowOptimal": {},
+    "passphrasePagePinEntropyOptimal": "PIN ຍາວພຽງພໍແລ້ວ",
+    "@passphrasePagePinEntropyOptimal": {},
+    "installationTypeTitle": "ການຕັ້ງຄ່າດິດ",
+    "@installationTypeTitle": {},
+    "installationTypeHeader": "ທ່ານຕ້ອງການຕິດຕັ້ງ {DISTRO} ແນວໃດ?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "ຄອມພິວເຕີນີ້ມີ {os} ຢູ່ແລ້ວ. ທ່ານຕ້ອງການເຮັດຫຍັງ?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "ຄອມພິວເຕີນີ້ມີ {os1} ແລະ {os2} ຢູ່ແລ້ວ. ທ່ານຕ້ອງການເຮັດຫຍັງ?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "ຄອມພິວເຕີນີ້ມີຫຼາຍລະບົບປະຕິບັດການຢູ່ແລ້ວ. ທ່ານຕ້ອງການເຮັດຫຍັງ?",
+    "@installationTypeMultiOSDetected": {},
+    "installationTypeNoOSDetected": "ຄອມພິວເຕີນີ້ບໍ່ມີລະບົບປະຕິບັດການທີ່ກວດພົບ. ທ່ານຕ້ອງການເຮັດຫຍັງ?",
+    "@installationTypeNoOSDetected": {},
+    "installationTypeErase": "ລຶບຂໍ້ມູນໃນດິດ ແລະ ຕິດຕັ້ງ {DISTRO}",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "ຂໍ້ມູນ ແລະ ພາທິຊັນທັງໝົດໃນດິດຈະຖືກລຶບ, ລວມທັງລະບົບປະຕິບັດການຕ່າງໆ.",
+    "@installationTypeEraseInfo": {},
+    "installationTypeAdvancedLabel": "ສະແດງຕົວເລືອກຂັ້ນສູງ...",
+    "@installationTypeAdvancedLabel": {},
+    "installationTypeAdvancedTitle": "ການເຂົ້າລະຫັດ ແລະ ລະບົບໄຟລ໌",
+    "@installationTypeAdvancedTitle": {},
+    "installationTypeExperimental": "ທົດລອງ",
+    "@installationTypeExperimental": {},
+    "installationTypeNone": "ບໍ່ມີການເຂົ້າລະຫັດ",
+    "@installationTypeNone": {},
+    "installationTypeNoneInfo": "ລະບົບໄຟລ໌ມາດຕະຖານທີ່ບໍ່ມີການເຂົ້າລະຫັດ.",
+    "@installationTypeNoneInfo": {},
+    "installationTypeNoneSelected": "ບໍ່ໄດ້ເລືອກອັນໃດ",
+    "@installationTypeNoneSelected": {},
+    "installationTypeLVM": "ໃຊ້ LVM ໂດຍບໍ່ມີການເຂົ້າລະຫັດ",
+    "@installationTypeLVM": {},
+    "installationTypeLVMSelected": "ເລືອກ LVM ແລ້ວ",
+    "@installationTypeLVMSelected": {},
+    "installationTypeLVMEncryption": "ເຂົ້າລະຫັດດ້ວຍວະລີຜ່ານ",
+    "@installationTypeLVMEncryption": {},
+    "installationTypeLVMEncryptionInfo": "ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. ສິ່ງນີ້ໃຊ້ການເຂົ້າລະຫັດ LUKS ກັບ LVM.",
+    "@installationTypeLVMEncryptionInfo": {},
+    "installationTypeLVMEncryptionSelected": "ເລືອກ LVM ແລະ ການເຂົ້າລະຫັດແລ້ວ",
+    "@installationTypeLVMEncryptionSelected": {},
+    "installationTypeEncryptInfo": "ທ່ານຈະຕ້ອງເລືອກຄີຄວາມປອດໄພໃນຂັ້ນຕອນຕໍ່ໄປ.",
+    "@installationTypeEncryptInfo": {},
+    "installationTypeZFS": "ໃຊ້ ZFS ໂດຍບໍ່ມີການເຂົ້າລະຫັດ",
+    "@installationTypeZFS": {},
+    "installationTypeZFSEncryption": "ເຂົ້າລະຫັດດ້ວຍວະລີຜ່ານໂດຍໃຊ້ ZFS",
+    "@installationTypeZFSEncryption": {},
+    "installationTypeZFSEncryptionInfo": "ການເຂົ້າລະຫັດແບບ Native ດ້ວຍ ZFS. ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທຸກຄັ້ງ ທີ່ທ່ານເປີດຄອມພິວເຕີ.",
+    "@installationTypeZFSEncryptionInfo": {},
+    "installationTypeZFSSelected": "ເລືອກ ZFS ແລ້ວ",
+    "@installationTypeZFSSelected": {},
+    "installationTypeZFSEncryptionSelected": "ເລືອກ ZFS ແລະ ການເຂົ້າລະຫັດແລ້ວ",
+    "@installationTypeZFSEncryptionSelected": {},
+    "installationTypeTPM": "ໃຊ້ການເຂົ້າລະຫັດທີ່ຮອງຮັບໂດຍຮາດແວ",
+    "@installationTypeTPM": {},
+    "installationTypeTPMInfo": "<a href=\"{url}\">ອ່ານກ່ຽວກັບການເຂົ້າລະຫັດ TPM</a> ກ່ອນທີ່ທ່ານຈະເລືອກຕົວເລືອກນີ້. ມັນອາດຈະບໍ່ເຮັດວຽກກັບຮາດແວຂອງທ່ານ ຫຼື {DISTRO} ລຸ້ນໃນອະນາຄົດ.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeTPMSelected": "ເລືອກ TPM ແລ້ວ",
+    "@installationTypeTPMSelected": {},
+    "installationTypeReinstall": "ລຶບ {os} ແລະ ຕິດຕັ້ງໃໝ່",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">ຄຳເຕືອນ:</font> ສິ່ງນີ້ຈະລຶບໂປຣແກຣມ, ເອກະສານ, ຮູບພາບ, ເພງ ແລະ ໄຟລ໌ອື່ນໆທັງໝົດໃນ {os} ຂອງທ່ານ.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "ຕິດຕັ້ງ {product} ຄຽງຄູ່ກັບ {os}",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "ຕິດຕັ້ງ {product} ຄຽງຄູ່ກັບ {os1} ແລະ {os2}",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "ຕິດຕັ້ງ {product} ຄຽງຄູ່ກັບລະບົບປະຕິບັດການທີ່ມີຢູ່",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "ຕິດຕັ້ງ {product} ຄຽງຄູ່ກັບພາທິຊັນອື່ນໆ",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "ເລືອກພາທິຊັນເພື່ອປັບຂະໜາດ ແລະ ສ້າງພື້ນທີ່ສຳລັບ {product}. ທ່ານສາມາດເລືອກ ລະບົບປະຕິບັດການຂອງທ່ານໄດ້ໃນຕອນບູດເຄື່ອງ.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "ລຶບ {os} ແລະ ຕິດຕັ້ງ {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "ໄຟລ໌ ແລະ ຂໍ້ມູນທັງໝົດຈາກການຕິດຕັ້ງ {os} ທີ່ມີຢູ່ຈະຖືກລຶບຖິ້ມຢ່າງຖາວອນ.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "ການຕິດຕັ້ງແບບກຳນົດເອງ",
+    "@installationTypeManual": {},
+    "installationTypeManualInfo": "ສຳລັບຜູ້ໃຊ້ຂັ້ນສູງທີ່ຕ້ອງການປັບແຕ່ງການຕັ້ງຄ່າດິດເອງ.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "ລຶບຂໍ້ມູນໃນດິດ ແລະ ຕິດຕັ້ງ {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "ເລີ່ມຕົ້ນໃໝ່ທັງໝົດໃນດິດທີ່ທ່ານເລືອກ.",
+    "@selectGuidedStorageInfo": {},
+    "selectGuidedStorageDriveDropdownLabel": "ເລືອກໄດຣຟ໌:",
+    "@selectGuidedStorageDriveDropdownLabel": {},
+    "selectGuidedStoragePartitionDropdownLabel": "ເລືອກພາທິຊັນ:",
+    "@selectGuidedStoragePartitionDropdownLabel": {},
+    "selectGuidedStorageInfoLabel": "ຈະໃຊ້ພື້ນທີ່ດິດທັງໝົດ:",
+    "@selectGuidedStorageInfoLabel": {},
+    "selectGuidedStorageInstallNow": "ຕິດຕັ້ງດຽວນີ້",
+    "@selectGuidedStorageInstallNow": {},
+    "guidedStoragePageHeader": "ເລືອກບ່ອນທີ່ຈະຕິດຕັ້ງ {DISTRO}",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "ຈັດສັນພື້ນທີ່ໄດຣຟ໌ໂດຍການລາກຕົວແບ່ງຂ້າງລຸ່ມນີ້:",
+    "@installAlongsideSpaceDivider": {},
+    "installAlongsideHiddenPartitions": "{num} ພາທິຊັນຂະໜາດນ້ອຍຖືກເຊື່ອງໄວ້, ໃຫ້ໃຊ້ <a href=\"{url}\">ເຄື່ອງມືຈັດການພາທິຊັນຂັ້ນສູງ</a> ເພື່ອການຄວບຄຸມທີ່ຫຼາຍຂຶ້ນ",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "ປັບຂະໜາດພາທິຊັນ",
+    "@installAlongsideResizePartition": {},
+    "installAlongsideAllocateSpace": "ຈັດສັນພື້ນທີ່",
+    "@installAlongsideAllocateSpace": {},
+    "installAlongsideFiles": "ໄຟລ໌",
+    "@installAlongsideFiles": {},
+    "installAlongsidePartition": "ພາທິຊັນ:",
+    "@installAlongsidePartition": {},
+    "installAlongsideSize": "ຂະໜາດ:",
+    "@installAlongsideSize": {},
+    "installAlongsideAvailable": "ຫວ່າງ:",
+    "@installAlongsideAvailable": {},
+    "allocateDiskSpace": "ການແບ່ງພາທິຊັນດ້ວຍຕົນເອງ",
+    "@allocateDiskSpace": {},
+    "allocateDiskSpaceInvalidMountPointSlash": "ຈຸດເຊື່ອມຕໍ່ (Mount point) ຕ້ອງເລີ່ມຕົ້ນດ້ວຍ \"/\"",
+    "@allocateDiskSpaceInvalidMountPointSlash": {},
+    "allocateDiskSpaceInvalidMountPointSpace": "ຈຸດເຊື່ອມຕໍ່ (Mount point) ບໍ່ສາມາດມີຍະຫວ່າງ",
+    "@allocateDiskSpaceInvalidMountPointSpace": {},
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} ບໍ່ແມ່ນລະບົບໄຟລ໌ທີ່ຮອງຮັບສຳລັບ {mountpoint}",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "ອຸປະກອນ",
+    "@diskHeadersDevice": {},
+    "diskHeadersType": "ປະເພດ",
+    "@diskHeadersType": {},
+    "diskHeadersMountPoint": "ຈຸດເຊື່ອມຕໍ່ (Mount point)",
+    "@diskHeadersMountPoint": {},
+    "diskHeadersSize": "ຂະໜາດ",
+    "@diskHeadersSize": {},
+    "diskHeadersUsed": "ໃຊ້ໄປ",
+    "@diskHeadersUsed": {},
+    "diskHeadersSystem": "ລະບົບ",
+    "@diskHeadersSystem": {},
+    "diskHeadersFormat": "ຟໍແມັດ",
+    "@diskHeadersFormat": {},
+    "freeDiskSpace": "ພື້ນທີ່ຫວ່າງ",
+    "@freeDiskSpace": {},
+    "newPartitionTable": "ຕາຕະລາງພາທິຊັນໃໝ່",
+    "@newPartitionTable": {},
+    "newPartitionTableConfirmationTitle": "ພາທິຊັນຫວ່າງເປົ່າໃໝ່",
+    "@newPartitionTableConfirmationTitle": {},
+    "newPartitionTableConfirmationMessage": "ການສ້າງຕາຕະລາງພາທິຊັນໃໝ່ໃນອຸປະກອນທັງໝົດຈະລຶບພາທິຊັນປະຈຸບັນທັງໝົດອອກ. ການດຳເນີນການນີ້ສາມາດຍົກເລີກໄດ້ຖ້າຈຳເປັນ.",
+    "@newPartitionTableConfirmationMessage": {},
+    "tooManyPrimaryPartitions": "ມີພາທິຊັນຫຼັກ (Primary) ຫຼາຍເກີນໄປ",
+    "@tooManyPrimaryPartitions": {},
+    "partitionLimitReached": "ຮອດຂີດຈຳກັດແລ້ວ",
+    "@partitionLimitReached": {},
+    "bootLoaderDevice": "ອຸປະກອນສຳລັບຕິດຕັ້ງ boot loader",
+    "@bootLoaderDevice": {},
+    "partitionCreateTitle": "ສ້າງພາທິຊັນ",
+    "@partitionCreateTitle": {},
+    "partitionEditTitle": "ແກ້ໄຂພາທິຊັນ",
+    "@partitionEditTitle": {},
+    "partitionSizeLabel": "ຂະໜາດ:",
+    "@partitionSizeLabel": {},
+    "partitionTypeLabel": "ປະເພດສຳລັບພາທິຊັນໃໝ່:",
+    "@partitionTypeLabel": {},
+    "partitionTypePrimary": "ຫຼັກ (Primary)",
+    "@partitionTypePrimary": {},
+    "partitionTypeLogical": "ໂລຈິກ (Logical)",
+    "@partitionTypeLogical": {},
+    "partitionLocationLabel": "ຕຳແໜ່ງສຳລັບພາທິຊັນໃໝ່:",
+    "@partitionLocationLabel": {},
+    "partitionLocationBeginning": "ຈຸດເລີ່ມຕົ້ນຂອງພື້ນທີ່ນີ້",
+    "@partitionLocationBeginning": {},
+    "partitionLocationEnd": "ຈຸດສິ້ນສຸດຂອງພື້ນທີ່ນີ້",
+    "@partitionLocationEnd": {},
+    "partitionFormatLabel": "ໃຊ້ເປັນ:",
+    "@partitionFormatLabel": {},
+    "partitionFormatNone": "ປ່ອຍໄວ້ໂດຍບໍ່ຟໍແມັດ",
+    "@partitionFormatNone": {},
+    "partitionFormatKeep": "ປ່ອຍໃຫ້ຟໍແມັດເປັນ {format}",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "ຟໍແມັດພາທິຊັນ",
+    "@partitionErase": {},
+    "partitionMountPointLabel": "ຈຸດເຊື່ອມຕໍ່ (Mount point):",
+    "@partitionMountPointLabel": {},
+    "confirmPageTitle": "ພ້ອມທີ່ຈະຕິດຕັ້ງ",
+    "@confirmPageTitle": {},
+    "confirmHeader": "ກວດເບິ່ງການເລືອກຂອງທ່ານ",
+    "@confirmHeader": {},
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "@confirmDiskEncryptionLVM": {},
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "@confirmDiskEncryptionZFS": {},
+    "confirmDiskEncryptionTPM": "TPM",
+    "@confirmDiskEncryptionTPM": {},
+    "confirmDiskEncryptionNone": "ບໍ່ມີ",
+    "@confirmDiskEncryptionNone": {},
+    "confirmDevicesTitle": "ອຸປະກອນ",
+    "@confirmDevicesTitle": {},
+    "confirmEntryApplications": "ແອັບພລິເຄຊັນ",
+    "@confirmEntryApplications": {},
+    "confirmEntryDiskSetup": "ປະເພດຂອງການຕິດຕັ້ງ",
+    "@confirmEntryDiskSetup": {},
+    "confirmEntryDiskEncryption": "ການເຂົ້າລະຫັດດິດ",
+    "@confirmEntryDiskEncryption": {},
+    "confirmEntryInstallationDisk": "ດິດຕິດຕັ້ງ",
+    "@confirmEntryInstallationDisk": {},
+    "confirmEntryProprietarySoftware": "ຊອບແວທີ່ເປັນກຳມະສິດ (Proprietary software)",
+    "@confirmEntryProprietarySoftware": {},
+    "confirmSectionGeneralTitle": "ທົ່ວໄປ",
+    "@confirmSectionGeneralTitle": {},
+    "confirmSectionSecurityAndMoreTitle": "ຄວາມປອດໄພ ແລະ ອື່ນໆ",
+    "@confirmSectionSecurityAndMoreTitle": {},
+    "confirmPartitionsTitle": "ພາທິຊັນ",
+    "@confirmPartitionsTitle": {},
+    "confirmPartitionTables": "ຕາຕະລາງພາທິຊັນຂອງອຸປະກອນຕໍ່ໄປນີ້ຈະຖືກປ່ຽນແປງ:",
+    "@confirmPartitionTables": {},
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "Codecs",
+    "@confirmProprietarySoftwareCodecs": {},
+    "confirmProprietarySoftwareCodecsDrivers": "Codecs ແລະ ໄດຣເວີ",
+    "@confirmProprietarySoftwareCodecsDrivers": {},
+    "confirmProprietarySoftwareDrivers": "ໄດຣເວີ",
+    "@confirmProprietarySoftwareDrivers": {},
+    "confirmInstallButton": "ຕິດຕັ້ງ",
+    "@confirmInstallButton": {},
+    "confirmTableErased": "ຖືກລຶບ",
+    "@confirmTableErased": {},
+    "confirmTableUnchanged": "ບໍ່ປ່ຽນແປງ",
+    "@confirmTableUnchanged": {},
+    "confirmTableResized": "ປັບຂະໜາດຈາກ {oldsize} ເປັນ {newsize}",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "ສ້າງ ແລະ ຟໍແມັດເປັນ {format} ໃຊ້ສຳລັບ {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "ຟໍແມັດເປັນ {format} ໃຊ້ສຳລັບ {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "ໃຊ້ສຳລັບ {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "ຟໍແມັດເປັນ {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "ການຕິດຕັ້ງສຳເລັດ",
+    "@installationCompleteTitle": {},
+    "readyToUse": "{system} ໄດ້ຮັບການຕິດຕັ້ງ ແລະ ພ້ອມໃຊ້ງານແລ້ວ",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** ຖືກຄັດລອກໄປໃສ່ດິດແລ້ວ",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "ຣີສະຕາດເຂົ້າສູ່ {system}",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "ຣີສະຕາດເພື່ອເຮັດໃຫ້ການຕິດຕັ້ງສຳເລັດ ຫຼື ສືບຕໍ່ທົດລອງໃຊ້.\nການປ່ຽນແປງໃດໆທີ່ທ່ານເຮັດຈະບໍ່ຖືກບັນທຶກ.",
+    "@restartWarningBody": {},
+    "rebootToConfigureWarning": "ທ່ານຕ້ອງຣີສະຕາດຄອມພິວເຕີເພື່ອສືບຕໍ່ຂັ້ນຕອນການຕິດຕັ້ງ.",
+    "@rebootToConfigureWarning": {},
+    "shutdown": "ປິດເຄື່ອງ",
+    "@shutdown": {},
+    "restartNow": "ຣີສະຕາດດຽວນີ້",
+    "@restartNow": {},
+    "continueTesting": "ສືບຕໍ່ທົດລອງໃຊ້",
+    "@continueTesting": {},
+    "bitlockerInfoTitle": "ກວດພົບ BitLocker",
+    "@bitlockerInfoTitle": {},
+    "bitlockerInfoDescription": "ໜຶ່ງ ຫຼື ຫຼາຍພາທິຊັນຖືກເຂົ້າລະຫັດດ້ວຍ BitLocker.",
+    "@bitlockerInfoDescription": {},
+    "bitlockerInfoDisable": "ເພື່ອຕິດຕັ້ງຄຽງຄູ່ກັບ Windows, ໃຫ້ປິດ BitLocker ໃນ Windows.",
+    "@bitlockerInfoDisable": {},
+    "bitlockerInfoRecovery": "Windows ອາດຈະຮ້ອງຂໍຄີກູ້ຄືນຕອນບູດເຄື່ອງຫຼັງການຕິດຕັ້ງ.",
+    "@bitlockerInfoRecovery": {},
+    "bitlockerInfoInstructions": "ສຳລັບຄຳແນະນຳ, ເຂົ້າໄປທີ່ <a href=\"{url}\">ຄູ່ມື BitLocker</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "ທ່ານອາດຈະສູນເສຍຂໍ້ມູນທັງໝົດຫາກບໍ່ມີຄີກູ້ຄືນ BitLocker",
+    "@bitlockerWarningTitle": {},
+    "restartComputer": "ຣີສະຕາດຄອມພິວເຕີ",
+    "@restartComputer": {},
+    "restartComputerTitle": "ຣີສະຕາດຄອມພິວເຕີບໍ່?",
+    "@restartComputerTitle": {},
+    "restartIntoWindows": "ຣີສະຕາດເຂົ້າສູ່ Windows",
+    "@restartIntoWindows": {},
+    "restartIntoWindowsTitle": "ຣີສະຕາດເຂົ້າສູ່ Windows ບໍ່?",
+    "@restartIntoWindowsTitle": {},
+    "restartIntoWindowsDescription": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການຣີສະຕາດຄອມພິວເຕີຂອງທ່ານ? ທ່ານຈະຕ້ອງເລີ່ມການຕິດຕັ້ງ {DISTRO} ໃໝ່ໃນພາຍຫຼັງເພື່ອໃຫ້ການຕິດຕັ້ງ {DISTRO} ສຳເລັດ.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "ຍິນດີຕ້ອນຮັບສູ່ {RELEASE}",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "ສາມາດໃຊ້ໄດ້:",
+    "@installationSlidesAvailable": {},
+    "installationSlidesIncluded": "ລວມມີ:",
+    "@installationSlidesIncluded": {},
+    "installationSlidesWelcomeTitle": "ໄວ, ຟຣີ ແລະ ເຕັມໄປດ້ວຍຄຸນສົມບັດໃໝ່",
+    "@installationSlidesWelcomeTitle": {},
+    "installationSlidesWelcomeHeader": "ເວີຊັນລ່າສຸດຂອງ {DISTRO} ເຮັດໃຫ້ການໃຊ້ຄອມພິວເຕີງ່າຍຂຶ້ນກວ່າເກົ່າ.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "ບໍ່ວ່າທ່ານຈະເປັນນັກພັດທະນາ, ຜູ້ສ້າງສັນຜົນງານ, ເກມເມີ ຫຼື ຜູ້ເບິ່ງແຍງລະບົບ ທ່ານຈະພົບກັບ ເຄື່ອງມືໃໝ່ໆເພື່ອປັບປຸງປະສິດທິພາບການເຮັດວຽກ ແລະ ຍົກລະດັບປະສົບການຂອງທ່ານໃນ {RELEASE}.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "ທຸກແອັບພລິເຄຊັນທີ່ທ່ານຕ້ອງການ",
+    "@installationSlidesSoftwareTitle": {},
+    "installationSlidesSoftwareBody": "ຕິດຕັ້ງ, ຈັດການ ແລະ ອັບເດດແອັບຂອງທ່ານທັງໝົດໃນ Ubuntu Software, ລວມທັງ ແອັບພລິເຄຊັນຫຼາຍພັນລາຍການຈາກທັງ Snap Store ແລະ {DISTRO} archive.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "ພັດທະນາດ້ວຍສິ່ງທີ່ດີທີ່ສຸດຂອງໂອເພນຊອດ (Open Source)",
+    "@installationSlidesDevelopmentTitle": {},
+    "installationSlidesDevelopmentBody": "{DISTRO} ເປັນເວີກສະເຕຊັນທີ່ເໝາະສົມທີ່ສຸດສຳລັບການພັດທະນາແອັບ ຫຼື ເວັບ, ວິທະຍາສາດຂໍ້ມູນ ແລະ AI/ML ລວມທັງ devops ແລະ ການບໍລິຫານຈັດການ. ທຸກໆການປ່ອຍລຸ້ນຂອງ {DISTRO} ຈະລວມມີ toolchains ລ່າສຸດ ແລະ ຮອງຮັບ IDEs ຫຼັກທັງໝົດ.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "ເສີມສ້າງຄວາມຄິດສ້າງສັນຂອງທ່ານ",
+    "@installationSlidesCreativityTitle": {},
+    "installationSlidesCreativityBody": "ຖ້າທ່ານເປັນນັກເຮັດອະນິເມຊັນ, ນັກອອກແບບ, ຜູ້ສ້າງວິດີໂອ ຫຼື ນັກພັດທະນາເກມ ມັນງ່າຍ ທີ່ຈະນຳຂັ້ນຕອນການເຮັດວຽກຂອງທ່ານມາສູ່ {DISTRO} ດ້ວຍການຮອງຮັບຊອບແວ ແລະ ແອັບພລິເຄຊັນ ມາດຕະຖານອຸດສາຫະກຳ ແລະ ໂອເພນຊອດ.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "ຍອດຢ້ຽມສຳລັບການຫຼິ້ນເກມ",
+    "@installationSlidesGamingTitle": {},
+    "installationSlidesGamingBody": "{DISTRO} ຮອງຮັບໄດຣເວີ NVIDIA ແລະ Mesa ລ່າສຸດເພື່ອປັບປຸງປະສິດທິພາບ ແລະ ຄວາມເຂົ້າກັນໄດ້. ເກມ Windows ຫຼາຍພັນເກມສາມາດຫຼິ້ນໄດ້ດີໃນ {DISTRO} ຜ່ານ ແອັບພລິເຄຊັນເຊັ່ນ Steam ໂດຍບໍ່ຕ້ອງຕັ້ງຄ່າເພີ່ມເຕີມ.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "ສ່ວນຕົວ ແລະ ປອດໄພ",
+    "@installationSlidesSecurityTitle": {},
+    "installationSlidesSecurityBody": "{DISTRO} ໃຫ້ເຄື່ອງມືທັງໝົດທີ່ທ່ານຕ້ອງການເພື່ອຄວາມເປັນສ່ວນຕົວ ແລະ ຄວາມປອດໄພ ໃນໂລກອອນໄລນ໌. ດ້ວຍ firewall ໃນຕົວ ແລະ ການຮອງຮັບ VPN ພ້ອມທັງແອັບພລິເຄຊັນ ທີ່ເນັ້ນຄວາມເປັນສ່ວນຕົວ ເພື່ອຮັບປະກັນວ່າທ່ານສາມາດຄວບຄຸມຂໍ້ມູນຂອງທ່ານໄດ້ຢ່າງເຕັມທີ່.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityLts": "{DISTRO} LTS ທຸກລຸ້ນມາພ້ອມກັບການແກ້ໄຂຄວາມປອດໄພ (security patching) ເປັນເວລາຫ້າປີ, ແລະ ຂະຫຍາຍເປັນສິບປີດ້ວຍການສະໝັກໃຊ້ Ubuntu Pro.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "ເພີ່ມພະລັງໃຫ້ກັບປະສິດທິພາບການເຮັດວຽກຂອງທ່ານ",
+    "@installationSlidesProductivityTitle": {},
+    "installationSlidesProductivityBody": "{DISTRO} Desktop ປະກອບມີ LibreOffice, ຊຸດແອັບພລິເຄຊັນໂອເພນຊອດທີ່ເຂົ້າກັນໄດ້ກັບ Microsoft Office ສຳລັບເອກະສານ, ສະເປຣດຊີດ ແລະ ການນຳສະເໜີ. ເຄື່ອງມືການເຮັດວຽກຮ່ວມກັນທີ່ນິຍົມກໍ່ມີໃຫ້ໃຊ້ເຊັ່ນກັນ.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityTitle": "ການເຂົ້າເຖິງສຳລັບທຸກຄົນ",
+    "@installationSlidesAccessibilityTitle": {},
+    "installationSlidesAccessibilityBody": "ຫົວໃຈຂອງປັດຊະຍາ {DISTRO} ແມ່ນຄວາມເຊື່ອທີ່ວ່າຄອມພິວເຕີມີໄວ້ສຳລັບທຸກຄົນ. ດ້ວຍເຄື່ອງມືຊ່ວຍການເຂົ້າເຖິງຂັ້ນສູງ ແລະ ຕົວເລືອກໃນການປ່ຽນພາສາ, ສີ ແລະ ຂະໜາດຕົວໜັງສື, {DISTRO} ເຮັດໃຫ້ການໃຊ້ຄອມພິວເຕີເປັນເລື່ອງງ່າຍ - ບໍ່ວ່າທ່ານຈະເປັນໃຜ ຫຼື ຢູ່ໃສກໍຕາມ.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityOrca": "ໂປຣແກຣມອ່ານໜ້າຈໍ Orca",
+    "@installationSlidesAccessibilityOrca": {},
+    "installationSlidesAccessibilityLanguages": "ການຮອງຮັບພາສາ",
+    "@installationSlidesAccessibilityLanguages": {},
+    "installationSlidesSupportTitle": "ຄວາມຊ່ວຍເຫຼືອ ແລະ ການສະໜັບສະໜູນ",
+    "@installationSlidesSupportTitle": {},
+    "installationSlidesSupportHeader": "ເອກະສານ {DISTRO} ຢ່າງເປັນທາງການມີໃຫ້ທັງທາງອອນໄລນ໌ ແລະ ຜ່ານໄອຄອນ Help ໃນແຖບ dock.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Ask Ubuntu ກວມເອົາຄຳຖາມ ແລະ ຄຳຕອບທີ່ຫຼາກຫຼາຍ ແລະ Ubuntu Discourse ໃຫ້ຄຳແນະນຳ ແລະ ການສົນທະນາສຳລັບຜູ້ໃຊ້ໃໝ່ ແລະ ຜູ້ທີ່ມີປະສົບການ.",
+    "@installationSlidesSupportCommunity": {},
+    "installationSlidesSupportEnterprise": "ສຳລັບຜູ້ໃຊ້ອົງກອນ Canonical ໃຫ້ການສະໜັບສະໜູນທາງການຄ້າ ເພື່ອເຮັດໃຫ້ງ່າຍ ຕໍ່ການນຳໃຊ້ ແລະ ຈັດການ Ubuntu ຢ່າງປອດໄພໃນບ່ອນເຮັດວຽກ.",
+    "@installationSlidesSupportEnterprise": {},
+    "installationSlidesSupportResources": "ແຫຼ່ງຂໍ້ມູນທີ່ເປັນປະໂຫຍດ:",
+    "@installationSlidesSupportResources": {},
+    "installationSlidesSupportDocumentation": "ເອກະສານຢ່າງເປັນທາງການ",
+    "@installationSlidesSupportDocumentation": {},
+    "installationSlidesSupportUbuntuPro": "ການສະໜັບສະໜູນລະດັບອົງກອນຕະຫຼອດ 24/7 ດ້ວຍ Ubuntu Pro",
+    "@installationSlidesSupportUbuntuPro": {},
+    "nextSlideSemanticLabel": "ສະໄລ້ຖັດໄປ",
+    "@nextSlideSemanticLabel": {},
+    "previousSlideSemanticLabel": "ສະໄລ້ກ່ອນໜ້າ",
+    "@previousSlideSemanticLabel": {},
+    "playSlideshowSemanticLabel": "ຫຼິ້ນສະໄລ້ໂຊ",
+    "@playSlideshowSemanticLabel": {},
+    "pauseSlideshowSemanticLabel": "ຢຸດສະໄລ້ໂຊຊົ່ວຄາວ",
+    "@pauseSlideshowSemanticLabel": {},
+    "toggleLogsSemanticLabel": "ເປີດ/ປິດ ບັນທຶກການຕິດຕັ້ງ",
+    "@toggleLogsSemanticLabel": {},
+    "copyingFiles": "ກຳລັງຄັດລອກໄຟລ໌…",
+    "@copyingFiles": {},
+    "installingSystem": "ກຳລັງຕິດຕັ້ງລະບົບ…",
+    "@installingSystem": {},
+    "configuringSystem": "ກຳລັງຕັ້ງຄ່າລະບົບ…",
+    "@configuringSystem": {},
+    "installationFailed": "ການຕິດຕັ້ງລົ້ມເຫຼວ",
+    "@installationFailed": {},
+    "notEnoughDiskSpaceTitle": "ພື້ນທີ່ດິດບໍ່ພຽງພໍ",
+    "@notEnoughDiskSpaceTitle": {},
+    "notEnoughDiskSpaceUbuntu": "ພື້ນທີ່ດິດບໍ່ພຽງພໍທີ່ຈະຕິດຕັ້ງ {DISTRO}",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "ດິດທີ່ເລືອກມີພື້ນທີ່ບໍ່ພຽງພໍທີ່ຈະຕິດຕັ້ງ {DISTRO}. ອອກຈາກຕົວຕິດຕັ້ງ ເພື່ອສ້າງພື້ນທີ່ຫວ່າງ ຫຼື ເລືອກດິດອື່ນ.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "ຫວ່າງ:",
+    "@notEnoughDiskSpaceAvailable": {},
+    "notEnoughDiskSpaceRequired": "ຕ້ອງການ:",
+    "@notEnoughDiskSpaceRequired": {},
+    "refreshPageTitle": "ມີອັບເດດໃໝ່",
+    "@refreshPageTitle": {},
+    "refreshHeader": "ມີອັບເດດສຳລັບຕົວຕິດຕັ້ງ",
+    "@refreshHeader": {},
+    "refreshUpdateNow": "ອັບເດດດຽວນີ້",
+    "@refreshUpdateNow": {},
+    "refreshInfo": "ອັບເດດເປັນເວີຊັນລ່າສຸດເພື່ອປັບປຸງຄວາມຫມັ້ນຄົງ ແລະ ຄຸນສົມບັດເພີ່ມເຕີມ.",
+    "@refreshInfo": {},
+    "refreshReady": "ອັບເດດພ້ອມແລ້ວ",
+    "@refreshReady": {},
+    "refreshCurrent": "ເວີຊັນ {snap} ປະຈຸບັນແມ່ນ {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "ອັບເດດເປັນເວີຊັນ {version}",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "ເວີຊັນປະຈຸບັນ {version} ເປັນລຸ້ນລ່າສຸດແລ້ວ.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "ກຳລັງອັບເດດ {snap}...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "ກະລຸນາປິດຕົວຕິດຕັ້ງ ແລະ ເປີດໃໝ່ເພື່ອສືບຕໍ່",
+    "@refreshRestart": {},
+    "refreshCloseLabel": "ປິດຕົວຕິດຕັ້ງ",
+    "@refreshCloseLabel": {},
+    "refreshSnapPrerequisites": "ກຳລັງກວດສອບເງື່ອນໄຂເບື້ອງຕົ້ນຂອງ {snap}...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "ກຳລັງຣີເຟຣຊ {snap}...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "ກຳລັງກວດສອບການຣີເຟຣຊຊ້ຳຂອງ {snap}...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "ກຳລັງກະກຽມ {snap}...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "ກຳລັງດາວໂຫຼດ {snap}...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "ກຳລັງກວດສອບຄວາມຖືກຕ້ອງຂອງ {snap}...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "ກຳລັງ Mount {snap}...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "ກຳລັງຢຸດບໍລິການ {snap}...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "ກຳລັງລຶບ aliases ຂອງ {snap}...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "ກຳລັງ Unlink {snap}...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "ກຳລັງອັບເດດ assets ຂອງ {snap}...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "ກຳລັງອັບເດດ {snap} kernel command line...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "ກຳລັງຄັດລອກຂໍ້ມູນ {snap}...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "ກຳລັງຕັ້ງຄ່າໂປຣໄຟລ໌ຄວາມປອດໄພຂອງ {snap}...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "ກຳລັງ Linking {snap}...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "ກຳລັງເຊື່ອມຕໍ່ {snap} plugs ແລະ slots...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "ກຳລັງຕັ້ງຄ່າ {snap} aliases ອັດຕະໂນມັດ...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "ກຳລັງຕັ້ງຄ່າ {snap} aliases...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "ກຳລັງເລີ່ມບໍລິການ {snap}...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "ກຳລັງທຳຄວາມສະອາດ {snap}...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "ຄີກູ້ຄືນ",
+    "@recoveryKeyTitle": {},
+    "recoveryKeyTitleBadgeLabel": "ສຳຄັນ",
+    "@recoveryKeyTitleBadgeLabel": {},
+    "recoveryKeyHeader": "ບັນທຶກຄີກູ້ຄືນຂອງທ່ານ",
+    "@recoveryKeyHeader": {},
+    "recoveryKeyInfoHeader": "ທ່ານອາດຈະສູນເສຍຂໍ້ມູນທັງໝົດຫາກບໍ່ມີຄີກູ້ຄືນ",
+    "@recoveryKeyInfoHeader": {},
+    "recoveryKeyTextFieldLabel": "ຄີກູ້ຄືນ",
+    "@recoveryKeyTextFieldLabel": {},
+    "recoveryKeyStorageAdvice": "ທ່ານຈະຕ້ອງໃຊ້ຄີກູ້ຄືນນີ້ຖ້າການຖອດລະຫັດລົ້ມເຫຼວໃນລະຫວ່າງການເລີ່ມຕົ້ນ. ຫາກບໍ່ມີຄີ, ທ່ານຈະສູນເສຍການເຂົ້າເຖິງຂໍ້ມູນທັງໝົດຂອງທ່ານ. ບັນທຶກມັນໄວ້ໃນບ່ອນທີ່ປອດໄພ, ເຊັ່ນ: ໂປຣແກຣມຈັດການລະຫັດຜ່ານ.",
+    "@recoveryKeyStorageAdvice": {},
+    "recoveryKeyConfirmation": "ຂ້ອຍໄດ້ບັນທຶກຄີກູ້ຄືນຂອງຂ້ອຍໄວ້ໃນບ່ອນທີ່ປອດໄພແລ້ວ",
+    "@recoveryKeyConfirmation": {},
+    "recoveryKeyLinkLabel": "ຮຽນຮູ້ເພີ່ມເຕີມ",
+    "@recoveryKeyLinkLabel": {},
+    "recoveryKeySaveToFileLabel": "ບັນທຶກລົງໄຟລ໌",
+    "@recoveryKeySaveToFileLabel": {},
+    "recoveryKeyShowQrCodeLabel": "ສະແດງ QR code",
+    "@recoveryKeyShowQrCodeLabel": {},
+    "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - ຄີກູ້ຄືນ",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "ສະແກນ QR code ເພື່ອຄັດລອກຄີກູ້ຄືນ ແລະ ບັນທຶກໄວ້ໃນບ່ອນທີ່ປອດໄພ, ເຊັ່ນ: ໂປຣແກຣມຈັດການລະຫັດຜ່ານ. ທ່ານຍັງສາມາດຖ່າຍຮູບໄວ້ໃຊ້ພາຍຫຼັງໄດ້.",
+    "@recoveryKeyQrDialogBody": {},
+    "recoveryKeyClipboardNotifiaction": "ຄັດລອກໄປທີ່ຄລິບບອດແລ້ວ",
+    "@recoveryKeyClipboardNotifiaction": {},
+    "recoveryKeyExceptionFileSystemTitle": "ບໍ່ໄດ້ບັນທຶກໄຟລ໌ຄີກູ້ຄືນ",
+    "@recoveryKeyExceptionFileSystemTitle": {},
+    "recoveryKeyExceptionDisallowedPathTitle": "ບໍ່ສາມາດບັນທຶກໄຟລ໌ຄີກູ້ຄືນໃນບ່ອນຊົ່ວຄາວໄດ້",
+    "@recoveryKeyExceptionDisallowedPathTitle": {},
+    "recoveryKeyExceptionUnknownTitle": "ຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ຈັກ",
+    "@recoveryKeyExceptionUnknownTitle": {},
+    "recoveryKeyExceptionFileSystemBody": "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ຂຽນລົງໃນໂຟນເດີນັ້ນ. ລອງປ່ຽນບ່ອນໃໝ່ ຫຼື ໃຊ້ອີກວິທີໜຶ່ງ.",
+    "@recoveryKeyExceptionFileSystemBody": {},
+    "recoveryKeyExceptionDisallowedPathBody": "ລອງປ່ຽນບ່ອນໃໝ່, ເຊັ່ນ: ໄດຣຟ໌ທີ່ຖອດໄດ້, ຫຼື ໃຊ້ອີກວິທີໜຶ່ງ.",
+    "@recoveryKeyExceptionDisallowedPathBody": {},
+    "recoveryKeyFilePickerTitle": "ບັນທຶກໄຟລ໌ຄີກູ້ຄືນ",
+    "@recoveryKeyFilePickerTitle": {},
+    "recoveryKeyFilePickerFilter": "ໄຟລ໌ຂໍ້ຄວາມ",
+    "@recoveryKeyFilePickerFilter": {},
+    "landscapeMagicAttachInstructions": "ສະແກນ QR code ຫຼື ປ້ອນລະຫັດຂ້າງລຸ່ມນີ້ທີ່ <a href=\"https://{url}\">{url}</a>",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "ການຕິດຕັ້ງແບບອັດຕະໂນມັດ",
+    "@landscapePageTitle": {},
+    "landscapeHeader": "ເຂົ້າສູ່ລະບົບ Landscape",
+    "@landscapeHeader": {},
+    "landscapeDomainHeader": "ປ້ອນໂດເມນ Landscape (FQDN)",
+    "@landscapeDomainHeader": {},
+    "landscapeDomainHintText": "ໂດເມນ Landscape (FQDN)",
+    "@landscapeDomainHintText": {},
+    "landscapeDomainInstructions": "ລະບຸໂດເມນ Landscape ຂອງອົງກອນທ່ານເພື່ອເຂົ້າສູ່ລະບົບ ແລະ ດຶງໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດ. ທ່ານສາມາດຂໍ FQDN ໄດ້ຈາກຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT ຂອງທ່ານ.",
+    "@landscapeDomainInstructions": {},
+    "landscapeDomainTextField": "ໂດເມນ Landscape (FQDN)",
+    "@landscapeDomainTextField": {},
+    "next": "ຕໍ່ໄປ",
+    "@next": {},
+    "landscapeDomainInvalidDomainWarning": "ໂດເມນບໍ່ຖືກຕ້ອງ, ກະລຸນາກວດສອບ ຫຼື ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT ຂອງທ່ານ",
+    "@landscapeDomainInvalidDomainWarning": {},
+    "landscapeDomainNoInternetTitleWarning": "ເຊື່ອມຕໍ່ອິນເຕີເນັດເພື່ອສືບຕໍ່",
+    "@landscapeDomainNoInternetTitleWarning": {},
+    "landscapeDomainNoInternetDescriptionWarning": "ຕ້ອງການອິນເຕີເນັດເພື່ອດຶງໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດຈາກ Landscape",
+    "@landscapeDomainNoInternetDescriptionWarning": {},
+    "landscapeCodeExpiredWarning": "ລະຫັດໝົດອາຍຸ, ກະລຸນາລອງໃໝ່ອີກຄັ້ງ",
+    "@landscapeCodeExpiredWarning": {},
+    "landscapeLoginFailedWarning": "ການເຂົ້າສູ່ລະບົບລົ້ມເຫຼວ, ກະລຸນາລອງໃໝ່ອີກຄັ້ງ",
+    "@landscapeLoginFailedWarning": {},
+    "landscapeErrorPageTitle": "ການຕິດຕັ້ງແບບອັດຕະໂນມັດບໍ່ສາມາດໃຊ້ໄດ້ກັບບັນຊີຂອງທ່ານ",
+    "@landscapeErrorPageTitle": {},
+    "landscapeErrorPageBody": "ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT ຂອງທ່ານ ຫຼື ລອງຕົວເລືອກການຕິດຕັ້ງອື່ນ.",
+    "@landscapeErrorPageBody": {},
+    "landscapeErrorPageCode": "ລະຫັດຂໍ້ຜິດພາດ: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu ຈະຕິດຕັ້ງດ້ວຍການຕັ້ງຄ່າທີ່ອົງກອນຂອງທ່ານສະໜອງໃຫ້",
+    "@landscapeConfirmPageSuccessInfoTitle": {},
+    "landscapeConfirmPageSuccessInfoContent": "ທ່ານສາມາດກວດເບິ່ງໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດທີ່ນຳເຂົ້າມາຈາກ Landscape ໄດ້ຢູ່ດ້ານລຸ່ມ.",
+    "@landscapeConfirmPageSuccessInfoContent": {},
+    "successIconSemanticLabel": "ສຳເລັດ",
+    "@successIconSemanticLabel": {},
+    "errorIconSemanticLabel": "ຜິດພາດ",
+    "@errorIconSemanticLabel": {},
+    "closeIconSemanticLabel": "ປິດ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "ຂະຫຍາຍໃຫຍ່ສຸດ",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "ຫຍໍ້ລົງ",
+    "@minimizeIconSemanticLabel": {}
 }
