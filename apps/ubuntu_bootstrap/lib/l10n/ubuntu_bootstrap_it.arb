@@ -563,5 +563,15 @@
                 "type": "String"
             }
         }
-    }
+    },
+    "passphrasePageBodyPassphrase": "Dovrai inserire la tua passphrase ogni volta che accendi il computer. Questa passphrase è diversa dalla password utente. Potrai cambiarla in seguito, ma non disabilitarla. Se dimentichi la passphrase, potrai recuperare l’accesso al disco utilizzando la chiave di ripristino.",
+    "@passphrasePageBodyPassphrase": {},
+    "passphrasePageBodyPin": "Dovrai inserire il tuo PIN ogni volta che accendi il computer. Questo PIN è diverso dalla password dell’utente. Potrai cambiarlo in seguito, ma non disabilitarlo. Se dimentichi il PIN, potrai recuperare l’accesso al disco utilizzando la chiave di ripristino.",
+    "@passphrasePageBodyPin": {},
+    "passphraseTypePassphraseTileSubTitle": "Massima sicurezza. Dovrai inserire una passphrase più lunga ogni volta che accendi il computer.",
+    "@passphraseTypePassphraseTileSubTitle": {},
+    "passphraseTypePinTileTitle": "Richiedi un PIN",
+    "@passphraseTypePinTileTitle": {},
+    "passphraseTypePinTileSubTitle": "Più sicuro. Dovrai inserire un PIN numerico ogni volta che accendi il computer.",
+    "@passphraseTypePinTileSubTitle": {}
 }
