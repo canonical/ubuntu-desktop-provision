@@ -82,9 +82,9 @@
     "@installationTypeOSDetected": {},
     "installationTypeErase": "Cancella il disco e installa {DISTRO}",
     "@installationTypeErase": {},
-    "installationTypeAdvancedTitle": "Caratteristiche avanzate",
+    "installationTypeAdvancedTitle": "Cifratura e file system",
     "@installationTypeAdvancedTitle": {},
-    "installationTypeNone": "Nessuno",
+    "installationTypeNone": "Nessuna cifratura",
     "@installationTypeNone": {},
     "installationTypeNoneSelected": "Nessuna selezione",
     "@installationTypeNoneSelected": {},
@@ -96,13 +96,13 @@
     "@installAlongsidePartition": {},
     "installationTypeTitle": "Tipo d'installazione",
     "@installationTypeTitle": {},
-    "installationTypeAdvancedLabel": "Caratteristiche avanzate…",
+    "installationTypeAdvancedLabel": "Mostra opzioni avanzate…",
     "@installationTypeAdvancedLabel": {},
     "installationTypeLVMSelected": "Selezionato LVM",
     "@installationTypeLVMSelected": {},
     "installationTypeMultiOSDetected": "Questo computer ha installato più di un sistema operativo. Come procedere?",
     "@installationTypeMultiOSDetected": {},
-    "installationTypeZFS": "SPERIMENTALE: Cancella il disco e usa ZFS",
+    "installationTypeZFS": "Usa ZFS senza cifratura",
     "@installationTypeZFS": {},
     "confirmInstallButton": "Installa",
     "@confirmInstallButton": {},
@@ -211,5 +211,357 @@
     "rstHeader": "Devi disabilitare RST per continuare l'installazione",
     "@rstHeader": {},
     "rstDisable": "Il computer utilizza Intel RST (Rapid Storage Technology). Puoi disabilitare RST in:",
-    "@rstDisable": {}
+    "@rstDisable": {},
+    "rstDisableWindows": "Windows, se stai usando un'installazione dual boot con Windows",
+    "@rstDisableWindows": {},
+    "rstDisableBios": "Impostazioni BIOS",
+    "@rstDisableBios": {},
+    "dontInstallDriverSoftwareNowDescription": "Puoi installarlo in seguito da Software e Aggiornamenti.",
+    "@dontInstallDriverSoftwareNowDescription": {},
+    "hideSecurityKey": "Nascondi",
+    "@hideSecurityKey": {},
+    "codecsAndDriversPageTitle": "Ottimizza il tuo computer",
+    "@codecsAndDriversPageTitle": {},
+    "codecsAndDriversPageDescription": "Installare il software proprietario raccomandato?",
+    "@codecsAndDriversPageDescription": {},
+    "codecsAndDriversPageBody": "{DISTRO} è distribuito senza software proprietario. Installare software aggiuntivo potrebbe migliorare le prestazioni del computer.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "Rilevata scheda grafica NVIDIA",
+    "@codecsAndDriversNvidiaNote": {},
+    "codecsAndDriversNvidiaBody": "Per le migliori prestazioni delle schede grafiche NVIDIA, è fortemente raccomandato installare driver aggiuntivi.",
+    "@codecsAndDriversNvidiaBody": {},
+    "fullInstallationTitle": "Selezione estesa",
+    "@fullInstallationTitle": {},
+    "fullInstallationSubtitle": "Una selezione di strumenti di produttività, utilità e web browser funzionanti offline.",
+    "@fullInstallationSubtitle": {},
+    "minimalInstallationTitle": "Selezione predefinita",
+    "@minimalInstallationTitle": {},
+    "minimalInstallationSubtitle": "Solo gli essenziali, web browser e utilità di base.",
+    "@minimalInstallationSubtitle": {},
+    "installDriversTitle": "Installa software di terze parti per hardware grafico e Wi-Fi",
+    "@installDriversTitle": {},
+    "installDriversSubtitle": "Inclusi, ma non esclusivamente, driver NVIDIA e simili",
+    "@installDriversSubtitle": {},
+    "installCodecsTitle": "Scarica e installa supporto per formati media aggiuntivi",
+    "@installCodecsTitle": {},
+    "batteryWarning": "Il computer non è collegato a una sorgente di alimentazione.",
+    "@batteryWarning": {},
+    "offlineWarning": "Sei offline",
+    "@offlineWarning": {},
+    "choosePassphraseHeader": "Crea una frase d'accesso",
+    "@choosePassphraseHeader": {},
+    "choosePassphraseBody": "Dovrai inserire la frase d'accesso ogni volta che accendi il computer. Questa frase d'accesso è diversa dalla password utente.",
+    "@choosePassphraseBody": {},
+    "choosePassphraseInfoHeader": "Assicurati di salvare la tua frase d'accesso",
+    "@choosePassphraseInfoHeader": {},
+    "choosePassphraseInfoBody": "Se viene persa, perderai tutti i tuoi dati.",
+    "@choosePassphraseInfoBody": {},
+    "chooseOptionalPassphraseInfoHeader": "Conserva la tua frase d'accesso e chiave di recupero in un luogo sicuro",
+    "@chooseOptionalPassphraseInfoHeader": {},
+    "chooseOptionalPassphraseInfoBody": "Se perdi la tua frase d'accesso, perderai tutti i tuoi dai. La frase d'accesso non sostituisce la chiave di recupero o la tua password utente.",
+    "@chooseOptionalPassphraseInfoBody": {},
+    "passphrasePageTitle": "Cifratura",
+    "@passphrasePageTitle": {},
+    "passphrasePageHeaderPassphrase": "Imposta una frase d'accesso di cifratura",
+    "@passphrasePageHeaderPassphrase": {},
+    "passphrasePageHeaderPin": "Imposta un PIN di cifratura",
+    "@passphrasePageHeaderPin": {},
+    "passphrasePageChoosePassphraseHint": "Frase d'accesso",
+    "@passphrasePageChoosePassphraseHint": {},
+    "passphrasePageConfirmPassphraseHint": "Conferma frase d'accesso",
+    "@passphrasePageConfirmPassphraseHint": {},
+    "passphrasePageRequiredPassphrase": "Una frase d'accesso è obbligatoria",
+    "@passphrasePageRequiredPassphrase": {},
+    "passphrasePageMismatchPassphrase": "Le frasi d'accesso non corrispondono",
+    "@passphrasePageMismatchPassphrase": {},
+    "passphrasePageChoosePinHint": "PIN",
+    "@passphrasePageChoosePinHint": {},
+    "passphrasePageConfirmPinHint": "Conferma PIN",
+    "@passphrasePageConfirmPinHint": {},
+    "passphrasePageRequiredPin": "Un PIN è obbligatorio",
+    "@passphrasePageRequiredPin": {},
+    "passphrasePageMismatchPin": "I PIN non corrispondono",
+    "@passphrasePageMismatchPin": {},
+    "passphraseTypePassphraseTileTitle": "Richiedi una frase d'accesso",
+    "@passphraseTypePassphraseTileTitle": {},
+    "passphraseTypeNoneTileTitle": "Sblocca il disco automaticamente",
+    "@passphraseTypeNoneTileTitle": {},
+    "passphraseTypePageHeader": "Sicurezza aggiuntiva",
+    "@passphraseTypePageHeader": {},
+    "installationTypeHeader": "Come vuoi installare {DISTRO}?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Tutti i dati e partizioni sul disco verranno eliminati, inclusi i sistemi operativi.",
+    "@installationTypeEraseInfo": {},
+    "installationTypeExperimental": "Sperimentale",
+    "@installationTypeExperimental": {},
+    "installationTypeNoneInfo": "File system standard senza cifratura.",
+    "@installationTypeNoneInfo": {},
+    "installationTypeLVM": "Usa LVM senza cifratura",
+    "@installationTypeLVM": {},
+    "installationTypeLVMEncryption": "Cifra con una frase d'accesso",
+    "@installationTypeLVMEncryption": {},
+    "installationTypeLVMEncryptionSelected": "LVM e cifratura selezionati",
+    "@installationTypeLVMEncryptionSelected": {},
+    "installationTypeEncryptInfo": "Sceglierai una chiave di sicurezza nel prossimo passaggio.",
+    "@installationTypeEncryptInfo": {},
+    "installationTypeZFSEncryption": "Cifra con una frase d'accesso usando ZFS",
+    "@installationTypeZFSEncryption": {},
+    "installationTypeZFSEncryptionInfo": "Cifratura nativa con ZFS. Dovrai inserire una frase d'accesso ogni volta che accenderai il computer.",
+    "@installationTypeZFSEncryptionInfo": {},
+    "installationTypeZFSEncryptionSelected": "ZFS e cifratura selezionati",
+    "@installationTypeZFSEncryptionSelected": {},
+    "installationTypeTPM": "Usa cifratura con supporto hardware",
+    "@installationTypeTPM": {},
+    "installationTypeTPMInfo": "<a href=\"{url}\">Leggi sulla cifratura TPM</a> prima di selezionare questa opzione. Potrebbe non funzionare con il tuo hardware o futuri rilasci di {DISTRO}.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeTPMSelected": "TPM selezionato",
+    "@installationTypeTPMSelected": {},
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Attenzione:</font> verranno cancellati tutti i programmi di {os}, documenti, foto, musica e ogni altro file.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "Installa {product} assieme a {os}",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "Installa {product} assieme a {os1} e {os2}",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "Installa {product} assieme agli altri sistemi operativi presenti",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "Installa {product} assieme alle altre partizioni",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "Seleziona una partizione da ridimensionare e creare spazio per {product}. Puoi scegliere il sistema operativo durante l'avvio.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "Elimina {os} e installa {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Tutti i file e dati dall'installazione di {os} presente verranno cancellati definitivamente.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManualInfo": "Per utenti avanzati che cercano un'installazione personalizzata sul disco.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Elimina il disco e installa {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Inizia da capo sul disco selezionato.",
+    "@selectGuidedStorageInfo": {},
+    "selectGuidedStorageDriveDropdownLabel": "Seleziona il disco:",
+    "@selectGuidedStorageDriveDropdownLabel": {},
+    "selectGuidedStoragePartitionDropdownLabel": "Seleziona la partizione:",
+    "@selectGuidedStoragePartitionDropdownLabel": {},
+    "guidedStoragePageHeader": "Scegli dove installare {DISTRO}",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideHiddenPartitions": "{num} partizioni più piccole sono nascoste, usa <a href=\"{url}\">strumento di partizionamento avanzato</a> per maggior controllo",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Ridimensiona partizione",
+    "@installAlongsideResizePartition": {},
+    "installAlongsideAllocateSpace": "Alloca spazio",
+    "@installAlongsideAllocateSpace": {},
+    "installAlongsideAvailable": "Disponibile:",
+    "@installAlongsideAvailable": {},
+    "allocateDiskSpace": "Partizionamento manuale",
+    "@allocateDiskSpace": {},
+    "diskHeadersDevice": "Dispositivo",
+    "@diskHeadersDevice": {},
+    "diskHeadersType": "Tipo",
+    "@diskHeadersType": {},
+    "diskHeadersSize": "Dimensione",
+    "@diskHeadersSize": {},
+    "diskHeadersUsed": "In uso",
+    "@diskHeadersUsed": {},
+    "diskHeadersSystem": "Sistema",
+    "@diskHeadersSystem": {},
+    "diskHeadersFormat": "Formato",
+    "@diskHeadersFormat": {},
+    "freeDiskSpace": "Spazio disponibile",
+    "@freeDiskSpace": {},
+    "newPartitionTable": "Nuova tavola di partizione",
+    "@newPartitionTable": {},
+    "newPartitionTableConfirmationTitle": "Nuova partizione vuota",
+    "@newPartitionTableConfirmationTitle": {},
+    "partitionLimitReached": "Limite raggiunto",
+    "@partitionLimitReached": {},
+    "bootLoaderDevice": "Dispositivo per l'installazione del boot loader",
+    "@bootLoaderDevice": {},
+    "partitionCreateTitle": "Crea partizione",
+    "@partitionCreateTitle": {},
+    "partitionEditTitle": "Modifica partizione",
+    "@partitionEditTitle": {},
+    "partitionSizeLabel": "Dimensione:",
+    "@partitionSizeLabel": {},
+    "partitionTypeLabel": "Tipo della nuova partizione:",
+    "@partitionTypeLabel": {},
+    "partitionTypePrimary": "Primario",
+    "@partitionTypePrimary": {},
+    "partitionTypeLogical": "Logico",
+    "@partitionTypeLogical": {},
+    "partitionLocationBeginning": "Inizio di questo spazio",
+    "@partitionLocationBeginning": {},
+    "partitionLocationEnd": "Fine di questo spazio",
+    "@partitionLocationEnd": {},
+    "partitionFormatLabel": "Usato come:",
+    "@partitionFormatLabel": {},
+    "partitionFormatNone": "Lascia non formattato",
+    "@partitionFormatNone": {},
+    "partitionFormatKeep": "Lascia formattato come {format}",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "Formatta la partizione",
+    "@partitionErase": {},
+    "confirmPageTitle": "Pronto per l'installazione",
+    "@confirmPageTitle": {},
+    "confirmHeader": "Rivedi le scelte",
+    "@confirmHeader": {},
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "@confirmDiskEncryptionLVM": {},
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "@confirmDiskEncryptionZFS": {},
+    "confirmDiskEncryptionTPM": "TPM",
+    "@confirmDiskEncryptionTPM": {},
+    "confirmDiskEncryptionNone": "Nessuna",
+    "@confirmDiskEncryptionNone": {},
+    "confirmDevicesTitle": "Dispositivi",
+    "@confirmDevicesTitle": {},
+    "confirmEntryApplications": "Applicazioni",
+    "@confirmEntryApplications": {},
+    "confirmEntryDiskSetup": "Tipo d'installazione",
+    "@confirmEntryDiskSetup": {},
+    "confirmEntryDiskEncryption": "Cifratura del disco",
+    "@confirmEntryDiskEncryption": {},
+    "confirmEntryInstallationDisk": "Disco d'installazione",
+    "@confirmEntryInstallationDisk": {},
+    "confirmEntryProprietarySoftware": "Software proprietario",
+    "@confirmEntryProprietarySoftware": {},
+    "confirmSectionGeneralTitle": "Generale",
+    "@confirmSectionGeneralTitle": {},
+    "confirmSectionSecurityAndMoreTitle": "Sicurezza e altro",
+    "@confirmSectionSecurityAndMoreTitle": {},
+    "confirmPartitionsTitle": "Partizioni",
+    "@confirmPartitionsTitle": {},
+    "confirmProprietarySoftwareDrivers": "Driver",
+    "@confirmProprietarySoftwareDrivers": {},
+    "confirmTableErased": "Eliminato",
+    "@confirmTableErased": {},
+    "confirmTableUnchanged": "Non modificato",
+    "@confirmTableUnchanged": {},
+    "confirmTableResized": "Ridimensionato da {oldsize} a {newsize}",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    }
 }
