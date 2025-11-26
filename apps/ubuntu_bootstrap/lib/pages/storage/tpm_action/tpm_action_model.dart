@@ -36,12 +36,6 @@ class TpmActionModel extends SafeChangeNotifier {
             t.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
       );
 
-  CoreBootEncryptionSupportError? get tpmError =>
-      tpmDisallowedCapability?.errors?.first;
-
-  CoreBootFixAction? get action => tpmError?.actions.first;
-
-  bool get isFixed => _disallowedTarget == null;
   GuidedStorageTargetReformat? _disallowedTarget;
 
   Future<bool> init() async {

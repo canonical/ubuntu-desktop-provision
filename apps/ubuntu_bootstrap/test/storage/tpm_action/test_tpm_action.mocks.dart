@@ -52,12 +52,6 @@ class MockTpmActionModel extends _i1.Mock implements _i2.TpmActionModel {
       ) as bool);
 
   @override
-  bool get isFixed => (super.noSuchMethod(
-        Invocation.getter(#isFixed),
-        returnValue: false,
-      ) as bool);
-
-  @override
   set confirmed(bool? confirmed) => super.noSuchMethod(
         Invocation.setter(
           #confirmed,

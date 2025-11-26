@@ -93,10 +93,9 @@ void main() {
     final model = TpmActionModel(storage, subiquity);
     await model.init();
 
-    expect(model.action, equals(CoreBootFixAction.CLEAR_TPM));
     expect(
-      model.tpmError!.kind,
-      equals(CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT),
+      model.tpmDisallowedCapability,
+      equals(defunctTpmTarget.disallowed.first),
     );
   });
 

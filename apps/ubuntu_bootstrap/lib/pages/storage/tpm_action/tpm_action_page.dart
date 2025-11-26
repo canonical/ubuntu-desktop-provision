@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_x.dart';
@@ -77,4 +78,13 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
       children: model.isFixed ? [Text('No errors')] : children,
     );
   }
+}
+
+extension on TpmActionModel {
+  CoreBootEncryptionSupportError? get tpmError =>
+      tpmDisallowedCapability?.errors?.first;
+
+  CoreBootFixAction? get action => tpmError?.actions.first;
+
+  bool get isFixed => tpmDisallowedCapability == null;
 }
