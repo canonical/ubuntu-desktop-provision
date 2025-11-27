@@ -361,5 +361,91 @@
     "pauseSlideshowSemanticLabel": "სლაიდშოუს პაუზა",
     "@pauseSlideshowSemanticLabel": {},
     "installationTypeTPM": "აპარატურით მხარდაჭერილი დაშიფვრის გამოყენება",
-    "@installationTypeTPM": {}
+    "@installationTypeTPM": {},
+    "autoinstallDirectErrorInvalidContentTitle": "არასწორი ავტოდაყენების ფაილი",
+    "@autoinstallDirectErrorInvalidContentTitle": {},
+    "autoinstallLandscapeOption": "ავტომატიზებულია Landscape-ისთან ერთად",
+    "@autoinstallLandscapeOption": {},
+    "landscapeDomainTextField": "Landscape-ის დომენი (FQDN)",
+    "@landscapeDomainTextField": {},
+    "rstDisableBios": "BIOS-ის პარამეტრები",
+    "@rstDisableBios": {},
+    "confirmTableMounted": "გამოიყენება {mountpoint}-ისთვის",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "დაფორმატებულია, როგორც {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeDomainHintText": "Laandscape-ის დომენი (FQDN)",
+    "@landscapeDomainHintText": {},
+    "landscapeErrorPageCode": "შეცდომის კოდი: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeySaveToFileLabel": "შენახვა ფაილში",
+    "@recoveryKeySaveToFileLabel": {},
+    "recoveryKeyShowQrCodeLabel": "QR კოდის ჩვენება",
+    "@recoveryKeyShowQrCodeLabel": {},
+    "recoveryKeyClipboardNotifiaction": "დაკოპირდა ბუფერში",
+    "@recoveryKeyClipboardNotifiaction": {},
+    "passphraseTypePassphraseTileTitle": "საკვანძო ფრაზის მოთხოვნა",
+    "@passphraseTypePassphraseTileTitle": {},
+    "passphraseTypePinTileTitle": "PIN-კოდის მოთხოვნა",
+    "@passphraseTypePinTileTitle": {},
+    "passphraseTypeNoneTileTitle": "დისკის ავტომატური განბლოკვა",
+    "@passphraseTypeNoneTileTitle": {},
+    "recoveryKeyFilePickerTitle": "აღდგენის გასაღების ფაილის შენახვა",
+    "@recoveryKeyFilePickerTitle": {},
+    "recoveryKeyExceptionFileSystemTitle": "აღდგენის გასაღების ფაილი შენახული არაა",
+    "@recoveryKeyExceptionFileSystemTitle": {},
+    "recoveryKeyExceptionDisallowedPathTitle": "აღდგენის გასაღების ფაილს დროებით ადგილას ვერ შეინახავთ",
+    "@recoveryKeyExceptionDisallowedPathTitle": {},
+    "recoveryKeyExceptionDisallowedPathBody": "სცადეთ სხვა მდებარეობა. მაგალითად: მოხსნადი დისკი, ან გამოიყენეთ სხვა მეთოდი.",
+    "@recoveryKeyExceptionDisallowedPathBody": {},
+    "recoveryKeyExceptionFileSystemBody": "თქვენ არ გაქვთ იმ საქაღალდეში ჩაწერის უფლება. სცადეთ სხვა მდებარეობა, ან გამოიყენეთ სხვა მეთოდი.",
+    "@recoveryKeyExceptionFileSystemBody": {},
+    "toggleLogsSemanticLabel": "დაყენების ჟურნალის გადართვა",
+    "@toggleLogsSemanticLabel": {},
+    "installationTypeLVMEncryptionSelected": "არჩეულია LVM და დაშიფვრა",
+    "@installationTypeLVMEncryptionSelected": {},
+    "installationTypeZFSEncryptionSelected": "არჩეულია ZFS და დაშიფვრა",
+    "@installationTypeZFSEncryptionSelected": {},
+    "partitionLocationBeginning": "ამ სივრცის დასაწყისში",
+    "@partitionLocationBeginning": {},
+    "partitionLocationEnd": "ამ ადგილის ბოლოში",
+    "@partitionLocationEnd": {},
+    "installationSlidesProductivityTitle": "გააძლიერეთ თქვენი პროდუქტიულობა",
+    "@installationSlidesProductivityTitle": {},
+    "passphrasePagePinEntropyOptimal": "PIN-კოდი საკმარისად გრძელია",
+    "@passphrasePagePinEntropyOptimal": {},
+    "installationTypeErase": "დისკის წაშლა და {DISTRO}-ის დაყენება",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "დისკის წაშლა და {DISTRO}-ის დაყენება",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    }
 }
