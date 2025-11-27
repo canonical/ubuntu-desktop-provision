@@ -583,5 +583,66 @@
     "passphrasePagePassphraseEntropyOptimal": "Frase segreta complessa",
     "@passphrasePagePassphraseEntropyOptimal": {},
     "passphrasePagePinEntropyBelowMin": "PIN poco sicuro, rendilo più lungo o meno prevedibile",
-    "@passphrasePagePinEntropyBelowMin": {}
+    "@passphrasePagePinEntropyBelowMin": {},
+    "passphrasePagePinEntropyBelowOptimal": "PIN sufficiente, rendilo più lungo o meno prevedibile per una maggiore sicurezza",
+    "@passphrasePagePinEntropyBelowOptimal": {},
+    "passphrasePagePinEntropyOptimal": "Il PIN è abbastanza lungo",
+    "@passphrasePagePinEntropyOptimal": {},
+    "installationTypeLVMEncryptionInfo": "Ogni volta che accendi il computer, dovrai inserire una frase segreta. Questa è necessarioa per la crittografia LUKS con LVM.",
+    "@installationTypeLVMEncryptionInfo": {},
+    "allocateDiskSpaceInvalidMountPointSlash": "I punti di mount devono iniziare con \"/\"",
+    "@allocateDiskSpaceInvalidMountPointSlash": {},
+    "allocateDiskSpaceInvalidMountPointSpace": "I punti di mount non possono contenere spazi",
+    "@allocateDiskSpaceInvalidMountPointSpace": {},
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} non è un file system supportato per {mountpoint}",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "newPartitionTableConfirmationMessage": "La creazione di una nuova tabella delle partizioni su un intero dispositivo rimuoverà tutte le partizioni correnti. Questa operazione può essere annullata se necessario.",
+    "@newPartitionTableConfirmationMessage": {},
+    "tooManyPrimaryPartitions": "Sono presenti troppe partizioni primarie",
+    "@tooManyPrimaryPartitions": {},
+    "partitionLocationLabel": "Posizione per la nuova partizione:",
+    "@partitionLocationLabel": {},
+    "partitionMountPointLabel": "Punto di mount:",
+    "@partitionMountPointLabel": {},
+    "rebootToConfigure": "**{system}** è stato copiato sul disco",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "Riavvia in {system}",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Riavvia per completare l'installazione o continua il test.\nLe modifiche apportate non verranno salvate.",
+    "@restartWarningBody": {},
+    "rebootToConfigureWarning": "Per continuare il processo di installazione è necessario riavviare il computer.",
+    "@rebootToConfigureWarning": {},
+    "shutdown": "Spegni",
+    "@shutdown": {},
+    "restartNow": "Riavvia adesso",
+    "@restartNow": {},
+    "continueTesting": "Continua il test",
+    "@continueTesting": {},
+    "bitlockerInfoTitle": "Rilevato BitLocker",
+    "@bitlockerInfoTitle": {},
+    "bitlockerInfoDescription": "Una o più partizioni sono crittografate con BitLocker.",
+    "@bitlockerInfoDescription": {},
+    "bitlockerInfoDisable": "Per installare insieme a Windows, disabilitare BitLocker in Windows.",
+    "@bitlockerInfoDisable": {}
 }
