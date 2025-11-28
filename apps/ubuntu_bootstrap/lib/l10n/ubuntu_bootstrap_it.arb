@@ -644,5 +644,59 @@
     "bitlockerInfoDescription": "Una o più partizioni sono crittografate con BitLocker.",
     "@bitlockerInfoDescription": {},
     "bitlockerInfoDisable": "Per installare insieme a Windows, disabilitare BitLocker in Windows.",
-    "@bitlockerInfoDisable": {}
+    "@bitlockerInfoDisable": {},
+    "confirmPartitionTables": "Le tabelle delle partizioni dei seguenti dispositivi sono state modificate:",
+    "@confirmPartitionTables": {},
+    "confirmProprietarySoftwareCodecs": "Codec",
+    "@confirmProprietarySoftwareCodecs": {},
+    "confirmProprietarySoftwareCodecsDrivers": "Codec e driver",
+    "@confirmProprietarySoftwareCodecsDrivers": {},
+    "confirmTableCreatedFormattedMounted": "Creato e formattato come {format} utilizzato per {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "Formattato come {format} utilizzato per {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "Utilizzato per {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "Formattato come {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Installazione completata",
+    "@installationCompleteTitle": {},
+    "readyToUse": "{system} è installato e pronto per l'uso",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    }
 }
