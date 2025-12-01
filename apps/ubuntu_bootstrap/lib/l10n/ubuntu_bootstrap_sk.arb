@@ -706,7 +706,7 @@
     "@recoveryKeyQrDialogBody": {},
     "recoveryKeyTitleBadgeLabel": "Dôležité",
     "@recoveryKeyTitleBadgeLabel": {},
-    "recoveryKeyExceptionDisallowedPathTitle": "Súbor s obnovovacím kľúčom sa nedá uložiť na dočasné miesto",
+    "recoveryKeyExceptionDisallowedPathTitle": "Súbor s obnovovacím kľúčom sa nedá uložiť do dočasného priečinka",
     "@recoveryKeyExceptionDisallowedPathTitle": {},
     "recoveryKeyExceptionUnknownTitle": "Neznáma chyba",
     "@recoveryKeyExceptionUnknownTitle": {},
