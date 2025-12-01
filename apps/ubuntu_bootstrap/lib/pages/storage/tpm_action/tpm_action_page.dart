@@ -28,7 +28,7 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
         YaruCheckButton(
           value: model.confirmed,
           onChanged: (value) => model.confirmed = value!,
-          title: Text('confirm'),
+          title: Text(lang.tpmActionConfirmLabel),
         ),
       if (model.action != null)
         OutlinedButton(
@@ -75,6 +75,8 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
         leading: const BackWizardButton(),
         trailing: [if (model.isFixed) NextWizardButton()],
       ),
+      // TODO: Discuss possibility of 'no errors' state. If every every
+      // sequence ends with a reboot, this should not be reachable.
       children: model.isFixed ? [Text('No errors')] : children,
     );
   }

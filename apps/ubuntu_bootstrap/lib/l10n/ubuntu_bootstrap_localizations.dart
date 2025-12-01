@@ -2446,6 +2446,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Technical details'**
   String get tpmActionDetailsLabel;
 
+  /// No description provided for @tpmActionConfirmLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get tpmActionConfirmLabel;
+
   /// No description provided for @tpmActionErrorKindInternal.
   ///
   /// In en, this message translates to:
@@ -2605,7 +2611,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindTpmStartupLocalityNotProtected.
   ///
   /// In en, this message translates to:
-  /// **'Tpm Startup Locality Not Protected'**
+  /// **'TPM Startup Locality Not Protected'**
   String get tpmActionErrorKindTpmStartupLocalityNotProtected;
 
   /// No description provided for @tpmActionErrorKindHostSecurity.

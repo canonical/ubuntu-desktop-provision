@@ -1366,6 +1366,9 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get tpmActionDetailsLabel => 'Technical details';
 
   @override
+  String get tpmActionConfirmLabel => 'Confirm';
+
+  @override
   String get tpmActionErrorKindInternal => 'Internal';
 
   @override
@@ -1449,7 +1452,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindTpmStartupLocalityNotProtected =>
-      'Tpm Startup Locality Not Protected';
+      'TPM Startup Locality Not Protected';
 
   @override
   String get tpmActionErrorKindHostSecurity => 'Host Security';
