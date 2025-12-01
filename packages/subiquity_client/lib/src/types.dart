@@ -867,6 +867,58 @@ abstract class Disk with _$Disk {
   factory Disk.fromJson(Map<String, dynamic> json) => _$DiskFromJson(json);
 }
 
+enum CoreBootAvailabilityErrorKind {
+  INTERNAL,
+  SHUTDOWN_REQUIRED,
+  REBOOT_REQUIRED,
+  UNEXPECTED_ACTION,
+  MISSING_ARGUMENT,
+  INVALID_ARGUMENT,
+  ACTION_FAILED,
+  RUNNING_IN_VM,
+  SYSTEM_NOT_EFI,
+  EFI_VARIABLE_ACCESS,
+  NO_SUITABLE_TPM2_DEVICE,
+  TPM_DEVICE_FAILURE,
+  TPM_DEVICE_DISABLED,
+  TPM_HIERARCHIES_OWNED,
+  TPM_DEVICE_LOCKOUT_LOCKED_OUT,
+  INSUFFICIENT_TPM_STORAGE,
+  NO_SUITABLE_PCR_BANK,
+  MEASURED_BOOT,
+  EMPTY_PCR_BANKS,
+  TPM_COMMAND_FAILED,
+  INVALID_TPM_RESPONSE,
+  TPM_COMMUNICATION,
+  UNSUPPORTED_PLATFORM,
+  UEFI_DEBUGGING_ENABLED,
+  INSUFFICIENT_DMA_PROTECTION,
+  NO_KERNEL_IOMMU,
+  TPM_STARTUP_LOCALITY_NOT_PROTECTED,
+  HOST_SECURITY,
+  PCR_UNUSABLE,
+  PCR_UNSUPPORTED,
+  VAR_SUPPLIED_DRIVERS_PRESENT,
+  SYS_PREP_APPLICATIONS_PRESENT,
+  ABSOLUTE_PRESENT,
+  INVALID_SECURE_BOOT_MODE,
+  WEAK_SECURE_BOOT_ALGORITHM_DETECTED,
+  PRE_OS_DIGEST_VERIFICATION_DETECTED,
+}
+
+enum CoreBootFixAction {
+  REBOOT,
+  SHUTDOWN,
+  REBOOT_TO_FW_SETTINGS,
+  CONTACT_OEM,
+  CONTACT_OS_VENDOR,
+  ENABLE_TPM_VIA_FIRMWARE,
+  ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE,
+  CLEAR_TPM_VIA_FIRMWARE,
+  CLEAR_TPM,
+  PROCEED,
+}
+
 enum GuidedCapability {
   MANUAL,
   DIRECT,
@@ -889,11 +941,25 @@ enum GuidedDisallowedCapabilityReason {
 }
 
 @freezed
+abstract class CoreBootEncryptionSupportError
+    with _$CoreBootEncryptionSupportError {
+  const factory CoreBootEncryptionSupportError({
+    required CoreBootAvailabilityErrorKind kind,
+    required String message,
+    required List<CoreBootFixAction> actions,
+  }) = _CoreBootEncryptionSupportError;
+
+  factory CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootEncryptionSupportErrorFromJson(json);
+}
+
+@freezed
 abstract class GuidedDisallowedCapability with _$GuidedDisallowedCapability {
   const factory GuidedDisallowedCapability({
     required GuidedCapability capability,
     required GuidedDisallowedCapabilityReason reason,
     String? message,
+    List<CoreBootEncryptionSupportError>? errors,
   }) = _GuidedDisallowedCapability;
 
   factory GuidedDisallowedCapability.fromJson(Map<String, dynamic> json) =>
@@ -1100,6 +1166,18 @@ abstract class EntropyResponse with _$EntropyResponse {
 enum CoreBootEncryptionFeatures {
   PASSPHRASE_AUTH,
   PIN_AUTH,
+}
+
+@freezed
+abstract class CoreBootFixEncryptionSupport
+    with _$CoreBootFixEncryptionSupport {
+  const factory CoreBootFixEncryptionSupport({
+    required CoreBootFixAction action,
+    String? systemLabel,
+  }) = _CoreBootFixEncryptionSupport;
+
+  factory CoreBootFixEncryptionSupport.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixEncryptionSupportFromJson(json);
 }
 
 // END GENERATED CODE

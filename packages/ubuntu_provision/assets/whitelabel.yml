@@ -36,6 +36,8 @@ pages:
     image: "assets/images/disk.svg"
   guided-capabilities:
     image: "assets/images/encryption.svg"
+  tpm-action:
+    image: "assets/images/encryption.svg"
   eula:
   guided-resize:
     image: "assets/images/disk.svg"

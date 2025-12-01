@@ -248,6 +248,26 @@ void main() {
     expect(model.canEraseAndInstall, isFalse);
     expect(model.canManualPartition, isFalse);
 
+    // disallowed TPM/FDE
+    const disallowedTpmFde = GuidedStorageTargetReformat(
+      diskId: '',
+      disallowed: [
+        GuidedDisallowedCapability(
+          capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+          reason:
+              GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
+        ),
+      ],
+    );
+    when(service.getGuidedStorage()).thenAnswer(
+      (_) async => fakeGuidedStorageResponse(targets: [disallowedTpmFde]),
+    );
+    await model.init();
+    expect(model.canInstallAlongside, isFalse);
+    expect(model.canEraseDisk, isTrue);
+    expect(model.canEraseAndInstall, isFalse);
+    expect(model.canManualPartition, isFalse);
+
     // resize
     const resize = GuidedStorageTargetResize(
       diskId: '',

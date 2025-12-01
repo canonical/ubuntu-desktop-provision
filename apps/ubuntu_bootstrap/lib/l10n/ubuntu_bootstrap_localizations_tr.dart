@@ -1365,4 +1365,166 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
 
   @override
   String get minimizeIconSemanticLabel => 'Minimize';
+
+  @override
+  String get tpmActionPageTitle => 'Hardware-backed encryption';
+
+  @override
+  String get tpmActionBadgeLabel => 'Action required';
+
+  @override
+  String get tpmActionDetailsLabel => 'Technical details';
+
+  @override
+  String get tpmActionConfirmLabel => 'Confirm';
+
+  @override
+  String get tpmActionErrorKindInternal => 'Internal';
+
+  @override
+  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+
+  @override
+  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+
+  @override
+  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+
+  @override
+  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+
+  @override
+  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+
+  @override
+  String get tpmActionErrorKindActionFailed => 'Action Failed';
+
+  @override
+  String get tpmActionErrorKindRunningInVm => 'Running In VM';
+
+  @override
+  String get tpmActionErrorKindSystemNotEfi => 'System Not EFI';
+
+  @override
+  String get tpmActionErrorKindEfiVariableAccess => 'EFI Variable Access';
+
+  @override
+  String get tpmActionErrorKindNoSuitableTpm2Device =>
+      'No Suitable TPM2 Device';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceFailure => 'TPM Device Failure';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM Device Disabled';
+
+  @override
+  String get tpmActionErrorKindTpmHierarchiesOwned => 'TPM Hierarchies Owned';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
+      'TPM Device Lockout Locked Out';
+
+  @override
+  String get tpmActionErrorKindInsufficientTpmStorage =>
+      'Insufficient TPM Storage';
+
+  @override
+  String get tpmActionErrorKindNoSuitablePcrBank => 'NoSuitable PCR Bank';
+
+  @override
+  String get tpmActionErrorKindMeasuredBoot => 'Measured Boot';
+
+  @override
+  String get tpmActionErrorKindEmptyPcrBanks => 'Empty PCR Banks';
+
+  @override
+  String get tpmActionErrorKindTpmCommandFailed => 'TPM Command Failed';
+
+  @override
+  String get tpmActionErrorKindInvalidTpmResponse => 'Invalid TPM Response';
+
+  @override
+  String get tpmActionErrorKindTpmCommunication => 'TPM Communication';
+
+  @override
+  String get tpmActionErrorKindUnsupportedPlatform => 'Unsupported Platform';
+
+  @override
+  String get tpmActionErrorKindUefiDebuggingEnabled => 'UEFI Debugging Enabled';
+
+  @override
+  String get tpmActionErrorKindInsufficientDmaProtection =>
+      'Insufficient DMA Protection';
+
+  @override
+  String get tpmActionErrorKindNoKernelIommu => 'No Kernel IOMMU';
+
+  @override
+  String get tpmActionErrorKindTpmStartupLocalityNotProtected =>
+      'TPM Startup Locality Not Protected';
+
+  @override
+  String get tpmActionErrorKindHostSecurity => 'Host Security';
+
+  @override
+  String get tpmActionErrorKindPcrUnusable => 'PCR Unusable';
+
+  @override
+  String get tpmActionErrorKindPcrUnsupported => 'PCR Unsupported';
+
+  @override
+  String get tpmActionErrorKindVarSuppliedDriversPresent =>
+      'Var Supplied Drivers Present';
+
+  @override
+  String get tpmActionErrorKindSysPrepApplicationsPresent =>
+      'Sys Prep Applications Present';
+
+  @override
+  String get tpmActionErrorKindAbsolutePresent => 'Absolute Present';
+
+  @override
+  String get tpmActionErrorKindInvalidSecureBootMode =>
+      'Invalid SecureBoot Mode';
+
+  @override
+  String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
+      'Weak SecureBoot Algorithm Detected';
+
+  @override
+  String get tpmActionErrorKindPreOsDigestVerificationDetected =>
+      'Pre Os Digest Verification Detected';
+
+  @override
+  String get tpmActionFixActionReboot => 'Reboot';
+
+  @override
+  String get tpmActionFixActionShutdown => 'Shutdown';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettings => 'Reboot To FW Settings';
+
+  @override
+  String get tpmActionFixActionContactOem => 'Contact OEM';
+
+  @override
+  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+
+  @override
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Enable TPM Via Firmware';
+
+  @override
+  String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
+      'Enable And Clear TPM Via Firmware';
+
+  @override
+  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM Via Firmware';
+
+  @override
+  String get tpmActionFixActionClearTpm => 'Clear TPM';
+
+  @override
+  String get tpmActionFixActionProceed => 'Proceed';
 }

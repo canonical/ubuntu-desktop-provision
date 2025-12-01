@@ -9,6 +9,7 @@ import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_routes.dart';
+import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_page.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 
@@ -57,6 +58,11 @@ class StorageWizard extends ConsumerWidget with ProvisioningPage {
         builder: (_) => GuidedCapabilitiesPage(),
         userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
         onLoad: (_) => const GuidedCapabilitiesPage().load(context, ref),
+      ),
+      StorageSteps.tpmAction.route: WizardRoute(
+        builder: (_) => TpmActionPage(),
+        userData: WizardRouteData(step: InstallationStep.storage.pageIndex),
+        onLoad: (_) => const TpmActionPage().load(context, ref),
       ),
       StorageSteps.passphraseType.route: WizardRoute(
         builder: (_) => const PassphraseTypePage(),

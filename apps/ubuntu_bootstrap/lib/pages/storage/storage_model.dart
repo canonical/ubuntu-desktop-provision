@@ -86,8 +86,14 @@ class StorageModel extends SafeChangeNotifier {
 
   List<GuidedStorageTarget> getAllTargets() => _targets ?? [];
 
+  // This explicitly includes targets where the TPM capability is disallowed,
+  // so users can select them and proceed. Errors and potential actions will be
+  // displayed in the GuidedCapabilitiesPage and TpmActionPage.
   Iterable<T> _getTargets<T extends GuidedStorageTarget>() =>
-      _targets?.whereType<T>().where((t) => t.allowed.isNotEmpty) ?? [];
+      _targets
+          ?.whereType<T>()
+          .where((t) => t.allowed.isNotEmpty || t.hasDisallowedTpmCapability) ??
+      [];
 
   Iterable<GuidedStorageTargetEraseInstall> getEraseInstallTargets() =>
       _getTargets<GuidedStorageTargetEraseInstall>();
@@ -171,6 +177,10 @@ class StorageModel extends SafeChangeNotifier {
       ) ??
       false;
 
+  /// Whether or not the current guided storage target disallows TPM guided capabilities.
+  bool get currentTargetDisallowsTpm =>
+      guidedTarget?.hasDisallowedTpmCapability ?? false;
+
   /// Whether DD guided capabilities are present in any guided storage target.
   bool get hasDd => _getTargets<GuidedStorageTargetReformat>()
       .any((t) => t.allowed.contains(GuidedCapability.DD));
@@ -205,7 +215,8 @@ class StorageModel extends SafeChangeNotifier {
   bool get hasAdvancedFeatures =>
       (currentTargetSupportsLvm ||
           currentTargetSupportsZfs ||
-          currentTargetSupportsTpm) &&
+          currentTargetSupportsTpm ||
+          currentTargetDisallowsTpm) &&
       !hasDd;
 
   /// Initializes the model.
@@ -220,9 +231,19 @@ class StorageModel extends SafeChangeNotifier {
                 ? StorageType.manual
                 : null;
     _storage.guidedCapability ??= _targets
-        ?.whereType<GuidedStorageTargetReformat>()
-        .expand((t) => t.allowed)
-        .firstOrNull;
+            ?.whereType<GuidedStorageTargetReformat>()
+            .expand((t) => t.allowed)
+            .firstOrNull ??
+        _targets
+            ?.whereType<GuidedStorageTargetReformat>()
+            .expand((t) => t.disallowed)
+            .where(
+              (t) =>
+                  t.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+                  t.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+            )
+            .firstOrNull
+            ?.capability;
     _hasBitLocker = await _storage.hasBitLocker();
     _disks = await _storage.getStorage();
 

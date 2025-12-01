@@ -378,6 +378,45 @@ Future<void> main() async {
   );
 
   testWidgets(
+    'tpm action',
+    (tester) async {
+      await tester.runApp(
+        () => runInstallerApp(
+          [
+            '--source-catalog=examples/sources/tpm.yaml',
+            '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+            '--',
+            '--bootloader=uefi',
+          ],
+          theme: currentTheme,
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.jumpToPage(InstallationStep.sourceSelection.route);
+      await tester.testSourceSelectionPage(
+        sourceId: 'src-defective',
+      );
+      await tester.pumpAndSettle();
+      await tester.jumpToPage(InstallationStep.storage.route);
+      await tester.pumpAndSettle();
+
+      await tester.testStoragePage(
+        type: StorageType.erase,
+      );
+
+      await tester.testGuidedCapabilityPage(
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      );
+
+      await tester.testTpmActionPage(
+        screenshot: '$currentThemeName/tpm-action',
+      );
+    },
+    variant: themeVariant,
+  );
+
+  testWidgets(
     'passphrase type',
     (tester) async {
       await tester.runApp(

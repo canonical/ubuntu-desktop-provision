@@ -215,3 +215,11 @@ class StorageService {
     return _client.getCoreBootEncryptionFeaturesV2();
   }
 }
+
+extension GuidedStorageTargetTpmX on GuidedStorageTarget {
+  bool get hasDisallowedTpmCapability => disallowed.any(
+        (t) =>
+            t.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+            t.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+      );
+}

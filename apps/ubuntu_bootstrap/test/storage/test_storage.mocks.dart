@@ -94,6 +94,12 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as bool);
 
   @override
+  bool get currentTargetDisallowsTpm => (super.noSuchMethod(
+        Invocation.getter(#currentTargetDisallowsTpm),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get hasDd => (super.noSuchMethod(
         Invocation.getter(#hasDd),
         returnValue: false,

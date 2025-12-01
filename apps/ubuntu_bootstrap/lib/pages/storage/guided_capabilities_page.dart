@@ -181,11 +181,8 @@ class TpmOption extends ConsumerWidget {
                 flex: 100,
                 child: Text(lang.installationTypeTPM),
               ),
-              Opacity(
-                opacity: model.currentTargetSupportsTpm ? 1.0 : 0.5,
-                child: InfoBadge(
-                  title: experimentalBadgeText,
-                ),
+              InfoBadge(
+                title: experimentalBadgeText,
               ),
             ].withSpacing(kWizardSpacing / 2),
           ),
@@ -198,10 +195,8 @@ class TpmOption extends ConsumerWidget {
             onLinkTap: (url, _, __) => launchUrl(url!),
           ),
           value: GuidedCapability.CORE_BOOT_ENCRYPTED,
-          groupValue: model.guidedCapability,
-          onChanged: model.currentTargetSupportsTpm
-              ? (v) => model.guidedCapability = v
-              : null,
+          groupValue: model.guidedCapability?.clean(),
+          onChanged: (v) => model.guidedCapability = v,
         ),
       ],
     );

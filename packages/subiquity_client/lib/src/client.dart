@@ -435,6 +435,16 @@ class SubiquityClient {
     return _receive('getCoreBootRecoveryKeyV2()', request);
   }
 
+  Future<void> coreBootFixEncryptionSupportV2(
+    CoreBootFixAction action,
+  ) async {
+    final request =
+        await _openUrl('POST', 'storage/v2/core_boot_fix_encryption_support');
+    final payload = CoreBootFixEncryptionSupport(action: action);
+    request.write(jsonEncode(payload.toJson()));
+    return _receive('coreBootFixEncryptionSupportV2($action)', request);
+  }
+
   Future<EntropyResponse?> calculateEntropyV2({
     String? passphrase,
     String? pin,
