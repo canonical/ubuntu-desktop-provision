@@ -859,5 +859,19 @@
     "tpmActionFixActionClearTpm": "פינוי TPM",
     "@tpmActionFixActionClearTpm": {},
     "tpmActionFixActionProceed": "המשך",
-    "@tpmActionFixActionProceed": {}
+    "@tpmActionFixActionProceed": {},
+    "tpmActionErrorKindEfiVariableAccess": "גישה למשתנה EFI",
+    "@tpmActionErrorKindEfiVariableAccess": {},
+    "tpmActionErrorKindMeasuredBoot": "עלייה מדודה",
+    "@tpmActionErrorKindMeasuredBoot": {},
+    "tpmActionErrorKindEmptyPcrBanks": "מאגרי PCR ריקים",
+    "@tpmActionErrorKindEmptyPcrBanks": {},
+    "tpmActionErrorKindUefiDebuggingEnabled": "ניפוי שגיאות ב־UEFI פעיל",
+    "@tpmActionErrorKindUefiDebuggingEnabled": {},
+    "tpmActionErrorKindNoKernelIommu": "אין IOMMU של ליבה",
+    "@tpmActionErrorKindNoKernelIommu": {},
+    "tpmActionErrorKindPcrUnusable": "PCR אינו שמיש",
+    "@tpmActionErrorKindPcrUnusable": {},
+    "tpmActionErrorKindPcrUnsupported": "אין תמיכה ב־PCR",
+    "@tpmActionErrorKindPcrUnsupported": {}
 }
