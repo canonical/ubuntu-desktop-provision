@@ -95,6 +95,7 @@ theme:
 pages:
   <page-name>:
     image: <image-name>
+    image-dark: <dark-image-name>
     visible: <bool>
 ```
 
@@ -102,7 +103,7 @@ pages:
 
 To customize the slides that are shown while the installation is underway you just need to add a slides directory in
 `/usr/share/desktop-provision/slides` and add numbered subdirectories with localized html-files and image files in
-there. The numbers determine in which order the slides should be. 
+there. The numbers determine in which order the slides should be.
 
 An example structure could look like this:
 

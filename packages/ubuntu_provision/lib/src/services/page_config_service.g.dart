@@ -9,12 +9,14 @@ part of 'page_config_service.dart';
 _PageConfigEntry _$PageConfigEntryFromJson(Map<String, dynamic> json) =>
     _PageConfigEntry(
       image: json['image'] as String?,
+      imageDark: json['image-dark'] as String?,
       visible: json['visible'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$PageConfigEntryToJson(_PageConfigEntry instance) =>
     <String, dynamic>{
       'image': instance.image,
+      'image-dark': instance.imageDark,
       'visible': instance.visible,
     };
 

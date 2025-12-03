@@ -36,9 +36,18 @@ class _InitWizardState extends ConsumerState<InitWizard>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
+  }
+
+  @override
   void didChangePlatformBrightness() {
-    final brightness = MediaQuery.platformBrightnessOf(context);
-    ref.read(brightnessProvider.notifier).state = brightness;
+    super.didChangePlatformBrightness();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final brightness = MediaQuery.platformBrightnessOf(context);
+      ref.read(brightnessProvider.notifier).state = brightness;
+    });
   }
 
   @override
@@ -126,9 +135,18 @@ class _WelcomeWizardState extends ConsumerState<WelcomeWizard>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
+  }
+
+  @override
   void didChangePlatformBrightness() {
-    final brightness = MediaQuery.platformBrightnessOf(context);
-    ref.read(brightnessProvider.notifier).state = brightness;
+    super.didChangePlatformBrightness();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final brightness = MediaQuery.platformBrightnessOf(context);
+      ref.read(brightnessProvider.notifier).state = brightness;
+    });
   }
 
   @override
