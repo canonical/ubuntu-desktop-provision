@@ -447,5 +447,174 @@
                 "type": "String"
             }
         }
-    }
+    },
+    "tpmActionConfirmLabel": "დადასტურება",
+    "@tpmActionConfirmLabel": {},
+    "tpmActionErrorKindInternal": "შიდა",
+    "@tpmActionErrorKindInternal": {},
+    "tpmActionFixActionReboot": "გადატვირთვა",
+    "@tpmActionFixActionReboot": {},
+    "tpmActionFixActionShutdown": "გამორთვა",
+    "@tpmActionFixActionShutdown": {},
+    "tpmActionFixActionProceed": "გაგრძელება",
+    "@tpmActionFixActionProceed": {},
+    "tpmActionPageTitle": "აპარატურით მხარდაჭერილი დაშიფვრა",
+    "@tpmActionPageTitle": {},
+    "tpmActionBadgeLabel": "საჭიროა ქმედება",
+    "@tpmActionBadgeLabel": {},
+    "tpmActionDetailsLabel": "ტექნიკური დეტალები",
+    "@tpmActionDetailsLabel": {},
+    "tpmActionErrorKindShutdownRequired": "საჭიროა გამორთვა",
+    "@tpmActionErrorKindShutdownRequired": {},
+    "tpmActionErrorKindRebootRequired": "საჭიროა გადატვირთვა",
+    "@tpmActionErrorKindRebootRequired": {},
+    "tpmActionErrorKindUnexpectedAction": "მოულოდნელი ქმედება",
+    "@tpmActionErrorKindUnexpectedAction": {},
+    "tpmActionErrorKindMissingArgument": "ნაკლული არგუმენტი",
+    "@tpmActionErrorKindMissingArgument": {},
+    "tpmActionErrorKindInvalidArgument": "არასწორი არგუმენტი",
+    "@tpmActionErrorKindInvalidArgument": {},
+    "tpmActionErrorKindActionFailed": "ქმედება ჩავარდა",
+    "@tpmActionErrorKindActionFailed": {},
+    "tpmActionErrorKindMeasuredBoot": "გაზომილი ჩატვირთვა",
+    "@tpmActionErrorKindMeasuredBoot": {},
+    "tpmActionErrorKindTpmCommunication": "TPM-თან კომუნიკაცია",
+    "@tpmActionErrorKindTpmCommunication": {},
+    "tpmActionErrorKindUnsupportedPlatform": "მხარდაუჭერელი პლატფორმა",
+    "@tpmActionErrorKindUnsupportedPlatform": {},
+    "tpmActionErrorKindHostSecurity": "ჰოსტის უსაფრთხოება",
+    "@tpmActionErrorKindHostSecurity": {},
+    "tpmActionErrorKindPcrUnusable": "PCR-ის გამოყენება შეუძლებელია",
+    "@tpmActionErrorKindPcrUnusable": {},
+    "tpmActionErrorKindPcrUnsupported": "PCR მხარდაჭერილი არაა",
+    "@tpmActionErrorKindPcrUnsupported": {},
+    "tpmActionErrorKindAbsolutePresent": "აბსოლუტური მნიშვნელობა არსებობს",
+    "@tpmActionErrorKindAbsolutePresent": {},
+    "tpmActionFixActionContactOem": "კავშირი OEM-თან",
+    "@tpmActionFixActionContactOem": {},
+    "tpmActionFixActionClearTpm": "TPM-ის გასუფთავება",
+    "@tpmActionFixActionClearTpm": {},
+    "tpmActionErrorKindRunningInVm": "გაშვებულია ვმ-ში",
+    "@tpmActionErrorKindRunningInVm": {},
+    "tpmActionErrorKindSystemNotEfi": "სისტემაში EFI ჩართული არაა",
+    "@tpmActionErrorKindSystemNotEfi": {},
+    "tpmActionErrorKindEfiVariableAccess": "წვდომა EFI-ის ცვლადებთან",
+    "@tpmActionErrorKindEfiVariableAccess": {},
+    "tpmActionErrorKindTpmDeviceFailure": "TPM-ის მოწყობილობის ჩავარდნა",
+    "@tpmActionErrorKindTpmDeviceFailure": {},
+    "tpmActionErrorKindTpmDeviceDisabled": "TPM-ის მოწყობილობა გამორთულია",
+    "@tpmActionErrorKindTpmDeviceDisabled": {},
+    "tpmActionErrorKindTpmHierarchiesOwned": "TPM-ის საკუთარი იერარქია",
+    "@tpmActionErrorKindTpmHierarchiesOwned": {},
+    "tpmActionErrorKindInsufficientTpmStorage": "არასაკმარისი TPM-ის საცავი",
+    "@tpmActionErrorKindInsufficientTpmStorage": {},
+    "tpmActionErrorKindNoSuitablePcrBank": "შესაბამისი PCR ბანკის გარეშე",
+    "@tpmActionErrorKindNoSuitablePcrBank": {},
+    "tpmActionErrorKindEmptyPcrBanks": "ცარიელი PCR ბანკები",
+    "@tpmActionErrorKindEmptyPcrBanks": {},
+    "tpmActionErrorKindTpmCommandFailed": "TPM-ის ბრძანება ჩავარდა",
+    "@tpmActionErrorKindTpmCommandFailed": {},
+    "tpmActionErrorKindInvalidTpmResponse": "TPM-ის არასწორი პასუხი",
+    "@tpmActionErrorKindInvalidTpmResponse": {},
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI-ის გამართვა ჩართულია",
+    "@tpmActionErrorKindUefiDebuggingEnabled": {},
+    "tpmActionErrorKindInsufficientDmaProtection": "არასაკმარისი DMA-ის დაცვა",
+    "@tpmActionErrorKindInsufficientDmaProtection": {},
+    "tpmActionErrorKindNoKernelIommu": "ბირთვის IOMMU-ის გარეშე",
+    "@tpmActionErrorKindNoKernelIommu": {},
+    "tpmActionErrorKindInvalidSecureBootMode": "არასწორი SecureBoot-ის რეჟიმი",
+    "@tpmActionErrorKindInvalidSecureBootMode": {},
+    "tpmActionFixActionContactOsVendor": "დაკავშირება ოს-ის მომწოდებელთან",
+    "@tpmActionFixActionContactOsVendor": {},
+    "chooseSecurityKey": "უსაფრთხოების გასაღების არჩევა",
+    "@chooseSecurityKey": {},
+    "confirmSecurityKey": "უსაფრთხოების გასაღების დადასტურება",
+    "@confirmSecurityKey": {},
+    "configureSecureBootSecurityKeyRequired": "აუცილებელია უსაფრთხოების გასაღები",
+    "@configureSecureBootSecurityKeyRequired": {},
+    "codecsAndDriversPageDescription": "დავაყენო რეკომენდებული არაუფასო პროგრამები?",
+    "@codecsAndDriversPageDescription": {},
+    "codecsAndDriversNvidiaNote": "აღმოჩენილია NVIDIA-ის გრაფიკული ბარათი",
+    "@codecsAndDriversNvidiaNote": {},
+    "offlineWarning": "ამჟამად ინტერნეტთან მიერთებული არ ბრძანდებით",
+    "@offlineWarning": {},
+    "installationTypeLVMEncryption": "დაშიფვრა საკვანძო ფრაზით",
+    "@installationTypeLVMEncryption": {},
+    "installationTypeZFS": "ZFS-ის გამოყენება დაშიფვრის გარეშე",
+    "@installationTypeZFS": {},
+    "installationTypeReinstall": "{os}-ის წაშლა და თავიდან დაყენება",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "{product}-ის დაყენება {os}-ისთან ერთად",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "tooManyPrimaryPartitions": "მეტისმეტად ბევრი ძირითადი დანაყოფი",
+    "@tooManyPrimaryPartitions": {},
+    "partitionFormatKeep": "{format}-ის ფორმატში დატოვება",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "configuringSystem": "სისტემის მორგება.…",
+    "@configuringSystem": {},
+    "notEnoughDiskSpaceTitle": "დისკზე ადგილი საკმარისი არაა",
+    "@notEnoughDiskSpaceTitle": {},
+    "refreshInstall": "{version} ვერსიამდე აწევა",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "{snap}-ის ავტომატური ფსევდონიმების დაყენება...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap}-ის ფსევდონიმების მორგება...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectOption": "ავტომატიზებული ავტოდაყენების ფაილით",
+    "@autoinstallDirectOption": {},
+    "landscapeHeader": "Landscape-ში შეცვლა",
+    "@landscapeHeader": {},
+    "landscapeDomainHeader": "შეიყვანეთ Landscape-ის დომენი (FQDN)",
+    "@landscapeDomainHeader": {},
+    "recoveryKeyHeader": "თქვენი აღდგენის გასაღების შენახვა",
+    "@recoveryKeyHeader": {},
+    "passphrasePageHeaderPassphrase": "დაშიფვრის საკვანძო ფრაზის მორგება",
+    "@passphrasePageHeaderPassphrase": {},
+    "passphrasePageHeaderPin": "დაშიფვრის PIN-კოდის მორგება",
+    "@passphrasePageHeaderPin": {},
+    "passphrasePageRequiredPassphrase": "საკვანძო ფრაზა აუცილებელია",
+    "@passphrasePageRequiredPassphrase": {},
+    "passphrasePageRequiredPin": "PIN-კოდი აუცილებელია",
+    "@passphrasePageRequiredPin": {},
+    "tpmActionErrorKindNoSuitableTpm2Device": "შესაბამისი TPM2 მოწყობილობის გარეშე",
+    "@tpmActionErrorKindNoSuitableTpm2Device": {}
 }
