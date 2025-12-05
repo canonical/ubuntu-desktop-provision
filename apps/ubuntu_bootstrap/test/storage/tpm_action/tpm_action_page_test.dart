@@ -35,7 +35,12 @@ void main() {
           CoreBootEncryptionSupportError(
             kind: CoreBootAvailabilityErrorKind.INTERNAL,
             message: 'error message',
-            actions: [CoreBootFixAction.REBOOT_TO_FW_SETTINGS],
+            actions: [
+              CoreBootFixActionWithCategory(
+                type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+                forUser: false,
+              ),
+            ],
           ),
         ],
       ),
