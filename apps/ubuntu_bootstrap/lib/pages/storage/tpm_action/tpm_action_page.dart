@@ -30,27 +30,44 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
           onChanged: (value) => model.confirmed = value!,
           title: Text(lang.tpmActionConfirmLabel),
         ),
-      if (model.action != null)
-        OutlinedButton(
-          onPressed:
-              (!model.confirmationNeeded || model.confirmed) && !model.isLoading
-                  ? () => notifier.performAction(model.action!)
-                  : null,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(model.action!.localize(lang)),
-              if (model.isLoading)
-                SizedBox.square(
-                  dimension: IconTheme.of(context).size,
-                  child: const YaruCircularProgressIndicator(
-                    strokeWidth: 3,
-                  ),
-                ),
-            ].withSpacing(kWizardSpacing / 2),
-          ),
+      if (model.actions.isNotEmpty) ...[
+        const SizedBox(height: kWizardSpacing / 2),
+        Text(
+          'Actions',
+          style: Theme.of(context).textTheme.titleMedium,
         ),
-      if (model.tpmError != null)
+        for (final action in model.actions)
+          OutlinedButton(
+            onPressed: (!model.confirmationNeeded || model.confirmed) &&
+                    !model.isLoading
+                ? () => notifier.performAction(action)
+                : null,
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(action.localize(lang)),
+                if (model.isLoading)
+                  SizedBox.square(
+                    dimension: IconTheme.of(context).size,
+                    child: const YaruCircularProgressIndicator(
+                      strokeWidth: 3,
+                    ),
+                  ),
+              ].withSpacing(kWizardSpacing / 2),
+            ),
+          ),
+      ],
+      if (model.userActions.isNotEmpty) ...[
+        const SizedBox(height: kWizardSpacing / 2),
+        Text(
+          'User Actions',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
+        for (final userAction in model.userActions)
+          Text(userAction.localize(lang)),
+      ],
+      if (model.tpmError != null) ...[
+        const SizedBox(height: kWizardSpacing / 2),
         YaruExpandable(
           expandButtonPosition: YaruExpandableButtonPosition.start,
           header: Text(lang.tpmActionDetailsLabel),
@@ -62,6 +79,7 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
             ],
           ),
         ),
+      ],
     ];
 
     return HorizontalPage(
@@ -86,7 +104,12 @@ extension on TpmActionModel {
   CoreBootEncryptionSupportError? get tpmError =>
       tpmDisallowedCapability?.errors?.first;
 
-  CoreBootFixAction? get action => tpmError?.actions.first;
+  List<CoreBootFixAction> get actions =>
+      tpmError?.actions.where((a) => !a.forUser).map((a) => a.type).toList() ??
+      [];
+  List<CoreBootFixAction> get userActions =>
+      tpmError?.actions.where((a) => a.forUser).map((a) => a.type).toList() ??
+      [];
 
   bool get isFixed => tpmDisallowedCapability == null;
 }

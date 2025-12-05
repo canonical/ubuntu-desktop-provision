@@ -941,12 +941,24 @@ enum GuidedDisallowedCapabilityReason {
 }
 
 @freezed
+abstract class CoreBootFixActionWithCategory
+    with _$CoreBootFixActionWithCategory {
+  const factory CoreBootFixActionWithCategory({
+    required CoreBootFixAction type,
+    required bool forUser,
+  }) = _CoreBootFixActionWithCategory;
+
+  factory CoreBootFixActionWithCategory.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixActionWithCategoryFromJson(json);
+}
+
+@freezed
 abstract class CoreBootEncryptionSupportError
     with _$CoreBootEncryptionSupportError {
   const factory CoreBootEncryptionSupportError({
     required CoreBootAvailabilityErrorKind kind,
     required String message,
-    required List<CoreBootFixAction> actions,
+    required List<CoreBootFixActionWithCategory> actions,
   }) = _CoreBootEncryptionSupportError;
 
   factory CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>

@@ -27,14 +27,25 @@ void main() {
             kind: CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT,
             message: 'TPM locked out',
             actions: [
-              CoreBootFixAction.CLEAR_TPM,
-              CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+              CoreBootFixActionWithCategory(
+                type: CoreBootFixAction.CLEAR_TPM,
+                forUser: false,
+              ),
+              CoreBootFixActionWithCategory(
+                type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+                forUser: false,
+              ),
             ],
           ),
           CoreBootEncryptionSupportError(
             kind: CoreBootAvailabilityErrorKind.INTERNAL,
             message: 'internal error',
-            actions: [CoreBootFixAction.REBOOT],
+            actions: [
+              CoreBootFixActionWithCategory(
+                type: CoreBootFixAction.REBOOT,
+                forUser: false,
+              ),
+            ],
           ),
         ],
       ),

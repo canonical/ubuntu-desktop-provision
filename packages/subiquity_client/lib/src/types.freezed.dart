@@ -18679,10 +18679,332 @@ class __$DiskCopyWithImpl<$Res> implements _$DiskCopyWith<$Res> {
 }
 
 /// @nodoc
+mixin _$CoreBootFixActionWithCategory {
+  CoreBootFixAction get type;
+  bool get forUser;
+
+  /// Create a copy of CoreBootFixActionWithCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionWithCategoryCopyWith<CoreBootFixActionWithCategory>
+      get copyWith => _$CoreBootFixActionWithCategoryCopyWithImpl<
+              CoreBootFixActionWithCategory>(
+          this as CoreBootFixActionWithCategory, _$identity);
+
+  /// Serializes this CoreBootFixActionWithCategory to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CoreBootFixActionWithCategory &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.forUser, forUser) || other.forUser == forUser));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, forUser);
+
+  @override
+  String toString() {
+    return 'CoreBootFixActionWithCategory(type: $type, forUser: $forUser)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CoreBootFixActionWithCategoryCopyWith<$Res> {
+  factory $CoreBootFixActionWithCategoryCopyWith(
+          CoreBootFixActionWithCategory value,
+          $Res Function(CoreBootFixActionWithCategory) _then) =
+      _$CoreBootFixActionWithCategoryCopyWithImpl;
+  @useResult
+  $Res call({CoreBootFixAction type, bool forUser});
+}
+
+/// @nodoc
+class _$CoreBootFixActionWithCategoryCopyWithImpl<$Res>
+    implements $CoreBootFixActionWithCategoryCopyWith<$Res> {
+  _$CoreBootFixActionWithCategoryCopyWithImpl(this._self, this._then);
+
+  final CoreBootFixActionWithCategory _self;
+  final $Res Function(CoreBootFixActionWithCategory) _then;
+
+  /// Create a copy of CoreBootFixActionWithCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? forUser = null,
+  }) {
+    return _then(_self.copyWith(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      forUser: null == forUser
+          ? _self.forUser
+          : forUser // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [CoreBootFixActionWithCategory].
+extension CoreBootFixActionWithCategoryPatterns
+    on CoreBootFixActionWithCategory {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_CoreBootFixActionWithCategory value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategory() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_CoreBootFixActionWithCategory value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategory():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_CoreBootFixActionWithCategory value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategory() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(CoreBootFixAction type, bool forUser)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategory() when $default != null:
+        return $default(_that.type, _that.forUser);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(CoreBootFixAction type, bool forUser) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategory():
+        return $default(_that.type, _that.forUser);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(CoreBootFixAction type, bool forUser)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategory() when $default != null:
+        return $default(_that.type, _that.forUser);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _CoreBootFixActionWithCategory implements CoreBootFixActionWithCategory {
+  const _CoreBootFixActionWithCategory(
+      {required this.type, required this.forUser});
+  factory _CoreBootFixActionWithCategory.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixActionWithCategoryFromJson(json);
+
+  @override
+  final CoreBootFixAction type;
+  @override
+  final bool forUser;
+
+  /// Create a copy of CoreBootFixActionWithCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CoreBootFixActionWithCategoryCopyWith<_CoreBootFixActionWithCategory>
+      get copyWith => __$CoreBootFixActionWithCategoryCopyWithImpl<
+          _CoreBootFixActionWithCategory>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CoreBootFixActionWithCategoryToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _CoreBootFixActionWithCategory &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.forUser, forUser) || other.forUser == forUser));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, forUser);
+
+  @override
+  String toString() {
+    return 'CoreBootFixActionWithCategory(type: $type, forUser: $forUser)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$CoreBootFixActionWithCategoryCopyWith<$Res>
+    implements $CoreBootFixActionWithCategoryCopyWith<$Res> {
+  factory _$CoreBootFixActionWithCategoryCopyWith(
+          _CoreBootFixActionWithCategory value,
+          $Res Function(_CoreBootFixActionWithCategory) _then) =
+      __$CoreBootFixActionWithCategoryCopyWithImpl;
+  @override
+  @useResult
+  $Res call({CoreBootFixAction type, bool forUser});
+}
+
+/// @nodoc
+class __$CoreBootFixActionWithCategoryCopyWithImpl<$Res>
+    implements _$CoreBootFixActionWithCategoryCopyWith<$Res> {
+  __$CoreBootFixActionWithCategoryCopyWithImpl(this._self, this._then);
+
+  final _CoreBootFixActionWithCategory _self;
+  final $Res Function(_CoreBootFixActionWithCategory) _then;
+
+  /// Create a copy of CoreBootFixActionWithCategory
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? type = null,
+    Object? forUser = null,
+  }) {
+    return _then(_CoreBootFixActionWithCategory(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      forUser: null == forUser
+          ? _self.forUser
+          : forUser // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
 mixin _$CoreBootEncryptionSupportError {
   CoreBootAvailabilityErrorKind get kind;
   String get message;
-  List<CoreBootFixAction> get actions;
+  List<CoreBootFixActionWithCategory> get actions;
 
   /// Create a copy of CoreBootEncryptionSupportError
   /// with the given fields replaced by the non-null parameter values.
@@ -18727,7 +19049,7 @@ abstract mixin class $CoreBootEncryptionSupportErrorCopyWith<$Res> {
   $Res call(
       {CoreBootAvailabilityErrorKind kind,
       String message,
-      List<CoreBootFixAction> actions});
+      List<CoreBootFixActionWithCategory> actions});
 }
 
 /// @nodoc
@@ -18759,7 +19081,7 @@ class _$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
       actions: null == actions
           ? _self.actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<CoreBootFixAction>,
+              as List<CoreBootFixActionWithCategory>,
     ));
   }
 }
@@ -18859,7 +19181,7 @@ extension CoreBootEncryptionSupportErrorPatterns
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(CoreBootAvailabilityErrorKind kind, String message,
-            List<CoreBootFixAction> actions)?
+            List<CoreBootFixActionWithCategory> actions)?
         $default, {
     required TResult orElse(),
   }) {
@@ -18888,7 +19210,7 @@ extension CoreBootEncryptionSupportErrorPatterns
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(CoreBootAvailabilityErrorKind kind, String message,
-            List<CoreBootFixAction> actions)
+            List<CoreBootFixActionWithCategory> actions)
         $default,
   ) {
     final _that = this;
@@ -18915,7 +19237,7 @@ extension CoreBootEncryptionSupportErrorPatterns
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult? Function(CoreBootAvailabilityErrorKind kind, String message,
-            List<CoreBootFixAction> actions)?
+            List<CoreBootFixActionWithCategory> actions)?
         $default,
   ) {
     final _that = this;
@@ -18935,7 +19257,7 @@ class _CoreBootEncryptionSupportError
   const _CoreBootEncryptionSupportError(
       {required this.kind,
       required this.message,
-      required final List<CoreBootFixAction> actions})
+      required final List<CoreBootFixActionWithCategory> actions})
       : _actions = actions;
   factory _CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>
       _$CoreBootEncryptionSupportErrorFromJson(json);
@@ -18944,9 +19266,9 @@ class _CoreBootEncryptionSupportError
   final CoreBootAvailabilityErrorKind kind;
   @override
   final String message;
-  final List<CoreBootFixAction> _actions;
+  final List<CoreBootFixActionWithCategory> _actions;
   @override
-  List<CoreBootFixAction> get actions {
+  List<CoreBootFixActionWithCategory> get actions {
     if (_actions is EqualUnmodifiableListView) return _actions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_actions);
@@ -19001,7 +19323,7 @@ abstract mixin class _$CoreBootEncryptionSupportErrorCopyWith<$Res>
   $Res call(
       {CoreBootAvailabilityErrorKind kind,
       String message,
-      List<CoreBootFixAction> actions});
+      List<CoreBootFixActionWithCategory> actions});
 }
 
 /// @nodoc
@@ -19033,7 +19355,7 @@ class __$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
       actions: null == actions
           ? _self._actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<CoreBootFixAction>,
+              as List<CoreBootFixActionWithCategory>,
     ));
   }
 }
