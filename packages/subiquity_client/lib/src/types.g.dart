@@ -987,13 +987,42 @@ Map<String, dynamic> _$DiskToJson(_Disk instance) => <String, dynamic>{
       'requires_reformat': instance.requiresReformat,
     };
 
+_CoreBootFixActionWithCategory _$CoreBootFixActionWithCategoryFromJson(
+        Map<String, dynamic> json) =>
+    _CoreBootFixActionWithCategory(
+      type: $enumDecode(_$CoreBootFixActionEnumMap, json['type']),
+      forUser: json['for_user'] as bool,
+    );
+
+Map<String, dynamic> _$CoreBootFixActionWithCategoryToJson(
+        _CoreBootFixActionWithCategory instance) =>
+    <String, dynamic>{
+      'type': _$CoreBootFixActionEnumMap[instance.type]!,
+      'for_user': instance.forUser,
+    };
+
+const _$CoreBootFixActionEnumMap = {
+  CoreBootFixAction.REBOOT: 'REBOOT',
+  CoreBootFixAction.SHUTDOWN: 'SHUTDOWN',
+  CoreBootFixAction.REBOOT_TO_FW_SETTINGS: 'REBOOT_TO_FW_SETTINGS',
+  CoreBootFixAction.CONTACT_OEM: 'CONTACT_OEM',
+  CoreBootFixAction.CONTACT_OS_VENDOR: 'CONTACT_OS_VENDOR',
+  CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE: 'ENABLE_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE:
+      'ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE: 'CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM: 'CLEAR_TPM',
+  CoreBootFixAction.PROCEED: 'PROCEED',
+};
+
 _CoreBootEncryptionSupportError _$CoreBootEncryptionSupportErrorFromJson(
         Map<String, dynamic> json) =>
     _CoreBootEncryptionSupportError(
       kind: $enumDecode(_$CoreBootAvailabilityErrorKindEnumMap, json['kind']),
       message: json['message'] as String,
       actions: (json['actions'] as List<dynamic>)
-          .map((e) => $enumDecode(_$CoreBootFixActionEnumMap, e))
+          .map((e) =>
+              CoreBootFixActionWithCategory.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1002,8 +1031,7 @@ Map<String, dynamic> _$CoreBootEncryptionSupportErrorToJson(
     <String, dynamic>{
       'kind': _$CoreBootAvailabilityErrorKindEnumMap[instance.kind]!,
       'message': instance.message,
-      'actions':
-          instance.actions.map((e) => _$CoreBootFixActionEnumMap[e]!).toList(),
+      'actions': instance.actions.map((e) => e.toJson()).toList(),
     };
 
 const _$CoreBootAvailabilityErrorKindEnumMap = {
@@ -1054,20 +1082,6 @@ const _$CoreBootAvailabilityErrorKindEnumMap = {
       'WEAK_SECURE_BOOT_ALGORITHM_DETECTED',
   CoreBootAvailabilityErrorKind.PRE_OS_DIGEST_VERIFICATION_DETECTED:
       'PRE_OS_DIGEST_VERIFICATION_DETECTED',
-};
-
-const _$CoreBootFixActionEnumMap = {
-  CoreBootFixAction.REBOOT: 'REBOOT',
-  CoreBootFixAction.SHUTDOWN: 'SHUTDOWN',
-  CoreBootFixAction.REBOOT_TO_FW_SETTINGS: 'REBOOT_TO_FW_SETTINGS',
-  CoreBootFixAction.CONTACT_OEM: 'CONTACT_OEM',
-  CoreBootFixAction.CONTACT_OS_VENDOR: 'CONTACT_OS_VENDOR',
-  CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE: 'ENABLE_TPM_VIA_FIRMWARE',
-  CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE:
-      'ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE',
-  CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE: 'CLEAR_TPM_VIA_FIRMWARE',
-  CoreBootFixAction.CLEAR_TPM: 'CLEAR_TPM',
-  CoreBootFixAction.PROCEED: 'PROCEED',
 };
 
 _GuidedDisallowedCapability _$GuidedDisallowedCapabilityFromJson(
