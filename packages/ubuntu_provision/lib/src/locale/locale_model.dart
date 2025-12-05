@@ -1,6 +1,8 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
@@ -38,20 +40,46 @@ class LocaleModel extends SafeChangeNotifier {
   Locale? get selectedLocale =>
       _languageList.elementAtOrNull(selectedIndex)?.locale;
 
-  Future<void> selectLanguage(int index) async {
+  Future<void> selectLanguage(int index, [String? homePath]) async {
     if (_selectedIndex == index) return;
     _selectedIndex = index;
     final locale = _languageList.elementAtOrNull(index)?.locale;
+    final retVal =
+        initDefaultLocale(locale.toString()).then((_) => notifyListeners());
     if (locale != null) {
       _log.info('Selected $locale as UI language');
+      final localeValue = '${locale.languageCode}_${locale.countryCode}.UTF-8';
+      final folder = p.join(
+        homePath ?? (Platform.environment['HOME'] ?? '/home/ubuntu'),
+        '.config/systemd/user/orca.service.d',
+      );
+      await Directory(folder).create(recursive: true);
+      final fullPath = p.join(folder, 'override.conf');
+      final systemdFile = File(fullPath);
+      await systemdFile
+          .writeAsString('[Service]\nEnvironment="LANG=$localeValue"\n');
+      final accessibilityService = tryGetService<AccessibilityService>();
+      if (accessibilityService != null) {
+        final screenReaderEnabled =
+            await accessibilityService.getScreenReader();
+        if (screenReaderEnabled) {
+          await accessibilityService.setScreenReader(false);
+          _log.info('Waiting for screen reader to fully disable');
+          await Future.delayed(const Duration(milliseconds: 100));
+          _log.info('Screen reader disabled');
+          await accessibilityService.setScreenReader(true);
+        }
+      } else {
+        _log.warning('Failed to get the Accessibility service');
+      }
     }
-    return initDefaultLocale(locale.toString()).then((_) => notifyListeners());
+    return retVal;
   }
 
   var _languageList = <LocalizedLanguage>[];
 
   /// Loads available languages.
-  Future<void> init() async {
+  Future<void> init([String? homePath]) async {
     if (_languageList.isNotEmpty) {
       return;
     }
@@ -59,7 +87,7 @@ class LocaleModel extends SafeChangeNotifier {
     _languageList = List.of(languages);
     _log.info('Loaded ${_languageList.length} languages');
     return _locale.getLocale().then((v) {
-      selectLocale(parseLocale(v));
+      selectLocale(parseLocale(v), homePath);
       notifyListeners();
     });
   }
@@ -97,7 +125,7 @@ class LocaleModel extends SafeChangeNotifier {
   ///
   /// See also:
   /// * [LocalizedLanguageMatcher.findBestMatch]
-  Future<void> selectLocale(Locale locale) {
-    return selectLanguage(_languageList.findBestMatch(locale));
+  Future<void> selectLocale(Locale locale, [String? homePath]) {
+    return selectLanguage(_languageList.findBestMatch(locale), homePath);
   }
 }
