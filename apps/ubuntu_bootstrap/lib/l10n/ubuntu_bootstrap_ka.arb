@@ -616,5 +616,311 @@
     "passphrasePageRequiredPin": "PIN-კოდი აუცილებელია",
     "@passphrasePageRequiredPin": {},
     "tpmActionErrorKindNoSuitableTpm2Device": "შესაბამისი TPM2 მოწყობილობის გარეშე",
-    "@tpmActionErrorKindNoSuitableTpm2Device": {}
+    "@tpmActionErrorKindNoSuitableTpm2Device": {},
+    "tpmActionErrorKindVarSuppliedDriversPresent": "აღმოჩენილია ცვლადით მოწოდებული დრაივერები",
+    "@tpmActionErrorKindVarSuppliedDriversPresent": {},
+    "tpmActionErrorKindSysPrepApplicationsPresent": "აღმოჩენილია სისტემის მომზადების აპლიკაციები",
+    "@tpmActionErrorKindSysPrepApplicationsPresent": {},
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "აღმოჩენილია SecureBoot-ის სუსტი ალგორითმი",
+    "@tpmActionErrorKindWeakSecureBootAlgorithmDetected": {},
+    "tpmActionFixActionRebootToFwSettings": "გადატვირთვა მიკროკოდის მორგებაზე",
+    "@tpmActionFixActionRebootToFwSettings": {},
+    "tpmActionFixActionEnableTpmViaFirmware": "TPM-ის ჩართვა მიკროკოდიდან",
+    "@tpmActionFixActionEnableTpmViaFirmware": {},
+    "tpmActionFixActionClearTpmViaFirmware": "TPM-ის გასუფთავება მიკროკოდიდან",
+    "@tpmActionFixActionClearTpmViaFirmware": {},
+    "secureBootSecurityKeysDontMatch": "უსაფრთხოების გასაღებები არ ემთხვევა",
+    "@secureBootSecurityKeysDontMatch": {},
+    "installationTypeAlongsideUnknown": "{product}-ის დაყენება სხვა დანაყოფების გვერდით",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "guidedStoragePageHeader": "აირჩიეთ, სად გნებავთ {DISTRO}-ის დაყენება",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "allocateDiskSpaceInvalidMountPointSpace": "მიმაგრების წერტილები არ შეიძლება, ჰარეებს შეიცავდეს",
+    "@allocateDiskSpaceInvalidMountPointSpace": {},
+    "bootLoaderDevice": "მოწყობილობა ჩამტვირთავის დასაყენებლად",
+    "@bootLoaderDevice": {},
+    "partitionTypeLabel": "ტიპი ახალი დანაყოფისთვის:",
+    "@partitionTypeLabel": {},
+    "partitionLocationLabel": "მდებარეობა ახალი დანაყოფისთვის:",
+    "@partitionLocationLabel": {},
+    "installationSlidesSoftwareTitle": "ყველა აპლიკაცია, რომელიც გჭირდებათ",
+    "@installationSlidesSoftwareTitle": {},
+    "refreshSnapUpdateKernelCommandLine": "{snap}-ის ბირთვის ბრძანების სტრიქონის განახლება...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "{snap}-ის უსაფრთხოების პროფილების მორგება...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "{snap}-ის კაუჭებისა და სლოტების დაკავშირება...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os}-ის წაშლა და {product}-ის დაყენება",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectErrorFileSystemTitle": "ავტოდაყენების ფაილი წაკითხვადი არაა",
+    "@autoinstallDirectErrorFileSystemTitle": {},
+    "landscapeCodeExpiredWarning": "კოდის ვადა ამოიწურა. თავიდან სცადეთ",
+    "@landscapeCodeExpiredWarning": {},
+    "landscapeLoginFailedWarning": "შესვლა ჩავარდა. თავიდან სცადეთ",
+    "@landscapeLoginFailedWarning": {},
+    "installationTypeNoneInfo": "სტანდარტული ფაილური სისტემა დაშიფვრის გარეშე.",
+    "@installationTypeNoneInfo": {},
+    "confirmTableResized": "ზომა შეიცვალა {oldsize}-დან {newsize}-ზე",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - აღდგენის გასაღები",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "passphrasePageMismatchPassphrase": "საკვანძო ფრაზები არ ემთხვევა",
+    "@passphrasePageMismatchPassphrase": {},
+    "passphrasePageMismatchPin": "PIN-კოდები არ ემთხვევა",
+    "@passphrasePageMismatchPin": {},
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM მოწყობილობის დაბლოკვა დაბლოკილია",
+    "@tpmActionErrorKindTpmDeviceLockoutLockedOut": {},
+    "tpmActionErrorKindTpmStartupLocalityNotProtected": "TPM-ის გაშვების ლოკალურობა დაცული არაა",
+    "@tpmActionErrorKindTpmStartupLocalityNotProtected": {},
+    "tpmActionErrorKindPreOsDigestVerificationDetected": "აღმოჩენილია დაიჯესტის გადამოწმება",
+    "@tpmActionErrorKindPreOsDigestVerificationDetected": {},
+    "choosePassphraseInfoHeader": "დარწმუნდით, რომ შეინახეთ თქვენი საკვანძო ფრაზა",
+    "@choosePassphraseInfoHeader": {},
+    "installationTypeZFSEncryption": "დაშიფვრა საკვანძო ფრაზით ZFS-ის გამოყენებით",
+    "@installationTypeZFSEncryption": {},
+    "installationTypeAlongsideDual": "{product}-ის დაყენება {os1}-სა და {os2}-ისთან ერთად",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "{product}-ის დაყენება არსებულ ოპერაციულ სისტემებთან ერთად",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfoLabel": "გამოყენებული იქნება მთელი დისკი:",
+    "@selectGuidedStorageInfoLabel": {},
+    "allocateDiskSpaceInvalidMountPointSlash": "მიმაგრების წერტილები \"/\"-ით უნდა იწყებოდეს",
+    "@allocateDiskSpaceInvalidMountPointSlash": {},
+    "installationSlidesSupportUbuntuPro": "კორპორატიული 24/7 მხარდაჭერა Ubuntu Pro-ისთან ერთად",
+    "@installationSlidesSupportUbuntuPro": {},
+    "refreshCurrent": "{snap}-ის მიმდინარე ვერსიაა {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "მიმდინარე ვერსია {version} უახლესია.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeDomainNoInternetTitleWarning": "გასაგრძელებლად დაუკავშირდით ინტერნეტს",
+    "@landscapeDomainNoInternetTitleWarning": {},
+    "confirmTableFormattedMounted": "დაფორმატებულია, როგორც {format}. მიმაგრებულია საქაღალდეზე {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "TPM-ის ჩართვა და გასუფთავება მიკროკოდიდან",
+    "@tpmActionFixActionEnableAndClearTpmViaFirmware": {},
+    "autoinstallHeader": "როგორ გნებავთ {DISTRO}-ის დაყენება?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "rstHeader": "დაყენების გასაგრძელებლად RST უნდა გამორთოთ",
+    "@rstHeader": {},
+    "dontInstallDriverSoftwareNow": "დრაივერის ჯერ არდაყენება",
+    "@dontInstallDriverSoftwareNow": {},
+    "installationTypeHeader": "როგორ გნებავთ, {DISTRO} დააყენოთ?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManualInfo": "განვითარებული მომხმარებლებისთვის, რომლებსაც დისკის დაყოფის მორგება სურთ.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "დაიწყეთ ნულიდან არჩეულ დისკზე.",
+    "@selectGuidedStorageInfo": {},
+    "readyToUse": "{system} დაყენებულია და მზადაა გამოსაყენებლად",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** დაკოპირდა დისკზე",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeTitle": "სწრაფი, უფასო და სავსე ახალი ფუნქციონალით",
+    "@installationSlidesWelcomeTitle": {},
+    "installationSlidesDevelopmentTitle": "წერეთ პროგრამები ღია კოდის საუკეთესო ნაწილით",
+    "@installationSlidesDevelopmentTitle": {},
+    "notEnoughDiskSpaceUbuntu": "{DISTRO}-ის დასაყენებლად დისკზე ადგილი საკმარისი არაა",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshHeader": "დაყენების პროგრამისთვის ხელმისაწვდომია განახლება",
+    "@refreshHeader": {},
+    "recoveryKeyConfirmation": "მე შევინახე აღდგენის გასაღები უსაფრთხო ადგილას",
+    "@recoveryKeyConfirmation": {},
+    "bitlockerInfoInstructions": "ინსტრუქციებისთვის ეწვიეთ <a href=\"{url}\">BitLocker-ის სახელმძღვანელოს</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "შეიყვანეთ autoinstall.yaml-ის ბმული, ან ლოკალური ფაილის ბილიკი:",
+    "@autoinstallInstructions": {},
+    "tryOrInstallHeader": "რა გნებავთ, უქნათ {DISTRO}-ს?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "minimalInstallationSubtitle": "მხოლოდ ძირითადი პროგრამები და ბრაუზერი.",
+    "@minimalInstallationSubtitle": {},
+    "installDriversTitle": "მესამე პირების მიერ მოწოდებული პროგრამების დაყენება გრაფიკისთვის და Wi-Fi-ის აპარატურისთვის",
+    "@installDriversTitle": {},
+    "installCodecsTitle": "დამატებითი მედიის ფორმატების მხარდაჭერის გადმოწერა და დაყენება",
+    "@installCodecsTitle": {},
+    "installAlongsideSpaceDivider": "გამოჰყავით დისკზე ადგილი ქვემოთ გამყოფის გადათრევით:",
+    "@installAlongsideSpaceDivider": {},
+    "refreshRestart": "გასაგრძელებლად აირჩიეთ დაყენების პროგრამა და გაუშვით ის თავიდან",
+    "@refreshRestart": {},
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} მხარდაჭერილი ფაილური სისტემა არაა მიმაგრების წერტილისთვის {mountpoint}",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectErrorInvalidContentBody": "შეამოწმეთ ფაილი, ან აირჩიეთ სხვა.",
+    "@autoinstallDirectErrorInvalidContentBody": {},
+    "autoinstallDirectErrorFileSystemBody": "შეამოწმეთ წვდომები, ან აირჩიეთ სხვა ფაილი.",
+    "@autoinstallDirectErrorFileSystemBody": {},
+    "chooseOptionalPassphraseInfoHeader": "შეინახეთ თქვენი საკვანძო ფრაზა და აღდგენის გასაღები სადმე უსაფრთხო ადგილას",
+    "@chooseOptionalPassphraseInfoHeader": {},
+    "bitlockerInfoDescription": "ერთი ან მეტი დანაყოფი დაშიფრულია BitLocker-ით.",
+    "@bitlockerInfoDescription": {},
+    "bitlockerInfoDisable": "Windows-თან ერთად დასაყენებლად გამორთეთ BitLocker Windows-ში.",
+    "@bitlockerInfoDisable": {},
+    "confirmTableCreatedFormattedMounted": "შეიქმნა და დაფორმატდა, როგორც {format}. გამოიყენება მიმაგრების წერტილისთვის {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeErrorPageTitle": "თქვენი ანგარიშისთვის ავტომატური დაყენება ხელმისაწვდომი არაა",
+    "@landscapeErrorPageTitle": {},
+    "passphrasePagePassphraseEntropyBelowMin": "საკვანძო ფრაზა სუსტია. გახადეთ ის უფრო გრძელი და რთული",
+    "@passphrasePagePassphraseEntropyBelowMin": {},
+    "passphrasePagePinEntropyBelowMin": "სუსტი PIN-კოდი. გახადეთ ის უფრო გრძელი და რთულად ამოსაცნობი",
+    "@passphrasePagePinEntropyBelowMin": {}
 }
