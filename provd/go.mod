@@ -4,7 +4,7 @@ go 1.24.9
 
 require (
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
-	github.com/linuxdeepin/go-gir v0.0.0-20250812023606-b28aaee32ac9
+	github.com/linuxdeepin/go-gir v0.0.0-20251204113853-1873b5530f50
 	github.com/spf13/cobra v1.10.1
 	github.com/spf13/viper v1.21.0
 	github.com/stretchr/testify v1.11.1
