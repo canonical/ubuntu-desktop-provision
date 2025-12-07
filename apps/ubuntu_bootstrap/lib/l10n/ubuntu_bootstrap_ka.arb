@@ -922,5 +922,67 @@
     "passphrasePagePassphraseEntropyBelowMin": "საკვანძო ფრაზა სუსტია. გახადეთ ის უფრო გრძელი და რთული",
     "@passphrasePagePassphraseEntropyBelowMin": {},
     "passphrasePagePinEntropyBelowMin": "სუსტი PIN-კოდი. გახადეთ ის უფრო გრძელი და რთულად ამოსაცნობი",
-    "@passphrasePagePinEntropyBelowMin": {}
+    "@passphrasePagePinEntropyBelowMin": {},
+    "tryOrInstallReleaseNotesLabel": "შეიძლება, გნებავთ, წაიკითხოთ <a href=\"{url}\">რელიზის შენიშვნები</a>.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "dontInstallDriverSoftwareNowDescription": "შეგიძლიათ მოგვიანებით დააყენოთ პროგრამებისა და განახლებების ცენტრიდან.",
+    "@dontInstallDriverSoftwareNowDescription": {},
+    "installDriversSubtitle": "NVIDIA-ის დრაივერები და მსგავსი პროგრამები",
+    "@installDriversSubtitle": {},
+    "confirmPartitionTables": "შეიცვლება შემდეგი მოწყობილობების დანაყოფების ცხრილი:",
+    "@confirmPartitionTables": {},
+    "landscapeDomainInvalidDomainWarning": "დომენი არასწორია. შეამოწმეთ ის, ან დაუკავშირდით IT მხარდაჭერის გუნდს",
+    "@landscapeDomainInvalidDomainWarning": {},
+    "bitlockerInfoRecovery": "Windows-მა დაყენების შემდეგ გადატვირთვისას, შეიძლება, აღდგენის გასაღებები მოგთხოვოთ.",
+    "@bitlockerInfoRecovery": {},
+    "updatesOtherSoftwarePageDescription": "დასაწყისისთვის, რომელი პროგრამების დაყენება გსურთ?",
+    "@updatesOtherSoftwarePageDescription": {},
+    "autoinstallInteractiveDescription": "მომხმარებლებისთვის, რომლებსაც სურთ დახმარება დაყენების ყველა ნაბიჯზე.",
+    "@autoinstallInteractiveDescription": {},
+    "fullInstallationSubtitle": "ინტერნეტის გარეშე მუშაობის შემძლე საოფისე პროგრამები, ხელსაწყოები და ბრაუზერი.",
+    "@fullInstallationSubtitle": {},
+    "installCodecsSubtitle": "შეიცავს MP3, MP4, MOV და მსგავსები და სხვა",
+    "@installCodecsSubtitle": {},
+    "batteryWarning": "კომპიუტერი დენის წყაროზე მიერთებული არაა.",
+    "@batteryWarning": {},
+    "choosePassphraseInfoBody": "თუ დაკარგავთ, მონაცემებთან წვდომა აღარ გექნებათ.",
+    "@choosePassphraseInfoBody": {},
+    "installationTypeEncryptInfo": "შემდეგ ნაბიჯზე უსაფრთხოების გასაღებს აირჩევთ.",
+    "@installationTypeEncryptInfo": {},
+    "installationSlidesWelcomeHeader": "{DISTRO}-ის უკანასკნელი ვერსია კომპიუტერთან მუშაობას წარმოუდგენლად აადვილებს.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeDomainNoInternetDescriptionWarning": "Landscape-დან ავტოდაყენების ფაილის გამოსათხოვად ინტერნეტი აუცილებელია",
+    "@landscapeDomainNoInternetDescriptionWarning": {},
+    "recoveryKeyInfoHeader": "აღდგენის გასაღების გარეშე შეიძლება, თქვენი მონაცემები მთლიანად დაკარგოთ",
+    "@recoveryKeyInfoHeader": {},
+    "bitlockerWarningTitle": "BitLocker-ის აღდგენის გასაღებების გარეშე, შეიძლება, მონაცემები სულ დაკარგოთ",
+    "@bitlockerWarningTitle": {},
+    "landscapeErrorPageBody": "დაუკავშირდით თქვენი IT მხარდაჭერის გუნდს, ან სცადეთ სხვა დაყენების ვარიანტი.",
+    "@landscapeErrorPageBody": {},
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu-ის დაყენება თქვენი ორგანიზაციის მიერ მოწოდებული კონფიგურაციით მოხდება",
+    "@landscapeConfirmPageSuccessInfoTitle": {},
+    "landscapeConfirmPageSuccessInfoContent": "Landscape-დან შემოტანილი ავტოდაყენების ფაილის გადახედვა ქვემოთ შეგიძლიათ.",
+    "@landscapeConfirmPageSuccessInfoContent": {},
+    "tryOrInstallRepairDescription": "რემონტი თავიდან დააყენებს ყველა დაყენებულ პროგრამას დოკუმენტებისა და პარამეტრების ხელისხლების გარეშე.",
+    "@tryOrInstallRepairDescription": {},
+    "tryDescription": "${RELEASE}-ის ცდა კომპიუტერში ცვლილებების შეტანის გარეშე შეგიძლიათ.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    }
 }
