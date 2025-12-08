@@ -984,5 +984,263 @@
                 "type": "String"
             }
         }
+    },
+    "autoinstallDirectDescription": "გამოცდილი მომხმარებლები, რომლებსაც autoinstall.yaml ფაილი აქვთ განმეორებადი სისტემების დასაყენებლად.",
+    "@autoinstallDirectDescription": {},
+    "autoinstallLandscapeDescription": "მომხმარებლებისთვის და ორგანიზაციებისთვის, რომლებსაც აქვთ autoinstall ფაილი Landscape-დან.",
+    "@autoinstallLandscapeDescription": {},
+    "installDescription": "დააყენთ {RELEASE} თქვენს ოპერაციულ სისტემასთან ერთად (ან მის გარეშე). ამას დიდი ხანი არ დასჭირდება.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "rstDisable": "თქვენი კომპიუტერი იყენებს Intel RST (Rapid Storage Technology). RST შეგიძლიათ, გამორთოთ:",
+    "@rstDisable": {},
+    "rstDisableWindows": "Windows, თუ იყენებთ ორმაგ ჩატვირთვას Windows-თან ერთად",
+    "@rstDisableWindows": {},
+    "rstInstructions": "ინსტრუქციებისთვის დაასკანერეთ QR კოდი სხვა მოწყობილობაზე, ან ეწვიეთ ვებვერდს <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootDescription": "თქვენ აირჩიეთ მესამე პირების მიერ მოწოდებული პროგრამების დაყენება. ამას დაცული ჩატვირთვის გამორთვა სჭირდება.\nამისათვის საჭიროა, უსაფრთხოების გასაღები ახლა აირჩიოთ, ან შეიყვანოთ ის, როცა სისტემა გადაიტვირთება.",
+    "@configureSecureBootDescription": {},
+    "codecsAndDriversPageBody": "{DISTRO}-ს ფასიანი პროგრამები ნაგულისხმევად არ მოჰყვება. დამატებითი პროგრამების დაყენებამ, შეიძლება, თქვენი კომპიუტერის წარმადობა გაზარდოს.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaBody": "NVIDIA-ის გრაფიკული ბარათებიდან საუკეთესო წარმადობის ასაღებად დამატებითი დრაივერების დაყენება მკაცრადაა რეკომენდებული.",
+    "@codecsAndDriversNvidiaBody": {},
+    "installThirdPartyTitle": "მესამე პირების მიერ მოწოდებული პროგრამების დაყენება გრაფიკისა და Wi-Fi-ის აპარატურისთვის და დამატებითი მედიის ფორმატებისთვის",
+    "@installThirdPartyTitle": {},
+    "installThirdPartySubtitle": "ეს პროგრამა ვრცელდება სალიცენზიო შეთანხმებით, რომლებიც დოკუმენტაციასთან ერთად მოჰყვება. ზოგიერთი მათგანი დახურული კოდითაა.",
+    "@installThirdPartySubtitle": {},
+    "choosePassphraseBody": "თქვენი საკვანძო ფრაზის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს საკვანძო ფრაზა განსხვავდება თქვენი მომხმარებლის პაროლისგან.",
+    "@choosePassphraseBody": {},
+    "chooseOptionalPassphraseInfoBody": "თუ თქვენს საკვანძო ფრაზას დაკარგავთ, ასევე სრულად დაკარგავთ თქვენს მონაცემებსაც. საკვანძო ფრაზა არ ანაცვლებს თქვენს აღდგენის გასაღებს, ან თქვენი მომხმარებლის პაროლს.",
+    "@chooseOptionalPassphraseInfoBody": {},
+    "passphrasePageBodyPassphrase": "თქვენი საკვანძო ფრაზის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს საკვანძო ფრაზა განსხვავდება თქვენი მომხმარებლის პაროლისგან. მისი შეცვლა მოგვიანებით შეგეძლებათ, მაგრამ არა გამორთვა. თუ საკვანძო ფრაზა დაგავიწყდებათ, დისკთან წვდომის დაბრუნებას აღდგენის გასაღებით შეძლებთ.",
+    "@passphrasePageBodyPassphrase": {},
+    "passphrasePageBodyPin": "თქვენი PIN-კოდის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს PIN-კოდი განსხვავდება თქვენი მომხმარებლის პაროლისგან. მისი შეცვლა მოგვიანებითაც შეგეძლებათ, მაგრამ არა მისი გამორთვა. თუ PIN-კოდი დაგავიწყდებათ, დისკზე წვდომის დაბრუნებას აღდგენის გასაღების გამოყენებით შეძლებთ.",
+    "@passphrasePageBodyPin": {},
+    "passphraseTypePassphraseTileSubTitle": "ყველაზე დაცული. დაგჭირდებათ, შეიყვანოთ უფრო გრძელი საკვანძო ფრაზა ყოველ ჯერზე, რამდენჯერაც კომპიუტერს ჩართავთ.",
+    "@passphraseTypePassphraseTileSubTitle": {},
+    "passphraseTypePinTileSubTitle": "უფრო დაცული. დაგჭირდებათ, შეიყვანოთ რიცხვითი PIN-კოდი ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ.",
+    "@passphraseTypePinTileSubTitle": {},
+    "passphraseTypePageBody": "ნაგულისხმევად კომპიუტერის სანდო პლატფორმის მოდული (TPM) განბლოკავს დისკს კომპიუტერის ჩართვისას. ასევე გაქვთ არჩევანი, კიდევ უფრო მეტადაც კი დაიცვათ თქვენი მონაცემები.",
+    "@passphraseTypePageBody": {},
+    "passphrasePagePassphraseEntropyBelowOptimal": "მისაღები საკვანძო ფრაზა. დააგრძელეთ და გაართულეთ ის უკეთესი უსაფრთხოებისთვის",
+    "@passphrasePagePassphraseEntropyBelowOptimal": {},
+    "passphrasePagePinEntropyBelowOptimal": "მისაღები PIN-კოდი. დააგრძელეთ და გაართულეთ ის უკეთესი უსაფრთხოებისთვის",
+    "@passphrasePagePinEntropyBelowOptimal": {},
+    "installationTypeOSDetected": "ამ კომპიუტერზე ახლა დაყენებულია {os}. რა გნებავთ, ვქნა?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "ამ კომპიუტერზე ამჟამად დაყენებულია {os1} და {os2}. რა გნებავთ, ვქნა?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "ამ კომპიუტერზე ამჟამად ერთზე მეტი ოპერაციული სისტემა აყენია. რა გნებავთ, ვქნა?",
+    "@installationTypeMultiOSDetected": {},
+    "installationSlidesAccessibilityBody": "{DISTRO}-ის ფილოსოფიის გულში დევს რწმენა, რომ კომპიუტერები ყველასთვისაა. დამატებითი წვდომადობის პროგრამებით და არჩევნით, შეცვალოთ თქვენი ენა, ფერები და ტექსტის ზომა, {DISTRO} კომპიუტერთან მუშაობას აადვილებს - ვინც და სადაც არ უნდა ბრძანდებოდეთ.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityBody": "{DISTRO} მოგაწვდოით ყველა პროგრამას, რომელიც ინტერნეტში კონფიდენციალურად და დაცულად სამუშაოდაა საჭირო. ჩაშენებული ქსელური ფარით, VPN-ის მხარდაჭერით და კონფიდენციალობის დამცველი პროგრამებით შეგიძლიათ, დარწმუნებული ბრძანდებოდეთ, რომ თქვენს მონაცემებს, მხოლოდ, თქვენ მართავთ.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyStorageAdvice": "თუ გაშვებისას გაშიფვრა ვერ მოხერხდება, დაგჭირდებათ, ეს გასაღები შეიყვანოთ. ამ გასაღების გარეშე თქვენს მონაცემებთან წვდომას სრულად დაკარგავთ. შეინახეთ ის სადმე სანდო ადგილას, მაგალითად - პაროლების მმართველში.",
+    "@recoveryKeyStorageAdvice": {},
+    "installationSlidesDevelopmentBody": "{DISTRO} იდეალური სამუშაო ადგილია აპის ან ვების დასაწერად, მონაცემთა მეცნიერებისთვის, ხი/მს-ისთვის და devops/ადმინისტრატორებისთვის. ყოველ {DISTRO}-ის რელიზი შეიცავს საუკეთესო ხელსაწყოებს და აქვს ყველა ძირითადი IDE-ის მხარდაჭერა.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigureWarning": "დაყენების პროცესის გასაგრძელებლად საჭიროა, გადატვირთოთ კომპიუტერი.",
+    "@rebootToConfigureWarning": {},
+    "refreshInfo": "განახლდით უახლეს ვერსიამდე გაუმჯობესებული საიმედოობისთვის და მეტი შესაძლებლობებისთვის.",
+    "@refreshInfo": {},
+    "landscapeMagicAttachInstructions": "დაასკანერეთ QR კოდი, ან შეიყვანეთ კოდი ბმულზე <a href=\"https://{url}\">{url}</a>",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "დისკის ყველა დანაყოფზე ყველა მონაცემი წაიშლება ოპერაციული სისტემების ჩათვლით.",
+    "@installationTypeEraseInfo": {},
+    "installationTypeEraseAndInstallInfo": "არსებული {os}-ის დაყენების დანაყოფებიდან ყველა ფაილი და მონაცემი სამუდამოდ წაიშლება.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeNoOSDetected": "ამ კომპიუტერზე ამჟამად აღმოჩენადი სისტემა დადენილი არაა. რა გნებავთ, ვქნა?",
+    "@installationTypeNoOSDetected": {},
+    "installationTypeLVMEncryptionInfo": "საკვანძო ფრაზის შეყვანა თქვენი კომპიუტერის თითოეული ჩართვისას დაგჭირდებათ. ეს იყენებს LUKS-ით დაშიფვრას LVM-თან ერთად.",
+    "@installationTypeLVMEncryptionInfo": {},
+    "installationTypeZFSEncryptionInfo": "საკუთარი დაშიფვრა ZFS-თან ერთად. საკვანძო ფრაზის შეყვანა კომპიუტერის ყოველი ჩართვისას დაგჭირდებათ.",
+    "@installationTypeZFSEncryptionInfo": {},
+    "installationTypeTPMInfo": "<a href=\"{url}\">წაიკითხეთ მეტი TPM-ით დაშიფვრის შესახებ</a> მანამდე, სანამ ამ არჩევანს გააკეთებთ. ამან, შეიძლება, თქვენს აპარატურასთან, ან {DISTRO}-ის მომავალ ვერსიასთან არ იმშაოს.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">გაფრთხილება:</font> ეს თქვენი {os}-ის ყველა პროგრამას, დოკუმენტებს, სურათებს და ყველა სხვა ფაილს წაშლის.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "აირჩიეთ დანაყოფი ზომის შესაცვლელად, ან შექმენით სივრცე {product}-ისთვის. ოპერაციული სისტემის არჩევა ჩატვირთვის დროს შეგეძლებათ.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideHiddenPartitions": "{num} პატარა დანაყოფი დამალულია. მართვის მეტი სადავის ხელში ასაღებად გამოიყენეთ <a href=\"{url}\">დაყოფის დამატებითი პროგრამა</a>",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "newPartitionTableConfirmationMessage": "ახალი დანაყოფების ცხრილის შექმნა მთელ მოწყობილობაზე ზედ ამჟამად არსებულ ყველა დანაყოფს წაშლით. ეს ქმედება სურვილის შემთხვევაში დაბრუნებადია.",
+    "@newPartitionTableConfirmationMessage": {},
+    "restartWarningBody": "გადატვირთეთ დაყენების დასასრულებლად, ან გააგრძელეთ შემოწმება.\nცვლილებები, რომელსაც შეიტანთ, შენახული არ იქნება.",
+    "@restartWarningBody": {},
+    "restartIntoWindowsDescription": "მართლა გნებავთ თქვენი კომპიუტერის გადატვირთვა? {DISTRO}-ის დაყენების დაწყება მოგვიანებით თავიდან მოგიწევთ {DISTRO}-ის დაყენების დასასრულებლად.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "თუ ბრძანდებით პროგრამისტი, ხელოვანი, გეიმერი, ან ადმინისტრატორი, თქვენ იპოვით ახალ პროგრამებს თქვენი პროდუქტიულობის გასაზრდელად და {RELEASE}-ში გამოცდილების გასაღრმავებლად.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareBody": "დააყენეთ, მართეთ და განაახლეთ ყველა თქვენი აპი Ubuntu Software-ში ათასობით აპლიკაციის ჩათვლით ორივე, Snap Store-დან და {DISTRO}-ის არქივიდან.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportHeader": "{DISTRO}-ის ოფიციალური დოკუმენტაცია ხელმისაწვდომია ორივეგან, ინტერნეტშიც და დახმარების ხატულათიც.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportEnterprise": "კორპორატიული მომხმარებლებისთვის Canonical-ს ფასიანი მხარდაჭერა აქვს, რომ კომპანიაში Ubuntu-ზე გადართვა მისი მართვა პრობლემების გარეშე შეგეძლოთ.",
+    "@installationSlidesSupportEnterprise": {},
+    "installationSlidesSecurityLts": "ყველა {DISTRO} LTS გამოცემა მოდის ხუთწლიანი უსაფრთხოების პაჩებით და შეგიძლიათ მისი 10 წლამდე გაგრძელება Ubuntu pro გამოწერით.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Ak Ubuntu მოიცავს კითხვაპასუხის დიდ დიაპაზონს და Ubuntu Discourse მოგაწვდით სახელმძღვანელოებს და კამათის თემებს ახალი და გამოცდილი მომხმარებლებისთვის.",
+    "@installationSlidesSupportCommunity": {},
+    "landscapeDomainInstructions": "შეიყვანეთ თქვენი ორგანიზაციის Landscape-ის დომენი, რომ შეხვიდეთ და გადმოწეროთ ავტოდაყენების ფაილი. FQDN-ის მიღება თქვენი IT მხარდაჭერის გუნდისგან შეგიძლიათ.",
+    "@landscapeDomainInstructions": {},
+    "notEnoughDiskSpaceBody": "არჩეულ დისკზე {DISTRO}-ის დასაყენებლად დისკზე ადგილი საკმარისი არაა. გადით დაყენების პროგრამიდან და გაათავისუფლეთ ადგილი, ან სხვა დისკი აირჩიეთ.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityBody": "{DISTRO} შეიცავს LibreOffice-ის. საოფისე პაკეტს, რომელიც თავსებადია Microsoft Office-ისთან დოკუმენტების, ელცხრილების და პრეზენტაციების შესაქმნელად. ასევე ხელმისაწვდომია კოლაბორაციის პოპულარული პროგრამები.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "დაასკანერეთ QR კოდი აღდგენის გასაღებების დასაკოპირებლად და შეინახეთ ის სადმე უსაფრთხო ადგილად, მაგ: პაროლების მმართველში. ასევე შეგიძლიათ, სურათი გადაუღოთ.",
+    "@recoveryKeyQrDialogBody": {},
+    "installationSlidesCreativityBody": "თუ ბრძანდებით ანიმატორი, დიზაინერი, ქმნით ვიდეოებს, ან წერთ თამაშებს, თქვენი სამუშაოს გადმოტანა ადვილია {DISTRO}-ზე ღია კოდის მქონე და სტანდარტული პროგრამებითა და აპლიკაციებით.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingBody": "{DISTRO}-ს აქვს უახლესი NVIDIA-ის და Mesa-ის დრაივერების მხარდაჭერა საუკეთესო წარმადობისა და თავსებადობის მისაღებად. ათასობით Windows-ის თამაში {DISTRO}-ზე მუშაობს Steam-ით დამატებითი მოთხოვნების გარეშე.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
     }
 }
