@@ -698,5 +698,73 @@
                 "type": "String"
             }
         }
-    }
+    },
+    "bitlockerInfoRecovery": "Windows potrebbe richiedere le chiavi di recupero all'avvio dopo l'installazione.",
+    "@bitlockerInfoRecovery": {},
+    "restartIntoWindows": "Riavvia verso Windows",
+    "@restartIntoWindows": {},
+    "restartIntoWindowsTitle": "Riavviare verso Windows?",
+    "@restartIntoWindowsTitle": {},
+    "restartIntoWindowsDescription": "Sei sicuro di voler riavviare il tuo computer? Avrai bisogno di riavviare l'installazione di {DISTRO} più tardi per finire di installare {DISTRO}.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "restartComputer": "Riavvia il computer",
+    "@restartComputer": {},
+    "restartComputerTitle": "Riavviare il computer?",
+    "@restartComputerTitle": {},
+    "installationSlidesWelcomeTitle": "Veloce, libero e pieno di nuove caratteristiche",
+    "@installationSlidesWelcomeTitle": {},
+    "installationSlidesDevelopmentTitle": "Sviluppa con il meglio dell'open source",
+    "@installationSlidesDevelopmentTitle": {},
+    "installationSlidesSecurityTitle": "Privato e sicuro",
+    "@installationSlidesSecurityTitle": {},
+    "installationSlidesSupportDocumentation": "Documentazione ufficiale",
+    "@installationSlidesSupportDocumentation": {},
+    "nextSlideSemanticLabel": "Slide successiva",
+    "@nextSlideSemanticLabel": {},
+    "previousSlideSemanticLabel": "Slide precedente",
+    "@previousSlideSemanticLabel": {},
+    "installationSlidesAccessibilityLanguages": "Supporto multi-lingua",
+    "@installationSlidesAccessibilityLanguages": {},
+    "installationSlidesSupportTitle": "Aiuto e supporto",
+    "@installationSlidesSupportTitle": {},
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerInfoInstructions": "Per istruzioni, visita la <a href=\"{url}\">guida di BitLocker</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "Benvenuto in {RELEASE}",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Tutte le applicazioni di cui hai bisogno",
+    "@installationSlidesSoftwareTitle": {},
+    "installationSlidesGamingTitle": "Fantastica per il gaming",
+    "@installationSlidesGamingTitle": {},
+    "toggleLogsSemanticLabel": "Mostra/Nascondi i log di installazione",
+    "@toggleLogsSemanticLabel": {}
 }
