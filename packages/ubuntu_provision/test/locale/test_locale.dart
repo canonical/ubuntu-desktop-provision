@@ -20,6 +20,7 @@ LocaleModel buildLocaleModel({Exception? error}) {
   return LocaleModel(
     locale: locale,
     sound: MockSoundService(),
+    a11y: MockAccessibilityService(),
   );
 }
 

@@ -158,6 +158,7 @@ extension on WidgetTester {
         .thenAnswer((_) async => ProvisioningMode.standard);
 
     registerMockAutoinstallService();
+    registerMockService<AccessibilityService>(MockAccessibilityService());
     registerMockService<ConfigService>(config);
     registerMockService<DesktopService>(MockDesktopService());
     registerMockService<InstallerService>(installer);

@@ -108,23 +108,3 @@ void main() {
     }
   });
 }
-
-MockProcess createMockProcess([ProcessResult? result]) {
-  final mockProcess = MockProcess();
-  when(mockProcess.run(any, any))
-      .thenAnswer((_) async => result ?? ProcessResult(0, 0, '', ''));
-  return mockProcess;
-}
-
-abstract class _Process {
-  Future<ProcessResult> run(String? executable, List<String>? arguments);
-}
-
-class MockProcess extends Mock implements _Process {
-  @override
-  Future<ProcessResult> run(String? executable, List<String>? arguments) =>
-      super.noSuchMethod(
-        Invocation.method(#run, [executable, arguments]),
-        returnValue: Future.value(ProcessResult(0, 0, '', '')),
-      ) as Future<ProcessResult>;
-}

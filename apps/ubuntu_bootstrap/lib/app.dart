@@ -100,7 +100,9 @@ Future<void> runInstallerApp(
 
   // Conditional registration if not already registered by flavors or tests. All services must be
   // registered here or their respective providers will fail to find them when building models.
-  tryRegisterService<AccessibilityService>(GnomeAccessibilityService.new);
+  tryRegisterService<AccessibilityService>(
+    () => GnomeAccessibilityService(liveRun: liveRun),
+  );
   tryRegisterService<EnvironmentVariableService>(
     EnvironmentVariableService.new,
   );

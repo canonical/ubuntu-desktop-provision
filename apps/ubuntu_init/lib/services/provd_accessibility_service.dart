@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:provd_client/provd_client.dart';
 import 'package:ubuntu_init/services/provd_address.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -79,4 +81,7 @@ class ProvdAccessibilityService
 
   @override
   Future<bool> isSupported() async => true;
+
+  @override
+  Future<void> setScreenReaderLocale(Locale locale) async {}
 }
