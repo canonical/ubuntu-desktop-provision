@@ -88,8 +88,8 @@ class LocaleModel extends SafeChangeNotifier {
     final languages = await loadLocalizedLanguages(supportedLocales);
     _languageList = List.of(languages);
     _log.info('Loaded ${_languageList.length} languages');
-    return _locale.getLocale().then((v) {
-      selectLocale(parseLocale(v));
+    return _locale.getLocale().then((v) async {
+      await selectLocale(parseLocale(v));
       notifyListeners();
     });
   }
