@@ -209,6 +209,10 @@ class ClassGenerator(ast.NodeVisitor):
     def visit_AnnAssign(self, node: ast.AnnAssign):
         self.properties.append(PropertyGenerator(node))
 
+    # skip function definitions within the class
+    def visit_FunctionDef(self, node: ast.FunctionDef):
+        pass
+
     def __str__(self):
         annotations = ""
         if any(property.type.startswith("Map<int,") for property in self.properties):
