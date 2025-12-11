@@ -15,6 +15,7 @@ final localeModelProvider = ChangeNotifierProvider((ref) {
   return LocaleModel(
     locale: getService<LocaleService>(),
     sound: tryGetService<SoundService>(),
+    a11y: getService<AccessibilityService>(),
   );
 });
 
@@ -24,11 +25,14 @@ class LocaleModel extends SafeChangeNotifier {
   LocaleModel({
     required LocaleService locale,
     required SoundService? sound,
+    required AccessibilityService a11y,
   })  : _locale = locale,
-        _sound = sound;
+        _sound = sound,
+        _a11y = a11y;
 
   final LocaleService _locale;
   final SoundService? _sound;
+  final AccessibilityService _a11y;
 
   /// The index of the currently selected language and locale.
   int get selectedIndex => _selectedIndex;
@@ -44,8 +48,10 @@ class LocaleModel extends SafeChangeNotifier {
     final locale = _languageList.elementAtOrNull(index)?.locale;
     if (locale != null) {
       _log.info('Selected $locale as UI language');
+      await initDefaultLocale(locale.toString());
+      notifyListeners();
+      await _a11y.setScreenReaderLocale(locale);
     }
-    return initDefaultLocale(locale.toString()).then((_) => notifyListeners());
   }
 
   var _languageList = <LocalizedLanguage>[];
@@ -58,8 +64,8 @@ class LocaleModel extends SafeChangeNotifier {
     final languages = await loadLocalizedLanguages(supportedLocales);
     _languageList = List.of(languages);
     _log.info('Loaded ${_languageList.length} languages');
-    return _locale.getLocale().then((v) {
-      selectLocale(parseLocale(v));
+    return _locale.getLocale().then((v) async {
+      await selectLocale(parseLocale(v));
       notifyListeners();
     });
   }

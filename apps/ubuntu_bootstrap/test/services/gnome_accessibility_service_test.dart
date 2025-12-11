@@ -1,4 +1,7 @@
 import 'package:dbus/dbus.dart';
+import 'package:file/file.dart';
+import 'package:file/memory.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -11,6 +14,9 @@ void main() {
   late MockGSettings interfaceSettings;
   late MockGSettings keyboardSettings;
   late MockGSettings wmSettings;
+  late FileSystem fileSystem;
+  late MockProcess mockProcess;
+  late Map<String, String> env;
 
   late GnomeAccessibilityService service;
 
@@ -20,6 +26,9 @@ void main() {
     interfaceSettings = MockGSettings();
     keyboardSettings = MockGSettings();
     wmSettings = MockGSettings();
+    fileSystem = MemoryFileSystem.test();
+    mockProcess = createMockProcess();
+    env = {'HOME': '/home/user'};
 
     when(a11yInterfaceSettings.set(any, any)).thenAnswer((_) async {});
     when(applicationSettings.set(any, any)).thenAnswer((_) async {});
@@ -28,11 +37,15 @@ void main() {
     when(wmSettings.set(any, any)).thenAnswer((_) async {});
 
     service = GnomeAccessibilityService(
+      liveRun: true,
       a11yInterfaceSettings: a11yInterfaceSettings,
       applicationSettings: applicationSettings,
       interfaceSettings: interfaceSettings,
       keyboardSettings: keyboardSettings,
       wmSettings: wmSettings,
+      fileSystem: fileSystem,
+      runProcess: mockProcess.run,
+      env: env,
     );
   });
 
@@ -175,5 +188,20 @@ void main() {
 
       expect(await service.isSupported(), isFalse);
     });
+  });
+
+  test('set orca language', () async {
+    await service.setScreenReaderLocale(Locale('de', 'DE'));
+    verify(mockProcess.run('systemctl', ['--user', 'daemon-reload'])).called(1);
+    verify(mockProcess.run('systemctl', ['--user', 'try-restart', 'orca']))
+        .called(1);
+    expect(
+      fileSystem
+          .file(
+            '/home/user/.config/systemd/user/orca.service.d/override.conf',
+          )
+          .readAsStringSync(),
+      equals('[Service]\nEnvironment="LANG=de_DE.UTF-8"\n'),
+    );
   });
 }

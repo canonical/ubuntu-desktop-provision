@@ -12,8 +12,9 @@ void main() {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     await model.init();
     expect(model.languageCount, greaterThan(1));
     expect(model.selectedIndex, isPositive);
@@ -27,8 +28,9 @@ void main() {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     await model.init();
 
     final languages = List.generate(model.languageCount, model.language);
@@ -43,8 +45,9 @@ void main() {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     await model.init();
     expect(model.languageCount, greaterThan(1));
     expect(model.selectedIndex, isPositive);
@@ -71,24 +74,26 @@ void main() {
     final locale = MockLocaleService();
     when(locale.setLocale('fr_CA.UTF-8')).thenAnswer((_) async {});
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     model.applyLocale(const Locale('fr', 'CA'));
     verify(locale.setLocale('fr_CA.UTF-8')).called(1);
   });
 
   test('selected language', () async {
     final locale = MockLocaleService();
+    when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
 
+    await model.init();
     var wasNotified = false;
     model.addListener(() => wasNotified = true);
 
-    expect(model.selectedIndex, isZero);
-    await model.selectLanguage(0);
-    expect(model.selectedIndex, isZero);
+    await model.selectLanguage(model.selectedIndex);
     expect(wasNotified, isFalse);
 
     await model.selectLanguage(1);
@@ -100,8 +105,9 @@ void main() {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     await model.init();
 
     final english = model.searchLanguage('eng');
@@ -135,8 +141,9 @@ void main() {
   test('play try_or_install sound', () async {
     final locale = MockLocaleService();
     final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
 
-    final model = LocaleModel(locale: locale, sound: sound);
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     await model.playWelcomeSound();
     verify(sound.play('system-ready')).called(1);
   });

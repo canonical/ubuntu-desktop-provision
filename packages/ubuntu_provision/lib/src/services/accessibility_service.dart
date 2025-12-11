@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 abstract class AccessibilityService {
   Future<bool> getHighContrast();
   Future<void> setHighContrast(bool value);
@@ -10,6 +12,8 @@ abstract class AccessibilityService {
 
   Future<bool> getScreenReader();
   Future<void> setScreenReader(bool value);
+
+  Future<void> setScreenReaderLocale(Locale locale);
 
   Future<bool> getVisualAlerts();
   Future<void> setVisualAlerts(bool value);

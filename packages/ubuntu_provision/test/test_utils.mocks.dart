@@ -7,12 +7,12 @@ import 'dart:async' as _i12;
 import 'dart:convert' as _i23;
 import 'dart:io' as _i9;
 import 'dart:typed_data' as _i24;
-import 'dart:ui' as _i18;
+import 'dart:ui' as _i13;
 
 import 'package:dbus/dbus.dart' as _i20;
 import 'package:file/file.dart' as _i3;
 import 'package:flutter/foundation.dart' as _i8;
-import 'package:flutter/material.dart' as _i17;
+import 'package:flutter/material.dart' as _i18;
 import 'package:flutter/services.dart' as _i7;
 import 'package:flutter/src/widgets/basic.dart' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
@@ -21,10 +21,10 @@ import 'package:flutter_svg/svg.dart' as _i10;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i19;
 import 'package:subiquity_client/subiquity_client.dart' as _i2;
-import 'package:timezone_map/src/location.dart' as _i16;
-import 'package:timezone_map/src/service.dart' as _i14;
-import 'package:timezone_map/src/source.dart' as _i15;
-import 'package:ubuntu_flavor/ubuntu_flavor.dart' as _i13;
+import 'package:timezone_map/src/location.dart' as _i17;
+import 'package:timezone_map/src/service.dart' as _i15;
+import 'package:timezone_map/src/source.dart' as _i16;
+import 'package:ubuntu_flavor/ubuntu_flavor.dart' as _i14;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i4;
 import 'package:ubuntu_utils/ubuntu_utils.dart' as _i21;
 import 'package:vector_graphics/vector_graphics.dart' as _i11;
@@ -483,6 +483,17 @@ class MockAccessibilityService extends _i1.Mock
       ) as _i12.Future<void>);
 
   @override
+  _i12.Future<void> setScreenReaderLocale(_i13.Locale? locale) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #setScreenReaderLocale,
+          [locale],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+
+  @override
   _i12.Future<bool> getVisualAlerts() => (super.noSuchMethod(
         Invocation.method(
           #getVisualAlerts,
@@ -796,22 +807,22 @@ class MockFlavorService extends _i1.Mock implements _i4.FlavorService {
   }
 
   @override
-  _i13.UbuntuFlavor get flavor => (super.noSuchMethod(
+  _i14.UbuntuFlavor get flavor => (super.noSuchMethod(
         Invocation.getter(#flavor),
-        returnValue: _i13.UbuntuFlavor.budgie,
-      ) as _i13.UbuntuFlavor);
+        returnValue: _i14.UbuntuFlavor.budgie,
+      ) as _i14.UbuntuFlavor);
 }
 
 /// A class which mocks [GeoService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockGeoService extends _i1.Mock implements _i14.GeoService {
+class MockGeoService extends _i1.Mock implements _i15.GeoService {
   MockGeoService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  void addSource(_i15.GeoSource? source) => super.noSuchMethod(
+  void addSource(_i16.GeoSource? source) => super.noSuchMethod(
         Invocation.method(
           #addSource,
           [source],
@@ -820,7 +831,7 @@ class MockGeoService extends _i1.Mock implements _i14.GeoService {
       );
 
   @override
-  void removeSource(_i15.GeoSource? source) => super.noSuchMethod(
+  void removeSource(_i16.GeoSource? source) => super.noSuchMethod(
         Invocation.method(
           #removeSource,
           [source],
@@ -839,47 +850,47 @@ class MockGeoService extends _i1.Mock implements _i14.GeoService {
       ) as _i12.Future<void>);
 
   @override
-  _i12.Future<_i16.GeoLocation?> lookupLocation() => (super.noSuchMethod(
+  _i12.Future<_i17.GeoLocation?> lookupLocation() => (super.noSuchMethod(
         Invocation.method(
           #lookupLocation,
           [],
         ),
-        returnValue: _i12.Future<_i16.GeoLocation?>.value(),
-      ) as _i12.Future<_i16.GeoLocation?>);
+        returnValue: _i12.Future<_i17.GeoLocation?>.value(),
+      ) as _i12.Future<_i17.GeoLocation?>);
 
   @override
-  _i12.Future<Iterable<_i16.GeoLocation>> searchLocation(String? location) =>
+  _i12.Future<Iterable<_i17.GeoLocation>> searchLocation(String? location) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchLocation,
           [location],
         ),
         returnValue:
-            _i12.Future<Iterable<_i16.GeoLocation>>.value(<_i16.GeoLocation>[]),
-      ) as _i12.Future<Iterable<_i16.GeoLocation>>);
+            _i12.Future<Iterable<_i17.GeoLocation>>.value(<_i17.GeoLocation>[]),
+      ) as _i12.Future<Iterable<_i17.GeoLocation>>);
 
   @override
-  _i12.Future<Iterable<_i16.GeoLocation>> searchCoordinates(
-          _i16.LatLng? coordinates) =>
+  _i12.Future<Iterable<_i17.GeoLocation>> searchCoordinates(
+          _i17.LatLng? coordinates) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchCoordinates,
           [coordinates],
         ),
         returnValue:
-            _i12.Future<Iterable<_i16.GeoLocation>>.value(<_i16.GeoLocation>[]),
-      ) as _i12.Future<Iterable<_i16.GeoLocation>>);
+            _i12.Future<Iterable<_i17.GeoLocation>>.value(<_i17.GeoLocation>[]),
+      ) as _i12.Future<Iterable<_i17.GeoLocation>>);
 
   @override
-  _i12.Future<Iterable<_i16.GeoLocation>> searchTimezone(String? timezone) =>
+  _i12.Future<Iterable<_i17.GeoLocation>> searchTimezone(String? timezone) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchTimezone,
           [timezone],
         ),
         returnValue:
-            _i12.Future<Iterable<_i16.GeoLocation>>.value(<_i16.GeoLocation>[]),
-      ) as _i12.Future<Iterable<_i16.GeoLocation>>);
+            _i12.Future<Iterable<_i17.GeoLocation>>.value(<_i17.GeoLocation>[]),
+      ) as _i12.Future<Iterable<_i17.GeoLocation>>);
 
   @override
   _i12.Future<void> cancelSearch() => (super.noSuchMethod(
@@ -940,7 +951,7 @@ class MockIdentityService extends _i1.Mock implements _i4.IdentityService {
 /// A class which mocks [Image].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockImage extends _i1.Mock implements _i17.Image {
+class MockImage extends _i1.Mock implements _i18.Image {
   MockImage() {
     _i1.throwOnMissingStub(this);
   }
@@ -955,10 +966,10 @@ class MockImage extends _i1.Mock implements _i17.Image {
       ) as _i5.ImageProvider<Object>);
 
   @override
-  _i18.FilterQuality get filterQuality => (super.noSuchMethod(
+  _i13.FilterQuality get filterQuality => (super.noSuchMethod(
         Invocation.getter(#filterQuality),
-        returnValue: _i18.FilterQuality.none,
-      ) as _i18.FilterQuality);
+        returnValue: _i13.FilterQuality.none,
+      ) as _i13.FilterQuality);
 
   @override
   _i5.AlignmentGeometry get alignment => (super.noSuchMethod(
@@ -1000,19 +1011,19 @@ class MockImage extends _i1.Mock implements _i17.Image {
       ) as bool);
 
   @override
-  _i6.State<_i17.Image> createState() => (super.noSuchMethod(
+  _i6.State<_i18.Image> createState() => (super.noSuchMethod(
         Invocation.method(
           #createState,
           [],
         ),
-        returnValue: _FakeState_5<_i17.Image>(
+        returnValue: _FakeState_5<_i18.Image>(
           this,
           Invocation.method(
             #createState,
             [],
           ),
         ),
-      ) as _i6.State<_i17.Image>);
+      ) as _i6.State<_i18.Image>);
 
   @override
   void debugFillProperties(_i7.DiagnosticPropertiesBuilder? properties) =>
@@ -3310,11 +3321,11 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
       ) as bool);
 
   @override
-  _i18.Clip get clipBehavior => (super.noSuchMethod(
+  _i13.Clip get clipBehavior => (super.noSuchMethod(
         Invocation.getter(#clipBehavior),
-        returnValue: _i18.Clip.none,
-        returnValueForMissingStub: _i18.Clip.none,
-      ) as _i18.Clip);
+        returnValue: _i13.Clip.none,
+        returnValueForMissingStub: _i13.Clip.none,
+      ) as _i13.Clip);
 
   @override
   _i25.RenderingStrategy get renderingStrategy => (super.noSuchMethod(
