@@ -36,7 +36,7 @@ void main() {
             kind: CoreBootAvailabilityErrorKind.INTERNAL,
             message: 'error message',
             actions: [
-              CoreBootFixActionWithCategory(
+              CoreBootFixActionWithCategoryAndArgs(
                 type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
                 forUser: false,
               ),
