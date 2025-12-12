@@ -63,7 +63,9 @@ class TpmActionModel extends SafeChangeNotifier {
   Future<void> performAction(CoreBootFixAction action) async {
     _isLoading = true;
     notifyListeners();
-    await _subiquity.coreBootFixEncryptionSupportV2(action);
+    await _subiquity.coreBootFixEncryptionSupportV2(
+      CoreBootFixActionWithArgs(type: action),
+    );
     await _updateGuidedStorage();
   }
 }

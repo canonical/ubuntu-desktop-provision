@@ -18679,83 +18679,75 @@ class __$DiskCopyWithImpl<$Res> implements _$DiskCopyWith<$Res> {
 }
 
 /// @nodoc
-mixin _$CoreBootFixActionWithCategory {
-  CoreBootFixAction get type;
-  bool get forUser;
+mixin _$CoreBootFixActionArgs {
+  List<CoreBootAvailabilityErrorKind>? get errorKinds;
 
-  /// Create a copy of CoreBootFixActionWithCategory
+  /// Create a copy of CoreBootFixActionArgs
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $CoreBootFixActionWithCategoryCopyWith<CoreBootFixActionWithCategory>
-      get copyWith => _$CoreBootFixActionWithCategoryCopyWithImpl<
-              CoreBootFixActionWithCategory>(
-          this as CoreBootFixActionWithCategory, _$identity);
+  $CoreBootFixActionArgsCopyWith<CoreBootFixActionArgs> get copyWith =>
+      _$CoreBootFixActionArgsCopyWithImpl<CoreBootFixActionArgs>(
+          this as CoreBootFixActionArgs, _$identity);
 
-  /// Serializes this CoreBootFixActionWithCategory to a JSON map.
+  /// Serializes this CoreBootFixActionArgs to a JSON map.
   Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CoreBootFixActionWithCategory &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.forUser, forUser) || other.forUser == forUser));
+            other is CoreBootFixActionArgs &&
+            const DeepCollectionEquality()
+                .equals(other.errorKinds, errorKinds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, forUser);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(errorKinds));
 
   @override
   String toString() {
-    return 'CoreBootFixActionWithCategory(type: $type, forUser: $forUser)';
+    return 'CoreBootFixActionArgs(errorKinds: $errorKinds)';
   }
 }
 
 /// @nodoc
-abstract mixin class $CoreBootFixActionWithCategoryCopyWith<$Res> {
-  factory $CoreBootFixActionWithCategoryCopyWith(
-          CoreBootFixActionWithCategory value,
-          $Res Function(CoreBootFixActionWithCategory) _then) =
-      _$CoreBootFixActionWithCategoryCopyWithImpl;
+abstract mixin class $CoreBootFixActionArgsCopyWith<$Res> {
+  factory $CoreBootFixActionArgsCopyWith(CoreBootFixActionArgs value,
+          $Res Function(CoreBootFixActionArgs) _then) =
+      _$CoreBootFixActionArgsCopyWithImpl;
   @useResult
-  $Res call({CoreBootFixAction type, bool forUser});
+  $Res call({List<CoreBootAvailabilityErrorKind>? errorKinds});
 }
 
 /// @nodoc
-class _$CoreBootFixActionWithCategoryCopyWithImpl<$Res>
-    implements $CoreBootFixActionWithCategoryCopyWith<$Res> {
-  _$CoreBootFixActionWithCategoryCopyWithImpl(this._self, this._then);
+class _$CoreBootFixActionArgsCopyWithImpl<$Res>
+    implements $CoreBootFixActionArgsCopyWith<$Res> {
+  _$CoreBootFixActionArgsCopyWithImpl(this._self, this._then);
 
-  final CoreBootFixActionWithCategory _self;
-  final $Res Function(CoreBootFixActionWithCategory) _then;
+  final CoreBootFixActionArgs _self;
+  final $Res Function(CoreBootFixActionArgs) _then;
 
-  /// Create a copy of CoreBootFixActionWithCategory
+  /// Create a copy of CoreBootFixActionArgs
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
-    Object? forUser = null,
+    Object? errorKinds = freezed,
   }) {
     return _then(_self.copyWith(
-      type: null == type
-          ? _self.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CoreBootFixAction,
-      forUser: null == forUser
-          ? _self.forUser
-          : forUser // ignore: cast_nullable_to_non_nullable
-              as bool,
+      errorKinds: freezed == errorKinds
+          ? _self.errorKinds
+          : errorKinds // ignore: cast_nullable_to_non_nullable
+              as List<CoreBootAvailabilityErrorKind>?,
     ));
   }
 }
 
-/// Adds pattern-matching-related methods to [CoreBootFixActionWithCategory].
-extension CoreBootFixActionWithCategoryPatterns
-    on CoreBootFixActionWithCategory {
+/// Adds pattern-matching-related methods to [CoreBootFixActionArgs].
+extension CoreBootFixActionArgsPatterns on CoreBootFixActionArgs {
   /// A variant of `map` that fallback to returning `orElse`.
   ///
   /// It is equivalent to doing:
@@ -18770,12 +18762,12 @@ extension CoreBootFixActionWithCategoryPatterns
 
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
-    TResult Function(_CoreBootFixActionWithCategory value)? $default, {
+    TResult Function(_CoreBootFixActionArgs value)? $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _CoreBootFixActionWithCategory() when $default != null:
+      case _CoreBootFixActionArgs() when $default != null:
         return $default(_that);
       case _:
         return orElse();
@@ -18797,11 +18789,11 @@ extension CoreBootFixActionWithCategoryPatterns
 
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
-    TResult Function(_CoreBootFixActionWithCategory value) $default,
+    TResult Function(_CoreBootFixActionArgs value) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CoreBootFixActionWithCategory():
+      case _CoreBootFixActionArgs():
         return $default(_that);
       case _:
         throw StateError('Unexpected subclass');
@@ -18822,11 +18814,11 @@ extension CoreBootFixActionWithCategoryPatterns
 
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult? Function(_CoreBootFixActionWithCategory value)? $default,
+    TResult? Function(_CoreBootFixActionArgs value)? $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CoreBootFixActionWithCategory() when $default != null:
+      case _CoreBootFixActionArgs() when $default != null:
         return $default(_that);
       case _:
         return null;
@@ -18847,13 +18839,14 @@ extension CoreBootFixActionWithCategoryPatterns
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(CoreBootFixAction type, bool forUser)? $default, {
+    TResult Function(List<CoreBootAvailabilityErrorKind>? errorKinds)?
+        $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
-      case _CoreBootFixActionWithCategory() when $default != null:
-        return $default(_that.type, _that.forUser);
+      case _CoreBootFixActionArgs() when $default != null:
+        return $default(_that.errorKinds);
       case _:
         return orElse();
     }
@@ -18874,12 +18867,12 @@ extension CoreBootFixActionWithCategoryPatterns
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(CoreBootFixAction type, bool forUser) $default,
+    TResult Function(List<CoreBootAvailabilityErrorKind>? errorKinds) $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CoreBootFixActionWithCategory():
-        return $default(_that.type, _that.forUser);
+      case _CoreBootFixActionArgs():
+        return $default(_that.errorKinds);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -18899,12 +18892,13 @@ extension CoreBootFixActionWithCategoryPatterns
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(CoreBootFixAction type, bool forUser)? $default,
+    TResult? Function(List<CoreBootAvailabilityErrorKind>? errorKinds)?
+        $default,
   ) {
     final _that = this;
     switch (_that) {
-      case _CoreBootFixActionWithCategory() when $default != null:
-        return $default(_that.type, _that.forUser);
+      case _CoreBootFixActionArgs() when $default != null:
+        return $default(_that.errorKinds);
       case _:
         return null;
     }
@@ -18913,29 +18907,35 @@ extension CoreBootFixActionWithCategoryPatterns
 
 /// @nodoc
 @JsonSerializable()
-class _CoreBootFixActionWithCategory implements CoreBootFixActionWithCategory {
-  const _CoreBootFixActionWithCategory(
-      {required this.type, required this.forUser});
-  factory _CoreBootFixActionWithCategory.fromJson(Map<String, dynamic> json) =>
-      _$CoreBootFixActionWithCategoryFromJson(json);
+class _CoreBootFixActionArgs implements CoreBootFixActionArgs {
+  const _CoreBootFixActionArgs(
+      {final List<CoreBootAvailabilityErrorKind>? errorKinds})
+      : _errorKinds = errorKinds;
+  factory _CoreBootFixActionArgs.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixActionArgsFromJson(json);
 
+  final List<CoreBootAvailabilityErrorKind>? _errorKinds;
   @override
-  final CoreBootFixAction type;
-  @override
-  final bool forUser;
+  List<CoreBootAvailabilityErrorKind>? get errorKinds {
+    final value = _errorKinds;
+    if (value == null) return null;
+    if (_errorKinds is EqualUnmodifiableListView) return _errorKinds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
-  /// Create a copy of CoreBootFixActionWithCategory
+  /// Create a copy of CoreBootFixActionArgs
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$CoreBootFixActionWithCategoryCopyWith<_CoreBootFixActionWithCategory>
-      get copyWith => __$CoreBootFixActionWithCategoryCopyWithImpl<
-          _CoreBootFixActionWithCategory>(this, _$identity);
+  _$CoreBootFixActionArgsCopyWith<_CoreBootFixActionArgs> get copyWith =>
+      __$CoreBootFixActionArgsCopyWithImpl<_CoreBootFixActionArgs>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$CoreBootFixActionWithCategoryToJson(
+    return _$CoreBootFixActionArgsToJson(
       this,
     );
   }
@@ -18944,50 +18944,481 @@ class _CoreBootFixActionWithCategory implements CoreBootFixActionWithCategory {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CoreBootFixActionWithCategory &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.forUser, forUser) || other.forUser == forUser));
+            other is _CoreBootFixActionArgs &&
+            const DeepCollectionEquality()
+                .equals(other._errorKinds, _errorKinds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, forUser);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_errorKinds));
 
   @override
   String toString() {
-    return 'CoreBootFixActionWithCategory(type: $type, forUser: $forUser)';
+    return 'CoreBootFixActionArgs(errorKinds: $errorKinds)';
   }
 }
 
 /// @nodoc
-abstract mixin class _$CoreBootFixActionWithCategoryCopyWith<$Res>
-    implements $CoreBootFixActionWithCategoryCopyWith<$Res> {
-  factory _$CoreBootFixActionWithCategoryCopyWith(
-          _CoreBootFixActionWithCategory value,
-          $Res Function(_CoreBootFixActionWithCategory) _then) =
-      __$CoreBootFixActionWithCategoryCopyWithImpl;
+abstract mixin class _$CoreBootFixActionArgsCopyWith<$Res>
+    implements $CoreBootFixActionArgsCopyWith<$Res> {
+  factory _$CoreBootFixActionArgsCopyWith(_CoreBootFixActionArgs value,
+          $Res Function(_CoreBootFixActionArgs) _then) =
+      __$CoreBootFixActionArgsCopyWithImpl;
   @override
   @useResult
-  $Res call({CoreBootFixAction type, bool forUser});
+  $Res call({List<CoreBootAvailabilityErrorKind>? errorKinds});
 }
 
 /// @nodoc
-class __$CoreBootFixActionWithCategoryCopyWithImpl<$Res>
-    implements _$CoreBootFixActionWithCategoryCopyWith<$Res> {
-  __$CoreBootFixActionWithCategoryCopyWithImpl(this._self, this._then);
+class __$CoreBootFixActionArgsCopyWithImpl<$Res>
+    implements _$CoreBootFixActionArgsCopyWith<$Res> {
+  __$CoreBootFixActionArgsCopyWithImpl(this._self, this._then);
 
-  final _CoreBootFixActionWithCategory _self;
-  final $Res Function(_CoreBootFixActionWithCategory) _then;
+  final _CoreBootFixActionArgs _self;
+  final $Res Function(_CoreBootFixActionArgs) _then;
 
-  /// Create a copy of CoreBootFixActionWithCategory
+  /// Create a copy of CoreBootFixActionArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? errorKinds = freezed,
+  }) {
+    return _then(_CoreBootFixActionArgs(
+      errorKinds: freezed == errorKinds
+          ? _self._errorKinds
+          : errorKinds // ignore: cast_nullable_to_non_nullable
+              as List<CoreBootAvailabilityErrorKind>?,
+    ));
+  }
+}
+
+/// @nodoc
+mixin _$CoreBootFixActionWithArgs {
+  CoreBootFixAction get type;
+  CoreBootFixActionArgs? get args;
+
+  /// Create a copy of CoreBootFixActionWithArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionWithArgsCopyWith<CoreBootFixActionWithArgs> get copyWith =>
+      _$CoreBootFixActionWithArgsCopyWithImpl<CoreBootFixActionWithArgs>(
+          this as CoreBootFixActionWithArgs, _$identity);
+
+  /// Serializes this CoreBootFixActionWithArgs to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CoreBootFixActionWithArgs &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.args, args) || other.args == args));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, args);
+
+  @override
+  String toString() {
+    return 'CoreBootFixActionWithArgs(type: $type, args: $args)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CoreBootFixActionWithArgsCopyWith<$Res> {
+  factory $CoreBootFixActionWithArgsCopyWith(CoreBootFixActionWithArgs value,
+          $Res Function(CoreBootFixActionWithArgs) _then) =
+      _$CoreBootFixActionWithArgsCopyWithImpl;
+  @useResult
+  $Res call({CoreBootFixAction type, CoreBootFixActionArgs? args});
+
+  $CoreBootFixActionArgsCopyWith<$Res>? get args;
+}
+
+/// @nodoc
+class _$CoreBootFixActionWithArgsCopyWithImpl<$Res>
+    implements $CoreBootFixActionWithArgsCopyWith<$Res> {
+  _$CoreBootFixActionWithArgsCopyWithImpl(this._self, this._then);
+
+  final CoreBootFixActionWithArgs _self;
+  final $Res Function(CoreBootFixActionWithArgs) _then;
+
+  /// Create a copy of CoreBootFixActionWithArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? args = freezed,
+  }) {
+    return _then(_self.copyWith(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      args: freezed == args
+          ? _self.args
+          : args // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixActionArgs?,
+    ));
+  }
+
+  /// Create a copy of CoreBootFixActionWithArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionArgsCopyWith<$Res>? get args {
+    if (_self.args == null) {
+      return null;
+    }
+
+    return $CoreBootFixActionArgsCopyWith<$Res>(_self.args!, (value) {
+      return _then(_self.copyWith(args: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [CoreBootFixActionWithArgs].
+extension CoreBootFixActionWithArgsPatterns on CoreBootFixActionWithArgs {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_CoreBootFixActionWithArgs value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithArgs() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_CoreBootFixActionWithArgs value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithArgs():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_CoreBootFixActionWithArgs value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithArgs() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(CoreBootFixAction type, CoreBootFixActionArgs? args)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithArgs() when $default != null:
+        return $default(_that.type, _that.args);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(CoreBootFixAction type, CoreBootFixActionArgs? args)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithArgs():
+        return $default(_that.type, _that.args);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(CoreBootFixAction type, CoreBootFixActionArgs? args)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithArgs() when $default != null:
+        return $default(_that.type, _that.args);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _CoreBootFixActionWithArgs implements CoreBootFixActionWithArgs {
+  const _CoreBootFixActionWithArgs({required this.type, this.args});
+  factory _CoreBootFixActionWithArgs.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixActionWithArgsFromJson(json);
+
+  @override
+  final CoreBootFixAction type;
+  @override
+  final CoreBootFixActionArgs? args;
+
+  /// Create a copy of CoreBootFixActionWithArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CoreBootFixActionWithArgsCopyWith<_CoreBootFixActionWithArgs>
+      get copyWith =>
+          __$CoreBootFixActionWithArgsCopyWithImpl<_CoreBootFixActionWithArgs>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CoreBootFixActionWithArgsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _CoreBootFixActionWithArgs &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.args, args) || other.args == args));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, args);
+
+  @override
+  String toString() {
+    return 'CoreBootFixActionWithArgs(type: $type, args: $args)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$CoreBootFixActionWithArgsCopyWith<$Res>
+    implements $CoreBootFixActionWithArgsCopyWith<$Res> {
+  factory _$CoreBootFixActionWithArgsCopyWith(_CoreBootFixActionWithArgs value,
+          $Res Function(_CoreBootFixActionWithArgs) _then) =
+      __$CoreBootFixActionWithArgsCopyWithImpl;
+  @override
+  @useResult
+  $Res call({CoreBootFixAction type, CoreBootFixActionArgs? args});
+
+  @override
+  $CoreBootFixActionArgsCopyWith<$Res>? get args;
+}
+
+/// @nodoc
+class __$CoreBootFixActionWithArgsCopyWithImpl<$Res>
+    implements _$CoreBootFixActionWithArgsCopyWith<$Res> {
+  __$CoreBootFixActionWithArgsCopyWithImpl(this._self, this._then);
+
+  final _CoreBootFixActionWithArgs _self;
+  final $Res Function(_CoreBootFixActionWithArgs) _then;
+
+  /// Create a copy of CoreBootFixActionWithArgs
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $Res call({
     Object? type = null,
-    Object? forUser = null,
+    Object? args = freezed,
   }) {
-    return _then(_CoreBootFixActionWithCategory(
+    return _then(_CoreBootFixActionWithArgs(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      args: freezed == args
+          ? _self.args
+          : args // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixActionArgs?,
+    ));
+  }
+
+  /// Create a copy of CoreBootFixActionWithArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionArgsCopyWith<$Res>? get args {
+    if (_self.args == null) {
+      return null;
+    }
+
+    return $CoreBootFixActionArgsCopyWith<$Res>(_self.args!, (value) {
+      return _then(_self.copyWith(args: value));
+    });
+  }
+}
+
+/// @nodoc
+mixin _$CoreBootFixActionWithCategoryAndArgs {
+  CoreBootFixAction get type;
+  bool get forUser;
+  CoreBootFixActionArgs? get args;
+
+  /// Create a copy of CoreBootFixActionWithCategoryAndArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionWithCategoryAndArgsCopyWith<
+          CoreBootFixActionWithCategoryAndArgs>
+      get copyWith => _$CoreBootFixActionWithCategoryAndArgsCopyWithImpl<
+              CoreBootFixActionWithCategoryAndArgs>(
+          this as CoreBootFixActionWithCategoryAndArgs, _$identity);
+
+  /// Serializes this CoreBootFixActionWithCategoryAndArgs to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is CoreBootFixActionWithCategoryAndArgs &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.forUser, forUser) || other.forUser == forUser) &&
+            (identical(other.args, args) || other.args == args));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, forUser, args);
+
+  @override
+  String toString() {
+    return 'CoreBootFixActionWithCategoryAndArgs(type: $type, forUser: $forUser, args: $args)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $CoreBootFixActionWithCategoryAndArgsCopyWith<$Res> {
+  factory $CoreBootFixActionWithCategoryAndArgsCopyWith(
+          CoreBootFixActionWithCategoryAndArgs value,
+          $Res Function(CoreBootFixActionWithCategoryAndArgs) _then) =
+      _$CoreBootFixActionWithCategoryAndArgsCopyWithImpl;
+  @useResult
+  $Res call(
+      {CoreBootFixAction type, bool forUser, CoreBootFixActionArgs? args});
+
+  $CoreBootFixActionArgsCopyWith<$Res>? get args;
+}
+
+/// @nodoc
+class _$CoreBootFixActionWithCategoryAndArgsCopyWithImpl<$Res>
+    implements $CoreBootFixActionWithCategoryAndArgsCopyWith<$Res> {
+  _$CoreBootFixActionWithCategoryAndArgsCopyWithImpl(this._self, this._then);
+
+  final CoreBootFixActionWithCategoryAndArgs _self;
+  final $Res Function(CoreBootFixActionWithCategoryAndArgs) _then;
+
+  /// Create a copy of CoreBootFixActionWithCategoryAndArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? forUser = null,
+    Object? args = freezed,
+  }) {
+    return _then(_self.copyWith(
       type: null == type
           ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -18996,7 +19427,307 @@ class __$CoreBootFixActionWithCategoryCopyWithImpl<$Res>
           ? _self.forUser
           : forUser // ignore: cast_nullable_to_non_nullable
               as bool,
+      args: freezed == args
+          ? _self.args
+          : args // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixActionArgs?,
     ));
+  }
+
+  /// Create a copy of CoreBootFixActionWithCategoryAndArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionArgsCopyWith<$Res>? get args {
+    if (_self.args == null) {
+      return null;
+    }
+
+    return $CoreBootFixActionArgsCopyWith<$Res>(_self.args!, (value) {
+      return _then(_self.copyWith(args: value));
+    });
+  }
+}
+
+/// Adds pattern-matching-related methods to [CoreBootFixActionWithCategoryAndArgs].
+extension CoreBootFixActionWithCategoryAndArgsPatterns
+    on CoreBootFixActionWithCategoryAndArgs {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_CoreBootFixActionWithCategoryAndArgs value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategoryAndArgs() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_CoreBootFixActionWithCategoryAndArgs value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategoryAndArgs():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_CoreBootFixActionWithCategoryAndArgs value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategoryAndArgs() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            CoreBootFixAction type, bool forUser, CoreBootFixActionArgs? args)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategoryAndArgs() when $default != null:
+        return $default(_that.type, _that.forUser, _that.args);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            CoreBootFixAction type, bool forUser, CoreBootFixActionArgs? args)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategoryAndArgs():
+        return $default(_that.type, _that.forUser, _that.args);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(
+            CoreBootFixAction type, bool forUser, CoreBootFixActionArgs? args)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _CoreBootFixActionWithCategoryAndArgs() when $default != null:
+        return $default(_that.type, _that.forUser, _that.args);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _CoreBootFixActionWithCategoryAndArgs
+    implements CoreBootFixActionWithCategoryAndArgs {
+  const _CoreBootFixActionWithCategoryAndArgs(
+      {required this.type, required this.forUser, this.args});
+  factory _CoreBootFixActionWithCategoryAndArgs.fromJson(
+          Map<String, dynamic> json) =>
+      _$CoreBootFixActionWithCategoryAndArgsFromJson(json);
+
+  @override
+  final CoreBootFixAction type;
+  @override
+  final bool forUser;
+  @override
+  final CoreBootFixActionArgs? args;
+
+  /// Create a copy of CoreBootFixActionWithCategoryAndArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$CoreBootFixActionWithCategoryAndArgsCopyWith<
+          _CoreBootFixActionWithCategoryAndArgs>
+      get copyWith => __$CoreBootFixActionWithCategoryAndArgsCopyWithImpl<
+          _CoreBootFixActionWithCategoryAndArgs>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$CoreBootFixActionWithCategoryAndArgsToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _CoreBootFixActionWithCategoryAndArgs &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.forUser, forUser) || other.forUser == forUser) &&
+            (identical(other.args, args) || other.args == args));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, forUser, args);
+
+  @override
+  String toString() {
+    return 'CoreBootFixActionWithCategoryAndArgs(type: $type, forUser: $forUser, args: $args)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$CoreBootFixActionWithCategoryAndArgsCopyWith<$Res>
+    implements $CoreBootFixActionWithCategoryAndArgsCopyWith<$Res> {
+  factory _$CoreBootFixActionWithCategoryAndArgsCopyWith(
+          _CoreBootFixActionWithCategoryAndArgs value,
+          $Res Function(_CoreBootFixActionWithCategoryAndArgs) _then) =
+      __$CoreBootFixActionWithCategoryAndArgsCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {CoreBootFixAction type, bool forUser, CoreBootFixActionArgs? args});
+
+  @override
+  $CoreBootFixActionArgsCopyWith<$Res>? get args;
+}
+
+/// @nodoc
+class __$CoreBootFixActionWithCategoryAndArgsCopyWithImpl<$Res>
+    implements _$CoreBootFixActionWithCategoryAndArgsCopyWith<$Res> {
+  __$CoreBootFixActionWithCategoryAndArgsCopyWithImpl(this._self, this._then);
+
+  final _CoreBootFixActionWithCategoryAndArgs _self;
+  final $Res Function(_CoreBootFixActionWithCategoryAndArgs) _then;
+
+  /// Create a copy of CoreBootFixActionWithCategoryAndArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? type = null,
+    Object? forUser = null,
+    Object? args = freezed,
+  }) {
+    return _then(_CoreBootFixActionWithCategoryAndArgs(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixAction,
+      forUser: null == forUser
+          ? _self.forUser
+          : forUser // ignore: cast_nullable_to_non_nullable
+              as bool,
+      args: freezed == args
+          ? _self.args
+          : args // ignore: cast_nullable_to_non_nullable
+              as CoreBootFixActionArgs?,
+    ));
+  }
+
+  /// Create a copy of CoreBootFixActionWithCategoryAndArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionArgsCopyWith<$Res>? get args {
+    if (_self.args == null) {
+      return null;
+    }
+
+    return $CoreBootFixActionArgsCopyWith<$Res>(_self.args!, (value) {
+      return _then(_self.copyWith(args: value));
+    });
   }
 }
 
@@ -19004,7 +19735,7 @@ class __$CoreBootFixActionWithCategoryCopyWithImpl<$Res>
 mixin _$CoreBootEncryptionSupportError {
   CoreBootAvailabilityErrorKind get kind;
   String get message;
-  List<CoreBootFixActionWithCategory> get actions;
+  List<CoreBootFixActionWithCategoryAndArgs> get actions;
 
   /// Create a copy of CoreBootEncryptionSupportError
   /// with the given fields replaced by the non-null parameter values.
@@ -19049,7 +19780,7 @@ abstract mixin class $CoreBootEncryptionSupportErrorCopyWith<$Res> {
   $Res call(
       {CoreBootAvailabilityErrorKind kind,
       String message,
-      List<CoreBootFixActionWithCategory> actions});
+      List<CoreBootFixActionWithCategoryAndArgs> actions});
 }
 
 /// @nodoc
@@ -19081,7 +19812,7 @@ class _$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
       actions: null == actions
           ? _self.actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<CoreBootFixActionWithCategory>,
+              as List<CoreBootFixActionWithCategoryAndArgs>,
     ));
   }
 }
@@ -19181,7 +19912,7 @@ extension CoreBootEncryptionSupportErrorPatterns
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(CoreBootAvailabilityErrorKind kind, String message,
-            List<CoreBootFixActionWithCategory> actions)?
+            List<CoreBootFixActionWithCategoryAndArgs> actions)?
         $default, {
     required TResult orElse(),
   }) {
@@ -19210,7 +19941,7 @@ extension CoreBootEncryptionSupportErrorPatterns
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(CoreBootAvailabilityErrorKind kind, String message,
-            List<CoreBootFixActionWithCategory> actions)
+            List<CoreBootFixActionWithCategoryAndArgs> actions)
         $default,
   ) {
     final _that = this;
@@ -19237,7 +19968,7 @@ extension CoreBootEncryptionSupportErrorPatterns
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult? Function(CoreBootAvailabilityErrorKind kind, String message,
-            List<CoreBootFixActionWithCategory> actions)?
+            List<CoreBootFixActionWithCategoryAndArgs> actions)?
         $default,
   ) {
     final _that = this;
@@ -19257,7 +19988,7 @@ class _CoreBootEncryptionSupportError
   const _CoreBootEncryptionSupportError(
       {required this.kind,
       required this.message,
-      required final List<CoreBootFixActionWithCategory> actions})
+      required final List<CoreBootFixActionWithCategoryAndArgs> actions})
       : _actions = actions;
   factory _CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>
       _$CoreBootEncryptionSupportErrorFromJson(json);
@@ -19266,9 +19997,9 @@ class _CoreBootEncryptionSupportError
   final CoreBootAvailabilityErrorKind kind;
   @override
   final String message;
-  final List<CoreBootFixActionWithCategory> _actions;
+  final List<CoreBootFixActionWithCategoryAndArgs> _actions;
   @override
-  List<CoreBootFixActionWithCategory> get actions {
+  List<CoreBootFixActionWithCategoryAndArgs> get actions {
     if (_actions is EqualUnmodifiableListView) return _actions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_actions);
@@ -19323,7 +20054,7 @@ abstract mixin class _$CoreBootEncryptionSupportErrorCopyWith<$Res>
   $Res call(
       {CoreBootAvailabilityErrorKind kind,
       String message,
-      List<CoreBootFixActionWithCategory> actions});
+      List<CoreBootFixActionWithCategoryAndArgs> actions});
 }
 
 /// @nodoc
@@ -19355,7 +20086,7 @@ class __$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
       actions: null == actions
           ? _self._actions
           : actions // ignore: cast_nullable_to_non_nullable
-              as List<CoreBootFixActionWithCategory>,
+              as List<CoreBootFixActionWithCategoryAndArgs>,
     ));
   }
 }
@@ -25269,7 +26000,7 @@ class __$EntropyResponseCopyWithImpl<$Res>
 
 /// @nodoc
 mixin _$CoreBootFixEncryptionSupport {
-  CoreBootFixAction get action;
+  CoreBootFixActionWithArgs get action;
   String? get systemLabel;
 
   /// Create a copy of CoreBootFixEncryptionSupport
@@ -25311,7 +26042,9 @@ abstract mixin class $CoreBootFixEncryptionSupportCopyWith<$Res> {
           $Res Function(CoreBootFixEncryptionSupport) _then) =
       _$CoreBootFixEncryptionSupportCopyWithImpl;
   @useResult
-  $Res call({CoreBootFixAction action, String? systemLabel});
+  $Res call({CoreBootFixActionWithArgs action, String? systemLabel});
+
+  $CoreBootFixActionWithArgsCopyWith<$Res> get action;
 }
 
 /// @nodoc
@@ -25334,12 +26067,22 @@ class _$CoreBootFixEncryptionSupportCopyWithImpl<$Res>
       action: null == action
           ? _self.action
           : action // ignore: cast_nullable_to_non_nullable
-              as CoreBootFixAction,
+              as CoreBootFixActionWithArgs,
       systemLabel: freezed == systemLabel
           ? _self.systemLabel
           : systemLabel // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  /// Create a copy of CoreBootFixEncryptionSupport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionWithArgsCopyWith<$Res> get action {
+    return $CoreBootFixActionWithArgsCopyWith<$Res>(_self.action, (value) {
+      return _then(_self.copyWith(action: value));
+    });
   }
 }
 
@@ -25436,7 +26179,8 @@ extension CoreBootFixEncryptionSupportPatterns on CoreBootFixEncryptionSupport {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(CoreBootFixAction action, String? systemLabel)? $default, {
+    TResult Function(CoreBootFixActionWithArgs action, String? systemLabel)?
+        $default, {
     required TResult orElse(),
   }) {
     final _that = this;
@@ -25463,7 +26207,8 @@ extension CoreBootFixEncryptionSupportPatterns on CoreBootFixEncryptionSupport {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(CoreBootFixAction action, String? systemLabel) $default,
+    TResult Function(CoreBootFixActionWithArgs action, String? systemLabel)
+        $default,
   ) {
     final _that = this;
     switch (_that) {
@@ -25488,7 +26233,8 @@ extension CoreBootFixEncryptionSupportPatterns on CoreBootFixEncryptionSupport {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(CoreBootFixAction action, String? systemLabel)? $default,
+    TResult? Function(CoreBootFixActionWithArgs action, String? systemLabel)?
+        $default,
   ) {
     final _that = this;
     switch (_that) {
@@ -25508,7 +26254,7 @@ class _CoreBootFixEncryptionSupport implements CoreBootFixEncryptionSupport {
       _$CoreBootFixEncryptionSupportFromJson(json);
 
   @override
-  final CoreBootFixAction action;
+  final CoreBootFixActionWithArgs action;
   @override
   final String? systemLabel;
 
@@ -25557,7 +26303,10 @@ abstract mixin class _$CoreBootFixEncryptionSupportCopyWith<$Res>
       __$CoreBootFixEncryptionSupportCopyWithImpl;
   @override
   @useResult
-  $Res call({CoreBootFixAction action, String? systemLabel});
+  $Res call({CoreBootFixActionWithArgs action, String? systemLabel});
+
+  @override
+  $CoreBootFixActionWithArgsCopyWith<$Res> get action;
 }
 
 /// @nodoc
@@ -25580,12 +26329,22 @@ class __$CoreBootFixEncryptionSupportCopyWithImpl<$Res>
       action: null == action
           ? _self.action
           : action // ignore: cast_nullable_to_non_nullable
-              as CoreBootFixAction,
+              as CoreBootFixActionWithArgs,
       systemLabel: freezed == systemLabel
           ? _self.systemLabel
           : systemLabel // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
+  }
+
+  /// Create a copy of CoreBootFixEncryptionSupport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CoreBootFixActionWithArgsCopyWith<$Res> get action {
+    return $CoreBootFixActionWithArgsCopyWith<$Res>(_self.action, (value) {
+      return _then(_self.copyWith(action: value));
+    });
   }
 }
 

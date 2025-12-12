@@ -765,7 +765,7 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
 
   @override
   _i5.Future<void> coreBootFixEncryptionSupportV2(
-          _i2.CoreBootFixAction? action) =>
+          _i2.CoreBootFixActionWithArgs? action) =>
       (super.noSuchMethod(
         Invocation.method(
           #coreBootFixEncryptionSupportV2,

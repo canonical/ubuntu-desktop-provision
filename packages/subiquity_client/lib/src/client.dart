@@ -436,7 +436,7 @@ class SubiquityClient {
   }
 
   Future<void> coreBootFixEncryptionSupportV2(
-    CoreBootFixAction action,
+    CoreBootFixActionWithArgs action,
   ) async {
     final request =
         await _openUrl('POST', 'storage/v2/core_boot_fix_encryption_support');

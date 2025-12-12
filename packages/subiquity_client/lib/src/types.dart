@@ -941,15 +941,39 @@ enum GuidedDisallowedCapabilityReason {
 }
 
 @freezed
-abstract class CoreBootFixActionWithCategory
-    with _$CoreBootFixActionWithCategory {
-  const factory CoreBootFixActionWithCategory({
+abstract class CoreBootFixActionArgs with _$CoreBootFixActionArgs {
+  const factory CoreBootFixActionArgs({
+    List<CoreBootAvailabilityErrorKind>? errorKinds,
+  }) = _CoreBootFixActionArgs;
+
+  factory CoreBootFixActionArgs.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixActionArgsFromJson(json);
+}
+
+@freezed
+abstract class CoreBootFixActionWithArgs with _$CoreBootFixActionWithArgs {
+  const factory CoreBootFixActionWithArgs({
+    required CoreBootFixAction type,
+    CoreBootFixActionArgs? args,
+  }) = _CoreBootFixActionWithArgs;
+
+  factory CoreBootFixActionWithArgs.fromJson(Map<String, dynamic> json) =>
+      _$CoreBootFixActionWithArgsFromJson(json);
+}
+
+@freezed
+abstract class CoreBootFixActionWithCategoryAndArgs
+    with _$CoreBootFixActionWithCategoryAndArgs {
+  const factory CoreBootFixActionWithCategoryAndArgs({
     required CoreBootFixAction type,
     required bool forUser,
-  }) = _CoreBootFixActionWithCategory;
+    CoreBootFixActionArgs? args,
+  }) = _CoreBootFixActionWithCategoryAndArgs;
 
-  factory CoreBootFixActionWithCategory.fromJson(Map<String, dynamic> json) =>
-      _$CoreBootFixActionWithCategoryFromJson(json);
+  factory CoreBootFixActionWithCategoryAndArgs.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$CoreBootFixActionWithCategoryAndArgsFromJson(json);
 }
 
 @freezed
@@ -958,7 +982,7 @@ abstract class CoreBootEncryptionSupportError
   const factory CoreBootEncryptionSupportError({
     required CoreBootAvailabilityErrorKind kind,
     required String message,
-    required List<CoreBootFixActionWithCategory> actions,
+    required List<CoreBootFixActionWithCategoryAndArgs> actions,
   }) = _CoreBootEncryptionSupportError;
 
   factory CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>
@@ -1184,7 +1208,7 @@ enum CoreBootEncryptionFeatures {
 abstract class CoreBootFixEncryptionSupport
     with _$CoreBootFixEncryptionSupport {
   const factory CoreBootFixEncryptionSupport({
-    required CoreBootFixAction action,
+    required CoreBootFixActionWithArgs action,
     String? systemLabel,
   }) = _CoreBootFixEncryptionSupport;
 

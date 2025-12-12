@@ -987,51 +987,20 @@ Map<String, dynamic> _$DiskToJson(_Disk instance) => <String, dynamic>{
       'requires_reformat': instance.requiresReformat,
     };
 
-_CoreBootFixActionWithCategory _$CoreBootFixActionWithCategoryFromJson(
+_CoreBootFixActionArgs _$CoreBootFixActionArgsFromJson(
         Map<String, dynamic> json) =>
-    _CoreBootFixActionWithCategory(
-      type: $enumDecode(_$CoreBootFixActionEnumMap, json['type']),
-      forUser: json['for_user'] as bool,
-    );
-
-Map<String, dynamic> _$CoreBootFixActionWithCategoryToJson(
-        _CoreBootFixActionWithCategory instance) =>
-    <String, dynamic>{
-      'type': _$CoreBootFixActionEnumMap[instance.type]!,
-      'for_user': instance.forUser,
-    };
-
-const _$CoreBootFixActionEnumMap = {
-  CoreBootFixAction.REBOOT: 'REBOOT',
-  CoreBootFixAction.SHUTDOWN: 'SHUTDOWN',
-  CoreBootFixAction.REBOOT_TO_FW_SETTINGS: 'REBOOT_TO_FW_SETTINGS',
-  CoreBootFixAction.CONTACT_OEM: 'CONTACT_OEM',
-  CoreBootFixAction.CONTACT_OS_VENDOR: 'CONTACT_OS_VENDOR',
-  CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE: 'ENABLE_TPM_VIA_FIRMWARE',
-  CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE:
-      'ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE',
-  CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE: 'CLEAR_TPM_VIA_FIRMWARE',
-  CoreBootFixAction.CLEAR_TPM: 'CLEAR_TPM',
-  CoreBootFixAction.PROCEED: 'PROCEED',
-};
-
-_CoreBootEncryptionSupportError _$CoreBootEncryptionSupportErrorFromJson(
-        Map<String, dynamic> json) =>
-    _CoreBootEncryptionSupportError(
-      kind: $enumDecode(_$CoreBootAvailabilityErrorKindEnumMap, json['kind']),
-      message: json['message'] as String,
-      actions: (json['actions'] as List<dynamic>)
-          .map((e) =>
-              CoreBootFixActionWithCategory.fromJson(e as Map<String, dynamic>))
+    _CoreBootFixActionArgs(
+      errorKinds: (json['error_kinds'] as List<dynamic>?)
+          ?.map((e) => $enumDecode(_$CoreBootAvailabilityErrorKindEnumMap, e))
           .toList(),
     );
 
-Map<String, dynamic> _$CoreBootEncryptionSupportErrorToJson(
-        _CoreBootEncryptionSupportError instance) =>
+Map<String, dynamic> _$CoreBootFixActionArgsToJson(
+        _CoreBootFixActionArgs instance) =>
     <String, dynamic>{
-      'kind': _$CoreBootAvailabilityErrorKindEnumMap[instance.kind]!,
-      'message': instance.message,
-      'actions': instance.actions.map((e) => e.toJson()).toList(),
+      'error_kinds': instance.errorKinds
+          ?.map((e) => _$CoreBootAvailabilityErrorKindEnumMap[e]!)
+          .toList(),
     };
 
 const _$CoreBootAvailabilityErrorKindEnumMap = {
@@ -1083,6 +1052,75 @@ const _$CoreBootAvailabilityErrorKindEnumMap = {
   CoreBootAvailabilityErrorKind.PRE_OS_DIGEST_VERIFICATION_DETECTED:
       'PRE_OS_DIGEST_VERIFICATION_DETECTED',
 };
+
+_CoreBootFixActionWithArgs _$CoreBootFixActionWithArgsFromJson(
+        Map<String, dynamic> json) =>
+    _CoreBootFixActionWithArgs(
+      type: $enumDecode(_$CoreBootFixActionEnumMap, json['type']),
+      args: json['args'] == null
+          ? null
+          : CoreBootFixActionArgs.fromJson(
+              json['args'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$CoreBootFixActionWithArgsToJson(
+        _CoreBootFixActionWithArgs instance) =>
+    <String, dynamic>{
+      'type': _$CoreBootFixActionEnumMap[instance.type]!,
+      'args': instance.args?.toJson(),
+    };
+
+const _$CoreBootFixActionEnumMap = {
+  CoreBootFixAction.REBOOT: 'REBOOT',
+  CoreBootFixAction.SHUTDOWN: 'SHUTDOWN',
+  CoreBootFixAction.REBOOT_TO_FW_SETTINGS: 'REBOOT_TO_FW_SETTINGS',
+  CoreBootFixAction.CONTACT_OEM: 'CONTACT_OEM',
+  CoreBootFixAction.CONTACT_OS_VENDOR: 'CONTACT_OS_VENDOR',
+  CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE: 'ENABLE_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE:
+      'ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE: 'CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM: 'CLEAR_TPM',
+  CoreBootFixAction.PROCEED: 'PROCEED',
+};
+
+_CoreBootFixActionWithCategoryAndArgs
+    _$CoreBootFixActionWithCategoryAndArgsFromJson(Map<String, dynamic> json) =>
+        _CoreBootFixActionWithCategoryAndArgs(
+          type: $enumDecode(_$CoreBootFixActionEnumMap, json['type']),
+          forUser: json['for_user'] as bool,
+          args: json['args'] == null
+              ? null
+              : CoreBootFixActionArgs.fromJson(
+                  json['args'] as Map<String, dynamic>),
+        );
+
+Map<String, dynamic> _$CoreBootFixActionWithCategoryAndArgsToJson(
+        _CoreBootFixActionWithCategoryAndArgs instance) =>
+    <String, dynamic>{
+      'type': _$CoreBootFixActionEnumMap[instance.type]!,
+      'for_user': instance.forUser,
+      'args': instance.args?.toJson(),
+    };
+
+_CoreBootEncryptionSupportError _$CoreBootEncryptionSupportErrorFromJson(
+        Map<String, dynamic> json) =>
+    _CoreBootEncryptionSupportError(
+      kind: $enumDecode(_$CoreBootAvailabilityErrorKindEnumMap, json['kind']),
+      message: json['message'] as String,
+      actions: (json['actions'] as List<dynamic>)
+          .map((e) => CoreBootFixActionWithCategoryAndArgs.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$CoreBootEncryptionSupportErrorToJson(
+        _CoreBootEncryptionSupportError instance) =>
+    <String, dynamic>{
+      'kind': _$CoreBootAvailabilityErrorKindEnumMap[instance.kind]!,
+      'message': instance.message,
+      'actions': instance.actions.map((e) => e.toJson()).toList(),
+    };
 
 _GuidedDisallowedCapability _$GuidedDisallowedCapabilityFromJson(
         Map<String, dynamic> json) =>
@@ -1497,13 +1535,14 @@ Map<String, dynamic> _$EntropyResponseToJson(_EntropyResponse instance) =>
 _CoreBootFixEncryptionSupport _$CoreBootFixEncryptionSupportFromJson(
         Map<String, dynamic> json) =>
     _CoreBootFixEncryptionSupport(
-      action: $enumDecode(_$CoreBootFixActionEnumMap, json['action']),
+      action: CoreBootFixActionWithArgs.fromJson(
+          json['action'] as Map<String, dynamic>),
       systemLabel: json['system_label'] as String?,
     );
 
 Map<String, dynamic> _$CoreBootFixEncryptionSupportToJson(
         _CoreBootFixEncryptionSupport instance) =>
     <String, dynamic>{
-      'action': _$CoreBootFixActionEnumMap[instance.action]!,
+      'action': instance.action.toJson(),
       'system_label': instance.systemLabel,
     };

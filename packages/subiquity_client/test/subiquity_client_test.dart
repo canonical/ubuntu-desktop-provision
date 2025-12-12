@@ -808,7 +808,9 @@ void main() {
           guided.targets.whereType<GuidedStorageTargetReformat>().last;
       final disallowedCapability = target.disallowed.first;
       await client.coreBootFixEncryptionSupportV2(
-        disallowedCapability.errors!.first.actions.first.type,
+        CoreBootFixActionWithArgs(
+          type: disallowedCapability.errors!.first.actions.first.type,
+        ),
       );
     });
   });

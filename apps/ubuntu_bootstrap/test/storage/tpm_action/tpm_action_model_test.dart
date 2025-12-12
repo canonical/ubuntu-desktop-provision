@@ -27,11 +27,11 @@ void main() {
             kind: CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT,
             message: 'TPM locked out',
             actions: [
-              CoreBootFixActionWithCategory(
+              CoreBootFixActionWithCategoryAndArgs(
                 type: CoreBootFixAction.CLEAR_TPM,
                 forUser: false,
               ),
-              CoreBootFixActionWithCategory(
+              CoreBootFixActionWithCategoryAndArgs(
                 type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
                 forUser: false,
               ),
@@ -41,7 +41,7 @@ void main() {
             kind: CoreBootAvailabilityErrorKind.INTERNAL,
             message: 'internal error',
             actions: [
-              CoreBootFixActionWithCategory(
+              CoreBootFixActionWithCategoryAndArgs(
                 type: CoreBootFixAction.REBOOT,
                 forUser: false,
               ),
@@ -121,7 +121,9 @@ void main() {
     await model.performAction(CoreBootFixAction.REBOOT_TO_FW_SETTINGS);
     verify(
       subiquity.coreBootFixEncryptionSupportV2(
-        CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+        CoreBootFixActionWithArgs(
+          type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+        ),
       ),
     ).called(1);
   });
