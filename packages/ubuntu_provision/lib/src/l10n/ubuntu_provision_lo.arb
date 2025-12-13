@@ -1,1 +1,12 @@
-{}
+{
+    "successIconSemanticLabel": "ສຳເລັດ",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "ປິດ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "ຂະຫຍາຍໃຫຍ່ສຸດ",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "ຫຍໍ້ລົງ",
+    "@minimizeIconSemanticLabel": {},
+    "close": "ປິດ",
+    "@close": {}
+}
