@@ -195,7 +195,7 @@ jobs:
           token: ${{secrets.CODECOV_TOKEN}}
 
       - name: Cache coverage files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             apps/*/coverage/lcov.info
@@ -261,7 +261,7 @@ jobs:
           token: ${{secrets.CODECOV_TOKEN}}
 
       - name: Cache coverage files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/coverage.out
           key: ${{ github.sha }}-go-test-coverage
@@ -282,7 +282,7 @@ jobs:
           go-version-file: "./provd/go.mod"
 
       - name: Restore Flutter coverage files from cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             apps/*/coverage/lcov.info
@@ -290,7 +290,7 @@ jobs:
           key: ${{ github.sha }}-flutter-test-coverage
 
       - name: Restore Go coverage files from cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/coverage.out
           key: ${{ github.sha }}-go-test-coverage
