@@ -873,5 +873,9 @@
     "tpmActionErrorKindPcrUnusable": "PCR אינו שמיש",
     "@tpmActionErrorKindPcrUnusable": {},
     "tpmActionErrorKindPcrUnsupported": "אין תמיכה ב־PCR",
-    "@tpmActionErrorKindPcrUnsupported": {}
+    "@tpmActionErrorKindPcrUnsupported": {},
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "התגלה אלגוריתם SecureBoot (טעינה מאובטחת) חלש",
+    "@tpmActionErrorKindWeakSecureBootAlgorithmDetected": {},
+    "tpmActionErrorKindInvalidSecureBootMode": "מצב SecureBoot (טעינה מאובטחת) שגוי",
+    "@tpmActionErrorKindInvalidSecureBootMode": {}
 }
