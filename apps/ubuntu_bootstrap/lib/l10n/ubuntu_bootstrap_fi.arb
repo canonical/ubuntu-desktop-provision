@@ -880,5 +880,7 @@
     "recoveryKeyClipboardNotifiaction": "Kopioitu leikepöydälle",
     "@recoveryKeyClipboardNotifiaction": {},
     "errorIconSemanticLabel": "Virhe",
-    "@errorIconSemanticLabel": {}
+    "@errorIconSemanticLabel": {},
+    "tpmActionErrorKindNoSuitablePcrBank": "",
+    "@tpmActionErrorKindNoSuitablePcrBank": {}
 }
