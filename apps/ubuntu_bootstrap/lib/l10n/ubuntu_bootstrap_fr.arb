@@ -862,7 +862,7 @@
     "@tpmActionErrorKindInvalidSecureBootMode": {},
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Algorithme SecureBoot faible détecté",
     "@tpmActionErrorKindWeakSecureBootAlgorithmDetected": {},
-    "tpmActionFixActionReboot": "",
+    "tpmActionFixActionReboot": "Redémarrer",
     "@tpmActionFixActionReboot": {},
     "tpmActionFixActionRebootToFwSettings": "Redémarrer vers paramètres FW",
     "@tpmActionFixActionRebootToFwSettings": {},
