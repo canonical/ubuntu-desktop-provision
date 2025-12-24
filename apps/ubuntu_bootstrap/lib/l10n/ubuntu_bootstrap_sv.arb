@@ -865,5 +865,19 @@
     "tpmActionFixActionClearTpm": "Rensa TPM",
     "@tpmActionFixActionClearTpm": {},
     "tpmActionFixActionProceed": "Fortsätt",
-    "@tpmActionFixActionProceed": {}
+    "@tpmActionFixActionProceed": {},
+    "tpmActionErrorKindMissingArgument": "Argument saknas",
+    "@tpmActionErrorKindMissingArgument": {},
+    "tpmActionErrorKindEfiVariableAccess": "EFI-variabelåtkomst",
+    "@tpmActionErrorKindEfiVariableAccess": {},
+    "tpmActionErrorKindTpmDeviceFailure": "Fel från TPM-enhet",
+    "@tpmActionErrorKindTpmDeviceFailure": {},
+    "tpmActionErrorKindNoSuitablePcrBank": "Ingen lämplig PCR-bank",
+    "@tpmActionErrorKindNoSuitablePcrBank": {},
+    "tpmActionErrorKindEmptyPcrBanks": "Tomma PCR-bankar",
+    "@tpmActionErrorKindEmptyPcrBanks": {},
+    "tpmActionErrorKindTpmStartupLocalityNotProtected": "TPM-uppstartsplacering ej skyddad",
+    "@tpmActionErrorKindTpmStartupLocalityNotProtected": {},
+    "tpmActionErrorKindPcrUnusable": "PCR obrukbar",
+    "@tpmActionErrorKindPcrUnusable": {}
 }
