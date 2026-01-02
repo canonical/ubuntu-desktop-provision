@@ -1,1 +1,8 @@
-{}
+{
+    "closeIconSemanticLabel": "ياپ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "چوڭايت",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "كىچىكلەت",
+    "@minimizeIconSemanticLabel": {}
+}
