@@ -81,7 +81,7 @@
     "@ubuntuProOnBoardingSkipForNowDescription": {},
     "telemetryCollectError": "Misslyckades att samla in telemetri data",
     "@telemetryCollectError": {},
-    "successIconSemanticLabel": "Lyckats",
+    "successIconSemanticLabel": "Lyckades",
     "@successIconSemanticLabel": {},
     "closeIconSemanticLabel": "Stäng",
     "@closeIconSemanticLabel": {},
