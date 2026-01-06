@@ -742,7 +742,7 @@
     "@passphraseTypePassphraseTileSubTitle": {},
     "recoveryKeyFilePickerTitle": "Spara återställningsnyckelfil",
     "@recoveryKeyFilePickerTitle": {},
-    "recoveryKeyFilePickerFilter": "Text filer",
+    "recoveryKeyFilePickerFilter": "Textfiler",
     "@recoveryKeyFilePickerFilter": {},
     "recoveryKeyTitleBadgeLabel": "Viktigt",
     "@recoveryKeyTitleBadgeLabel": {},
@@ -774,7 +774,7 @@
     "@passphrasePagePinEntropyOptimal": {},
     "passphrasePagePassphraseEntropyOptimal": "Stark lösenfras",
     "@passphrasePagePassphraseEntropyOptimal": {},
-    "successIconSemanticLabel": "Lyckats",
+    "successIconSemanticLabel": "Lyckades",
     "@successIconSemanticLabel": {},
     "nextSlideSemanticLabel": "Nästa bild",
     "@nextSlideSemanticLabel": {},
@@ -879,5 +879,11 @@
     "tpmActionErrorKindTpmStartupLocalityNotProtected": "TPM-uppstartsplacering ej skyddad",
     "@tpmActionErrorKindTpmStartupLocalityNotProtected": {},
     "tpmActionErrorKindPcrUnusable": "PCR obrukbar",
-    "@tpmActionErrorKindPcrUnusable": {}
+    "@tpmActionErrorKindPcrUnusable": {},
+    "tpmActionErrorKindTpmHierarchiesOwned": "TPM-hierarkier ägda",
+    "@tpmActionErrorKindTpmHierarchiesOwned": {},
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM-enhet Utlåsning Utlåst",
+    "@tpmActionErrorKindTpmDeviceLockoutLockedOut": {},
+    "tpmActionErrorKindMeasuredBoot": "Uppmätt uppstart",
+    "@tpmActionErrorKindMeasuredBoot": {}
 }
