@@ -13,6 +13,10 @@ architectures:
   - build-on: amd64
   - build-on: arm64
 
+package-repositories:
+  - type: apt
+    ppa: desktop-snappers/core22-mesa-backports
+
 apps:
   subiquity-server:
     command: bin/subiquity-server
@@ -228,6 +232,8 @@ parts:
       - libglib2.0-bin
       - libibus-1.0-5
       - python3-gi
+      - libxcb-dri2-0
+      - libxcb-dri3-0
     prime:
       - usr/lib/*/libEGL*.so.*
       - usr/lib/*/libGL*.so.*
