@@ -882,7 +882,7 @@
     "@tpmActionErrorKindPcrUnusable": {},
     "tpmActionErrorKindTpmHierarchiesOwned": "Ägda TPM-hierarkier",
     "@tpmActionErrorKindTpmHierarchiesOwned": {},
-    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM-enhetsutlåsning utlåst",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM-enhetblockering låst",
     "@tpmActionErrorKindTpmDeviceLockoutLockedOut": {},
     "tpmActionErrorKindMeasuredBoot": "Uppmätt uppstart",
     "@tpmActionErrorKindMeasuredBoot": {},
