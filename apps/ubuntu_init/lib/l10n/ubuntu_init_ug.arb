@@ -4,5 +4,7 @@
     "maximizeIconSemanticLabel": "چوڭايت",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "كىچىكلەت",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "successIconSemanticLabel": "مۇۋەپپەقىيەتلىك",
+    "@successIconSemanticLabel": {}
 }
