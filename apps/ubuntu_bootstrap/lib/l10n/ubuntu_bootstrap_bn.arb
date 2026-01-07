@@ -1,8 +1,17 @@
 {
-  "@@locale": "bn",
-  "welcome": "স্বাগতম",
-  "changeButtonText": "পরিবর্তন",
-  "windowTitle": "{RELEASE} ইনস্টল করুন",
-  "tryOption": "{RELEASE} ব্যবহার করে দেখুন",
-  "installOption": "{RELEASE} ইনস্টল করুন"
+    "@@locale": "bn",
+    "welcome": "স্বাগতম",
+    "@welcome": {},
+    "changeButtonText": "পরিবর্তন",
+    "@changeButtonText": {},
+    "windowTitle": "{RELEASE} ইনস্টল করুন",
+    "@windowTitle": {},
+    "tryOption": "{RELEASE} ব্যবহার করে দেখুন",
+    "@tryOption": {},
+    "installOption": "{RELEASE} ইনস্টল করুন",
+    "@installOption": {},
+    "tpmActionErrorKindAbsolutePresent": "",
+    "@tpmActionErrorKindAbsolutePresent": {},
+    "tpmActionErrorKindInvalidSecureBootMode": "",
+    "@tpmActionErrorKindInvalidSecureBootMode": {}
 }
