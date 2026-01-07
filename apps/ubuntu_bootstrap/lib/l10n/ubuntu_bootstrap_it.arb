@@ -766,5 +766,13 @@
     "installationSlidesGamingTitle": "Fantastica per il gaming",
     "@installationSlidesGamingTitle": {},
     "toggleLogsSemanticLabel": "Mostra/Nascondi i log di installazione",
-    "@toggleLogsSemanticLabel": {}
+    "@toggleLogsSemanticLabel": {},
+    "successIconSemanticLabel": "Successo",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "Chiudi",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "Massimizza",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "Minimizza",
+    "@minimizeIconSemanticLabel": {}
 }
