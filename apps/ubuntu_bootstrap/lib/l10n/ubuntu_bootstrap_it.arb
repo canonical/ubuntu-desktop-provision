@@ -774,5 +774,7 @@
     "maximizeIconSemanticLabel": "Massimizza",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimizza",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "bitlockerWarningTitle": "Puoi perdere tutti i tuoi dati senza le chiavi di recupero BitLocker",
+    "@bitlockerWarningTitle": {}
 }
