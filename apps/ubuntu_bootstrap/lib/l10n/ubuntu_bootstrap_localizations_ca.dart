@@ -1379,7 +1379,8 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get minimizeIconSemanticLabel => 'Minimitza';
 
   @override
-  String get tpmActionPageTitle => 'Hardware-backed encryption';
+  String get tpmActionPageTitle =>
+      'Hardware-backed encryption could not be enabled';
 
   @override
   String get tpmActionBadgeLabel => 'Action required';
@@ -1389,6 +1390,22 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionConfirmLabel => 'Confirm';
+
+  @override
+  String tpmActionSolutionLabel(int n, String text) {
+    return 'Solution $n: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+
+  @override
+  String get tpmActionErrorSupportLabel =>
+      'Try the solutions below, contact IT support, or choose a different encryption method.';
+
+  @override
+  String get tpmActionErrorSupportNoActionLabel =>
+      'Contact IT support, or choose a different encryption method.';
 
   @override
   String get tpmActionErrorKindInternal => 'Internal';
@@ -1509,13 +1526,46 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Pre Os Digest Verification Detected';
 
   @override
-  String get tpmActionFixActionReboot => 'Reboot';
+  String get tpmActionFixActionReboot => 'Restart';
 
   @override
-  String get tpmActionFixActionShutdown => 'Shutdown';
+  String get tpmActionFixActionShutdown => 'Power off';
 
   @override
-  String get tpmActionFixActionRebootToFwSettings => 'Reboot To FW Settings';
+  String get tpmActionFixActionRebootToFwSettings =>
+      'Restart to firmware settings';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
+      'Enable DMA protection manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
+      'Clear TPM manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
+      'Enable secure boot manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
+      'Enable DMA protection manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
+      'Enable PCR banks manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
+      'Enable TPM manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
+      'Clear TPM manually';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
+      'Clear TPM manually';
 
   @override
   String get tpmActionFixActionContactOem => 'Contact OEM';
@@ -1538,5 +1588,29 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get tpmActionFixActionClearTpm => 'Clear TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Proceed';
+  String get tpmActionFixActionProceed => 'Ignore';
+
+  @override
+  String get tpmActionRestartLabel => 'Restart';
+
+  @override
+  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+
+  @override
+  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+
+  @override
+  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+
+  @override
+  String get tpmActionFixActionClearTpmWarningTitle =>
+      'Clearing the TPM erases all encryption keys';
+
+  @override
+  String get tpmActionFixActionClearTpmWarningBody =>
+      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+
+  @override
+  String get tpmActionFixActionClearTpmConfirmationLabel =>
+      'I understand the consequences of clearing the TPM';
 }
