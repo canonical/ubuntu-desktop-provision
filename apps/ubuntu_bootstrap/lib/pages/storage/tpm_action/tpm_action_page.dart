@@ -4,8 +4,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_x.dart';
-import 'package:ubuntu_provision/interfaces.dart';
-import 'package:ubuntu_provision/widgets.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -20,51 +19,38 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(tpmActionModelProvider);
-    final notifier = ref.read(tpmActionModelProvider.notifier);
 
     final children = [
-      if (model.tpmError != null) Text(model.tpmError!.kind.localize(lang)),
-      if (model.confirmationNeeded)
-        YaruCheckButton(
-          value: model.confirmed,
-          onChanged: (value) => model.confirmed = value!,
-          title: Text(lang.tpmActionConfirmLabel),
+      if (model.tpmError != null) ...[
+        Text(model.tpmError!.kind.label(lang)),
+        Text(
+          model.actions.isNotEmpty
+              ? lang.tpmActionErrorSupportLabel
+              : lang.tpmActionErrorSupportNoActionLabel,
         ),
+      ],
       if (model.actions.isNotEmpty) ...[
         const SizedBox(height: kWizardSpacing / 2),
-        Text(
-          'Actions',
-          style: Theme.of(context).textTheme.titleMedium,
+        YaruExpansionPanel(
+          shrinkWrap: true,
+          headers: [
+            for (final (i, action) in model.actions.indexed)
+              Text(
+                lang.tpmActionSolutionLabel(
+                  i + 1,
+                  action.title(lang, model.tpmError?.kind),
+                ),
+              ),
+          ],
+          children: [
+            for (final action in model.actions)
+              _ActionBody(
+                action: action,
+                errorKind: model.tpmError?.kind,
+                isLoading: model.isLoading,
+              ),
+          ],
         ),
-        for (final action in model.actions)
-          OutlinedButton(
-            onPressed: (!model.confirmationNeeded || model.confirmed) &&
-                    !model.isLoading
-                ? () => notifier.performAction(action)
-                : null,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(action.localize(lang)),
-                if (model.isLoading)
-                  SizedBox.square(
-                    dimension: IconTheme.of(context).size,
-                    child: const YaruCircularProgressIndicator(
-                      strokeWidth: 3,
-                    ),
-                  ),
-              ].withSpacing(kWizardSpacing / 2),
-            ),
-          ),
-      ],
-      if (model.userActions.isNotEmpty) ...[
-        const SizedBox(height: kWizardSpacing / 2),
-        Text(
-          'User Actions',
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
-        for (final userAction in model.userActions)
-          Text(userAction.localize(lang)),
       ],
       if (model.tpmError != null) ...[
         const SizedBox(height: kWizardSpacing / 2),
@@ -85,10 +71,6 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
     return HorizontalPage(
       windowTitle: lang.installationTypeAdvancedTitle,
       title: lang.tpmActionPageTitle,
-      trailingTitleWidget: YaruInfoBadge(
-        title: Text(lang.tpmActionBadgeLabel),
-        yaruInfoType: YaruInfoType.warning,
-      ),
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [if (model.isFixed) NextWizardButton()],
@@ -100,15 +82,90 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
+class _ActionBody extends ConsumerStatefulWidget {
+  const _ActionBody({
+    required this.action,
+    this.errorKind,
+    this.isLoading = false,
+  });
+
+  final CoreBootFixAction action;
+  final CoreBootAvailabilityErrorKind? errorKind;
+  final bool isLoading;
+
+  @override
+  ConsumerState<_ActionBody> createState() => _ActionBodyState();
+}
+
+class _ActionBodyState extends ConsumerState<_ActionBody> {
+  late bool isConfirmed;
+
+  @override
+  void initState() {
+    super.initState();
+    isConfirmed = widget.action.warning == null;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final notifier = ref.read(tpmActionModelProvider.notifier);
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    return Padding(
+      padding: EdgeInsetsGeometry.only(
+        left: kYaruPagePadding,
+        right: kYaruPagePadding,
+        bottom: kYaruPagePadding,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(widget.action.description(lang)),
+          if (widget.action.warning != null) ...[
+            YaruInfoBox(
+              yaruInfoType: YaruInfoType.warning,
+              title: Text(widget.action.warning!.title(lang)),
+              child: Text(widget.action.warning!.body(lang)),
+            ),
+            YaruCheckButton(
+              value: isConfirmed,
+              onChanged: (value) => setState(() => isConfirmed = value!),
+              title: Text(widget.action.warning!.confirmationLabel(lang)),
+            ),
+          ],
+          Row(
+            children: [
+              OutlinedButton(
+                onPressed: isConfirmed
+                    ? () => notifier.performAction(widget.action)
+                    : null,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(widget.action.label(lang)),
+                    if (widget.isLoading)
+                      SizedBox.square(
+                        dimension: IconTheme.of(context).size,
+                        child: const YaruCircularProgressIndicator(
+                          strokeWidth: 3,
+                        ),
+                      ),
+                  ].withSpacing(kWizardSpacing / 2),
+                ),
+              ),
+            ],
+          ),
+        ].withSpacing(kWizardSpacing / 2),
+      ),
+    );
+  }
+}
+
 extension on TpmActionModel {
   CoreBootEncryptionSupportError? get tpmError =>
       tpmDisallowedCapability?.errors?.first;
 
   List<CoreBootFixAction> get actions =>
       tpmError?.actions.where((a) => !a.forUser).map((a) => a.type).toList() ??
-      [];
-  List<CoreBootFixAction> get userActions =>
-      tpmError?.actions.where((a) => a.forUser).map((a) => a.type).toList() ??
       [];
 
   bool get isFixed => tpmDisallowedCapability == null;

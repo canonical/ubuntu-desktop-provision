@@ -49,11 +49,16 @@ void main() {
     await tester.pumpApp((_) => buildPage(model));
     await tester.pumpAndSettle();
     expect(
-      find.text(CoreBootAvailabilityErrorKind.INTERNAL.localize(tester.lang)),
+      find.text(CoreBootAvailabilityErrorKind.INTERNAL.label(tester.lang)),
       findsOneWidget,
     );
     expect(
-      find.text(CoreBootFixAction.REBOOT_TO_FW_SETTINGS.localize(tester.lang)),
+      find.text(
+        tester.lang.tpmActionSolutionLabel(
+          1,
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS.title(tester.lang),
+        ),
+      ),
       findsOneWidget,
     );
   });
