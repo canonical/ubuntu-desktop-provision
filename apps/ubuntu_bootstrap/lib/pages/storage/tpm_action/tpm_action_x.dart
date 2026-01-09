@@ -2,7 +2,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 
 extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
-  String localize(UbuntuBootstrapLocalizations l10n) => switch (this) {
+  String label(UbuntuBootstrapLocalizations l10n) => switch (this) {
         CoreBootAvailabilityErrorKind.INTERNAL =>
           l10n.tpmActionErrorKindInternal,
         CoreBootAvailabilityErrorKind.SHUTDOWN_REQUIRED =>
@@ -76,24 +76,123 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
         CoreBootAvailabilityErrorKind.PRE_OS_DIGEST_VERIFICATION_DETECTED =>
           l10n.tpmActionErrorKindPreOsDigestVerificationDetected,
       };
+
+  String description(UbuntuBootstrapLocalizations l10) =>
+      'Description for $this';
 }
 
 extension CoreBootFixActionL10n on CoreBootFixAction {
-  String localize(UbuntuBootstrapLocalizations l10n) => switch (this) {
-        CoreBootFixAction.REBOOT => l10n.tpmActionFixActionReboot,
-        CoreBootFixAction.SHUTDOWN => l10n.tpmActionFixActionShutdown,
-        CoreBootFixAction.REBOOT_TO_FW_SETTINGS =>
+  String title(
+    UbuntuBootstrapLocalizations l10n, [
+    CoreBootAvailabilityErrorKind? error,
+  ]) =>
+      switch ((this, error)) {
+        (CoreBootFixAction.REBOOT, _) => l10n.tpmActionFixActionReboot,
+        (CoreBootFixAction.SHUTDOWN, _) => l10n.tpmActionFixActionShutdown,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.INSUFFICIENT_DMA_PROTECTION
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.INSUFFICIENT_TPM_STORAGE
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.INVALID_SECURE_BOOT_MODE
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsNoKernelIommu,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.NO_SUITABLE_PCR_BANK
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.TPM_DEVICE_DISABLED,
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.TPM_HIERARCHIES_OWNED
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned,
+        (CoreBootFixAction.REBOOT_TO_FW_SETTINGS, _) =>
           l10n.tpmActionFixActionRebootToFwSettings,
-        CoreBootFixAction.CONTACT_OEM => l10n.tpmActionFixActionContactOem,
-        CoreBootFixAction.CONTACT_OS_VENDOR =>
+        (CoreBootFixAction.CONTACT_OEM, _) => l10n.tpmActionFixActionContactOem,
+        (CoreBootFixAction.CONTACT_OS_VENDOR, _) =>
           l10n.tpmActionFixActionContactOsVendor,
-        CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE =>
+        (CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE, _) =>
           l10n.tpmActionFixActionEnableTpmViaFirmware,
-        CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE =>
+        (CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE, _) =>
           l10n.tpmActionFixActionEnableAndClearTpmViaFirmware,
-        CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE =>
+        (CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE, _) =>
           l10n.tpmActionFixActionClearTpmViaFirmware,
-        CoreBootFixAction.CLEAR_TPM => l10n.tpmActionFixActionClearTpm,
-        CoreBootFixAction.PROCEED => l10n.tpmActionFixActionProceed,
+        (CoreBootFixAction.CLEAR_TPM, _) => l10n.tpmActionFixActionClearTpm,
+        (CoreBootFixAction.PROCEED, _) => l10n.tpmActionFixActionProceed,
       };
+
+  String label(UbuntuBootstrapLocalizations l10n) => switch (this) {
+        CoreBootFixAction.REBOOT ||
+        CoreBootFixAction.REBOOT_TO_FW_SETTINGS =>
+          l10n.tpmActionRestartLabel,
+        CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE =>
+          l10n.tpmActionRestartAndEnableTpmLabel,
+        CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE ||
+        CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE ||
+        CoreBootFixAction.CLEAR_TPM =>
+          l10n.tpmActionRestartAndClearTpmLabel,
+        CoreBootFixAction.PROCEED => l10n.tpmActionIgnoreAndContinueLabel,
+        CoreBootFixAction.SHUTDOWN ||
+        CoreBootFixAction.CONTACT_OEM ||
+        CoreBootFixAction.CONTACT_OS_VENDOR =>
+          title(l10n),
+      };
+
+  String description(UbuntuBootstrapLocalizations l10n) =>
+      'Description for $this';
+
+  DestructiveActionWarning? get warning => switch (this) {
+        CoreBootFixAction.CLEAR_TPM ||
+        CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE ||
+        CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE =>
+          DestructiveActionWarning(
+            title: (l10n) => l10n.tpmActionFixActionClearTpmWarningTitle,
+            body: (l10n) => l10n.tpmActionFixActionClearTpmWarningBody,
+            confirmationLabel: (l10n) =>
+                l10n.tpmActionFixActionClearTpmConfirmationLabel,
+          ),
+        CoreBootFixAction.REBOOT ||
+        CoreBootFixAction.SHUTDOWN ||
+        CoreBootFixAction.REBOOT_TO_FW_SETTINGS ||
+        CoreBootFixAction.CONTACT_OEM ||
+        CoreBootFixAction.CONTACT_OS_VENDOR ||
+        CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE ||
+        CoreBootFixAction.PROCEED =>
+          null,
+      };
+}
+
+class DestructiveActionWarning {
+  const DestructiveActionWarning({
+    required this.title,
+    required this.body,
+    required this.confirmationLabel,
+  });
+
+  final String Function(UbuntuBootstrapLocalizations) title;
+  final String Function(UbuntuBootstrapLocalizations) body;
+  final String Function(UbuntuBootstrapLocalizations) confirmationLabel;
 }

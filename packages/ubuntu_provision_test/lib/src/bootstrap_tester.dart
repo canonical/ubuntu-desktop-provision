@@ -427,7 +427,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
 
     if (action != null) {
-      await tapButton(action.localize(l10n));
+      await tapButton(action.label(l10n));
       await pump();
     }
   }

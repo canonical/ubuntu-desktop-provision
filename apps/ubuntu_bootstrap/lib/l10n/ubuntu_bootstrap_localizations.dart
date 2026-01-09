@@ -2431,7 +2431,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionPageTitle.
   ///
   /// In en, this message translates to:
-  /// **'Hardware-backed encryption'**
+  /// **'Hardware-backed encryption could not be enabled'**
   String get tpmActionPageTitle;
 
   /// No description provided for @tpmActionBadgeLabel.
@@ -2451,6 +2451,30 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Confirm'**
   String get tpmActionConfirmLabel;
+
+  /// No description provided for @tpmActionSolutionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Solution {n}: {text}'**
+  String tpmActionSolutionLabel(int n, String text);
+
+  /// No description provided for @tpmActionDocumentationLinkLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Link to documentation'**
+  String get tpmActionDocumentationLinkLabel;
+
+  /// No description provided for @tpmActionErrorSupportLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Try the solutions below, contact IT support, or choose a different encryption method.'**
+  String get tpmActionErrorSupportLabel;
+
+  /// No description provided for @tpmActionErrorSupportNoActionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact IT support, or choose a different encryption method.'**
+  String get tpmActionErrorSupportNoActionLabel;
 
   /// No description provided for @tpmActionErrorKindInternal.
   ///
@@ -2671,20 +2695,68 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionReboot.
   ///
   /// In en, this message translates to:
-  /// **'Reboot'**
+  /// **'Restart'**
   String get tpmActionFixActionReboot;
 
   /// No description provided for @tpmActionFixActionShutdown.
   ///
   /// In en, this message translates to:
-  /// **'Shutdown'**
+  /// **'Power off'**
   String get tpmActionFixActionShutdown;
 
   /// No description provided for @tpmActionFixActionRebootToFwSettings.
   ///
   /// In en, this message translates to:
-  /// **'Reboot To FW Settings'**
+  /// **'Restart to firmware settings'**
   String get tpmActionFixActionRebootToFwSettings;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable DMA protection manually'**
+  String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear TPM manually'**
+  String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable secure boot manually'**
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsNoKernelIommu.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable DMA protection manually'**
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommu;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable PCR banks manually'**
+  String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable TPM manually'**
+  String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear TPM manually'**
+  String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear TPM manually'**
+  String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned;
 
   /// No description provided for @tpmActionFixActionContactOem.
   ///
@@ -2725,8 +2797,50 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionProceed.
   ///
   /// In en, this message translates to:
-  /// **'Proceed'**
+  /// **'Ignore'**
   String get tpmActionFixActionProceed;
+
+  /// No description provided for @tpmActionRestartLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart'**
+  String get tpmActionRestartLabel;
+
+  /// No description provided for @tpmActionRestartAndEnableTpmLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart and enable TPM'**
+  String get tpmActionRestartAndEnableTpmLabel;
+
+  /// No description provided for @tpmActionRestartAndClearTpmLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart and clear TPM'**
+  String get tpmActionRestartAndClearTpmLabel;
+
+  /// No description provided for @tpmActionIgnoreAndContinueLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Ignore and continue'**
+  String get tpmActionIgnoreAndContinueLabel;
+
+  /// No description provided for @tpmActionFixActionClearTpmWarningTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Clearing the TPM erases all encryption keys'**
+  String get tpmActionFixActionClearTpmWarningTitle;
+
+  /// No description provided for @tpmActionFixActionClearTpmWarningBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.'**
+  String get tpmActionFixActionClearTpmWarningBody;
+
+  /// No description provided for @tpmActionFixActionClearTpmConfirmationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'I understand the consequences of clearing the TPM'**
+  String get tpmActionFixActionClearTpmConfirmationLabel;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate
