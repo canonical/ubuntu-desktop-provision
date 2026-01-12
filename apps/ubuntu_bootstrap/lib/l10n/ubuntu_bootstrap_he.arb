@@ -794,7 +794,7 @@
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "מזעור",
     "@minimizeIconSemanticLabel": {},
-    "tpmActionPageTitle": "הצפנה בגיבוי חומרה",
+    "tpmActionPageTitle": "לא ניתן להפעיל הצפנה בגיבוי חומרה",
     "@tpmActionPageTitle": {},
     "tpmActionBadgeLabel": "נדרשת התערבות",
     "@tpmActionBadgeLabel": {},
@@ -858,7 +858,7 @@
     "@tpmActionFixActionClearTpmViaFirmware": {},
     "tpmActionFixActionClearTpm": "פינוי TPM",
     "@tpmActionFixActionClearTpm": {},
-    "tpmActionFixActionProceed": "המשך",
+    "tpmActionFixActionProceed": "התעלמות",
     "@tpmActionFixActionProceed": {},
     "tpmActionErrorKindEfiVariableAccess": "גישה למשתנה EFI",
     "@tpmActionErrorKindEfiVariableAccess": {},
@@ -877,5 +877,54 @@
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "התגלה אלגוריתם SecureBoot (טעינה מאובטחת) חלש",
     "@tpmActionErrorKindWeakSecureBootAlgorithmDetected": {},
     "tpmActionErrorKindInvalidSecureBootMode": "מצב SecureBoot (טעינה מאובטחת) שגוי",
-    "@tpmActionErrorKindInvalidSecureBootMode": {}
+    "@tpmActionErrorKindInvalidSecureBootMode": {},
+    "tpmActionSolutionLabel": "פתרון {n}‏: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "קישור לתיעוד",
+    "@tpmActionDocumentationLinkLabel": {},
+    "tpmActionErrorSupportLabel": "נא לנסות את הפתרונות שלהלן, ליצור קשר עם התמיכה הטכנית או לבחור בשיטת הצפנה חלופית.",
+    "@tpmActionErrorSupportLabel": {},
+    "tpmActionErrorSupportNoActionLabel": "ליצור קשר עם התמיכה הטכנית או לבחור בשיטת הצפנה חלופית.",
+    "@tpmActionErrorSupportNoActionLabel": {},
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "הפעלת הגנת DMA (גישה ישירה לזיכרון) ידנית",
+    "@tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": {},
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "מחיקת TPM ידנית",
+    "@tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": {},
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "הפעלת עלייה בטוחה (secure boot) ידנית",
+    "@tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": {},
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "הפעלת הגנת DMA (גישה ישירה לזיכרון) ידנית",
+    "@tpmActionFixActionRebootToFwSettingsNoKernelIommu": {},
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "הפעלת TPM ידנית",
+    "@tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": {},
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "מחיקת TPM ידנית",
+    "@tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": {},
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "מחיקת TPM ידנית",
+    "@tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": {},
+    "tpmActionRestartLabel": "הפעלה מחדש",
+    "@tpmActionRestartLabel": {},
+    "tpmActionRestartAndEnableTpmLabel": "הפעלת מחדש והפעלת TPM",
+    "@tpmActionRestartAndEnableTpmLabel": {},
+    "tpmActionRestartAndClearTpmLabel": "הפעלה מחדש ומחיקת TPM",
+    "@tpmActionRestartAndClearTpmLabel": {},
+    "tpmActionIgnoreAndContinueLabel": "התעלמות והמשך",
+    "@tpmActionIgnoreAndContinueLabel": {},
+    "tpmActionFixActionClearTpmWarningTitle": "פינוי ה־TPM מוחק את כל מפתחות ההצפנה",
+    "@tpmActionFixActionClearTpmWarningTitle": {},
+    "tpmActionFixActionClearTpmWarningBody": "הגישה שלך לכל הנתונים בכוננים המוצפנים שאין לך מפתחות שחזור אליהם תאבד. יכולות אחרות שתלויות ב־TPM, כגון אימות האישורים, יכולות גם כן להיפגע.",
+    "@tpmActionFixActionClearTpmWarningBody": {},
+    "tpmActionFixActionClearTpmConfirmationLabel": "השלכות מחיקת ה־TPM ברורות לי",
+    "@tpmActionFixActionClearTpmConfirmationLabel": {},
+    "tpmActionErrorTitle": "הפתרון הזה נכשל",
+    "@tpmActionErrorTitle": {},
+    "tpmActionErrorDescription": "כדאי לנסות פתרון אחר או ליצור קשר עם התמיכה הטכנית",
+    "@tpmActionErrorDescription": {}
 }
