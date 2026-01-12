@@ -99,6 +99,7 @@ class _ActionBody extends ConsumerStatefulWidget {
 
 class _ActionBodyState extends ConsumerState<_ActionBody> {
   late bool isConfirmed;
+  SubiquityException? error;
 
   @override
   void initState() {
@@ -106,10 +107,19 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
     isConfirmed = widget.action.warning == null;
   }
 
+  Future<void> tryPerformAction() async {
+    final err = await ref
+        .read(tpmActionModelProvider.notifier)
+        .performAction(widget.action);
+    if (err != null) {
+      setState(() => error = err);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final notifier = ref.read(tpmActionModelProvider.notifier);
     final lang = UbuntuBootstrapLocalizations.of(context);
+
     return Padding(
       padding: EdgeInsetsGeometry.only(
         left: kYaruPagePadding,
@@ -135,8 +145,8 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
           Row(
             children: [
               OutlinedButton(
-                onPressed: isConfirmed && !widget.isLoading
-                    ? () => notifier.performAction(widget.action)
+                onPressed: isConfirmed && !widget.isLoading && error == null
+                    ? tryPerformAction
                     : null,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -154,6 +164,12 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
               ),
             ],
           ),
+          if (error != null)
+            YaruInfoBox(
+              yaruInfoType: YaruInfoType.danger,
+              title: Text(lang.tpmActionErrorTitle),
+              child: Text(lang.tpmActionErrorDescription),
+            ),
         ].withSpacing(kWizardSpacing / 2),
       ),
     );

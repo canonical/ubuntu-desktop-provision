@@ -24,26 +24,27 @@ void main() {
     );
   }
 
-  testWidgets('show error and action', (tester) async {
-    final model = buildTpmActionModel(
-      useTpm: true,
-      tpmDisallowedCapability: GuidedDisallowedCapability(
-        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        reason:
-            GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
-        errors: [
-          CoreBootEncryptionSupportError(
-            kind: CoreBootAvailabilityErrorKind.INTERNAL,
-            message: 'error message',
-            actions: [
-              CoreBootFixActionWithCategoryAndArgs(
-                type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
-                forUser: false,
-              ),
-            ],
+  final testDisallowedCapability = GuidedDisallowedCapability(
+    capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+    reason: GuidedDisallowedCapabilityReason.CORE_BOOT_ENCRYPTION_UNAVAILABLE,
+    errors: [
+      CoreBootEncryptionSupportError(
+        kind: CoreBootAvailabilityErrorKind.INTERNAL,
+        message: 'error message',
+        actions: [
+          CoreBootFixActionWithCategoryAndArgs(
+            type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+            forUser: false,
           ),
         ],
       ),
+    ],
+  );
+
+  testWidgets('show error and action', (tester) async {
+    final model = buildTpmActionModel(
+      useTpm: true,
+      tpmDisallowedCapability: testDisallowedCapability,
     );
 
     await tester.pumpApp((_) => buildPage(model));
@@ -61,5 +62,43 @@ void main() {
       ),
       findsOneWidget,
     );
+  });
+
+  group('perform action', () {
+    for (final testCase in [
+      (name: 'no error', actionResult: null, expectError: false),
+      (
+        name: 'error',
+        actionResult: SubiquityException('POST', 500, 'internal error'),
+        expectError: true,
+      ),
+    ]) {
+      testWidgets(testCase.name, (tester) async {
+        final model = buildTpmActionModel(
+          tpmDisallowedCapability: testDisallowedCapability,
+          actionResult: testCase.actionResult,
+        );
+        await tester.pumpApp((_) => buildPage(model));
+        await tester.pumpAndSettle();
+        await tester.tap(
+          find.text(
+            tester.lang.tpmActionSolutionLabel(
+              1,
+              CoreBootFixAction.REBOOT_TO_FW_SETTINGS.title(tester.lang),
+            ),
+          ),
+        );
+        await tester.pumpAndSettle();
+        await tester.tap(
+          find.text(CoreBootFixAction.REBOOT_TO_FW_SETTINGS.label(tester.lang)),
+        );
+        await tester.pumpAndSettle();
+
+        expect(
+          find.text(tester.lang.tpmActionErrorTitle),
+          testCase.expectError ? findsOneWidget : findsNothing,
+        );
+      });
+    }
   });
 }

@@ -4,6 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+
+final _log = Logger('tpm_action_model');
 
 final tpmActionModelProvider = ChangeNotifierProvider(
   (_) => TpmActionModel(
@@ -60,12 +63,21 @@ class TpmActionModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> performAction(CoreBootFixAction action) async {
+  Future<SubiquityException?> performAction(CoreBootFixAction action) async {
     _isLoading = true;
     notifyListeners();
-    await _subiquity.coreBootFixEncryptionSupportV2(
+    SubiquityException? error;
+    await _subiquity
+        .coreBootFixEncryptionSupportV2(
       CoreBootFixActionWithArgs(type: action),
-    );
+    )
+        .onError<SubiquityException>((e, _) {
+      _log.error(
+        'Caught subiquity exception $e while performing action $action',
+      );
+      error = e;
+    });
     await _updateGuidedStorage();
+    return error;
   }
 }

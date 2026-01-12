@@ -82,15 +82,15 @@ class MockTpmActionModel extends _i1.Mock implements _i2.TpmActionModel {
       ) as _i3.Future<bool>);
 
   @override
-  _i3.Future<void> performAction(_i4.CoreBootFixAction? action) =>
+  _i3.Future<_i4.SubiquityException?> performAction(
+          _i4.CoreBootFixAction? action) =>
       (super.noSuchMethod(
         Invocation.method(
           #performAction,
           [action],
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i3.Future<_i4.SubiquityException?>.value(),
+      ) as _i3.Future<_i4.SubiquityException?>);
 
   @override
   void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
