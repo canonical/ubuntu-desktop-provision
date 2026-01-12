@@ -1,1 +1,14 @@
-{}
+{
+    "welcomePageTitle": "Bun venit",
+    "@welcomePageTitle": {},
+    "welcomePageHeader": "Bun venit la {distro}",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "CE ESTE NOU?",
+    "@welcomeWhatsNew": {}
+}
