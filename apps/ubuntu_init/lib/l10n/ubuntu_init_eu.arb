@@ -1,1 +1,10 @@
-{}
+{
+    "successIconSemanticLabel": "Dena ondo joan da",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "Itxi",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "Maximizatu",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "Txikitu",
+    "@minimizeIconSemanticLabel": {}
+}
