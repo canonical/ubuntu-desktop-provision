@@ -135,7 +135,7 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
           Row(
             children: [
               OutlinedButton(
-                onPressed: isConfirmed
+                onPressed: isConfirmed && !widget.isLoading
                     ? () => notifier.performAction(widget.action)
                     : null,
                 child: Row(
