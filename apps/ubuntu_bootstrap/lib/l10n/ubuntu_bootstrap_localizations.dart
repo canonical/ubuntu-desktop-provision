@@ -2841,6 +2841,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'I understand the consequences of clearing the TPM'**
   String get tpmActionFixActionClearTpmConfirmationLabel;
+
+  /// No description provided for @tpmActionErrorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'This solution failed'**
+  String get tpmActionErrorTitle;
+
+  /// No description provided for @tpmActionErrorDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Try a different solution or contact IT support'**
+  String get tpmActionErrorDescription;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate

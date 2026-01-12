@@ -1599,4 +1599,11 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
       'I understand the consequences of clearing the TPM';
+
+  @override
+  String get tpmActionErrorTitle => 'This solution failed';
+
+  @override
+  String get tpmActionErrorDescription =>
+      'Try a different solution or contact IT support';
 }

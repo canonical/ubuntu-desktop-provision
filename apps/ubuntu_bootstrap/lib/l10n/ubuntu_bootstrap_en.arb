@@ -1096,5 +1096,7 @@
   "tpmActionIgnoreAndContinueLabel": "Ignore and continue",
   "tpmActionFixActionClearTpmWarningTitle": "Clearing the TPM erases all encryption keys",
   "tpmActionFixActionClearTpmWarningBody": "You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.",
-  "tpmActionFixActionClearTpmConfirmationLabel": "I understand the consequences of clearing the TPM"
+  "tpmActionFixActionClearTpmConfirmationLabel": "I understand the consequences of clearing the TPM",
+  "tpmActionErrorTitle": "This solution failed",
+  "tpmActionErrorDescription": "Try a different solution or contact IT support"
 }
