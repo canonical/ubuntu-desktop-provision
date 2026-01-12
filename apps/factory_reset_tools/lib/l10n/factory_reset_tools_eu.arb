@@ -1,3 +1,13 @@
 {
-  "@@locale": "eu"
+    "@@locale": "eu",
+    "restart": "Berrabiarazi",
+    "@restart": {},
+    "close": "Itxi",
+    "@close": {},
+    "closeIconSemanticLabel": "Itxi",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "Maximizatu",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "Txikitu",
+    "@minimizeIconSemanticLabel": {}
 }
