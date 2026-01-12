@@ -792,7 +792,7 @@
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalizovať",
     "@minimizeIconSemanticLabel": {},
-    "tpmActionPageTitle": "Šifrovanie podporované hardvérom",
+    "tpmActionPageTitle": "Hardvérom podporované šifrovanie sa nepodarilo aktivovať",
     "@tpmActionPageTitle": {},
     "tpmActionBadgeLabel": "Vyžaduje sa akcia",
     "@tpmActionBadgeLabel": {},
@@ -890,6 +890,57 @@
     "@tpmActionFixActionClearTpmViaFirmware": {},
     "tpmActionFixActionClearTpm": "Vymazať TPM",
     "@tpmActionFixActionClearTpm": {},
-    "tpmActionFixActionProceed": "Pokračovať",
-    "@tpmActionFixActionProceed": {}
+    "tpmActionFixActionProceed": "Ignorovať",
+    "@tpmActionFixActionProceed": {},
+    "tpmActionSolutionLabel": "Riešenie {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Odkaz na dokumentáciu",
+    "@tpmActionDocumentationLinkLabel": {},
+    "tpmActionErrorSupportLabel": "Vyskúšajte riešenia uvedené nižšie, kontaktujte IT podporu alebo zvoľte inú metódu šifrovania.",
+    "@tpmActionErrorSupportLabel": {},
+    "tpmActionErrorSupportNoActionLabel": "Kontaktujte IT podporu alebo zvoľte inú metódu šifrovania.",
+    "@tpmActionErrorSupportNoActionLabel": {},
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Povoľte ochranu DMA manuálne",
+    "@tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": {},
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Vymažte TPM manuálne",
+    "@tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": {},
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Povoľte Secure Boot manuálne",
+    "@tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": {},
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Povoľte ochranu DMA manuálne",
+    "@tpmActionFixActionRebootToFwSettingsNoKernelIommu": {},
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Povoľte PCR banky manuálne",
+    "@tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": {},
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Povoľte TPM manuálne",
+    "@tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": {},
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Vymažte TPM manuálne",
+    "@tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": {},
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Vymažte TPM manuálne",
+    "@tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": {},
+    "tpmActionRestartLabel": "Reštartovať",
+    "@tpmActionRestartLabel": {},
+    "tpmActionRestartAndEnableTpmLabel": "Reštartovať a povoliť TPM",
+    "@tpmActionRestartAndEnableTpmLabel": {},
+    "tpmActionRestartAndClearTpmLabel": "Reštartovať a vymazať TPM",
+    "@tpmActionRestartAndClearTpmLabel": {},
+    "tpmActionIgnoreAndContinueLabel": "Ignorovať a pokračovať",
+    "@tpmActionIgnoreAndContinueLabel": {},
+    "tpmActionFixActionClearTpmWarningTitle": "Vymazanie TPM odstráni všetky šifrovacie kľúče",
+    "@tpmActionFixActionClearTpmWarningTitle": {},
+    "tpmActionFixActionClearTpmWarningBody": "Stratíte prístup ku všetkým údajom na šifrovaných diskoch, pre ktoré nemáte obnovovacie kľúče. Taktiež to naruší ďalšie funkcie závislé od TPM, ako napríklad autentifikáciu a certifikáty.",
+    "@tpmActionFixActionClearTpmWarningBody": {},
+    "tpmActionFixActionClearTpmConfirmationLabel": "Chápem dôsledky vymazania TPM",
+    "@tpmActionFixActionClearTpmConfirmationLabel": {},
+    "tpmActionErrorTitle": "Toto riešenie zlyhalo",
+    "@tpmActionErrorTitle": {},
+    "tpmActionErrorDescription": "Vyskúšajte iné riešenie alebo kontaktujte IT podporu",
+    "@tpmActionErrorDescription": {}
 }
