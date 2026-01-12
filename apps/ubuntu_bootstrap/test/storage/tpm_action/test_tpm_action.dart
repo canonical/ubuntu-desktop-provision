@@ -12,11 +12,13 @@ TpmActionModel buildTpmActionModel({
   GuidedDisallowedCapability? tpmDisallowedCapability,
   bool confirmationNeeded = false,
   bool isLoading = false,
+  SubiquityException? actionResult,
 }) {
   final model = MockTpmActionModel();
   when(model.init()).thenAnswer((_) async => useTpm);
   when(model.tpmDisallowedCapability).thenReturn(tpmDisallowedCapability);
   when(model.confirmationNeeded).thenReturn(confirmationNeeded);
   when(model.isLoading).thenReturn(isLoading);
+  when(model.performAction(any)).thenAnswer((_) async => actionResult);
   return model;
 }

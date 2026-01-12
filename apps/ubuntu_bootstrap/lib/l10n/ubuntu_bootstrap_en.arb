@@ -1018,10 +1018,24 @@
   "closeIconSemanticLabel": "Close",
   "maximizeIconSemanticLabel": "Maximize",
   "minimizeIconSemanticLabel": "Minimize",
-  "tpmActionPageTitle": "Hardware-backed encryption",
+  "tpmActionPageTitle": "Hardware-backed encryption could not be enabled",
   "tpmActionBadgeLabel": "Action required",
   "tpmActionDetailsLabel": "Technical details",
   "tpmActionConfirmLabel": "Confirm",
+  "tpmActionSolutionLabel": "Solution {n}: {text}",
+  "@tpmActionSolutionLabel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "tpmActionDocumentationLinkLabel": "Link to documentation",
+  "tpmActionErrorSupportLabel": "Try the solutions below, contact IT support, or choose a different encryption method.",
+  "tpmActionErrorSupportNoActionLabel": "Contact IT support, or choose a different encryption method.",
   "tpmActionErrorKindInternal": "Internal",
   "tpmActionErrorKindShutdownRequired": "Shutdown Required",
   "tpmActionErrorKindRebootRequired": "Reboot Required",
@@ -1058,14 +1072,31 @@
   "tpmActionErrorKindInvalidSecureBootMode": "Invalid SecureBoot Mode",
   "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Weak SecureBoot Algorithm Detected",
   "tpmActionErrorKindPreOsDigestVerificationDetected": "Pre Os Digest Verification Detected",
-  "tpmActionFixActionReboot": "Reboot",
-  "tpmActionFixActionShutdown": "Shutdown",
-  "tpmActionFixActionRebootToFwSettings": "Reboot To FW Settings",
+  "tpmActionFixActionReboot": "Restart",
+  "tpmActionFixActionShutdown": "Power off",
+  "tpmActionFixActionRebootToFwSettings": "Restart to firmware settings",
+  "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Enable DMA protection manually",
+  "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Clear TPM manually",
+  "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Enable secure boot manually",
+  "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Enable DMA protection manually",
+  "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Enable PCR banks manually",
+  "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Enable TPM manually",
+  "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Clear TPM manually",
+  "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Clear TPM manually",
   "tpmActionFixActionContactOem": "Contact OEM",
   "tpmActionFixActionContactOsVendor": "Contact OS Vendor",
   "tpmActionFixActionEnableTpmViaFirmware": "Enable TPM Via Firmware",
   "tpmActionFixActionEnableAndClearTpmViaFirmware": "Enable And Clear TPM Via Firmware",
   "tpmActionFixActionClearTpmViaFirmware": "Clear TPM Via Firmware",
   "tpmActionFixActionClearTpm": "Clear TPM",
-  "tpmActionFixActionProceed": "Proceed"
+  "tpmActionFixActionProceed": "Ignore",
+  "tpmActionRestartLabel": "Restart",
+  "tpmActionRestartAndEnableTpmLabel": "Restart and enable TPM",
+  "tpmActionRestartAndClearTpmLabel": "Restart and clear TPM",
+  "tpmActionIgnoreAndContinueLabel": "Ignore and continue",
+  "tpmActionFixActionClearTpmWarningTitle": "Clearing the TPM erases all encryption keys",
+  "tpmActionFixActionClearTpmWarningBody": "You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.",
+  "tpmActionFixActionClearTpmConfirmationLabel": "I understand the consequences of clearing the TPM",
+  "tpmActionErrorTitle": "This solution failed",
+  "tpmActionErrorDescription": "Try a different solution or contact IT support"
 }
