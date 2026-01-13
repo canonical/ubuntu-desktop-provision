@@ -1,4 +1,225 @@
 {
-  "@@locale": "kn",
-  "welcome": "ಸುಸ್ವಾಗತ"
+    "@@locale": "kn",
+    "welcome": "ಸುಸ್ವಾಗತ",
+    "@welcome": {},
+    "appTitle": "ಉಬುಂಟು ಡೆಸ್ಕ್‌ಟಾಪ್ ಸ್ಥಾಪಕ",
+    "@appTitle": {},
+    "windowTitle": "ಸ್ಥಾಪಿಸಿ {RELEASE}",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "ಸ್ವಯಂಚಾಲಿತ ಅನುಸ್ಥಾಪನೆ",
+    "@autoinstallDirectTitle": {},
+    "autoinstallDirectHeader": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿ",
+    "@autoinstallDirectHeader": {},
+    "autoinstallDirectUrlLabel": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿನೀವು ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್‌ನ URL ಅನ್ನು ನಮೂದಿಸಬಹುದು:",
+    "@autoinstallDirectUrlLabel": {},
+    "autoinstallDirectFileLabel": "ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ:",
+    "@autoinstallDirectFileLabel": {},
+    "autoinstallDirectFileButtonLabel": "ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ...",
+    "@autoinstallDirectFileButtonLabel": {},
+    "autoinstallDirectFileClearButtonLabel": "ಫೈಲ್ ತೆರವುಗೊಳಿಸಿ",
+    "@autoinstallDirectFileClearButtonLabel": {},
+    "autoinstallDirectFilePickerTitle": "ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ",
+    "@autoinstallDirectFilePickerTitle": {},
+    "autoinstallDirectFilePickerFilterLabel": "YAML ಫೈಲ್‌ಗಳು",
+    "@autoinstallDirectFilePickerFilterLabel": {},
+    "autoinstallDirectImportButtonLabel": "ಆಮದು ಮಾಡಿಕೊಳ್ಳಿ",
+    "@autoinstallDirectImportButtonLabel": {},
+    "autoinstallDirectErrorNetworkTitle": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ತಲುಪಲಾಗುವುದಿಲ್ಲ",
+    "@autoinstallDirectErrorNetworkTitle": {},
+    "autoinstallDirectErrorNetworkBody": "URL ಸರಿಯಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ, ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ ಅಥವಾ ನಂತರ ಪ್ರಯತ್ನಿಸಿ.",
+    "@autoinstallDirectErrorNetworkBody": {},
+    "autoinstallDirectErrorInvalidUrlTitle": "ಅಮಾನ್ಯ URL",
+    "@autoinstallDirectErrorInvalidUrlTitle": {},
+    "autoinstallDirectErrorInvalidUrlBody": "URL ಸರಿಯಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಅನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+    "@autoinstallDirectErrorInvalidUrlBody": {},
+    "autoinstallDirectErrorInvalidContentTitle": "ಅಮಾನ್ಯ ಸ್ವಯಂ ಸ್ಥಾಪನೆ ಫೈಲ್",
+    "@autoinstallDirectErrorInvalidContentTitle": {},
+    "autoinstallDirectErrorInvalidContentBody": "ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.",
+    "@autoinstallDirectErrorInvalidContentBody": {},
+    "autoinstallDirectErrorFileSystemTitle": "ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.",
+    "@autoinstallDirectErrorFileSystemTitle": {},
+    "autoinstallDirectErrorFileSystemBody": "ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.ನಿಮ್ಮ ಅನುಮತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆ ಫೈಲ್ ಅನ್ನು ಒದಗಿಸಿ.",
+    "@autoinstallDirectErrorFileSystemBody": {},
+    "autoinstallDirectErrorUnkownTitle": "ಅಜ್ಞಾತ ದೋಷ",
+    "@autoinstallDirectErrorUnkownTitle": {},
+    "autoinstallTitle": "ಅನುಸ್ಥಾಪನೆಯ ಪ್ರಕಾರ",
+    "@autoinstallTitle": {},
+    "autoinstallHeader": "ನೀವು {DISTRO} ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "autoinstall.yaml URL ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಮಾರ್ಗವನ್ನು ನಮೂದಿಸಿ:",
+    "@autoinstallInstructions": {},
+    "autoinstallInteractiveOption": "ಸಂವಾದಾತ್ಮಕ ಸ್ಥಾಪನೆ",
+    "@autoinstallInteractiveOption": {},
+    "autoinstallInteractiveDescription": "ಅನುಸ್ಥಾಪನೆಯ ಮೂಲಕ ಹಂತ ಹಂತವಾಗಿ ಮಾರ್ಗದರ್ಶನ ಮಾಡಲು ಬಯಸುವ ಬಳಕೆದಾರರಿಗೆ.",
+    "@autoinstallInteractiveDescription": {},
+    "autoinstallDirectOption": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್‌ನೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿದೆ",
+    "@autoinstallDirectOption": {},
+    "autoinstallDirectDescription": "ಸ್ಥಿರವಾದ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಸಿಸ್ಟಮ್ ಸೆಟಪ್‌ಗಳಿಗಾಗಿ autoinstall.yaml ಅನ್ನು ಹೊಂದಿರುವ ಮುಂದುವರಿದ ಬಳಕೆದಾರರಿಗೆ.",
+    "@autoinstallDirectDescription": {},
+    "autoinstallLandscapeOption": "ಭೂದೃಶ್ಯದೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತ",
+    "@autoinstallLandscapeOption": {},
+    "autoinstallLandscapeDescription": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಮೂಲಕ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಒದಗಿಸುವ ಸಂಸ್ಥೆಗಳಲ್ಲಿನ ಬಳಕೆದಾರರಿಗೆ.",
+    "@autoinstallLandscapeDescription": {},
+    "changeButtonText": "ಬದಲಾವಣೆ",
+    "@changeButtonText": {},
+    "quitButtonText": "ಅನುಸ್ಥಾಪನೆಯನ್ನು ತ್ಯಜಿಸಿ",
+    "@quitButtonText": {},
+    "loadingPageTitle": "{DISTRO} ಗೆ ಸುಸ್ವಾಗತ",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "{DISTRO} ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "ಎಚ್ಚರಿಕೆ:",
+    "@warningLabel": {},
+    "tryOrInstallTitle": "{DISTRO} ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಾಪಿಸಿ",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "ನೀವು {DISTRO} ಜೊತೆಗೆ ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "ದುರಸ್ತಿ ಅನುಸ್ಥಾಪನೆ",
+    "@tryOrInstallRepairOption": {},
+    "tryOrInstallRepairDescription": "ರಿಪೇರಿ ಮಾಡುವುದರಿಂದ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸ್ಪರ್ಶಿಸದೆಯೇ ಎಲ್ಲಾ ಸ್ಥಾಪಿಸಲಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಮರುಸ್ಥಾಪಿಸುತ್ತದೆ.",
+    "@tryOrInstallRepairDescription": {},
+    "tryOption": "{RELEASE} ಪ್ರಯತ್ನಿಸಿ",
+    "@tryOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryDescription": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ಗೆ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡದೆಯೇ ನೀವು {RELEASE} ಅನ್ನು ಪ್ರಯತ್ನಿಸಬಹುದು.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installOption": "ಸ್ಥಾಪಿಸಿ {RELEASE}",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಂ ಜೊತೆಗೆ (ಅಥವಾ ಬದಲಿಗೆ) {RELEASE} ಅನ್ನು ಸ್ಥಾಪಿಸಿ. ಇದು ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಾರದು.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "ನೀವು <a href=\"{url}\">ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳನ್ನು</a> ಓದಲು ಬಯಸಬಹುದು.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "RST ಪತ್ತೆಯಾಗಿದೆ",
+    "@rstTitle": {},
+    "rstHeader": "ಅನುಸ್ಥಾಪನೆಯನ್ನು ಮುಂದುವರಿಸಲು ನೀವು RST ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕು",
+    "@rstHeader": {},
+    "rstDisable": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಇಂಟೆಲ್ RST (ರಾಪಿಡ್ ಸ್ಟೋರೇಜ್ ಟೆಕ್ನಾಲಜಿ) ಅನ್ನು ಬಳಸುತ್ತದೆ. ನೀವು ಇದರಲ್ಲಿ RST ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು:",
+    "@rstDisable": {},
+    "rstDisableWindows": "ವಿಂಡೋಸ್, ನೀವು ವಿಂಡೋಸ್ನೊಂದಿಗೆ ಡ್ಯುಯಲ್ ಬೂಟ್ ಸೆಟಪ್ ಅನ್ನು ಬಳಸುತ್ತಿದ್ದರೆ",
+    "@rstDisableWindows": {},
+    "rstDisableBios": "BIOS ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "@rstDisableBios": {},
+    "rstInstructions": "ಸೂಚನೆಗಳಿಗಾಗಿ, ಇನ್ನೊಂದು ಸಾಧನದಲ್ಲಿ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ಭೇಟಿ ನೀಡಿ: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ",
+    "@configureSecureBootTitle": {},
+    "configureSecureBootDescription": "ನೀವು ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ್ದೀರಿ. ಇದಕ್ಕೆ ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಆಫ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ.ಇದನ್ನು ಮಾಡಲು, ನೀವು ಇದೀಗ ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆರಿಸಬೇಕಾಗುತ್ತದೆ ಮತ್ತು ಸಿಸ್ಟಮ್ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ ಅದನ್ನು ನಮೂದಿಸಿ.ನೀವು ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ್ದೀರಿ. ಇದಕ್ಕೆ ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಆಫ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ.ಇದನ್ನು ಮಾಡಲು, ನೀವು ಇದೀಗ ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆರಿಸಬೇಕಾಗುತ್ತದೆ ಮತ್ತು ಸಿಸ್ಟಮ್ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ ಅದನ್ನು ನಮೂದಿಸಿ.",
+    "@configureSecureBootDescription": {},
+    "configureSecureBootOption": "ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ",
+    "@configureSecureBootOption": {},
+    "chooseSecurityKey": "ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "@chooseSecurityKey": {},
+    "confirmSecurityKey": "ಭದ್ರತಾ ಕೀಯನ್ನು ದೃಢೀಕರಿಸಿ",
+    "@confirmSecurityKey": {},
+    "dontInstallDriverSoftwareNow": "ಸದ್ಯಕ್ಕೆ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಬೇಡಿ",
+    "@dontInstallDriverSoftwareNow": {},
+    "dontInstallDriverSoftwareNowDescription": "ನೀವು ಅದನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್‌ನಿಂದ ಸ್ಥಾಪಿಸಬಹುದುನೀವು ಅದನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್‌ನಿಂದ ಸ್ಥಾಪಿಸಬಹುದು",
+    "@dontInstallDriverSoftwareNowDescription": {},
+    "configureSecureBootSecurityKeyRequired": "ಭದ್ರತಾ ಕೀ ಅಗತ್ಯವಿದೆ",
+    "@configureSecureBootSecurityKeyRequired": {},
+    "secureBootSecurityKeysDontMatch": "ಭದ್ರತಾ ಕೀಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+    "@secureBootSecurityKeysDontMatch": {},
+    "showSecurityKey": "ತೋರಿಸು",
+    "@showSecurityKey": {},
+    "hideSecurityKey": "ಮರೆಮಾಡಿ",
+    "@hideSecurityKey": {},
+    "updatesOtherSoftwarePageTitle": "ಅಪ್ಲಿಕೇಶನ್‌ಗಳು",
+    "@updatesOtherSoftwarePageTitle": {},
+    "updatesOtherSoftwarePageDescription": "ಪ್ರಾರಂಭಿಸಲು ನೀವು ಯಾವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?",
+    "@updatesOtherSoftwarePageDescription": {},
+    "codecsAndDriversPageTitle": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆಪ್ಟಿಮೈಜ್ ಮಾಡಿ",
+    "@codecsAndDriversPageTitle": {},
+    "codecsAndDriversPageDescription": "ಶಿಫಾರಸು ಮಾಡಲಾದ ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವುದೇ?",
+    "@codecsAndDriversPageDescription": {},
+    "codecsAndDriversPageBody": "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಯಾವುದೇ ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು {DISTRO} ರವಾನಿಸುತ್ತದೆ. ಹೆಚ್ಚುವರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವುದು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಸುಧಾರಿಸಬಹುದು.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "NVIDIA ಗ್ರಾಫಿಕ್ಸ್ ಕಾರ್ಡ್ ಪತ್ತೆಯಾಗಿದೆ",
+    "@codecsAndDriversNvidiaNote": {},
+    "codecsAndDriversNvidiaBody": "NVIDIA ಗ್ರಾಫಿಕ್ ಕಾರ್ಡ್‌ಗಳ ಉತ್ತಮ ಕಾರ್ಯಕ್ಷಮತೆಗಾಗಿ, ಹೆಚ್ಚುವರಿ ಡ್ರೈವರ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸುವುದನ್ನು ಬಲವಾಗಿ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.",
+    "@codecsAndDriversNvidiaBody": {},
+    "fullInstallationTitle": "ವಿಸ್ತೃತ ಆಯ್ಕೆ",
+    "@fullInstallationTitle": {},
+    "fullInstallationSubtitle": "ಕಚೇರಿ ಪರಿಕರಗಳು, ಉಪಯುಕ್ತತೆಗಳು ಮತ್ತು ವೆಬ್ ಬ್ರೌಸರ್‌ನ ಆಫ್‌ಲೈನ್-ಸ್ನೇಹಿ ಆಯ್ಕೆ.",
+    "@fullInstallationSubtitle": {},
+    "minimalInstallationTitle": "ಡೀಫಾಲ್ಟ್ ಆಯ್ಕೆ",
+    "@minimalInstallationTitle": {},
+    "minimalInstallationSubtitle": "ಕೇವಲ ಅಗತ್ಯಗಳು, ವೆಬ್ ಬ್ರೌಸರ್ ಮತ್ತು ಮೂಲಭೂತ ಉಪಯುಕ್ತತೆಗಳು.",
+    "@minimalInstallationSubtitle": {}
 }
