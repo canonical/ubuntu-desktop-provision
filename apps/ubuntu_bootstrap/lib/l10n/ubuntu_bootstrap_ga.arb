@@ -788,7 +788,7 @@
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Íoslaghdaigh",
     "@minimizeIconSemanticLabel": {},
-    "tpmActionPageTitle": "Criptiú le tacaíocht crua-earraí",
+    "tpmActionPageTitle": "Níorbh fhéidir criptiú crua-earraí-tacaithe a chumasú",
     "@tpmActionPageTitle": {},
     "tpmActionBadgeLabel": "Gníomh riachtanach",
     "@tpmActionBadgeLabel": {},
@@ -868,11 +868,11 @@
     "@tpmActionErrorKindWeakSecureBootAlgorithmDetected": {},
     "tpmActionErrorKindPreOsDigestVerificationDetected": "Fíorú Réamh-Dhíreoite Braite",
     "@tpmActionErrorKindPreOsDigestVerificationDetected": {},
-    "tpmActionFixActionReboot": "Athbhútáil",
+    "tpmActionFixActionReboot": "Atosaigh",
     "@tpmActionFixActionReboot": {},
     "tpmActionFixActionShutdown": "Múchadh",
     "@tpmActionFixActionShutdown": {},
-    "tpmActionFixActionRebootToFwSettings": "Atosaigh go Socruithe FW",
+    "tpmActionFixActionRebootToFwSettings": "Atosaigh chuig socruithe dochtearraí",
     "@tpmActionFixActionRebootToFwSettings": {},
     "tpmActionFixActionContactOem": "Déan teagmháil le OEM",
     "@tpmActionFixActionContactOem": {},
@@ -887,5 +887,22 @@
     "tpmActionFixActionClearTpm": "Glan TPM",
     "@tpmActionFixActionClearTpm": {},
     "tpmActionFixActionProceed": "Téigh ar aghaidh",
-    "@tpmActionFixActionProceed": {}
+    "@tpmActionFixActionProceed": {},
+    "tpmActionSolutionLabel": "Réiteach {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Nasc chuig an doiciméadú",
+    "@tpmActionDocumentationLinkLabel": {},
+    "tpmActionErrorSupportLabel": "Bain triail as na réitigh thíos, déan teagmháil le tacaíocht TF, nó roghnaigh modh criptithe difriúil.",
+    "@tpmActionErrorSupportLabel": {},
+    "tpmActionErrorSupportNoActionLabel": "Téigh i dteagmháil le tacaíocht TF, nó roghnaigh modh criptithe difriúil.",
+    "@tpmActionErrorSupportNoActionLabel": {}
 }
