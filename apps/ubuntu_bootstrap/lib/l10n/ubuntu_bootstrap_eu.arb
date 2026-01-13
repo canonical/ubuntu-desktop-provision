@@ -219,5 +219,328 @@
     "passphrasePageHeaderPassphrase": "Ezarri zifratzeko pasaesaldia",
     "@passphrasePageHeaderPassphrase": {},
     "passphrasePageHeaderPin": "Ezarri zifratzeko PINa",
-    "@passphrasePageHeaderPin": {}
+    "@passphrasePageHeaderPin": {},
+    "passphrasePageBodyPassphrase": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. Pasaesaldia ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.",
+    "@passphrasePageBodyPassphrase": {},
+    "passphrasePageBodyPin": "PINa sartu beharko duzu ordenagailua pizten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. PINa ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.",
+    "@passphrasePageBodyPin": {},
+    "passphrasePageChoosePassphraseHint": "Pasaesaldia",
+    "@passphrasePageChoosePassphraseHint": {},
+    "passphrasePageConfirmPassphraseHint": "Berretsi pasaesaldia",
+    "@passphrasePageConfirmPassphraseHint": {},
+    "passphrasePageRequiredPassphrase": "Pasaesaldia beharrezkoa da",
+    "@passphrasePageRequiredPassphrase": {},
+    "passphrasePageMismatchPassphrase": "Pasaesaldiak ez datoz bat",
+    "@passphrasePageMismatchPassphrase": {},
+    "passphrasePageChoosePinHint": "PINa",
+    "@passphrasePageChoosePinHint": {},
+    "passphrasePageConfirmPinHint": "Berretsi PINa",
+    "@passphrasePageConfirmPinHint": {},
+    "passphrasePageRequiredPin": "PINa beharrezkoa da",
+    "@passphrasePageRequiredPin": {},
+    "passphrasePageMismatchPin": "PINak ez datoz bat",
+    "@passphrasePageMismatchPin": {},
+    "passphraseTypePassphraseTileTitle": "Eskatu pasaesaldia",
+    "@passphraseTypePassphraseTileTitle": {},
+    "passphraseTypePassphraseTileSubTitle": "Seguruena. Pasaesaldi luzeago bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
+    "@passphraseTypePassphraseTileSubTitle": {},
+    "passphraseTypePinTileTitle": "Eskatu PINa",
+    "@passphraseTypePinTileTitle": {},
+    "passphraseTypePinTileSubTitle": "Seguruagoa. Zenbakizko PIN bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
+    "@passphraseTypePinTileSubTitle": {},
+    "passphraseTypeNoneTileTitle": "Desblokeatu diskoa automatikoki",
+    "@passphraseTypeNoneTileTitle": {},
+    "passphraseTypePageHeader": "Segurtasun gehigarria",
+    "@passphraseTypePageHeader": {},
+    "passphraseTypePageBody": "Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.",
+    "@passphraseTypePageBody": {},
+    "passphrasePagePassphraseEntropyBelowMin": "Pasaesaldi ahula, egizu luzeagoa edo konplexuagoa",
+    "@passphrasePagePassphraseEntropyBelowMin": {},
+    "passphrasePagePassphraseEntropyBelowOptimal": "Baleko pasaesaldia, egizu luzeagoa edo konplexuagoa segurtasuna areagotzeko",
+    "@passphrasePagePassphraseEntropyBelowOptimal": {},
+    "passphrasePagePassphraseEntropyOptimal": "Pasaesaldi sendoa",
+    "@passphrasePagePassphraseEntropyOptimal": {},
+    "passphrasePagePinEntropyBelowMin": "PIN ahula, egizu luzeagoa edo asmatzeko zailagoa",
+    "@passphrasePagePinEntropyBelowMin": {},
+    "passphrasePagePinEntropyBelowOptimal": "Baleko PINa, egizu luzeagoa edo asmatzeko zailagoa segurtasuna areagotzeko",
+    "@passphrasePagePinEntropyBelowOptimal": {},
+    "passphrasePagePinEntropyOptimal": "Luzera egokiko PINa",
+    "@passphrasePagePinEntropyOptimal": {},
+    "installationTypeTitle": "Diskoaren konfigurazioa",
+    "@installationTypeTitle": {},
+    "installationTypeHeader": "Nola instalatu nahi duzu {DISTRO}?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "Ordenagailuak une honetan {os} dauka instalaturik. Zer egin nahi duzu?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "Ordenagailuak une honetan {os1} eta {os2} ditu instalaturik. Zer egin nahi duzu?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "Ordenagailuak une honetan hainbat sistema eragile ditu instalaturik. Zer egin nahi duzu?",
+    "@installationTypeMultiOSDetected": {},
+    "installationTypeNoOSDetected": "Ordenagailuan ez da antzeman instalatutako sistema eragilerik. Zer egin nahi duzu?",
+    "@installationTypeNoOSDetected": {},
+    "installationTypeErase": "Ezabatu diskoa eta instalatu {DISTRO}",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Diskoko datu eta partizio guztiak ezabatuko dira, sistema eragileak barne.",
+    "@installationTypeEraseInfo": {},
+    "installationTypeAdvancedLabel": "Erakutsi aukera aurreratuak...",
+    "@installationTypeAdvancedLabel": {},
+    "installationTypeAdvancedTitle": "Zifratzea eta fitxategi-sistema",
+    "@installationTypeAdvancedTitle": {},
+    "installationTypeExperimental": "Esperimentala",
+    "@installationTypeExperimental": {},
+    "installationTypeNone": "Zifratzerik ez",
+    "@installationTypeNone": {},
+    "installationTypeNoneInfo": "Fitxategi-sistema estandarra, zifratze gabe.",
+    "@installationTypeNoneInfo": {},
+    "installationTypeNoneSelected": "Ez da bat ere hautatu",
+    "@installationTypeNoneSelected": {},
+    "installationTypeLVM": "Erabili LVM zifratze gabe",
+    "@installationTypeLVM": {},
+    "installationTypeLVMSelected": "LVM hautatuta",
+    "@installationTypeLVMSelected": {},
+    "installationTypeLVMEncryption": "Zifratzea pasaesaldiarekin",
+    "@installationTypeLVMEncryption": {},
+    "installationTypeLVMEncryptionInfo": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Honek LUKS zifratzea darabil LVMrekin.",
+    "@installationTypeLVMEncryptionInfo": {},
+    "installationTypeLVMEncryptionSelected": "LVM eta zifratzea hautatuta",
+    "@installationTypeLVMEncryptionSelected": {},
+    "installationTypeEncryptInfo": "Hurrengo urratsean aukeratuko duzu segurtasun gakoa.",
+    "@installationTypeEncryptInfo": {},
+    "installationTypeZFS": "Erabili ZFS zifratze gabe",
+    "@installationTypeZFS": {},
+    "installationTypeZFSEncryption": "Zifratu pasaesaldiarekin, ZFS erabiliz",
+    "@installationTypeZFSEncryption": {},
+    "installationTypeZFSEncryptionInfo": "Zifratze natiboa ZFSrekin. Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro.",
+    "@installationTypeZFSEncryptionInfo": {},
+    "installationTypeZFSSelected": "ZFS hautatuta",
+    "@installationTypeZFSSelected": {},
+    "installationTypeZFSEncryptionSelected": "ZFS eta zifratzea hautatuta",
+    "@installationTypeZFSEncryptionSelected": {},
+    "installationTypeTPM": "Erabili hardwarez indartutako zifratzea",
+    "@installationTypeTPM": {},
+    "installationTypeTPMInfo": "<a href=\"{url}\">Irakurri TPM zifratzeari buruz</a> aukera hau hautatu aurretik. Baliteke ez funtzionatzea zure hardwarearekin, edo {DISTRO}ren etorkizuneko bertsioekin.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeTPMSelected": "TPM hautatuta",
+    "@installationTypeTPMSelected": {},
+    "installationTypeReinstall": "Ezabatu {os} eta berrinstalatu",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Abisua:</font> Honek {os}(e)ko programa guztiak, dokumentuak, argazkiak, musika eta beste edozein fitxategi ezabatuko ditu.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "Instalatu {product}, {os}(r)ekin batera",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "Instalatu {product}, {os1} eta {os2}(r)ekin batera",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "Instalatu {product} existitzen diren beste sistema eragileekin batera",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "Instalatu {product} beste partizioekin batera",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "Hautatu tamainaz aldatu beharreko partizioa, horrela {product}entzako lekua egiteko. Abioan sistema eragilea aukeratu ahalko duzu.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "Ezabatu {os} eta instalatu {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Existitzen den {os} instalazioko fitxategi eta datu guztiak betiko ezabatuko dira.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "Eskuzko instalazioa",
+    "@installationTypeManual": {},
+    "installationTypeManualInfo": "Disko konfigurazio pertsonalizatua erabili nahi duten erabiltzaile aurreratuentzako.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Ezabatu diskoa eta instalatu {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Hasi zerotik hautatutako diskoan.",
+    "@selectGuidedStorageInfo": {},
+    "selectGuidedStorageDriveDropdownLabel": "Hautatu unitatea:",
+    "@selectGuidedStorageDriveDropdownLabel": {},
+    "selectGuidedStoragePartitionDropdownLabel": "Hautatu partizioa:",
+    "@selectGuidedStoragePartitionDropdownLabel": {},
+    "selectGuidedStorageInfoLabel": "Disko osoa erabiliko da:",
+    "@selectGuidedStorageInfoLabel": {},
+    "selectGuidedStorageInstallNow": "Instalatu orain",
+    "@selectGuidedStorageInstallNow": {},
+    "guidedStoragePageHeader": "Aukeratu {DISTRO} non instalatu",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "Esleitu lekua unitatean azpiko banalerroa arrastatuz:",
+    "@installAlongsideSpaceDivider": {},
+    "installAlongsideHiddenPartitions": "{num} partizio txikiago ezkutaturik daude, erabili <a href=\"{url}\">partizio tresna aurreratua</a> kontrol gehiago izateko",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Aldatu partizioaren tamaina",
+    "@installAlongsideResizePartition": {},
+    "installAlongsideAllocateSpace": "Esleitu lekua",
+    "@installAlongsideAllocateSpace": {},
+    "installAlongsideFiles": "Fitxategiak",
+    "@installAlongsideFiles": {},
+    "installAlongsidePartition": "Partizioa:",
+    "@installAlongsidePartition": {},
+    "installAlongsideSize": "Tamaina:",
+    "@installAlongsideSize": {},
+    "installAlongsideAvailable": "Erabilgarri:",
+    "@installAlongsideAvailable": {},
+    "allocateDiskSpace": "Eskuzko partitzea",
+    "@allocateDiskSpace": {},
+    "allocateDiskSpaceInvalidMountPointSlash": "Muntatze-puntuek \"/\" izan behar dute hasieran",
+    "@allocateDiskSpaceInvalidMountPointSlash": {},
+    "allocateDiskSpaceInvalidMountPointSpace": "Muntatze-puntuek ezin dute zuriunerik izan",
+    "@allocateDiskSpaceInvalidMountPointSpace": {},
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} fitxategi-sistema ez dago onartuta {mountpoint} puntuarentzat",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "Gailua",
+    "@diskHeadersDevice": {},
+    "diskHeadersType": "Mota",
+    "@diskHeadersType": {},
+    "diskHeadersMountPoint": "Muntatze-puntua",
+    "@diskHeadersMountPoint": {},
+    "diskHeadersSize": "Tamaina",
+    "@diskHeadersSize": {},
+    "diskHeadersUsed": "Erabilita",
+    "@diskHeadersUsed": {},
+    "diskHeadersSystem": "Sistema",
+    "@diskHeadersSystem": {},
+    "diskHeadersFormat": "Formatua",
+    "@diskHeadersFormat": {},
+    "freeDiskSpace": "Leku librea",
+    "@freeDiskSpace": {},
+    "newPartitionTable": "Partizio-taula berria",
+    "@newPartitionTable": {},
+    "newPartitionTableConfirmationTitle": "Partizio huts berria",
+    "@newPartitionTableConfirmationTitle": {}
 }
