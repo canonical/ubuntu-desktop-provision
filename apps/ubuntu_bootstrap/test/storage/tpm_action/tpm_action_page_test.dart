@@ -41,6 +41,8 @@ void main() {
     ],
   );
 
+  final testAction = testDisallowedCapability.errors!.first.actions.first;
+
   testWidgets('show error and action', (tester) async {
     final model = buildTpmActionModel(
       useTpm: true,
@@ -57,7 +59,7 @@ void main() {
       find.text(
         tester.lang.tpmActionSolutionLabel(
           1,
-          CoreBootFixAction.REBOOT_TO_FW_SETTINGS.title(tester.lang),
+          testAction.title(tester.lang),
         ),
       ),
       findsOneWidget,
@@ -84,13 +86,13 @@ void main() {
           find.text(
             tester.lang.tpmActionSolutionLabel(
               1,
-              CoreBootFixAction.REBOOT_TO_FW_SETTINGS.title(tester.lang),
+              testAction.title(tester.lang),
             ),
           ),
         );
         await tester.pumpAndSettle();
         await tester.tap(
-          find.text(CoreBootFixAction.REBOOT_TO_FW_SETTINGS.label(tester.lang)),
+          find.text(testAction.label(tester.lang)),
         );
         await tester.pumpAndSettle();
 

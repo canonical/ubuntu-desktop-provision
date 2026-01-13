@@ -118,11 +118,26 @@ void main() {
     final subiquity = MockSubiquityClient();
 
     final model = TpmActionModel(storage, subiquity);
-    await model.performAction(CoreBootFixAction.REBOOT_TO_FW_SETTINGS);
+    await model.performAction(
+      CoreBootFixActionWithCategoryAndArgs(
+        type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+        forUser: false,
+        args: CoreBootFixActionArgs(
+          errorKinds: [
+            CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT,
+          ],
+        ),
+      ),
+    );
     verify(
       subiquity.coreBootFixEncryptionSupportV2(
         CoreBootFixActionWithArgs(
           type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          args: CoreBootFixActionArgs(
+            errorKinds: [
+              CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT,
+            ],
+          ),
         ),
       ),
     ).called(1);

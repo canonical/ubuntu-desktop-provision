@@ -427,7 +427,12 @@ extension UbuntuBootstrapPageTester on WidgetTester {
     }
 
     if (action != null) {
-      await tapButton(action.label(l10n));
+      await tapButton(
+        CoreBootFixActionWithCategoryAndArgs(
+          type: action,
+          forUser: false,
+        ).label(l10n),
+      );
       await pump();
     }
   }

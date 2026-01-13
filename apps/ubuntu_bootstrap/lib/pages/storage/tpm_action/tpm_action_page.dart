@@ -89,7 +89,7 @@ class _ActionBody extends ConsumerStatefulWidget {
     this.isLoading = false,
   });
 
-  final CoreBootFixAction action;
+  final CoreBootFixActionWithCategoryAndArgs action;
   final CoreBootAvailabilityErrorKind? errorKind;
   final bool isLoading;
 
@@ -180,9 +180,8 @@ extension on TpmActionModel {
   CoreBootEncryptionSupportError? get tpmError =>
       tpmDisallowedCapability?.errors?.first;
 
-  List<CoreBootFixAction> get actions =>
-      tpmError?.actions.where((a) => !a.forUser).map((a) => a.type).toList() ??
-      [];
+  List<CoreBootFixActionWithCategoryAndArgs> get actions =>
+      tpmError?.actions.where((a) => !a.forUser).toList() ?? [];
 
   bool get isFixed => tpmDisallowedCapability == null;
 }
