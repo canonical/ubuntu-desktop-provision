@@ -142,4 +142,72 @@ void main() {
       ),
     ).called(1);
   });
+  test('automatically trigger subsequent reboot action', () async {
+    var calls = 0;
+    final storage = MockStorageService();
+    when(storage.getGuidedStorage()).thenAnswer(
+      (_) async => GuidedStorageResponseV2(
+        status: ProbeStatus.DONE,
+        targets: [
+          GuidedStorageTarget.reformat(
+            diskId: 'disk',
+            disallowed: [
+              GuidedDisallowedCapability(
+                capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+                reason: GuidedDisallowedCapabilityReason
+                    .CORE_BOOT_ENCRYPTION_UNAVAILABLE,
+                errors: calls++ > 0
+                    ? []
+                    : [
+                        CoreBootEncryptionSupportError(
+                          kind: CoreBootAvailabilityErrorKind.REBOOT_REQUIRED,
+                          message: 'reboot required',
+                          actions: [
+                            CoreBootFixActionWithCategoryAndArgs(
+                              type: CoreBootFixAction.REBOOT,
+                              forUser: false,
+                            ),
+                          ],
+                        ),
+                      ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+    final subiquity = MockSubiquityClient();
+
+    final model = TpmActionModel(storage, subiquity);
+    await model.performAction(
+      CoreBootFixActionWithCategoryAndArgs(
+        type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+        forUser: false,
+        args: CoreBootFixActionArgs(
+          errorKinds: [
+            CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT,
+          ],
+        ),
+      ),
+    );
+    verify(
+      subiquity.coreBootFixEncryptionSupportV2(
+        CoreBootFixActionWithArgs(
+          type: CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          args: CoreBootFixActionArgs(
+            errorKinds: [
+              CoreBootAvailabilityErrorKind.TPM_DEVICE_LOCKOUT_LOCKED_OUT,
+            ],
+          ),
+        ),
+      ),
+    ).called(1);
+    verify(
+      subiquity.coreBootFixEncryptionSupportV2(
+        CoreBootFixActionWithArgs(
+          type: CoreBootFixAction.REBOOT,
+        ),
+      ),
+    ).called(1);
+  });
 }

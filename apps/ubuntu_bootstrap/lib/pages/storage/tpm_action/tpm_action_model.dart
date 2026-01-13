@@ -41,6 +41,8 @@ class TpmActionModel extends SafeChangeNotifier {
 
   GuidedStorageTargetReformat? _disallowedTarget;
 
+  static const immediateActions = [CoreBootFixAction.REBOOT];
+
   Future<bool> init() async {
     if (![
       GuidedCapability.CORE_BOOT_ENCRYPTED,
@@ -50,6 +52,7 @@ class TpmActionModel extends SafeChangeNotifier {
     }
 
     await _updateGuidedStorage();
+    notifyListeners();
     return _disallowedTarget != null;
   }
 
@@ -59,15 +62,16 @@ class TpmActionModel extends SafeChangeNotifier {
         .whereType<GuidedStorageTargetReformat>()
         .where((t) => t.hasDisallowedTpmCapability)
         .firstOrNull;
-    _isLoading = false;
-    notifyListeners();
   }
 
   Future<SubiquityException?> performAction(
-    CoreBootFixActionWithCategoryAndArgs action,
-  ) async {
-    _isLoading = true;
-    notifyListeners();
+    CoreBootFixActionWithCategoryAndArgs action, {
+    bool triggeredByUser = true,
+  }) async {
+    if (triggeredByUser) {
+      _isLoading = true;
+      notifyListeners();
+    }
     SubiquityException? error;
     await _subiquity
         .coreBootFixEncryptionSupportV2(
@@ -80,6 +84,13 @@ class TpmActionModel extends SafeChangeNotifier {
       error = e;
     });
     await _updateGuidedStorage();
+    final nextAction =
+        tpmDisallowedCapability?.errors?.firstOrNull?.actions.firstOrNull;
+    if (nextAction != null && immediateActions.contains(nextAction.type)) {
+      return performAction(nextAction, triggeredByUser: false);
+    }
+    _isLoading = false;
+    notifyListeners();
     return error;
   }
 }
