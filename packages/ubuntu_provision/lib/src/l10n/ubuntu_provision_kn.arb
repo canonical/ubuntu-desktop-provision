@@ -36,5 +36,35 @@
     "accessibilityPointingLabel": "ಸೂಚಿಸುವುದು ಮತ್ತು ಕ್ಲಿಕ್ ಮಾಡುವುದು",
     "@accessibilityPointingLabel": {},
     "accessibilityScreenReaderLabel": "ಸ್ಕ್ರೀನ್ ರೀಡರ್",
-    "@accessibilityScreenReaderLabel": {}
+    "@accessibilityScreenReaderLabel": {},
+    "accessibilityVisualAlertsLabel": "ದೃಶ್ಯ ಎಚ್ಚರಿಕೆಗಳು",
+    "@accessibilityVisualAlertsLabel": {},
+    "accessibilityStickKeysLabel": "ಅಂಟಿಕೊಳ್ಳುವ ಕೀಲಿಗಳು",
+    "@accessibilityStickKeysLabel": {},
+    "accessibilitySlowKeysLabel": "ನಿಧಾನ ಕೀಲಿಗಳು",
+    "@accessibilitySlowKeysLabel": {},
+    "accessibilityMouseKeysLabel": "ಮೌಸ್ ಕೀಗಳು",
+    "@accessibilityMouseKeysLabel": {},
+    "accessibilityDesktopZoomLabel": "ಡೆಸ್ಕ್‌ಟಾಪ್ ಜೂಮ್",
+    "@accessibilityDesktopZoomLabel": {},
+    "errorPageTitle": "ಏನೋ ತಪ್ಪಾಗಿದೆ",
+    "@errorPageTitle": {},
+    "errorPageUnexpected": "ನಮ್ಮನ್ನು ಕ್ಷಮಿಸಿ, ಆದರೆ ದೋಷ ಏನೆಂದು ನಮಗೆ ಖಚಿತವಿಲ್ಲ. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲು ನೀವು ಪ್ರಯತ್ನಿಸಬಹುದು ಮತ್ತು ಅನುಸ್ಥಾಪನ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಮತ್ತೆ ಪ್ರಾರಂಭಿಸಬಹುದು. ನೀವು <a>ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಬಹುದು</a>.",
+    "@errorPageUnexpected": {},
+    "errorPageUbuntuBug": "ಸಂಬಂಧಿತ ಡೀಬಗ್ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಸ್ವಯಂಚಾಲಿತ ದೋಷ ವರದಿಯನ್ನು ಕಳುಹಿಸಲು, ದಯವಿಟ್ಟು <pre>sudo ubuntu-bug {SNAP}</pre> ಅನ್ನು ಟರ್ಮಿನಲ್‌ನಲ್ಲಿ ಅಥವಾ ಕಮಾಂಡ್ ಕನ್ಸೋಲ್‌ನಿಂದ (Alt F2) ರನ್ ಮಾಡಿ.",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "errorPageShowLog": "ಲಾಗ್ ತೋರಿಸು",
+    "@errorPageShowLog": {},
+    "errorPageHideLog": "ಲಾಗ್ ಅನ್ನು ಮರೆಮಾಡಿ",
+    "@errorPageHideLog": {},
+    "restart": "ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "@restart": {},
+    "timezonePageTitle": "ನಿಮ್ಮ ಸಮಯವಲಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "@timezonePageTitle": {}
 }
