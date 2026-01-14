@@ -2,5 +2,39 @@
     "accessibilityPageTitle": "ಪ್ರವೇಶಿಸುವಿಕೆ",
     "@accessibilityPageTitle": {},
     "close": "ಮುಚ್ಚಿ",
-    "@close": {}
+    "@close": {},
+    "successIconSemanticLabel": "ಯಶಸ್ಸು",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "ಮುಚ್ಚಿ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "ಗರಿಷ್ಠಗೊಳಿಸು",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "ಕಡಿಮೆಗೊಳಿಸು",
+    "@minimizeIconSemanticLabel": {},
+    "accessibilityPageHeader": "{DISTRO} ನಲ್ಲಿ ಪ್ರವೇಶಿಸುವಿಕೆ",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "ನೀವು ಹೊಂದಿಸುವ ಮೊದಲು ನಿಮ್ಮ ಅಗತ್ಯಗಳಿಗೆ {DISTRO} ಅನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ. ನೀವು ಅವುಗಳನ್ನು ನಂತರ ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilitySeeingLabel": "ನೋಡುತ್ತಿದ್ದೇನೆ",
+    "@accessibilitySeeingLabel": {},
+    "accessibilityHearingLabel": "ಕೇಳುವಿಕೆ",
+    "@accessibilityHearingLabel": {},
+    "accessibilityTypingLabel": "ಟೈಪಿಂಗ್",
+    "@accessibilityTypingLabel": {},
+    "accessibilityPointingLabel": "ಸೂಚಿಸುವುದು ಮತ್ತು ಕ್ಲಿಕ್ ಮಾಡುವುದು",
+    "@accessibilityPointingLabel": {},
+    "accessibilityScreenReaderLabel": "ಸ್ಕ್ರೀನ್ ರೀಡರ್",
+    "@accessibilityScreenReaderLabel": {}
 }
