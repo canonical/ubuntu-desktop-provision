@@ -148,6 +148,20 @@ jobs:
           branch: create-pull-request/mocks
           delete-branch: true
 
+  subiquity-types:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: asdf-vm/actions/install@v3
+      - uses: bluefireteam/melos-action@v3
+      - name: Regenerate subiquity types
+        run: make -B
+        working-directory: packages/subiquity_client
+      - name: Check for outdated subiquity types
+        run: ./.github/scripts/check-outdated-files.sh
+
   l10n:
     runs-on: ubuntu-24.04
     steps:
