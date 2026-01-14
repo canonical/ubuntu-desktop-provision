@@ -63,13 +63,15 @@ class TpmActionModel extends SafeChangeNotifier {
     notifyListeners();
   }
 
-  Future<SubiquityException?> performAction(CoreBootFixAction action) async {
+  Future<SubiquityException?> performAction(
+    CoreBootFixActionWithCategoryAndArgs action,
+  ) async {
     _isLoading = true;
     notifyListeners();
     SubiquityException? error;
     await _subiquity
         .coreBootFixEncryptionSupportV2(
-      CoreBootFixActionWithArgs(type: action),
+      CoreBootFixActionWithArgs(type: action.type, args: action.args),
     )
         .onError<SubiquityException>((e, _) {
       _log.error(

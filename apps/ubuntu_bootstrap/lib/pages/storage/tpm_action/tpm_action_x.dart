@@ -81,12 +81,12 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
       'Description for $this';
 }
 
-extension CoreBootFixActionL10n on CoreBootFixAction {
+extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
   String title(
     UbuntuBootstrapLocalizations l10n, [
     CoreBootAvailabilityErrorKind? error,
   ]) =>
-      switch ((this, error)) {
+      switch ((type, error)) {
         (CoreBootFixAction.REBOOT, _) => l10n.tpmActionFixActionReboot,
         (CoreBootFixAction.SHUTDOWN, _) => l10n.tpmActionFixActionShutdown,
         (
@@ -144,7 +144,7 @@ extension CoreBootFixActionL10n on CoreBootFixAction {
         (CoreBootFixAction.PROCEED, _) => l10n.tpmActionFixActionProceed,
       };
 
-  String label(UbuntuBootstrapLocalizations l10n) => switch (this) {
+  String label(UbuntuBootstrapLocalizations l10n) => switch (type) {
         CoreBootFixAction.REBOOT ||
         CoreBootFixAction.REBOOT_TO_FW_SETTINGS =>
           l10n.tpmActionRestartLabel,
@@ -162,9 +162,9 @@ extension CoreBootFixActionL10n on CoreBootFixAction {
       };
 
   String description(UbuntuBootstrapLocalizations l10n) =>
-      'Description for $this';
+      'Description for $type';
 
-  DestructiveActionWarning? get warning => switch (this) {
+  DestructiveActionWarning? get warning => switch (type) {
         CoreBootFixAction.CLEAR_TPM ||
         CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE ||
         CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE =>
