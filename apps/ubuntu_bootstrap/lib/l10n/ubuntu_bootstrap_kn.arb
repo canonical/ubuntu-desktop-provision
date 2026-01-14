@@ -221,5 +221,161 @@
     "minimalInstallationTitle": "ಡೀಫಾಲ್ಟ್ ಆಯ್ಕೆ",
     "@minimalInstallationTitle": {},
     "minimalInstallationSubtitle": "ಕೇವಲ ಅಗತ್ಯಗಳು, ವೆಬ್ ಬ್ರೌಸರ್ ಮತ್ತು ಮೂಲಭೂತ ಉಪಯುಕ್ತತೆಗಳು.",
-    "@minimalInstallationSubtitle": {}
+    "@minimalInstallationSubtitle": {},
+    "installationTypeAlongside": "{os} ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "{os1} ಮತ್ತು {os2} ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಂಗಳ ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "ಇತರ ವಿಭಾಗಗಳ ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "ಮರುಗಾತ್ರಗೊಳಿಸಲು ಮತ್ತು {product} ಗಾಗಿ ಜಾಗವನ್ನು ರಚಿಸಲು ವಿಭಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಬೂಟ್ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ ಅನ್ನು ನೀವು ಆಯ್ಕೆ ಮಾಡಬಹುದು.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os} ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ {os} ಸ್ಥಾಪನೆಯಿಂದ ಎಲ್ಲಾ ಫೈಲ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "ಹಸ್ತಚಾಲಿತ ಸ್ಥಾಪನೆ",
+    "@installationTypeManual": {},
+    "installationTypeManualInfo": "ಕಸ್ಟಮೈಸ್ ಮಾಡಿದ ಡಿಸ್ಕ್ ಸೆಟಪ್‌ಗಳನ್ನು ಬಯಸುವ ಮುಂದುವರಿದ ಬಳಕೆದಾರರಿಗೆ.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "ಡಿಸ್ಕ್ ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು {DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "ನಿಮ್ಮ ಆಯ್ಕೆಮಾಡಿದ ಡಿಸ್ಕ್‌ನಲ್ಲಿ ಮೊದಲಿನಿಂದ ಪ್ರಾರಂಭಿಸಿ.",
+    "@selectGuidedStorageInfo": {},
+    "selectGuidedStorageDriveDropdownLabel": "ಡ್ರೈವ್ ಆಯ್ಕೆಮಾಡಿ:",
+    "@selectGuidedStorageDriveDropdownLabel": {},
+    "selectGuidedStoragePartitionDropdownLabel": "ವಿಭಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ:",
+    "@selectGuidedStoragePartitionDropdownLabel": {},
+    "selectGuidedStorageInfoLabel": "ಸಂಪೂರ್ಣ ಡಿಸ್ಕ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ:",
+    "@selectGuidedStorageInfoLabel": {},
+    "selectGuidedStorageInstallNow": "ಈಗ ಸ್ಥಾಪಿಸಿ",
+    "@selectGuidedStorageInstallNow": {},
+    "guidedStoragePageHeader": "{DISTRO} ಅನ್ನು ಎಲ್ಲಿ ಸ್ಥಾಪಿಸಬೇಕು ಎಂಬುದನ್ನು ಆರಿಸಿ",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "ಕೆಳಗಿನ ವಿಭಾಜಕವನ್ನು ಎಳೆಯುವ ಮೂಲಕ ಡ್ರೈವ್ ಜಾಗವನ್ನು ನಿಯೋಜಿಸಿ:",
+    "@installAlongsideSpaceDivider": {},
+    "installAlongsideHiddenPartitions": "{num} ಚಿಕ್ಕ ವಿಭಾಗಗಳನ್ನು ಮರೆಮಾಡಲಾಗಿದೆ, ಹೆಚ್ಚಿನ ನಿಯಂತ್ರಣಕ್ಕಾಗಿ <a href=\"{url}\">ಸುಧಾರಿತ ವಿಭಜನಾ ಉಪಕರಣವನ್ನು</a> ಬಳಸಿ",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "ವಿಭಾಗವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಿ",
+    "@installAlongsideResizePartition": {},
+    "installAlongsideAllocateSpace": "ಜಾಗವನ್ನು ನಿಗದಿಪಡಿಸಿ",
+    "@installAlongsideAllocateSpace": {},
+    "installAlongsideFiles": "ಫೈಲ್‌ಗಳು",
+    "@installAlongsideFiles": {},
+    "installAlongsidePartition": "ವಿಭಜನೆ:",
+    "@installAlongsidePartition": {},
+    "installAlongsideSize": "ಗಾತ್ರ:",
+    "@installAlongsideSize": {},
+    "installAlongsideAvailable": "ಲಭ್ಯವಿದೆ:",
+    "@installAlongsideAvailable": {},
+    "allocateDiskSpace": "ಹಸ್ತಚಾಲಿತ ವಿಭಜನೆ",
+    "@allocateDiskSpace": {},
+    "allocateDiskSpaceInvalidMountPointSlash": "ಮೌಂಟ್ ಪಾಯಿಂಟ್‌ಗಳು \"/\" ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗಬೇಕು",
+    "@allocateDiskSpaceInvalidMountPointSlash": {},
+    "allocateDiskSpaceInvalidMountPointSpace": "ಮೌಂಟ್ ಪಾಯಿಂಟ್‌ಗಳು ಜಾಗವನ್ನು ಹೊಂದಿರಬಾರದು",
+    "@allocateDiskSpaceInvalidMountPointSpace": {},
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} ಎಂಬುದು {mountpoint} ಗಾಗಿ ಬೆಂಬಲಿತ ಫೈಲ್ ಸಿಸ್ಟಂ ಅಲ್ಲ",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "ಸಾಧನ",
+    "@diskHeadersDevice": {},
+    "successIconSemanticLabel": "ಯಶಸ್ಸು",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "ಮುಚ್ಚಿ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "ಗರಿಷ್ಠಗೊಳಿಸು",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "ಕಡಿಮೆಗೊಳಿಸು",
+    "@minimizeIconSemanticLabel": {}
 }
