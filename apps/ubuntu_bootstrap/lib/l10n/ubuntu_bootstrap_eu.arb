@@ -542,5 +542,264 @@
     "newPartitionTable": "Partizio-taula berria",
     "@newPartitionTable": {},
     "newPartitionTableConfirmationTitle": "Partizio huts berria",
-    "@newPartitionTableConfirmationTitle": {}
+    "@newPartitionTableConfirmationTitle": {},
+    "newPartitionTableConfirmationMessage": "Gailu osoan partizio-taula berria sortuz gero, une honetan bertan dauden partizio guztiak ezabatuko dira. Eragiketa hau desegin daiteke, beharrezkoa bada.",
+    "@newPartitionTableConfirmationMessage": {},
+    "tooManyPrimaryPartitions": "Partizio primario gehiegi",
+    "@tooManyPrimaryPartitions": {},
+    "partitionLimitReached": "Mugara iritsi da",
+    "@partitionLimitReached": {},
+    "bootLoaderDevice": "Abio kargatzailea instalatzeko gailua",
+    "@bootLoaderDevice": {},
+    "partitionCreateTitle": "Sortu partizioa",
+    "@partitionCreateTitle": {},
+    "partitionEditTitle": "Editatu partizioa",
+    "@partitionEditTitle": {},
+    "partitionSizeLabel": "Tamaina:",
+    "@partitionSizeLabel": {},
+    "partitionTypeLabel": "Partizio berriaren mota:",
+    "@partitionTypeLabel": {},
+    "partitionTypePrimary": "Primarioa",
+    "@partitionTypePrimary": {},
+    "partitionTypeLogical": "Logikoa",
+    "@partitionTypeLogical": {},
+    "partitionLocationLabel": "Partizio berriaren kokalekua:",
+    "@partitionLocationLabel": {},
+    "partitionLocationBeginning": "Tarte honen hasieran",
+    "@partitionLocationBeginning": {},
+    "partitionLocationEnd": "Tarte honen amaieran",
+    "@partitionLocationEnd": {},
+    "partitionFormatLabel": "Erabilera:",
+    "@partitionFormatLabel": {},
+    "partitionFormatNone": "Utzi formateatu gabe",
+    "@partitionFormatNone": {},
+    "partitionFormatKeep": "Utzi {format} gisa formateatuta",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "Formateatu partizioa",
+    "@partitionErase": {},
+    "partitionMountPointLabel": "Muntatze-puntua:",
+    "@partitionMountPointLabel": {},
+    "confirmPageTitle": "Instalatzeko prest",
+    "@confirmPageTitle": {},
+    "confirmHeader": "Berrikusi zure aukeraketa",
+    "@confirmHeader": {},
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "@confirmDiskEncryptionLVM": {},
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "@confirmDiskEncryptionZFS": {},
+    "confirmDiskEncryptionTPM": "TPM",
+    "@confirmDiskEncryptionTPM": {},
+    "confirmDiskEncryptionNone": "Bat ere ez",
+    "@confirmDiskEncryptionNone": {},
+    "confirmDevicesTitle": "Gailuak",
+    "@confirmDevicesTitle": {},
+    "confirmEntryApplications": "Aplikazioak",
+    "@confirmEntryApplications": {},
+    "confirmEntryDiskSetup": "Instalazio mota",
+    "@confirmEntryDiskSetup": {},
+    "confirmEntryDiskEncryption": "Diskoaren zifratzea",
+    "@confirmEntryDiskEncryption": {},
+    "confirmEntryInstallationDisk": "Instalazio-diskoa",
+    "@confirmEntryInstallationDisk": {},
+    "confirmEntryProprietarySoftware": "Software pribatiboa",
+    "@confirmEntryProprietarySoftware": {},
+    "confirmSectionGeneralTitle": "Orokorra",
+    "@confirmSectionGeneralTitle": {},
+    "confirmSectionSecurityAndMoreTitle": "Segurtasuna eta gehiago",
+    "@confirmSectionSecurityAndMoreTitle": {},
+    "confirmPartitionsTitle": "Partizioak",
+    "@confirmPartitionsTitle": {},
+    "confirmPartitionTables": "Gailu hauetako partizio-taulak aldatu egin dira:",
+    "@confirmPartitionTables": {},
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "Kodekak",
+    "@confirmProprietarySoftwareCodecs": {},
+    "confirmProprietarySoftwareCodecsDrivers": "Kodekak eta kontrolatzaileak",
+    "@confirmProprietarySoftwareCodecsDrivers": {},
+    "confirmProprietarySoftwareDrivers": "Kontrolatzaileak",
+    "@confirmProprietarySoftwareDrivers": {},
+    "confirmInstallButton": "Instalatu",
+    "@confirmInstallButton": {},
+    "confirmTableErased": "Ezabatua",
+    "@confirmTableErased": {},
+    "confirmTableUnchanged": "Aldatu gabe",
+    "@confirmTableUnchanged": {},
+    "confirmTableResized": "Tamainaz aldatua (lehen: {oldsize} / orain: {newsize})",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "Sortua eta {format} gisa formateatua. Erabilera: {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "{format} gisa formateatua. Erabilera: {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "Erabilera: {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} gisa formateatua",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Instalazioa osatu da",
+    "@installationCompleteTitle": {},
+    "readyToUse": "{system} instalatu da eta erabiltzeko prest dago",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** diskora kopiatu da",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "Berrabiarazi {system}ra",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Berrabiarazi instalazioa osatzeko edo jarraitu probatzen.\nEgiten dituzun aldaketak ez dira gordeko.",
+    "@restartWarningBody": {},
+    "rebootToConfigureWarning": "Instalazio prozesuarekin jarraitzeko ordenagailua berrabiarazi behar duzu.",
+    "@rebootToConfigureWarning": {},
+    "shutdown": "Itzali",
+    "@shutdown": {},
+    "restartNow": "Berrabiarazi orain",
+    "@restartNow": {},
+    "continueTesting": "Jarraitu probatzen",
+    "@continueTesting": {},
+    "bitlockerInfoTitle": "BitLocker antzeman da",
+    "@bitlockerInfoTitle": {},
+    "bitlockerInfoDescription": "Partizio bat edo gehiago BitLocker erabiliz zifratu dira.",
+    "@bitlockerInfoDescription": {},
+    "bitlockerInfoDisable": "Windowsekin batera instalatzeko, ezgaitu BitLocker Windowsen.",
+    "@bitlockerInfoDisable": {},
+    "bitlockerInfoRecovery": "Baliteke Windowsek berreskuratze gakoak eskatzea instalazio ondoren abiaraztean.",
+    "@bitlockerInfoRecovery": {},
+    "bitlockerInfoInstructions": "Jarraibideetarako, bisitatu <a href=\"{url}\">BitLocker-en gida</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "Datu guztiak gal ditzakezu BitLocker-en berreskuratze gakorik gabe",
+    "@bitlockerWarningTitle": {},
+    "restartComputer": "Berrabiarazi ordenagailua",
+    "@restartComputer": {},
+    "restartComputerTitle": "Ordenagailua berrabiarazi?",
+    "@restartComputerTitle": {},
+    "restartIntoWindows": "Berrabiarazi Windowsera",
+    "@restartIntoWindows": {},
+    "restartIntoWindowsTitle": "Windowsera berrabiarazi?",
+    "@restartIntoWindowsTitle": {},
+    "restartIntoWindowsDescription": "Ziur ordenagailua berrabiarazi nahi duzula? Geroago {DISTRO}ren instalazioa berrekin beharko duzu, {DISTRO} instalatzen amaitzeko.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "Ongi etorri {RELEASE}ra",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "Erabilgarri:",
+    "@installationSlidesAvailable": {},
+    "installationSlidesIncluded": "Hau barne:",
+    "@installationSlidesIncluded": {},
+    "installationSlidesWelcomeTitle": "Bizkorra, librea eta eginbidez betea",
+    "@installationSlidesWelcomeTitle": {},
+    "installationSlidesWelcomeHeader": "{DISTRO}ren azken bertsioak ordenagailuan aritzea inoiz baino errazago egiten du.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "Izan garatzailea, sortzailea, bideojokozalea edo administratzailea, {RELEASE}n produktibitatea handitzeko eta zure bizipena hobetzeko tresna berriak aurkituko dituzu.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Behar dituzun aplikazio guztiak",
+    "@installationSlidesSoftwareTitle": {},
+    "installationSlidesSoftwareBody": "Instalatu, kudeatu eta eguneratu aplikazio guztiak Ubuntu Softwarearekin. Bertan aurkituko dizu Snap Store dendako eta {DISTRO}ren artxiboko softwarea.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "Garatu kode ireki onenarekin",
+    "@installationSlidesDevelopmentTitle": {}
 }
