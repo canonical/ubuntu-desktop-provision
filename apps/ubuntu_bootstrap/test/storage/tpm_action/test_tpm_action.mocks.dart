@@ -83,11 +83,14 @@ class MockTpmActionModel extends _i1.Mock implements _i2.TpmActionModel {
 
   @override
   _i3.Future<_i4.SubiquityException?> performAction(
-          _i4.CoreBootFixActionWithCategoryAndArgs? action) =>
+    _i4.CoreBootFixActionWithCategoryAndArgs? action, {
+    bool? triggeredByUser = true,
+  }) =>
       (super.noSuchMethod(
         Invocation.method(
           #performAction,
           [action],
+          {#triggeredByUser: triggeredByUser},
         ),
         returnValue: _i3.Future<_i4.SubiquityException?>.value(),
       ) as _i3.Future<_i4.SubiquityException?>);
