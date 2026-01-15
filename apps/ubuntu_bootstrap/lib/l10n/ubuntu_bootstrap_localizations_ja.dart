@@ -1434,10 +1434,6 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindNoKernelIommu => 'No Kernel IOMMU';
 
   @override
-  String get tpmActionErrorKindTpmStartupLocalityNotProtected =>
-      'TPM Startup Locality Not Protected';
-
-  @override
   String get tpmActionErrorKindHostSecurity => 'Host Security';
 
   @override
@@ -1445,10 +1441,6 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindPcrUnsupported => 'PCR Unsupported';
-
-  @override
-  String get tpmActionErrorKindVarSuppliedDriversPresent =>
-      'Var Supplied Drivers Present';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
@@ -1468,6 +1460,9 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindPreOsDigestVerificationDetected =>
       'Pre Os Digest Verification Detected';
+
+  @override
+  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
 
   @override
   String get tpmActionFixActionReboot => 'Restart';
