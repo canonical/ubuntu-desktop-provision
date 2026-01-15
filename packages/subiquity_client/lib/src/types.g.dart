@@ -1035,13 +1035,10 @@ const _$CoreBootAvailabilityErrorKindEnumMap = {
   CoreBootAvailabilityErrorKind.INSUFFICIENT_DMA_PROTECTION:
       'INSUFFICIENT_DMA_PROTECTION',
   CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU: 'NO_KERNEL_IOMMU',
-  CoreBootAvailabilityErrorKind.TPM_STARTUP_LOCALITY_NOT_PROTECTED:
-      'TPM_STARTUP_LOCALITY_NOT_PROTECTED',
   CoreBootAvailabilityErrorKind.HOST_SECURITY: 'HOST_SECURITY',
   CoreBootAvailabilityErrorKind.PCR_UNUSABLE: 'PCR_UNUSABLE',
   CoreBootAvailabilityErrorKind.PCR_UNSUPPORTED: 'PCR_UNSUPPORTED',
-  CoreBootAvailabilityErrorKind.VAR_SUPPLIED_DRIVERS_PRESENT:
-      'VAR_SUPPLIED_DRIVERS_PRESENT',
+  CoreBootAvailabilityErrorKind.ADDON_DRIVERS_PRESENT: 'ADDON_DRIVERS_PRESENT',
   CoreBootAvailabilityErrorKind.SYS_PREP_APPLICATIONS_PRESENT:
       'SYS_PREP_APPLICATIONS_PRESENT',
   CoreBootAvailabilityErrorKind.ABSOLUTE_PRESENT: 'ABSOLUTE_PRESENT',
