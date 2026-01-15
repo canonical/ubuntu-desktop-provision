@@ -801,5 +801,315 @@
         }
     },
     "installationSlidesDevelopmentTitle": "Garatu kode ireki onenarekin",
-    "@installationSlidesDevelopmentTitle": {}
+    "@installationSlidesDevelopmentTitle": {},
+    "installationSlidesAccessibilityOrca": "Orca pantaila-irakurlea",
+    "@installationSlidesAccessibilityOrca": {},
+    "installationSlidesAccessibilityLanguages": "Hizkuntza-sostengua",
+    "@installationSlidesAccessibilityLanguages": {},
+    "installationSlidesSupportTitle": "Laguntza eta euskarria",
+    "@installationSlidesSupportTitle": {},
+    "installationSlidesSupportHeader": "{DISTRO}ren dokumentazio ofiziala eskuragarri dago bai online, bai atrakeko Laguntza ikonoaren bitartez.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportDocumentation": "Dokumentazio ofiziala",
+    "@installationSlidesSupportDocumentation": {},
+    "nextSlideSemanticLabel": "Hurrengo diapositiba",
+    "@nextSlideSemanticLabel": {},
+    "previousSlideSemanticLabel": "Aurreko diapositiba",
+    "@previousSlideSemanticLabel": {},
+    "playSlideshowSemanticLabel": "Erreproduzitu diapositibak",
+    "@playSlideshowSemanticLabel": {},
+    "pauseSlideshowSemanticLabel": "Pausatu diapositibak",
+    "@pauseSlideshowSemanticLabel": {},
+    "toggleLogsSemanticLabel": "Erakutsi / ezkutatu erregistroak",
+    "@toggleLogsSemanticLabel": {},
+    "copyingFiles": "Fitxategiak kopiatzen…",
+    "@copyingFiles": {},
+    "installingSystem": "Sistema instalatzen…",
+    "@installingSystem": {},
+    "configuringSystem": "Sistema konfiguratzen…",
+    "@configuringSystem": {},
+    "installationFailed": "Instalazioak huts egin du",
+    "@installationFailed": {},
+    "notEnoughDiskSpaceTitle": "Ez dago behar beste leku diskoan",
+    "@notEnoughDiskSpaceTitle": {},
+    "notEnoughDiskSpaceUbuntu": "Diskoan ez dago {DISTRO} instalatzeko behar beste leku",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "Hautatutako diskoak ez dauka {DISTRO} instalatzeko behar beste leku. Irten instalatzailetik diskoan lekua egiteko, edo hautatu beste disko bat.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "Erabilgarri:",
+    "@notEnoughDiskSpaceAvailable": {},
+    "notEnoughDiskSpaceRequired": "Beharrezko:",
+    "@notEnoughDiskSpaceRequired": {},
+    "refreshPageTitle": "Eguneratzea eskuragarri",
+    "@refreshPageTitle": {},
+    "refreshHeader": "Instalatzailearentzako eguneratze bat eskuragarri dago",
+    "@refreshHeader": {},
+    "refreshUpdateNow": "Eguneratu orain",
+    "@refreshUpdateNow": {},
+    "refreshInfo": "Eguneratu azken bertsiora fidagarritasun handiagorako eta eginbide gehiago lortzeko.",
+    "@refreshInfo": {},
+    "refreshReady": "Eguneratzea prest",
+    "@refreshReady": {},
+    "refreshCurrent": "Uneko {snap} bertsioa honakoa da: {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "Eguneratu {version} bertsiora",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "Uneko bertsioa ({version}) egunean dago.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} eguneratzen...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "Jarraitzeko, itxi instalatzailea eta abiarazi berriro",
+    "@refreshRestart": {},
+    "refreshCloseLabel": "Itxi instalatzailea",
+    "@refreshCloseLabel": {},
+    "refreshSnapPrerequisites": "{snap}(r)en eskakizunak egiaztatzen...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "{snap} berritzen...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "{snap}(r)en berritzea aztertzen...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "{snap} prestatzen...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "{snap} deskargatzen...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "{snap} balioztatzen...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "{snap} muntatzen...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "{snap} zerbitzuak geldiarazten...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "{snap} aliasak ezabatzen...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "{snap} desestekatzen...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "{snap} baliabideak eguneratzen...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "{snap} kernelaren komando-lerroa eguneratzen...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "{snap}(r)en datuak kopiatzen...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "{snap}(r)en segurtasun-profilak konfiguratzen...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "{snap} estekatzen...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "Berreskuratze gakoa",
+    "@recoveryKeyTitle": {},
+    "recoveryKeyTitleBadgeLabel": "Garrantzitsua",
+    "@recoveryKeyTitleBadgeLabel": {},
+    "recoveryKeyHeader": "Gorde berreskuratze gakoa",
+    "@recoveryKeyHeader": {},
+    "recoveryKeyInfoHeader": "Zure datu guztiak gal ditzakezu berreskuratze gakorik ez baduzu",
+    "@recoveryKeyInfoHeader": {},
+    "recoveryKeyTextFieldLabel": "Berreskuratze gakoa",
+    "@recoveryKeyTextFieldLabel": {},
+    "recoveryKeyStorageAdvice": "Abioan datuak deszifratzeak huts egiten badu, berreskuratze gakoa sartu beharko duzu. Gako hau gabe, zure datu guztietara sarbidea galduko duzu. Gorde ezazu leku seguruan, adibidez pasahitz-kudeatzaile batean.",
+    "@recoveryKeyStorageAdvice": {},
+    "recoveryKeyConfirmation": "Berreskuratze gakoa leku seguruan gorde dut",
+    "@recoveryKeyConfirmation": {},
+    "recoveryKeyLinkLabel": "Ikasi gehiago",
+    "@recoveryKeyLinkLabel": {},
+    "recoveryKeySaveToFileLabel": "Gorde fitxategian",
+    "@recoveryKeySaveToFileLabel": {},
+    "recoveryKeyShowQrCodeLabel": "Erakutsi QR kodea",
+    "@recoveryKeyShowQrCodeLabel": {},
+    "recoveryKeyQrDialogTitle": "{DISTRO} Mahaigaina - Berreskuratze gakoa",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "Eskaneatu QR kodea berreskuratze gakoa kopiatzeko eta leku seguruan gordetzeko, adibidez pasahitz-kudeatzaile batean. Geroago erabiltzeko argazki bat ere atera dezakezu.",
+    "@recoveryKeyQrDialogBody": {},
+    "recoveryKeyClipboardNotifiaction": "Arbelera kopiatu da",
+    "@recoveryKeyClipboardNotifiaction": {},
+    "recoveryKeyExceptionFileSystemTitle": "Berreskuratze gakoaren fitxategia ez da gorde",
+    "@recoveryKeyExceptionFileSystemTitle": {},
+    "recoveryKeyExceptionDisallowedPathTitle": "Berreskuratze gakoaren fitxategia ezin izan da gorde aldi baterako kokalekuan",
+    "@recoveryKeyExceptionDisallowedPathTitle": {},
+    "recoveryKeyExceptionUnknownTitle": "Errore ezezaguna",
+    "@recoveryKeyExceptionUnknownTitle": {},
+    "recoveryKeyExceptionFileSystemBody": "Ez duzu karpeta horretan idazteko baimenik. Saiatu beste kokaleku batean edo erabili bestelako metodo bat.",
+    "@recoveryKeyExceptionFileSystemBody": {},
+    "recoveryKeyExceptionDisallowedPathBody": "Saiatu beste kokaleku batekin, esaterako unitate aldagarri bat, edo erabili bestelako metodo bat.",
+    "@recoveryKeyExceptionDisallowedPathBody": {},
+    "recoveryKeyFilePickerTitle": "Gorde berreskuratze gakoaren fitxategia",
+    "@recoveryKeyFilePickerTitle": {},
+    "recoveryKeyFilePickerFilter": "Testu-fitxategiak",
+    "@recoveryKeyFilePickerFilter": {},
+    "landscapeMagicAttachInstructions": "Eskaneatu QR kodea edo sartu azpiko kodea hemen: <a href=\"https://{url}\">{url}</a>",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "Instalazio automatizatua",
+    "@landscapePageTitle": {},
+    "landscapeHeader": "Hasi saioa Landscapen",
+    "@landscapeHeader": {},
+    "landscapeDomainHeader": "Sartu Landscapeko domeinua (FQDN)",
+    "@landscapeDomainHeader": {},
+    "landscapeDomainHintText": "Landscapeko domeinua (FQDN)",
+    "@landscapeDomainHintText": {},
+    "errorIconSemanticLabel": "Errorea",
+    "@errorIconSemanticLabel": {},
+    "tpmActionDetailsLabel": "Xehetasun teknikoak",
+    "@tpmActionDetailsLabel": {},
+    "tpmActionConfirmLabel": "Berretsi",
+    "@tpmActionConfirmLabel": {},
+    "tpmActionSolutionLabel": "{n}. soluzioa: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Dokumentaziora esteka",
+    "@tpmActionDocumentationLinkLabel": {},
+    "tpmActionErrorSupportLabel": "Saiatu jarraian azaldutako soluzioekin, jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.",
+    "@tpmActionErrorSupportLabel": {},
+    "tpmActionErrorSupportNoActionLabel": "Jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.",
+    "@tpmActionErrorSupportNoActionLabel": {}
 }
