@@ -55,7 +55,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 77eaf4493ed6f62d49d086a6694808ea44de14fe
+    source-commit: &commit-ref 129dbc2cfd77a9bc05c4aff4cdce5fb91a56eaff
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
