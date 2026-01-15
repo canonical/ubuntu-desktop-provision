@@ -55,16 +55,14 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
           l10n.tpmActionErrorKindInsufficientDmaProtection,
         CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU =>
           l10n.tpmActionErrorKindNoKernelIommu,
-        CoreBootAvailabilityErrorKind.TPM_STARTUP_LOCALITY_NOT_PROTECTED =>
-          l10n.tpmActionErrorKindTpmStartupLocalityNotProtected,
         CoreBootAvailabilityErrorKind.HOST_SECURITY =>
           l10n.tpmActionErrorKindHostSecurity,
         CoreBootAvailabilityErrorKind.PCR_UNUSABLE =>
           l10n.tpmActionErrorKindPcrUnusable,
         CoreBootAvailabilityErrorKind.PCR_UNSUPPORTED =>
           l10n.tpmActionErrorKindPcrUnsupported,
-        CoreBootAvailabilityErrorKind.VAR_SUPPLIED_DRIVERS_PRESENT =>
-          l10n.tpmActionErrorKindVarSuppliedDriversPresent,
+        CoreBootAvailabilityErrorKind.ADDON_DRIVERS_PRESENT =>
+          l10n.tpmActionErrorKindAddonDriversPresent,
         CoreBootAvailabilityErrorKind.SYS_PREP_APPLICATIONS_PRESENT =>
           l10n.tpmActionErrorKindSysPrepApplicationsPresent,
         CoreBootAvailabilityErrorKind.ABSOLUTE_PRESENT =>
