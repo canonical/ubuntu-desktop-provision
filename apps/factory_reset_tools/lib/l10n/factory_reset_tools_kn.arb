@@ -53,5 +53,19 @@
     "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
     "@loading": {},
     "warning": "ಎಚ್ಚರಿಕೆ",
-    "@warning": {}
+    "@warning": {},
+    "createUsbListExplanation": "USB ಫ್ಲಾಶ್ ಡ್ರೈವ್ ಆಯ್ಕೆಮಾಡಿ. ಡ್ರೈವ್ **ಕನಿಷ್ಠ 16GB ಸ್ಥಳಾವಕಾಶವನ್ನು ಹೊಂದಿರಬೇಕು.**",
+    "@createUsbListExplanation": {},
+    "createUsbWarning": "ಫ್ಲ್ಯಾಶ್ ಡ್ರೈವ್ ಅನ್ನು ಮರು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಡ್ರೈವ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾ ಕಳೆದುಹೋಗುತ್ತದೆ.",
+    "@createUsbWarning": {},
+    "resetMediaTitle": "USB ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮ",
+    "@resetMediaTitle": {},
+    "noMediaDetected": "ಯಾವುದೇ ತೆಗೆಯಬಹುದಾದ ಸಂಗ್ರಹಣೆ ಪತ್ತೆಯಾಗಿಲ್ಲ",
+    "@noMediaDetected": {},
+    "restore": "ಮರುಸ್ಥಾಪಿಸಿಮರುಸ್ಥಾಪಿಸಿ",
+    "@restore": {},
+    "reformat": "ರಿಫಾರ್ಮ್ಯಾಟ್",
+    "@reformat": {},
+    "failed": "ಆಜ್ಞೆಯನ್ನು ಚಲಾಯಿಸಲು ವಿಫಲವಾಗಿದೆ",
+    "@failed": {}
 }
