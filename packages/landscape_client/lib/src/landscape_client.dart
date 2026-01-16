@@ -33,7 +33,8 @@ class LandscapeClient {
 
   Future<pbgrpc.AttachResponse> attach() async {
     final request = pbgrpc.Empty();
-    return await _landscapeClient.attach(request);
+    return await _landscapeClient.attach(request,
+        options: CallOptions(timeout: Duration(seconds: 60)));
   }
 
   Stream<pbgrpc.WatchAuthenticationResponse> watch(

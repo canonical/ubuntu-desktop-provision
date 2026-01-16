@@ -46,7 +46,4 @@ class AutoinstallModel extends _$AutoinstallModel {
   }
 
   Future<String> getFileContent() => _service.getFileContent();
-
-  bool get showLandscape =>
-      getService<InstallerService>().experimentalFeatures.contains('landscape');
 }
