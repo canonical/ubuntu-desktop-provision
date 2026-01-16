@@ -66,7 +66,7 @@ Translations are managed using [Weblate](https://hosted.weblate.org/projects/ubu
 
 ### Required dependencies
 
-[Install Flutter](https://flutter.dev/docs/get-started/install/linux) - the currently used version is specified in `.tool-versions`. If you're using [asdf](https://asdf-vm.com/) to manage your Flutter SDK, you can simply run `asdf install` to install the required version.
+[Install Flutter](https://docs.flutter.dev/platform-integration/linux/setup) - the currently used version is specified in `.tool-versions`. If you're using [asdf](https://asdf-vm.com/) to manage your Flutter SDK, you can simply run `asdf install` to install the required version.
 
 Fetch [Subiquity](https://github.com/canonical/subiquity), which is included as a git sub-module, by running
 ```
