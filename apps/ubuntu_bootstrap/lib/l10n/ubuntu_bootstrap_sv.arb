@@ -944,5 +944,7 @@
     "tpmActionErrorTitle": "Lösningen misslyckades",
     "@tpmActionErrorTitle": {},
     "tpmActionErrorDescription": "Testa en annan lösning eller kontakta IT-support",
-    "@tpmActionErrorDescription": {}
+    "@tpmActionErrorDescription": {},
+    "tpmActionErrorKindAddonDriversPresent": "Tilläggsdrivrutiner finns",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
