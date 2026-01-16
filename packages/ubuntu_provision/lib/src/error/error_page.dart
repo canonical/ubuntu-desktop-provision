@@ -15,18 +15,30 @@ import 'package:yaru/widgets.dart';
 
 /// This is an error page that is shown when an unexpected error occurs.
 /// It shows a message and a the log.
-class ErrorPage extends ConsumerWidget with ProvisioningPage {
+class ErrorPage extends ConsumerStatefulWidget with ProvisioningPage {
   const ErrorPage({
     required this.allowRestart,
     super.key,
   });
 
   final bool allowRestart;
+
+  @override
+  ConsumerState<ErrorPage> createState() => _ErrorPageState();
+}
+
+class _ErrorPageState extends ConsumerState<ErrorPage> {
   final launchpadUrl =
       'https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug';
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  void initState() {
+    super.initState();
+    ref.read(apportProvider)?.launch();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final image = ref.watch(pageImagesProvider).get(name);
     final lang = UbuntuProvisionLocalizations.of(context);
@@ -136,11 +148,11 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
           ),
           const SizedBox(width: kWizardBarSpacing),
           WizardButton(
-            label: allowRestart ? lang.restart : lang.close,
+            label: widget.allowRestart ? lang.restart : lang.close,
             highlighted: true,
             onActivated: () async {
               final window = YaruWindow.of(context);
-              if (allowRestart) {
+              if (widget.allowRestart) {
                 await model.reboot().then((_) => window.close());
               } else {
                 await window.close();
