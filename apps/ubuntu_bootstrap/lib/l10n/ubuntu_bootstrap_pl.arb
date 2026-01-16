@@ -944,5 +944,7 @@
     "tpmActionErrorTitle": "To rozwiązanie zawiodło",
     "@tpmActionErrorTitle": {},
     "tpmActionErrorDescription": "Wypróbuj inne rozwiązanie lub skontaktuj się z pomocą techniczną",
-    "@tpmActionErrorDescription": {}
+    "@tpmActionErrorDescription": {},
+    "tpmActionErrorKindAddonDriversPresent": "Dodatkowe sterowniki obecne",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
