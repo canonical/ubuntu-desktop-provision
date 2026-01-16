@@ -942,5 +942,7 @@
     "tpmActionErrorTitle": "Toto riešenie zlyhalo",
     "@tpmActionErrorTitle": {},
     "tpmActionErrorDescription": "Vyskúšajte iné riešenie alebo kontaktujte IT podporu",
-    "@tpmActionErrorDescription": {}
+    "@tpmActionErrorDescription": {},
+    "tpmActionErrorKindAddonDriversPresent": "Prítomné doplnkové ovládače",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
