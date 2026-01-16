@@ -906,5 +906,7 @@
     "tpmActionErrorDescription": "Proovi muud lahendust või küsi abi IT-toelt",
     "@tpmActionErrorDescription": {},
     "tpmActionFixActionClearTpmWarningBody": "Kui sul pole taastevõtmeid, siis kaotad ligipääsu kõikidele oma krüptitud andmekandjatele. Lisaks lõpetavad töötamise muud funktsionaalsused, mis sõltuvad TPM-ist, näiteks autentimine ja sertifikaadid.",
-    "@tpmActionFixActionClearTpmWarningBody": {}
+    "@tpmActionFixActionClearTpmWarningBody": {},
+    "tpmActionErrorKindAddonDriversPresent": "Täiendavad draiverid on olemas",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
