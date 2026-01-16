@@ -24,7 +24,6 @@ import 'package:ubuntu_utils/src/url_launcher.dart' as _i6;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
-// ignore_for_file: invalid_use_of_internal_member
 
 class _FakeProductInfo_0 extends _i1.SmartFake implements _i2.ProductInfo {
   _FakeProductInfo_0(
@@ -113,10 +112,10 @@ class MockThemeVariantService extends _i1.Mock
   }
 
   @override
-  set themeVariant(_i2.ThemeVariant? value) => super.noSuchMethod(
+  set themeVariant(_i2.ThemeVariant? _themeVariant) => super.noSuchMethod(
         Invocation.setter(
           #themeVariant,
-          value,
+          _themeVariant,
         ),
         returnValueForMissingStub: null,
       );
