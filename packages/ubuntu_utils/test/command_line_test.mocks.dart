@@ -22,7 +22,6 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
-// ignore_for_file: invalid_use_of_internal_member
 
 class _FakeEncoding_0 extends _i1.SmartFake implements _i2.Encoding {
   _FakeEncoding_0(
@@ -58,10 +57,10 @@ class MockIOSink extends _i1.Mock implements _i3.IOSink {
       ) as _i4.Future<dynamic>);
 
   @override
-  set encoding(_i2.Encoding? value) => super.noSuchMethod(
+  set encoding(_i2.Encoding? _encoding) => super.noSuchMethod(
         Invocation.setter(
           #encoding,
-          value,
+          _encoding,
         ),
         returnValueForMissingStub: null,
       );

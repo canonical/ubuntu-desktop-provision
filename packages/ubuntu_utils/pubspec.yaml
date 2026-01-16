@@ -8,6 +8,7 @@ environment:
   flutter: ">=3.38.1"
 
 dependencies:
+  analyzer: ^7.0.0
   args: ^2.4.2
   flutter:
     sdk: flutter
