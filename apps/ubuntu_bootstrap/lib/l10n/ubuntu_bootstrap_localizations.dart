@@ -2632,12 +2632,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'No Kernel IOMMU'**
   String get tpmActionErrorKindNoKernelIommu;
 
-  /// No description provided for @tpmActionErrorKindTpmStartupLocalityNotProtected.
-  ///
-  /// In en, this message translates to:
-  /// **'TPM Startup Locality Not Protected'**
-  String get tpmActionErrorKindTpmStartupLocalityNotProtected;
-
   /// No description provided for @tpmActionErrorKindHostSecurity.
   ///
   /// In en, this message translates to:
@@ -2655,12 +2649,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'PCR Unsupported'**
   String get tpmActionErrorKindPcrUnsupported;
-
-  /// No description provided for @tpmActionErrorKindVarSuppliedDriversPresent.
-  ///
-  /// In en, this message translates to:
-  /// **'Var Supplied Drivers Present'**
-  String get tpmActionErrorKindVarSuppliedDriversPresent;
 
   /// No description provided for @tpmActionErrorKindSysPrepApplicationsPresent.
   ///
@@ -2691,6 +2679,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Pre Os Digest Verification Detected'**
   String get tpmActionErrorKindPreOsDigestVerificationDetected;
+
+  /// No description provided for @tpmActionErrorKindAddonDriversPresent.
+  ///
+  /// In en, this message translates to:
+  /// **'Addon Drivers Present'**
+  String get tpmActionErrorKindAddonDriversPresent;
 
   /// No description provided for @tpmActionFixActionReboot.
   ///
