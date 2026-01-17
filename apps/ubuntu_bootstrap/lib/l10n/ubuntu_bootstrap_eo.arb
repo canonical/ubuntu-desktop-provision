@@ -944,5 +944,7 @@
     "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Malaŭtomate ŝalti PCR-bankojn",
     "@tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": {},
     "tpmActionFixActionClearTpmWarningBody": "Vi perdos ĉiom da datenoj en tiuj ĉifritaj diskoj, kies restaŭrŝlosilojn vi ne havas. Tio ankaŭ rompos tiujn aliajn funkciojn, kiuj dependas de la fidata platforma modulo (TPM), kiel ekzemple aŭtentokontrolon kaj atestilojn.",
-    "@tpmActionFixActionClearTpmWarningBody": {}
+    "@tpmActionFixActionClearTpmWarningBody": {},
+    "tpmActionErrorKindAddonDriversPresent": "Ekzistas aldona zorgilo",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
