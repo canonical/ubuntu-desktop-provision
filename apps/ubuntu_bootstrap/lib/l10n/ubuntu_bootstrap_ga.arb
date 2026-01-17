@@ -938,5 +938,7 @@
     "tpmActionErrorTitle": "Theip ar an réiteach seo",
     "@tpmActionErrorTitle": {},
     "tpmActionErrorDescription": "Bain triail as réiteach difriúil nó déan teagmháil le tacaíocht TF",
-    "@tpmActionErrorDescription": {}
+    "@tpmActionErrorDescription": {},
+    "tpmActionErrorKindAddonDriversPresent": "Tiománaithe Breiseán i Láthair",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
