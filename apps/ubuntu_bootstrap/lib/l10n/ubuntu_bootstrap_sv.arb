@@ -884,7 +884,7 @@
     "@tpmActionErrorKindTpmHierarchiesOwned": {},
     "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM-enhetblockering låst",
     "@tpmActionErrorKindTpmDeviceLockoutLockedOut": {},
-    "tpmActionErrorKindMeasuredBoot": "Uppmätt uppstart",
+    "tpmActionErrorKindMeasuredBoot": "Measured Boot",
     "@tpmActionErrorKindMeasuredBoot": {},
     "tpmActionErrorKindVarSuppliedDriversPresent": "Drivrutiner som tillhandahålls av leverantörer finns",
     "@tpmActionErrorKindVarSuppliedDriversPresent": {},
