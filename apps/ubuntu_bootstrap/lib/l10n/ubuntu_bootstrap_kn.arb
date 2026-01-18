@@ -1310,5 +1310,130 @@
     "tpmActionErrorTitle": "ಈ ಪರಿಹಾರವು ವಿಫಲವಾಗಿದೆ",
     "@tpmActionErrorTitle": {},
     "tpmActionErrorDescription": "ಬೇರೆ ಪರಿಹಾರವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ",
-    "@tpmActionErrorDescription": {}
+    "@tpmActionErrorDescription": {},
+    "rebootToConfigureWarning": "ಅನುಸ್ಥಾಪನಾ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಮುಂದುವರಿಸಲು ನೀವು ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಬೇಕು.",
+    "@rebootToConfigureWarning": {},
+    "shutdown": "ಸ್ಥಗಿತಗೊಳಿಸಿ",
+    "@shutdown": {},
+    "restartNow": "ಈಗ ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "@restartNow": {},
+    "continueTesting": "ಪರೀಕ್ಷೆಯನ್ನು ಮುಂದುವರಿಸಿ",
+    "@continueTesting": {},
+    "bitlockerInfoTitle": "ಬಿಟ್‌ಲಾಕರ್ ಪತ್ತೆಯಾಗಿದೆ",
+    "@bitlockerInfoTitle": {},
+    "bitlockerInfoDescription": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚಿನ ವಿಭಾಗಗಳನ್ನು ಬಿಟ್‌ಲಾಕರ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ.",
+    "@bitlockerInfoDescription": {},
+    "bitlockerInfoDisable": "ವಿಂಡೋಸ್ ಜೊತೆಗೆ ಸ್ಥಾಪಿಸಲು, ವಿಂಡೋಸ್‌ನಲ್ಲಿ ಬಿಟ್‌ಲಾಕರ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ.",
+    "@bitlockerInfoDisable": {},
+    "bitlockerInfoRecovery": "ಅನುಸ್ಥಾಪನೆಯ ನಂತರ ಬೂಟ್‌ನಲ್ಲಿ ವಿಂಡೋಸ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳನ್ನು ವಿನಂತಿಸಬಹುದು.",
+    "@bitlockerInfoRecovery": {},
+    "bitlockerInfoInstructions": "ಸೂಚನೆಗಳಿಗಾಗಿ, <a href=\"{url}\">BitLocker ಮಾರ್ಗದರ್ಶಿ</a> ಅನ್ನು ಭೇಟಿ ಮಾಡಿ.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "ಬಿಟ್‌ಲಾಕರ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳಿಲ್ಲದೆ ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು",
+    "@bitlockerWarningTitle": {},
+    "installationSlidesSupportCommunity": "Ask Ubuntu ಹಲವಾರು ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ ಮತ್ತು ಉಬುಂಟು ಡಿಸ್ಕೋರ್ಸ್ ಹೊಸ ಮತ್ತು ಅನುಭವಿ ಬಳಕೆದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಚರ್ಚೆಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ.",
+    "@installationSlidesSupportCommunity": {},
+    "installationSlidesSupportEnterprise": "ಎಂಟರ್‌ಪ್ರೈಸ್ ಬಳಕೆದಾರರಿಗೆ ಕೆನೊನಿಕಲ್ ವಾಣಿಜ್ಯ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುತ್ತದೆ ಮತ್ತು ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಉಬುಂಟು ಅನ್ನು ಆನ್‌ಬೋರ್ಡ್ ಮಾಡಲು ಮತ್ತು ನಿರ್ವಹಿಸಲು ಸುಲಭವಾಗುತ್ತದೆ.",
+    "@installationSlidesSupportEnterprise": {},
+    "installationSlidesSupportResources": "ಸಹಾಯಕ ಸಂಪನ್ಮೂಲಗಳು:",
+    "@installationSlidesSupportResources": {},
+    "installationSlidesSupportDocumentation": "ಅಧಿಕೃತ ದಸ್ತಾವೇಜನ್ನು",
+    "@installationSlidesSupportDocumentation": {},
+    "installationSlidesSupportUbuntuPro": "ಉಬುಂಟು ಪ್ರೊನೊಂದಿಗೆ ಎಂಟರ್‌ಪ್ರೈಸ್-ಗ್ರೇಡ್ 24/7 ಬೆಂಬಲ",
+    "@installationSlidesSupportUbuntuPro": {},
+    "nextSlideSemanticLabel": "ಮುಂದಿನ ಸ್ಲೈಡ್",
+    "@nextSlideSemanticLabel": {},
+    "previousSlideSemanticLabel": "ಹಿಂದಿನ ಸ್ಲೈಡ್",
+    "@previousSlideSemanticLabel": {},
+    "playSlideshowSemanticLabel": "ಸ್ಲೈಡ್‌ಶೋ ಪ್ಲೇ ಮಾಡಿ",
+    "@playSlideshowSemanticLabel": {},
+    "pauseSlideshowSemanticLabel": "ಸ್ಲೈಡ್‌ಶೋ ವಿರಾಮಗೊಳಿಸಿ",
+    "@pauseSlideshowSemanticLabel": {},
+    "toggleLogsSemanticLabel": "ಇನ್‌ಸ್ಟಾಲ್ ಲಾಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ",
+    "@toggleLogsSemanticLabel": {},
+    "copyingFiles": "ಫೈಲ್‌ಗಳನ್ನು ನಕಲಿಸಲಾಗುತ್ತಿದೆ…",
+    "@copyingFiles": {},
+    "installingSystem": "ಅನುಸ್ಥಾಪನೆಯು ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು.ಸಿಸ್ಟಮ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ…",
+    "@installingSystem": {},
+    "configuringSystem": "ವ್ಯವಸ್ಥೆಯನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ…",
+    "@configuringSystem": {},
+    "installationFailed": "ಅನುಸ್ಥಾಪನೆಯು ವಿಫಲವಾಗಿದೆ",
+    "@installationFailed": {},
+    "notEnoughDiskSpaceTitle": "ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವಿಲ್ಲ",
+    "@notEnoughDiskSpaceTitle": {},
+    "notEnoughDiskSpaceUbuntu": "{DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವಿಲ್ಲ",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "ಆಯ್ಕೆಮಾಡಿದ ಡಿಸ್ಕ್ {DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವನ್ನು ಹೊಂದಿಲ್ಲ. ಜಾಗವನ್ನು ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಲು ಅನುಸ್ಥಾಪಕವನ್ನು ತ್ಯಜಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ಡಿಸ್ಕ್ ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "ಲಭ್ಯವಿದೆ:",
+    "@notEnoughDiskSpaceAvailable": {},
+    "notEnoughDiskSpaceRequired": "ಅಗತ್ಯವಿದೆ:",
+    "@notEnoughDiskSpaceRequired": {},
+    "refreshPageTitle": "ನವೀಕರಣ ಲಭ್ಯವಿದೆ",
+    "@refreshPageTitle": {},
+    "refreshHeader": "ಸ್ಥಾಪಕಕ್ಕೆ ನವೀಕರಣ ಲಭ್ಯವಿದೆ",
+    "@refreshHeader": {},
+    "refreshUpdateNow": "ಈಗ ನವೀಕರಿಸಿ",
+    "@refreshUpdateNow": {},
+    "refreshInfo": "ಸುಧಾರಿತ ವಿಶ್ವಾಸಾರ್ಹತೆ ಮತ್ತು ಹೆಚ್ಚಿನ ವೈಶಿಷ್ಟ್ಯಗಳಿಗಾಗಿ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಿ.",
+    "@refreshInfo": {},
+    "refreshReady": "ನವೀಕರಣ ಸಿದ್ಧವಾಗಿದೆ",
+    "@refreshReady": {},
+    "refreshCurrent": "ಪ್ರಸ್ತುತ {snap} ಆವೃತ್ತಿಯು {version} ಆಗಿದೆ.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "ಆವೃತ್ತಿ {version} ಗೆ ನವೀಕರಿಸಿ",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "ಪ್ರಸ್ತುತ ಆವೃತ್ತಿ {version} ಅಪ್-ಟು-ಡೇಟ್ ಆಗಿದೆ.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} ಅನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionPageTitle": "ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಲಿಲ್ಲ",
+    "@tpmActionPageTitle": {},
+    "tpmActionErrorKindAddonDriversPresent": "Addon ಡ್ರೈವರ್‌ಗಳು ಪ್ರಸ್ತುತ",
+    "@tpmActionErrorKindAddonDriversPresent": {}
 }
