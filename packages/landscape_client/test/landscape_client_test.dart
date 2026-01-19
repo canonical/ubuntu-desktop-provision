@@ -13,7 +13,8 @@ void main() {
   final landscapeClient = LandscapeClient.withClients(mockLandscapeClient);
 
   test('attach', () async {
-    when(mockLandscapeClient.attach(any)).thenAnswer((_) {
+    when(mockLandscapeClient.attach(any, options: anyNamed('options')))
+        .thenAnswer((_) {
       return MockResponseFuture(
         pbgrpc.AttachResponse(
             status: pbgrpc.AttachStatus.ATTACH_SUCCESS, token: 'test_token'),
@@ -24,7 +25,9 @@ void main() {
 
     expect(response.status, pbgrpc.AttachStatus.ATTACH_SUCCESS);
     expect(response.token, 'test_token');
-    verify(mockLandscapeClient.attach(pbgrpc.Empty())).called(1);
+    verify(mockLandscapeClient.attach(pbgrpc.Empty(),
+            options: anyNamed('options')))
+        .called(1);
   });
 
   test('watch authentication', () {
