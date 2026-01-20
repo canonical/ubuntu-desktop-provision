@@ -37,9 +37,9 @@ class WizardApp extends StatelessWidget {
             YaruWindow.of(context).setTitle(title);
             return title;
           },
-          theme: (theme ?? flavor?.theme ?? yaru.theme)?.customize(),
+          theme: (theme ?? flavor?.theme ?? yaru.theme).customize(),
           darkTheme:
-              (darkTheme ?? flavor?.darkTheme ?? yaru.darkTheme)?.customize(),
+              (darkTheme ?? flavor?.darkTheme ?? yaru.darkTheme).customize(),
           highContrastTheme:
               yaruHighContrastLight.customize(highContrast: true),
           highContrastDarkTheme:
