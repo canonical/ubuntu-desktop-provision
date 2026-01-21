@@ -2584,12 +2584,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Measured Boot'**
   String get tpmActionErrorKindMeasuredBoot;
 
-  /// No description provided for @tpmActionErrorKindEmptyPcrBanks.
-  ///
-  /// In en, this message translates to:
-  /// **'Empty PCR Banks'**
-  String get tpmActionErrorKindEmptyPcrBanks;
-
   /// No description provided for @tpmActionErrorKindTpmCommandFailed.
   ///
   /// In en, this message translates to:
@@ -2644,12 +2638,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'PCR Unusable'**
   String get tpmActionErrorKindPcrUnusable;
 
-  /// No description provided for @tpmActionErrorKindPcrUnsupported.
-  ///
-  /// In en, this message translates to:
-  /// **'PCR Unsupported'**
-  String get tpmActionErrorKindPcrUnsupported;
-
   /// No description provided for @tpmActionErrorKindSysPrepApplicationsPresent.
   ///
   /// In en, this message translates to:
@@ -2674,11 +2662,11 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Weak SecureBoot Algorithm Detected'**
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected;
 
-  /// No description provided for @tpmActionErrorKindPreOsDigestVerificationDetected.
+  /// No description provided for @tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests.
   ///
   /// In en, this message translates to:
-  /// **'Pre Os Digest Verification Detected'**
-  String get tpmActionErrorKindPreOsDigestVerificationDetected;
+  /// **'Pre OS Secure Boot Auth By Enrolled Digests'**
+  String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests;
 
   /// No description provided for @tpmActionErrorKindAddonDriversPresent.
   ///

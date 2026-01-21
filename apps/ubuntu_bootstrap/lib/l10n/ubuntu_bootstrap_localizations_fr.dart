@@ -1467,9 +1467,6 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindMeasuredBoot => 'Measured Boot';
 
   @override
-  String get tpmActionErrorKindEmptyPcrBanks => 'Empty PCR Banks';
-
-  @override
   String get tpmActionErrorKindTpmCommandFailed => 'TPM Command Failed';
 
   @override
@@ -1498,9 +1495,6 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindPcrUnusable => 'PCR Unusable';
 
   @override
-  String get tpmActionErrorKindPcrUnsupported => 'PCR Unsupported';
-
-  @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
       'Sys Prep Applications Present';
 
@@ -1516,8 +1510,8 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
       'Weak SecureBoot Algorithm Detected';
 
   @override
-  String get tpmActionErrorKindPreOsDigestVerificationDetected =>
-      'Pre Os Digest Verification Detected';
+  String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
+      'Pre OS Secure Boot Auth By Enrolled Digests';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';

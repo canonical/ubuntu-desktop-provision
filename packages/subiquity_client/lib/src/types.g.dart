@@ -1025,19 +1025,15 @@ const _$CoreBootAvailabilityErrorKindEnumMap = {
       'INSUFFICIENT_TPM_STORAGE',
   CoreBootAvailabilityErrorKind.NO_SUITABLE_PCR_BANK: 'NO_SUITABLE_PCR_BANK',
   CoreBootAvailabilityErrorKind.MEASURED_BOOT: 'MEASURED_BOOT',
-  CoreBootAvailabilityErrorKind.EMPTY_PCR_BANKS: 'EMPTY_PCR_BANKS',
   CoreBootAvailabilityErrorKind.TPM_COMMAND_FAILED: 'TPM_COMMAND_FAILED',
   CoreBootAvailabilityErrorKind.INVALID_TPM_RESPONSE: 'INVALID_TPM_RESPONSE',
   CoreBootAvailabilityErrorKind.TPM_COMMUNICATION: 'TPM_COMMUNICATION',
   CoreBootAvailabilityErrorKind.UNSUPPORTED_PLATFORM: 'UNSUPPORTED_PLATFORM',
-  CoreBootAvailabilityErrorKind.UEFI_DEBUGGING_ENABLED:
-      'UEFI_DEBUGGING_ENABLED',
   CoreBootAvailabilityErrorKind.INSUFFICIENT_DMA_PROTECTION:
       'INSUFFICIENT_DMA_PROTECTION',
   CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU: 'NO_KERNEL_IOMMU',
   CoreBootAvailabilityErrorKind.HOST_SECURITY: 'HOST_SECURITY',
   CoreBootAvailabilityErrorKind.PCR_UNUSABLE: 'PCR_UNUSABLE',
-  CoreBootAvailabilityErrorKind.PCR_UNSUPPORTED: 'PCR_UNSUPPORTED',
   CoreBootAvailabilityErrorKind.ADDON_DRIVERS_PRESENT: 'ADDON_DRIVERS_PRESENT',
   CoreBootAvailabilityErrorKind.SYS_PREP_APPLICATIONS_PRESENT:
       'SYS_PREP_APPLICATIONS_PRESENT',
@@ -1046,8 +1042,8 @@ const _$CoreBootAvailabilityErrorKindEnumMap = {
       'INVALID_SECURE_BOOT_MODE',
   CoreBootAvailabilityErrorKind.WEAK_SECURE_BOOT_ALGORITHM_DETECTED:
       'WEAK_SECURE_BOOT_ALGORITHM_DETECTED',
-  CoreBootAvailabilityErrorKind.PRE_OS_DIGEST_VERIFICATION_DETECTED:
-      'PRE_OS_DIGEST_VERIFICATION_DETECTED',
+  CoreBootAvailabilityErrorKind.PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS:
+      'PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS',
 };
 
 _CoreBootFixActionWithArgs _$CoreBootFixActionWithArgsFromJson(
@@ -1077,6 +1073,7 @@ const _$CoreBootFixActionEnumMap = {
   CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE:
       'ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE',
   CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE: 'CLEAR_TPM_VIA_FIRMWARE',
+  CoreBootFixAction.CLEAR_TPM_SIMPLE: 'CLEAR_TPM_SIMPLE',
   CoreBootFixAction.CLEAR_TPM: 'CLEAR_TPM',
   CoreBootFixAction.PROCEED: 'PROCEED',
 };
