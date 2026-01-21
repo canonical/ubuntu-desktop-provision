@@ -39,8 +39,6 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
           l10n.tpmActionErrorKindNoSuitablePcrBank,
         CoreBootAvailabilityErrorKind.MEASURED_BOOT =>
           l10n.tpmActionErrorKindMeasuredBoot,
-        CoreBootAvailabilityErrorKind.EMPTY_PCR_BANKS =>
-          l10n.tpmActionErrorKindEmptyPcrBanks,
         CoreBootAvailabilityErrorKind.TPM_COMMAND_FAILED =>
           l10n.tpmActionErrorKindTpmCommandFailed,
         CoreBootAvailabilityErrorKind.INVALID_TPM_RESPONSE =>
@@ -49,8 +47,6 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
           l10n.tpmActionErrorKindTpmCommunication,
         CoreBootAvailabilityErrorKind.UNSUPPORTED_PLATFORM =>
           l10n.tpmActionErrorKindUnsupportedPlatform,
-        CoreBootAvailabilityErrorKind.UEFI_DEBUGGING_ENABLED =>
-          l10n.tpmActionErrorKindUefiDebuggingEnabled,
         CoreBootAvailabilityErrorKind.INSUFFICIENT_DMA_PROTECTION =>
           l10n.tpmActionErrorKindInsufficientDmaProtection,
         CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU =>
@@ -59,8 +55,6 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
           l10n.tpmActionErrorKindHostSecurity,
         CoreBootAvailabilityErrorKind.PCR_UNUSABLE =>
           l10n.tpmActionErrorKindPcrUnusable,
-        CoreBootAvailabilityErrorKind.PCR_UNSUPPORTED =>
-          l10n.tpmActionErrorKindPcrUnsupported,
         CoreBootAvailabilityErrorKind.ADDON_DRIVERS_PRESENT =>
           l10n.tpmActionErrorKindAddonDriversPresent,
         CoreBootAvailabilityErrorKind.SYS_PREP_APPLICATIONS_PRESENT =>
@@ -71,8 +65,9 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
           l10n.tpmActionErrorKindInvalidSecureBootMode,
         CoreBootAvailabilityErrorKind.WEAK_SECURE_BOOT_ALGORITHM_DETECTED =>
           l10n.tpmActionErrorKindWeakSecureBootAlgorithmDetected,
-        CoreBootAvailabilityErrorKind.PRE_OS_DIGEST_VERIFICATION_DETECTED =>
-          l10n.tpmActionErrorKindPreOsDigestVerificationDetected,
+        CoreBootAvailabilityErrorKind
+              .PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS =>
+          l10n.tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests,
       };
 
   String description(UbuntuBootstrapLocalizations l10) =>
@@ -138,6 +133,8 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
           l10n.tpmActionFixActionEnableAndClearTpmViaFirmware,
         (CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE, _) =>
           l10n.tpmActionFixActionClearTpmViaFirmware,
+        (CoreBootFixAction.CLEAR_TPM_SIMPLE, _) =>
+          l10n.tpmActionFixActionClearTpm,
         (CoreBootFixAction.CLEAR_TPM, _) => l10n.tpmActionFixActionClearTpm,
         (CoreBootFixAction.PROCEED, _) => l10n.tpmActionFixActionProceed,
       };
@@ -150,7 +147,8 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
           l10n.tpmActionRestartAndEnableTpmLabel,
         CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE ||
         CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE ||
-        CoreBootFixAction.CLEAR_TPM =>
+        CoreBootFixAction.CLEAR_TPM ||
+        CoreBootFixAction.CLEAR_TPM_SIMPLE =>
           l10n.tpmActionRestartAndClearTpmLabel,
         CoreBootFixAction.PROCEED => l10n.tpmActionIgnoreAndContinueLabel,
         CoreBootFixAction.SHUTDOWN ||
@@ -164,6 +162,7 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
 
   DestructiveActionWarning? get warning => switch (type) {
         CoreBootFixAction.CLEAR_TPM ||
+        CoreBootFixAction.CLEAR_TPM_SIMPLE ||
         CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE ||
         CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE =>
           DestructiveActionWarning(
