@@ -21,9 +21,12 @@ class InstallerService {
   List<String> get experimentalFeatures => _experimentalFeatures ?? [];
 
   Future<void> init() async {
+    final status = await monitorStatus()
+        .firstWhere((s) => s?.isLoading == false || (s?.isError ?? false));
+    if (status?.isError ?? false) {
+      return;
+    }
     await _client.setVariant(Variant.DESKTOP);
-    final status =
-        await monitorStatus().firstWhere((s) => s?.isLoading == false);
     if (status?.interactive ?? false) {
       // Use the default values for a number of endpoints that aren't used in
       // the bootstrap stage, or for which a UI page isn't implemented yet.
@@ -100,4 +103,5 @@ extension ApplicationStatusX on ApplicationStatus {
   bool get isInstalling =>
       state.index >= ApplicationState.RUNNING.index &&
       state.index < ApplicationState.DONE.index;
+  bool get isError => state == ApplicationState.ERROR;
 }

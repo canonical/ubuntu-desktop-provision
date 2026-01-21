@@ -56,6 +56,27 @@ void main() {
     verifyNever(client.markConfigured(any));
   });
 
+  test('init error', () async {
+    final client = MockSubiquityClient();
+    when(client.getInteractiveSections()).thenAnswer((_) async => null);
+    when(client.monitorStatus()).thenAnswer(
+      (_) => Stream.fromIterable([
+        fakeApplicationStatus(ApplicationState.STARTING_UP),
+        fakeApplicationStatus(ApplicationState.CLOUD_INIT_WAIT),
+        fakeApplicationStatus(ApplicationState.EARLY_COMMANDS),
+        fakeApplicationStatus(ApplicationState.ERROR),
+      ]),
+    );
+
+    final pageConfigService = setupMockPageConfig();
+    final service = InstallerService(client, pageConfig: pageConfigService);
+    await expectLater(service.init(), completes);
+
+    verify(client.monitorStatus()).called(1);
+    verifyNever(client.setVariant(any));
+    verifyNever(client.markConfigured(any));
+  });
+
   test('load interactive', () async {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
