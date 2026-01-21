@@ -43,6 +43,7 @@ import 'package:vector_graphics/vector_graphics_compat.dart' as _i25;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
+// ignore_for_file: invalid_use_of_internal_member
 
 class _FakeAdConnectionInfo_0 extends _i1.SmartFake
     implements _i2.AdConnectionInfo {
@@ -1676,10 +1677,10 @@ class MockPageConfigService extends _i1.Mock implements _i4.PageConfigService {
       ) as bool);
 
   @override
-  set mode(_i4.ProvisioningMode? _mode) => super.noSuchMethod(
+  set mode(_i4.ProvisioningMode? value) => super.noSuchMethod(
         Invocation.setter(
           #mode,
-          _mode,
+          value,
         ),
         returnValueForMissingStub: null,
       );
@@ -1773,10 +1774,10 @@ class MockPowerService extends _i1.Mock implements _i4.PowerService {
       ) as _i12.Stream<List<String>>);
 
   @override
-  set kbdBacklight(_i4.UPowerKbdBacklight? _kbdBacklight) => super.noSuchMethod(
+  set kbdBacklight(_i4.UPowerKbdBacklight? value) => super.noSuchMethod(
         Invocation.setter(
           #kbdBacklight,
-          _kbdBacklight,
+          value,
         ),
         returnValueForMissingStub: null,
       );
@@ -1983,10 +1984,10 @@ class MockThemeVariantService extends _i1.Mock
   }
 
   @override
-  set themeVariant(_i4.ThemeVariant? _themeVariant) => super.noSuchMethod(
+  set themeVariant(_i4.ThemeVariant? value) => super.noSuchMethod(
         Invocation.setter(
           #themeVariant,
-          _themeVariant,
+          value,
         ),
         returnValueForMissingStub: null,
       );
