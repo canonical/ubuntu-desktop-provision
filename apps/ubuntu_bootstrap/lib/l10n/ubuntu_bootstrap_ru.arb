@@ -482,5 +482,6 @@
     "tpmActionFixActionClearTpmWarningBody": "Вы потеряете доступ ко всем данным на зашифрованных дисках, для которых у вас нет ключей восстановления. Это также приведет к сбою других функций, которые зависят от TPM, таких как аутентификация и сертификаты.",
     "tpmActionFixActionClearTpmConfirmationLabel": "Я понимаю последствия очистки TPM",
     "tpmActionErrorTitle": "Это решение не сработало",
-    "tpmActionErrorDescription": "Попробуйте другое решение или обратитесь в службу IT-поддержки"
+    "tpmActionErrorDescription": "Попробуйте другое решение или обратитесь в службу IT-поддержки",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Аутентификация Secure Boot до запуска ОС по зарегистрированным хэшам"
 }
