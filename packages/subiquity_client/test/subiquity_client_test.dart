@@ -29,6 +29,7 @@ void main() {
         '--source-catalog=examples/sources/mixed.yaml',
         '--storage-version=2',
         '--bootloader=uefi',
+        '--no-report-storage-user-error',
       ],
     );
     final future = client.getStatus();
@@ -95,6 +96,7 @@ void main() {
           '--source-catalog=examples/sources/mixed.yaml',
           '--storage-version=2',
           '--bootloader=uefi',
+          '--no-report-storage-user-error',
         ],
       );
       client.open(socketPath);
@@ -679,6 +681,7 @@ void main() {
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',
           '--storage-version=2',
           '--bootloader=uefi',
+          '--no-report-storage-user-error',
         ],
       );
       client.open(socketPath);
@@ -774,6 +777,7 @@ void main() {
           '--dry-run-config=examples/dry-run-configs/tpm.yaml',
           '--storage-version=2',
           '--bootloader=uefi',
+          '--no-report-storage-user-error',
         ],
       );
       client.open(socketPath);
