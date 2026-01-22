@@ -203,6 +203,7 @@ Future<void> runInstallerApp(
     if (options['source-catalog'] != null)
       '--source-catalog=${options['source-catalog']}',
     '--storage-version=2',
+    '--no-report-storage-user-error',
     ...options.rest,
   ];
 
