@@ -67,6 +67,7 @@ class TpmActionModel extends SafeChangeNotifier {
   Future<SubiquityException?> performAction(
     CoreBootFixActionWithCategoryAndArgs action, {
     bool triggeredByUser = true,
+    VoidCallback? fixedCallback,
   }) async {
     if (triggeredByUser) {
       _isLoading = true;
@@ -90,7 +91,11 @@ class TpmActionModel extends SafeChangeNotifier {
       return performAction(nextAction, triggeredByUser: false);
     }
     _isLoading = false;
-    notifyListeners();
-    return error;
+    if (tpmDisallowedCapability != null) {
+      notifyListeners();
+      return error;
+    }
+    fixedCallback?.call();
+    return null;
   }
 }
