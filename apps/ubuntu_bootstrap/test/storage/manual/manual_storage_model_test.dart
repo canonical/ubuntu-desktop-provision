@@ -163,11 +163,11 @@ void main() {
 
     expect(model.bootDiskIndex, equals(1));
 
-    model.selectBootDisk(0);
+    await model.selectBootDisk(0);
     verify(service.addBootPartition(testDisks.first)).called(1);
 
     // do not attempt to readd boot partition
-    model.selectBootDisk(1);
+    await model.selectBootDisk(1);
     verifyNever(service.addBootPartition(testDisks.last));
   });
 
