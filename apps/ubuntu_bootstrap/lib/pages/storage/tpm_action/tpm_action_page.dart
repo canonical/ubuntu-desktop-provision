@@ -107,10 +107,25 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
     isConfirmed = widget.action.warning == null;
   }
 
+  Future<void> next(BuildContext context) async {
+    final wizard = Wizard.maybeOf(context);
+    final rootWizard = Wizard.maybeOf(context, root: true);
+    final effectiveWizard = (wizard?.hasNext ?? false) ? wizard : rootWizard;
+    try {
+      await effectiveWizard?.next();
+    } on WizardException catch (_) {
+      if (effectiveWizard != rootWizard) {
+        await rootWizard?.next();
+      }
+    }
+    // skip this page when returning here from the next page
+    effectiveWizard?.back();
+  }
+
   Future<void> tryPerformAction() async {
     final err = await ref
         .read(tpmActionModelProvider.notifier)
-        .performAction(widget.action);
+        .performAction(widget.action, fixedCallback: () => next(context));
     if (err != null) {
       setState(() => error = err);
     }

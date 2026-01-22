@@ -19,6 +19,7 @@ TpmActionModel buildTpmActionModel({
   when(model.tpmDisallowedCapability).thenReturn(tpmDisallowedCapability);
   when(model.confirmationNeeded).thenReturn(confirmationNeeded);
   when(model.isLoading).thenReturn(isLoading);
-  when(model.performAction(any)).thenAnswer((_) async => actionResult);
+  when(model.performAction(any, fixedCallback: anyNamed('fixedCallback')))
+      .thenAnswer((_) async => actionResult);
   return model;
 }
