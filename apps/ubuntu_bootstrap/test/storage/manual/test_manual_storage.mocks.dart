@@ -150,6 +150,16 @@ class MockManualStorageModel extends _i1.Mock
       ) as bool);
 
   @override
+  void setRecoverableError(_i4.SubiquityRecoverableException? error) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setRecoverableError,
+          [error],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   _i5.Future<void> addPartition(
     _i4.Disk? disk,
     _i4.Gap? gap, {
