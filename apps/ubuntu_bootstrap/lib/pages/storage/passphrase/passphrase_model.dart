@@ -89,7 +89,11 @@ class PassphraseModel extends SafeChangeNotifier {
                     ? _passphrase.value
                     : null,
               )
-              .then((response) => _entropy.value = response);
+              .then((response) => _entropy.value = response)
+              .onError<SubiquityRecoverableException>((e, _) {
+            _log.error(e);
+            return null;
+          });
         }
       },
     );
