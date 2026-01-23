@@ -9,8 +9,12 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart'
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_selector.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
+final launchpadUrl =
+    'https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug';
 
 class ManualStoragePage extends ConsumerStatefulWidget {
   const ManualStoragePage({super.key});
@@ -87,7 +91,7 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
                   'body': Style(margin: Margins.zero),
                   'a': Style(color: Theme.of(context).colorScheme.link),
                 },
-                onLinkTap: (url, _, __) {},
+                onLinkTap: (url, _, __) => launchUrl(launchpadUrl),
               ),
             ),
             const SizedBox(height: kWizardSpacing / 4),
