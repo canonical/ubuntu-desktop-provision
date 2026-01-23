@@ -2835,6 +2835,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Try a different solution or contact IT support'**
   String get tpmActionErrorDescription;
+
+  /// No description provided for @manualPartitioningWarningBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Try something else. You may also <a>send an error report</a>.'**
+  String get manualPartitioningWarningBody;
 }
 
 class _UbuntuBootstrapLocalizationsDelegate
