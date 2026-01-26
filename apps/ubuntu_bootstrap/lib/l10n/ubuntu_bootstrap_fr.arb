@@ -466,5 +466,9 @@
     "tpmActionDocumentationLinkLabel": "Lien vers la documentation",
     "tpmActionErrorSupportLabel": "Essayez les solutions ci-dessous, contactez le support informatique ou choisissez une méthode de chiffrement différente.",
     "tpmActionErrorSupportNoActionLabel": "Contactez le support informatique ou choisissez une méthode de chiffrement différente.",
-    "tpmActionErrorKindSysPrepApplicationsPresent": "Applications de préparation de systèmes présentes"
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Applications de préparation de systèmes présentes",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Activer la protection DMA manuellement",
+    "tpmActionRestartLabel": "Redémarrer",
+    "tpmActionRestartAndEnableTpmLabel": "Redémarrer et activer le TPM",
+    "tpmActionRestartAndClearTpmLabel": "Redémarrer et effacer le TPM"
 }
