@@ -13,9 +13,6 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-final launchpadUrl =
-    'https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug';
-
 class ManualStoragePage extends ConsumerStatefulWidget {
   const ManualStoragePage({super.key});
 
@@ -91,7 +88,7 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
                   'body': Style(margin: Margins.zero),
                   'a': Style(color: Theme.of(context).colorScheme.link),
                 },
-                onLinkTap: (url, _, __) => launchUrl(launchpadUrl),
+                onLinkTap: (url, _, __) => model.launchApport(),
               ),
             ),
             const SizedBox(height: kWizardSpacing / 4),
