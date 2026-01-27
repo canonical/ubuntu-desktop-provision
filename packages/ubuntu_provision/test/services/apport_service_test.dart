@@ -13,7 +13,7 @@ void main() {
     final service = ApportService(runProcess: mockProcess.run, env: mockEnv);
 
     await service.launch();
-    verify(mockProcess.run('ubuntu-bug', ['snap-name'])).called(1);
+    verify(mockProcess.run('sudo', ['ubuntu-bug', 'snap-name'])).called(1);
   });
 }
 

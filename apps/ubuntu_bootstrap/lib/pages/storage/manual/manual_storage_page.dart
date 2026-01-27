@@ -9,7 +9,6 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart'
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_selector.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
