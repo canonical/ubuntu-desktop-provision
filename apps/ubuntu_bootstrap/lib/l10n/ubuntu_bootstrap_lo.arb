@@ -1084,5 +1084,6 @@
     "tpmActionFixActionClearTpmWarningBody": "ທ່ານຈະສູນເສຍການເຂົ້າເຖິງຂໍ້ມູນທັງໝົດໃນໄດຣຟ໌ທີ່ເຂົ້າລະຫັດໄວ້ ເຊິ່ງທ່ານບໍ່ມີຄີກູ້ຄືນ. ມັນຍັງຈະສົ່ງຜົນກະທົບຕໍ່ຄຸນສົມບັດອື່ນໆທີ່ຂຶ້ນກັບ TPM ເຊັ່ນ: ການຢືນຢັນຕົວຕົນ ແລະ ໃບຮັບຮອງ.",
     "tpmActionFixActionClearTpmConfirmationLabel": "ຂ້ອຍເຂົ້າໃຈຜົນທີ່ຕາມມາຂອງການລ້າງຄ່າ TPM",
     "tpmActionErrorTitle": "ວິທີແກ້ໄຂນີ້ລົ້ມເຫຼວ",
-    "tpmActionErrorDescription": "ລອງວິທີແກ້ໄຂອື່ນ ຫຼື ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT"
+    "tpmActionErrorDescription": "ລອງວິທີແກ້ໄຂອື່ນ ຫຼື ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT",
+    "manualPartitioningWarningBody": "ລອງວິທີອື່ນ. ທ່ານຍັງສາມາດ <a>ສົ່ງລາຍງານຂໍ້ຜິດພາດ</a>."
 }
