@@ -480,5 +480,6 @@
     "tpmActionErrorTitle": "Theip ar an réiteach seo",
     "tpmActionErrorDescription": "Bain triail as réiteach difriúil nó déan teagmháil le tacaíocht TF",
     "tpmActionErrorKindAddonDriversPresent": "Tiománaithe Breiseán i Láthair",
-    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Údarú Tosaithe Slán Réamh-OS de réir Díolaim Cláraithe"
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Údarú Tosaithe Slán Réamh-OS de réir Díolaim Cláraithe",
+    "manualPartitioningWarningBody": "Bain triail as rud éigin eile. Féadfaidh tú <a>tuairisc earráide a sheoladh</a> freisin."
 }
