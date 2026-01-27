@@ -7,6 +7,9 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+
+final _log = Logger('manual_storage_model');
 
 /// The default mount points for auto-completion.
 enum DefaultMountPoint {
@@ -60,6 +63,7 @@ class ManualStorageModel extends SafeChangeNotifier {
   var _selectedObjectIndex = -1;
   int _bootDiskIndex = -1;
   var _waitingForReply = false;
+  SubiquityRecoverableException? _recoverableError;
 
   /// Whether the current input is valid.
   bool get isValid => !_service.needRoot && !_service.needBoot;
@@ -142,6 +146,17 @@ class ManualStorageModel extends SafeChangeNotifier {
   /// requests when subiquity is slow to respond.
   bool get waitingForReply => _waitingForReply;
 
+  /// A recoverable error potentially returned by subiquity when performing a
+  /// manual partitioning action.
+  SubiquityRecoverableException? get recoverableError => _recoverableError;
+
+  /// Set an error state and log the error details.
+  void setRecoverableError(SubiquityRecoverableException error) {
+    _recoverableError = error;
+    _log.error('Caught recoverable error: $error');
+    notifyListeners();
+  }
+
   /// Adds a partition.
   Future<void> addPartition(
     Disk disk,
@@ -162,6 +177,9 @@ class ManualStorageModel extends SafeChangeNotifier {
         _selectedDiskIndex,
         (selectedDisk?.partitions.whereType<Partition>().length ?? 0) - 1,
       );
+    }).onError<SubiquityRecoverableException>((e, _) {
+      _recoverableError = e;
+      notifyListeners();
     });
   }
 
@@ -180,14 +198,25 @@ class ManualStorageModel extends SafeChangeNotifier {
       mount: mount,
       wipe: (wipe ?? false) ? 'superblock' : null,
     );
-    return _service.editPartition(disk, newPartition).then(_updateDisks);
+    return _service
+        .editPartition(disk, newPartition)
+        .then(_updateDisks)
+        .onError<SubiquityRecoverableException>(
+          (e, _) => setRecoverableError(e),
+        );
   }
 
   /// Deletes a partition.
   Future<void> deletePartition(Disk disk, Partition partition) async {
     _waitingForReply = true;
     notifyListeners();
-    await _service.deletePartition(disk, partition).then(_updateDisks);
+    await _service
+        .deletePartition(disk, partition)
+        .then(_updateDisks)
+        .onError<SubiquityRecoverableException>((e, _) {
+      _waitingForReply = false;
+      setRecoverableError(e);
+    });
   }
 
   /// Whether the disk or its object can be selected.
@@ -209,12 +238,18 @@ class ManualStorageModel extends SafeChangeNotifier {
   int? get bootDiskIndex => _bootDiskIndex != -1 ? _bootDiskIndex : null;
 
   /// Selects the specified boot disk.
-  void selectBootDisk(int diskIndex) {
+  Future<void> selectBootDisk(int diskIndex) async {
     if (_bootDiskIndex == diskIndex || disks[diskIndex].bootDevice == true) {
       return;
     }
-    _bootDiskIndex = diskIndex;
-    _service.addBootPartition(disks[diskIndex]).then(_updateDisks);
+    return _service
+        .addBootPartition(disks[diskIndex])
+        .then(_updateDisks)
+        .then((_) {
+      _bootDiskIndex = diskIndex;
+    }).onError<SubiquityRecoverableException>((e, _) {
+      setRecoverableError(e);
+    });
   }
 
   /// Fetches storage from the service.
@@ -245,6 +280,7 @@ class ManualStorageModel extends SafeChangeNotifier {
     }
     _bootDiskIndex = disks.indexWhere((disk) => disk.bootDevice == true);
     _waitingForReply = false;
+    _recoverableError = null;
     notifyListeners();
   }
 

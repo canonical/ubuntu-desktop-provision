@@ -43,6 +43,15 @@ class SubiquityException implements Exception {
   String toString() => '$method returned error $statusCode\n$message';
 }
 
+class SubiquityRecoverableException implements Exception {
+  const SubiquityRecoverableException(this.title, this.message);
+  final String title;
+  final String message;
+
+  @override
+  String toString() => 'Recoverable error: $title: $message';
+}
+
 class SubiquityClient {
   final _client = HttpClient();
   final _ready = Completer();
@@ -70,7 +79,12 @@ class SubiquityClient {
   ]) async {
     final response = await request.close();
     final str = await response.transform(utf8.decoder).join();
-    if (response.statusCode != 200) {
+    if (response.statusCode == 422) {
+      throw SubiquityRecoverableException(
+        jsonDecode(response.headers.value('x-error-title') ?? '') as String,
+        jsonDecode(response.headers.value('x-error-msg') ?? '') as String,
+      );
+    } else if (response.statusCode != 200) {
       throw SubiquityException(method, response.statusCode, str);
     }
     _log.debug(() => formatResponseLog(method, str));

@@ -1606,4 +1606,8 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorDescription =>
       'Try a different solution or contact IT support';
+
+  @override
+  String get manualPartitioningWarningBody =>
+      'Try something else. You may also <a>send an error report</a>.';
 }

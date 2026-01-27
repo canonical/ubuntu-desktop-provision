@@ -1095,5 +1095,6 @@
   "tpmActionFixActionClearTpmWarningBody": "You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.",
   "tpmActionFixActionClearTpmConfirmationLabel": "I understand the consequences of clearing the TPM",
   "tpmActionErrorTitle": "This solution failed",
-  "tpmActionErrorDescription": "Try a different solution or contact IT support"
+  "tpmActionErrorDescription": "Try a different solution or contact IT support",
+  "manualPartitioningWarningBody": "Try something else. You may also <a>send an error report</a>."
 }

@@ -24,6 +24,7 @@ ManualStorageModel buildManualStorageModel({
   bool? canReformatDisk,
   int? bootDiskIndex,
   bool? waitingForReply,
+  SubiquityRecoverableException? recoverableError,
 }) {
   final model = MockManualStorageModel();
   when(model.isValid).thenReturn(isValid ?? false);
@@ -50,5 +51,6 @@ ManualStorageModel buildManualStorageModel({
 
   when(model.bootDiskIndex).thenReturn(bootDiskIndex);
   when(model.waitingForReply).thenReturn(waitingForReply ?? false);
+  when(model.recoverableError).thenReturn(recoverableError);
   return model;
 }
