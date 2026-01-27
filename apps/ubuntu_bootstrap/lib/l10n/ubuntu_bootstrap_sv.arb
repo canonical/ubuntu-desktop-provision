@@ -483,5 +483,6 @@
     "tpmActionErrorTitle": "Lösningen misslyckades",
     "tpmActionErrorDescription": "Testa en annan lösning eller kontakta IT-support",
     "tpmActionErrorKindAddonDriversPresent": "Tilläggsdrivrutiner finns",
-    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Pre OS Secure Boot aut. genom Enrolled Digests"
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Pre OS Secure Boot aut. genom Enrolled Digests",
+    "manualPartitioningWarningBody": "Prova någonting annat. Du kan också <a>skicka en felrapport</a>."
 }
