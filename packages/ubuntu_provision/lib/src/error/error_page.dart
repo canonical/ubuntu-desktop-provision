@@ -8,7 +8,6 @@ import 'package:ubuntu_provision/src/error/error_model.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:yaru/foundation.dart';
 import 'package:yaru/icons.dart';
 import 'package:yaru/widgets.dart';
@@ -22,8 +21,6 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
   });
 
   final bool allowRestart;
-  final launchpadUrl =
-      'https://bugs.launchpad.net/ubuntu-desktop-provision/+filebug';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -72,24 +69,13 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                               decoration: TextDecoration.underline,
                             ),
                             recognizer: TapGestureRecognizer()
-                              ..onTap =
-                                  () => launchUrl(Uri.parse(launchpadUrl)),
+                              ..onTap = model.launchApport,
                             // Handle link tap
                           ),
                           TextSpan(text: endText),
                         ],
                       ),
                     ),
-                    if (snapName != null) ...[
-                      const SizedBox(height: 20),
-                      Html(
-                        data: lang.errorPageUbuntuBug(snapName),
-                        style: {
-                          'body': Style(margin: Margins.zero),
-                          'pre': Style(fontFamily: 'Ubuntu Mono'),
-                        },
-                      ),
-                    ],
                   ],
                 ),
               ),
