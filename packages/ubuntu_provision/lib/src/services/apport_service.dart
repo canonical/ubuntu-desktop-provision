@@ -28,7 +28,7 @@ class ApportService {
     }
     if (liveRun) {
       _log.info('Running apport for $snapName');
-      final result = await runProcess(apport, [snapName]);
+      final result = await runProcess('sudo', [apport, snapName]);
       if (result.exitCode != 0) {
         _log.error('Failed to run apport for $snapName: ${result.stderr}');
       }
