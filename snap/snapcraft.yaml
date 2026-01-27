@@ -15,8 +15,6 @@ architectures:
 
 package-repositories:
   - type: apt
-    ppa: desktop-snappers/core22-mesa-backports
-  - type: apt
     ppa: subiquity/core22
 
 apps:
@@ -227,8 +225,6 @@ parts:
       - libglib2.0-bin
       - libibus-1.0-5
       - python3-gi
-      - libxcb-dri2-0
-      - libxcb-dri3-0
     prime:
       - usr/lib/*/libEGL*.so.*
       - usr/lib/*/libGL*.so.*
