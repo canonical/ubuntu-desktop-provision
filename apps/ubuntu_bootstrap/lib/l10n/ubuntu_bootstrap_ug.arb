@@ -1068,5 +1068,6 @@
             }
         }
     },
-    "tpmActionErrorKindAddonDriversPresent": "قوشۇلما قوزغاتقۇ مەۋجۇت"
+    "tpmActionErrorKindAddonDriversPresent": "قوشۇلما قوزغاتقۇ مەۋجۇت",
+    "manualPartitioningWarningBody": "باشقىنى سىناڭ. يەنە <a>خاتالىق دوكلاتى يوللا</a>يالايسىز."
 }
