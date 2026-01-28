@@ -464,5 +464,6 @@
     "tpmActionErrorDescription": "Proovi muud lahendust või küsi abi IT-toelt",
     "tpmActionFixActionClearTpmWarningBody": "Kui sul pole taastevõtmeid, siis kaotad ligipääsu kõikidele oma krüptitud andmekandjatele. Lisaks lõpetavad töötamise muud funktsionaalsused, mis sõltuvad TPM-ist, näiteks autentimine ja sertifikaadid.",
     "tpmActionErrorKindAddonDriversPresent": "Täiendavad draiverid on olemas",
-    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Autentimine eelnevalt lisatud räside alusel operatsioonisüsteemieelses turvalise algkäivituse (Secure Boot) faasis"
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Autentimine eelnevalt lisatud räside alusel operatsioonisüsteemieelses turvalise algkäivituse (Secure Boot) faasis",
+    "manualPartitioningWarningBody": "Palun proovi mõnda muud võimalust. Lisaks võid <a>meile saata veateate</a>."
 }
