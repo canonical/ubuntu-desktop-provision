@@ -1,1 +1,16 @@
-{}
+{
+    "successIconSemanticLabel": "Dena ondo joan da",
+    "closeIconSemanticLabel": "Itxi",
+    "maximizeIconSemanticLabel": "Maximizatu",
+    "minimizeIconSemanticLabel": "Txikitu",
+    "welcomePageTitle": "Ongi etorri",
+    "welcomePageHeader": "Ongi etorri {distro}ra",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "ZER BERRI?"
+}

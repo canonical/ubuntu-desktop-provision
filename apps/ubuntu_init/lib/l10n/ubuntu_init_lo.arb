@@ -1,1 +1,134 @@
-{}
+{
+    "welcomePageTitle": "ຍິນດີຕ້ອນຮັບ",
+    "@welcomePageTitle": {},
+    "welcomePageHeader": "ຍິນດີຕ້ອນຮັບສູ່ {distro}",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "ມີຫຍັງໃໝ່?",
+    "@welcomeWhatsNew": {},
+    "welcomeStartTitle": "ການເລີ່ມຕົ້ນທີ່ລຽບງ່າຍ",
+    "@welcomeStartTitle": {},
+    "welcomeStartSubtitle": "ສະໜັບສະໜູນປະສົບການການຕິດຕັ້ງທີ່ສະອາດຕາກວ່າເກົ່າ.",
+    "@welcomeStartSubtitle": {},
+    "welcomeStoreTitle": "ຮູບໂສມໃໝ່ຂອງຮ້ານຄ້າແອັບ",
+    "@welcomeStoreTitle": {},
+    "welcomeStoreSubtitle": "ຄົ້ນຫາຊອບແວທີ່ທ່ານມັກໄດ້ງ່າຍກວ່າທີ່ເຄີຍ.",
+    "@welcomeStoreSubtitle": {},
+    "welcomeSecurityTitle": "ຍົກລະດັບຄວາມປອດໄພ",
+    "@welcomeSecurityTitle": {},
+    "welcomeSecuritySubtitle": "ຕົວເລືອກໃໝ່ສຳລັບການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ ຫຼື ZFS.",
+    "@welcomeSecuritySubtitle": {},
+    "welcomeChangelogLabel": "<a href=\"{url}\">ເບິ່ງບັນທຶກການປ່ຽນແປງ</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryPageTitle": "ຂໍ້ມູນການນຳໃຊ້ (Telemetry)",
+    "@telemetryPageTitle": {},
+    "telemetryHeader": "ຊ່ວຍປັບປຸງ {distro} ໃຫ້ດີຂຶ້ນ",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "ຊ່ວຍພວກເຮົາປັບປຸງ {distro} ໂດຍການແບ່ງປັນຂໍ້ມູນລະບົບຂອງທ່ານກັບພວກເຮົາ. ນີ້ລວມມີສິ່ງຕ່າງໆ ເຊັ່ນ: ລຸ້ນເຄື່ອງຂອງທ່ານ, ຊອບແວທີ່ຕິດຕັ້ງ ແລະ ທີ່ຕັ້ງທີ່ທ່ານເລືອກສຳລັບເຂດເວລາ.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "ຕົກລົງ, ແບ່ງປັນຂໍ້ມູນລະບົບກັບທີມງານ {distro}",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "ບໍ່, ບໍ່ຕ້ອງແບ່ງປັນຂໍ້ມູນລະບົບ",
+    "@telemetryLabelOff": {},
+    "telemetryReportLabel": "ສະແດງລາຍງານທຳອິດ",
+    "@telemetryReportLabel": {},
+    "telemetryReportTitle": "ລາຍລະອຽດການລາຍງານ",
+    "@telemetryReportTitle": {},
+    "telemetryLegalLabel": "ແຈ້ງເຕືອນທາງກົດໝາຍ",
+    "@telemetryLegalLabel": {},
+    "telemetryCollectError": "ການເກັບກຳຂໍ້ມູນ Telemetry ລົ້ມເຫຼວ",
+    "@telemetryCollectError": {},
+    "privacyPageTitle": "ບໍລິການລະບຸທີ່ຕັ້ງ",
+    "@privacyPageTitle": {},
+    "privacyLocationTitle": "ເປີດນຳໃຊ້ບໍລິການລະບຸທີ່ຕັ້ງບໍ່?",
+    "@privacyLocationTitle": {},
+    "privacyLocationSubtitle": "ອະນຸຍາດໃຫ້ແອັບພລິເຄຊັນຮູ້ທີ່ຕັ້ງທາງພູມສາດຂອງທ່ານ.\nທ່ານສາມາດປ່ຽນແປງສິ່ງນີ້ໄດ້ທຸກເວລາໃນການຕັ້ງຄ່າລະບົບ.",
+    "@privacyLocationSubtitle": {},
+    "privacyLocationEnable": "ບໍລິການລະບຸທີ່ຕັ້ງ",
+    "@privacyLocationEnable": {},
+    "privacyPolicyLink": "ຄວາມເປັນສ່ວນຕົວຂອງຂໍ້ມູນ",
+    "@privacyPolicyLink": {},
+    "ubuntuProMagicAttachInstructions": "ເຊື່ອມຕໍ່ແບບ Magic ດ້ວຍລະຫັດນີ້ທີ່ <a href=\"https://{url}\">{url}</a>",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProPageTitle": "Ubuntu Pro",
+    "@ubuntuProPageTitle": {},
+    "ubuntuProHeader": "ເຊື່ອມຕໍ່ເຄື່ອງນີ້",
+    "@ubuntuProHeader": {},
+    "ubuntuProOrAddTokenManually": "ຫຼື ເພີ່ມໂທເຄັນດ້ວຍໂຕເອງ",
+    "@ubuntuProOrAddTokenManually": {},
+    "ubuntuProTokenTextfieldHint": "ໂທເຄັນ",
+    "@ubuntuProTokenTextfieldHint": {},
+    "ubuntuProSubscriptionDescription": "ຮັບການສະໝັກໃຊ້ທີ່ຄອບຄຸມທີ່ສຸດສຳລັບຄວາມປອດໄພຂອງຊອບແວໂອເພນຊອດ",
+    "@ubuntuProSubscriptionDescription": {},
+    "ubuntuProSubscriptionFreeForPersonalUse": "ຟຣີສະເໝີສຳລັບການນຳໃຊ້ສ່ວນຕົວ. ທົດລອງໃຊ້ 30 ມື້ສຳລັບອົງກອນ. <a href=\"https://{url}\">ຮຽນຮູ້ເພີ່ມເຕີມ</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "ເຊື່ອມຕໍ່",
+    "@ubuntuProTokenAttachButton": {},
+    "ubuntuProTokenAttachError": "ໂທເຄັນບໍ່ຖືກຕ້ອງ",
+    "@ubuntuProTokenAttachError": {},
+    "ubuntuProTokenAttachSucess": "ໂທເຄັນຖືກຕ້ອງ",
+    "@ubuntuProTokenAttachSucess": {},
+    "ubuntuProTokenAttachErrorVariant": "ໂທເຄັນບໍ່ຖືກຕ້ອງ, ລອງໃໝ່",
+    "@ubuntuProTokenAttachErrorVariant": {},
+    "ubuntuProOnBoardingSkipForNow": "ຂ້າມໄປກ່ອນ",
+    "@ubuntuProOnBoardingSkipForNow": {},
+    "ubuntuProOnBoardingSkipForNowDescription": "ທ່ານສາມາດເປີດນຳໃຊ້ Ubuntu Pro ພາຍຫຼັງໄດ້ສະເໝີຜ່ານແອັບພລິເຄຊັນ Software & Updates.",
+    "@ubuntuProOnBoardingSkipForNowDescription": {},
+    "ubuntuProOnBoardingEnableUbuntuPro": "ເປີດນຳໃຊ້ Ubuntu Pro",
+    "@ubuntuProOnBoardingEnableUbuntuPro": {},
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "ເຊື່ອມຕໍ່ເຄື່ອງນີ້ໃສ່ການສະໝັກໃຊ້ Ubuntu Pro ເພື່ອຮັບການອັບເດດຄວາມປອດໄພສຳລັບແພັກເກັດທີ່ກວ້າງຂວາງກວ່າເກົ່າ, ຈົນເຖິງປີ 2032.",
+    "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+    "ubuntuProSucessAttachHeader": "ຕອນນີ້ເປີດນຳໃຊ້ Ubuntu Pro ໃນເຄື່ອງນີ້ແລ້ວ",
+    "@ubuntuProSucessAttachHeader": {},
+    "ubuntuProSucessAttachDescription": "ທ່ານສາມາດຈັດການບໍລິການ Pro ຂອງທ່ານໄດ້ໃນແອັບພລິເຄຊັນ Software & Updates.",
+    "@ubuntuProSucessAttachDescription": {},
+    "successIconSemanticLabel": "ສຳເລັດ",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "ປິດ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "ຂະຫຍາຍໃຫຍ່ສຸດ",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "ຫຍໍ້ລົງ",
+    "@minimizeIconSemanticLabel": {}
+}
