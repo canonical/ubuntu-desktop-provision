@@ -8,6 +8,7 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 final _log = Logger('manual_storage_model');
 
@@ -47,15 +48,19 @@ enum PartitionLocation {
 
 /// Provider for [ManualStorageModel].
 final manualStorageModelProvider = ChangeNotifierProvider(
-  (_) => ManualStorageModel(getService<StorageService>()),
+  (_) => ManualStorageModel(
+    getService<StorageService>(),
+    getService<ApportService>(),
+  ),
 );
 
 /// View model for [ManualStoragePage].
 class ManualStorageModel extends SafeChangeNotifier {
   /// Creates a new model with the given disk storage service.
-  ManualStorageModel(this._service);
+  ManualStorageModel(this._service, this._apport);
 
   final StorageService _service;
+  final ApportService _apport;
 
   var _disks = <Disk>[];
   var _originalConfigs = <String, Partition>{};
@@ -156,6 +161,9 @@ class ManualStorageModel extends SafeChangeNotifier {
     _log.error('Caught recoverable error: $error');
     notifyListeners();
   }
+
+  /// Launch apport.
+  Future<void> launchApport() => _apport.launch();
 
   /// Adds a partition.
   Future<void> addPartition(

@@ -30,7 +30,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => testDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.getStorage();
     verify(service.getStorage()).called(1);
 
@@ -42,7 +42,7 @@ void main() {
     when(service.getStorage()).thenAnswer((_) async => testDisks);
     when(service.setStorage()).thenAnswer((_) async => changedDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.getStorage();
 
     await model.setStorage();
@@ -54,7 +54,7 @@ void main() {
     final service = MockStorageService();
     when(service.resetStorage()).thenAnswer((_) async => changedDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.resetStorage();
     expect(model.disks, equals(changedDisks));
     verify(service.resetStorage()).called(1);
@@ -65,7 +65,7 @@ void main() {
     when(service.reformatDisk(testDisks.first))
         .thenAnswer((_) async => changedDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.reformatDisk(testDisks.first);
     expect(model.disks, equals(changedDisks));
     verify(service.reformatDisk(testDisks.first)).called(1);
@@ -75,7 +75,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => testDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     expect(model.isStorageSelected(0), isFalse);
     expect(model.isStorageSelected(1), isFalse);
     expect(model.isStorageSelected(1, 0), isFalse);
@@ -123,7 +123,7 @@ void main() {
   });
 
   test('notify selection changes', () {
-    final model = ManualStorageModel(MockStorageService());
+    final model = ManualStorageModel(MockStorageService(), MockApportService());
     expect(model.selectedDiskIndex, equals(-1));
 
     var wasNotified = false;
@@ -156,7 +156,7 @@ void main() {
       ];
     });
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     expect(model.bootDiskIndex, isNull);
 
     await model.getStorage();
@@ -208,7 +208,7 @@ void main() {
       ],
     );
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     expect(model.selectedDisk, isNull);
     expect(model.selectedPartition, isNull);
     expect(model.selectedGap, isNull);
@@ -306,7 +306,7 @@ void main() {
     when(service.addPartition(fakeDisk(), gap, partition))
         .thenAnswer((_) async => changedDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.addPartition(
       fakeDisk(),
       gap,
@@ -332,7 +332,7 @@ void main() {
     when(service.editPartition(fakeDisk(), edited))
         .thenAnswer((_) async => changedDisks);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.editPartition(
       fakeDisk(),
       partition,
@@ -356,7 +356,7 @@ void main() {
     }
 
     final service = MockStorageService();
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
 
     // get partitions -> select first disk
     when(service.getStorage()).thenAnswer((_) async => [testPartitions(2)]);
@@ -389,7 +389,7 @@ void main() {
   });
 
   test('dispose', () async {
-    final model = ManualStorageModel(MockStorageService());
+    final model = ManualStorageModel(MockStorageService(), MockApportService());
     model.dispose();
     expect(
       () => model.selectionChangedNotifier.notifyListeners(),
@@ -399,7 +399,7 @@ void main() {
 
   test('valid', () async {
     final service = MockStorageService();
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
 
     when(service.needRoot).thenReturn(true);
     when(service.needBoot).thenReturn(true);
@@ -427,7 +427,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [disk]);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.getStorage();
 
     model.selectStorage(0, 0);
@@ -454,7 +454,7 @@ void main() {
     final service = MockStorageService();
     when(service.getStorage()).thenAnswer((_) async => [disk]);
 
-    final model = ManualStorageModel(service);
+    final model = ManualStorageModel(service, MockApportService());
     await model.getStorage();
 
     model.selectStorage(0, 0);

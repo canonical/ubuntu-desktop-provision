@@ -7,24 +7,24 @@ import 'dart:async' as _i12;
 import 'dart:convert' as _i23;
 import 'dart:io' as _i9;
 import 'dart:typed_data' as _i24;
-import 'dart:ui' as _i13;
+import 'dart:ui' as _i14;
 
 import 'package:dbus/dbus.dart' as _i20;
 import 'package:file/file.dart' as _i3;
 import 'package:flutter/foundation.dart' as _i8;
-import 'package:flutter/material.dart' as _i18;
+import 'package:flutter/material.dart' as _i19;
 import 'package:flutter/services.dart' as _i7;
 import 'package:flutter/src/widgets/basic.dart' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
 import 'package:flutter/src/widgets/notification_listener.dart' as _i22;
 import 'package:flutter_svg/svg.dart' as _i10;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i19;
+import 'package:mockito/src/dummies.dart' as _i13;
 import 'package:subiquity_client/subiquity_client.dart' as _i2;
-import 'package:timezone_map/src/location.dart' as _i17;
-import 'package:timezone_map/src/service.dart' as _i15;
-import 'package:timezone_map/src/source.dart' as _i16;
-import 'package:ubuntu_flavor/ubuntu_flavor.dart' as _i14;
+import 'package:timezone_map/src/location.dart' as _i18;
+import 'package:timezone_map/src/service.dart' as _i16;
+import 'package:timezone_map/src/source.dart' as _i17;
+import 'package:ubuntu_flavor/ubuntu_flavor.dart' as _i15;
 import 'package:ubuntu_provision/ubuntu_provision.dart' as _i4;
 import 'package:ubuntu_utils/ubuntu_utils.dart' as _i21;
 import 'package:vector_graphics/vector_graphics.dart' as _i11;
@@ -397,6 +397,57 @@ class _FakeStatelessElement_30 extends _i1.SmartFake
       super.toString();
 }
 
+/// A class which mocks [ApportService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockApportService extends _i1.Mock implements _i4.ApportService {
+  MockApportService() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  bool get liveRun => (super.noSuchMethod(
+        Invocation.getter(#liveRun),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  _i12.Future<_i9.ProcessResult> Function(
+    String,
+    List<String>,
+  ) get runProcess => (super.noSuchMethod(
+        Invocation.getter(#runProcess),
+        returnValue: (
+          String __p0,
+          List<String> __p1,
+        ) =>
+            _i12.Future<_i9.ProcessResult>.value(
+                _i13.dummyValue<_i9.ProcessResult>(
+          this,
+          Invocation.getter(#runProcess),
+        )),
+      ) as _i12.Future<_i9.ProcessResult> Function(
+        String,
+        List<String>,
+      ));
+
+  @override
+  Map<String, String> get env => (super.noSuchMethod(
+        Invocation.getter(#env),
+        returnValue: <String, String>{},
+      ) as Map<String, String>);
+
+  @override
+  _i12.Future<void> launch() => (super.noSuchMethod(
+        Invocation.method(
+          #launch,
+          [],
+        ),
+        returnValue: _i12.Future<void>.value(),
+        returnValueForMissingStub: _i12.Future<void>.value(),
+      ) as _i12.Future<void>);
+}
+
 /// A class which mocks [AccessibilityService].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -483,7 +534,7 @@ class MockAccessibilityService extends _i1.Mock
       ) as _i12.Future<void>);
 
   @override
-  _i12.Future<void> setScreenReaderLocale(_i13.Locale? locale) =>
+  _i12.Future<void> setScreenReaderLocale(_i14.Locale? locale) =>
       (super.noSuchMethod(
         Invocation.method(
           #setScreenReaderLocale,
@@ -807,22 +858,22 @@ class MockFlavorService extends _i1.Mock implements _i4.FlavorService {
   }
 
   @override
-  _i14.UbuntuFlavor get flavor => (super.noSuchMethod(
+  _i15.UbuntuFlavor get flavor => (super.noSuchMethod(
         Invocation.getter(#flavor),
-        returnValue: _i14.UbuntuFlavor.budgie,
-      ) as _i14.UbuntuFlavor);
+        returnValue: _i15.UbuntuFlavor.budgie,
+      ) as _i15.UbuntuFlavor);
 }
 
 /// A class which mocks [GeoService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockGeoService extends _i1.Mock implements _i15.GeoService {
+class MockGeoService extends _i1.Mock implements _i16.GeoService {
   MockGeoService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  void addSource(_i16.GeoSource? source) => super.noSuchMethod(
+  void addSource(_i17.GeoSource? source) => super.noSuchMethod(
         Invocation.method(
           #addSource,
           [source],
@@ -831,7 +882,7 @@ class MockGeoService extends _i1.Mock implements _i15.GeoService {
       );
 
   @override
-  void removeSource(_i16.GeoSource? source) => super.noSuchMethod(
+  void removeSource(_i17.GeoSource? source) => super.noSuchMethod(
         Invocation.method(
           #removeSource,
           [source],
@@ -850,47 +901,47 @@ class MockGeoService extends _i1.Mock implements _i15.GeoService {
       ) as _i12.Future<void>);
 
   @override
-  _i12.Future<_i17.GeoLocation?> lookupLocation() => (super.noSuchMethod(
+  _i12.Future<_i18.GeoLocation?> lookupLocation() => (super.noSuchMethod(
         Invocation.method(
           #lookupLocation,
           [],
         ),
-        returnValue: _i12.Future<_i17.GeoLocation?>.value(),
-      ) as _i12.Future<_i17.GeoLocation?>);
+        returnValue: _i12.Future<_i18.GeoLocation?>.value(),
+      ) as _i12.Future<_i18.GeoLocation?>);
 
   @override
-  _i12.Future<Iterable<_i17.GeoLocation>> searchLocation(String? location) =>
+  _i12.Future<Iterable<_i18.GeoLocation>> searchLocation(String? location) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchLocation,
           [location],
         ),
         returnValue:
-            _i12.Future<Iterable<_i17.GeoLocation>>.value(<_i17.GeoLocation>[]),
-      ) as _i12.Future<Iterable<_i17.GeoLocation>>);
+            _i12.Future<Iterable<_i18.GeoLocation>>.value(<_i18.GeoLocation>[]),
+      ) as _i12.Future<Iterable<_i18.GeoLocation>>);
 
   @override
-  _i12.Future<Iterable<_i17.GeoLocation>> searchCoordinates(
-          _i17.LatLng? coordinates) =>
+  _i12.Future<Iterable<_i18.GeoLocation>> searchCoordinates(
+          _i18.LatLng? coordinates) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchCoordinates,
           [coordinates],
         ),
         returnValue:
-            _i12.Future<Iterable<_i17.GeoLocation>>.value(<_i17.GeoLocation>[]),
-      ) as _i12.Future<Iterable<_i17.GeoLocation>>);
+            _i12.Future<Iterable<_i18.GeoLocation>>.value(<_i18.GeoLocation>[]),
+      ) as _i12.Future<Iterable<_i18.GeoLocation>>);
 
   @override
-  _i12.Future<Iterable<_i17.GeoLocation>> searchTimezone(String? timezone) =>
+  _i12.Future<Iterable<_i18.GeoLocation>> searchTimezone(String? timezone) =>
       (super.noSuchMethod(
         Invocation.method(
           #searchTimezone,
           [timezone],
         ),
         returnValue:
-            _i12.Future<Iterable<_i17.GeoLocation>>.value(<_i17.GeoLocation>[]),
-      ) as _i12.Future<Iterable<_i17.GeoLocation>>);
+            _i12.Future<Iterable<_i18.GeoLocation>>.value(<_i18.GeoLocation>[]),
+      ) as _i12.Future<Iterable<_i18.GeoLocation>>);
 
   @override
   _i12.Future<void> cancelSearch() => (super.noSuchMethod(
@@ -951,7 +1002,7 @@ class MockIdentityService extends _i1.Mock implements _i4.IdentityService {
 /// A class which mocks [Image].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockImage extends _i1.Mock implements _i18.Image {
+class MockImage extends _i1.Mock implements _i19.Image {
   MockImage() {
     _i1.throwOnMissingStub(this);
   }
@@ -966,10 +1017,10 @@ class MockImage extends _i1.Mock implements _i18.Image {
       ) as _i5.ImageProvider<Object>);
 
   @override
-  _i13.FilterQuality get filterQuality => (super.noSuchMethod(
+  _i14.FilterQuality get filterQuality => (super.noSuchMethod(
         Invocation.getter(#filterQuality),
-        returnValue: _i13.FilterQuality.none,
-      ) as _i13.FilterQuality);
+        returnValue: _i14.FilterQuality.none,
+      ) as _i14.FilterQuality);
 
   @override
   _i5.AlignmentGeometry get alignment => (super.noSuchMethod(
@@ -1011,19 +1062,19 @@ class MockImage extends _i1.Mock implements _i18.Image {
       ) as bool);
 
   @override
-  _i6.State<_i18.Image> createState() => (super.noSuchMethod(
+  _i6.State<_i19.Image> createState() => (super.noSuchMethod(
         Invocation.method(
           #createState,
           [],
         ),
-        returnValue: _FakeState_5<_i18.Image>(
+        returnValue: _FakeState_5<_i19.Image>(
           this,
           Invocation.method(
             #createState,
             [],
           ),
         ),
-      ) as _i6.State<_i18.Image>);
+      ) as _i6.State<_i19.Image>);
 
   @override
   void debugFillProperties(_i7.DiagnosticPropertiesBuilder? properties) =>
@@ -1056,7 +1107,7 @@ class MockImage extends _i1.Mock implements _i18.Image {
           #toStringShort,
           [],
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringShort,
@@ -1079,7 +1130,7 @@ class MockImage extends _i1.Mock implements _i18.Image {
             #minLevel: minLevel,
           },
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringShallow,
@@ -1110,7 +1161,7 @@ class MockImage extends _i1.Mock implements _i18.Image {
             #wrapWidth: wrapWidth,
           },
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringDeep,
@@ -1275,7 +1326,7 @@ class MockLocaleService extends _i1.Mock implements _i4.LocaleService {
           #getLocale,
           [],
         ),
-        returnValue: _i12.Future<String>.value(_i19.dummyValue<String>(
+        returnValue: _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #getLocale,
@@ -1412,7 +1463,7 @@ class MockNetworkService extends _i1.Mock implements _i4.NetworkService {
   @override
   String get primaryConnectionType => (super.noSuchMethod(
         Invocation.getter(#primaryConnectionType),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#primaryConnectionType),
         ),
@@ -1433,7 +1484,7 @@ class MockNetworkService extends _i1.Mock implements _i4.NetworkService {
   @override
   String get version => (super.noSuchMethod(
         Invocation.getter(#version),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#version),
         ),
@@ -1460,7 +1511,7 @@ class MockNetworkService extends _i1.Mock implements _i4.NetworkService {
   @override
   String get connectivityCheckUri => (super.noSuchMethod(
         Invocation.getter(#connectivityCheckUri),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#connectivityCheckUri),
         ),
@@ -1716,7 +1767,7 @@ class MockPowerService extends _i1.Mock implements _i4.PowerService {
   @override
   String get daemonVersion => (super.noSuchMethod(
         Invocation.getter(#daemonVersion),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#daemonVersion),
         ),
@@ -1798,7 +1849,7 @@ class MockPowerService extends _i1.Mock implements _i4.PowerService {
           #getCriticalAction,
           [],
         ),
-        returnValue: _i12.Future<String>.value(_i19.dummyValue<String>(
+        returnValue: _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #getCriticalAction,
@@ -1847,7 +1898,7 @@ class MockProductService extends _i1.Mock implements _i4.ProductService {
           #getReleaseNotesURL,
           [languageCode],
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #getReleaseNotesURL,
@@ -1918,7 +1969,7 @@ class MockTelemetryService extends _i1.Mock implements _i4.TelemetryService {
   @override
   String get path => (super.noSuchMethod(
         Invocation.getter(#path),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#path),
         ),
@@ -2017,7 +2068,7 @@ class MockTimezoneService extends _i1.Mock implements _i4.TimezoneService {
           #getTimezone,
           [],
         ),
-        returnValue: _i12.Future<String>.value(_i19.dummyValue<String>(
+        returnValue: _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #getTimezone,
@@ -2048,7 +2099,7 @@ class MockUdevDeviceInfo extends _i1.Mock implements _i4.UdevDeviceInfo {
   @override
   String get fullName => (super.noSuchMethod(
         Invocation.getter(#fullName),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#fullName),
         ),
@@ -2325,11 +2376,11 @@ class MockFile extends _i1.Mock implements _i9.File {
   @override
   String get path => (super.noSuchMethod(
         Invocation.getter(#path),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.getter(#path),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.getter(#path),
         ),
@@ -2835,7 +2886,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           [],
           {#encoding: encoding},
         ),
-        returnValue: _i12.Future<String>.value(_i19.dummyValue<String>(
+        returnValue: _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #readAsString,
@@ -2844,7 +2895,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           ),
         )),
         returnValueForMissingStub:
-            _i12.Future<String>.value(_i19.dummyValue<String>(
+            _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #readAsString,
@@ -2862,7 +2913,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           [],
           {#encoding: encoding},
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #readAsStringSync,
@@ -2870,7 +2921,7 @@ class MockFile extends _i1.Mock implements _i9.File {
             {#encoding: encoding},
           ),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #readAsStringSync,
@@ -3052,7 +3103,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           #resolveSymbolicLinks,
           [],
         ),
-        returnValue: _i12.Future<String>.value(_i19.dummyValue<String>(
+        returnValue: _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #resolveSymbolicLinks,
@@ -3060,7 +3111,7 @@ class MockFile extends _i1.Mock implements _i9.File {
           ),
         )),
         returnValueForMissingStub:
-            _i12.Future<String>.value(_i19.dummyValue<String>(
+            _i12.Future<String>.value(_i13.dummyValue<String>(
           this,
           Invocation.method(
             #resolveSymbolicLinks,
@@ -3075,14 +3126,14 @@ class MockFile extends _i1.Mock implements _i9.File {
           #resolveSymbolicLinksSync,
           [],
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #resolveSymbolicLinksSync,
             [],
           ),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #resolveSymbolicLinksSync,
@@ -3178,14 +3229,14 @@ class MockSvgFileLoader extends _i1.Mock implements _i10.SvgFileLoader {
           #provideSvg,
           [message],
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #provideSvg,
             [message],
           ),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #provideSvg,
@@ -3321,11 +3372,11 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
       ) as bool);
 
   @override
-  _i13.Clip get clipBehavior => (super.noSuchMethod(
+  _i14.Clip get clipBehavior => (super.noSuchMethod(
         Invocation.getter(#clipBehavior),
-        returnValue: _i13.Clip.none,
-        returnValueForMissingStub: _i13.Clip.none,
-      ) as _i13.Clip);
+        returnValue: _i14.Clip.none,
+        returnValueForMissingStub: _i14.Clip.none,
+      ) as _i14.Clip);
 
   @override
   _i25.RenderingStrategy get renderingStrategy => (super.noSuchMethod(
@@ -3394,14 +3445,14 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
           #toStringShort,
           [],
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringShort,
             [],
           ),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringShort,
@@ -3424,7 +3475,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             #minLevel: minLevel,
           },
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringShallow,
@@ -3435,7 +3486,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             },
           ),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringShallow,
@@ -3466,7 +3517,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             #wrapWidth: wrapWidth,
           },
         ),
-        returnValue: _i19.dummyValue<String>(
+        returnValue: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringDeep,
@@ -3479,7 +3530,7 @@ class MockSvgPicture extends _i1.Mock implements _i10.SvgPicture {
             },
           ),
         ),
-        returnValueForMissingStub: _i19.dummyValue<String>(
+        returnValueForMissingStub: _i13.dummyValue<String>(
           this,
           Invocation.method(
             #toStringDeep,

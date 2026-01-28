@@ -1096,5 +1096,5 @@
   "tpmActionFixActionClearTpmConfirmationLabel": "I understand the consequences of clearing the TPM",
   "tpmActionErrorTitle": "This solution failed",
   "tpmActionErrorDescription": "Try a different solution or contact IT support",
-  "manualPartitioningWarningBody": "Try something else. You may also <a>send an error report</a>."
+  "manualPartitioningWarningBody": "Try something else. You may also <a href=\"\">send an error report</a>."
 }

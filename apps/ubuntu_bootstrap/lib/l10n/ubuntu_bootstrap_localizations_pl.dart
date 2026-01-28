@@ -1603,5 +1603,5 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a>send an error report</a>.';
+      'Try something else. You may also <a href=\"\">send an error report</a>.';
 }
