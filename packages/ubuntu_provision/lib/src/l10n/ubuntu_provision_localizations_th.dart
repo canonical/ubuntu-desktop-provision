@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsTh extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.';
+      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {

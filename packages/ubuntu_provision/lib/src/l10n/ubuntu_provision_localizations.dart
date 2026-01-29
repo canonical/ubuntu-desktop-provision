@@ -354,7 +354,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @errorPageUnexpected.
   ///
   /// In en, this message translates to:
-  /// **'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can can also <a>report the issue</a>.'**
+  /// **'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.'**
   String get errorPageUnexpected;
 
   /// No description provided for @errorPageUbuntuBug.

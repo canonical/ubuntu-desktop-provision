@@ -12,6 +12,7 @@ final errorModelProvider = StateProvider((ref) {
   final logStream = ref.watch(logStreamProvider);
   return ErrorModel(
     session: getService<SessionService>(),
+    apport: getService<ApportService>(),
     isLogVisible: false,
     logStream: logStream,
   );
@@ -40,12 +41,16 @@ final logStreamProvider = Provider<Stream<String>>((ref) {
 class ErrorModel {
   const ErrorModel({
     required this.session,
+    required this.apport,
     required this.isLogVisible,
     required this.logStream,
   });
 
   /// The session service.
   final SessionService session;
+
+  /// The Apport service.
+  final ApportService apport;
 
   /// Whether the log is visible or not,
   final bool isLogVisible;
@@ -55,11 +60,14 @@ class ErrorModel {
 
   Future<void> reboot() => session.reboot();
 
+  Future<void> launchApport() => apport.launch();
+
   ErrorModel copyWith({
     bool? isLogVisible,
   }) {
     return ErrorModel(
       session: session,
+      apport: apport,
       logStream: logStream,
       isLogVisible: isLogVisible ?? this.isLogVisible,
     );

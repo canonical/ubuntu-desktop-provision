@@ -2839,7 +2839,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @manualPartitioningWarningBody.
   ///
   /// In en, this message translates to:
-  /// **'Try something else. You may also <a>send an error report</a>.'**
+  /// **'Try something else. You may also <a href=\"\">send an error report</a>.'**
   String get manualPartitioningWarningBody;
 }
 
