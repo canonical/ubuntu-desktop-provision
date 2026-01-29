@@ -483,5 +483,5 @@
     "tpmActionErrorDescription": "Vyskúšajte iné riešenie alebo kontaktujte IT podporu",
     "tpmActionErrorKindAddonDriversPresent": "Prítomné doplnkové ovládače",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Overenie Secure Boot pred OS pomocou zapísaných odtlačkov",
-    "manualPartitioningWarningBody": "Skúste niečo iné. Môžete tiež <a>odoslať chybové hlásenie</a>."
+    "manualPartitioningWarningBody": "Skúste niečo iné. Môžete tiež <a href=\"\">odoslať chybové hlásenie</a>."
 }
