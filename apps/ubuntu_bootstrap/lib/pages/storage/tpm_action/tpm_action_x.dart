@@ -26,7 +26,7 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
         CoreBootAvailabilityErrorKind.NO_SUITABLE_TPM2_DEVICE =>
           l10n.tpmActionErrorKindNoSuitableTpm2Device,
         CoreBootAvailabilityErrorKind.TPM_DEVICE_FAILURE =>
-          l10n.tpmActionErrorKindTpmDeviceFailure,
+          l10n.tpmActionErrorKindGenericTpm,
         CoreBootAvailabilityErrorKind.TPM_DEVICE_DISABLED =>
           l10n.tpmActionErrorKindTpmDeviceDisabled,
         CoreBootAvailabilityErrorKind.TPM_HIERARCHIES_OWNED =>
@@ -36,15 +36,15 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
         CoreBootAvailabilityErrorKind.INSUFFICIENT_TPM_STORAGE =>
           l10n.tpmActionErrorKindInsufficientTpmStorage,
         CoreBootAvailabilityErrorKind.NO_SUITABLE_PCR_BANK =>
-          l10n.tpmActionErrorKindNoSuitablePcrBank,
+          l10n.tpmActionErrorKindGenericFirmware,
         CoreBootAvailabilityErrorKind.MEASURED_BOOT =>
-          l10n.tpmActionErrorKindMeasuredBoot,
+          l10n.tpmActionErrorKindGenericTpm,
         CoreBootAvailabilityErrorKind.TPM_COMMAND_FAILED =>
-          l10n.tpmActionErrorKindTpmCommandFailed,
+          l10n.tpmActionErrorKindGenericTpm,
         CoreBootAvailabilityErrorKind.INVALID_TPM_RESPONSE =>
-          l10n.tpmActionErrorKindInvalidTpmResponse,
+          l10n.tpmActionErrorKindGenericTpm,
         CoreBootAvailabilityErrorKind.TPM_COMMUNICATION =>
-          l10n.tpmActionErrorKindTpmCommunication,
+          l10n.tpmActionErrorKindGenericTpm,
         CoreBootAvailabilityErrorKind.UNSUPPORTED_PLATFORM =>
           l10n.tpmActionErrorKindUnsupportedPlatform,
         CoreBootAvailabilityErrorKind.INSUFFICIENT_DMA_PROTECTION =>
@@ -54,7 +54,7 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
         CoreBootAvailabilityErrorKind.HOST_SECURITY =>
           l10n.tpmActionErrorKindHostSecurity,
         CoreBootAvailabilityErrorKind.PCR_UNUSABLE =>
-          l10n.tpmActionErrorKindPcrUnusable,
+          l10n.tpmActionErrorKindGenericFirmware,
         CoreBootAvailabilityErrorKind.ADDON_DRIVERS_PRESENT =>
           l10n.tpmActionErrorKindAddonDriversPresent,
         CoreBootAvailabilityErrorKind.SYS_PREP_APPLICATIONS_PRESENT =>
@@ -69,9 +69,6 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
               .PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS =>
           l10n.tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests,
       };
-
-  String description(UbuntuBootstrapLocalizations l10) =>
-      'Description for $this';
 }
 
 extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
@@ -122,6 +119,11 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
           CoreBootAvailabilityErrorKind.TPM_HIERARCHIES_OWNED
         ) =>
           l10n.tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.ABSOLUTE_PRESENT
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsAbsolutePresent,
         (CoreBootFixAction.REBOOT_TO_FW_SETTINGS, _) =>
           l10n.tpmActionFixActionRebootToFwSettings,
         (CoreBootFixAction.CONTACT_OEM, _) => l10n.tpmActionFixActionContactOem,
@@ -157,8 +159,44 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
           title(l10n),
       };
 
-  String description(UbuntuBootstrapLocalizations l10n) =>
-      'Description for $type';
+  String? description(
+    UbuntuBootstrapLocalizations l10n, [
+    CoreBootAvailabilityErrorKind? error,
+  ]) =>
+      switch ((type, error)) {
+        (
+          CoreBootFixAction.REBOOT,
+          CoreBootAvailabilityErrorKind.TPM_DEVICE_FAILURE
+        ) =>
+          l10n.tpmActionFixActionRebootTpmDeviceFailureDescription,
+        (CoreBootFixAction.REBOOT, _) =>
+          l10n.tpmActionFixActionRebootDescription,
+        (CoreBootFixAction.SHUTDOWN, _) =>
+          l10n.tpmActionFixActionShutdownDescription,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.NO_SUITABLE_PCR_BANK ||
+              CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU,
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsWithDocsDescription,
+        (CoreBootFixAction.REBOOT_TO_FW_SETTINGS, _) =>
+          l10n.tpmActionFixActionRebootToFwSettingsDescription,
+        (CoreBootFixAction.PROCEED, _) =>
+          l10n.tpmActionFixActionProceedDescription,
+        _ => null,
+      };
+
+  String? caveats(UbuntuBootstrapLocalizations l10n) => switch (type) {
+        CoreBootFixAction.REBOOT ||
+        CoreBootFixAction.SHUTDOWN ||
+        CoreBootFixAction.REBOOT_TO_FW_SETTINGS =>
+          l10n.tpmActionFixActionCaveatRetry,
+        CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE ||
+        CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE ||
+        CoreBootFixAction.CLEAR_TPM_VIA_FIRMWARE =>
+          l10n.tpmActionFixActionCaveatConfirm,
+        _ => null,
+      };
 
   DestructiveActionWarning? get warning => switch (type) {
         CoreBootFixAction.CLEAR_TPM ||

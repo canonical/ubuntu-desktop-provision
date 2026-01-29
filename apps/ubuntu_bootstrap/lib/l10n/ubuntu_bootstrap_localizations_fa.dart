@@ -1407,90 +1407,87 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindActionFailed => 'Action Failed';
 
   @override
-  String get tpmActionErrorKindRunningInVm => 'Running In VM';
+  String get tpmActionErrorKindRunningInVm =>
+      'The current environment is a virtual machine.';
 
   @override
-  String get tpmActionErrorKindSystemNotEfi => 'System Not EFI';
+  String get tpmActionErrorKindSystemNotEfi =>
+      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess => 'EFI Variable Access';
+  String get tpmActionErrorKindEfiVariableAccess =>
+      'There is an issue with this computer\'s firmware settings.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'No Suitable TPM2 Device';
+      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
 
   @override
-  String get tpmActionErrorKindTpmDeviceFailure => 'TPM Device Failure';
+  String get tpmActionErrorKindTpmDeviceDisabled =>
+      'This computer\'s TPM is disabled.';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM Device Disabled';
-
-  @override
-  String get tpmActionErrorKindTpmHierarchiesOwned => 'TPM Hierarchies Owned';
+  String get tpmActionErrorKindTpmHierarchiesOwned =>
+      'This computer\'s TPM is already in use by another system or application.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'TPM Device Lockout Locked Out';
+      'This computer\'s TPM is currently locked.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'Insufficient TPM Storage';
+      'This computer\'s TPM does not have enough storage available.';
 
   @override
-  String get tpmActionErrorKindNoSuitablePcrBank => 'NoSuitable PCR Bank';
+  String get tpmActionErrorKindUnsupportedPlatform =>
+      'This computer is not compatible with hardware-backed encryption.';
 
   @override
-  String get tpmActionErrorKindMeasuredBoot => 'Measured Boot';
-
-  @override
-  String get tpmActionErrorKindTpmCommandFailed => 'TPM Command Failed';
-
-  @override
-  String get tpmActionErrorKindInvalidTpmResponse => 'Invalid TPM Response';
-
-  @override
-  String get tpmActionErrorKindTpmCommunication => 'TPM Communication';
-
-  @override
-  String get tpmActionErrorKindUnsupportedPlatform => 'Unsupported Platform';
-
-  @override
-  String get tpmActionErrorKindUefiDebuggingEnabled => 'UEFI Debugging Enabled';
+  String get tpmActionErrorKindUefiDebuggingEnabled =>
+      'UEFI debugging is enabled';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'Insufficient DMA Protection';
+      'This computer is missing a required security feature (DMA protection).';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu => 'No Kernel IOMMU';
+  String get tpmActionErrorKindNoKernelIommu =>
+      'This computer is missing a required security feature (kernel IOMMU).';
 
   @override
-  String get tpmActionErrorKindHostSecurity => 'Host Security';
-
-  @override
-  String get tpmActionErrorKindPcrUnusable => 'PCR Unusable';
+  String get tpmActionErrorKindHostSecurity =>
+      'There is an issue with this computer\'s security settings.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'Sys Prep Applications Present';
+      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
 
   @override
-  String get tpmActionErrorKindAbsolutePresent => 'Absolute Present';
+  String get tpmActionErrorKindAbsolutePresent =>
+      'Absolute Persistence Module is enabled in this computer.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Invalid SecureBoot Mode';
+      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Weak SecureBoot Algorithm Detected';
+      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'Pre OS Secure Boot Auth By Enrolled Digests';
+      'This computer is using a manual allowlist to verify software at startup.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+
+  @override
+  String get tpmActionErrorKindGenericTpm =>
+      'There is an issue with this computer\'s TPM.';
+
+  @override
+  String get tpmActionErrorKindGenericFirmware =>
+      'There is an issue with this computer\'s firmware.';
 
   @override
   String get tpmActionFixActionReboot => 'Restart';
@@ -1535,27 +1532,54 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
       'Clear TPM manually';
 
   @override
+  String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
+      'Disable Absolute Persistence Module manually';
+
+  @override
   String get tpmActionFixActionContactOem => 'Contact OEM';
 
   @override
   String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware =>
-      'Enable TPM Via Firmware';
+  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable And Clear TPM Via Firmware';
+      'Enable and clear TPM on restart';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM Via Firmware';
+  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
 
   @override
   String get tpmActionFixActionClearTpm => 'Clear TPM';
 
   @override
   String get tpmActionFixActionProceed => 'Ignore';
+
+  @override
+  String get tpmActionFixActionRebootDescription =>
+      'Restart the computer to complete previous actions.';
+
+  @override
+  String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
+      'Restarting the computer may fix the issue.';
+
+  @override
+  String get tpmActionFixActionShutdownDescription =>
+      'Power off the computer to complete previous actions.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsDescription =>
+      'You can do this in you computer\'s firmware settings.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
+      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+
+  @override
+  String get tpmActionFixActionProceedDescription =>
+      'Ignoring the issue may result in a less secure installation.';
 
   @override
   String get tpmActionRestartLabel => 'Restart';
@@ -1580,6 +1604,14 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
       'I understand the consequences of clearing the TPM';
+
+  @override
+  String get tpmActionFixActionCaveatConfirm =>
+      'You may be asked to confirm this action on restart.';
+
+  @override
+  String get tpmActionFixActionCaveatRetry =>
+      'You will then have to retry installation from scratch.';
 
   @override
   String get tpmActionErrorTitle => 'This solution failed';

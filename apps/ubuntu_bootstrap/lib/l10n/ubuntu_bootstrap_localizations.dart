@@ -2521,151 +2521,109 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindRunningInVm.
   ///
   /// In en, this message translates to:
-  /// **'Running In VM'**
+  /// **'The current environment is a virtual machine.'**
   String get tpmActionErrorKindRunningInVm;
 
   /// No description provided for @tpmActionErrorKindSystemNotEfi.
   ///
   /// In en, this message translates to:
-  /// **'System Not EFI'**
+  /// **'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.'**
   String get tpmActionErrorKindSystemNotEfi;
 
   /// No description provided for @tpmActionErrorKindEfiVariableAccess.
   ///
   /// In en, this message translates to:
-  /// **'EFI Variable Access'**
+  /// **'There is an issue with this computer\'s firmware settings.'**
   String get tpmActionErrorKindEfiVariableAccess;
 
   /// No description provided for @tpmActionErrorKindNoSuitableTpm2Device.
   ///
   /// In en, this message translates to:
-  /// **'No Suitable TPM2 Device'**
+  /// **'This computer does not have the required security hardware (TPM 2.0) for this encryption method.'**
   String get tpmActionErrorKindNoSuitableTpm2Device;
-
-  /// No description provided for @tpmActionErrorKindTpmDeviceFailure.
-  ///
-  /// In en, this message translates to:
-  /// **'TPM Device Failure'**
-  String get tpmActionErrorKindTpmDeviceFailure;
 
   /// No description provided for @tpmActionErrorKindTpmDeviceDisabled.
   ///
   /// In en, this message translates to:
-  /// **'TPM Device Disabled'**
+  /// **'This computer\'s TPM is disabled.'**
   String get tpmActionErrorKindTpmDeviceDisabled;
 
   /// No description provided for @tpmActionErrorKindTpmHierarchiesOwned.
   ///
   /// In en, this message translates to:
-  /// **'TPM Hierarchies Owned'**
+  /// **'This computer\'s TPM is already in use by another system or application.'**
   String get tpmActionErrorKindTpmHierarchiesOwned;
 
   /// No description provided for @tpmActionErrorKindTpmDeviceLockoutLockedOut.
   ///
   /// In en, this message translates to:
-  /// **'TPM Device Lockout Locked Out'**
+  /// **'This computer\'s TPM is currently locked.'**
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut;
 
   /// No description provided for @tpmActionErrorKindInsufficientTpmStorage.
   ///
   /// In en, this message translates to:
-  /// **'Insufficient TPM Storage'**
+  /// **'This computer\'s TPM does not have enough storage available.'**
   String get tpmActionErrorKindInsufficientTpmStorage;
-
-  /// No description provided for @tpmActionErrorKindNoSuitablePcrBank.
-  ///
-  /// In en, this message translates to:
-  /// **'NoSuitable PCR Bank'**
-  String get tpmActionErrorKindNoSuitablePcrBank;
-
-  /// No description provided for @tpmActionErrorKindMeasuredBoot.
-  ///
-  /// In en, this message translates to:
-  /// **'Measured Boot'**
-  String get tpmActionErrorKindMeasuredBoot;
-
-  /// No description provided for @tpmActionErrorKindTpmCommandFailed.
-  ///
-  /// In en, this message translates to:
-  /// **'TPM Command Failed'**
-  String get tpmActionErrorKindTpmCommandFailed;
-
-  /// No description provided for @tpmActionErrorKindInvalidTpmResponse.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid TPM Response'**
-  String get tpmActionErrorKindInvalidTpmResponse;
-
-  /// No description provided for @tpmActionErrorKindTpmCommunication.
-  ///
-  /// In en, this message translates to:
-  /// **'TPM Communication'**
-  String get tpmActionErrorKindTpmCommunication;
 
   /// No description provided for @tpmActionErrorKindUnsupportedPlatform.
   ///
   /// In en, this message translates to:
-  /// **'Unsupported Platform'**
+  /// **'This computer is not compatible with hardware-backed encryption.'**
   String get tpmActionErrorKindUnsupportedPlatform;
 
   /// No description provided for @tpmActionErrorKindUefiDebuggingEnabled.
   ///
   /// In en, this message translates to:
-  /// **'UEFI Debugging Enabled'**
+  /// **'UEFI debugging is enabled'**
   String get tpmActionErrorKindUefiDebuggingEnabled;
 
   /// No description provided for @tpmActionErrorKindInsufficientDmaProtection.
   ///
   /// In en, this message translates to:
-  /// **'Insufficient DMA Protection'**
+  /// **'This computer is missing a required security feature (DMA protection).'**
   String get tpmActionErrorKindInsufficientDmaProtection;
 
   /// No description provided for @tpmActionErrorKindNoKernelIommu.
   ///
   /// In en, this message translates to:
-  /// **'No Kernel IOMMU'**
+  /// **'This computer is missing a required security feature (kernel IOMMU).'**
   String get tpmActionErrorKindNoKernelIommu;
 
   /// No description provided for @tpmActionErrorKindHostSecurity.
   ///
   /// In en, this message translates to:
-  /// **'Host Security'**
+  /// **'There is an issue with this computer\'s security settings.'**
   String get tpmActionErrorKindHostSecurity;
-
-  /// No description provided for @tpmActionErrorKindPcrUnusable.
-  ///
-  /// In en, this message translates to:
-  /// **'PCR Unusable'**
-  String get tpmActionErrorKindPcrUnusable;
 
   /// No description provided for @tpmActionErrorKindSysPrepApplicationsPresent.
   ///
   /// In en, this message translates to:
-  /// **'Sys Prep Applications Present'**
+  /// **'There is software running at startup that may prevent a secure connection with the computer\'s TPM.'**
   String get tpmActionErrorKindSysPrepApplicationsPresent;
 
   /// No description provided for @tpmActionErrorKindAbsolutePresent.
   ///
   /// In en, this message translates to:
-  /// **'Absolute Present'**
+  /// **'Absolute Persistence Module is enabled in this computer.'**
   String get tpmActionErrorKindAbsolutePresent;
 
   /// No description provided for @tpmActionErrorKindInvalidSecureBootMode.
   ///
   /// In en, this message translates to:
-  /// **'Invalid SecureBoot Mode'**
+  /// **'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.'**
   String get tpmActionErrorKindInvalidSecureBootMode;
 
   /// No description provided for @tpmActionErrorKindWeakSecureBootAlgorithmDetected.
   ///
   /// In en, this message translates to:
-  /// **'Weak SecureBoot Algorithm Detected'**
+  /// **'Some of the certificates verifying components in this computer are outdated or use weak protection.'**
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected;
 
   /// No description provided for @tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests.
   ///
   /// In en, this message translates to:
-  /// **'Pre OS Secure Boot Auth By Enrolled Digests'**
+  /// **'This computer is using a manual allowlist to verify software at startup.'**
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests;
 
   /// No description provided for @tpmActionErrorKindAddonDriversPresent.
@@ -2673,6 +2631,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Addon Drivers Present'**
   String get tpmActionErrorKindAddonDriversPresent;
+
+  /// No description provided for @tpmActionErrorKindGenericTpm.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with this computer\'s TPM.'**
+  String get tpmActionErrorKindGenericTpm;
+
+  /// No description provided for @tpmActionErrorKindGenericFirmware.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with this computer\'s firmware.'**
+  String get tpmActionErrorKindGenericFirmware;
 
   /// No description provided for @tpmActionFixActionReboot.
   ///
@@ -2740,6 +2710,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Clear TPM manually'**
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned;
 
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsAbsolutePresent.
+  ///
+  /// In en, this message translates to:
+  /// **'Disable Absolute Persistence Module manually'**
+  String get tpmActionFixActionRebootToFwSettingsAbsolutePresent;
+
   /// No description provided for @tpmActionFixActionContactOem.
   ///
   /// In en, this message translates to:
@@ -2755,19 +2731,19 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionEnableTpmViaFirmware.
   ///
   /// In en, this message translates to:
-  /// **'Enable TPM Via Firmware'**
+  /// **'Enable TPM on restart'**
   String get tpmActionFixActionEnableTpmViaFirmware;
 
   /// No description provided for @tpmActionFixActionEnableAndClearTpmViaFirmware.
   ///
   /// In en, this message translates to:
-  /// **'Enable And Clear TPM Via Firmware'**
+  /// **'Enable and clear TPM on restart'**
   String get tpmActionFixActionEnableAndClearTpmViaFirmware;
 
   /// No description provided for @tpmActionFixActionClearTpmViaFirmware.
   ///
   /// In en, this message translates to:
-  /// **'Clear TPM Via Firmware'**
+  /// **'Clear TPM on restart'**
   String get tpmActionFixActionClearTpmViaFirmware;
 
   /// No description provided for @tpmActionFixActionClearTpm.
@@ -2781,6 +2757,42 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Ignore'**
   String get tpmActionFixActionProceed;
+
+  /// No description provided for @tpmActionFixActionRebootDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart the computer to complete previous actions.'**
+  String get tpmActionFixActionRebootDescription;
+
+  /// No description provided for @tpmActionFixActionRebootTpmDeviceFailureDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Restarting the computer may fix the issue.'**
+  String get tpmActionFixActionRebootTpmDeviceFailureDescription;
+
+  /// No description provided for @tpmActionFixActionShutdownDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Power off the computer to complete previous actions.'**
+  String get tpmActionFixActionShutdownDescription;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can do this in you computer\'s firmware settings.'**
+  String get tpmActionFixActionRebootToFwSettingsDescription;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsWithDocsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.'**
+  String get tpmActionFixActionRebootToFwSettingsWithDocsDescription;
+
+  /// No description provided for @tpmActionFixActionProceedDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Ignoring the issue may result in a less secure installation.'**
+  String get tpmActionFixActionProceedDescription;
 
   /// No description provided for @tpmActionRestartLabel.
   ///
@@ -2823,6 +2835,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'I understand the consequences of clearing the TPM'**
   String get tpmActionFixActionClearTpmConfirmationLabel;
+
+  /// No description provided for @tpmActionFixActionCaveatConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'You may be asked to confirm this action on restart.'**
+  String get tpmActionFixActionCaveatConfirm;
+
+  /// No description provided for @tpmActionFixActionCaveatRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'You will then have to retry installation from scratch.'**
+  String get tpmActionFixActionCaveatRetry;
 
   /// No description provided for @tpmActionErrorTitle.
   ///
