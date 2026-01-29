@@ -484,5 +484,5 @@
     "tpmActionErrorDescription": "Wypróbuj inne rozwiązanie lub skontaktuj się z pomocą techniczną",
     "tpmActionErrorKindAddonDriversPresent": "Dodatkowe sterowniki obecne",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Uwierzytelnienie bezpiecznego rozruchu (Secure Boot) przed systemem operacyjnym wg zarejestrowanych skrótów",
-    "manualPartitioningWarningBody": "Wypróbuj coś innego. Możesz również <a>wysłać raport o błędzie</a>."
+    "manualPartitioningWarningBody": "Wypróbuj coś innego. Możesz również <a href=\"\">wysłać raport o błędzie</a>."
 }
