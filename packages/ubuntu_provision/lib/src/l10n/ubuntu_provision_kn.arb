@@ -1,1 +1,152 @@
-{}
+{
+    "accessibilityPageTitle": "ಪ್ರವೇಶಿಸುವಿಕೆ",
+    "close": "ಮುಚ್ಚಿ",
+    "successIconSemanticLabel": "ಯಶಸ್ಸು",
+    "closeIconSemanticLabel": "ಮುಚ್ಚಿ",
+    "maximizeIconSemanticLabel": "ಗರಿಷ್ಠಗೊಳಿಸು",
+    "minimizeIconSemanticLabel": "ಕಡಿಮೆಗೊಳಿಸು",
+    "accessibilityPageHeader": "{DISTRO} ನಲ್ಲಿ ಪ್ರವೇಶಿಸುವಿಕೆ",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "ನೀವು ಹೊಂದಿಸುವ ಮೊದಲು ನಿಮ್ಮ ಅಗತ್ಯಗಳಿಗೆ {DISTRO} ಅನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ. ನೀವು ಅವುಗಳನ್ನು ನಂತರ ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilitySeeingLabel": "ನೋಡುತ್ತಿದ್ದೇನೆ",
+    "accessibilityHearingLabel": "ಕೇಳುವಿಕೆ",
+    "accessibilityTypingLabel": "ಟೈಪಿಂಗ್",
+    "accessibilityPointingLabel": "ಸೂಚಿಸುವುದು ಮತ್ತು ಕ್ಲಿಕ್ ಮಾಡುವುದು",
+    "accessibilityScreenReaderLabel": "ಸ್ಕ್ರೀನ್ ರೀಡರ್",
+    "accessibilityVisualAlertsLabel": "ದೃಶ್ಯ ಎಚ್ಚರಿಕೆಗಳು",
+    "accessibilityStickKeysLabel": "ಅಂಟಿಕೊಳ್ಳುವ ಕೀಲಿಗಳು",
+    "accessibilitySlowKeysLabel": "ನಿಧಾನ ಕೀಲಿಗಳು",
+    "accessibilityMouseKeysLabel": "ಮೌಸ್ ಕೀಗಳು",
+    "accessibilityDesktopZoomLabel": "ಡೆಸ್ಕ್‌ಟಾಪ್ ಜೂಮ್",
+    "errorPageTitle": "ಏನೋ ತಪ್ಪಾಗಿದೆ",
+    "errorPageUnexpected": "ನಮ್ಮನ್ನು ಕ್ಷಮಿಸಿ, ಆದರೆ ದೋಷ ಏನೆಂದು ನಮಗೆ ಖಚಿತವಿಲ್ಲ. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲು ನೀವು ಪ್ರಯತ್ನಿಸಬಹುದು ಮತ್ತು ಅನುಸ್ಥಾಪನ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಮತ್ತೆ ಪ್ರಾರಂಭಿಸಬಹುದು. ನೀವು <a>ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಬಹುದು</a>.",
+    "errorPageUbuntuBug": "ಸಂಬಂಧಿತ ಡೀಬಗ್ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಂತೆ ಸ್ವಯಂಚಾಲಿತ ದೋಷ ವರದಿಯನ್ನು ಕಳುಹಿಸಲು, ದಯವಿಟ್ಟು <pre>sudo ubuntu-bug {SNAP}</pre> ಅನ್ನು ಟರ್ಮಿನಲ್‌ನಲ್ಲಿ ಅಥವಾ ಕಮಾಂಡ್ ಕನ್ಸೋಲ್‌ನಿಂದ (Alt F2) ರನ್ ಮಾಡಿ.",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "errorPageShowLog": "ಲಾಗ್ ತೋರಿಸು",
+    "errorPageHideLog": "ಲಾಗ್ ಅನ್ನು ಮರೆಮಾಡಿ",
+    "restart": "ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "timezonePageTitle": "ನಿಮ್ಮ ಸಮಯವಲಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "accessibilityZoomLabel": "ಜೂಮ್ ಮಾಡಿ",
+    "accessibilityHighContrastLabel": "ಹೆಚ್ಚಿನ ಕಾಂಟ್ರಾಸ್ಟ್",
+    "accessibilityLargeTextLabel": "ದೊಡ್ಡ ಪಠ್ಯ",
+    "accessibilityReduceAnimationLabel": "ಅನಿಮೇಷನ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡಿ",
+    "timezoneLocationLabel": "ಸ್ಥಳ",
+    "timezoneTimezoneLabel": "ಸಮಯವಲಯ",
+    "keyboardTitle": "ಕೀಬೋರ್ಡ್ ಲೇಔಟ್",
+    "keyboardHeader": "ನಿಮ್ಮ ಕೀಬೋರ್ಡ್ ವಿನ್ಯಾಸವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "keyboardTestHint": "ನಿಮ್ಮ ಕೀಬೋರ್ಡ್ ಪರೀಕ್ಷಿಸಲು ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ",
+    "keyboardDetectTitle": "ಕೀಬೋರ್ಡ್ ವಿನ್ಯಾಸವನ್ನು ಪತ್ತೆ ಮಾಡಿ",
+    "keyboardDetectButton": "ಪತ್ತೆ ಮಾಡಿ",
+    "keyboardVariantLabel": "ನಿಮ್ಮ ಕೀಬೋರ್ಡ್ ರೂಪಾಂತರವನ್ನು ಆಯ್ಕೆಮಾಡಿ:",
+    "keyboardPressKeyLabel": "ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಕೀಗಳಲ್ಲಿ ಒಂದನ್ನು ಒತ್ತಿರಿ:",
+    "keyboardKeyPresentLabel": "ನಿಮ್ಮ ಕೀಬೋರ್ಡ್‌ನಲ್ಲಿ ಈ ಕೆಳಗಿನ ಕೀ ಇದೆಯೇ?",
+    "themePageTitle": "ನಿಮ್ಮ ಥೀಮ್ ಆಯ್ಕೆಮಾಡಿ",
+    "themePageHeader": "ಗೋಚರತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ನೀವು ಇದನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ಬದಲಾಯಿಸಬಹುದು.",
+    "themeDark": "ಕತ್ತಲು",
+    "themeLight": "ಬೆಳಕು",
+    "localePageTitle": "{DISTRO} ಗೆ ಸುಸ್ವಾಗತ",
+    "@localePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "localeHeader": "ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆರಿಸಿ:",
+    "identityPageTitle": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ರಚಿಸಿ",
+    "identityAutoLogin": "ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಲಾಗ್ ಇನ್ ಮಾಡಿ",
+    "identityRequirePassword": "ಲಾಗ್ ಇನ್ ಮಾಡಲು ನನ್ನ ಪಾಸ್‌ವರ್ಡ್ ಅಗತ್ಯವಿದೆ",
+    "identityRealNameLabel": "ನಿಮ್ಮ ಹೆಸರು",
+    "identityRealNameRequired": "ಒಂದು ಹೆಸರು ಅಗತ್ಯವಿದೆ",
+    "identityRealNameTooLong": "ಆ ಹೆಸರು ತುಂಬಾ ಉದ್ದವಾಗಿದೆ.",
+    "identityHostnameLabel": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಹೆಸರು",
+    "identityHostnameInfo": "ಇತರ ಕಂಪ್ಯೂಟರ್‌ಗಳೊಂದಿಗೆ ಮಾತನಾಡುವಾಗ ಅದು ಬಳಸುವ ಹೆಸರು.",
+    "identityHostnameRequired": "ಕಂಪ್ಯೂಟರ್ ಹೆಸರು ಅಗತ್ಯವಿದೆ",
+    "identityHostnameTooLong": "ಆ ಕಂಪ್ಯೂಟರ್ ಹೆಸರು ತುಂಬಾ ಉದ್ದವಾಗಿದೆ.",
+    "identityInvalidHostname": "ಕಂಪ್ಯೂಟರ್ ಹೆಸರು ಅಮಾನ್ಯವಾಗಿದೆ",
+    "identityUsernameLabel": "ನಿಮ್ಮ ಬಳಕೆದಾರ ಹೆಸರು",
+    "identityUsernameRequired": "ಬಳಕೆದಾರಹೆಸರು ಅಗತ್ಯವಿದೆ",
+    "identityInvalidUsername": "ಬಳಕೆದಾರಹೆಸರು ಅಮಾನ್ಯವಾಗಿದೆ",
+    "identityUsernameInUse": "ಆ ಬಳಕೆದಾರ ಹೆಸರು ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.",
+    "identityUsernameSystemReserved": "ಆ ಹೆಸರನ್ನು ಸಿಸ್ಟಮ್ ಬಳಕೆಗಾಗಿ ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.",
+    "identityUsernameTooLong": "ಆ ಹೆಸರು ತುಂಬಾ ಉದ್ದವಾಗಿದೆ.",
+    "identityUsernameInvalidChars": "ಆ ಹೆಸರು ಅಮಾನ್ಯ ಅಕ್ಷರಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.",
+    "identityPasswordLabel": "ಪಾಸ್ವರ್ಡ್",
+    "identityPasswordRequired": "ಪಾಸ್ವರ್ಡ್ ಅಗತ್ಯವಿದೆ",
+    "identityConfirmPasswordLabel": "ಪಾಸ್ವರ್ಡ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
+    "identityPasswordMismatch": "ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+    "identityPasswordShow": "ತೋರಿಸು",
+    "identityPasswordHide": "ಮರೆಮಾಡಿ",
+    "identityActiveDirectoryOption": "ಸಕ್ರಿಯ ಡೈರೆಕ್ಟರಿಯನ್ನು ಬಳಸಿ",
+    "identityActiveDirectoryInfo": "ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನೀವು ಡೊಮೇನ್ ಮತ್ತು ಇತರ ವಿವರಗಳನ್ನು ನಮೂದಿಸುತ್ತೀರಿ.",
+    "activeDirectoryTitle": "ಸಕ್ರಿಯ ಡೈರೆಕ್ಟರಿಗೆ ಲಾಗ್ ಇನ್ ಮಾಡಿ",
+    "activeDirectoryHeader": "ಸಕ್ರಿಯ ಡೈರೆಕ್ಟರಿಗೆ ಲಾಗ್ ಇನ್ ಮಾಡಬೇಕೆ?",
+    "activeDirectoryInfo": "ಸುಲಭವಾದ ಆಡಳಿತಕ್ಕಾಗಿ ಸಕ್ರಿಯ ಡೈರೆಕ್ಟರಿಯೊಂದಿಗೆ ಮನಬಂದಂತೆ ಸಂಯೋಜಿಸಲು {DISTRO} ಅನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
+    "@activeDirectoryInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryTestConnection": "ಡೊಮೇನ್ ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ",
+    "activeDirectoryDomainLabel": "ಡೊಮೇನ್",
+    "activeDirectoryDomainEmpty": "ಅಗತ್ಯವಿದೆ",
+    "activeDirectoryDomainTooLong": "ತುಂಬಾ ಉದ್ದವಾಗಿದೆ",
+    "activeDirectoryDomainInvalidChars": "ಅಮಾನ್ಯ ಅಕ್ಷರಗಳು",
+    "activeDirectoryDomainStartDot": "ಚುಕ್ಕೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ (.)",
+    "activeDirectoryDomainEndDot": "ಚುಕ್ಕೆಯೊಂದಿಗೆ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ (.)",
+    "activeDirectoryDomainStartHyphen": "ಹೈಫನ್ (-) ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ",
+    "activeDirectoryDomainEndHyphen": "ಹೈಫನ್ (-) ನೊಂದಿಗೆ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ",
+    "activeDirectoryDomainMultipleDots": "ಬಹು ಅನುಕ್ರಮ ಚುಕ್ಕೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ (..)",
+    "activeDirectoryDomainNotFound": "ಡೊಮೇನ್ ಕಂಡುಬಂದಿಲ್ಲ",
+    "activeDirectoryAdminLabel": "ಡೊಮೇನ್ ಸೇರ್ಪಡೆ ಬಳಕೆದಾರ",
+    "activeDirectoryAdminEmpty": "ಅಗತ್ಯವಿದೆ",
+    "activeDirectoryAdminInvalidChars": "ಅಮಾನ್ಯ ಅಕ್ಷರಗಳು",
+    "activeDirectoryPasswordLabel": "ಪಾಸ್ವರ್ಡ್",
+    "activeDirectoryPasswordEmpty": "ಅಗತ್ಯವಿದೆ",
+    "activeDirectoryErrorTitle": "ಸಕ್ರಿಯ ಡೈರೆಕ್ಟರಿಗೆ ಸಂಪರ್ಕವನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುವಲ್ಲಿ ದೋಷ",
+    "activeDirectoryErrorMessage": "ಕ್ಷಮಿಸಿ, ಈ ಸಮಯದಲ್ಲಿ ಸಕ್ರಿಯ ಡೈರೆಕ್ಟರಿಯನ್ನು ಹೊಂದಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಒಮ್ಮೆ ನಿಮ್ಮ ಸಿಸ್ಟಂ ಚಾಲನೆಯಲ್ಲಿದೆ, ಸಹಾಯಕ್ಕಾಗಿ <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> ಗೆ ಭೇಟಿ ನೀಡಿ.",
+    "networkPageTitle": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ",
+    "networkPageHeader": "ಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ",
+    "networkPageBody": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವು ಹೊಂದಾಣಿಕೆಯ ಪರಿಶೀಲನೆ ಮತ್ತು ಹೆಚ್ಚುವರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಪ್ಯಾಕೇಜ್‌ಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಸ್ಥಾಪನೆಯನ್ನು ಸುಧಾರಿಸುತ್ತದೆ.",
+    "networkWiredOption": "ತಂತಿ ಸಂಪರ್ಕವನ್ನು ಬಳಸಿ",
+    "networkWiredNone": "ಯಾವುದೇ ವೈರ್ಡ್ ಸಂಪರ್ಕ ಪತ್ತೆಯಾಗಿಲ್ಲ",
+    "networkWiredOff": "ತಂತಿ ಸಂಪರ್ಕವನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ",
+    "networkWiredDisabled": "ಈ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿ ಈಥರ್ನೆಟ್ ಅನ್ನು ಬಳಸಲು, ವೈರ್ಡ್ ಸಂಪರ್ಕವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕು",
+    "networkWiredEnable": "ವೈರ್ಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "networkWifiOption": "Wi-Fi ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ",
+    "networkWifiOff": "ವೈರ್‌ಲೆಸ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "networkWifiNone": "ಯಾವುದೇ Wi-Fi ಸಾಧನಗಳು ಪತ್ತೆಯಾಗಿಲ್ಲ",
+    "networkWifiDisabled": "ಈ ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿ ವೈ-ಫೈ ಬಳಸಲು, ವೈರ್‌ಲೆಸ್ ನೆಟ್‌ವರ್ಕಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಬೇಕು",
+    "networkWifiEnable": "Wi-Fi ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "networkHiddenWifiOption": "ಗುಪ್ತ ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ",
+    "networkHiddenWifiNameLabel": "ನೆಟ್ವರ್ಕ್ ಹೆಸರು",
+    "networkHiddenWifiNameRequired": "ನೆಟ್‌ವರ್ಕ್ ಹೆಸರಿನ ಅಗತ್ಯವಿದೆ",
+    "networkNoneOption": "ಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಿಸಬೇಡಿ",
+    "eulaPageTitle": "ಪರವಾನಗಿ ಒಪ್ಪಂದ",
+    "eulaReviewTerms": "ಪರವಾನಗಿ ನಿಯಮಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+    "eulaReadAndAcceptTerms": "ಈ ಯಂತ್ರವನ್ನು ಹೊಂದಿಸುವುದನ್ನು ಮುಂದುವರಿಸಲು, ನೀವು ಪರವಾನಗಿ ಒಪ್ಪಂದದ ನಿಯಮಗಳನ್ನು ಓದಬೇಕು ಮತ್ತು ಒಪ್ಪಿಕೊಳ್ಳಬೇಕು.",
+    "eulaAcceptTerms": "ನಾನು ಈ ನಿಯಮಗಳನ್ನು ಓದಿದ್ದೇನೆ ಮತ್ತು ಒಪ್ಪಿಕೊಂಡಿದ್ದೇನೆ",
+    "expandIconSemanticLabel": "ವಿಸ್ತರಿಸು",
+    "collapseIconSemanticLabel": "ಕುಗ್ಗಿಸು"
+}
