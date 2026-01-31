@@ -25,15 +25,15 @@
     "@localeHeader": {},
     "identityPageTitle": "إعداد حسابك",
     "@identityPageTitle": {},
-    "identityAutoLogin": "لِج آليًا",
+    "identityAutoLogin": "تسجيل دخول تلقائي",
     "@identityAutoLogin": {},
-    "identityRequirePassword": "اطلب كلمة السر للولوج",
+    "identityRequirePassword": "يتطلب كلمة المرور للدخول",
     "@identityRequirePassword": {},
-    "identityHostnameInfo": "يستخدم هذا الاسم للتواصل مع الحواسيب الأخرى.",
+    "identityHostnameInfo": "يستخدم هذا الاسم للتواصل مع الاجهزة الأخرى.",
     "@identityHostnameInfo": {},
-    "accessibilityPageTitle": "الإتاحة",
+    "accessibilityPageTitle": "إمكانية الوصول",
     "@accessibilityPageTitle": {},
-    "accessibilityPageHeader": "الإتاحة في {DISTRO}",
+    "accessibilityPageHeader": "إمكانية الوصول في {DISTRO}",
     "@accessibilityPageHeader": {
         "placeholders": {
             "DISTRO": {
@@ -41,7 +41,7 @@
             }
         }
     },
-    "accessibilityPageBody": "خصِّص {DISTRO} ليناسب احتياجاتك قبل إعداده. يمكنك تغييرهم لاحقًا في إعدادات النظام.",
+"accessibilityPageBody": "اضبط {DISTRO} وفق احتياجاتك قبل الإعداد. يمكنك تعديلها لاحقًا من إعدادات النظام.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -69,7 +69,7 @@
     "@accessibilityScreenReaderLabel": {},
     "accessibilityVisualAlertsLabel": "الإنذارات البصرية",
     "@accessibilityVisualAlertsLabel": {},
-    "accessibilityStickKeysLabel": "المفاتيح اللاصقة",
+    "accessibilityStickKeysLabel": "المفاتيح الثابتة",
     "@accessibilityStickKeysLabel": {},
     "accessibilitySlowKeysLabel": "المفاتيح البطيئة",
     "@accessibilitySlowKeysLabel": {},
@@ -79,7 +79,7 @@
     "@accessibilityDesktopZoomLabel": {},
     "networkPageHeader": "اتصل بالإنترنت",
     "@networkPageHeader": {},
-    "networkPageBody": "سيحسِّن الاتصال بالإنترنت عملية تنصيبك عبر تحققات التوافقية وحزم البرمجيات الإضافية.",
+    "networkPageBody": "يساعد اتصال الإنترنت على إتمام التثبيت والتحقق من التوافق وتثبيت الحزم الإضافية.",
     "@networkPageBody": {},
     "networkWiredOption": "استعمل اتصالًا سلكيًا",
     "@networkWiredOption": {},
@@ -95,9 +95,9 @@
     "@networkNoneOption": {},
     "errorPageTitle": "حدث خطأ",
     "@errorPageTitle": {},
-    "errorPageUnexpected": "تعذَّرت معرفة الخطأ. حاول إعادة تشغيل حاسوبك وبدء عملية التنصيب من جديد. يمكنك أيضًا <a>الإبلاغ عن المشكلة</a>.",
+    "errorPageUnexpected": "حدث خطأ غير متوقع. أعد تشغيل جهازك وحاول التثبيت مرة أخرى. يمكنك أيضًا <a>الإبلاغ عن المشكلة</a>.",
     "@errorPageUnexpected": {},
-    "errorPageUbuntuBug": "لإرسال بلاغ علة آلي، ضمِّن معلومات التنقيح المتعلقة، وشغِّل <pre>sudo ubuntu-bug {SNAP}</pre> في الطرفية، أو من محث الأوامر (Alt+F2).",
+    "errorPageUbuntuBug": "لإرسال تقرير خطأ تلقائي يشمل معلومات التصحيح، شغِّل <pre>sudo ubuntu-bug {SNAP}</pre> في الطرفية أو عبر واجهة تنفيذ الأوامر (Alt+F2)."
     "@errorPageUbuntuBug": {
         "placeholders": {
             "SNAP": {
@@ -115,7 +115,7 @@
     "@close": {},
     "timezoneLocationLabel": "الموضع",
     "@timezoneLocationLabel": {},
-    "themePageTitle": "اختر سمتك",
+    "themePageTitle": "اختر المظهر",
     "@themePageTitle": {},
     "themePageHeader": "يمكنك تغييره لاحقًا في إعدادات المظهر.",
     "@themePageHeader": {},
@@ -169,7 +169,7 @@
     "@identityActiveDirectoryInfo": {},
     "activeDirectoryTitle": "لِج إلى Active Directory",
     "@activeDirectoryTitle": {},
-    "activeDirectoryHeader": "أألِج إلى Active Directory؟",
+    "activeDirectoryHeader": "تسجيل الدخول إلى Active Directory؟",
     "@activeDirectoryHeader": {},
     "activeDirectoryInfo": "صُمِّمت {DISTRO} لتتكامل بسلاسة مع Active Directory لتسهيل الإدارة.",
     "@activeDirectoryInfo": {
@@ -179,7 +179,7 @@
             }
         }
     },
-    "activeDirectoryTestConnection": "اختبر ترابطية النطاق",
+    "activeDirectoryTestConnection": "اختبر اتصال النطاق",
     "@activeDirectoryTestConnection": {},
     "activeDirectoryDomainLabel": "النطاق",
     "@activeDirectoryDomainLabel": {},
@@ -235,7 +235,7 @@
     "@eulaPageTitle": {},
     "eulaReviewTerms": "راجع شروط الترخيص",
     "@eulaReviewTerms": {},
-    "eulaReadAndAcceptTerms": "عليك قراءة شروط الترخيص والموافقة عليها لتستمر في إعداد هذه الآلة.",
+    "eulaReadAndAcceptTerms": "اقرأ شروط الترخيص ووافق عليها للمتابعة.",
     "@eulaReadAndAcceptTerms": {},
     "eulaAcceptTerms": "قرأت الشروط ووافقت عليها",
     "@eulaAcceptTerms": {},
