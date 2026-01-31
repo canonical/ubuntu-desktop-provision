@@ -103,7 +103,7 @@
     "errorPageShowLog": "Afficher le journal",
     "errorPageHideLog": "Masquer le journal",
     "restart": "Redémarrer",
-    "errorPageUnexpected": "Nous sommes désolés, mais nous ne sommes pas sûrs de l'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d'installation. Vous pouvez également <a> signaler le problème</a>.",
+    "errorPageUnexpected": "Nous sommes désolés, mais nous ne sommes pas sûrs de l'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d'installation. Vous pouvez également <a>signaler le problème</a>.",
     "activeDirectoryHeader": "Se connecter à Active Directory ?",
     "activeDirectoryInfo": "{DISTRO} est conçu pour s'intégrer de façon transparente avec Active Directory pour faciliter l'administration.",
     "networkPageBody": "Une connexion Internet améliorera votre installation avec le contrôle de compatibilité et les logiciels supplémentaires.",
