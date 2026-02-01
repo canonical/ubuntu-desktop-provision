@@ -25,7 +25,7 @@
     "networkWiredOff": "Tá nasc sreinge casta as",
     "networkHiddenWifiNameRequired": "Tá ainm líonra de dhíth",
     "networkNoneOption": "Ná ceangail leis an idirlíon",
-    "errorPageUnexpected": "Tá brón orainn, ach níl muid cinnte cad é an earráid. Is féidir leat do ríomhaire a atosú agus an próiseas suiteála a thosú arís. Is féidir leat <a>an cheist a thuairisciú</a> freisin.",
+    "errorPageUnexpected": "Tá brón orainn, ach nílimid cinnte cad é an earráid. Is féidir leat iarracht a dhéanamh do ríomhaire a atosú agus an próiseas suiteála a thosú arís. Is féidir leat <a>an fhadhb a thuairisciú</a> freisin.",
     "eulaPageTitle": "Comhaontú ceadúnais",
     "errorPageUbuntuBug": "Chun tuairisc fhabht uathoibrithe a sheoladh lena n-áirítear faisnéis dífhabhtaithe ábhartha, rith <pre>sudo ubuntu-bug {SNAP}</pre> i teirminéal, nó ón gconsól ordaithe (Alt+F2).",
     "errorPageHideLog": "Folaigh logchomhad",
