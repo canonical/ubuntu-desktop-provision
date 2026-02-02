@@ -105,7 +105,7 @@
     "accessibilityPageBody": "Passen Sie {DISTRO} an Ihre Bedürfnisse an, bevor Sie es einrichten. Sie können sie später in den Systemeinstellungen ändern.",
     "accessibilityScreenReaderLabel": "Bildschirmleser",
     "accessibilityStickKeysLabel": "Haftbare Tasten",
-    "errorPageUnexpected": "Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Sie können auch das <a>Problem melden</a>.",
+    "errorPageUnexpected": "Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Außerdem können Sie das <a>Problem melden</a>.",
     "accessibilityDesktopZoomLabel": "Schreibtisch-Zoom",
     "errorPageUbuntuBug": "Um einen automatisierten Fehlerbericht mit relevanten Debug-Informationen zu senden, führen Sie bitte <pre>sudo ubuntu-bug {SNAP}</pre> in einem Terminal oder von der Befehlskonsole (Alt+F2) aus.",
     "closeIconSemanticLabel": "Schließen",
