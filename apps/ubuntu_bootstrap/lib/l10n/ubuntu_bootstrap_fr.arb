@@ -487,7 +487,7 @@
     "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Désactiver manuellement le module de persistance absolue",
     "tpmActionFixActionRebootDescription": "Redémarrer l’ordinateur pour terminer les actions précédentes.",
     "tpmActionFixActionRebootTpmDeviceFailureDescription": "Redémarrer l’ordinateur pourrait résoudre le problème.",
-    "tpmActionFixActionShutdownDescription": "Éteindre l’ordinateur pour effectuer les actions précédentes.",
+    "tpmActionFixActionShutdownDescription": "Éteindre l’ordinateur pour terminer les actions précédentes.",
     "tpmActionFixActionRebootToFwSettingsDescription": "Vous pouvez le faire dans les paramètres du micrologiciel de votre ordinateur.",
     "tpmActionErrorKindAddonDriversPresent": "Pilotes supplémentaires présents",
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vous pouvez peut-être le faire dans les paramètres du micrologiciel de votre ordinateur. Consultez la documentation du fournisseur du processeur pour obtenir des conseils.",
