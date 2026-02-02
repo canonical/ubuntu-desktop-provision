@@ -16,6 +16,10 @@ architectures:
 package-repositories:
   - type: apt
     ppa: desktop-snappers/core22-mesa-backports
+    # pyroute2 from core22 is not compatible with the pure Python implementation of
+    # probert (LP: #2139131).
+  - type: apt
+    ppa: subiquity/core22
 
 apps:
   subiquity-server:
@@ -53,7 +57,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 65491c99edbc1776d205156de8a74220d7aaa71e
+    source-commit: &commit-ref f32962636fbf4bb445c8e221c718dbee3c57edf1
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -72,7 +76,7 @@ parts:
     plugin: nil
     source: https://git.launchpad.net/curtin
     source-type: git
-    source-commit: 0fd15cd64ba6380f3835d9c2226fae1061547c31
+    source-commit: 8bc0121d6809719a611f3f9db9630122b0e8ed8f
     override-pull: |
       craftctl default
       PACKAGED_VERSION="$(git describe --long --abbrev=9 --match=[0-9][0-9]*)"
@@ -96,17 +100,10 @@ parts:
     plugin: nil
     source: https://github.com/canonical/probert.git
     source-type: git
-    source-commit: ee45ec6103d235884828ad7aca5018fafdfc4a62
+    source-commit: 26175bb2fb952335cc652c602e7c5ae6ef7ac82b
     override-build: *pyinstall
     build-packages:
-      - build-essential
-      - libnl-3-dev
-      - libnl-genl-3-dev
-      - libnl-route-3-dev
-      - pkg-config
-      - python3-dev
       - python3-pip
-    build-attributes: [enable-patchelf]
     stage:
       - "*"
       - -bin/python3*
