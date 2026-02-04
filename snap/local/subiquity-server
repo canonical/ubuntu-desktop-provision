@@ -35,6 +35,7 @@ args=(
 	--storage-version=2
 	--postinst-hooks-dir=$SNAP/etc/subiquity/postinst.d
 	--no-wlan-listener
+	--no-report-storage-user-error
 )
 
 block_probing_timeout="$(block_probing_timeout)"
