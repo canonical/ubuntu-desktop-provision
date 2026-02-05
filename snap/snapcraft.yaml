@@ -45,7 +45,6 @@ apps:
       LIVE_RUN: 1
       LOG_LEVEL: debug
       SNAP_PYTHON: python3
-      FLUTTER_LINUX_RENDERER: software
 
   probert:
     command: bin/probert
