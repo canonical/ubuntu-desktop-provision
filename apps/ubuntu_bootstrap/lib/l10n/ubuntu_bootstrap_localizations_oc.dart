@@ -483,8 +483,13 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Chifrar amb frasa secrèta';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Deuretz picar una frasa secrèta cada còp qu\'alucatz l\'ordenador. Emplega lo chiframent LUKS amb LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

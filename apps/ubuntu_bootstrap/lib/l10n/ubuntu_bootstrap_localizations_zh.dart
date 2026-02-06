@@ -442,8 +442,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => '用密码加密';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      '您每次打开计算机都将需要输入密码。这将同 LVM 一同使用 LUKS 加密。';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
@@ -2002,10 +2007,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get installationTypeLVMEncryption => '使用密碼加密';
-
-  @override
-  String get installationTypeLVMEncryptionInfo =>
-      '每次開啟電腦時，您都需要輸入密碼。這使用 LVM 的 LUKS 加密。';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已選用 LVM 及加密';

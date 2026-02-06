@@ -477,8 +477,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Salaa tunnuslauseella';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Tunnuslause tulee syöttää joka kerta tietokonetta avattaessa. Tämä valinta käyttää LUKS-salausta yhdessä LVM:n kanssa.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';

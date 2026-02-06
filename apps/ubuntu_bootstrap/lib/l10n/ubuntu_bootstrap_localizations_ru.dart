@@ -483,8 +483,13 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Использовать шифрование с паролем';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Вам нужно будет вводить пароль каждый раз при включении компьютера. Эта функция использует шифрование LUKS с LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

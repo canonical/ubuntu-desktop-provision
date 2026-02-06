@@ -473,8 +473,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'הצפנה עם מילת צופן';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'יש למלא מילת צופן עם כל הדלקה של המחשב. משתמש בהצפנת LUKS עם LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'נבחרו LVM והצפנה';

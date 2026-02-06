@@ -488,8 +488,13 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'ஒரு கடவுச்சொல்லுடன் குறியாக்கம்';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் நீங்கள் ஒரு கடவுச்சொற்றாக்க வேண்டும். இது எல்விஎம் உடன் லக்ச் குறியாக்கத்தைப் பயன்படுத்துகிறது.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

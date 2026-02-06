@@ -460,8 +460,13 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'パスフレーズで暗号化';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'PCの電源を入れるたびにパスフレーズの入力が必要です。LVMのLUKS暗号化を使用します。';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVMと暗号化を選択';

@@ -479,8 +479,13 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Ĉifri kun pasfrazo';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Vi bezonis tajpi pasfrazon por startigi la komputilon. Tio uzas LUKS-ĉifradon kun LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

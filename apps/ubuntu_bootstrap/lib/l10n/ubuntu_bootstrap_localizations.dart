@@ -1017,11 +1017,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Encrypt with a passphrase'**
   String get installationTypeLVMEncryption;
 
-  /// No description provided for @installationTypeLVMEncryptionInfo.
+  /// No description provided for @installationTypeLVMEncryptionInfoResolute.
   ///
   /// In en, this message translates to:
-  /// **'You will need to enter a passphrase every time you turn on your computer.'**
-  String get installationTypeLVMEncryptionInfo;
+  /// **'You will need to enter a passphrase every time you turn on your computer. {advancedHint}'**
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint);
+
+  /// No description provided for @installationTypeLVMEncryptionInfo2.
+  ///
+  /// In en, this message translates to:
+  /// **'This uses LVM with LUKS encryption.'**
+  String get installationTypeLVMEncryptionInfo2;
 
   /// No description provided for @installationTypeLVMEncryptionSelected.
   ///

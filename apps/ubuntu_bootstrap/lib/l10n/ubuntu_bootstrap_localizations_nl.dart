@@ -487,8 +487,13 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
       'Versleutelen met een wachtwoordzin';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'U moet elke keer dat u de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

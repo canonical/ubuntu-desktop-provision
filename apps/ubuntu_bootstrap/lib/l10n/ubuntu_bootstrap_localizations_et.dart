@@ -482,8 +482,13 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Krüpti salafraasiga';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Sa pead sisestama selle salafraasi alati peale arvuti sisselülitamist. Krüptimiseks on kasutusel LUKS ja LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

@@ -482,8 +482,13 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Criptigh le pasfhrása';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Beidh ort pasfhrása a chur isteach gach uair a chuireann tú do ríomhaire ar siúl. Úsáideann sé seo criptiú LUKS le LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

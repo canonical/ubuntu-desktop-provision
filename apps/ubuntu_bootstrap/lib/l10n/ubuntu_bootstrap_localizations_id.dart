@@ -482,8 +482,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Enkripsi dengan frasa sandi';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Anda harus memasukkan frasa sandi setiap kali Anda menyalakan komputer Anda. Ini menggunakan enkripsi LUKS dengan LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

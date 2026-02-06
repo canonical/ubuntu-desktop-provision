@@ -462,8 +462,13 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'LVM과 암호화 사용';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM 및 암호화 선택됨';

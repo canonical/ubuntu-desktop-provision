@@ -476,8 +476,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'رمزنگاری با عبارت عبور';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'هربار که می‌خواهید رایانه‌تان را روشن کنید باید عبارت عبور را وارد کنید. این عبارت از رمزنگاری LUKS با LVM استفاده می‌کند.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

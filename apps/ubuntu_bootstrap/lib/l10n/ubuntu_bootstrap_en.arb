@@ -251,7 +251,15 @@
   "installationTypeLVM": "Use LVM without encryption",
   "installationTypeLVMSelected": "LVM selected",
   "installationTypeLVMEncryption": "Encrypt with a passphrase",
-  "installationTypeLVMEncryptionInfo": "You will need to enter a passphrase every time you turn on your computer.",
+  "installationTypeLVMEncryptionInfoResolute": "You will need to enter a passphrase every time you turn on your computer. {advancedHint}",
+  "@installationTypeLVMEncryptionInfoResolute": {
+    "placeholders": {
+      "advancedHint": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVMEncryptionInfo2": "This uses LVM with LUKS encryption.",
   "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
   "installationTypeEncryptInfo": "You will choose a security key in the next step.",
   "installationTypeZFS": "Use ZFS without encryption",

@@ -485,8 +485,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Шифрування за допомогою парольної фрази';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Вам потрібно буде вводити парольну фразу щоразу, коли ви вмикаєте комп\'ютер. Для цього використовується шифрування LUKS за допомогою LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>

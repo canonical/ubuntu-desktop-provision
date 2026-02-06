@@ -484,8 +484,13 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Šifrovat pomocí přístupového hesla';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Při každém zapnutí počítače bude třeba zadat přístupové heslo. Používá se šifrování LUKS s LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybráno LVM a šifrování';
