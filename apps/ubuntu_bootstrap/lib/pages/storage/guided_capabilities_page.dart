@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
@@ -29,6 +30,8 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final experimentalBadgeText =
         UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
+    final tpmOptionEnabled = model.currentTargetSupportsTpm ||
+        model.guidedTarget?.tpmDisallowedReason != null;
 
     return HorizontalPage(
       windowTitle: lang.installationTypeAdvancedTitle,
@@ -71,15 +74,14 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
               OptionButton<GuidedCapability?>(
                 title: Text(lang.installationTypeTPM),
                 subtitle: Text(
-                  model.currentTargetSupportsTpm
+                  tpmOptionEnabled
                       ? lang.installationTypeTPMInfoResolute
                       : lang.installationTypeTPMInfoUnavailable,
                 ),
                 value: GuidedCapability.CORE_BOOT_ENCRYPTED,
                 groupValue: model.guidedCapability?.clean(),
-                onChanged: model.currentTargetSupportsTpm
-                    ? (v) => model.guidedCapability = v
-                    : null,
+                onChanged:
+                    tpmOptionEnabled ? (v) => model.guidedCapability = v : null,
                 isThreeLines: false,
               ),
               YaruExpandable(
@@ -176,4 +178,14 @@ extension on GuidedCapability {
           GuidedCapability.CORE_BOOT_ENCRYPTED,
         _ => this,
       };
+}
+
+extension on GuidedStorageTarget {
+  String? get tpmDisallowedReason => disallowed
+      .firstWhereOrNull(
+        (e) =>
+            e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
+            e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
+      )
+      ?.message;
 }
