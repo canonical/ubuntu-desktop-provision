@@ -121,14 +121,18 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                 value: model.isInstalling ? null : 0,
               ),
             ),
-            trailing: IconButton(
-              icon: Icon(
-                YaruIcons.terminal,
-                color:
-                    model.isLogVisible ? Theme.of(context).primaryColor : null,
-                semanticLabel: lang.toggleLogsSemanticLabel,
+            trailing: Semantics(
+              toggled: model.isLogVisible,
+              child: IconButton(
+                icon: Icon(
+                  YaruIcons.terminal,
+                  color: model.isLogVisible
+                      ? Theme.of(context).primaryColor
+                      : null,
+                  semanticLabel: lang.toggleLogsSemanticLabel,
+                ),
+                onPressed: model.toggleLogVisibility,
               ),
-              onPressed: model.toggleLogVisibility,
             ),
             leading: Row(
               children: [
