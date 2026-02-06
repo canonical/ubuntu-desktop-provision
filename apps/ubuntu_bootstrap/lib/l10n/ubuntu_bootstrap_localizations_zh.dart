@@ -471,9 +471,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => '启用硬件支持的加密';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '在您选择此选项前请<a href=\"$url\">了解 TPM 加密</a>。这可能与您的硬件或者未来的 $DISTRO 更新不兼容。';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => '已选择 TPM';
@@ -2028,11 +2031,6 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get installationTypeTPM => '使用硬體支援的加密';
-
-  @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '在您選擇此選項之前，請<a href=\"$url\">閱讀有關 TPM 加密</a>的資訊。此選項可能不適用於您的硬體或未來的 $DISTRO 版本。';
-  }
 
   @override
   String get installationTypeTPMSelected => '已選用 TPM 加密';

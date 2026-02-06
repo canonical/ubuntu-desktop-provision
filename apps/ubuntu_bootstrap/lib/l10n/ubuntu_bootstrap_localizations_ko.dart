@@ -463,7 +463,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+      'You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM 및 암호화 선택됨';
@@ -491,9 +491,12 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => '하드웨어 기반 전체 디스크 암호화 설정';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '이것은 실험적인 기능이며 이 하드웨어나 향후 $DISTRO 릴리스에서 작동하지 않을 수 있습니다. 이 옵션을 선택하기 전에 <a href=\"$url\">TPM 암호화에 대해 알아보세요</a>.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM 선택됨';

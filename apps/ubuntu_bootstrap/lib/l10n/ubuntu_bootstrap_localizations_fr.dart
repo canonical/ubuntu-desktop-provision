@@ -520,9 +520,12 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Utiliser le chiffrement par matériel';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Lisez à propos du chiffrement TPM</a> avant de choisir cette option. Cela risque de ne pas fonctionner avec votre matériel ou les futures versions de $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM sélectionné';

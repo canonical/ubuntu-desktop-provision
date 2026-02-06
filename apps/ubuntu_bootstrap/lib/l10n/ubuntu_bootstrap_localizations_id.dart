@@ -516,9 +516,12 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Gunakan enkripsi yang didukung oleh perangkat keras';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Bacalah tentang enkripsi TPM</a> sebelum Anda memilih opsi ini. Ini mungkin tidak bekerja dengan perangkat keras atau rilis $DISTRO di masa depan.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM dipilih';

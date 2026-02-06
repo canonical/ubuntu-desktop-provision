@@ -515,9 +515,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Použít šifrování obsluhované hardwarem';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Než zvolíte tuto možnost, <a href=\"$url\">Přečtěte si o šifrování TPM</a>. Nemusí fungovat s vaším hardwarem nebo v budoucích vydáních $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'Vybráno TPM';

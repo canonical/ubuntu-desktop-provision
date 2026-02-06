@@ -485,7 +485,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+      'You will need to enter a passphrase every time you turn on your computer.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -518,9 +518,12 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
       'Utilizar a encriptação com suporte por hardware';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Leia sobre a encriptação TPM</a> antes de escolher esta opção.~Isto pode não funcionar com o seu hardware ou lançamentos futuros $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM selecionado';
@@ -1953,11 +1956,6 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String get installationTypeTPM =>
       'EXPERIMENTAL: Habilitar criptografia completa de disco com suporte de hardware';
-
-  @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Este é um recurso experimental. Pode não funcionar com o seu hardware ou versões futuras do $DISTRO. <a href=\"$url\">Leia sobre a criptografia TPM</a> antes de escolher esta opção.';
-  }
 
   @override
   String get installationTypeTPMSelected => 'TPM selecionado';

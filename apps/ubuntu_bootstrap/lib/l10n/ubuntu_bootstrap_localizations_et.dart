@@ -515,9 +515,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Kasuta raudvarapõhist krüptimist';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Enne selle valiku tegemist <a href=\"$url\">loe lisateavet TPM-i põhise krüptimise kohta</a>. See ei pruugi toimida sinu arvuti raudvaraga ega $DISTRO tulevaste versioonidega.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM on valitud';

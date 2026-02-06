@@ -489,9 +489,12 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'ハードウェアベースのディスク暗号化を使用';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。このハードウェアまたは将来の $DISTRO リリースでは動作しなくなるかもしれません。';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPMを選択';

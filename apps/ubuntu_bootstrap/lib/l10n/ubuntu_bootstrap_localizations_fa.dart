@@ -508,9 +508,12 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'استفاده از رمزنگاری سخت‌افزاری';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'پیش از انتخاب این گزینه <a href=\"$url\">دربارهٔ رمزنگاری TPM بخوانید</a>. ممکن است با سخت‌افزارتان یا ارائه‌های آیندهٔ $DISTRO کار نکند.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM گزیده شد';

@@ -523,9 +523,12 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'வன்பொருள் உதவி குறியாக்கத்தைப் பயன்படுத்தவும்';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href = \"$url\"> இந்த விருப்பத்தைத் தேர்ந்தெடுப்பதற்கு முன் டிபிஎம் குறியாக்கத்தைப் பற்றி படிக்கவும் </a>. இது உங்கள் வன்பொருள் அல்லது எதிர்கால $DISTRO வெளியீடுகளுடன் செயல்படாது.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'டிபிஎம் தேர்ந்தெடுக்கப்பட்டது';

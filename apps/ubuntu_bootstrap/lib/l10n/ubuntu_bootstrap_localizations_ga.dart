@@ -515,9 +515,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Bain úsáid as criptiúchán crua-earraí';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Léigh faoi chriptiú TPM</a> sula roghnaíonn tú an rogha seo. Seans nach n-oibreoidh sé seo le do chrua-earraí nó le heisiúintí $DISTRO amach anseo.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM roghnaithe';

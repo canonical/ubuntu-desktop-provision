@@ -524,9 +524,12 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
       'Hardwaregestützte Verschlüsselung verwenden';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Informieren Sie sich über TPM-Verschlüsselung</a>, bevor Sie diese Option wählen. Dies funktioniert möglicherweise nicht mit Ihrer Hardware oder zukünftigen $DISTRO-Versionen.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM ausgewählt';
