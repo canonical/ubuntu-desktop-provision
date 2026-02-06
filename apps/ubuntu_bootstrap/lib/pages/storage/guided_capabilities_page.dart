@@ -9,6 +9,8 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
+final showAdvancedProvider = StateProvider((_) => false);
+
 /// Select advanced installation features
 class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
   const GuidedCapabilitiesPage({super.key});
@@ -47,15 +49,21 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
               if (model.currentTargetSupportsDirect)
                 OptionButton(
                   title: Text(lang.installationTypeNone),
-                  subtitle: Text(lang.installationTypeNoneInfo),
                   value: GuidedCapability.DIRECT,
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
+                  isThreeLines: false,
                 ),
               if (model.currentTargetSupportsLvm)
                 OptionButton(
                   title: Text(lang.installationTypeLVMEncryption),
-                  subtitle: Text(lang.installationTypeLVMEncryptionInfo),
+                  subtitle: Text(
+                    lang.installationTypeLVMEncryptionInfoResolute(
+                      ref.watch(showAdvancedProvider)
+                          ? lang.installationTypeLVMEncryptionInfo2
+                          : '',
+                    ),
+                  ),
                   value: GuidedCapability.LVM_LUKS,
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
@@ -72,10 +80,13 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                 onChanged: model.currentTargetSupportsTpm
                     ? (v) => model.guidedCapability = v
                     : null,
+                isThreeLines: false,
               ),
               YaruExpandable(
                 expandButtonPosition: YaruExpandableButtonPosition.start,
                 header: Text(lang.installationTypeAdvancedLabel),
+                onChange: (expanded) =>
+                    ref.read(showAdvancedProvider.notifier).state = expanded,
                 child: Column(
                   children: [
                     const SizedBox(height: kWizardSpacing / 8),
