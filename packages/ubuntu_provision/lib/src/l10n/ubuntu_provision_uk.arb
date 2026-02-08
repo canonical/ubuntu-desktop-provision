@@ -43,7 +43,7 @@
     "networkWifiOption": "Підключитися до Wi-Fi мережі",
     "networkWifiOff": "Бездротове підключення вимкнено",
     "networkWifiNone": "Не знайдено жодного Wi-Fi пристрою",
-    "networkWifiDisabled": "Для використання Wi-Fi на цьому комп'ютері має бути ввімкнений бездротовий зв’язок",
+    "networkWifiDisabled": "Для використання Wi-Fi на цьому комп'ютері має бути ввімкнений бездротовий зв'язок",
     "networkWifiEnable": "Ввімкнути Wi-Fi",
     "networkHiddenWifiOption": "Підключитися до прихованої Wi-Fi мережі",
     "networkHiddenWifiNameLabel": "Назва мережі",
