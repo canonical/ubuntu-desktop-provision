@@ -429,9 +429,9 @@
     "tpmActionFixActionRebootToFwSettings": "הפעלה מחדש להגדרות קושחה",
     "tpmActionFixActionContactOem": "יצירת קשר עם ספק החומרה",
     "tpmActionFixActionContactOsVendor": "יצירת קשר עם ספק מערכת ההפעלה",
-    "tpmActionFixActionEnableTpmViaFirmware": "הפעלת TPM דרך קושחה",
-    "tpmActionFixActionEnableAndClearTpmViaFirmware": "הפעלה וניקוי TPM דרך קושחה",
-    "tpmActionFixActionClearTpmViaFirmware": "פינוי TPM דרך קושחה",
+    "tpmActionFixActionEnableTpmViaFirmware": "הפעלת TPM תוך כדי הפעלה מחדש",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "הפעלת ומחיקת TPM תוך כדי הפעלה מחדש",
+    "tpmActionFixActionClearTpmViaFirmware": "פינוי TPM תוך כדי הפעלה מחדש",
     "tpmActionFixActionClearTpm": "פינוי TPM",
     "tpmActionFixActionProceed": "התעלמות",
     "tpmActionErrorKindEfiVariableAccess": "יש איזו בעיה עם הגדרות הקושחה של המחשב הזה.",
@@ -479,5 +479,13 @@
     "tpmActionErrorKindSysPrepApplicationsPresent": "יש תוכנה שרצה בעלייה שעלולה למנוע חיבור מאובטח ל־TPM של המחשב.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "המחשב הזה משתמש ברשימת היתר ידנית כדי לאמת תוכנות בעלייה.",
     "tpmActionErrorKindGenericTpm": "יש תקלה עם ה־TPM של המחשב הזה.",
-    "tpmActionErrorKindGenericFirmware": "יש תקלה עם הקושחה של המחשב הזה."
+    "tpmActionErrorKindGenericFirmware": "יש תקלה עם הקושחה של המחשב הזה.",
+    "tpmActionFixActionCaveatRetry": "לאחר מכן יש לנסות להתקין מאפס.",
+    "tpmActionFixActionCaveatConfirm": "יכול להיות שתופיע בקשה לאשר את הפעולה הזאת לאחר הפעלה מחדש.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "יכול להיות שניתן לבצע זאת דרך הגדרות הקושחה של המחשב שלך. כדאי לבדוק מה כתוב בהנחיות של יצרן המעבד.",
+    "tpmActionFixActionProceedDescription": "התעלמות מהבעיה הזאת עלולה לגרום להתקנה פחות מאובטחת.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "אפשר לבצע את זה דרך הגדרות הקושחה של המחשב שלך.",
+    "tpmActionFixActionRebootDescription": "יש להפעיל את המחשב מחדש כדי להשלים את הפעולות הקודמות.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "הפעלת המחשב מחדש עשויה לתקן את הבעיה.",
+    "tpmActionFixActionShutdownDescription": "יש לכבות את המחשב כדי להשלים את הפעולות הקודמות."
 }
