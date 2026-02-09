@@ -239,7 +239,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           break;
         case GuidedCapability.ZFS:
           await tap(find.text(l10n.installationTypeAdvancedLabel));
-          await pump();
+          await pumpAndSettle();
           await scrollUntilVisible(
             find.text(l10n.installationTypeZFS),
             -kMinInteractiveDimension / 2,
@@ -250,7 +250,7 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           break;
         case GuidedCapability.ZFS_LUKS_KEYSTORE:
           await tap(find.text(l10n.installationTypeAdvancedLabel));
-          await pump();
+          await pumpAndSettle();
           await scrollUntilVisible(
             find.text(l10n.installationTypeZFSEncryption),
             -kMinInteractiveDimension / 2,
@@ -260,14 +260,6 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           await tap(find.text(l10n.installationTypeZFSEncryption));
           break;
         case GuidedCapability.CORE_BOOT_ENCRYPTED:
-          await tap(find.text(l10n.installationTypeAdvancedLabel));
-          await pump();
-          await scrollUntilVisible(
-            find.text(l10n.installationTypeTPM),
-            -kMinInteractiveDimension / 2,
-            scrollable: find.byType(Scrollable).last,
-          );
-          await pump();
           await tap(find.text(l10n.installationTypeTPM));
           break;
         default:

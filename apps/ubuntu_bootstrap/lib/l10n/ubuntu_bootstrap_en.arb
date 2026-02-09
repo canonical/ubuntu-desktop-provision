@@ -242,7 +242,7 @@
     }
   },
   "installationTypeEraseInfo": "All data and partitions on the disk will be erased, including operating systems.",
-  "installationTypeAdvancedLabel": "Show advanced options...",
+  "installationTypeAdvancedLabel": "Advanced options",
   "installationTypeAdvancedTitle": "Encryption and file system",
   "installationTypeExperimental": "Experimental",
   "installationTypeNone": "No encryption",
@@ -251,7 +251,15 @@
   "installationTypeLVM": "Use LVM without encryption",
   "installationTypeLVMSelected": "LVM selected",
   "installationTypeLVMEncryption": "Encrypt with a passphrase",
-  "installationTypeLVMEncryptionInfo": "You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.",
+  "installationTypeLVMEncryptionInfoResolute": "You will need to enter a passphrase every time you turn on your computer. {advancedHint}",
+  "@installationTypeLVMEncryptionInfoResolute": {
+    "placeholders": {
+      "advancedHint": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVMEncryptionInfo2": "This uses LVM with LUKS encryption.",
   "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
   "installationTypeEncryptInfo": "You will choose a security key in the next step.",
   "installationTypeZFS": "Use ZFS without encryption",
@@ -260,17 +268,8 @@
   "installationTypeZFSSelected": "ZFS selected",
   "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
   "installationTypeTPM": "Use hardware-backed encryption",
-  "installationTypeTPMInfo": "<a href=\"{url}\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future {DISTRO} releases.",
-  "@installationTypeTPMInfo": {
-    "placeholders": {
-      "DISTRO": {
-        "type": "String"
-      },
-      "url": {
-        "type": "String"
-      }
-    }
-  },
+  "installationTypeTPMInfoResolute": "The disk will unlock automatically during startup.",
+  "installationTypeTPMInfoUnavailable": "Not available on this computer.",
   "installationTypeTPMSelected": "TPM selected",
   "installationTypeReinstall": "Erase {os} and reinstall",
   "@installationTypeReinstall": {

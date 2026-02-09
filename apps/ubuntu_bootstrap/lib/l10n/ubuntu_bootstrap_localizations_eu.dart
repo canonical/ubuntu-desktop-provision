@@ -452,7 +452,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'All data and partitions on the disk will be erased, including operating systems.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Show advanced options...';
+  String get installationTypeAdvancedLabel => 'Advanced options';
 
   @override
   String get installationTypeAdvancedTitle => 'Encryption and file system';
@@ -480,8 +480,13 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -513,9 +518,12 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Use hardware-backed encryption';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future $DISTRO releases.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM selected';

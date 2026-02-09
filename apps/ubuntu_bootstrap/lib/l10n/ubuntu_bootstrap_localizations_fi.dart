@@ -477,8 +477,13 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Salaa tunnuslauseella';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Tunnuslause tulee syöttää joka kerta tietokonetta avattaessa. Tämä valinta käyttää LUKS-salausta yhdessä LVM:n kanssa.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
@@ -509,9 +514,12 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Käytä laitteistopohjaista koko levyn salausta';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Lue TPM-salauksesta</a> ennen kuin otat käyttöön tämän valinnan. Tämä ei välttämättä toimi sinun laitteistollasi tai tulevilla $DISTRO-julkaisuilla.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM valittu';

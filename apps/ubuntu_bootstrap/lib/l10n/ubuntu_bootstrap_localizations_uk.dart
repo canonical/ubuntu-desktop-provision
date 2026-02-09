@@ -485,8 +485,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Шифрування за допомогою парольної фрази';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Вам потрібно буде вводити парольну фразу щоразу, коли ви вмикаєте комп\'ютер. Для цього використовується шифрування LUKS за допомогою LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -518,9 +523,12 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Використовувати апаратне шифрування';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Прочитайте про шифрування TPM</a>, перш ніж вибрати цей параметр. Це може не працювати на вашому обладнанні або у майбутніх випусках $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM обрано';

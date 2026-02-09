@@ -966,7 +966,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationTypeAdvancedLabel.
   ///
   /// In en, this message translates to:
-  /// **'Show advanced options...'**
+  /// **'Advanced options'**
   String get installationTypeAdvancedLabel;
 
   /// No description provided for @installationTypeAdvancedTitle.
@@ -1017,11 +1017,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Encrypt with a passphrase'**
   String get installationTypeLVMEncryption;
 
-  /// No description provided for @installationTypeLVMEncryptionInfo.
+  /// No description provided for @installationTypeLVMEncryptionInfoResolute.
   ///
   /// In en, this message translates to:
-  /// **'You will need to enter a passphrase every time you turn on your computer. This uses LUKS encryption with LVM.'**
-  String get installationTypeLVMEncryptionInfo;
+  /// **'You will need to enter a passphrase every time you turn on your computer. {advancedHint}'**
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint);
+
+  /// No description provided for @installationTypeLVMEncryptionInfo2.
+  ///
+  /// In en, this message translates to:
+  /// **'This uses LVM with LUKS encryption.'**
+  String get installationTypeLVMEncryptionInfo2;
 
   /// No description provided for @installationTypeLVMEncryptionSelected.
   ///
@@ -1071,11 +1077,17 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Use hardware-backed encryption'**
   String get installationTypeTPM;
 
-  /// No description provided for @installationTypeTPMInfo.
+  /// No description provided for @installationTypeTPMInfoResolute.
   ///
   /// In en, this message translates to:
-  /// **'<a href=\"{url}\">Read about TPM encryption</a> before you choose this option. This may not work with your hardware or future {DISTRO} releases.'**
-  String installationTypeTPMInfo(String DISTRO, String url);
+  /// **'The disk will unlock automatically during startup.'**
+  String get installationTypeTPMInfoResolute;
+
+  /// No description provided for @installationTypeTPMInfoUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Not available on this computer.'**
+  String get installationTypeTPMInfoUnavailable;
 
   /// No description provided for @installationTypeTPMSelected.
   ///

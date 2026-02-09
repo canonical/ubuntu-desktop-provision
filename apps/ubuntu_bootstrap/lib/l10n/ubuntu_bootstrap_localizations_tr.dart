@@ -481,8 +481,13 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Bir parola ile şifreleyin';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Bilgisayarınızı her açtığınızda bir parola girmeniz gerekecektir. Bu, LVM ile LUKS şifrelemesini kullanır.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -514,9 +519,12 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Donanım destekli şifrelemeyi kullanın';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'Bu seçeneği seçmeden önce <a href=\"$url\">TPM şifrelemesi hakkında bilgi edinin</a>. Bu, donanımınız veya gelecekteki $DISTRO sürümleriyle çalışmayabilir.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM seçildi';

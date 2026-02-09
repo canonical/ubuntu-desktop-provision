@@ -33,10 +33,7 @@ void main() {
     );
   }
 
-  Widget buildGuidedCapabilitiesPage(
-    StorageModel model, {
-    bool showAdvanced = false,
-  }) {
+  Widget buildGuidedCapabilitiesPage(StorageModel model) {
     final pageImages = PageImages.internal(
       MockPageConfigService(),
       MockThemeVariantService(),
@@ -45,7 +42,6 @@ void main() {
       overrides: [
         storageModelProvider.overrideWith((_) => model),
         pageImagesProvider.overrideWith((_) => pageImages),
-        showAdvancedProvider.overrideWith((_) => showAdvanced),
       ],
       child: GuidedCapabilitiesPage(),
     );
@@ -445,13 +441,12 @@ void main() {
       final model = buildStorageModel();
 
       await tester.pumpApp(
-        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+        (_) => buildGuidedCapabilitiesPage(model),
       );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
 
-      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
       expect(find.text(l10n.installationTypeLVMEncryption), findsOneWidget);
 
       await tester.tap(find.text(l10n.installationTypeLVMEncryption));
@@ -463,13 +458,15 @@ void main() {
       final model = buildStorageModel();
 
       await tester.pumpApp(
-        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+        (_) => buildGuidedCapabilitiesPage(model),
       );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
 
-      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
+      await tester.tap(find.text(l10n.installationTypeAdvancedLabel));
+      await tester.pumpAndSettle();
+
       expect(find.text(l10n.installationTypeLVM), findsOneWidget);
 
       await tester.tap(find.text(l10n.installationTypeLVM));
@@ -481,11 +478,14 @@ void main() {
       final model = buildStorageModel();
 
       await tester.pumpApp(
-        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+        (_) => buildGuidedCapabilitiesPage(model),
       );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      await tester.tap(find.text(l10n.installationTypeAdvancedLabel));
+      await tester.pumpAndSettle();
 
       await tester.scrollUntilVisible(
         find.text(l10n.installationTypeZFS),
@@ -495,7 +495,6 @@ void main() {
 
       await tester.pump();
 
-      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
       expect(find.text(l10n.installationTypeZFS), findsOneWidget);
 
       await tester.tap(find.text(l10n.installationTypeZFS));
@@ -507,11 +506,14 @@ void main() {
       final model = buildStorageModel();
 
       await tester.pumpApp(
-        (_) => buildGuidedCapabilitiesPage(model, showAdvanced: true),
+        (_) => buildGuidedCapabilitiesPage(model),
       );
 
       final context = tester.element(find.byType(GuidedCapabilitiesPage));
       final l10n = UbuntuBootstrapLocalizations.of(context);
+
+      await tester.tap(find.text(l10n.installationTypeAdvancedLabel));
+      await tester.pumpAndSettle();
 
       await tester.scrollUntilVisible(
         find.text(l10n.installationTypeZFSEncryption),
@@ -521,7 +523,6 @@ void main() {
 
       await tester.pump();
 
-      expect(find.text(l10n.installationTypeAdvancedLabel), findsNothing);
       expect(find.text(l10n.installationTypeZFSEncryption), findsOneWidget);
 
       await tester.tap(find.text(l10n.installationTypeZFSEncryption));

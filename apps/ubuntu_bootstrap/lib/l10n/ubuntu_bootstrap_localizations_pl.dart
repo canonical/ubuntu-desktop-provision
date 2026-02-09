@@ -484,8 +484,13 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Zaszyfruj przy użyciu hasła';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Konieczne będzie wprowadzenie hasła przy każdym włączeniu komputera. Używa szyfrowania LUKS z LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -517,9 +522,12 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Użyj szyfrowania sprzętowego';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Przeczytaj o szyfrowaniu TPM</a> przed wyborem tej opcji. Może ona nie działać z tym sprzętem lub przyszłymi wersjami $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'Wybrano moduł TPM';

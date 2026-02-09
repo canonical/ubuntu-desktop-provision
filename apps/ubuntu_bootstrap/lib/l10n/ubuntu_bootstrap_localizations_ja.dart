@@ -460,8 +460,13 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'パスフレーズで暗号化';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'PCの電源を入れるたびにパスフレーズの入力が必要です。LVMのLUKS暗号化を使用します。';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVMと暗号化を選択';
@@ -489,9 +494,12 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'ハードウェアベースのディスク暗号化を使用';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return 'このオプションを選択する前に <a href=\"$url\">TPM暗号化</a> をよく読んでください。このハードウェアまたは将来の $DISTRO リリースでは動作しなくなるかもしれません。';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPMを選択';

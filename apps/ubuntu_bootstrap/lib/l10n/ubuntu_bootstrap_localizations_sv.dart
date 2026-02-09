@@ -481,8 +481,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Kryptera med en lösenfras';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Du måste ange en lösenordsfras varje gång du slår på din dator. Detta använder LUKS-kryptering med LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM och kryptering vald';
@@ -512,9 +517,12 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Använd hårdvarustödd kryptering';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Läs om TPM kryptering</a> innan du väljer detta alternativ. Detta kanske inte fungerar med din hårdvara eller framtida $DISTRO släpp.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM vald';

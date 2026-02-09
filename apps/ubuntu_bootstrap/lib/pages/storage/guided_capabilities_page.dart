@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -29,9 +28,10 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final theme = Theme.of(context);
     final experimentalBadgeText =
         UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
+    final tpmOptionEnabled = model.currentTargetSupportsTpm ||
+        model.guidedTarget?.tpmDisallowedReason != null;
 
     return HorizontalPage(
       windowTitle: lang.installationTypeAdvancedTitle,
@@ -52,28 +52,46 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
               if (model.currentTargetSupportsDirect)
                 OptionButton(
                   title: Text(lang.installationTypeNone),
-                  subtitle: Text(lang.installationTypeNoneInfo),
                   value: GuidedCapability.DIRECT,
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
+                  isThreeLines: false,
                 ),
-              const SizedBox(height: kWizardSpacing / 2),
               if (model.currentTargetSupportsLvm)
                 OptionButton(
                   title: Text(lang.installationTypeLVMEncryption),
-                  subtitle: Text(lang.installationTypeLVMEncryptionInfo),
+                  subtitle: Text(
+                    lang.installationTypeLVMEncryptionInfoResolute(
+                      ref.watch(showAdvancedProvider)
+                          ? lang.installationTypeLVMEncryptionInfo2
+                          : '',
+                    ),
+                  ),
                   value: GuidedCapability.LVM_LUKS,
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
-              Visibility(
-                visible: ref.watch(showAdvancedProvider),
+              OptionButton<GuidedCapability?>(
+                title: Text(lang.installationTypeTPM),
+                subtitle: Text(
+                  tpmOptionEnabled
+                      ? lang.installationTypeTPMInfoResolute
+                      : lang.installationTypeTPMInfoUnavailable,
+                ),
+                value: GuidedCapability.CORE_BOOT_ENCRYPTED,
+                groupValue: model.guidedCapability?.clean(),
+                onChanged:
+                    tpmOptionEnabled ? (v) => model.guidedCapability = v : null,
+                isThreeLines: false,
+              ),
+              YaruExpandable(
+                expandButtonPosition: YaruExpandableButtonPosition.start,
+                header: Text(lang.installationTypeAdvancedLabel),
+                onChange: (expanded) =>
+                    ref.read(showAdvancedProvider.notifier).state = expanded,
                 child: Column(
                   children: [
                     const SizedBox(height: kWizardSpacing / 8),
-                    Divider(
-                      color: theme.dividerColor,
-                    ),
                     if (model.currentTargetSupportsLvm)
                       OptionButton(
                         title: Text(lang.installationTypeLVM),
@@ -120,29 +138,10 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         onChanged: (v) => model.guidedCapability = v!.clean(),
                       ),
                     ],
-                    if (model.currentTargetSupportsTpm ||
-                        model.guidedTarget?.tpmDisallowedReason != null) ...[
-                      TpmOption(model: model),
-                    ],
                   ].withSpacing(kWizardSpacing / 2),
                 ),
               ),
-              Visibility(
-                visible: !ref.watch(showAdvancedProvider),
-                child: Column(
-                  children: [
-                    const SizedBox(height: kWizardSpacing),
-                    OutlinedButton(
-                      onPressed: () =>
-                          ref.read(showAdvancedProvider.notifier).state = true,
-                      child: Text(
-                        lang.installationTypeAdvancedLabel,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+            ].withSpacing(kWizardSpacing / 2),
           ),
         ),
       ],
@@ -160,45 +159,13 @@ class TpmOption extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final flavor = ref.watch(flavorProvider);
-    final experimentalBadgeText =
-        UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
 
-    // If TPM is explicitly disallowed we display the reason why, otherwise we show
-    // the link for learning more about TPM FDE.
-    final tpmInfo = model.guidedTarget?.tpmDisallowedReason ??
-        lang.installationTypeTPMInfo(flavor.displayName, model.tpmInfoUrl);
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        OptionButton<GuidedCapability?>(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                flex: 100,
-                child: Text(lang.installationTypeTPM),
-              ),
-              InfoBadge(
-                title: experimentalBadgeText,
-              ),
-            ].withSpacing(kWizardSpacing / 2),
-          ),
-          subtitle: Html(
-            data: tpmInfo,
-            style: {
-              'body': Style(margin: Margins.zero),
-              'a': Style(color: Theme.of(context).colorScheme.link),
-            },
-            onLinkTap: (url, _, __) => launchUrl(url!),
-          ),
-          value: GuidedCapability.CORE_BOOT_ENCRYPTED,
-          groupValue: model.guidedCapability?.clean(),
-          onChanged: (v) => model.guidedCapability = v,
-        ),
-      ],
+    return OptionButton<GuidedCapability?>(
+      title: Text(lang.installationTypeTPM),
+      subtitle: Text(lang.installationTypeTPMInfoResolute),
+      value: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      groupValue: model.guidedCapability?.clean(),
+      onChanged: (v) => model.guidedCapability = v,
     );
   }
 }

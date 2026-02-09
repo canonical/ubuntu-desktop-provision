@@ -488,8 +488,13 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'ஒரு கடவுச்சொல்லுடன் குறியாக்கம்';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'உங்கள் கணினியை இயக்கும் ஒவ்வொரு முறையும் நீங்கள் ஒரு கடவுச்சொற்றாக்க வேண்டும். இது எல்விஎம் உடன் லக்ச் குறியாக்கத்தைப் பயன்படுத்துகிறது.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -523,9 +528,12 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'வன்பொருள் உதவி குறியாக்கத்தைப் பயன்படுத்தவும்';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href = \"$url\"> இந்த விருப்பத்தைத் தேர்ந்தெடுப்பதற்கு முன் டிபிஎம் குறியாக்கத்தைப் பற்றி படிக்கவும் </a>. இது உங்கள் வன்பொருள் அல்லது எதிர்கால $DISTRO வெளியீடுகளுடன் செயல்படாது.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'டிபிஎம் தேர்ந்தெடுக்கப்பட்டது';

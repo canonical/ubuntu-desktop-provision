@@ -473,8 +473,13 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'הצפנה עם מילת צופן';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'יש למלא מילת צופן עם כל הדלקה של המחשב. משתמש בהצפנת LUKS עם LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'נבחרו LVM והצפנה';
@@ -502,9 +507,12 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'להשתמש בהצפנה מגובית חומרה';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">כדאי לקרוא על הצפנת TPM</a> בטרם בחירה באפשרות הזאת. יכול להיות שלא תעבוד עם החומרה שלך או בגרסאות עתידיות של $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM נבחר';

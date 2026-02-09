@@ -483,8 +483,13 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryption => 'Šifrovať prístupovou frázou';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'Budete musieť zadať prístupovú frázu zakaždým, keď zapnete počítač. Používa sa šifrovanie LUKS s LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -516,9 +521,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Použiť hardvérové šifrovanie';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Prečítajte si o šifrovaní TPM</a>, než si vyberiete túto možnosť. Možno nebude fungovať s vaším hardvérom alebo budúcimi verziami $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'Vybrané TPM';

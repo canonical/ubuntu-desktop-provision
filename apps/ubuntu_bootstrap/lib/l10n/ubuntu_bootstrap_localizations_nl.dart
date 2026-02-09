@@ -487,8 +487,13 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
       'Versleutelen met een wachtwoordzin';
 
   @override
-  String get installationTypeLVMEncryptionInfo =>
-      'U moet elke keer dat u de computer aanzet een wachtwoordzin invoeren. Dit maakt gebruik van LUKS-codering met LVM.';
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 =>
+      'This uses LVM with LUKS encryption.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -520,9 +525,12 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'Hardwarematige versleuteling gebruiken';
 
   @override
-  String installationTypeTPMInfo(String DISTRO, String url) {
-    return '<a href=\"$url\">Lees meer over TPM-versleuteling</a> voordat u deze optie kiest. Dit werkt mogelijk niet met jouw hardware of toekomstige versies van $DISTRO.';
-  }
+  String get installationTypeTPMInfoResolute =>
+      'The disk will unlock automatically during startup.';
+
+  @override
+  String get installationTypeTPMInfoUnavailable =>
+      'Not available on this computer.';
 
   @override
   String get installationTypeTPMSelected => 'TPM geselecteerd';
