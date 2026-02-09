@@ -24,7 +24,7 @@
     "rstInstructions": "Для отримання інструкцій відкрийте цю сторінку на телефоні або іншому пристрої: <a href=\"https://{url}\">{url}</a>",
     "dontInstallDriverSoftwareNowDescription": "Ви можете встановити його пізніше з розділу \"Програми та оновлення\".",
     "readyToUse": "{system} встановлена та готова до користування",
-    "installationTypeAdvancedLabel": "Показати додаткові параметри...",
+    "installationTypeAdvancedLabel": "Додаткові параметри",
     "installAlongsideHiddenPartitions": "{num} менших розділів приховано, скористайтеся <a href=\"{url}\">розширеним інструментом розбиття на розділи</a> для більшого контролю",
     "partitionLocationEnd": "Кінець цього простору",
     "confirmPartitionFormat": "розділ <b>{sysname}</b> відформатовано як <b>{format}</b>",
@@ -483,5 +483,16 @@
     "tpmActionFixActionCaveatRetry": "Після цього вам доведеться повторити спробу встановлення з нуля.",
     "tpmActionErrorTitle": "Це рішення не вдалося",
     "tpmActionErrorDescription": "Спробуйте інше рішення або зверніться до ІТ-підтримки",
-    "manualPartitioningWarningBody": "Спробуйте щось інше. Ви також можете <a href=\"\">надіслати звіт про помилку</a>."
+    "manualPartitioningWarningBody": "Спробуйте щось інше. Ви також можете <a href=\"\">надіслати звіт про помилку</a>.",
+    "installationTypeLVMEncryptionInfoResolute": "Вам потрібно буде вводити парольну фразу щоразу, коли ви вмикаєте комп'ютер. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Це використовує LVM з шифруванням LUKS.",
+    "installationTypeTPMInfoResolute": "Диск автоматично розблокується під час запуску.",
+    "installationTypeTPMInfoUnavailable": "Недоступно на цьому комп’ютері."
 }
