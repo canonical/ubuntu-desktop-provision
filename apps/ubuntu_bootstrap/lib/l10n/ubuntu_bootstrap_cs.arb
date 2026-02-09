@@ -30,7 +30,7 @@
     "installationTypeTitle": "Uspořádání disku",
     "installationTypeOSDetected": "Na tomto počítači se už nachází {os}. Co si přejete udělat?",
     "installationTypeNoOSDetected": "Na tomto počítači nebyl zjištěn žádný operační systém. Co si přejete udělat?",
-    "installationTypeAdvancedLabel": "Zobrazit pokročilé možnosti…",
+    "installationTypeAdvancedLabel": "Pokročilé možnosti",
     "installationTypeAdvancedTitle": "Šifrování a souborový systém",
     "installationTypeNone": "Bez šifrování",
     "installationTypeNoneSelected": "Nic nevybráno",
@@ -495,5 +495,16 @@
     "tpmActionFixActionProceedDescription": "Ignorování problému může vést k slaběji zabezpečené instalaci.",
     "tpmActionFixActionCaveatConfirm": "Může se stát, že při restartu budete požádáni o potvrzení této akce.",
     "tpmActionFixActionCaveatRetry": "Poté bude třeba zkusit instalaci znovu od začátku.",
-    "manualPartitioningWarningBody": "Zkuste něco jiného. Je také možné <a href=\"\">odeslat hlášení o chybě</a>."
+    "manualPartitioningWarningBody": "Zkuste něco jiného. Je také možné <a href=\"\">odeslat hlášení o chybě</a>.",
+    "installationTypeLVMEncryptionInfoResolute": "Přístupovou frázi bude třeba zadávat pokaždé, když počítač zapnete. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Toto používá LVM s LUKS šifrováním.",
+    "installationTypeTPMInfoResolute": "Disk bude při startu odemknut automaticky.",
+    "installationTypeTPMInfoUnavailable": "Na tomto počítači není k dispozici."
 }
