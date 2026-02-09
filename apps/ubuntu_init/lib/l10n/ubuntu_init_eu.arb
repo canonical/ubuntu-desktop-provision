@@ -12,5 +12,49 @@
             }
         }
     },
-    "welcomeWhatsNew": "ZER BERRI?"
+    "welcomeWhatsNew": "ZER BERRI?",
+    "welcomeStoreTitle": "Aplikazioen denda itxuraberritua",
+    "welcomeStoreSubtitle": "Software gogokoena aurkitzea inoiz baino errazagoa da orain.",
+    "welcomeSecurityTitle": "Segurtasun areagotua",
+    "welcomeSecuritySubtitle": "Aukera berriak hardware edo ZFS bidezko zifratzean.",
+    "welcomeChangelogLabel": "<a href=\"{url}\">Ikusi aldaketen erregistroa</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryPageTitle": "Telemetria",
+    "telemetryHeader": "Lagundu {distro} hobetzen",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "Lagun gaitzazu {distro} hobetzen sistemako datuak gurekin partekatuz. Datu hauetan doaz zure makinaren modeloa, instalatutako softwarea eta ordu-eremurako aukeratutako kokalekua.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "Bai, partekatu sistemako datuak {distro} taldearekin",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "Ez, ez partekatu sistemako daturik",
+    "telemetryReportLabel": "Erakutsi lehenengo txostena",
+    "telemetryReportTitle": "Txostenaren xehetasunak",
+    "telemetryLegalLabel": "Lege-oharra",
+    "telemetryCollectError": "Huts egin du telemetria datuak biltzeak",
+    "privacyPageTitle": "Kokapen zerbitzuak",
+    "privacyLocationTitle": "Kokapen zerbitzuak gaitu?"
 }
