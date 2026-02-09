@@ -4,7 +4,7 @@
     "tryOrInstallRepairOption": "நிறுவலை பழுதுபார்",
     "installationTypeTitle": "நிறுவல் வகை",
     "installationTypeNoOSDetected": "இந்த கணினியில் தற்போது எந்த இயங்கு தளங்களும் கண்டறியப்படவில்லை.என்ன செய்ய விரும்புகிறீர்கள்?",
-    "installationTypeAdvancedLabel": "மேம்பட்ட விருப்பங்களைக் காட்டு ...",
+    "installationTypeAdvancedLabel": "மேம்பட்ட விருப்பங்கள்",
     "installationTypeAdvancedTitle": "குறியாக்கம் மற்றும் கோப்பு முறைமை",
     "installationTypeNone": "குறியாக்கம் இல்லை",
     "installationTypeNoneSelected": "எதுவும் தேர்வாகவில்லை",
@@ -424,9 +424,9 @@
     "tpmActionErrorKindPreOsDigestVerificationDetected": "ப்ரீ ஓஎச் டைசச்ட் சரிபார்ப்பு கண்டறியப்பட்டது",
     "tpmActionFixActionContactOem": "ஒஇஎம் ஐ தொடர்பு கொள்ளவும்",
     "tpmActionFixActionContactOsVendor": "OS விற்பனையாளரைத் தொடர்பு கொள்ளவும்",
-    "tpmActionFixActionEnableTpmViaFirmware": "நிலைபொருள் வழியாக TPM ஐ இயக்கவும்",
-    "tpmActionFixActionEnableAndClearTpmViaFirmware": "நிலைபொருள் வழியாக TPM ஐ இயக்கி அழிக்கவும்",
-    "tpmActionFixActionClearTpmViaFirmware": "நிலைபொருள் வழியாக TPM ஐ அழிக்கவும்",
+    "tpmActionFixActionEnableTpmViaFirmware": "மறுதொடக்கம் செய்யும்போது TPMஐ இயக்கவும்",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "மறுதொடக்கத்தில் TPM ஐ இயக்கி அழிக்கவும்",
+    "tpmActionFixActionClearTpmViaFirmware": "மறுதொடக்கம் செய்யும் போது TPM ஐ அழிக்கவும்",
     "tpmActionFixActionClearTpm": "TPM ஐ அழி",
     "tpmActionPageTitle": "வன்பொருள் உதவி குறியாக்கத்தை இயக்க முடியவில்லை",
     "tpmActionSolutionLabel": "தீர்வு {n}: {text}",
@@ -465,5 +465,28 @@
     "tpmActionErrorTitle": "இந்த தீர்வு தோல்வியடைந்தது",
     "tpmActionErrorDescription": "வேறு தீர்வை முயற்சிக்கவும் அல்லது IT ஆதரவைத் தொடர்பு கொள்ளவும்",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "தொடக்கத்தில் மென்பொருளைச் சரிபார்க்க இந்தக் கணினி கைமுறை அனுமதிப் பட்டியலைப் பயன்படுத்துகிறது.",
-    "tpmActionErrorKindAddonDriversPresent": "சொருகு இயக்கிகள் உள்ளன"
+    "tpmActionErrorKindAddonDriversPresent": "சொருகு இயக்கிகள் உள்ளன",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "உங்கள் கணினியின் ஃபார்ம்வேர் அமைப்புகளில் இதைச் செய்ய முடியும். வழிகாட்டுதலுக்காக CPU விற்பனையாளரின் ஆவணங்களைச் சரிபார்.",
+    "tpmActionFixActionProceedDescription": "சிக்கலைப் புறக்கணிப்பது குறைவான பாதுகாப்பான நிறுவலுக்கு வழிவகுக்கும்.",
+    "tpmActionFixActionCaveatConfirm": "மறுதொடக்கம் செய்யும்போது இந்தச் செயலை உறுதிப்படுத்தும்படி உங்களிடம் கேட்கப்படலாம்.",
+    "tpmActionFixActionCaveatRetry": "நீங்கள் புதிதாக நிறுவலை மீண்டும் முயற்சிக்க வேண்டும்.",
+    "manualPartitioningWarningBody": "வேறு ஏதாவது முயற்சிக்கவும். நீங்கள் <a href=\"\">ஒரு பிழை அறிக்கையையும் அனுப்பலாம்</a>.",
+    "installationTypeLVMEncryptionInfoResolute": "ஒவ்வொரு முறையும் உங்கள் கணினியை இயக்கும்போது கடவுச்சொற்றொடரை உள்ளிட வேண்டும். {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "இது LUKS குறியாக்கத்துடன் LVM ஐப் பயன்படுத்துகிறது.",
+    "installationTypeTPMInfoResolute": "தொடக்கத்தின்போது வட்டு தானாகவே திறக்கப்படும்.",
+    "installationTypeTPMInfoUnavailable": "இந்தக் கணினியில் கிடைக்கவில்லை.",
+    "tpmActionErrorKindGenericTpm": "இந்தக் கணினியின் TPM இல் சிக்கல் உள்ளது.",
+    "tpmActionErrorKindGenericFirmware": "இந்தக் கணினியின் ஃபார்ம்வேரில் சிக்கல் உள்ளது.",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "முழுமையான நிலைத்தன்மை தொகுதியைக் கைமுறையாக முடக்கவும்",
+    "tpmActionFixActionRebootDescription": "முந்தைய செயல்களை முடிக்கக் கணினியை மறுதொடக்கம் செய்யவும்.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "கணினியை மறுதொடக்கம் செய்வது சிக்கலைச் சரிசெய்யலாம்.",
+    "tpmActionFixActionShutdownDescription": "முந்தைய செயல்களை முடிக்கக் கணினியை அணைக்கவும்.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "உங்கள் கணினியின் ஃபார்ம்வேர் அமைப்புகளில் இதைச் செய்யலாம்."
 }
