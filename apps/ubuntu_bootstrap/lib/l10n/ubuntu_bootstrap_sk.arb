@@ -40,7 +40,7 @@
     "installationTypeDualOSDetected": "Na tomto počítači sa už nachádzajú {os1} a {os2}. Čo chcete urobiť?",
     "installationTypeNoOSDetected": "Na tomto počítači sa teraz nezistil žiadny operačný systém. Čo chcete urobiť?",
     "installationTypeErase": "Vymazať disk a nainštalovať {DISTRO}",
-    "installationTypeAdvancedLabel": "Zobraziť rozšírené možnosti...",
+    "installationTypeAdvancedLabel": "Rozšírené možnosti",
     "installationTypeAdvancedTitle": "Šifrovanie a súborový systém",
     "installationTypeNone": "Bez šifrovania",
     "installationTypeNoneSelected": "Nič nevybrané",
@@ -494,5 +494,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Toto možno budete môcť vykonať v nastaveniach firmvéru vášho počítača. Pre podrobnosti si pozrite dokumentáciu výrobcu procesora.",
     "tpmActionFixActionProceedDescription": "Ignorovanie tohto problému môže viesť k menej bezpečnej inštalácii.",
     "tpmActionFixActionCaveatConfirm": "Po reštarte môžete byť požiadaní o potvrdenie tejto akcie.",
-    "tpmActionFixActionCaveatRetry": "Potom budete musieť spustiť inštaláciu od začiatku."
+    "tpmActionFixActionCaveatRetry": "Potom budete musieť spustiť inštaláciu od začiatku.",
+    "installationTypeLVMEncryptionInfoResolute": "Pri každom zapnutí počítača bude potrebné zadať prístupovú frázu. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Toto používa LVM s LUKS šifrovaním.",
+    "installationTypeTPMInfoResolute": "Disk sa počas spúšťania odomkne automaticky.",
+    "installationTypeTPMInfoUnavailable": "Nie je dostupné na tomto počítači."
 }
