@@ -64,7 +64,7 @@
     "dontInstallDriverSoftwareNowDescription": "Vous pouvez l’installer ultérieurement depuis Logiciel & Mises à jour.",
     "installationTypeOSDetected": "Cet ordinateur est installé avec {os}. Que voulez-vous faire ?",
     "installationTypeErase": "Effacer le disque et installer {DISTRO}",
-    "installationTypeAdvancedLabel": "Montrer fonctions avancées…",
+    "installationTypeAdvancedLabel": "Fonctions avancées",
     "installationTypeAdvancedTitle": "Chiffrement et système de fichiers",
     "installationTypeReinstallWarning": "<font color=\"{color}\">Attention :</font> Cela va supprimer tous vos programmes, documents, photos, musiques, et tous les fichiers de {os}.",
     "installationTypeAlongside": "Installer {product} à côté de {os}",
@@ -493,5 +493,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vous pouvez peut-être le faire dans les paramètres du micrologiciel de votre ordinateur. Consultez la documentation du fournisseur du processeur pour obtenir des conseils.",
     "tpmActionFixActionProceedDescription": "Ignorer le problème pourrait entraîner une installation moins sécurisée.",
     "tpmActionFixActionCaveatConfirm": "Vous devrez peut-être confirmer cette action au redémarrage.",
-    "tpmActionFixActionCaveatRetry": "Vous devrez ensuite recommencer l’installation à partir de zéro."
+    "tpmActionFixActionCaveatRetry": "Vous devrez ensuite recommencer l’installation à partir de zéro.",
+    "installationTypeLVMEncryptionInfoResolute": "Vous devrez saisir une phrase secrète chaque fois que vous allumez votre ordinateur. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Cela utilise LVM avec le chiffrement LUKS.",
+    "installationTypeTPMInfoResolute": "Le disque se déverrouillera automatiquement lors du démarrage.",
+    "installationTypeTPMInfoUnavailable": "Non disponible sur cet ordinateur."
 }
