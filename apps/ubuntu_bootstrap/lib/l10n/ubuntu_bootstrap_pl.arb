@@ -58,7 +58,7 @@
     "secureBootSecurityKeysDontMatch": "Klucze bezpieczeństwa nie są zgodne",
     "installationTypeOSDetected": "Na tym komputerze jest obecnie zainstalowany system {os}. Co chcesz zrobić?",
     "installationTypeNoOSDetected": "Na tym komputerze nie ma obecnie wykrytych systemów operacyjnych. Co chcesz zrobić?",
-    "installationTypeAdvancedLabel": "Pokaż opcje zaawansowane...",
+    "installationTypeAdvancedLabel": "Opcje zaawansowane",
     "installationTypeAdvancedTitle": "Szyfrowanie i system plików",
     "installationTypeNone": "Bez szyfrowania",
     "installationTypeNoneSelected": "Nie wybrano",
@@ -495,5 +495,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Możesz to zrobić w ustawieniach oprogramowania sprzętowego komputera. Sprawdź dokumentację producenta procesora, aby uzyskać wskazówki.",
     "tpmActionFixActionProceedDescription": "Zignorowanie problemu może skutkować słabszym bezpieczeństwem instalacji.",
     "tpmActionFixActionCaveatConfirm": "Potwierdzenie tej czynności może pojawić się przy ponownym uruchomieniu.",
-    "tpmActionFixActionCaveatRetry": "Następnie spróbuj przeprowadzić instalację od nowa."
+    "tpmActionFixActionCaveatRetry": "Następnie spróbuj przeprowadzić instalację od nowa.",
+    "installationTypeLVMEncryptionInfoResolute": "Za każdym razem, gdy włączasz komputer, musisz wpisać hasło. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Używa LVM z szyfrowaniem LUKS.",
+    "installationTypeTPMInfoResolute": "Dysk zostanie odblokowany automatycznie podczas uruchamiania.",
+    "installationTypeTPMInfoUnavailable": "Niedostępne na tym komputerze."
 }
