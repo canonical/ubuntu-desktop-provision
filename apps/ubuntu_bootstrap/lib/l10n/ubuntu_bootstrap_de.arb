@@ -35,7 +35,7 @@
     "installationTypeOSDetected": "Auf diesem Computer befindet sich momentan {os}. Wie möchten Sie vorgehen?",
     "installationTypeNoOSDetected": "Auf diesem Computer befinden sich momentan keine erkannten Betriebssysteme. Wie möchten Sie vorgehen?",
     "installationTypeErase": "Festplatte löschen und {DISTRO} installieren",
-    "installationTypeAdvancedLabel": "Erweiterte Optionen anzeigen ...",
+    "installationTypeAdvancedLabel": "Erweiterte Optionen",
     "installationTypeAdvancedTitle": "Verschlüsselung und Dateisystem",
     "installationTypeNone": "Keine Verschlüsselung",
     "installationTypeNoneSelected": "Keine ausgewählt",
@@ -492,5 +492,16 @@
     "tpmActionFixActionProceedDescription": "Das Ignorieren dieses Problems kann zu einer weniger sicheren Installation führen.",
     "tpmActionFixActionCaveatConfirm": "Möglicherweise werden Sie beim Neustart aufgefordert, diese Aktion zu bestätigen.",
     "tpmActionFixActionCaveatRetry": "Sie müssen dann die Installation von Grund auf neu versuchen.",
-    "manualPartitioningWarningBody": "Versuchen Sie etwas anderes. Sie können auch einen <a href=\"\">Fehlerbericht senden</a>."
+    "manualPartitioningWarningBody": "Versuchen Sie etwas anderes. Sie können auch einen <a href=\"\">Fehlerbericht senden</a>.",
+    "installationTypeTPMInfoUnavailable": "Auf diesem Computer nicht verfügbar.",
+    "installationTypeLVMEncryptionInfoResolute": "Sie müssen jedes Mal, wenn Sie Ihren Computer einschalten, eine Passphrase eingeben. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Dies verwendet LVM mit LUKS-Verschlüsselung.",
+    "installationTypeTPMInfoResolute": "Die Festplatte wird beim Start automatisch entsperrt."
 }
