@@ -37,7 +37,7 @@
     "installationCompleteTitle": "ההתקנה הושלמה",
     "restartInto": "הפעלה מחדש אל {system}",
     "shutdown": "כיבוי",
-    "installationTypeAdvancedLabel": "הצגת אפשרויות מתקדמות…",
+    "installationTypeAdvancedLabel": "אפשרויות מתקדמות",
     "installationTypeAdvancedTitle": "הצפנה ומערכת קבצים",
     "installationTypeErase": "למחוק את הכונן ולהתקין את {DISTRO}",
     "installationTypeReinstallWarning": "<font color=\"{color}\">אזהרה:</font> פעולה זו תמחק את כל התכניות, המסמכים, התמונות, המוזיקה וקבצים מסוגים נוספים כחלק ממערכת {os}.",
@@ -487,5 +487,16 @@
     "tpmActionFixActionRebootToFwSettingsDescription": "אפשר לבצע את זה דרך הגדרות הקושחה של המחשב שלך.",
     "tpmActionFixActionRebootDescription": "יש להפעיל את המחשב מחדש כדי להשלים את הפעולות הקודמות.",
     "tpmActionFixActionRebootTpmDeviceFailureDescription": "הפעלת המחשב מחדש עשויה לתקן את הבעיה.",
-    "tpmActionFixActionShutdownDescription": "יש לכבות את המחשב כדי להשלים את הפעולות הקודמות."
+    "tpmActionFixActionShutdownDescription": "יש לכבות את המחשב כדי להשלים את הפעולות הקודמות.",
+    "installationTypeLVMEncryptionInfoResolute": "דורש מילוי של מילת הצופן בכל הפעלה של המחשב. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "משתמש ב־LVM (ניהול כרכים לוגי) עם הצפנת LUKS (הגדרת מפתח אחוד בלינוקס).",
+    "installationTypeTPMInfoResolute": "נעילת הכונן הזאת תיפתח אוטומטית במהלך הפעלת המחשב.",
+    "installationTypeTPMInfoUnavailable": "לא זמין במחשב הזה."
 }
