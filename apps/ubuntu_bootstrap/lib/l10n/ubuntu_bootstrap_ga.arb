@@ -50,7 +50,7 @@
     "installationTypeNoOSDetected": "Níl aon chórais oibriúcháin aimsithe ag an ríomhaire seo faoi láthair. Céard ar mhaith leat a dhéanamh?",
     "installationTypeErase": "Léirscrios diosca agus suiteáil {DISTRO}",
     "installationTypeEraseInfo": "Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.",
-    "installationTypeAdvancedLabel": "Taispeáin ardroghanna...",
+    "installationTypeAdvancedLabel": "Roghanna ardleibhéil",
     "installationTypeAdvancedTitle": "Criptiú agus córas comhaid",
     "installationTypeExperimental": "Turgnamhach",
     "installationTypeNoneSelected": "Níl aon cheann roghnaithe",
@@ -492,5 +492,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "B’fhéidir go mbeifeá in ann é seo a dhéanamh i socruithe dochtearraí do ríomhaire. Seiceáil doiciméadacht an tsoláthair LAP le haghaidh treorach.",
     "tpmActionFixActionProceedDescription": "D’fhéadfadh sé go mbeadh an suiteáil níos lú slán má dhéantar neamhaird den fhadhb.",
     "tpmActionFixActionCaveatConfirm": "D’fhéadfaí iarraidh ort an gníomh seo a dheimhniú nuair a atosófar é.",
-    "tpmActionFixActionCaveatRetry": "Beidh ort iarracht eile a dhéanamh an suiteáil ón tús ansin."
+    "tpmActionFixActionCaveatRetry": "Beidh ort iarracht eile a dhéanamh an suiteáil ón tús ansin.",
+    "installationTypeLVMEncryptionInfoResolute": "Beidh ort frása faire a iontráil gach uair a chasann tú ar do ríomhaire. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Úsáideann sé seo LVM le criptiú LUKS.",
+    "installationTypeTPMInfoResolute": "Díghlasálfar an diosca go huathoibríoch le linn an tosaithe.",
+    "installationTypeTPMInfoUnavailable": "Níl sé ar fáil ar an ríomhaire seo."
 }
