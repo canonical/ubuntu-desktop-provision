@@ -15,7 +15,7 @@
     "partitionTypePrimary": "Primär",
     "readyToUse": "{system} är installerat och redo att användas",
     "installationTypeErase": "Radera disk och installera {DISTRO}",
-    "installationTypeAdvancedLabel": "Visa avancerade alternativ...",
+    "installationTypeAdvancedLabel": "Avancerade alternativ",
     "installationTypeAdvancedTitle": "Kryptering och filsystem",
     "installationTypeNone": "Ingen kryptering",
     "installationTypeNoneSelected": "Inget valt",
@@ -495,5 +495,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Du kan eventuellt göra detta i datorns inställningar för fast programvara. Se dokumentationen från CPU-leverantören för vägledning.",
     "tpmActionFixActionProceedDescription": "Att ignorera problemet kan leda till en mindre säker installation.",
     "tpmActionFixActionCaveatConfirm": "Du kan bli ombedd att bekräfta denna åtgärd vid omstart.",
-    "tpmActionFixActionCaveatRetry": "Du måste då försöka installera om från början."
+    "tpmActionFixActionCaveatRetry": "Du måste då försöka installera om från början.",
+    "installationTypeTPMInfoUnavailable": "Ej tillgänglig på den här datorn.",
+    "installationTypeLVMEncryptionInfoResolute": "Du kommer att behöva ange en lösenfras varje gång du startar din dator. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Detta använder LVM med LUKS-kryptering.",
+    "installationTypeTPMInfoResolute": "Disken kommer att låsas upp automatiskt under uppstart."
 }
