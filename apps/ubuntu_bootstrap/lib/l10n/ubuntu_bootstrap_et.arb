@@ -119,7 +119,7 @@
     "installationTypeNoOSDetected": "Selles arvutis on pole olemas ühtegi tuvastatavat operatsioonisüsteemi. Mida sa tahad teha?",
     "installationTypeErase": "Kustuta ja vorminda ketas ning paigaldada {DISTRO}",
     "installationTypeEraseInfo": "Kõik andmed ja partitsioonid sellelt kettalt saavad järgnevaga kustutatud, sealhulgas operatsioonisüsteemid.",
-    "installationTypeAdvancedLabel": "Näita lisavalikuid...",
+    "installationTypeAdvancedLabel": "Lisaseadistused",
     "createPassphrase": "Loo salafraas",
     "installationTypeHeader": "Kuidas sa tahad {DISTRO} paigaldada?",
     "confirmPassphrase": "Korda salafraasi",
@@ -476,5 +476,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Sa võib-olla saad seda teha oma arvuti püsivara seadistsutes. Lisateavet leiad protsessoritootja dokumentatsioonist.",
     "tpmActionFixActionProceedDescription": "Selle probleemi eiramisel võib tulemuseks olla vähemturvaline süsteemipaigaldus.",
     "tpmActionFixActionCaveatConfirm": "Ilmselt sinult küsitakse arvuti uuesti käivitamisel selle toimingu osas kinnitust.",
-    "tpmActionFixActionCaveatRetry": "Sel juhul pead paigalduse tegema uuesti nullist."
+    "tpmActionFixActionCaveatRetry": "Sel juhul pead paigalduse tegema uuesti nullist.",
+    "installationTypeLVMEncryptionInfoResolute": "Igal arvuti sisselülitamisel pead sisestama salafraasi. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Sel puhul on kasutusel LVM koos LUKS-põhise krüptimisega.",
+    "installationTypeTPMInfoResolute": "Ketas avatakse käivitamisel lukust automaatselt.",
+    "installationTypeTPMInfoUnavailable": "Pole saadaval selles arvutis."
 }
