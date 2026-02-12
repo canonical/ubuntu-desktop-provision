@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/intl_standalone.dart';
 import 'package:path/path.dart' as p;
-import 'package:pdfrx/pdfrx.dart';
+// import 'package:pdfrx/pdfrx.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/eula/eula_l10n.dart';
@@ -103,29 +103,30 @@ class _EulaPdfViewer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PdfViewer.file(
-      path,
-      params: PdfViewerParams(
-        errorBannerBuilder: (context, error, stackTrace, documentRef) => Center(
-          child: Text(
-            stackTrace.toString(),
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-        ),
-        linkWidgetBuilder: (context, link, size) => MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: GestureDetector(
-            onTap: () {
-              UrlLauncher().launchUrl(link.url.toString());
-            },
-            child: Container(
-              width: size.width,
-              height: size.height,
-              color: Colors.transparent,
-            ),
-          ),
-        ),
-      ),
-    );
+    return SizedBox();
+    // return PdfViewer.file(
+    //   path,
+    //   params: PdfViewerParams(
+    //     errorBannerBuilder: (context, error, stackTrace, documentRef) => Center(
+    //       child: Text(
+    //         stackTrace.toString(),
+    //         style: Theme.of(context).textTheme.bodyLarge,
+    //       ),
+    //     ),
+    //     linkWidgetBuilder: (context, link, size) => MouseRegion(
+    //       cursor: SystemMouseCursors.click,
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           UrlLauncher().launchUrl(link.url.toString());
+    //         },
+    //         child: Container(
+    //           width: size.width,
+    //           height: size.height,
+    //           color: Colors.transparent,
+    //         ),
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 }
