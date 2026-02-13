@@ -58,7 +58,7 @@
     "chooseSecurityKey": "Выберите ключ безопасности",
     "confirmSecurityKey": "Подтвердите ключ безопасности",
     "otherOptions": "Другие опции",
-    "installationTypeAdvancedLabel": "Дополнительные возможности...",
+    "installationTypeAdvancedLabel": "Дополнительные возможности",
     "installationTypeAdvancedTitle": "Файловая система и шифрование",
     "newPartitionTableConfirmationTitle": "Новый пустой раздел",
     "restartInto": "Перезагрузка в {system}",
@@ -495,5 +495,16 @@
     "tpmActionFixActionProceedDescription": "Игнорирование этой проблемы может привести к снижению безопасности установки.",
     "tpmActionFixActionCaveatConfirm": "При перезапуске может быть предложено подтвердить это действие.",
     "tpmActionFixActionCaveatRetry": "Затем вам придется повторить установку с самого начала.",
-    "manualPartitioningWarningBody": "Попробуйте что-нибудь еще. Вы также можете <a href=\"\">отправить отчет об ошибке</a>."
+    "manualPartitioningWarningBody": "Попробуйте что-нибудь еще. Вы также можете <a href=\"\">отправить отчет об ошибке</a>.",
+    "installationTypeLVMEncryptionInfoResolute": "Вам нужно будет вводить пароль каждый раз при включении компьютера. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Эта опция использует LVM с шифрованием LUKS.",
+    "installationTypeTPMInfoResolute": "Диск будет автоматически разблокирован во время запуска.",
+    "installationTypeTPMInfoUnavailable": "Недоступно на этом компьютере."
 }
