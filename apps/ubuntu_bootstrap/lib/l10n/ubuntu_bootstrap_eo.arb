@@ -11,7 +11,7 @@
     "changeButtonText": "Ŝanĝi",
     "partitionTypePrimary": "Unuagrada",
     "restartInto": "Restartigi al {system}",
-    "installationTypeAdvancedLabel": "Montri funkciojn por spertuloj…",
+    "installationTypeAdvancedLabel": "Opcioj por spertuloj",
     "installationTypeNoneSelected": "Nenio elektita",
     "installationTypeTitle": "Agordado de disko",
     "freeDiskSpace": "Disponebla spaco",
@@ -495,5 +495,16 @@
     "tpmActionFixActionRebootToFwSettingsDescription": "Vi povas fari tion per la mikroprogramaj agordoj de via komputilo.",
     "tpmActionFixActionCaveatConfirm": "Vi eble devos konfirmi ĉi tiun agon dum restarto.",
     "tpmActionFixActionCaveatRetry": "Vi devos reprovi la instalon denove.",
-    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vi eble povas fari tion per la mikroprogramaj agordoj de via komputilo. Por helpo, legu la dokumentaron de la fabrikanto de la ĉefprocesoro."
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vi eble povas fari tion per la mikroprogramaj agordoj de via komputilo. Por helpo, legu la dokumentaron de la fabrikanto de la ĉefprocesoro.",
+    "installationTypeTPMInfoUnavailable": "Ne disponebla ĉe ĉi tiu komputilo.",
+    "installationTypeLVMEncryptionInfo2": "Tio uzas la Logikan Volum-Mastrumanton (LVM) kun ĉifrado per la Linux-a Unuiĝinta Ŝlosilo-Agordo (LUKS).",
+    "installationTypeTPMInfoResolute": "La disko malŝlosiĝos aŭtomate dum starto.",
+    "installationTypeLVMEncryptionInfoResolute": "Vi devos tajpi pasfrazon ĉiufoje, po unu fojo dum starto de via komputilo. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    }
 }
