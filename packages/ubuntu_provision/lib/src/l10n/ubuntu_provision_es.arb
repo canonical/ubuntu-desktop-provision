@@ -95,7 +95,7 @@
     "accessibilityMouseKeysLabel": "Teclas de ratón",
     "accessibilityDesktopZoomLabel": "Ampliación de escritorio",
     "errorPageTitle": "Se produjo un problema",
-    "errorPageUnexpected": "Lo sentimos, pero no estamos seguros de cuál es el error. Puede intentar reiniciar su computadora y comenzar el proceso de instalación nuevamente. También puede <a>informar del problema</a>.",
+    "errorPageUnexpected": "Lo sentimos, pero no estamos seguros de qué es el error. Puede intentar reiniciar su equipo e iniciar el proceso de instalación de nuevo. También puede <a>informar del problema</a>.",
     "errorPageShowLog": "Mostrar registro",
     "errorPageHideLog": "Ocultar registro",
     "restart": "Reiniciar",
