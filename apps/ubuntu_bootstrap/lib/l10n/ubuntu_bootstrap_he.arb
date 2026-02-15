@@ -498,5 +498,7 @@
     },
     "installationTypeLVMEncryptionInfo2": "משתמש ב־LVM (ניהול כרכים לוגי) עם הצפנת LUKS (הגדרת מפתח אחוד בלינוקס).",
     "installationTypeTPMInfoResolute": "נעילת הכונן הזאת תיפתח אוטומטית במהלך הפעלת המחשב.",
-    "installationTypeTPMInfoUnavailable": "לא זמין במחשב הזה."
+    "installationTypeTPMInfoUnavailable": "לא זמין במחשב הזה.",
+    "tpmActionErrorKindAbsolutePresent": "מודול Absolute Persistence פעיל במחשב הזה.",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "כיבוי מודול Absolute Persistence ידנית"
 }
