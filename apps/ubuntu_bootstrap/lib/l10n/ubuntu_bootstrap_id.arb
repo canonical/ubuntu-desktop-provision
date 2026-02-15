@@ -490,5 +490,16 @@
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Anda mungkin dapat melakukannya di pengaturan firmware komputer Anda. Periksa dokumentasi vendor CPU untuk panduan.",
     "tpmActionFixActionProceedDescription": "Mengabaikan masalah dapat mengakibatkan instalasi yang kurang aman.",
     "tpmActionFixActionCaveatConfirm": "Anda mungkin diminta untuk mengonfirmasi tindakan ini saat restart.",
-    "tpmActionFixActionCaveatRetry": "Setelah itu Anda harus mencoba ulang instalasi dari awal."
+    "tpmActionFixActionCaveatRetry": "Setelah itu Anda harus mencoba ulang instalasi dari awal.",
+    "installationTypeLVMEncryptionInfoResolute": "Anda perlu memasukkan frasa sandi setiap kali Anda menyalakan komputer. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Ini menggunakan LVM dengan enkripsi LUKS.",
+    "installationTypeTPMInfoResolute": "Disk akan membuka kunci secara otomatis saat startup.",
+    "installationTypeTPMInfoUnavailable": "Tidak tersedia di komputer ini."
 }
