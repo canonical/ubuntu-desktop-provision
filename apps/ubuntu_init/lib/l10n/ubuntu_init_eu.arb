@@ -56,5 +56,41 @@
     "telemetryLegalLabel": "Lege-oharra",
     "telemetryCollectError": "Huts egin du telemetria datuak biltzeak",
     "privacyPageTitle": "Kokapen zerbitzuak",
-    "privacyLocationTitle": "Kokapen zerbitzuak gaitu?"
+    "privacyLocationTitle": "Kokapen zerbitzuak gaitu?",
+    "privacyLocationEnable": "Kokapen zerbitzuak",
+    "privacyPolicyLink": "Datuen pribatutasuna",
+    "ubuntuProPageTitle": "Ubuntu Pro",
+    "ubuntuProHeader": "Erantsi makina hau",
+    "ubuntuProMagicAttachInstructions": "Erantsi magikoki hemengo kode hau erabiliz <a href=\"https://{url}\">{url}</a>",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProOrAddTokenManually": "edo gehitu tokena eskuz",
+    "ubuntuProTokenTextfieldHint": "Tokena",
+    "ubuntuProSubscriptionDescription": "Eskuratu kode irekiko softwarearen segurtasun harpidetzarik osoena",
+    "ubuntuProSubscriptionFreeForPersonalUse": "Betiko dohainik erabilera pertsonalerako. 30 eguneko proba enpresentzako. <a href=\"https://{url}\">Informazio gehiago</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "Erantsi",
+    "ubuntuProTokenAttachError": "Token baliogabea",
+    "ubuntuProTokenAttachSucess": "Baliozko tokena",
+    "ubuntuProTokenAttachErrorVariant": "Token baliogabea, saiatu berriz",
+    "ubuntuProOnBoardingSkipForNow": "Saltatu oraingoz",
+    "ubuntuProOnBoardingSkipForNowDescription": "Ubuntu Pro geroago ere gaitu dezakezu Softwarea eta eguneraketak aplikaziotik.",
+    "ubuntuProOnBoardingEnableUbuntuPro": "Gaitu Ubuntu Pro",
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "Erantsi makina hau Ubuntu Pro harpidetza bati, eta lortu segurtasun-eguneratzeak pakete sorta zabalagoarentzat 2032ra arte.",
+    "ubuntuProSucessAttachHeader": "Orain Ubuntu Pro gaituta dago makina honentzat",
+    "ubuntuProSucessAttachDescription": "Zure Pro zerbitzuak kudeatzeko Softwarea eta eguneraketak aplikazioa erabil dezakezu.",
+    "welcomeStartTitle": "Hasiera sinplifikatua",
+    "welcomeStartSubtitle": "Martxan jartzeko esperientzia garbiago baten alde.",
+    "privacyLocationSubtitle": "Eman aplikazioei zure kokapen geografikoa jakiteko baimena.\nHau edonoiz alda dezakezu Sistemaren ezarpenetatik."
 }
