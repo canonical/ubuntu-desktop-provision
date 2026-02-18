@@ -390,5 +390,17 @@
     "recoveryKeyExceptionFileSystemTitle": "Fichièr de clau de recuperacion non salvagardat",
     "recoveryKeyExceptionDisallowedPathTitle": "Lo fichièr de clau de recuperacion se pòt pas enregistrar dins un emplaçament temporari",
     "recoveryKeyExceptionFileSystemBody": "Avètz pas l’autorizacion d’escriure dins aqueste dossièr. Ensajatz un luòc diferent o un autre metòde.",
-    "recoveryKeyExceptionDisallowedPathBody": "Ensajatz un emplaçament diferent, coma un lector amovible o un utilizatz un autre metòde."
+    "recoveryKeyExceptionDisallowedPathBody": "Ensajatz un emplaçament diferent, coma un lector amovible o un utilizatz un autre metòde.",
+    "tpmActionConfirmLabel": "Confirmar",
+    "tpmActionSolutionLabel": "Solucion {n} : {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    }
 }
