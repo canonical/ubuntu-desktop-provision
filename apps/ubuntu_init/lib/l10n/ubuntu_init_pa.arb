@@ -1,1 +1,37 @@
-{}
+{
+    "welcomePageTitle": "ਜੀ ਆਇਆਂ ਨੂੰ",
+    "welcomePageHeader": "{distro} ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "ਨਵਾਂ ਕੀ ਹੈ?",
+    "welcomeStoreTitle": "ਐਪ ਸਟੋਰ ਦੀ ਨਵੀਂ ਦਿੱਖ",
+    "welcomeSecurityTitle": "ਵਧਾਈ ਗਈ ਸੁਰੱਖਿਆ",
+    "telemetryPageTitle": "ਟੈਲੀਮੈਂਟਰੀ",
+    "telemetryHeader": "{distro} ਨੂੰ ਸੁਧਾਰਨ ਲਈ ਮਦਦ ਕਰੋ",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "ਨਹੀ, ਸਿਸਟਮ ਡਾਟੇ ਨੂੰ ਸਾਂਝਾ ਨਾ ਕਰੋ",
+    "telemetryLegalLabel": "ਕਨੂੰਨੀ ਨੋਟਿਸ",
+    "privacyPageTitle": "ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ",
+    "privacyLocationTitle": "ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰਨਾ ਹੈ?",
+    "privacyLocationEnable": "ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ",
+    "privacyPolicyLink": "ਡਾਟਾ ਪਰਦੇਦਾਰੀ",
+    "ubuntuProHeader": "ਇਹ ਮਸ਼ੀਨ ਅਟੈਚ ਕਰੋ",
+    "ubuntuProTokenTextfieldHint": "ਟੋਕਨ",
+    "ubuntuProTokenAttachButton": "ਅਟੈਚ",
+    "ubuntuProOnBoardingSkipForNow": "ਹੁਣ ਲਈ ਛੱਡੋ",
+    "successIconSemanticLabel": "ਸਫ਼ਲ",
+    "closeIconSemanticLabel": "ਬੰਦ ਕਰੋ",
+    "maximizeIconSemanticLabel": "ਵੱਧ ਤੋਂ ਵੱਧ",
+    "minimizeIconSemanticLabel": "ਘੱਟੋ-ਘੱਟ"
+}
