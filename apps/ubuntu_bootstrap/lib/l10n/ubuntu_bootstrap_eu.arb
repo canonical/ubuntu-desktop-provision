@@ -192,7 +192,7 @@
         }
     },
     "installationTypeEraseInfo": "Diskoko datu eta partizio guztiak ezabatuko dira, sistema eragileak barne.",
-    "installationTypeAdvancedLabel": "Erakutsi aukera aurreratuak...",
+    "installationTypeAdvancedLabel": "Aukera aurreratuak",
     "installationTypeAdvancedTitle": "Zifratzea eta fitxategi-sistema",
     "installationTypeExperimental": "Esperimentala",
     "installationTypeNone": "Zifratzerik ez",
@@ -209,7 +209,7 @@
     "installationTypeZFSEncryptionInfo": "Zifratze natiboa ZFSrekin. Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro.",
     "installationTypeZFSSelected": "ZFS hautatuta",
     "installationTypeZFSEncryptionSelected": "ZFS eta zifratzea hautatuta",
-    "installationTypeTPM": "Erabili hardwarez indartutako zifratzea",
+    "installationTypeTPM": "Erabili hardware bidezko zifratzea",
     "installationTypeTPMInfo": "<a href=\"{url}\">Irakurri TPM zifratzeari buruz</a> aukera hau hautatu aurretik. Baliteke ez funtzionatzea zure hardwarearekin, edo {DISTRO}ren etorkizuneko bertsioekin.",
     "@installationTypeTPMInfo": {
         "placeholders": {
@@ -838,5 +838,37 @@
     },
     "tpmActionDocumentationLinkLabel": "Dokumentaziora esteka",
     "tpmActionErrorSupportLabel": "Saiatu jarraian azaldutako soluzioekin, jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.",
-    "tpmActionErrorSupportNoActionLabel": "Jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat."
+    "tpmActionErrorSupportNoActionLabel": "Jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.",
+    "tpmActionPageTitle": "Ezin izan da hardware bidezko zifratzea gaitu",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Ordenagailuak ez dauka zifratze metodo honentzako beharrezko segurtasun hardwarerik (TPM 2.0).",
+    "tpmActionErrorKindUnsupportedPlatform": "Ordenagailua ez da hardware bidezko zifratzearekin bateragarria.",
+    "installationTypeLVMEncryptionInfoResolute": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzunero. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Honek LVM darabil LUKS zifratzearekin.",
+    "installationTypeTPMInfoResolute": "Diskoa automatikoki desblokeatuko da abioan.",
+    "installationTypeTPMInfoUnavailable": "Ez dago erabilgarri ordenagailu honetan.",
+    "installationSlidesDevelopmentBody": "{DISTRO} lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta adimen artifiziala (AA) / ikasketa automatikorako, nahiz devops eta administraziorako. {DISTRO} bertsio guztiek azkeneko tresna-kateak ditu barnean, eta IDE nagusi guztiekin bateragarriak dira.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "Hobetu sormena",
+    "installationSlidesCreativityBody": "Animatzailea, diseinatzailea, bideo-sortzailea edo bideojoko garatzailea bazara, era errazean ekar ditzakezu zure lan-fluxuak {DISTRO}ra, kode irekiko eta industriaren software eta aplikazio estandarren sostenguarekin.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "Bikaina jokatzeko"
 }
