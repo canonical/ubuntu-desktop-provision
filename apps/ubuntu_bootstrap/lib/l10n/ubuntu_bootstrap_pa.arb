@@ -1,7 +1,475 @@
 {
-  "@@locale": "pa",
-  "windowTitle": "{RELEASE} ਇੰਸਟਾਲ ਕਰੋ",
-  "tryOption": "{RELEASE}ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
-  "welcome": "ਜੀ ਆਇਆਂ ਨੂੰ",
-  "tryOrInstallReleaseNotesLabel": "ਤੁਸੀਂ <a href=\"{url}\">ਰੀਲਿਜ਼ ਨੋਟਿਸ</a> ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ।"
+    "@@locale": "pa",
+    "windowTitle": "{RELEASE} ਇੰਸਟਾਲ ਕਰੋ",
+    "tryOption": "{RELEASE}ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "welcome": "ਜੀ ਆਇਆਂ ਨੂੰ",
+    "tryOrInstallReleaseNotesLabel": "ਤੁਸੀਂ <a href=\"{url}\">ਰੀਲਿਜ਼ ਨੋਟਿਸ</a> ਪੜ੍ਹਨਾ ਚਾਹੋਗੇ।",
+    "appTitle": "ਉਬੰਤੂ ਡੈਸਕਟਾਪ ਇੰਸਟਾਲਰ",
+    "autoinstallDirectTitle": "ਆਪਣੇ-ਆਪ ਇੰਸਟਾਲੇਸ਼ਨ",
+    "autoinstallDirectFileButtonLabel": "...ਫ਼ਾਇਲ ਨੂੰ ਚੁਣੋ",
+    "autoinstallDirectFileClearButtonLabel": "ਫ਼ਾਇਲ ਨੂੰ ਮਿਟਾਓ",
+    "autoinstallDirectFilePickerTitle": "ਫ਼ਾਇਲ ਨੂੰ ਚੁਣੋ",
+    "autoinstallDirectFilePickerFilterLabel": "YAML ਫਾਇਲਾਂ",
+    "autoinstallDirectImportButtonLabel": "ਇੰਪੋਰਟ",
+    "autoinstallDirectErrorUnkownTitle": "ਅਣਪਛਾਤੀ ਗਲਤੀ",
+    "autoinstallTitle": "ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਕਿਸਮ",
+    "autoinstallHeader": "ਕੀ ਤੁਸੀਂ {DISTRO} ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "changeButtonText": "ਬਦਲੋ",
+    "quitButtonText": "ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਛੱਡੋ",
+    "loadingPageTitle": "{DISTRO} ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "{DISTRO} ਨੂੰ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "ਸਾਵਧਾਨ:",
+    "tryOrInstallTitle": "{DISTRO} ਨੂੰ ਅਜ਼ਮਾਓ ਜਾਂ ਇੰਸਟਾਲ ਕਰੋ",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "{DISTRO} ਨਾਲ ਤੁਸੀਂ ਕੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਰਿਪੇਅਰ ਕਰੋ",
+    "tryOrInstallRepairDescription": "ਰਿਪੇਅਰ ਕਰਨ ਨਾਲ ਦਸਤਾਵੇਜ਼ਾਂ ਜਾਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਦਲੇ ਬਗ਼ੈਰ ਪਹਿਲਾਂ ਹੀ ਇੰਸਟਾਲ ਹੋਏ ਸਾਫਟਵੇਅਰਾਂ ਨੂੰ ਮੁੜ-ਇੰਸਟਾਲ ਕੀਤਾ ਜਾਵੇਗਾ।",
+    "installOption": "{RELEASE} ਨੂੰ ਇੰਸਟਾਲ ਕਰੋ",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "RST ਖੋਜਿਆ",
+    "rstHeader": "ਇੰਸਟਾਲੇਸ਼ਨ ਜਾਰੀ ਰੱਖਣ ਲਈ ਤੁਹਾਨੂੰ RST ਨੂੰ ਅਸਮਰੱਥ ਕਰਨਾ ਪਵੇਗਾ",
+    "rstDisableWindows": "Windows, ਜੇ ਤੁਸੀਂ Windows ਨਾਲ ਡੁਅਲ ਬੂਟ ਸੈਟਅੱਪ ਵਰਤ ਰਹੇ ਹੋ",
+    "rstDisableBios": "BIOS ਸੈਟਿੰਘਾਂ",
+    "rstInstructions": "ਹਦਾਇਤਾਂ ਲਈ ਹੋਰ ਡਿਵਾਈਸ ਉੱਤੇ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ ਜਾਂ ਖੋਲ੍ਹੋ:  <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "ਸਕਿਉਰ ਬੂਟ ਦੀ ਸੰਰਚਨਾ",
+    "configureSecureBootOption": "ਸਕਿਉਰ ਬੂਟ ਦੀ ਸੰਰਚਨਾ",
+    "chooseSecurityKey": "ਸੁਰੱਖਿਆ ਕੁੰਜੀ ਨੂੰ ਚੁਣੋ",
+    "confirmSecurityKey": "ਸੁਰੱਖਿਆ ਕੁੰਜੀ ਨੂੰ ਤਸਦੀਕ ਕਰੋ",
+    "dontInstallDriverSoftwareNow": "ਹੁਣੇ ਡਰਾਇਵਰ ਸਾਫਟੇਅਰ ਨੂੰ ਇੰਸਟਾਲ ਨਾ ਕਰੋ",
+    "dontInstallDriverSoftwareNowDescription": "ਤੁਸੀਂ ਇਸ ਨੂੰ ਸਾਫਟਵੇਅਰ ਅਤੇ ਅੱਪਡੇਟਾਂ ਵਿੱਚੋਂ ਬਾਅਦ ਵਿੱਚ ਇੰਸਟਾਲ ਕਰ ਸਕਦੇ ਹੋ।",
+    "configureSecureBootSecurityKeyRequired": "ਸੁਰੱਖਿਆ ਕੁੰਜੀ ਚਾਹੀਦੀ ਹੈ",
+    "secureBootSecurityKeysDontMatch": "ਸੁਰੱਖਿਆ ਕੁੰਜੀਆਂ ਮਿਲਦੀਆਂ ਨਹੀਂ ਹਨ",
+    "showSecurityKey": "ਵੇਖਾਓ",
+    "hideSecurityKey": "ਓਹਲੇ",
+    "updatesOtherSoftwarePageTitle": "ਐਪਲੀਕੇਸ਼ਨਾਂ",
+    "codecsAndDriversPageTitle": "ਆਪਣੇ ਕੰਪਿਊਟਰ ਨੂੰ ਅਨੁਕੂਲ ਬਣਾਓ",
+    "codecsAndDriversNvidiaNote": "NVIDIA ਗਰਾਫਿਕਸ ਕਾਰਡ ਖੋਜਿਆ ਗਿਆ ਹੈ",
+    "minimalInstallationTitle": "ਮੂਲ ਚੋਣ",
+    "minimalInstallationSubtitle": "ਸਿਰਫ਼ ਲਾਜ਼ਮੀ, ਵੈੱਬ ਬਰਾਊਜ਼ਰ ਅਤੇ ਮੁੱਢਲੀਆਂ ਸਹੂਲਤਾਂ ਹੀ।",
+    "otherOptions": "ਹੋਰ ਚੋਣਾਂ",
+    "batteryWarning": "ਕੰਪਿਊਟਰ ਪਾਵਰ ਸਰੋਤ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੈ।",
+    "offlineWarning": "ਤੁਸੀਂ ਇਸ ਵੇਲੇ ਆਫਲਾਈਨ ਹੋ",
+    "choosePassphraseHeader": "ਵਾਕ ਬਣਾਓ",
+    "choosePassphraseInfoHeader": "ਆਪਣੇ ਵਾਕ ਨੂੰ ਸੰਭਾਲਣਾ ਯਾਦ ਰੱਖੋ",
+    "choosePassphraseInfoBody": "ਜੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਭੁੱਲ ਗਏ ਤਾਂ ਤੁਹਾਡਾ ਸਾਰਾ ਡਾਟਾ ਗੁੰਮ ਜਾਏਗਾ।",
+    "passphrasePageTitle": "ਇੰਕ੍ਰਿਪਸ਼ਨ",
+    "passphrasePageConfirmPassphraseHint": "ਵਾਕ ਦੀ ਤਸਦੀਕ",
+    "passphrasePageRequiredPassphrase": "ਵਾਕ ਚਾਹੀਦਾ ਹੈ",
+    "passphrasePageMismatchPassphrase": "ਵਾਕ ਮਿਲਦੇ ਨਹੀਂ ਹਨ",
+    "passphrasePageChoosePinHint": "ਪਿੰਨ",
+    "passphrasePageConfirmPinHint": "ਪਿੰਨ ਦੀ ਤਸਦੀਕ",
+    "passphrasePageRequiredPin": "ਪਿੰਨ ਚਾਹੀਦਾ ਹੈ",
+    "passphrasePageMismatchPin": "ਪਿੰਨ ਮਿਲਦੇ ਨਹੀਂ ਹਨ",
+    "passphraseTypePassphraseTileTitle": "ਵਾਕ ਚਾਹੀਦਾ ਹੈ",
+    "passphraseTypePinTileTitle": "ਪਿੰਨ ਚਾਹੀਦਾ ਹੈ",
+    "passphraseTypeNoneTileTitle": "ਡਿਸਕ ਨੂੰ ਆਪਣੇ-ਆਪ ਅਣ-ਲਾਕ ਕਰੋ",
+    "passphraseTypePageHeader": "ਵਧੀਕ ਸੁਰੱਖਿਆ",
+    "passphrasePagePassphraseEntropyOptimal": "ਮਜ਼ਬੂਤ ਵਾਕ",
+    "installationTypeTitle": "ਡਿਸਕ ਸੈਟਅੱਪ",
+    "installationTypeHeader": "ਤੁਸੀਂ {DISTRO} ਨੂੰ ਕਿਵੇਂ ਇੰਸਟਾਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "ਇਸ ਕੰਪਿਊਟਰ ਉੱਤੇ ਇਸ ਵੇਲੇ {os} ਹੈ। ਤੁਸੀਂ ਕੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeErase": "ਡਿਸਕ ਨੂੰ ਮਿਟਾਓ ਅਤੇ {DISTRO} ਨੂੰ ਇੰਸਟਾਲ ਕਰੋ",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAdvancedLabel": "ਤਕਨੀਕੀ ਚੋਣਾਂ",
+    "installationTypeAdvancedTitle": "ਇੰਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਫ਼ਾਇਲ ਸਿਸਟਮ",
+    "installationTypeExperimental": "ਤਜਰਬੇ-ਅਧੀਨ",
+    "installationTypeNone": "ਕੋਈ ਇੰਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ",
+    "installationTypeNoneInfo": "ਬਿਨਾਂ ਇੰਕ੍ਰਿਪਸ਼ਨ ਦੇ ਮਿਆਰੀ ਫ਼ਾਇਲ ਸਿਸਟਮ ਹੈ।",
+    "installationTypeNoneSelected": "ਕੋਈ ਨਹੀ ਚੁਣਿਆ",
+    "installationTypeLVM": "ਬਿਨਾਂ ਇੰਕ੍ਰਿਪਸ਼ਨ ਦੇ LVM",
+    "installationTypeLVMSelected": "LVM ਚੁਣਿਆ",
+    "installationTypeLVMEncryption": "ਵਾਕ ਨਾਲ ਇੰਕ੍ਰਿਪਟ ਕਰੋ",
+    "installationTypeLVMEncryptionSelected": "LVM ਅਤੇ ਇੰਕ੍ਰਿਪਸ਼ਨ ਨੂੰ ਚੁਣਿਆ",
+    "installationTypeZFS": "ਬਿਨਾਂ ਇੰਕ੍ਰਿਪਸ਼ਨ ZFS ਨੂੰ ਵਰਤੋਂ",
+    "installationTypeZFSSelected": "ZFS ਨੂੰ ਚੁਣਿਆ",
+    "installationTypeZFSEncryptionSelected": "ZFS ਅਤੇ ਇੰਕ੍ਰਿਪਸ਼ਨ ਨੂੰ ਚੁਣਿਆ",
+    "installationTypeTPMSelected": "TPM ਚੁਣਿਆ",
+    "installationTypeReinstall": "{os} ਨੂੰ ਮਿਟਾਓ ਅਤੇ ਮੁੜ-ਇੰਸਟਾਲ ਕਰੋ",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">ਸਾਵਧਾਨ:</font> ਇਸ ਨਾਲ ਤੁਹਾਡੇ {os} ਪਰੋਗਰਾਮਾਂ, ਦਸਤਾਵੇਜ਼ਾਂ, ਫੋਟੋ, ਸੰਗੀਤ ਅਤੇ ਹੋਰ ਫ਼ਾਇਲਾਂ ਨੂੰ ਹਟਾਇਆ ਜਾਵੇਘਾ।",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "{os} ਨਾਲ {product} ਨੂੰ ਇੰਸਟਾਲ ਕਰੋ",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "{product} ਨੂੰ ਮੌਜੂਦ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਦੇ ਨਾਲ ਇੰਸਟਾਲ ਕਰੋ",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "{product} ਨੂੰ {os1} ਅਤੇ {os2} ਦੇ ਨਾਲ ਇੰਸਟਾਲ ਕਰੋ",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os} ਨੂੰ ਮਿਟਾਓ ਅਤੇ {product} ਨੂੰ ਇੰਸਟਾਲ ਕਰੋ",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "ਖੁਦ ਇੰਸਟਾਲ ਕਰੋ",
+    "selectGuidedStoragePageTitle": "ਡਿਸਕ ਨੂੰ ਮਿਟਾਓ ਅਤੇ {DISTRO} ਨੂੰ ਇੰਸਟਾਲ ਕਰੋ",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageDriveDropdownLabel": "ਡਰਾਇਵ ਨੂੰ ਚੁਣੋ:",
+    "selectGuidedStoragePartitionDropdownLabel": "ਪਾਰਟੀਸ਼ਨ ਨੂੰ ਚੁਣੋ:",
+    "selectGuidedStorageInfoLabel": "ਪੂਰੀ ਡਿਸਕ ਨੂੰ ਵਰਤਿਆ ਜਾਵੇਗਾ:",
+    "selectGuidedStorageInstallNow": "ਹੁਣੇ ਇੰਸਟਾਲ ਕਰੋ",
+    "guidedStoragePageHeader": "ਚੁਣੋ ਕਿ {DISTRO} ਨੂੰ ਕਿੱਥੇ ਇੰਸਟਾਲ ਕਰਨਾ ਹੈ",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "ਪਾਰਟੀਸ਼ਨ ਦੇ ਆਕਾਰ ਨੂੰ ਬਦਲੋ",
+    "installAlongsideAllocateSpace": "ਥਾਂ ਦਿਓ",
+    "installAlongsideFiles": "ਫ਼ਾਇਲਾਂ",
+    "installAlongsidePartition": "ਪਾਰਟੀਸ਼ਨ:",
+    "installAlongsideSize": "ਆਕਾਰ:",
+    "installAlongsideAvailable": "ਮੌਜੂਦ:",
+    "allocateDiskSpace": "ਖੁਦ ਪਾਰਟੀਸ਼ਨ ਬਣਾਓ",
+    "diskHeadersDevice": "ਡਿਵਾਈਸ",
+    "diskHeadersType": "ਕਿਸਮ",
+    "diskHeadersMountPoint": "ਮਾਊਂਟ ਪੁਆਇੰਟ",
+    "diskHeadersSize": "ਆਕਾਰ",
+    "diskHeadersUsed": "ਵਰਤੀ",
+    "diskHeadersSystem": "ਸਿਸਟਮ",
+    "diskHeadersFormat": "ਫਾਰਮੈਟ",
+    "freeDiskSpace": "ਖਾਲੀ ਥਾਂ",
+    "newPartitionTable": "ਨਵਾਂ ਪਾਰਟੀਸ਼ਨ ਟੇਬਲ",
+    "newPartitionTableConfirmationTitle": "ਨਵਾਂ ਖਾਲੀ ਪਾਰਟੀਸ਼ਨ",
+    "partitionCreateTitle": "ਪਾਰਟੀਸ਼ਨ ਬਣਾਓ",
+    "partitionEditTitle": "ਪਾਰਟੀਸ਼ਨ ਨੂੰ ਸੋਧੋ",
+    "partitionSizeLabel": "ਆਕਾਰ:",
+    "partitionTypeLabel": "ਨਵੇਂ ਪਾਰਟੀਸ਼ਨ ਲਈ ਕਿਸਮ:",
+    "partitionTypePrimary": "ਪ੍ਰਾਇਮਰੀ",
+    "partitionTypeLogical": "ਲਾਜ਼ੀਕਲ",
+    "partitionLocationLabel": "ਨਵੇਂ ਪਾਰਟੀਸ਼ਨ ਲਈ ਟਿਕਾਣਾ:",
+    "partitionLocationBeginning": "ਇਸ ਥਾਂ ਦੀ ਸ਼ੁਰੂਆਤ",
+    "partitionLocationEnd": "ਇਸ ਥਾਂ ਦਾ ਅੰਤ",
+    "partitionFormatLabel": "ਇਸ ਵਜੋਂ ਵਰਤੋਂ:",
+    "partitionFormatNone": "ਬਿਨਾਂ ਫਾਰਮੈਟ ਦੇ ਛੱਡੋ",
+    "partitionErase": "ਪਾਰਟੀਸ਼ਨ ਨੂੰ ਫਾਰਮੈਟ ਕਰੋ",
+    "partitionMountPointLabel": "ਮਾਊਂਟ ਪੁਆਇੰਟ:",
+    "confirmPageTitle": "ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਤਿਆਰ",
+    "confirmHeader": "ਆਪਣੀਆਂ ਚੋਣਾਂ ਦੀ ਪੜਤਾਲ ਕਰੋ",
+    "confirmDiskEncryptionNone": "ਕੋਈ ਨਹੀਂ",
+    "confirmDevicesTitle": "ਡਿਵਾਈਸ",
+    "confirmEntryApplications": "ਐਪਲੀਕੇਸ਼ਨਾਂ",
+    "confirmEntryDiskSetup": "ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਕਿਸਮ",
+    "confirmEntryDiskEncryption": "ਡਿਸਕ ਇੰਕ੍ਰਿਪਸ਼ਨ",
+    "confirmEntryInstallationDisk": "ਇੰਸਟਾਲੇਸ਼ਨ ਡਿਸਕ",
+    "confirmEntryProprietarySoftware": "ਪ੍ਰੋਪਰੇਟਰੀ ਸਾਫਟਵੇਅਰ",
+    "confirmSectionGeneralTitle": "ਆਮ",
+    "confirmSectionSecurityAndMoreTitle": "ਸੁਰੱਖਿਆ ਅਤੇ ਹੋਰ",
+    "confirmPartitionsTitle": "ਪਾਰਟੀਸ਼ਨ",
+    "confirmProprietarySoftwareCodecsDrivers": "Codecs ਅਤੇ ਡਰਾਇਵਰ",
+    "confirmProprietarySoftwareDrivers": "ਡਰਾਇਵਰ",
+    "confirmInstallButton": "ਇੰਸਟਾਲ",
+    "confirmTableErased": "ਮਿਟਾਏ",
+    "confirmTableUnchanged": "ਬਿਨਾਂ ਤਬਦੀਲੀ",
+    "confirmTableMounted": "{mountpoint} ਲਈ ਵਰਤਿਆ",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} ਵਜੋਂ ਫਾਰਮੈਟ ਕੀਤਾ",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "ਇੰਸਟਾਲੇਸ਼ਨ ਪੂਰੀ ਹੋਈ",
+    "readyToUse": "{system} ਨੂੰ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ ਹੈ ਅਤੇ ਵਰਤਣ ਲਈ ਤਿਆਰ ਹੈ",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "{system} ਲਈ ਮੁੜ-ਚਾਲੂ ਕਰੋ",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "shutdown": "ਬੰਦ ਕਰੋ",
+    "restartNow": "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ",
+    "continueTesting": "ਟੈਸਟ ਕਰਨਾ ਜਾਰੀ ਰੱਖੋ",
+    "restartComputer": "ਕੰਪਿਊਟਰ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰੋ",
+    "restartComputerTitle": "ਕੰਪਿਊਟਰ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਹੈ?",
+    "restartIntoWindows": "Windows ਲਈ ਮੁੜ-ਚਾਲੂ ਕਰੋ",
+    "restartIntoWindowsTitle": "Windows ਲਈ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਹੈ?",
+    "installationSlidesTitle": "{RELEASE} ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "ਮੌਜੂਦ:",
+    "installationSlidesIncluded": "ਸ਼ਾਮਲ ਹੈ:",
+    "installationSlidesWelcomeTitle": "ਤੇਜ਼, ਮੁਫ਼ਤ ਅਤੇ ਪੂਰੇ ਫ਼ੀਚਰਾਂ ਨਾਲ ਭਰਪੂਰ",
+    "installationSlidesSecurityTitle": "ਪ੍ਰਾਈਵੇਟ ਅਤੇ ਸੁਰੱਖਿਅਤ",
+    "installationSlidesAccessibilityTitle": "ਹਰੇਕ ਦੀ ਪਹੁੰਚ ਵਿੱਚ",
+    "installationSlidesAccessibilityLanguages": "ਭਾਸ਼ਾ ਸਹਿਯੋਗ",
+    "installationSlidesSupportTitle": "ਮਦਦ ਅਤੇ ਸਹਿਯੋਗ",
+    "installationSlidesSupportResources": "ਮਦਦਗਾਰ ਸਰੋਤ:",
+    "nextSlideSemanticLabel": "ਅਗਲੀ ਸਲਾਈਡ",
+    "previousSlideSemanticLabel": "ਪਿਛਲੀ ਸਲਾਈਡ",
+    "playSlideshowSemanticLabel": "ਸਲਾਈਡ-ਸ਼ੋ ਨੂੰ ਚਲਾਓ",
+    "copyingFiles": "ਫ਼ਾਇਲਾਂ ਨੂੰ ਕਾਪੀ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "installingSystem": "ਸਿਸਟਮ ਨੂੰ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "configuringSystem": "ਸਿਸਟਮ ਨੂੰ ਸੈਟਅੱਪ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "installationFailed": "ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ",
+    "notEnoughDiskSpaceTitle": "ਲੋੜੀਦੀ ਡਿਸਕ ਥਾਂ ਨਹੀਂ ਹੈ",
+    "notEnoughDiskSpaceUbuntu": "{DISTRO} ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਲੋੜੀਦੀ ਡਿਸਕ ਥਾਂ ਨਹੀਂ ਹੈ",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "ਮੌਜੂਦ:",
+    "notEnoughDiskSpaceRequired": "ਚਾਹੀਦੀ:",
+    "refreshPageTitle": "ਅੱਪਡੇਟ ਮੌਜੂਦ ਹੈ",
+    "refreshHeader": "ਇੰਸਟਾਲਰ ਲਈ ਅੱਪਡੇਟ ਮੌਜੂਦ ਹੈ",
+    "refreshUpdateNow": "ਹੁਣੇ ਅੱਪਡੇਟ ਕਰੋ",
+    "refreshReady": "ਅੱਪਡੇਟ ਤਿਆਰ ਹੈ",
+    "refreshCurrent": "ਮੌਜੂਦਾ {snap} ਵਰਜ਼ਨ {version} ਹੈ।",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "ਵਰਜ਼ਨ {version} ਲਈ ਅੱਪਡੇਟ ਕਰੋ",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} ਨੂੰ ਅੱਪਡੇਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "ਜਾਰੀ ਰੱਖਣ ਵਾਸਤੇ ਇੰਸਟਾਲਰ ਨੂੰ ਬੰਦ ਕਰਕੇ ਫੇਰ ਚਲਾਓ",
+    "refreshCloseLabel": "ਇੰਸਟਾਲਰ ਨੂੰ ਬੰਦ ਕਰੋ",
+    "refreshSnapDownload": "{snap} ਨੂੰ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "{snap} ਨੂੰ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "{snap} ਨੂੰ ਮਾਊਂਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "{snap} ਡਾਟੇ ਨੂੰ ਕਾਪੀ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "{snap} ਨੂੰ ਲਿੰਕ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "{snap} ਨੂੰ ਮਿਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ…",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "ਰਿਕਵਰੀ ਕੁੰਜੀ",
+    "recoveryKeyTitleBadgeLabel": "ਖਾਸ",
+    "recoveryKeyHeader": "ਆਪਣੀ ਰਿਕਵਰੀ ਕੁੰਜੀ ਨੂੰ ਸੰਭਾਲੋ",
+    "recoveryKeyTextFieldLabel": "ਰਿਕਵਰੀ ਕੁੰਜੀ",
+    "recoveryKeyLinkLabel": "ਹੋਰ ਜਾਣੋ",
+    "recoveryKeySaveToFileLabel": "ਫ਼ਾਇਲ ਵਿੱਚ ਸੰਭਾਲੋ",
+    "recoveryKeyShowQrCodeLabel": "QR ਕੋਡ ਨੂੰ ਵੇਖਾਓ",
+    "recoveryKeyQrDialogTitle": "{DISTRO} ਡੈਸਕਟਾਪ - ਰਿਕਵਰੀ ਕੁੰਜੀ",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyClipboardNotifiaction": "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕੀਤਾ",
+    "recoveryKeyExceptionUnknownTitle": "ਅਣਪਛਾਤੀ ਗਲਤੀ",
+    "recoveryKeyFilePickerFilter": "ਲਿਖਤ ਫ਼ਾਇਲਾਂ",
+    "next": "ਅੱਗੇ",
+    "landscapeDomainNoInternetTitleWarning": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੰਟਰਨੈੱਟ ਨਾਲ ਕਨੈਕਟ ਕਰੋ",
+    "successIconSemanticLabel": "ਸਫ਼ਲ",
+    "errorIconSemanticLabel": "ਗਲਤੀ",
+    "closeIconSemanticLabel": "ਬੰਦ ਕਰੋ",
+    "maximizeIconSemanticLabel": "ਵੱਧ ਤੋਂ ਵੱਧ",
+    "minimizeIconSemanticLabel": "ਘੱਟੋ-ਘੱਟ",
+    "tpmActionBadgeLabel": "ਕਾਰਵਾਈ ਚਾਹੀਦੀ ਹੈ",
+    "tpmActionDetailsLabel": "ਤਕਨੀਕੀ ਡਾਟਾ",
+    "tpmActionConfirmLabel": "ਤਸਦੀਕ",
+    "tpmActionErrorKindShutdownRequired": "ਬੰਦ ਕਰਨ ਦੀ ਲੋੜ ਹੈ",
+    "tpmActionErrorKindRebootRequired": "ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ",
+    "tpmActionFixActionProceed": "ਅਣਡਿੱਠਾ",
+    "tpmActionRestartLabel": "ਮੁੜ-ਚਾਲੂ",
+    "tpmActionRestartAndEnableTpmLabel": "ਮੁੜ-ਚਾਲੂ ਕਰੋ ਅਤੇ TPM ਸਮਰੱਥ ਕਰੋ",
+    "tpmActionRestartAndClearTpmLabel": "ਮੁੜ-ਚਾਲੂ ਕਰੋ ਅਤੇ TPM ਮਿਟਾਓ",
+    "tpmActionIgnoreAndContinueLabel": "ਅਣਡਿੱਠਾ ਕਰਕੇ ਜਾਰੀ ਰੱਖੋ"
 }
