@@ -57,6 +57,7 @@ Future<void> showCreatePartitionDialog(
                         maximum: gap.size,
                         onSizeChanged: (v) => partitionSize.value = v,
                         onUnitSelected: (v) => partitionUnit.value = v,
+                        unitSemanticLabel: lang.partitionSizeLabel,
                       );
                     },
                   ),
@@ -66,20 +67,30 @@ Future<void> showCreatePartitionDialog(
                   ValueListenableBuilder(
                     valueListenable: partitionFormat,
                     builder: (context, value, child) {
-                      return MenuButtonBuilder<PartitionFormat?>(
-                        entries: [
-                          ...PartitionFormat.supported
-                              .map((f) => MenuButtonEntry(value: f)),
-                          const MenuButtonEntry(value: null, isDivider: true),
-                          const MenuButtonEntry(value: PartitionFormat.swap),
-                          const MenuButtonEntry(value: null, isDivider: true),
-                          const MenuButtonEntry(value: PartitionFormat.none),
-                        ],
-                        selected: partitionFormat.value,
-                        onSelected: (format) => partitionFormat.value = format,
-                        itemBuilder: (context, format, child) => Text(
-                          format?.displayName ?? lang.partitionFormatNone,
-                          key: ValueKey(format?.type),
+                      final selectedFormatLabel = _partitionFormatLabel(
+                        lang,
+                        selectedFormat: partitionFormat.value,
+                      );
+                      return Semantics(
+                        label: lang.partitionFormatLabel,
+                        value: selectedFormatLabel,
+                        button: true,
+                        child: MenuButtonBuilder<PartitionFormat?>(
+                          entries: [
+                            ...PartitionFormat.supported
+                                .map((f) => MenuButtonEntry(value: f)),
+                            const MenuButtonEntry(value: null, isDivider: true),
+                            const MenuButtonEntry(value: PartitionFormat.swap),
+                            const MenuButtonEntry(value: null, isDivider: true),
+                            const MenuButtonEntry(value: PartitionFormat.none),
+                          ],
+                          selected: partitionFormat.value,
+                          onSelected: (format) =>
+                              partitionFormat.value = format,
+                          itemBuilder: (context, format, child) => Text(
+                            format?.displayName ?? lang.partitionFormatNone,
+                            key: ValueKey(format?.type),
+                          ),
                         ),
                       );
                     },
@@ -190,6 +201,7 @@ Future<void> showEditPartitionDialog(
                         maximum: (partition.size ?? 0) + (gap?.size ?? 0),
                         onSizeChanged: (v) => partitionSize.value = v,
                         onUnitSelected: (v) => partitionUnit.value = v,
+                        unitSemanticLabel: lang.partitionSizeLabel,
                       );
                     },
                   ),
@@ -203,43 +215,54 @@ Future<void> showEditPartitionDialog(
                       final configFormat = originalPartition != null
                           ? PartitionFormat.fromPartition(originalPartition)
                           : null;
-                      return MenuButtonBuilder<PartitionFormat?>(
-                        entries: [
-                          if (partitionMount.value ==
-                                  DefaultMountPoint.home.path &&
-                              (partition.preserve ?? false)) ...[
-                            const MenuButtonEntry(value: null),
+                      final selectedFormatLabel = _partitionFormatLabel(
+                        lang,
+                        selectedFormat: partitionFormat.value,
+                        configFormat: configFormat,
+                      );
+                      return Semantics(
+                        label: lang.partitionFormatLabel,
+                        value: selectedFormatLabel,
+                        button: true,
+                        child: MenuButtonBuilder<PartitionFormat?>(
+                          entries: [
+                            if (partitionMount.value ==
+                                    DefaultMountPoint.home.path &&
+                                (partition.preserve ?? false)) ...[
+                              const MenuButtonEntry(value: null),
+                              const MenuButtonEntry(
+                                value: null,
+                                isDivider: true,
+                              ),
+                            ],
+                            ...PartitionFormat.supported
+                                .map((f) => MenuButtonEntry(value: f)),
                             const MenuButtonEntry(value: null, isDivider: true),
+                            const MenuButtonEntry(value: PartitionFormat.swap),
+                            if ((partition.preserve ?? false) != true) ...[
+                              const MenuButtonEntry(
+                                value: null,
+                                isDivider: true,
+                              ),
+                              const MenuButtonEntry(
+                                value: PartitionFormat.none,
+                              ),
+                            ],
                           ],
-                          ...PartitionFormat.supported
-                              .map((f) => MenuButtonEntry(value: f)),
-                          const MenuButtonEntry(value: null, isDivider: true),
-                          const MenuButtonEntry(value: PartitionFormat.swap),
-                          if ((partition.preserve ?? false) != true) ...[
-                            const MenuButtonEntry(value: null, isDivider: true),
-                            const MenuButtonEntry(value: PartitionFormat.none),
-                          ],
-                        ],
-                        selected: partitionFormat.value,
-                        onSelected: (format) => partitionFormat.value = format,
-                        itemBuilder: (context, format, child) => Text(
-                          format?.displayName ??
-                              (configFormat?.displayName != null
-                                  ? lang.partitionFormatKeep(
-                                      configFormat!.displayName!,
-                                    )
-                                  : lang.partitionFormatNone),
-                          key: ValueKey(format?.type),
-                        ),
-                        child: Text(
-                          partitionFormat.value?.displayName ??
-                              (configFormat?.displayName != null
-                                  ? lang.partitionFormatKeep(
-                                      configFormat!.displayName!,
-                                    )
-                                  : lang.partitionFormatNone),
-                          key: ValueKey(
-                            partitionFormat.value?.type,
+                          selected: partitionFormat.value,
+                          onSelected: (format) =>
+                              partitionFormat.value = format,
+                          itemBuilder: (context, format, child) => Text(
+                            _partitionFormatLabel(
+                              lang,
+                              selectedFormat: format,
+                              configFormat: configFormat,
+                            ),
+                            key: ValueKey(format?.type),
+                          ),
+                          child: Text(
+                            selectedFormatLabel,
+                            key: ValueKey(partitionFormat.value?.type),
                           ),
                         ),
                       );
@@ -344,17 +367,20 @@ class _PartitionMountField extends StatelessWidget {
                 focusNode,
                 onFieldSubmitted,
               ) {
-                return TextFormField(
-                  enabled: format != PartitionFormat.none &&
-                      format != PartitionFormat.swap,
-                  controller: textEditingController,
-                  focusNode: focusNode,
-                  onChanged: (value) => partitionMount.value = value,
-                  onFieldSubmitted: (_) => onFieldSubmitted(),
-                  autovalidateMode: AutovalidateMode.always,
-                  validator: (value) =>
-                      _validateMountedPartition(value!, partitionFormat.value)
-                          .localize(lang),
+                return Semantics(
+                  label: lang.partitionMountPointLabel,
+                  child: TextFormField(
+                    enabled: format != PartitionFormat.none &&
+                        format != PartitionFormat.swap,
+                    controller: textEditingController,
+                    focusNode: focusNode,
+                    onChanged: (value) => partitionMount.value = value,
+                    onFieldSubmitted: (_) => onFieldSubmitted(),
+                    autovalidateMode: AutovalidateMode.always,
+                    validator: (value) =>
+                        _validateMountedPartition(value!, partitionFormat.value)
+                            .localize(lang),
+                  ),
                 );
               },
             ),
@@ -378,6 +404,20 @@ MountedPartitionValidation _validateMountedPartition(
     return MountedPartitionValidation.bootIsVfat;
   }
   return MountedPartitionValidation.success;
+}
+
+String _partitionFormatLabel(
+  UbuntuBootstrapLocalizations lang, {
+  required PartitionFormat? selectedFormat,
+  PartitionFormat? configFormat,
+}) {
+  if (selectedFormat?.displayName != null) {
+    return selectedFormat!.displayName!;
+  }
+  if (configFormat?.displayName != null) {
+    return lang.partitionFormatKeep(configFormat!.displayName!);
+  }
+  return lang.partitionFormatNone;
 }
 
 enum MountedPartitionValidation {
