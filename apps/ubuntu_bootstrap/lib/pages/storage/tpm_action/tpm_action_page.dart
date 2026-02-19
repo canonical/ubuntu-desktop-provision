@@ -24,9 +24,11 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
       if (model.tpmError != null) ...[
         Text(model.tpmError!.kind.label(lang)),
         Text(
-          model.actions.isNotEmpty
-              ? lang.tpmActionErrorSupportLabel
-              : lang.tpmActionErrorSupportNoActionLabel,
+          switch (model.actions.length) {
+            0 => lang.tpmActionErrorSupportNoActionLabel,
+            1 => lang.tpmActionErrorSupportSingleLabel,
+            _ => lang.tpmActionErrorSupportLabel
+          },
         ),
       ],
       if (model.actions.isNotEmpty) ...[
@@ -36,10 +38,14 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
           headers: [
             for (final (i, action) in model.actions.indexed)
               Text(
-                lang.tpmActionSolutionLabel(
-                  i + 1,
-                  action.title(lang, model.tpmError?.kind),
-                ),
+                model.actions.length > 1
+                    ? lang.tpmActionSolutionLabel(
+                        i + 1,
+                        action.title(lang, model.tpmError?.kind),
+                      )
+                    : lang.tpmActionSingleSolutionLabel(
+                        action.title(lang, model.tpmError?.kind),
+                      ),
               ),
           ],
           children: [
