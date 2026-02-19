@@ -563,7 +563,7 @@
             }
         }
     },
-    "installationSlidesWelcomeBody": "Izan garatzailea, sortzailea, bideojokozalea edo administratzailea, {RELEASE}n produktibitatea handitzeko eta zure bizipena hobetzeko tresna berriak aurkituko dituzu.",
+    "installationSlidesWelcomeBody": "Garatzailea, sortzailea, bideojokozalea nahiz administratzailea izan, {RELEASE}n produktibitatea handitzeko eta zure bizipena hobetzeko tresna berriak aurkituko dituzu.",
     "@installationSlidesWelcomeBody": {
         "placeholders": {
             "RELEASE": {
@@ -572,7 +572,7 @@
         }
     },
     "installationSlidesSoftwareTitle": "Behar dituzun aplikazio guztiak",
-    "installationSlidesSoftwareBody": "Instalatu, kudeatu eta eguneratu aplikazio guztiak Ubuntu Softwarearekin. Bertan aurkituko dizu Snap Store dendako eta {DISTRO}ren artxiboko softwarea.",
+    "installationSlidesSoftwareBody": "Instalatu, kudeatu eta eguneratu zure aplikazio guztiak Ubuntu Softwarearekin, Snap biltegiko eta {DISTRO}ren artxiboko milaka aplikazio barne.",
     "@installationSlidesSoftwareBody": {
         "placeholders": {
             "DISTRO": {
@@ -580,10 +580,10 @@
             }
         }
     },
-    "installationSlidesDevelopmentTitle": "Garatu kode ireki onenarekin",
+    "installationSlidesDevelopmentTitle": "Garatu kode irekirik onenarekin",
     "installationSlidesAccessibilityOrca": "Orca pantaila-irakurlea",
     "installationSlidesAccessibilityLanguages": "Hizkuntza-sostengua",
-    "installationSlidesSupportTitle": "Laguntza eta euskarria",
+    "installationSlidesSupportTitle": "Laguntza eta sostengua",
     "installationSlidesSupportHeader": "{DISTRO}ren dokumentazio ofiziala eskuragarri dago bai online, bai atrakeko Laguntza ikonoaren bitartez.",
     "@installationSlidesSupportHeader": {
         "placeholders": {
@@ -853,7 +853,7 @@
     "installationTypeLVMEncryptionInfo2": "Honek LVM darabil LUKS zifratzearekin.",
     "installationTypeTPMInfoResolute": "Diskoa automatikoki desblokeatuko da abioan.",
     "installationTypeTPMInfoUnavailable": "Ez dago erabilgarri ordenagailu honetan.",
-    "installationSlidesDevelopmentBody": "{DISTRO} lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta adimen artifiziala (AA) / ikasketa automatikorako, nahiz devops eta administraziorako. {DISTRO} bertsio guztiek azkeneko tresna-kateak ditu barnean, eta IDE nagusi guztiekin bateragarriak dira.",
+    "installationSlidesDevelopmentBody": "{DISTRO} lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta AArako (adimen artifiziala) / ikasketa automatikorako, hala nola devops eta administraziorako. {DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.",
     "@installationSlidesDevelopmentBody": {
         "placeholders": {
             "DISTRO": {
@@ -861,8 +861,8 @@
             }
         }
     },
-    "installationSlidesCreativityTitle": "Hobetu sormena",
-    "installationSlidesCreativityBody": "Animatzailea, diseinatzailea, bideo-sortzailea edo bideojoko garatzailea bazara, era errazean ekar ditzakezu zure lan-fluxuak {DISTRO}ra, kode irekiko eta industriaren software eta aplikazio estandarren sostenguarekin.",
+    "installationSlidesCreativityTitle": "Areagotu zure sormena",
+    "installationSlidesCreativityBody": "Animatzailea, diseinatzailea, bideo-sortzailea edo bideojoko garatzailea bazara, erraz ekar ditzakezu zure lan-fluxuak {DISTRO}ra, kode irekiko eta industriako software eta aplikazio estandarrei esker.",
     "@installationSlidesCreativityBody": {
         "placeholders": {
             "DISTRO": {
@@ -870,5 +870,176 @@
             }
         }
     },
-    "installationSlidesGamingTitle": "Bikaina jokatzeko"
+    "installationSlidesGamingTitle": "Jokatzeko aparta",
+    "installationSlidesGamingBody": "{DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka, errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute {DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "Pribatua eta segurua",
+    "installationSlidesSecurityBody": "{DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebakiarekin eta VPN euskarriarekin eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityBody": "Mahaigainerako {DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarriak diren aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "Indartu zure produktibitatea",
+    "installationSlidesAccessibilityTitle": "Erabilerraza denontzat",
+    "installationSlidesAccessibilityBody": "{DISTRO}ren filosofiaren erroan informatika denontzako den sinesmena dago. Erabilerraztasun tresna aurreratuekin eta hizkuntza, koloreak eta testuen tamaina aldatzeko aukerarekin, {DISTRO}k informatika erraz bilakatzen du - edonor zarela eta edonon zaudela ere.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportEnterprise": "Enpresako erabiltzaileentzat, Canonicalek euskarri komertziala eskaintzen du lan-eremuan Ubuntu era seguruan erraz instalatu eta kudeatzeko.",
+    "installationSlidesSupportUbuntuPro": "Enpresa mailako 24/7 euskarria Ubuntu Pro-rekin",
+    "installationSlidesSupportResources": "Baliabide lagungarriak:",
+    "installationSlidesSecurityLts": "{DISTRO}ren LTS bertsio guztiek bost urterako segurtasun adabakiak barne dituztela argitaratzen dira, Ubuntu Pro harpidetzaren bidez hamar urtera luza daitekeelarik tartea.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Ask Ubuntuk galdera-erantzun sorta zabala dauka, eta Ubuntu Discoursek erabiltzaile hasiberri zein esperientziadunentzako gidak eta eztabaidak eskaintzen ditu.",
+    "refreshSnapAutoConnect": "{snap}(r)en larakoak (plug) eta artekak (slot) konektatzen...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "{snap}(r)en alias automatikoak ezartzen...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap}(r)en aliasak konfiguratzen...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "{snap}(r)en zerbitzuak abiarazten...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "{snap} garbitzen...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeDomainInstructions": "Sartu zure erakundearen Landscape domeinua saioa hasteko eta autoinstall fitxategi bat eskuratzeko. FQDNa zure IT laguntza zerbitzuak eman diezazuke.",
+    "landscapeDomainTextField": "Landscape domeinua (FQDN)",
+    "next": "Hurrengoa",
+    "landscapeDomainInvalidDomainWarning": "Domeinu baliogabea, egiaztatu ondo dagoela edo galdetu zure IT laguntza zerbitzuari",
+    "landscapeDomainNoInternetTitleWarning": "Konektatu Internetera jarraitzeko",
+    "landscapeDomainNoInternetDescriptionWarning": "Internet beharrezkoa da Landscapetik autoinstall fitxategia eskuratzeko",
+    "landscapeCodeExpiredWarning": "Kodea iraungi da, saiatu berriz",
+    "landscapeLoginFailedWarning": "Saio hasierak huts egin du, saiatu berriz",
+    "landscapeErrorPageTitle": "Instalazio automatizatua ez dago zure konturako erabilgarri",
+    "landscapeErrorPageBody": "Jarri zure IT laguntza zerbitzuarekin harremanetan edo saiatu beste instalazio aukera batekin.",
+    "landscapeErrorPageCode": "Errore kodea: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu zure erakundeak hornitutako konfigurazioarekin instalatuko da",
+    "landscapeConfirmPageSuccessInfoContent": "Jarraian Landscapetik inportatutako autoinstall fitxategia berrikus dezakezu.",
+    "tpmActionBadgeLabel": "Ekintza beharrezkoa da",
+    "tpmActionErrorKindInternal": "Barnekoa",
+    "tpmActionErrorKindShutdownRequired": "Itzaltzea beharrezkoa da",
+    "tpmActionErrorKindRebootRequired": "Berrabiaraztea beharrezkoa da",
+    "tpmActionErrorKindUnexpectedAction": "Ekintza esperogabea",
+    "tpmActionErrorKindMissingArgument": "Argumentua faltan",
+    "tpmActionErrorKindInvalidArgument": "Okerreko argumentua",
+    "tpmActionErrorKindActionFailed": "Ekintzak huts egin du",
+    "tpmActionErrorKindRunningInVm": "Uneko ingurunea ez da makina birtual bat.",
+    "tpmActionErrorKindSystemNotEfi": "Ordenagailu honek firmware zaharrago bat darabil (BIOS legatua), zifratze metodo honekin bateragarria ez dena.",
+    "tpmActionErrorKindEfiVariableAccess": "Arazo bat dago ordenagailu honen firmware ezarpenekin.",
+    "tpmActionErrorKindTpmDeviceDisabled": "Ordenagailu honen TPMa ezgaitua dago.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "Ordenagailu honen TPMa dagoeneko beste sistema edo aplikazio baten erabiltzen du.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "Ordenagailu honen TPMa une honetan blokeatua dago.",
+    "tpmActionErrorKindInsufficientTpmStorage": "Ordenagailu honen TPMak ez dauka behar beste leku libre.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI arazketa gaitua dago",
+    "tpmActionErrorKindInsufficientDmaProtection": "Ordenagailu honek beharrezko segurtasun eginbide bat (DMA babesa) falta du.",
+    "tpmActionErrorKindNoKernelIommu": "Ordenagailu honek beharrezko segurtasun eginbide bat (kernel IOMMU) falta du.",
+    "tpmActionErrorKindHostSecurity": "Arazo bat dago ordenagailu honen segurtasun ezarpenekin.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Abioan exekutatzen ari den softwareak ordenagailuaren TPMarekin konexio segurua ezartzea eragotz dezake.",
+    "tpmActionErrorKindAbsolutePresent": "Iraunkortasun Absoluturako Modulua gaitua dago ordenagailu honetan.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Abio segurua ezgaitua dago ordenagailu honetan, edo ez dago \"deployed\" moduan konfiguratua.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Ordenagailu honetako osagaiak egiaztatzen dituzten zenbait ziurtagiri zaharkituta daude, edo babes ahula daukate.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Ordenagailu honek eskuzko baimen-zerrenda darabil abioko softwarea egiaztatzeko.",
+    "tpmActionErrorKindAddonDriversPresent": "Unitate gehigarriak presente",
+    "tpmActionErrorKindGenericTpm": "Arazo bat dago ordenagailu honen TPMarekin.",
+    "tpmActionErrorKindGenericFirmware": "Arazo bat dago ordenagailu honen firmwarearekin.",
+    "tpmActionFixActionReboot": "Berrabiarazi",
+    "tpmActionFixActionShutdown": "Itzali",
+    "tpmActionFixActionRebootToFwSettings": "Berrabiarazi firmwarearen ezarpenetara",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA babesa eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPMa eskuz garbitu",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Abio segurua eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "DMA babesa eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR bankuak eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPMa eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPMa eskuz garbitu",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPMa eskuz garbitu",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Ezgaitu Iraunkortasun Absoluturako Modulua eskuz",
+    "tpmActionFixActionContactOem": "Kontaktatu OEMa",
+    "tpmActionFixActionContactOsVendor": "Kontaktatu SEaren hornitzailea",
+    "tpmActionFixActionEnableTpmViaFirmware": "Gaitu TPMa berrabiaraztean",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Gaitu eta garbitu TPMa berrabiaraztean",
+    "tpmActionFixActionClearTpmViaFirmware": "Garbitu TPMa berrabiaraztean",
+    "tpmActionFixActionClearTpm": "Garbitu TPMa",
+    "tpmActionFixActionProceed": "Ez ikusi egin",
+    "tpmActionFixActionRebootDescription": "Berrabiarazi ordenagailua aurreko ekintzak osatzeko.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Baliteke ordenagailua berrabiaraziz arazoa konpontzea.",
+    "tpmActionFixActionShutdownDescription": "Itzali ordenagailua aurreko ekintzak osatzeko.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Hau ordenagailuaren firmware ezarpenetatik egin dezakezu.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Baliteke hau ordenagailuaren firmware ezarpenetatik egin ahal izatea. Irakurri PUZ hornitzailearen dokumentazioa gida gisa.",
+    "tpmActionFixActionProceedDescription": "Arazoari ez ikusi eginez gero, baliteke instalazioaren segurtasun gutxitzea.",
+    "tpmActionRestartLabel": "Berrabiarazi",
+    "tpmActionRestartAndEnableTpmLabel": "Berrabiarazi eta gaitu TPMa",
+    "tpmActionRestartAndClearTpmLabel": "Berrabiarazi eta garbitu TPMa",
+    "tpmActionIgnoreAndContinueLabel": "Ez ikusi egin eta jarraitu",
+    "tpmActionFixActionClearTpmWarningTitle": "TPMa garbituz gero, zifratze gako guztiak ezabatuko dira",
+    "tpmActionFixActionClearTpmWarningBody": "Zifratutako unitateetako datu guztietara sarbidea galduko duzu hauentzako berreskuratze gakorik ez badaukazu. TPMaren menpe dauden beste eginbide batzuk ere hautsiko ditu, hala nola, autentikazioa eta ziurtagiriak.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "Ulertzen ditut TPMa garbitzeak dituen ondorioak",
+    "tpmActionFixActionCaveatConfirm": "Baliteke berrabiaraztean ekintza hau berresteko eskatzea.",
+    "tpmActionFixActionCaveatRetry": "Orduan, instalazioa berriro hutsetik berrekin beharko duzu.",
+    "tpmActionErrorTitle": "Soluzio honek huts egin du",
+    "tpmActionErrorDescription": "Probatu beste soluzioren bat, edo jarri harremanetan IT laguntza zerbitzuarekin",
+    "manualPartitioningWarningBody": "Probatu beste zerbait. Horrez gain, <a href=\"\">errore-txosten bat bidal</a> dezakezu."
 }
