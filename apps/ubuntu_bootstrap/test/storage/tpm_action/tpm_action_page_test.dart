@@ -57,8 +57,7 @@ void main() {
     );
     expect(
       find.text(
-        tester.lang.tpmActionSolutionLabel(
-          1,
+        tester.lang.tpmActionSingleSolutionLabel(
           testAction.title(tester.lang),
         ),
       ),
@@ -81,15 +80,6 @@ void main() {
           actionResult: testCase.actionResult,
         );
         await tester.pumpApp((_) => buildPage(model));
-        await tester.pumpAndSettle();
-        await tester.tap(
-          find.text(
-            tester.lang.tpmActionSolutionLabel(
-              1,
-              testAction.title(tester.lang),
-            ),
-          ),
-        );
         await tester.pumpAndSettle();
         await tester.tap(
           find.text(testAction.label(tester.lang)),
