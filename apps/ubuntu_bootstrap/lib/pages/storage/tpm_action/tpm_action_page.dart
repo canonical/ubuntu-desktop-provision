@@ -34,6 +34,7 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
       if (model.actions.isNotEmpty) ...[
         const SizedBox(height: kWizardSpacing / 2),
         YaruExpansionPanel(
+          isInitiallyExpanded: model.actions.length == 1 ? [true] : null,
           shrinkWrap: true,
           headers: [
             for (final (i, action) in model.actions.indexed)
