@@ -186,6 +186,24 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
         _ => null,
       };
 
+  String? firmwareHint(
+    UbuntuBootstrapLocalizations l10n, [
+    CoreBootAvailabilityErrorKind? error,
+  ]) =>
+      switch ((type, error)) {
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.INVALID_SECURE_BOOT_MODE
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsNoKernelIommuHint,
+        _ => null
+      };
+
   String? caveats(UbuntuBootstrapLocalizations l10n) => switch (type) {
         CoreBootFixAction.REBOOT ||
         CoreBootFixAction.SHUTDOWN ||

@@ -135,7 +135,8 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final headerStrings = [
-      widget.action.description(lang),
+      widget.action.description(lang, widget.errorKind),
+      widget.action.firmwareHint(lang, widget.errorKind),
       widget.action.caveats(lang),
     ].nonNulls;
 
