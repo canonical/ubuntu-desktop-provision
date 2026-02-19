@@ -2470,6 +2470,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Solution {n}: {text}'**
   String tpmActionSolutionLabel(int n, String text);
 
+  /// No description provided for @tpmActionSingleSolutionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Solution: {text}'**
+  String tpmActionSingleSolutionLabel(String text);
+
   /// No description provided for @tpmActionDocumentationLinkLabel.
   ///
   /// In en, this message translates to:
@@ -2481,6 +2487,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Try the solutions below, contact IT support, or choose a different encryption method.'**
   String get tpmActionErrorSupportLabel;
+
+  /// No description provided for @tpmActionErrorSupportSingleLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Try the solution below, contact IT support, or choose a different encryption method.'**
+  String get tpmActionErrorSupportSingleLabel;
 
   /// No description provided for @tpmActionErrorSupportNoActionLabel.
   ///
@@ -2545,7 +2557,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindEfiVariableAccess.
   ///
   /// In en, this message translates to:
-  /// **'There is an issue with this computer\'s firmware settings.'**
+  /// **'There is an issue with this computer\'s firmware.'**
   String get tpmActionErrorKindEfiVariableAccess;
 
   /// No description provided for @tpmActionErrorKindNoSuitableTpm2Device.
@@ -2605,13 +2617,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindHostSecurity.
   ///
   /// In en, this message translates to:
-  /// **'There is an issue with this computer\'s security settings.'**
+  /// **'There is an issue with this computer\'s security configuration.'**
   String get tpmActionErrorKindHostSecurity;
 
   /// No description provided for @tpmActionErrorKindSysPrepApplicationsPresent.
   ///
   /// In en, this message translates to:
-  /// **'There is software running at startup that may prevent a secure connection with the computer\'s TPM.'**
+  /// **'There is software running at startup that might prevent a secure connection with the computer\'s TPM.'**
   String get tpmActionErrorKindSysPrepApplicationsPresent;
 
   /// No description provided for @tpmActionErrorKindAbsolutePresent.
@@ -2623,7 +2635,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindInvalidSecureBootMode.
   ///
   /// In en, this message translates to:
-  /// **'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.'**
+  /// **'Secure boot is disabled in this computer or is not set in deployed mode.'**
   String get tpmActionErrorKindInvalidSecureBootMode;
 
   /// No description provided for @tpmActionErrorKindWeakSecureBootAlgorithmDetected.
@@ -2799,6 +2811,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.'**
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Check secure boot mode is set to \"deployed\".'**
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint;
+
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsNoKernelIommuHint.
+  ///
+  /// In en, this message translates to:
+  /// **'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".'**
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint;
 
   /// No description provided for @tpmActionFixActionProceedDescription.
   ///
