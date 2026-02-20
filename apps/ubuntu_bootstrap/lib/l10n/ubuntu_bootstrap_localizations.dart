@@ -1651,7 +1651,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @shutdown.
   ///
   /// In en, this message translates to:
-  /// **'Shut Down'**
+  /// **'Shut down'**
   String get shutdown;
 
   /// No description provided for @restartNow.
@@ -1861,7 +1861,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @installationSlidesAccessibilityOrca.
   ///
   /// In en, this message translates to:
-  /// **'Orca Screen Reader'**
+  /// **'Orca screen reader'**
   String get installationSlidesAccessibilityOrca;
 
   /// No description provided for @installationSlidesAccessibilityLanguages.
@@ -2479,7 +2479,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionDocumentationLinkLabel.
   ///
   /// In en, this message translates to:
-  /// **'Link to documentation'**
+  /// **'Learn more about hardware-backed encryption'**
   String get tpmActionDocumentationLinkLabel;
 
   /// No description provided for @tpmActionErrorSupportLabel.
@@ -2503,43 +2503,43 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindInternal.
   ///
   /// In en, this message translates to:
-  /// **'Internal'**
+  /// **'Internal error.'**
   String get tpmActionErrorKindInternal;
 
   /// No description provided for @tpmActionErrorKindShutdownRequired.
   ///
   /// In en, this message translates to:
-  /// **'Shutdown Required'**
+  /// **'Power off is required.'**
   String get tpmActionErrorKindShutdownRequired;
 
   /// No description provided for @tpmActionErrorKindRebootRequired.
   ///
   /// In en, this message translates to:
-  /// **'Reboot Required'**
+  /// **'Restart is required.'**
   String get tpmActionErrorKindRebootRequired;
 
   /// No description provided for @tpmActionErrorKindUnexpectedAction.
   ///
   /// In en, this message translates to:
-  /// **'Unexpected Action'**
+  /// **'Unexpected action.'**
   String get tpmActionErrorKindUnexpectedAction;
 
   /// No description provided for @tpmActionErrorKindMissingArgument.
   ///
   /// In en, this message translates to:
-  /// **'Missing Argument'**
+  /// **'Missing argument.'**
   String get tpmActionErrorKindMissingArgument;
 
   /// No description provided for @tpmActionErrorKindInvalidArgument.
   ///
   /// In en, this message translates to:
-  /// **'Invalid Argument'**
+  /// **'Invalid argument.'**
   String get tpmActionErrorKindInvalidArgument;
 
   /// No description provided for @tpmActionErrorKindActionFailed.
   ///
   /// In en, this message translates to:
-  /// **'Action Failed'**
+  /// **'Action failed.'**
   String get tpmActionErrorKindActionFailed;
 
   /// No description provided for @tpmActionErrorKindRunningInVm.
@@ -2599,7 +2599,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindUefiDebuggingEnabled.
   ///
   /// In en, this message translates to:
-  /// **'UEFI debugging is enabled'**
+  /// **'UEFI debugging is enabled.'**
   String get tpmActionErrorKindUefiDebuggingEnabled;
 
   /// No description provided for @tpmActionErrorKindInsufficientDmaProtection.
@@ -2611,7 +2611,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindNoKernelIommu.
   ///
   /// In en, this message translates to:
-  /// **'This computer is missing a required security feature (kernel IOMMU).'**
+  /// **'This computer is missing a required security feature (IOMMU).'**
   String get tpmActionErrorKindNoKernelIommu;
 
   /// No description provided for @tpmActionErrorKindHostSecurity.
@@ -2641,7 +2641,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindWeakSecureBootAlgorithmDetected.
   ///
   /// In en, this message translates to:
-  /// **'Some of the certificates verifying components in this computer are outdated or use weak protection.'**
+  /// **'Some of the certificates verifying software in this computer are outdated or use weak protection.'**
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected;
 
   /// No description provided for @tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests.
@@ -2653,7 +2653,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindAddonDriversPresent.
   ///
   /// In en, this message translates to:
-  /// **'Addon Drivers Present'**
+  /// **'Add-on drivers are present.'**
   String get tpmActionErrorKindAddonDriversPresent;
 
   /// No description provided for @tpmActionErrorKindGenericTpm.
@@ -2707,7 +2707,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionRebootToFwSettingsNoKernelIommu.
   ///
   /// In en, this message translates to:
-  /// **'Enable DMA protection manually'**
+  /// **'Enable IOMMU manually'**
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu;
 
   /// No description provided for @tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank.
@@ -2749,7 +2749,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionContactOsVendor.
   ///
   /// In en, this message translates to:
-  /// **'Contact OS Vendor'**
+  /// **'Contact OS vendor'**
   String get tpmActionFixActionContactOsVendor;
 
   /// No description provided for @tpmActionFixActionEnableTpmViaFirmware.
@@ -2803,13 +2803,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionRebootToFwSettingsDescription.
   ///
   /// In en, this message translates to:
-  /// **'You can do this in you computer\'s firmware settings.'**
+  /// **'You can do this in your computer\'s firmware settings.'**
   String get tpmActionFixActionRebootToFwSettingsDescription;
 
   /// No description provided for @tpmActionFixActionRebootToFwSettingsWithDocsDescription.
   ///
   /// In en, this message translates to:
-  /// **'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.'**
+  /// **'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.'**
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription;
 
   /// No description provided for @tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint.
@@ -2827,7 +2827,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionProceedDescription.
   ///
   /// In en, this message translates to:
-  /// **'Ignoring the issue may result in a less secure installation.'**
+  /// **'Ignoring this issue might result in a less secure installation.'**
   String get tpmActionFixActionProceedDescription;
 
   /// No description provided for @tpmActionRestartLabel.
@@ -2875,13 +2875,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionFixActionCaveatConfirm.
   ///
   /// In en, this message translates to:
-  /// **'You may be asked to confirm this action on restart.'**
+  /// **'You might be asked to confirm this action on restart.'**
   String get tpmActionFixActionCaveatConfirm;
 
   /// No description provided for @tpmActionFixActionCaveatRetry.
   ///
   /// In en, this message translates to:
-  /// **'You will then have to retry installation from scratch.'**
+  /// **'Then you will need to start the installation again.'**
   String get tpmActionFixActionCaveatRetry;
 
   /// No description provided for @tpmActionErrorTitle.
@@ -2893,7 +2893,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorDescription.
   ///
   /// In en, this message translates to:
-  /// **'Try a different solution or contact IT support'**
+  /// **'Try a different solution or contact IT support.'**
   String get tpmActionErrorDescription;
 
   /// No description provided for @manualPartitioningWarningBody.
