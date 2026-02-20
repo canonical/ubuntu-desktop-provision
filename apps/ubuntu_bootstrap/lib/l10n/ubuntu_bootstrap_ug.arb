@@ -1,6 +1,1085 @@
 {
-  "@@locale": "ug",
-  "tryOption": "‏{RELEASE} نى سىناپ كۆرىمەن",
-  "installOption": "‏{RELEASE} نى ئورنىتىمەن",
-  "welcome": "مەرھابا"
+    "@@locale": "ug",
+    "tryOption": "‏{RELEASE} نى سىناي",
+    "installOption": "‏{RELEASE} نى ئورنات",
+    "welcome": "مەرھابا",
+    "appTitle": "Ubuntu ئۈستەلئۈستى ئورناتقۇچ",
+    "windowTitle": "‏{RELEASE} نى ئورنات",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "ئۆزلۈكىدىن ئورنىتىش",
+    "autoinstallDirectHeader": "ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى ئەكىر",
+    "autoinstallDirectUrlLabel": "ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنىڭ تور ئادرېسىنى كىرگۈزەلەيسىز:",
+    "autoinstallDirectFileLabel": "ياكى يەرلىك ھۆججەت تاللىنىدۇ:",
+    "autoinstallDirectFileButtonLabel": "ھۆججەت تاللىنىدۇ…",
+    "autoinstallDirectFileClearButtonLabel": "ھۆججەتنى تازىلا",
+    "autoinstallDirectFilePickerTitle": "ھۆججەت تاللىنىدۇ",
+    "autoinstallDirectFilePickerFilterLabel": "YAML ھۆججەت",
+    "autoinstallDirectImportButtonLabel": "ئەكىر",
+    "autoinstallDirectErrorNetworkTitle": "ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى زىيارەت قىلغىلى بولمايدۇ",
+    "autoinstallDirectErrorNetworkBody": "تور ئادرېسىنىڭ توغرىلىقىنى تەكشۈرۈڭ، ئىنتېرنېت باغلىنىشىنى سىناڭ ياكى سەل تۇرۇپ قايتا سىناڭ.",
+    "autoinstallDirectErrorInvalidUrlTitle": "ئىناۋەتسىز تور ئادرېسى",
+    "autoinstallDirectErrorInvalidUrlBody": "تور ئادرېسىنىڭ توغرا ئىكەنلىكىنى تەكشۈرۈڭ ياكى يەرلىك ھۆججەتنى تاللاڭ.",
+    "autoinstallDirectErrorInvalidContentTitle": "ئىناۋەتسىز ئۆزلۈكىدىن ئورنىتىش ھۆججىتى",
+    "autoinstallDirectErrorInvalidContentBody": "ھۆججەتنى تەكشۈرۈڭ ياكى باشقا بىرىنى تەمىنلەڭ.",
+    "autoinstallDirectErrorFileSystemTitle": "ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى ئوقۇغىلى بولمايدۇ",
+    "autoinstallDirectErrorFileSystemBody": "ئىجازىتىڭىزنى تەكشۈرۈڭ ياكى باشقا ھۆججەت تەمىنلەڭ.",
+    "autoinstallDirectErrorUnkownTitle": "يوچۇن خاتالىق",
+    "autoinstallTitle": "ئورنىتىش تۈرى",
+    "autoinstallHeader": "{DISTRO} نى قانداق ئورناتماقچى؟",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "autoinstall.yaml نىڭ تور ئادرېسى ياكى يەرلىك ھۆججەت يولى كىرگۈزۈلىدۇ:",
+    "autoinstallInteractiveOption": "تەسىرلىشىشچان ئورنىتىش",
+    "autoinstallInteractiveDescription": "ئورنىتىشتا قەدەممۇ-قەدەم يېتەكلەشكە ئېھتىياجلىق ئىشلەتكۈچىلەرگە ماس كېلىدۇ.",
+    "autoinstallDirectOption": "ئۆزلۈكىدىن ئورنىتىش ھۆججىتى ئارقىلىق ئاپتوماتلاشتۇرۇلغان",
+    "autoinstallDirectDescription": "ئۆزلۈكسىز ۋە تەكرار سىستېما سەپلەيدىغان autoinstall.yaml ھۆججىتىگە ئىگە ئالىي ئىشلەتكۈچىلەرگە ماس كېلىدۇ.",
+    "autoinstallLandscapeOption": "Landscape ئاپتوماتلاشتۇرغان",
+    "autoinstallLandscapeDescription": "Landscape ئارقىلىق ئۆزلۈكىدىن ئورنىتىش ھۆججىتى تەمىنلەيدىغان تەشكىلنىڭ ئىشلەتكۈچىلىرىگە ماس كېلىدۇ.",
+    "changeButtonText": "ئۆزگەرت",
+    "quitButtonText": "ئورنىتىشتىن چېكىن",
+    "loadingPageTitle": "{DISTRO} غا خۇش كەلدىڭىز",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "{DISTRO} نى تەييارلاۋاتىدۇ…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "ئاگاھلاندۇرۇش:",
+    "tryOrInstallTitle": "{DISTRO} نى سىنايدۇ ياكى ئورنىتىدۇ",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "{DISTRO} نى قانداق بىر تەرەپ قىلماقچى؟",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "ئوڭشاپ ئورنىتىش",
+    "tryOrInstallRepairDescription": "ئوڭشاش پۈتۈك ۋە تەڭشەكلەرگە چېقىلماستىن ئورنىتىلغان بارلىق يۇمشاق دېتاللارنى قايتا ئورنىتىدۇ.",
+    "tryDescription": "كومپيۇتېرىڭىزغا ھېچقانداق ئۆزگەرتىش ئېلىپ بارماستىن {RELEASE} نى سىنىيالايسىز.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "نۆۋەتتىكى مەشغۇلات سىستېمىسىنىڭ ئورنىغا {RELEASE} نى ئورنىتىدۇ (ياكى ئۇنىڭ ئورنىغا) ئالماشتۇرىدۇ. بۇنىڭغا ئانچە كۆپ ۋاقىت كەتمەيدۇ.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "تېز ساقلاش تېخنىكىسى (RST) بايقالدى",
+    "rstHeader": "ئورنىتىشنى داۋاملاشتۇرۇش ئۈچۈن RST نى چەكلىشىڭىز كېرەك",
+    "rstDisable": "بۇ كومپيۇتېردا Intel شىركىتىنىڭ RST (تېز ساقلاش تېخنىكىسى) ئىشلىتىلگەن. تۆۋەندە RST نى چەكلىيەلەيسىز:",
+    "rstDisableWindows": "Windows، ئەگەر ئۇنىڭ بىلەن قوش سىستېما قوزغىتىش ئىشلەتسىڭىز",
+    "rstDisableBios": "BIOS تەڭشىكى",
+    "configureSecureBootTitle": "بىخەتەر قوزغىلىش سەپلىمىسى",
+    "configureSecureBootDescription": "سىز ئۈچىنچى تەرەپ قوزغاتقۇ يۇمشاق دېتالىنى ئورنىتىشنى تاللىدىڭىز. بۇ بىخەتەر قوزغىلىشنى تاقاشنى تەلەپ قىلىدۇ.\nشۇنىڭ ئۈچۈن دەرھال بىخەتەر شىفىرلىق ئاچقۇچتىن بىرنى تاللىشىڭىز كېرەك ھەمدە سىستېما قايتا قوزغىتىلغاندا ئۇنى كىرگۈزۈشىڭىز كېرەك.",
+    "configureSecureBootOption": "بىخەتەر قوزغىلىش سەپلىمىسى",
+    "chooseSecurityKey": "بىخەتەرلىك ئاچقۇچى تاللىنىدۇ",
+    "confirmSecurityKey": "بىخەتەرلىك ئاچقۇچىنى جەزملەش",
+    "dontInstallDriverSoftwareNow": "ھازىرچە قوزغاتقۇ يۇمشاق دېتالنى ئورناتمايدۇ",
+    "dontInstallDriverSoftwareNowDescription": "ئۇنى كېيىن يۇمشاق دېتال ۋە يېڭىلاشتىن ئورنىتالايسىز.",
+    "configureSecureBootSecurityKeyRequired": "بىخەتەرلىك ئاچقۇچى زۆرۈر",
+    "secureBootSecurityKeysDontMatch": "بىخەتەرلىك ئاچقۇچى ماسلاشمىدى",
+    "showSecurityKey": "كۆرسەت",
+    "hideSecurityKey": "يوشۇر",
+    "updatesOtherSoftwarePageTitle": "پىروگرامما",
+    "updatesOtherSoftwarePageDescription": "قايسى ئەپلەرنى ئورناتماقچى؟",
+    "codecsAndDriversPageTitle": "كومپيۇتېرىڭىزنى ئەلالاشتۇرىدۇ",
+    "codecsAndDriversPageDescription": "تەۋسىيە قىلىنغان مەخسۇس يۇمشاق دېتالنى ئورنىتامدۇ؟",
+    "codecsAndDriversPageBody": "كۆڭۈلدىكى ئەھۋالدا {DISTRO} نىڭ ئۆزىدە مەخسۇس يۇمشاق دېتال يوق. قوشۇمچە يۇمشاق دېتال ئورنىتىش كومپيۇتېرىڭىزنىڭ ئۈنۈمىنى ياخشىلىشى مۇمكىن.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "NVIDIA كۆرسىتىش كارتىسى بايقالدى",
+    "codecsAndDriversNvidiaBody": "NVIDIA كۆرسىتىش كارتىسىنىڭ ئۈنۈمىنى جارى قىلدۇرۇش ئۈچۈن، قوشۇمچە قوزغاتقۇ ئورنىتىش كۈچلۈك تەۋسىيە قىلىنىدۇ.",
+    "fullInstallationTitle": "كېڭەيتىلگەن تاللاش",
+    "fullInstallationSubtitle": "تورسىز تاللاپ ئورنىتىشقا دوستانە ئىشخانا يۈرۈشلۈك قورالى ۋە توركۆرگۈ.",
+    "minimalInstallationTitle": "كۆڭۈلدىكى تاللاش",
+    "minimalInstallationSubtitle": "پەقەت زۆرۈر يۇمشاق دېتال، توركۆرگۈ ۋە ئاساسىي قوراللار ئورنىتىلىدۇ.",
+    "otherOptions": "باشقا تاللانما",
+    "installThirdPartyTitle": "كۆرسىتىش ۋە Wi-Fi قاتتىق دېتالى شۇنداقلا قوشۇمچە ۋاسىتە پىچىمى ئۈچۈن ئۈچىنچى تەرەپ يۇمشاق دېتاللىرىنى ئورنىتىدۇ",
+    "installThirdPartySubtitle": "مەزكۇر يۇمشاق دېتال ئۇنىڭ پۈتۈكلىرىدىكى ئىجازەتنامىنىڭ چەكلىمىسىگە ئۇچرايدۇ. بەزىلىرى خۇسۇسلارنىڭ ئىگىدارچىلىقىدا.",
+    "installDriversTitle": "كۆرسىتىش ۋە Wi-Fi قاتتىق دېتالى شۇنداقلا قوشۇمچە ۋاسىتە پىچىمى ئۈچۈن ئۈچىنچى تەرەپ يۇمشاق دېتالىنى ئورنىتىدۇ",
+    "installDriversSubtitle": "NVIDIA قوزغاتقۇ ۋە ئوخشىشىپ كېتىدىغان يۇمشاق بىلەنلا چەكلەنمەسلىكى مۇمكىن",
+    "installCodecsTitle": "قوشۇمچە ۋاسىتە پىچىمىنى قوللاش ئۈچۈن چۈشۈرۈپ ئورنىتىدۇ",
+    "installCodecsSubtitle": "MP3، MP4، MOV ۋە ئوخشىشىپ كېتىدىغان كودلىغۇچ بىلەنلا چەكلەنمەسلىكى مۇمكىن",
+    "batteryWarning": "كومپيۇتېر توك مەنبەسىگە چېتىلمىغان.",
+    "offlineWarning": "سىز نۆۋەتتە تورسىز ھالەتتە",
+    "choosePassphraseHeader": "ئىم ئىبارە قۇر",
+    "choosePassphraseBody": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق.",
+    "choosePassphraseInfoHeader": "ئىم ئىبارىنى ياخشى ساقلاڭ",
+    "choosePassphraseInfoBody": "ئەگەر ئۇنى يوقىتىپ قويسىڭىز، ھەممە سانلىق مەلۇماتىڭىزنى يوقىتىسىز.",
+    "chooseOptionalPassphraseInfoHeader": "ئىم ئىبارە ۋە ئەسلىگە كەلتۈرۈش ئاچقۇچىنى بىخەتەر بىر جايغا ساقلاڭ",
+    "chooseOptionalPassphraseInfoBody": "ئەگەر ئۇنى يوقىتىپ قويسىڭىز، ھەممە سانلىق مەلۇماتىڭىزنى يوقىتىسىز. ئىم ئىبارە ئەسلىگە كەلتۈرۈش ئاچقۇچى ياكى ئىشلەتكۈچى ئىمنىڭ ئورنىنى ئالالمايدۇ.",
+    "passphrasePageTitle": "شىفىرلاش",
+    "passphrasePageHeaderPassphrase": "شىفىرلاش ئىم ئىبارە تەڭشىكى",
+    "passphrasePageHeaderPin": "شىفىرلاش PIN تەڭشىكى",
+    "passphrasePageBodyPassphrase": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر ئىم ئىبارىنى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.",
+    "passphrasePageBodyPin": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا PIN كىرگۈزۈشىڭىز كېرەك. بۇ PIN ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر PIN نى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.",
+    "passphrasePageChoosePassphraseHint": "ئىم ئىبارە",
+    "passphrasePageConfirmPassphraseHint": "جەزملەش ئىم ئىبارە",
+    "passphrasePageRequiredPassphrase": "ئىم ئىبارە زۆرۈر",
+    "passphrasePageMismatchPassphrase": "ئىم ئىبارە ماس كەلمىدى",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "جەزملەش PIN",
+    "passphrasePageRequiredPin": "PIN كىرگۈزۈش زۆرۈر",
+    "passphrasePageMismatchPin": "PIN ماس كەلمىدى",
+    "passphraseTypePassphraseTileTitle": "ئىم ئىبارە زۆرۈر",
+    "passphraseTypePassphraseTileSubTitle": "ئەڭ بىخەتەر. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك.",
+    "passphraseTypePinTileTitle": "PIN زۆرۈر",
+    "passphraseTypePinTileSubTitle": "بىخەتەررەك. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق رەقەم PIN كىرگۈزۈشىڭىز كېرەك.",
+    "passphraseTypeNoneTileTitle": "دىسكا قۇلۇپىنى ئۆزلۈكىدىن ئاچىدۇ",
+    "passphraseTypePageHeader": "قوشۇمچە بىخەتەرلىك",
+    "passphraseTypePageBody": "كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا كومپيۇتېرنىڭ ئىشەنچ سۇپا مودېلى (TPM) نىڭ قۇلۇپى ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.",
+    "passphrasePagePassphraseEntropyBelowMin": "ئاجىز ئىم ئىبارە، ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ",
+    "passphrasePagePassphraseEntropyBelowOptimal": "ياخشى ئىم ئىبار، تېخىمۇ بىخەتەر بولۇشى ئۈچۈن ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ",
+    "passphrasePagePassphraseEntropyOptimal": "كۈچلۈك ئىم ئىبارە",
+    "passphrasePagePinEntropyBelowMin": "ئاجىز PIN، ئۇزۇنراق ياكى مۆلچەرلەشنى تەسلەشتۈرۈڭ",
+    "passphrasePagePinEntropyBelowOptimal": "ياخشى PIN، تېخىمۇ بىخەتەر بولۇشى ئۈچۈن ئۇزۇنراق ياكى مۆلچەرلەشنى تەسلەشتۈرۈڭ",
+    "passphrasePagePinEntropyOptimal": "PIN يېتەرلىك ئۇزۇن",
+    "installationTypeTitle": "دىسكا تەڭشىكى",
+    "installationTypeHeader": "{DISTRO} نى قانداق ئورناتماقچى؟",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "مەزكۇر كومپيۇتېردا {os} بار ئىكەن. قانداق قىلىسىز؟",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "مەزكۇر كومپيۇتېردا {os1} ۋە {os2} بار ئىكەن. قانداق قىلىسىز؟",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "مەزكۇر كومپيۇتېردا بىر قانچە مەشغۇلات سىستېمىسى بار ئىكەن. قانداق قىلىسىز؟",
+    "installationTypeNoOSDetected": "مەزكۇر كومپيۇتېردا ھېچقانداق مەشغۇلات سىستېمىسى يوق ئىكەن. قانداق قىلىسىز؟",
+    "installationTypeErase": "دىسكىنى ئۆچۈرۈپ ${DISTRO} نى ئورنىتىدۇ",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "دىسكىدىكى بارلىق سانلىق مەلۇمات ۋە رايون ئۆچۈرۈلىدۇ، مەشغۇلات سىستېمىسىمۇ شۇنىڭ ئىچىدە.",
+    "installationTypeAdvancedLabel": "ئالىي تاللانما كۆرسەت…",
+    "installationTypeAdvancedTitle": "شىفىرلاش ۋە ھۆججەت سىستېمىسى",
+    "installationTypeExperimental": "تەجرىبە",
+    "installationTypeNone": "شىفىرلاش يوق",
+    "installationTypeNoneInfo": "شىفىرلانمىغان ئۆلچەملىك ھۆججەت سىستېمىسى.",
+    "installationTypeNoneSelected": "ھېچقايسىسى تاللانمىدى",
+    "installationTypeLVM": "شىفىرلانمىغان لوگىكىلىق دىسكا باشقۇرۇش (LVM) نى ئىشلىتىدۇ",
+    "installationTypeLVMSelected": "LVM تاللاندى",
+    "installationTypeLVMEncryption": "ئىم ئىبارە بىلەن شىفىرلايدۇ",
+    "installationTypeLVMEncryptionInfo": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ LVM نى ئۆز ئىچىگە ئالغان LUKS شىفىرلاشنى ئىشلىتىدۇ.",
+    "installationTypeLVMEncryptionSelected": "LVM ۋە شىفىرلاش تاللاندى",
+    "installationTypeEncryptInfo": "كېيىنكى باسقۇچتا بىخەتەرلىك ئاچقۇچىنى تاللايسىز.",
+    "installationTypeZFS": "شىفىرلانمىغان ZFS نى ئىشلىتىدۇ",
+    "installationTypeZFSEncryption": "ZFS نى ئىشلىتىپ ئىم ئىبارە بىلەن شىفىرلايدۇ",
+    "installationTypeZFSEncryptionInfo": "ZFS نى ئىشلىتىپ يەرلىك شىفىرلايدۇ. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك.",
+    "installationTypeZFSSelected": "ZFS تاللاندى",
+    "installationTypeZFSEncryptionSelected": "ZFS ۋە مەخپىيلەشتۈرۈش تاللاندى",
+    "installationTypeTPM": "قاتتىق دېتال قوللايدىغان شىفىرلاشنى ئىشلىتىدۇ",
+    "installationTypeTPMSelected": "TPM تاللاندى",
+    "installationTypeReinstall": "{os} نى ئۆچۈرۈپ قايتا ئورنىتىدۇ",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "{product} نى {os} بىلەن يانداش ئورنىتىدۇ",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "{product} نى {os1} ۋە {os2} بىلەن يانداش ئورنىتىدۇ",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "{product} نى مەۋجۇت مەشغۇلات سىستېمىسى بىلەن يانداش ئورنىتىدۇ",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "{product} نى باشقا رايونغا يانداش ئورنىتىدۇ",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "چوڭلۇقىنى ئۆزگەرتىدىغان رايوندىن بىرنى تاللاپ ھەمدە {product} غا بوشلۇق قۇرىدۇ. قوزغىلىۋاتقاندا مەشغۇلات سىستېمىسىنى تاللىيالايسىز.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os} نى ئۆچۈرۈپ {product} نى ئورنىتىدۇ",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "نۆۋەتتىكى {os} ئورناتقان بارلىق ھۆججەت ۋە سانلىق مەلۇمات مەڭگۈلۈك ئۆچۈرۈلىدۇ.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "قولدا ئورنىتىش",
+    "installationTypeManualInfo": "دىسكا سەپلىمىسىنى ئۆزى تەڭشەيدىغان ئالىي ئىشلەتكۈچىلەرگە ماس كېلىدۇ.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "دىسكىنى ئۆچۈرۈپ ${DISTRO} نى ئورنىتىدۇ",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "تاللىغان دىسكىدىن باشتىن باشلايدۇ.",
+    "selectGuidedStorageDriveDropdownLabel": "قوزغاتقۇچ تاللىنىدۇ:",
+    "selectGuidedStoragePartitionDropdownLabel": "رايون تاللىنىدۇ:",
+    "selectGuidedStorageInfoLabel": "پۈتكۈل دىسكا ئىشلىتىلىدۇ:",
+    "selectGuidedStorageInstallNow": "ھازىر ئورنات",
+    "guidedStoragePageHeader": "{DISTRO} نى نەگە ئورنىتىدىغانلىقى تاللىنىدۇ",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "تۆۋەندىكى بۆلگۈچنى سۆرەش ئارقىلىق دىسكا بوشلۇقى ئاجرىتىلىدۇ:",
+    "installAlongsideResizePartition": "رايون چوڭلۇقىنى ئۆزگەرتىدۇ",
+    "installAlongsideAllocateSpace": "بوشلۇق تەقسىملەيدۇ",
+    "installAlongsideFiles": "ھۆججەت",
+    "installAlongsidePartition": "رايون:",
+    "installAlongsideSize": "چوڭلۇقى:",
+    "installAlongsideAvailable": "ئىشلىتىلىشچان:",
+    "allocateDiskSpace": "قولدا رايونغا ئايرىش",
+    "allocateDiskSpaceInvalidMountPointSlash": "ئېگەرلەش نۇقتىسى چوقۇم «/» دىن باشلىنىدۇ",
+    "allocateDiskSpaceInvalidMountPointSpace": "ئېگەرلەش نۇقتىسى بوشلۇقنى ئۆز ئىچىگە ئالمايدۇ",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} نى {mountpoint} ھۆججەت سىستېمىسى قوللىمايدۇ",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "ئۈسكۈنە",
+    "diskHeadersType": "تىپى",
+    "diskHeadersMountPoint": "ئېگەرلەش نۇقتىسى",
+    "diskHeadersSize": "چوڭلۇقى",
+    "diskHeadersUsed": "ئىشلىتىلگىنى",
+    "diskHeadersSystem": "سىستېما",
+    "diskHeadersFormat": "پىچىمى",
+    "freeDiskSpace": "ئەركىن بوشلۇق",
+    "newPartitionTable": "يېڭى دىسكا رايون جەدۋىلى",
+    "newPartitionTableConfirmationTitle": "يېڭى بوش دىسكا رايونى",
+    "newPartitionTableConfirmationMessage": "پۈتكۈل ئۈسكۈنىدە يېڭى دىسكا رايون جەدۋىلى قۇرغاندا نۆۋەتتىكى بارلىق دىسكا رايونىنى ئۆچۈرۈۋېتىدۇ. ئەگەر لازىم بولسا بۇ مەشغۇلاتتىن يېنىۋالغىلى بولىدۇ.",
+    "tooManyPrimaryPartitions": "ئاساسىي رايون بەك كۆپ",
+    "partitionLimitReached": "يۇقىرى چېكىگە يەتتى",
+    "bootLoaderDevice": "قوزغىتىش يېتەكلىگۈچ ئورنىتىدىغان ئۈسكۈنە",
+    "partitionCreateTitle": "دىسكا رايونى قۇر",
+    "partitionEditTitle": "دىسكا رايوننى تەھرىرلە",
+    "partitionSizeLabel": "چوڭلۇقى:",
+    "partitionTypeLabel": "يېڭى دىسكا رايونىنىڭ تۈرى:",
+    "partitionTypePrimary": "ئاساسىي",
+    "partitionTypeLogical": "لوگىكىلىق",
+    "partitionLocationLabel": "يېڭى دىسكا رايونىنىڭ ئورنى:",
+    "partitionLocationBeginning": "مەزكۇر بوشلۇقنىڭ بېشى",
+    "partitionLocationEnd": "مەزكۇر بوشلۇقنىڭ ئاخىرى",
+    "partitionFormatLabel": "ئىشلىتىلگىنى:",
+    "partitionFormatNone": "پىچماي قالدۇر",
+    "partitionFormatKeep": "{format} پىچىمىدا قالدۇرىدۇ",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "رايوننى پىچىدۇ",
+    "partitionMountPointLabel": "ئېگەرلەش نۇقتىسى:",
+    "confirmPageTitle": "ئورنىتىشقا تەييارلاندى",
+    "confirmHeader": "تاللىشىڭىزنى تەكشۈرىدۇ",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "يوق",
+    "confirmDevicesTitle": "ئۈسكۈنە",
+    "confirmEntryApplications": "پىروگرامما",
+    "confirmEntryDiskSetup": "ئورنىتىش تۈرى",
+    "confirmEntryDiskEncryption": "دىسكا شىفىرلاش",
+    "confirmEntryInstallationDisk": "ئورنىتىش دىسكىسى",
+    "confirmEntryProprietarySoftware": "مەخسۇس يۇمشاق دېتال",
+    "confirmSectionGeneralTitle": "ئادەتتىكى",
+    "confirmSectionSecurityAndMoreTitle": "بىخەتەرلىك ۋە باشقىلار",
+    "confirmPartitionsTitle": "دىسكا رايونى",
+    "confirmPartitionTables": "تۆۋەندىكى ئۈسكۈنىنىڭ دىسكا رايون جەدۋىلى ئۆزگەردى:",
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "كودلىغۇچ-يەشكۈچ",
+    "confirmProprietarySoftwareCodecsDrivers": "كودلىغۇچ ۋە قوزغاتقۇچ",
+    "confirmProprietarySoftwareDrivers": "قوزغاتقۇ",
+    "confirmInstallButton": "ئورنات",
+    "confirmTableErased": "ئۆچۈرۈلدى",
+    "confirmTableUnchanged": "ئۆزگەرتىلمىدى",
+    "confirmTableResized": "چوڭلۇقى {oldsize} دىن {newsize} غا ئۆزگەرتىلدى",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "{mountpoint} غا ئىشلىتىش ئۈچۈن {format} سۈپىتىدە پىچىلىپ قۇرۇلدى",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "{mountpoint} غا ئىشلىتىش ئۈچۈن {format} سۈپىتىدە پىچىلدى",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "{mountpoint} غا ئىشلىتىلىدۇ",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} سۈپىتىدە پىچىلدى",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "ئورنىتىش تامام",
+    "readyToUse": "{system} ئورنىتىلدى ۋە ئىشلىتىشكە تەييار",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** دىسكىغا كۆچۈرۈلدى",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "{system} غا قايتا قوزغىلىپ كىرىدۇ",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "قايتا قوزغىتىلسا ئورنىتىشنى تاماملايدۇ ياكى سىناشنى داۋاملاشتۇرىدۇ.\nھەر قانداق ئۆزگەرتىشىڭىز ساقلانمايدۇ.",
+    "rebootToConfigureWarning": "ئورنىتىش جەريانىنى داۋاملاشتۇرۇش ئۈچۈن كومپيۇتېرنى قايتا قوزغىتىش زۆرۈر.",
+    "shutdown": "تاقا",
+    "restartNow": "ھازىر قايتا قوزغات",
+    "continueTesting": "سىناشنى داۋاملاشتۇر",
+    "bitlockerInfoTitle": "BitLocker بايقالدى",
+    "bitlockerInfoDescription": "بىر ياكى بىر قانچە دىسكا رايونى BitLocker بىلەن شىفىرلانغان.",
+    "bitlockerInfoDisable": "Windows بىلەن يانداش ئورنىتىش ئۈچۈن، Windows تىكى BitLocker نى چەكلەش كېرەك.",
+    "bitlockerInfoRecovery": "ئورناتقاندىن كېيىن Windows قوزغالغاندا ئەسلىگە قايتۇرۇش شىفىرلىق ئاچقۇچىنى سورىشى مۇمكىن.",
+    "bitlockerWarningTitle": "ئەگەر BitLocker ئەسلىگە قايتۇرۇش ئاچقۇچىڭىز بولمىسا بارلىق سانلىق مەلۇماتلىرىڭىزنى يوقىتىشىڭىز مۇمكىن",
+    "restartComputer": "كومپيۇتېرنى قايتا قوزغات",
+    "restartComputerTitle": "كومپيۇتېرنى قايتا قوزغىتامدۇ؟",
+    "restartIntoWindows": "قايتا قوزغىتىپ Windows قا كىرىدۇ",
+    "restartIntoWindowsTitle": "قايتا قوزغىتىپ Windows قا كىرەمدۇ؟",
+    "restartIntoWindowsDescription": "كومپيۇتېرنى راستتىنلا قايتا قوزغىتامسىز؟ سىز سەل تۇرۇپ {DISTRO} ئورنىتىشنى قايتا قوزغاتسىڭىز ئاندىن {DISTRO} ئورنىتىشنى تاماملىيالايسىز.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "{RELEASE} غا خۇش كەلدىڭىز",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "ئىشلىتىلىشچان:",
+    "installationSlidesIncluded": "ئىچىدە:",
+    "installationSlidesWelcomeTitle": "تېز، ئەركىن يەنى ھەقسىز، يېڭى ئىقتىدارلار بىلەن تولغان",
+    "installationSlidesWelcomeHeader": "{DISTRO} نىڭ يېڭى نەشرى ھېسابلاشنى ئىلگىرى ھەر قانداق ۋاقىتتىكىدىن تېخىمۇ ئاسانلاشتۇردى.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "مەيلى سىز ئىجادكار، مەزمۇن ياراتقۇچى، ئويۇن ئوينىغۇچى ياكى سىستېما باشقۇرغۇچى بولۇڭ، {RELEASE} نەشرىدىن خىزمەت ئۈنۈمىنى ئاشۇرۇپ، ئىشلىتىش تەسىراتىنى كۈچەيتىدىغان يېڭى قوراللارنى تاپالايسىز.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "سىز ئېھتىياجلىق ھەممە پىروگرامما بار",
+    "installationSlidesSoftwareBody": "Ubuntu يۇمشاق دېتال مەركىزىدە Snap دۇكىنى ۋە {DISTRO} يۇمشاق دېتال ئامبىرىدىن مىڭلىغان يۇمشاق دېتالنى ئورنىتىپ، باشقۇرۇپ ۋە يېڭىلىيالايسىز.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "ئەڭ ياخشى ئوچۇق كودلۇق يۇمشاق دېتالدا ئىجادىيەت بىلەن شۇغۇللىنىڭ",
+    "installationSlidesDevelopmentBody": "{DISTRO} پىروگرامما ياكى تور ئىجادىيىتى، ئۇچۇر ئىلمى ۋە AI/ML شۇنداقلا يۈرگۈزۈش ۋە باشقۇرۇشنىڭ كۆڭۈلدىكىدەك خىزمەت پونكىتى. ھەر بىر {DISTRO} نەشرىدە ئەڭ يېڭى قورال زەنجىرى بولۇپلا قالماي يەنە بارلىق ئاساسىي ئېقىمدىكى IDE نى قوللايدۇ.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "تەسەۋۋۇرىڭىزنى كۈچەيتىدۇ",
+    "installationSlidesCreativityBody": "ئەگەر سىز لايىھەلىگۈچى، كارتون فىلىم لايىھەلىگۈچى، سىن ئىجادىيەتچىسى ياكى ئويۇن ئىجادكارى بولسىڭىز، ئىش ئېقىمىنى ئوچۇق كودلۇق ۋە كەسىپ ئۆلچىمىنى قوللايدىغان يۇمشاق دېتال ۋە ئەپنى {DISTRO} غا ئەكىرىش ئىنتايىن ئاددىي.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "ئويۇن ئوينىغۇچىلارغا بەك ماس كېلىدۇ",
+    "installationSlidesGamingBody": "{DISTRO} ئەڭ يېڭى نەشرىدىكى NVIDIA ۋە Mesa قوزغاتقۇنى قوللاپ ئۈنۈم ۋە ماسلىشىشچانلىقنى ياخشىلىدى. Windows تىكى مىڭلىغان ئويۇننى {DISTRO} دا Steam قاتارلىق پىروگراممىلار ئارقىلىق قوشۇمچە سەپلەش ئېلىپ بارماستىن راۋان ئوينىغىلى بولىدۇ.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "شەخسىيەت ۋە بىخەتەرلىك كاپالەتكە ئىگە",
+    "installationSlidesSecurityBody": "{DISTRO} توردا شەخسىيەت بىخەتەرلىكىگە كاپالەتلىك قىلىدىغان ھەممە قورالنى تەمىنلەيدۇ. {DISTRO} نىڭ ئىچىدە مۇداپىئە تېمى ۋە مەۋھۇم شەخسىي تور يەنى VPN بار بولۇپ، شەخسىيەتنى مەركەز قىلغان بىر يۈرۈش پىروگراممىنى تەمىنلەپ، سانلىق مەلۇماتلىرىڭىزنى ئۆزىڭىزنىڭ تولۇق تىزگىنلىشىگە كاپالەتلىك قىلىدۇ.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityLts": "بارلىق {DISTRO} نەشرى 5 يىللىق بىخەتەرلىك يامىقىنى ئۆز ئىچىگە ئالىدۇ، ئەگەر Ubuntu Pro مۇشتەرىلىكى بولسا 10 يىلغا ئۇزارتقىلى بولىدۇ.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "ئىشلەپچىقىرىش ئۈنۈمىنى ئاشۇرىدۇ",
+    "installationSlidesProductivityBody": "{DISTRO} نىڭ ئۈستەلئۈستى نەشرىگە LibreOffice ئالدىن ئورنىتىلغان بولۇپ، Microsoft Office بىلەن ماسلىشىدىغان ئوچۇق كودلۇق ئىشخانا يۈرۈشلۈك يۇمشاق دېتالى، پۈتۈك، ئېلېكتىرونلۇق جەدۋەل ۋە سىيرىلما بىر تەرەپ قىلىشقا ئىشلىتىلىدۇ. ئۇنىڭدىن باشقا يەنە ئالقىشلىنىۋاتقان ھەمكارلىشىش قورالىمۇ تەمىنلەنگەن.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityTitle": "ھەممەيلەن ئىشلىتەلەيدۇ",
+    "installationSlidesAccessibilityBody": "{DISTRO} نىڭ غايىسى: كومپيۇتېرنى ھەممە ئادەم ئىشلىتەلەيدىغان بولۇشتۇر. ئۇنىڭدىكى ئالىي دەرىجىلىك قولايلىق قورال ۋە باشقا نۇرغۇن تاللانمىلار رەڭ، تېكىست چوڭلۇقى، تىل قاتارلىقلارنىڭ ھەممىسىنى ئۆزگەرتىش، شۇنداقلا سىز قەيەردە، كىم بولۇشىڭىزدىن قەتئىينەزەر {DISTRO} ھېسابلاشنى ئاسانلاشتۇرىدۇ.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityOrca": "Orca ئېكران ئوقۇغۇچ",
+    "installationSlidesAccessibilityLanguages": "تىل قوللاش",
+    "installationSlidesSupportTitle": "ياردەم ۋە قوللاش",
+    "installationSlidesSupportHeader": "ئىگە تەرەپ {DISTRO} قوللانمىسىنى توردا ۋە يان بالداقتىكى ياردەم سىنبەلگە ئارقىلىق زىيارەت قىلغىلى بولىدۇ.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Ask Ubuntu ھەر خىل مەسىلە ۋە جاۋابلار بار، Ubuntu Discourse يېڭىياچى ۋە تەجرىبىلىك ئىشلەتكۈچىلەرگە يېتەكچى ۋە مۇنازىرە سۇپىسى تەمىنلەيدۇ.",
+    "installationSlidesSupportEnterprise": "كارخانا ئىشلەتكۈچىلىرى ئۈچۈن Canonical شىركىتى سودا جەھەتتىن قوللاش بىلەن تەمىنلەپ، كارخانىدا خىزمەت مۇھىتىدا Ubuntu نى بىخەتەر ئورنىتىپ باشقۇرۇشنى ئاسانلاشتۇرىدۇ.",
+    "installationSlidesSupportResources": "پايدىلىق مەنبەلەر:",
+    "installationSlidesSupportDocumentation": "ئىگە تەرەپ قوللانما",
+    "installationSlidesSupportUbuntuPro": "Ubuntu Pro نىڭ 24/7 كارخانا دەرىجىسىدىكى قوللىشى",
+    "nextSlideSemanticLabel": "كېيىنكى سىيرىلما",
+    "previousSlideSemanticLabel": "ئالدىنقى سىيرىلما",
+    "playSlideshowSemanticLabel": "تام تەسۋىرنى كۆرسىتىدۇ",
+    "pauseSlideshowSemanticLabel": "تام تەسۋىرنى ۋاقىتلىق توختىتىدۇ",
+    "toggleLogsSemanticLabel": "ئورنىتىش خاتىرىسىنى ئالماشتۇرىدۇ",
+    "copyingFiles": "ھۆججەت كۆچۈرۈۋاتىدۇ…",
+    "installingSystem": "سىستېما ئورنىتىۋاتىدۇ…",
+    "configuringSystem": "سىستېمىنى تەڭشەۋاتىدۇ…",
+    "installationFailed": "ئورنىتالمىدى",
+    "notEnoughDiskSpaceTitle": "يېتەرلىك دىسكا بوشلۇقى يوق",
+    "notEnoughDiskSpaceUbuntu": "{DISTRO} نى ئورنىتىشقا يېتەرلىك دىسكا بوشلۇقى يوق",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "تاللىغان دىسكىدا {DISTRO} نى ئورنىتىشقا يېتەرلىك دىسكا بوشلۇقى يوق. بوشلۇق تەييارلاش ئۈچۈن ئورناتقۇچتىن چېكىنىڭ ياكى باشقا دىسكا تاللاڭ.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "ئىشلىتىلىشچان:",
+    "notEnoughDiskSpaceRequired": "زۆرۈر:",
+    "refreshPageTitle": "يېڭىلانما بار",
+    "refreshHeader": "ئورناتقۇچنىڭ يېڭىلانمىسى بار",
+    "refreshUpdateNow": "ھازىر يېڭىلا",
+    "refreshInfo": "ئەڭ يېڭى نەشرىگە يېڭىلانسا ئىشەنچلىكلىكىنى ياخشىلاپ، تېخىمۇ كۆپ ئىقتىدارىغا ئېرىشكىلى بولىدۇ.",
+    "refreshReady": "يېڭىلانما تەييار",
+    "refreshCurrent": "نۆۋەتتىكى{snap} نىڭ نەشرى {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "يېڭىلىنىدىغان نەشرى {version}",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "نۆۋەتتىكى نەشرى {version} ئەڭ يېڭىسى.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} نى يېڭىلاۋاتىدۇ…",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "داۋاملاشتۇرۇش ئۈچۈن ئورناتقۇچنى تاقاپ ۋە قايتا قوزغىتىڭ",
+    "refreshCloseLabel": "ئورناتقۇچنى ياپ",
+    "refreshSnapPrerequisites": "{snap} نىڭ ئالدىنقى شەرتىگە كاپالەتلىك قىلىۋاتىدۇ…",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "{snap} نى يېڭىلاۋاتىدۇ…",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "{snap} نىڭ قايتا يېڭىلىنىشىنى تەكشۈرۈۋاتىدۇ…",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "{snap} نى تەييارلاۋاتىدۇ…",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "{snap} نى چۈشۈرۈۋاتىدۇ…",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "{snap} نى دەلىللەۋاتىدۇ…",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "{snap} نى ئېگەرلەۋاتىدۇ…",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "{snap} مۇلازىمىتىنى توختىتىۋاتىدۇ…",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "{snap} لەقىمىنى چىقىرىۋېتىۋاتىدۇ…",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "{snap} ئۇلانمىسىنى ئۈزۈۋاتىدۇ…",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "{snap} مەنبەسىنى يېڭىلاۋاتىدۇ…",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "{snap} نىڭ يادرو بۇيرۇق قۇرىنى يېڭىلاۋاتىدۇ…",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "{snap} سانلىق مەلۇماتىنى كۆچۈرۈۋاتىدۇ…",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "{snap} نىڭ بىخەتەرلىك سەپلىمە ھۆججىتىنى تەڭشەۋاتىدۇ…",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "{snap} غا باغلاۋاتىدۇ…",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "{snap} نىڭ كۆرۈنۈش قىستۇرمىسى ۋە ئوقۇرىغا باغلاۋاتىدۇ…",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "ئاپتوماتىك {snap} لەقىمىنى تەڭشەۋاتىدۇ…",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap} لەقىمىنى تەڭشەۋاتىدۇ…",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "{snap} مۇلازىمىتىنى قوزغىتىۋاتىدۇ…",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "{snap} نى تازىلاۋاتىدۇ…",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "ئەسلىگە كەلتۈرۈش ئاچقۇچى",
+    "recoveryKeyTitleBadgeLabel": "مۇھىم",
+    "recoveryKeyHeader": "ئەسلىگە كەلتۈرۈش ئاچقۇچىنى ساقلايدۇ",
+    "recoveryKeyInfoHeader": "ئەسلىگە قايتۇرۇش ئاچقۇچىڭىز بولمىسا بارلىق سانلىق مەلۇماتلىرىڭىزنى يوقىتىشىڭىز مۇمكىن",
+    "recoveryKeyTextFieldLabel": "ئەسلىگە كەلتۈرۈش ئاچقۇچى",
+    "recoveryKeyStorageAdvice": "ئەگەر قوزغالغاندا شىفىر يېشەلمىسە، بۇ شىفىرلىق ئاچقۇچنى تەمىنلىشىڭىز كېرەك. ئەگەر ئاچقۇچ بولمىسا، ھېچقانداق سانلىق مەلۇماتىڭىزنى زىيارەت قىلالمايسىز. ئۇنى ئىم باشقۇرغۇچقا ئوخشاش بىخەتەر بىر جايغا ساقلاڭ.",
+    "recoveryKeyConfirmation": "ئەسلىگە كەلتۈرۈش ئاچقۇچىنى بىخەتەر جايغا ساقلىدىم",
+    "recoveryKeyLinkLabel": "مول بىلىم",
+    "recoveryKeySaveToFileLabel": "ھۆججەتكە ساقلا",
+    "recoveryKeyShowQrCodeLabel": "QR كودىنى كۆرسەت",
+    "recoveryKeyQrDialogTitle": "{DISTRO} ئۈستەلئۈستى - ئەسلىگە كەلتۈرۈش ئاچقۇچى",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "QR كودىنى تاراپ ئەسلىگە كەلتۈرۈش ئاچقۇچىنى ئىم باشقۇرغۇچقا ئوخشاش بىرەر بىخەتەر جايدا ساقلاڭ. كېيىن ئىشلىتىش ئۈچۈن ئۇنى سۈرەتكە تارتسىڭىزمۇ بولىدۇ.",
+    "recoveryKeyClipboardNotifiaction": "چاپلاش تاختىسىغا كۆچۈرۈلدى",
+    "recoveryKeyExceptionFileSystemTitle": "ئەسلىگە كەلتۈرۈش ئاچقۇچى ساقلانمىدى",
+    "recoveryKeyExceptionDisallowedPathTitle": "ئەسلىگە كەلتۈرۈش ئاچقۇچ ھۆججىتىنى ۋاقىتلىق ئورۇنغا ساقلىيالمايدۇ",
+    "recoveryKeyExceptionUnknownTitle": "يوچۇن خاتالىق",
+    "recoveryKeyExceptionFileSystemBody": "ئۇ قىسقۇچ ئورنىغا يېزىش ئىجازىتىڭىز يوق. پەرقلىق ئورۇننى سىناڭ ياكى باشقا ئۇسۇلنى ئىشلىتىڭ.",
+    "recoveryKeyExceptionDisallowedPathBody": "كۆچمە دىسكىغا ئوخشاش پەرقلىق ئورۇننى سىناڭ ياكى باشقا ئۇسۇلنى ئىشلىتىڭ.",
+    "recoveryKeyFilePickerTitle": "ئەسلىگە كەلتۈرۈش ئاچقۇچىنى ساقلايدۇ",
+    "recoveryKeyFilePickerFilter": "تېكىست ھۆججەت",
+    "landscapePageTitle": "ئۆزلۈكىدىن ئورنىتىش",
+    "landscapeHeader": "Landscape غا تىزىمغا كىرىڭ",
+    "landscapeDomainHeader": "Landscape دائىرىنى كىرگۈزۈڭ (FQDN)",
+    "landscapeDomainHintText": "Landscape دائىرە ئىسمى (FQDN)",
+    "landscapeDomainInstructions": "تەشكىلىڭىزنىڭ Landscape دائىرە ئىسمىنى تەمىنلەپ تىزىمغا كىرىپ ئۆزلۈكىدىن ئورنىتىش ھۆججىتىگە ئېرىشىڭ. ئۇچۇر تېخنىكا قوللىغۇچىڭىزدىن FQDN غا ئېرىشەلەيسىز.",
+    "landscapeDomainTextField": "Landscape دائىرە ئىسمى (FQDN)",
+    "next": "كېيىنكى",
+    "landscapeDomainInvalidDomainWarning": "دائىرە ئىسمى ئىناۋەتسىز، تەكشۈرۈڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىڭىز بىلەن ئالاقىلىشىڭ",
+    "landscapeDomainNoInternetTitleWarning": "داۋاملاشتۇرۇش ئۈچۈن ئىنتېرنېتقا باغلاش كېرەك",
+    "landscapeDomainNoInternetDescriptionWarning": "چوقۇم ئىنتېرنېتقا باغلاپ Landscape دىن ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى چۈشۈرۈش كېرەك",
+    "landscapeCodeExpiredWarning": "كودنىڭ ۋاقتى ئۆتكەن، قايتا سىناڭ",
+    "landscapeLoginFailedWarning": "تىزىمغا كىرەلمىدى، قايتا سىناڭ",
+    "landscapeErrorPageTitle": "ھېسابىڭىزدا ئۆزلۈكىدىن ئورنىتىشنى ئىشلەتكىلى بولمايدۇ",
+    "landscapeErrorPageBody": "ئۇچۇر تېخنىكا قوللىغۇچىڭىز بىلەن ئالاقىلىشىڭ ياكى باشقا ئورنىتىش تاللانمىسىنى سىناڭ.",
+    "landscapeErrorPageCode": "خاتالىق كودى: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu تەشكىلىڭىز تەمىنلىگەن سەپلىمە بىلەن ئورنىتىدۇ",
+    "landscapeConfirmPageSuccessInfoContent": "تۆۋەندە Landscape دىن ئەكىرگەن ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى كۆرەلەيسىز.",
+    "successIconSemanticLabel": "مۇۋەپپەقىيەتلىك",
+    "errorIconSemanticLabel": "خاتالىق",
+    "closeIconSemanticLabel": "ياپ",
+    "maximizeIconSemanticLabel": "چوڭايت",
+    "minimizeIconSemanticLabel": "كىچىكلەت",
+    "tpmActionBadgeLabel": "زۆرۈر مەشغۇلات",
+    "tpmActionDetailsLabel": "تېخنىكىلىق تەپسىلات",
+    "tpmActionConfirmLabel": "جەزملە",
+    "tpmActionErrorKindInternal": "ئىچكى",
+    "tpmActionErrorKindShutdownRequired": "تاقاش زۆرۈر",
+    "tpmActionErrorKindRebootRequired": "قايتا قوزغىتىش زۆرۈر",
+    "tpmActionErrorKindUnexpectedAction": "كۈتۈلمىگەن مەشغۇلات",
+    "tpmActionErrorKindMissingArgument": "ئەركىن ئۆزگەرگۈچى كەم",
+    "tpmActionErrorKindInvalidArgument": "ئىناۋەتسىز ئۆزگەرگۈچى",
+    "tpmActionErrorKindActionFailed": "مەشغۇلات مەغلۇپ بولدى",
+    "tpmActionErrorKindRunningInVm": "نۆۋەتتىكى مۇھىت مەۋھۇم كومپيۇتېر.",
+    "tpmActionErrorKindSystemNotEfi": "بۇ كومپيۇتېر مەزكۇر شىفىرلاش ئۇسۇلىنى قوللىمايدىغان كونىراق مۇقىم دېتال (كونا BIOS) ئىشلىتىۋاتىدۇ.",
+    "tpmActionErrorKindEfiVariableAccess": "بۇ كومپيۇتېرنىڭ مۇقىم دېتال تەڭشىكىدە مەسىلە بار.",
+    "tpmActionErrorKindNoSuitableTpm2Device": "بۇ كومپيۇتېردا مەزكۇر شىفىرلاش ئۇسۇلىغا زۆرۈر بولغان بىخەتەرلىك قاتتىق دېتالى (TPM 2.0) يوق.",
+    "tpmActionErrorKindTpmDeviceFailure": "TPM ئۈسكۈنە مەغلۇپ بولدى",
+    "tpmActionErrorKindTpmDeviceDisabled": "بۇ كومپيۇتېردا TPM چەكلەنگەن.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "بۇ كومپيۇتېرنىڭ TPM نى باشقا سىستېما ياكى پىروگرامما ئىشلىتىۋاتىدۇ.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "نۆۋەتتە بۇ كومپيۇتېرنىڭ TPM ى قۇلۇپلانغان.",
+    "tpmActionErrorKindInsufficientTpmStorage": "بۇ كومپيۇتېرنىڭ TPM دا ساقلاش بوشلۇقى يېتەرلىك ئەمەس.",
+    "tpmActionErrorKindNoSuitablePcrBank": "مۇۋاپىق PCR ئامبىرى يوق",
+    "tpmActionErrorKindMeasuredBoot": "ئۆلچەنگەن قوزغىتىش",
+    "tpmActionErrorKindEmptyPcrBanks": "بوش PCR ئامبىرى",
+    "tpmActionErrorKindTpmCommandFailed": "TPM بۇيرۇقى مەغلۇپ بولدى",
+    "tpmActionErrorKindInvalidTpmResponse": "ئىناۋەتسىز TPM ئىنكاسى",
+    "tpmActionErrorKindTpmCommunication": "TPM ئالاقىسى",
+    "tpmActionErrorKindUnsupportedPlatform": "بۇ كومپيۇتېر قاتتىق دېتال ئاساسىدىكى شىفىرلاش بىلەن ماسلاشمايدۇ.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI سازلاش قوزغىتىلغان",
+    "tpmActionErrorKindInsufficientDmaProtection": "بۇ كومپيۇتېردا زۆرۈر بولغان بىخەتەرلىك ئىقتىدارى (DMA قوغداش) كەم.",
+    "tpmActionErrorKindNoKernelIommu": "بۇ كومپيۇتېردا زۆرۈر بولغان بىخەتەرلىك ئىقتىدارى (يادرولۇق IOMMU) كەم.",
+    "tpmActionErrorKindHostSecurity": "بۇ كومپيۇتېرنىڭ بىخەتەرلىك تەڭشىكىدە مەسىلە بار.",
+    "tpmActionErrorKindPcrUnusable": "PCR نى ئىشلەتكىلى بولمايدۇ",
+    "tpmActionErrorKindPcrUnsupported": "PCR نى قوللىمايدۇ",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "كومپيۇتېرنىڭ TPM ى بىلەن بىخەتەر ئۇلىنىشقا توسقۇنلۇق قىلىدىغان يۇمشاق دېتال كومپيۇتېر قوزغىتىلغاندىلا ئىجرا بولۇۋاتىدۇ.",
+    "tpmActionErrorKindAbsolutePresent": "بۇ كومپيۇتېردا مۇتلەق ئۆزلۈكسىزلىك بۆلىكى قوزغىتىلغان.",
+    "tpmActionErrorKindInvalidSecureBootMode": "بۇ كومپيۇتېردا بىخەتەر قوزغىتىش ھالىتى چەكلەنگەن ياكى «جايلاشتۇرۇلغان» ھالەتتە سەپلەنمىگەن.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "بۇ كومپيۇتېردىكى بەزى گۇۋاھنامە دەلىللەش بۆلىكىنىڭ ۋاقتى ئۆتكەن ياكى ئاجىز بىخەتەرلىك قوغداش ئۇسۇلى ئىشلىتىلگەن.",
+    "tpmActionErrorKindPreOsDigestVerificationDetected": "قىسقىچە دەلىللەشنى ئالدىن بايقىدى",
+    "tpmActionFixActionContactOem": "OEM بىلەن ئالاقىلىشىش",
+    "tpmActionFixActionContactOsVendor": "مەشغۇلات سىستېمىسىنى تەمىنلىگۈچى بىلەن ئالاقىلىشىش",
+    "tpmActionFixActionEnableTpmViaFirmware": "قايتا قوزغىتىلغاندا TPM نى قوزغىتىدۇ",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "قايتا قوزغىتىلغاندا TPM نى قوزغىتىدۇ ۋە تازىلايدۇ",
+    "tpmActionFixActionClearTpmViaFirmware": "قايتا قوزغىتىلغاندا TPM نى تازىلايدۇ",
+    "tpmActionFixActionClearTpm": "TPM نى تازىلا",
+    "tryOrInstallReleaseNotesLabel": "سىز <a href=\"{url}\">تارقىتىش ئىزاھاتى</a>نى ئوقۇشنى ئارزۇ قىلىشىڭىز مۇمكىن.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstInstructions": "مۇناسىۋەتلىك چۈشەندۈرۈشكە ئېرىشىش ئۈچۈن ئۈسكۈنىدىكى QR كودى تارىلىدۇ ياكى تۆۋەندىكى زىيارەت قىلىنىدۇ: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeMagicAttachInstructions": "QR كودىنى تاراڭ ياكى <a href=\"https://{url}\">{url}</a> غا تۆۋەندىكى كودنى كىرگۈزۈڭ",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionPageTitle": "قاتتىق دېتال قوللايدىغان شىفىرلاشنى قوزغاتقىلى بولمايدۇ",
+    "tpmActionSolutionLabel": "ھەل قىلىش لايىھەسى {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "قوللانمىغا باغلا",
+    "tpmActionErrorSupportLabel": "تۆۋەندىكى ھەل قىلىش لايىھەسىنى سىناڭ، ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ ياكى باشقا شىفىرلاش ئۇسۇلىنى تاللاڭ.",
+    "tpmActionErrorSupportNoActionLabel": "ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ ياكى باشقا شىفىرلاش ئۇسۇلىنى تاللاڭ.",
+    "tpmActionFixActionReboot": "قايتا قوزغات",
+    "tpmActionFixActionShutdown": "توكنى ئۈز",
+    "tpmActionFixActionRebootToFwSettings": "قايتا قوزغىتىپ مۇقىم دېتال تەڭشىكىگە كىرىدۇ",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA قوغداشنى قولدا قوزغىتىدۇ",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPM نى قولدا تازىلايدۇ",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "بىخەتەر قوزغىتىشنى قولدا قوزغىتىدۇ",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "DMA قوغداشنى قولدا قوزغىتىدۇ",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR ئامبىرىنى قولدا قوزغىتىدۇ",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPM نى قولدا قوزغىتىدۇ",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM نى قولدا تازىلايدۇ",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPM نى قولدا تازىلايدۇ",
+    "tpmActionFixActionProceed": "پەرۋا قىلما",
+    "tpmActionRestartLabel": "قايتا قوزغات",
+    "tpmActionRestartAndEnableTpmLabel": "قايتا قوزغىتىپ ۋە TPM نى قوزغىتىدۇ",
+    "tpmActionRestartAndClearTpmLabel": "قايتا قوزغىتىپ ۋە TPM نى تازىلايدۇ",
+    "tpmActionIgnoreAndContinueLabel": "پەرۋا قىلماي داۋاملاشتۇر",
+    "tpmActionFixActionClearTpmWarningTitle": "TPM تازىلانسا بارلىق شىفىرلىق ئاچقۇچ ئۆچۈرۈلىدۇ",
+    "tpmActionFixActionClearTpmWarningBody": "ئەگەر ئەسلىگە كەلتۈرۈش ئاچقۇچىڭىز بولمىسا شىفىرلانغان دىسكىدىكى سانلىق مەلۇماتنى زىيارەت قىلىش ئىجازىتىڭىزدىن مەھرۇم قالىسىز. بۇ مەشغۇلاتتا TPM غا تايىنىدىغان دەلىللەش ۋە گۇۋاھنامىگە ئوخشاش ئىقتىدارلار ئۈنۈمىنى يوقىتىدۇ.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "مەن TPM نى تازىلاشنىڭ ئاقىۋىتىنى چۈشىنىمەن",
+    "tpmActionErrorTitle": "بۇ ھەل قىلىش لايىھەسى مەغلۇپ بولدى",
+    "tpmActionErrorDescription": "باشقا ھەل قىلىش لايىھەسىنى سىناڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ",
+    "installationTypeTPMInfo": "بۇ تاللانمىنى تاللاشتىن ئىلگىرى <a href=\"{url}\">TPMشىفىرلاش ھەققىدە ئوقۇڭ</a>. بۇ ئىقتىدار قاتتىق دېتالىڭىز ياكى كەلگۈسىدىكى تارقىتىلغان نەشرى {DISTRO} دە ئىشلىمەسلىكى مۇمكىن.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">ئاگاھلاندۇرۇش:</font> بۇنىڭدا {os} دىكى بارلىق پروگرامما، پۈتۈك، سۈرەت، نەغمە ۋە باشقا ھەممە ھۆججەت ئۆچۈرۈلىدۇ.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideHiddenPartitions": "{num} كىچىك رايون يوشۇرۇن، تېخىمۇ تەپسىلىي تىزگىنلەش ئۈچۈن <a href=\"{url}\">ئالىي رايونغا ئايرىش قورالى</a> نى ئىشلىتىڭ",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerInfoInstructions": "چۈشەندۈرۈشى ئۈچۈن <a href=\"{url}\">BitLocker يېتەكچىسى</a>نى زىيارەت قىلىڭ.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorKindAddonDriversPresent": "قوشۇلما قوزغاتقۇ مەۋجۇت",
+    "manualPartitioningWarningBody": "باشقىنى سىناڭ. يەنە <a href=\"\">خاتالىق دوكلاتى يوللا</a>يالايسىز.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "بۇ كومپيۇتېر قوزغىتىلغاندا دەلىللەيدىغان يۇمشاق دېتالنى يول قويۇش تىزىمىنى قولدا دەلىللەش يولغا قويۇلغان.",
+    "tpmActionErrorKindGenericTpm": "بۇ كومپيۇتېرنىڭ TPM دا مەسىلە بار.",
+    "tpmActionErrorKindGenericFirmware": "بۇ كومپيۇتېرنىڭ مۇقىم دېتالىدا مەسىلە بار.",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "مۇتلەق ئۆزلۈكسىزلىك بۆلىكى قولدا چەكلەنگەن",
+    "tpmActionFixActionRebootDescription": "ئالدىنقى مەشغۇلاتنى تاماملاش ئۈچۈن كومپيۇتېرنى قايتا قوزغىتىدۇ.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "كومپيۇتېر قايتا قوزغىتىلسا مەسىلە ئوڭشىلىشى مۇمكىن.",
+    "tpmActionFixActionShutdownDescription": "ئالدىنقى مەشغۇلاتنى تاماملاش ئۈچۈن كومپيۇتېرنىڭ توك مەنبەسىنى ئۈزۈش كېرەك.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "بۇنى كومپيۇتېرنىڭ مۇقىم دېتال تەڭشىكىدە قىلالايسىز.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "بۇنى كومپيۇتېرنىڭ مۇقىم دېتال تەڭشىكىدە قىلالىشىڭىز مۇمكىن. كورسەتمە ئۈچۈن CPU تەمىنلىگۈچىنىڭ قوللانمىسىنى تەكشۈرۈڭ.",
+    "tpmActionFixActionProceedDescription": "مەسىلىگە پەرۋا قىلمىغاندا بىخەتەرلىكى تۆۋەنرەك ئورنىتىش نەتىجىسى كېلىپ چىقىشى مۇمكىن.",
+    "tpmActionFixActionCaveatConfirm": "قايتا قوزغىتىلغاندا بۇ مەشغۇلاتنى جەزملىشىڭىزنى سورىشى مۇمكىن.",
+    "tpmActionFixActionCaveatRetry": "ئاندىن قايتا ئورنىتىشنى نۆلدىن باشلاپ سىنايسىز."
 }

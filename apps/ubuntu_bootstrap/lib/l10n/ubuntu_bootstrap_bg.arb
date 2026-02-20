@@ -1,3 +1,5 @@
 {
-  "@@locale": "bg"
+    "@@locale": "bg",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "",
+    "@tpmActionErrorKindSysPrepApplicationsPresent": {}
 }

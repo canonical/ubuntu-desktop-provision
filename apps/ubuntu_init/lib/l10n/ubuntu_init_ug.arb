@@ -1,1 +1,134 @@
-{}
+{
+    "closeIconSemanticLabel": "ياپ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "چوڭايت",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "كىچىكلەت",
+    "@minimizeIconSemanticLabel": {},
+    "successIconSemanticLabel": "مۇۋەپپەقىيەتلىك",
+    "@successIconSemanticLabel": {},
+    "welcomePageTitle": "خۇش كەلدىڭىز",
+    "@welcomePageTitle": {},
+    "welcomePageHeader": "{distro} غا خۇش كەلدىڭىز",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "قانداق يېڭىلىق بار؟",
+    "@welcomeWhatsNew": {},
+    "welcomeStartTitle": "راۋان باشلىنىش",
+    "@welcomeStartTitle": {},
+    "welcomeStartSubtitle": "تېخىمۇ ئاددىي ئورنىتىش تەسىراتى.",
+    "@welcomeStartSubtitle": {},
+    "welcomeStoreTitle": "يېڭى ئۇسلۇبتىكى ئەپ دۇكىنى",
+    "@welcomeStoreTitle": {},
+    "welcomeStoreSubtitle": "سىز ياقتۇرىدىغان يۇمشاق دېتالنى ئىزدەش ئەزەلدىن بۇنداق ئاسان بولۇپ باقمىغان.",
+    "@welcomeStoreSubtitle": {},
+    "welcomeSecurityTitle": "كۈچەيتىلگەن بىخەتەرلىك",
+    "@welcomeSecurityTitle": {},
+    "welcomeSecuritySubtitle": "قاتتىق ئاساسىدىكى شىفىرلاش يېڭى تاللانمىسى ياكى ZFS شىفىرلاش.",
+    "@welcomeSecuritySubtitle": {},
+    "telemetryPageTitle": "ئۇچۇر توپلاش",
+    "@telemetryPageTitle": {},
+    "telemetryHeader": "{distro} نى ياخشىلاشقا ياردەم",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "سىستېما سانلىق مەلۇماتلىرىڭىزنى بىز بىلەن ئورتاقلىشىش ئارقىلىق {distro} نى ياخشىلاشقا ياردەملىشىڭ. بۇ ماشىنىڭىزنىڭ تىپى، ئورنىتىلغان يۇمشاق دېتال ۋە سىز ۋاقىت رايونىنى تاللىغان ئورۇنغا ئوخشاش نەرسىلەرنى ئۆز ئىچىگە ئالىدۇ.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "ھەئە، سىستېما سانلىق مەلۇماتىنى {distro} قوشۇنىدىكىلەرگە ھەمبەھىرلە",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "ياق، سىستېما سانلىق مەلۇماتىنى ھەمبەھىرلىمە",
+    "@telemetryLabelOff": {},
+    "telemetryReportLabel": "تۇنجى دوكلاتنى كۆرسەت",
+    "@telemetryReportLabel": {},
+    "telemetryReportTitle": "دوكلات تەپسىلاتى",
+    "@telemetryReportTitle": {},
+    "telemetryLegalLabel": "قانۇنىي ئۇقتۇرۇش",
+    "@telemetryLegalLabel": {},
+    "telemetryCollectError": "يىراقتىن ئۇچۇر توپلىيالمىدى",
+    "@telemetryCollectError": {},
+    "privacyPageTitle": "ئورۇن مۇلازىمىتى",
+    "@privacyPageTitle": {},
+    "privacyLocationTitle": "ئورۇن ئۇچۇرى مۇلازىمىتىنى قوزغىتامدۇ؟",
+    "@privacyLocationTitle": {},
+    "privacyLocationSubtitle": "ئەپنىڭ جۇغراپىيەلىك ئورۇن ئۇچۇرىڭىزنى بىلىشىگە يول قويىدۇ.\nبۇنى خالىغان ۋاقىتتا سىستېما تەڭشەكتىن ئۆزگەرتەلەيسىز.",
+    "@privacyLocationSubtitle": {},
+    "privacyLocationEnable": "ئورۇن مۇلازىمىتى",
+    "@privacyLocationEnable": {},
+    "privacyPolicyLink": "سانلىق مەلۇمات شەخسىيىتى",
+    "@privacyPolicyLink": {},
+    "ubuntuProPageTitle": "Ubuntu Pro",
+    "@ubuntuProPageTitle": {},
+    "ubuntuProHeader": "بۇ ماشىنىغا باغلا",
+    "@ubuntuProHeader": {},
+    "ubuntuProOrAddTokenManually": "ياكى پەرمان تاختىسىنى قولدا قوشۇڭ",
+    "@ubuntuProOrAddTokenManually": {},
+    "ubuntuProTokenTextfieldHint": "پەرمان تاختا",
+    "@ubuntuProTokenTextfieldHint": {},
+    "ubuntuProSubscriptionDescription": "ئوچۇق كودلۇق يۇمشاق دېتال بىخەتەرلىكى ئائىت كەڭ دائىرىدىكى قوللاشقا ئېرىشىدۇ",
+    "@ubuntuProSubscriptionDescription": {},
+    "ubuntuProTokenAttachButton": "باغلا",
+    "@ubuntuProTokenAttachButton": {},
+    "ubuntuProTokenAttachError": "ئىناۋەتسىز پەرمان تاختا",
+    "@ubuntuProTokenAttachError": {},
+    "ubuntuProTokenAttachSucess": "ئىناۋەتلىك پەرمان تاختا",
+    "@ubuntuProTokenAttachSucess": {},
+    "ubuntuProTokenAttachErrorVariant": "ئىناۋەتسىز پەرمان تاختا، قايتا سىناڭ",
+    "@ubuntuProTokenAttachErrorVariant": {},
+    "ubuntuProOnBoardingSkipForNow": "ھازىرچە ئاتلا",
+    "@ubuntuProOnBoardingSkipForNow": {},
+    "ubuntuProOnBoardingSkipForNowDescription": "سىز كېيىن يۇمشاق دېتال ۋە ئەپ يېڭىلانمىدىن Ubuntu Pro نى قوزغىتالايسىز.",
+    "@ubuntuProOnBoardingSkipForNowDescription": {},
+    "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pro نى قوزغات",
+    "@ubuntuProOnBoardingEnableUbuntuPro": {},
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "بۇ كومپيۇتېرنى Ubuntu Pro غا باغلاپ، كەڭ دائىرىدىكى يۇمشاق دېتال بوغچىسىنىڭ بىخەتەرلىك يېڭىلىنىشىغا 2032-يىلىغىچە ئېرىشەلەيسىز.",
+    "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+    "ubuntuProSucessAttachHeader": "ھازىر بۇ كومپيۇتېردا Ubuntu Pro قوزغىتىلدى",
+    "@ubuntuProSucessAttachHeader": {},
+    "ubuntuProSucessAttachDescription": "يۇمشاق دېتال ۋە ئەپ يېڭىلانمىدىن Ubuntu Pro قوللاش مۇلازىمىتىنى باشقۇرالايسىز.",
+    "@ubuntuProSucessAttachDescription": {},
+    "welcomeChangelogLabel": "<a href=\"{url}\">ئۆزگىرىش خاتىرىسىنى كۆرسەت</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProMagicAttachInstructions": "<a href=\"https://{url}\">{url}</a> دا بۇ كودنى ئىشلىتىپ سىستېمىنى Ubuntu Pro بىلەن باغلىيالايدۇ",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProSubscriptionFreeForPersonalUse": "شەخسىي ئىشلەتكۈچىلەر ئۈچۈن ھەمىشە ھەقسىز. كارخانا 30 كۈن ھەقسىز ئىشلىتەلەيدۇ. <a href=\"https://{url}\">مول بىلىم</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    }
+}

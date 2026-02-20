@@ -1,24 +1,152 @@
 {
-  "keyboardTitle": "Teklatuaren diseinua",
-  "keyboardHeader": "Aukeratu zure teklatuaren diseinua:",
-  "keyboardTestHint": "Idatzi hemen zure teklatua probatzeko",
-  "keyboardDetectTitle": "Detektatu teklatuaren diseinua",
-  "keyboardPressKeyLabel": "Mesedez, sakatu hurrengo tekletariko bat:",
-  "keyboardKeyPresentLabel": "Hurrengo tekla zure teklatuan al dago?",
-  "localeHeader": "Aukeratu zure hizkuntza:",
-  "networkPageTitle": "Konektatu internetera",
-  "networkWiredOption": "Erabili kable bidezko konexioa",
-  "networkWiredNone": "Ez da kable bidezko konexiorik hauteman",
-  "networkWiredOff": "Kable bidezko konexioa desaktibatuta dago",
-  "networkWiredDisabled": "Ordenagailu honetan Ethernet erabiltzeko, kable bidezko konexioa gaitu behar da",
-  "networkWiredEnable": "Gaitu kable bidezko konexioa",
-  "networkWifiOption": "Konektatu Wi-Fi sare batera",
-  "networkWifiOff": "Haririk habeko sarea desgaituta dago",
-  "networkWifiNone": "Ez da Wi-Fi gailurik hauteman",
-  "networkWifiDisabled": "Ordenagailu honetan Wi-Fia erabiltzeko, haririk gabeko sareak gaitu behar dira",
-  "networkWifiEnable": "Gaitu Wi-Fia",
-  "networkHiddenWifiOption": "Konektatu ezkutuko Wi-Fi sare batera",
-  "networkHiddenWifiNameLabel": "Sarearen izena",
-  "networkHiddenWifiNameRequired": "Sare-izena behar da",
-  "networkNoneOption": "Ez dut internetera konektatu nahi oraingoz"
+    "keyboardTitle": "Teklatuaren diseinua",
+    "keyboardHeader": "Hautatu teklatuaren diseinua",
+    "keyboardTestHint": "Idatzi hemen zure teklatua probatzeko",
+    "keyboardDetectTitle": "Detektatu teklatuaren diseinua",
+    "keyboardPressKeyLabel": "Mesedez, sakatu hurrengo tekletariko bat:",
+    "keyboardKeyPresentLabel": "Hurrengo tekla zure teklatuan al dago?",
+    "localeHeader": "Aukeratu zure hizkuntza:",
+    "networkPageTitle": "Konektatu internetera",
+    "networkWiredOption": "Erabili kable bidezko konexioa",
+    "networkWiredNone": "Ez da kable bidezko konexiorik hauteman",
+    "networkWiredOff": "Kable bidezko konexioa desaktibatuta dago",
+    "networkWiredDisabled": "Ordenagailu honetan Ethernet erabiltzeko, kable bidezko konexioa gaitu behar da",
+    "networkWiredEnable": "Gaitu kable bidezko konexioa",
+    "networkWifiOption": "Konektatu Wi-Fi sare batera",
+    "networkWifiOff": "Haririk habeko sarea desgaituta dago",
+    "networkWifiNone": "Ez da Wi-Fi gailurik hauteman",
+    "networkWifiDisabled": "Ordenagailu honetan Wi-Fia erabiltzeko, haririk gabeko sareak gaitu behar dira",
+    "networkWifiEnable": "Gaitu Wi-Fia",
+    "networkHiddenWifiOption": "Konektatu ezkutuko Wi-Fi sare batera",
+    "networkHiddenWifiNameLabel": "Sarearen izena",
+    "networkHiddenWifiNameRequired": "Sare-izena behar da",
+    "networkNoneOption": "Ez dut internetera konektatu nahi oraingoz",
+    "accessibilityPageTitle": "Erabilerraztasuna",
+    "accessibilityPageHeader": "Erabilerraztasuna {DISTRO}n",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "Pertsonalizatu {DISTRO} zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Sistemaren ezarpenetan.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilitySeeingLabel": "Ikusmena",
+    "accessibilityHearingLabel": "Entzumena",
+    "accessibilityTypingLabel": "Idazketa",
+    "accessibilityPointingLabel": "Erakustea eta klik egitea",
+    "accessibilityZoomLabel": "Zooma",
+    "accessibilityHighContrastLabel": "Kontraste handia",
+    "accessibilityLargeTextLabel": "Testu handia",
+    "accessibilityReduceAnimationLabel": "Gutxitu animazioak",
+    "accessibilityScreenReaderLabel": "Pantaila irakurlea",
+    "accessibilityVisualAlertsLabel": "Abisu bisualak",
+    "accessibilityStickKeysLabel": "Tekla itsaskorrak",
+    "accessibilitySlowKeysLabel": "Tekla motelak",
+    "accessibilityMouseKeysLabel": "Sagu-teklak",
+    "accessibilityDesktopZoomLabel": "Mahaigainaren zooma",
+    "errorPageTitle": "Arazo bat egon da",
+    "errorPageUnexpected": "Sentitzen dugu, baina ez dakigu ziur zein izan den errorea. Ordenagailua berrabiarazi eta instalazio prozesua berriro abiatzen saia zaitezke. Nahi baduzu, <a>arazoaren berri eman</a> dezakezu.",
+    "errorPageUbuntuBug": "Errore-txosten automatizatua bidaltzeko (arazteko beharrezko informazioarekin), exekutatu <pre>sudo ubuntu-bug {SNAP}</pre> terminal batean, edo komando-kontsolan (Alt+F2).",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "errorPageShowLog": "Erakutsi erregistroa",
+    "errorPageHideLog": "Ezkutatu erregistroa",
+    "restart": "Berrabiarazi",
+    "close": "Itxi",
+    "timezonePageTitle": "Hautatu zure ordu-eremua",
+    "timezoneLocationLabel": "Kokalekua",
+    "timezoneTimezoneLabel": "Ordu-eremua",
+    "keyboardDetectButton": "Antzeman",
+    "keyboardVariantLabel": "Hautatu teklatuaren aldaera:",
+    "themePageTitle": "Aukeratu gaia",
+    "themePageHeader": "Edozein unetan alda dezakezu hau itxura ezarpenetan.",
+    "themeDark": "Iluna",
+    "themeLight": "Argia",
+    "localePageTitle": "Ongi etorri {DISTRO}ra",
+    "@localePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "identityPageTitle": "Sortu kontua",
+    "identityAutoLogin": "Hasi saioa automatikoki",
+    "identityRequirePassword": "Eskatu pasahitza saioa hasteko",
+    "identityRealNameLabel": "Zure izena",
+    "identityRealNameRequired": "Izena beharrezkoa da",
+    "identityRealNameTooLong": "Izena luzeegia da.",
+    "identityHostnameLabel": "Ordenagailuaren izena",
+    "identityHostnameInfo": "Beste ordenagailuekin komunikatzean erabiliko duen izena.",
+    "identityHostnameRequired": "Ordenagailuaren izena beharrezkoa da",
+    "identityHostnameTooLong": "Ordenagailuaren izena luzeegia da.",
+    "identityInvalidHostname": "Ordenagailuaren izena baliogabea da",
+    "identityUsernameLabel": "Erabiltzaile-izena",
+    "identityUsernameRequired": "Erabiltzaile-izena beharrezkoa da",
+    "identityInvalidUsername": "Erabiltzaile-izena baliogabea da",
+    "identityUsernameInUse": "Dagoeneko existitzen da erabiltzaile-izen hori.",
+    "identityUsernameSystemReserved": "Izen hori sistemak erabiltzeko erreserbatuta dago.",
+    "identityUsernameTooLong": "Izen hori luzeegia da.",
+    "identityUsernameInvalidChars": "Izen horrek karaktere baliogabeak ditu.",
+    "identityPasswordLabel": "Pasahitza",
+    "identityPasswordRequired": "Pasahitza beharrezkoa da",
+    "identityConfirmPasswordLabel": "Berretsi pasahitza",
+    "identityPasswordMismatch": "Pasahitzak ez datoz bat",
+    "identityPasswordShow": "Erakutsi",
+    "identityPasswordHide": "Ezkutatu",
+    "identityActiveDirectoryOption": "Erabili Active Directory",
+    "identityActiveDirectoryInfo": "Domeinua eta bestelako xehetasunak hurrengo urratsean sartuko dituzu.",
+    "activeDirectoryTitle": "Hasi saioa Active Directoryn",
+    "activeDirectoryHeader": "Active Directoryn saioa hasi?",
+    "activeDirectoryInfo": "{DISTRO} Active Directoryrekin oztoporik gabe integratzeko diseinatuta dago, administrazioa errazteko.",
+    "@activeDirectoryInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryTestConnection": "Probatu domeinuaren konektagarritasuna",
+    "activeDirectoryDomainLabel": "Domeinua",
+    "activeDirectoryDomainEmpty": "Beharrezkoa",
+    "activeDirectoryDomainTooLong": "Luzeegia",
+    "activeDirectoryDomainInvalidChars": "Karaktere baliogabeak",
+    "activeDirectoryDomainStartDot": "Puntu (.) batekin hasten da",
+    "activeDirectoryDomainEndDot": "Puntu (.) batekin amaitzen da",
+    "activeDirectoryDomainStartHyphen": "Marratxo (-) batekin hasten da",
+    "activeDirectoryDomainEndHyphen": "Marratxo (-) batekin amaitzen da",
+    "activeDirectoryDomainMultipleDots": "Puntu bat baino gehiago ditu jarraian (..)",
+    "activeDirectoryDomainNotFound": "Ez da domeinua aurkitu",
+    "activeDirectoryAdminLabel": "Domeinura batzeko erabiltzailea",
+    "activeDirectoryAdminEmpty": "Beharrezkoa",
+    "activeDirectoryAdminInvalidChars": "Karaktere baliogabeak",
+    "activeDirectoryPasswordLabel": "Pasahitza",
+    "activeDirectoryPasswordEmpty": "Beharrezkoa",
+    "activeDirectoryErrorTitle": "Errorea Active Directoryrako konexioa konfiguratzean",
+    "activeDirectoryErrorMessage": "Une honetan ezin da Active Directory konfiguratu. Sistema martxan dagoenean, bisitatu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> laguntza lortzeko.",
+    "networkPageHeader": "Konektatu Internetera",
+    "networkPageBody": "Interneterako konexioak instalazioa hobetuko du, bateragarritasun-egiaztatzeak eginez eta software pakete gehigarria instalatuz.",
+    "eulaPageTitle": "Lizentziaren onarpena",
+    "eulaReviewTerms": "Berrikusi lizentziaren baldintzak",
+    "eulaReadAndAcceptTerms": "Makina hau konfiguratzen jarraitzeko, aurrena lizentziaren baldintzak irakurri eta onartu behar dituzu.",
+    "eulaAcceptTerms": "Baldintza hauek irakurri eta onartzen ditut",
+    "successIconSemanticLabel": "Dena ondo joan da",
+    "closeIconSemanticLabel": "Itxi",
+    "maximizeIconSemanticLabel": "Maximizatu",
+    "minimizeIconSemanticLabel": "Txikitu",
+    "expandIconSemanticLabel": "Zabaldu",
+    "collapseIconSemanticLabel": "Tolestu"
 }
