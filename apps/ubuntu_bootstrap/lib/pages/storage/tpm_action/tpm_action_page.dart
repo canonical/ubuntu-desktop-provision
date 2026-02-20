@@ -24,22 +24,29 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
       if (model.tpmError != null) ...[
         Text(model.tpmError!.kind.label(lang)),
         Text(
-          model.actions.isNotEmpty
-              ? lang.tpmActionErrorSupportLabel
-              : lang.tpmActionErrorSupportNoActionLabel,
+          switch (model.actions.length) {
+            0 => lang.tpmActionErrorSupportNoActionLabel,
+            1 => lang.tpmActionErrorSupportSingleLabel,
+            _ => lang.tpmActionErrorSupportLabel
+          },
         ),
       ],
       if (model.actions.isNotEmpty) ...[
         const SizedBox(height: kWizardSpacing / 2),
         YaruExpansionPanel(
+          isInitiallyExpanded: model.actions.length == 1 ? [true] : null,
           shrinkWrap: true,
           headers: [
             for (final (i, action) in model.actions.indexed)
               Text(
-                lang.tpmActionSolutionLabel(
-                  i + 1,
-                  action.title(lang, model.tpmError?.kind),
-                ),
+                model.actions.length > 1
+                    ? lang.tpmActionSolutionLabel(
+                        i + 1,
+                        action.title(lang, model.tpmError?.kind),
+                      )
+                    : lang.tpmActionSingleSolutionLabel(
+                        action.title(lang, model.tpmError?.kind),
+                      ),
               ),
           ],
           children: [
@@ -135,7 +142,8 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final headerStrings = [
-      widget.action.description(lang),
+      widget.action.description(lang, widget.errorKind),
+      widget.action.firmwareHint(lang, widget.errorKind),
       widget.action.caveats(lang),
     ].nonNulls;
 
