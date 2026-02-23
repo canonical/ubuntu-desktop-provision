@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -64,7 +65,19 @@ abstract class NetworkDeviceModel<T extends NetworkDevice>
     final previousSelected = _selectedDevice;
     _selectedDevice = null;
     final devices = <T>[];
-    for (final device in getDevices()) {
+    final hwAddresses = <String>{};
+
+    // sort new devices by hwAddress and path, then only retain the first for each
+    // hwAddress to avoid multiple updates of the same device
+    final newDevices = getDevices()
+        .sortedByCompare(
+          (device) => (device.hwAddress, device.path),
+          (a, b) => a.$1.compareTo(a.$2) == 0
+              ? b.$1.compareTo(b.$2)
+              : a.$1.compareTo(a.$2),
+        )
+        .where((device) => hwAddresses.add(device.hwAddress));
+    for (final device in newDevices) {
       var model = _allDevices[device.hwAddress];
       if (model == null) {
         model = createDevice(device);
