@@ -142,9 +142,9 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
       };
 
   String label(UbuntuBootstrapLocalizations l10n) => switch (type) {
-        CoreBootFixAction.REBOOT ||
+        CoreBootFixAction.REBOOT => l10n.tpmActionRestartLabel,
         CoreBootFixAction.REBOOT_TO_FW_SETTINGS =>
-          l10n.tpmActionRestartLabel,
+          l10n.tpmActionFixActionRebootToFwSettings,
         CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE =>
           l10n.tpmActionRestartAndEnableTpmLabel,
         CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE ||
