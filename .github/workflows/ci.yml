@@ -54,7 +54,7 @@ jobs:
           echo "XDG_RUNTIME_DIR=/run/user/$UID" >> $GITHUB_ENV
           # write any setting to force-start dconf.service (via xvfb because dbus-launch needs a display)
           xvfb-run -a gsettings set org.gnome.desktop.interface color-scheme "'default'"
-      - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/${{matrix.target}}
+      - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test -vv integration_test/${{matrix.target}}
         working-directory: apps/ubuntu_bootstrap
         env:
           SUBIQUITY_REPLAY_TIMESCALE: 100
