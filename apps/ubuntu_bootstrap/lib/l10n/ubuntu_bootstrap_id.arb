@@ -15,7 +15,7 @@
     "confirmInstallButton": "Pasang",
     "diskHeadersMountPoint": "Titik kait",
     "partitionCreateTitle": "Buat partisi",
-    "installationTypeAdvancedLabel": "Tampilkan opsi tingkat lanjut...",
+    "installationTypeAdvancedLabel": "Opsi tingkat lanjut",
     "installationTypeAlongside": "Pasang {product} bersama {os}",
     "diskHeadersSize": "Ukuran",
     "installationTypeManualInfo": "Untuk pengguna tingkat lanjut yang mencari pengaturan disk yang disesuaikan.",
