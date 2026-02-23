@@ -22,6 +22,7 @@ abstract class NetworkDeviceModel<T extends NetworkDevice>
 
   @override
   Future<void> init() async {
+    log.info('init');
     setProperties(service.propertiesChanged);
     enablePropertyListeners();
     updateDevices();
@@ -61,6 +62,10 @@ abstract class NetworkDeviceModel<T extends NetworkDevice>
 
   @protected
   void updateDevices() {
+    log.info('all devices:');
+    for (final e in _allDevices.entries) {
+      log.info('${e.key}: ${e.value.device}');
+    }
     final previousSelected = _selectedDevice;
     _selectedDevice = null;
     final devices = <T>[];
@@ -137,6 +142,10 @@ class NetworkDevice extends SafeChangeNotifier with PropertyStreamNotifier {
 
   @protected
   void updateDevice(NetworkManagerDevice device) {
+    log.info('update device $device ($_device)');
+    log.info('${device.path} (${_device.path})');
+    log.info('${device.hwAddress} (${_device.hwAddress})');
+    log.info('${device.state} (${_device.state})');
     if (_device == device) return;
     _setDevice(device);
     notifyListeners();

@@ -8,6 +8,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/main.dart' as app;
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
@@ -15,10 +16,18 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaml/yaml.dart';
 import 'package:yaru_test/yaru_test.dart';
 
+final log = Logger.setup(
+  path: './ubuntu_bootstrap_test.log',
+  name: 'ubuntu_bootstrap',
+);
+
 void main() {
+  log.info('starting integration test');
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  log.info('bindings initialized');
 
   setUpAll(YaruTestWindow.ensureInitialized);
+  log.info('window initialized');
 
   setUp(() async {
     await cleanUpSubiquity();

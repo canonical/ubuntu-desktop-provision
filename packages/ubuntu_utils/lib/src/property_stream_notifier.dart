@@ -1,6 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
+
+final _log = Logger('property_stream_notifier');
 
 /// Listens and notifies a stream of property changes.
 mixin PropertyStreamNotifier on ChangeNotifier {
@@ -13,6 +16,7 @@ mixin PropertyStreamNotifier on ChangeNotifier {
     _subscription?.cancel();
     _subscription = properties.listen((changedProperties) {
       if (_enabled == false) return;
+      _log.info('changed properties: $changedProperties');
       for (final property in changedProperties) {
         _callbacks[property]?.call();
       }
