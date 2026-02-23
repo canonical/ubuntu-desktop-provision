@@ -70,11 +70,19 @@ abstract class NetworkDeviceModel<T extends NetworkDevice>
     final previousSelected = _selectedDevice;
     _selectedDevice = null;
     final devices = <T>[];
-    final newDevices = getDevices().sortedByCompare(
+    final newDevices = getDevices()
+        .sortedByCompare(
       (device) => (device.hwAddress, device.path),
       (a, b) => a.$1.compareTo(a.$2) == 0
           ? b.$1.compareTo(b.$2)
           : a.$1.compareTo(a.$2),
+    )
+        .fold(
+      <NetworkManagerDevice>[],
+      (elements, next) =>
+          elements.map((e) => e.hwAddress).contains(next.hwAddress)
+              ? elements
+              : [...elements, next],
     );
     for (final device in newDevices) {
       var model = _allDevices[device.hwAddress];
