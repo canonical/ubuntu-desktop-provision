@@ -158,6 +158,8 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (description.isNotEmpty) Text(description),
+          if (widget.action.type == CoreBootFixAction.REBOOT_TO_FW_SETTINGS)
+            Text(lang.tpmActionFixActionRebootToFwSettingsInstructions),
           if (caveats != null) Text(caveats),
           if (widget.action.warning != null) ...[
             YaruInfoBox(

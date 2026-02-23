@@ -1075,6 +1075,7 @@
   "tpmActionFixActionReboot": "Restart",
   "tpmActionFixActionShutdown": "Power off",
   "tpmActionFixActionRebootToFwSettings": "Restart to firmware settings",
+  "tpmActionFixActionRebootToFwSettingsInstructions": "If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).",
   "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Enable DMA protection manually",
   "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Clear TPM manually",
   "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Enable secure boot manually",

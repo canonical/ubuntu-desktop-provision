@@ -2686,6 +2686,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Restart to firmware settings'**
   String get tpmActionFixActionRebootToFwSettings;
 
+  /// No description provided for @tpmActionFixActionRebootToFwSettingsInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).'**
+  String get tpmActionFixActionRebootToFwSettingsInstructions;
+
   /// No description provided for @tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection.
   ///
   /// In en, this message translates to:
