@@ -141,11 +141,12 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
   @override
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final headerStrings = [
+
+    final description = [
       widget.action.description(lang, widget.errorKind),
       widget.action.firmwareHint(lang, widget.errorKind),
-      widget.action.caveats(lang),
-    ].nonNulls;
+    ].nonNulls.join(' ');
+    final caveats = widget.action.caveats(lang);
 
     return Padding(
       padding: EdgeInsetsGeometry.only(
@@ -156,7 +157,8 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          for (final headerString in headerStrings) Text(headerString),
+          if (description.isNotEmpty) Text(description),
+          if (caveats != null) Text(caveats),
           if (widget.action.warning != null) ...[
             YaruInfoBox(
               yaruInfoType: YaruInfoType.warning,
