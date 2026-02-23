@@ -23,6 +23,7 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
     final children = [
       if (model.tpmError != null) ...[
         Text(model.tpmError!.kind.label(lang)),
+        const SizedBox(height: kWizardSpacing / 2),
         Text(
           switch (model.actions.length) {
             0 => lang.tpmActionErrorSupportNoActionLabel,
@@ -155,7 +156,7 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (headerStrings.isNotEmpty) Text(headerStrings.join(' ')),
+          for (final headerString in headerStrings) Text(headerString),
           if (widget.action.warning != null) ...[
             YaruInfoBox(
               yaruInfoType: YaruInfoType.warning,
