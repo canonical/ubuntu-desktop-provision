@@ -59,6 +59,12 @@ jobs:
         working-directory: apps/ubuntu_bootstrap
         env:
           SUBIQUITY_REPLAY_TIMESCALE: 100
+      - name: archive logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ubuntu_bootstrap_test.log
+          path: apps/ubuntu_bootstrap/ubuntu_bootstrap_test.log
 
   flutter-format:
     runs-on: ubuntu-24.04
