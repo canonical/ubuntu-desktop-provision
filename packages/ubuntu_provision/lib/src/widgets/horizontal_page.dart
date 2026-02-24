@@ -16,12 +16,7 @@ class HorizontalPage extends ConsumerWidget {
     this.trailingTitleWidget,
     this.isNextEnabled = true,
     this.managedScrolling = true,
-    this.padding = const EdgeInsets.fromLTRB(
-      kYaruPagePadding,
-      kYaruPagePadding,
-      3 * kYaruPagePadding,
-      kYaruPagePadding,
-    ),
+    this.padding = const EdgeInsets.only(right: 3 * kYaruPagePadding),
     this.bottomBar,
     this.snackBar,
     this.imageTitleWidget,
@@ -91,6 +86,8 @@ class HorizontalPage extends ConsumerWidget {
     final scrollBarPadding =
         (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
     const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
+    const scrollViewPadding =
+        EdgeInsets.only(top: 3 * kWizardSpacing, bottom: 3 * kWizardSpacing);
     final lang = UbuntuProvisionLocalizations.of(context);
 
     return WizardPage(
@@ -100,47 +97,53 @@ class HorizontalPage extends ConsumerWidget {
         maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
         minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
-      content: Padding(
-        padding: adjustedPadding,
-        child: Row(
-          children: [
-            if (image != null || imageTitleWidget != null)
-              Expanded(
-                flex: 6,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (image != null) Flexible(child: image),
-                    if (imageTitleWidget != null) ...[
-                      const SizedBox(height: kWizardSpacing),
-                      imageTitleWidget!,
-                    ],
-                  ],
-                ),
-              ),
-            const SizedBox(width: kWizardSpacing),
+      contentPadding: EdgeInsets.zero,
+      headerPadding: EdgeInsets.zero,
+      content: Row(
+        children: [
+          if (image != null || imageTitleWidget != null)
             Expanded(
-              flex: 8,
+              flex: 6,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (!managedScrolling) ...[
-                    const Spacer(),
-                    _Headline(
+                  if (image != null) Flexible(child: image),
+                  if (imageTitleWidget != null) ...[
+                    const SizedBox(height: kWizardSpacing),
+                    imageTitleWidget!,
+                  ],
+                ],
+              ),
+            ),
+          const SizedBox(width: kWizardSpacing),
+          Expanded(
+            flex: 8,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (!managedScrolling) ...[
+                  const Spacer(),
+                  Padding(
+                    padding: adjustedPadding,
+                    child: _Headline(
                       title: title,
                       trailingTitleWidget: trailingTitleWidget,
                     ),
-                  ],
-                  Expanded(
-                    flex: managedScrolling ? 1 : _contentFlex,
-                    child: managedScrolling
-                        ? Center(
-                            child: Scrollbar(
-                              thumbVisibility: true,
-                              child: SingleChildScrollView(
-                                primary: true,
-                                padding: hoverPadding +
-                                    EdgeInsets.only(right: scrollBarPadding),
+                  ),
+                ],
+                Expanded(
+                  flex: managedScrolling ? 1 : _contentFlex,
+                  child: managedScrolling
+                      ? Center(
+                          child: Scrollbar(
+                            thumbVisibility: true,
+                            child: SingleChildScrollView(
+                              primary: true,
+                              padding: hoverPadding +
+                                  EdgeInsets.only(right: scrollBarPadding) +
+                                  scrollViewPadding,
+                              child: Padding(
+                                padding: adjustedPadding,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -153,15 +156,18 @@ class HorizontalPage extends ConsumerWidget {
                                 ),
                               ),
                             ),
-                          )
-                        : Column(children: children),
-                  ),
-                  if (!managedScrolling) const Spacer(),
-                ],
-              ),
+                          ),
+                        )
+                      : Padding(
+                          padding: adjustedPadding,
+                          child: Column(children: children),
+                        ),
+                ),
+                if (!managedScrolling) const Spacer(),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       snackBar: snackBar,
       bottomBar: bottomBar ??
