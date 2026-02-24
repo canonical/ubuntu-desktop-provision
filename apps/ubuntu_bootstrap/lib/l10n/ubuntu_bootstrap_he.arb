@@ -405,13 +405,13 @@
     "tpmActionBadgeLabel": "נדרשת התערבות",
     "tpmActionDetailsLabel": "פרטים טכניים",
     "tpmActionConfirmLabel": "אישור",
-    "tpmActionErrorKindInternal": "פנימי",
-    "tpmActionErrorKindShutdownRequired": "יש לכבות",
-    "tpmActionErrorKindRebootRequired": "יש להפעיל מחדש",
-    "tpmActionErrorKindUnexpectedAction": "פעולה מפתיעה",
-    "tpmActionErrorKindMissingArgument": "ארגומנט חסר",
-    "tpmActionErrorKindInvalidArgument": "ארגומנט שגוי",
-    "tpmActionErrorKindActionFailed": "הפעולה נכשלה",
+    "tpmActionErrorKindInternal": "שגיאה פנימית.",
+    "tpmActionErrorKindShutdownRequired": "יש לכבות.",
+    "tpmActionErrorKindRebootRequired": "יש להפעיל מחדש.",
+    "tpmActionErrorKindUnexpectedAction": "פעולה מפתיעה.",
+    "tpmActionErrorKindMissingArgument": "ארגומנט חסר.",
+    "tpmActionErrorKindInvalidArgument": "ארגומנט שגוי.",
+    "tpmActionErrorKindActionFailed": "הפעולה נכשלה.",
     "tpmActionErrorKindRunningInVm": "הסביבה הנוכחית היא מכונה וירטואלית.",
     "tpmActionErrorKindSystemNotEfi": "המחשב הזה משתמש בקושחה ישנה יותר (BIOS מיושן) שאינה תואמת לשיטת ההצפנה הזאת.",
     "tpmActionErrorKindNoSuitableTpm2Device": "למחשב הזה אין את חומרת האבטחה ההכרחית (TPM 2.0) לשיטת ההצפנה הזאת.",
@@ -434,15 +434,15 @@
     "tpmActionFixActionClearTpmViaFirmware": "פינוי TPM תוך כדי הפעלה מחדש",
     "tpmActionFixActionClearTpm": "פינוי TPM",
     "tpmActionFixActionProceed": "התעלמות",
-    "tpmActionErrorKindEfiVariableAccess": "יש איזו בעיה עם הגדרות הקושחה של המחשב הזה.",
+    "tpmActionErrorKindEfiVariableAccess": "יש איזו בעיה עם הקושחה של המחשב הזה.",
     "tpmActionErrorKindMeasuredBoot": "עלייה מדודה",
     "tpmActionErrorKindEmptyPcrBanks": "מאגרי PCR ריקים",
-    "tpmActionErrorKindUefiDebuggingEnabled": "ניפוי שגיאות ב־UEFI פעיל",
-    "tpmActionErrorKindNoKernelIommu": "למחשב הזה חסרה יכולת אבטחה הכרחית (IOMMU בליבה).",
+    "tpmActionErrorKindUefiDebuggingEnabled": "ניפוי שגיאות ב־UEFI פעיל.",
+    "tpmActionErrorKindNoKernelIommu": "למחשב הזה חסרה יכולת אבטחה הכרחית (IOMMU).",
     "tpmActionErrorKindPcrUnusable": "PCR אינו שמיש",
     "tpmActionErrorKindPcrUnsupported": "אין תמיכה ב־PCR",
-    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "חלק מרכיבי אימות האישורים במחשב הזה הם מיושנים או שמשתמשים בהגנה חלשה.",
-    "tpmActionErrorKindInvalidSecureBootMode": "Secure boot (טעינה מאובטחת) כבוי במחשב הזה או שלא מוגדר במצב „מוטמע”.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "חלק nתוכנות אימות האישורים במחשב הזה הן מיושנות או שמשתמשות בהגנה חלשה.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Secure boot (טעינה מאובטחת) כבוי במחשב הזה או שלא מוגדר במצב מוטמע.",
     "tpmActionSolutionLabel": "פתרון {n}‏: {text}",
     "@tpmActionSolutionLabel": {
         "placeholders": {
@@ -454,13 +454,13 @@
             }
         }
     },
-    "tpmActionDocumentationLinkLabel": "קישור לתיעוד",
+    "tpmActionDocumentationLinkLabel": "מידע נוסף על הצפנה בגיבוי חומרה",
     "tpmActionErrorSupportLabel": "נא לנסות את הפתרונות שלהלן, ליצור קשר עם התמיכה הטכנית או לבחור בשיטת הצפנה חלופית.",
     "tpmActionErrorSupportNoActionLabel": "ליצור קשר עם התמיכה הטכנית או לבחור בשיטת הצפנה חלופית.",
     "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "הפעלת הגנת DMA (גישה ישירה לזיכרון) ידנית",
     "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "מחיקת TPM ידנית",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "הפעלת עלייה בטוחה (secure boot) ידנית",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "הפעלת הגנת DMA (גישה ישירה לזיכרון) ידנית",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "הפעלת IOMMU ידנית",
     "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "הפעלת TPM ידנית",
     "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "מחיקת TPM ידנית",
     "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "מחיקת TPM ידנית",
@@ -472,7 +472,7 @@
     "tpmActionFixActionClearTpmWarningBody": "הגישה שלך לכל הנתונים בכוננים המוצפנים שאין לך מפתחות שחזור אליהם תאבד. יכולות אחרות שתלויות ב־TPM, כגון אימות האישורים, יכולות גם כן להיפגע.",
     "tpmActionFixActionClearTpmConfirmationLabel": "השלכות מחיקת ה־TPM ברורות לי",
     "tpmActionErrorTitle": "הפתרון הזה נכשל",
-    "tpmActionErrorDescription": "כדאי לנסות פתרון אחר או ליצור קשר עם התמיכה הטכנית",
+    "tpmActionErrorDescription": "כדאי לנסות פתרון אחר או ליצור קשר עם התמיכה הטכנית.",
     "manualPartitioningWarningBody": "עדיף לנסות משהו אחר. אפשר גם <a href=\"\">לדווח על שגיאה</a>.",
     "tpmActionErrorKindTpmHierarchiesOwned": "ה־TPM של המחשב הזה כבר בשימוש של מערכת או יישום אחרים.",
     "tpmActionErrorKindTpmDeviceLockoutLockedOut": "ה־TPM של המחשב הזה נעול כרגע.",
@@ -480,7 +480,7 @@
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "המחשב הזה משתמש ברשימת היתר ידנית כדי לאמת תוכנות בעלייה.",
     "tpmActionErrorKindGenericTpm": "יש תקלה עם ה־TPM של המחשב הזה.",
     "tpmActionErrorKindGenericFirmware": "יש תקלה עם הקושחה של המחשב הזה.",
-    "tpmActionFixActionCaveatRetry": "לאחר מכן יש לנסות להתקין מאפס.",
+    "tpmActionFixActionCaveatRetry": "לאחר מכן יש להפעיל את תוכנית ההתקנה מחדש.",
     "tpmActionFixActionCaveatConfirm": "יכול להיות שתופיע בקשה לאשר את הפעולה הזאת לאחר הפעלה מחדש.",
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "יכול להיות שניתן לבצע זאת דרך הגדרות הקושחה של המחשב שלך. כדאי לבדוק מה כתוב בהנחיות של יצרן המעבד.",
     "tpmActionFixActionProceedDescription": "התעלמות מהבעיה הזאת עלולה לגרום להתקנה פחות מאובטחת.",
@@ -500,5 +500,17 @@
     "installationTypeTPMInfoResolute": "נעילת הכונן הזאת תיפתח אוטומטית במהלך הפעלת המחשב.",
     "installationTypeTPMInfoUnavailable": "לא זמין במחשב הזה.",
     "tpmActionErrorKindAbsolutePresent": "מודול Absolute Persistence פעיל במחשב הזה.",
-    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "כיבוי מודול Absolute Persistence ידנית"
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "כיבוי מודול Absolute Persistence ידנית",
+    "tpmActionSingleSolutionLabel": "פתרון: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorSupportSingleLabel": "נא לנסות את הפתרון שלהלן, ליצור קשר עם התמיכה הטכנית או לבחור בשיטת הצפנה אחרת.",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "אם הגדרות הקושחה לא נטענות אוטומטית, יש להפעיל מחדש וללחוץ על כפתור ההגדרות שוב ושוב במהלך העלייה (בדרך כלל F2,‏ F10 או Delete).",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "יש לבדוק שהטעינה המאובטחת מוגדרת ל„מוטמע”.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "היכולת הזאת מוכרת בשמות „טכנולוגיית וירטואליזציה”, „VT-d” או „AMD-Vi”."
 }
