@@ -5,7 +5,8 @@ pages:
   accessibility:
     image: "assets/images/accessibility.svg"
   try-or-install:
-    image: "assets/images/try-or-install.svg"
+    image: "assets/images/mascot-light.svg"
+    image-dark: "assets/images/mascot-dark.svg"
   rst:
     image: "assets/images/rst.svg"
   keyboard:
@@ -13,7 +14,8 @@ pages:
   network:
     image: "assets/images/wifi.svg"
   refresh:
-    image: "assets/images/mascot.svg"
+    image: "assets/images/mascot-light.svg"
+    image-dark: "assets/images/mascot-dark.svg"
   autoinstall:
     image: "assets/images/disk.svg"
   autoinstall-direct:
@@ -68,7 +70,8 @@ pages:
     image: "assets/images/telemetry.svg"
   welcome:
   done:
-    image: "assets/images/mascot_no_background.svg"
+    image: "assets/images/mascot-light.svg"
+    image-dark: "assets/images/mascot-dark.svg"
   storage-icon:
     image: "assets/images/ubuntu_storage_icon.svg"
   error:
