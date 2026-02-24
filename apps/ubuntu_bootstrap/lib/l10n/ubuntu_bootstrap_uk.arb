@@ -423,7 +423,7 @@
         }
     },
     "tpmActionDocumentationLinkLabel": "Посилання на документацію",
-    "tpmActionErrorKindInternal": "Внутрішня",
+    "tpmActionErrorKindInternal": "Внутрішня помилка",
     "tpmActionErrorKindShutdownRequired": "Потрібне вимкнення",
     "tpmActionErrorKindRebootRequired": "Потрібне перезавантаження",
     "tpmActionErrorKindUnexpectedAction": "Неочікувана дія",
