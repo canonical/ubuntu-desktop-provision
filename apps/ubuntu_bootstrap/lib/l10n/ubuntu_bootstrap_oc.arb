@@ -73,7 +73,7 @@
     "secureBootSecurityKeysDontMatch": "Las claus de seguretat correspondon pas",
     "installationTypeNoOSDetected": "Aqueste ordenador possedís pas cap de sistèma operatiu detectat actualament. De qué volètz far ?",
     "installationTypeErase": "Escafar lo disc e installar {DISTRO}",
-    "installationTypeAdvancedLabel": "Mostrar las opcions avançadas...",
+    "installationTypeAdvancedLabel": "Opcions avançadas",
     "installationTypeAdvancedTitle": "Chiframent e sistèma de fichièrs",
     "installationTypeNone": "Cap de chiframent",
     "installationTypeNoneSelected": "Cap pas seleccionat",
@@ -402,5 +402,20 @@
                 "type": "String"
             }
         }
-    }
+    },
+    "tpmActionBadgeLabel": "Accion requerida",
+    "tpmActionDetailsLabel": "Detalhs tecnics",
+    "tpmActionSingleSolutionLabel": "Solucion : {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorKindInternal": "Error intèrna.",
+    "tpmActionErrorKindShutdownRequired": "Extincion requerida.",
+    "tpmActionErrorKindRebootRequired": "Reaviada requerida.",
+    "tpmActionErrorKindMissingArgument": "Paramètre mancant.",
+    "tpmActionErrorKindInvalidArgument": "Paramètre invalid."
 }
