@@ -12,6 +12,7 @@ base: core24
 platforms:
   amd64:
   arm64:
+  riscv64:
 
 apps:
   subiquity-server:
@@ -58,6 +59,10 @@ parts:
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
+      if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
+        export FLUTTER_STORAGE_BASE_URL=https://flutter-experimental.ubuntu.com
+      fi
+
       set -eux
       mkdir -p $CRAFT_PART_INSTALL/bin
       git submodule update --init --recursive
@@ -168,9 +173,23 @@ parts:
       fi
 
       craftctl default
-      FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
-      git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+
+      if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
+        git clone -b 3.38.9 --depth 1 https://github.com/flutter/flutter.git
+
+        # Apply tool patch for riscv64 support
+        cp /root/project/snap/local/riscv64-tool.patch $CRAFT_PART_SRC/flutter/
+        git -C $CRAFT_PART_SRC/flutter apply riscv64-tool.patch
+        rm $CRAFT_PART_SRC/flutter/riscv64-tool.patch
+      else
+        FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
+        git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
+      fi
     override-build: |
+      if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
+        export FLUTTER_STORAGE_BASE_URL=https://flutter-experimental.ubuntu.com
+      fi
+
       mkdir -p $CRAFT_PART_INSTALL/usr/bin
       mkdir -p $CRAFT_PART_INSTALL/usr/libexec
       cp -r $CRAFT_PART_SRC/flutter $CRAFT_PART_INSTALL/usr/libexec/flutter
@@ -208,12 +227,15 @@ parts:
     build-attributes: [enable-patchelf]
     stage-packages:
       - libatk1.0-0t64
+      - libc6
+      - libc6-dev
       - libcairo-gobject2
       - libcairo2
       - libegl-mesa0
       - libegl1
       # Needed for the dri drivers see https://github.com/canonical/ubuntu-desktop-installer/issues/2391
       - libelf1t64
+      - libgcc-s1
       - libgl1
       - libgles2
       - libglib2.0-0t64
@@ -242,6 +264,7 @@ parts:
       - usr/lib/*/libGL*.so.*
       - usr/lib/*/libX*.so.*
       - usr/lib/*/liba*.so.*
+      - usr/lib/*/libc*.so.*
       - usr/lib/*/libcairo*.so.*
       - usr/lib/*/libe*.so.*
       - usr/lib/*/libf*.so.*
