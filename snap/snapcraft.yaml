@@ -54,7 +54,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 41efb9ecd934c05c5f3b04808e035570f8091a55
+    source-commit: &commit-ref 656fa6b40a1eefbf2f5e07e0703c3cff13671752
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -74,7 +74,7 @@ parts:
     plugin: nil
     source: https://github.com/canonical/curtin
     source-type: git
-    source-commit: e7e57942f1f76537d670916adbaa374c62d48fab
+    source-commit: 04af5d497fa0e88f86843afbdc666f05e0c7a554
     override-pull: |
       craftctl default
       # Since snapcraft 8.14, the tags are not automatically fetched
