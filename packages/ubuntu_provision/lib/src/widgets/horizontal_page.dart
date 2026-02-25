@@ -16,7 +16,7 @@ class HorizontalPage extends ConsumerWidget {
     this.trailingTitleWidget,
     this.isNextEnabled = true,
     this.managedScrolling = true,
-    this.padding = const EdgeInsets.only(right: 3 * kYaruPagePadding),
+    this.padding = const EdgeInsets.only(right: 2 * kYaruPagePadding),
     this.bottomBar,
     this.snackBar,
     this.imageTitleWidget,
