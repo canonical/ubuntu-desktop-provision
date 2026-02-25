@@ -99,6 +99,7 @@ class HorizontalPage extends ConsumerWidget {
       ),
       contentPadding: EdgeInsets.zero,
       headerPadding: EdgeInsets.zero,
+      footer: managedScrolling ? Divider() : null,
       content: Row(
         children: [
           if (image != null || imageTitleWidget != null)
