@@ -2,7 +2,7 @@
     "@@locale": "sv",
     "partitionErase": "Formatera partitionen",
     "installationCompleteTitle": "Installationen är klar",
-    "shutdown": "Stäng av",
+    "shutdown": "Stäng ner",
     "bitlockerTitle": "Bitlocker är aktiverat",
     "bitlockerDescription": "Den här datorn använder Windows BitLocker-kryptering.\nDu behöver använda Windows för att skapa fritt utrymme eller gå tillbaka och välja '{option}' för att fortsätta.",
     "newPartitionTableConfirmationTitle": "Ny tom partition",
