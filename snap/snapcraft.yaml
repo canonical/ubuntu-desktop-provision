@@ -175,10 +175,11 @@ parts:
       craftctl default
 
       if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
-        git clone -b 3.38.9 --depth 1 https://github.com/flutter/flutter.git
+        FLUTTER_VERSION=3.38.9
+        git clone -b ${FLUTTER_VERSION} --depth 1 https://github.com/flutter/flutter.git
 
         # Apply tool patch for riscv64 support
-        cp /root/project/snap/local/riscv64-tool.patch $CRAFT_PART_SRC/flutter/
+        curl -L -o "$CRAFT_PART_SRC/flutter/riscv64-tool.patch" "https://flutter-experimental.ubuntu.com/tool/${FLUTTER_VERSION}.patch"
         git -C $CRAFT_PART_SRC/flutter apply riscv64-tool.patch
         rm $CRAFT_PART_SRC/flutter/riscv64-tool.patch
       else
