@@ -85,7 +85,7 @@
     "confirmPartitionTables": "La subdiskotabeloj de la jenaj aparatoj estas ŝanĝotaj:",
     "confirmHeader": "Reviziu viajn elektojn",
     "readyToUse": "{system} estas instalita kaj preta por uzo",
-    "shutdown": "Malŝalti",
+    "shutdown": "Malstartigi",
     "restartIntoWindows": "Restartigi al Windows",
     "bitlockerDescription": "Ĉi tiun komputilon ĉifras Windows BitLocker.\nLiberigu diskospacon per Windows, aŭ reiru kaj elektu «{option}» por daŭrigi.",
     "bitlockerInstructions": "Por instrukcioj, skanu la QR-kodon per alia aparato, aŭ vizitu la jenon: <a href=\"https://{url}\">{url}</a>",
@@ -404,25 +404,25 @@
     "tpmActionFixActionReboot": "Restartigi",
     "tpmActionFixActionShutdown": "Malstartigi",
     "tpmActionConfirmLabel": "Konfirmi",
-    "tpmActionErrorKindInternal": "Interna",
+    "tpmActionErrorKindInternal": "Interna eraro.",
     "tpmActionDetailsLabel": "Teĥnikaj detaloj",
-    "tpmActionErrorKindShutdownRequired": "Malstarto necesas",
-    "tpmActionErrorKindRebootRequired": "Restarto necesas",
+    "tpmActionErrorKindShutdownRequired": "Malstarto necesas.",
+    "tpmActionErrorKindRebootRequired": "Restarto necesas.",
     "tpmActionPageTitle": "Ne povas ŝalti aparato-bazan ĉifradon",
     "tpmActionBadgeLabel": "Ago necesas",
-    "tpmActionErrorKindMissingArgument": "Argumento mankas",
-    "tpmActionErrorKindInvalidArgument": "Argumento ne validas",
-    "tpmActionErrorKindActionFailed": "Ago malsukcesis",
+    "tpmActionErrorKindMissingArgument": "Argumento mankas.",
+    "tpmActionErrorKindInvalidArgument": "Argumento ne validas.",
+    "tpmActionErrorKindActionFailed": "Ago malsukcesis.",
     "tpmActionErrorKindSystemNotEfi": "Ĉi tiu komputilo uzas malnovan mikroprogramon (malnovan BIOS) ne kongruan kun tiu ĉifra metodo.",
     "tpmActionErrorKindRunningInVm": "La aktuala medio estas virtuala maŝino.",
-    "tpmActionErrorKindUnexpectedAction": "Neatendita ago",
-    "tpmActionErrorKindInvalidSecureBootMode": "Ĉe ĉi tiu komputilo, Sekura Praŝargo estas aŭ malŝaltita aŭ estas agordita en reĝimo alia ol «disponebla».",
-    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Kelkaj atestiloj por kontroli komponantojn en ĉi tiu komputilo estas tro malnovaj aŭ uzas malfortajn algoritmojn.",
-    "tpmActionErrorKindNoKernelIommu": "Ĉe ĉi tiu komputilo mankas postulata sekuriga funkcio, nome kerna eneliga memormastrumilo (IOMMU).",
+    "tpmActionErrorKindUnexpectedAction": "Neatendita ago.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Ĉe ĉi tiu komputilo, Sekura Praŝargo estas aŭ malŝaltita aŭ ne estas agordita en disponebla reĝimo.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Kelkaj atestiloj por kontroli programojn en ĉi tiu komputilo estas tro malnovaj aŭ uzas malfortajn algoritmojn.",
+    "tpmActionErrorKindNoKernelIommu": "Ĉe ĉi tiu komputilo mankas postulata sekuriga funkcio, nome eneliga memormastrumilo (IOMMU).",
     "tpmActionFixActionContactOsVendor": "Kontaktu la programistojn de la mastruma sistemo",
     "tpmActionFixActionContactOem": "Kontaktu la fabrikantojn de la komputilo",
     "tpmActionFixActionProceed": "Ignori",
-    "tpmActionErrorKindEfiVariableAccess": "Ekzistas problemo pri la agordoj de la mikroprogramoj de ĉi tiu komputilo.",
+    "tpmActionErrorKindEfiVariableAccess": "Ekzistas problemo pri la mikroprogramoj de ĉi tiu komputilo.",
     "tpmActionErrorKindNoSuitableTpm2Device": "Ĉe ĉi tiu komputilo mankas la postulata sekuriga aparato, nome Fidata Platforma Modulo (TPM) 2.0, por tiu ĉifra metodo.",
     "tpmActionErrorKindTpmDeviceFailure": "Malsukceso de Fidata Platforma Modulo (TPM)",
     "tpmActionErrorKindTpmDeviceDisabled": "La Fidata Platforma Modulo (TPM) de ĉi tiu komputilo estas malŝaltita.",
@@ -436,7 +436,7 @@
     "tpmActionFixActionClearTpmViaFirmware": "Forviŝi Fidatan Platforman Modulon (TPM) per restarto",
     "tpmActionFixActionEnableTpmViaFirmware": "Ŝalti Fidatan Platforman Modulon (TPM) per restarto",
     "tpmActionFixActionEnableAndClearTpmViaFirmware": "Ŝalti kaj forviŝi Fidatan Platforman Modulon (TPM) per restarto",
-    "tpmActionErrorKindUefiDebuggingEnabled": "Sencimigo UEFI estas ŝaltita",
+    "tpmActionErrorKindUefiDebuggingEnabled": "Sencimigo UEFI estas ŝaltita.",
     "tpmActionErrorKindInsufficientDmaProtection": "Ĉe ĉi tiu komputilo mankas postulata sekuriga funkcio, nome protekto kontraŭ Rekta Memoratingo (DMA).",
     "tpmActionErrorKindTpmHierarchiesOwned": "La Fidata Platforma Modulo (TPM) de ĉi tiu komputilo estas jam uzata de alia sistemo aŭ programo.",
     "tpmActionFixActionRebootToFwSettings": "Restartigi al mikroprogramaj agordoj",
@@ -450,7 +450,7 @@
     "tpmActionErrorKindTpmStartupLocalityNotProtected": "Lokeco de TPM-starto ne estas gardata",
     "tpmActionErrorKindVarSuppliedDriversPresent": "Var-provizita pelilo ĉeestas",
     "tpmActionErrorKindPreOsDigestVerificationDetected": "Troviĝis antaŭ-mastrumsistema kontrolsuma kontrolo",
-    "tpmActionErrorKindSysPrepApplicationsPresent": "Programo ruliĝanta ĉe starto malhelpas sekuran konekton al la Fidata Platforma Modulo (TPM) de ĉi tiu komputilo.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Programo ruliĝanta ĉe starto eble malhelpas sekuran konekton al la Fidata Platforma Modulo (TPM) de ĉi tiu komputilo.",
     "tpmActionSolutionLabel": "Solvo {n}: {text}",
     "@tpmActionSolutionLabel": {
         "placeholders": {
@@ -462,13 +462,13 @@
             }
         }
     },
-    "tpmActionDocumentationLinkLabel": "Hiperligo al dokumentaro",
+    "tpmActionDocumentationLinkLabel": "Lernu pli pri aparato-baza ĉifrado",
     "tpmActionErrorSupportLabel": "Provu unu el la jenaj solvoj, kontaktu teĥnikan subtenon, aŭ elektu alian ĉifradan metodon.",
     "tpmActionErrorSupportNoActionLabel": "Kontaktu teĥnikan subtenon, aŭ elektu alian ĉifradan metodon.",
     "tpmActionRestartLabel": "Restartigi",
     "tpmActionIgnoreAndContinueLabel": "Ignori kaj daŭrigi",
     "tpmActionErrorTitle": "Ĉi tiu solvo malsukcesis",
-    "tpmActionErrorDescription": "Provu alian solvon, aŭ kontaktu teĥnikan subtenon",
+    "tpmActionErrorDescription": "Provu alian solvon, aŭ kontaktu teĥnikan asiston.",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Malaŭtomate ŝalti sekuran praŝargon",
     "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Malaŭtomate ŝalti sekuran platforman modulon (TPM)",
     "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Malaŭtomate forviŝi sekuran platforman modulon (TPM)",
@@ -479,10 +479,10 @@
     "tpmActionFixActionClearTpmConfirmationLabel": "Mi komprenas la konsekvencojn de forviŝado de la fidata platforma modulo",
     "tpmActionFixActionClearTpmWarningTitle": "Forviŝante la fidatan platforman modulon (TMP), vi perdos ĉiujn ĉifrajn ŝlosilojn",
     "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Malaŭtomate ŝalti protekton kontraŭ rekta memoratingo (DMA)",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Malaŭtomate ŝalti protekton kontraŭ rekta memoratingo (DMA)",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Malaŭtomate ŝalti eneligan memormastrumilon (IOMMU)",
     "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Malaŭtomate ŝalti PCR-bankojn",
     "tpmActionFixActionClearTpmWarningBody": "Vi perdos ĉiom da datenoj en tiuj ĉifritaj diskoj, kies restaŭrŝlosilojn vi ne havas. Tio ankaŭ rompos tiujn aliajn funkciojn, kiuj dependas de la fidata platforma modulo (TPM), kiel ekzemple aŭtentokontrolon kaj atestilojn.",
-    "tpmActionErrorKindAddonDriversPresent": "Ekzistas aldona zorgilo",
+    "tpmActionErrorKindAddonDriversPresent": "Ekzistas aldona zorgilo.",
     "tpmActionErrorKindGenericTpm": "Ekzistas problemo pri la Fidata Platforma Modulo (TPM) de ĉi tiu komputilo.",
     "tpmActionErrorKindGenericFirmware": "Ekzistas problemo pri la mikroprogramoj de ĉi tiu komputilo.",
     "tpmActionFixActionRebootDescription": "Restartigi la komputilon por kompletigi la antaŭajn agojn.",
@@ -494,7 +494,7 @@
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Ĉi tiu komputilo estas uzanta malaŭtomatan permesoliston por kontroli programojn ĉe starto.",
     "tpmActionFixActionRebootToFwSettingsDescription": "Vi povas fari tion per la mikroprogramaj agordoj de via komputilo.",
     "tpmActionFixActionCaveatConfirm": "Vi eble devos konfirmi ĉi tiun agon dum restarto.",
-    "tpmActionFixActionCaveatRetry": "Vi devos reprovi la instalon denove.",
+    "tpmActionFixActionCaveatRetry": "Poste vi devos reekinstali denove.",
     "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vi eble povas fari tion per la mikroprogramaj agordoj de via komputilo. Por helpo, legu la dokumentaron de la fabrikanto de la ĉefprocesoro.",
     "installationTypeTPMInfoUnavailable": "Ne disponebla ĉe ĉi tiu komputilo.",
     "installationTypeLVMEncryptionInfo2": "Tio uzas la Logikan Volum-Mastrumanton (LVM) kun ĉifrado per la Linux-a Unuiĝinta Ŝlosilo-Agordo (LUKS).",
@@ -506,5 +506,17 @@
                 "type": "String"
             }
         }
-    }
+    },
+    "tpmActionSingleSolutionLabel": "Solvo: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorSupportSingleLabel": "Provu la ĉi-suban solvon, kontaktu teĥnikan asiston, aŭ elektu alian ĉifran metodon.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Ĉi tiu funkcio eble nomiĝas «Virtualiga Teĥniko», «VT-d», aŭ «AMD-Vi».",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Se mikroprogramaj agordoj ne ŝargiĝas aŭtomate, restartigu la komputilon, kaj dum starto ripete premadu la klavon por agordoj (ofte F2, F10, aŭ Forigi).",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolu, ĉu la reĝimo de sekura praŝargo estas «disponebla»."
 }
