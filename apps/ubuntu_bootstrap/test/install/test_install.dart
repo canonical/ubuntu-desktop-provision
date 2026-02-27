@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
@@ -63,12 +65,12 @@ class MockSlidesModel extends Mock implements SlidesModel {
   Future<void> preCache() async {}
 
   @override
-  late final slides = [
+  late final slides = UnmodifiableListView([
     for (var i = 1; i <= slideCount; i++)
       SlideHtml(
         '<html><body>slide_$i</body></html>',
         index: i,
         locale: 'en_US',
       ),
-  ];
+  ]);
 }
