@@ -73,6 +73,8 @@ github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19 h1:IP8p46//e//o0KP
 github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19/go.mod h1:PUpwIgUuCQyuCz/gwiq6WYbo7IvtXXd8JqL01ez+jZE=
 github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac h1:w8/ullxXcbVscMoDk2C7e4eMvimRnrBfhLSZGtuvdRg=
 github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac/go.mod h1:+kTYKcCrcrX8W2/scrDwXO3tyUpe/WZ7fCFDMrTMb7U=
+github.com/ubuntu/ubuntu-report v1.7.4 h1:iTKlpH9L5NIcTjMaBXRLsKEOUe0yOV8NIWGv/7sGyig=
+github.com/ubuntu/ubuntu-report v1.7.4/go.mod h1:aMpCAm5Yw65h+kLOjInFDOle4DwZv0K70QkFnFn3GP4=
 go.opentelemetry.io/auto/sdk v1.2.1 h1:jXsnJ4Lmnqd11kwkBV2LgLoFMZKizbCi5fNZ/ipaZ64=
 go.opentelemetry.io/auto/sdk v1.2.1/go.mod h1:KRTj+aOaElaLi+wW1kO/DZRXwkF4C5xPbEe3ZiIhN7Y=
 go.opentelemetry.io/otel v1.38.0 h1:RkfdswUDRimDg0m2Az18RKOsnI8UDzppJAtj01/Ymk8=
