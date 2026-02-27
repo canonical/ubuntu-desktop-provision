@@ -59,26 +59,35 @@ class StorageSelector extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
+    final selectedValue =
+        selectedIndex != null && selectedIndex! >= 0 && selectedIndex! < count
+            ? formatStorage(context, ref, selectedIndex!)
+            : '';
     return Row(
       children: <Widget>[
         Text(lang.selectGuidedStoragePartitionDropdownLabel),
         const SizedBox(width: kWizardSpacing),
         Expanded(
-          child: MenuButtonBuilder<int>(
-            entries: [
-              ...List.generate(count, (index) => index)
-                  .map((i) => MenuButtonEntry(value: i)),
-              ...bitLockerEntries(context, ref),
-            ],
-            selected: selectedIndex != null &&
-                    selectedIndex! >= 0 &&
-                    selectedIndex! < count
-                ? selectedIndex
-                : null,
-            onSelected: onSelected,
-            itemBuilder: (context, index, child) => Text(
-              formatStorage(context, ref, index),
-              key: ValueKey(index),
+          child: Semantics(
+            label: lang.selectGuidedStoragePartitionDropdownLabel,
+            value: selectedValue,
+            button: true,
+            child: MenuButtonBuilder<int>(
+              entries: [
+                ...List.generate(count, (index) => index)
+                    .map((i) => MenuButtonEntry(value: i)),
+                ...bitLockerEntries(context, ref),
+              ],
+              selected: selectedIndex != null &&
+                      selectedIndex! >= 0 &&
+                      selectedIndex! < count
+                  ? selectedIndex
+                  : null,
+              onSelected: onSelected,
+              itemBuilder: (context, index, child) => Text(
+                formatStorage(context, ref, index),
+                key: ValueKey(index),
+              ),
             ),
           ),
         ),
