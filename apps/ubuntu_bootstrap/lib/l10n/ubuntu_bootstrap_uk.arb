@@ -43,7 +43,7 @@
     "installationTypeNone": "Немає шифрування",
     "onBatteryWarning": "<font color=\"{color}\">Попередження</font>: комп'ютер не підключено до джерела живлення.",
     "confirmPageTitle": "Записати зміни на диск",
-    "shutdown": "Вимкнути",
+    "shutdown": "Вимкнути живлення",
     "restartIntoWindows": "Перезапустити у Windows",
     "installDriversTitle": "Встановити стороннє програмне забезпечення для графіки та обладнання Wi-Fi",
     "installDriversSubtitle": "Включаючи, але не обмежуючись драйверами NVIDIA та подібними",
