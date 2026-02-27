@@ -98,7 +98,6 @@ void main() {
           '--machine-config=examples/machines/simple.json',
           '--source-catalog=examples/sources/desktop.yaml',
           '--storage-version=2',
-          '--no-report-storage-user-error',
           '--foo',
           'bar',
         ],
