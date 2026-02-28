@@ -433,7 +433,7 @@
     "tpmActionErrorKindHostSecurity": "Il y a un problème avec la configuration de sécurité de cet ordinateur.",
     "tpmActionErrorKindPcrUnusable": "PCR inutilisable",
     "tpmActionErrorKindPcrUnsupported": "PCR non pris en charge",
-    "tpmActionErrorKindInvalidSecureBootMode": "Le démarrage sécurisé est désactivé sur cet ordinateur ou n’est pas configuré en mode \"déployé\".",
+    "tpmActionErrorKindInvalidSecureBootMode": "Le démarrage sécurisé est désactivé sur cet ordinateur ou n’est pas réglé en mode déployé.",
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Certains des certificats vérifiant du logiciel dans cet ordinateur sont obsolètes ou utilisent une protection faible.",
     "tpmActionFixActionReboot": "Redémarrer",
     "tpmActionFixActionRebootToFwSettings": "Redémarrer vers paramètres micrologiciel",
