@@ -1,1 +1,134 @@
-{}
+{
+    "welcomePageTitle": "ಸ್ವಾಗತ",
+    "@welcomePageTitle": {},
+    "welcomePageHeader": "{distro} ಗೆ ಸುಸ್ವಾಗತ",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "ಹೊಸದೇನಿದೆ?",
+    "@welcomeWhatsNew": {},
+    "welcomeStartTitle": "ಸುವ್ಯವಸ್ಥಿತ ಆರಂಭ",
+    "@welcomeStartTitle": {},
+    "welcomeStartSubtitle": "ಕ್ಲೀನರ್ ಸೆಟಪ್ ಅನುಭವವನ್ನು ಬೆಂಬಲಿಸುವುದು.",
+    "@welcomeStartSubtitle": {},
+    "welcomeStoreTitle": "ಹೊಸ ನೋಟ ಆಪ್ ಸ್ಟೋರ್",
+    "@welcomeStoreTitle": {},
+    "welcomeStoreSubtitle": "ನಿಮ್ಮ ಮೆಚ್ಚಿನ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಕಂಡುಹಿಡಿಯುವುದು ಎಂದಿಗೂ ಸುಲಭವಲ್ಲ.",
+    "@welcomeStoreSubtitle": {},
+    "welcomeSecurityTitle": "ಸುಧಾರಿತ ಭದ್ರತೆ",
+    "@welcomeSecurityTitle": {},
+    "welcomeSecuritySubtitle": "ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಅಥವಾ ZFS ಎನ್‌ಕ್ರಿಪ್ಶನ್‌ಗಾಗಿ ಹೊಸ ಆಯ್ಕೆಗಳು.",
+    "@welcomeSecuritySubtitle": {},
+    "welcomeChangelogLabel": "<a href=\"{url}\">ಚೇಂಜ್ಲಾಗ್ ವೀಕ್ಷಿಸಿ</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryPageTitle": "ಟೆಲಿಮೆಟ್ರಿ",
+    "@telemetryPageTitle": {},
+    "telemetryHeader": "ಸುಧಾರಿಸಲು ಸಹಾಯ ಮಾಡಿ {distro}",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "ನಿಮ್ಮ ಸಿಸ್ಟಂ ಡೇಟಾವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುವ ಮೂಲಕ {distro} ಸುಧಾರಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ. ಇದು ನಿಮ್ಮ ಯಂತ್ರದ ಮಾದರಿ, ಸ್ಥಾಪಿಸಲಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ನಿಮ್ಮ ಸಮಯವಲಯಕ್ಕಾಗಿ ನೀವು ಆಯ್ಕೆಮಾಡಿದ ಸ್ಥಳದಂತಹ ವಿಷಯಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "ಹೌದು, {distro} ತಂಡದೊಂದಿಗೆ ಸಿಸ್ಟಂ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "ಇಲ್ಲ, ಸಿಸ್ಟಮ್ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಬೇಡಿ",
+    "@telemetryLabelOff": {},
+    "telemetryReportLabel": "ಮೊದಲ ವರದಿಯನ್ನು ತೋರಿಸಿ",
+    "@telemetryReportLabel": {},
+    "telemetryReportTitle": "ವಿವರಗಳನ್ನು ವರದಿ ಮಾಡುವುದು",
+    "@telemetryReportTitle": {},
+    "telemetryLegalLabel": "ಕಾನೂನು ಸೂಚನೆ",
+    "@telemetryLegalLabel": {},
+    "telemetryCollectError": "ಟೆಲಿಮೆಟ್ರಿ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸಲು ವಿಫಲವಾಗಿದೆ",
+    "@telemetryCollectError": {},
+    "privacyPageTitle": "ಸ್ಥಳ ಸೇವೆಗಳು",
+    "@privacyPageTitle": {},
+    "privacyLocationTitle": "ಸ್ಥಳ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದೇ?",
+    "@privacyLocationTitle": {},
+    "privacyLocationSubtitle": "ನಿಮ್ಮ ಭೌಗೋಳಿಕ ಸ್ಥಳವನ್ನು ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ತಿಳಿಸಿ.\nನೀವು ಇದನ್ನು ಯಾವಾಗ ಬೇಕಾದರೂ ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು.",
+    "@privacyLocationSubtitle": {},
+    "privacyLocationEnable": "ಸ್ಥಳ ಸೇವೆಗಳು",
+    "@privacyLocationEnable": {},
+    "privacyPolicyLink": "ಡೇಟಾ ಗೌಪ್ಯತೆ",
+    "@privacyPolicyLink": {},
+    "ubuntuProMagicAttachInstructions": "<a href=\"https://{url}\">{url}</a> ನಲ್ಲಿ ಈ ಕೋಡ್‌ನೊಂದಿಗೆ ಮ್ಯಾಜಿಕ್ ಲಗತ್ತಿಸಿ",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProPageTitle": "ಉಬುಂಟು ಪ್ರೊ",
+    "@ubuntuProPageTitle": {},
+    "ubuntuProHeader": "ಈ ಯಂತ್ರವನ್ನು ಲಗತ್ತಿಸಿ",
+    "@ubuntuProHeader": {},
+    "ubuntuProOrAddTokenManually": "ಅಥವಾ ಹಸ್ತಚಾಲಿತವಾಗಿ ಟೋಕನ್ ಸೇರಿಸಿ",
+    "@ubuntuProOrAddTokenManually": {},
+    "ubuntuProTokenTextfieldHint": "ಟೋಕನ್",
+    "@ubuntuProTokenTextfieldHint": {},
+    "ubuntuProSubscriptionDescription": "ಓಪನ್ ಸೋರ್ಸ್ ಸಾಫ್ಟ್‌ವೇರ್ ಭದ್ರತೆಗಾಗಿ ಅತ್ಯಂತ ವ್ಯಾಪಕವಾದ ಚಂದಾದಾರಿಕೆಯನ್ನು ಪಡೆಯಿರಿ",
+    "@ubuntuProSubscriptionDescription": {},
+    "ubuntuProSubscriptionFreeForPersonalUse": "ವೈಯಕ್ತಿಕ ಬಳಕೆಗಾಗಿ ಯಾವಾಗಲೂ ಉಚಿತ. ಉದ್ಯಮಗಳಿಗೆ 30-ದಿನಗಳ ಪ್ರಯೋಗ. <a href=\"https://{url}\">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "ಲಗತ್ತಿಸಿ",
+    "@ubuntuProTokenAttachButton": {},
+    "ubuntuProTokenAttachError": "ಅಮಾನ್ಯ ಟೋಕನ್",
+    "@ubuntuProTokenAttachError": {},
+    "ubuntuProTokenAttachSucess": "ಮಾನ್ಯ ಟೋಕನ್",
+    "@ubuntuProTokenAttachSucess": {},
+    "ubuntuProTokenAttachErrorVariant": "ಅಮಾನ್ಯವಾದ ಟೋಕನ್, ಮರುಪ್ರಯತ್ನಿಸಿ",
+    "@ubuntuProTokenAttachErrorVariant": {},
+    "ubuntuProOnBoardingSkipForNow": "ಸದ್ಯಕ್ಕೆ ಬಿಟ್ಟುಬಿಡಿ",
+    "@ubuntuProOnBoardingSkipForNow": {},
+    "ubuntuProOnBoardingSkipForNowDescription": "ನೀವು ಯಾವಾಗಲೂ ಉಬುಂಟು ಪ್ರೊ ಅನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್ ಮೂಲಕ ಸಕ್ರಿಯಗೊಳಿಸಬಹುದುನೀವು ಯಾವಾಗಲೂ ಉಬುಂಟು ಪ್ರೊ ಅನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್ ಮೂಲಕ ಸಕ್ರಿಯಗೊಳಿಸಬಹುದು",
+    "@ubuntuProOnBoardingSkipForNowDescription": {},
+    "ubuntuProOnBoardingEnableUbuntuPro": "ಉಬುಂಟು ಪ್ರೊ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "@ubuntuProOnBoardingEnableUbuntuPro": {},
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "2032 ರವರೆಗೆ ವ್ಯಾಪಕ ಶ್ರೇಣಿಯ ಪ್ಯಾಕೇಜ್‌ಗಳಲ್ಲಿ ಭದ್ರತಾ ನವೀಕರಣಗಳಿಗಾಗಿ ಈ ಯಂತ್ರವನ್ನು ಉಬುಂಟು ಪ್ರೊ ಚಂದಾದಾರಿಕೆಗೆ ಲಗತ್ತಿಸಿ.",
+    "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+    "ubuntuProSucessAttachHeader": "ಉಬುಂಟು ಪ್ರೊ ಅನ್ನು ಈಗ ಈ ಯಂತ್ರದಲ್ಲಿ ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "@ubuntuProSucessAttachHeader": {},
+    "ubuntuProSucessAttachDescription": "ಸಾಫ್ಟ್‌ವೇರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಪ್ರೊ ಸೇವೆಗಳನ್ನು ನೀವು ನಿರ್ವಹಿಸಬಹುದುಸಾಫ್ಟ್‌ವೇರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಪ್ರೊ ಸೇವೆಗಳನ್ನು ನೀವು ನಿರ್ವಹಿಸಬಹುದು",
+    "@ubuntuProSucessAttachDescription": {},
+    "successIconSemanticLabel": "ಯಶಸ್ಸು",
+    "@successIconSemanticLabel": {},
+    "closeIconSemanticLabel": "ಮುಚ್ಚಿ",
+    "@closeIconSemanticLabel": {},
+    "maximizeIconSemanticLabel": "ಗರಿಷ್ಠಗೊಳಿಸು",
+    "@maximizeIconSemanticLabel": {},
+    "minimizeIconSemanticLabel": "ಕಡಿಮೆಗೊಳಿಸು",
+    "@minimizeIconSemanticLabel": {}
+}

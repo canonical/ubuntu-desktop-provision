@@ -1,4 +1,1088 @@
 {
-  "@@locale": "kn",
-  "welcome": "ಸುಸ್ವಾಗತ"
+    "@@locale": "kn",
+    "welcome": "ಸುಸ್ವಾಗತ",
+    "appTitle": "ಉಬುಂಟು ಡೆಸ್ಕ್‌ಟಾಪ್ ಸ್ಥಾಪಕ",
+    "windowTitle": "ಸ್ಥಾಪಿಸಿ {RELEASE}",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "ಸ್ವಯಂಚಾಲಿತ ಅನುಸ್ಥಾಪನೆ",
+    "autoinstallDirectHeader": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿ",
+    "autoinstallDirectUrlLabel": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿನೀವು ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್‌ನ URL ಅನ್ನು ನಮೂದಿಸಬಹುದು:",
+    "autoinstallDirectFileLabel": "ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ:",
+    "autoinstallDirectFileButtonLabel": "ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ...",
+    "autoinstallDirectFileClearButtonLabel": "ಫೈಲ್ ತೆರವುಗೊಳಿಸಿ",
+    "autoinstallDirectFilePickerTitle": "ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ",
+    "autoinstallDirectFilePickerFilterLabel": "YAML ಫೈಲ್‌ಗಳು",
+    "autoinstallDirectImportButtonLabel": "ಆಮದು ಮಾಡಿಕೊಳ್ಳಿ",
+    "autoinstallDirectErrorNetworkTitle": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ತಲುಪಲಾಗುವುದಿಲ್ಲ",
+    "autoinstallDirectErrorNetworkBody": "URL ಸರಿಯಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ, ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ ಅಥವಾ ನಂತರ ಪ್ರಯತ್ನಿಸಿ.",
+    "autoinstallDirectErrorInvalidUrlTitle": "ಅಮಾನ್ಯ URL",
+    "autoinstallDirectErrorInvalidUrlBody": "URL ಸರಿಯಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಅನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+    "autoinstallDirectErrorInvalidContentTitle": "ಅಮಾನ್ಯ ಸ್ವಯಂ ಸ್ಥಾಪನೆ ಫೈಲ್",
+    "autoinstallDirectErrorInvalidContentBody": "ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.",
+    "autoinstallDirectErrorFileSystemTitle": "ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.",
+    "autoinstallDirectErrorFileSystemBody": "ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.ನಿಮ್ಮ ಅನುಮತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆ ಫೈಲ್ ಅನ್ನು ಒದಗಿಸಿ.",
+    "autoinstallDirectErrorUnkownTitle": "ಅಜ್ಞಾತ ದೋಷ",
+    "autoinstallTitle": "ಅನುಸ್ಥಾಪನೆಯ ಪ್ರಕಾರ",
+    "autoinstallHeader": "ನೀವು {DISTRO} ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "autoinstall.yaml URL ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಮಾರ್ಗವನ್ನು ನಮೂದಿಸಿ:",
+    "autoinstallInteractiveOption": "ಸಂವಾದಾತ್ಮಕ ಸ್ಥಾಪನೆ",
+    "autoinstallInteractiveDescription": "ಅನುಸ್ಥಾಪನೆಯ ಮೂಲಕ ಹಂತ ಹಂತವಾಗಿ ಮಾರ್ಗದರ್ಶನ ಮಾಡಲು ಬಯಸುವ ಬಳಕೆದಾರರಿಗೆ.",
+    "autoinstallDirectOption": "ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್‌ನೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿದೆ",
+    "autoinstallDirectDescription": "ಸ್ಥಿರವಾದ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಸಿಸ್ಟಮ್ ಸೆಟಪ್‌ಗಳಿಗಾಗಿ autoinstall.yaml ಅನ್ನು ಹೊಂದಿರುವ ಮುಂದುವರಿದ ಬಳಕೆದಾರರಿಗೆ.",
+    "autoinstallLandscapeOption": "ಭೂದೃಶ್ಯದೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತ",
+    "autoinstallLandscapeDescription": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಮೂಲಕ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಒದಗಿಸುವ ಸಂಸ್ಥೆಗಳಲ್ಲಿನ ಬಳಕೆದಾರರಿಗೆ.",
+    "changeButtonText": "ಬದಲಾವಣೆ",
+    "quitButtonText": "ಅನುಸ್ಥಾಪನೆಯನ್ನು ತ್ಯಜಿಸಿ",
+    "loadingPageTitle": "{DISTRO} ಗೆ ಸುಸ್ವಾಗತ",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "{DISTRO} ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "ಎಚ್ಚರಿಕೆ:",
+    "tryOrInstallTitle": "{DISTRO} ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಾಪಿಸಿ",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "ನೀವು {DISTRO} ಜೊತೆಗೆ ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "ದುರಸ್ತಿ ಅನುಸ್ಥಾಪನೆ",
+    "tryOrInstallRepairDescription": "ರಿಪೇರಿ ಮಾಡುವುದರಿಂದ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸ್ಪರ್ಶಿಸದೆಯೇ ಎಲ್ಲಾ ಸ್ಥಾಪಿಸಲಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಮರುಸ್ಥಾಪಿಸುತ್ತದೆ.",
+    "tryOption": "{RELEASE} ಪ್ರಯತ್ನಿಸಿ",
+    "@tryOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryDescription": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ಗೆ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡದೆಯೇ ನೀವು {RELEASE} ಅನ್ನು ಪ್ರಯತ್ನಿಸಬಹುದು.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installOption": "ಸ್ಥಾಪಿಸಿ {RELEASE}",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಂ ಜೊತೆಗೆ (ಅಥವಾ ಬದಲಿಗೆ) {RELEASE} ಅನ್ನು ಸ್ಥಾಪಿಸಿ. ಇದು ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಾರದು.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "ನೀವು <a href=\"{url}\">ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳನ್ನು</a> ಓದಲು ಬಯಸಬಹುದು.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "RST ಪತ್ತೆಯಾಗಿದೆ",
+    "rstHeader": "ಅನುಸ್ಥಾಪನೆಯನ್ನು ಮುಂದುವರಿಸಲು ನೀವು RST ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕು",
+    "rstDisable": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಇಂಟೆಲ್ RST (ರಾಪಿಡ್ ಸ್ಟೋರೇಜ್ ಟೆಕ್ನಾಲಜಿ) ಅನ್ನು ಬಳಸುತ್ತದೆ. ನೀವು ಇದರಲ್ಲಿ RST ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು:",
+    "rstDisableWindows": "ವಿಂಡೋಸ್, ನೀವು ವಿಂಡೋಸ್ನೊಂದಿಗೆ ಡ್ಯುಯಲ್ ಬೂಟ್ ಸೆಟಪ್ ಅನ್ನು ಬಳಸುತ್ತಿದ್ದರೆ",
+    "rstDisableBios": "BIOS ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "rstInstructions": "ಸೂಚನೆಗಳಿಗಾಗಿ, ಇನ್ನೊಂದು ಸಾಧನದಲ್ಲಿ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ಭೇಟಿ ನೀಡಿ: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ",
+    "configureSecureBootDescription": "ನೀವು ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ್ದೀರಿ. ಇದಕ್ಕೆ ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಆಫ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ.ಇದನ್ನು ಮಾಡಲು, ನೀವು ಇದೀಗ ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆರಿಸಬೇಕಾಗುತ್ತದೆ ಮತ್ತು ಸಿಸ್ಟಮ್ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ ಅದನ್ನು ನಮೂದಿಸಿ.ನೀವು ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ್ದೀರಿ. ಇದಕ್ಕೆ ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಆಫ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ.ಇದನ್ನು ಮಾಡಲು, ನೀವು ಇದೀಗ ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆರಿಸಬೇಕಾಗುತ್ತದೆ ಮತ್ತು ಸಿಸ್ಟಮ್ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ ಅದನ್ನು ನಮೂದಿಸಿ.",
+    "configureSecureBootOption": "ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ",
+    "chooseSecurityKey": "ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "confirmSecurityKey": "ಭದ್ರತಾ ಕೀಯನ್ನು ದೃಢೀಕರಿಸಿ",
+    "dontInstallDriverSoftwareNow": "ಸದ್ಯಕ್ಕೆ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಬೇಡಿ",
+    "dontInstallDriverSoftwareNowDescription": "ನೀವು ಅದನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್‌ನಿಂದ ಸ್ಥಾಪಿಸಬಹುದುನೀವು ಅದನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್‌ನಿಂದ ಸ್ಥಾಪಿಸಬಹುದು",
+    "configureSecureBootSecurityKeyRequired": "ಭದ್ರತಾ ಕೀ ಅಗತ್ಯವಿದೆ",
+    "secureBootSecurityKeysDontMatch": "ಭದ್ರತಾ ಕೀಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+    "showSecurityKey": "ತೋರಿಸು",
+    "hideSecurityKey": "ಮರೆಮಾಡಿ",
+    "updatesOtherSoftwarePageTitle": "ಅಪ್ಲಿಕೇಶನ್‌ಗಳು",
+    "updatesOtherSoftwarePageDescription": "ಪ್ರಾರಂಭಿಸಲು ನೀವು ಯಾವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?",
+    "codecsAndDriversPageTitle": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆಪ್ಟಿಮೈಜ್ ಮಾಡಿ",
+    "codecsAndDriversPageDescription": "ಶಿಫಾರಸು ಮಾಡಲಾದ ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವುದೇ?",
+    "codecsAndDriversPageBody": "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಯಾವುದೇ ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು {DISTRO} ರವಾನಿಸುತ್ತದೆ. ಹೆಚ್ಚುವರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವುದು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಸುಧಾರಿಸಬಹುದು.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "NVIDIA ಗ್ರಾಫಿಕ್ಸ್ ಕಾರ್ಡ್ ಪತ್ತೆಯಾಗಿದೆ",
+    "codecsAndDriversNvidiaBody": "NVIDIA ಗ್ರಾಫಿಕ್ ಕಾರ್ಡ್‌ಗಳ ಉತ್ತಮ ಕಾರ್ಯಕ್ಷಮತೆಗಾಗಿ, ಹೆಚ್ಚುವರಿ ಡ್ರೈವರ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸುವುದನ್ನು ಬಲವಾಗಿ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.",
+    "fullInstallationTitle": "ವಿಸ್ತೃತ ಆಯ್ಕೆ",
+    "fullInstallationSubtitle": "ಕಚೇರಿ ಪರಿಕರಗಳು, ಉಪಯುಕ್ತತೆಗಳು ಮತ್ತು ವೆಬ್ ಬ್ರೌಸರ್‌ನ ಆಫ್‌ಲೈನ್-ಸ್ನೇಹಿ ಆಯ್ಕೆ.",
+    "minimalInstallationTitle": "ಡೀಫಾಲ್ಟ್ ಆಯ್ಕೆ",
+    "minimalInstallationSubtitle": "ಕೇವಲ ಅಗತ್ಯಗಳು, ವೆಬ್ ಬ್ರೌಸರ್ ಮತ್ತು ಮೂಲಭೂತ ಉಪಯುಕ್ತತೆಗಳು.",
+    "installationTypeAlongside": "{os} ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "{os1} ಮತ್ತು {os2} ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಂಗಳ ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "ಇತರ ವಿಭಾಗಗಳ ಜೊತೆಗೆ {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "ಮರುಗಾತ್ರಗೊಳಿಸಲು ಮತ್ತು {product} ಗಾಗಿ ಜಾಗವನ್ನು ರಚಿಸಲು ವಿಭಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಬೂಟ್ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ ಅನ್ನು ನೀವು ಆಯ್ಕೆ ಮಾಡಬಹುದು.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os} ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು {product} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ {os} ಸ್ಥಾಪನೆಯಿಂದ ಎಲ್ಲಾ ಫೈಲ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "ಹಸ್ತಚಾಲಿತ ಸ್ಥಾಪನೆ",
+    "installationTypeManualInfo": "ಕಸ್ಟಮೈಸ್ ಮಾಡಿದ ಡಿಸ್ಕ್ ಸೆಟಪ್‌ಗಳನ್ನು ಬಯಸುವ ಮುಂದುವರಿದ ಬಳಕೆದಾರರಿಗೆ.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "ಡಿಸ್ಕ್ ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು {DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "ನಿಮ್ಮ ಆಯ್ಕೆಮಾಡಿದ ಡಿಸ್ಕ್‌ನಲ್ಲಿ ಮೊದಲಿನಿಂದ ಪ್ರಾರಂಭಿಸಿ.",
+    "selectGuidedStorageDriveDropdownLabel": "ಡ್ರೈವ್ ಆಯ್ಕೆಮಾಡಿ:",
+    "selectGuidedStoragePartitionDropdownLabel": "ವಿಭಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ:",
+    "selectGuidedStorageInfoLabel": "ಸಂಪೂರ್ಣ ಡಿಸ್ಕ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ:",
+    "selectGuidedStorageInstallNow": "ಈಗ ಸ್ಥಾಪಿಸಿ",
+    "guidedStoragePageHeader": "{DISTRO} ಅನ್ನು ಎಲ್ಲಿ ಸ್ಥಾಪಿಸಬೇಕು ಎಂಬುದನ್ನು ಆರಿಸಿ",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "ಕೆಳಗಿನ ವಿಭಾಜಕವನ್ನು ಎಳೆಯುವ ಮೂಲಕ ಡ್ರೈವ್ ಜಾಗವನ್ನು ನಿಯೋಜಿಸಿ:",
+    "installAlongsideHiddenPartitions": "{num} ಚಿಕ್ಕ ವಿಭಾಗಗಳನ್ನು ಮರೆಮಾಡಲಾಗಿದೆ, ಹೆಚ್ಚಿನ ನಿಯಂತ್ರಣಕ್ಕಾಗಿ <a href=\"{url}\">ಸುಧಾರಿತ ವಿಭಜನಾ ಉಪಕರಣವನ್ನು</a> ಬಳಸಿ",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "ವಿಭಾಗವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಿ",
+    "installAlongsideAllocateSpace": "ಜಾಗವನ್ನು ನಿಗದಿಪಡಿಸಿ",
+    "installAlongsideFiles": "ಫೈಲ್‌ಗಳು",
+    "installAlongsidePartition": "ವಿಭಜನೆ:",
+    "installAlongsideSize": "ಗಾತ್ರ:",
+    "installAlongsideAvailable": "ಲಭ್ಯವಿದೆ:",
+    "allocateDiskSpace": "ಹಸ್ತಚಾಲಿತ ವಿಭಜನೆ",
+    "allocateDiskSpaceInvalidMountPointSlash": "ಮೌಂಟ್ ಪಾಯಿಂಟ್‌ಗಳು \"/\" ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗಬೇಕು",
+    "allocateDiskSpaceInvalidMountPointSpace": "ಮೌಂಟ್ ಪಾಯಿಂಟ್‌ಗಳು ಜಾಗವನ್ನು ಹೊಂದಿರಬಾರದು",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} ಎಂಬುದು {mountpoint} ಗಾಗಿ ಬೆಂಬಲಿತ ಫೈಲ್ ಸಿಸ್ಟಂ ಅಲ್ಲ",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "ಸಾಧನ",
+    "successIconSemanticLabel": "ಯಶಸ್ಸು",
+    "closeIconSemanticLabel": "ಮುಚ್ಚಿ",
+    "maximizeIconSemanticLabel": "ಗರಿಷ್ಠಗೊಳಿಸು",
+    "minimizeIconSemanticLabel": "ಕಡಿಮೆಗೊಳಿಸು",
+    "otherOptions": "ಇತರ ಆಯ್ಕೆಗಳು",
+    "installThirdPartyTitle": "ಗ್ರಾಫಿಕ್ಸ್ ಮತ್ತು ವೈ-ಫೈ ಹಾರ್ಡ್‌ವೇರ್‌ಗಾಗಿ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಿ, ಜೊತೆಗೆ ಹೆಚ್ಚುವರಿ ಮಾಧ್ಯಮ ಸ್ವರೂಪಗಳು",
+    "installThirdPartySubtitle": "ಈ ಸಾಫ್ಟ್‌ವೇರ್ ಅದರ ದಸ್ತಾವೇಜನ್ನು ಒಳಗೊಂಡಿರುವ ಪರವಾನಗಿ ನಿಯಮಗಳಿಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ. ಕೆಲವು ಸ್ವಾಮ್ಯದವು.",
+    "installDriversTitle": "ಗ್ರಾಫಿಕ್ಸ್ ಮತ್ತು ವೈ-ಫೈ ಹಾರ್ಡ್‌ವೇರ್‌ಗಾಗಿ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "passphrasePagePassphraseEntropyOptimal": "ಬಲವಾದ ಪಾಸ್‌ಫ್ರೇಸ್",
+    "installDriversSubtitle": "NVIDIA ಡ್ರೈವರ್‌ಗಳು ಮತ್ತು ಅಂತಹುದೇ ಸೇರಿದಂತೆ ಆದರೆ ಸೀಮಿತವಾಗಿಲ್ಲ",
+    "installCodecsTitle": "ಹೆಚ್ಚುವರಿ ಮಾಧ್ಯಮ ಸ್ವರೂಪಗಳಿಗೆ ಬೆಂಬಲವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಸ್ಥಾಪಿಸಿ",
+    "installCodecsSubtitle": "MP3, MP4, MOV ಮತ್ತು ಅಂತಹುದೇ ಸೇರಿದಂತೆ ಆದರೆ ಸೀಮಿತವಾಗಿಲ್ಲ",
+    "batteryWarning": "ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ವಿದ್ಯುತ್ ಮೂಲಕ್ಕೆ ಪ್ಲಗ್ ಇನ್ ಮಾಡಲಾಗಿಲ್ಲ.",
+    "offlineWarning": "ನೀವು ಪ್ರಸ್ತುತ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿದ್ದೀರಿ",
+    "choosePassphraseHeader": "ಪಾಸ್‌ಫ್ರೇಸ್ ರಚಿಸಿ",
+    "choosePassphraseBody": "ನೀವು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಪಾಸ್‌ಫ್ರೇಸ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್‌ಗಿಂತ ಭಿನ್ನವಾಗಿದೆ.",
+    "choosePassphraseInfoHeader": "ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ಉಳಿಸಲು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ",
+    "choosePassphraseInfoBody": "ನೀವು ಅದನ್ನು ಕಳೆದುಕೊಂಡರೆ, ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ.",
+    "chooseOptionalPassphraseInfoHeader": "ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಮತ್ತು ಮರುಪ್ರಾಪ್ತಿ ಕೀಯನ್ನು ಎಲ್ಲೋ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಗ್ರಹಿಸಿ",
+    "chooseOptionalPassphraseInfoBody": "ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನೀವು ಕಳೆದುಕೊಂಡರೆ, ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ. ಪಾಸ್‌ಫ್ರೇಸ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಅಥವಾ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಬದಲಾಯಿಸುವುದಿಲ್ಲ.",
+    "passphrasePageTitle": "ಗೂಢಲಿಪೀಕರಣ",
+    "passphrasePageHeaderPassphrase": "ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ಹೊಂದಿಸಿ",
+    "passphrasePageHeaderPin": "ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಪಿನ್ ಹೊಂದಿಸಿ",
+    "passphrasePageBodyPassphrase": "ನೀವು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಪಾಸ್‌ಫ್ರೇಸ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್‌ಗಿಂತ ಭಿನ್ನವಾಗಿದೆ. ನೀವು ಅದನ್ನು ನಂತರ ಬದಲಾಯಿಸಬಹುದು, ಆದರೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದಿಲ್ಲ. ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನೀವು ಮರೆತರೆ, ಮರುಪಡೆಯುವಿಕೆ ಕೀಲಿಯನ್ನು ಬಳಸಿಕೊಂಡು ನೀವು ಡಿಸ್ಕ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಮರಳಿ ಪಡೆಯಬಹುದು.",
+    "passphrasePageBodyPin": "ನೀವು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನಿಮ್ಮ ಪಿನ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಪಿನ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್‌ಗಿಂತ ಭಿನ್ನವಾಗಿದೆ. ನೀವು ಅದನ್ನು ನಂತರ ಬದಲಾಯಿಸಬಹುದು, ಆದರೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದಿಲ್ಲ. ನಿಮ್ಮ ಪಿನ್ ಅನ್ನು ನೀವು ಮರೆತರೆ, ಮರುಪ್ರಾಪ್ತಿ ಕೀಯನ್ನು ಬಳಸಿಕೊಂಡು ನೀವು ಡಿಸ್ಕ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಮರಳಿ ಪಡೆಯಬಹುದು.",
+    "recoveryKeyExceptionFileSystemTitle": "ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಫೈಲ್ ಅನ್ನು ಉಳಿಸಲಾಗಿಲ್ಲ",
+    "passphrasePageChoosePassphraseHint": "ಪಾಸ್ಫ್ರೇಸ್",
+    "recoveryKeyExceptionDisallowedPathTitle": "ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಫೈಲ್ ಅನ್ನು ತಾತ್ಕಾಲಿಕ ಸ್ಥಳದಲ್ಲಿ ಉಳಿಸಲಾಗುವುದಿಲ್ಲ",
+    "passphrasePageConfirmPassphraseHint": "ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
+    "recoveryKeyExceptionUnknownTitle": "ಅಜ್ಞಾತ ದೋಷ",
+    "passphrasePageRequiredPassphrase": "ಪಾಸ್‌ಫ್ರೇಸ್ ಅಗತ್ಯವಿದೆ",
+    "passphrasePageMismatchPassphrase": "ಪಾಸ್‌ಫ್ರೇಸ್‌ಗಳು ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ",
+    "passphrasePageChoosePinHint": "ಪಿನ್",
+    "recoveryKeyExceptionFileSystemBody": "ಆ ಫೋಲ್ಡರ್‌ಗೆ ಬರೆಯಲು ನೀವು ಅನುಮತಿಯನ್ನು ಹೊಂದಿಲ್ಲ. ಬೇರೆ ಸ್ಥಳವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ವಿಧಾನವನ್ನು ಬಳಸಿ.",
+    "passphrasePageConfirmPinHint": "ಪಿನ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
+    "recoveryKeyExceptionDisallowedPathBody": "ತೆಗೆಯಬಹುದಾದ ಡ್ರೈವ್‌ನಂತಹ ಬೇರೆ ಸ್ಥಳವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ವಿಧಾನವನ್ನು ಬಳಸಿ.",
+    "passphrasePageRequiredPin": "ಪಿನ್ ಅಗತ್ಯವಿದೆ",
+    "recoveryKeyFilePickerTitle": "ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಫೈಲ್ ಅನ್ನು ಉಳಿಸಿ",
+    "passphrasePageMismatchPin": "ಪಿನ್‌ಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ",
+    "recoveryKeyFilePickerFilter": "ಪಠ್ಯ ಫೈಲ್ಗಳು",
+    "passphraseTypePassphraseTileTitle": "ಪಾಸ್‌ಫ್ರೇಸ್ ಅಗತ್ಯವಿದೆಪಾಸ್‌ಫ್ರೇಸ್ ಅಗತ್ಯವಿದೆ",
+    "passphraseTypePassphraseTileSubTitle": "ಅತ್ಯಂತ ಸುರಕ್ಷಿತ. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ನೀವು ಪ್ರತಿ ಬಾರಿ ಆನ್ ಮಾಡಿದಾಗಲೂ ನೀವು ದೀರ್ಘವಾದ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ.",
+    "passphraseTypePinTileTitle": "ಪಿನ್ ಅಗತ್ಯವಿದೆಪಿನ್ ಅಗತ್ಯವಿದೆ",
+    "passphraseTypePinTileSubTitle": "ಹೆಚ್ಚು ಸುರಕ್ಷಿತ. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ನೀವು ಪ್ರತಿ ಬಾರಿ ಆನ್ ಮಾಡಿದಾಗಲೂ ನೀವು ಸಂಖ್ಯಾತ್ಮಕ ಪಿನ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ.",
+    "passphraseTypeNoneTileTitle": "ಡಿಸ್ಕ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅನ್ಲಾಕ್ ಮಾಡಿ",
+    "passphraseTypePageHeader": "ಹೆಚ್ಚುವರಿ ಭದ್ರತೆ",
+    "passphraseTypePageBody": "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ, ಕಂಪ್ಯೂಟರ್‌ನ ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾಡ್ಯೂಲ್ (TPM) ಪ್ರಾರಂಭದ ಸಮಯದಲ್ಲಿ ಡಿಸ್ಕ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಮತ್ತಷ್ಟು ರಕ್ಷಿಸಲು ನಿಮಗೆ ಆಯ್ಕೆಗಳಿವೆ.",
+    "passphrasePagePassphraseEntropyBelowMin": "ದುರ್ಬಲ ಪಾಸ್‌ಫ್ರೇಸ್, ಅದನ್ನು ಉದ್ದ ಅಥವಾ ಹೆಚ್ಚು ಸಂಕೀರ್ಣಗೊಳಿಸಿ",
+    "passphrasePagePassphraseEntropyBelowOptimal": "ನ್ಯಾಯೋಚಿತ ಪಾಸ್‌ಫ್ರೇಸ್, ಉತ್ತಮ ಭದ್ರತೆಗಾಗಿ ಅದನ್ನು ದೀರ್ಘ ಅಥವಾ ಹೆಚ್ಚು ಸಂಕೀರ್ಣಗೊಳಿಸಿ",
+    "passphrasePagePinEntropyBelowMin": "ದುರ್ಬಲವಾದ ಪಿನ್, ಅದನ್ನು ಉದ್ದ ಅಥವಾ ಕಡಿಮೆ ಊಹಿಸಬಹುದಾದಂತೆ ಮಾಡಿ",
+    "passphrasePagePinEntropyBelowOptimal": "ನ್ಯಾಯೋಚಿತ ಪಿನ್, ಉತ್ತಮ ಭದ್ರತೆಗಾಗಿ ದೀರ್ಘ ಅಥವಾ ಕಡಿಮೆ ಊಹಿಸಬಹುದಾದಂತೆ ಮಾಡಿ",
+    "passphrasePagePinEntropyOptimal": "ಪಿನ್ ಸಾಕಷ್ಟು ಉದ್ದವಾಗಿದೆ",
+    "installationTypeTitle": "ಡಿಸ್ಕ್ ಸೆಟಪ್",
+    "installationTypeHeader": "ನೀವು {DISTRO} ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?ನೀವು {DISTRO} ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ {os} ಅನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ {os1} ಮತ್ತು {os2} ಅನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ ಬಹು ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್‌ಗಳನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?",
+    "installationTypeNoOSDetected": "ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ ಯಾವುದೇ ಪತ್ತೆಯಾದ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್‌ಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?",
+    "installationTypeErase": "ಡಿಸ್ಕ್ ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು {DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಿ",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್‌ಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಡಿಸ್ಕ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾ ಮತ್ತು ವಿಭಾಗಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ.",
+    "installationTypeAdvancedLabel": "ಸುಧಾರಿತ ಆಯ್ಕೆಗಳನ್ನು ತೋರಿಸಿ...",
+    "installationTypeAdvancedTitle": "ಎನ್ಕ್ರಿಪ್ಶನ್ ಮತ್ತು ಫೈಲ್ ಸಿಸ್ಟಮ್",
+    "installationTypeExperimental": "ಪ್ರಾಯೋಗಿಕ",
+    "installationTypeNone": "ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಇಲ್ಲ",
+    "installationTypeNoneInfo": "ಗೂಢಲಿಪೀಕರಣವಿಲ್ಲದೆ ಪ್ರಮಾಣಿತ ಫೈಲ್ ಸಿಸ್ಟಮ್.",
+    "installationTypeNoneSelected": "ಯಾವುದನ್ನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ",
+    "installationTypeLVM": "ಗೂಢಲಿಪೀಕರಣವಿಲ್ಲದೆ LVM ಬಳಸಿ",
+    "installationTypeLVMSelected": "LVM ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ",
+    "installationTypeLVMEncryption": "ಪಾಸ್‌ಫ್ರೇಸ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿ",
+    "installationTypeLVMEncryptionInfo": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನೀವು ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಇದು LVM ನೊಂದಿಗೆ LUKS ಗೂಢಲಿಪೀಕರಣವನ್ನು ಬಳಸುತ್ತದೆ.",
+    "installationTypeLVMEncryptionSelected": "LVM ಮತ್ತು ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ",
+    "installationTypeEncryptInfo": "ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನೀವು ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡುತ್ತೀರಿ.",
+    "installationTypeZFS": "ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಇಲ್ಲದೆ ZFS ಬಳಸಿ",
+    "installationTypeZFSEncryption": "ZFS ಬಳಸಿಕೊಂಡು ಪಾಸ್‌ಫ್ರೇಸ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿ",
+    "installationTypeZFSEncryptionInfo": "ZFS ನೊಂದಿಗೆ ಸ್ಥಳೀಯ ಎನ್‌ಕ್ರಿಪ್ಶನ್. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನೀವು ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ.",
+    "installationTypeZFSSelected": "ZFS ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ",
+    "installationTypeZFSEncryptionSelected": "ZFS ಮತ್ತು ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ",
+    "installationTypeTPM": "ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಬಳಸಿ",
+    "installationTypeTPMInfo": "ನೀವು ಈ ಆಯ್ಕೆಯನ್ನು ಆರಿಸುವ ಮೊದಲು <a href=\"{url}\">TPM ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಬಗ್ಗೆ ಓದಿ</a>. ಇದು ನಿಮ್ಮ ಹಾರ್ಡ್‌ವೇರ್ ಅಥವಾ ಭವಿಷ್ಯದ {DISTRO} ಬಿಡುಗಡೆಗಳೊಂದಿಗೆ ಕೆಲಸ ಮಾಡದೇ ಇರಬಹುದು.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeTPMSelected": "TPM ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ",
+    "installationTypeReinstall": "{os} ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು ಮರುಸ್ಥಾಪಿಸಿ",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">ಎಚ್ಚರಿಕೆ:</font> ಇದು ನಿಮ್ಮ ಎಲ್ಲಾ {os} ಪ್ರೋಗ್ರಾಂಗಳು, ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು, ಫೋಟೋಗಳು, ಸಂಗೀತ ಮತ್ತು ಯಾವುದೇ ಇತರ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸುತ್ತದೆ.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersType": "ಟೈಪ್ ಮಾಡಿ",
+    "diskHeadersMountPoint": "ಮೌಂಟ್ ಪಾಯಿಂಟ್",
+    "diskHeadersSize": "ಗಾತ್ರ",
+    "diskHeadersUsed": "ಬಳಸಲಾಗಿದೆ",
+    "diskHeadersSystem": "ವ್ಯವಸ್ಥೆ",
+    "diskHeadersFormat": "ಫಾರ್ಮ್ಯಾಟ್",
+    "freeDiskSpace": "ಮುಕ್ತ ಸ್ಥಳ",
+    "newPartitionTable": "ಹೊಸ ವಿಭಜನಾ ಕೋಷ್ಟಕ",
+    "newPartitionTableConfirmationTitle": "ಹೊಸ ಖಾಲಿ ವಿಭಾಗ",
+    "newPartitionTableConfirmationMessage": "ಸಂಪೂರ್ಣ ಸಾಧನದಲ್ಲಿ ಹೊಸ ವಿಭಜನಾ ಕೋಷ್ಟಕವನ್ನು ರಚಿಸುವುದು ಅದರ ಎಲ್ಲಾ ಪ್ರಸ್ತುತ ವಿಭಾಗಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ಅಗತ್ಯವಿದ್ದರೆ ಈ ಕಾರ್ಯಾಚರಣೆಯನ್ನು ರದ್ದುಗೊಳಿಸಬಹುದು.",
+    "tooManyPrimaryPartitions": "ಹಲವಾರು ಪ್ರಾಥಮಿಕ ವಿಭಾಗಗಳು",
+    "partitionLimitReached": "ಮಿತಿಯನ್ನು ತಲುಪಿದೆ",
+    "bootLoaderDevice": "ಬೂಟ್ ಲೋಡರ್ ಅನುಸ್ಥಾಪನೆಗೆ ಸಾಧನ",
+    "partitionCreateTitle": "ವಿಭಾಗವನ್ನು ರಚಿಸಿ",
+    "partitionEditTitle": "ವಿಭಾಗವನ್ನು ಸಂಪಾದಿಸಿ",
+    "partitionSizeLabel": "ಗಾತ್ರ:",
+    "partitionTypeLabel": "ಹೊಸ ವಿಭಾಗಕ್ಕಾಗಿ ಟೈಪ್ ಮಾಡಿ:",
+    "partitionTypePrimary": "ಪ್ರಾಥಮಿಕ",
+    "partitionTypeLogical": "ತಾರ್ಕಿಕ",
+    "partitionLocationLabel": "ಹೊಸ ವಿಭಾಗದ ಸ್ಥಳ:",
+    "partitionLocationBeginning": "ಈ ಜಾಗದ ಆರಂಭ",
+    "partitionLocationEnd": "ಈ ಜಾಗದ ಅಂತ್ಯ",
+    "partitionFormatLabel": "ಹೀಗೆ ಬಳಸಲಾಗಿದೆ:",
+    "partitionFormatNone": "ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡದೆ ಬಿಡಿ",
+    "partitionFormatKeep": "{format} ನಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡುವುದನ್ನು ಬಿಡಿ",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "ವಿಭಾಗವನ್ನು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿ",
+    "partitionMountPointLabel": "ಮೌಂಟ್ ಪಾಯಿಂಟ್:",
+    "confirmPageTitle": "ಸ್ಥಾಪಿಸಲು ಸಿದ್ಧವಾಗಿದೆ",
+    "confirmHeader": "ನಿಮ್ಮ ಆಯ್ಕೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "ಯಾವುದೂ ಇಲ್ಲ",
+    "confirmDevicesTitle": "ಸಾಧನಗಳು",
+    "confirmEntryApplications": "ಅಪ್ಲಿಕೇಶನ್‌ಗಳು",
+    "confirmEntryDiskSetup": "ಅನುಸ್ಥಾಪನೆಯ ಪ್ರಕಾರ",
+    "confirmEntryDiskEncryption": "ಡಿಸ್ಕ್ ಎನ್ಕ್ರಿಪ್ಶನ್",
+    "confirmEntryInstallationDisk": "ಅನುಸ್ಥಾಪನ ಡಿಸ್ಕ್",
+    "confirmEntryProprietarySoftware": "ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್",
+    "confirmSectionGeneralTitle": "ಸಾಮಾನ್ಯಸಾಮಾನ್ಯ",
+    "confirmSectionSecurityAndMoreTitle": "ಭದ್ರತೆಭದ್ರತೆ",
+    "confirmPartitionsTitle": "ವಿಭಜನೆಗಳು",
+    "confirmPartitionTables": "ಕೆಳಗಿನ ಸಾಧನಗಳ ವಿಭಜನಾ ಕೋಷ್ಟಕಗಳನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ:",
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "ಕೊಡೆಕ್‌ಗಳು",
+    "confirmProprietarySoftwareCodecsDrivers": "ಕೊಡೆಕ್‌ಗಳುಕೊಡೆಕ್‌ಗಳು",
+    "confirmProprietarySoftwareDrivers": "ಚಾಲಕರು",
+    "confirmInstallButton": "ಸ್ಥಾಪಿಸಿ",
+    "confirmTableErased": "ಅಳಿಸಲಾಗಿದೆ",
+    "confirmTableUnchanged": "ಬದಲಾಗದೆ",
+    "confirmTableResized": "{oldsize} ನಿಂದ {newsize} ಗೆ ಮರುಗಾತ್ರಗೊಳಿಸಲಾಗಿದೆ",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "{mountpoint} ಗಾಗಿ ಬಳಸಲಾದ {format} ನಂತೆ ರಚಿಸಲಾಗಿದೆ ಮತ್ತು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "{mountpoint} ಗಾಗಿ ಬಳಸಲಾದ {format} ನಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "{mountpoint} ಗಾಗಿ ಬಳಸಲಾಗಿದೆ",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} ನಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "ಅನುಸ್ಥಾಪನೆಯು ಪೂರ್ಣಗೊಂಡಿದೆ",
+    "readyToUse": "{system} ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಬಳಸಲು ಸಿದ್ಧವಾಗಿದೆ",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** ಅನ್ನು ಡಿಸ್ಕ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "{system} ಗೆ ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಅಥವಾ ಪರೀಕ್ಷೆಯನ್ನು ಮುಂದುವರಿಸಲು ಮರುಪ್ರಾರಂಭಿಸಿ. ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಲಾಗುವುದಿಲ್ಲ.",
+    "restartComputer": "ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "restartComputerTitle": "ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸುವುದೇ?",
+    "restartIntoWindows": "ವಿಂಡೋಸ್‌ಗೆ ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "restartIntoWindowsTitle": "ವಿಂಡೋಸ್‌ಗೆ ಮರುಪ್ರಾರಂಭಿಸುವುದೇ?",
+    "restartIntoWindowsDescription": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ? {DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ನೀವು ನಂತರ {DISTRO} ಸ್ಥಾಪನೆಯನ್ನು ಮರುಪ್ರಾರಂಭಿಸಬೇಕಾಗುತ್ತದೆ.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "{RELEASE} ಗೆ ಸುಸ್ವಾಗತ",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "ಲಭ್ಯವಿದೆ:",
+    "installationSlidesIncluded": "ಒಳಗೊಂಡಿದೆ:",
+    "installationSlidesWelcomeTitle": "ವೇಗವಾದ, ಉಚಿತ ಮತ್ತು ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳ ಪೂರ್ಣ",
+    "installationSlidesWelcomeHeader": "{DISTRO} ನ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯು ಕಂಪ್ಯೂಟಿಂಗ್ ಅನ್ನು ಎಂದಿಗಿಂತಲೂ ಸುಲಭಗೊಳಿಸುತ್ತದೆ.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "ನೀವು ಡೆವಲಪರ್, ರಚನೆಕಾರ, ಗೇಮರ್ ಅಥವಾ ನಿರ್ವಾಹಕರಾಗಿರಲಿ, ನಿಮ್ಮ ಉತ್ಪಾದಕತೆಯನ್ನು ಸುಧಾರಿಸಲು ಮತ್ತು {RELEASE} ನಲ್ಲಿ ನಿಮ್ಮ ಅನುಭವವನ್ನು ಹೆಚ್ಚಿಸಲು ಹೊಸ ಪರಿಕರಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು",
+    "installationSlidesSoftwareBody": "ಸ್ನ್ಯಾಪ್ ಸ್ಟೋರ್ ಮತ್ತು {DISTRO} ಆರ್ಕೈವ್ ಎರಡರಿಂದಲೂ ಸಾವಿರಾರು ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಉಬುಂಟು ಸಾಫ್ಟ್‌ವೇರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಿ, ನಿರ್ವಹಿಸಿ ಮತ್ತು ನವೀಕರಿಸಿ.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "ಅತ್ಯುತ್ತಮ ತೆರೆದ ಮೂಲದೊಂದಿಗೆ ಅಭಿವೃದ್ಧಿಪಡಿಸಿ",
+    "installationSlidesDevelopmentBody": "ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ ${OS} ಅನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?ಅಪ್ಲಿಕೇಶನ್ ಅಥವಾ ವೆಬ್ ಅಭಿವೃದ್ಧಿ, ಡೇಟಾ ಸೈನ್ಸ್ ಮತ್ತು AI/ML ಹಾಗೂ devops ಮತ್ತು ಆಡಳಿತಕ್ಕಾಗಿ {DISTRO} ಆದರ್ಶ ಕಾರ್ಯಸ್ಥಳವಾಗಿದೆ. ಪ್ರತಿ {DISTRO} ಬಿಡುಗಡೆಯು ಇತ್ತೀಚಿನ ಟೂಲ್‌ಚೇನ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ ಮತ್ತು ಎಲ್ಲಾ ಪ್ರಮುಖ IDE ಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "ನಿಮ್ಮ ಸೃಜನಶೀಲತೆಯನ್ನು ಹೆಚ್ಚಿಸಿ",
+    "installationSlidesCreativityBody": "ನೀವು ಆನಿಮೇಟರ್, ಡಿಸೈನರ್, ವೀಡಿಯೊ ರಚನೆಕಾರರು ಅಥವಾ ಗೇಮ್ ಡೆವಲಪರ್ ಆಗಿದ್ದರೆ ಓಪನ್ ಸೋರ್ಸ್ ಮತ್ತು ಇಂಡಸ್ಟ್ರಿ ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಬೆಂಬಲದೊಂದಿಗೆ ನಿಮ್ಮ ವರ್ಕ್‌ಫ್ಲೋಗಳನ್ನು {DISTRO} ಗೆ ತರಲು ಸುಲಭವಾಗಿದೆ.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "ಗೇಮಿಂಗ್‌ಗೆ ಅದ್ಭುತವಾಗಿದೆ",
+    "installationSlidesGamingBody": "ಕಾರ್ಯಕ್ಷಮತೆ ಮತ್ತು ಹೊಂದಾಣಿಕೆಯನ್ನು ಸುಧಾರಿಸಲು {DISTRO} ಇತ್ತೀಚಿನ NVIDIA ಮತ್ತು Mesa ಡ್ರೈವರ್‌ಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ. ಯಾವುದೇ ಹೆಚ್ಚುವರಿ ಕಾನ್ಫಿಗರೇಶನ್ ಇಲ್ಲದ ಸ್ಟೀಮ್‌ನಂತಹ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಮೂಲಕ {DISTRO} ನಲ್ಲಿ ಸಾವಿರಾರು ವಿಂಡೋಸ್ ಶೀರ್ಷಿಕೆಗಳು ಉತ್ತಮವಾಗಿ ಪ್ಲೇ ಆಗುತ್ತವೆ.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "ಖಾಸಗಿ ಮತ್ತು ಸುರಕ್ಷಿತ",
+    "installationSlidesSecurityBody": "ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಖಾಸಗಿಯಾಗಿ ಮತ್ತು ಸುರಕ್ಷಿತವಾಗಿರಲು ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ಎಲ್ಲಾ ಪರಿಕರಗಳನ್ನು {DISTRO} ಒದಗಿಸುತ್ತದೆ. ಅಂತರ್ನಿರ್ಮಿತ ಫೈರ್‌ವಾಲ್ ಮತ್ತು VPN ಬೆಂಬಲ ಮತ್ತು ನಿಮ್ಮ ಡೇಟಾದ ಸಂಪೂರ್ಣ ನಿಯಂತ್ರಣವನ್ನು ನೀವು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಗೌಪ್ಯತೆ-ಕೇಂದ್ರಿತ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಹೋಸ್ಟ್‌ನೊಂದಿಗೆ.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityLts": "ಎಲ್ಲಾ {DISTRO} LTS ಬಿಡುಗಡೆಗಳು ಐದು ವರ್ಷಗಳ ಭದ್ರತಾ ಪ್ಯಾಚಿಂಗ್‌ನೊಂದಿಗೆ ಬರುತ್ತವೆ, ಉಬುಂಟು ಪ್ರೊ ಚಂದಾದಾರಿಕೆಯೊಂದಿಗೆ ಹತ್ತು ವರ್ಷಗಳವರೆಗೆ ವಿಸ್ತರಿಸುತ್ತವೆ.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "ನಿಮ್ಮ ಉತ್ಪಾದಕತೆಯನ್ನು ಹೆಚ್ಚಿಸಿ",
+    "installationSlidesProductivityBody": "{DISTRO} ಡೆಸ್ಕ್‌ಟಾಪ್ LibreOffice ಅನ್ನು ಒಳಗೊಂಡಿದೆ, ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು, ಸ್ಪ್ರೆಡ್‌ಶೀಟ್‌ಗಳು ಮತ್ತು ಪ್ರಸ್ತುತಿಗಳಿಗಾಗಿ Microsoft Office ಹೊಂದಾಣಿಕೆಯ ಮುಕ್ತ ಮೂಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಸೂಟ್. ಜನಪ್ರಿಯ ಸಹಯೋಗ ಸಾಧನಗಳು ಸಹ ಲಭ್ಯವಿದೆ.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityTitle": "ಎಲ್ಲರಿಗೂ ಪ್ರವೇಶ",
+    "installationSlidesAccessibilityBody": "{DISTRO} ತತ್ವಶಾಸ್ತ್ರದ ಹೃದಯಭಾಗದಲ್ಲಿ ಕಂಪ್ಯೂಟಿಂಗ್ ಪ್ರತಿಯೊಬ್ಬರಿಗೂ ಆಗಿದೆ ಎಂಬ ನಂಬಿಕೆಯಾಗಿದೆ. ಸುಧಾರಿತ ಪ್ರವೇಶಿಸುವಿಕೆ ಪರಿಕರಗಳು ಮತ್ತು ಭಾಷೆ, ಬಣ್ಣಗಳು ಮತ್ತು ಪಠ್ಯ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸುವ ಆಯ್ಕೆಗಳೊಂದಿಗೆ, {DISTRO} ಕಂಪ್ಯೂಟಿಂಗ್ ಅನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ - ನೀವು ಯಾರೇ ಮತ್ತು ಎಲ್ಲಿದ್ದರೂ.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityOrca": "ಓರ್ಕಾ ಸ್ಕ್ರೀನ್ ರೀಡರ್",
+    "installationSlidesAccessibilityLanguages": "ಭಾಷಾ ಬೆಂಬಲ",
+    "installationSlidesSupportTitle": "ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ",
+    "installationSlidesSupportHeader": "ಅಧಿಕೃತ {DISTRO} ದಸ್ತಾವೇಜನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಮತ್ತು ಡಾಕ್‌ನಲ್ಲಿರುವ ಸಹಾಯ ಐಕಾನ್ ಮೂಲಕ ಲಭ್ಯವಿದೆ.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "ದಯವಿಟ್ಟು ಸ್ಥಾಪಕವನ್ನು ಮುಚ್ಚಿ ಮತ್ತು ಮುಂದುವರೆಯಲು ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "refreshCloseLabel": "ಅನುಸ್ಥಾಪಕವನ್ನು ಮುಚ್ಚಿ",
+    "refreshSnapPrerequisites": "{snap} ಪೂರ್ವಾಪೇಕ್ಷಿತಗಳನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "ರಿಫ್ರೆಶ್ ಆಗುತ್ತಿದೆ {snap}...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "{snap} ಮರು-ರಿಫ್ರೆಶ್ ಅನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "{snap} ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ {snap}...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "ಮೌಲ್ಯೀಕರಿಸಲಾಗುತ್ತಿದೆ {snap}...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "ಆರೋಹಿಸಲಾಗುತ್ತಿದೆ {snap}...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "{snap} ಸೇವೆಗಳನ್ನು ನಿಲ್ಲಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "{snap} ಅಲಿಯಾಸ್‌ಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "ಅನ್‌ಲಿಂಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ {snap}...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "{snap} ಸ್ವತ್ತುಗಳನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "{snap} ಕರ್ನಲ್ ಕಮಾಂಡ್ ಲೈನ್ ಅನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "{snap} ಡೇಟಾವನ್ನು ನಕಲಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "{snap} ಭದ್ರತಾ ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "ಲಿಂಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ {snap}...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "{snap} ಪ್ಲಗ್‌ಗಳು ಮತ್ತು ಸ್ಲಾಟ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "ಸ್ವಯಂಚಾಲಿತ {snap} ಅಲಿಯಾಸ್‌ಗಳನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap} ಅಲಿಯಾಸ್‌ಗಳನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "{snap} ಸೇವೆಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "{snap} ಅನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "ರಿಕವರಿ ಕೀ",
+    "recoveryKeyTitleBadgeLabel": "ಪ್ರಮುಖ",
+    "recoveryKeyHeader": "ನಿಮ್ಮ ಮರುಪ್ರಾಪ್ತಿ ಕೀಯನ್ನು ಉಳಿಸಿ",
+    "recoveryKeyInfoHeader": "ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಇಲ್ಲದೆಯೇ ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು",
+    "recoveryKeyTextFieldLabel": "ರಿಕವರಿ ಕೀ",
+    "recoveryKeyStorageAdvice": "ಪ್ರಾರಂಭದ ಸಮಯದಲ್ಲಿ ಡೀಕ್ರಿಪ್ಶನ್ ವಿಫಲವಾದಲ್ಲಿ ನೀವು ಈ ಮರುಪ್ರಾಪ್ತಿ ಕೀಲಿಯನ್ನು ಒದಗಿಸಬೇಕಾಗುತ್ತದೆ. ಕೀ ಇಲ್ಲದೆ, ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾಗೆ ನೀವು ಪ್ರವೇಶವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ. ಪಾಸ್‌ವರ್ಡ್ ನಿರ್ವಾಹಕದಂತಹ ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿ ಅದನ್ನು ಉಳಿಸಿ.",
+    "recoveryKeyConfirmation": "ನಾನು ನನ್ನ ಮರುಪ್ರಾಪ್ತಿ ಕೀಲಿಯನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಎಲ್ಲೋ ಉಳಿಸಿದ್ದೇನೆ",
+    "recoveryKeyLinkLabel": "ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ",
+    "recoveryKeySaveToFileLabel": "ಫೈಲ್‌ಗೆ ಉಳಿಸಿ",
+    "recoveryKeyShowQrCodeLabel": "QR ಕೋಡ್ ತೋರಿಸಿ",
+    "recoveryKeyQrDialogTitle": "{DISTRO} ಡೆಸ್ಕ್‌ಟಾಪ್ - ರಿಕವರಿ ಕೀ",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "ಮರುಪ್ರಾಪ್ತಿ ಕೀಲಿಯನ್ನು ನಕಲಿಸಲು QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ನಿರ್ವಾಹಕದಂತಹ ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿ ಅದನ್ನು ಉಳಿಸಿ. ನಂತರದ ಬಳಕೆಗಾಗಿ ನೀವು ಫೋಟೋವನ್ನು ಸಹ ತೆಗೆದುಕೊಳ್ಳಬಹುದು.",
+    "recoveryKeyClipboardNotifiaction": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ",
+    "landscapeMagicAttachInstructions": "QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು <a href=\"https://{url}\">{url}</a> ನಲ್ಲಿ ನಮೂದಿಸಿ",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "ಸ್ವಯಂಚಾಲಿತ ಅನುಸ್ಥಾಪನೆ",
+    "landscapeHeader": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್‌ಗೆ ಲಾಗ್ ಇನ್ ಮಾಡಿ",
+    "landscapeDomainHeader": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ ನಮೂದಿಸಿ (FQDN)",
+    "landscapeDomainHintText": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ (FQDN)",
+    "landscapeDomainInstructions": "ಲಾಗ್ ಇನ್ ಮಾಡಲು ಮತ್ತು ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ನಿಮ್ಮ ಸಂಸ್ಥೆಯ ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ ಅನ್ನು ಒದಗಿಸಿ. ನಿಮ್ಮ IT ಬೆಂಬಲದಿಂದ ನೀವು FQDN ಅನ್ನು ಪಡೆಯಬಹುದು.",
+    "landscapeDomainTextField": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ (FQDN)",
+    "next": "ಮುಂದೆ",
+    "landscapeDomainInvalidDomainWarning": "ಅಮಾನ್ಯ ಡೊಮೇನ್, ದಯವಿಟ್ಟು ನಿಮ್ಮ IT ಬೆಂಬಲವನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಸಂಪರ್ಕಿಸಿ",
+    "landscapeDomainNoInternetTitleWarning": "ಮುಂದುವರಿಸಲು ಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ",
+    "landscapeDomainNoInternetDescriptionWarning": "ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್‌ನಿಂದ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಪಡೆಯಲು ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿದೆ",
+    "landscapeCodeExpiredWarning": "ಕೋಡ್ ಅವಧಿ ಮೀರಿದೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+    "landscapeLoginFailedWarning": "ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+    "landscapeErrorPageTitle": "ನಿಮ್ಮ ಖಾತೆಗೆ ಸ್ವಯಂಚಾಲಿತ ಸ್ಥಾಪನೆ ಲಭ್ಯವಿಲ್ಲ",
+    "landscapeErrorPageBody": "ನಿಮ್ಮ IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಬೇರೆ ಅನುಸ್ಥಾಪನ ಆಯ್ಕೆಯನ್ನು ಪ್ರಯತ್ನಿಸಿ.",
+    "landscapeErrorPageCode": "ದೋಷ ಕೋಡ್: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "ನಿಮ್ಮ ಸಂಸ್ಥೆಯು ಒದಗಿಸಿದ ಸಂರಚನೆಯೊಂದಿಗೆ ಉಬುಂಟು ಸ್ಥಾಪಿಸುತ್ತದೆ",
+    "landscapeConfirmPageSuccessInfoContent": "ಕೆಳಗಿನ ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್‌ನಿಂದ ಆಮದು ಮಾಡಲಾದ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ನೀವು ಪರಿಶೀಲಿಸಬಹುದು.",
+    "errorIconSemanticLabel": "ದೋಷ",
+    "tpmActionBadgeLabel": "ಕ್ರಮ ಅಗತ್ಯವಿದೆ",
+    "tpmActionDetailsLabel": "ತಾಂತ್ರಿಕ ವಿವರಗಳು",
+    "tpmActionConfirmLabel": "ದೃಢೀಕರಿಸಿ",
+    "tpmActionSolutionLabel": "ಪರಿಹಾರ {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "ದಸ್ತಾವೇಜನ್ನು ಲಿಂಕ್ ಮಾಡಿ",
+    "tpmActionErrorSupportLabel": "ಕೆಳಗಿನ ಪರಿಹಾರಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ, IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಬೇರೆ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+    "tpmActionErrorSupportNoActionLabel": "IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಬೇರೆ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
+    "tpmActionErrorKindInternal": "ಆಂತರಿಕ",
+    "tpmActionErrorKindShutdownRequired": "ಸ್ಥಗಿತಗೊಳಿಸುವ ಅಗತ್ಯವಿದೆ",
+    "tpmActionErrorKindRebootRequired": "ರೀಬೂಟ್ ಅಗತ್ಯವಿದೆ",
+    "tpmActionErrorKindUnexpectedAction": "ಅನಿರೀಕ್ಷಿತ ಕ್ರಿಯೆ",
+    "tpmActionErrorKindMissingArgument": "ತಪ್ಪಿದ ವಾದ",
+    "tpmActionErrorKindInvalidArgument": "ಅಮಾನ್ಯವಾದ ವಾದ",
+    "tpmActionErrorKindActionFailed": "ಕ್ರಿಯೆ ವಿಫಲವಾಗಿದೆ",
+    "tpmActionErrorKindRunningInVm": "VM ನಲ್ಲಿ ರನ್ ಆಗುತ್ತಿದೆ",
+    "tpmActionErrorKindSystemNotEfi": "ಸಿಸ್ಟಮ್ EFI ಅಲ್ಲ",
+    "tpmActionErrorKindEfiVariableAccess": "EFI ವೇರಿಯಬಲ್ ಪ್ರವೇಶ",
+    "tpmActionErrorKindNoSuitableTpm2Device": "ಸೂಕ್ತವಾದ TPM2 ಸಾಧನವಿಲ್ಲ",
+    "tpmActionErrorKindTpmDeviceFailure": "TPM ಸಾಧನದ ವೈಫಲ್ಯ",
+    "tpmActionErrorKindTpmDeviceDisabled": "TPM ಸಾಧನವನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "tpmActionErrorKindTpmHierarchiesOwned": "TPM ಶ್ರೇಣಿಗಳ ಮಾಲೀಕತ್ವ",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM ಸಾಧನ ಲಾಕ್‌ಔಟ್ ಲಾಕ್ ಔಟ್ ಆಗಿದೆ",
+    "tpmActionErrorKindInsufficientTpmStorage": "ಸಾಕಷ್ಟು TPM ಸಂಗ್ರಹಣೆ ಇಲ್ಲ",
+    "tpmActionErrorKindNoSuitablePcrBank": "ಸೂಕ್ತವಲ್ಲದ ಪಿಸಿಆರ್ ಬ್ಯಾಂಕ್",
+    "tpmActionErrorKindMeasuredBoot": "ಅಳತೆ ಮಾಡಿದ ಬೂಟ್",
+    "tpmActionErrorKindEmptyPcrBanks": "ಖಾಲಿ PCR ಬ್ಯಾಂಕ್‌ಗಳು",
+    "tpmActionErrorKindTpmCommandFailed": "TPM ಕಮಾಂಡ್ ವಿಫಲವಾಗಿದೆ",
+    "tpmActionErrorKindInvalidTpmResponse": "ಅಮಾನ್ಯ TPM ಪ್ರತಿಕ್ರಿಯೆ",
+    "tpmActionErrorKindTpmCommunication": "TPM ಸಂವಹನ",
+    "tpmActionErrorKindUnsupportedPlatform": "ಬೆಂಬಲಿತವಲ್ಲದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI ಡೀಬಗ್ ಮಾಡುವುದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "tpmActionErrorKindInsufficientDmaProtection": "ಸಾಕಷ್ಟಿಲ್ಲದ DMA ರಕ್ಷಣೆ",
+    "tpmActionErrorKindNoKernelIommu": "ಕರ್ನಲ್ IOMMU ಇಲ್ಲ",
+    "tpmActionErrorKindTpmStartupLocalityNotProtected": "TPM ಆರಂಭಿಕ ಸ್ಥಳವನ್ನು ರಕ್ಷಿಸಲಾಗಿಲ್ಲ",
+    "tpmActionErrorKindHostSecurity": "ಹೋಸ್ಟ್ ಸೆಕ್ಯುರಿಟಿ",
+    "tpmActionErrorKindPcrUnusable": "ಪಿಸಿಆರ್ ಬಳಸಲಾಗುವುದಿಲ್ಲ",
+    "tpmActionErrorKindPcrUnsupported": "PCR ಬೆಂಬಲಿತವಾಗಿಲ್ಲ",
+    "tpmActionErrorKindVarSuppliedDriversPresent": "Var ಸರಬರಾಜು ಮಾಡಿದ ಚಾಲಕರು ಪ್ರಸ್ತುತ",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Sys ಪ್ರೆಪ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಪ್ರಸ್ತುತ",
+    "tpmActionErrorKindAbsolutePresent": "ಸಂಪೂರ್ಣ ಪ್ರಸ್ತುತ",
+    "tpmActionErrorKindInvalidSecureBootMode": "ಅಮಾನ್ಯ SecureBoot ಮೋಡ್",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "ದುರ್ಬಲ SecureBoot ಅಲ್ಗಾರಿದಮ್ ಪತ್ತೆಯಾಗಿದೆ",
+    "tpmActionErrorKindPreOsDigestVerificationDetected": "ಪೂರ್ವ ಓಎಸ್ ಡೈಜೆಸ್ಟ್ ಪರಿಶೀಲನೆ ಪತ್ತೆಯಾಗಿದೆ",
+    "tpmActionFixActionReboot": "ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "tpmActionFixActionShutdown": "ಪವರ್ ಆಫ್",
+    "tpmActionFixActionRebootToFwSettings": "ಫರ್ಮ್‌ವೇರ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA ರಕ್ಷಣೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "DMA ರಕ್ಷಣೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR ಬ್ಯಾಂಕ್‌ಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionFixActionContactOem": "OEM ಅನ್ನು ಸಂಪರ್ಕಿಸಿ",
+    "tpmActionFixActionContactOsVendor": "OS ಮಾರಾಟಗಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ",
+    "tpmActionFixActionEnableTpmViaFirmware": "ಫರ್ಮ್‌ವೇರ್ ಮೂಲಕ TPM ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "ಫರ್ಮ್‌ವೇರ್ ಮೂಲಕ TPM ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionFixActionClearTpmViaFirmware": "ಫರ್ಮ್‌ವೇರ್ ಮೂಲಕ TPM ಅನ್ನು ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionFixActionClearTpm": "TPM ಅನ್ನು ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionFixActionProceed": "ನಿರ್ಲಕ್ಷಿಸಿ",
+    "tpmActionRestartLabel": "ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "tpmActionRestartAndEnableTpmLabel": "TPM ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ ಮತ್ತು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "tpmActionRestartAndClearTpmLabel": "TPM ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ ಮತ್ತು ತೆರವುಗೊಳಿಸಿ",
+    "tpmActionIgnoreAndContinueLabel": "ನಿರ್ಲಕ್ಷಿಸಿ ಮತ್ತು ಮುಂದುವರಿಸಿ",
+    "tpmActionFixActionClearTpmWarningTitle": "TPM ಅನ್ನು ತೆರವುಗೊಳಿಸುವುದು ಎಲ್ಲಾ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಕೀಗಳನ್ನು ಅಳಿಸುತ್ತದೆ",
+    "tpmActionFixActionClearTpmWarningBody": "ನೀವು ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳನ್ನು ಹೊಂದಿಲ್ಲದ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಡ್ರೈವ್‌ಗಳಲ್ಲಿನ ಎಲ್ಲಾ ಡೇಟಾಗೆ ನೀವು ಪ್ರವೇಶವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ. ಇದು ದೃಢೀಕರಣ ಮತ್ತು ಪ್ರಮಾಣಪತ್ರಗಳಂತಹ TPM ಅನ್ನು ಅವಲಂಬಿಸಿರುವ ಇತರ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಸಹ ಮುರಿಯುತ್ತದೆ.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "TPM ಅನ್ನು ತೆರವುಗೊಳಿಸುವುದರ ಪರಿಣಾಮಗಳನ್ನು ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ",
+    "tpmActionErrorTitle": "ಈ ಪರಿಹಾರವು ವಿಫಲವಾಗಿದೆ",
+    "tpmActionErrorDescription": "ಬೇರೆ ಪರಿಹಾರವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ",
+    "rebootToConfigureWarning": "ಅನುಸ್ಥಾಪನಾ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಮುಂದುವರಿಸಲು ನೀವು ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಬೇಕು.",
+    "shutdown": "ಸ್ಥಗಿತಗೊಳಿಸಿ",
+    "restartNow": "ಈಗ ಮರುಪ್ರಾರಂಭಿಸಿ",
+    "continueTesting": "ಪರೀಕ್ಷೆಯನ್ನು ಮುಂದುವರಿಸಿ",
+    "bitlockerInfoTitle": "ಬಿಟ್‌ಲಾಕರ್ ಪತ್ತೆಯಾಗಿದೆ",
+    "bitlockerInfoDescription": "ಒಂದು ಅಥವಾ ಹೆಚ್ಚಿನ ವಿಭಾಗಗಳನ್ನು ಬಿಟ್‌ಲಾಕರ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ.",
+    "bitlockerInfoDisable": "ವಿಂಡೋಸ್ ಜೊತೆಗೆ ಸ್ಥಾಪಿಸಲು, ವಿಂಡೋಸ್‌ನಲ್ಲಿ ಬಿಟ್‌ಲಾಕರ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ.",
+    "bitlockerInfoRecovery": "ಅನುಸ್ಥಾಪನೆಯ ನಂತರ ಬೂಟ್‌ನಲ್ಲಿ ವಿಂಡೋಸ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳನ್ನು ವಿನಂತಿಸಬಹುದು.",
+    "bitlockerInfoInstructions": "ಸೂಚನೆಗಳಿಗಾಗಿ, <a href=\"{url}\">BitLocker ಮಾರ್ಗದರ್ಶಿ</a> ಅನ್ನು ಭೇಟಿ ಮಾಡಿ.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "ಬಿಟ್‌ಲಾಕರ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳಿಲ್ಲದೆ ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು",
+    "installationSlidesSupportCommunity": "Ask Ubuntu ಹಲವಾರು ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ ಮತ್ತು ಉಬುಂಟು ಡಿಸ್ಕೋರ್ಸ್ ಹೊಸ ಮತ್ತು ಅನುಭವಿ ಬಳಕೆದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಚರ್ಚೆಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ.",
+    "installationSlidesSupportEnterprise": "ಎಂಟರ್‌ಪ್ರೈಸ್ ಬಳಕೆದಾರರಿಗೆ ಕೆನೊನಿಕಲ್ ವಾಣಿಜ್ಯ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುತ್ತದೆ ಮತ್ತು ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಉಬುಂಟು ಅನ್ನು ಆನ್‌ಬೋರ್ಡ್ ಮಾಡಲು ಮತ್ತು ನಿರ್ವಹಿಸಲು ಸುಲಭವಾಗುತ್ತದೆ.",
+    "installationSlidesSupportResources": "ಸಹಾಯಕ ಸಂಪನ್ಮೂಲಗಳು:",
+    "installationSlidesSupportDocumentation": "ಅಧಿಕೃತ ದಸ್ತಾವೇಜನ್ನು",
+    "installationSlidesSupportUbuntuPro": "ಉಬುಂಟು ಪ್ರೊನೊಂದಿಗೆ ಎಂಟರ್‌ಪ್ರೈಸ್-ಗ್ರೇಡ್ 24/7 ಬೆಂಬಲ",
+    "nextSlideSemanticLabel": "ಮುಂದಿನ ಸ್ಲೈಡ್",
+    "previousSlideSemanticLabel": "ಹಿಂದಿನ ಸ್ಲೈಡ್",
+    "playSlideshowSemanticLabel": "ಸ್ಲೈಡ್‌ಶೋ ಪ್ಲೇ ಮಾಡಿ",
+    "pauseSlideshowSemanticLabel": "ಸ್ಲೈಡ್‌ಶೋ ವಿರಾಮಗೊಳಿಸಿ",
+    "toggleLogsSemanticLabel": "ಇನ್‌ಸ್ಟಾಲ್ ಲಾಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ",
+    "copyingFiles": "ಫೈಲ್‌ಗಳನ್ನು ನಕಲಿಸಲಾಗುತ್ತಿದೆ…",
+    "installingSystem": "ಅನುಸ್ಥಾಪನೆಯು ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು.ಸಿಸ್ಟಮ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ…",
+    "configuringSystem": "ವ್ಯವಸ್ಥೆಯನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ…",
+    "installationFailed": "ಅನುಸ್ಥಾಪನೆಯು ವಿಫಲವಾಗಿದೆ",
+    "notEnoughDiskSpaceTitle": "ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವಿಲ್ಲ",
+    "notEnoughDiskSpaceUbuntu": "{DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವಿಲ್ಲ",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "ಆಯ್ಕೆಮಾಡಿದ ಡಿಸ್ಕ್ {DISTRO} ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವನ್ನು ಹೊಂದಿಲ್ಲ. ಜಾಗವನ್ನು ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಲು ಅನುಸ್ಥಾಪಕವನ್ನು ತ್ಯಜಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ಡಿಸ್ಕ್ ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "ಲಭ್ಯವಿದೆ:",
+    "notEnoughDiskSpaceRequired": "ಅಗತ್ಯವಿದೆ:",
+    "refreshPageTitle": "ನವೀಕರಣ ಲಭ್ಯವಿದೆ",
+    "refreshHeader": "ಸ್ಥಾಪಕಕ್ಕೆ ನವೀಕರಣ ಲಭ್ಯವಿದೆ",
+    "refreshUpdateNow": "ಈಗ ನವೀಕರಿಸಿ",
+    "refreshInfo": "ಸುಧಾರಿತ ವಿಶ್ವಾಸಾರ್ಹತೆ ಮತ್ತು ಹೆಚ್ಚಿನ ವೈಶಿಷ್ಟ್ಯಗಳಿಗಾಗಿ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಿ.",
+    "refreshReady": "ನವೀಕರಣ ಸಿದ್ಧವಾಗಿದೆ",
+    "refreshCurrent": "ಪ್ರಸ್ತುತ {snap} ಆವೃತ್ತಿಯು {version} ಆಗಿದೆ.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "ಆವೃತ್ತಿ {version} ಗೆ ನವೀಕರಿಸಿ",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "ಪ್ರಸ್ತುತ ಆವೃತ್ತಿ {version} ಅಪ್-ಟು-ಡೇಟ್ ಆಗಿದೆ.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} ಅನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionPageTitle": "ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಲಿಲ್ಲ",
+    "tpmActionErrorKindAddonDriversPresent": "Addon ಡ್ರೈವರ್‌ಗಳು ಪ್ರಸ್ತುತ"
 }

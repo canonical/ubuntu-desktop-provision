@@ -1,32 +1,1057 @@
 {
-  "@@locale": "eu",
-  "updatesOtherSoftwarePageTitle": "Eguneraketak eta beste softwarea",
-  "updatesOtherSoftwarePageDescription": "Zeintzuk aplikazio instalatu nahi zenituzke hasteko?",
-  "appTitle": "Mahaigainerako Ubuntu instalatzailea",
-  "dontInstallDriverSoftwareNow": "Ez instalatu driver softwarea oraingoz",
-  "configureSecureBootSecurityKeyRequired": "Segurtasun gakoa beharrezkoa da",
-  "windowTitle": "{RELEASE} instalatu",
-  "quitButtonText": "Irten instalaziotik",
-  "tryOrInstallTitle": "Probatu edo instalatu",
-  "tryOrInstallRepairOption": "Konpondu instalazioa",
-  "tryOrInstallRepairDescription": "Konponketak instalatutako software guztia berrinstalatuko du dokumentuak edo ezarpenak ukitu gabe.",
-  "tryOption": "{RELEASE} probatu",
-  "tryDescription": "{RELEASE} probatu dezakezu zure ordenagailuan aldaketarik egin gabe.",
-  "installOption": "{RELEASE} instalatu",
-  "installDescription": "{RELEASE} instalatu zure sistemaren ondoan (edo ordez). Ez du asko iraungo.",
-  "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">kaleratze oharrak</a> irakurri ditzakezu.",
-  "rstTitle": "Itzali RST",
-  "rstDescription": "Ordenagailu honek Intel RST (Rapid Storage Technology) erabiltzen du. RST itzali behar duzu Windowsen Ubuntu instalatu baino lehenago.",
-  "rstInstructions": "Argibideetarako, ireki orri hau telefono edo beste gailu batean: <a href=\"https://{url}\">{url}</a>",
-  "configureSecureBootTitle": "Konfiguratu abio segurua",
-  "configureSecureBootOption": "Konfiguratu abio segurua",
-  "chooseSecurityKey": "Aukeratu segurtasun gako bat",
-  "confirmSecurityKey": "Berretsi segurtasun gakoa",
-  "dontInstallDriverSoftwareNowDescription": "Gero instalatu dezakezu Software eta Eguneratzeetatik.",
-  "secureBootSecurityKeysDontMatch": "Segurtasun gakoak ez datoz bat",
-  "otherOptions": "Beste aukera batzuk",
-  "installThirdPartyTitle": "Instalatu hirugarreneko softwarea grafiko eta Wi-Fi hardwarearentzako, batia multimedia formatu gehigarrientzako euskarria",
-  "changeButtonText": "Aldatu",
-  "showSecurityKey": "Erakutsi segurtasun gakoa",
-  "welcome": "Ongi etorri"
+    "@@locale": "eu",
+    "updatesOtherSoftwarePageTitle": "Aplikazioak",
+    "updatesOtherSoftwarePageDescription": "Zer aplikazio instalatu nahi zenituzke hasteko?",
+    "appTitle": "Mahaigainerako Ubunturen instalatzailea",
+    "dontInstallDriverSoftwareNow": "Ez instalatu kontrolatzaileak oraingoz",
+    "configureSecureBootSecurityKeyRequired": "Segurtasun gakoa beharrezkoa da",
+    "windowTitle": "Instalatu {RELEASE}",
+    "quitButtonText": "Irten instalaziotik",
+    "tryOrInstallTitle": "Probatu edo instalatu {DISTRO}",
+    "tryOrInstallRepairOption": "Konpondu instalazioa",
+    "tryOrInstallRepairDescription": "Konponketak instalatutako software guztia berrinstalatuko du, dokumentuak edo ezarpenak ukitu gabe.",
+    "tryOption": "{RELEASE} probatu",
+    "tryDescription": "{RELEASE} proba dezakezu ordenagailuan aldaketarik egin gabe.",
+    "installOption": "{RELEASE} instalatu",
+    "installDescription": "Instalatu {RELEASE} uneko sistema eragilearekin batera (edo haren ordez). Ez luke denbora asko beharko.",
+    "tryOrInstallReleaseNotesLabel": "Agian <a href=\"{url}\">bertsio-oharrak</a> irakurri nahiko dituzu.",
+    "rstTitle": "RST antzeman da",
+    "rstDescription": "Ordenagailu honek Intel RST (Rapid Storage Technology) erabiltzen du. RST itzali behar duzu Windowsen Ubuntu instalatu baino lehenago.",
+    "rstInstructions": "Argibideetarako, eskaneatu QR kodea beste gailu batekin edo bisitatu: <a href=\"https://{url}\">{url}</a>",
+    "configureSecureBootTitle": "Konfiguratu abio segurua",
+    "configureSecureBootOption": "Konfiguratu abio segurua",
+    "chooseSecurityKey": "Aukeratu segurtasun gako bat",
+    "confirmSecurityKey": "Berretsi segurtasun gakoa",
+    "dontInstallDriverSoftwareNowDescription": "Geroago instala ditzakezu Softwarea eta eguneraketak aplikaziotik.",
+    "secureBootSecurityKeysDontMatch": "Segurtasun gakoak ez datoz bat",
+    "otherOptions": "Beste aukera batzuk",
+    "installThirdPartyTitle": "Instalatu hirugarrenen softwarea grafikoen eta Wi-Fiaren hardwarearentzako, eta baita multimedia formatu gehigarrientzako euskarria ere",
+    "changeButtonText": "Aldatu",
+    "showSecurityKey": "Erakutsi",
+    "welcome": "Ongi etorri",
+    "successIconSemanticLabel": "Dena ondo joan da",
+    "closeIconSemanticLabel": "Itxi",
+    "maximizeIconSemanticLabel": "Maximizatu",
+    "minimizeIconSemanticLabel": "Txikitu",
+    "autoinstallDirectTitle": "Instalazio automatizatua",
+    "autoinstallDirectHeader": "Inportatu autoinstall fitxategia",
+    "autoinstallDirectUrlLabel": "Autoinstall fitxategi baten URLa sar dezakezu:",
+    "autoinstallDirectFileLabel": "Edo fitxategi lokal bat hautatu:",
+    "autoinstallDirectFileButtonLabel": "Hautatu fitxategia...",
+    "autoinstallDirectFileClearButtonLabel": "Kendu fitxategia",
+    "autoinstallDirectFilePickerTitle": "Aukeratu fitxategia",
+    "autoinstallDirectFilePickerFilterLabel": "YAML fitxategiak",
+    "autoinstallDirectImportButtonLabel": "Inportatu",
+    "autoinstallDirectErrorNetworkTitle": "Ezin izan da autoinstall fitxategia eskuratu",
+    "autoinstallDirectErrorNetworkBody": "Egiaztatu URLa zuzena dela, probatu Interneterako konexioa, edo saiatu geroago.",
+    "autoinstallDirectErrorInvalidUrlTitle": "URL baliogabea",
+    "autoinstallDirectErrorInvalidUrlBody": "Egiaztatu URLa zuzena dela edo hautatu fitxategi lokal bat.",
+    "autoinstallDirectErrorInvalidContentTitle": "Autoinstall fitxategi baliogabea",
+    "autoinstallDirectErrorInvalidContentBody": "Egiaztatu fitxategia egokia dela, edo aukeratu beste bat.",
+    "autoinstallDirectErrorFileSystemTitle": "Autoinstall fitxategia ezin da irakurri",
+    "autoinstallDirectErrorFileSystemBody": "Egiaztatu irakurtzeko baimenak dituzula, edo aukeratu beste fitxategi bat.",
+    "autoinstallDirectErrorUnkownTitle": "Errore ezezaguna",
+    "autoinstallTitle": "Instalazio mota",
+    "autoinstallHeader": "Nola instalatu nahi duzu {DISTRO}?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "Sartu autoinstall.yaml fitxategiaren URLa edo bide-izen lokala:",
+    "autoinstallInteractiveOption": "Instalazio interaktiboa",
+    "autoinstallInteractiveDescription": "Instalazioa urratsez urrats gidatuta egin nahi duten erabiltzaileentzat.",
+    "autoinstallDirectOption": "Automatizatua, autoinstall fitxategi batekin",
+    "autoinstallDirectDescription": "Erabiltzaile aurreratuentzat, autoinstall.yaml fitxategi batean zehaztutako konfigurazio sistematiko errepikakorrekin.",
+    "autoinstallLandscapeOption": "Automatizatua, Landscape erabilita",
+    "autoinstallLandscapeDescription": "Landscape bidezko autoinstall fitxategi bat darabilten erakundeetako erabiltzaileentzat.",
+    "loadingPageTitle": "Ongi etorri {DISTRO}ra",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "{DISTRO} prestatzen…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "Abisua:",
+    "tryOrInstallHeader": "Zer egin nahi duzu {DISTRO}rekin?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "rstHeader": "RST ezgaitu behar duzu instalazioarekin aurrera egiteko",
+    "rstDisable": "Ordenagailuak Intel RST (Rapid Storage Technology) darabil. Hemen ezgaitu dezakezu RST:",
+    "rstDisableWindows": "Windowsen, abio bikoitza eta Windows instalatuta baduzu ordenagailuan",
+    "rstDisableBios": "BIOSaren ezarpenetan",
+    "configureSecureBootDescription": "Hirugarrenen kontrolatzaileak instalatzea aukeratu duzu. Hau egiteko abio segurua itzali beharra dago.\nHorretarako, orain segurtasun gako bat aukeratu behar duzu orain, eta sistema berrabiaraztean berau sartu.",
+    "hideSecurityKey": "Ezkutatu",
+    "codecsAndDriversPageTitle": "Optimizatu ordenagailua",
+    "codecsAndDriversPageDescription": "Software pribatibo gomendatua instalatu?",
+    "codecsAndDriversPageBody": "{DISTRO}k ez dakar software pribatiborik defektuz. Software gehigarri hau instalatuz baliteke ordenagailuaren errendimendua hobetzea.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "NVIDIA txartel grafikoa antzeman da",
+    "codecsAndDriversNvidiaBody": "NVIDIA txartel grafikoen errendimendu onena ziurtatzeko, biziki gomendatzen da kontrolatzaile gehigarriak instalatzea.",
+    "fullInstallationTitle": "Aukera zabala",
+    "fullInstallationSubtitle": "Konexiorik gabe lan egin ahal izateko bulegotika, tresnak eta web nabigatzailea.",
+    "minimalInstallationTitle": "Oinarrizko aukera",
+    "minimalInstallationSubtitle": "Behar-beharrezko aplikazioak soilik, web nabigatzailea eta oinarrizko tresnak.",
+    "installThirdPartySubtitle": "Software hau dokumentazioan datorren lizentziaren baldintzei lotua dago. Lizentzia batzuk pribatiboak dira.",
+    "installDriversTitle": "Instalatu hirugarrenen softwarea grafikoen eta Wi-Fiaren hardwarearentzako",
+    "installDriversSubtitle": "Barnean daude, besteak beste, NVIDIA eta antzeko kontrolagailuak",
+    "installCodecsTitle": "Deskargatu eta instalatu multimedia formatu gehigarrientzako euskarria",
+    "installCodecsSubtitle": "Barnean daude, besteak beste, MP3, MP4, MOV eta antzekoak",
+    "batteryWarning": "Ordenagailua ez dago argindarrera konektatua.",
+    "offlineWarning": "Une honetan ez zaude konektaturik",
+    "choosePassphraseHeader": "Sortu pasaesaldia",
+    "choosePassphraseBody": "Ordenagailua pizten duzunero pasaesaldia sartu beharko duzu. Pasaesaldi hau ez da erabiltzailearen pasahitza.",
+    "choosePassphraseInfoHeader": "Ez ahaztu pasaesaldia leku seguruan gordetzea",
+    "choosePassphraseInfoBody": "Galtzen baduzu, zure datu guztiak galduko dituzu.",
+    "chooseOptionalPassphraseInfoHeader": "Gorde pasaesaldia eta berreskuratze gakoa leku seguruan",
+    "chooseOptionalPassphraseInfoBody": "Pasaesaldia galtzen baduzu, zure datu guztiak galduko dituzu. Pasaesaldiak ez du berreskuratze gakoa edo erabiltzaile-pasahitza ordezkatzen.",
+    "passphrasePageTitle": "Zifratzea",
+    "passphrasePageHeaderPassphrase": "Ezarri zifratzeko pasaesaldia",
+    "passphrasePageHeaderPin": "Ezarri zifratzeko PINa",
+    "passphrasePageBodyPassphrase": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. Pasaesaldia ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.",
+    "passphrasePageBodyPin": "PINa sartu beharko duzu ordenagailua pizten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. PINa ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.",
+    "passphrasePageChoosePassphraseHint": "Pasaesaldia",
+    "passphrasePageConfirmPassphraseHint": "Berretsi pasaesaldia",
+    "passphrasePageRequiredPassphrase": "Pasaesaldia beharrezkoa da",
+    "passphrasePageMismatchPassphrase": "Pasaesaldiak ez datoz bat",
+    "passphrasePageChoosePinHint": "PINa",
+    "passphrasePageConfirmPinHint": "Berretsi PINa",
+    "passphrasePageRequiredPin": "PINa beharrezkoa da",
+    "passphrasePageMismatchPin": "PINak ez datoz bat",
+    "passphraseTypePassphraseTileTitle": "Eskatu pasaesaldia",
+    "passphraseTypePassphraseTileSubTitle": "Seguruena. Pasaesaldi luzeago bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
+    "passphraseTypePinTileTitle": "Eskatu PINa",
+    "passphraseTypePinTileSubTitle": "Seguruagoa. Zenbakizko PIN bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
+    "passphraseTypeNoneTileTitle": "Desblokeatu diskoa automatikoki",
+    "passphraseTypePageHeader": "Segurtasun gehigarria",
+    "passphraseTypePageBody": "Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.",
+    "passphrasePagePassphraseEntropyBelowMin": "Pasaesaldi ahula, egizu luzeagoa edo konplexuagoa",
+    "passphrasePagePassphraseEntropyBelowOptimal": "Baleko pasaesaldia, egizu luzeagoa edo konplexuagoa segurtasuna areagotzeko",
+    "passphrasePagePassphraseEntropyOptimal": "Pasaesaldi sendoa",
+    "passphrasePagePinEntropyBelowMin": "PIN ahula, egizu luzeagoa edo asmatzeko zailagoa",
+    "passphrasePagePinEntropyBelowOptimal": "Baleko PINa, egizu luzeagoa edo asmatzeko zailagoa segurtasuna areagotzeko",
+    "passphrasePagePinEntropyOptimal": "Luzera egokiko PINa",
+    "installationTypeTitle": "Diskoaren konfigurazioa",
+    "installationTypeHeader": "Nola instalatu nahi duzu {DISTRO}?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "Ordenagailuak une honetan {os} dauka instalaturik. Zer egin nahi duzu?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "Ordenagailuak une honetan {os1} eta {os2} ditu instalaturik. Zer egin nahi duzu?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "Ordenagailuak une honetan hainbat sistema eragile ditu instalaturik. Zer egin nahi duzu?",
+    "installationTypeNoOSDetected": "Ordenagailuan ez da antzeman instalatutako sistema eragilerik. Zer egin nahi duzu?",
+    "installationTypeErase": "Ezabatu diskoa eta instalatu {DISTRO}",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Diskoko datu eta partizio guztiak ezabatuko dira, sistema eragileak barne.",
+    "installationTypeAdvancedLabel": "Aukera aurreratuak",
+    "installationTypeAdvancedTitle": "Zifratzea eta fitxategi-sistema",
+    "installationTypeExperimental": "Esperimentala",
+    "installationTypeNone": "Zifratzerik ez",
+    "installationTypeNoneInfo": "Fitxategi-sistema estandarra, zifratze gabe.",
+    "installationTypeNoneSelected": "Ez da bat ere hautatu",
+    "installationTypeLVM": "Erabili LVM zifratze gabe",
+    "installationTypeLVMSelected": "LVM hautatuta",
+    "installationTypeLVMEncryption": "Zifratzea pasaesaldiarekin",
+    "installationTypeLVMEncryptionInfo": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Honek LUKS zifratzea darabil LVMrekin.",
+    "installationTypeLVMEncryptionSelected": "LVM eta zifratzea hautatuta",
+    "installationTypeEncryptInfo": "Hurrengo urratsean aukeratuko duzu segurtasun gakoa.",
+    "installationTypeZFS": "Erabili ZFS zifratze gabe",
+    "installationTypeZFSEncryption": "Zifratu pasaesaldiarekin, ZFS erabiliz",
+    "installationTypeZFSEncryptionInfo": "Zifratze natiboa ZFSrekin. Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro.",
+    "installationTypeZFSSelected": "ZFS hautatuta",
+    "installationTypeZFSEncryptionSelected": "ZFS eta zifratzea hautatuta",
+    "installationTypeTPM": "Erabili hardware bidezko zifratzea",
+    "installationTypeTPMInfo": "<a href=\"{url}\">Irakurri TPM zifratzeari buruz</a> aukera hau hautatu aurretik. Baliteke ez funtzionatzea zure hardwarearekin, edo {DISTRO}ren etorkizuneko bertsioekin.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeTPMSelected": "TPM hautatuta",
+    "installationTypeReinstall": "Ezabatu {os} eta berrinstalatu",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Abisua:</font> Honek {os}(e)ko programa guztiak, dokumentuak, argazkiak, musika eta beste edozein fitxategi ezabatuko ditu.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "Instalatu {product}, {os}(r)ekin batera",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "Instalatu {product}, {os1} eta {os2}(r)ekin batera",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "Instalatu {product} existitzen diren beste sistema eragileekin batera",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "Instalatu {product} beste partizioekin batera",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "Hautatu tamainaz aldatu beharreko partizioa, horrela {product}entzako lekua egiteko. Abioan sistema eragilea aukeratu ahalko duzu.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "Ezabatu {os} eta instalatu {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Existitzen den {os} instalazioko fitxategi eta datu guztiak betiko ezabatuko dira.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "Eskuzko instalazioa",
+    "installationTypeManualInfo": "Disko konfigurazio pertsonalizatua erabili nahi duten erabiltzaile aurreratuentzako.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Ezabatu diskoa eta instalatu {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Hasi zerotik hautatutako diskoan.",
+    "selectGuidedStorageDriveDropdownLabel": "Hautatu unitatea:",
+    "selectGuidedStoragePartitionDropdownLabel": "Hautatu partizioa:",
+    "selectGuidedStorageInfoLabel": "Disko osoa erabiliko da:",
+    "selectGuidedStorageInstallNow": "Instalatu orain",
+    "guidedStoragePageHeader": "Aukeratu {DISTRO} non instalatu",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "Esleitu lekua unitatean azpiko banalerroa arrastatuz:",
+    "installAlongsideHiddenPartitions": "{num} partizio txikiago ezkutaturik daude, erabili <a href=\"{url}\">partizio tresna aurreratua</a> kontrol gehiago izateko",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Aldatu partizioaren tamaina",
+    "installAlongsideAllocateSpace": "Esleitu lekua",
+    "installAlongsideFiles": "Fitxategiak",
+    "installAlongsidePartition": "Partizioa:",
+    "installAlongsideSize": "Tamaina:",
+    "installAlongsideAvailable": "Erabilgarri:",
+    "allocateDiskSpace": "Eskuzko partitzea",
+    "allocateDiskSpaceInvalidMountPointSlash": "Muntatze-puntuek \"/\" izan behar dute hasieran",
+    "allocateDiskSpaceInvalidMountPointSpace": "Muntatze-puntuek ezin dute zuriunerik izan",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} fitxategi-sistema ez dago onartuta {mountpoint} puntuarentzat",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "Gailua",
+    "diskHeadersType": "Mota",
+    "diskHeadersMountPoint": "Muntatze-puntua",
+    "diskHeadersSize": "Tamaina",
+    "diskHeadersUsed": "Erabilita",
+    "diskHeadersSystem": "Sistema",
+    "diskHeadersFormat": "Formatua",
+    "freeDiskSpace": "Leku librea",
+    "newPartitionTable": "Partizio-taula berria",
+    "newPartitionTableConfirmationTitle": "Partizio huts berria",
+    "newPartitionTableConfirmationMessage": "Gailu osoan partizio-taula berria sortuz gero, une honetan bertan dauden partizio guztiak ezabatuko dira. Eragiketa hau desegin daiteke, beharrezkoa bada.",
+    "tooManyPrimaryPartitions": "Partizio primario gehiegi",
+    "partitionLimitReached": "Mugara iritsi da",
+    "bootLoaderDevice": "Abio kargatzailea instalatzeko gailua",
+    "partitionCreateTitle": "Sortu partizioa",
+    "partitionEditTitle": "Editatu partizioa",
+    "partitionSizeLabel": "Tamaina:",
+    "partitionTypeLabel": "Partizio berriaren mota:",
+    "partitionTypePrimary": "Primarioa",
+    "partitionTypeLogical": "Logikoa",
+    "partitionLocationLabel": "Partizio berriaren kokalekua:",
+    "partitionLocationBeginning": "Tarte honen hasieran",
+    "partitionLocationEnd": "Tarte honen amaieran",
+    "partitionFormatLabel": "Erabilera:",
+    "partitionFormatNone": "Utzi formateatu gabe",
+    "partitionFormatKeep": "Utzi {format} gisa formateatuta",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "Formateatu partizioa",
+    "partitionMountPointLabel": "Muntatze-puntua:",
+    "confirmPageTitle": "Instalatzeko prest",
+    "confirmHeader": "Berrikusi zure aukeraketa",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "Bat ere ez",
+    "confirmDevicesTitle": "Gailuak",
+    "confirmEntryApplications": "Aplikazioak",
+    "confirmEntryDiskSetup": "Instalazio mota",
+    "confirmEntryDiskEncryption": "Diskoaren zifratzea",
+    "confirmEntryInstallationDisk": "Instalazio-diskoa",
+    "confirmEntryProprietarySoftware": "Software pribatiboa",
+    "confirmSectionGeneralTitle": "Orokorra",
+    "confirmSectionSecurityAndMoreTitle": "Segurtasuna eta gehiago",
+    "confirmPartitionsTitle": "Partizioak",
+    "confirmPartitionTables": "Gailu hauetako partizio-taulak aldatu egin dira:",
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "Kodekak",
+    "confirmProprietarySoftwareCodecsDrivers": "Kodekak eta kontrolatzaileak",
+    "confirmProprietarySoftwareDrivers": "Kontrolatzaileak",
+    "confirmInstallButton": "Instalatu",
+    "confirmTableErased": "Ezabatua",
+    "confirmTableUnchanged": "Aldatu gabe",
+    "confirmTableResized": "Tamainaz aldatua (lehen: {oldsize} / orain: {newsize})",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "Sortua eta {format} gisa formateatua. Erabilera: {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "{format} gisa formateatua. Erabilera: {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "Erabilera: {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} gisa formateatua",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Instalazioa osatu da",
+    "readyToUse": "{system} instalatu da eta erabiltzeko prest dago",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** diskora kopiatu da",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "Berrabiarazi {system}ra",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Berrabiarazi instalazioa osatzeko edo jarraitu probatzen.\nEgiten dituzun aldaketak ez dira gordeko.",
+    "rebootToConfigureWarning": "Instalazio prozesuarekin jarraitzeko ordenagailua berrabiarazi behar duzu.",
+    "shutdown": "Itzali",
+    "restartNow": "Berrabiarazi orain",
+    "continueTesting": "Jarraitu probatzen",
+    "bitlockerInfoTitle": "BitLocker antzeman da",
+    "bitlockerInfoDescription": "Partizio bat edo gehiago BitLocker erabiliz zifratu dira.",
+    "bitlockerInfoDisable": "Windowsekin batera instalatzeko, ezgaitu BitLocker Windowsen.",
+    "bitlockerInfoRecovery": "Baliteke Windowsek berreskuratze gakoak eskatzea instalazio ondoren abiaraztean.",
+    "bitlockerInfoInstructions": "Jarraibideetarako, bisitatu <a href=\"{url}\">BitLocker-en gida</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "Datu guztiak gal ditzakezu BitLocker-en berreskuratze gakorik gabe",
+    "restartComputer": "Berrabiarazi ordenagailua",
+    "restartComputerTitle": "Ordenagailua berrabiarazi?",
+    "restartIntoWindows": "Berrabiarazi Windowsera",
+    "restartIntoWindowsTitle": "Windowsera berrabiarazi?",
+    "restartIntoWindowsDescription": "Ziur ordenagailua berrabiarazi nahi duzula? Geroago {DISTRO}ren instalazioa berrekin beharko duzu, {DISTRO} instalatzen amaitzeko.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "Ongi etorri {RELEASE}ra",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "Erabilgarri:",
+    "installationSlidesIncluded": "Hau barne:",
+    "installationSlidesWelcomeTitle": "Bizkorra, librea eta eginbidez betea",
+    "installationSlidesWelcomeHeader": "{DISTRO}ren azken bertsioak ordenagailuan aritzea inoiz baino errazago egiten du.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "Garatzailea, sortzailea, bideojokozalea nahiz administratzailea izan, {RELEASE}n produktibitatea handitzeko eta zure bizipena hobetzeko tresna berriak aurkituko dituzu.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Behar dituzun aplikazio guztiak",
+    "installationSlidesSoftwareBody": "Instalatu, kudeatu eta eguneratu zure aplikazio guztiak Ubuntu Softwarearekin, Snap biltegiko eta {DISTRO}ren artxiboko milaka aplikazio barne.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "Garatu kode irekirik onenarekin",
+    "installationSlidesAccessibilityOrca": "Orca pantaila-irakurlea",
+    "installationSlidesAccessibilityLanguages": "Hizkuntza-sostengua",
+    "installationSlidesSupportTitle": "Laguntza eta sostengua",
+    "installationSlidesSupportHeader": "{DISTRO}ren dokumentazio ofiziala eskuragarri dago bai online, bai atrakeko Laguntza ikonoaren bitartez.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportDocumentation": "Dokumentazio ofiziala",
+    "nextSlideSemanticLabel": "Hurrengo diapositiba",
+    "previousSlideSemanticLabel": "Aurreko diapositiba",
+    "playSlideshowSemanticLabel": "Erreproduzitu diapositibak",
+    "pauseSlideshowSemanticLabel": "Pausatu diapositibak",
+    "toggleLogsSemanticLabel": "Erakutsi / ezkutatu erregistroak",
+    "copyingFiles": "Fitxategiak kopiatzen…",
+    "installingSystem": "Sistema instalatzen…",
+    "configuringSystem": "Sistema konfiguratzen…",
+    "installationFailed": "Instalazioak huts egin du",
+    "notEnoughDiskSpaceTitle": "Ez dago behar beste leku diskoan",
+    "notEnoughDiskSpaceUbuntu": "Diskoan ez dago {DISTRO} instalatzeko behar beste leku",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "Hautatutako diskoak ez dauka {DISTRO} instalatzeko behar beste leku. Irten instalatzailetik diskoan lekua egiteko, edo hautatu beste disko bat.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "Erabilgarri:",
+    "notEnoughDiskSpaceRequired": "Beharrezko:",
+    "refreshPageTitle": "Eguneratzea eskuragarri",
+    "refreshHeader": "Instalatzailearentzako eguneratze bat eskuragarri dago",
+    "refreshUpdateNow": "Eguneratu orain",
+    "refreshInfo": "Eguneratu azken bertsiora fidagarritasun handiagorako eta eginbide gehiago lortzeko.",
+    "refreshReady": "Eguneratzea prest",
+    "refreshCurrent": "Uneko {snap} bertsioa honakoa da: {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "Eguneratu {version} bertsiora",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "Uneko bertsioa ({version}) egunean dago.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} eguneratzen...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "Jarraitzeko, itxi instalatzailea eta abiarazi berriro",
+    "refreshCloseLabel": "Itxi instalatzailea",
+    "refreshSnapPrerequisites": "{snap}(r)en eskakizunak egiaztatzen...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "{snap} berritzen...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "{snap}(r)en berritzea aztertzen...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "{snap} prestatzen...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "{snap} deskargatzen...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "{snap} balioztatzen...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "{snap} muntatzen...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "{snap} zerbitzuak geldiarazten...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "{snap} aliasak ezabatzen...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "{snap} desestekatzen...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "{snap} baliabideak eguneratzen...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "{snap} kernelaren komando-lerroa eguneratzen...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "{snap}(r)en datuak kopiatzen...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "{snap}(r)en segurtasun-profilak konfiguratzen...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "{snap} estekatzen...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "Berreskuratze gakoa",
+    "recoveryKeyTitleBadgeLabel": "Garrantzitsua",
+    "recoveryKeyHeader": "Gorde berreskuratze gakoa",
+    "recoveryKeyInfoHeader": "Zure datu guztiak gal ditzakezu berreskuratze gakorik ez baduzu",
+    "recoveryKeyTextFieldLabel": "Berreskuratze gakoa",
+    "recoveryKeyStorageAdvice": "Abioan datuak deszifratzeak huts egiten badu, berreskuratze gakoa sartu beharko duzu. Gako hau gabe, zure datu guztietara sarbidea galduko duzu. Gorde ezazu leku seguruan, adibidez pasahitz-kudeatzaile batean.",
+    "recoveryKeyConfirmation": "Berreskuratze gakoa leku seguruan gorde dut",
+    "recoveryKeyLinkLabel": "Ikasi gehiago",
+    "recoveryKeySaveToFileLabel": "Gorde fitxategian",
+    "recoveryKeyShowQrCodeLabel": "Erakutsi QR kodea",
+    "recoveryKeyQrDialogTitle": "{DISTRO} Mahaigaina - Berreskuratze gakoa",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "Eskaneatu QR kodea berreskuratze gakoa kopiatzeko eta leku seguruan gordetzeko, adibidez pasahitz-kudeatzaile batean. Geroago erabiltzeko argazki bat ere atera dezakezu.",
+    "recoveryKeyClipboardNotifiaction": "Arbelera kopiatu da",
+    "recoveryKeyExceptionFileSystemTitle": "Berreskuratze gakoaren fitxategia ez da gorde",
+    "recoveryKeyExceptionDisallowedPathTitle": "Berreskuratze gakoaren fitxategia ezin izan da gorde aldi baterako kokalekuan",
+    "recoveryKeyExceptionUnknownTitle": "Errore ezezaguna",
+    "recoveryKeyExceptionFileSystemBody": "Ez duzu karpeta horretan idazteko baimenik. Saiatu beste kokaleku batean edo erabili bestelako metodo bat.",
+    "recoveryKeyExceptionDisallowedPathBody": "Saiatu beste kokaleku batekin, esaterako unitate aldagarri bat, edo erabili bestelako metodo bat.",
+    "recoveryKeyFilePickerTitle": "Gorde berreskuratze gakoaren fitxategia",
+    "recoveryKeyFilePickerFilter": "Testu-fitxategiak",
+    "landscapeMagicAttachInstructions": "Eskaneatu QR kodea edo sartu azpiko kodea hemen: <a href=\"https://{url}\">{url}</a>",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "Instalazio automatizatua",
+    "landscapeHeader": "Hasi saioa Landscapen",
+    "landscapeDomainHeader": "Sartu Landscapeko domeinua (FQDN)",
+    "landscapeDomainHintText": "Landscapeko domeinua (FQDN)",
+    "errorIconSemanticLabel": "Errorea",
+    "tpmActionDetailsLabel": "Xehetasun teknikoak",
+    "tpmActionConfirmLabel": "Berretsi",
+    "tpmActionSolutionLabel": "{n}. soluzioa: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Informazio gehiago hardware bidezko zifratzeari buruz",
+    "tpmActionErrorSupportLabel": "Saiatu jarraian azaldutako soluzioekin, jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.",
+    "tpmActionErrorSupportNoActionLabel": "Jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.",
+    "tpmActionPageTitle": "Ezin izan da hardware bidezko zifratzea gaitu",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Ordenagailuak ez dauka zifratze metodo honentzako beharrezko segurtasun hardwarerik (TPM 2.0).",
+    "tpmActionErrorKindUnsupportedPlatform": "Ordenagailua ez da hardware bidezko zifratzearekin bateragarria.",
+    "installationTypeLVMEncryptionInfoResolute": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzunero. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Honek LVM darabil LUKS zifratzearekin.",
+    "installationTypeTPMInfoResolute": "Diskoa automatikoki desblokeatuko da abioan.",
+    "installationTypeTPMInfoUnavailable": "Ez dago erabilgarri ordenagailu honetan.",
+    "installationSlidesDevelopmentBody": "{DISTRO} lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta AArako (adimen artifiziala) / ikasketa automatikorako, hala nola devops eta administraziorako. {DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "Areagotu zure sormena",
+    "installationSlidesCreativityBody": "Animatzailea, diseinatzailea, bideo-sortzailea edo bideojoko garatzailea bazara, erraz ekar ditzakezu zure lan-fluxuak {DISTRO}ra, kode irekiko eta industriako software eta aplikazio estandarrei esker.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "Jokatzeko aparta",
+    "installationSlidesGamingBody": "{DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka, errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute {DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "Pribatua eta segurua",
+    "installationSlidesSecurityBody": "{DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebakiarekin eta VPN euskarriarekin eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityBody": "Mahaigainerako {DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarriak diren aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "Indartu zure produktibitatea",
+    "installationSlidesAccessibilityTitle": "Erabilerraza denontzat",
+    "installationSlidesAccessibilityBody": "{DISTRO}ren filosofiaren erroan informatika denontzako den sinesmena dago. Erabilerraztasun tresna aurreratuekin eta hizkuntza, koloreak eta testuen tamaina aldatzeko aukerarekin, {DISTRO}k informatika erraz bilakatzen du - edonor zarela eta edonon zaudela ere.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportEnterprise": "Enpresako erabiltzaileentzat, Canonicalek euskarri komertziala eskaintzen du lan-eremuan Ubuntu era seguruan erraz instalatu eta kudeatzeko.",
+    "installationSlidesSupportUbuntuPro": "Enpresa mailako 24/7 euskarria Ubuntu Pro-rekin",
+    "installationSlidesSupportResources": "Baliabide lagungarriak:",
+    "installationSlidesSecurityLts": "{DISTRO}ren LTS bertsio guztiek bost urterako segurtasun adabakiak barne dituztela argitaratzen dira, Ubuntu Pro harpidetzaren bidez hamar urtera luza daitekeelarik tartea.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Ask Ubuntuk galdera-erantzun sorta zabala dauka, eta Ubuntu Discoursek erabiltzaile hasiberri zein esperientziadunentzako gidak eta eztabaidak eskaintzen ditu.",
+    "refreshSnapAutoConnect": "{snap}(r)en larakoak (plug) eta artekak (slot) konektatzen...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "{snap}(r)en alias automatikoak ezartzen...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap}(r)en aliasak konfiguratzen...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "{snap}(r)en zerbitzuak abiarazten...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "{snap} garbitzen...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeDomainInstructions": "Sartu zure erakundearen Landscape domeinua saioa hasteko eta autoinstall fitxategi bat eskuratzeko. FQDNa zure IT laguntza zerbitzuak eman diezazuke.",
+    "landscapeDomainTextField": "Landscape domeinua (FQDN)",
+    "next": "Hurrengoa",
+    "landscapeDomainInvalidDomainWarning": "Domeinu baliogabea, egiaztatu ondo dagoela edo galdetu zure IT laguntza zerbitzuari",
+    "landscapeDomainNoInternetTitleWarning": "Konektatu Internetera jarraitzeko",
+    "landscapeDomainNoInternetDescriptionWarning": "Internet beharrezkoa da Landscapetik autoinstall fitxategia eskuratzeko",
+    "landscapeCodeExpiredWarning": "Kodea iraungi da, saiatu berriz",
+    "landscapeLoginFailedWarning": "Saio hasierak huts egin du, saiatu berriz",
+    "landscapeErrorPageTitle": "Instalazio automatizatua ez dago zure konturako erabilgarri",
+    "landscapeErrorPageBody": "Jarri zure IT laguntza zerbitzuarekin harremanetan edo saiatu beste instalazio aukera batekin.",
+    "landscapeErrorPageCode": "Errore kodea: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu zure erakundeak hornitutako konfigurazioarekin instalatuko da",
+    "landscapeConfirmPageSuccessInfoContent": "Jarraian Landscapetik inportatutako autoinstall fitxategia berrikus dezakezu.",
+    "tpmActionBadgeLabel": "Ekintza beharrezkoa da",
+    "tpmActionErrorKindInternal": "Barne errorea.",
+    "tpmActionErrorKindShutdownRequired": "Itzaltzea beharrezkoa da.",
+    "tpmActionErrorKindRebootRequired": "Berrabiaraztea beharrezkoa da.",
+    "tpmActionErrorKindUnexpectedAction": "Ekintza esperogabea.",
+    "tpmActionErrorKindMissingArgument": "Argumentua faltan.",
+    "tpmActionErrorKindInvalidArgument": "Okerreko argumentua.",
+    "tpmActionErrorKindActionFailed": "Ekintzak huts egin du.",
+    "tpmActionErrorKindRunningInVm": "Uneko ingurunea ez da makina birtual bat.",
+    "tpmActionErrorKindSystemNotEfi": "Ordenagailu honek firmware zaharrago bat darabil (BIOS legatua), zifratze metodo honekin bateragarria ez dena.",
+    "tpmActionErrorKindEfiVariableAccess": "Arazo bat dago ordenagailu honen firmwarearekin.",
+    "tpmActionErrorKindTpmDeviceDisabled": "Ordenagailu honen TPMa ezgaitua dago.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "Ordenagailu honen TPMa dagoeneko beste sistema edo aplikazio baten erabiltzen du.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "Ordenagailu honen TPMa une honetan blokeatua dago.",
+    "tpmActionErrorKindInsufficientTpmStorage": "Ordenagailu honen TPMak ez dauka behar beste leku libre.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI arazketa gaitua dago.",
+    "tpmActionErrorKindInsufficientDmaProtection": "Ordenagailu honek beharrezko segurtasun eginbide bat (DMA babesa) falta du.",
+    "tpmActionErrorKindNoKernelIommu": "Ordenagailu honek beharrezko segurtasun eginbide bat (IOMMU) falta du.",
+    "tpmActionErrorKindHostSecurity": "Arazo bat dago ordenagailu honen segurtasun konfigurazioarekin.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Baliteke abioan exekutatzen ari den softwareak ordenagailuaren TPMarekin konexio segurua ezartzea eragoztea.",
+    "tpmActionErrorKindAbsolutePresent": "Iraunkortasun Absoluturako Modulua gaitua dago ordenagailu honetan.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Abio segurua ezgaitua dago ordenagailu honetan, edo ez dago deployed moduan ezarria.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Ordenagailu honetako softwarea egiaztatzen duten zenbait ziurtagiri zaharkituta daude, edo babes ahula daukate.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Ordenagailu honek eskuzko baimen-zerrenda darabil abioko softwarea egiaztatzeko.",
+    "tpmActionErrorKindAddonDriversPresent": "Unitate gehigarriak presente daude.",
+    "tpmActionErrorKindGenericTpm": "Arazo bat dago ordenagailu honen TPMarekin.",
+    "tpmActionErrorKindGenericFirmware": "Arazo bat dago ordenagailu honen firmwarearekin.",
+    "tpmActionFixActionReboot": "Berrabiarazi",
+    "tpmActionFixActionShutdown": "Itzali",
+    "tpmActionFixActionRebootToFwSettings": "Berrabiarazi firmwarearen ezarpenetara",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA babesa eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPMa eskuz garbitu",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Abio segurua eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "IOMMU eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR bankuak eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPMa eskuz gaitu",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPMa eskuz garbitu",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPMa eskuz garbitu",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Ezgaitu Iraunkortasun Absoluturako Modulua eskuz",
+    "tpmActionFixActionContactOem": "Kontaktatu OEMa",
+    "tpmActionFixActionContactOsVendor": "Kontaktatu SEaren hornitzailea",
+    "tpmActionFixActionEnableTpmViaFirmware": "Gaitu TPMa berrabiaraztean",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Gaitu eta garbitu TPMa berrabiaraztean",
+    "tpmActionFixActionClearTpmViaFirmware": "Garbitu TPMa berrabiaraztean",
+    "tpmActionFixActionClearTpm": "Garbitu TPMa",
+    "tpmActionFixActionProceed": "Ez ikusi egin",
+    "tpmActionFixActionRebootDescription": "Berrabiarazi ordenagailua aurreko ekintzak osatzeko.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Baliteke ordenagailua berrabiaraziz arazoa konpontzea.",
+    "tpmActionFixActionShutdownDescription": "Itzali ordenagailua aurreko ekintzak osatzeko.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Hau ordenagailuaren firmware ezarpenetatik egin dezakezu.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Baliteke hau ordenagailuaren firmware ezarpenetatik egin ahal izatea. Irakurri PUZ hornitzailearen dokumentazioa gida gisa.",
+    "tpmActionFixActionProceedDescription": "Arazo honi ez ikusi eginez gero, baliteke instalazioaren segurtasun gutxitzea.",
+    "tpmActionRestartLabel": "Berrabiarazi",
+    "tpmActionRestartAndEnableTpmLabel": "Berrabiarazi eta gaitu TPMa",
+    "tpmActionRestartAndClearTpmLabel": "Berrabiarazi eta garbitu TPMa",
+    "tpmActionIgnoreAndContinueLabel": "Ez ikusi egin eta jarraitu",
+    "tpmActionFixActionClearTpmWarningTitle": "TPMa garbituz gero, zifratze gako guztiak ezabatuko dira",
+    "tpmActionFixActionClearTpmWarningBody": "Zifratutako unitateetako datu guztietara sarbidea galduko duzu hauentzako berreskuratze gakorik ez badaukazu. TPMaren menpe dauden beste eginbide batzuk ere hautsiko ditu, hala nola, autentikazioa eta ziurtagiriak.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "Ulertzen ditut TPMa garbitzeak dituen ondorioak",
+    "tpmActionFixActionCaveatConfirm": "Baliteke berrabiaraztean ekintza hau berresteko eskatzea.",
+    "tpmActionFixActionCaveatRetry": "Orduan, instalazioa berriro hasi beharko duzu.",
+    "tpmActionErrorTitle": "Soluzio honek huts egin du",
+    "tpmActionErrorDescription": "Probatu beste soluzioren bat, edo jarri harremanetan IT laguntza zerbitzuarekin.",
+    "manualPartitioningWarningBody": "Probatu beste zerbait. Horrez gain, <a href=\"\">errore-txosten bat bidal</a> dezakezu.",
+    "tpmActionSingleSolutionLabel": "Soluzioa: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorSupportSingleLabel": "Probatu ondorengo soluzioa, jarri harremanetan IT laguntza-zerbitzuarekin, edo aukeratu beste zifratze metodo bat.",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Firmware ezarpenak ez badira automatikoki kargatzen, berrabiarazi eta sakatu ezarpenen tekla behin eta berriro abioan (normalean F2, F10 edo Ezabatu).",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Egiaztatu abio seguru modua \"deployed\" gisa ezarria dagoela.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke."
 }
