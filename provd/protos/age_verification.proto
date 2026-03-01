@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package age_verification;
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+service AgeVerification {
+  rpc SetAge(SetAgeRequest) returns (SetAgeResponse);
+  rpc GetAgeBracket(GetAgeBracketRequest) returns (GetAgeBracketResponse);
+}
+
+message SetAgeRequest {
+  string username = 1;
+  int32 birth_year = 2;
+}
+
+message SetAgeResponse {}
+
+enum AgeBracket {
+  UNKNOWN = 0;
+  UNDER_13 = 1;
+  AGE_13_TO_15 = 2;
+  AGE_16_TO_17 = 3;
+  AGE_18_PLUS = 4;
+}
+
+message GetAgeBracketRequest {
+  string username = 1;
+}
+
+message GetAgeBracketResponse {
+  AgeBracket bracket = 1;
+}

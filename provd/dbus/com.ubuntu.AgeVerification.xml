@@ -1,0 +1,11 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="com.ubuntu.AgeVerification">
+    <method name="GetAgeBracket">
+      <arg name="username" type="s" direction="in"/>
+      <arg name="bracket" type="u" direction="out"/>
+    </method>
+    <annotation name="org.freedesktop.DBus.Property.EmitsChangedSignal" value="true"/>
+  </interface>
+</node>

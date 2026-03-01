@@ -8,6 +8,7 @@ import (
 	"log/slog"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/accessibility"
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/ageverification"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/gdm"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/keyboard"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services/locale"
@@ -32,6 +33,7 @@ type Manager struct {
 	timezoneService      timezone.Service
 	accessibilityService accessibility.Service
 	telemetryService     telemetry.Service
+	ageVerificationService ageverification.Service
 	gdmService           *gdm.Service
 	bus                  *dbus.Conn
 }
@@ -94,6 +96,8 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		return nil, status.Errorf(codes.Internal, "failed to create telemetry service: %s", err)
 	}
 
+	ageVerificationService := ageverification.Service{}
+
 	return &Manager{
 		userService:          *userService,
 		localeService:        *localeService,
@@ -102,6 +106,7 @@ func NewManager(ctx context.Context) (m *Manager, e error) {
 		timezoneService:      *timezoneService,
 		accessibilityService: *accessibilityService,
 		telemetryService:     *telemetryService,
+		ageVerificationService: ageVerificationService,
 		gdmService:           gdmService,
 		bus:                  bus,
 	}, nil
@@ -120,6 +125,7 @@ func (m Manager) RegisterGRPCServices(ctx context.Context) *grpc.Server {
 	pb.RegisterTimezoneServiceServer(grpcServer, &m.timezoneService)
 	pb.RegisterAccessibilityServiceServer(grpcServer, &m.accessibilityService)
 	pb.RegisterTelemetryServiceServer(grpcServer, &m.telemetryService)
+	pb.RegisterAgeVerificationServer(grpcServer, &m.ageVerificationService)
 
 	if m.gdmService != nil {
 		pb.RegisterGdmServiceServer(grpcServer, m.gdmService)
