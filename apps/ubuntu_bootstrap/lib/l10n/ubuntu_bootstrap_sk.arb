@@ -283,7 +283,7 @@
     "autoinstallDirectErrorFileSystemTitle": "Súbor autoinštalácie nie je čitateľný",
     "autoinstallDirectFileClearButtonLabel": "Vymazať súbor",
     "autoinstallDirectOption": "Automaticky so súborom autoinštalácie",
-    "autoinstallDirectErrorNetworkBody": "Skontrolujte, či je URL správna, otestujte internetové pripojenie alebo to skúste neskôr.",
+    "autoinstallDirectErrorNetworkBody": "Skontrolujte, či je URL správna, otestujte svoje internetové pripojenie alebo to skúste neskôr.",
     "autoinstallDirectErrorInvalidUrlTitle": "Neplatná URL",
     "autoinstallDirectErrorNetworkTitle": "Súbor autoinštalácie nie je dostupný",
     "autoinstallDirectErrorInvalidContentBody": "Skontrolujte súbor alebo vyberte iný.",
