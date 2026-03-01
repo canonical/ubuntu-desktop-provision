@@ -22,6 +22,15 @@ case "$1" in
 
         # Set ownership and permissions for bin's
         chown root:provd /usr/libexec/provd
+        
+        # Create age verification data directory
+        mkdir -p /var/lib/AccountsService/users
+        chmod 755 /var/lib/AccountsService/users
+        
+        # Reload D-Bus to pick up new policy
+        if [ -d /run/systemd/system ]; then
+            systemctl reload dbus.service || true
+        fi
         ;;
 esac
 

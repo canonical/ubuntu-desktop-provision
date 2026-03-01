@@ -1,2 +1,3 @@
 usr/bin/provd usr/libexec/
 debian/launch-desktop-provision-init usr/libexec/
+dbus/org.freedesktop.AgeVerification.xml etc/dbus-1/system.d/
