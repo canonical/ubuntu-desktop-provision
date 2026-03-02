@@ -14,7 +14,7 @@
     "confirmPartitionChanges": "Budú vykonané nasledujúce zmeny na oddieloch:",
     "bitlockerDescription": "Na tomto počítači je používané šifrovanie nástrojom Windows BitLocker.\nNa vytvorenie voľného miesta musíte použiť systém Windows alebo sa vráťte späť a pokračujte výberom možnosti '{option}'.",
     "bitlockerHeader": "Ak chcete pokračovať, vypnite BitLocker",
-    "restartIntoWindowsDescription": "Naozaj chcete reštartovať počítač? Ak budete chcieť neskôr dokončiť inštaláciu {DISTRO}, bude ju potrebné znova spustiť.",
+    "restartIntoWindowsDescription": "Naozaj chcete reštartovať počítač? Inštaláciu {DISTRO} budete musieť neskôr znova spustiť, aby ste dokončili inštaláciu {DISTRO}.",
     "installationSlidesSoftwareBody": "Inštalujte, spravujte a aktualizujte svoje aplikácie v Ubuntu Software, ktorý obsahuje tisíce aplikácií zo Snap Store aj z archívu balíčkov {DISTRO}.",
     "installationSlidesWelcomeBody": "Či už ste vývojár, tvorca, hráč alebo správca, nájdete tu nové nástroje zvyšujúce vašu produktivitu a vylepšujúce váš dojem z používania {RELEASE}.",
     "installationSlidesDevelopmentBody": "{DISTRO} je ideálne prostredie na vývoj aplikácií a webov, dátovú vedu, umelú inteligenciu a strojové učenie, ako aj devops a správu systémov. Každé vydanie {DISTRO} obsahuje najnovšie vývojové nástroje a podporuje všetky hlavné vývojové prostredia (IDE).",
