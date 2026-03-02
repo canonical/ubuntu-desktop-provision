@@ -228,15 +228,12 @@ parts:
     build-attributes: [enable-patchelf]
     stage-packages:
       - libatk1.0-0t64
-      - libc6
-      - libc6-dev
       - libcairo-gobject2
       - libcairo2
       - libegl-mesa0
       - libegl1
       # Needed for the dri drivers see https://github.com/canonical/ubuntu-desktop-installer/issues/2391
       - libelf1t64
-      - libgcc-s1
       - libgl1
       - libgles2
       - libglib2.0-0t64
@@ -265,7 +262,6 @@ parts:
       - usr/lib/*/libGL*.so.*
       - usr/lib/*/libX*.so.*
       - usr/lib/*/liba*.so.*
-      - usr/lib/*/libc*.so.*
       - usr/lib/*/libcairo*.so.*
       - usr/lib/*/libe*.so.*
       - usr/lib/*/libf*.so.*
