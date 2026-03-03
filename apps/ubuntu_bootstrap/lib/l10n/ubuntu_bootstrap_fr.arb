@@ -490,7 +490,7 @@
     "tpmActionFixActionShutdownDescription": "Éteindre l’ordinateur pour terminer les actions précédentes.",
     "tpmActionFixActionRebootToFwSettingsDescription": "Vous pouvez le faire dans les paramètres du micrologiciel de votre ordinateur.",
     "tpmActionErrorKindAddonDriversPresent": "Pilotes supplémentaires sont présents.",
-    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vous pouvez peut-être le faire dans les paramètres du micrologiciel de votre ordinateur. Consultez la documentation du fournisseur du processeur pour obtenir des conseils.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Vous pourrez peut-être le faire dans les paramètres du micrologiciel de votre ordinateur. Consultez la documentation du fournisseur du processeur pour obtenir des conseils.",
     "tpmActionFixActionProceedDescription": "Ignorer ce problème risque d'entraîner une installation moins sécurisée.",
     "tpmActionFixActionCaveatConfirm": "Vous pourriez avoir à confirmer cette action au redémarrage.",
     "tpmActionFixActionCaveatRetry": "Ensuite, vous devrez recommencer l’installation.",
