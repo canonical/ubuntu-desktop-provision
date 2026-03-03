@@ -41,7 +41,7 @@
     "otherOptions": "Egyéb lehetőségek",
     "installThirdPartyTitle": "Harmadik féltől származó szoftverek grafikus és Wi-Fi-hardverekhez, valamint további médiaformátumok telepítése",
     "installThirdPartySubtitle": "Erre a szoftverre a dokumentációjában szereplő licencfeltételek vonatkoznak. Néhányuk kereskedelmi forgalomban kapható tulajdonosi szoftver.",
-    "installationTypeAdvancedLabel": "Speciális beállítások megjelenítése…",
+    "installationTypeAdvancedLabel": "Speciális beállítások",
     "installationTypeAdvancedTitle": "Titkosítás és fájlrendszer",
     "installationTypeNone": "Nincs titkosítás",
     "installationTypeEncryptInfo": "Biztonsági kulcsot a következő lépésben fog választani.",
@@ -127,7 +127,7 @@
     "installationSlidesSoftwareBody": "Telepítse, kezelje és frissítse az Ubuntu szoftverben található összes alkalmazást, beleértve a Snap alkalmazásboltból és a(z) {DISTRO} archívumából származó több ezer alkalmazást is.",
     "installationSlidesWelcomeBody": "Legyen akár fejlesztő, alkotó, játékos vagy rendszergazda, a(z) {RELEASE} új eszközöket nyújt Önnek a termelékenység és a felhasználói élmény javításához.",
     "installationSlidesAccessibilityBody": "A(z) {DISTRO} filozófiájának középpontjában az a meggyőződés áll, hogy a számítástechnika mindenkié. A fejlett akadálymentesítési eszközökkel, valamint a nyelv, a színek és a szövegméret megváltoztatásának lehetőségeivel a(z) {DISTRO} egyszerűvé teszi a számítástechnikát – bárki és bárhol is legyen.",
-    "installationSlidesAccessibilityOrca": "Orca képernyőolvasó",
+    "installationSlidesAccessibilityOrca": "Orka képernyőolvasó",
     "installationSlidesSupportHeader": "A hivatalos {DISTRO} dokumentáció az interneten és az alkalmazásindítóban lévő Súgó ikonon keresztül is elérhető.",
     "installationSlidesSupportCommunity": "Az Ask Ubuntu a kérdések és válaszok széles skáláját lefedi, az Ubuntu Discourse pedig útmutatókat és beszélgetési lehetőségeket nyújt új és tapasztalt felhasználók számára.",
     "installationSlidesSupportEnterprise": "Vállalati felhasználóknak a Canonical kereskedelmi támogatást nyújt, hogy megkönnyítse az Ubuntu bevezetését és biztonságos kezelését a munkahelyen.",
@@ -416,35 +416,35 @@
             }
         }
     },
-    "tpmActionDocumentationLinkLabel": "Hivatkozás a dokumentációra",
+    "tpmActionDocumentationLinkLabel": "Tudjon meg többet a hardveresen támogatott titkosításról",
     "tpmActionErrorSupportLabel": "Próbálja ki az alábbi megoldásokat, vegye fel a kapcsolatot az IT-támogatással, vagy válasszon másik titkosítási módszert.",
     "tpmActionErrorSupportNoActionLabel": "Vegye fel a kapcsolatot az IT-támogatással, vagy válasszon másik titkosítási módszert.",
-    "tpmActionErrorKindInternal": "Belső",
-    "tpmActionErrorKindShutdownRequired": "Leállítás szükséges",
-    "tpmActionErrorKindRebootRequired": "Újraindítás szükséges",
-    "tpmActionErrorKindUnexpectedAction": "Váratlan művelet",
-    "tpmActionErrorKindMissingArgument": "Hiányzó argumentum",
-    "tpmActionErrorKindInvalidArgument": "Érvénytelen argumentum",
-    "tpmActionErrorKindActionFailed": "A művelet sikertelen",
+    "tpmActionErrorKindInternal": "Belső hiba.",
+    "tpmActionErrorKindShutdownRequired": "Kikapcsolás szükséges.",
+    "tpmActionErrorKindRebootRequired": "Újraindítás szükséges.",
+    "tpmActionErrorKindUnexpectedAction": "Váratlan művelet.",
+    "tpmActionErrorKindMissingArgument": "Hiányzó argumentum.",
+    "tpmActionErrorKindInvalidArgument": "Érvénytelen argumentum.",
+    "tpmActionErrorKindActionFailed": "A művelet nem sikerült.",
     "tpmActionErrorKindRunningInVm": "A jelenlegi környezet egy virtuális gép.",
     "tpmActionErrorKindSystemNotEfi": "Ez a számítógép régebbi belső vezérlőprogramot (örökölt BIOS-t) használ, amely nem kompatibilis ezzel a titkosítási módszerrel.",
-    "tpmActionErrorKindEfiVariableAccess": "Probléma van a számítógép belső vezérlőprogramjának beállításaival.",
+    "tpmActionErrorKindEfiVariableAccess": "Probléma van a számítógép belső vezérlőprogramjával.",
     "tpmActionErrorKindNoSuitableTpm2Device": "Ez a számítógép nem rendelkezik az ehhez a titkosítási módszerhez szükséges biztonsági hardverrel (TPM 2.0).",
     "tpmActionErrorKindTpmDeviceDisabled": "A számítógép TPM-je le van tiltva.",
     "tpmActionErrorKindTpmHierarchiesOwned": "A számítógép TPM-jét már használja egy másik rendszer vagy alkalmazás.",
     "tpmActionErrorKindTpmDeviceLockoutLockedOut": "A számítógép TPM-je jelenleg zárolva van.",
     "tpmActionErrorKindInsufficientTpmStorage": "A számítógép TPM-je nem rendelkezik elegendő elérhető tárhellyel.",
     "tpmActionErrorKindUnsupportedPlatform": "Ez a számítógép nem kompatibilis a hardveresen támogatott titkosítással.",
-    "tpmActionErrorKindUefiDebuggingEnabled": "Az UEFI-hibakeresés engedélyezve van",
+    "tpmActionErrorKindUefiDebuggingEnabled": "Az UEFI-hibakeresés engedélyezve van.",
     "tpmActionErrorKindInsufficientDmaProtection": "Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (DMA-védelem).",
-    "tpmActionErrorKindNoKernelIommu": "Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (rendszermag IOMMU).",
+    "tpmActionErrorKindNoKernelIommu": "Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (IOMMU).",
     "tpmActionErrorKindHostSecurity": "Probléma van a számítógép biztonsági beállításaival.",
-    "tpmActionErrorKindSysPrepApplicationsPresent": "Van olyan, rendszer indításakor futó szoftver, amely megakadályozhatja a számítógép TPM-jével való biztonságos kapcsolatot.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Van olyan, a rendszer indításakor futó szoftver, amely megakadályozhatja a számítógép TPM-jével való biztonságos kapcsolatot.",
     "tpmActionErrorKindAbsolutePresent": "Az Absolute Persistence Module engedélyezve van ezen a számítógépen.",
-    "tpmActionErrorKindInvalidSecureBootMode": "A biztonságos rendszerindítás le van tiltva ezen a számítógépen, vagy nincs beállítva az „üzembe állított” módban.",
-    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "A számítógépen lévő összetevőket ellenőrző tanúsítványok némelyike elavult vagy gyenge védelmet használ.",
+    "tpmActionErrorKindInvalidSecureBootMode": "A biztonságos rendszerindítás le van tiltva ezen a számítógépen, vagy nincs beállítva az üzembe állított módban.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "A számítógépen lévő szoftvereket ellenőrző tanúsítványok némelyike elavult vagy gyenge védelmet használ.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Ez a számítógép kézi engedélyezési listát használ a szoftverek indításkori ellenőrzéséhez.",
-    "tpmActionErrorKindAddonDriversPresent": "Kiegészítő illesztőprogramok találhatók",
+    "tpmActionErrorKindAddonDriversPresent": "Kiegészítő illesztőprogramok találhatók.",
     "tpmActionErrorKindGenericTpm": "Probléma van a számítógép TPM-jével.",
     "tpmActionErrorKindGenericFirmware": "Probléma van a számítógép belső vezérlőprogramjával.",
     "tpmActionFixActionReboot": "Újraindítás",
@@ -453,7 +453,7 @@
     "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA-védelem kézi engedélyezése",
     "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPM kézi törlése",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Biztonságos rendszerindítás kézi engedélyezése",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "DMA-védelem kézi engedélyezése",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "IOMMU kézi engedélyezése",
     "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR-bankok kézi engedélyezése",
     "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPM kézi engedélyezése",
     "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM kézi törlése",
@@ -480,8 +480,31 @@
     "tpmActionFixActionClearTpmWarningBody": "Elveszíti a hozzáférést az összes adathoz az olyan titkosított meghajtókon, amelyekhez nincsenek helyreállítási kulcsai. Ez elrontja a TPM-től függő egyéb funkciókat is, mint például a hitelesítést és a tanúsítványokat.",
     "tpmActionFixActionClearTpmConfirmationLabel": "Tisztában vagyok a TPM törlésének következményeivel",
     "tpmActionFixActionCaveatConfirm": "Lehet, hogy a művelet megerősítését kérik az újraindításkor.",
-    "tpmActionFixActionCaveatRetry": "Ezután újra meg kell próbálnia a telepítést az elejétől.",
+    "tpmActionFixActionCaveatRetry": "Ezután újra el kell indítania a telepítést.",
     "tpmActionErrorTitle": "Ez a megoldás nem sikerült",
-    "tpmActionErrorDescription": "Próbáljon másik megoldást, vagy vegye fel a kapcsolatot az IT-támogatással",
-    "manualPartitioningWarningBody": "Próbáljon valami mást. <a href=\"\">Küldhet hibajelentést is</a>."
+    "tpmActionErrorDescription": "Próbáljon másik megoldást, vagy vegye fel a kapcsolatot az IT-támogatással.",
+    "manualPartitioningWarningBody": "Próbáljon valami mást. <a href=\"\">Küldhet hibajelentést is</a>.",
+    "installationTypeLVMEncryptionInfoResolute": "Jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Ez LVM-et használ LUKS-titkosítással.",
+    "installationTypeTPMInfoResolute": "A lemez automatikusan feloldásra kerül az indítás során.",
+    "installationTypeTPMInfoUnavailable": "Nem érhető el ezen a számítógépen.",
+    "tpmActionSingleSolutionLabel": "Megoldás: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorSupportSingleLabel": "Próbálja meg a lenti megoldást, vegye fel a kapcsolatot az IT-támogatással, vagy válasszon másik titkosítási módszert.",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Ha a belső vezérlőprogram beállításai nem töltődnek be automatikusan, akkor indítsa újra a számítógépet, majd nyomja meg többször a beállítások billentyűjét az indítás során (általában F2, F10 vagy Delete).",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Ellenőrizze, hogy a biztonságos rendszerindítás módja „üzembe állított” értékre van-e állítva.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Erre a funkcióra „Virtualization Technology”, „VT-d” vagy „AMD-Vi” néven is hivatkozhatnak."
 }
