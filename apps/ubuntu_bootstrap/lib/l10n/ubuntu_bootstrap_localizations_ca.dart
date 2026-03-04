@@ -112,6 +112,14 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Per als usuaris en organitzacions que proporcionen un fitxer autoinstall mitjançant Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Canvia';
 
   @override
@@ -909,6 +917,9 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartComputerTitle => 'Voleu reiniciar l\'ordinador?';
+
+  @override
+  String get restartInstaller => 'Restart installer';
 
   @override
   String get restartIntoWindows => 'Reiniciar a WIndows';

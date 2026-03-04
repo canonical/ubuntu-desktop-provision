@@ -112,6 +112,14 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Käyttäjille, joiden organisaatio tarjoaa autoinstall-tiedoston Landscapen kautta.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Muuta';
 
   @override
@@ -896,6 +904,9 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartComputerTitle => 'Käynnistetäänkö tietokone uudelleen?';
+
+  @override
+  String get restartInstaller => 'Restart installer';
 
   @override
   String get restartIntoWindows => 'Uudelleenkäynnistä Windowsiin';

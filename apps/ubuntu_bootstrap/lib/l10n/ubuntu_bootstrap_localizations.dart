@@ -417,6 +417,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'For users in organizations that provide an autoinstall file via Landscape.'**
   String get autoinstallLandscapeDescription;
 
+  /// No description provided for @autoinstallErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'A command in the autoinstall file failed to run during installation.'**
+  String get autoinstallErrorMessage;
+
+  /// No description provided for @autoinstallErrorInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.'**
+  String get autoinstallErrorInstructions;
+
   /// No description provided for @changeButtonText.
   ///
   /// In en, this message translates to:
@@ -1713,6 +1725,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Restart computer?'**
   String get restartComputerTitle;
+
+  /// No description provided for @restartInstaller.
+  ///
+  /// In en, this message translates to:
+  /// **'Restart installer'**
+  String get restartInstaller;
 
   /// No description provided for @restartIntoWindows.
   ///

@@ -113,6 +113,14 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
       'Voor gebruikers in organisaties die een automatisch installatiebestand leveren via Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Veranderen';
 
   @override
@@ -909,6 +917,9 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartComputerTitle => 'Computer opnieuw starten?';
+
+  @override
+  String get restartInstaller => 'Restart installer';
 
   @override
   String get restartIntoWindows => 'Opnieuw starten naar Windows';

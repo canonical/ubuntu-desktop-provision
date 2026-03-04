@@ -109,6 +109,14 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
       'For users in organizations that provide an autoinstall file via Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => '바꾸기';
 
   @override
@@ -873,6 +881,9 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartComputerTitle => 'Restart computer?';
+
+  @override
+  String get restartInstaller => 'Restart installer';
 
   @override
   String get restartIntoWindows => 'Windows로 다시 시작';
