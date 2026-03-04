@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/app/installation_step.dart';
 import 'package:ubuntu_bootstrap/app/installer_model.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -83,7 +85,12 @@ class _InstallWizard extends ConsumerWidget {
         ...preInstallRoutes,
         InstallationStep.done.route: WizardRoute(
           builder: (_) => const DonePage(),
-          onLoad: (_) => const DonePage().load(context, ref),
+          onLoad: (_) {
+            if (!ref.context.mounted) {
+              return false;
+            }
+            return const DonePage().load(context, ref);
+          },
         ),
         InstallationStep.error.route: WizardRoute(
           builder: (_) => const ErrorPage(allowRestart: false),
@@ -146,24 +153,66 @@ class _AutoinstallWizard extends ConsumerWidget {
           onLoad: (_) => const DonePage().load(context, ref),
         ),
         InstallationStep.error.route: WizardRoute(
-          builder: (_) => const ErrorPage(allowRestart: false),
+          builder: (_) => ErrorPage(
+            allowRestart: false,
+            errorParser: (e) => errorParser(
+              e,
+              UbuntuBootstrapLocalizations.of(context),
+            ),
+          ),
         ),
       },
     );
   }
 }
 
-class _ErrorWizard extends StatelessWidget {
+class _ErrorWizard extends ConsumerWidget {
   const _ErrorWizard();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final status = ref.read(installerModelProvider.select((m) => m.status));
     return Wizard(
       routes: <String, WizardRoute>{
         InstallationStep.error.route: WizardRoute(
-          builder: (_) => const ErrorPage(allowRestart: false),
+          builder: (_) => ErrorPage(
+            allowRestart: false,
+            error: status,
+            errorParser: (e) => errorParser(
+              e,
+              UbuntuBootstrapLocalizations.of(context),
+            ),
+          ),
         ),
       },
     );
   }
 }
+
+ErrorDetails? errorParser(Object? e, UbuntuBootstrapLocalizations l10n) =>
+    switch (e) {
+      ApplicationStatus(
+        state: ApplicationState.ERROR,
+        nonreportableError: NonReportableError(
+          cause: 'AutoinstallUserSuppliedCmdError',
+          message: final message,
+          details: final details,
+        )
+      ) =>
+        ErrorDetails(
+          title: l10n.installationFailed,
+          message: [
+            l10n.autoinstallErrorMessage,
+            l10n.autoinstallErrorInstructions,
+          ],
+          details: [
+            message,
+            details,
+          ].nonNulls.join('\n'),
+          action: (ref) async {
+            await ref.read(autoinstallModelProvider.notifier).restart();
+          },
+          actionLabel: l10n.restartInstaller,
+        ),
+      _ => null,
+    };
