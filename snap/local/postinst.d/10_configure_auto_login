@@ -74,6 +74,8 @@ EOF
         sed -i 's/PLACEHOLDER/Lubuntu.desktop/' $ROOT/etc/sddm.conf
     elif $chroot $ROOT [ -f /usr/share/xsessions/lxqt.desktop ] || $chroot $ROOT [ -f /usr/share/wayland-sessions/lxqt.desktop ]; then
         sed -i 's/PLACEHOLDER/lxqt.desktop/' $ROOT/etc/sddm.conf
+    elif $chroot $ROOT [ -f /usr/share/xsessions/budgie-desktop.desktop ] || $chroot $ROOT [ -f /usr/share/wayland-sessions/budgie-desktop.desktop ]; then
+        sed -i 's/PLACEHOLDER/budgie-desktop.desktop/' $ROOT/etc/sddm.conf
     else #fallback if some other DE/WM is used
         if [ -d /usr/share/xsessions ]; then
             SDDMSESSION=$(ls /usr/share/xsessions | head -1)
