@@ -41,7 +41,8 @@ class InstallerService {
   }
 
   Future<void> load() async {
-    await monitorStatus().firstWhere((s) => s?.isLoading == false);
+    await monitorStatus()
+        .firstWhere((s) => s?.isLoading == false && s?.isError == false);
 
     final subiquityPages = await _getSubiquityPages();
     if (subiquityPages.isNotEmpty) {
