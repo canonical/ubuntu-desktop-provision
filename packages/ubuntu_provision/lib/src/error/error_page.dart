@@ -126,6 +126,7 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                           child: TextFormField(
                             style: TextStyle(
                               inherit: false,
+                              color: Theme.of(context).colorScheme.onSurface,
                               fontSize: Theme.of(context)
                                   .textTheme
                                   .bodyMedium!
