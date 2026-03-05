@@ -58,6 +58,11 @@ parts:
     source-commit: &commit-ref ce6beb72033cd2b85e5760f91f742db4137304fc
     source-type: git
     build-attributes: [enable-patchelf]
+    stage-packages:
+      - to riscv64:
+        - libc6
+        - libc6-dev
+        - libgcc-s1
     override-build: |
       if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
         export FLUTTER_STORAGE_BASE_URL=https://flutter-experimental.ubuntu.com
