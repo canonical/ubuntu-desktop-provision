@@ -185,22 +185,19 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
             },
           ),
           if (errorDetails?.action != null)
-            PushButton.filled(
+            PushButton.elevated(
               onPressed: () => errorDetails.action!.call(ref),
               child: Text(errorDetails!.actionLabel!),
             ),
-          WizardButton(
-            label: allowRestart ? lang.restart : lang.close,
-            highlighted: true,
-            onActivated: () async {
-              final window = YaruWindow.of(context);
-              if (allowRestart) {
+          if (allowRestart)
+            WizardButton(
+              label: lang.restart,
+              highlighted: true,
+              onActivated: () async {
+                final window = YaruWindow.of(context);
                 await model.reboot().then((_) => window.close());
-              } else {
-                await window.close();
-              }
-            },
-          ),
+              },
+            ),
         ].withSpacing(kWizardBarSpacing),
       ),
     );

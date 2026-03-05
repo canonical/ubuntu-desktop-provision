@@ -93,7 +93,7 @@ class _InstallWizard extends ConsumerWidget {
           },
         ),
         InstallationStep.error.route: WizardRoute(
-          builder: (_) => const ErrorPage(allowRestart: false),
+          builder: (_) => const ErrorPage(allowRestart: true),
         ),
       },
       predicate: (route) {
