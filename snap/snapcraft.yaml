@@ -48,6 +48,11 @@ apps:
       SNAP_PYTHON: python3
   probert:
     command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.12 $SNAP/bin/probert
+  curtin:
+    command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.12 $SNAP/bin/curtin
+    environment:
+      PYTHON: $SNAP/usr/bin/python3.12
+      PATH: $PATH:$SNAP/bin
 
 parts:
   ubuntu-bootstrap:
