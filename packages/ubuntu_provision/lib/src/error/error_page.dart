@@ -124,6 +124,15 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                               YaruExpandableButtonPosition.start,
                           header: Text('Technical details'),
                           child: TextFormField(
+                            style: TextStyle(
+                              inherit: false,
+                              fontSize: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .fontSize,
+                              fontFamily: 'Ubuntu Mono',
+                              textBaseline: TextBaseline.alphabetic,
+                            ),
                             initialValue: errorDetails!.details,
                             readOnly: true,
                             maxLines: null,
