@@ -46,9 +46,8 @@ apps:
       LIVE_RUN: 1
       LOG_LEVEL: debug
       SNAP_PYTHON: python3
-
   probert:
-    command: bin/probert
+    command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.12 $SNAP/bin/probert
 
 parts:
   ubuntu-bootstrap:
