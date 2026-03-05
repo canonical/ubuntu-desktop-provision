@@ -78,8 +78,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
             Expanded(
               child: YaruBorderContainer(
                 constraints: BoxConstraints(minHeight: 300),
-                padding:
-                    status?.interactive == false ? null : kWizardTilePadding,
+                padding: kWizardTilePadding,
                 borderRadius: kWizardBorderRadius,
                 color: Theme.of(context).colorScheme.primaryContainer,
                 child: status?.interactive == false
