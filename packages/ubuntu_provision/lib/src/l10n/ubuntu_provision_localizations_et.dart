@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Peida logi';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Käivita arvuti uuesti';
 
   @override

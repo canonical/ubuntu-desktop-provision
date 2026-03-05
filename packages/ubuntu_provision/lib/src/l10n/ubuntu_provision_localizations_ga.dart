@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Folaigh logchomhad';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Tosaigh arís';
 
   @override

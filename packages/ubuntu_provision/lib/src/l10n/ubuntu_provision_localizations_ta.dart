@@ -83,6 +83,9 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'பதிவை மறைக்க';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'மறுதொடக்கம்';
 
   @override

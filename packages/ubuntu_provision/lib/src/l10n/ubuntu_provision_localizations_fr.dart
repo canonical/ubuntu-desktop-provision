@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Masquer le journal';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Redémarrer';
 
   @override

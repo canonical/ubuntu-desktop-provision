@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Verberg logboek';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Herstarten';
 
   @override

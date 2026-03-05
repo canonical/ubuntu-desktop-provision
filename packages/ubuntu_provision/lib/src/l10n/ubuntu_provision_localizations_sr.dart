@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsSr extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Сакриј дневник';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Поново покрени';
 
   @override

@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Napló elrejtése';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Újraindítás';
 
   @override

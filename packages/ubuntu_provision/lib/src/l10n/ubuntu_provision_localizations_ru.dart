@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Скрыть журнал';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Перезагрузить';
 
   @override

@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Ukryj dziennik';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Uruchom ponownie';
 
   @override

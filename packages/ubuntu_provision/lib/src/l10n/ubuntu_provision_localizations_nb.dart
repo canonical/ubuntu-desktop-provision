@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skjul logg';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Omstart';
 
   @override

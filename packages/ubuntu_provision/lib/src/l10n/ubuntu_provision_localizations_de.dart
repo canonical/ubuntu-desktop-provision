@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Protokoll ausblenden';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Neustart';
 
   @override
