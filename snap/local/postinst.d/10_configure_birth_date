@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+
+installer_conf=/tmp/bootstrap-postinst.conf
+
+if ! source $installer_conf 2>/dev/null || [ -z "$BirthDate" ] || [ -z "$Username" ]; then
+    exit
+fi
+
+ACCT_DIR=/target/var/lib/AccountsService/users
+ACCT_FILE="$ACCT_DIR/$Username"
+
+mkdir -p "$ACCT_DIR"
+
+if [ -f "$ACCT_FILE" ]; then
+    if grep -q '^\[User\]' "$ACCT_FILE"; then
+        sed -i "/^\[User\]/a BirthDate=$BirthDate" "$ACCT_FILE"
+    else
+        printf '\n[User]\nBirthDate=%s\n' "$BirthDate" >> "$ACCT_FILE"
+    fi
+else
+    printf '[User]\nBirthDate=%s\n' "$BirthDate" > "$ACCT_FILE"
+fi
