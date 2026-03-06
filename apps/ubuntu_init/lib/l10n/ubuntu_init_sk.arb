@@ -23,7 +23,7 @@
     "telemetryDescription": "Pomôžte nám zlepšiť {distro} zdieľaním systémových údajov. Ide napríklad o model vášho zariadenia, nainštalovaný softvér a polohu, ktorú ste vybrali pre časové pásmo.",
     "privacyPolicyLink": "Ochrana údajov",
     "ubuntuProPageTitle": "Ubuntu Pro",
-    "ubuntuProSubscriptionFreeForPersonalUse": "Vždy bezplatné na osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://{url}\">Viac informácií</a>",
+    "ubuntuProSubscriptionFreeForPersonalUse": "Vždy zadarmo na osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://{url}\">Viac informácií</a>",
     "ubuntuProHeader": "Pripojiť toto zariadenie",
     "ubuntuProTokenTextfieldHint": "Token",
     "ubuntuProSubscriptionDescription": "Získajte najkomplexnejšie predplatné na zabezpečenie open-source softvéru",
