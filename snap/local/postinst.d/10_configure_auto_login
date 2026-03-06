@@ -68,14 +68,20 @@ if $chroot $ROOT [ -f /usr/bin/sddm ]; then
 User=$USER
 Session=PLACEHOLDER
 EOF
-    if $chroot $ROOT [ -f /usr/share/xsessions/plasma.desktop ]; then
+    if $chroot $ROOT [ -f /usr/share/xsessions/plasma.desktop ] || $chroot $ROOT [ -f /usr/share/wayland-sessions/plasma.desktop ]; then
         sed -i 's/PLACEHOLDER/plasma.desktop/' $ROOT/etc/sddm.conf
-    elif $chroot $ROOT [ -f /usr/share/xsessions/Lubuntu.desktop ]; then
+    elif $chroot $ROOT [ -f /usr/share/xsessions/Lubuntu.desktop ] || $chroot $ROOT [ -f /usr/share/wayland-sessions/Lubuntu.desktop ]; then
         sed -i 's/PLACEHOLDER/Lubuntu.desktop/' $ROOT/etc/sddm.conf
-    elif $chroot $ROOT [ -f /usr/share/xsessions/lxqt.desktop ]; then
+    elif $chroot $ROOT [ -f /usr/share/xsessions/lxqt.desktop ] || $chroot $ROOT [ -f /usr/share/wayland-sessions/lxqt.desktop ]; then
         sed -i 's/PLACEHOLDER/lxqt.desktop/' $ROOT/etc/sddm.conf
+    elif $chroot $ROOT [ -f /usr/share/xsessions/budgie-desktop.desktop ] || $chroot $ROOT [ -f /usr/share/wayland-sessions/budgie-desktop.desktop ]; then
+        sed -i 's/PLACEHOLDER/budgie-desktop.desktop/' $ROOT/etc/sddm.conf
     else #fallback if some other DE/WM is used
-        SDDMSESSION=$(ls /usr/share/xsessions | head -1)
+        if [ -d /usr/share/xsessions ]; then
+            SDDMSESSION=$(ls /usr/share/xsessions | head -1)
+        else
+            SDDMSESSION=$(ls /usr/share/wayland-sessions | head -1)
+        fi
         sed -i "s/PLACEHOLDER/$SDDMSESSION/" $ROOT/etc/sddm.conf
     fi
 fi
