@@ -159,6 +159,15 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'هذا الاسم طويل جدًا.';
 
   @override
+  String get identityBirthDateLabel => 'تاريخ الميلاد';
+
+  @override
+  String get identityBirthDateFormat => 'الصيغة: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'تاريخ الميلاد مطلوب';
+
+  @override
   String get identityHostnameLabel => 'اسم الحاسوب';
 
   @override

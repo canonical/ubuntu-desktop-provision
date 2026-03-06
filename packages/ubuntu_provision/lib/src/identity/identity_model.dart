@@ -59,6 +59,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
       _password,
       _confirmedPassword,
       _autoLogin,
+      _birthDate,
       _productName,
       _showPassword,
       _hasActiveDirectorySupport,
@@ -82,6 +83,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
   final _password = ValueNotifier<String?>(null);
   final _confirmedPassword = ValueNotifier<String?>(null);
   final _autoLogin = ValueNotifier<bool>(false);
+  final _birthDate = ValueNotifier<String>('');
   final _productName = ValueNotifier<String>('');
   final _showPassword = ValueNotifier<bool>(false);
   final _hasActiveDirectorySupport = ValueNotifier<bool?>(null);
@@ -122,6 +124,23 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
   bool get autoLogin => _autoLogin.value;
   set autoLogin(bool value) => _autoLogin.value = value;
 
+  /// The user's date of birth in YYYY-MM-DD format.
+  String get birthDate => _birthDate.value;
+  set birthDate(String value) => _birthDate.value = value;
+
+  static final _birthDateRegex = RegExp(r'^\d{4}-\d{2}-\d{2}$');
+
+  /// Whether the current birth date is valid.
+  bool get isBirthDateValid {
+    if (birthDate.isEmpty) return false;
+    if (!_birthDateRegex.hasMatch(birthDate)) return false;
+    final parsed = DateTime.tryParse(birthDate);
+    if (parsed == null) return false;
+    if (parsed.year < 1900) return false;
+    if (parsed.isAfter(DateTime.now())) return false;
+    return true;
+  }
+
   /// Returns true if there is at least site-wide connectivity.
   bool get isConnected => _network.isConnected || _network.isConnectedSite;
 
@@ -143,6 +162,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
         usernameOk &&
         password.isNotEmpty &&
         password == confirmedPassword &&
+        isBirthDateValid &&
         RegExp(kValidUsernamePattern).hasMatch(username) &&
         RegExp(kValidHostnamePattern).hasMatch(hostname);
   }
@@ -181,6 +201,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
       username: username,
       password: password,
       autoLogin: autoLogin,
+      birthDate: birthDate,
     );
     _log.info('Saved identity: $identity');
 

@@ -159,6 +159,15 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => '名字过长。';
 
   @override
+  String get identityBirthDateLabel => '出生日期';
+
+  @override
+  String get identityBirthDateFormat => '格式：YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => '出生日期为必填项';
+
+  @override
   String get identityHostnameLabel => '您的电脑主机名';
 
   @override
@@ -519,6 +528,15 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get identityRealNameTooLong => '該姓名太長。';
+
+  @override
+  String get identityBirthDateLabel => '出生日期';
+
+  @override
+  String get identityBirthDateFormat => '格式：YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => '出生日期為必填項';
 
   @override
   String get identityHostnameLabel => '您電腦的名稱';

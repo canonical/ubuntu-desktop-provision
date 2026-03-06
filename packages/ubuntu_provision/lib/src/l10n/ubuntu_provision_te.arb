@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "పుట్టిన తేదీ",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "ఆకృతి: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "పుట్టిన తేదీ అవసరం",
+    "@identityBirthDateRequired": {}
+}

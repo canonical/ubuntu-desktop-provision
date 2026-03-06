@@ -41,6 +41,7 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const RealNameFormField(),
+              const BirthDateFormField(),
               const HostnameFormField(),
               const UsernameFormField(),
               const PasswordFormField(),

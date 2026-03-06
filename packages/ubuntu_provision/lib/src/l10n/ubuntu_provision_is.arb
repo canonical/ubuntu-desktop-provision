@@ -2,5 +2,11 @@
   "keyboardTitle": "Lyklaborðsútfærsla",
   "keyboardHeader": "Veldu lyklaborðsútfærslu:",
   "keyboardTestHint": "Innsláðu hér til að prófa lyklaborðið þitt",
-  "keyboardDetectTitle": "Greina Sjálfvirkt Lyklaborðsútfærslu"
+  "keyboardDetectTitle": "Greina Sjálfvirkt Lyklaborðsútfærslu",
+  "identityBirthDateLabel": "Fæðingardagur",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Snið: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Fæðingardagur er nauðsynlegur",
+  "@identityBirthDateRequired": {}
 }

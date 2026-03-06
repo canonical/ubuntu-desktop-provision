@@ -224,5 +224,11 @@
     }
   },
   "successIconSemanticLabel": "Menestys",
-  "@successIconSemanticLabel": {}
+  "@successIconSemanticLabel": {},
+  "identityBirthDateLabel": "Syntymäaika",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Muoto: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Syntymäaika vaaditaan",
+  "@identityBirthDateRequired": {}
 }

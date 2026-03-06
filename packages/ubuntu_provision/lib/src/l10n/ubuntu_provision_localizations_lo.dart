@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityBirthDateLabel => 'ວັນເດືອນປີເກີດ';
+
+  @override
+  String get identityBirthDateFormat => 'ຮູບແບບ: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'ຕ້ອງການວັນເດືອນປີເກີດ';
+
+  @override
   String get identityHostnameLabel => 'Your computer\'s name';
 
   @override

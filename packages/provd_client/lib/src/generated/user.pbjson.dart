@@ -13,6 +13,8 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+import 'google/protobuf/empty.pbjson.dart' as $0;
+
 @$core.Deprecated('Use usernameValidationDescriptor instead')
 const UsernameValidation$json = {
   '1': 'UsernameValidation',
@@ -41,6 +43,7 @@ const User$json = {
     {'1': 'username', '3': 3, '4': 1, '5': 9, '10': 'username'},
     {'1': 'password', '3': 4, '4': 1, '5': 9, '10': 'password'},
     {'1': 'auto_login', '3': 5, '4': 1, '5': 8, '10': 'autoLogin'},
+    {'1': 'birth_date', '3': 6, '4': 1, '5': 9, '10': 'birthDate'},
   ],
 };
 
@@ -48,7 +51,8 @@ const User$json = {
 final $typed_data.Uint8List userDescriptor = $convert.base64Decode(
     'CgRVc2VyEhsKCXJlYWxfbmFtZRgBIAEoCVIIcmVhbE5hbWUSGgoIaG9zdG5hbWUYAiABKAlSCG'
     'hvc3RuYW1lEhoKCHVzZXJuYW1lGAMgASgJUgh1c2VybmFtZRIaCghwYXNzd29yZBgEIAEoCVII'
-    'cGFzc3dvcmQSHQoKYXV0b19sb2dpbhgFIAEoCFIJYXV0b0xvZ2lu');
+    'cGFzc3dvcmQSHQoKYXV0b19sb2dpbhgFIAEoCFIJYXV0b0xvZ2luEh0KCmJpcnRoX2RhdGUYBi'
+    'ABKAlSCWJpcnRoRGF0ZQ==');
 
 @$core.Deprecated('Use createUserRequestDescriptor instead')
 const CreateUserRequest$json = {
@@ -88,4 +92,27 @@ const ValidateUsernameResponse$json = {
 final $typed_data.Uint8List validateUsernameResponseDescriptor = $convert.base64Decode(
     'ChhWYWxpZGF0ZVVzZXJuYW1lUmVzcG9uc2USSQoTdXNlcm5hbWVfdmFsaWRhdGlvbhgBIAEoDj'
     'IYLnVzZXIuVXNlcm5hbWVWYWxpZGF0aW9uUhJ1c2VybmFtZVZhbGlkYXRpb24=');
+
+const $core.Map<$core.String, $core.dynamic> UserServiceBase$json = {
+  '1': 'UserService',
+  '2': [
+    {'1': 'CreateUser', '2': '.user.CreateUserRequest', '3': '.google.protobuf.Empty'},
+    {'1': 'ValidateUsername', '2': '.user.ValidateUsernameRequest', '3': '.user.ValidateUsernameResponse'},
+  ],
+};
+
+@$core.Deprecated('Use userServiceDescriptor instead')
+const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> UserServiceBase$messageJson = {
+  '.user.CreateUserRequest': CreateUserRequest$json,
+  '.user.User': User$json,
+  '.google.protobuf.Empty': $0.Empty$json,
+  '.user.ValidateUsernameRequest': ValidateUsernameRequest$json,
+  '.user.ValidateUsernameResponse': ValidateUsernameResponse$json,
+};
+
+/// Descriptor for `UserService`. Decode as a `google.protobuf.ServiceDescriptorProto`.
+final $typed_data.Uint8List userServiceDescriptor = $convert.base64Decode(
+    'CgtVc2VyU2VydmljZRI9CgpDcmVhdGVVc2VyEhcudXNlci5DcmVhdGVVc2VyUmVxdWVzdBoWLm'
+    'dvb2dsZS5wcm90b2J1Zi5FbXB0eRJRChBWYWxpZGF0ZVVzZXJuYW1lEh0udXNlci5WYWxpZGF0'
+    'ZVVzZXJuYW1lUmVxdWVzdBoeLnVzZXIuVmFsaWRhdGVVc2VybmFtZVJlc3BvbnNl');
 

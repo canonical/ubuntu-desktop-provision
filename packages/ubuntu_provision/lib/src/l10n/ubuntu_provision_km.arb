@@ -2,5 +2,11 @@
   "close": "បិទ",
   "@close": {},
   "restart": "ចាប់ផ្ដើមឡើងវិញ",
-  "@restart": {}
+  "@restart": {},
+  "identityBirthDateLabel": "ថ្ងៃខែឆ្នាំកំណើត",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ទម្រង់: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "ថ្ងៃខែឆ្នាំកំណើតត្រូវបានទាមទារ",
+  "@identityBirthDateRequired": {}
 }

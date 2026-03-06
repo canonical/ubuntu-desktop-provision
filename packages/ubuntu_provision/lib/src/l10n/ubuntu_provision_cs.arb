@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Maximalizovat",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalizovat",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Datum narození",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formát: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Datum narození je povinné",
+    "@identityBirthDateRequired": {}
 }

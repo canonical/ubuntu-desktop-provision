@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "تۇغۇلغان چېسلا",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "فورمات: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "تۇغۇلغان چېسلا تەلەپ قىلىنىدۇ",
+    "@identityBirthDateRequired": {}
+}

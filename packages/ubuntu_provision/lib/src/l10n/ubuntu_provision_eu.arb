@@ -20,5 +20,11 @@
   "networkHiddenWifiOption": "Konektatu ezkutuko Wi-Fi sare batera",
   "networkHiddenWifiNameLabel": "Sarearen izena",
   "networkHiddenWifiNameRequired": "Sare-izena behar da",
-  "networkNoneOption": "Ez dut internetera konektatu nahi oraingoz"
+  "networkNoneOption": "Ez dut internetera konektatu nahi oraingoz",
+  "identityBirthDateLabel": "Jaiotze-data",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formatua: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Jaiotze-data beharrezkoa da",
+  "@identityBirthDateRequired": {}
 }

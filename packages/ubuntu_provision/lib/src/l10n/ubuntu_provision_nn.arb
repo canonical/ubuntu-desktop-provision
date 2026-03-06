@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Fødselsdato",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Fødselsdato er påkravd",
+    "@identityBirthDateRequired": {}
+}

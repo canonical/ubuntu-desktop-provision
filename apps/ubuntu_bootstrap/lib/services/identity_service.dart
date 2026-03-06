@@ -21,6 +21,14 @@ class SubiquityIdentityService implements IdentityService {
   @visibleForTesting
   static const kAutoLoginUser = 'AutoLoginUser';
 
+  /// The username post-install config key.
+  @visibleForTesting
+  static const kUsername = 'Username';
+
+  /// The birth-date post-install config key.
+  @visibleForTesting
+  static const kBirthDate = 'BirthDate';
+
   @override
   Future<Identity> getIdentity() async {
     final data = await _subiquity.getIdentity();
@@ -29,6 +37,7 @@ class SubiquityIdentityService implements IdentityService {
       username: data.username,
       hostname: data.hostname,
       autoLogin: await _postInstall.get(kAutoLoginUser) != null,
+      birthDate: await _postInstall.get(kBirthDate) ?? '',
     );
   }
 
@@ -38,6 +47,11 @@ class SubiquityIdentityService implements IdentityService {
       await _postInstall.set(kAutoLoginUser, identity.username);
     } else {
       await _postInstall.set(kAutoLoginUser, null);
+    }
+
+    if (identity.birthDate.isNotEmpty) {
+      await _postInstall.set(kUsername, identity.username);
+      await _postInstall.set(kBirthDate, identity.birthDate);
     }
 
     return _subiquity.setIdentity(

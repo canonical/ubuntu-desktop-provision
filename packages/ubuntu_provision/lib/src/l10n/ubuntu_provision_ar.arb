@@ -248,5 +248,11 @@
     "maximizeIconSemanticLabel": "كبِّر",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "صغِّر",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "تاريخ الميلاد",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "الصيغة: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "تاريخ الميلاد مطلوب",
+    "@identityBirthDateRequired": {}
 }

@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Maksimalkan",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalkan",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Tanggal lahir",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Tanggal lahir wajib diisi",
+    "@identityBirthDateRequired": {}
 }

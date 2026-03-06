@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
+  String get identityBirthDateLabel => 'დაბადების თარიღი';
+
+  @override
+  String get identityBirthDateFormat => 'ფორმატი: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'დაბადების თარიღი აუცილებელია';
+
+  @override
   String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
 
   @override

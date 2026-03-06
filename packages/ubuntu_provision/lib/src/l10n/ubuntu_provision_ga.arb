@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Uasmhéadaigh",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Íoslaghdaigh",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Dáta breithe",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formáid: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Tá dáta breithe ag teastáil",
+    "@identityBirthDateRequired": {}
 }

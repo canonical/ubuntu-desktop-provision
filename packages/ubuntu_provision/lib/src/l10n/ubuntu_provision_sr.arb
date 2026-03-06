@@ -107,5 +107,11 @@
   "identityPasswordRequired": "Потребна је лозинка",
   "identityPasswordHide": "Сакриј",
   "identityActiveDirectoryOption": "Користи Active Directory",
-  "activeDirectoryDomainTooLong": "Превише дуго"
+  "activeDirectoryDomainTooLong": "Превише дуго",
+  "identityBirthDateLabel": "Датум рођења",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Формат: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Датум рођења је обавезан",
+  "@identityBirthDateRequired": {}
 }

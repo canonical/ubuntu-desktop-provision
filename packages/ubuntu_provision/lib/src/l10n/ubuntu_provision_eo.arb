@@ -224,5 +224,11 @@
     "minimizeIconSemanticLabel": "Minimumigi",
     "@minimizeIconSemanticLabel": {},
     "closeIconSemanticLabel": "Fermi",
-    "@closeIconSemanticLabel": {}
+    "@closeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Naskiĝdato",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formato: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Naskiĝdato estas bezonata",
+    "@identityBirthDateRequired": {}
 }

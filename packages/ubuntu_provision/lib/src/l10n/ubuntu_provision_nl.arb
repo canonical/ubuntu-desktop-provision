@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Maximaliseren",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimaliseren",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Geboortedatum",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formaat: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Een geboortedatum is vereist",
+    "@identityBirthDateRequired": {}
 }

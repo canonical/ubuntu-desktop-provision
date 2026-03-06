@@ -525,6 +525,24 @@ abstract class UbuntuProvisionLocalizations {
   /// **'That name is too long.'**
   String get identityRealNameTooLong;
 
+  /// No description provided for @identityBirthDateLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Date of birth'**
+  String get identityBirthDateLabel;
+
+  /// No description provided for @identityBirthDateFormat.
+  ///
+  /// In en, this message translates to:
+  /// **'Format: YYYY-MM-DD'**
+  String get identityBirthDateFormat;
+
+  /// No description provided for @identityBirthDateRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'A date of birth is required'**
+  String get identityBirthDateRequired;
+
   /// No description provided for @identityHostnameLabel.
   ///
   /// In en, this message translates to:

@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Petsa ng kapanganakan",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Kinakailangan ang petsa ng kapanganakan",
+    "@identityBirthDateRequired": {}
+}

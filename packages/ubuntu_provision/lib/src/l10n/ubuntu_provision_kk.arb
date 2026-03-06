@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Туған күні",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Пішім: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Туған күні қажет",
+    "@identityBirthDateRequired": {}
+}

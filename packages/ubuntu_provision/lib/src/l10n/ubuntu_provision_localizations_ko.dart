@@ -159,6 +159,15 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => '너무 긴 이름입니다.';
 
   @override
+  String get identityBirthDateLabel => '생년월일';
+
+  @override
+  String get identityBirthDateFormat => '형식: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => '생년월일을 입력해야 합니다';
+
+  @override
   String get identityHostnameLabel => '컴퓨터 이름';
 
   @override

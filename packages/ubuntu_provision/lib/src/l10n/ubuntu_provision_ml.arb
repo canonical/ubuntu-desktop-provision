@@ -37,5 +37,11 @@
   "networkWifiNone": "Wi-Fi ഉപകരണങ്ങളൊന്നും കണ്ടെത്തിയില്ല",
   "networkWifiDisabled": "ഈ കമ്പ്യൂട്ടറിൽ Wi-Fi ഉപയോഗിക്കുന്നതിന്, വയർലെസ് നെറ്റ്‌വർക്കിംഗ് പ്രവർത്തനക്ഷമമാക്കിയിരിക്കണം",
   "networkWifiEnable": "Wi-Fi പ്രവർത്തനക്ഷമമാക്കുക",
-  "networkNoneOption": "എനിക്ക് ഇപ്പോൾ ഇന്റർനെറ്റിലേക്ക് ബന്ധിപ്പിക്കാൻ താൽപ്പര്യമില്ല"
+  "networkNoneOption": "എനിക്ക് ഇപ്പോൾ ഇന്റർനെറ്റിലേക്ക് ബന്ധിപ്പിക്കാൻ താൽപ്പര്യമില്ല",
+  "identityBirthDateLabel": "ജനനത്തീയതി",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ഫോർമാറ്റ്: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "ജനനത്തീയതി ആവശ്യമാണ്",
+  "@identityBirthDateRequired": {}
 }

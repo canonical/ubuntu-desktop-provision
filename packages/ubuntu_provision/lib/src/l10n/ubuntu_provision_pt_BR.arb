@@ -107,5 +107,11 @@
   "eulaReviewTerms": "Revise os termos de licença",
   "eulaReadAndAcceptTerms": "Para continuar configurando esta máquina, você deve ler e aceitar os termos do contrato de licença.",
   "eulaAcceptTerms": "Li e aceito estes termos",
-  "errorPageUbuntuBug": "Para enviar um relatório de bug automatizado incluindo informações de depuração relevantes, execute <pre>sudo ubuntu-bug {SNAP}</pre> em um terminal ou no console de comando (Alt+F2)."
+  "errorPageUbuntuBug": "Para enviar um relatório de bug automatizado incluindo informações de depuração relevantes, execute <pre>sudo ubuntu-bug {SNAP}</pre> em um terminal ou no console de comando (Alt+F2).",
+  "identityBirthDateLabel": "Data de nascimento",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formato: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "A data de nascimento é obrigatória",
+  "@identityBirthDateRequired": {}
 }

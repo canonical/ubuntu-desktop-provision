@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsVi extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityBirthDateLabel => 'Ngày sinh';
+
+  @override
+  String get identityBirthDateFormat => 'Định dạng: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Ngày sinh là bắt buộc';
+
+  @override
   String get identityHostnameLabel => 'Your computer\'s name';
 
   @override

@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Bu isim çok uzun.';
 
   @override
+  String get identityBirthDateLabel => 'Doğum tarihi';
+
+  @override
+  String get identityBirthDateFormat => 'Biçim: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Doğum tarihi gereklidir';
+
+  @override
   String get identityHostnameLabel => 'Bilgisayar adı';
 
   @override

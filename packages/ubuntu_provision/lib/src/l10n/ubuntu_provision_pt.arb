@@ -240,5 +240,11 @@
   "errorPageUnexpected": "Lamentamos, mas não sabemos qual é o erro. Você pode tentar reiniciar o computador e iniciar o processo de instalação novamente. Você também pode <a>relatar o problema</a>.",
   "@errorPageUnexpected": {},
   "errorPageHideLog": "Esconder log",
-  "@errorPageHideLog": {}
+  "@errorPageHideLog": {},
+  "identityBirthDateLabel": "Data de nascimento",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formato: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "A data de nascimento é obrigatória",
+  "@identityBirthDateRequired": {}
 }

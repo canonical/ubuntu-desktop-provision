@@ -105,5 +105,11 @@
   "activeDirectoryHeader": "Logg inn i Active Directory?",
   "eulaPageTitle": "Lisensavtale",
   "eulaReviewTerms": "Vis lisensvilkårene",
-  "eulaAcceptTerms": "Jeg har lest og godtatt disse vilkårene"
+  "eulaAcceptTerms": "Jeg har lest og godtatt disse vilkårene",
+  "identityBirthDateLabel": "Fødselsdato",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Format: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Fødselsdato er påkrevd",
+  "@identityBirthDateRequired": {}
 }

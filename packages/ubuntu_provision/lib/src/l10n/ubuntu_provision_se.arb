@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Riegádanbeaivi",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formáhta: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Riegádanbeaivi lea dárbbašlaš",
+    "@identityBirthDateRequired": {}
+}

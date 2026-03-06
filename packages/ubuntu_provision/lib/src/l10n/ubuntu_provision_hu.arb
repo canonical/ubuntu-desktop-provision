@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Maximalizálás",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalizálás",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Születési dátum",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formátum: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "A születési dátum megadása kötelező",
+    "@identityBirthDateRequired": {}
 }

@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'نام بیش از حد طولانی است.';
 
   @override
+  String get identityBirthDateLabel => 'تاریخ تولد';
+
+  @override
+  String get identityBirthDateFormat => 'قالب: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'تاریخ تولد الزامی است';
+
+  @override
   String get identityHostnameLabel => 'نام رایانه‌تان';
 
   @override

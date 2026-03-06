@@ -103,5 +103,11 @@
   "accessibilityMouseKeysLabel": "마우스 키",
   "accessibilityDesktopZoomLabel": "데스크톱 확대",
   "errorPageTitle": "알 수 없는 오류가 발생했습니다",
-  "errorPageUnexpected": "죄송합니다, 알 수 없는 오류가 발생했습니다. 컴퓨터를 다시 시작하고 설치 과정을 다시 시작해 보세요. 또한 <a>이 문제를 제보할 수</a> 있습니다."
+  "errorPageUnexpected": "죄송합니다, 알 수 없는 오류가 발생했습니다. 컴퓨터를 다시 시작하고 설치 과정을 다시 시작해 보세요. 또한 <a>이 문제를 제보할 수</a> 있습니다.",
+  "identityBirthDateLabel": "생년월일",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "형식: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "생년월일을 입력해야 합니다",
+  "@identityBirthDateRequired": {}
 }

@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Esse nome é demasiado comprido.';
 
   @override
+  String get identityBirthDateLabel => 'Data de nascimento';
+
+  @override
+  String get identityBirthDateFormat => 'Formato: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'A data de nascimento é obrigatória';
+
+  @override
   String get identityHostnameLabel => 'Nome do seu computador';
 
   @override
@@ -536,6 +545,15 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
 
   @override
   String get identityRealNameTooLong => 'O nome é longo demais.';
+
+  @override
+  String get identityBirthDateLabel => 'Data de nascimento';
+
+  @override
+  String get identityBirthDateFormat => 'Formato: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'A data de nascimento é obrigatória';
 
   @override
   String get identityHostnameLabel => 'Nome do seu computador';

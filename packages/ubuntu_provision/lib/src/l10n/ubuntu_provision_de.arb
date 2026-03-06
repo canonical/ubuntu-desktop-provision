@@ -224,5 +224,11 @@
     "minimizeIconSemanticLabel": "Minimieren",
     "@minimizeIconSemanticLabel": {},
     "successIconSemanticLabel": "Erfolg",
-    "@successIconSemanticLabel": {}
+    "@successIconSemanticLabel": {},
+    "identityBirthDateLabel": "Geburtsdatum",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Ein Geburtsdatum ist erforderlich",
+    "@identityBirthDateRequired": {}
 }

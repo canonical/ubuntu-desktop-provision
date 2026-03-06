@@ -107,5 +107,11 @@
   "eulaReadAndAcceptTerms": "For at fortsætte med opsætning af denne maskine skal du læse og acceptere betingelserne i licensaftalen.",
   "eulaAcceptTerms": "Jeg har læst og accepterer disse betingelser",
   "networkPageBody": "En internetforbindelse vil forbedre din installation med kompatibilitetstjek og ekstra softwarepakker.",
-  "errorPageUbuntuBug": "Hvis du vil sende en automatisk fejlrapport med relevante fejlfindingsoplysninger, skal du køre <pre>sudo ubuntu-bug {SNAP}</pre> i en terminal eller fra kommandokonsollen (Alt+F2)."
+  "errorPageUbuntuBug": "Hvis du vil sende en automatisk fejlrapport med relevante fejlfindingsoplysninger, skal du køre <pre>sudo ubuntu-bug {SNAP}</pre> i en terminal eller fra kommandokonsollen (Alt+F2).",
+  "identityBirthDateLabel": "Fødselsdato",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Format: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "En fødselsdato er påkrævet",
+  "@identityBirthDateRequired": {}
 }

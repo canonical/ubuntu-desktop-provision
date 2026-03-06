@@ -224,5 +224,11 @@
     "minimizeIconSemanticLabel": "Minimeeri",
     "@minimizeIconSemanticLabel": {},
     "closeIconSemanticLabel": "Sulge",
-    "@closeIconSemanticLabel": {}
+    "@closeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Sünnikuupäev",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Vorming: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Sünnikuupäev on nõutav",
+    "@identityBirthDateRequired": {}
 }

@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Санаи таваллуд",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Формат: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Санаи таваллуд лозим аст",
+    "@identityBirthDateRequired": {}
+}

@@ -102,5 +102,11 @@
   "networkPageBody": "අන්තර්ජාලයට සබැඳීමෙන් අමතර මෘදුකාංග ඇසුරුම් සමඟ උපාංගයට වඩාත් අනුකූල පරිදි ස්ථාපනය වනු ඇත.",
   "eulaReviewTerms": "බලපත්‍ර නියම සමාලෝචනය කරන්න",
   "eulaReadAndAcceptTerms": "මෙම යන්ත්‍රය දිගටම පිහිටුවීමට ඔබ බලපත්‍ර එකඟතාවේ නියම කියවා පිළිගත යුතුය.",
-  "activeDirectoryInfo": "පහසුවෙන් පරිපාලනය සඳහා සක්‍රිය නාමාවලිය සමඟ බාධාවකින් තොරව අනුකලනයට {DISTRO} නිර්මාණය කර ඇත."
+  "activeDirectoryInfo": "පහසුවෙන් පරිපාලනය සඳහා සක්‍රිය නාමාවලිය සමඟ බාධාවකින් තොරව අනුකලනයට {DISTRO} නිර්මාණය කර ඇත.",
+  "identityBirthDateLabel": "උපන් දිනය",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ආකෘතිය: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "උපන් දිනය අවශ්‍යයි",
+  "@identityBirthDateRequired": {}
 }

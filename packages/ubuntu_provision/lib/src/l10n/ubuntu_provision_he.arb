@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "הגדלה",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "מזעור",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "תאריך לידה",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "פורמט: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "תאריך לידה נדרש",
+    "@identityBirthDateRequired": {}
 }

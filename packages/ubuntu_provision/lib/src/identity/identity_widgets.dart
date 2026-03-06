@@ -305,6 +305,52 @@ class UseActiveDirectoryCheckButton extends ConsumerWidget {
   }
 }
 
+class BirthDateFormField extends ConsumerWidget {
+  const BirthDateFormField({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final lang = IdentityLocalizations.of(context);
+    final birthDate =
+        ref.watch(identityModelProvider.select((model) => model.birthDate));
+    final isValid =
+        ref.watch(identityModelProvider.select((model) => model.isBirthDateValid));
+
+    return GestureDetector(
+      onTap: () => _pickDate(context, ref),
+      child: AbsorbPointer(
+        child: ValidatedFormField(
+          labelText: lang.identityBirthDateLabel,
+          successWidget: isValid
+              ? SuccessIcon(semanticLabel: lang.successIconSemanticLabel)
+              : const SizedBox(),
+          initialValue: birthDate,
+          helperText: lang.identityBirthDateFormat,
+          validator: RequiredValidator(
+            errorText: lang.identityBirthDateRequired,
+          ),
+          suffixIcon: const Icon(YaruIcons.calendar),
+        ),
+      ),
+    );
+  }
+
+  Future<void> _pickDate(BuildContext context, WidgetRef ref) async {
+    final model = ref.read(identityModelProvider);
+    final initial = DateTime.tryParse(model.birthDate) ?? DateTime(2000);
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: initial,
+      firstDate: DateTime(1900),
+      lastDate: DateTime.now(),
+    );
+    if (picked != null) {
+      model.birthDate =
+          '${picked.year.toString().padLeft(4, '0')}-${picked.month.toString().padLeft(2, '0')}-${picked.day.toString().padLeft(2, '0')}';
+    }
+  }
+}
+
 class AutoLoginCheckButton extends ConsumerWidget {
   const AutoLoginCheckButton({super.key});
 

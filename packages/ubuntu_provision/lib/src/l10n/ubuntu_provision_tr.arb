@@ -240,5 +240,11 @@
   "networkPageBody": "İnternet bağlantısı, uyumluluk kontrolü ve ekstra yazılım paketleri ile kurulumunuzu iyileştirecektir.",
   "@networkPageBody": {},
   "eulaReadAndAcceptTerms": "Bu makineyi kurmaya devam etmek için lisans sözleşmesinin şartlarını okuyup kabul etmeniz gerekir.",
-  "@eulaReadAndAcceptTerms": {}
+  "@eulaReadAndAcceptTerms": {},
+  "identityBirthDateLabel": "Doğum tarihi",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Biçim: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Doğum tarihi gereklidir",
+  "@identityBirthDateRequired": {}
 }

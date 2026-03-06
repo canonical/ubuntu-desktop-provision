@@ -51,5 +51,11 @@
   "networkWifiOff": "ระบบเครือข่ายแบบไร้สายปิดใช้อยู่",
   "networkWifiEnable": "เปิดใช้ Wi-Fi",
   "networkWifiNone": "ไม่พบอุปกรณ์ Wi-Fi",
-  "networkHiddenWifiNameRequired": "ต้องป้อนชื่อเครือข่ายด้วย"
+  "networkHiddenWifiNameRequired": "ต้องป้อนชื่อเครือข่ายด้วย",
+  "identityBirthDateLabel": "วันเกิด",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "รูปแบบ: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "จำเป็นต้องระบุวันเกิด",
+  "@identityBirthDateRequired": {}
 }

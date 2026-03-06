@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Maximera",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimera",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Födelsedatum",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Ett födelsedatum krävs",
+    "@identityBirthDateRequired": {}
 }

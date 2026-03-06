@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Roja jidayikbûnê",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Roja jidayikbûnê pêwîst e",
+    "@identityBirthDateRequired": {}
+}

@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "জন্ম তারিখ",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "বিন্যাস: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "জন্ম তারিখ প্রয়োজন",
+    "@identityBirthDateRequired": {}
+}

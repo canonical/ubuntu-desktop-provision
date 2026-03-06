@@ -163,6 +163,15 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Αυτό το όνομα είναι πολύ μακρύ.';
 
   @override
+  String get identityBirthDateLabel => 'Ημερομηνία γέννησης';
+
+  @override
+  String get identityBirthDateFormat => 'Μορφή: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Απαιτείται ημερομηνία γέννησης';
+
+  @override
   String get identityHostnameLabel => 'Το όνομα του υπολογιστή σας';
 
   @override

@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Датум на раѓање",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Формат: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Потребен е датум на раѓање",
+    "@identityBirthDateRequired": {}
+}

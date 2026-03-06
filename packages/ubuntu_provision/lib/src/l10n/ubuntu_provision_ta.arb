@@ -218,5 +218,11 @@
   "identityHostnameTooLong": "அந்த கணினி பெயர் மிக நீளமானது.",
   "@identityHostnameTooLong": {},
   "successIconSemanticLabel": "வெற்றி",
-  "@successIconSemanticLabel": {}
+  "@successIconSemanticLabel": {},
+  "identityBirthDateLabel": "பிறந்த தேதி",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "வடிவம்: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "பிறந்த தேதி தேவை",
+  "@identityBirthDateRequired": {}
 }

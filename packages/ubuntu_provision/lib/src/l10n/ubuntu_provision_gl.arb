@@ -1,4 +1,10 @@
 {
   "close": "Pechar",
-  "@close": {}
+  "@close": {},
+  "identityBirthDateLabel": "Data de nacemento",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formato: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "É necesaria unha data de nacemento",
+  "@identityBirthDateRequired": {}
 }

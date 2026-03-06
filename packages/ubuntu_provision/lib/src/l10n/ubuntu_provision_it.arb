@@ -40,5 +40,11 @@
   "accessibilityPageBody": "Personalizza {DISTRO} in base alle tue esigenze prima della configurazione. Puoi modificarli in seguito in Impostazioni di sistema.",
   "accessibilityHighContrastLabel": "Alto contrasto",
   "accessibilityLargeTextLabel": "Testo grande",
-  "accessibilityScreenReaderLabel": "Lettore di schermo"
+  "accessibilityScreenReaderLabel": "Lettore di schermo",
+  "identityBirthDateLabel": "Data di nascita",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formato: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "È richiesta una data di nascita",
+  "@identityBirthDateRequired": {}
 }

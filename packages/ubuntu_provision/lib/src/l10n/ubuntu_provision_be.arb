@@ -106,5 +106,11 @@
   "activeDirectoryAdminEmpty": "Патрабуецца",
   "activeDirectoryAdminInvalidChars": "Памылковыя сімвалы",
   "activeDirectoryPasswordLabel": "Пароль",
-  "activeDirectoryPasswordEmpty": "Патрабуецца"
+  "activeDirectoryPasswordEmpty": "Патрабуецца",
+  "identityBirthDateLabel": "Дата нараджэння",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Фармат: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Дата нараджэння абавязковая",
+  "@identityBirthDateRequired": {}
 }

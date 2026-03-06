@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Развернуть",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Свернуть",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Дата рождения",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Формат: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Дата рождения обязательна",
+    "@identityBirthDateRequired": {}
 }

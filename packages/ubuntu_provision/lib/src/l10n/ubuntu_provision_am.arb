@@ -4,5 +4,11 @@
   "keyboardTestHint": "የፊደል ገበታውን ለመሞከር እዚህ ይጻፉ",
   "keyboardDetectTitle": "የፊደል ገበታ አዘገጃጀቱን በመፈለግ ላይ",
   "keyboardPressKeyLabel": "እባክዎን ከእነዚህ ቁልፎች አንዱን ይጫኑ :",
-  "keyboardKeyPresentLabel": "ይህ የሚቀጥለው ቁልፍ በእርስዎ የፊደል ገብታው ውስጥ አለ?"
+  "keyboardKeyPresentLabel": "ይህ የሚቀጥለው ቁልፍ በእርስዎ የፊደል ገብታው ውስጥ አለ?",
+  "identityBirthDateLabel": "የልደት ቀን",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ቅርጸት: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "የልደት ቀን ያስፈልጋል",
+  "@identityBirthDateRequired": {}
 }

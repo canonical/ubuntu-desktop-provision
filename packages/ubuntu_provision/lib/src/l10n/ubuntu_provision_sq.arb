@@ -11,5 +11,11 @@
   "identityRealNameLabel": "Emri juaj",
   "identityHostnameInfo": "Emri që ai përdor kur flet me kompjuterat e tjerë.",
   "identityPasswordLabel": "Zgjidh një fjalëkalim",
-  "networkWifiEnable": "Aktivizo Wi-Fi"
+  "networkWifiEnable": "Aktivizo Wi-Fi",
+  "identityBirthDateLabel": "Data e lindjes",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formati: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Data e lindjes është e detyrueshme",
+  "@identityBirthDateRequired": {}
 }

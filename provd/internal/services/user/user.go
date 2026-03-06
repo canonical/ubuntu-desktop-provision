@@ -10,6 +10,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"time"
 
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	pb "github.com/canonical/ubuntu-desktop-provision/provd/protos"
@@ -155,6 +156,14 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	if Hostname == "" {
 		return nil, status.Errorf(codes.InvalidArgument, "received an empty Hostname")
 	}
+	birthDate := user.GetBirthDate()
+	if birthDate == "" {
+		return nil, status.Errorf(codes.InvalidArgument, "birthDate is required")
+	}
+	if err := validateBirthDate(birthDate); err != nil {
+		return nil, status.Errorf(codes.InvalidArgument, "invalid birthDate: %v", err)
+	}
+
 	// Create the user
 	var userObjectPath dbus.ObjectPath
 	call := s.accounts.Call(consts.DbusAccountsPrefix+".CreateUser", 0, username, realName, accountType)
@@ -194,6 +203,16 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 	err = s.hostname.Call(consts.DbusHostnamePrefix+".SetStaticHostname", 0, Hostname, false).Err
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to set Hostname: %v", err)
+	}
+
+	// Write birth date to userdb JSON drop-in
+	record := fmt.Sprintf("{\"userName\":%q,\"uid\":%d,\"birthDate\":%q}\n", username, userID, birthDate)
+	recordPath := fmt.Sprintf("/run/userdb/%s.user", username)
+	if err := os.MkdirAll("/run/userdb", 0755); err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to create userdb directory: %v", err)
+	}
+	if err := os.WriteFile(recordPath, []byte(record), 0644); err != nil {
+		return nil, status.Errorf(codes.Internal, "failed to write user record: %v", err)
 	}
 
 	return &emptypb.Empty{}, nil
@@ -309,4 +328,19 @@ func scanFile(file *os.File, username string) (bool, error) {
 		}
 	}
 	return false, scanner.Err()
+}
+
+// validateBirthDate checks that s is a valid YYYY-MM-DD calendar date.
+func validateBirthDate(s string) error {
+	t, err := time.Parse("2006-01-02", s)
+	if err != nil {
+		return fmt.Errorf("expected YYYY-MM-DD format: %v", err)
+	}
+	if t.Year() < 1900 {
+		return fmt.Errorf("year must be 1900 or later")
+	}
+	if t.After(time.Now()) {
+		return fmt.Errorf("date cannot be in the future")
+	}
+	return nil
 }

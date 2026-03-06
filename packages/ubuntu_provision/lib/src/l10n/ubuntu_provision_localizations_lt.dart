@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Šis vardas per ilgas.';
 
   @override
+  String get identityBirthDateLabel => 'Gimimo data';
+
+  @override
+  String get identityBirthDateFormat => 'Formatas: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Gimimo data yra privaloma';
+
+  @override
   String get identityHostnameLabel => 'Jūsų kompiuterio pavadinimas';
 
   @override

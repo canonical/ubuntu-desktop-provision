@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Datum rojstva",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Oblika: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Datum rojstva je obvezen",
+    "@identityBirthDateRequired": {}
+}

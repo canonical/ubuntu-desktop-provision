@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Nimi on liian pitkä.';
 
   @override
+  String get identityBirthDateLabel => 'Syntymäaika';
+
+  @override
+  String get identityBirthDateFormat => 'Muoto: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Syntymäaika vaaditaan';
+
+  @override
   String get identityHostnameLabel => 'Tietokoneen nimi';
 
   @override

@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Nama itu terlalu panjang.';
 
   @override
+  String get identityBirthDateLabel => 'Tanggal lahir';
+
+  @override
+  String get identityBirthDateFormat => 'Format: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Tanggal lahir wajib diisi';
+
+  @override
   String get identityHostnameLabel => 'Nama komputer Anda';
 
   @override

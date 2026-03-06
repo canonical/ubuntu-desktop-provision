@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Jméno je příliš dlouhé.';
 
   @override
+  String get identityBirthDateLabel => 'Datum narození';
+
+  @override
+  String get identityBirthDateFormat => 'Formát: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Datum narození je povinné';
+
+  @override
   String get identityHostnameLabel => 'Název pro váš počítač';
 
   @override

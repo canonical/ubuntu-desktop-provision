@@ -1,5 +1,11 @@
 {
   "keyboardTitle": "Kiểu bàn phím",
   "keyboardHeader": "Chọn kiểu bàn phím của bạn",
-  "localeHeader": "Đã chọn ngôn ngữ:"
+  "localeHeader": "Đã chọn ngôn ngữ:",
+  "identityBirthDateLabel": "Ngày sinh",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Định dạng: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Ngày sinh là bắt buộc",
+  "@identityBirthDateRequired": {}
 }

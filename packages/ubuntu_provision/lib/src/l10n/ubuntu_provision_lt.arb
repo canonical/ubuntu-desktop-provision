@@ -88,5 +88,11 @@
   "accessibilitySlowKeysLabel": "Lėtieji klavišai",
   "errorPageTitle": "Kažkas nutiko",
   "accessibilityHighContrastLabel": "Didelis kontrastas",
-  "accessibilityPageTitle": "Prieinamumas"
+  "accessibilityPageTitle": "Prieinamumas",
+  "identityBirthDateLabel": "Gimimo data",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Formatas: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Gimimo data yra privaloma",
+  "@identityBirthDateRequired": {}
 }

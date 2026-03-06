@@ -159,6 +159,15 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'その名前は長すぎます。';
 
   @override
+  String get identityBirthDateLabel => '生年月日';
+
+  @override
+  String get identityBirthDateFormat => '形式: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => '生年月日は必須です';
+
+  @override
   String get identityHostnameLabel => 'コンピューターの名前';
 
   @override

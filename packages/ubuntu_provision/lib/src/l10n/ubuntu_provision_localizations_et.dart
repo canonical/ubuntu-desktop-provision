@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'See nimi on liiga pikk.';
 
   @override
+  String get identityBirthDateLabel => 'Sünnikuupäev';
+
+  @override
+  String get identityBirthDateFormat => 'Vorming: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Sünnikuupäev on nõutav';
+
+  @override
   String get identityHostnameLabel => 'Sinu arvuti nimi';
 
   @override

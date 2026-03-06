@@ -4,5 +4,11 @@
   "keyboardTestHint": "ਆਪਣੇ ਕੀਬੋਰਡ ਨੂੰ ਟੈਸਟ ਕਰਨ ਲਈ ਇੱਥੇ ਲਿਖੋ",
   "keyboardDetectTitle": "ਕੀਬੋਰਡ ਲੇਆਉਟ ਖੋਜੋ",
   "keyboardPressKeyLabel": "ਅੱਗੇ ਦਿੱਤੀਆਂ ਸਵਿੱਚਾਂ ਦੱਬੋ:",
-  "keyboardKeyPresentLabel": "ਕੀ ਤੁਹਾਡੇ ਕੀਬੋਰਡ ਉੱਤੇ ਅੱਗੇ ਦਿੱਤੀ ਸਵਿੱਚ ਮੌਜੂਦ ਹੈ?"
+  "keyboardKeyPresentLabel": "ਕੀ ਤੁਹਾਡੇ ਕੀਬੋਰਡ ਉੱਤੇ ਅੱਗੇ ਦਿੱਤੀ ਸਵਿੱਚ ਮੌਜੂਦ ਹੈ?",
+  "identityBirthDateLabel": "ਜਨਮ ਮਿਤੀ",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ਫਾਰਮੈਟ: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "ਜਨਮ ਮਿਤੀ ਲੋੜੀਂਦੀ ਹੈ",
+  "@identityBirthDateRequired": {}
 }

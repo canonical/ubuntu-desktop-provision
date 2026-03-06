@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "ວັນເດືອນປີເກີດ",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "ຮູບແບບ: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "ຕ້ອງການວັນເດືອນປີເກີດ",
+    "@identityBirthDateRequired": {}
+}

@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "最大化",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "最小化",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "出生日期",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "格式：YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "出生日期为必填项",
+    "@identityBirthDateRequired": {}
 }

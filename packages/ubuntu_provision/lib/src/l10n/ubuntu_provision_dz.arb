@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "སྐྱེས་ཚེས།",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "རྣམ་གཞག: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "སྐྱེས་ཚེས་དགོས།",
+    "@identityBirthDateRequired": {}
+}

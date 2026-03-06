@@ -17,6 +17,7 @@ message User {
   string username = 3;
   string password = 4;
   bool auto_login = 5;
+  string birth_date = 6;  // Required. ISO 8601 calendar date (YYYY-MM-DD).
 }
 
 message CreateUserRequest {

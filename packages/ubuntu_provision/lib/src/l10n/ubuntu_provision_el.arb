@@ -132,5 +132,11 @@
   "accessibilitySeeingLabel": "Βλέποντας",
   "@accessibilitySeeingLabel": {},
   "accessibilityHearingLabel": "Ακούγοντας",
-  "@accessibilityHearingLabel": {}
+  "@accessibilityHearingLabel": {},
+  "identityBirthDateLabel": "Ημερομηνία γέννησης",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Μορφή: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Απαιτείται ημερομηνία γέννησης",
+  "@identityBirthDateRequired": {}
 }

@@ -19,5 +19,11 @@
   "identityUsernameLabel": "Dewiswch enw defnyddiwr",
   "identityPasswordLabel": "Dewiswch gyfrinair",
   "identityConfirmPasswordLabel": "Cadarnhewch eich cyfrinair",
-  "identityPasswordMismatch": "Nid yw'r cyfrineiriau yn cyd-fynd"
+  "identityPasswordMismatch": "Nid yw'r cyfrineiriau yn cyd-fynd",
+  "identityBirthDateLabel": "Dyddiad geni",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "Fformat: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "Mae dyddiad geni yn ofynnol",
+  "@identityBirthDateRequired": {}
 }

@@ -1,3 +1,9 @@
 {
-  "localeHeader": "आफ्नो भाषा छान्नुहोस्:"
+  "localeHeader": "आफ्नो भाषा छान्नुहोस्:",
+  "identityBirthDateLabel": "जन्म मिति",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ढाँचा: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "जन्म मिति आवश्यक छ",
+  "@identityBirthDateRequired": {}
 }

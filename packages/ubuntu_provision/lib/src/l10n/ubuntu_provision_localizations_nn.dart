@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsNn extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityBirthDateLabel => 'Fødselsdato';
+
+  @override
+  String get identityBirthDateFormat => 'Format: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Fødselsdato er påkravd';
+
+  @override
   String get identityHostnameLabel => 'Your computer\'s name';
 
   @override

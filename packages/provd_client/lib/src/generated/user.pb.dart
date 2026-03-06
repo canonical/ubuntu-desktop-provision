@@ -9,10 +9,12 @@
 // ignore_for_file: non_constant_identifier_names, prefer_final_fields
 // ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
+import 'dart:async' as $async;
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'google/protobuf/empty.pb.dart' as $0;
 import 'user.pbenum.dart';
 
 export 'user.pbenum.dart';
@@ -24,6 +26,7 @@ class User extends $pb.GeneratedMessage {
     $core.String? username,
     $core.String? password,
     $core.bool? autoLogin,
+    $core.String? birthDate,
   }) {
     final $result = create();
     if (realName != null) {
@@ -41,6 +44,9 @@ class User extends $pb.GeneratedMessage {
     if (autoLogin != null) {
       $result.autoLogin = autoLogin;
     }
+    if (birthDate != null) {
+      $result.birthDate = birthDate;
+    }
     return $result;
   }
   User._() : super();
@@ -53,6 +59,7 @@ class User extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'username')
     ..aOS(4, _omitFieldNames ? '' : 'password')
     ..aOB(5, _omitFieldNames ? '' : 'autoLogin')
+    ..aOS(6, _omitFieldNames ? '' : 'birthDate')
     ..hasRequiredFields = false
   ;
 
@@ -121,6 +128,15 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasAutoLogin() => $_has(4);
   @$pb.TagNumber(5)
   void clearAutoLogin() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get birthDate => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set birthDate($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasBirthDate() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearBirthDate() => clearField(6);
 }
 
 class CreateUserRequest extends $pb.GeneratedMessage {
@@ -287,6 +303,18 @@ class ValidateUsernameResponse extends $pb.GeneratedMessage {
   $core.bool hasUsernameValidation() => $_has(0);
   @$pb.TagNumber(1)
   void clearUsernameValidation() => clearField(1);
+}
+
+class UserServiceApi {
+  $pb.RpcClient _client;
+  UserServiceApi(this._client);
+
+  $async.Future<$0.Empty> createUser($pb.ClientContext? ctx, CreateUserRequest request) =>
+    _client.invoke<$0.Empty>(ctx, 'UserService', 'CreateUser', request, $0.Empty())
+  ;
+  $async.Future<ValidateUsernameResponse> validateUsername($pb.ClientContext? ctx, ValidateUsernameRequest request) =>
+    _client.invoke<ValidateUsernameResponse>(ctx, 'UserService', 'ValidateUsername', request, ValidateUsernameResponse())
+  ;
 }
 
 

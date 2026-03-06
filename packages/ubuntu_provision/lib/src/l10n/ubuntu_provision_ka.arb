@@ -107,5 +107,11 @@
   "networkPageHeader": "ინტერნეტთან დაკავშირება",
   "errorPageUbuntuBug": "იმისათვის, რომ გააგზავნოთ ანგარიში შესაბამისი გამართვის ინფორმაციით, გაუვთ <pre>sudo ububuntu-log {SNAP}</pre> ტერმინალში ან ბრძანების სტრიქონში (Alt+F2).",
   "restart": "გადატვირთვა",
-  "activeDirectoryErrorMessage": "უკაცრავად, მაგრამ ამჟამად Active Directory-ის მორგება შეუძლებელია. როცა სისტემას ბოლომდე ჩატვირთავთ, დახმარებისთვის ეწვიეთ ვებგვერდს <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>."
+  "activeDirectoryErrorMessage": "უკაცრავად, მაგრამ ამჟამად Active Directory-ის მორგება შეუძლებელია. როცა სისტემას ბოლომდე ჩატვირთავთ, დახმარებისთვის ეწვიეთ ვებგვერდს <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a>.",
+  "identityBirthDateLabel": "დაბადების თარიღი",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ფორმატი: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "დაბადების თარიღი აუცილებელია",
+  "@identityBirthDateRequired": {}
 }

@@ -38,6 +38,7 @@ extension on Identity {
         password: password,
         hostname: hostname,
         autoLogin: autoLogin,
+        birthDate: birthDate,
       );
 }
 

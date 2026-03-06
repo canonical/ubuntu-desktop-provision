@@ -160,6 +160,15 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'මෙම නම දිග වැඩියි.';
 
   @override
+  String get identityBirthDateLabel => 'උපන් දිනය';
+
+  @override
+  String get identityBirthDateFormat => 'ආකෘතිය: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'උපන් දිනය අවශ්‍යයි';
+
+  @override
   String get identityHostnameLabel => 'ඔබගේ පරිගණකයේ නම';
 
   @override

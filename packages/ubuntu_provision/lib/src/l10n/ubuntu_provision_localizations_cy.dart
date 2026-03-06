@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsCy extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityBirthDateLabel => 'Dyddiad geni';
+
+  @override
+  String get identityBirthDateFormat => 'Fformat: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Mae dyddiad geni yn ofynnol';
+
+  @override
   String get identityHostnameLabel => 'Enw eich cyfrifiadur';
 
   @override

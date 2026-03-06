@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "မွေးသက္ကရာဇ်",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "ပုံစံ: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "မွေးသက္ကရာဇ် လိုအပ်ပါသည်",
+    "@identityBirthDateRequired": {}
+}

@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Data nașterii",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Data nașterii este obligatorie",
+    "@identityBirthDateRequired": {}
+}

@@ -161,6 +161,15 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Tá an t-ainm sin rófhada.';
 
   @override
+  String get identityBirthDateLabel => 'Dáta breithe';
+
+  @override
+  String get identityBirthDateFormat => 'Formáid: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Tá dáta breithe ag teastáil';
+
+  @override
   String get identityHostnameLabel => 'Ainm do ríomhaire';
 
   @override

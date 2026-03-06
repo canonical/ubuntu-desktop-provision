@@ -224,5 +224,11 @@
     "maximizeIconSemanticLabel": "Maksymalizuj",
     "@maximizeIconSemanticLabel": {},
     "minimizeIconSemanticLabel": "Minimalizuj",
-    "@minimizeIconSemanticLabel": {}
+    "@minimizeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Data urodzenia",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Format: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Data urodzenia jest wymagana",
+    "@identityBirthDateRequired": {}
 }

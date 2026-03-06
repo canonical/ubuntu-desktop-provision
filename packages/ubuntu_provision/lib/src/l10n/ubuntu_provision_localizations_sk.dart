@@ -163,6 +163,15 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Meno je príliš dlhé.';
 
   @override
+  String get identityBirthDateLabel => 'Dátum narodenia';
+
+  @override
+  String get identityBirthDateFormat => 'Formát: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'Dátum narodenia je povinný';
+
+  @override
   String get identityHostnameLabel => 'Názov pre váš počítač';
 
   @override

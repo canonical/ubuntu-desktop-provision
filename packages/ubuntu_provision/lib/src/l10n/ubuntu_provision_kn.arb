@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "ಹುಟ್ಟಿದ ದಿನಾಂಕ",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "ಸ್ವರೂಪ: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "ಹುಟ್ಟಿದ ದಿನಾಂಕ ಅಗತ್ಯವಿದೆ",
+    "@identityBirthDateRequired": {}
+}

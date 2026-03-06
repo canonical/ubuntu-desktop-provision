@@ -17,6 +17,7 @@ class Identity {
     this.password = '',
     this.hostname = '',
     this.autoLogin = false,
+    this.birthDate = '',
   });
 
   final String realname;
@@ -24,6 +25,7 @@ class Identity {
   final String password;
   final String hostname;
   final bool autoLogin;
+  final String birthDate;
 
   Identity copyWith({
     String? realname,
@@ -31,6 +33,7 @@ class Identity {
     String? password,
     String? hostname,
     bool? autoLogin,
+    String? birthDate,
   }) {
     return Identity(
       realname: realname ?? this.realname,
@@ -38,6 +41,7 @@ class Identity {
       password: password ?? this.password,
       hostname: hostname ?? this.hostname,
       autoLogin: autoLogin ?? this.autoLogin,
+      birthDate: birthDate ?? this.birthDate,
     );
   }
 
@@ -49,7 +53,8 @@ class Identity {
         other.username == username &&
         other.password == password &&
         other.hostname == hostname &&
-        other.autoLogin == autoLogin;
+        other.autoLogin == autoLogin &&
+        other.birthDate == birthDate;
   }
 
   @override
@@ -60,12 +65,13 @@ class Identity {
       password,
       hostname,
       autoLogin,
+      birthDate,
     );
   }
 
   @override
   String toString() {
     final hiddenPassword = '*' * password.length;
-    return 'Identity(realname: $realname, username: $username, password: $hiddenPassword, hostname: $hostname, autoLogin: $autoLogin)';
+    return 'Identity(realname: $realname, username: $username, password: $hiddenPassword, hostname: $hostname, autoLogin: $autoLogin, birthDate: $birthDate)';
   }
 }

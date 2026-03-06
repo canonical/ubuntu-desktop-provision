@@ -224,5 +224,11 @@
     "minimizeIconSemanticLabel": "Згорнути",
     "@minimizeIconSemanticLabel": {},
     "closeIconSemanticLabel": "Закрити",
-    "@closeIconSemanticLabel": {}
+    "@closeIconSemanticLabel": {},
+    "identityBirthDateLabel": "Дата народження",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Формат: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Дата народження обов'язкова",
+    "@identityBirthDateRequired": {}
 }

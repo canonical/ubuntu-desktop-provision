@@ -1,3 +1,9 @@
 {
-  "keyboardTitle": "કીબોર્ડ લેઆઉટ"
+  "keyboardTitle": "કીબોર્ડ લેઆઉટ",
+  "identityBirthDateLabel": "જન્મ તારીખ",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "ફોર્મેટ: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "જન્મ તારીખ જરૂરી છે",
+  "@identityBirthDateRequired": {}
 }

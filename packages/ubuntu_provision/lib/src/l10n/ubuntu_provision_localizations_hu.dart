@@ -162,6 +162,15 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Ez a név túl hosszú.';
 
   @override
+  String get identityBirthDateLabel => 'Születési dátum';
+
+  @override
+  String get identityBirthDateFormat => 'Formátum: YYYY-MM-DD';
+
+  @override
+  String get identityBirthDateRequired => 'A születési dátum megadása kötelező';
+
+  @override
   String get identityHostnameLabel => 'A számítógépének neve';
 
   @override

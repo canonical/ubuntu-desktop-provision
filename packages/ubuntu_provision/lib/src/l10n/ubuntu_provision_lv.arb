@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "Dzimšanas datums",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "Formāts: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "Dzimšanas datums ir obligāts",
+    "@identityBirthDateRequired": {}
+}

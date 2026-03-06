@@ -1,1 +1,8 @@
-{}
+{
+    "identityBirthDateLabel": "जन्म तिथि",
+    "@identityBirthDateLabel": {},
+    "identityBirthDateFormat": "प्रारूप: YYYY-MM-DD",
+    "@identityBirthDateFormat": {},
+    "identityBirthDateRequired": "जन्म तिथि आवश्यक है",
+    "@identityBirthDateRequired": {}
+}

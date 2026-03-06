@@ -224,5 +224,11 @@
         "type": "String"
       }
     }
-  }
+  },
+  "identityBirthDateLabel": "تاریخ تولد",
+  "@identityBirthDateLabel": {},
+  "identityBirthDateFormat": "قالب: YYYY-MM-DD",
+  "@identityBirthDateFormat": {},
+  "identityBirthDateRequired": "تاریخ تولد الزامی است",
+  "@identityBirthDateRequired": {}
 }
