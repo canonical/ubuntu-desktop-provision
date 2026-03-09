@@ -286,7 +286,7 @@
     "landscapeMagicAttachInstructions": "Отсканируйте QR-код или введите код ниже на сайте <a href=\"https://{url}\">{url}</a>",
     "landscapeDomainInstructions": "Укажите домен Landscape вашей организации для входа в систему и получения файла автоматической установки. FQDN можно получить в службе технической поддержки.",
     "landscapeCodeExpiredWarning": "Код устарел, пожалуйста, попробуйте ещё раз",
-    "autoinstallLandscapeOption": "Автоматизированный с Landscape",
+    "autoinstallLandscapeOption": "Автоматизированно с Landscape",
     "landscapeHeader": "Войдите в систему, чтобы узнать о Landscape",
     "autoinstallLandscapeDescription": "Для пользователей организаций, которые предоставляют файл автоматической установки через Landscape.",
     "landscapePageTitle": "Автоматическая установка",
