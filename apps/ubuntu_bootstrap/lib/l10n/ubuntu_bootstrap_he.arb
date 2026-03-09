@@ -32,7 +32,7 @@
     "configureSecureBootSecurityKeyRequired": "נדרש מפתח אבטחה",
     "minimalInstallationTitle": "התקנת ברירת מחדל",
     "minimalInstallationSubtitle": "היסודות, דפדפן ועזרים בסיסיים.",
-    "otherOptions": "אפשרויות נוספות",
+    "otherOptions": "אפשרויות אחרות",
     "bitlockerTitle": "BitLocker פעיל",
     "installationCompleteTitle": "ההתקנה הושלמה",
     "restartInto": "הפעלה מחדש אל {system}",
