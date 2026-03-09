@@ -161,7 +161,7 @@
     "installationSlidesGamingBody": "{DISTRO} pren en carga los darrièrs pilòts NVIDIA e Mesa per melhorar las performanças e la compatibilitat. Milierats de jòcs per Windows foncionan coma cal sus {DISTRO} via d’aplicacions coma Steam amb cap de configuracion suplementària.",
     "installationSlidesSecurityBody": "{DISTRO} provesís totas las aisinas qu’avètz mestièr per demorar privat e segur en linha. Amb un parafuòc e la presa en carga VPN integrats e una seria d’aplicacions pensadas per la confidencialitat avètz tot lo contraròtle de vòstras donadas.",
     "installationSlidesSecurityLts": "Totas las versions de {DISTRO} LTS son fornidas amb cinc ans de patches de seguretat, fins a detz ans amb un abonament Ubuntu Pro.",
-    "installationSlidesProductivityBody": "{DISTRO} Desktop inclutz LibreOffice, una seguida burotica liura compatibla amb Microsoft Office pels documents, fuèlhs de calcul e las presentacion. D’espleches de collaboracion populars son tanben disponibles.",
+    "installationSlidesProductivityBody": "{DISTRO} Desktop inclutz LibreOffice, una seguida burotica liura compatibla amb Microsoft Office pels documents, fuèlhs de calcul e las presentacions. D’espleches de collaboracion populars son tanben disponibles.",
     "installationSlidesSupportCommunity": "Ask Ubuntu cobrís una larga plaja de questions e responsas e lo Discourse d’Ubuntu provesís de guidas e de discussions pels nòuvenguts e los utilizaires experimentats.",
     "installationSlidesSupportEnterprise": "Per las entrepresas Canonical fornís una assisténcia comerciala per facilitar l’integracion e la gestion d’Ubuntu en tota seguretat al lòc de trabalh.",
     "rstHeader": "Devètz desactivar lo RST per contunhar l’installacion",
