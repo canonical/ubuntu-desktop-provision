@@ -113,5 +113,6 @@
     "minimizeIconSemanticLabel": "Згорнути",
     "closeIconSemanticLabel": "Закрити",
     "expandIconSemanticLabel": "Розгорнути",
-    "collapseIconSemanticLabel": "Згорнути"
+    "collapseIconSemanticLabel": "Згорнути",
+    "errorPageTechnicalDetails": "Технічні деталі"
 }
