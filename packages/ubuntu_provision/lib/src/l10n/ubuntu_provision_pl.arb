@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Maksymalizuj",
     "minimizeIconSemanticLabel": "Minimalizuj",
     "expandIconSemanticLabel": "Rozwiń",
-    "collapseIconSemanticLabel": "Zwiń"
+    "collapseIconSemanticLabel": "Zwiń",
+    "errorPageTechnicalDetails": "Szczegóły techniczne"
 }
