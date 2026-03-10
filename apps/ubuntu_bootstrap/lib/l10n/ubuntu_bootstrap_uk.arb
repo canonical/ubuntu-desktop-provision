@@ -506,5 +506,8 @@
     "tpmActionErrorSupportSingleLabel": "Спробуйте наведене нижче рішення, зверніться до ІТ-підтримки або виберіть інший метод шифрування.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Якщо налаштування прошивки не завантажуються автоматично, перезавантажте комп’ютер і під час запуску кілька разів натискайте клавішу входу до налаштувань (зазвичай F2, F10 або Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Перевірте, чи для режиму безпечного завантаження (Secure Boot) встановлено значення \"розгорнуто\" (\"deployed\").",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Ця функція може мати назву «Virtualization Technology», «VT-d» або «AMD-Vi»."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Ця функція може мати назву «Virtualization Technology», «VT-d» або «AMD-Vi».",
+    "autoinstallErrorMessage": "Команду у файлі автоматичного встановлення не вдалося виконати під час встановлення.",
+    "autoinstallErrorInstructions": "Вам потрібно буде перезапустити встановлення. Перевірте файл автоматичного встановлення, виберіть інший тип встановлення або зверніться до ІТ-підтримки.",
+    "restartInstaller": "Перезапустити встановлювач"
 }
