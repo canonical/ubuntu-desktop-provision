@@ -179,5 +179,10 @@
     "codecsAndDriversPageDescription": "Įdiegti rekomenduojamą nuosavybinę programinę įrangą?",
     "codecsAndDriversNvidiaNote": "Aptikta „NVIDIA“ grafikos plokštė",
     "codecsAndDriversNvidiaBody": "Geriausiam „NVIDIA“ grafikos plokštės našumui pasiekti, yra primygtinai rekomenduojama įdiegti papildomas tvarkykles.",
-    "choosePassphraseTitle": "Disko slaptafrazė"
+    "choosePassphraseTitle": "Disko slaptafrazė",
+    "successIconSemanticLabel": "Sėkminga",
+    "errorIconSemanticLabel": "Klaida",
+    "closeIconSemanticLabel": "Užverti",
+    "maximizeIconSemanticLabel": "Išskleisti",
+    "minimizeIconSemanticLabel": "Suskleisti"
 }
