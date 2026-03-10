@@ -113,5 +113,6 @@
     "minimizeIconSemanticLabel": "Minimumigi",
     "closeIconSemanticLabel": "Fermi",
     "expandIconSemanticLabel": "Malkaŝi",
-    "collapseIconSemanticLabel": "Kaŝi"
+    "collapseIconSemanticLabel": "Kaŝi",
+    "errorPageTechnicalDetails": "Teĥnikaj detaloj"
 }
