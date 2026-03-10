@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Развернуть",
     "minimizeIconSemanticLabel": "Свернуть",
     "expandIconSemanticLabel": "Расширить",
-    "collapseIconSemanticLabel": "Свернуть"
+    "collapseIconSemanticLabel": "Свернуть",
+    "errorPageTechnicalDetails": "Технические сведения"
 }
