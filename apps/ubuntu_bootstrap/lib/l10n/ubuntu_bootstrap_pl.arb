@@ -518,5 +518,8 @@
     "tpmActionErrorSupportSingleLabel": "Wypróbuj poniższe rozwiązanie, skontaktuj się z pomocą techniczną lub wybierz inną metodę szyfrowania.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Jeśli ustawienia oprogramowania sprzętowego nie załadują się automatycznie, uruchom ponownie komputer i naciskaj klawisz ustawień kilkakrotnie podczas uruchamiania (najczęściej F2, F10 lub Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Sprawdź, czy tryb bezpiecznego rozruchu jest ustawiony na „wdrożony”.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funkcja ta może być nazwana „Virtualization Technology”, „VT-d” lub „AMD-Vi”."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funkcja ta może być nazwana „Virtualization Technology”, „VT-d” lub „AMD-Vi”.",
+    "autoinstallErrorMessage": "Polecenie w pliku autoinstalacji nie zostało uruchomione podczas instalacji.",
+    "autoinstallErrorInstructions": "Konieczne będzie ponowne uruchomienie instalacji. Sprawdź plik autoinstalacji, wybierz inny typ instalacji lub skontaktuj się z pomocą techniczną.",
+    "restartInstaller": "Uruchom ponownie instalator"
 }
