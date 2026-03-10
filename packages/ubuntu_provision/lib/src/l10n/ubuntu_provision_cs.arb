@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Maximalizovat",
     "minimizeIconSemanticLabel": "Minimalizovat",
     "expandIconSemanticLabel": "Rozbalit",
-    "collapseIconSemanticLabel": "Sbalit"
+    "collapseIconSemanticLabel": "Sbalit",
+    "errorPageTechnicalDetails": "Technické detaily"
 }
