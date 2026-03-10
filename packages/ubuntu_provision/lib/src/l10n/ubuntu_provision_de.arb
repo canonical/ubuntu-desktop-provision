@@ -113,5 +113,6 @@
     "minimizeIconSemanticLabel": "Minimieren",
     "successIconSemanticLabel": "Erfolg",
     "expandIconSemanticLabel": "Aufklappen",
-    "collapseIconSemanticLabel": "Einklappen"
+    "collapseIconSemanticLabel": "Einklappen",
+    "errorPageTechnicalDetails": "Technische Details"
 }
