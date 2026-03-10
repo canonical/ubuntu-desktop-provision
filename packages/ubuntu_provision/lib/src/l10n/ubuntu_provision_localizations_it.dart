@@ -37,19 +37,19 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get accessibilityZoomLabel => 'Zoom';
 
   @override
-  String get accessibilityHighContrastLabel => 'Alto contrasto';
+  String get accessibilityHighContrastLabel => 'Contrasto elevato';
 
   @override
   String get accessibilityLargeTextLabel => 'Testo grande';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Riduci animazione';
 
   @override
   String get accessibilityScreenReaderLabel => 'Lettore di schermo';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Avvisi visivi';
 
   @override
   String get accessibilityStickKeysLabel => 'Sticky keys';
@@ -61,25 +61,25 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get accessibilityMouseKeysLabel => 'Mouse keys';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Zoom desktop';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Qualcosa è andato storto';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.';
+      'Spiacenti, ma non siamo sicuri di questo errore. Puoi provare a riavviare il computer e iniziare nuovamente il processo di installazione. Puoi anche <a>segnalare l\'errore</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Per inviare una segnalazione automatica di errore includi le informazioni di debug rilevati, esegui <pre>sudo ubuntu-bug $SNAP</pre> in un terminal, o dalla console di comando (ALT+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Mostra log';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Nascondi log';
 
   @override
   String get errorPageTechnicalDetails => 'Technical details';
@@ -115,7 +115,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Detect';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'Seleziona il formato della tastiera:';
 
   @override
   String get keyboardPressKeyLabel => 'Prego premere uno dei seguenti tasti:';
@@ -129,17 +129,17 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
 
   @override
   String get themePageHeader =>
-      'You can always change this later in the appearance settings.';
+      'Puoi sempre modificarlo in seguito nelle impostazioni dell\'aspetto.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'Scuro';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'Chiaro';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Benvenuto su $DISTRO';
   }
 
   @override
@@ -152,67 +152,67 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get identityAutoLogin => 'Accedere automaticamente';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'Richiedi la password all\'accesso';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'Nome';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'È richiesto un nome';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'Il nome è troppo lungo.';
 
   @override
   String get identityHostnameLabel => 'Il nome del computer';
 
   @override
   String get identityHostnameInfo =>
-      'The name it uses when it talks to other computers.';
+      'Il nome usato per comunicare con altri computer.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'È richiesto un nome del computer';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'Il nome del computer è troppo lungo.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'Il nome del computer non è valido';
 
   @override
   String get identityUsernameLabel => 'Scegli uno username';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'È richiesto un username';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'L\'username non è valido';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'Esiste già un utente con quel nome.';
 
   @override
   String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+      'Quel nome è riservato per uso interno al sistema.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'Quel nome è troppo lungo.';
 
   @override
   String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+      'Quel nome contiene caratteri non validi.';
 
   @override
   String get identityPasswordLabel => 'Scegli una password';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'È richiesta una password';
 
   @override
   String get identityConfirmPasswordLabel => 'Conferma la password';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'Le password non corrispondono';
 
   @override
   String get identityPasswordShow => 'Mostra';
@@ -221,79 +221,80 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get identityPasswordHide => 'Nascondi';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Usa Active Directory';
 
   @override
   String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+      'Inserirai il dominio e altri dettagli nel passaggio successivo.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'Accedi ad Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Accedere ad Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO è progettato per integrarsi perfettamente con Active Directory per un\'amministrazione più semplice.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection =>
+      'Testare la connettività del dominio';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Dominio';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Richiesto';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Troppo lungo';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Caratteri non validi';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Inizia con un punto (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Termina con un punto (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'Inizia con un trattino (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'Termina con un trattino (-)';
 
   @override
   String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+      'Contiene più punti in sequenza (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Dominio non trovato';
 
   @override
   String get activeDirectoryAdminLabel => 'Domain join user';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Richiesto';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Caratteri non validi';
 
   @override
   String get activeDirectoryPasswordLabel => 'Password';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Richiesto';
 
   @override
   String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+      'Errore durante la configurazione della connessione ad Active Directory';
 
   @override
   String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+      'Spiacenti, al momento non è possibile configurare Active Directory. Una volta che il sistema è attivo e funzionante, visita <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per ricevere assistenza.';
 
   @override
   String get networkPageTitle => 'Connetti alla rete';
@@ -304,7 +305,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'Una connessione Internet migliorerà la tua installazione con controllo di compatibilità e pacchetti software aggiuntivi.';
 
   @override
   String get networkWiredOption => 'Usa connessione cablata';
@@ -320,7 +321,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
       'Per usufruire della connessione Ethernet in questo computer, una connessione cablata deve essere attiva';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'Abilita cablato';
 
   @override
   String get networkWifiOption => 'Connetti a una rete Wi-Fi';
@@ -352,33 +353,33 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
       'Non voglio connettermi alla rete in questo momento';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Accordo di licenza';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Leggi i termini della licenza';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'Per continuare a configurare questa macchina, è necessario leggere e accettare i termini del contratto di licenza.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Ho letto e accetto i termini';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Successo';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Chiudi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Massimizza';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizza';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Espandi';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Riduci';
 }

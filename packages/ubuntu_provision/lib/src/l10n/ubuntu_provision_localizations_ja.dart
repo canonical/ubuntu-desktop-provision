@@ -367,8 +367,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => '最小化';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => '広げる';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => '隠す';
 }

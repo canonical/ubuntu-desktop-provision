@@ -20,7 +20,7 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'COSA C\'È DI NUOVO?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Un inizio semplificato';
 
   @override
   String get welcomeStartSubtitle =>
@@ -157,14 +157,14 @@ class UbuntuInitLocalizationsIt extends UbuntuInitLocalizations {
       'Puoi gestire i tuoi servizi Pro nell\'applicazione Software e aggiornamenti.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Successo';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Chiudi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Massimizza';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizza';
 }

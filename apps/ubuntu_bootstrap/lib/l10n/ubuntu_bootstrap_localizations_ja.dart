@@ -362,7 +362,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PINが一致しません';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'パスフレーズが必要です';
+  String get passphraseTypePassphraseTileTitle => 'パスフレーズを要求';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
@@ -929,7 +929,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationSlidesDevelopmentTitle => '最高のオープンソースを活用して開発';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTROはDevOpsや運用だけでなく、アプリケーションやウェブの開発、データサイエンス、AI/MLにも最適なワークステーションです。$DISTROのリリースごとに、最新のツールチェインやすべての主要なIDEが含まれています。';
   }
 
@@ -1216,7 +1216,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       '起動時に暗号化の解除に失敗した場合、このリカバリーキーを使用することがあります。このキーを失くすと、すべてのデータにアクセスできなくなります。キーはパスワードマネージャーなどどこか安全なところに保存してください。';
 
   @override
-  String get recoveryKeyConfirmation => 'どこか安全なところにリカバリーキーを保存します';
+  String get recoveryKeyConfirmation => '安全なところにリカバリーキーを保存しました';
 
   @override
   String get recoveryKeyLinkLabel => '追加情報';
@@ -1288,7 +1288,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get landscapeDomainTextField => 'Landscapeドメイン(FQDN)';
 
   @override
-  String get next => '次';
+  String get next => '次へ';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>

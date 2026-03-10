@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Sie können auch das <a>Problem melden</a>.';
+      'Es tut uns leid, aber wir sind uns nicht sicher, was der Fehler ist. Sie können versuchen, Ihren Computer neu zu starten und den Installationsprozess erneut zu beginnen. Außerdem können Sie das <a>Problem melden</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -383,8 +383,8 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimieren';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Aufklappen';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Einklappen';
 }

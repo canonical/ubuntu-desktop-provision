@@ -29,7 +29,7 @@
     "@welcomeSecuritySubtitle": {},
     "telemetryLabelOn": "Ano, sdílet údaje o systému s týmem {distro}",
     "@telemetryLabelOn": {},
-    "telemetryReportLabel": "Zobrazit první hlášení",
+    "telemetryReportLabel": "Zobrazit prvotní hlášení",
     "@telemetryReportLabel": {},
     "telemetryReportTitle": "Podrobnosti hlášení",
     "@telemetryReportTitle": {},

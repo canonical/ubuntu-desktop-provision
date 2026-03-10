@@ -723,4 +723,10 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get minimizeIconSemanticLabel => '最小化';
+
+  @override
+  String get expandIconSemanticLabel => '展開';
+
+  @override
+  String get collapseIconSemanticLabel => '收合';
 }

@@ -9,16 +9,16 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsHe([String locale = 'he']) : super(locale);
 
   @override
-  String get appTitle => 'כלי איפוס יצרן';
+  String get appTitle => 'כלי איפוס להגדרות היצרן';
 
   @override
-  String get windowTitle => 'כלי איפוס יצרן';
+  String get windowTitle => 'כלי איפוס להגדרות היצרן';
 
   @override
-  String get homeTitle => 'מה מעניין אותך לבצע?';
+  String get homeTitle => 'מה ברצונך לעשות?';
 
   @override
-  String get createResetMedia => 'ליצור מדיה לאיפוס';
+  String get createResetMedia => 'ליצור אמצעי איפוס';
 
   @override
   String get startFactoryReset => 'להתחיל איפוס להגדרות יצרן';
@@ -28,7 +28,7 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
 
   @override
   String get createUsbBody =>
-      'ליצור אמצעי איפוס ב־USB לשחזור המערכת, לרבות התאמת התקנות האובונטו שלך.';
+      'ליצור אמצעי USB לאיפוס בשביל לשחזר את המערכת, כמו גם בשביל להתאים את התקנות אובונטו שלך.';
 
   @override
   String get createUsbListExplanation =>
@@ -38,14 +38,14 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get createUsbWarning => 'הכונן הנתיק יפורמט וכל הנתונים שעליו יאבדו.';
 
   @override
-  String get resetMediaTitle => 'אמצעי איפוס ב־USB';
+  String get resetMediaTitle => 'אמצעי USB לאיפוס';
 
   @override
   String get noMediaDetected => 'לא זוהו אמצעי אחסון נתיקים';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'צריך אחסון USB כדי ליצור אמצעי איפוס יצרן.';
+      'צריך אחסון USB כדי ליצור אמצעי איפוס להגדרות היצרן.';
 
   @override
   String get factoryResetTitle =>
@@ -55,11 +55,11 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get loadingDrives => 'נא להמתין בעת משיכת הכוננים.';
 
   @override
-  String get resetMediaReadyTitle => 'אמצעי האיפוס ב־USB מוכן';
+  String get resetMediaReadyTitle => 'אמצעי ה־USB לאיפוס מוכן';
 
   @override
   String get resetMediaReadyBody =>
-      'בעת הצורך, נא להכניס את כונן ה־USB למחשב המועמד לאיפוס ולהפעיל את אותו המחשב מחדש.';
+      'בעת הצורך, יש להכניס את כונן ה־USB למחשב שברצונך לאפס ולהפעיל אותו מחדש.';
 
   @override
   String get errorLoadingDrives => 'אירעה שגיאה במשיכת הכוננים.';
@@ -74,10 +74,10 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get resetMediaFinalizing => 'לקראת סיום';
 
   @override
-  String get resetMediaFinished => 'הסתיים';
+  String get resetMediaFinished => 'הפעולה הסתיימה';
 
   @override
-  String get resetMediaFailed => 'נכשל';
+  String get resetMediaFailed => 'הפעולה נכשלה';
 
   @override
   String get error => 'שגיאה';
@@ -107,11 +107,11 @@ class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
   String get ok => 'אישור';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'סגירה';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'הגדלה';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'מזעור';
 }

@@ -958,7 +958,7 @@ class UbuntuBootstrapLocalizationsBn extends UbuntuBootstrapLocalizations {
       'Develop with the best of open source';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
   }
 
@@ -1497,12 +1497,10 @@ class UbuntuBootstrapLocalizationsBn extends UbuntuBootstrapLocalizations {
       'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
 
   @override
-  String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+  String get tpmActionErrorKindAbsolutePresent => '';
 
   @override
-  String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+  String get tpmActionErrorKindInvalidSecureBootMode => '';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>

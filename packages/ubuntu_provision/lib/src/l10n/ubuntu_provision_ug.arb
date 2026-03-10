@@ -1,1 +1,152 @@
-{}
+{
+    "accessibilityPageTitle": "قولايلىق",
+    "accessibilityPageHeader": "{DISTRO} دىكى قولايلىقلىقى",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "تەڭشەشتىن ئىلگىرى ئېھتىياجىڭىزغا ئاساسەن {DISTRO} نى خاسلاشتۇرالايسىز. كېيىن ئۇلارنى سىستېما تەڭشىكىدىن ئۆزگەرتەلەيسىز.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilitySeeingLabel": "كۆرۈش سېزىمى",
+    "accessibilityHearingLabel": "ئاڭلاش سېزىمى",
+    "accessibilityTypingLabel": "كىرگۈزۈش",
+    "accessibilityPointingLabel": "نىشانلاش ۋە چېكىش",
+    "accessibilityZoomLabel": "نىسبەت",
+    "accessibilityHighContrastLabel": "يۇقىرى سېلىشتۇرما",
+    "accessibilityLargeTextLabel": "چوڭ تېكىست",
+    "accessibilityReduceAnimationLabel": "جانلاندۇرۇمنى ئازايتىش",
+    "accessibilityScreenReaderLabel": "ئېكران ئوقۇغۇچ",
+    "accessibilityVisualAlertsLabel": "كۆرۈنمە ئاگاھلاندۇرۇش",
+    "accessibilityStickKeysLabel": "يېپىشقاق كۇنۇپكا",
+    "accessibilitySlowKeysLabel": "ئاستا كۇنۇپكا",
+    "accessibilityMouseKeysLabel": "چاشقىنەك كۇنۇپكىسى",
+    "accessibilityDesktopZoomLabel": "ئۈستەلئۈستى نىسبىتى",
+    "errorPageTitle": "كاشىلا كۆرۈلدى",
+    "errorPageShowLog": "خاتىرە كۆرسەت",
+    "errorPageHideLog": "خاتىرە يوشۇر",
+    "restart": "قايتا قوزغات",
+    "close": "ياپ",
+    "timezonePageTitle": "ۋاقىت رايونى تاللىنىدۇ",
+    "timezoneLocationLabel": "ئورۇن",
+    "timezoneTimezoneLabel": "ۋاقىت رايونى",
+    "keyboardTitle": "ھەرپتاختا ئورۇنلاشتۇرۇلۇشى",
+    "keyboardHeader": "ھەرپتاختا ئورۇنلاشتۇرۇلۇشى تاللىنىدۇ",
+    "keyboardTestHint": "ھەرپتاختىڭىزنى سىناش ئۈچۈن بۇ جايغا كىرگۈزۈڭ",
+    "keyboardDetectTitle": "ھەرپتاختا جايلاشتۇرۇشنى بايقايدۇ",
+    "keyboardDetectButton": "بايقا",
+    "keyboardVariantLabel": "ھەرپتاختا ئورۇنلاشتۇرۇلۇشى تاللىنىدۇ:",
+    "keyboardPressKeyLabel": "تۆۋەندىكى كۇنۇپكىلاردىن بىرنى بېسىڭ:",
+    "keyboardKeyPresentLabel": "ھەرپتاختىڭىزدا تۆۋەندىكى كۇنۇپكىلار بارمۇ؟",
+    "themePageTitle": "ئۆرنەك تاللىنىدۇ",
+    "themePageHeader": "كېيىن قىياپەت تەڭشىكىدىن خالىغان ۋاقىتتا ئۆزگەرتەلەيسىز.",
+    "themeDark": "قاراڭغۇ",
+    "themeLight": "يورۇق",
+    "localePageTitle": "{DISTRO} غا خۇش كەلدىڭىز",
+    "@localePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "localeHeader": "تىل تاللىنىدۇ:",
+    "identityPageTitle": "ھېسابىڭىز قۇرۇلىدۇ",
+    "identityAutoLogin": "ئۆزلۈكىدىن تىزىمغا كىرىدۇ",
+    "identityRequirePassword": "تىزىمغا كىرگەندە ئىم سورايدۇ",
+    "identityRealNameLabel": "ئاتىڭىز",
+    "identityRealNameRequired": "ئىسىم زۆرۈر",
+    "identityRealNameTooLong": "ئىسىم بەك ئۇزۇن.",
+    "identityHostnameLabel": "كومپيۇتېرىڭىزنىڭ ئىسمى",
+    "identityHostnameInfo": "باشقا كومپيۇتېرلار بىلەن ئالاقە قىلغاندا بۇ كومپيۇتېر ئىشلىتىدىغان ئىسم.",
+    "identityHostnameRequired": "كومپيۇتېر ئىسمى زۆرۈر",
+    "identityHostnameTooLong": "كومپيۇتېر ئىسمى بەك ئۇزۇن.",
+    "identityInvalidHostname": "كومپيۇتېر ئىسمى ئىناۋەتسىز",
+    "identityUsernameLabel": "ئىشلەتكۈچى ئاتىڭىز",
+    "identityUsernameRequired": "ئىشلەتكۈچى ئاتى زۆرۈر",
+    "identityInvalidUsername": "ئىشلەتكۈچى ئاتى ئىناۋەتسىز",
+    "identityUsernameInUse": "ئىشلەتكۈچى ئاتى مەۋجۇت.",
+    "identityUsernameSystemReserved": "بۇ ئات سىستېمىنىڭ ئىشلىتىشى ئۈچۈن قالدۇرۇلغان.",
+    "identityUsernameTooLong": "ئىسىم بەك ئۇزۇن.",
+    "identityUsernameInvalidChars": "ئىسىمدا ئىناۋەتسىز ھەرپ بار.",
+    "identityPasswordLabel": "ئىم",
+    "identityPasswordRequired": "ئىم زۆرۈر",
+    "identityConfirmPasswordLabel": "ئىم جەزملە",
+    "identityPasswordMismatch": "ئىم ماسلاشمىدى",
+    "identityPasswordShow": "كۆرسەت",
+    "identityPasswordHide": "يوشۇر",
+    "identityActiveDirectoryOption": "ئاكتىپ مۇندەرىجىنى ئىشلىتىدۇ",
+    "identityActiveDirectoryInfo": "كېيىنكى قەدەمدە دائىرە ۋە باشقا تەپسىلاتلارنى كىرگۈزەلەيسىز.",
+    "activeDirectoryTitle": "ئاكتىپ مۇندەرىجىگە تىزىمغا كىرىش سەپلىمىسى",
+    "activeDirectoryHeader": "ئاكتىپ مۇندەرىجىگە تىزىمغا كىرەمدۇ؟",
+    "activeDirectoryInfo": "باشقۇرۇش ئاسان بولۇشى ئۈچۈن {DISTRO} ئاكتىپ مۇندەرىجە بىلەن زىچ توپلاشتۇرۇپ لايىھەلىگەن.",
+    "@activeDirectoryInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryTestConnection": "دائىرە باغلىنىشىنى سىنا",
+    "activeDirectoryDomainLabel": "دائىرە",
+    "activeDirectoryDomainEmpty": "زۆرۈر",
+    "activeDirectoryDomainTooLong": "بەك ئۇزۇن",
+    "activeDirectoryDomainInvalidChars": "ئىناۋەتسىز ھەرپ",
+    "activeDirectoryDomainStartDot": "چېكىت (.) تىن باشلىنىدۇ",
+    "activeDirectoryDomainEndDot": "چېكىت (.) بىلەن ئاخىرلىشىدۇ",
+    "activeDirectoryDomainStartHyphen": "سىزىقچە (-) بىلەن باشلىنىدۇ",
+    "activeDirectoryDomainEndHyphen": "سىزىقچە (-) بىلەن ئاخىرلىشىدۇ",
+    "activeDirectoryDomainMultipleDots": "تەرتىپلىك كۆپ چېكىت (..) بار",
+    "activeDirectoryDomainNotFound": "دائىرە تېپىلمىدى",
+    "activeDirectoryAdminLabel": "دائىرىگە قوشۇلغان ئىشلەتكۈچى",
+    "activeDirectoryAdminEmpty": "زۆرۈر",
+    "activeDirectoryAdminInvalidChars": "ئىناۋەتسىز ھەرپ",
+    "activeDirectoryPasswordLabel": "ئىم",
+    "activeDirectoryPasswordEmpty": "زۆرۈر",
+    "activeDirectoryErrorTitle": "ئاكتىپ مۇندەرىجىگە ئۇلىنىش تەڭشەشتە خاتالىق",
+    "networkPageTitle": "ئىنتېرنېت باغلىنىشى",
+    "networkPageHeader": "ئىنتېرنېتقا باغلا",
+    "networkPageBody": "ئىنتېرنېتقا باغلانغاندىن كېيىن، ماسلىشىشچانلىق تەكشۈرۈشى ۋە قوشۇمچە يۇمشاق دېتال بوغچىسى ئورنىتىشىڭىزنى ياخشىلايدۇ.",
+    "networkWiredOption": "سىملىق تور باغلىنىشى ئىشلىتىدۇ",
+    "networkWiredNone": "ھېچقانداق سىملىق تور باغلىنىشى بايقالمىدى",
+    "networkWiredOff": "سىملىق تور باغلىنىشى تاقاق",
+    "networkWiredDisabled": "بۇ كومپيۇتېردىكى دائىرىلىك تورنى ئىشلىتىشتە، سىملىق تور چوقۇم قوزغىتىلىشى كېرەك",
+    "networkWiredEnable": "سىملىق تورنى قوزغات",
+    "networkWifiOption": "Wi-Fi تورىغا باغلان",
+    "networkWifiOff": "سىمسىز تور چەكلەنگەن",
+    "networkWifiNone": "ھېچقانداق Wi-Fi تورى بايقالمىدى",
+    "networkWifiDisabled": "بۇ كومپيۇتېردىكى Wi-Fi يەنى سىمسىز تورنى ئىشلىتىشتە، سىمسىز تور چوقۇم قوزغىتىلىشى كېرەك",
+    "networkWifiEnable": "Wi-Fi نى قوزغات",
+    "networkHiddenWifiOption": "يوشۇرۇن Wi-Fi تورىغا باغلىنىدۇ",
+    "networkHiddenWifiNameLabel": "تور ئىسمى",
+    "networkHiddenWifiNameRequired": "تور ئىسمى زۆرۈر",
+    "networkNoneOption": "ئىنتېرنېتقا باغلىما",
+    "eulaPageTitle": "ئىجازەت كېلىشىمى",
+    "eulaReviewTerms": "ئىجازەتنامە ماددىلىرىنى كۆرسىتىدۇ",
+    "eulaReadAndAcceptTerms": "بۇ كومپيۇتېرنى تەڭشەشنى داۋاملاشتۇرسىڭىز، چوقۇم ئىجازەت كېلىشىمىنىڭ ماددىلىرىنى ئوقۇپ ۋە قوشۇلىسىز.",
+    "eulaAcceptTerms": "بۇ ماددىلارنى ئوقۇدۇم ۋە قوشۇلىمەن",
+    "successIconSemanticLabel": "مۇۋەپپەقىيەتلىك",
+    "closeIconSemanticLabel": "ياپ",
+    "maximizeIconSemanticLabel": "چوڭايت",
+    "minimizeIconSemanticLabel": "كىچىكلەت",
+    "expandIconSemanticLabel": "ياي",
+    "collapseIconSemanticLabel": "يىغ",
+    "errorPageUnexpected": "كەچۈرۈڭ، قانداق خاتالىق كۆرۈلگەنلىكى ئېنىق ئەمەس. كومپيۇتېرىڭىزنى قايتا قوزغىتىپ ئاندىن ئورنىتىش جەريانىنى قايتا باشلاڭ. سىز يەنە <a>مەسىلە مەلۇم قىل</a>الايسىز.",
+    "errorPageUbuntuBug": "ئەگەر سازلاش ئۇچۇرىنى ئۆز ئىچىگە ئالغان ئاپتوماتىك كەمتۈك دوكلاتى يوللىماقچى بولسىڭىز، تېرمىنال ياكى بۇيرۇق سۇپىسى(Alt+F2) دا <pre>sudo ubuntu-bug {SNAP}</pre> نى ئىجرا قىلىڭ.",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryErrorMessage": "كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ."
+}

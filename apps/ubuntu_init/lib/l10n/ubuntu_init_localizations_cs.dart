@@ -66,7 +66,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
   String get telemetryLabelOff => 'Ne, nesdílet systémové informace';
 
   @override
-  String get telemetryReportLabel => 'Zobrazit první hlášení';
+  String get telemetryReportLabel => 'Zobrazit prvotní hlášení';
 
   @override
   String get telemetryReportTitle => 'Podrobnosti hlášení';

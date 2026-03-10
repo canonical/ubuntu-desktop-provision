@@ -23,21 +23,21 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Zjednodušený začiatok';
 
   @override
-  String get welcomeStartSubtitle => 'Podpora jednoduchšieho nastavenia.';
+  String get welcomeStartSubtitle => 'Jednoduchšie a prehľadnejšie nastavenie.';
 
   @override
   String get welcomeStoreTitle => 'Nový vzhľad obchodu s aplikáciami';
 
   @override
   String get welcomeStoreSubtitle =>
-      'Nájsť svoj obľúbený softvér nebolo nikdy jednoduchšie.';
+      'Nájsť váš obľúbený softvér nebolo nikdy jednoduchšie.';
 
   @override
   String get welcomeSecurityTitle => 'Vylepšené zabezpečenie';
 
   @override
   String get welcomeSecuritySubtitle =>
-      'Nové možnosti pre hardvérové šifrovanie alebo ZFS.';
+      'Nové možnosti hardvérového alebo ZFS šifrovania.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -54,7 +54,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Pomôžte nám zlepšiť $distro zdieľaním svojich systémových údajov s nami. To zahŕňa veci, ako je model vášho zariadenia, nainštalovaný softvér a umiestnenie, ktoré ste vybrali pre svoje časové pásmo.';
+    return 'Pomôžte nám zlepšiť $distro zdieľaním systémových údajov. Ide napríklad o model vášho zariadenia, nainštalovaný softvér a polohu, ktorú ste vybrali pre časové pásmo.';
   }
 
   @override
@@ -79,24 +79,24 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
       'Zhromažďovanie telemetrických údajov zlyhalo';
 
   @override
-  String get privacyPageTitle => 'Služby umiestnenia';
+  String get privacyPageTitle => 'Služby určovania polohy';
 
   @override
-  String get privacyLocationTitle => 'Povoliť služby umiestnenia?';
+  String get privacyLocationTitle => 'Povoliť služby určovania polohy?';
 
   @override
   String get privacyLocationSubtitle =>
-      'Poskytnite aplikáciám údaje o svojej geografickej polohe.\nToto môžete kedykoľvek zmeniť v nastaveniach systému.';
+      'Umožnite aplikáciám zistiť vašu geografickú polohu.\nNastavenie môžete kedykoľvek zmeniť v Systémových nastaveniach.';
 
   @override
-  String get privacyLocationEnable => 'Služby umiestnenia';
+  String get privacyLocationEnable => 'Služby určovania polohy';
 
   @override
   String get privacyPolicyLink => 'Ochrana údajov';
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Pripojiť sa s týmto kódom na <a href=\"https://$url\">$url</a>';
+    return 'Pripojte sa pomocou tohto kódu na <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -106,14 +106,14 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Pripojiť toto zariadenie';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'alebo pridať token manuálne';
+  String get ubuntuProOrAddTokenManually => 'alebo zadať token manuálne';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Získajte najkomplexnejšie predplatné pre bezpečnosť softvéru s otvoreným zdrojovým kódom';
+      'Získajte najkomplexnejšie predplatné na zabezpečenie open-source softvéru';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
@@ -138,22 +138,22 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'Ubuntu Pro môžete povoliť kedykoľvek neskôr prostredníctvom aplikácie Softvér a aktualizácie.';
+      'Ubuntu Pro môžete aktivovať kedykoľvek neskôr prostredníctvom nástroja Softvér a aktualizácie.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Povoliť Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Aktivovať Ubuntu Pro';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Pripojte toto zariadenie k predplatnému Ubuntu Pro pre aktualizácie zabezpečenia v širšom rozsahu balíkov do roku 2032.';
+      'Pripojte toto zariadenie k predplatnému Ubuntu Pro a získajte aktualizácie zabezpečenia pre širší rozsah balíkov až do roku 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
-      'Ubuntu Pro je teraz povolené v tomto zariadení';
+      'Ubuntu Pro je teraz aktivované na tomto zariadení';
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.';
+      'Služby Pro môžete spravovať v nástroji Softvér a aktualizácie.';
 
   @override
   String get successIconSemanticLabel => 'Úspech';

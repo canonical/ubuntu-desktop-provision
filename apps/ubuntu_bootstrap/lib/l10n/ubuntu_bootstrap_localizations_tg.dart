@@ -958,7 +958,7 @@ class UbuntuBootstrapLocalizationsTg extends UbuntuBootstrapLocalizations {
       'Develop with the best of open source';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
   }
 

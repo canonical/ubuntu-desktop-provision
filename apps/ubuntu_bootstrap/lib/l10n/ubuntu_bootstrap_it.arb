@@ -1,64 +1,542 @@
 {
-  "@@locale": "it",
-  "appTitle": "Installer di Ubuntu Desktop",
-  "windowTitle": "Installa {RELEASE}",
-  "welcome": "Benvenuto",
-  "tryOrInstallTitle": "Prova o installa",
-  "tryOrInstallRepairOption": "Ripara installazione",
-  "tryOrInstallRepairDescription": "La riparazione reinstallerá tutti i programmi senza toccare alcun documento o impostazione.",
-  "tryOption": "Prova {RELEASE}",
-  "tryDescription": "Puoi provare {RELEASE} senza apportare alcuna modifica al tuo computer.",
-  "installOption": "Installa {RELEASE}",
-  "installDescription": "Installa {RELEASE} accanto (o al posto di) al tuo sistema operativo attuale. Questo non dovrebbe durare molto.",
-  "tryOrInstallReleaseNotesLabel": "Forse vorresti leggere le <a href=\"{url}\">informazioni di rilascio</a>.",
-  "rstTitle": "Disattiva RST",
-  "rstDescription": "Questo computer usa Intel RST (Rapid Storage Technology). Devi disattivare RST da Windows prima di poter installare Ubuntu.",
-  "rstInstructions": "Per istruzioni, apri questa pagina da un telefono o un altro dispositivo: <a href=\"https://{url}\">{url}</a>",
-  "changeButtonText": "Modifica",
-  "configureSecureBootDescription": "Hai scelto di installare driver software di terze parti. Questo richiede lo spegnimento dell'Avvio Sicuro.\nPer farlo, devi scegliere una chiave di sicurezza, e digitarla al riavvio del sistema.",
-  "configureSecureBootTitle": "Configura Avvio Sicuro",
-  "onBatteryWarning": "<font color=\"{color}\">Attenzione</font>: Il computer non è connesso a una fonte di alimentazione.",
-  "configureSecureBootOption": "Configura Avvio Sicuro",
-  "chooseSecurityKey": "Scegli una chiave di sicurezza",
-  "confirmSecurityKey": "Conferma la chiave di sicurezza",
-  "dontInstallDriverSoftwareNow": "Non installare il software dei driver per il momento",
-  "configureSecureBootSecurityKeyRequired": "È richiesta la chiave di sicurezza",
-  "secureBootSecurityKeysDontMatch": "Le chiavi di sicurezza non corrispondono",
-  "updatesOtherSoftwarePageTitle": "Aggiornamenti e altro software",
-  "otherOptions": "Altre opzioni",
-  "installThirdPartyTitle": "Installa software di terze parti per hardware grafico e Wi-Fi, e altri formati multimediali",
-  "installThirdPartySubtitle": "Questo software è soggetto ai termini di licenza inclusi nella documentazione. Alcuni sono proprietari.",
-  "updatesOtherSoftwarePageDescription": "Quali applicazioni installare?",
-  "notEnoughDiskSpaceTitle": "Spiacenti",
-  "configuringSystem": "Configurazione del sistema…",
-  "diskHeadersMountPoint": "Punto di mount",
-  "selectGuidedStorageInstallNow": "Installa ora",
-  "installationTypeZFSSelected": "Selezionato ZFS",
-  "installationTypeNoOSDetected": "Non è stato trovato alcun sistema operativo installato su questo computer. Come procedere?",
-  "copyingFiles": "Copia dei file…",
-  "installAlongsideSpaceDivider": "Suddividere lo spazio sul disco trascinando la barra verticale sottostante:",
-  "installationTypeDualOSDetected": "Questo computer ha installato {os1} e {os2}. Come procedere?",
-  "installCodecsSubtitle": "Questo software è soggetto ai termini di licenza inclusi nella documentazione. Alcuni sono proprietari.",
-  "installationTypeOSDetected": "Questo computer ha installato {os}. Come procedere?",
-  "installationTypeErase": "Cancella il disco e installa {DISTRO}",
-  "installationTypeAdvancedTitle": "Caratteristiche avanzate",
-  "installationTypeNone": "Nessuno",
-  "installationTypeNoneSelected": "Nessuna selezione",
-  "installationTypeReinstall": "Cancella {os} e reinstalla",
-  "installAlongsideFiles": "File",
-  "installAlongsidePartition": "Partizione:",
-  "installationTypeTitle": "Tipo d'installazione",
-  "installationTypeAdvancedLabel": "Caratteristiche avanzate…",
-  "installationTypeLVMSelected": "Selezionato LVM",
-  "installationTypeMultiOSDetected": "Questo computer ha installato più di un sistema operativo. Come procedere?",
-  "installationTypeZFS": "SPERIMENTALE: Cancella il disco e usa ZFS",
-  "confirmInstallButton": "Installa",
-  "installAlongsideSize": "Dimensione:",
-  "installationTypeManual": "Altro",
-  "selectGuidedStorageDropdownLabel": "Seleziona il disco:",
-  "selectGuidedStorageInfoLabel": "Verrà utilizzato l'intero disco:",
-  "installationFailed": "Installazione non riuscita",
-  "installingSystem": "Installazione del sistema…",
-  "showSecurityKey": "Mostra chiave di sicurezza",
-  "quitButtonText": "Esci dall' installazione"
+    "@@locale": "it",
+    "appTitle": "Installer di Ubuntu Desktop",
+    "windowTitle": "Installa {RELEASE}",
+    "welcome": "Benvenuto",
+    "tryOrInstallTitle": "Prova o installa",
+    "tryOrInstallRepairOption": "Ripara installazione",
+    "tryOrInstallRepairDescription": "La riparazione reinstallerá tutti i programmi senza toccare alcun documento o impostazione.",
+    "tryOption": "Prova {RELEASE}",
+    "tryDescription": "Puoi provare {RELEASE} senza apportare alcuna modifica al tuo computer.",
+    "installOption": "Installa {RELEASE}",
+    "installDescription": "Installa {RELEASE} accanto (o al posto di) al tuo sistema operativo attuale. Questo non dovrebbe durare molto.",
+    "tryOrInstallReleaseNotesLabel": "Forse vorresti leggere le <a href=\"{url}\">informazioni di rilascio</a>.",
+    "rstTitle": "Disattiva RST",
+    "rstDescription": "Questo computer usa Intel RST (Rapid Storage Technology). Devi disattivare RST da Windows prima di poter installare Ubuntu.",
+    "rstInstructions": "Per istruzioni, apri questa pagina da un telefono o un altro dispositivo: <a href=\"https://{url}\">{url}</a>",
+    "changeButtonText": "Modifica",
+    "configureSecureBootDescription": "Hai scelto di installare driver software di terze parti. Questo richiede lo spegnimento dell'Avvio Sicuro.\nPer farlo, devi scegliere una chiave di sicurezza, e digitarla al riavvio del sistema.",
+    "configureSecureBootTitle": "Configura Avvio Sicuro",
+    "onBatteryWarning": "<font color=\"{color}\">Attenzione</font>: Il computer non è connesso a una fonte di alimentazione.",
+    "configureSecureBootOption": "Configura Avvio Sicuro",
+    "chooseSecurityKey": "Scegli una chiave di sicurezza",
+    "confirmSecurityKey": "Conferma la chiave di sicurezza",
+    "dontInstallDriverSoftwareNow": "Non installare il software dei driver per il momento",
+    "configureSecureBootSecurityKeyRequired": "È richiesta la chiave di sicurezza",
+    "secureBootSecurityKeysDontMatch": "Le chiavi di sicurezza non corrispondono",
+    "updatesOtherSoftwarePageTitle": "Aggiornamenti e altro software",
+    "otherOptions": "Altre opzioni",
+    "installThirdPartyTitle": "Installa software di terze parti per hardware grafico e Wi-Fi, e altri formati multimediali",
+    "installThirdPartySubtitle": "Questo software è soggetto ai termini di licenza inclusi nella documentazione. Alcuni sono proprietari.",
+    "updatesOtherSoftwarePageDescription": "Quali applicazioni installare?",
+    "notEnoughDiskSpaceTitle": "Spiacenti",
+    "configuringSystem": "Configurazione del sistema…",
+    "diskHeadersMountPoint": "Punto di mount",
+    "selectGuidedStorageInstallNow": "Installa ora",
+    "installationTypeZFSSelected": "Selezionato ZFS",
+    "installationTypeNoOSDetected": "Non è stato trovato alcun sistema operativo installato su questo computer. Come procedere?",
+    "copyingFiles": "Copia dei file…",
+    "installAlongsideSpaceDivider": "Suddividere lo spazio sul disco trascinando la barra verticale sottostante:",
+    "installationTypeDualOSDetected": "Questo computer ha installato {os1} e {os2}. Come procedere?",
+    "installCodecsSubtitle": "Questo software è soggetto ai termini di licenza inclusi nella documentazione. Alcuni sono proprietari.",
+    "installationTypeOSDetected": "Questo computer ha installato {os}. Come procedere?",
+    "installationTypeErase": "Cancella il disco e installa {DISTRO}",
+    "installationTypeAdvancedTitle": "Cifratura e file system",
+    "installationTypeNone": "Nessuna cifratura",
+    "installationTypeNoneSelected": "Nessuna selezione",
+    "installationTypeReinstall": "Cancella {os} e reinstalla",
+    "installAlongsideFiles": "File",
+    "installAlongsidePartition": "Partizione:",
+    "installationTypeTitle": "Tipo d'installazione",
+    "installationTypeAdvancedLabel": "Mostra opzioni avanzate…",
+    "installationTypeLVMSelected": "Selezionato LVM",
+    "installationTypeMultiOSDetected": "Questo computer ha installato più di un sistema operativo. Come procedere?",
+    "installationTypeZFS": "Usa ZFS senza cifratura",
+    "confirmInstallButton": "Installa",
+    "installAlongsideSize": "Dimensione:",
+    "installationTypeManual": "Altro",
+    "selectGuidedStorageDropdownLabel": "Seleziona il disco:",
+    "selectGuidedStorageInfoLabel": "Verrà utilizzato l'intero disco:",
+    "installationFailed": "Installazione non riuscita",
+    "installingSystem": "Installazione del sistema…",
+    "showSecurityKey": "Mostra chiave di sicurezza",
+    "quitButtonText": "Esci dall' installazione",
+    "autoinstallDirectTitle": "Installazione automatica",
+    "autoinstallDirectHeader": "Importa autoinstall file",
+    "autoinstallDirectUrlLabel": "Puoi inserire l'URL del file di autoinstall:",
+    "autoinstallDirectFileLabel": "O selezione un file locale:",
+    "autoinstallDirectFileButtonLabel": "Seleziona file...",
+    "autoinstallDirectFileClearButtonLabel": "Pulisci file",
+    "autoinstallDirectFilePickerTitle": "Scegli file",
+    "autoinstallDirectImportButtonLabel": "Importa",
+    "autoinstallDirectErrorNetworkTitle": "File di autoinstall non è raggiungibile",
+    "autoinstallDirectErrorNetworkBody": "Controlla se l'URL è corretto, testa la connessione internet, o riprova più tardi.",
+    "autoinstallDirectErrorInvalidUrlTitle": "URL invalido",
+    "autoinstallDirectErrorInvalidUrlBody": "Controlla se l'URL è corretto o selezione un file locale.",
+    "autoinstallDirectErrorInvalidContentTitle": "File di autoinstall invalido",
+    "autoinstallDirectErrorInvalidContentBody": "Controlla il file o seleziona uno diverso.",
+    "autoinstallDirectErrorFileSystemTitle": "Il file di autoinstall non è leggibile",
+    "autoinstallDirectErrorFileSystemBody": "Controlla i permessi o seleziona un file diverso.",
+    "autoinstallDirectErrorUnkownTitle": "Errore sconosciuto",
+    "autoinstallTitle": "Tipo di installazione",
+    "autoinstallHeader": "Come vorresti installare {DISTRO}?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "Inserisci l'URL di autoinstall.yaml o il percorso di un file locale:",
+    "autoinstallInteractiveOption": "Installazione interattiva",
+    "autoinstallInteractiveDescription": "Per gli utenti che vogliono essere guidati passo passo nell'installazione.",
+    "autoinstallDirectOption": "Automatica con file di autoinstall",
+    "autoinstallDirectDescription": "Per utenti avanzati che hanno un autoinstall.yaml per installazioni consistenti e riproducibili.",
+    "autoinstallLandscapeOption": "Automatico con Landscape",
+    "autoinstallLandscapeDescription": "Per utenti e organizzazioni che forniscono un file di autoinstall via Landscape.",
+    "autoinstallDirectFilePickerFilterLabel": "File YAML",
+    "loadingPageTitle": "Benvenuto su {DISTRO}",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "Preparando {DISTRO}…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "Attenzione:",
+    "tryOrInstallHeader": "Cosa vuoi fare con {DISTRO}?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "rstHeader": "Devi disabilitare RST per continuare l'installazione",
+    "rstDisable": "Il computer utilizza Intel RST (Rapid Storage Technology). Puoi disabilitare RST in:",
+    "rstDisableWindows": "Windows, se stai usando un'installazione dual boot con Windows",
+    "rstDisableBios": "Impostazioni BIOS",
+    "dontInstallDriverSoftwareNowDescription": "Puoi installarlo in seguito da Software e Aggiornamenti.",
+    "hideSecurityKey": "Nascondi",
+    "codecsAndDriversPageTitle": "Ottimizza il tuo computer",
+    "codecsAndDriversPageDescription": "Installare il software proprietario raccomandato?",
+    "codecsAndDriversPageBody": "{DISTRO} è distribuito senza software proprietario. Installare software aggiuntivo potrebbe migliorare le prestazioni del computer.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "Rilevata scheda grafica NVIDIA",
+    "codecsAndDriversNvidiaBody": "Per le migliori prestazioni delle schede grafiche NVIDIA, è fortemente raccomandato installare driver aggiuntivi.",
+    "fullInstallationTitle": "Selezione estesa",
+    "fullInstallationSubtitle": "Una selezione di strumenti di produttività, utilità e web browser funzionanti offline.",
+    "minimalInstallationTitle": "Selezione predefinita",
+    "minimalInstallationSubtitle": "Solo gli essenziali, web browser e utilità di base.",
+    "installDriversTitle": "Installa software di terze parti per hardware grafico e Wi-Fi",
+    "installDriversSubtitle": "Inclusi, ma non esclusivamente, driver NVIDIA e simili",
+    "installCodecsTitle": "Scarica e installa supporto per formati media aggiuntivi",
+    "batteryWarning": "Il computer non è collegato a una sorgente di alimentazione.",
+    "offlineWarning": "Sei offline",
+    "choosePassphraseHeader": "Crea una frase d'accesso",
+    "choosePassphraseBody": "Dovrai inserire la frase d'accesso ogni volta che accendi il computer. Questa frase d'accesso è diversa dalla password utente.",
+    "choosePassphraseInfoHeader": "Assicurati di salvare la tua frase d'accesso",
+    "choosePassphraseInfoBody": "Se viene persa, perderai tutti i tuoi dati.",
+    "chooseOptionalPassphraseInfoHeader": "Conserva la tua frase d'accesso e chiave di recupero in un luogo sicuro",
+    "chooseOptionalPassphraseInfoBody": "Se perdi la tua frase d'accesso, perderai tutti i tuoi dai. La frase d'accesso non sostituisce la chiave di recupero o la tua password utente.",
+    "passphrasePageTitle": "Cifratura",
+    "passphrasePageHeaderPassphrase": "Imposta una frase d'accesso di cifratura",
+    "passphrasePageHeaderPin": "Imposta un PIN di cifratura",
+    "passphrasePageChoosePassphraseHint": "Frase d'accesso",
+    "passphrasePageConfirmPassphraseHint": "Conferma frase d'accesso",
+    "passphrasePageRequiredPassphrase": "Una frase d'accesso è obbligatoria",
+    "passphrasePageMismatchPassphrase": "Le frasi d'accesso non corrispondono",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "Conferma PIN",
+    "passphrasePageRequiredPin": "Un PIN è obbligatorio",
+    "passphrasePageMismatchPin": "I PIN non corrispondono",
+    "passphraseTypePassphraseTileTitle": "Richiedi una frase d'accesso",
+    "passphraseTypeNoneTileTitle": "Sblocca il disco automaticamente",
+    "passphraseTypePageHeader": "Sicurezza aggiuntiva",
+    "installationTypeHeader": "Come vuoi installare {DISTRO}?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Tutti i dati e partizioni sul disco verranno eliminati, inclusi i sistemi operativi.",
+    "installationTypeExperimental": "Sperimentale",
+    "installationTypeNoneInfo": "File system standard senza cifratura.",
+    "installationTypeLVM": "Usa LVM senza cifratura",
+    "installationTypeLVMEncryption": "Cifra con una frase d'accesso",
+    "installationTypeLVMEncryptionSelected": "LVM e cifratura selezionati",
+    "installationTypeEncryptInfo": "Sceglierai una chiave di sicurezza nel prossimo passaggio.",
+    "installationTypeZFSEncryption": "Cifra con una frase d'accesso usando ZFS",
+    "installationTypeZFSEncryptionInfo": "Cifratura nativa con ZFS. Dovrai inserire una frase d'accesso ogni volta che accenderai il computer.",
+    "installationTypeZFSEncryptionSelected": "ZFS e cifratura selezionati",
+    "installationTypeTPM": "Usa cifratura con supporto hardware",
+    "installationTypeTPMInfo": "<a href=\"{url}\">Leggi sulla cifratura TPM</a> prima di selezionare questa opzione. Potrebbe non funzionare con il tuo hardware o futuri rilasci di {DISTRO}.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeTPMSelected": "TPM selezionato",
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Attenzione:</font> verranno cancellati tutti i programmi di {os}, documenti, foto, musica e ogni altro file.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "Installa {product} assieme a {os}",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "Installa {product} assieme a {os1} e {os2}",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "Installa {product} assieme agli altri sistemi operativi presenti",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "Installa {product} assieme alle altre partizioni",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "Seleziona una partizione da ridimensionare e creare spazio per {product}. Puoi scegliere il sistema operativo durante l'avvio.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "Elimina {os} e installa {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Tutti i file e dati dall'installazione di {os} presente verranno cancellati definitivamente.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManualInfo": "Per utenti avanzati che cercano un'installazione personalizzata sul disco.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Elimina il disco e installa {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Inizia da capo sul disco selezionato.",
+    "selectGuidedStorageDriveDropdownLabel": "Seleziona il disco:",
+    "selectGuidedStoragePartitionDropdownLabel": "Seleziona la partizione:",
+    "guidedStoragePageHeader": "Scegli dove installare {DISTRO}",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideHiddenPartitions": "{num} partizioni più piccole sono nascoste, usa <a href=\"{url}\">strumento di partizionamento avanzato</a> per maggior controllo",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Ridimensiona partizione",
+    "installAlongsideAllocateSpace": "Alloca spazio",
+    "installAlongsideAvailable": "Disponibile:",
+    "allocateDiskSpace": "Partizionamento manuale",
+    "diskHeadersDevice": "Dispositivo",
+    "diskHeadersType": "Tipo",
+    "diskHeadersSize": "Dimensione",
+    "diskHeadersUsed": "In uso",
+    "diskHeadersSystem": "Sistema",
+    "diskHeadersFormat": "Formato",
+    "freeDiskSpace": "Spazio disponibile",
+    "newPartitionTable": "Nuova tavola di partizione",
+    "newPartitionTableConfirmationTitle": "Nuova partizione vuota",
+    "partitionLimitReached": "Limite raggiunto",
+    "bootLoaderDevice": "Dispositivo per l'installazione del boot loader",
+    "partitionCreateTitle": "Crea partizione",
+    "partitionEditTitle": "Modifica partizione",
+    "partitionSizeLabel": "Dimensione:",
+    "partitionTypeLabel": "Tipo della nuova partizione:",
+    "partitionTypePrimary": "Primario",
+    "partitionTypeLogical": "Logico",
+    "partitionLocationBeginning": "Inizio di questo spazio",
+    "partitionLocationEnd": "Fine di questo spazio",
+    "partitionFormatLabel": "Usato come:",
+    "partitionFormatNone": "Lascia non formattato",
+    "partitionFormatKeep": "Lascia formattato come {format}",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "Formatta la partizione",
+    "confirmPageTitle": "Pronto per l'installazione",
+    "confirmHeader": "Rivedi le scelte",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "Nessuna",
+    "confirmDevicesTitle": "Dispositivi",
+    "confirmEntryApplications": "Applicazioni",
+    "confirmEntryDiskSetup": "Tipo d'installazione",
+    "confirmEntryDiskEncryption": "Cifratura del disco",
+    "confirmEntryInstallationDisk": "Disco d'installazione",
+    "confirmEntryProprietarySoftware": "Software proprietario",
+    "confirmSectionGeneralTitle": "Generale",
+    "confirmSectionSecurityAndMoreTitle": "Sicurezza e altro",
+    "confirmPartitionsTitle": "Partizioni",
+    "confirmProprietarySoftwareDrivers": "Driver",
+    "confirmTableErased": "Eliminato",
+    "confirmTableUnchanged": "Non modificato",
+    "confirmTableResized": "Ridimensionato da {oldsize} a {newsize}",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "passphrasePageBodyPassphrase": "Dovrai inserire la tua passphrase ogni volta che accendi il computer. Questa passphrase è diversa dalla password utente. Potrai cambiarla in seguito, ma non disabilitarla. Se dimentichi la passphrase, potrai recuperare l’accesso al disco utilizzando la chiave di ripristino.",
+    "passphrasePageBodyPin": "Dovrai inserire il tuo PIN ogni volta che accendi il computer. Questo PIN è diverso dalla password dell’utente. Potrai cambiarlo in seguito, ma non disabilitarlo. Se dimentichi il PIN, potrai recuperare l’accesso al disco utilizzando la chiave di ripristino.",
+    "passphraseTypePassphraseTileSubTitle": "Massima sicurezza. Dovrai inserire una passphrase più lunga ogni volta che accendi il computer.",
+    "passphraseTypePinTileTitle": "Richiedi un PIN",
+    "passphraseTypePinTileSubTitle": "Più sicuro. Dovrai inserire un PIN numerico ogni volta che accendi il computer.",
+    "passphraseTypePageBody": "Per impostazione predefinita, il Trusted Platform Module (TPM) del computer sbloccherà il disco all'avvio. Sono disponibili anche opzioni per proteggere ulteriormente i dati.",
+    "passphrasePagePassphraseEntropyBelowMin": "Frase segreta debole, rendila più lunga o più complessa",
+    "passphrasePagePassphraseEntropyBelowOptimal": "Frase segreta sufficiente, rendila più lunga o più complessa per una maggiore sicurezza",
+    "passphrasePagePassphraseEntropyOptimal": "Frase segreta complessa",
+    "passphrasePagePinEntropyBelowMin": "PIN poco sicuro, rendilo più lungo o meno prevedibile",
+    "passphrasePagePinEntropyBelowOptimal": "PIN sufficiente, rendilo più lungo o meno prevedibile per una maggiore sicurezza",
+    "passphrasePagePinEntropyOptimal": "Il PIN è abbastanza lungo",
+    "installationTypeLVMEncryptionInfo": "Ogni volta che accendi il computer, dovrai inserire una frase segreta. Questa è necessarioa per la crittografia LUKS con LVM.",
+    "allocateDiskSpaceInvalidMountPointSlash": "I punti di mount devono iniziare con \"/\"",
+    "allocateDiskSpaceInvalidMountPointSpace": "I punti di mount non possono contenere spazi",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} non è un file system supportato per {mountpoint}",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "newPartitionTableConfirmationMessage": "La creazione di una nuova tabella delle partizioni su un intero dispositivo rimuoverà tutte le partizioni correnti. Questa operazione può essere annullata se necessario.",
+    "tooManyPrimaryPartitions": "Sono presenti troppe partizioni primarie",
+    "partitionLocationLabel": "Posizione per la nuova partizione:",
+    "partitionMountPointLabel": "Punto di mount:",
+    "rebootToConfigure": "**{system}** è stato copiato sul disco",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "Riavvia in {system}",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Riavvia per completare l'installazione o continua il test.\nLe modifiche apportate non verranno salvate.",
+    "rebootToConfigureWarning": "Per continuare il processo di installazione è necessario riavviare il computer.",
+    "shutdown": "Spegni",
+    "restartNow": "Riavvia adesso",
+    "continueTesting": "Continua il test",
+    "bitlockerInfoTitle": "Rilevato BitLocker",
+    "bitlockerInfoDescription": "Una o più partizioni sono crittografate con BitLocker.",
+    "bitlockerInfoDisable": "Per installare insieme a Windows, disabilitare BitLocker in Windows.",
+    "confirmPartitionTables": "Le tabelle delle partizioni dei seguenti dispositivi sono state modificate:",
+    "confirmProprietarySoftwareCodecs": "Codec",
+    "confirmProprietarySoftwareCodecsDrivers": "Codec e driver",
+    "confirmTableCreatedFormattedMounted": "Creato e formattato come {format} utilizzato per {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "Formattato come {format} utilizzato per {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "Utilizzato per {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "Formattato come {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Installazione completata",
+    "readyToUse": "{system} è installato e pronto per l'uso",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerInfoRecovery": "Windows potrebbe richiedere le chiavi di recupero all'avvio dopo l'installazione.",
+    "restartIntoWindows": "Riavvia verso Windows",
+    "restartIntoWindowsTitle": "Riavviare verso Windows?",
+    "restartIntoWindowsDescription": "Sei sicuro di voler riavviare il tuo computer? Avrai bisogno di riavviare l'installazione di {DISTRO} più tardi per finire di installare {DISTRO}.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "restartComputer": "Riavvia il computer",
+    "restartComputerTitle": "Riavviare il computer?",
+    "installationSlidesWelcomeTitle": "Veloce, libero e pieno di nuove caratteristiche",
+    "installationSlidesDevelopmentTitle": "Sviluppa con il meglio dell'open source",
+    "installationSlidesSecurityTitle": "Privato e sicuro",
+    "installationSlidesSupportDocumentation": "Documentazione ufficiale",
+    "nextSlideSemanticLabel": "Slide successiva",
+    "previousSlideSemanticLabel": "Slide precedente",
+    "installationSlidesAccessibilityLanguages": "Supporto multi-lingua",
+    "installationSlidesSupportTitle": "Aiuto e supporto",
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerInfoInstructions": "Per istruzioni, visita la <a href=\"{url}\">guida di BitLocker</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "Benvenuto in {RELEASE}",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Tutte le applicazioni di cui hai bisogno",
+    "installationSlidesGamingTitle": "Fantastica per il gaming",
+    "toggleLogsSemanticLabel": "Mostra/Nascondi i log di installazione",
+    "successIconSemanticLabel": "Successo",
+    "closeIconSemanticLabel": "Chiudi",
+    "maximizeIconSemanticLabel": "Massimizza",
+    "minimizeIconSemanticLabel": "Minimizza",
+    "bitlockerWarningTitle": "Puoi perdere tutti i tuoi dati senza le chiavi di recupero BitLocker"
 }

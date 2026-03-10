@@ -392,7 +392,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get passphraseTypeNoneTileTitle => 'قفل‌گشایی خودکار دیسک';
 
   @override
-  String get passphraseTypePageHeader => 'عبارت عبور یا پین رمزنگاری';
+  String get passphraseTypePageHeader => 'امنیت اضافی';
 
   @override
   String get passphraseTypePageBody =>
@@ -956,7 +956,7 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
       'توسعه با بهترین‌های نرم‌افزار آزاد';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
   }
 
@@ -1367,13 +1367,13 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get errorIconSemanticLabel => 'خطا';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'بستن';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'بیشینه';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'کمینه';
 
   @override
   String get tpmActionPageTitle =>

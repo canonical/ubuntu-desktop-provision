@@ -381,8 +381,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimalkan';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Perluas';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Kuncupkan';
 }

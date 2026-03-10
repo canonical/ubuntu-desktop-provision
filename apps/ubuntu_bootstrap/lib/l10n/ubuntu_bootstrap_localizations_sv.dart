@@ -9,7 +9,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu skrivbordsinstallatören';
+  String get appTitle => 'Installerare för Ubuntu-skrivbordet';
 
   @override
   String windowTitle(String RELEASE) {
@@ -33,20 +33,20 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileButtonLabel => 'Välj fil...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Rensa fil';
+  String get autoinstallDirectFileClearButtonLabel => 'Töm fil';
 
   @override
   String get autoinstallDirectFilePickerTitle => 'Välj fil';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML filer';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML-filer';
 
   @override
   String get autoinstallDirectImportButtonLabel => 'Importera';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Automatisk installationsfil kan inte nås';
+      'Automatiska installationsfilen kan inte nås';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
@@ -79,7 +79,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorUnkownTitle => 'Okänt fel';
 
   @override
-  String get autoinstallTitle => 'Typ av installation';
+  String get autoinstallTitle => 'Installationstyp';
 
   @override
   String autoinstallHeader(String DISTRO) {
@@ -141,7 +141,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Prova eller installera $DISTRO';
+    return 'Testa eller installera $DISTRO';
   }
 
   @override
@@ -158,12 +158,12 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOption(String RELEASE) {
-    return 'Prova $RELEASE';
+    return 'Testa $RELEASE';
   }
 
   @override
   String tryDescription(String RELEASE) {
-    return 'Du kan prova $RELEASE utan att göra några ändringar till din dator.';
+    return 'Du kan testa $RELEASE utan att göra några ändringar till din dator.';
   }
 
   @override
@@ -182,7 +182,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get rstTitle => 'RST upptäckt';
+  String get rstTitle => 'RST upptäcktes';
 
   @override
   String get rstHeader =>
@@ -201,18 +201,18 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String rstInstructions(String url) {
-    return 'För instruktioner, scanna QR-koden på en annan enhet eller besök:<a href=\"https://$url\">$url</a>';
+    return 'För instruktioner, skanna QR-koden på en annan enhet eller besök: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Konfigurera Säker start';
+  String get configureSecureBootTitle => 'Konfigurera Secure Boot';
 
   @override
   String get configureSecureBootDescription =>
-      'Du har valt att installera drivrutinsprogram från tredje part. Detta kräver att du stänger av Säker Start.\nFör att göra detta måste du välja en säkerhetsnyckel nu och ange den när systemet startar om.';
+      'Du har valt att installera drivrutinsprogram från tredje part. Detta kräver att du stänger av Secure Boot.\nFör att göra detta måste du välja en säkerhetsnyckel nu och ange den när systemet startar om.';
 
   @override
-  String get configureSecureBootOption => 'Konfigurera Säker start';
+  String get configureSecureBootOption => 'Konfigurera Secure Boot';
 
   @override
   String get chooseSecurityKey => 'Välj en säkerhetsnyckel';
@@ -236,13 +236,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Säkerhetsnycklarna matchar inte';
 
   @override
-  String get showSecurityKey => 'Visa säkerhetsnyckel';
+  String get showSecurityKey => 'Visa';
 
   @override
   String get hideSecurityKey => 'Dölj';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Program och uppdateringar';
+  String get updatesOtherSoftwarePageTitle => 'Applikationer';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
@@ -261,25 +261,25 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA grafikkort har upptäckts';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA-grafikkort har upptäckts';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'För bästa prestanda för NVIDIA grafikkort rekommenderas starkt att du installerar ytterligare drivrutiner.';
+      'För bästa prestanda för NVIDIA-grafikkort rekommenderas starkt att du installerar ytterligare drivrutiner.';
 
   @override
-  String get fullInstallationTitle => 'Fullständig installation';
+  String get fullInstallationTitle => 'Utökat urval';
 
   @override
   String get fullInstallationSubtitle =>
       'Ett offline-vänligt urval av kontorsverktyg, verktyg och webbläsare.';
 
   @override
-  String get minimalInstallationTitle => 'Standard installation';
+  String get minimalInstallationTitle => 'Standardurval';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Bara de viktigaste, webbläsare och grundläggande verktyg.';
+      'Bara det viktigaste, webbläsare och grundläggande verktyg.';
 
   @override
   String get otherOptions => 'Andra alternativ';
@@ -302,7 +302,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get installCodecsTitle =>
-      'Ladda ner och installera stöd för ytterligare medieformat';
+      'Hämta ner och installera stöd för ytterligare medieformat';
 
   @override
   String get installCodecsSubtitle =>
@@ -312,17 +312,18 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get batteryWarning => 'Datorn är inte ansluten till en strömkälla.';
 
   @override
-  String get offlineWarning => 'Du är för närvarande offline';
+  String get offlineWarning => 'Du är för närvarande frånkopplad';
 
   @override
   String get choosePassphraseHeader => 'Skapa en lösenfras';
 
   @override
   String get choosePassphraseBody =>
-      'Du måste ange ditt lösenord varje gång du startar datorn. Lösenordet skiljer sig från ditt användarlösenord.';
+      'Du måste ange din lösenfras varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Se till att spara din lösenfras';
+  String get choosePassphraseInfoHeader =>
+      'Försäkra dig om att spara din lösenfras';
 
   @override
   String get choosePassphraseInfoBody =>
@@ -348,11 +349,11 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Du måste ange din lösenfras varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer din lösenfras kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
+      'Du måste ange din lösenfras varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer bort din lösenfras kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Du måste ange din PIN-kod varje gång du startar datorn. Denna PIN-kod skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer din PIN-kod kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
+      'Du måste ange din PIN-kod varje gång du startar datorn. Denna PIN-kod skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer bort din PIN-kod kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Lösenfras';
@@ -391,7 +392,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'Mer säker. Du måste ange en numerisk PIN-kod varje gång du slår på datorn.';
+      'Mer säker. Du måste ange en numerisk PIN-kod varje gång du startar datorn.';
 
   @override
   String get passphraseTypeNoneTileTitle => 'Lås upp disk automatiskt';
@@ -409,7 +410,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Rättvis lösenfras, gör den längre eller mer komplex för bättre säkerhet';
+      'Helt ok lösenfras, gör den längre eller mer komplex för bättre säkerhet';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => 'Stark lösenfras';
@@ -420,14 +421,14 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Rättvis PIN-kod, gör den längre eller mindre förutsägbar för bättre säkerhet';
+      'Helt ok PIN-kod, gör den längre eller mindre förutsägbar för bättre säkerhet';
 
   @override
   String get passphrasePagePinEntropyOptimal =>
       'PIN-koden är tillräckligt lång';
 
   @override
-  String get installationTypeTitle => 'Typ av installation';
+  String get installationTypeTitle => 'Diskkonfiguration';
 
   @override
   String installationTypeHeader(String DISTRO) {
@@ -462,7 +463,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'All data och partitioner på disken kommer att raderas, inklusive operativsystem.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Visa avancerade alternativ...';
+  String get installationTypeAdvancedLabel => 'Avancerade alternativ';
 
   @override
   String get installationTypeAdvancedTitle => 'Kryptering och filsystem';
@@ -474,10 +475,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installationTypeNone => 'Ingen kryptering';
 
   @override
-  String get installationTypeNoneInfo => 'Standard filsystem utan kryptering.';
+  String get installationTypeNoneInfo => 'Standardfilsystem utan kryptering.';
 
   @override
-  String get installationTypeNoneSelected => 'Inga valda';
+  String get installationTypeNoneSelected => 'Inget valt';
 
   @override
   String get installationTypeLVM => 'Använd LVM utan kryptering';
@@ -490,15 +491,15 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Du kommer att behöva ange en lösenfras varje gång du startar din dator. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Detta använder LVM med LUKS-kryptering.';
 
   @override
-  String get installationTypeLVMEncryptionSelected => 'LVM och kryptering vald';
+  String get installationTypeLVMEncryptionSelected => 'LVM och kryptering valt';
 
   @override
   String get installationTypeEncryptInfo =>
@@ -513,27 +514,27 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Inbyggd kryptering med ZFS. Du måste ange en lösenordsfras varje gång du slår på din dator.';
+      'Inbyggd kryptering med ZFS. Du måste ange en lösenfras varje gång du startar din dator.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS valt';
 
   @override
-  String get installationTypeZFSEncryptionSelected => 'ZFS och kryptering vald';
+  String get installationTypeZFSEncryptionSelected => 'ZFS och kryptering valt';
 
   @override
   String get installationTypeTPM => 'Använd hårdvarustödd kryptering';
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Disken kommer att låsas upp automatiskt under uppstart.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Ej tillgänglig på den här datorn.';
 
   @override
-  String get installationTypeTPMSelected => 'TPM vald';
+  String get installationTypeTPMSelected => 'TPM valt';
 
   @override
   String installationTypeReinstall(String os) {
@@ -542,7 +543,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Varning:</font> Detta tar bort alla dina $os-program, dokument, foton, musik och alla andra filer.';
+    return '<font color=\"$color\">Varning:</font> Detta raderar alla dina program, dokument, foton, musik och alla andra filer i $os.';
   }
 
   @override
@@ -577,7 +578,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'Alla filer och data från din befintliga $os installation kommer att raderas permanent.';
+    return 'Alla filer och data från din befintliga $os-installation kommer att raderas permanent.';
   }
 
   @override
@@ -585,7 +586,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Du kan skapa eller ändra storlek på partitioner själv, eller välja flera partitioner för $DISTRO';
+    return 'För avancerade användare som söker anpassade diskkonfigurationer.';
   }
 
   @override
@@ -616,7 +617,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get installAlongsideSpaceDivider =>
-      'Tilldela enhetsutrymme genom att dra i spaken nedan:';
+      'Tilldela diskutrymme genom att dra i listen nedan:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
@@ -627,7 +628,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get installAlongsideResizePartition => 'Ändra storlek på partition';
 
   @override
-  String get installAlongsideAllocateSpace => 'Tilldela utrymme';
+  String get installAlongsideAllocateSpace => 'Allokera utrymme';
 
   @override
   String get installAlongsideFiles => 'Filer';
@@ -650,7 +651,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
-      'Monteringspunkter kan inte innehålla mellanslag';
+      'Monteringspunkter får inte innehålla mellanslag';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
@@ -686,17 +687,17 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get newPartitionTable => 'Ny partitionstabell';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'Skapa en ny tom partition';
+  String get newPartitionTableConfirmationTitle => 'Ny tom partition';
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Att skapa en ny partitionstabell på en hel enhet tar bort alla dess nuvarande partitioner. Denna operation kan ångras om det behövs.';
+      'Skapa en ny partitionstabell på en hel enhet tar bort alla dess nuvarande partitioner. Denna operation kan ångras om det behövs.';
 
   @override
   String get tooManyPrimaryPartitions => 'För många primära partitioner';
 
   @override
-  String get partitionLimitReached => 'Gränsen nådd';
+  String get partitionLimitReached => 'Gränsen uppnådd';
 
   @override
   String get bootLoaderDevice => 'Enhet för installation av starthanteraren';
@@ -711,7 +712,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get partitionSizeLabel => 'Storlek:';
 
   @override
-  String get partitionTypeLabel => 'Typ för den nya partitionen:';
+  String get partitionTypeLabel => 'Typ för nya partitionen:';
 
   @override
   String get partitionTypePrimary => 'Primär';
@@ -720,13 +721,13 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get partitionTypeLogical => 'Logisk';
 
   @override
-  String get partitionLocationLabel => 'Plats för den nya partitionen:';
+  String get partitionLocationLabel => 'Plats för nya partitionen:';
 
   @override
   String get partitionLocationBeginning => 'Början av detta utrymme';
 
   @override
-  String get partitionLocationEnd => 'Slutet på detta utrymme';
+  String get partitionLocationEnd => 'Slutet av detta utrymme';
 
   @override
   String get partitionFormatLabel => 'Används som:';
@@ -749,7 +750,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Redo att installera';
 
   @override
-  String get confirmHeader => 'Se över dina val';
+  String get confirmHeader => 'Granska dina val';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -770,10 +771,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get confirmEntryApplications => 'Program';
 
   @override
-  String get confirmEntryDiskSetup => 'Typ av installation';
+  String get confirmEntryDiskSetup => 'Installationstyp';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk kryptering';
+  String get confirmEntryDiskEncryption => 'Diskkryptering';
 
   @override
   String get confirmEntryInstallationDisk => 'Installationsdisk';
@@ -782,7 +783,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get confirmEntryProprietarySoftware => 'Proprietär programvara';
 
   @override
-  String get confirmSectionGeneralTitle => 'Allmän';
+  String get confirmSectionGeneralTitle => 'Allmänt';
 
   @override
   String get confirmSectionSecurityAndMoreTitle => 'Säkerhet & mer';
@@ -792,7 +793,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get confirmPartitionTables =>
-      'Följande enheters partitionstabeller är ändrade:';
+      'Partitionstabellerna för följande enheter är ändrade:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -862,14 +863,14 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartWarningBody =>
-      'Starta om för att slutföra installationen eller fortsätt att testa.\nÄndringar du gör kommer inte att sparas.';
+      'Starta om för att slutföra installationen eller fortsätt att testa.\nEventuella ändringar du gör kommer inte att sparas.';
 
   @override
   String get rebootToConfigureWarning =>
       'Du måste starta om datorn för att fortsätta installationsprocessen.';
 
   @override
-  String get shutdown => 'Stäng av';
+  String get shutdown => 'Stäng ner';
 
   @override
   String get restartNow => 'Starta om nu';
@@ -894,7 +895,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'För instruktioner, besök vår <a href=\"$url\">BitLocker guide</a>.';
+    return 'För instruktioner, besök vår <a href=\"$url\">BitLocker-guide</a>.';
   }
 
   @override
@@ -918,7 +919,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Är du säker på att du vill starta om din dator? Du kommer att behöva starta om $DISTRO senare för att slutföra installationen av $DISTRO.';
+    return 'Är du säker på att du vill starta om din dator? Du kommer att behöva starta om $DISTRO-installationen senare för att slutföra installationen av $DISTRO.';
   }
 
   @override
@@ -959,8 +960,8 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Utveckla med det bästa av öppen källkod';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO är den idealiska arbetsstationen för app eller webbutveckling, datavetenskap och AI/ML samt devops och administration. Varje $DISTRO-version innehåller de senaste verktygskedjorna och stöder alla större IDE:er.';
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
+    return '$DISTRO är den idealiska arbetsstationen för app- eller webbutveckling, datavetenskap och AI/ML samt devops och administration. Varje $DISTRO-version innehåller de senaste verktygskedjorna och har stöd för alla större IDE:er.';
   }
 
   @override
@@ -968,7 +969,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Om du är en animatör, designer, videoskapare eller spelutvecklare är det enkelt att ta med dina arbetsflöden till $DISTRO med stöd för industristandard programvara och applikationer med öppen källkod.';
+    return 'Om du är en animatör, designer, videoskapare eller spelutvecklare är det enkelt att ta med dina arbetsflöden till $DISTRO med stöd för industristandardprogram och applikationer med öppen källkod.';
   }
 
   @override
@@ -976,7 +977,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO stödjer dom senaste NVIDIA och Mesa drivrutinerna för att förbättra prestanda och kompatibilitet. Tusen av Windows titlar fungerar bra att spela på $DISTRO via program som Steam utan ytterligare konfiguration.';
+    return '$DISTRO har stöd för de senaste NVIDIA- och Mesa-drivrutinerna för att förbättra prestanda och kompatibilitet. Tusentals Windows-spel fungerar bra att spela på $DISTRO via program som Steam utan ytterligare konfiguration.';
   }
 
   @override
@@ -984,12 +985,12 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO ger dig alla verktyg du behöver för att hålla dig privat och säker online. Med inbyggd brandvägg och VPN-stöd och en mängd sekretesscentrerade program för att säkerställa att du har full kontroll över din data.';
+    return '$DISTRO tillhandahåller alla verktyg du behöver för att skydda din integritet och säkerhet online. Med inbyggd brandvägg och VPN-stöd samt en rad integritetsfokuserade applikationer som garanterar att du har full kontroll över dina data.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'Alla $DISTRO LTS-släpp kommer med fem års av säkerhetskorrigering ingår, samt sträcker sig till tio år med ett Ubuntu Pro-abonnemang.';
+    return 'Alla $DISTRO LTS-utgåvor levereras med fem års säkerhetsuppdateringar inkluderade, vilket förlängs till tio år med ett Ubuntu Pro-abonnemang.';
   }
 
   @override
@@ -997,15 +998,15 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Skrivbord inkluderar Libreoffice, en svit av Microsoft Office kompatibla öppen källkods program för dokument, kalkylblad och presentationer. Populära samarbetsverktyg finns också tillgängliga.';
+    return '$DISTRO-skrivbordet innehåller LibreOffice, en svit av Microsoft Office-kompatibla öppen källkodsprogram för dokument, kalkylblad och presentationer. Populära samarbetsverktyg finns också tillgängliga.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Tillgång för alla';
+  String get installationSlidesAccessibilityTitle => 'Åtkomst för alla';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'I hjärtat av $DISTRO filosofin är tron att datoranvändning är för alla. Med avancerade tillgänglighetsverktyg och alternativ för att ändra språk, färger och textstorlek gör $DISTRO datoranvändning enkel - vem och var du än är.';
+    return 'Kärnan i ${DISTRO}s filosofi är övertygelsen att datorer är till för alla. Med avancerade hjälpmedelsverktyg och alternativ för att ändra språk, färger och textstorlek gör $DISTRO det enkelt att använda datorer – oavsett vem du är och var du befinner dig.';
   }
 
   @override
@@ -1019,7 +1020,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Den officiella $DISTRO dokumentation är tillgänglig både online och via Hjälp ikonen i dockan.';
+    return 'Den officiella $DISTRO-dokumentation finns tillgänglig både på nätet och via Hjälp-ikonen i dockan.';
   }
 
   @override
@@ -1031,7 +1032,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'För företagsanvändare tillhandahåller Canonical kommersiell support för att göra det enkelt att installera och hantera Ubuntu säkert på arbetsplatsen.';
 
   @override
-  String get installationSlidesSupportResources => 'Hjälpsamma resurser:';
+  String get installationSlidesSupportResources => 'Användbara resurser:';
 
   @override
   String get installationSlidesSupportDocumentation =>
@@ -1060,10 +1061,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get copyingFiles => 'Kopierar filer…';
 
   @override
-  String get installingSystem => 'Installerar ditt system…';
+  String get installingSystem => 'Installerar systemet…';
 
   @override
-  String get configuringSystem => 'Ställer in ditt system…';
+  String get configuringSystem => 'Ställer in systemet…';
 
   @override
   String get installationFailed => 'Installationen misslyckades';
@@ -1106,7 +1107,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'Din nuvarande $snap version är $version.';
+    return 'Din nuvarande $snap-version är $version.';
   }
 
   @override
@@ -1126,14 +1127,14 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshRestart =>
-      'Vänligen stäng installationsprogrammet och starta om för att fortsätta';
+      'Stäng installationsprogrammet och starta om för att fortsätta';
 
   @override
   String get refreshCloseLabel => 'Stäng installationsprogrammet';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Säkerställer $snap förutsättningar...';
+    return 'Säkerställer förutsättningar för $snap...';
   }
 
   @override
@@ -1153,7 +1154,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Laddar ner $snap...';
+    return 'Hämtar ner $snap...';
   }
 
   @override
@@ -1168,12 +1169,12 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stoppar $snap tjänster...';
+    return 'Stoppar $snap-tjänster...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Tar bort $snap alias...';
+    return 'Tar bort $snap-alias...';
   }
 
   @override
@@ -1183,22 +1184,22 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Uppdaterar $snap tillgångar...';
+    return 'Uppdaterar $snap-tillgångar...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Uppdaterar $snap kärnans kommandorad...';
+    return 'Uppdaterar $snap-kärnans kommandorad...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Kopierar $snap data...';
+    return 'Kopierar $snap-data...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Ställer in $snap säkerhetsprofiler...';
+    return 'Ställer in $snap-säkerhetsprofiler...';
   }
 
   @override
@@ -1208,27 +1209,27 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Ansluter $snap pluggar och fack...';
+    return 'Ansluter $snap-pluggar och fack...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Ställer in automatiska $snap alias...';
+    return 'Ställer in automatiska $snap-alias...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Ställer in $snap alias...';
+    return 'Ställer in $snap-alias...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Startar $snap tjänster...';
+    return 'Startar $snap-tjänster...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Rensar upp $snap...';
+    return 'Städar upp $snap...';
   }
 
   @override
@@ -1249,7 +1250,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Du måste ange denna återställningsnyckel om dekrypteringen misslyckas under uppstarten. Utan nyckeln förlorar du åtkomst till all din data. Spara den någonstans säkert, till exempel i en lösenordshanterare.';
+      'Du måste ange denna återställningsnyckel om avkrypteringen misslyckas under uppstarten. Utan nyckeln förlorar du åtkomst till all din data. Spara den någonstans säkert, till exempel i en lösenordshanterare.';
 
   @override
   String get recoveryKeyConfirmation =>
@@ -1266,7 +1267,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO skrivbord - Återställningsnyckel';
+    return '$DISTRO-skrivbordet - Återställningsnyckel';
   }
 
   @override
@@ -1278,11 +1279,11 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Återställningsnyckelfil sparades inte';
+      'Återställningsnyckelfilen sparades inte';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Återställningsnyckelfil kan inte sparas på en temporär plats';
+      'Återställningsnyckelfilen kan inte sparas på en temporär plats';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Okänt fel';
@@ -1299,7 +1300,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get recoveryKeyFilePickerTitle => 'Spara återställningsnyckelfil';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text filer';
+  String get recoveryKeyFilePickerFilter => 'Textfiler';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1313,24 +1314,24 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get landscapeHeader => 'Logga in till Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Ange Landscape domän (FQDN)';
+  String get landscapeDomainHeader => 'Ange Landscape-domän (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domän (FQDN)';
+  String get landscapeDomainHintText => 'Landscape-domän (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Ange din organisations landscape domän för att logga in och hämta en autoinstallationsfil. Du kan få FQDN från din IT-support.';
+      'Ange din organisations Landscape-domän för att logga in och hämta en autoinstallationsfil. Du kan få FQDN från din IT-support.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domän (FQDN)';
+  String get landscapeDomainTextField => 'Landscape-domän (FQDN)';
 
   @override
   String get next => 'Nästa';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Ogiltig domän, vänligen kontrollera eller kontakta din IT-support';
+      'Ogiltig domän, kontrollera eller kontakta din IT-support';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
@@ -1341,12 +1342,11 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Internet behövs för att hämta autoinstallationsfilen från Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning =>
-      'Koden har löpt ut, vänligen försök igen';
+  String get landscapeCodeExpiredWarning => 'Koden har löpt ut, försök igen';
 
   @override
   String get landscapeLoginFailedWarning =>
-      'Inloggningen misslyckades, vänligen försök igen';
+      'Inloggningen misslyckades, försök igen';
 
   @override
   String get landscapeErrorPageTitle =>
@@ -1370,7 +1370,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Du kan granska autoinstallationsfilen som importeras från Landscape nedan.';
 
   @override
-  String get successIconSemanticLabel => 'Lyckats';
+  String get successIconSemanticLabel => 'Lyckades';
 
   @override
   String get errorIconSemanticLabel => 'Fel';
@@ -1386,292 +1386,293 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Hårdvarubaserad kryptering kunde inte aktiveras';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Åtgärd krävs';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Tekniska detaljer';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Bekräfta';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Lösning $n: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Lösning: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Läs mer om hårdvarustödd kryptering';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Testa lösningarna nedanför, kontakta IT-support, eller välj en annan krypteringsmetod.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Testa lösningen nedanför, kontakta IT-supporten, eller välj en annan krypteringsmetod.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Kontakta IT-support, eller välj en annan krypteringsmetod.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Internt fel.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Avstängning krävs.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'Omstart krävs.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Oväntad åtgärd.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Argument saknas.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Ogiltigt argument.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Åtgärd misslyckades.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Den aktuella miljön är en virtuell maskin.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Denna dator använder äldre fast programvara (äldre BIOS) som inte är kompatibel med denna krypteringsmetod.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Det finns ett problem med den här datorns fasta programvara.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Denna dator har inte den säkerhetshårdvara (TPM 2.0) som krävs för denna krypteringsmetod.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'Den här datorns TPM är inaktiverad.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'Denna dators TPM används redan av ett annat system eller en annan applikation.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'Den här datorns TPM är för närvarande låst.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'Denna dators TPM har inte tillräckligt med lagringsutrymme tillgängligt.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Denna dator är inte kompatibel med hårdvarubaserad kryptering.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'UEFI-felsökning är aktiverad.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Denna dator saknar en nödvändig säkerhetsfunktion (DMA-skydd).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'Denna dator saknar en nödvändig säkerhetsfunktion (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Det finns ett problem med säkerhetskonfigurationen på den här datorn.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Det finns programvara som körs vid uppstart som kan förhindra en säker anslutning till datorns TPM.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Modulen Absolute Persistence är aktiverad på den här datorn.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'Secure boot är inaktiverad på den här datorn, eller är inte inställd till distribuerat läge.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Vissa av certifikaten som verifierar mjukvara i den här datorn är föråldrade eller använder svagt skydd.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Denna dator använder en manuell tillåtelselista för att verifiera programvara vid uppstart.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Tilläggsdrivrutiner finns.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Det finns ett problem med TPM på den här datorn.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Det finns ett problem med den här datorns fasta programvara.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Starta om';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Stäng av';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Starta om till firmware-inställningar';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Om inställningar för fast programvara inte läses in automatiskt, starta om och tryck på inställningstangenten upprepade gånger under uppstarten (ofta F2, F10 eller Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Aktivera DMA-skydd manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Rensa TPM manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Aktivera säker uppstart manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'Aktivera IOMMU manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Aktivera PCR-bankar manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Aktivera TPM manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Rensa TPM manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Rensa TPM manuellt';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Inaktivera modulen Absolute Persistence manuellt';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Kontakta OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor => 'Kontakta OS-leverantör';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Aktivera TPM vid omstart';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Aktivera och töm TPM vid omstart';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware => 'Töm TPM vid omstart';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Töm TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Ignorera';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Starta om datorn för att slutföra tidigare åtgärder.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Om du startar om datorn kan problemet lösas.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Stäng av datorn för att slutföra tidigare åtgärder.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Du kan göra detta i din dators inställningar för fast programvara.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Du kan eventuellt göra detta i datorns inställningar för fast programvara. Se dokumentationen från CPU-leverantören för vägledning.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Kontrollera att secure boot-läge är inställt till ”distribuerat”.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Funktionen kan benämnas ”Virtualiseringsteknologi”, ”VT-d” eller ”AMD-Vi”.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Att ignorera detta problem kan leda till en mindre säker installation.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Starta om';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Starta om och aktivera TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel => 'Starta om och rensa TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Ignorera och fortsätt';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Att rensa TPM raderar alla krypteringsnycklar';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Du kommer att förlora åtkomst till all data på krypterade enheter för vilka du saknar återställningsnycklar. Det kommer också att stoppa annan funktionalitet som beror på TPM, som autentisering och certifikat.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Jag förstår konsekvenserna av att rensa TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Du kan bli ombedd att bekräfta denna åtgärd vid omstart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Du måste då starta installationen på nytt.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Lösningen misslyckades';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Testa en annan lösning eller kontakta IT-support.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Prova någonting annat. Du kan också <a href=\"\">skicka en felrapport</a>.';
 }

@@ -9,159 +9,161 @@ class UbuntuInitLocalizationsEu extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Ongi etorri';
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Welcome to $distro';
+    return 'Ongi etorri ${distro}ra';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'ZER BERRI?';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'Hasiera sinplifikatua';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle =>
+      'Martxan jartzeko esperientzia garbiago baten alde.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'Aplikazioen denda itxuraberritua';
 
   @override
   String get welcomeStoreSubtitle =>
-      'It\'s never been easier to find your favourite software.';
+      'Software gogokoena aurkitzea inoiz baino errazagoa da orain.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'Segurtasun areagotua';
 
   @override
   String get welcomeSecuritySubtitle =>
-      'New options for hardware-backed or ZFS encryption.';
+      'Aukera berriak hardware edo ZFS bidezko zifratzean.';
 
   @override
   String welcomeChangelogLabel(String url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">Ikusi aldaketen erregistroa</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'Telemetria';
 
   @override
   String telemetryHeader(String distro) {
-    return 'Help improve $distro';
+    return 'Lagundu $distro hobetzen';
   }
 
   @override
   String telemetryDescription(String distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'Lagun gaitzazu $distro hobetzen sistemako datuak gurekin partekatuz. Datu hauetan doaz zure makinaren modeloa, instalatutako softwarea eta ordu-eremurako aukeratutako kokalekua.';
   }
 
   @override
   String telemetryLabelOn(String distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'Bai, partekatu sistemako datuak $distro taldearekin';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'Ez, ez partekatu sistemako daturik';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'Erakutsi lehenengo txostena';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'Txostenaren xehetasunak';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'Lege-oharra';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'Huts egin du telemetria datuak biltzeak';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'Kokapen zerbitzuak';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'Kokapen zerbitzuak gaitu?';
 
   @override
   String get privacyLocationSubtitle =>
-      'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+      'Eman aplikazioei zure kokapen geografikoa jakiteko baimena.\nHau edonoiz alda dezakezu Sistemaren ezarpenetatik.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'Kokapen zerbitzuak';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'Datuen pribatutasuna';
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Erantsi magikoki hemengo kode hau erabiliz <a href=\"https://$url\">$url</a>';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Erantsi makina hau';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'edo gehitu tokena eskuz';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Tokena';
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Get the most comprehensive subscription for open-source software security';
+      'Eskuratu kode irekiko softwarearen segurtasun harpidetzarik osoena';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Betiko dohainik erabilera pertsonalerako. 30 eguneko proba enpresentzako. <a href=\"https://$url\">Informazio gehiago</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Erantsi';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Token baliogabea';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Baliozko tokena';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Token baliogabea, saiatu berriz';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Saltatu oraingoz';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'You can always enable Ubuntu Pro later via the Software & Updates application.';
+      'Ubuntu Pro geroago ere gaitu dezakezu Softwarea eta eguneraketak aplikaziotik.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Gaitu Ubuntu Pro';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+      'Erantsi makina hau Ubuntu Pro harpidetza bati, eta lortu segurtasun-eguneratzeak pakete sorta zabalagoarentzat 2032ra arte.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
-      'Ubuntu Pro is now enabled in this machine';
+      'Orain Ubuntu Pro gaituta dago makina honentzat';
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'You can manage your Pro services in the Software & Updates application.';
+      'Zure Pro zerbitzuak kudeatzeko Softwarea eta eguneraketak aplikazioa erabil dezakezu.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Dena ondo joan da';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Itxi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizatu';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Txikitu';
 }

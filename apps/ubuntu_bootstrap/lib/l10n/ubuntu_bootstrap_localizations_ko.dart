@@ -62,18 +62,17 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      '파일을 확인하거나 다른 파일을 제공하시오.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'Autoinstall 파일을 불러올 수 없습니다';
 
   @override
-  String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+  String get autoinstallDirectErrorFileSystemBody => '권한을 확인하거나 다른 파일을 제공하세요.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => '알 수 없는 오류';
 
   @override
   String get autoinstallTitle => '설치 유형';
@@ -99,14 +98,14 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      '일관되고 반복 가능한 시스템 설정을 위해 autoinstall.yaml 파일을 사용하는 숙련된 사용자를 위한 내용입니다.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Landscape로 자동화된 기능입니다';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Landscape를 통해 autoinstall 파일을 제공하는 조직의 사용자용입니다.';
 
   @override
   String get autoinstallErrorMessage =>
@@ -932,7 +931,7 @@ class UbuntuBootstrapLocalizationsKo extends UbuntuBootstrapLocalizations {
   String get installationSlidesDevelopmentTitle => '최고의 오픈소스를 활용하여 개발하기';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO 앱 또는 웹 개발, 데이터 과학 및 AI / ML뿐만 아니라 devops 및 관리를위한 이상적인 워크 스테이션입니다. 모든 $DISTRO 릴리스에는 최신 툴체인이 포함되어 있으며 모든 주요 IDE를 지원합니다.';
   }
 

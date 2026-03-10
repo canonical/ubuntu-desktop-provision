@@ -9,15 +9,15 @@ class UbuntuInitLocalizationsRo extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'Bun venit';
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Welcome to $distro';
+    return 'Bun venit la $distro';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'CE ESTE NOU?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';

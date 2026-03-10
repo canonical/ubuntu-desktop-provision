@@ -960,7 +960,7 @@ class UbuntuBootstrapLocalizationsSr extends UbuntuBootstrapLocalizations {
       'Развијајте са најбољим од отвореног кода';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO је идеална радна станица за развој апликација или веба, науку о подацима и AI/ML, као и за devops и администрацију. Свака $DISTRO верзија укључује најновије алате и подржава све главне IDE-ове.';
   }
 
