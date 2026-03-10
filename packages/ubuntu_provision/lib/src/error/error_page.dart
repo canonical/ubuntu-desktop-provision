@@ -30,14 +30,12 @@ class ErrorDetails {
 class ErrorPage extends ConsumerWidget with ProvisioningPage {
   const ErrorPage({
     required this.allowRestart,
-    this.error,
-    this.errorParser,
+    this.errorDetails,
     super.key,
   });
 
   final bool allowRestart;
-  final Object? error;
-  final ErrorDetails? Function(Object?)? errorParser;
+  final ErrorDetails? errorDetails;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -52,9 +50,6 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
     final linkText = match?.group(1);
     final endText = match?.end != null ? bodyText.substring(match!.end) : '';
     final model = ref.watch(errorModelProvider);
-
-    final errorDetails =
-        errorParser?.call(error ?? ModalRoute.of(context)?.settings.arguments);
 
     final content = errorDetails?.message != null
         ? errorDetails!.message!.map(Text.new).withSpacing(kWizardSpacing / 2)
@@ -187,7 +182,7 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
           ),
           if (errorDetails?.action != null)
             PushButton.elevated(
-              onPressed: () => errorDetails.action!.call(ref),
+              onPressed: () => errorDetails!.action!.call(ref),
               child: Text(errorDetails!.actionLabel!),
             ),
           if (allowRestart)

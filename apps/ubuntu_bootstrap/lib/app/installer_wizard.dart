@@ -155,10 +155,6 @@ class _AutoinstallWizard extends ConsumerWidget {
         InstallationStep.error.route: WizardRoute(
           builder: (_) => ErrorPage(
             allowRestart: false,
-            errorParser: (e) => errorParser(
-              e,
-              UbuntuBootstrapLocalizations.of(context),
-            ),
           ),
         ),
       },
@@ -177,11 +173,8 @@ class _ErrorWizard extends ConsumerWidget {
         InstallationStep.error.route: WizardRoute(
           builder: (_) => ErrorPage(
             allowRestart: false,
-            error: status,
-            errorParser: (e) => errorParser(
-              e,
-              UbuntuBootstrapLocalizations.of(context),
-            ),
+            errorDetails: status
+                ?.toErrorDetails(UbuntuBootstrapLocalizations.of(context)),
           ),
         ),
       },
@@ -189,30 +182,32 @@ class _ErrorWizard extends ConsumerWidget {
   }
 }
 
-ErrorDetails? errorParser(Object? e, UbuntuBootstrapLocalizations l10n) =>
-    switch (e) {
-      ApplicationStatus(
-        state: ApplicationState.ERROR,
-        nonreportableError: NonReportableError(
-          cause: 'AutoinstallUserSuppliedCmdError',
-          message: final message,
-          details: final details,
-        )
-      ) =>
-        ErrorDetails(
-          title: l10n.installationFailed,
-          message: [
-            l10n.autoinstallErrorMessage,
-            l10n.autoinstallErrorInstructions,
-          ],
-          details: [
-            message,
-            details,
-          ].nonNulls.join('\n'),
-          action: (ref) async {
-            await ref.read(autoinstallModelProvider.notifier).restart();
-          },
-          actionLabel: l10n.restartInstaller,
-        ),
-      _ => null,
-    };
+extension on ApplicationStatus {
+  ErrorDetails? toErrorDetails(UbuntuBootstrapLocalizations l10n) =>
+      switch (this) {
+        ApplicationStatus(
+          state: ApplicationState.ERROR,
+          nonreportableError: NonReportableError(
+            cause: 'AutoinstallUserSuppliedCmdError',
+            message: final message,
+            details: final details,
+          )
+        ) =>
+          ErrorDetails(
+            title: l10n.installationFailed,
+            message: [
+              l10n.autoinstallErrorMessage,
+              l10n.autoinstallErrorInstructions,
+            ],
+            details: [
+              message,
+              details,
+            ].nonNulls.join('\n'),
+            action: (ref) async {
+              await ref.read(autoinstallModelProvider.notifier).restart();
+            },
+            actionLabel: l10n.restartInstaller,
+          ),
+        _ => null,
+      };
+}
