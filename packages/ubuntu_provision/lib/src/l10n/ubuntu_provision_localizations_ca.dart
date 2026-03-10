@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Amaga el registre';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Reinicia';
 
   @override

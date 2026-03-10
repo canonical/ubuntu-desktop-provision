@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ログを非表示';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => '再起動';
 
   @override

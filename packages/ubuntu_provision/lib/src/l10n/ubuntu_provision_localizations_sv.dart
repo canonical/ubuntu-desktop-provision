@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Dölj logg';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Starta om';
 
   @override

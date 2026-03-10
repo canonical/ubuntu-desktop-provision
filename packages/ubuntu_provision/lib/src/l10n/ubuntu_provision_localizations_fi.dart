@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Piilota loki';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Käynnistä uudelleen';
 
   @override

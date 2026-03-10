@@ -43,6 +43,7 @@
   },
   "errorPageShowLog": "Show log",
   "errorPageHideLog": "Hide log",
+  "errorPageTechnicalDetails": "Technical details",
   "restart": "Restart",
   "close": "Close",
   "timezonePageTitle": "Select your timezone",

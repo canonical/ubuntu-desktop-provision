@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Amagar lo jornal';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Reaviar';
 
   @override

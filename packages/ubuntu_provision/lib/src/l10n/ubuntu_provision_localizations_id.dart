@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Sembunyikan log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Jalankan Ulang';
 
   @override

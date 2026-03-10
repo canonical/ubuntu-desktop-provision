@@ -114,6 +114,14 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'நிலப்பரப்பு வழியாக ஆட்டோஇன்ச்டால் கோப்பை வழங்கும் நிறுவனங்களில் உள்ள பயனர்களுக்கு.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'மாற்று';
 
   @override
@@ -912,6 +920,9 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartComputerTitle => 'கணினியை மறுதொடக்கம் செய்யவா?';
+
+  @override
+  String get restartInstaller => 'Restart installer';
 
   @override
   String get restartIntoWindows => 'சன்னல்களில் மறுதொடக்கம் செய்யுங்கள்';

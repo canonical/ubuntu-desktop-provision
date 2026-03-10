@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Slėpti žurnalą';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Paleisti iš naujo';
 
   @override

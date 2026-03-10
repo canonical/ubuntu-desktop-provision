@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Kaŝi protokolon';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Restartigi';
 
   @override

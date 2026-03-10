@@ -21,7 +21,7 @@ final errorModelProvider = StateProvider((ref) {
 final logStreamProvider = Provider<Stream<String>>((ref) {
   final client = getService<SubiquityClient>();
   final journal = getService<JournalService>();
-  final logController = StreamController<String>();
+  final logController = StreamController<String>.broadcast();
   client.getStatus().then((status) {
     if (status.nonreportableError != null) {
       logController.add(status.nonreportableError!.message);

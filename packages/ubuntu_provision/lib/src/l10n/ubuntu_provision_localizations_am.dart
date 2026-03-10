@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsAm extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Hide log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Restart';
 
   @override

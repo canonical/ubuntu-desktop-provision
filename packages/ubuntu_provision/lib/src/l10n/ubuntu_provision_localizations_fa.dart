@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'نهفتن گزارش‌ها';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'آغاز دوباره';
 
   @override

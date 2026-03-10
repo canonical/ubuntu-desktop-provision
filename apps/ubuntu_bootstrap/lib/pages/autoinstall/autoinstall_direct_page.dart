@@ -119,7 +119,8 @@ class _ImportButton extends ConsumerWidget {
         minimumSize: WidgetStateProperty.all(kPushButtonSize),
       ),
       onPressed: directModel.error == null &&
-              (directModel.url.isNotEmpty || directModel.localPath != null)
+              (directModel.url.isNotEmpty || directModel.localPath != null) &&
+              !directModel.isLoading
           ? () async {
               if (await ref
                   .read(autoinstallDirectModelProvider.notifier)
@@ -128,22 +129,12 @@ class _ImportButton extends ConsumerWidget {
               }
             }
           : null,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (directModel.isLoading) ...[
-            SizedBox.square(
-              dimension: 16.0,
-              child: YaruCircularProgressIndicator(
-                color: Theme.of(context).colorScheme.onPrimary,
-                strokeWidth: 2,
-              ),
-            ),
-            const SizedBox(width: 8),
-          ],
-          Text(lang.autoinstallDirectImportButtonLabel),
-        ],
-      ),
+      child: directModel.isLoading
+          ? SizedBox.square(
+              dimension: IconTheme.of(context).size,
+              child: const YaruCircularProgressIndicator(strokeWidth: 3),
+            )
+          : Text(lang.autoinstallDirectImportButtonLabel),
     );
   }
 }

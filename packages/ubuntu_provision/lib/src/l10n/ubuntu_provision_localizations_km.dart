@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsKm extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Hide log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'ចាប់ផ្ដើមឡើងវិញ';
 
   @override

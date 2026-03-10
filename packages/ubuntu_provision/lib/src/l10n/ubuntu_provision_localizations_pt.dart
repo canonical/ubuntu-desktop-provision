@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Esconder log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Reiniciar';
 
   @override

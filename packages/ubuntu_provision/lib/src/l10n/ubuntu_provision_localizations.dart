@@ -375,6 +375,12 @@ abstract class UbuntuProvisionLocalizations {
   /// **'Hide log'**
   String get errorPageHideLog;
 
+  /// No description provided for @errorPageTechnicalDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Technical details'**
+  String get errorPageTechnicalDetails;
+
   /// No description provided for @restart.
   ///
   /// In en, this message translates to:

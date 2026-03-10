@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skryť denník';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Reštartovať';
 
   @override

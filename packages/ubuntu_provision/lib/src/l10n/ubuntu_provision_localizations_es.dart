@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Ocultar registro';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Reiniciar';
 
   @override

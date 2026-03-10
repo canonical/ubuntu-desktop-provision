@@ -133,17 +133,16 @@ void main() {
   });
 
   test('load error', () async {
+    final controller = StreamController<ApplicationStatus>();
+
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);
-    when(client.monitorStatus()).thenAnswer(
-      (_) => Stream.fromIterable([
-        fakeApplicationStatus(ApplicationState.ERROR),
-      ]),
-    );
+    when(client.monitorStatus()).thenAnswer((_) => controller.stream);
 
     final pageConfigService = setupMockPageConfig();
     final service = InstallerService(client, pageConfig: pageConfigService);
-    await expectLater(service.load(), completes);
+    controller.add(fakeApplicationStatus(ApplicationState.ERROR));
+    await expectLater(service.load(), doesNotComplete);
 
     verify(client.monitorStatus()).called(1);
   });

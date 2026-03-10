@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ჟურნალის დამალვა';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'გადატვირთვა';
 
   @override

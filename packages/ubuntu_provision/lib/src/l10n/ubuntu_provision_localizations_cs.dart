@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skrýt záznam';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Restartovat';
 
   @override

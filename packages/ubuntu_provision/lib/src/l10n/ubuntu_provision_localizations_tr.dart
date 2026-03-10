@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Günlüğü gizle';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Yeniden Başlat';
 
   @override
