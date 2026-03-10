@@ -382,8 +382,8 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimeeri';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Laienda vaadet';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Ahenda vaadet';
 }

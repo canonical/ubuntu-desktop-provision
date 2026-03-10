@@ -465,8 +465,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'A lemezen lévő összes adat és partíció törlésre kerül, beleértve az operációs rendszereket is.';
 
   @override
-  String get installationTypeAdvancedLabel =>
-      'Speciális beállítások megjelenítése…';
+  String get installationTypeAdvancedLabel => 'Speciális beállítások';
 
   @override
   String get installationTypeAdvancedTitle => 'Titkosítás és fájlrendszer';
@@ -495,12 +494,12 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Ez LVM-et használ LUKS-titkosítással.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -534,11 +533,11 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'A lemez automatikusan feloldásra kerül az indítás során.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Nem érhető el ezen a számítógépen.';
 
   @override
   String get installationTypeTPMSelected => 'TPM kiválasztva';
@@ -972,7 +971,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Fejlesszen a nyílt forráskód legjobbjaival';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return 'A(z) $DISTRO ideális munkaállomás az alkalmazás- vagy webfejlesztéshez, az adattudományhoz és a mesterséges intelligenciához vagy gépi tanuláshoz, valamint a fejlesztésekhez és az adminisztrációhoz. Minden $DISTRO kiadás a legújabb eszközláncokat tartalmazza, és támogatja az összes főbb integrált fejlesztőkörnyezetet.';
   }
 
@@ -1023,7 +1022,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca képernyőolvasó';
+  String get installationSlidesAccessibilityOrca => 'Orka képernyőolvasó';
 
   @override
   String get installationSlidesAccessibilityLanguages => 'Nyelvi támogatás';
@@ -1313,7 +1312,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Helyreállítási kulcs fájljának mentése';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Szöveges fájlok';
+  String get recoveryKeyFilePickerFilter => 'Szövegfájlok';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1399,292 +1398,296 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'A hardveresen támogatott titkosítást nem sikerült engedélyezni';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Művelet szükséges';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Műszaki részletek';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Megerősítés';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return '$n. megoldás: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Megoldás: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Tudjon meg többet a hardveresen támogatott titkosításról';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Próbálja ki az alábbi megoldásokat, vegye fel a kapcsolatot az IT-támogatással, vagy válasszon másik titkosítási módszert.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Próbálja meg a lenti megoldást, vegye fel a kapcsolatot az IT-támogatással, vagy válasszon másik titkosítási módszert.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Vegye fel a kapcsolatot az IT-támogatással, vagy válasszon másik titkosítási módszert.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Belső hiba.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Kikapcsolás szükséges.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'Újraindítás szükséges.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Váratlan művelet.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Hiányzó argumentum.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Érvénytelen argumentum.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'A művelet nem sikerült.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'A jelenlegi környezet egy virtuális gép.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Ez a számítógép régebbi belső vezérlőprogramot (örökölt BIOS-t) használ, amely nem kompatibilis ezzel a titkosítási módszerrel.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Probléma van a számítógép belső vezérlőprogramjával.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Ez a számítógép nem rendelkezik az ehhez a titkosítási módszerhez szükséges biztonsági hardverrel (TPM 2.0).';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'A számítógép TPM-je le van tiltva.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'A számítógép TPM-jét már használja egy másik rendszer vagy alkalmazás.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'A számítógép TPM-je jelenleg zárolva van.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'A számítógép TPM-je nem rendelkezik elegendő elérhető tárhellyel.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Ez a számítógép nem kompatibilis a hardveresen támogatott titkosítással.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'Az UEFI-hibakeresés engedélyezve van.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (DMA-védelem).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Probléma van a számítógép biztonsági beállításaival.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Van olyan, a rendszer indításakor futó szoftver, amely megakadályozhatja a számítógép TPM-jével való biztonságos kapcsolatot.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Az Absolute Persistence Module engedélyezve van ezen a számítógépen.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'A biztonságos rendszerindítás le van tiltva ezen a számítógépen, vagy nincs beállítva az üzembe állított módban.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'A számítógépen lévő szoftvereket ellenőrző tanúsítványok némelyike elavult vagy gyenge védelmet használ.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Ez a számítógép kézi engedélyezési listát használ a szoftverek indításkori ellenőrzéséhez.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Kiegészítő illesztőprogramok találhatók.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Probléma van a számítógép TPM-jével.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Probléma van a számítógép belső vezérlőprogramjával.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Újraindítás';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Kikapcsolás';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Újraindítás a belső vezérlőprogram beállításaiba';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Ha a belső vezérlőprogram beállításai nem töltődnek be automatikusan, akkor indítsa újra a számítógépet, majd nyomja meg többször a beállítások billentyűjét az indítás során (általában F2, F10 vagy Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'DMA-védelem kézi engedélyezése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'TPM kézi törlése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Biztonságos rendszerindítás kézi engedélyezése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'IOMMU kézi engedélyezése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'PCR-bankok kézi engedélyezése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'TPM kézi engedélyezése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'TPM kézi törlése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'TPM kézi törlése';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Absolute Persistence Module kézi letiltása';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Kapcsolatfelvétel az OEM-mel';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Kapcsolatfelvétel az operációs rendszer gyártójával';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'TPM engedélyezése újraindításkor';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'TPM engedélyezése és törlése újraindításkor';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'TPM törlése újraindításkor';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'TPM törlése';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Mellőzés';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'A számítógép újraindítása az előző műveletek befejezéséhez.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'A számítógép újraindítása megoldhatja a problémát.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'A számítógép kikapcsolása az előző műveletek befejezéséhez.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Ezt a számítógép belső vezérlőprogramjának beállításaiban teheti meg.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Lehet, hogy ezt a számítógép belső vezérlőprogramjának beállításaiban tudja megtenni. Olvassa el a CPU gyártójának dokumentációját az útmutatásért.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Ellenőrizze, hogy a biztonságos rendszerindítás módja „üzembe állított” értékre van-e állítva.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Erre a funkcióra „Virtualization Technology”, „VT-d” vagy „AMD-Vi” néven is hivatkozhatnak.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'A probléma figyelmen kívül hagyása kevésbé biztonságos telepítést eredményezhet.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Újraindítás';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'Újraindítás és TPM engedélyezése';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel => 'Újraindítás és TPM törlése';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Mellőzés és folytatás';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'A TPM törlése törli az összes titkosítási kulcsot';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Elveszíti a hozzáférést az összes adathoz az olyan titkosított meghajtókon, amelyekhez nincsenek helyreállítási kulcsai. Ez elrontja a TPM-től függő egyéb funkciókat is, mint például a hitelesítést és a tanúsítványokat.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Tisztában vagyok a TPM törlésének következményeivel';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Lehet, hogy a művelet megerősítését kérik az újraindításkor.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Ezután újra el kell indítania a telepítést.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Ez a megoldás nem sikerült';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Próbáljon másik megoldást, vagy vegye fel a kapcsolatot az IT-támogatással.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Próbáljon valami mást. <a href=\"\">Küldhet hibajelentést is</a>.';
 }

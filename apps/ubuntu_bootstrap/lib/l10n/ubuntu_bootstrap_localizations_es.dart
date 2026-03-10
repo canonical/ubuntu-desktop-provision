@@ -319,11 +319,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Necesita una contraseña para cifrar sus archivos. Se le solicitará su contraseña cada vez que encienda su ordenador.';
+      'Necesita una contraseña para cifrar sus archivos. Se le solicitará su contraseña cada vez que encienda su ordenador. Esta contraseña es distinta a la que usa para iniciar sesión con su usuario.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Almacene su frase secreta en algún lugar seguro';
+      'Asegúrese de almacenar su frase secreta en algún lugar seguro';
 
   @override
   String get choosePassphraseInfoBody =>
@@ -338,91 +338,94 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Si pierde su frase secreta, perderá todos sus datos. La frase de contraseña no remplaza la llave de recuperación o su contraseña de usuario.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Encriptación';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Establecer una contraseña de encriptación';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Establecer un PIN de encriptación';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Cada vez que encienda el ordenador, deberá introducir la contraseña. Esta contraseña es distinta a la que usa para iniciar sesión como usuario. Puede cambiarla más tarde, pero no desactivarla. Si olvida la contraseña, podrá recuperar el acceso al disco usando la clave de recuperación.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Cada vez que encienda el ordenador, deberá introducir el PIN. Este PIN es distinto a su contraseña de usuario. Podrá cambiarlo más tarde, pero no desactivarlo. Si olvida su PIN, puede recuperar el acceso al disco usando la clave de recuperación.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Contraseña';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Confirme la contraseña';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Se necesita una contraseña';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Las contraseñas no coinciden';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Confirme el PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Se necesita un PIN';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'Los PIN no coinciden';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Necesitar una contraseña';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Lo más seguro. Cada vez que encienda el ordenador, tendrá que introducir una contraseña más larga.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Necesitar un PIN';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Más seguro. Se debe introducir un PIN numérico cada vez que encienda el ordenador.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'Desbloquear el disco automáticamente';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Seguridad adicional';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Por defecto, el módulo de plataforma de confianza del ordenador (TPM) desbloqueará el disco durante el arranque. También tiene opciones para proteger sus datos de forma adicional.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Contraseña débil, hágala más larga o más compleja';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Contraseña suficiente, hágala más larga o más compleja para mayor seguridad';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Contraseña fuerte';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'PIN débil, hágalo más largo o menos predecible';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'PIN suficiente, hágalo más largo o menos predecible para mayor seguridad';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal =>
+      'La longitud del PIN es suficiente';
 
   @override
   String get installationTypeTitle => 'Configuración del disco';
@@ -460,7 +463,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Todos los datos y particiones en el disco serán borradas, incluyendo el sistema operativo.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Mostrar opciones avanzadas…';
+  String get installationTypeAdvancedLabel => 'Opciones avanzadas';
 
   @override
   String get installationTypeAdvancedTitle => 'Cifrado y sistema de archivo';
@@ -489,12 +492,12 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Necesitará introducir una frase de paso cada vez que encienda su equipo. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Esto utiliza LVM con cifrado LUKS.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -527,11 +530,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'El disco se desbloqueará automáticamente durante el arranque.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'No disponible en este equipo.';
 
   @override
   String get installationTypeTPMSelected => 'TPM seleccionado';
@@ -964,7 +967,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Desarrolla con lo mejor del código abierto';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO es la estación de trabajo ideal para el desarrollo web o de aplicaciones, ciencia de datos e IA/ML, así como para operaciones de desarrollo y administración. Todas las versiones de $DISTRO incluyen las cadenas de herramientas más recientes y son compatibles con los principales IDE.';
   }
 
@@ -1047,19 +1050,20 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Asistencia 24/7 de nivel empresarial con Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Siguiente diapositiva';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Anterior diapositiva';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Presentación de diapositivas';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Pausar presentación';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel =>
+      'Mostrar u ocultar registros de instalación';
 
   @override
   String get copyingFiles => 'Copiando archivos…';
@@ -1254,57 +1258,58 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Almacene la clave de recuperación donde sea seguro. Utilícela para cifrar el disco en caso de ciertos cambios del sistema. Por ejemplo, puede necesitarlo si cambia los componentes en su equipo o actualice el firmware.';
+      'Deberá proporcionar esta clave de recuperación si el descifrado falla durante el inicio. Sin la clave, perderá el acceso a todos sus datos. Guárdela en un lugar seguro, como un gestor de contraseñas.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Comprendo que puedo perder todos mis datos si no tengo una clave de recuperación';
+      'He guardado mi clave de recuperación en un lugar seguro';
 
   @override
   String get recoveryKeyLinkLabel => 'Saber más';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Guardar a un archivo';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Mostrar código QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Escritorio - Clave de recuperación';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Escanee el código QR para copiar la clave de recuperación y guardarla en un lugar seguro, como un gestor de contraseñas. También puede tomarle una foto para usarlo más tarde.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Copiada al portapapeles';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'No se ha guardado la clave de recuperación';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'El archivo de clave de recuperación no se puede guardar en una ubicación temporal';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Error desconocido';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'No tiene permisos de escritura en esa carpeta. Inténtelo en otra ruta o use otro método.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Pruebe una lugar diferente, como una unidad extraíble, o use otro método.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Guardar archivo de clave de recuperación';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Archivos de texto';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1376,36 +1381,36 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Puede revisar el archivo autoinstall importado desde Landscape a continuación.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Éxito';
 
   @override
   String get errorIconSemanticLabel => 'Error';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Cerrar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'El cifrado con hardware en segundo plano no pudo ser habilitado';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Acción requerida';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Detalles técnicos';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Confirmar';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Solución $n: $text';
   }
 
   @override
@@ -1414,12 +1419,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+  String get tpmActionDocumentationLinkLabel => 'Enlace a la documentación';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Intente las soluciones a continuación, contacte con mantenimiento IT, o elija un método distinto del cifrado.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
@@ -1427,122 +1431,122 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Contacte con el mantenimiento IT, o elija un método diferente de cifrado.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Interno';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Apagado Requerido';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'Rearranque Requerido';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Acción Inesperada';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Argumento Ausente';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Argumento No Válido';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Acción Incorrecta';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'El entorno actual es una máquina virtual.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Este equipo está utilizando firmware más antiguo (BIOS heredado) que no es compatible con este método de cifrado.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Hay un tema con este ajuste del firmware en el equipo.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Este equipo no tiene el hardware de seguridad requerido (TPM 2.0) para este método de cifrado.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'Este TPM del equipo está inhabilitado.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'Este TPM del equipo ya está en uso por otro sistema u otra aplicación.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'Este TPM del equipo actualmente está bloqueado.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'Este TPM del equipo no tiene suficiente almacén disponible.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Este equipo no es compatible con cifrado por hardware en segundo plano.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'Depuración de UEFI está habilitada';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Este equipo está ausente en una característica de seguridad requerida (protección DMA).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'A este equipo le falta una característica de seguridad requerida (kernel IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Hay un asunto con este ajuste de seguridad del equipo.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Hay software ejecutándose al inicio que puede prevenir una conexión segura con el TPM del equipo.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Módulo de Persistencia Absoluta está habilitada en este equipo.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'El arranque seguro está inhabilitado en este equipo o no está configurado en modo \"deployed\".';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Alguno de los certificados verifican componentes en este equipo están obsoletos o utilizan protección débil.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Este equipo está utilizando un listado de permiso manual para verificar el software al arrancar.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Unidades Añadidas Presentes';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Hay un asunto con este TPM del equipo.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Hay un asunto con este firmware del equipo.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Reiniciar';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Apagar';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Reiniciar en los ajustes del firmware';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
@@ -1550,81 +1554,83 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Habilitar manualmente la protección DMA';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Purgar TPM manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Habilitar arranque seguro manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'Habilitar protección DMA manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Habilitar bancos PCR manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Habilitar TPM manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Purgar TPM manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Purgar TPM manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Inhabilitar Módulo de Persistencia Absoluta manualmente';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Contacto OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Contacto con Proveedor de SO';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Habilitar TPM al reiniciar';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Habilitar y purgar TPM al reiniciar';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware => 'Purgar TPM en reinicio';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Purgar TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Ignorar';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Reinicia el equipo para completar acciones anteriores.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Reiniciar el equipo puede reparar el defecto.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Apagar el equipo para completar acciones anteriores.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Puede hacer esto en sus ajustes del firmware del equipo.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Puede ser capaz de hacer esto en su ajustes del firmware del equipo. Compruebe la documentación del proveedor de CPU para guía.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
@@ -1636,48 +1642,48 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Se hace caso omiso al asunto puede resultar en una instalación menos segura.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Reiniciar';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Reiniciar y habilitar TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel => 'Reiniciar y purgar TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Ignorar y continuar';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Purgando el TPM borra todas las llaves de cifrado';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Perderá el acceso a todos los datos en unidades cifradas para la cual no tenga llaves de recuperación. Además romperá otras características que dependen en el TPM, tales como autenticación y certificados.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Yo comprendo las consecuencias de purga del TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Puede ser preguntado para confirmar esta acción al reiniciar.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Entonces tendrá que reintentar la instalación desde el comienzo.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Esta solución ha fallado';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Intente una solución diferente o contacte con el mantenimiento de IT';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Intente algo más. Puede además <a href=\"\">enviar un informe de error</a>.';
 }

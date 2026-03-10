@@ -9,15 +9,15 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'ਜੀ ਆਇਆਂ ਨੂੰ';
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Welcome to $distro';
+    return '$distro ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'ਨਵਾਂ ਕੀ ਹੈ?';
 
   @override
   String get welcomeStartTitle => 'A streamlined start';
@@ -26,14 +26,14 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'ਐਪ ਸਟੋਰ ਦੀ ਨਵੀਂ ਦਿੱਖ';
 
   @override
   String get welcomeStoreSubtitle =>
       'It\'s never been easier to find your favourite software.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'ਵਧਾਈ ਗਈ ਸੁਰੱਖਿਆ';
 
   @override
   String get welcomeSecuritySubtitle =>
@@ -45,11 +45,11 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'ਟੈਲੀਮੈਂਟਰੀ';
 
   @override
   String telemetryHeader(String distro) {
-    return 'Help improve $distro';
+    return '$distro ਨੂੰ ਸੁਧਾਰਨ ਲਈ ਮਦਦ ਕਰੋ';
   }
 
   @override
@@ -63,7 +63,7 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'ਨਹੀ, ਸਿਸਟਮ ਡਾਟੇ ਨੂੰ ਸਾਂਝਾ ਨਾ ਕਰੋ';
 
   @override
   String get telemetryReportLabel => 'Show the first report';
@@ -72,26 +72,26 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   String get telemetryReportTitle => 'Reporting details';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'ਕਨੂੰਨੀ ਨੋਟਿਸ';
 
   @override
   String get telemetryCollectError => 'Failed to collect telemetry data';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਕਰਨਾ ਹੈ?';
 
   @override
   String get privacyLocationSubtitle =>
       'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'ਡਾਟਾ ਪਰਦੇਦਾਰੀ';
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
@@ -102,13 +102,13 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'ਇਹ ਮਸ਼ੀਨ ਅਟੈਚ ਕਰੋ';
 
   @override
   String get ubuntuProOrAddTokenManually => 'or add a token manually';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'ਟੋਕਨ';
 
   @override
   String get ubuntuProSubscriptionDescription =>
@@ -120,7 +120,7 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'ਅਟੈਚ';
 
   @override
   String get ubuntuProTokenAttachError => 'Invalid token';
@@ -132,7 +132,7 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'ਹੁਣ ਲਈ ਛੱਡੋ';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
@@ -154,14 +154,14 @@ class UbuntuInitLocalizationsPa extends UbuntuInitLocalizations {
       'You can manage your Pro services in the Software & Updates application.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'ਸਫ਼ਲ';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ਬੰਦ ਕਰੋ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'ਵੱਧ ਤੋਂ ਵੱਧ';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'ਘੱਟੋ-ਘੱਟ';
 }

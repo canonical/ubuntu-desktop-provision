@@ -401,11 +401,11 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get passphraseTypeNoneTileTitle => 'வட்டு தானாக திறக்கவும்';
 
   @override
-  String get passphraseTypePageHeader => 'குறியாக்க முள் அல்லது கடவுச்சொல்';
+  String get passphraseTypePageHeader => 'கூடுதல் பாதுகாப்பு';
 
   @override
   String get passphraseTypePageBody =>
-      'இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (டிபிஎம்) தொடக்கத்தின் போது வட்டைத் திறக்கும். இருப்பினும், உங்கள் தரவைப் பாதுகாக்க ஒரு முள் அல்லது கடவுச்சொல் தேவைப்படலாம்.';
+      'இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (TPM) துவக்கத்தின் போது வட்டைத் திறக்கும். உங்கள் தரவை மேலும் பாதுகாப்பதற்கான விருப்பங்களும் உள்ளன.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -465,8 +465,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'இயக்க முறைமைகள் உட்பட வட்டில் உள்ள அனைத்து தரவு மற்றும் பகிர்வுகளும் அழிக்கப்படும்.';
 
   @override
-  String get installationTypeAdvancedLabel =>
-      'மேம்பட்ட விருப்பங்களைக் காட்டு ...';
+  String get installationTypeAdvancedLabel => 'மேம்பட்ட விருப்பங்கள்';
 
   @override
   String get installationTypeAdvancedTitle =>
@@ -497,12 +496,12 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'ஒவ்வொரு முறையும் உங்கள் கணினியை இயக்கும்போது கடவுச்சொற்றொடரை உள்ளிட வேண்டும். $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'இது LUKS குறியாக்கத்துடன் LVM ஐப் பயன்படுத்துகிறது.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -537,11 +536,11 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'தொடக்கத்தின்போது வட்டு தானாகவே திறக்கப்படும்.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'இந்தக் கணினியில் கிடைக்கவில்லை.';
 
   @override
   String get installationTypeTPMSelected => 'டிபிஎம் தேர்ந்தெடுக்கப்பட்டது';
@@ -883,7 +882,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'நிறுவல் செயல்முறையைத் தொடர நீங்கள் கணினியை மறுதொடக்கம் செய்ய வேண்டும்.';
 
   @override
-  String get shutdown => 'மூடு';
+  String get shutdown => 'நிறுத்தி மூடு';
 
   @override
   String get restartNow => 'இப்போது மறுதொடக்கம் செய்யுங்கள்';
@@ -974,7 +973,7 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'சிறந்த திறந்த மூலத்துடன் உருவாகிறது';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO என்பது பயன்பாடு அல்லது வலை வளர்ச்சி, தரவு அறிவியல் மற்றும் AI/ML மற்றும் டெவொப்ச் மற்றும் நிர்வாகத்திற்கான சிறந்த பணிநிலையம். ஒவ்வொரு $DISTRO வெளியீட்டில் அண்மைக் கால கருவித்தொகுப்புகள் உள்ளன மற்றும் அனைத்து முக்கிய ஐடிகளையும் ஆதரிக்கிறது.';
   }
 
@@ -1391,30 +1390,30 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get errorIconSemanticLabel => 'பிழை';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'மூடு';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'பெரியதுபடுத்து';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'சிறியதாக்கு';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'வன்பொருள் உதவி குறியாக்கத்தை இயக்க முடியவில்லை';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'நடவடிக்கை தேவை';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'தொழில்நுட்ப விவரங்கள்';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'உறுதிப்படுத்தவும்';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'தீர்வு $n: $text';
   }
 
   @override
@@ -1423,12 +1422,11 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+  String get tpmActionDocumentationLinkLabel => 'ஆவணத்திற்கான இணைப்பு';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'கீழே உள்ள தீர்வுகளை முயற்சிக்கவும், IT ஆதரவைத் தொடர்பு கொள்ளவும் அல்லது வேறு குறியாக்க முறையைத் தேர்வு செய்யவும்.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
@@ -1436,122 +1434,121 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'IT ஆதரவைத் தொடர்புகொள்ளவும் அல்லது வேறு குறியாக்க முறையைத் தேர்வு செய்யவும்.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'உள்';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'பணிநிறுத்தம் தேவை';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'மறுதொடக்கம் தேவை';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'எதிர்பாராத செயல்';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'வாதத்தைக் காணவில்லை';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'தவறான உரையாடல்';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'செயல் தோல்வியடைந்தது';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'தற்போதைய சூழல் ஒரு மெய்நிகர் இயந்திரம்.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'இந்த கணினி இந்த குறியாக்க முறைக்கு இணங்காத பழைய ஃபார்ம்வேரை (லெகசி பயாஸ்) பயன்படுத்துகிறது.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'இந்தக் கணினியின் ஃபார்ம்வேர் அமைப்புகளில் சிக்கல் உள்ளது.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'இந்த குறியாக்க முறைக்கு தேவையான பாதுகாப்பு வன்பொருள் (TPM 2.0) இந்த கணினியில் இல்லை.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'இந்தக் கணினியின் TPM முடக்கப்பட்டுள்ளது.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'இந்தக் கணினியின் TPM ஏற்கனவே வேறொரு சிஸ்டம் அல்லது பயன்பாட்டினால் பயன்பாட்டில் உள்ளது.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'இந்தக் கணினியின் TPM தற்போது பூட்டப்பட்டுள்ளது.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'இந்தக் கணினியின் TPM இல் போதுமான சேமிப்பிடம் இல்லை.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'இந்த கணினி வன்பொருள் ஆதரவு குறியாக்கத்துடன் இணங்கவில்லை.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'UEFI பிழைத்திருத்தம் இயக்கப்பட்டது';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'இந்தக் கணினியில் தேவையான பாதுகாப்பு அம்சம் (DMA பாதுகாப்பு) இல்லை.';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'இந்தக் கணினியில் தேவையான பாதுகாப்பு அம்சம் இல்லை (கர்னல் IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'இந்தக் கணினியின் பாதுகாப்பு அமைப்புகளில் சிக்கல் உள்ளது.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'கணினியின் TPM உடன் பாதுகாப்பான இணைப்பைத் தடுக்கக்கூடிய மென்பொருள் தொடக்கத்தில் இயங்குகிறது.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'இந்த கணினியில் முழுமையான நிலைத்தன்மை தொகுதி இயக்கப்பட்டுள்ளது.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'இந்தக் கணினியில் பாதுகாப்பான துவக்கம் முடக்கப்பட்டுள்ளது அல்லது \"வரிசைப்படுத்தப்பட்ட\" பயன்முறையில் கட்டமைக்கப்படவில்லை.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'இந்தக் கணினியில் உள்ள கூறுகளைச் சரிபார்க்கும் சில சான்றிதழ்கள் காலாவதியானவை அல்லது பலவீனமான பாதுகாப்பைப் பயன்படுத்துகின்றன.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'தொடக்கத்தில் மென்பொருளைச் சரிபார்க்க இந்தக் கணினி கைமுறை அனுமதிப் பட்டியலைப் பயன்படுத்துகிறது.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+  String get tpmActionErrorKindAddonDriversPresent => 'சொருகு இயக்கிகள் உள்ளன';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'இந்தக் கணினியின் TPM இல் சிக்கல் உள்ளது.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'இந்தக் கணினியின் ஃபார்ம்வேரில் சிக்கல் உள்ளது.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'மறுதொடக்கம்';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'பவர் ஆஃப்';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'ஃபார்ம்வேர் அமைப்புகளுக்கு மறுதொடக்கம் செய்யுங்கள்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
@@ -1559,81 +1556,84 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'DMA பாதுகாப்பை கைமுறையாக இயக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'TPM ஐ கைமுறையாக அழிக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'பாதுகாப்பான துவக்கத்தை கைமுறையாக இயக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'DMA பாதுகாப்பை கைமுறையாக இயக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'PCR வங்கிகளை கைமுறையாக இயக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'TPM ஐ கைமுறையாக இயக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'TPM ஐ கைமுறையாக அழிக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'TPM ஐ கைமுறையாக அழிக்கவும்';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'முழுமையான நிலைத்தன்மை தொகுதியைக் கைமுறையாக முடக்கவும்';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'ஒஇஎம் ஐ தொடர்பு கொள்ளவும்';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'OS விற்பனையாளரைத் தொடர்பு கொள்ளவும்';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'மறுதொடக்கம் செய்யும்போது TPMஐ இயக்கவும்';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'மறுதொடக்கத்தில் TPM ஐ இயக்கி அழிக்கவும்';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'மறுதொடக்கம் செய்யும் போது TPM ஐ அழிக்கவும்';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'TPM ஐ அழி';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'புறக்கணிக்கவும்';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'முந்தைய செயல்களை முடிக்கக் கணினியை மறுதொடக்கம் செய்யவும்.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'கணினியை மறுதொடக்கம் செய்வது சிக்கலைச் சரிசெய்யலாம்.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'முந்தைய செயல்களை முடிக்கக் கணினியை அணைக்கவும்.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'உங்கள் கணினியின் ஃபார்ம்வேர் அமைப்புகளில் இதைச் செய்யலாம்.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'உங்கள் கணினியின் ஃபார்ம்வேர் அமைப்புகளில் இதைச் செய்ய முடியும். வழிகாட்டுதலுக்காக CPU விற்பனையாளரின் ஆவணங்களைச் சரிபார்.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
@@ -1645,48 +1645,50 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'சிக்கலைப் புறக்கணிப்பது குறைவான பாதுகாப்பான நிறுவலுக்கு வழிவகுக்கும்.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'மறுதொடக்கம்';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'TPM ஐ மறுதொடக்கம் செய்து இயக்கவும்';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'TPM ஐ மறுதொடக்கம் செய்து அழிக்கவும்';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'புறக்கணித்து தொடரவும்';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPM ஐ அழிப்பது அனைத்து குறியாக்க விசைகளையும் அழிக்கிறது';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'உங்களிடம் மீட்பு விசைகள் இல்லாத என்க்ரிப்ட் செய்யப்பட்ட டிரைவ்களில் உள்ள எல்லா தரவுகளுக்கான அணுகலையும் இழப்பீர்கள். ஏற்பு மற்றும் சான்றிதழ்கள் போன்ற TPM சார்ந்த மற்ற அம்சங்களையும் இது உடைக்கும்.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'TPMஐ அழிப்பதால் ஏற்படும் விளைவுகளை நான் புரிந்துகொள்கிறேன்';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'மறுதொடக்கம் செய்யும்போது இந்தச் செயலை உறுதிப்படுத்தும்படி உங்களிடம் கேட்கப்படலாம்.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'நீங்கள் புதிதாக நிறுவலை மீண்டும் முயற்சிக்க வேண்டும்.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'இந்த தீர்வு தோல்வியடைந்தது';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'வேறு தீர்வை முயற்சிக்கவும் அல்லது IT ஆதரவைத் தொடர்பு கொள்ளவும்';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'வேறு ஏதாவது முயற்சிக்கவும். நீங்கள் <a href=\"\">ஒரு பிழை அறிக்கையையும் அனுப்பலாம்</a>.';
 }

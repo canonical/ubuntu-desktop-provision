@@ -9,374 +9,375 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsLo([String locale = 'lo']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'ການເຂົ້າເຖິງ';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'ການເຂົ້າເຖິງໃນ $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'ປັບແຕ່ງ $DISTRO ຕາມຄວາມຕ້ອງການຂອງທ່ານກ່ອນຕິດດັ້ັ້ງ. ທ່ານສາມາດປ່ຽນແປງພາຍຫຼັງໄດ້ໃນການຕັ້ງຄ່າລະບົບ.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'ການເບິ່ງເຫັນ';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'ການໄດ້ຍິນ';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'ການພິມ';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'ການຊີ້ ແລະ ການຄລິກ';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'ຂະຫຍາຍ';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'ຄວາມຕັດກັນສູງ';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'ຕົວໜັງສືຂະໜາດໃຫຍ່';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'ຫຼຸດຜ່ອນການເຄື່ອນໄຫວ';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'ໂປຣແກຣມອ່ານໜ້າຈໍ';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'ການແຈ້ງເຕືອນແບບພາບ';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'ປຸ່ມກົດຄ້າງ';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'ປຸ່ມກົດຊ້າ';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'ປຸ່ມບັງຄັບເມົາສ໌';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'ການຂະຫຍາຍໜ້າຈໍ';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'ມີບາງຢ່າງຜິດພາດ';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.';
+      'ຂໍອະໄພ, ພວກເຮົາບໍ່ແນ່ໃຈວ່າເກີດຂໍ້ຜິດພາດຫຍັງຂຶ້ນ. ທ່ານສາມາດລອງເລີ່ມລະບົບຄອມພິວເຕີໃໝ່ ແລະ ເລີ່ມຂັ້ນຕອນການຕິດຕັ້ງອີກຄັ້ງ. ທ່ານຍັງສາມາດ <a>ລາຍງານບັນຫາ</a> ໄດ້.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'ເພື່ອສົ່ງລາຍງານຂໍ້ຜິດພາດແບບອັດຕະໂນມັດ ລວມທັງຂໍ້ມູນດີບັກທີ່ກ່ຽວຂ້ອງ, ກະລຸນາແລ່ນຄຳສັ່ງ <pre>sudo ubuntu-bug $SNAP</pre> ໃນເທີມິນຽນ (terminal), ຫຼື ຈາກຄອນໂຊນຄຳສັ່ງ (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'ສະແດງບັນທຶກ';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'ເຊື່ອງບັນທຶກ';
 
   @override
   String get errorPageTechnicalDetails => 'Technical details';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'ເລີ່ມລະບົບໃໝ່';
 
   @override
-  String get close => 'Close';
+  String get close => 'ປິດ';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'ເລືອກເຂດເວລາຂອງທ່ານ';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'ສະຖານທີ່';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'ເຂດເວລາ';
 
   @override
-  String get keyboardTitle => 'Keyboard layout';
+  String get keyboardTitle => 'ຮູບແບບແປ້ນພິມ';
 
   @override
-  String get keyboardHeader => 'Select your keyboard layout';
+  String get keyboardHeader => 'ເລືອກຮູບແບບແປ້ນພິມຂອງທ່ານ';
 
   @override
-  String get keyboardTestHint => 'Type here to test your keyboard';
+  String get keyboardTestHint => 'ພິມໃສ່ບ່ອນນີ້ເພື່ອທົດສອບແປ້ນພິມຂອງທ່ານ';
 
   @override
-  String get keyboardDetectTitle => 'Detect keyboard layout';
+  String get keyboardDetectTitle => 'ກວດຫາຮູບແບບແປ້ນພິມ';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'ກວດຫາ';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'ເລືອກແບບຍ່ອຍຂອງແປ້ນພິມຂອງທ່ານ:';
 
   @override
-  String get keyboardPressKeyLabel => 'Please press one of the following keys:';
+  String get keyboardPressKeyLabel => 'ກະລຸນາກົດປຸ່ມໃດໜຶ່ງດັ່ງຕໍ່ໄປນີ້:';
 
   @override
   String get keyboardKeyPresentLabel =>
-      'Is the following key present on your keyboard?';
+      'ມີປຸ່ມດັ່ງຕໍ່ໄປນີ້ຢູ່ເທິງແປ້ນພິມຂອງທ່ານບໍ່?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'ເລືອກຮູບແບບຕີມຂອງທ່ານ';
 
   @override
   String get themePageHeader =>
-      'You can always change this later in the appearance settings.';
+      'ທ່ານສາມາດປ່ຽນແປງສິ່ງນີ້ພາຍຫຼັງໄດ້ສະເໝີໃນການຕັ້ງຄ່າຮູບໂສມ.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'ມືດ';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'ແຈ້ງ';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'ຍິນດີຕ້ອນຮັບສູ່ $DISTRO';
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'ເລືອກພາສາຂອງທ່ານ:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'ສ້າງບັນຊີຂອງທ່ານ';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'ເຂົ້າສູ່ລະບົບໂດຍອັດຕະໂນມັດ';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword =>
+      'ຕ້ອງໃຊ້ລະຫັດຜ່ານຂອງຂ້ອຍເພື່ອເຂົ້າສູ່ລະບົບ';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'ຊື່ຂອງທ່ານ';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'ຈຳເປັນຕ້ອງໃສ່ຊື່';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'ຊື່ນັ້ນຍາວເກີນໄປ.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'ຊື່ຄອມພິວເຕີຂອງທ່ານ';
 
   @override
   String get identityHostnameInfo =>
-      'The name it uses when it talks to other computers.';
+      'ຊື່ທີ່ມັນໃຊ້ເວລາຕິດຕໍ່ສື່ສານກັບຄອມພິວເຕີເຄື່ອງອື່ນ.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'ຈຳເປັນຕ້ອງໃສ່ຊື່ຄອມພິວເຕີ';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'ຊື່ຄອມພິວເຕີນັ້ນຍາວເກີນໄປ.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'ຊື່ຄອມພິວເຕີບໍ່ຖືກຕ້ອງ';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'ຊື່ຜູ້ໃຊ້ຂອງທ່ານ';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'ຈຳເປັນຕ້ອງໃສ່ຊື່ຜູ້ໃຊ້';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'ຊື່ຜູ້ໃຊ້ບໍ່ຖືກຕ້ອງ';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'ມີຊື່ຜູ້ໃຊ້ນັ້ນຢູ່ແລ້ວ.';
 
   @override
   String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+      'ຊື່ນັ້ນຖືກສະຫງວນໄວ້ສຳລັບການນຳໃຊ້ຂອງລະບົບ.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'ຊື່ນັ້ນຍາວເກີນໄປ.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'ຊື່ນັ້ນມີຕົວອັກສອນທີ່ບໍ່ຖືກຕ້ອງ.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'ລະຫັດຜ່ານ';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'ຈຳເປັນຕ້ອງໃສ່ລະຫັດຜ່ານ';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'ຢືນຢັນລະຫັດຜ່ານ';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'ລະຫັດຜ່ານບໍ່ກົງກັນ';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'ສະແດງ';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'ເຊື່ອງ';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'ໃຊ້ Active Directory';
 
   @override
   String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+      'ທ່ານຈະຕ້ອງປ້ອນໂດເມນ ແລະ ລາຍລະອຽດອື່ນໆໃນຂັ້ນຕອນຕໍ່ໄປ.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'ເຂົ້າສູ່ລະບົບ Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'ເຂົ້າສູ່ລະບົບ Active Directory ບໍ່?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO ຖືກອອກແບບມາໃຫ້ເຊື່ອມຕໍ່ກັບ Active Directory ໄດ້ຢ່າງລຽບງ່າຍ ເພື່ອການບໍລິຫານຈັດການທີ່ງ່າຍຂຶ້ນ.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'ທົດສອບການເຊື່ອມຕໍ່ໂດເມນ';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'ໂດເມນ';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'ຈຳເປັນ';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'ຍາວເກີນໄປ';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'ຕົວອັກສອນບໍ່ຖືກຕ້ອງ';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'ຂຶ້ນຕົ້ນດ້ວຍຈຸດ (.)';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'ລົງທ້າຍດ້ວຍຈຸດ (.)';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'ຂຶ້ນຕົ້ນດ້ວຍຂີດ (-)';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'ລົງທ້າຍດ້ວຍຂີດ (-)';
 
   @override
   String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+      'ມີຈຸດຕໍ່ເນື່ອງກັນຫຼາຍຈຸດ (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'ບໍ່ພົບໂດເມນ';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'ຜູ້ໃຊ້ເຂົ້າຮ່ວມໂດເມນ';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'ຈຳເປັນ';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'ຕົວອັກສອນບໍ່ຖືກຕ້ອງ';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'ລະຫັດຜ່ານ';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'ຈຳເປັນ';
 
   @override
   String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+      'ເກີດຂໍ້ຜິດພາດໃນການຕັ້ງຄ່າການເຊື່ອມຕໍ່ກັບ Active Directory';
 
   @override
   String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+      'ຂໍອະໄພ, ບໍ່ສາມາດຕັ້ງຄ່າ Active Directory ໄດ້ໃນຂະນະນີ້. ເມື່ອລະບົບຂອງທ່ານພ້ອມໃຊ້ງານແລ້ວ, ໃຫ້ເຂົ້າໄປທີ່ <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> ເພື່ອຂໍຄວາມຊ່ວຍເຫຼືອ.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'ການເຊື່ອມຕໍ່ອິນເຕີເນັດ';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'ເຊື່ອມຕໍ່ກັບອິນເຕີເນັດ';
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'ການເຊື່ອມຕໍ່ອິນເຕີເນັດຈະຊ່ວຍປັບປຸງການຕິດຕັ້ງຂອງທ່ານ ດ້ວຍການກວດສອບຄວາມເຂົ້າກັນໄດ້ ແລະ ແພັກເກັດຊອບແວເພີ່ມເຕີມ.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'ໃຊ້ການເຊື່ອມຕໍ່ແບບມີສາຍ';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'ກວດບໍ່ພົບການເຊື່ອມຕໍ່ແບບມີສາຍ';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'ການເຊື່ອມຕໍ່ແບບມີສາຍຖືກປິດຢູ່';
 
   @override
   String get networkWiredDisabled =>
-      'To use Ethernet on this computer, a wired connection must be enabled';
+      'ເພື່ອໃຊ້ອິນເຕີເນັດຜ່ານສາຍ (Ethernet) ໃນຄອມພິວເຕີນີ້, ຕ້ອງເປີດການເຊື່ອມຕໍ່ແບບມີສາຍກ່ອນ';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'ເປີດໃຊ້ແບບມີສາຍ';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'ເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍ Wi-Fi';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'ເຄືອຂ່າຍໄຮ້ສາຍຖືກປິດໃຊ້ງານ';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'ກວດບໍ່ພົບອຸປະກອນ Wi-Fi';
 
   @override
   String get networkWifiDisabled =>
-      'To use Wi-Fi on this computer, wireless networking must be enabled';
+      'ເພື່ອໃຊ້ Wi-Fi ໃນຄອມພິວເຕີນີ້, ຕ້ອງເປີດການເຊື່ອມຕໍ່ເຄືອຂ່າຍໄຮ້ສາຍກ່ອນ';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'ເປີດໃຊ້ Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption =>
+      'ເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍ Wi-Fi ທີ່ເຊື່ອງຢູ່';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'ຊື່ເຄືອຂ່າຍ';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'ຈຳເປັນຕ້ອງໃສ່ຊື່ເຄືອຂ່າຍ';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'ບໍ່ຕ້ອງເຊື່ອມຕໍ່ກັບອິນເຕີເນັດ';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'ຂໍ້ຕົກລົງໃບອະນຸຍາດ';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'ກວດເບິ່ງເງື່ອນໄຂໃບອະນຸຍາດ';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'ເພື່ອສືບຕໍ່ການຕັ້ງຄ່າເຄື່ອງນີ້, ທ່ານຕ້ອງອ່ານ ແລະ ຍອມຮັບເງື່ອນໄຂຂອງຂໍ້ຕົກລົງໃບອະນຸຍາດ.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'ຂ້າພະເຈົ້າໄດ້ອ່ານ ແລະ ຍອມຮັບເງື່ອນໄຂເຫຼົ່ານີ້';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'ສຳເລັດ';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ປິດ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'ຂະຫຍາຍໃຫຍ່ສຸດ';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'ຫຍໍ້ລົງ';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'ຂະຫຍາຍອອກ';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'ຫຍໍ້ເຂົ້າ';
 }

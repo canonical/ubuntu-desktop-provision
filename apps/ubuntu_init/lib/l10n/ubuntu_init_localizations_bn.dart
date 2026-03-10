@@ -23,7 +23,7 @@ class UbuntuInitLocalizationsBn extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'A streamlined start';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => '';
 
   @override
   String get welcomeStoreTitle => 'New look App Store';

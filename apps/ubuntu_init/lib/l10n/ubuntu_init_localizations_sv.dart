@@ -20,14 +20,14 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get welcomeWhatsNew => 'VAD ÄR NYTT?';
 
   @override
-  String get welcomeStartTitle => 'En strömlinjeformad start';
+  String get welcomeStartTitle => 'En smidig start';
 
   @override
   String get welcomeStartSubtitle =>
-      'Stödjer en renare installationsupplevelse.';
+      'Stöd för en renare installationsupplevelse.';
 
   @override
-  String get welcomeStoreTitle => 'Nytt utseende App Store';
+  String get welcomeStoreTitle => 'Nytt utseende för App Store';
 
   @override
   String get welcomeStoreSubtitle =>
@@ -38,7 +38,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
 
   @override
   String get welcomeSecuritySubtitle =>
-      'Nya alternativ för hårdvarustöd kryptering eller ZFS-kryptering.';
+      'Nya alternativ för hårdvarustödd kryptering eller ZFS-kryptering.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -73,11 +73,11 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
   String get telemetryReportTitle => 'Rapporteringsdetaljer';
 
   @override
-  String get telemetryLegalLabel => 'Juridisk meddelande';
+  String get telemetryLegalLabel => 'Juridiskt meddelande';
 
   @override
   String get telemetryCollectError =>
-      'Misslyckades att samla in telemetri data';
+      'Misslyckades med att samla in telemetridata';
 
   @override
   String get privacyPageTitle => 'Platstjänster';
@@ -87,7 +87,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
 
   @override
   String get privacyLocationSubtitle =>
-      'Låt program veta din geografiska plats.\nDu kan ändra detta när som helst i Systeminställningarna.';
+      'Låt programmen veta din geografiska plats.\nDu kan ändra detta när som helst i Systeminställningarna.';
 
   @override
   String get privacyLocationEnable => 'Platstjänster';
@@ -97,7 +97,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Magisk anslut med koden på <a href=\"https://$url\"></a>';
+    return 'Anslut magiskt med koden på <a href=\"https://$url\"></a>';
   }
 
   @override
@@ -114,11 +114,11 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Få den mest omfattande prenumerationen för säkerhet med öppen källkod';
+      'Få det mest omfattande abonnemanget för säkerhet med öppen källkod';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Alltid gratis för personligt bruk. 30 dagars provperiod för företag. <a href=\"https://$url\">Läs mer</a>';
+    return 'Alltid kostnadsfritt för personligt bruk. 30 dagars provperiod för företag. <a href=\"https://$url\">Läs mer</a>';
   }
 
   @override
@@ -145,7 +145,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Lägg till denna maskin till en Ubuntu Pro prenumeration för säkerhetsuppdateringar på ett bredare utbud av paket, fram till 2032.';
+      'Lägg till denna maskin till ett Ubuntu Pro-abonnemang för säkerhetsuppdateringar för ett bredare utbud av paket, fram till 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
@@ -156,7 +156,7 @@ class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
       'Du kan hantera dina Pro-tjänster med programmet Programvara och uppdateringar.';
 
   @override
-  String get successIconSemanticLabel => 'Lyckats';
+  String get successIconSemanticLabel => 'Lyckades';
 
   @override
   String get closeIconSemanticLabel => 'Stäng';

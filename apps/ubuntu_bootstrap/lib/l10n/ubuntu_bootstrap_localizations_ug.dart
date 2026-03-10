@@ -9,107 +9,108 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsUg([String locale = 'ug']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Ubuntu ئۈستەلئۈستى ئورناتقۇچ';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return '‏$RELEASE نى ئورنات';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'ئۆزلۈكىدىن ئورنىتىش';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى ئەكىر';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنىڭ تور ئادرېسىنى كىرگۈزەلەيسىز:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'ياكى يەرلىك ھۆججەت تاللىنىدۇ:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'ھۆججەت تاللىنىدۇ…';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'ھۆججەتنى تازىلا';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'ھۆججەت تاللىنىدۇ';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML ھۆججەت';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'ئەكىر';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى زىيارەت قىلغىلى بولمايدۇ';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'تور ئادرېسىنىڭ توغرىلىقىنى تەكشۈرۈڭ، ئىنتېرنېت باغلىنىشىنى سىناڭ ياكى سەل تۇرۇپ قايتا سىناڭ.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'ئىناۋەتسىز تور ئادرېسى';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'تور ئادرېسىنىڭ توغرا ئىكەنلىكىنى تەكشۈرۈڭ ياكى يەرلىك ھۆججەتنى تاللاڭ.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'ئىناۋەتسىز ئۆزلۈكىدىن ئورنىتىش ھۆججىتى';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'ھۆججەتنى تەكشۈرۈڭ ياكى باشقا بىرىنى تەمىنلەڭ.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى ئوقۇغىلى بولمايدۇ';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'ئىجازىتىڭىزنى تەكشۈرۈڭ ياكى باشقا ھۆججەت تەمىنلەڭ.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'يوچۇن خاتالىق';
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'ئورنىتىش تۈرى';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return '$DISTRO نى قانداق ئورناتماقچى؟';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'autoinstall.yaml نىڭ تور ئادرېسى ياكى يەرلىك ھۆججەت يولى كىرگۈزۈلىدۇ:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'تەسىرلىشىشچان ئورنىتىش';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'ئورنىتىشتا قەدەممۇ-قەدەم يېتەكلەشكە ئېھتىياجلىق ئىشلەتكۈچىلەرگە ماس كېلىدۇ.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption =>
+      'ئۆزلۈكىدىن ئورنىتىش ھۆججىتى ئارقىلىق ئاپتوماتلاشتۇرۇلغان';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'ئۆزلۈكسىز ۋە تەكرار سىستېما سەپلەيدىغان autoinstall.yaml ھۆججىتىگە ئىگە ئالىي ئىشلەتكۈچىلەرگە ماس كېلىدۇ.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Landscape ئاپتوماتلاشتۇرغان';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Landscape ئارقىلىق ئۆزلۈكىدىن ئورنىتىش ھۆججىتى تەمىنلەيدىغان تەشكىلنىڭ ئىشلەتكۈچىلىرىگە ماس كېلىدۇ.';
 
   @override
   String get autoinstallErrorMessage =>
@@ -120,635 +121,636 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'ئۆزگەرت';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'ئورنىتىشتىن چېكىن';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO غا خۇش كەلدىڭىز';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO نى تەييارلاۋاتىدۇ…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'ئاگاھلاندۇرۇش:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return '$DISTRO نى سىنايدۇ ياكى ئورنىتىدۇ';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return '$DISTRO نى قانداق بىر تەرەپ قىلماقچى؟';
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'ئوڭشاپ ئورنىتىش';
 
   @override
   String get tryOrInstallRepairDescription =>
-      'Repairing will reinstall all installed software without touching documents or settings.';
+      'ئوڭشاش پۈتۈك ۋە تەڭشەكلەرگە چېقىلماستىن ئورنىتىلغان بارلىق يۇمشاق دېتاللارنى قايتا ئورنىتىدۇ.';
 
   @override
   String tryOption(String RELEASE) {
-    return '‏$RELEASE نى سىناپ كۆرىمەن';
+    return '‏$RELEASE نى سىناي';
   }
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'كومپيۇتېرىڭىزغا ھېچقانداق ئۆزگەرتىش ئېلىپ بارماستىن $RELEASE نى سىنىيالايسىز.';
   }
 
   @override
   String installOption(String RELEASE) {
-    return '‏$RELEASE نى ئورنىتىمەن';
+    return '‏$RELEASE نى ئورنات';
   }
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'نۆۋەتتىكى مەشغۇلات سىستېمىسىنىڭ ئورنىغا $RELEASE نى ئورنىتىدۇ (ياكى ئۇنىڭ ئورنىغا) ئالماشتۇرىدۇ. بۇنىڭغا ئانچە كۆپ ۋاقىت كەتمەيدۇ.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'سىز <a href=\"$url\">تارقىتىش ئىزاھاتى</a>نى ئوقۇشنى ئارزۇ قىلىشىڭىز مۇمكىن.';
   }
 
   @override
-  String get rstTitle => 'RST detected';
+  String get rstTitle => 'تېز ساقلاش تېخنىكىسى (RST) بايقالدى';
 
   @override
-  String get rstHeader => 'You must disable RST to continue installation';
+  String get rstHeader =>
+      'ئورنىتىشنى داۋاملاشتۇرۇش ئۈچۈن RST نى چەكلىشىڭىز كېرەك';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'بۇ كومپيۇتېردا Intel شىركىتىنىڭ RST (تېز ساقلاش تېخنىكىسى) ئىشلىتىلگەن. تۆۋەندە RST نى چەكلىيەلەيسىز:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      'Windows، ئەگەر ئۇنىڭ بىلەن قوش سىستېما قوزغىتىش ئىشلەتسىڭىز';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOS تەڭشىكى';
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'مۇناسىۋەتلىك چۈشەندۈرۈشكە ئېرىشىش ئۈچۈن ئۈسكۈنىدىكى QR كودى تارىلىدۇ ياكى تۆۋەندىكى زىيارەت قىلىنىدۇ: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'بىخەتەر قوزغىلىش سەپلىمىسى';
 
   @override
   String get configureSecureBootDescription =>
-      'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+      'سىز ئۈچىنچى تەرەپ قوزغاتقۇ يۇمشاق دېتالىنى ئورنىتىشنى تاللىدىڭىز. بۇ بىخەتەر قوزغىلىشنى تاقاشنى تەلەپ قىلىدۇ.\nشۇنىڭ ئۈچۈن دەرھال بىخەتەر شىفىرلىق ئاچقۇچتىن بىرنى تاللىشىڭىز كېرەك ھەمدە سىستېما قايتا قوزغىتىلغاندا ئۇنى كىرگۈزۈشىڭىز كېرەك.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'بىخەتەر قوزغىلىش سەپلىمىسى';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'بىخەتەرلىك ئاچقۇچى تاللىنىدۇ';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'بىخەتەرلىك ئاچقۇچىنى جەزملەش';
 
   @override
   String get dontInstallDriverSoftwareNow =>
-      'Don\'t install the driver software for now';
+      'ھازىرچە قوزغاتقۇ يۇمشاق دېتالنى ئورناتمايدۇ';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'You can install it later from Software & Updates.';
+      'ئۇنى كېيىن يۇمشاق دېتال ۋە يېڭىلاشتىن ئورنىتالايسىز.';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
-      'Security key is required';
+      'بىخەتەرلىك ئاچقۇچى زۆرۈر';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'بىخەتەرلىك ئاچقۇچى ماسلاشمىدى';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'كۆرسەت';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'يوشۇر';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'پىروگرامما';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
-      'What apps would you like to install to start with?';
+      'قايسى ئەپلەرنى ئورناتماقچى؟';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'كومپيۇتېرىڭىزنى ئەلالاشتۇرىدۇ';
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'تەۋسىيە قىلىنغان مەخسۇس يۇمشاق دېتالنى ئورنىتامدۇ؟';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'كۆڭۈلدىكى ئەھۋالدا $DISTRO نىڭ ئۆزىدە مەخسۇس يۇمشاق دېتال يوق. قوشۇمچە يۇمشاق دېتال ئورنىتىش كومپيۇتېرىڭىزنىڭ ئۈنۈمىنى ياخشىلىشى مۇمكىن.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'NVIDIA كۆرسىتىش كارتىسى بايقالدى';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+      'NVIDIA كۆرسىتىش كارتىسىنىڭ ئۈنۈمىنى جارى قىلدۇرۇش ئۈچۈن، قوشۇمچە قوزغاتقۇ ئورنىتىش كۈچلۈك تەۋسىيە قىلىنىدۇ.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'كېڭەيتىلگەن تاللاش';
 
   @override
   String get fullInstallationSubtitle =>
-      'An offline-friendly selection of office tools, utilities and web browser.';
+      'تورسىز تاللاپ ئورنىتىشقا دوستانە ئىشخانا يۈرۈشلۈك قورالى ۋە توركۆرگۈ.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'كۆڭۈلدىكى تاللاش';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Just the essentials, web browser and basic utilities.';
+      'پەقەت زۆرۈر يۇمشاق دېتال، توركۆرگۈ ۋە ئاساسىي قوراللار ئورنىتىلىدۇ.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'باشقا تاللانما';
 
   @override
   String get installThirdPartyTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+      'كۆرسىتىش ۋە Wi-Fi قاتتىق دېتالى شۇنداقلا قوشۇمچە ۋاسىتە پىچىمى ئۈچۈن ئۈچىنچى تەرەپ يۇمشاق دېتاللىرىنى ئورنىتىدۇ';
 
   @override
   String get installThirdPartySubtitle =>
-      'This software is subject to license terms included with its documentation. Some are proprietary.';
+      'مەزكۇر يۇمشاق دېتال ئۇنىڭ پۈتۈكلىرىدىكى ئىجازەتنامىنىڭ چەكلىمىسىگە ئۇچرايدۇ. بەزىلىرى خۇسۇسلارنىڭ ئىگىدارچىلىقىدا.';
 
   @override
   String get installDriversTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware';
+      'كۆرسىتىش ۋە Wi-Fi قاتتىق دېتالى شۇنداقلا قوشۇمچە ۋاسىتە پىچىمى ئۈچۈن ئۈچىنچى تەرەپ يۇمشاق دېتالىنى ئورنىتىدۇ';
 
   @override
   String get installDriversSubtitle =>
-      'Including but not limited to NVIDIA drivers and similar';
+      'NVIDIA قوزغاتقۇ ۋە ئوخشىشىپ كېتىدىغان يۇمشاق بىلەنلا چەكلەنمەسلىكى مۇمكىن';
 
   @override
   String get installCodecsTitle =>
-      'Download and install support for additional media formats';
+      'قوشۇمچە ۋاسىتە پىچىمىنى قوللاش ئۈچۈن چۈشۈرۈپ ئورنىتىدۇ';
 
   @override
   String get installCodecsSubtitle =>
-      'Including but not limited to MP3, MP4, MOV and similar';
+      'MP3، MP4، MOV ۋە ئوخشىشىپ كېتىدىغان كودلىغۇچ بىلەنلا چەكلەنمەسلىكى مۇمكىن';
 
   @override
-  String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'كومپيۇتېر توك مەنبەسىگە چېتىلمىغان.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'سىز نۆۋەتتە تورسىز ھالەتتە';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'ئىم ئىبارە قۇر';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader => 'ئىم ئىبارىنى ياخشى ساقلاڭ';
 
   @override
   String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+      'ئەگەر ئۇنى يوقىتىپ قويسىڭىز، ھەممە سانلىق مەلۇماتىڭىزنى يوقىتىسىز.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'ئىم ئىبارە ۋە ئەسلىگە كەلتۈرۈش ئاچقۇچىنى بىخەتەر بىر جايغا ساقلاڭ';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'ئەگەر ئۇنى يوقىتىپ قويسىڭىز، ھەممە سانلىق مەلۇماتىڭىزنى يوقىتىسىز. ئىم ئىبارە ئەسلىگە كەلتۈرۈش ئاچقۇچى ياكى ئىشلەتكۈچى ئىمنىڭ ئورنىنى ئالالمايدۇ.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'شىفىرلاش';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'شىفىرلاش ئىم ئىبارە تەڭشىكى';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'شىفىرلاش PIN تەڭشىكى';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر ئىم ئىبارىنى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا PIN كىرگۈزۈشىڭىز كېرەك. بۇ PIN ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر PIN نى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'ئىم ئىبارە';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'جەزملەش ئىم ئىبارە';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'ئىم ئىبارە زۆرۈر';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'ئىم ئىبارە ماس كەلمىدى';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'جەزملەش PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PIN كىرگۈزۈش زۆرۈر';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN ماس كەلمىدى';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'ئىم ئىبارە زۆرۈر';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'ئەڭ بىخەتەر. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'PIN زۆرۈر';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'بىخەتەررەك. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق رەقەم PIN كىرگۈزۈشىڭىز كېرەك.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'دىسكا قۇلۇپىنى ئۆزلۈكىدىن ئاچىدۇ';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'قوشۇمچە بىخەتەرلىك';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا كومپيۇتېرنىڭ ئىشەنچ سۇپا مودېلى (TPM) نىڭ قۇلۇپى ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'ئاجىز ئىم ئىبارە، ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'ياخشى ئىم ئىبار، تېخىمۇ بىخەتەر بولۇشى ئۈچۈن ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'كۈچلۈك ئىم ئىبارە';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'ئاجىز PIN، ئۇزۇنراق ياكى مۆلچەرلەشنى تەسلەشتۈرۈڭ';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'ياخشى PIN، تېخىمۇ بىخەتەر بولۇشى ئۈچۈن ئۇزۇنراق ياكى مۆلچەرلەشنى تەسلەشتۈرۈڭ';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN يېتەرلىك ئۇزۇن';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'دىسكا تەڭشىكى';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return '$DISTRO نى قانداق ئورناتماقچى؟';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'مەزكۇر كومپيۇتېردا $os بار ئىكەن. قانداق قىلىسىز؟';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'مەزكۇر كومپيۇتېردا $os1 ۋە $os2 بار ئىكەن. قانداق قىلىسىز؟';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'This computer currently has multiple operating systems on it. What would you like to do?';
+      'مەزكۇر كومپيۇتېردا بىر قانچە مەشغۇلات سىستېمىسى بار ئىكەن. قانداق قىلىسىز؟';
 
   @override
   String get installationTypeNoOSDetected =>
-      'This computer currently has no detected operating systems. What would you like to do?';
+      'مەزكۇر كومپيۇتېردا ھېچقانداق مەشغۇلات سىستېمىسى يوق ئىكەن. قانداق قىلىسىز؟';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'دىسكىنى ئۆچۈرۈپ \$$DISTRO نى ئورنىتىدۇ';
   }
 
   @override
   String get installationTypeEraseInfo =>
-      'All data and partitions on the disk will be erased, including operating systems.';
+      'دىسكىدىكى بارلىق سانلىق مەلۇمات ۋە رايون ئۆچۈرۈلىدۇ، مەشغۇلات سىستېمىسىمۇ شۇنىڭ ئىچىدە.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced options';
+  String get installationTypeAdvancedLabel => 'ئالىي تاللانما';
 
   @override
-  String get installationTypeAdvancedTitle => 'Encryption and file system';
+  String get installationTypeAdvancedTitle => 'شىفىرلاش ۋە ھۆججەت سىستېمىسى';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'تەجرىبە';
 
   @override
-  String get installationTypeNone => 'No encryption';
+  String get installationTypeNone => 'شىفىرلاش يوق';
 
   @override
   String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+      'شىفىرلانمىغان ئۆلچەملىك ھۆججەت سىستېمىسى.';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'ھېچقايسىسى تاللانمىدى';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM =>
+      'شىفىرلانمىغان لوگىكىلىق دىسكا باشقۇرۇش (LVM) نى ئىشلىتىدۇ';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'LVM تاللاندى';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption => 'ئىم ئىبارە بىلەن شىفىرلايدۇ';
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'بۇ مەشغۇلات LUKS شىفىرلاشنى LVM غا ئىشلىتىدۇ.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
-      'LVM and encryption selected';
+      'LVM ۋە شىفىرلاش تاللاندى';
 
   @override
   String get installationTypeEncryptInfo =>
-      'You will choose a security key in the next step.';
+      'كېيىنكى باسقۇچتا بىخەتەرلىك ئاچقۇچىنى تاللايسىز.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption';
+  String get installationTypeZFS => 'شىفىرلانمىغان ZFS نى ئىشلىتىدۇ';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Encrypt with a passphrase using ZFS';
+      'ZFS نى ئىشلىتىپ ئىم ئىبارە بىلەن شىفىرلايدۇ';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'ZFS نى ئىشلىتىپ يەرلىك شىفىرلايدۇ. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك.';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS تاللاندى';
 
   @override
   String get installationTypeZFSEncryptionSelected =>
-      'ZFS and encryption selected';
+      'ZFS ۋە مەخپىيلەشتۈرۈش تاللاندى';
 
   @override
-  String get installationTypeTPM => 'Use hardware-backed encryption';
+  String get installationTypeTPM =>
+      'قاتتىق دېتال قوللايدىغان شىفىرلاشنى ئىشلىتىدۇ';
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'قوزغالغاندا دىسكىنىڭ قۇلۇپى ئۆزلۈكىدىن ئېچىلىدۇ.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'بۇ كومپيۇتېردا ئىشلەتكىلى بولمايدۇ.';
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM تاللاندى';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return '$os نى ئۆچۈرۈپ قايتا ئورنىتىدۇ';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">ئاگاھلاندۇرۇش:</font> بۇنىڭدا $os دىكى بارلىق پروگرامما، پۈتۈك، سۈرەت، نەغمە ۋە باشقا ھەممە ھۆججەت ئۆچۈرۈلىدۇ.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return '$product نى $os بىلەن يانداش ئورنىتىدۇ';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return '$product نى $os1 ۋە $os2 بىلەن يانداش ئورنىتىدۇ';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside existing operating systems';
+    return '$product نى مەۋجۇت مەشغۇلات سىستېمىسى بىلەن يانداش ئورنىتىدۇ';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return '$product نى باشقا رايونغا يانداش ئورنىتىدۇ';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+    return 'چوڭلۇقىنى ئۆزگەرتىدىغان رايوندىن بىرنى تاللاپ ھەمدە $product غا بوشلۇق قۇرىدۇ. قوزغىلىۋاتقاندا مەشغۇلات سىستېمىسىنى تاللىيالايسىز.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '$os نى ئۆچۈرۈپ $product نى ئورنىتىدۇ';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'نۆۋەتتىكى $os ئورناتقان بارلىق ھۆججەت ۋە سانلىق مەلۇمات مەڭگۈلۈك ئۆچۈرۈلىدۇ.';
   }
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'قولدا ئورنىتىش';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'دىسكا سەپلىمىسىنى ئۆزى تەڭشەيدىغان ئالىي ئىشلەتكۈچىلەرگە ماس كېلىدۇ.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'دىسكىنى ئۆچۈرۈپ \$$DISTRO نى ئورنىتىدۇ';
   }
 
   @override
-  String get selectGuidedStorageInfo =>
-      'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'تاللىغان دىسكىدىن باشتىن باشلايدۇ.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'قوزغاتقۇچ تاللىنىدۇ:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'رايون تاللىنىدۇ:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'پۈتكۈل دىسكا ئىشلىتىلىدۇ:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'ھازىر ئورنات';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '$DISTRO نى نەگە ئورنىتىدىغانلىقى تاللىنىدۇ';
   }
 
   @override
   String get installAlongsideSpaceDivider =>
-      'Allocate drive space by dragging the divider below:';
+      'تۆۋەندىكى بۆلگۈچنى سۆرەش ئارقىلىق دىسكا بوشلۇقى ئاجرىتىلىدۇ:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num كىچىك رايون يوشۇرۇن، تېخىمۇ تەپسىلىي تىزگىنلەش ئۈچۈن <a href=\"$url\">ئالىي رايونغا ئايرىش قورالى</a> نى ئىشلىتىڭ';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'رايون چوڭلۇقىنى ئۆزگەرتىدۇ';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'بوشلۇق تەقسىملەيدۇ';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'ھۆججەت';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'رايون:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'چوڭلۇقى:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'ئىشلىتىلىشچان:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'قولدا رايونغا ئايرىش';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash =>
-      'Mount points must start with \"/\"';
+      'ئېگەرلەش نۇقتىسى چوقۇم «/» دىن باشلىنىدۇ';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
-      'Mount points cannot contain spaces';
+      'ئېگەرلەش نۇقتىسى بوشلۇقنى ئۆز ئىچىگە ئالمايدۇ';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format نى $mountpoint ھۆججەت سىستېمىسى قوللىمايدۇ';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'ئۈسكۈنە';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'تىپى';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'ئېگەرلەش نۇقتىسى';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'چوڭلۇقى';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'ئىشلىتىلگىنى';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'سىستېما';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'پىچىمى';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'ئەركىن بوشلۇق';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'يېڭى دىسكا رايون جەدۋىلى';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'يېڭى بوش دىسكا رايونى';
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+      'پۈتكۈل ئۈسكۈنىدە يېڭى دىسكا رايون جەدۋىلى قۇرغاندا نۆۋەتتىكى بارلىق دىسكا رايونىنى ئۆچۈرۈۋېتىدۇ. ئەگەر لازىم بولسا بۇ مەشغۇلاتتىن يېنىۋالغىلى بولىدۇ.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'ئاساسىي رايون بەك كۆپ';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'يۇقىرى چېكىگە يەتتى';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'قوزغىتىش يېتەكلىگۈچ ئورنىتىدىغان ئۈسكۈنە';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'دىسكا رايونى قۇر';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'دىسكا رايوننى تەھرىرلە';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'چوڭلۇقى:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'يېڭى دىسكا رايونىنىڭ تۈرى:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'ئاساسىي';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'لوگىكىلىق';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'يېڭى دىسكا رايونىنىڭ ئورنى:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'مەزكۇر بوشلۇقنىڭ بېشى';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'مەزكۇر بوشلۇقنىڭ ئاخىرى';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'ئىشلىتىلگىنى:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'پىچماي قالدۇر';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return '$format پىچىمىدا قالدۇرىدۇ';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'رايوننى پىچىدۇ';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'ئېگەرلەش نۇقتىسى:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'ئورنىتىشقا تەييارلاندى';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'تاللىشىڭىزنى تەكشۈرىدۇ';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -760,38 +762,38 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'يوق';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'ئۈسكۈنە';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'پىروگرامما';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'ئورنىتىش تۈرى';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'دىسكا شىفىرلاش';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'ئورنىتىش دىسكىسى';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'مەخسۇس يۇمشاق دېتال';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'ئادەتتىكى';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'بىخەتەرلىك ۋە باشقىلار';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'دىسكا رايونى';
 
   @override
   String get confirmPartitionTables =>
-      'The partition tables of the following devices are changed:';
+      'تۆۋەندىكى ئۈسكۈنىنىڭ دىسكا رايون جەدۋىلى ئۆزگەردى:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -799,875 +801,884 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'كودلىغۇچ-يەشكۈچ';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'كودلىغۇچ ۋە قوزغاتقۇچ';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'قوزغاتقۇ';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'ئورنات';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'ئۆچۈرۈلدى';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'ئۆزگەرتىلمىدى';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'چوڭلۇقى $oldsize دىن $newsize غا ئۆزگەرتىلدى';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return '$mountpoint غا ئىشلىتىش ئۈچۈن $format سۈپىتىدە پىچىلىپ قۇرۇلدى';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '$mountpoint غا ئىشلىتىش ئۈچۈن $format سۈپىتىدە پىچىلدى';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return '$mountpoint غا ئىشلىتىلىدۇ';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return '$format سۈپىتىدە پىچىلدى';
   }
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'ئورنىتىش تامام';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system ئورنىتىلدى ۋە ئىشلىتىشكە تەييار';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** دىسكىغا كۆچۈرۈلدى';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return '$system غا قايتا قوزغىلىپ كىرىدۇ';
   }
 
   @override
   String get restartWarningBody =>
-      'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+      'قايتا قوزغىتىلسا ئورنىتىشنى تاماملايدۇ ياكى سىناشنى داۋاملاشتۇرىدۇ.\nھەر قانداق ئۆزگەرتىشىڭىز ساقلانمايدۇ.';
 
   @override
   String get rebootToConfigureWarning =>
-      'You have to restart the computer to continue the installation process.';
+      'ئورنىتىش جەريانىنى داۋاملاشتۇرۇش ئۈچۈن كومپيۇتېرنى قايتا قوزغىتىش زۆرۈر.';
 
   @override
-  String get shutdown => 'Shut down';
+  String get shutdown => 'تاقا';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'ھازىر قايتا قوزغات';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'سىناشنى داۋاملاشتۇر';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker بايقالدى';
 
   @override
   String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+      'بىر ياكى بىر قانچە دىسكا رايونى BitLocker بىلەن شىفىرلانغان.';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'Windows بىلەن يانداش ئورنىتىش ئۈچۈن، Windows تىكى BitLocker نى چەكلەش كېرەك.';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'ئورناتقاندىن كېيىن Windows قوزغالغاندا ئەسلىگە قايتۇرۇش شىفىرلىق ئاچقۇچىنى سورىشى مۇمكىن.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'چۈشەندۈرۈشى ئۈچۈن <a href=\"$url\">BitLocker يېتەكچىسى</a>نى زىيارەت قىلىڭ.';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'ئەگەر BitLocker ئەسلىگە قايتۇرۇش ئاچقۇچىڭىز بولمىسا بارلىق سانلىق مەلۇماتلىرىڭىزنى يوقىتىشىڭىز مۇمكىن';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'كومپيۇتېرنى قايتا قوزغات';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'كومپيۇتېرنى قايتا قوزغىتامدۇ؟';
 
   @override
   String get restartInstaller => 'Restart installer';
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'قايتا قوزغىتىپ Windows قا كىرىدۇ';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'قايتا قوزغىتىپ Windows قا كىرەمدۇ؟';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'كومپيۇتېرنى راستتىنلا قايتا قوزغىتامسىز؟ سىز سەل تۇرۇپ $DISTRO ئورنىتىشنى قايتا قوزغاتسىڭىز ئاندىن $DISTRO ئورنىتىشنى تاماملىيالايسىز.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return '$RELEASE غا خۇش كەلدىڭىز';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'ئىشلىتىلىشچان:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'ئىچىدە:';
 
   @override
   String get installationSlidesWelcomeTitle =>
-      'Fast, free and full of new features';
+      'تېز، ئەركىن يەنى ھەقسىز، يېڭى ئىقتىدارلار بىلەن تولغان';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return '$DISTRO نىڭ يېڭى نەشرى ھېسابلاشنى ئىلگىرى ھەر قانداق ۋاقىتتىكىدىن تېخىمۇ ئاسانلاشتۇردى.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'مەيلى سىز ئىجادكار، مەزمۇن ياراتقۇچى، ئويۇن ئوينىغۇچى ياكى سىستېما باشقۇرغۇچى بولۇڭ، $RELEASE نەشرىدىن خىزمەت ئۈنۈمىنى ئاشۇرۇپ، ئىشلىتىش تەسىراتىنى كۈچەيتىدىغان يېڭى قوراللارنى تاپالايسىز.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle =>
+      'سىز ئېھتىياجلىق ھەممە پىروگرامما بار';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Ubuntu يۇمشاق دېتال مەركىزىدە Snap دۇكىنى ۋە $DISTRO يۇمشاق دېتال ئامبىرىدىن مىڭلىغان يۇمشاق دېتالنى ئورنىتىپ، باشقۇرۇپ ۋە يېڭىلىيالايسىز.';
   }
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Develop with the best of open source';
+      'ئەڭ ياخشى ئوچۇق كودلۇق يۇمشاق دېتالدا ئىجادىيەت بىلەن شۇغۇللىنىڭ';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
+    return '$DISTRO پىروگرامما ياكى تور ئىجادىيىتى، ئۇچۇر ئىلمى ۋە AI/ML شۇنداقلا يۈرگۈزۈش ۋە باشقۇرۇشنىڭ كۆڭۈلدىكىدەك خىزمەت پونكىتى. ھەر بىر $DISTRO نەشرىدە ئەڭ يېڭى قورال زەنجىرى بولۇپلا قالماي يەنە بارلىق ئاساسىي ئېقىمدىكى IDE نى قوللايدۇ.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'تەسەۋۋۇرىڭىزنى كۈچەيتىدۇ';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'ئەگەر سىز لايىھەلىگۈچى، كارتون فىلىم لايىھەلىگۈچى، سىن ئىجادىيەتچىسى ياكى ئويۇن ئىجادكارى بولسىڭىز، ئىش ئېقىمىنى ئوچۇق كودلۇق ۋە كەسىپ ئۆلچىمىنى قوللايدىغان يۇمشاق دېتال ۋە ئەپنى $DISTRO غا ئەكىرىش ئىنتايىن ئاددىي.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle =>
+      'ئويۇن ئوينىغۇچىلارغا بەك ماس كېلىدۇ';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return '$DISTRO ئەڭ يېڭى نەشرىدىكى NVIDIA ۋە Mesa قوزغاتقۇنى قوللاپ ئۈنۈم ۋە ماسلىشىشچانلىقنى ياخشىلىدى. Windows تىكى مىڭلىغان ئويۇننى $DISTRO دا Steam قاتارلىق پىروگراممىلار ئارقىلىق قوشۇمچە سەپلەش ئېلىپ بارماستىن راۋان ئوينىغىلى بولىدۇ.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle =>
+      'شەخسىيەت ۋە بىخەتەرلىك كاپالەتكە ئىگە';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return '$DISTRO توردا شەخسىيەت بىخەتەرلىكىگە كاپالەتلىك قىلىدىغان ھەممە قورالنى تەمىنلەيدۇ. $DISTRO نىڭ ئىچىدە مۇداپىئە تېمى ۋە مەۋھۇم شەخسىي تور يەنى VPN بار بولۇپ، شەخسىيەتنى مەركەز قىلغان بىر يۈرۈش پىروگراممىنى تەمىنلەپ، سانلىق مەلۇماتلىرىڭىزنى ئۆزىڭىزنىڭ تولۇق تىزگىنلىشىگە كاپالەتلىك قىلىدۇ.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'بارلىق $DISTRO نەشرى 5 يىللىق بىخەتەرلىك يامىقىنى ئۆز ئىچىگە ئالىدۇ، ئەگەر Ubuntu Pro مۇشتەرىلىكى بولسا 10 يىلغا ئۇزارتقىلى بولىدۇ.';
   }
 
   @override
   String get installationSlidesProductivityTitle =>
-      'Power up your productivity';
+      'ئىشلەپچىقىرىش ئۈنۈمىنى ئاشۇرىدۇ';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO نىڭ ئۈستەلئۈستى نەشرىگە LibreOffice ئالدىن ئورنىتىلغان بولۇپ، Microsoft Office بىلەن ماسلىشىدىغان ئوچۇق كودلۇق ئىشخانا يۈرۈشلۈك يۇمشاق دېتالى، پۈتۈك، ئېلېكتىرونلۇق جەدۋەل ۋە سىيرىلما بىر تەرەپ قىلىشقا ئىشلىتىلىدۇ. ئۇنىڭدىن باشقا يەنە ئالقىشلىنىۋاتقان ھەمكارلىشىش قورالىمۇ تەمىنلەنگەن.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'ھەممەيلەن ئىشلىتەلەيدۇ';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return '$DISTRO نىڭ غايىسى: كومپيۇتېرنى ھەممە ئادەم ئىشلىتەلەيدىغان بولۇشتۇر. ئۇنىڭدىكى ئالىي دەرىجىلىك قولايلىق قورال ۋە باشقا نۇرغۇن تاللانمىلار رەڭ، تېكىست چوڭلۇقى، تىل قاتارلىقلارنىڭ ھەممىسىنى ئۆزگەرتىش، شۇنداقلا سىز قەيەردە، كىم بولۇشىڭىزدىن قەتئىينەزەر $DISTRO ھېسابلاشنى ئاسانلاشتۇرىدۇ.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca screen reader';
+  String get installationSlidesAccessibilityOrca => 'Orca ئېكران ئوقۇغۇچ';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'تىل قوللاش';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'ياردەم ۋە قوللاش';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'ئىگە تەرەپ $DISTRO قوللانمىسىنى توردا ۋە يان بالداقتىكى ياردەم سىنبەلگە ئارقىلىق زىيارەت قىلغىلى بولىدۇ.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+      'Ask Ubuntu ھەر خىل مەسىلە ۋە جاۋابلار بار، Ubuntu Discourse يېڭىياچى ۋە تەجرىبىلىك ئىشلەتكۈچىلەرگە يېتەكچى ۋە مۇنازىرە سۇپىسى تەمىنلەيدۇ.';
 
   @override
   String get installationSlidesSupportEnterprise =>
-      'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+      'كارخانا ئىشلەتكۈچىلىرى ئۈچۈن Canonical شىركىتى سودا جەھەتتىن قوللاش بىلەن تەمىنلەپ، كارخانىدا خىزمەت مۇھىتىدا Ubuntu نى بىخەتەر ئورنىتىپ باشقۇرۇشنى ئاسانلاشتۇرىدۇ.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'پايدىلىق مەنبەلەر:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'ئىگە تەرەپ قوللانما';
 
   @override
   String get installationSlidesSupportUbuntuPro =>
-      'Enterprise-grade 24/7 support with Ubuntu Pro';
+      'Ubuntu Pro نىڭ 24/7 كارخانا دەرىجىسىدىكى قوللىشى';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'كېيىنكى سىيرىلما';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'ئالدىنقى سىيرىلما';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'تام تەسۋىرنى كۆرسىتىدۇ';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'تام تەسۋىرنى ۋاقىتلىق توختىتىدۇ';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'ئورنىتىش خاتىرىسىنى ئالماشتۇرىدۇ';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'ھۆججەت كۆچۈرۈۋاتىدۇ…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'سىستېما ئورنىتىۋاتىدۇ…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'سىستېمىنى تەڭشەۋاتىدۇ…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'ئورنىتالمىدى';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'يېتەرلىك دىسكا بوشلۇقى يوق';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return '$DISTRO نى ئورنىتىشقا يېتەرلىك دىسكا بوشلۇقى يوق';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'تاللىغان دىسكىدا $DISTRO نى ئورنىتىشقا يېتەرلىك دىسكا بوشلۇقى يوق. بوشلۇق تەييارلاش ئۈچۈن ئورناتقۇچتىن چېكىنىڭ ياكى باشقا دىسكا تاللاڭ.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'ئىشلىتىلىشچان:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'زۆرۈر:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'يېڭىلانما بار';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'ئورناتقۇچنىڭ يېڭىلانمىسى بار';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'ھازىر يېڭىلا';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'ئەڭ يېڭى نەشرىگە يېڭىلانسا ئىشەنچلىكلىكىنى ياخشىلاپ، تېخىمۇ كۆپ ئىقتىدارىغا ئېرىشكىلى بولىدۇ.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'يېڭىلانما تەييار';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'نۆۋەتتىكى$snap نىڭ نەشرى $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'يېڭىلىنىدىغان نەشرى $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'نۆۋەتتىكى نەشرى $version ئەڭ يېڭىسى.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap نى يېڭىلاۋاتىدۇ…';
   }
 
   @override
   String get refreshRestart =>
-      'Please close the installer and relaunch to continue';
+      'داۋاملاشتۇرۇش ئۈچۈن ئورناتقۇچنى تاقاپ ۋە قايتا قوزغىتىڭ';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'ئورناتقۇچنى ياپ';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap نىڭ ئالدىنقى شەرتىگە كاپالەتلىك قىلىۋاتىدۇ…';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap نى يېڭىلاۋاتىدۇ…';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '$snap نىڭ قايتا يېڭىلىنىشىنى تەكشۈرۈۋاتىدۇ…';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap نى تەييارلاۋاتىدۇ…';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap نى چۈشۈرۈۋاتىدۇ…';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap نى دەلىللەۋاتىدۇ…';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '$snap نى ئېگەرلەۋاتىدۇ…';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap مۇلازىمىتىنى توختىتىۋاتىدۇ…';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap لەقىمىنى چىقىرىۋېتىۋاتىدۇ…';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap ئۇلانمىسىنى ئۈزۈۋاتىدۇ…';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap مەنبەسىنى يېڭىلاۋاتىدۇ…';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '$snap نىڭ يادرو بۇيرۇق قۇرىنى يېڭىلاۋاتىدۇ…';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap سانلىق مەلۇماتىنى كۆچۈرۈۋاتىدۇ…';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap نىڭ بىخەتەرلىك سەپلىمە ھۆججىتىنى تەڭشەۋاتىدۇ…';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '$snap غا باغلاۋاتىدۇ…';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap نىڭ كۆرۈنۈش قىستۇرمىسى ۋە ئوقۇرىغا باغلاۋاتىدۇ…';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'ئاپتوماتىك $snap لەقىمىنى تەڭشەۋاتىدۇ…';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap لەقىمىنى تەڭشەۋاتىدۇ…';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap مۇلازىمىتىنى قوزغىتىۋاتىدۇ…';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap نى تازىلاۋاتىدۇ…';
   }
 
   @override
-  String get recoveryKeyTitle => 'Recovery key';
+  String get recoveryKeyTitle => 'ئەسلىگە كەلتۈرۈش ئاچقۇچى';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'مۇھىم';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'ئەسلىگە كەلتۈرۈش ئاچقۇچىنى ساقلايدۇ';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+      'ئەسلىگە قايتۇرۇش ئاچقۇچىڭىز بولمىسا بارلىق سانلىق مەلۇماتلىرىڭىزنى يوقىتىشىڭىز مۇمكىن';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'ئەسلىگە كەلتۈرۈش ئاچقۇچى';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      'ئەگەر قوزغالغاندا شىفىر يېشەلمىسە، بۇ شىفىرلىق ئاچقۇچنى تەمىنلىشىڭىز كېرەك. ئەگەر ئاچقۇچ بولمىسا، ھېچقانداق سانلىق مەلۇماتىڭىزنى زىيارەت قىلالمايسىز. ئۇنى ئىم باشقۇرغۇچقا ئوخشاش بىخەتەر بىر جايغا ساقلاڭ.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+      'ئەسلىگە كەلتۈرۈش ئاچقۇچىنى بىخەتەر جايغا ساقلىدىم';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'مول بىلىم';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'ھۆججەتكە ساقلا';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'QR كودىنى كۆرسەت';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO ئۈستەلئۈستى - ئەسلىگە كەلتۈرۈش ئاچقۇچى';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'QR كودىنى تاراپ ئەسلىگە كەلتۈرۈش ئاچقۇچىنى ئىم باشقۇرغۇچقا ئوخشاش بىرەر بىخەتەر جايدا ساقلاڭ. كېيىن ئىشلىتىش ئۈچۈن ئۇنى سۈرەتكە تارتسىڭىزمۇ بولىدۇ.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'چاپلاش تاختىسىغا كۆچۈرۈلدى';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'ئەسلىگە كەلتۈرۈش ئاچقۇچى ساقلانمىدى';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'ئەسلىگە كەلتۈرۈش ئاچقۇچ ھۆججىتىنى ۋاقىتلىق ئورۇنغا ساقلىيالمايدۇ';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'يوچۇن خاتالىق';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'ئۇ قىسقۇچ ئورنىغا يېزىش ئىجازىتىڭىز يوق. پەرقلىق ئورۇننى سىناڭ ياكى باشقا ئۇسۇلنى ئىشلىتىڭ.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'كۆچمە دىسكىغا ئوخشاش پەرقلىق ئورۇننى سىناڭ ياكى باشقا ئۇسۇلنى ئىشلىتىڭ.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'ئەسلىگە كەلتۈرۈش ئاچقۇچىنى ساقلايدۇ';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'تېكىست ھۆججەت';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'QR كودىنى تاراڭ ياكى <a href=\"https://$url\">$url</a> غا تۆۋەندىكى كودنى كىرگۈزۈڭ';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'ئۆزلۈكىدىن ئورنىتىش';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Landscape غا تىزىمغا كىرىڭ';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Landscape دائىرىنى كىرگۈزۈڭ (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscape دائىرە ئىسمى (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'تەشكىلىڭىزنىڭ Landscape دائىرە ئىسمىنى تەمىنلەپ تىزىمغا كىرىپ ئۆزلۈكىدىن ئورنىتىش ھۆججىتىگە ئېرىشىڭ. ئۇچۇر تېخنىكا قوللىغۇچىڭىزدىن FQDN غا ئېرىشەلەيسىز.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape دائىرە ئىسمى (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'كېيىنكى';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      'دائىرە ئىسمى ئىناۋەتسىز، تەكشۈرۈڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىڭىز بىلەن ئالاقىلىشىڭ';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+      'داۋاملاشتۇرۇش ئۈچۈن ئىنتېرنېتقا باغلاش كېرەك';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'چوقۇم ئىنتېرنېتقا باغلاپ Landscape دىن ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى چۈشۈرۈش كېرەك';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'كودنىڭ ۋاقتى ئۆتكەن، قايتا سىناڭ';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning => 'تىزىمغا كىرەلمىدى، قايتا سىناڭ';
 
   @override
   String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+      'ھېسابىڭىزدا ئۆزلۈكىدىن ئورنىتىشنى ئىشلەتكىلى بولمايدۇ';
 
   @override
   String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+      'ئۇچۇر تېخنىكا قوللىغۇچىڭىز بىلەن ئالاقىلىشىڭ ياكى باشقا ئورنىتىش تاللانمىسىنى سىناڭ.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'خاتالىق كودى: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'Ubuntu تەشكىلىڭىز تەمىنلىگەن سەپلىمە بىلەن ئورنىتىدۇ';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'تۆۋەندە Landscape دىن ئەكىرگەن ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى كۆرەلەيسىز.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'مۇۋەپپەقىيەتلىك';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'خاتالىق';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ياپ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'چوڭايت';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'كىچىكلەت';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'قاتتىق دېتال قوللايدىغان شىفىرلاشنى قوزغاتقىلى بولمايدۇ';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'زۆرۈر مەشغۇلات';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'تېخنىكىلىق تەپسىلات';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'جەزملە';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'ھەل قىلىش لايىھەسى $n: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'لايىھە: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'قاتتىق دېتال قوللايدىغان شىفىرلاش ھەققىدىكى مول بىلىم';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'تۆۋەندىكى ھەل قىلىش لايىھەسىنى سىناڭ، ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ ياكى باشقا شىفىرلاش ئۇسۇلىنى تاللاڭ.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'تۆۋەندىكى لايىھەنى سىناڭ، ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ ياكى پەرقلىق شىفىرلاش ئۇسۇلىنى تاللاڭ.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ ياكى باشقا شىفىرلاش ئۇسۇلىنى تاللاڭ.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'ئىچكى خاتالىق.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'توكتىن ئۈزۈش زۆرۈر.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'قايتا قوزغىتىش زۆرۈر.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'كۈتۈلمىگەن مەشغۇلات.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'ئەركىن ئۆزگەرگۈچى كەم.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'ئىناۋەتسىز ئۆزگەرگۈچى.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'مەشغۇلات مەغلۇپ بولدى.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'نۆۋەتتىكى مۇھىت مەۋھۇم كومپيۇتېر.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'بۇ كومپيۇتېر مەزكۇر شىفىرلاش ئۇسۇلىنى قوللىمايدىغان كونىراق مۇقىم دېتال (كونا BIOS) ئىشلىتىۋاتىدۇ.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'بۇ كومپيۇتېرنىڭ مۇقىم دېتالىدا مەسىلە بار.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'بۇ كومپيۇتېردا مەزكۇر شىفىرلاش ئۇسۇلىغا زۆرۈر بولغان بىخەتەرلىك قاتتىق دېتالى (TPM 2.0) يوق.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'بۇ كومپيۇتېردا TPM چەكلەنگەن.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'بۇ كومپيۇتېرنىڭ TPM نى باشقا سىستېما ياكى پىروگرامما ئىشلىتىۋاتىدۇ.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'نۆۋەتتە بۇ كومپيۇتېرنىڭ TPM ى قۇلۇپلانغان.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'بۇ كومپيۇتېرنىڭ TPM دا ساقلاش بوشلۇقى يېتەرلىك ئەمەس.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'بۇ كومپيۇتېر قاتتىق دېتال ئاساسىدىكى شىفىرلاش بىلەن ماسلاشمايدۇ.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'UEFI سازلاش قوزغىتىلغان.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'بۇ كومپيۇتېردا زۆرۈر بولغان بىخەتەرلىك ئىقتىدارى (DMA قوغداش) كەم.';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'بۇ كومپيۇتېردا زۆرۈر بولغان بىخەتەرلىك ئىقتىدارى (IOMMU) كەم.';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'بۇ كومپيۇتېرنىڭ بىخەتەرلىك سەپلىمىسىدە مەسىلە بار.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'بەلكىم كومپيۇتېرنىڭ TPM ى بىلەن بىخەتەر ئۇلىنىشقا توسقۇنلۇق قىلىدىغان يۇمشاق دېتال كومپيۇتېر قوزغىتىلغاندىلا ئىجرا بولۇۋاتىدۇ.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'بۇ كومپيۇتېردا مۇتلەق ئۆزلۈكسىزلىك بۆلىكى قوزغىتىلغان.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'بۇ كومپيۇتېردا بىخەتەر قوزغىتىش ھالىتى چەكلەنگەن ياكى «جايلاشتۇرۇلغان» ھالەتتە تەڭشەلمىگەن.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'بۇ كومپيۇتېردىكى بەزى گۇۋاھنامە دەلىللەش يۇمشاق دېتالىنىڭ ۋاقتى ئۆتكەن ياكى ئاجىز بىخەتەرلىك قوغداش ئۇسۇلى ئىشلىتىلگەن.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'بۇ كومپيۇتېر قوزغىتىلغاندا دەلىللەيدىغان يۇمشاق دېتالنى يول قويۇش تىزىمىنى قولدا دەلىللەش يولغا قويۇلغان.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'قوشۇلما قوزغاتقۇ مەۋجۇت.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'بۇ كومپيۇتېرنىڭ TPM دا مەسىلە بار.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'بۇ كومپيۇتېرنىڭ مۇقىم دېتالىدا مەسىلە بار.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'قايتا قوزغات';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'توكنى ئۈز';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'قايتا قوزغىتىپ مۇقىم دېتال تەڭشىكىگە كىرىدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'ئەگەر مۇقىم دېتال تەڭشىكى ئۆزلۈكىدىن يۈكلەنمىسە، قايتا قوزغىتىپ ۋە قوزغىلىۋاتقاندا تەڭشەك كۇنۇپكىسى تەكرار بېسىلىدۇ (ئادەتتە F2، F10 ياكى Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'DMA قوغداشنى قولدا قوزغىتىدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'TPM نى قولدا تازىلايدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'بىخەتەر قوزغىتىشنى قولدا قوزغىتىدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'IOMMU نى قولدا قوزغىتىدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'PCR ئامبىرىنى قولدا قوزغىتىدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'TPM نى قولدا قوزغىتىدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'TPM نى قولدا تازىلايدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'TPM نى قولدا تازىلايدۇ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'مۇتلەق ئۆزلۈكسىزلىك بۆلىكى قولدا چەكلەنگەن';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'OEM بىلەن ئالاقىلىشىش';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'مەشغۇلات سىستېمىسىنى تەمىنلىگۈچى بىلەن ئالاقىلىشىش';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'قايتا قوزغىتىلغاندا TPM نى قوزغىتىدۇ';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'قايتا قوزغىتىلغاندا TPM نى قوزغىتىدۇ ۋە تازىلايدۇ';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'قايتا قوزغىتىلغاندا TPM نى تازىلايدۇ';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'TPM نى تازىلا';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'پەرۋا قىلما';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'ئالدىنقى مەشغۇلاتنى تاماملاش ئۈچۈن كومپيۇتېرنى قايتا قوزغىتىدۇ.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'كومپيۇتېر قايتا قوزغىتىلسا مەسىلە ئوڭشىلىشى مۇمكىن.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'ئالدىنقى مەشغۇلاتنى تاماملاش ئۈچۈن كومپيۇتېرنىڭ توك مەنبەسىنى ئۈزۈش كېرەك.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'بۇنى كومپيۇتېرنىڭ مۇقىم دېتال تەڭشىكىدە قىلالايسىز.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'بۇنى كومپيۇتېرنىڭ مۇقىم دېتال تەڭشىكىدە قىلالىشىڭىز مۇمكىن. كورسەتمە ئۈچۈن CPU تەمىنلىگۈچىنىڭ قوللانمىسىنى تەكشۈرۈڭ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'بىخەتەر قوزغىتىش ھالىتىنىڭ «ئورنىتىلغان» غا تەڭشەلگەنلىكىنى تەكشۈرىدۇ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'بۇ ئىقتىدار «كۆرۈنۈشلەشتۈرۈش تېخنىكىسى»، «VT-d» ياكى «AMD-Vi\"» دەپ ئاتىلىشى مۇمكىن.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'بۇ مەسىلىگە پەرۋا قىلمىغاندا بىخەتەرلىكى تۆۋەنرەك ئورنىتىش نەتىجىسى كېلىپ چىقىشى مۇمكىن.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'قايتا قوزغات';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'قايتا قوزغىتىپ ۋە TPM نى قوزغىتىدۇ';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'قايتا قوزغىتىپ ۋە TPM نى تازىلايدۇ';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'پەرۋا قىلماي داۋاملاشتۇر';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPM تازىلانسا بارلىق شىفىرلىق ئاچقۇچ ئۆچۈرۈلىدۇ';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'ئەگەر ئەسلىگە كەلتۈرۈش ئاچقۇچىڭىز بولمىسا شىفىرلانغان دىسكىدىكى سانلىق مەلۇماتنى زىيارەت قىلىش ئىجازىتىڭىزدىن مەھرۇم قالىسىز. بۇ مەشغۇلاتتا TPM غا تايىنىدىغان دەلىللەش ۋە گۇۋاھنامىگە ئوخشاش ئىقتىدارلار ئۈنۈمىنى يوقىتىدۇ.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'مەن TPM نى تازىلاشنىڭ ئاقىۋىتىنى چۈشىنىمەن';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'قايتا قوزغىتىلغاندا بۇ مەشغۇلاتنى جەزملىشىڭىزنى سورىشى مۇمكىن.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'ئاندىن ئورنىتىشنى قايتا باشلىشىڭىز كېرەك بولىدۇ.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'بۇ ھەل قىلىش لايىھەسى مەغلۇپ بولدى';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'باشقا ھەل قىلىش لايىھەسىنى سىناڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'باشقىنى سىناڭ. يەنە <a href=\"\">خاتالىق دوكلاتى يوللا</a>يالايسىز.';
 }

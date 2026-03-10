@@ -9,107 +9,108 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'ಉಬುಂಟು ಡೆಸ್ಕ್‌ಟಾಪ್ ಸ್ಥಾಪಕ';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'ಸ್ಥಾಪಿಸಿ $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'ಸ್ವಯಂಚಾಲಿತ ಅನುಸ್ಥಾಪನೆ';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿ';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಿನೀವು ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್‌ನ URL ಅನ್ನು ನಮೂದಿಸಬಹುದು:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'ಫೈಲ್ ತೆರವುಗೊಳಿಸಿ';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML ಫೈಲ್‌ಗಳು';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'ಆಮದು ಮಾಡಿಕೊಳ್ಳಿ';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ತಲುಪಲಾಗುವುದಿಲ್ಲ';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'URL ಸರಿಯಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ, ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರೀಕ್ಷಿಸಿ ಅಥವಾ ನಂತರ ಪ್ರಯತ್ನಿಸಿ.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'ಅಮಾನ್ಯ URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'URL ಸರಿಯಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಅನ್ನು ಆಯ್ಕೆಮಾಡಿ.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'ಅಮಾನ್ಯ ಸ್ವಯಂ ಸ್ಥಾಪನೆ ಫೈಲ್';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'ಫೈಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆಯದನ್ನು ಒದಗಿಸಿ.ನಿಮ್ಮ ಅನುಮತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಬೇರೆ ಫೈಲ್ ಅನ್ನು ಒದಗಿಸಿ.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'ಅಜ್ಞಾತ ದೋಷ';
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'ಅನುಸ್ಥಾಪನೆಯ ಪ್ರಕಾರ';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'ನೀವು $DISTRO ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'autoinstall.yaml URL ಅಥವಾ ಸ್ಥಳೀಯ ಫೈಲ್ ಮಾರ್ಗವನ್ನು ನಮೂದಿಸಿ:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'ಸಂವಾದಾತ್ಮಕ ಸ್ಥಾಪನೆ';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'ಅನುಸ್ಥಾಪನೆಯ ಮೂಲಕ ಹಂತ ಹಂತವಾಗಿ ಮಾರ್ಗದರ್ಶನ ಮಾಡಲು ಬಯಸುವ ಬಳಕೆದಾರರಿಗೆ.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption =>
+      'ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್‌ನೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿದೆ';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'ಸ್ಥಿರವಾದ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಸಿಸ್ಟಮ್ ಸೆಟಪ್‌ಗಳಿಗಾಗಿ autoinstall.yaml ಅನ್ನು ಹೊಂದಿರುವ ಮುಂದುವರಿದ ಬಳಕೆದಾರರಿಗೆ.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'ಭೂದೃಶ್ಯದೊಂದಿಗೆ ಸ್ವಯಂಚಾಲಿತ';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಮೂಲಕ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಒದಗಿಸುವ ಸಂಸ್ಥೆಗಳಲ್ಲಿನ ಬಳಕೆದಾರರಿಗೆ.';
 
   @override
   String get autoinstallErrorMessage =>
@@ -120,370 +121,380 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'ಬದಲಾವಣೆ';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'ಅನುಸ್ಥಾಪನೆಯನ್ನು ತ್ಯಜಿಸಿ';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO ಗೆ ಸುಸ್ವಾಗತ';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'ಎಚ್ಚರಿಕೆ:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return '$DISTRO ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'ನೀವು $DISTRO ಜೊತೆಗೆ ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?';
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'ದುರಸ್ತಿ ಅನುಸ್ಥಾಪನೆ';
 
   @override
   String get tryOrInstallRepairDescription =>
-      'Repairing will reinstall all installed software without touching documents or settings.';
+      'ರಿಪೇರಿ ಮಾಡುವುದರಿಂದ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು ಅಥವಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸ್ಪರ್ಶಿಸದೆಯೇ ಎಲ್ಲಾ ಸ್ಥಾಪಿಸಲಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಮರುಸ್ಥಾಪಿಸುತ್ತದೆ.';
 
   @override
   String tryOption(String RELEASE) {
-    return 'Try $RELEASE';
+    return '$RELEASE ಪ್ರಯತ್ನಿಸಿ';
   }
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ಗೆ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡದೆಯೇ ನೀವು $RELEASE ಅನ್ನು ಪ್ರಯತ್ನಿಸಬಹುದು.';
   }
 
   @override
   String installOption(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'ಸ್ಥಾಪಿಸಿ $RELEASE';
   }
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಂ ಜೊತೆಗೆ (ಅಥವಾ ಬದಲಿಗೆ) $RELEASE ಅನ್ನು ಸ್ಥಾಪಿಸಿ. ಇದು ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಾರದು.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+    return 'ನೀವು <a href=\"$url\">ಬಿಡುಗಡೆ ಟಿಪ್ಪಣಿಗಳನ್ನು</a> ಓದಲು ಬಯಸಬಹುದು.';
   }
 
   @override
-  String get rstTitle => 'RST detected';
+  String get rstTitle => 'RST ಪತ್ತೆಯಾಗಿದೆ';
 
   @override
-  String get rstHeader => 'You must disable RST to continue installation';
+  String get rstHeader =>
+      'ಅನುಸ್ಥಾಪನೆಯನ್ನು ಮುಂದುವರಿಸಲು ನೀವು RST ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕು';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಇಂಟೆಲ್ RST (ರಾಪಿಡ್ ಸ್ಟೋರೇಜ್ ಟೆಕ್ನಾಲಜಿ) ಅನ್ನು ಬಳಸುತ್ತದೆ. ನೀವು ಇದರಲ್ಲಿ RST ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬಹುದು:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      'ವಿಂಡೋಸ್, ನೀವು ವಿಂಡೋಸ್ನೊಂದಿಗೆ ಡ್ಯುಯಲ್ ಬೂಟ್ ಸೆಟಪ್ ಅನ್ನು ಬಳಸುತ್ತಿದ್ದರೆ';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOS ಸೆಟ್ಟಿಂಗ್‌ಗಳು';
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'ಸೂಚನೆಗಳಿಗಾಗಿ, ಇನ್ನೊಂದು ಸಾಧನದಲ್ಲಿ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ಭೇಟಿ ನೀಡಿ: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ';
 
   @override
   String get configureSecureBootDescription =>
-      'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+      'ನೀವು ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ್ದೀರಿ. ಇದಕ್ಕೆ ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಆಫ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ.ಇದನ್ನು ಮಾಡಲು, ನೀವು ಇದೀಗ ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆರಿಸಬೇಕಾಗುತ್ತದೆ ಮತ್ತು ಸಿಸ್ಟಮ್ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ ಅದನ್ನು ನಮೂದಿಸಿ.ನೀವು ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಆಯ್ಕೆ ಮಾಡಿದ್ದೀರಿ. ಇದಕ್ಕೆ ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಆಫ್ ಮಾಡುವ ಅಗತ್ಯವಿದೆ.ಇದನ್ನು ಮಾಡಲು, ನೀವು ಇದೀಗ ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆರಿಸಬೇಕಾಗುತ್ತದೆ ಮತ್ತು ಸಿಸ್ಟಮ್ ಮರುಪ್ರಾರಂಭಿಸಿದಾಗ ಅದನ್ನು ನಮೂದಿಸಿ.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'ಭದ್ರತಾ ಕೀಯನ್ನು ದೃಢೀಕರಿಸಿ';
 
   @override
   String get dontInstallDriverSoftwareNow =>
-      'Don\'t install the driver software for now';
+      'ಸದ್ಯಕ್ಕೆ ಡ್ರೈವರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಬೇಡಿ';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'You can install it later from Software & Updates.';
+      'ನೀವು ಅದನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್‌ನಿಂದ ಸ್ಥಾಪಿಸಬಹುದುನೀವು ಅದನ್ನು ನಂತರ ಸಾಫ್ಟ್‌ವೇರ್‌ನಿಂದ ಸ್ಥಾಪಿಸಬಹುದು';
 
   @override
-  String get configureSecureBootSecurityKeyRequired =>
-      'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'ಭದ್ರತಾ ಕೀ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch =>
+      'ಭದ್ರತಾ ಕೀಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'ತೋರಿಸು';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'ಮರೆಮಾಡಿ';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'ಅಪ್ಲಿಕೇಶನ್‌ಗಳು';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
-      'What apps would you like to install to start with?';
+      'ಪ್ರಾರಂಭಿಸಲು ನೀವು ಯಾವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle =>
+      'ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆಪ್ಟಿಮೈಜ್ ಮಾಡಿ';
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'ಶಿಫಾರಸು ಮಾಡಲಾದ ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವುದೇ?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಯಾವುದೇ ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು $DISTRO ರವಾನಿಸುತ್ತದೆ. ಹೆಚ್ಚುವರಿ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವುದು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಸುಧಾರಿಸಬಹುದು.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote =>
+      'NVIDIA ಗ್ರಾಫಿಕ್ಸ್ ಕಾರ್ಡ್ ಪತ್ತೆಯಾಗಿದೆ';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+      'NVIDIA ಗ್ರಾಫಿಕ್ ಕಾರ್ಡ್‌ಗಳ ಉತ್ತಮ ಕಾರ್ಯಕ್ಷಮತೆಗಾಗಿ, ಹೆಚ್ಚುವರಿ ಡ್ರೈವರ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸುವುದನ್ನು ಬಲವಾಗಿ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'ವಿಸ್ತೃತ ಆಯ್ಕೆ';
 
   @override
   String get fullInstallationSubtitle =>
-      'An offline-friendly selection of office tools, utilities and web browser.';
+      'ಕಚೇರಿ ಪರಿಕರಗಳು, ಉಪಯುಕ್ತತೆಗಳು ಮತ್ತು ವೆಬ್ ಬ್ರೌಸರ್‌ನ ಆಫ್‌ಲೈನ್-ಸ್ನೇಹಿ ಆಯ್ಕೆ.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'ಡೀಫಾಲ್ಟ್ ಆಯ್ಕೆ';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Just the essentials, web browser and basic utilities.';
+      'ಕೇವಲ ಅಗತ್ಯಗಳು, ವೆಬ್ ಬ್ರೌಸರ್ ಮತ್ತು ಮೂಲಭೂತ ಉಪಯುಕ್ತತೆಗಳು.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'ಇತರ ಆಯ್ಕೆಗಳು';
 
   @override
   String get installThirdPartyTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+      'ಗ್ರಾಫಿಕ್ಸ್ ಮತ್ತು ವೈ-ಫೈ ಹಾರ್ಡ್‌ವೇರ್‌ಗಾಗಿ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಿ, ಜೊತೆಗೆ ಹೆಚ್ಚುವರಿ ಮಾಧ್ಯಮ ಸ್ವರೂಪಗಳು';
 
   @override
   String get installThirdPartySubtitle =>
-      'This software is subject to license terms included with its documentation. Some are proprietary.';
+      'ಈ ಸಾಫ್ಟ್‌ವೇರ್ ಅದರ ದಸ್ತಾವೇಜನ್ನು ಒಳಗೊಂಡಿರುವ ಪರವಾನಗಿ ನಿಯಮಗಳಿಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ. ಕೆಲವು ಸ್ವಾಮ್ಯದವು.';
 
   @override
   String get installDriversTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware';
+      'ಗ್ರಾಫಿಕ್ಸ್ ಮತ್ತು ವೈ-ಫೈ ಹಾರ್ಡ್‌ವೇರ್‌ಗಾಗಿ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
 
   @override
   String get installDriversSubtitle =>
-      'Including but not limited to NVIDIA drivers and similar';
+      'NVIDIA ಡ್ರೈವರ್‌ಗಳು ಮತ್ತು ಅಂತಹುದೇ ಸೇರಿದಂತೆ ಆದರೆ ಸೀಮಿತವಾಗಿಲ್ಲ';
 
   @override
   String get installCodecsTitle =>
-      'Download and install support for additional media formats';
+      'ಹೆಚ್ಚುವರಿ ಮಾಧ್ಯಮ ಸ್ವರೂಪಗಳಿಗೆ ಬೆಂಬಲವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಸ್ಥಾಪಿಸಿ';
 
   @override
   String get installCodecsSubtitle =>
-      'Including but not limited to MP3, MP4, MOV and similar';
+      'MP3, MP4, MOV ಮತ್ತು ಅಂತಹುದೇ ಸೇರಿದಂತೆ ಆದರೆ ಸೀಮಿತವಾಗಿಲ್ಲ';
 
   @override
   String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+      'ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ವಿದ್ಯುತ್ ಮೂಲಕ್ಕೆ ಪ್ಲಗ್ ಇನ್ ಮಾಡಲಾಗಿಲ್ಲ.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'ನೀವು ಪ್ರಸ್ತುತ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿದ್ದೀರಿ';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'ಪಾಸ್‌ಫ್ರೇಸ್ ರಚಿಸಿ';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'ನೀವು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಪಾಸ್‌ಫ್ರೇಸ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್‌ಗಿಂತ ಭಿನ್ನವಾಗಿದೆ.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader =>
+      'ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ಉಳಿಸಲು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ';
 
   @override
   String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+      'ನೀವು ಅದನ್ನು ಕಳೆದುಕೊಂಡರೆ, ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಮತ್ತು ಮರುಪ್ರಾಪ್ತಿ ಕೀಯನ್ನು ಎಲ್ಲೋ ಸುರಕ್ಷಿತವಾಗಿ ಸಂಗ್ರಹಿಸಿ';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನೀವು ಕಳೆದುಕೊಂಡರೆ, ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ. ಪಾಸ್‌ಫ್ರೇಸ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಅಥವಾ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಬದಲಾಯಿಸುವುದಿಲ್ಲ.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'ಗೂಢಲಿಪೀಕರಣ';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ಹೊಂದಿಸಿ';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಪಿನ್ ಹೊಂದಿಸಿ';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'ನೀವು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಪಾಸ್‌ಫ್ರೇಸ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್‌ಗಿಂತ ಭಿನ್ನವಾಗಿದೆ. ನೀವು ಅದನ್ನು ನಂತರ ಬದಲಾಯಿಸಬಹುದು, ಆದರೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದಿಲ್ಲ. ನಿಮ್ಮ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನೀವು ಮರೆತರೆ, ಮರುಪಡೆಯುವಿಕೆ ಕೀಲಿಯನ್ನು ಬಳಸಿಕೊಂಡು ನೀವು ಡಿಸ್ಕ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಮರಳಿ ಪಡೆಯಬಹುದು.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'ನೀವು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನಿಮ್ಮ ಪಿನ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ. ಈ ಪಿನ್ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪಾಸ್‌ವರ್ಡ್‌ಗಿಂತ ಭಿನ್ನವಾಗಿದೆ. ನೀವು ಅದನ್ನು ನಂತರ ಬದಲಾಯಿಸಬಹುದು, ಆದರೆ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದಿಲ್ಲ. ನಿಮ್ಮ ಪಿನ್ ಅನ್ನು ನೀವು ಮರೆತರೆ, ಮರುಪ್ರಾಪ್ತಿ ಕೀಯನ್ನು ಬಳಸಿಕೊಂಡು ನೀವು ಡಿಸ್ಕ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಮರಳಿ ಪಡೆಯಬಹುದು.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'ಪಾಸ್ಫ್ರೇಸ್';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'ಪಾಸ್‌ಫ್ರೇಸ್ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'ಪಾಸ್‌ಫ್ರೇಸ್‌ಗಳು ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'ಪಿನ್';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'ಪಿನ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'ಪಿನ್ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'ಪಿನ್‌ಗಳು ಹೊಂದಿಕೆಯಾಗುತ್ತಿಲ್ಲ';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle =>
+      'ಪಾಸ್‌ಫ್ರೇಸ್ ಅಗತ್ಯವಿದೆಪಾಸ್‌ಫ್ರೇಸ್ ಅಗತ್ಯವಿದೆ';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'ಅತ್ಯಂತ ಸುರಕ್ಷಿತ. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ನೀವು ಪ್ರತಿ ಬಾರಿ ಆನ್ ಮಾಡಿದಾಗಲೂ ನೀವು ದೀರ್ಘವಾದ ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'ಪಿನ್ ಅಗತ್ಯವಿದೆಪಿನ್ ಅಗತ್ಯವಿದೆ';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'ಹೆಚ್ಚು ಸುರಕ್ಷಿತ. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ನೀವು ಪ್ರತಿ ಬಾರಿ ಆನ್ ಮಾಡಿದಾಗಲೂ ನೀವು ಸಂಖ್ಯಾತ್ಮಕ ಪಿನ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'ಡಿಸ್ಕ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅನ್ಲಾಕ್ ಮಾಡಿ';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'ಹೆಚ್ಚುವರಿ ಭದ್ರತೆ';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ, ಕಂಪ್ಯೂಟರ್‌ನ ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾಡ್ಯೂಲ್ (TPM) ಪ್ರಾರಂಭದ ಸಮಯದಲ್ಲಿ ಡಿಸ್ಕ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಮತ್ತಷ್ಟು ರಕ್ಷಿಸಲು ನಿಮಗೆ ಆಯ್ಕೆಗಳಿವೆ.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'ದುರ್ಬಲ ಪಾಸ್‌ಫ್ರೇಸ್, ಅದನ್ನು ಉದ್ದ ಅಥವಾ ಹೆಚ್ಚು ಸಂಕೀರ್ಣಗೊಳಿಸಿ';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'ನ್ಯಾಯೋಚಿತ ಪಾಸ್‌ಫ್ರೇಸ್, ಉತ್ತಮ ಭದ್ರತೆಗಾಗಿ ಅದನ್ನು ದೀರ್ಘ ಅಥವಾ ಹೆಚ್ಚು ಸಂಕೀರ್ಣಗೊಳಿಸಿ';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'ಬಲವಾದ ಪಾಸ್‌ಫ್ರೇಸ್';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'ದುರ್ಬಲವಾದ ಪಿನ್, ಅದನ್ನು ಉದ್ದ ಅಥವಾ ಕಡಿಮೆ ಊಹಿಸಬಹುದಾದಂತೆ ಮಾಡಿ';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'ನ್ಯಾಯೋಚಿತ ಪಿನ್, ಉತ್ತಮ ಭದ್ರತೆಗಾಗಿ ದೀರ್ಘ ಅಥವಾ ಕಡಿಮೆ ಊಹಿಸಬಹುದಾದಂತೆ ಮಾಡಿ';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'ಪಿನ್ ಸಾಕಷ್ಟು ಉದ್ದವಾಗಿದೆ';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'ಡಿಸ್ಕ್ ಸೆಟಪ್';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'ನೀವು $DISTRO ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?ನೀವು $DISTRO ಅನ್ನು ಹೇಗೆ ಸ್ಥಾಪಿಸಲು ಬಯಸುತ್ತೀರಿ?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ $os ಅನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ $os1 ಮತ್ತು $os2 ಅನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'This computer currently has multiple operating systems on it. What would you like to do?';
+      'ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ ಬಹು ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್‌ಗಳನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?';
 
   @override
   String get installationTypeNoOSDetected =>
-      'This computer currently has no detected operating systems. What would you like to do?';
+      'ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ ಯಾವುದೇ ಪತ್ತೆಯಾದ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್‌ಗಳನ್ನು ಹೊಂದಿಲ್ಲ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'ಡಿಸ್ಕ್ ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು $DISTRO ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String get installationTypeEraseInfo =>
-      'All data and partitions on the disk will be erased, including operating systems.';
+      'ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್‌ಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಡಿಸ್ಕ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾ ಮತ್ತು ವಿಭಾಗಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced options';
+  String get installationTypeAdvancedLabel => 'ಸುಧಾರಿತ ಆಯ್ಕೆಗಳನ್ನು ತೋರಿಸಿ...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Encryption and file system';
+  String get installationTypeAdvancedTitle => 'ಎನ್ಕ್ರಿಪ್ಶನ್ ಮತ್ತು ಫೈಲ್ ಸಿಸ್ಟಮ್';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'ಪ್ರಾಯೋಗಿಕ';
 
   @override
-  String get installationTypeNone => 'No encryption';
+  String get installationTypeNone => 'ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಇಲ್ಲ';
 
   @override
   String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+      'ಗೂಢಲಿಪೀಕರಣವಿಲ್ಲದೆ ಪ್ರಮಾಣಿತ ಫೈಲ್ ಸಿಸ್ಟಮ್.';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'ಯಾವುದನ್ನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM => 'ಗೂಢಲಿಪೀಕರಣವಿಲ್ಲದೆ LVM ಬಳಸಿ';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'LVM ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption =>
+      'ಪಾಸ್‌ಫ್ರೇಸ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿ';
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
@@ -496,32 +507,32 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeLVMEncryptionSelected =>
-      'LVM and encryption selected';
+      'LVM ಮತ್ತು ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ';
 
   @override
   String get installationTypeEncryptInfo =>
-      'You will choose a security key in the next step.';
+      'ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನೀವು ಭದ್ರತಾ ಕೀಲಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡುತ್ತೀರಿ.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption';
+  String get installationTypeZFS => 'ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಇಲ್ಲದೆ ZFS ಬಳಸಿ';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Encrypt with a passphrase using ZFS';
+      'ZFS ಬಳಸಿಕೊಂಡು ಪಾಸ್‌ಫ್ರೇಸ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿ';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'ZFS ನೊಂದಿಗೆ ಸ್ಥಳೀಯ ಎನ್‌ಕ್ರಿಪ್ಶನ್. ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಆನ್ ಮಾಡಿದಾಗಲೆಲ್ಲಾ ನೀವು ಪಾಸ್‌ಫ್ರೇಸ್ ಅನ್ನು ನಮೂದಿಸಬೇಕಾಗುತ್ತದೆ.';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ';
 
   @override
   String get installationTypeZFSEncryptionSelected =>
-      'ZFS and encryption selected';
+      'ZFS ಮತ್ತು ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ';
 
   @override
-  String get installationTypeTPM => 'Use hardware-backed encryption';
+  String get installationTypeTPM => 'ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಬಳಸಿ';
 
   @override
   String get installationTypeTPMInfoResolute =>
@@ -532,223 +543,225 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'Not available on this computer.';
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return '$os ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು ಮರುಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">ಎಚ್ಚರಿಕೆ:</font> ಇದು ನಿಮ್ಮ ಎಲ್ಲಾ $os ಪ್ರೋಗ್ರಾಂಗಳು, ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು, ಫೋಟೋಗಳು, ಸಂಗೀತ ಮತ್ತು ಯಾವುದೇ ಇತರ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸುತ್ತದೆ.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return '$os ಜೊತೆಗೆ $product ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return '$os1 ಮತ್ತು $os2 ಜೊತೆಗೆ $product ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside existing operating systems';
+    return 'ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಂಗಳ ಜೊತೆಗೆ $product ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'ಇತರ ವಿಭಾಗಗಳ ಜೊತೆಗೆ $product ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+    return 'ಮರುಗಾತ್ರಗೊಳಿಸಲು ಮತ್ತು $product ಗಾಗಿ ಜಾಗವನ್ನು ರಚಿಸಲು ವಿಭಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಬೂಟ್ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ ಅನ್ನು ನೀವು ಆಯ್ಕೆ ಮಾಡಬಹುದು.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return '$os ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು $product ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ $os ಸ್ಥಾಪನೆಯಿಂದ ಎಲ್ಲಾ ಫೈಲ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.';
   }
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'ಹಸ್ತಚಾಲಿತ ಸ್ಥಾಪನೆ';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'ಕಸ್ಟಮೈಸ್ ಮಾಡಿದ ಡಿಸ್ಕ್ ಸೆಟಪ್‌ಗಳನ್ನು ಬಯಸುವ ಮುಂದುವರಿದ ಬಳಕೆದಾರರಿಗೆ.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'ಡಿಸ್ಕ್ ಅನ್ನು ಅಳಿಸಿ ಮತ್ತು $DISTRO ಅನ್ನು ಸ್ಥಾಪಿಸಿ';
   }
 
   @override
   String get selectGuidedStorageInfo =>
-      'Start from scratch on your selected disk.';
+      'ನಿಮ್ಮ ಆಯ್ಕೆಮಾಡಿದ ಡಿಸ್ಕ್‌ನಲ್ಲಿ ಮೊದಲಿನಿಂದ ಪ್ರಾರಂಭಿಸಿ.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'ಡ್ರೈವ್ ಆಯ್ಕೆಮಾಡಿ:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel =>
+      'ವಿಭಾಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel =>
+      'ಸಂಪೂರ್ಣ ಡಿಸ್ಕ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'ಈಗ ಸ್ಥಾಪಿಸಿ';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return '$DISTRO ಅನ್ನು ಎಲ್ಲಿ ಸ್ಥಾಪಿಸಬೇಕು ಎಂಬುದನ್ನು ಆರಿಸಿ';
   }
 
   @override
   String get installAlongsideSpaceDivider =>
-      'Allocate drive space by dragging the divider below:';
+      'ಕೆಳಗಿನ ವಿಭಾಜಕವನ್ನು ಎಳೆಯುವ ಮೂಲಕ ಡ್ರೈವ್ ಜಾಗವನ್ನು ನಿಯೋಜಿಸಿ:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num ಚಿಕ್ಕ ವಿಭಾಗಗಳನ್ನು ಮರೆಮಾಡಲಾಗಿದೆ, ಹೆಚ್ಚಿನ ನಿಯಂತ್ರಣಕ್ಕಾಗಿ <a href=\"$url\">ಸುಧಾರಿತ ವಿಭಜನಾ ಉಪಕರಣವನ್ನು</a> ಬಳಸಿ';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'ವಿಭಾಗವನ್ನು ಮರುಗಾತ್ರಗೊಳಿಸಿ';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'ಜಾಗವನ್ನು ನಿಗದಿಪಡಿಸಿ';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'ಫೈಲ್‌ಗಳು';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'ವಿಭಜನೆ:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'ಗಾತ್ರ:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'ಲಭ್ಯವಿದೆ:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'ಹಸ್ತಚಾಲಿತ ವಿಭಜನೆ';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash =>
-      'Mount points must start with \"/\"';
+      'ಮೌಂಟ್ ಪಾಯಿಂಟ್‌ಗಳು \"/\" ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗಬೇಕು';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
-      'Mount points cannot contain spaces';
+      'ಮೌಂಟ್ ಪಾಯಿಂಟ್‌ಗಳು ಜಾಗವನ್ನು ಹೊಂದಿರಬಾರದು';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format ಎಂಬುದು $mountpoint ಗಾಗಿ ಬೆಂಬಲಿತ ಫೈಲ್ ಸಿಸ್ಟಂ ಅಲ್ಲ';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'ಸಾಧನ';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'ಟೈಪ್ ಮಾಡಿ';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'ಮೌಂಟ್ ಪಾಯಿಂಟ್';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'ಗಾತ್ರ';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'ಬಳಸಲಾಗಿದೆ';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'ವ್ಯವಸ್ಥೆ';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'ಫಾರ್ಮ್ಯಾಟ್';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'ಮುಕ್ತ ಸ್ಥಳ';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'ಹೊಸ ವಿಭಜನಾ ಕೋಷ್ಟಕ';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'ಹೊಸ ಖಾಲಿ ವಿಭಾಗ';
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+      'ಸಂಪೂರ್ಣ ಸಾಧನದಲ್ಲಿ ಹೊಸ ವಿಭಜನಾ ಕೋಷ್ಟಕವನ್ನು ರಚಿಸುವುದು ಅದರ ಎಲ್ಲಾ ಪ್ರಸ್ತುತ ವಿಭಾಗಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ಅಗತ್ಯವಿದ್ದರೆ ಈ ಕಾರ್ಯಾಚರಣೆಯನ್ನು ರದ್ದುಗೊಳಿಸಬಹುದು.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'ಹಲವಾರು ಪ್ರಾಥಮಿಕ ವಿಭಾಗಗಳು';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'ಮಿತಿಯನ್ನು ತಲುಪಿದೆ';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'ಬೂಟ್ ಲೋಡರ್ ಅನುಸ್ಥಾಪನೆಗೆ ಸಾಧನ';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'ವಿಭಾಗವನ್ನು ರಚಿಸಿ';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'ವಿಭಾಗವನ್ನು ಸಂಪಾದಿಸಿ';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'ಗಾತ್ರ:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'ಹೊಸ ವಿಭಾಗಕ್ಕಾಗಿ ಟೈಪ್ ಮಾಡಿ:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'ಪ್ರಾಥಮಿಕ';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'ತಾರ್ಕಿಕ';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'ಹೊಸ ವಿಭಾಗದ ಸ್ಥಳ:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'ಈ ಜಾಗದ ಆರಂಭ';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'ಈ ಜಾಗದ ಅಂತ್ಯ';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'ಹೀಗೆ ಬಳಸಲಾಗಿದೆ:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡದೆ ಬಿಡಿ';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return '$format ನಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡುವುದನ್ನು ಬಿಡಿ';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'ವಿಭಾಗವನ್ನು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಿ';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'ಮೌಂಟ್ ಪಾಯಿಂಟ್:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'ಸ್ಥಾಪಿಸಲು ಸಿದ್ಧವಾಗಿದೆ';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'ನಿಮ್ಮ ಆಯ್ಕೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -760,38 +773,38 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'ಯಾವುದೂ ಇಲ್ಲ';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'ಸಾಧನಗಳು';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'ಅಪ್ಲಿಕೇಶನ್‌ಗಳು';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'ಅನುಸ್ಥಾಪನೆಯ ಪ್ರಕಾರ';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'ಡಿಸ್ಕ್ ಎನ್ಕ್ರಿಪ್ಶನ್';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'ಅನುಸ್ಥಾಪನ ಡಿಸ್ಕ್';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'ಸ್ವಾಮ್ಯದ ಸಾಫ್ಟ್‌ವೇರ್';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'ಸಾಮಾನ್ಯಸಾಮಾನ್ಯ';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'ಭದ್ರತೆಭದ್ರತೆ';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'ವಿಭಜನೆಗಳು';
 
   @override
   String get confirmPartitionTables =>
-      'The partition tables of the following devices are changed:';
+      'ಕೆಳಗಿನ ಸಾಧನಗಳ ವಿಭಜನಾ ಕೋಷ್ಟಕಗಳನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -799,603 +812,608 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'ಕೊಡೆಕ್‌ಗಳು';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers => 'ಕೊಡೆಕ್‌ಗಳುಕೊಡೆಕ್‌ಗಳು';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'ಚಾಲಕರು';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'ಸ್ಥಾಪಿಸಿ';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'ಅಳಿಸಲಾಗಿದೆ';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'ಬದಲಾಗದೆ';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return '$oldsize ನಿಂದ $newsize ಗೆ ಮರುಗಾತ್ರಗೊಳಿಸಲಾಗಿದೆ';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return '$mountpoint ಗಾಗಿ ಬಳಸಲಾದ $format ನಂತೆ ರಚಿಸಲಾಗಿದೆ ಮತ್ತು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '$mountpoint ಗಾಗಿ ಬಳಸಲಾದ $format ನಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return '$mountpoint ಗಾಗಿ ಬಳಸಲಾಗಿದೆ';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return '$format ನಂತೆ ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗಿದೆ';
   }
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'ಅನುಸ್ಥಾಪನೆಯು ಪೂರ್ಣಗೊಂಡಿದೆ';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಬಳಸಲು ಸಿದ್ಧವಾಗಿದೆ';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** ಅನ್ನು ಡಿಸ್ಕ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return '$system ಗೆ ಮರುಪ್ರಾರಂಭಿಸಿ';
   }
 
   @override
   String get restartWarningBody =>
-      'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+      'ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಅಥವಾ ಪರೀಕ್ಷೆಯನ್ನು ಮುಂದುವರಿಸಲು ಮರುಪ್ರಾರಂಭಿಸಿ. ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಲಾಗುವುದಿಲ್ಲ.';
 
   @override
   String get rebootToConfigureWarning =>
-      'You have to restart the computer to continue the installation process.';
+      'ಅನುಸ್ಥಾಪನಾ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಮುಂದುವರಿಸಲು ನೀವು ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಬೇಕು.';
 
   @override
-  String get shutdown => 'Shut down';
+  String get shutdown => 'ಸ್ಥಗಿತಗೊಳಿಸಿ';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'ಈಗ ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'ಪರೀಕ್ಷೆಯನ್ನು ಮುಂದುವರಿಸಿ';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'ಬಿಟ್‌ಲಾಕರ್ ಪತ್ತೆಯಾಗಿದೆ';
 
   @override
   String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+      'ಒಂದು ಅಥವಾ ಹೆಚ್ಚಿನ ವಿಭಾಗಗಳನ್ನು ಬಿಟ್‌ಲಾಕರ್‌ನೊಂದಿಗೆ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ.';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'ವಿಂಡೋಸ್ ಜೊತೆಗೆ ಸ್ಥಾಪಿಸಲು, ವಿಂಡೋಸ್‌ನಲ್ಲಿ ಬಿಟ್‌ಲಾಕರ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ.';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'ಅನುಸ್ಥಾಪನೆಯ ನಂತರ ಬೂಟ್‌ನಲ್ಲಿ ವಿಂಡೋಸ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳನ್ನು ವಿನಂತಿಸಬಹುದು.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'ಸೂಚನೆಗಳಿಗಾಗಿ, <a href=\"$url\">BitLocker ಮಾರ್ಗದರ್ಶಿ</a> ಅನ್ನು ಭೇಟಿ ಮಾಡಿ.';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'ಬಿಟ್‌ಲಾಕರ್ ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳಿಲ್ಲದೆ ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸುವುದೇ?';
 
   @override
   String get restartInstaller => 'Restart installer';
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'ವಿಂಡೋಸ್‌ಗೆ ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'ವಿಂಡೋಸ್‌ಗೆ ಮರುಪ್ರಾರಂಭಿಸುವುದೇ?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ? $DISTRO ಅನ್ನು ಸ್ಥಾಪಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ನೀವು ನಂತರ $DISTRO ಸ್ಥಾಪನೆಯನ್ನು ಮರುಪ್ರಾರಂಭಿಸಬೇಕಾಗುತ್ತದೆ.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return '$RELEASE ಗೆ ಸುಸ್ವಾಗತ';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'ಲಭ್ಯವಿದೆ:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'ಒಳಗೊಂಡಿದೆ:';
 
   @override
   String get installationSlidesWelcomeTitle =>
-      'Fast, free and full of new features';
+      'ವೇಗವಾದ, ಉಚಿತ ಮತ್ತು ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳ ಪೂರ್ಣ';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return '$DISTRO ನ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯು ಕಂಪ್ಯೂಟಿಂಗ್ ಅನ್ನು ಎಂದಿಗಿಂತಲೂ ಸುಲಭಗೊಳಿಸುತ್ತದೆ.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'ನೀವು ಡೆವಲಪರ್, ರಚನೆಕಾರ, ಗೇಮರ್ ಅಥವಾ ನಿರ್ವಾಹಕರಾಗಿರಲಿ, ನಿಮ್ಮ ಉತ್ಪಾದಕತೆಯನ್ನು ಸುಧಾರಿಸಲು ಮತ್ತು $RELEASE ನಲ್ಲಿ ನಿಮ್ಮ ಅನುಭವವನ್ನು ಹೆಚ್ಚಿಸಲು ಹೊಸ ಪರಿಕರಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle =>
+      'ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'ಸ್ನ್ಯಾಪ್ ಸ್ಟೋರ್ ಮತ್ತು $DISTRO ಆರ್ಕೈವ್ ಎರಡರಿಂದಲೂ ಸಾವಿರಾರು ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ಉಬುಂಟು ಸಾಫ್ಟ್‌ವೇರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಿ, ನಿರ್ವಹಿಸಿ ಮತ್ತು ನವೀಕರಿಸಿ.';
   }
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Develop with the best of open source';
+      'ಅತ್ಯುತ್ತಮ ತೆರೆದ ಮೂಲದೊಂದಿಗೆ ಅಭಿವೃದ್ಧಿಪಡಿಸಿ';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
+    return 'ಈ ಕಂಪ್ಯೂಟರ್ ಪ್ರಸ್ತುತ \$$OS ಅನ್ನು ಹೊಂದಿದೆ. ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?ಅಪ್ಲಿಕೇಶನ್ ಅಥವಾ ವೆಬ್ ಅಭಿವೃದ್ಧಿ, ಡೇಟಾ ಸೈನ್ಸ್ ಮತ್ತು AI/ML ಹಾಗೂ devops ಮತ್ತು ಆಡಳಿತಕ್ಕಾಗಿ $DISTRO ಆದರ್ಶ ಕಾರ್ಯಸ್ಥಳವಾಗಿದೆ. ಪ್ರತಿ $DISTRO ಬಿಡುಗಡೆಯು ಇತ್ತೀಚಿನ ಟೂಲ್‌ಚೇನ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ ಮತ್ತು ಎಲ್ಲಾ ಪ್ರಮುಖ IDE ಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle =>
+      'ನಿಮ್ಮ ಸೃಜನಶೀಲತೆಯನ್ನು ಹೆಚ್ಚಿಸಿ';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'ನೀವು ಆನಿಮೇಟರ್, ಡಿಸೈನರ್, ವೀಡಿಯೊ ರಚನೆಕಾರರು ಅಥವಾ ಗೇಮ್ ಡೆವಲಪರ್ ಆಗಿದ್ದರೆ ಓಪನ್ ಸೋರ್ಸ್ ಮತ್ತು ಇಂಡಸ್ಟ್ರಿ ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಬೆಂಬಲದೊಂದಿಗೆ ನಿಮ್ಮ ವರ್ಕ್‌ಫ್ಲೋಗಳನ್ನು $DISTRO ಗೆ ತರಲು ಸುಲಭವಾಗಿದೆ.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'ಗೇಮಿಂಗ್‌ಗೆ ಅದ್ಭುತವಾಗಿದೆ';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return 'ಕಾರ್ಯಕ್ಷಮತೆ ಮತ್ತು ಹೊಂದಾಣಿಕೆಯನ್ನು ಸುಧಾರಿಸಲು $DISTRO ಇತ್ತೀಚಿನ NVIDIA ಮತ್ತು Mesa ಡ್ರೈವರ್‌ಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ. ಯಾವುದೇ ಹೆಚ್ಚುವರಿ ಕಾನ್ಫಿಗರೇಶನ್ ಇಲ್ಲದ ಸ್ಟೀಮ್‌ನಂತಹ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಮೂಲಕ $DISTRO ನಲ್ಲಿ ಸಾವಿರಾರು ವಿಂಡೋಸ್ ಶೀರ್ಷಿಕೆಗಳು ಉತ್ತಮವಾಗಿ ಪ್ಲೇ ಆಗುತ್ತವೆ.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'ಖಾಸಗಿ ಮತ್ತು ಸುರಕ್ಷಿತ';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return 'ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಖಾಸಗಿಯಾಗಿ ಮತ್ತು ಸುರಕ್ಷಿತವಾಗಿರಲು ನಿಮಗೆ ಅಗತ್ಯವಿರುವ ಎಲ್ಲಾ ಪರಿಕರಗಳನ್ನು $DISTRO ಒದಗಿಸುತ್ತದೆ. ಅಂತರ್ನಿರ್ಮಿತ ಫೈರ್‌ವಾಲ್ ಮತ್ತು VPN ಬೆಂಬಲ ಮತ್ತು ನಿಮ್ಮ ಡೇಟಾದ ಸಂಪೂರ್ಣ ನಿಯಂತ್ರಣವನ್ನು ನೀವು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಗೌಪ್ಯತೆ-ಕೇಂದ್ರಿತ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಹೋಸ್ಟ್‌ನೊಂದಿಗೆ.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'ಎಲ್ಲಾ $DISTRO LTS ಬಿಡುಗಡೆಗಳು ಐದು ವರ್ಷಗಳ ಭದ್ರತಾ ಪ್ಯಾಚಿಂಗ್‌ನೊಂದಿಗೆ ಬರುತ್ತವೆ, ಉಬುಂಟು ಪ್ರೊ ಚಂದಾದಾರಿಕೆಯೊಂದಿಗೆ ಹತ್ತು ವರ್ಷಗಳವರೆಗೆ ವಿಸ್ತರಿಸುತ್ತವೆ.';
   }
 
   @override
   String get installationSlidesProductivityTitle =>
-      'Power up your productivity';
+      'ನಿಮ್ಮ ಉತ್ಪಾದಕತೆಯನ್ನು ಹೆಚ್ಚಿಸಿ';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return '$DISTRO ಡೆಸ್ಕ್‌ಟಾಪ್ LibreOffice ಅನ್ನು ಒಳಗೊಂಡಿದೆ, ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು, ಸ್ಪ್ರೆಡ್‌ಶೀಟ್‌ಗಳು ಮತ್ತು ಪ್ರಸ್ತುತಿಗಳಿಗಾಗಿ Microsoft Office ಹೊಂದಾಣಿಕೆಯ ಮುಕ್ತ ಮೂಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಸೂಟ್. ಜನಪ್ರಿಯ ಸಹಯೋಗ ಸಾಧನಗಳು ಸಹ ಲಭ್ಯವಿದೆ.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'ಎಲ್ಲರಿಗೂ ಪ್ರವೇಶ';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return '$DISTRO ತತ್ವಶಾಸ್ತ್ರದ ಹೃದಯಭಾಗದಲ್ಲಿ ಕಂಪ್ಯೂಟಿಂಗ್ ಪ್ರತಿಯೊಬ್ಬರಿಗೂ ಆಗಿದೆ ಎಂಬ ನಂಬಿಕೆಯಾಗಿದೆ. ಸುಧಾರಿತ ಪ್ರವೇಶಿಸುವಿಕೆ ಪರಿಕರಗಳು ಮತ್ತು ಭಾಷೆ, ಬಣ್ಣಗಳು ಮತ್ತು ಪಠ್ಯ ಗಾತ್ರವನ್ನು ಬದಲಾಯಿಸುವ ಆಯ್ಕೆಗಳೊಂದಿಗೆ, $DISTRO ಕಂಪ್ಯೂಟಿಂಗ್ ಅನ್ನು ಸುಲಭಗೊಳಿಸುತ್ತದೆ - ನೀವು ಯಾರೇ ಮತ್ತು ಎಲ್ಲಿದ್ದರೂ.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca screen reader';
+  String get installationSlidesAccessibilityOrca => 'ಓರ್ಕಾ ಸ್ಕ್ರೀನ್ ರೀಡರ್';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'ಭಾಷಾ ಬೆಂಬಲ';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'ಅಧಿಕೃತ $DISTRO ದಸ್ತಾವೇಜನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಮತ್ತು ಡಾಕ್‌ನಲ್ಲಿರುವ ಸಹಾಯ ಐಕಾನ್ ಮೂಲಕ ಲಭ್ಯವಿದೆ.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+      'Ask Ubuntu ಹಲವಾರು ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ ಮತ್ತು ಉಬುಂಟು ಡಿಸ್ಕೋರ್ಸ್ ಹೊಸ ಮತ್ತು ಅನುಭವಿ ಬಳಕೆದಾರರಿಗೆ ಮಾರ್ಗದರ್ಶಿಗಳು ಮತ್ತು ಚರ್ಚೆಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ.';
 
   @override
   String get installationSlidesSupportEnterprise =>
-      'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+      'ಎಂಟರ್‌ಪ್ರೈಸ್ ಬಳಕೆದಾರರಿಗೆ ಕೆನೊನಿಕಲ್ ವಾಣಿಜ್ಯ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುತ್ತದೆ ಮತ್ತು ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಉಬುಂಟು ಅನ್ನು ಆನ್‌ಬೋರ್ಡ್ ಮಾಡಲು ಮತ್ತು ನಿರ್ವಹಿಸಲು ಸುಲಭವಾಗುತ್ತದೆ.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'ಸಹಾಯಕ ಸಂಪನ್ಮೂಲಗಳು:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'ಅಧಿಕೃತ ದಸ್ತಾವೇಜನ್ನು';
 
   @override
   String get installationSlidesSupportUbuntuPro =>
-      'Enterprise-grade 24/7 support with Ubuntu Pro';
+      'ಉಬುಂಟು ಪ್ರೊನೊಂದಿಗೆ ಎಂಟರ್‌ಪ್ರೈಸ್-ಗ್ರೇಡ್ 24/7 ಬೆಂಬಲ';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'ಮುಂದಿನ ಸ್ಲೈಡ್';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'ಹಿಂದಿನ ಸ್ಲೈಡ್';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'ಸ್ಲೈಡ್‌ಶೋ ಪ್ಲೇ ಮಾಡಿ';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'ಸ್ಲೈಡ್‌ಶೋ ವಿರಾಮಗೊಳಿಸಿ';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'ಇನ್‌ಸ್ಟಾಲ್ ಲಾಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'ಫೈಲ್‌ಗಳನ್ನು ನಕಲಿಸಲಾಗುತ್ತಿದೆ…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem =>
+      'ಅನುಸ್ಥಾಪನೆಯು ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು.ಸಿಸ್ಟಮ್ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'ವ್ಯವಸ್ಥೆಯನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'ಅನುಸ್ಥಾಪನೆಯು ವಿಫಲವಾಗಿದೆ';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವಿಲ್ಲ';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return '$DISTRO ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವಿಲ್ಲ';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'ಆಯ್ಕೆಮಾಡಿದ ಡಿಸ್ಕ್ $DISTRO ಅನ್ನು ಸ್ಥಾಪಿಸಲು ಸಾಕಷ್ಟು ಡಿಸ್ಕ್ ಸ್ಥಳವನ್ನು ಹೊಂದಿಲ್ಲ. ಜಾಗವನ್ನು ಲಭ್ಯವಾಗುವಂತೆ ಮಾಡಲು ಅನುಸ್ಥಾಪಕವನ್ನು ತ್ಯಜಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ಡಿಸ್ಕ್ ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'ಲಭ್ಯವಿದೆ:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'ಅಗತ್ಯವಿದೆ:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'ನವೀಕರಣ ಲಭ್ಯವಿದೆ';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader => 'ಸ್ಥಾಪಕಕ್ಕೆ ನವೀಕರಣ ಲಭ್ಯವಿದೆ';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'ಈಗ ನವೀಕರಿಸಿ';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'ಸುಧಾರಿತ ವಿಶ್ವಾಸಾರ್ಹತೆ ಮತ್ತು ಹೆಚ್ಚಿನ ವೈಶಿಷ್ಟ್ಯಗಳಿಗಾಗಿ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಿ.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'ನವೀಕರಣ ಸಿದ್ಧವಾಗಿದೆ';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'ಪ್ರಸ್ತುತ $snap ಆವೃತ್ತಿಯು $version ಆಗಿದೆ.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'ಆವೃತ್ತಿ $version ಗೆ ನವೀಕರಿಸಿ';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'ಪ್ರಸ್ತುತ ಆವೃತ್ತಿ $version ಅಪ್-ಟು-ಡೇಟ್ ಆಗಿದೆ.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap ಅನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String get refreshRestart =>
-      'Please close the installer and relaunch to continue';
+      'ದಯವಿಟ್ಟು ಸ್ಥಾಪಕವನ್ನು ಮುಚ್ಚಿ ಮತ್ತು ಮುಂದುವರೆಯಲು ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'ಅನುಸ್ಥಾಪಕವನ್ನು ಮುಚ್ಚಿ';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap ಪೂರ್ವಾಪೇಕ್ಷಿತಗಳನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'ರಿಫ್ರೆಶ್ ಆಗುತ್ತಿದೆ $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '$snap ಮರು-ರಿಫ್ರೆಶ್ ಅನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'ಮೌಲ್ಯೀಕರಿಸಲಾಗುತ್ತಿದೆ $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'ಆರೋಹಿಸಲಾಗುತ್ತಿದೆ $snap...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap ಸೇವೆಗಳನ್ನು ನಿಲ್ಲಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap ಅಲಿಯಾಸ್‌ಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'ಅನ್‌ಲಿಂಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap ಸ್ವತ್ತುಗಳನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '$snap ಕರ್ನಲ್ ಕಮಾಂಡ್ ಲೈನ್ ಅನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap ಡೇಟಾವನ್ನು ನಕಲಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap ಭದ್ರತಾ ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'ಲಿಂಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap ಪ್ಲಗ್‌ಗಳು ಮತ್ತು ಸ್ಲಾಟ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'ಸ್ವಯಂಚಾಲಿತ $snap ಅಲಿಯಾಸ್‌ಗಳನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap ಅಲಿಯಾಸ್‌ಗಳನ್ನು ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap ಸೇವೆಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap ಅನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲಾಗುತ್ತಿದೆ...';
   }
 
   @override
-  String get recoveryKeyTitle => 'Recovery key';
+  String get recoveryKeyTitle => 'ರಿಕವರಿ ಕೀ';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'ಪ್ರಮುಖ';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'ನಿಮ್ಮ ಮರುಪ್ರಾಪ್ತಿ ಕೀಯನ್ನು ಉಳಿಸಿ';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+      'ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಇಲ್ಲದೆಯೇ ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'ರಿಕವರಿ ಕೀ';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      'ಪ್ರಾರಂಭದ ಸಮಯದಲ್ಲಿ ಡೀಕ್ರಿಪ್ಶನ್ ವಿಫಲವಾದಲ್ಲಿ ನೀವು ಈ ಮರುಪ್ರಾಪ್ತಿ ಕೀಲಿಯನ್ನು ಒದಗಿಸಬೇಕಾಗುತ್ತದೆ. ಕೀ ಇಲ್ಲದೆ, ನಿಮ್ಮ ಎಲ್ಲಾ ಡೇಟಾಗೆ ನೀವು ಪ್ರವೇಶವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ. ಪಾಸ್‌ವರ್ಡ್ ನಿರ್ವಾಹಕದಂತಹ ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿ ಅದನ್ನು ಉಳಿಸಿ.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+      'ನಾನು ನನ್ನ ಮರುಪ್ರಾಪ್ತಿ ಕೀಲಿಯನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಎಲ್ಲೋ ಉಳಿಸಿದ್ದೇನೆ';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'ಫೈಲ್‌ಗೆ ಉಳಿಸಿ';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'QR ಕೋಡ್ ತೋರಿಸಿ';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO ಡೆಸ್ಕ್‌ಟಾಪ್ - ರಿಕವರಿ ಕೀ';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'ಮರುಪ್ರಾಪ್ತಿ ಕೀಲಿಯನ್ನು ನಕಲಿಸಲು QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ನಿರ್ವಾಹಕದಂತಹ ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿ ಅದನ್ನು ಉಳಿಸಿ. ನಂತರದ ಬಳಕೆಗಾಗಿ ನೀವು ಫೋಟೋವನ್ನು ಸಹ ತೆಗೆದುಕೊಳ್ಳಬಹುದು.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಫೈಲ್ ಅನ್ನು ಉಳಿಸಲಾಗಿಲ್ಲ';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಫೈಲ್ ಅನ್ನು ತಾತ್ಕಾಲಿಕ ಸ್ಥಳದಲ್ಲಿ ಉಳಿಸಲಾಗುವುದಿಲ್ಲ';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'ಅಜ್ಞಾತ ದೋಷ';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'ಆ ಫೋಲ್ಡರ್‌ಗೆ ಬರೆಯಲು ನೀವು ಅನುಮತಿಯನ್ನು ಹೊಂದಿಲ್ಲ. ಬೇರೆ ಸ್ಥಳವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ವಿಧಾನವನ್ನು ಬಳಸಿ.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'ತೆಗೆಯಬಹುದಾದ ಡ್ರೈವ್‌ನಂತಹ ಬೇರೆ ಸ್ಥಳವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ಇನ್ನೊಂದು ವಿಧಾನವನ್ನು ಬಳಸಿ.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'ಮರುಪ್ರಾಪ್ತಿ ಕೀ ಫೈಲ್ ಅನ್ನು ಉಳಿಸಿ';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'ಪಠ್ಯ ಫೈಲ್ಗಳು';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು <a href=\"https://$url\">$url</a> ನಲ್ಲಿ ನಮೂದಿಸಿ';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'ಸ್ವಯಂಚಾಲಿತ ಅನುಸ್ಥಾಪನೆ';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್‌ಗೆ ಲಾಗ್ ಇನ್ ಮಾಡಿ';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ ನಮೂದಿಸಿ (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'ಲಾಗ್ ಇನ್ ಮಾಡಲು ಮತ್ತು ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ನಿಮ್ಮ ಸಂಸ್ಥೆಯ ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ ಅನ್ನು ಒದಗಿಸಿ. ನಿಮ್ಮ IT ಬೆಂಬಲದಿಂದ ನೀವು FQDN ಅನ್ನು ಪಡೆಯಬಹುದು.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್ ಡೊಮೇನ್ (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'ಮುಂದೆ';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      'ಅಮಾನ್ಯ ಡೊಮೇನ್, ದಯವಿಟ್ಟು ನಿಮ್ಮ IT ಬೆಂಬಲವನ್ನು ಪರಿಶೀಲಿಸಿ ಅಥವಾ ಸಂಪರ್ಕಿಸಿ';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+      'ಮುಂದುವರಿಸಲು ಇಂಟರ್ನೆಟ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್‌ನಿಂದ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ಪಡೆಯಲು ಇಂಟರ್ನೆಟ್ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning =>
+      'ಕೋಡ್ ಅವಧಿ ಮೀರಿದೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning =>
+      'ಲಾಗಿನ್ ವಿಫಲವಾಗಿದೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ';
 
   @override
   String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+      'ನಿಮ್ಮ ಖಾತೆಗೆ ಸ್ವಯಂಚಾಲಿತ ಸ್ಥಾಪನೆ ಲಭ್ಯವಿಲ್ಲ';
 
   @override
   String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+      'ನಿಮ್ಮ IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಬೇರೆ ಅನುಸ್ಥಾಪನ ಆಯ್ಕೆಯನ್ನು ಪ್ರಯತ್ನಿಸಿ.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'ದೋಷ ಕೋಡ್: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'ನಿಮ್ಮ ಸಂಸ್ಥೆಯು ಒದಗಿಸಿದ ಸಂರಚನೆಯೊಂದಿಗೆ ಉಬುಂಟು ಸ್ಥಾಪಿಸುತ್ತದೆ';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'ಕೆಳಗಿನ ಲ್ಯಾಂಡ್‌ಸ್ಕೇಪ್‌ನಿಂದ ಆಮದು ಮಾಡಲಾದ ಸ್ವಯಂಇನ್‌ಸ್ಟಾಲ್ ಫೈಲ್ ಅನ್ನು ನೀವು ಪರಿಶೀಲಿಸಬಹುದು.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'ಯಶಸ್ಸು';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'ದೋಷ';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ಮುಚ್ಚಿ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'ಗರಿಷ್ಠಗೊಳಿಸು';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'ಕಡಿಮೆಗೊಳಿಸು';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಲಿಲ್ಲ';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'ಕ್ರಮ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'ತಾಂತ್ರಿಕ ವಿವರಗಳು';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'ದೃಢೀಕರಿಸಿ';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'ಪರಿಹಾರ $n: $text';
   }
 
   @override
@@ -1404,12 +1422,11 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+  String get tpmActionDocumentationLinkLabel => 'ದಸ್ತಾವೇಜನ್ನು ಲಿಂಕ್ ಮಾಡಿ';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'ಕೆಳಗಿನ ಪರಿಹಾರಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ, IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಬೇರೆ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
@@ -1417,96 +1434,89 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ ಅಥವಾ ಬೇರೆ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'ಆಂತರಿಕ';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'ಸ್ಥಗಿತಗೊಳಿಸುವ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'ರೀಬೂಟ್ ಅಗತ್ಯವಿದೆ';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'ಅನಿರೀಕ್ಷಿತ ಕ್ರಿಯೆ';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'ತಪ್ಪಿದ ವಾದ';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'ಅಮಾನ್ಯವಾದ ವಾದ';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'ಕ್ರಿಯೆ ವಿಫಲವಾಗಿದೆ';
 
   @override
-  String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+  String get tpmActionErrorKindRunningInVm => 'VM ನಲ್ಲಿ ರನ್ ಆಗುತ್ತಿದೆ';
 
   @override
-  String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+  String get tpmActionErrorKindSystemNotEfi => 'ಸಿಸ್ಟಮ್ EFI ಅಲ್ಲ';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+  String get tpmActionErrorKindEfiVariableAccess => 'EFI ವೇರಿಯಬಲ್ ಪ್ರವೇಶ';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'ಸೂಕ್ತವಾದ TPM2 ಸಾಧನವಿಲ್ಲ';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'TPM ಸಾಧನವನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ';
 
   @override
-  String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+  String get tpmActionErrorKindTpmHierarchiesOwned => 'TPM ಶ್ರೇಣಿಗಳ ಮಾಲೀಕತ್ವ';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'TPM ಸಾಧನ ಲಾಕ್‌ಔಟ್ ಲಾಕ್ ಔಟ್ ಆಗಿದೆ';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'ಸಾಕಷ್ಟು TPM ಸಂಗ್ರಹಣೆ ಇಲ್ಲ';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'ಬೆಂಬಲಿತವಲ್ಲದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'UEFI ಡೀಬಗ್ ಮಾಡುವುದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'ಸಾಕಷ್ಟಿಲ್ಲದ DMA ರಕ್ಷಣೆ';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+  String get tpmActionErrorKindNoKernelIommu => 'ಕರ್ನಲ್ IOMMU ಇಲ್ಲ';
 
   @override
-  String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+  String get tpmActionErrorKindHostSecurity => 'ಹೋಸ್ಟ್ ಸೆಕ್ಯುರಿಟಿ';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Sys ಪ್ರೆಪ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಪ್ರಸ್ತುತ';
 
   @override
-  String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+  String get tpmActionErrorKindAbsolutePresent => 'ಸಂಪೂರ್ಣ ಪ್ರಸ್ತುತ';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'ಅಮಾನ್ಯ SecureBoot ಮೋಡ್';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'ದುರ್ಬಲ SecureBoot ಅಲ್ಗಾರಿದಮ್ ಪತ್ತೆಯಾಗಿದೆ';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
@@ -1514,7 +1524,7 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Addon ಡ್ರೈವರ್‌ಗಳು ಪ್ರಸ್ತುತ';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1525,14 +1535,14 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'There is an issue with this computer\'s firmware.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'ಪವರ್ ಆಫ್';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'ಫರ್ಮ್‌ವೇರ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
@@ -1540,61 +1550,63 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'DMA ರಕ್ಷಣೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ತೆರವುಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'ಸುರಕ್ಷಿತ ಬೂಟ್ ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'DMA ರಕ್ಷಣೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'PCR ಬ್ಯಾಂಕ್‌ಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ತೆರವುಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'TPM ಅನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ತೆರವುಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
       'Disable Absolute Persistence Module manually';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'OEM ಅನ್ನು ಸಂಪರ್ಕಿಸಿ';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor => 'OS ಮಾರಾಟಗಾರರನ್ನು ಸಂಪರ್ಕಿಸಿ';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'ಫರ್ಮ್‌ವೇರ್ ಮೂಲಕ TPM ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'ಫರ್ಮ್‌ವೇರ್ ಮೂಲಕ TPM ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ತೆರವುಗೊಳಿಸಿ';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'ಫರ್ಮ್‌ವೇರ್ ಮೂಲಕ TPM ಅನ್ನು ತೆರವುಗೊಳಿಸಿ';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'TPM ಅನ್ನು ತೆರವುಗೊಳಿಸಿ';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'ನಿರ್ಲಕ್ಷಿಸಿ';
 
   @override
   String get tpmActionFixActionRebootDescription =>
@@ -1629,28 +1641,30 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'Ignoring this issue might result in a less secure installation.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'TPM ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ ಮತ್ತು ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'TPM ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ ಮತ್ತು ತೆರವುಗೊಳಿಸಿ';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'ನಿರ್ಲಕ್ಷಿಸಿ ಮತ್ತು ಮುಂದುವರಿಸಿ';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPM ಅನ್ನು ತೆರವುಗೊಳಿಸುವುದು ಎಲ್ಲಾ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಕೀಗಳನ್ನು ಅಳಿಸುತ್ತದೆ';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'ನೀವು ಮರುಪ್ರಾಪ್ತಿ ಕೀಗಳನ್ನು ಹೊಂದಿಲ್ಲದ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಡ್ರೈವ್‌ಗಳಲ್ಲಿನ ಎಲ್ಲಾ ಡೇಟಾಗೆ ನೀವು ಪ್ರವೇಶವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ. ಇದು ದೃಢೀಕರಣ ಮತ್ತು ಪ್ರಮಾಣಪತ್ರಗಳಂತಹ TPM ಅನ್ನು ಅವಲಂಬಿಸಿರುವ ಇತರ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಸಹ ಮುರಿಯುತ್ತದೆ.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'TPM ಅನ್ನು ತೆರವುಗೊಳಿಸುವುದರ ಪರಿಣಾಮಗಳನ್ನು ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
@@ -1661,11 +1675,11 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'Then you will need to start the installation again.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'ಈ ಪರಿಹಾರವು ವಿಫಲವಾಗಿದೆ';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'ಬೇರೆ ಪರಿಹಾರವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ';
 
   @override
   String get manualPartitioningWarningBody =>

@@ -9,159 +9,160 @@ class UbuntuInitLocalizationsUg extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsUg([String locale = 'ug']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'خۇش كەلدىڭىز';
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Welcome to $distro';
+    return '$distro غا خۇش كەلدىڭىز';
   }
 
   @override
-  String get welcomeWhatsNew => 'WHAT\'S NEW?';
+  String get welcomeWhatsNew => 'قانداق يېڭىلىق بار؟';
 
   @override
-  String get welcomeStartTitle => 'A streamlined start';
+  String get welcomeStartTitle => 'راۋان باشلىنىش';
 
   @override
-  String get welcomeStartSubtitle => 'Supporting a cleaner setup experience.';
+  String get welcomeStartSubtitle => 'تېخىمۇ ئاددىي ئورنىتىش تەسىراتى.';
 
   @override
-  String get welcomeStoreTitle => 'New look App Store';
+  String get welcomeStoreTitle => 'يېڭى ئۇسلۇبتىكى ئەپ دۇكىنى';
 
   @override
   String get welcomeStoreSubtitle =>
-      'It\'s never been easier to find your favourite software.';
+      'سىز ياقتۇرىدىغان يۇمشاق دېتالنى ئىزدەش ئەزەلدىن بۇنداق ئاسان بولۇپ باقمىغان.';
 
   @override
-  String get welcomeSecurityTitle => 'Enhanced security';
+  String get welcomeSecurityTitle => 'كۈچەيتىلگەن بىخەتەرلىك';
 
   @override
   String get welcomeSecuritySubtitle =>
-      'New options for hardware-backed or ZFS encryption.';
+      'قاتتىق ئاساسىدىكى شىفىرلاش يېڭى تاللانمىسى ياكى ZFS شىفىرلاش.';
 
   @override
   String welcomeChangelogLabel(String url) {
-    return '<a href=\"$url\">View changelog</a>';
+    return '<a href=\"$url\">ئۆزگىرىش خاتىرىسىنى كۆرسەت</a>';
   }
 
   @override
-  String get telemetryPageTitle => 'Telemetry';
+  String get telemetryPageTitle => 'ئۇچۇر توپلاش';
 
   @override
   String telemetryHeader(String distro) {
-    return 'Help improve $distro';
+    return '$distro نى ياخشىلاشقا ياردەم';
   }
 
   @override
   String telemetryDescription(String distro) {
-    return 'Help us improve $distro by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.';
+    return 'سىستېما سانلىق مەلۇماتلىرىڭىزنى بىز بىلەن ئورتاقلىشىش ئارقىلىق $distro نى ياخشىلاشقا ياردەملىشىڭ. بۇ ماشىنىڭىزنىڭ تىپى، ئورنىتىلغان يۇمشاق دېتال ۋە سىز ۋاقىت رايونىنى تاللىغان ئورۇنغا ئوخشاش نەرسىلەرنى ئۆز ئىچىگە ئالىدۇ.';
   }
 
   @override
   String telemetryLabelOn(String distro) {
-    return 'Yes, share system data with the $distro team';
+    return 'ھەئە، سىستېما سانلىق مەلۇماتىنى $distro قوشۇنىدىكىلەرگە ھەمبەھىرلە';
   }
 
   @override
-  String get telemetryLabelOff => 'No, don\'t share system data';
+  String get telemetryLabelOff => 'ياق، سىستېما سانلىق مەلۇماتىنى ھەمبەھىرلىمە';
 
   @override
-  String get telemetryReportLabel => 'Show the first report';
+  String get telemetryReportLabel => 'تۇنجى دوكلاتنى كۆرسەت';
 
   @override
-  String get telemetryReportTitle => 'Reporting details';
+  String get telemetryReportTitle => 'دوكلات تەپسىلاتى';
 
   @override
-  String get telemetryLegalLabel => 'Legal notice';
+  String get telemetryLegalLabel => 'قانۇنىي ئۇقتۇرۇش';
 
   @override
-  String get telemetryCollectError => 'Failed to collect telemetry data';
+  String get telemetryCollectError => 'يىراقتىن ئۇچۇر توپلىيالمىدى';
 
   @override
-  String get privacyPageTitle => 'Location services';
+  String get privacyPageTitle => 'ئورۇن مۇلازىمىتى';
 
   @override
-  String get privacyLocationTitle => 'Enable location services?';
+  String get privacyLocationTitle => 'ئورۇن ئۇچۇرى مۇلازىمىتىنى قوزغىتامدۇ؟';
 
   @override
   String get privacyLocationSubtitle =>
-      'Let applications know your geographical location.\nYou can change this anytime in System Settings.';
+      'ئەپنىڭ جۇغراپىيەلىك ئورۇن ئۇچۇرىڭىزنى بىلىشىگە يول قويىدۇ.\nبۇنى خالىغان ۋاقىتتا سىستېما تەڭشەكتىن ئۆزگەرتەلەيسىز.';
 
   @override
-  String get privacyLocationEnable => 'Location services';
+  String get privacyLocationEnable => 'ئورۇن مۇلازىمىتى';
 
   @override
-  String get privacyPolicyLink => 'Data Privacy';
+  String get privacyPolicyLink => 'سانلىق مەلۇمات شەخسىيىتى';
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return '<a href=\"https://$url\">$url</a> دا بۇ كودنى ئىشلىتىپ سىستېمىنى Ubuntu Pro بىلەن باغلىيالايدۇ';
   }
 
   @override
   String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'بۇ ماشىنىغا باغلا';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'ياكى پەرمان تاختىسىنى قولدا قوشۇڭ';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'پەرمان تاختا';
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Get the most comprehensive subscription for open-source software security';
+      'ئوچۇق كودلۇق يۇمشاق دېتال بىخەتەرلىكى ئائىت كەڭ دائىرىدىكى قوللاشقا ئېرىشىدۇ';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'شەخسىي ئىشلەتكۈچىلەر ئۈچۈن ھەمىشە ھەقسىز. كارخانا 30 كۈن ھەقسىز ئىشلىتەلەيدۇ. <a href=\"https://$url\">مول بىلىم</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'باغلا';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'ئىناۋەتسىز پەرمان تاختا';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'ئىناۋەتلىك پەرمان تاختا';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'ئىناۋەتسىز پەرمان تاختا، قايتا سىناڭ';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'ھازىرچە ئاتلا';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'You can always enable Ubuntu Pro later via the Software & Updates application.';
+      'سىز كېيىن يۇمشاق دېتال ۋە ئەپ يېڭىلانمىدىن Ubuntu Pro نى قوزغىتالايسىز.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Ubuntu Pro نى قوزغات';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+      'بۇ كومپيۇتېرنى Ubuntu Pro غا باغلاپ، كەڭ دائىرىدىكى يۇمشاق دېتال بوغچىسىنىڭ بىخەتەرلىك يېڭىلىنىشىغا 2032-يىلىغىچە ئېرىشەلەيسىز.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
-      'Ubuntu Pro is now enabled in this machine';
+      'ھازىر بۇ كومپيۇتېردا Ubuntu Pro قوزغىتىلدى';
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'You can manage your Pro services in the Software & Updates application.';
+      'يۇمشاق دېتال ۋە ئەپ يېڭىلانمىدىن Ubuntu Pro قوللاش مۇلازىمىتىنى باشقۇرالايسىز.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'مۇۋەپپەقىيەتلىك';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ياپ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'چوڭايت';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'كىچىكلەت';
 }

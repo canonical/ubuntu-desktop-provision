@@ -1808,7 +1808,7 @@ abstract class UbuntuBootstrapLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{DISTRO} is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every {DISTRO} release includes the latest toolchains and supports all major IDEs.'**
-  String installationSlidesDevelopmentBody(String DISTRO);
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS);
 
   /// No description provided for @installationSlidesCreativityTitle.
   ///

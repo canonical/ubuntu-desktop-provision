@@ -376,8 +376,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimumigi';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Malkaŝi';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Kaŝi';
 }

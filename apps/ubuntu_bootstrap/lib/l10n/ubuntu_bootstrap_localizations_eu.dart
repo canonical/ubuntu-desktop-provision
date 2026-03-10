@@ -9,107 +9,108 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get appTitle => 'Mahaigainerako Ubuntu instalatzailea';
+  String get appTitle => 'Mahaigainerako Ubunturen instalatzailea';
 
   @override
   String windowTitle(String RELEASE) {
-    return '$RELEASE instalatu';
+    return 'Instalatu $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Instalazio automatizatua';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'Inportatu autoinstall fitxategia';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'Autoinstall fitxategi baten URLa sar dezakezu:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Edo fitxategi lokal bat hautatu:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Hautatu fitxategia...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Kendu fitxategia';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Aukeratu fitxategia';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML fitxategiak';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Inportatu';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'Ezin izan da autoinstall fitxategia eskuratu';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'Egiaztatu URLa zuzena dela, probatu Interneterako konexioa, edo saiatu geroago.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL baliogabea';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'Egiaztatu URLa zuzena dela edo hautatu fitxategi lokal bat.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'Autoinstall fitxategi baliogabea';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'Egiaztatu fitxategia egokia dela, edo aukeratu beste bat.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'Autoinstall fitxategia ezin da irakurri';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'Egiaztatu irakurtzeko baimenak dituzula, edo aukeratu beste fitxategi bat.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Errore ezezaguna';
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Instalazio mota';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Nola instalatu nahi duzu $DISTRO?';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'Sartu autoinstall.yaml fitxategiaren URLa edo bide-izen lokala:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Instalazio interaktiboa';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'Instalazioa urratsez urrats gidatuta egin nahi duten erabiltzaileentzat.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption =>
+      'Automatizatua, autoinstall fitxategi batekin';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'Erabiltzaile aurreratuentzat, autoinstall.yaml fitxategi batean zehaztutako konfigurazio sistematiko errepikakorrekin.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Automatizatua, Landscape erabilita';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Landscape bidezko autoinstall fitxategi bat darabilten erakundeetako erabiltzaileentzat.';
 
   @override
   String get autoinstallErrorMessage =>
@@ -127,25 +128,25 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Ongi etorri ${DISTRO}ra';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return '$DISTRO prestatzen…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Abisua:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Probatu edo instalatu';
+    return 'Probatu edo instalatu $DISTRO';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Zer egin nahi duzu ${DISTRO}rekin?';
   }
 
   @override
@@ -153,7 +154,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get tryOrInstallRepairDescription =>
-      'Konponketak instalatutako software guztia berrinstalatuko du dokumentuak edo ezarpenak ukitu gabe.';
+      'Konponketak instalatutako software guztia berrinstalatuko du, dokumentuak edo ezarpenak ukitu gabe.';
 
   @override
   String tryOption(String RELEASE) {
@@ -162,7 +163,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return '$RELEASE probatu dezakezu zure ordenagailuan aldaketarik egin gabe.';
+    return '$RELEASE proba dezakezu ordenagailuan aldaketarik egin gabe.';
   }
 
   @override
@@ -172,34 +173,35 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return '$RELEASE instalatu zure sistemaren ondoan (edo ordez). Ez du asko iraungo.';
+    return 'Instalatu $RELEASE uneko sistema eragilearekin batera (edo haren ordez). Ez luke denbora asko beharko.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return '<a href=\"$url\">kaleratze oharrak</a> irakurri ditzakezu.';
+    return 'Agian <a href=\"$url\">bertsio-oharrak</a> irakurri nahiko dituzu.';
   }
 
   @override
-  String get rstTitle => 'Itzali RST';
+  String get rstTitle => 'RST antzeman da';
 
   @override
-  String get rstHeader => 'You must disable RST to continue installation';
+  String get rstHeader =>
+      'RST ezgaitu behar duzu instalazioarekin aurrera egiteko';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'Ordenagailuak Intel RST (Rapid Storage Technology) darabil. Hemen ezgaitu dezakezu RST:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      'Windowsen, abio bikoitza eta Windows instalatuta baduzu ordenagailuan';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'BIOSaren ezarpenetan';
 
   @override
   String rstInstructions(String url) {
-    return 'Argibideetarako, ireki orri hau telefono edo beste gailu batean: <a href=\"https://$url\">$url</a>';
+    return 'Argibideetarako, eskaneatu QR kodea beste gailu batekin edo bisitatu: <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -207,7 +209,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get configureSecureBootDescription =>
-      'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+      'Hirugarrenen kontrolatzaileak instalatzea aukeratu duzu. Hau egiteko abio segurua itzali beharra dago.\nHorretarako, orain segurtasun gako bat aukeratu behar duzu orain, eta sistema berrabiaraztean berau sartu.';
 
   @override
   String get configureSecureBootOption => 'Konfiguratu abio segurua';
@@ -220,11 +222,11 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get dontInstallDriverSoftwareNow =>
-      'Ez instalatu driver softwarea oraingoz';
+      'Ez instalatu kontrolatzaileak oraingoz';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'Gero instalatu dezakezu Software eta Eguneratzeetatik.';
+      'Geroago instala ditzakezu Softwarea eta eguneraketak aplikaziotik.';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
@@ -235,522 +237,521 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Segurtasun gakoak ez datoz bat';
 
   @override
-  String get showSecurityKey => 'Erakutsi segurtasun gakoa';
+  String get showSecurityKey => 'Erakutsi';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Ezkutatu';
 
   @override
-  String get updatesOtherSoftwarePageTitle =>
-      'Eguneraketak eta beste softwarea';
+  String get updatesOtherSoftwarePageTitle => 'Aplikazioak';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
-      'Zeintzuk aplikazio instalatu nahi zenituzke hasteko?';
+      'Zer aplikazio instalatu nahi zenituzke hasteko?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Optimizatu ordenagailua';
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'Software pribatibo gomendatua instalatu?';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '${DISTRO}k ez dakar software pribatiborik defektuz. Software gehigarri hau instalatuz baliteke ordenagailuaren errendimendua hobetzea.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote =>
+      'NVIDIA txartel grafikoa antzeman da';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+      'NVIDIA txartel grafikoen errendimendu onena ziurtatzeko, biziki gomendatzen da kontrolatzaile gehigarriak instalatzea.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Aukera zabala';
 
   @override
   String get fullInstallationSubtitle =>
-      'An offline-friendly selection of office tools, utilities and web browser.';
+      'Konexiorik gabe lan egin ahal izateko bulegotika, tresnak eta web nabigatzailea.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Oinarrizko aukera';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Just the essentials, web browser and basic utilities.';
+      'Behar-beharrezko aplikazioak soilik, web nabigatzailea eta oinarrizko tresnak.';
 
   @override
   String get otherOptions => 'Beste aukera batzuk';
 
   @override
   String get installThirdPartyTitle =>
-      'Instalatu hirugarreneko softwarea grafiko eta Wi-Fi hardwarearentzako, batia multimedia formatu gehigarrientzako euskarria';
+      'Instalatu hirugarrenen softwarea grafikoen eta Wi-Fiaren hardwarearentzako, eta baita multimedia formatu gehigarrientzako euskarria ere';
 
   @override
   String get installThirdPartySubtitle =>
-      'This software is subject to license terms included with its documentation. Some are proprietary.';
+      'Software hau dokumentazioan datorren lizentziaren baldintzei lotua dago. Lizentzia batzuk pribatiboak dira.';
 
   @override
   String get installDriversTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware';
+      'Instalatu hirugarrenen softwarea grafikoen eta Wi-Fiaren hardwarearentzako';
 
   @override
   String get installDriversSubtitle =>
-      'Including but not limited to NVIDIA drivers and similar';
+      'Barnean daude, besteak beste, NVIDIA eta antzeko kontrolagailuak';
 
   @override
   String get installCodecsTitle =>
-      'Download and install support for additional media formats';
+      'Deskargatu eta instalatu multimedia formatu gehigarrientzako euskarria';
 
   @override
   String get installCodecsSubtitle =>
-      'Including but not limited to MP3, MP4, MOV and similar';
+      'Barnean daude, besteak beste, MP3, MP4, MOV eta antzekoak';
 
   @override
-  String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'Ordenagailua ez dago argindarrera konektatua.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Une honetan ez zaude konektaturik';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Sortu pasaesaldia';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'Ordenagailua pizten duzunero pasaesaldia sartu beharko duzu. Pasaesaldi hau ez da erabiltzailearen pasahitza.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader =>
+      'Ez ahaztu pasaesaldia leku seguruan gordetzea';
 
   @override
   String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+      'Galtzen baduzu, zure datu guztiak galduko dituzu.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'Gorde pasaesaldia eta berreskuratze gakoa leku seguruan';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'Pasaesaldia galtzen baduzu, zure datu guztiak galduko dituzu. Pasaesaldiak ez du berreskuratze gakoa edo erabiltzaile-pasahitza ordezkatzen.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Zifratzea';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Ezarri zifratzeko pasaesaldia';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Ezarri zifratzeko PINa';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. Pasaesaldia ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'PINa sartu beharko duzu ordenagailua pizten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. PINa ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Pasaesaldia';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Berretsi pasaesaldia';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Pasaesaldia beharrezkoa da';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Pasaesaldiak ez datoz bat';
 
   @override
-  String get passphrasePageChoosePinHint => 'PIN';
+  String get passphrasePageChoosePinHint => 'PINa';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Berretsi PINa';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PINa beharrezkoa da';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PINak ez datoz bat';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Eskatu pasaesaldia';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Seguruena. Pasaesaldi luzeago bat sartu beharko duzu ordenagailua pizten duzun aldiro.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Eskatu PINa';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Seguruagoa. Zenbakizko PIN bat sartu beharko duzu ordenagailua pizten duzun aldiro.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Desblokeatu diskoa automatikoki';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Segurtasun gehigarria';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Pasaesaldi ahula, egizu luzeagoa edo konplexuagoa';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Baleko pasaesaldia, egizu luzeagoa edo konplexuagoa segurtasuna areagotzeko';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Pasaesaldi sendoa';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'PIN ahula, egizu luzeagoa edo asmatzeko zailagoa';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Baleko PINa, egizu luzeagoa edo asmatzeko zailagoa segurtasuna areagotzeko';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'Luzera egokiko PINa';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'Diskoaren konfigurazioa';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Nola instalatu nahi duzu $DISTRO?';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'Ordenagailuak une honetan $os dauka instalaturik. Zer egin nahi duzu?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'Ordenagailuak une honetan $os1 eta $os2 ditu instalaturik. Zer egin nahi duzu?';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'This computer currently has multiple operating systems on it. What would you like to do?';
+      'Ordenagailuak une honetan hainbat sistema eragile ditu instalaturik. Zer egin nahi duzu?';
 
   @override
   String get installationTypeNoOSDetected =>
-      'This computer currently has no detected operating systems. What would you like to do?';
+      'Ordenagailuan ez da antzeman instalatutako sistema eragilerik. Zer egin nahi duzu?';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Ezabatu diskoa eta instalatu $DISTRO';
   }
 
   @override
   String get installationTypeEraseInfo =>
-      'All data and partitions on the disk will be erased, including operating systems.';
+      'Diskoko datu eta partizio guztiak ezabatuko dira, sistema eragileak barne.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced options';
+  String get installationTypeAdvancedLabel => 'Aukera aurreratuak';
 
   @override
-  String get installationTypeAdvancedTitle => 'Encryption and file system';
+  String get installationTypeAdvancedTitle => 'Zifratzea eta fitxategi-sistema';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Esperimentala';
 
   @override
-  String get installationTypeNone => 'No encryption';
+  String get installationTypeNone => 'Zifratzerik ez';
 
   @override
   String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+      'Fitxategi-sistema estandarra, zifratze gabe.';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'Ez da bat ere hautatu';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM => 'Erabili LVM zifratze gabe';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'LVM hautatuta';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption => 'Zifratzea pasaesaldiarekin';
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Pasaesaldia sartu beharko duzu ordenagailua pizten duzunero. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Honek LVM darabil LUKS zifratzearekin.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
-      'LVM and encryption selected';
+      'LVM eta zifratzea hautatuta';
 
   @override
   String get installationTypeEncryptInfo =>
-      'You will choose a security key in the next step.';
+      'Hurrengo urratsean aukeratuko duzu segurtasun gakoa.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption';
+  String get installationTypeZFS => 'Erabili ZFS zifratze gabe';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Encrypt with a passphrase using ZFS';
+      'Zifratu pasaesaldiarekin, ZFS erabiliz';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'Zifratze natiboa ZFSrekin. Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro.';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'ZFS hautatuta';
 
   @override
   String get installationTypeZFSEncryptionSelected =>
-      'ZFS and encryption selected';
+      'ZFS eta zifratzea hautatuta';
 
   @override
-  String get installationTypeTPM => 'Use hardware-backed encryption';
+  String get installationTypeTPM => 'Erabili hardware bidezko zifratzea';
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Diskoa automatikoki desblokeatuko da abioan.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Ez dago erabilgarri ordenagailu honetan.';
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'TPM hautatuta';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return 'Ezabatu $os eta berrinstalatu';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">Abisua:</font> Honek $os(e)ko programa guztiak, dokumentuak, argazkiak, musika eta beste edozein fitxategi ezabatuko ditu.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return 'Instalatu $product, $os(r)ekin batera';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return 'Instalatu $product, $os1 eta $os2(r)ekin batera';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside existing operating systems';
+    return 'Instalatu $product existitzen diren beste sistema eragileekin batera';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'Instalatu $product beste partizioekin batera';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+    return 'Hautatu tamainaz aldatu beharreko partizioa, horrela ${product}entzako lekua egiteko. Abioan sistema eragilea aukeratu ahalko duzu.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Ezabatu $os eta instalatu $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Existitzen den $os instalazioko fitxategi eta datu guztiak betiko ezabatuko dira.';
   }
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'Eskuzko instalazioa';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'Disko konfigurazio pertsonalizatua erabili nahi duten erabiltzaile aurreratuentzako.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Ezabatu diskoa eta instalatu $DISTRO';
   }
 
   @override
-  String get selectGuidedStorageInfo =>
-      'Start from scratch on your selected disk.';
+  String get selectGuidedStorageInfo => 'Hasi zerotik hautatutako diskoan.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Hautatu unitatea:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Hautatu partizioa:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel => 'Disko osoa erabiliko da:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'Instalatu orain';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Aukeratu $DISTRO non instalatu';
   }
 
   @override
   String get installAlongsideSpaceDivider =>
-      'Allocate drive space by dragging the divider below:';
+      'Esleitu lekua unitatean azpiko banalerroa arrastatuz:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num partizio txikiago ezkutaturik daude, erabili <a href=\"$url\">partizio tresna aurreratua</a> kontrol gehiago izateko';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Aldatu partizioaren tamaina';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Esleitu lekua';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'Fitxategiak';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'Partizioa:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'Tamaina:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'Erabilgarri:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Eskuzko partitzea';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash =>
-      'Mount points must start with \"/\"';
+      'Muntatze-puntuek \"/\" izan behar dute hasieran';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
-      'Mount points cannot contain spaces';
+      'Muntatze-puntuek ezin dute zuriunerik izan';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return '$format fitxategi-sistema ez dago onartuta $mountpoint puntuarentzat';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'Gailua';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'Mota';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'Muntatze-puntua';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'Tamaina';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'Erabilita';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'Sistema';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'Formatua';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'Leku librea';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'Partizio-taula berria';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Partizio huts berria';
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+      'Gailu osoan partizio-taula berria sortuz gero, une honetan bertan dauden partizio guztiak ezabatuko dira. Eragiketa hau desegin daiteke, beharrezkoa bada.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'Partizio primario gehiegi';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Mugara iritsi da';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice => 'Abio kargatzailea instalatzeko gailua';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'Sortu partizioa';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'Editatu partizioa';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'Tamaina:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'Partizio berriaren mota:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'Primarioa';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'Logikoa';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'Partizio berriaren kokalekua:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'Tarte honen hasieran';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'Tarte honen amaieran';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Erabilera:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Utzi formateatu gabe';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Utzi $format gisa formateatuta';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'Formateatu partizioa';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'Muntatze-puntua:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'Instalatzeko prest';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Berrikusi zure aukeraketa';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -762,38 +763,38 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Bat ere ez';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Gailuak';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Aplikazioak';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'Instalazio mota';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Diskoaren zifratzea';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Instalazio-diskoa';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Software pribatiboa';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Orokorra';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Segurtasuna eta gehiago';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Partizioak';
 
   @override
   String get confirmPartitionTables =>
-      'The partition tables of the following devices are changed:';
+      'Gailu hauetako partizio-taulak aldatu egin dira:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -801,875 +802,885 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Kodekak';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers =>
+      'Kodekak eta kontrolatzaileak';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Kontrolatzaileak';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Instalatu';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Ezabatua';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Aldatu gabe';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Tamainaz aldatua (lehen: $oldsize / orain: $newsize)';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Sortua eta $format gisa formateatua. Erabilera: $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return '$format gisa formateatua. Erabilera: $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Erabilera: $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return '$format gisa formateatua';
   }
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'Instalazioa osatu da';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return '$system instalatu da eta erabiltzeko prest dago';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return '**$system** diskora kopiatu da';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Berrabiarazi ${system}ra';
   }
 
   @override
   String get restartWarningBody =>
-      'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+      'Berrabiarazi instalazioa osatzeko edo jarraitu probatzen.\nEgiten dituzun aldaketak ez dira gordeko.';
 
   @override
   String get rebootToConfigureWarning =>
-      'You have to restart the computer to continue the installation process.';
+      'Instalazio prozesuarekin jarraitzeko ordenagailua berrabiarazi behar duzu.';
 
   @override
-  String get shutdown => 'Shut down';
+  String get shutdown => 'Itzali';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Berrabiarazi orain';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Jarraitu probatzen';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'BitLocker antzeman da';
 
   @override
   String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+      'Partizio bat edo gehiago BitLocker erabiliz zifratu dira.';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'Windowsekin batera instalatzeko, ezgaitu BitLocker Windowsen.';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'Baliteke Windowsek berreskuratze gakoak eskatzea instalazio ondoren abiaraztean.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Jarraibideetarako, bisitatu <a href=\"$url\">BitLocker-en gida</a>.';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'Datu guztiak gal ditzakezu BitLocker-en berreskuratze gakorik gabe';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Berrabiarazi ordenagailua';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Ordenagailua berrabiarazi?';
 
   @override
   String get restartInstaller => 'Restart installer';
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Berrabiarazi Windowsera';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Windowsera berrabiarazi?';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'Ziur ordenagailua berrabiarazi nahi duzula? Geroago ${DISTRO}ren instalazioa berrekin beharko duzu, $DISTRO instalatzen amaitzeko.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Ongi etorri ${RELEASE}ra';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Erabilgarri:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'Hau barne:';
 
   @override
   String get installationSlidesWelcomeTitle =>
-      'Fast, free and full of new features';
+      'Bizkorra, librea eta eginbidez betea';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return '${DISTRO}ren azken bertsioak ordenagailuan aritzea inoiz baino errazago egiten du.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Garatzailea, sortzailea, bideojokozalea nahiz administratzailea izan, ${RELEASE}n produktibitatea handitzeko eta zure bizipena hobetzeko tresna berriak aurkituko dituzu.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle =>
+      'Behar dituzun aplikazio guztiak';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Instalatu, kudeatu eta eguneratu zure aplikazio guztiak Ubuntu Softwarearekin, Snap biltegiko eta ${DISTRO}ren artxiboko milaka aplikazio barne.';
   }
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Develop with the best of open source';
+      'Garatu kode irekirik onenarekin';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
+    return '$DISTRO lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta AArako (adimen artifiziala) / ikasketa automatikorako, hala nola devops eta administraziorako. ${DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle => 'Areagotu zure sormena';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Animatzailea, diseinatzailea, bideo-sortzailea edo bideojoko garatzailea bazara, erraz ekar ditzakezu zure lan-fluxuak ${DISTRO}ra, kode irekiko eta industriako software eta aplikazio estandarrei esker.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Jokatzeko aparta';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return '${DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka, errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute ${DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Pribatua eta segurua';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return '${DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebakiarekin eta VPN euskarriarekin eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return '${DISTRO}ren LTS bertsio guztiek bost urterako segurtasun adabakiak barne dituztela argitaratzen dira, Ubuntu Pro harpidetzaren bidez hamar urtera luza daitekeelarik tartea.';
   }
 
   @override
   String get installationSlidesProductivityTitle =>
-      'Power up your productivity';
+      'Indartu zure produktibitatea';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return 'Mahaigainerako ${DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarriak diren aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Erabilerraza denontzat';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return '${DISTRO}ren filosofiaren erroan informatika denontzako den sinesmena dago. Erabilerraztasun tresna aurreratuekin eta hizkuntza, koloreak eta testuen tamaina aldatzeko aukerarekin, ${DISTRO}k informatika erraz bilakatzen du - edonor zarela eta edonon zaudela ere.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca screen reader';
+  String get installationSlidesAccessibilityOrca => 'Orca pantaila-irakurlea';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'Hizkuntza-sostengua';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Laguntza eta sostengua';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return '${DISTRO}ren dokumentazio ofiziala eskuragarri dago bai online, bai atrakeko Laguntza ikonoaren bitartez.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+      'Ask Ubuntuk galdera-erantzun sorta zabala dauka, eta Ubuntu Discoursek erabiltzaile hasiberri zein esperientziadunentzako gidak eta eztabaidak eskaintzen ditu.';
 
   @override
   String get installationSlidesSupportEnterprise =>
-      'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+      'Enpresako erabiltzaileentzat, Canonicalek euskarri komertziala eskaintzen du lan-eremuan Ubuntu era seguruan erraz instalatu eta kudeatzeko.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Baliabide lagungarriak:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Dokumentazio ofiziala';
 
   @override
   String get installationSlidesSupportUbuntuPro =>
-      'Enterprise-grade 24/7 support with Ubuntu Pro';
+      'Enpresa mailako 24/7 euskarria Ubuntu Pro-rekin';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Hurrengo diapositiba';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Aurreko diapositiba';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Erreproduzitu diapositibak';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Pausatu diapositibak';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Erakutsi / ezkutatu erregistroak';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'Fitxategiak kopiatzen…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'Sistema instalatzen…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'Sistema konfiguratzen…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'Instalazioak huts egin du';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'Ez dago behar beste leku diskoan';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'Diskoan ez dago $DISTRO instalatzeko behar beste leku';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Hautatutako diskoak ez dauka $DISTRO instalatzeko behar beste leku. Irten instalatzailetik diskoan lekua egiteko, edo hautatu beste disko bat.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Erabilgarri:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Beharrezko:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Eguneratzea eskuragarri';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader =>
+      'Instalatzailearentzako eguneratze bat eskuragarri dago';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Eguneratu orain';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'Eguneratu azken bertsiora fidagarritasun handiagorako eta eginbide gehiago lortzeko.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Eguneratzea prest';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'Uneko $snap bertsioa honakoa da: $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Eguneratu $version bertsiora';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'Uneko bertsioa ($version) egunean dago.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return '$snap eguneratzen...';
   }
 
   @override
   String get refreshRestart =>
-      'Please close the installer and relaunch to continue';
+      'Jarraitzeko, itxi instalatzailea eta abiarazi berriro';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Itxi instalatzailea';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return '$snap(r)en eskakizunak egiaztatzen...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return '$snap berritzen...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return '$snap(r)en berritzea aztertzen...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return '$snap prestatzen...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return '$snap deskargatzen...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return '$snap balioztatzen...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return '$snap muntatzen...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return '$snap zerbitzuak geldiarazten...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return '$snap aliasak ezabatzen...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return '$snap desestekatzen...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return '$snap baliabideak eguneratzen...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return '$snap kernelaren komando-lerroa eguneratzen...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return '$snap(r)en datuak kopiatzen...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return '$snap(r)en segurtasun-profilak konfiguratzen...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return '$snap estekatzen...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return '$snap(r)en larakoak (plug) eta artekak (slot) konektatzen...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return '$snap(r)en alias automatikoak ezartzen...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return '$snap(r)en aliasak konfiguratzen...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return '$snap(r)en zerbitzuak abiarazten...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return '$snap garbitzen...';
   }
 
   @override
-  String get recoveryKeyTitle => 'Recovery key';
+  String get recoveryKeyTitle => 'Berreskuratze gakoa';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Garrantzitsua';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'Gorde berreskuratze gakoa';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+      'Zure datu guztiak gal ditzakezu berreskuratze gakorik ez baduzu';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Berreskuratze gakoa';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      'Abioan datuak deszifratzeak huts egiten badu, berreskuratze gakoa sartu beharko duzu. Gako hau gabe, zure datu guztietara sarbidea galduko duzu. Gorde ezazu leku seguruan, adibidez pasahitz-kudeatzaile batean.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+      'Berreskuratze gakoa leku seguruan gorde dut';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Ikasi gehiago';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Gorde fitxategian';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Erakutsi QR kodea';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Mahaigaina - Berreskuratze gakoa';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Eskaneatu QR kodea berreskuratze gakoa kopiatzeko eta leku seguruan gordetzeko, adibidez pasahitz-kudeatzaile batean. Geroago erabiltzeko argazki bat ere atera dezakezu.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Arbelera kopiatu da';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Berreskuratze gakoaren fitxategia ez da gorde';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Berreskuratze gakoaren fitxategia ezin izan da gorde aldi baterako kokalekuan';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Errore ezezaguna';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Ez duzu karpeta horretan idazteko baimenik. Saiatu beste kokaleku batean edo erabili bestelako metodo bat.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Saiatu beste kokaleku batekin, esaterako unitate aldagarri bat, edo erabili bestelako metodo bat.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Gorde berreskuratze gakoaren fitxategia';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Testu-fitxategiak';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Eskaneatu QR kodea edo sartu azpiko kodea hemen: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Instalazio automatizatua';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Hasi saioa Landscapen';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader => 'Sartu Landscapeko domeinua (FQDN)';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Landscapeko domeinua (FQDN)';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'Sartu zure erakundearen Landscape domeinua saioa hasteko eta autoinstall fitxategi bat eskuratzeko. FQDNa zure IT laguntza zerbitzuak eman diezazuke.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Landscape domeinua (FQDN)';
 
   @override
-  String get next => 'Next';
+  String get next => 'Hurrengoa';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      'Domeinu baliogabea, egiaztatu ondo dagoela edo galdetu zure IT laguntza zerbitzuari';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+      'Konektatu Internetera jarraitzeko';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'Internet beharrezkoa da Landscapetik autoinstall fitxategia eskuratzeko';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning => 'Kodea iraungi da, saiatu berriz';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning =>
+      'Saio hasierak huts egin du, saiatu berriz';
 
   @override
   String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+      'Instalazio automatizatua ez dago zure konturako erabilgarri';
 
   @override
   String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+      'Jarri zure IT laguntza zerbitzuarekin harremanetan edo saiatu beste instalazio aukera batekin.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Errore kodea: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'Ubuntu zure erakundeak hornitutako konfigurazioarekin instalatuko da';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'Jarraian Landscapetik inportatutako autoinstall fitxategia berrikus dezakezu.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Dena ondo joan da';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Errorea';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Itxi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizatu';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Txikitu';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Ezin izan da hardware bidezko zifratzea gaitu';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Ekintza beharrezkoa da';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Xehetasun teknikoak';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Berretsi';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return '$n. soluzioa: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Soluzioa: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Informazio gehiago hardware bidezko zifratzeari buruz';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Saiatu jarraian azaldutako soluzioekin, jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Probatu ondorengo soluzioa, jarri harremanetan IT laguntza-zerbitzuarekin, edo aukeratu beste zifratze metodo bat.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Jarri laguntza informatiko zerbitzuarekin harremanetan, edo aukeratu beste zifratze metodo bat.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Barne errorea.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Itzaltzea beharrezkoa da.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired =>
+      'Berrabiaraztea beharrezkoa da.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Ekintza esperogabea.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Argumentua faltan.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Okerreko argumentua.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Ekintzak huts egin du.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Uneko ingurunea ez da makina birtual bat.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Ordenagailu honek firmware zaharrago bat darabil (BIOS legatua), zifratze metodo honekin bateragarria ez dena.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Arazo bat dago ordenagailu honen firmwarearekin.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Ordenagailuak ez dauka zifratze metodo honentzako beharrezko segurtasun hardwarerik (TPM 2.0).';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'Ordenagailu honen TPMa ezgaitua dago.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'Ordenagailu honen TPMa dagoeneko beste sistema edo aplikazio baten erabiltzen du.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'Ordenagailu honen TPMa une honetan blokeatua dago.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'Ordenagailu honen TPMak ez dauka behar beste leku libre.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Ordenagailua ez da hardware bidezko zifratzearekin bateragarria.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'UEFI arazketa gaitua dago.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Ordenagailu honek beharrezko segurtasun eginbide bat (DMA babesa) falta du.';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'Ordenagailu honek beharrezko segurtasun eginbide bat (IOMMU) falta du.';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Arazo bat dago ordenagailu honen segurtasun konfigurazioarekin.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Baliteke abioan exekutatzen ari den softwareak ordenagailuaren TPMarekin konexio segurua ezartzea eragoztea.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Iraunkortasun Absoluturako Modulua gaitua dago ordenagailu honetan.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'Abio segurua ezgaitua dago ordenagailu honetan, edo ez dago deployed moduan ezarria.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Ordenagailu honetako softwarea egiaztatzen duten zenbait ziurtagiri zaharkituta daude, edo babes ahula daukate.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Ordenagailu honek eskuzko baimen-zerrenda darabil abioko softwarea egiaztatzeko.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Unitate gehigarriak presente daude.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Arazo bat dago ordenagailu honen TPMarekin.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Arazo bat dago ordenagailu honen firmwarearekin.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Berrabiarazi';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Itzali';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Berrabiarazi firmwarearen ezarpenetara';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Firmware ezarpenak ez badira automatikoki kargatzen, berrabiarazi eta sakatu ezarpenen tekla behin eta berriro abioan (normalean F2, F10 edo Ezabatu).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'DMA babesa eskuz gaitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'TPMa eskuz garbitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Abio segurua eskuz gaitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'IOMMU eskuz gaitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'PCR bankuak eskuz gaitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'TPMa eskuz gaitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'TPMa eskuz garbitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'TPMa eskuz garbitu';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Ezgaitu Iraunkortasun Absoluturako Modulua eskuz';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Kontaktatu OEMa';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Kontaktatu SEaren hornitzailea';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Gaitu TPMa berrabiaraztean';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Gaitu eta garbitu TPMa berrabiaraztean';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Garbitu TPMa berrabiaraztean';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Garbitu TPMa';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Ez ikusi egin';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Berrabiarazi ordenagailua aurreko ekintzak osatzeko.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Baliteke ordenagailua berrabiaraziz arazoa konpontzea.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Itzali ordenagailua aurreko ekintzak osatzeko.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Hau ordenagailuaren firmware ezarpenetatik egin dezakezu.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Baliteke hau ordenagailuaren firmware ezarpenetatik egin ahal izatea. Irakurri PUZ hornitzailearen dokumentazioa gida gisa.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Egiaztatu abio seguru modua \"deployed\" gisa ezarria dagoela.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Arazo honi ez ikusi eginez gero, baliteke instalazioaren segurtasun gutxitzea.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Berrabiarazi';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Berrabiarazi eta gaitu TPMa';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'Berrabiarazi eta garbitu TPMa';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Ez ikusi egin eta jarraitu';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPMa garbituz gero, zifratze gako guztiak ezabatuko dira';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Zifratutako unitateetako datu guztietara sarbidea galduko duzu hauentzako berreskuratze gakorik ez badaukazu. TPMaren menpe dauden beste eginbide batzuk ere hautsiko ditu, hala nola, autentikazioa eta ziurtagiriak.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Ulertzen ditut TPMa garbitzeak dituen ondorioak';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Baliteke berrabiaraztean ekintza hau berresteko eskatzea.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Orduan, instalazioa berriro hasi beharko duzu.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Soluzio honek huts egin du';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Probatu beste soluzioren bat, edo jarri harremanetan IT laguntza zerbitzuarekin.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Probatu beste zerbait. Horrez gain, <a href=\"\">errore-txosten bat bidal</a> dezakezu.';
 }

@@ -462,7 +462,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Kõik andmed ja partitsioonid sellelt kettalt saavad järgnevaga kustutatud, sealhulgas operatsioonisüsteemid.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Näita lisavalikuid...';
+  String get installationTypeAdvancedLabel => 'Lisaseadistused';
 
   @override
   String get installationTypeAdvancedTitle => 'Krüptimine ja failisüsteem';
@@ -491,12 +491,12 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Igal arvuti sisselülitamisel pead sisestama salafraasi. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Sel puhul on kasutusel LVM koos LUKS-põhise krüptimisega.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -529,11 +529,11 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Ketas avatakse käivitamisel lukust automaatselt.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Pole saadaval selles arvutis.';
 
   @override
   String get installationTypeTPMSelected => 'TPM on valitud';
@@ -963,7 +963,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Arenda parimate avatud lähtekoodil põhinevate töövahenditega';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO on ideaalne tööjaam rakenduste või veebiteenuste arendusteks, andmeteaduse ja tehisintellektiga seotud tööde jaoks ning loomulikult devopsi ja süsteemihalduse jaoks. Iga $DISTRO viimane versioon sisaldab uusimaid arendustarvikuid ning toetab kõiki suurimaid lõimitud arenduskeskondi.';
   }
 
@@ -1393,292 +1393,299 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Raudvarapõhist krüptimist ei saanud sisse lülitada';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Vajalik on kasutaja sekkumine';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Tehnilised üksikasjad';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Kinnita';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Lahendus $n: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Lahendus: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Lisateave raudvarapõhise krüptimise kohta';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Proovi järgnevaid lahendusi, küsi abi IT-toelt või vali muu krüptimismeetod.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Proovi allpool pakutud lahendust, küsi abi oma IT-toelt või katseta mõnda muud krüptimismeetodit.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Küsi abi IT-toelt või vali muu krüptimismeetod.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Sisemine viga.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired =>
+      'Vajalik on arvuti seistamine.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired =>
+      'Vajalik on arvuti taaskäivitamine.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Ootamatu tegevus.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Vajalik argument on puudu.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Vajalik argument on vigane.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Toiming ei õnnestunud.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Praegune keskkond on virtuaalmasin.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'See arvuti kasutab vanemat tüüpi püsivara (vanamoodne BIOS), mis pole selle krüptimismeetodiga ühilduv.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Selle arvuti püsivaraga on seotud üks probleem.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Selles arvutis pole antud krüptimismeetodi jaoks nõutavat riistavaralist seadet (TPM 2.0).';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'Selle arvuti TPM-seade on lülitatud välja.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'Selle arvuti TPM-seade on juba kasutusel mõne muu süsteemi või rakenduse poolt.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'Selle arvuti TPM-seade on juba lukustatud.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'Selle arvuti TPM-seadmel pole piisavalt vaba andmeruumi.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'See arvuti pole ühilduv raudvaralisele krüptimisele vajalike nõuetega.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'UEFI veaotsing/silumine on lülitatud sisse.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Selles arvutis on puudu vajalik turvafunkstionaalsus (DMA-kaitse).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'Selles arvutis on puudu vajalik turvafunktsionaalsus (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Selle arvuti turvaseadistsutes on üks viga.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Süsteemi käivitamisel alustab tööd tarkvara, mis võib takistada turvalise ühenduse loomist TPM-seadmega.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Absoluutse püsivuse moodul on selles arvutis lülitatud sisse.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'SecureBoot on selles arvutis lülitatud välja või ei tööta standardrežiimis.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Mõned sertifikaadid, mille abil selle arvuti tarkvara õigsust kontrollitakse, on aegunud või kasutavad madalat turvataset.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'See arvuti kasutab käsitsi koostatud pääsuloendit käivitamisel töölepandava tarkvara õigsuse kontrollimiseks.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Täiendavad draiverid on olemas.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Selle arvuti TPM-iga on seotud üks viga.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Selle arvuti püsivaraga on seotud üks viga.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Käivita uuesti';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Lülita välja';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Taaskäivita ja ava püsivara seadistused';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Kui püsivara seadistused jäävad automaatselt laadimata, siis käivita uuesti ja selle ajal vajuta korduvalt vastavat valikuklahvi (tüüpiliselt F2, F10 või Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Lülita DMA-kaitse sisse käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Kustuta TPM käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Lülita „Secure Boot“ sisse käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'Lülita IOMMU käsitsi sisse';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Lülita PCR-mäluplokid sisse käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Lülita TPM sisse käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Kustuta TPM käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Kustuta TPM käsitsi';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Lülita absoluutse püsivuse moodul käsitsi välja';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Võta ühendust OEM-iga';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Võta ühendust operatsioonisüsteemi valmistajaga';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Lülita TPM-seade käivitamisel sisse';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Lülita TPM-seade taaskäivitamisel sisse ja kustuta andmed';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Kustuta TPM-seadme andmed arvuti taaskäivitamisel';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Kustuta TPM-i andmed';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Eira';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Eelmiste toimingute lõpetamiseks käivita arvuti uuesti.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Arvuti käivitamisel võib see viga korda minna.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Eelmiste toimingute lõpetamiseks seiska see arvuti.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Sa võid seda teha oma arvuti püsivara seadistsutes.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Sa võib-olla saad seda teha oma arvuti püsivara seadistustes. Lisateavet leiad protsessoritootja dokumentatsioonist.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Kontrolli, kas „Secure Boot“ režiim on „deployed“.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Tootja võib seda funktsionaalsust nimetada kui „Virtualization Technology“, „VT-d“ või „AMD-Vi“.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Selle probleemi eiramisel võib tulemuseks olla vähemturvaline süsteemipaigaldus.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Käivita uuesti';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'Käivita uuesti ja lülita TPM sisse';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'Käivita uuesti ja kustuta TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Eira ja jätka';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPM-i sisu kustutamisega kustutatakse ja kõik krüptovõtmed';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Kui sul pole taastevõtmeid, siis kaotad ligipääsu kõikidele oma krüptitud andmekandjatele. Lisaks lõpetavad töötamise muud funktsionaalsused, mis sõltuvad TPM-ist, näiteks autentimine ja sertifikaadid.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Ma saan aru, mis juhtub, kui kustutan TPM-i sisu';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Ilmselt sinult küsitakse arvuti uuesti käivitamisel selle toimingu osas kinnitust.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Sel juhul pead paigalduse tegema uuesti.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'See lahendus ei toiminud';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Proovi muud lahendust või küsi abi IT-toelt.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Palun proovi mõnda muud võimalust. Lisaks võid <a href=\"\">meile saata veateate</a>.';
 }

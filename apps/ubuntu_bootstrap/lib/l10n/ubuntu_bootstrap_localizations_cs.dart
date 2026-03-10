@@ -53,11 +53,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Zkontrolujte správnost URL adresy, otestujte připojení k Internetu nebo to zkuste později.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná adresa URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná URL adresa';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Zkontrolujte správnost adresy URL nebo vyberte místní soubor.';
+      'Zkontrolujte správnost URL adresy nebo vyberte místní soubor.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
@@ -99,7 +99,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectOption =>
-      'Automatizováno podle souboru autoinstall';
+      'Automatizovaná podle souboru autoinstall';
 
   @override
   String get autoinstallDirectDescription =>
@@ -173,7 +173,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Nainstalovat $RELEASE vedle (nebo namísto) stávajícího operačního systému. Nebude to zdlouhavé.';
+    return 'Nainstalovat $RELEASE vedle (nebo namísto) stávajícího operačního systému. Mělo by to trvat jen chvilku.';
   }
 
   @override
@@ -327,7 +327,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseInfoBody =>
-      'Pokud ho totiž zapomenete, nedostanete se ke svým datům => přijdete o ně.';
+      'Pokud ho totiž zapomenete, nedostanete se ke svým datům ⇒ přijdete o ně!';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -463,7 +463,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Všechna data a oddíly na disku budou smazány, včetně operačních systémů.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Zobrazit pokročilé možnosti…';
+  String get installationTypeAdvancedLabel => 'Pokročilé možnosti';
 
   @override
   String get installationTypeAdvancedTitle => 'Šifrování a souborový systém';
@@ -493,12 +493,12 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Přístupovou frázi bude třeba zadávat pokaždé, když počítač zapnete. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Toto používá LVM s LUKS šifrováním.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'Vybráno LVM a šifrování';
@@ -529,11 +529,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Disk bude při startu odemknut automaticky.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Na tomto počítači není k dispozici.';
 
   @override
   String get installationTypeTPMSelected => 'Vybráno TPM';
@@ -963,7 +963,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Vyvíjejte s nejlepším open source';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO je ideální prostředí pro vývoj aplikací či webů, datovou vědu a umělou inteligenci (AI/ML), a také pro devops a správu systémů. Každé vydání $DISTRO obsahuje nejnovější sady potřebných nástrojů a podporuje všechna hlavní integrovaná vývojářská prostředí (IDE).';
   }
 
@@ -998,7 +998,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationSlidesProductivityTitle =>
-      'Zlepšete svou produktivitu';
+      'Nastartujte si produktivitu';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
@@ -1391,292 +1391,295 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Šifrování jištěné hardwarem nebylo možné zapnout';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Vyžadována akce';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Technické detaily';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Potvrdit';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Řešení $n: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Řešení: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Zjistěte více o hardwarově podpořeném šifrování';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Vyzkoušejte následující řešení, obraťte se na podporu IT, nebo zvolte jiný způsob šifrování.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Vyzkoušejte níže uvedené řešení, kontaktujte IT podporu nebo zvolte jinou metodu šifrování.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Obraťte se na podporu IT, nebo zvolte jiný způsob šifrování.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Vnitřní chyba.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Je vyžadováno vypnutí.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'Je vyžadován restart.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Neočekávaná akce.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Chybějící argument.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Neplatný argument.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Akce selhala.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Stávající prostředí je virtuální stroj.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Tento počítač používá starší firmware (zastaralý BIOS), který není kompatibilní s touto metodou šifrování.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Vyskytl se problém s firmwarem tohoto počítače.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Tento počítač nemá potřebný bezpečnostní hardware (TPM 2.0) pro tuto metodu šifrování.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'TPM zařízení tohoto počítače je vypnuté.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'TPM zařízení tohoto počítače už je používáno jiným systémem nebo aplikací.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'TPM zařízení tohoto počítače je v tuto chvíli uzamčeno.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'TPM zařízení tohoto počítače nemá k dispozici dostatečné úložiště.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Tento počítač není kompatibilní s hardwarem podporovaným šifrováním.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'Je zapnutý ladicí režim UEFI.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Tento počítač postrádá potřebnou funkci zabezpečení (ochrana DMA přístupu do paměti).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'Tento počítač postrádá potřebnou funkci zabezpečení (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Je problém s nastavením zabezpečení tohoto počítače.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Je přítomen software spouštěný při startu počítače, který může bránit zabezpečenému spojení s TPM zařízením počítače.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Na tomto počítači je zapnuté Absolute Persistence Module.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'Secure boot je na tomto počítači vypnutý nebo není nastaven v režimu nasazeno.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Některý software ověřující certifikáty na tomto počítači je zastaralý nebo používá slabou ochranu.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Na tomto počítači je používáno pro ověřování software při startu ručně spravovaný seznam povoleného.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Jsou přítomny dodatečné ovladače.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Je problém s TPM zařízením tohoto počítače.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Je problém s firmware tohoto počítače.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Restartovat';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Vypnout';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Restartovat do nastavení firmwaru';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Pokud se nastavení firmwaru nenačtou automaticky, restartujte počítač a během spouštění opakovaně stiskněte klávesu nastavení (obvykle F2, F10 nebo Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Ručně zapnout ochranu DMA';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Ručně pročistit TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Ručně zapnout Secure Boot';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'Ručně zapnout IOMMU';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Ručně zapnout řady PCR';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Ručně zapnout TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Ručně pročistit TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Ručně pročistit TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Vypněte Absolute Persistence Module ručně';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Kontaktujte OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Kontaktovat dodavatele operačního systému';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Zapnout TPM při restartu';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Zapnout a vyčistit TPM při restartu';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Vyčistit TPM při restartu';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Vyčistit TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Ignorovat';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Restartujte počítač pro dokončení předchozích akcí.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Restartování počítače může problém vyřešit.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Vypněte počítač pro dokončení předchozích akcí.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Je možné tak učinit v nastavení firmwaru počítače.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Možná to budete moci provést v nastavení firmwaru počítače. Ohledně toho jak se podívejte do dokumentace u výrobce procesoru.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Zkontrolujte, zda je režim secure boot nastaven na „nasazeno“.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Tato funkce může být označována jako „virtualizační technologie“, „VT-d“ nebo „AMD-Vi“.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Ignorování tohoto problému může vést k slaběji zabezpečené instalaci.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Restartovat';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Restartovat a zapnout TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel => 'Restartovat a pročistit TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Ignorovat a pokračovat';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Pročištění TPM smaže všechny šifrovací klíče';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Ztratíte přístup ke všem datům na šifrovaných discích, ke kterým nemáte obnovovací klíče. Přestanou také pracovat další funkce, které závisí na TPM, jako autentizace a certifikáty.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Chápu důsledky pročištění TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Při restartu můžete být požádáni o potvrzení této akce.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Poté budete muset spustit instalaci znovu.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Toto řešení neuspělo';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Zkuste jiné řešení nebo se obraťte na podporu IT.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Zkuste něco jiného. Je také možné <a href=\"\">odeslat hlášení o chybě</a>.';
 }

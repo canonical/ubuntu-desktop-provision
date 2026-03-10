@@ -159,11 +159,11 @@ class UbuntuInitLocalizationsTa extends UbuntuInitLocalizations {
   String get successIconSemanticLabel => 'வெற்றி';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'மூடு';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'பெரியதுபடுத்து';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'சிறியதாக்கு';
 }

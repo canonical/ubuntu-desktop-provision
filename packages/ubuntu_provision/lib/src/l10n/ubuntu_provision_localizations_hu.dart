@@ -379,8 +379,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimalizálás';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Kinyitás';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Összecsukás';
 }

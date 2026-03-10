@@ -427,7 +427,7 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'PIN suficient, feu-lo més llarg o menys predictible per a una seguretat millor';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'EL PIN és suficientment llarg';
+  String get passphrasePagePinEntropyOptimal => 'El PIN és suficientment llarg';
 
   @override
   String get installationTypeTitle => 'Configuració del disc';
@@ -971,7 +971,7 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Desenvolupeu amb el millor de codi obert';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO és l\'estació de treball ideal per al desenvolupament d\'aplicacions o web, ciència de dades i AI /ML, així com operacions de desenvolupament i administració. Totes les versions $DISTRO inclouen les últimes cadenes d\'eines i suporten tots els IDE principals.';
   }
 

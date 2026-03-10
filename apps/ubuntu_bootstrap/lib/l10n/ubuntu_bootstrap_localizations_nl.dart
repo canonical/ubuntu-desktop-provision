@@ -971,7 +971,7 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
       'Ontwikkel enmet het beste van open source';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO is het ideale werkstation voor app- of webontwikkeling, data science en AI/ML, maar ook voor devops en beheer. Elke $DISTRO-release bevat de nieuwste toolchains en ondersteunt alle belangrijke IDE\'s.';
   }
 

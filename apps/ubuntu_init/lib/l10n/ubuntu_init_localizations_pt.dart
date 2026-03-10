@@ -156,16 +156,16 @@ class UbuntuInitLocalizationsPt extends UbuntuInitLocalizations {
       'Pode gerir os seus serviços Pro na aplicação Software e Atualizações.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sucesso';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fechar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -318,4 +318,16 @@ class UbuntuInitLocalizationsPtBr extends UbuntuInitLocalizationsPt {
   @override
   String get ubuntuProSucessAttachDescription =>
       'Você pode gerenciar seus serviços Pro no aplicativo Software & Atualizações.';
+
+  @override
+  String get successIconSemanticLabel => 'Sucesso';
+
+  @override
+  String get closeIconSemanticLabel => 'Fechar';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximizar';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimizar';
 }

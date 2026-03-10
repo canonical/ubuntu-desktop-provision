@@ -955,7 +955,7 @@ class UbuntuBootstrapLocalizationsDa extends UbuntuBootstrapLocalizations {
       'Udvikling med de bedste open source-værktøjer';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO er den ideelle platform til program- eller webudvikling, datavidenskab og AI/ML samt devops og administration. Hver $DISTRO-udgivelse inkluderer de seneste toolchains og understøtter alle større IDE\'er.';
   }
 

@@ -9,110 +9,112 @@ class FactoryResetToolsLocalizationsEu extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Fabrikako ezarpenetara berrezartzeko tresnak';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Fabrikako ezarpenetara berrezartzeko tresnak';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Zer egin nahi duzu?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Sortu berrezartzeko euskarria';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Abiatu fabrikako ezarpenetara berrezartzea';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Sortu berrezartzeko USB euskarria';
 
   @override
   String get createUsbBody =>
-      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+      'Sortu sistema berrezarri eta zure Ubuntu instalazioak pertsonalizatzeko USB euskarria.';
 
   @override
   String get createUsbListExplanation =>
-      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+      'Hautatu USB memoria-unitatea. Unitateak **gutxienez 16GB libre** izan behar ditu.';
 
   @override
   String get createUsbWarning =>
-      'The flash drive will be reformatted and all data on the drive will be lost.';
+      'Memoria-unitatea birformateatu egingo da, eta bertako datu guztiak galduko dira.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Berrezartzeko USB euskarria';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected =>
+      'Ez da biltegiratze unitate eramangarririk antzeman';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'You need a USB storage to create a Factory Reset Media.';
+      'USB unitate bat behar duzu fabrikako ezarpenetara berrezartzeko euskarria sortzeko.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle =>
+      'Hautatu aukera bat fabrikako ezarpenera berrezartzea abiatzeko';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Itxaron unitateak eskuratu bitartean.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'Berrezartzeko USB euskarria prest dago';
 
   @override
   String get resetMediaReadyBody =>
-      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+      'Erabili nahi duzunean, sartu USB unitatea berrezarri nahi duzun ordenagailuan, eta berrabiarazi sistema.';
 
   @override
   String get errorLoadingDrives =>
-      'An error occurred while fetching the drives.';
+      'Errore bat gertatu da unitateak eskuratzean.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Abiarazten';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopiatzen';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Amaitzen';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Amaituta';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Huts egin du';
 
   @override
-  String get error => 'Error';
+  String get error => 'Errorea';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Kargatzen...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Abisua';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Berrezarri';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Berrabiarazi';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Birformateatu';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Huts egin du komandoa exekutatzean';
 
   @override
-  String get close => 'Close';
+  String get close => 'Itxi';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ados';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Itxi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizatu';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Txikitu';
 }

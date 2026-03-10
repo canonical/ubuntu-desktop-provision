@@ -958,7 +958,7 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
       'Распрацоўвайце праграмы з найлепшым адкрытым праграмным забеспячэннем';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO — гэта ідэальная працоўная станцыя для распрацоўкі праграм, навукі аб даных, ШІ і машыннага навучання, а таксама DevOps і адміністравання. Кожны выпуск $DISTRO уключае апошнія наборы інструментаў і падтрымлівае ўсе асноўныя IDE.';
   }
 
