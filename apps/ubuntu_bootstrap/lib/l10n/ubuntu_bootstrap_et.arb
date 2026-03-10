@@ -497,5 +497,7 @@
         }
     },
     "tpmActionErrorSupportSingleLabel": "Proovi allpool pakutud lahendust, küsi abi oma IT-toelt või katseta mõnda muud krüptimismeetodit.",
-    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolli, kas „Secure Boot“ režiim on „deployed“."
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolli, kas „Secure Boot“ režiim on „deployed“.",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Kui püsivara seadistused jäävad automaatselt laadimata, siis käivita uuesti ja selle ajal vajuta korduvalt vastavat valikuklahvi (tüüpiliselt F2, F10 või Delete).",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tootja võib seda funktsionaalsust nimetada kui „Virtualization Technology“, „VT-d“ või „AMD-Vi“."
 }
