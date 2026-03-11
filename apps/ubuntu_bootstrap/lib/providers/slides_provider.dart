@@ -127,8 +127,10 @@ class SlidesModel {
         content = await file.readAsString();
       }
 
-      final flavorSpecificContent =
-          content.replaceAll('{{ DISTRO }}', _flavor.displayName);
+      final flavorSpecificContent = content.replaceAll(
+        RegExp(r'{{\s*DISTRO\s*}}'),
+        _flavor.displayName,
+      );
 
       final bundledHtml = await _replaceImages(
         flavorSpecificContent,
