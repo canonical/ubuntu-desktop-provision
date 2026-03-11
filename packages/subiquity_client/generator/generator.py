@@ -74,6 +74,10 @@ class EnumTransformer(ast.NodeTransformer):
         def visit_Assign(self, node: ast.Assign):
             self.values.extend(node.targets)
 
+        # skip function definitions within the class
+        def visit_FunctionDef(self, node: ast.FunctionDef):
+            pass
+
     def visit_ClassDef(self, node: ast.ClassDef):
         if any(base.value.id == "enum" for base in node.bases):
             scanner = self.EnumScanner()
