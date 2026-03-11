@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -8,6 +9,9 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
+const _tpmDocumenationUrl =
+    'https://documentation.ubuntu.com/desktop/en/latest/explanation/hardware-backed-disk-encryption/';
 
 class TpmActionPage extends ConsumerWidget with ProvisioningPage {
   const TpmActionPage({super.key});
@@ -21,17 +25,30 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
     final model = ref.watch(tpmActionModelProvider);
 
     final children = [
-      if (model.tpmError != null) ...[
-        Text(model.tpmError!.kind.label(lang)),
-        const SizedBox(height: kWizardSpacing / 2),
-        Text(
-          switch (model.actions.length) {
-            0 => lang.tpmActionErrorSupportNoActionLabel,
-            1 => lang.tpmActionErrorSupportSingleLabel,
-            _ => lang.tpmActionErrorSupportLabel
-          },
-        ),
-      ],
+      if (model.tpmError != null)
+        ...[
+          Text(model.tpmError!.kind.label(lang)),
+          Text(
+            switch (model.actions.length) {
+              0 => lang.tpmActionErrorSupportNoActionLabel,
+              1 => lang.tpmActionErrorSupportSingleLabel,
+              _ => lang.tpmActionErrorSupportLabel
+            },
+          ),
+          Html(
+            data:
+                '<a href="$_tpmDocumenationUrl">${lang.tpmActionDocumentationLinkLabel}</a>',
+            style: {
+              'body': Style(margin: Margins.zero),
+              'a': Style(
+                color: Theme.of(context).colorScheme.link,
+                textDecoration: TextDecoration.none,
+              ),
+            },
+            shrinkWrap: true,
+            onLinkTap: (url, __, ___) => launchUrl(url!),
+          ),
+        ].withSpacing(kWizardSpacing / 2),
       if (model.actions.isNotEmpty) ...[
         const SizedBox(height: kWizardSpacing / 2),
         YaruExpansionPanel(
