@@ -31,7 +31,11 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
       content: ListView(
         children: [
           const SizedBox(height: kWizardSpacing * 2),
-          SvgPicture.asset('assets/ubuntu.svg', package: 'ubuntu_init'),
+          SvgPicture.asset(
+            'assets/ubuntu.svg',
+            package: 'ubuntu_init',
+            height: 100,
+          ),
           const SizedBox(height: kWizardSpacing),
           Text(
             l10n.welcomePageHeader(model.productInfo.toString()),
