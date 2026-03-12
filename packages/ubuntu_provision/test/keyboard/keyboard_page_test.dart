@@ -143,7 +143,10 @@ void main() {
 
     final keySearch = find.byType(KeySearch);
     expect(keySearch, findsOneWidget);
-    expect(keySearch, hasFocus);
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+    await tester.pumpAndSettle();
 
     await tester.sendKeyEvent(LogicalKeyboardKey.keyF);
     await tester.sendKeyEvent(LogicalKeyboardKey.keyO);

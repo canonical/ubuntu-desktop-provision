@@ -59,7 +59,6 @@ class LocalePage extends ConsumerWidget with ProvisioningPage {
                 locale: model.locale(index),
               ),
             ),
-            tabFocusNode: nextFocusNode,
             onKeySearch: (value) {
               final index = model.searchLanguage(value);
               if (index != -1) {

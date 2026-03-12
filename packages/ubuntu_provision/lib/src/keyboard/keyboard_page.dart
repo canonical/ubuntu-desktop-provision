@@ -50,7 +50,6 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
           child: ListWidget.builder(
             selectedIndex: model.selectedLayoutIndex,
             itemCount: model.layoutCount,
-            tabFocusNode: nextFocusNode,
             itemBuilder: (context, index) => ThemedListTile(
               key: ValueKey(index),
               title: Text(model.layoutName(index)),

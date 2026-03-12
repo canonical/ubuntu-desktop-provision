@@ -25,7 +25,7 @@ class MediaSelectorPage extends ConsumerWidget {
       data: (drives) {
         if (drives.isEmpty) {
           return [
-            YaruTile(
+            YaruListTile(
               title: Text(lang.noMediaDetected),
               subtitle: Text(lang.noMediaDetectedSubtitle),
             ),
@@ -50,13 +50,13 @@ class MediaSelectorPage extends ConsumerWidget {
         }
       },
       error: (error, stackTrace) => [
-        YaruTile(
+        YaruListTile(
           title: Text(lang.error),
           subtitle: Text(lang.errorLoadingDrives),
         ),
       ],
       loading: () => [
-        YaruTile(
+        YaruListTile(
           title: Text(lang.loading),
           subtitle: Text(lang.loadingDrives),
         ),
@@ -88,7 +88,6 @@ class MediaSelectorPage extends ConsumerWidget {
         const SizedBox(height: kWizardSpacing / 2),
         YaruInfoBox(
           yaruInfoType: YaruInfoType.warning,
-          isThreeLine: true,
           title: Text(lang.warning),
           subtitle: Text(lang.createUsbWarning),
         ),
