@@ -86,6 +86,9 @@ void main() {
     final languageList = find.byType(ListWidget);
     expect(languageList, findsOneWidget);
 
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+    await tester.pumpAndSettle();
+
     expect(find.byType(KeySearch), hasFocus);
 
     // french
