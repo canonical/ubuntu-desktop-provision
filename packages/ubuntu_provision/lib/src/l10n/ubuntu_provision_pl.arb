@@ -87,7 +87,7 @@
     "accessibilityVisualAlertsLabel": "Powiadomienia wizualne",
     "accessibilityStickKeysLabel": "Lepkie klawisze",
     "accessibilitySlowKeysLabel": "Powolne klawisze",
-    "accessibilityPageBody": "Dostosuj {DISTRO} do swoich potrzeb przed konfiguracją. Możesz później zmienić dostosowanie w ustawieniach systemu.",
+    "accessibilityPageBody": "Dostosuj {DISTRO} do swoich potrzeb przed konfiguracją. Możesz później zmienić dostosowanie w programie Ustawienia.",
     "accessibilityDesktopZoomLabel": "Powiększanie pulpitu",
     "errorPageTitle": "Wystąpił problem",
     "errorPageShowLog": "Pokaż dziennik",
