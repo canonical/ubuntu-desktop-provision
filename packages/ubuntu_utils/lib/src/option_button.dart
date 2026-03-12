@@ -55,7 +55,6 @@ class OptionButton<T> extends StatelessWidget {
             ),
             subtitle: subtitle,
             contentPadding: kWizardTilePadding,
-            isThreeLine: isThreeLines,
             value: value,
             groupValue: groupValue,
             onChanged: onChanged,

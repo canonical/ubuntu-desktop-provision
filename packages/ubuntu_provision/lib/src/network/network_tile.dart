@@ -17,8 +17,7 @@ class NetworkTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return YaruTile(
-      padding: EdgeInsets.zero,
+    return YaruListTile(
       leading: SizedBox(width: 32, child: leading),
       title: title ?? const SizedBox.shrink(),
       subtitle: subtitle,

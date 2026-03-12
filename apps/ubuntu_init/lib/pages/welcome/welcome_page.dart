@@ -51,12 +51,12 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
                         ?.copyWith(fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: kWizardSpacing / 2),
-                  YaruTile(
+                  YaruListTile(
                     leading: Icon(YaruIcons.log_in, color: theme.primaryColor),
                     title: Text(l10n.welcomeStartTitle),
                     subtitle: Text(l10n.welcomeStartSubtitle),
                   ),
-                  YaruTile(
+                  YaruListTile(
                     leading: Icon(
                       YaruIcons.application_bag,
                       color: theme.primaryColor,
@@ -64,7 +64,7 @@ class WelcomePage extends ConsumerWidget with ProvisioningPage {
                     title: Text(l10n.welcomeStoreTitle),
                     subtitle: Text(l10n.welcomeStoreSubtitle),
                   ),
-                  YaruTile(
+                  YaruListTile(
                     leading: Icon(YaruIcons.lock, color: theme.primaryColor),
                     title: Text(l10n.welcomeSecurityTitle),
                     subtitle: Text(l10n.welcomeSecuritySubtitle),

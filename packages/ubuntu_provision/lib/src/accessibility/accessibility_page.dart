@@ -39,23 +39,23 @@ class AccessibilityPage extends ConsumerWidget with ProvisioningPage {
                 : lang.expandIconSemanticLabel,
           ),
           headers: [
-            YaruTile(
+            YaruListTile(
               leading: const Icon(YaruIcons.eye),
               title: Text(lang.accessibilitySeeingLabel),
             ),
-            YaruTile(
+            YaruListTile(
               leading: const Icon(YaruIcons.headphones),
               title: Text(lang.accessibilityHearingLabel),
             ),
-            YaruTile(
+            YaruListTile(
               leading: const Icon(YaruIcons.keyboard),
               title: Text(lang.accessibilityTypingLabel),
             ),
-            YaruTile(
+            YaruListTile(
               leading: const Icon(YaruIcons.mouse),
               title: Text(lang.accessibilityPointingLabel),
             ),
-            YaruTile(
+            YaruListTile(
               leading: const Icon(YaruIcons.magnifying_glass),
               title: Text(lang.accessibilityZoomLabel),
             ),
