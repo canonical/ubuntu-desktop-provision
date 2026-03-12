@@ -225,13 +225,13 @@ class _WarningSubtitle extends ConsumerWidget {
     return RichText(
       text: TextSpan(
         text: UbuntuLocalizations.of(context).warningLabel,
-        style: theme.textTheme.bodyMedium!.copyWith(
+        style: theme.textTheme.bodySmall!.copyWith(
           fontWeight: FontWeight.bold,
           color: theme.colorScheme.error,
         ),
         children: <TextSpan>[
-          TextSpan(text: ': ', style: theme.textTheme.bodyMedium),
-          TextSpan(text: text, style: theme.textTheme.bodyMedium),
+          TextSpan(text: ': ', style: theme.textTheme.bodySmall),
+          TextSpan(text: text, style: theme.textTheme.bodySmall),
         ],
       ),
     );
