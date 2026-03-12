@@ -54,7 +54,7 @@ class OptionButton<T> extends StatelessWidget {
               ],
             ),
             subtitle: subtitle,
-            contentPadding: kWizardTilePadding,
+            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             value: value,
             groupValue: groupValue,
             onChanged: onChanged,

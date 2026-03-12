@@ -5,7 +5,6 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/identity/identity_l10n.dart';
 import 'package:ubuntu_provision/src/identity/identity_model.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
-import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 class RealNameFormField extends ConsumerWidget {
@@ -296,7 +295,6 @@ class UseActiveDirectoryCheckButton extends ConsumerWidget {
       child: YaruCheckButton(
         value: useActiveDirectory,
         title: Text(lang.identityActiveDirectoryOption),
-        contentPadding: kWizardPadding,
         onChanged: isConnected && (hasActiveDirectorySupport ?? false)
             ? (v) => ref.read(identityModelProvider).useActiveDirectory = v!
             : null,
@@ -315,7 +313,6 @@ class AutoLoginCheckButton extends ConsumerWidget {
         ref.watch(identityModelProvider.select((model) => model.autoLogin));
     return YaruCheckButton(
       title: Text(lang.identityRequirePassword),
-      contentPadding: kWizardPadding,
       value: !autoLogin,
       onChanged: (value) {
         final model = ref.read(identityModelProvider);
