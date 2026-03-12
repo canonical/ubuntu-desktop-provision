@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Customise $DISTRO to your needs before you set up. You can change them later in the Settings app.';
   }
 
   @override
