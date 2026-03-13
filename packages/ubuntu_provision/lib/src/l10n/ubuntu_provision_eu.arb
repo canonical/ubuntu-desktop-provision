@@ -30,7 +30,7 @@
             }
         }
     },
-    "accessibilityPageBody": "Pertsonalizatu {DISTRO} zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Sistemaren ezarpenetan.",
+    "accessibilityPageBody": "Pertsonalizatu {DISTRO} zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Ezarpenak aplikazioan.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -148,5 +148,6 @@
     "maximizeIconSemanticLabel": "Maximizatu",
     "minimizeIconSemanticLabel": "Txikitu",
     "expandIconSemanticLabel": "Zabaldu",
-    "collapseIconSemanticLabel": "Tolestu"
+    "collapseIconSemanticLabel": "Tolestu",
+    "errorPageTechnicalDetails": "Xehetasun teknikoak"
 }
