@@ -83,7 +83,7 @@
     "eulaAcceptTerms": "Я прочитав і приймаю ці умови",
     "accessibilityPageTitle": "Доступність",
     "accessibilityPageHeader": "Доступність в {DISTRO}",
-    "accessibilityPageBody": "Налаштуйте {DISTRO} відповідно до ваших потреб перед початком роботи. Ви можете змінити це пізніше в Налаштуваннях системи.",
+    "accessibilityPageBody": "Налаштуйте {DISTRO} відповідно до ваших потреб перед початком роботи. Ви можете змінити це пізніше в застосунку «Налаштування».",
     "accessibilitySeeingLabel": "Зір",
     "accessibilityHearingLabel": "Слух",
     "accessibilityTypingLabel": "Введення",
