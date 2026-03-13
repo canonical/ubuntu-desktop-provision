@@ -1,1 +1,96 @@
-{}
+{
+    "welcomePageTitle": "Benvido",
+    "welcomePageHeader": "Benvido a {distro}",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "QUE HAI DE NOVO?",
+    "welcomeStartTitle": "Un comezo simplificado",
+    "welcomeStartSubtitle": "Apoiando unha experiencia de configuración máis limpa.",
+    "welcomeStoreSubtitle": "Nunca foi tan doado atopar o teu programa favorito.",
+    "welcomeSecurityTitle": "Seguranza mellorada",
+    "welcomeSecuritySubtitle": "Novas opcións para o cifrado con respaldo de hardware ou ZFS.",
+    "welcomeChangelogLabel": "<a href=\"{url}\">Ver rexistro de cambios</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryPageTitle": "Telemetría",
+    "telemetryHeader": "Axuda a mellorar {distro}",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "Axúdanos a mellorar {distro} compartindo os datos do teu sistema connosco. Isto inclúe cousas como o modelo da túa máquina, o software instalado e a localización que escolliches para o teu fuso horario.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "Si, compartir os datos do sistema co equipo de {distro}",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "Non, non compartir datos do sistema",
+    "telemetryReportLabel": "Amosar o primeiro informe",
+    "telemetryReportTitle": "Detalles do informe",
+    "telemetryLegalLabel": "Aviso legal",
+    "telemetryCollectError": "Non se puideron recoller datos de telemetría",
+    "privacyPageTitle": "Servizo de localización",
+    "privacyLocationTitle": "Activar servizos de localización?",
+    "privacyLocationSubtitle": "Permite as aplicacións coñecer a túa localización xeográfica.\nPodes cambiar isto en calquera momento nas Preferencias do Sistema.",
+    "privacyLocationEnable": "Servizo de localización",
+    "privacyPolicyLink": "Privacidade dos datos",
+    "ubuntuProMagicAttachInstructions": "Ligazón automática co código neste enderezo <a href=\"https://{url}\">{url}</a>",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProHeader": "Conectar esta máquina",
+    "ubuntuProOrAddTokenManually": "ou engadir un token manualmente",
+    "ubuntuProTokenTextfieldHint": "Token",
+    "ubuntuProSubscriptionDescription": "Obtén a subscrición máis completa para a seguridade do software de código aberto",
+    "ubuntuProSubscriptionFreeForPersonalUse": "Sempre gratuito para uso persoal. Proba de 30 días para empresas <a href=\"https://{url}\">Saber máis</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "Anexar",
+    "ubuntuProTokenAttachError": "Token non válido",
+    "ubuntuProTokenAttachSucess": "Token válido",
+    "ubuntuProTokenAttachErrorVariant": "Token non válido, ténteo de novo",
+    "ubuntuProOnBoardingSkipForNow": "Omitir por agora",
+    "ubuntuProOnBoardingSkipForNowDescription": "Sempre podes activar Ubuntu Pro máis tarde a través da aplicación Software e actualizacións.",
+    "ubuntuProOnBoardingEnableUbuntuPro": "Activar Ubuntu Pro",
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "Conecta esta máquina a unha subscrición de Ubuntu Pro para obter actualizacións de seguranza nunha gama máis ampla de paquetes ata 2032.",
+    "ubuntuProSucessAttachHeader": "Ubuntu Pro xa está activado nesta máquina",
+    "ubuntuProSucessAttachDescription": "Podes xestionar os teus servizos Pro na aplicación Software e actualizacións.",
+    "successIconSemanticLabel": "Éxito",
+    "closeIconSemanticLabel": "Pechar",
+    "maximizeIconSemanticLabel": "Maximizar",
+    "minimizeIconSemanticLabel": "Minimizar",
+    "welcomeStoreTitle": "Ollada á nova App Store",
+    "ubuntuProPageTitle": "Ubuntu Pro"
+}
