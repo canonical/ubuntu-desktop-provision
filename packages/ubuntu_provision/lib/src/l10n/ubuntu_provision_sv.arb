@@ -78,7 +78,7 @@
     "networkHiddenWifiNameRequired": "Ett nätverksnamn krävs",
     "networkNoneOption": "Anslut inte till internet",
     "accessibilityPageTitle": "Hjälpmedel",
-    "accessibilityPageBody": "Anpassa {DISTRO} för att passa dina behov innan du installerar. Du kan ändra dem senare i Systeminställningar.",
+    "accessibilityPageBody": "Anpassa {DISTRO} till dina behov innan du installerar. Du kan ändra dem senare i appen Inställningar.",
     "accessibilitySeeingLabel": "Syn",
     "accessibilityHearingLabel": "Hörsel",
     "accessibilityTypingLabel": "Skrivning",
