@@ -1,3 +1,1102 @@
 {
-  "@@locale": "gl"
+    "@@locale": "gl",
+    "recoveryKeyExceptionDisallowedPathTitle": "Non se pode gardar o ficheiro da chave de recuperación nunha localización temporal",
+    "recoveryKeyExceptionFileSystemTitle": "Non se gardou o ficheiro da chave de recuperación",
+    "recoveryKeyExceptionUnknownTitle": "Erro descoñecido",
+    "recoveryKeyExceptionFileSystemBody": "Non tes permiso para escribir nese cartafol. Proba cunha localización diferente ou usa outro método.",
+    "recoveryKeyExceptionDisallowedPathBody": "Proba cunha localización diferente, como unha unidade extraíble, ou usa outro método.",
+    "recoveryKeyFilePickerTitle": "Gardar ficheiro de chave de recuperación",
+    "recoveryKeyFilePickerFilter": "Ficheiros de texto",
+    "successIconSemanticLabel": "Éxito",
+    "closeIconSemanticLabel": "Pechar",
+    "maximizeIconSemanticLabel": "Maximizar",
+    "minimizeIconSemanticLabel": "Minimizar",
+    "windowTitle": "Instalar {RELEASE}",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "Instalación automática",
+    "autoinstallDirectErrorFileSystemBody": "Comprobe os seus permisos ou proporcione un ficheiro diferente.",
+    "autoinstallDirectErrorUnkownTitle": "Erro descoñecido",
+    "autoinstallTitle": "Tipo de instalación",
+    "autoinstallHeader": "Como queres instalar {DISTRO}?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallTitle": "Probar ou instalar {DISTRO}",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "Que queres facer con {DISTRO}?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "Reparar instalación",
+    "appTitle": "Instalador de escritorio Ubuntu",
+    "autoinstallDirectHeader": "Importar ficheiro de instalación automática",
+    "autoinstallDirectUrlLabel": "Podes introducir o URL dun ficheiro de auto-instalación:",
+    "autoinstallDirectFileLabel": "Ou seleccionar un ficheiro local:",
+    "autoinstallDirectFileButtonLabel": "Seleccionar ficheiro...",
+    "autoinstallDirectFileClearButtonLabel": "Limpar ficheiro",
+    "autoinstallDirectFilePickerTitle": "Escoller ficheiro",
+    "autoinstallDirectFilePickerFilterLabel": "Ficheiros YAML",
+    "autoinstallDirectImportButtonLabel": "Importar",
+    "autoinstallDirectErrorNetworkTitle": "Non se pode acceder ao ficheiro de instalación automática",
+    "autoinstallDirectErrorNetworkBody": "Comproba que o URL sexa correcto, proba a túa conexión a internet ou téntao de novo máis tarde.",
+    "autoinstallDirectErrorInvalidUrlTitle": "URL inválido",
+    "autoinstallDirectErrorInvalidUrlBody": "Comprobe que o URL sexa correcto ou seleccione un ficheiro local.",
+    "autoinstallDirectErrorInvalidContentTitle": "Ficheiro de auto-instalación non válido",
+    "autoinstallDirectErrorInvalidContentBody": "Revisa o ficheiro ou proporciona un diferente.",
+    "autoinstallDirectErrorFileSystemTitle": "O ficheiro de auto-instalación non é lexíbel",
+    "autoinstallInstructions": "Introduza o URL ou a ruta do ficheiro local de autoinstall.yaml:",
+    "autoinstallInteractiveOption": "Instalación interactiva",
+    "autoinstallInteractiveDescription": "Para os usuarios que desexen ser guiados paso a paso durante a instalación.",
+    "autoinstallDirectOption": "Automatizado con un ficheiro de auto-instalación",
+    "autoinstallDirectDescription": "Para usuarios avanzados que dispoñen dun ficheiro autoinstall.yaml para configuracións de sistema consistentes e repetibles.",
+    "autoinstallLandscapeOption": "Automatizado con Landscape",
+    "autoinstallLandscapeDescription": "Para usuarios de organizacións que fornecen un ficheiro de auto-instalación a través de Landscape.",
+    "autoinstallErrorMessage": "Non se puido executar un comando no ficheiro de auto-instalación durante a instalación.",
+    "autoinstallErrorInstructions": "Terás que reiniciar a instalación. Comproba o ficheiro de auto-instalación, escolle un tipo de instalación diferente ou ponte en contacto co teu servizo de asistencia informática.",
+    "changeButtonText": "Mudar",
+    "quitButtonText": "Saír da instalación",
+    "loadingPageTitle": "Benvido a {DISTRO}",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "Preparando {DISTRO}…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "Aviso:",
+    "tryOrInstallRepairDescription": "A reparación reinstalará todo o software instalado sen tocar os documentos nin a configuración.",
+    "tryOption": "Probar {RELEASE}",
+    "@tryOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryDescription": "Podes probar {RELEASE} sen facer ningún cambio no teu ordenador.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installOption": "Instalar {RELEASE}",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "Instalar {RELEASE} xunto co teu sistema operativo actual (ou no seu lugar). Isto non debería levar moito tempo.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "Quizais queiras ler as <a href=\"{url}\">notas da versión</a>.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "RST detectado",
+    "rstHeader": "Debe desactivar RST para continuar coa instalación",
+    "rstDisable": "O teu ordenador usa Intel RST (Rapid Storage Technology). Podes desactivar RST en:",
+    "rstDisableWindows": "Windows, se estás a usar unha configuración de arranque dual con Windows",
+    "rstDisableBios": "Parámetros da BIOS",
+    "rstInstructions": "Para obter instrucións, escanea o código QR noutro dispositivo ou visita: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "Configurar o Arranque seguro",
+    "configureSecureBootDescription": "Escolleu instalar software de controlador de terceiros. Isto require desactivar o Arranque seguro.\nPara facelo, debe escoller unha chave de seguranza agora e introducila cando se reinicie o sistema.",
+    "configureSecureBootOption": "Configurar o Arranque Seguro",
+    "chooseSecurityKey": "Escolla unha chave de seguranza",
+    "confirmSecurityKey": "Confirme a chave de seguranza",
+    "dontInstallDriverSoftwareNow": "Non instalar o software do controlador por agora",
+    "dontInstallDriverSoftwareNowDescription": "Podes instalalo máis tarde dende Software e actualizacións.",
+    "configureSecureBootSecurityKeyRequired": "Precísase da chave de seguranza",
+    "secureBootSecurityKeysDontMatch": "As chaves de seguranza non coinciden",
+    "showSecurityKey": "Amosar",
+    "hideSecurityKey": "Agochar",
+    "updatesOtherSoftwarePageTitle": "Aplicacións",
+    "updatesOtherSoftwarePageDescription": "Que aplicacións queres instalar para comezar?",
+    "codecsAndDriversPageTitle": "Optimice o seu ordenador",
+    "codecsAndDriversPageDescription": "Instalar software propietario recomendado?",
+    "codecsAndDriversPageBody": "{DISTRO} non inclúe software propietario por defecto. A instalación de software adicional pode mellorar o rendemento do teu ordenador.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "Detectouse unha tarxeta gráfica NVIDIA",
+    "codecsAndDriversNvidiaBody": "Para obter o mellor rendemento das tarxetas gráficas NVIDIA, recoméndase encarecidamente instalar controladores adicionais.",
+    "fullInstallationTitle": "Selección ampliada",
+    "fullInstallationSubtitle": "Unha selección de ferramentas de oficina, utilidades e navegador web compatibles sen conexión a internet.",
+    "minimalInstallationTitle": "Selección predeterminada",
+    "minimalInstallationSubtitle": "Só o esencial, o navegador web e as utilidades básicas.",
+    "otherOptions": "Outras opcións",
+    "installThirdPartyTitle": "Instalar software de terceiros para gráficos e dispositivos Wi-Fi, así como formatos multimedia adicionais",
+    "installThirdPartySubtitle": "Este software está suxeito aos termos de licenza incluídos na súa documentación. Algúns son propietarios.",
+    "installDriversTitle": "Instalar software de terceiros para gráficos e hardware Wi-Fi",
+    "installDriversSubtitle": "Incluíndo, entre outros, controladores NVIDIA e similares",
+    "installCodecsTitle": "Descargar e instalar compatibilidade con formatos multimedia adicionais",
+    "installCodecsSubtitle": "Incluíndo, entre outros, MP3, MP4, MOV e similares",
+    "batteryWarning": "O ordenador non está conectado a unha fonte de alimentación.",
+    "offlineWarning": "Estás desconectado/a actualmente",
+    "choosePassphraseHeader": "Crear unha frase de paso",
+    "choosePassphraseBody": "Terás que introducir a túa frase de paso cada vez que acendas o ordenador. Esta frase de paso é diferente do teu contrasinal de usuario.",
+    "choosePassphraseInfoHeader": "Asegúrate de gardar a túa frase de paso",
+    "choosePassphraseInfoBody": "Se a perdes, perderás todos os teus datos.",
+    "chooseOptionalPassphraseInfoHeader": "Garda a túa frase de paso e a túa chave de recuperación nun lugar seguro",
+    "chooseOptionalPassphraseInfoBody": "Se perdes a túa frase de paso, perderás todos os teus datos. A frase de paso non substitúe á chave de recuperación nin ó contrasinal de usuario.",
+    "passphrasePageTitle": "Cifrado",
+    "passphrasePageHeaderPassphrase": "Definir unha frase de paso cifrada",
+    "passphrasePageHeaderPin": "Definir un PIN cifrado",
+    "passphrasePageBodyPassphrase": "Terás que introducir a túa frase de paso cada vez que acendas o ordenador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.",
+    "passphrasePageBodyPin": "Terás que introducir o teu PIN cada vez que acendas o ordenador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.",
+    "passphrasePageChoosePassphraseHint": "Frase de paso",
+    "passphrasePageConfirmPassphraseHint": "Confirmar frase de paso",
+    "passphrasePageRequiredPassphrase": "Precísase dunha frase de paso",
+    "passphrasePageMismatchPassphrase": "As frases de paso non coinciden",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "Confirmar o PIN",
+    "passphrasePageRequiredPin": "Requírese un PIN",
+    "passphrasePageMismatchPin": "Os PINs non coinciden",
+    "passphraseTypePassphraseTileTitle": "Requírese unha frase de paso",
+    "passphraseTypePassphraseTileSubTitle": "Máis seguro. Terás que introducir unha frase de paso máis longa cada vez que acendas o ordenador.",
+    "passphraseTypePinTileTitle": "Requirir un PIN",
+    "passphraseTypePinTileSubTitle": "Máis seguro. Terás que introducir un PIN numérico cada vez que acendas o ordenador.",
+    "passphraseTypeNoneTileTitle": "Desbloquear o disco automaticamente",
+    "passphraseTypePageHeader": "Seguranza adicional",
+    "passphraseTypePageBody": "Por defecto, o módulo de plataforma fiable (TPM) do ordenador desbloqueará o disco durante o inicio. Tamén tes opcións para protexer aínda máis os teus datos.",
+    "passphrasePagePassphraseEntropyBelowMin": "Frase de paso feble, faina máis longa ou máis complexa",
+    "passphrasePagePassphraseEntropyBelowOptimal": "Frase de paso xusta, faina máis longa ou máis complexa para unha mellor seguranza",
+    "passphrasePagePassphraseEntropyOptimal": "Frase de paso forte",
+    "passphrasePagePinEntropyBelowMin": "PIN feble, faino máis longo ou menos previsíbel",
+    "passphrasePagePinEntropyBelowOptimal": "PIN xusto, faino máis longo ou menos previsíbel para unha mellor seguranza",
+    "passphrasePagePinEntropyOptimal": "O PIN é o suficientemente longo",
+    "installationTypeTitle": "Configuración do disco",
+    "installationTypeHeader": "Como queres instalar {DISTRO}?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "Este ordenador ten actualmente {os} instalado. Que queres facer?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "Este ordenador ten actualmente {os1} e {os2} instalados. Que queres facer?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "Actualmente este ordenador ten varios sistemas operativos instalados. Que queres facer?",
+    "installationTypeNoOSDetected": "Actualmente este ordenador non ten ningún sistema operativo detectado. Que queres facer?",
+    "installationTypeErase": "Limpar o disco e instalar {DISTRO}",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Borraranse todos os datos e particións do disco, incluídos os sistemas operativos.",
+    "installationTypeAdvancedLabel": "Opcións avanzadas",
+    "installationTypeAdvancedTitle": "Cifrado e sistema de ficheiros",
+    "installationTypeExperimental": "Experimental",
+    "installationTypeNone": "Sen cifrado",
+    "installationTypeNoneInfo": "Sistema de ficheiros estándar sen cifrado.",
+    "installationTypeNoneSelected": "Ningunha seleccionada",
+    "installationTypeLVM": "Usar LVM sen cifrado",
+    "installationTypeLVMSelected": "LVM seleccionado",
+    "installationTypeLVMEncryption": "Cifrado con frase de paso",
+    "installationTypeLVMEncryptionInfoResolute": "Terás que introducir unha frase de paso cada vez que acendas o ordenador. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Isto usa LVM con cifrado LUKS.",
+    "installationTypeLVMEncryptionSelected": "LVM e cifrado seleccionados",
+    "installationTypeEncryptInfo": "Escollerás unha chave de seguranza no seguinte paso.",
+    "installationTypeZFS": "Usar ZFS sen cifrado",
+    "installationTypeZFSEncryption": "Cifrar cunha frase de paso usando ZFS",
+    "installationTypeZFSEncryptionInfo": "Cifrado nativo con ZFS. Terás que introducir unha frase de paso cada vez que acendas o ordenador.",
+    "installationTypeZFSSelected": "ZFS seleccionado",
+    "installationTypeZFSEncryptionSelected": "ZFS e cifrado seleccionados",
+    "installationTypeTPM": "Usar cifrado con respaldo de hardware",
+    "installationTypeTPMInfoResolute": "O disco desbloquearase automaticamente durante o inicio.",
+    "installationTypeTPMInfoUnavailable": "Non dispoñíbel neste ordenador.",
+    "installationTypeTPMSelected": "TPM seleccionado",
+    "installationTypeReinstall": "Borrar {os} e reinstalar",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Aviso:</font> isto eliminará todos os teus programas, documentos, fotos, música e calquera outro ficheiro de {os}.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "Instalar {product} xunto con {os}",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "Instalar {product} xunto con {os1} e {os2}",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "Instalar {product} xunto cos sistemas operativos existentes",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "Instalar {product} xunto con outras particións",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "Selecciona unha partición para redimensionala e crear espazo para {product}. Podes escoller o teu sistema operativo durante o arranque.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "Borrar {os} e instalar {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Todos os ficheiros e datos da instalación existente de {os} eliminaranse permanentemente.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "Instalación manual",
+    "installationTypeManualInfo": "Para usuarios avanzados que buscan configuracións de disco personalizadas.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Borrar o disco e instalar {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Comeza de cero no disco escollido.",
+    "selectGuidedStorageDriveDropdownLabel": "Seleccionar a unidade:",
+    "selectGuidedStoragePartitionDropdownLabel": "Seleccionar a partición:",
+    "selectGuidedStorageInfoLabel": "Empregarase todo o disco:",
+    "selectGuidedStorageInstallNow": "Instalar agora",
+    "guidedStoragePageHeader": "Escolle onde instalar {DISTRO}",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "Asigne o espazo do disco arrastrando o divisor de embaixo:",
+    "installAlongsideHiddenPartitions": "Hai {num} particións máis pequenas ocultas, use a <a href=\"{url}\">ferramenta de partición avanzada</a> para ter máis control",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Redimensionar partición",
+    "installAlongsideAllocateSpace": "Asignar espazo",
+    "installAlongsideFiles": "Ficheiros",
+    "installAlongsidePartition": "Partición:",
+    "installAlongsideSize": "Tamaño:",
+    "installAlongsideAvailable": "Dispoñíbel:",
+    "allocateDiskSpace": "Particionamento manual",
+    "allocateDiskSpaceInvalidMountPointSlash": "Os puntos de montaxe deben comezar por \"/\"",
+    "allocateDiskSpaceInvalidMountPointSpace": "Os puntos de montaxe non poden conter espazos",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format} non é un sistema de ficheiros compatible con {mountpoint}",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "Dispositivo",
+    "diskHeadersType": "Tipo",
+    "diskHeadersMountPoint": "Punto de montaxe",
+    "diskHeadersSize": "Tamaño",
+    "diskHeadersUsed": "Usado",
+    "diskHeadersSystem": "Sistema",
+    "diskHeadersFormat": "Formato",
+    "freeDiskSpace": "Espazo libre",
+    "newPartitionTable": "Nova táboa de particións",
+    "newPartitionTableConfirmationTitle": "Nova partición baleira",
+    "newPartitionTableConfirmationMessage": "Crear unha nova táboa de particións nun dispositivo completo eliminará todas as súas particións actuais. Esta operación pódese desfacer se é necesario.",
+    "tooManyPrimaryPartitions": "Demasiadas particións primarias",
+    "partitionLimitReached": "Límite acadado",
+    "bootLoaderDevice": "Dispositivo para a instalación do cargador de arranque",
+    "partitionCreateTitle": "Crear partición",
+    "partitionEditTitle": "Editar a partición",
+    "partitionSizeLabel": "Tamaño:",
+    "partitionTypeLabel": "Tipo da nova partición:",
+    "partitionTypePrimary": "Primaria",
+    "partitionTypeLogical": "Lóxica",
+    "partitionLocationLabel": "Localización da nova partición:",
+    "partitionLocationBeginning": "Inicio deste espazo",
+    "partitionLocationEnd": "Fin deste espazo",
+    "partitionFormatLabel": "Usada como:",
+    "partitionFormatNone": "Deixar sen formatear",
+    "partitionFormatKeep": "Deixar formateada como {format}",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "Formatear a partición",
+    "partitionMountPointLabel": "Punto de montaxe:",
+    "confirmPageTitle": "Listo para instalar",
+    "confirmHeader": "Revisa as túas opcións",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "Ningunha",
+    "confirmDevicesTitle": "Dispositivos",
+    "confirmEntryApplications": "Aplicacións",
+    "confirmEntryDiskSetup": "Tipo de instalación",
+    "confirmEntryDiskEncryption": "Cifrado de disco",
+    "confirmEntryInstallationDisk": "Disco de instalación",
+    "confirmEntryProprietarySoftware": "Software propietario",
+    "confirmSectionGeneralTitle": "Xeral",
+    "confirmSectionSecurityAndMoreTitle": "Seguranza e máis",
+    "confirmPartitionsTitle": "Particións",
+    "confirmPartitionTables": "Modificáronse as táboas de particións dos seguintes dispositivos:",
+    "confirmPartitionTable": "{serial}{path}",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "Códecs",
+    "confirmProprietarySoftwareCodecsDrivers": "Códecs e controladores",
+    "confirmProprietarySoftwareDrivers": "Controladores",
+    "confirmInstallButton": "Instalar",
+    "confirmTableErased": "Borrado",
+    "confirmTableUnchanged": "Non modificado",
+    "confirmTableResized": "Redimensionado dende {oldsize} a {newsize}",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "Creado e formatado como {format} usado para {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "Formatado como {format} usado para {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "Usado para {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "Formateado como {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Rematou a instalación",
+    "readyToUse": "{system} está instalado e listo para usar",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "Copiouse **{system}** ao disco",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "Reiniciar en {system}",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Reinicia para completar a instalación ou continuar as probas.\nNon se gardarán os cambios que fagas.",
+    "rebootToConfigureWarning": "Tes que reiniciar o ordenador para continuar co proceso de instalación.",
+    "shutdown": "Apagar",
+    "restartNow": "Reiniciar agora",
+    "continueTesting": "Continuar probando",
+    "bitlockerInfoTitle": "Detectouse BitLocker",
+    "bitlockerInfoDescription": "Unha ou máis particións están cifradas con BitLocker.",
+    "bitlockerInfoDisable": "Para instalalo xunto con Windows, desactive BitLocker en Windows.",
+    "bitlockerInfoRecovery": "Pode que Windows solicite chaves de recuperación ao iniciar despois da instalación.",
+    "bitlockerInfoInstructions": "Para instruccións, visite a <a href=\"{url}\">Guía de BitLocker</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "Podes perder todos os teus datos sen as chaves de recuperación de BitLocker",
+    "restartComputer": "Reiniciar o ordenador",
+    "restartComputerTitle": "Reiniciar o ordenador?",
+    "restartInstaller": "Reiniciar o instalador",
+    "restartIntoWindows": "Reiniciar en Windows",
+    "restartIntoWindowsTitle": "Reiniciar en Windows?",
+    "restartIntoWindowsDescription": "Seguro que queres reiniciar o ordenador? Terás que reiniciar a instalación de {DISTRO} máis tarde para rematar de instalar {DISTRO}.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "Benvido a {RELEASE}",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "Dispoñíbel:",
+    "installationSlidesIncluded": "Incluído:",
+    "installationSlidesWelcomeTitle": "Rápido, gratuíto e cheo de novas funcións",
+    "installationSlidesWelcomeHeader": "A última versión de {DISTRO} fai que a informática sexa máis doada ca nunca.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "Tanto se es desenvolvedor, creador, xogador ou administrador, atoparás novas ferramentas para mellorar a túa produtividade e a túa experiencia en {RELEASE}.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Todas as aplicacións que necesitas",
+    "installationSlidesSoftwareBody": "Instala, xestiona e actualiza todas as túas aplicacións en Ubuntu Software, incluíndo miles de aplicacións tanto da Snap Store como do arquivo {DISTRO}.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "Desenvolvido co mellor do código aberto",
+    "installationSlidesDevelopmentBody": "{DISTRO} é a estación de traballo ideal para o desenvolvemento de aplicacións ou web, ciencia de datos e IA/ML, así como para devops e administración. Cada versión de {DISTRO} inclúe as últimas cadeas de ferramentas e é compatible cos principais IDE.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "Mellora a túa creatividade",
+    "installationSlidesCreativityBody": "Se es animador, deseñador, creador de vídeos ou desenvolvedor de xogos, é doado levar os teus fluxos de traballo a {DISTRO} con compatibilidade con software e aplicacións de código aberto e estándar da industria.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "Ideal para xogar",
+    "installationSlidesGamingBody": "{DISTRO} é compatible cos controladores NVIDIA e Mesa máis recentes para mellorar o rendemento e a compatibilidade. Miles de títulos de Windows funcionan perfectamente en {DISTRO} a través de aplicacións como Steam sen ningunha configuración adicional.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "Privado e seguro",
+    "installationSlidesSecurityBody": "{DISTRO} ofréceche todas as ferramentas que necesitas para manter a privacidade e a seguridade en liña. Cun firewall integrado e compatibilidade con VPN e unha serie de aplicacións centradas na privacidade para garantir que tes o control total dos teus datos.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityLts": "Todas as versións de {DISTRO} LTS inclúen cinco anos de parches de seguranza, que se poden ampliar a dez anos cunha subscrición a Ubuntu Pro.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "Potencia a túa produtividade",
+    "installationSlidesProductivityBody": "{DISTRO} Desktop inclúe LibreOffice, un conxunto de aplicacións de código aberto compatibles con Microsoft Office para documentos, follas de cálculo e presentacións. Tamén hai dispoñíbeis ferramentas de colaboración populares.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityTitle": "Acceso para todos",
+    "installationSlidesAccessibilityBody": "No corazón da filosofía de {DISTRO} está a crenza de que a informática é para todos. Con ferramentas de accesibilidade avanzadas e opcións para cambiar o idioma, as cores e o tamaño do texto, {DISTRO} facilita a informática, quen sexas e onde estés.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityOrca": "Lector de pantalla Orca",
+    "installationSlidesAccessibilityLanguages": "Compatibilidade lingüística",
+    "installationSlidesSupportTitle": "Axuda e asistencia",
+    "installationSlidesSupportHeader": "A documentación oficial de {DISTRO} está dispoñible tanto en liña como a través da icona de Axuda no dock.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "\"Ask Ubuntu\" abrangue unha serie de preguntas e respostas e o \"Discourse\" de Ubuntu ofrece guías e debates para usuarios novos así como experimentados.",
+    "installationSlidesSupportEnterprise": "Para os usuarios empresariais, Canonical ofrece soporte comercial para facilitar a incorporación e a xestión segura de Ubuntu no lugar de traballo.",
+    "installationSlidesSupportResources": "Recursos útiles:",
+    "installationSlidesSupportDocumentation": "Documentación oficial",
+    "installationSlidesSupportUbuntuPro": "Soporte 24/7 de nivel empresarial con Ubuntu Pro",
+    "nextSlideSemanticLabel": "Seguinte diapositiva",
+    "previousSlideSemanticLabel": "Diapositiva anterior",
+    "playSlideshowSemanticLabel": "Reproducir presentación",
+    "pauseSlideshowSemanticLabel": "Pausar presentación",
+    "toggleLogsSemanticLabel": "Amostrar/agochar rexistros de instalación",
+    "copyingFiles": "Copiando ficheiros…",
+    "installingSystem": "Instalando o sistema…",
+    "configuringSystem": "Configurando o sistema…",
+    "installationFailed": "Fallo na instalación",
+    "notEnoughDiskSpaceTitle": "Non hai espazo suficiente en disco",
+    "notEnoughDiskSpaceUbuntu": "Non hai espazo en disco suficiente para instalar {DISTRO}",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "O disco seleccionado non ten espazo en disco suficiente para instalar {DISTRO}. Saia do instalador para liberar espazo ou seleccione outro disco.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "Dispoñíbel:",
+    "notEnoughDiskSpaceRequired": "Requerido:",
+    "refreshPageTitle": "Actualización dispoñíbel",
+    "refreshHeader": "Hai unha actualización dispoñíbel para o instalador",
+    "refreshUpdateNow": "Actualizar agora",
+    "refreshInfo": "Actualiza á última versión para unha mellor fiabilidade e máis funcións.",
+    "refreshReady": "Actualización preparada",
+    "refreshCurrent": "A versión actual de {snap} é {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "Actualizar á versión {version}",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "A versión actual {version} está actualizada.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "Actualizando {snap}...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "Pecha o instalador e reiníciao para continuar",
+    "refreshCloseLabel": "Pechar instalador",
+    "refreshSnapPrerequisites": "Comprobando os requisitos previos de {snap}...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "Actualizando {snap}...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "Comprobando a actualización de {snap}...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "Preparando {snap}...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "Descargando {snap}...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "Validando {snap}...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "Montando {snap}...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "Detendo os servizos {snap}...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "Eliminando o alias {snap}...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "Desvinculando {snap}...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyStorageAdvice": "Terás que proporcionar esta chave de recuperación se o descifrado falla durante o inicio. Sen a chave, perderás o acceso a todos os teus datos. Garda a chave nun lugar seguro, como un xestor de contrasinais.",
+    "recoveryKeyConfirmation": "Gardei a miña chave de recuperación nun lugar seguro",
+    "recoveryKeyLinkLabel": "Saber máis",
+    "recoveryKeySaveToFileLabel": "Gardar nun ficheiro",
+    "recoveryKeyShowQrCodeLabel": "Mostrar código QR",
+    "recoveryKeyQrDialogTitle": "{DISTRO} Escritorio - Chave de recuperación",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "Escanee o código QR para copiar a chave de recuperación e gardala nun lugar seguro, como un xestor de contrasinais. Tamén podes tomar unha foto para usala máis tarde.",
+    "recoveryKeyClipboardNotifiaction": "Copiado no portapapeis",
+    "landscapeMagicAttachInstructions": "Escanea o código QR ou introduce o código que aparece a continuación en <a href=\"https://{url}\">{url}</a>",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "Instalación automática",
+    "landscapeHeader": "Iniciar sesión en Landscape",
+    "landscapeDomainHeader": "Introducir dominio de Landscape (FQDN)",
+    "landscapeDomainHintText": "Dominio Landscape (FQDN)",
+    "landscapeDomainInstructions": "Forneza o dominio Landscape da súa organización para iniciar sesión e obter un ficheiro de instalación automática. Pode obter o FQDN a través do seu servizo de asistencia informática.",
+    "landscapeDomainTextField": "Dominio Landscape (FQDN)",
+    "next": "Seguinte",
+    "landscapeDomainInvalidDomainWarning": "Dominio non válido. Compróbeo ou póñase en contacto co servizo de asistencia informática",
+    "landscapeDomainNoInternetTitleWarning": "Conéctate a internet para continuar",
+    "landscapeDomainNoInternetDescriptionWarning": "Necesítase internet para obter o ficheiro de instalación automática de Landscape",
+    "landscapeCodeExpiredWarning": "Código caducado. Ténteo de novo",
+    "landscapeLoginFailedWarning": "Fallou o inicio de sesión. Téntao de novo",
+    "landscapeErrorPageTitle": "A instalación automática non está dispoñible para a túa conta",
+    "landscapeErrorPageBody": "Ponte en contacto co servizo de asistencia informática ou proba unha opción de instalación diferente.",
+    "landscapeErrorPageCode": "Código de erro: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu instalarase coa configuración proporcionada pola túa organización",
+    "landscapeConfirmPageSuccessInfoContent": "Podes revisar o ficheiro de instalación automática importado desde Landscape a continuación.",
+    "errorIconSemanticLabel": "Erro",
+    "tpmActionPageTitle": "Non se puido activar o cifrado con respaldo de hardware",
+    "tpmActionBadgeLabel": "Acción requirida",
+    "tpmActionDetailsLabel": "Detalles técnicos",
+    "tpmActionConfirmLabel": "Confirmar",
+    "tpmActionSolutionLabel": "Solución {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionSingleSolutionLabel": "Solución: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Saber máis do cifrado con respaldo de hardware",
+    "tpmActionErrorSupportLabel": "Proba as solucións seguintes, ponte en contacto co servizo de asistencia informática ou escolle un método de cifrado diferente.",
+    "tpmActionErrorSupportSingleLabel": "Proba a solución que aparece a continuación, ponte en contacto co servizo de asistencia informática ou escolle un método de cifrado diferente.",
+    "tpmActionErrorSupportNoActionLabel": "Ponte en contacto co servizo de asistencia informática ou escolle un método de cifrado diferente.",
+    "tpmActionErrorKindInternal": "Erro interno.",
+    "tpmActionErrorKindRebootRequired": "É necesario reiniciar.",
+    "tpmActionErrorKindUnexpectedAction": "Acción inesperada.",
+    "tpmActionErrorKindMissingArgument": "Argumento ausente.",
+    "tpmActionErrorKindInvalidArgument": "Argumento non válido.",
+    "tpmActionErrorKindActionFailed": "Fallou a acción.",
+    "tpmActionErrorKindRunningInVm": "O entorno actual é unha máquina virtual.",
+    "tpmActionErrorKindSystemNotEfi": "Este ordenador usa un firmware antigo (BIOS herdado) que non é compatible con este método de cifrado.",
+    "tpmActionErrorKindEfiVariableAccess": "Hai un problema co firmware deste ordenador.",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Este computador non ten o hardware de seguranza necesario (TPM 2.0) para este método de cifrado.",
+    "tpmActionErrorKindTpmDeviceDisabled": "O TPM deste ordenador está desactivado.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "O TPM deste computador xa está a ser usado por outro sistema ou aplicación.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "O TPM deste ordenador está bloqueado actualmente.",
+    "refreshSnapUpdateAssets": "Actualizando os recursos de {snap}...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "Actualizando a liña de comandos do kernel {snap}...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "Copiando os datos {snap}...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "Configurando os perfís de seguranza {snap}...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "Ligando {snap}...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "Conectando os conectores e as ranuras {snap}...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "Definindo alias automáticos de {snap}...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "Configurando alias de {snap}...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "Iniciando os servizos {snap}...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "Limpando {snap}...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "Chave de recuperación",
+    "recoveryKeyTitleBadgeLabel": "Importante",
+    "recoveryKeyHeader": "Garda a túa chave de recuperación",
+    "recoveryKeyInfoHeader": "Podes perder todos os teus datos sen unha chave de recuperación",
+    "recoveryKeyTextFieldLabel": "Chave de recuperación",
+    "tpmActionErrorKindShutdownRequired": "É necesario apagar.",
+    "tpmActionErrorKindInsufficientTpmStorage": "O TPM deste ordenador non ten almacenamento suficiente dispoñible.",
+    "tpmActionErrorKindUnsupportedPlatform": "Este ordenador non é compatible co cifrado con hardware.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "A depuración UEFI está activada.",
+    "tpmActionErrorKindInsufficientDmaProtection": "A este ordenador fáltalle unha función de seguranza obrigatoria (protección DMA).",
+    "tpmActionErrorKindNoKernelIommu": "A este ordenador fáltalle unha función de seguranza obrigatoria (IOMMU).",
+    "tpmActionErrorKindHostSecurity": "Hai un problema coa configuración de seguranza deste ordenador.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Hai software que se executa ao inicio e que pode impedir unha conexión segura co TPM do computador.",
+    "tpmActionErrorKindAbsolutePresent": "O Módulo de Persistencia Absoluta está activado neste computador.",
+    "tpmActionErrorKindInvalidSecureBootMode": "O arranque seguro está desactivado neste ordenador ou non está configurado no modo despregado.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Algúns dos certificados que verifican o software neste ordenador están desactualizados ou usan unha protección débil.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Este ordenador está a usar unha lista de permisos manual para verificar o software ao iniciar.",
+    "tpmActionErrorKindAddonDriversPresent": "Hai controladores complementarios presentes.",
+    "tpmActionErrorKindGenericTpm": "Hai un problema co TPM deste ordenador.",
+    "tpmActionErrorKindGenericFirmware": "Hai un problema co firmware deste ordenador.",
+    "tpmActionFixActionReboot": "Reiniciar",
+    "tpmActionFixActionShutdown": "Apagar",
+    "tpmActionFixActionRebootToFwSettings": "Reiniciar na configuración do firmware",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Se a configuración do firmware non se carga automaticamente, reinicie o ordenador e prema a tecla de configuración repetidamente durante o inicio (normalmente F2, F10 ou Supr).",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Activar a protección DMA manualmente",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Borrar TPM manualmente",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Activar o arranque seguro manualmente",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Activar IOMMU manualmente",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Podes facelo na configuración do firmware do teu ordenador.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "É posíbel que poidas facelo na configuración do firmware do teu ordenador. Consulta a documentación do provedor da CPU para obter orientación.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Comprobe que o modo de arranque seguro estea configurado como \"implementado\".",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Esta funcionalidade podería denominarse \"Tecnoloxía de virtualización\", \"VT-d\" ou \"AMD-Vi\".",
+    "tpmActionFixActionProceedDescription": "Ignorar este problema pode resultar nunha instalación menos segura.",
+    "tpmActionRestartLabel": "Reiniciar",
+    "tpmActionRestartAndEnableTpmLabel": "Reiniciar e activar o TPM",
+    "tpmActionRestartAndClearTpmLabel": "Reiniciar e purgar TPM",
+    "tpmActionIgnoreAndContinueLabel": "Ignorar e continuar",
+    "tpmActionFixActionClearTpmWarningTitle": "Ao borrar o TPM, bórranse todas as chaves de cifrado",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Activar os bancos de PCR manualmente",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Activar TPM manualmente",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Borrar TPM manualmente",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Borrar TPM manualmente",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Desactivar o módulo de persistencia absoluta manualmente",
+    "tpmActionFixActionContactOem": "Contactar OEM",
+    "tpmActionFixActionContactOsVendor": "Contactar vendedor do SO",
+    "tpmActionFixActionEnableTpmViaFirmware": "Activar TPM ao reiniciar",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Activar e purgar o TPM ao reiniciar",
+    "tpmActionFixActionClearTpmViaFirmware": "Purgar o TPM ao reiniciar",
+    "tpmActionFixActionClearTpm": "Purgar TPM",
+    "tpmActionFixActionProceed": "Ignorar",
+    "tpmActionFixActionRebootDescription": "Reinicie o ordenador para completar as accións anteriores.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Reiniciar o ordenador pode solucionar o problema.",
+    "tpmActionFixActionShutdownDescription": "Apaga o ordenador para completar as accións anteriores.",
+    "tpmActionFixActionClearTpmWarningBody": "Perderás o acceso a todos os datos das unidades cifradas para as que non teñas claves de recuperación. Tamén se producirán erros noutras funcións que dependen do TPM, como a autenticación e os certificados.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "Entendo as consecuencias de purgar o TPM",
+    "tpmActionFixActionCaveatConfirm": "É posíbel que se che pida que confirmes esta acción ao reiniciar.",
+    "tpmActionFixActionCaveatRetry": "Entón terás que iniciar a instalación de novo.",
+    "tpmActionErrorTitle": "Esta solución fallou",
+    "tpmActionErrorDescription": "Proba unha solución diferente ou ponte en contacto co servizo de asistencia informática.",
+    "manualPartitioningWarningBody": "Proba con outra cousa. Tamén podes <a href=\"\">enviar un informe de erros</a>."
 }
