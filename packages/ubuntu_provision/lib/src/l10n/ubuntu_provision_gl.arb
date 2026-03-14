@@ -9,7 +9,7 @@
             }
         }
     },
-    "accessibilityPageBody": "Personalice {DISTRO} segundo as súas necesidades antes da posta en marcha. Pode cambialo máis tarde en Preferencias do Sistema.",
+    "accessibilityPageBody": "Personalice {DISTRO} segundo as súas necesidades antes da posta en marcha. Pode cambialo máis tarde na aplicación Preferencias.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -144,7 +144,7 @@
     "eulaReadAndAcceptTerms": "Para continuar coa configuración desta máquina, debes ler e aceptar os termos do acordo de licenza.",
     "eulaAcceptTerms": "Lin e acepto estos termos",
     "successIconSemanticLabel": "Éxito",
-    "closeIconSemanticLabel": "Fechar",
+    "closeIconSemanticLabel": "Pechar",
     "maximizeIconSemanticLabel": "Maximizar",
     "minimizeIconSemanticLabel": "Minimizar",
     "expandIconSemanticLabel": "Despregar",
