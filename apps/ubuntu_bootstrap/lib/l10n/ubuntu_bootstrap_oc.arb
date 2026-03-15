@@ -417,5 +417,6 @@
     "tpmActionErrorKindShutdownRequired": "Extincion requerida.",
     "tpmActionErrorKindRebootRequired": "Reaviada requerida.",
     "tpmActionErrorKindMissingArgument": "Paramètre mancant.",
-    "tpmActionErrorKindInvalidArgument": "Paramètre invalid."
+    "tpmActionErrorKindInvalidArgument": "Paramètre invalid.",
+    "autoinstallErrorMessage": "Una comanda dins lo fichièr d'autoinstallacion a pas pogut s'executar pendent l'installacion."
 }
