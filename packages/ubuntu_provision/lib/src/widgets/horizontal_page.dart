@@ -116,16 +116,7 @@ class _HorizontalPageState extends ConsumerState<HorizontalPage> {
     final adjustedPadding = isSmallWindow
         ? widget.padding.copyWith(right: 0, left: 0)
         : widget.padding;
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
-    const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
-    const scrollViewPadding =
-        EdgeInsets.only(top: 3 * kWizardSpacing, bottom: 3 * kWizardSpacing);
     final lang = UbuntuProvisionLocalizations.of(context);
-
-    // Re-check scroll state after rendering the frame, in case the scrollbar
-    // disappears or re-appears entirely.
-    WidgetsBinding.instance.addPostFrameCallback((_) => _checkScrollState());
 
     return WizardPage(
       title: YaruWindowTitleBar(
@@ -175,34 +166,17 @@ class _HorizontalPageState extends ConsumerState<HorizontalPage> {
                 Expanded(
                   flex: widget.managedScrolling ? 1 : widget._contentFlex,
                   child: widget.managedScrolling
-                      ? Center(
-                          child: PrimaryScrollController(
-                            controller: _controller,
-                            child: Scrollbar(
-                              thumbVisibility: true,
-                              child: SingleChildScrollView(
-                                primary: true,
-                                padding: hoverPadding +
-                                    EdgeInsets.only(right: scrollBarPadding) +
-                                    scrollViewPadding,
-                                child: Padding(
-                                  padding: adjustedPadding,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      _Headline(
-                                        title: widget.title,
-                                        trailingTitleWidget:
-                                            widget.trailingTitleWidget,
-                                      ),
-                                      ...widget.children,
-                                    ],
-                                  ),
-                                ),
-                              ),
+                      ? _ManagedScrollContainer(
+                          controller: _controller,
+                          checkScrollState: _checkScrollState,
+                          padding: adjustedPadding,
+                          children: [
+                            _Headline(
+                              title: widget.title,
+                              trailingTitleWidget: widget.trailingTitleWidget,
                             ),
-                          ),
+                            ...widget.children,
+                          ],
                         )
                       : Padding(
                           padding: adjustedPadding,
@@ -227,6 +201,56 @@ class _HorizontalPageState extends ConsumerState<HorizontalPage> {
               ),
             ],
           ),
+    );
+  }
+}
+
+class _ManagedScrollContainer extends StatelessWidget {
+  const _ManagedScrollContainer({
+    required this.controller,
+    required this.checkScrollState,
+    required this.padding,
+    required this.children,
+  });
+
+  final VoidCallback checkScrollState;
+  final ScrollController controller;
+  final EdgeInsets padding;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    final scrollBarPadding =
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
+    const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
+    const scrollViewPadding =
+        EdgeInsets.only(top: 3 * kWizardSpacing, bottom: 3 * kWizardSpacing);
+    return Center(
+      child: NotificationListener<ScrollMetricsNotification>(
+        onNotification: (_) {
+          checkScrollState();
+          return false;
+        },
+        child: PrimaryScrollController(
+          controller: controller,
+          child: Scrollbar(
+            thumbVisibility: true,
+            child: SingleChildScrollView(
+              primary: true,
+              padding: hoverPadding +
+                  EdgeInsets.only(right: scrollBarPadding) +
+                  scrollViewPadding,
+              child: Padding(
+                padding: padding,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: children,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
