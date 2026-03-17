@@ -10,8 +10,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-const _tpmDocumenationUrl =
-    'https://documentation.ubuntu.com/desktop/en/latest/explanation/hardware-backed-disk-encryption/';
+const _tpmDocumenationUrl = 'https://ubuntu.com/desktop/tpm-fde-requirements';
 
 class TpmActionPage extends ConsumerWidget with ProvisioningPage {
   const TpmActionPage({super.key});
