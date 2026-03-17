@@ -141,8 +141,9 @@ class _AccessibilityListTile extends ConsumerWidget {
         const Divider(),
         YaruSwitchListTile(
           title: Padding(
-            padding: kWizardIndentation
-                .add(const EdgeInsets.symmetric(vertical: 8.0)),
+            padding: kWizardIndentation.add(
+              const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+            ),
             child: Text(title),
           ),
           value: model.activeOptions.contains(id),

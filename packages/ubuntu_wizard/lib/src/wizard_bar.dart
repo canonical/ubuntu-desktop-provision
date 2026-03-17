@@ -56,6 +56,7 @@ class _WizardBarState extends State<WizardBar> {
               : null,
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: widget.trailing?.withSpacing(kWizardBarSpacing) ?? [],
           ),
         ),
