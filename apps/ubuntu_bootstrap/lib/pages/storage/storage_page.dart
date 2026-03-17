@@ -121,7 +121,7 @@ class StoragePage extends ConsumerWidget with ProvisioningPage {
             ),
             subtitle: Text(
               lang.installationTypeAlongsideInfo(flavor.displayName),
-              style: theme.textTheme.bodyMedium!.copyWith(
+              style: theme.textTheme.bodySmall!.copyWith(
                 color: canInstallAlongside ? null : theme.disabledColor,
               ),
             ),
