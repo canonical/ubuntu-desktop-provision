@@ -63,7 +63,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 096064c33a77765634d385adf32ee722b4fd5f05
+    source-commit: &commit-ref 7c4935bcf428e240b7324468aa72ac1b66ebbed2
     source-type: git
     build-attributes: [enable-patchelf]
     stage-packages:
