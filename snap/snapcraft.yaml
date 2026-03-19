@@ -329,7 +329,7 @@ parts:
       version=$(
           git describe --match "ubuntu-desktop-bootstrap/*" |
               sed -E 's#^ubuntu-desktop-bootstrap/##' |
-              sed -E 's#-([0-9]+)-g([0-9a-f]+)$#+git\1.\2#'
+              sed -E 's#-[0-9]+-g([0-9a-f]+)$#-\1#'
       )
       if [ -n $(git status --porcelain) ]; then
           version="${version}.dirty"
