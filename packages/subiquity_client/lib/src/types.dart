@@ -406,11 +406,26 @@ abstract class SnapInfo with _$SnapInfo {
       _$SnapInfoFromJson(json);
 }
 
+enum DriverType {
+  DEB,
+  KERNEL_COMPONENT,
+}
+
+@freezed
+abstract class Driver with _$Driver {
+  const factory Driver({
+    required DriverType type,
+    required String name,
+  }) = _Driver;
+
+  factory Driver.fromJson(Map<String, dynamic> json) => _$DriverFromJson(json);
+}
+
 @freezed
 abstract class DriversResponse with _$DriversResponse {
   const factory DriversResponse({
     required bool install,
-    required List<String>? drivers,
+    required List<Driver>? drivers,
     required bool localOnly,
     required bool searchDrivers,
   }) = _DriversResponse;
