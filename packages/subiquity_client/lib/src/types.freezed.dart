@@ -8308,9 +8308,318 @@ class __$SnapInfoCopyWithImpl<$Res> implements _$SnapInfoCopyWith<$Res> {
 }
 
 /// @nodoc
+mixin _$Driver {
+  DriverType get type;
+  String get name;
+
+  /// Create a copy of Driver
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $DriverCopyWith<Driver> get copyWith =>
+      _$DriverCopyWithImpl<Driver>(this as Driver, _$identity);
+
+  /// Serializes this Driver to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Driver &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, name);
+
+  @override
+  String toString() {
+    return 'Driver(type: $type, name: $name)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $DriverCopyWith<$Res> {
+  factory $DriverCopyWith(Driver value, $Res Function(Driver) _then) =
+      _$DriverCopyWithImpl;
+  @useResult
+  $Res call({DriverType type, String name});
+}
+
+/// @nodoc
+class _$DriverCopyWithImpl<$Res> implements $DriverCopyWith<$Res> {
+  _$DriverCopyWithImpl(this._self, this._then);
+
+  final Driver _self;
+  final $Res Function(Driver) _then;
+
+  /// Create a copy of Driver
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? name = null,
+  }) {
+    return _then(_self.copyWith(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as DriverType,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [Driver].
+extension DriverPatterns on Driver {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Driver value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Driver() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Driver value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Driver():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_Driver value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Driver() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(DriverType type, String name)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _Driver() when $default != null:
+        return $default(_that.type, _that.name);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(DriverType type, String name) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Driver():
+        return $default(_that.type, _that.name);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(DriverType type, String name)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _Driver() when $default != null:
+        return $default(_that.type, _that.name);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Driver implements Driver {
+  const _Driver({required this.type, required this.name});
+  factory _Driver.fromJson(Map<String, dynamic> json) => _$DriverFromJson(json);
+
+  @override
+  final DriverType type;
+  @override
+  final String name;
+
+  /// Create a copy of Driver
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DriverCopyWith<_Driver> get copyWith =>
+      __$DriverCopyWithImpl<_Driver>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$DriverToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Driver &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, name);
+
+  @override
+  String toString() {
+    return 'Driver(type: $type, name: $name)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$DriverCopyWith<$Res> implements $DriverCopyWith<$Res> {
+  factory _$DriverCopyWith(_Driver value, $Res Function(_Driver) _then) =
+      __$DriverCopyWithImpl;
+  @override
+  @useResult
+  $Res call({DriverType type, String name});
+}
+
+/// @nodoc
+class __$DriverCopyWithImpl<$Res> implements _$DriverCopyWith<$Res> {
+  __$DriverCopyWithImpl(this._self, this._then);
+
+  final _Driver _self;
+  final $Res Function(_Driver) _then;
+
+  /// Create a copy of Driver
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? type = null,
+    Object? name = null,
+  }) {
+    return _then(_Driver(
+      type: null == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as DriverType,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
 mixin _$DriversResponse {
   bool get install;
-  List<String>? get drivers;
+  List<Driver>? get drivers;
   bool get localOnly;
   bool get searchDrivers;
 
@@ -8357,7 +8666,7 @@ abstract mixin class $DriversResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {bool install,
-      List<String>? drivers,
+      List<Driver>? drivers,
       bool localOnly,
       bool searchDrivers});
 }
@@ -8388,7 +8697,7 @@ class _$DriversResponseCopyWithImpl<$Res>
       drivers: freezed == drivers
           ? _self.drivers
           : drivers // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<Driver>?,
       localOnly: null == localOnly
           ? _self.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable
@@ -8494,7 +8803,7 @@ extension DriversResponsePatterns on DriversResponse {
 
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(bool install, List<String>? drivers, bool localOnly,
+    TResult Function(bool install, List<Driver>? drivers, bool localOnly,
             bool searchDrivers)?
         $default, {
     required TResult orElse(),
@@ -8524,7 +8833,7 @@ extension DriversResponsePatterns on DriversResponse {
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(bool install, List<String>? drivers, bool localOnly,
+    TResult Function(bool install, List<Driver>? drivers, bool localOnly,
             bool searchDrivers)
         $default,
   ) {
@@ -8552,7 +8861,7 @@ extension DriversResponsePatterns on DriversResponse {
 
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function(bool install, List<String>? drivers, bool localOnly,
+    TResult? Function(bool install, List<Driver>? drivers, bool localOnly,
             bool searchDrivers)?
         $default,
   ) {
@@ -8572,7 +8881,7 @@ extension DriversResponsePatterns on DriversResponse {
 class _DriversResponse implements DriversResponse {
   const _DriversResponse(
       {required this.install,
-      required final List<String>? drivers,
+      required final List<Driver>? drivers,
       required this.localOnly,
       required this.searchDrivers})
       : _drivers = drivers;
@@ -8581,9 +8890,9 @@ class _DriversResponse implements DriversResponse {
 
   @override
   final bool install;
-  final List<String>? _drivers;
+  final List<Driver>? _drivers;
   @override
-  List<String>? get drivers {
+  List<Driver>? get drivers {
     final value = _drivers;
     if (value == null) return null;
     if (_drivers is EqualUnmodifiableListView) return _drivers;
@@ -8645,7 +8954,7 @@ abstract mixin class _$DriversResponseCopyWith<$Res>
   @useResult
   $Res call(
       {bool install,
-      List<String>? drivers,
+      List<Driver>? drivers,
       bool localOnly,
       bool searchDrivers});
 }
@@ -8676,7 +8985,7 @@ class __$DriversResponseCopyWithImpl<$Res>
       drivers: freezed == drivers
           ? _self._drivers
           : drivers // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<Driver>?,
       localOnly: null == localOnly
           ? _self.localOnly
           : localOnly // ignore: cast_nullable_to_non_nullable

@@ -467,11 +467,27 @@ Map<String, dynamic> _$SnapInfoToJson(_SnapInfo instance) => <String, dynamic>{
       'channels': instance.channels.map((e) => e.toJson()).toList(),
     };
 
+_Driver _$DriverFromJson(Map<String, dynamic> json) => _Driver(
+      type: $enumDecode(_$DriverTypeEnumMap, json['type']),
+      name: json['name'] as String,
+    );
+
+Map<String, dynamic> _$DriverToJson(_Driver instance) => <String, dynamic>{
+      'type': _$DriverTypeEnumMap[instance.type]!,
+      'name': instance.name,
+    };
+
+const _$DriverTypeEnumMap = {
+  DriverType.DEB: 'DEB',
+  DriverType.KERNEL_COMPONENT: 'KERNEL_COMPONENT',
+};
+
 _DriversResponse _$DriversResponseFromJson(Map<String, dynamic> json) =>
     _DriversResponse(
       install: json['install'] as bool,
-      drivers:
-          (json['drivers'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      drivers: (json['drivers'] as List<dynamic>?)
+          ?.map((e) => Driver.fromJson(e as Map<String, dynamic>))
+          .toList(),
       localOnly: json['local_only'] as bool,
       searchDrivers: json['search_drivers'] as bool,
     );
@@ -479,7 +495,7 @@ _DriversResponse _$DriversResponseFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$DriversResponseToJson(_DriversResponse instance) =>
     <String, dynamic>{
       'install': instance.install,
-      'drivers': instance.drivers,
+      'drivers': instance.drivers?.map((e) => e.toJson()).toList(),
       'local_only': instance.localOnly,
       'search_drivers': instance.searchDrivers,
     };
