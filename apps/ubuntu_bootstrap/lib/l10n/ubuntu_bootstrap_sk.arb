@@ -274,7 +274,7 @@
     "autoinstallDirectUrlLabel": "Zadajte URL súboru pre autoinštaláciu:",
     "autoinstallDirectFileLabel": "Alebo vyberte miestny súbor:",
     "autoinstallDirectFileButtonLabel": "Vybrať súbor...",
-    "autoinstallDirectFilePickerTitle": "Zvoľte súbor",
+    "autoinstallDirectFilePickerTitle": "Výber súboru",
     "autoinstallDirectFilePickerFilterLabel": "Súbory YAML",
     "autoinstallDirectImportButtonLabel": "Importovať",
     "installationTypeEraseAndInstall": "Vymazať {os} a nainštalovať {product}",
