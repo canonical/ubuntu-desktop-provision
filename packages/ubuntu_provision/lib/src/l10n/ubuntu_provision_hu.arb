@@ -89,7 +89,7 @@
     "eulaReviewTerms": "A licencfeltételek áttekintése",
     "accessibilityPageTitle": "Akadálymentesítés",
     "accessibilityPageHeader": "Akadálymentesítés a(z) {DISTRO} disztribúcióban",
-    "accessibilityPageBody": "Szabja személyre a(z) {DISTRO} disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a rendszerbeállításokban.",
+    "accessibilityPageBody": "Szabja személyre a(z) {DISTRO} disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a Beállítások alkalmazásban.",
     "accessibilitySeeingLabel": "Látás",
     "accessibilityHearingLabel": "Hallás",
     "accessibilityTypingLabel": "Gépelés",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Maximalizálás",
     "minimizeIconSemanticLabel": "Minimalizálás",
     "expandIconSemanticLabel": "Kinyitás",
-    "collapseIconSemanticLabel": "Összecsukás"
+    "collapseIconSemanticLabel": "Összecsukás",
+    "errorPageTechnicalDetails": "Műszaki részletek"
 }

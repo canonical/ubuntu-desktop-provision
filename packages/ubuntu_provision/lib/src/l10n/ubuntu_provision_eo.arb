@@ -99,7 +99,7 @@
     "accessibilityStickKeysLabel": "Persistaj klavoj",
     "errorPageUnexpected": "Bedaŭrinde, ni ne konas la eraron. Vi povas provi restartigi vian komputilon kaj rekomenci la instalon. Vi ankaŭ povas <a>raporti la problemon</a>.",
     "accessibilityPointingLabel": "Montrado kaj alklakado",
-    "accessibilityPageBody": "Adaptu {DISTRO} al viaj bezonoj dum la instalado. Vi povas poste ŝanĝi la agordojn per Sistemaj Agordoj.",
+    "accessibilityPageBody": "Adaptu {DISTRO} al viaj bezonoj dum la instalado. Vi povas poste ŝanĝi la agordojn per la programo Agordoj.",
     "networkPageBody": "Interreta konekto plibonigos vian instalon per kontrolado de kongrueco kaj pliaj programoj.",
     "activeDirectoryHeader": "Ĉu saluti en Aktivan Dosierujon?",
     "activeDirectoryInfo": "{DISTRO} plene integriĝas kun Aktiva Dosierujo por facila administrado.",
@@ -113,5 +113,6 @@
     "minimizeIconSemanticLabel": "Minimumigi",
     "closeIconSemanticLabel": "Fermi",
     "expandIconSemanticLabel": "Malkaŝi",
-    "collapseIconSemanticLabel": "Kaŝi"
+    "collapseIconSemanticLabel": "Kaŝi",
+    "errorPageTechnicalDetails": "Teĥnikaj detaloj"
 }

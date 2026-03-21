@@ -98,7 +98,7 @@
     "restart": "Reštartovať",
     "activeDirectoryHeader": "Chcete sa prihlásiť do Active Directory?",
     "accessibilityPageTitle": "Prístupnosť",
-    "accessibilityPageBody": "Prispôsobte si {DISTRO} svojim potrebám ešte pred nastavením. Neskôr ich môžete upraviť v nastaveniach systému.",
+    "accessibilityPageBody": "Prispôsobte si {DISTRO} svojim potrebám ešte pred nastavením. Neskôr ich môžete zmeniť v aplikácii Nastavenia.",
     "accessibilityHearingLabel": "Sluch",
     "errorPageUnexpected": "Ľutujeme, ale nevieme, čo spôsobilo chybu. Skúste reštartovať počítač a znova spustiť proces inštalácie. Môžete tiež <a>nahlásiť problém</a>.",
     "activeDirectoryInfo": "{DISTRO} je navrhnuté tak, aby sa bezproblémovo integrovalo s Active Directory pre jednoduchšiu správu.",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Maximalizovať",
     "minimizeIconSemanticLabel": "Minimalizovať",
     "expandIconSemanticLabel": "Rozbaliť",
-    "collapseIconSemanticLabel": "Zbaliť"
+    "collapseIconSemanticLabel": "Zbaliť",
+    "errorPageTechnicalDetails": "Technické podrobnosti"
 }
