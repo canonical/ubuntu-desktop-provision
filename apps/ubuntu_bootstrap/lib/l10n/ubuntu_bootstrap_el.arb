@@ -3,17 +3,85 @@
     "windowTitle": "Εγκατάσταση του {RELEASE}",
     "tryOption": "Δοκιμάστε το {RELEASE}",
     "installOption": "Εγκατάσταση του {RELEASE}",
-    "rstTitle": "Απενεργοποίηση του RST",
-    "tryOrInstallReleaseNotesLabel": "Ίσως θέλετε να διαβάσετε τις <a href=\"{url}\">σημειώσεις έκδοσης</a>.",
+    "rstTitle": "Ανιχνεύθηκε RST",
+    "tryOrInstallReleaseNotesLabel": "Μπορείτε να διαβάσετε τις <a href=\"{url}\">σημειώσεις έκδοσης</a>.",
     "welcome": "Καλωσορίσατε",
     "autoinstallDirectTitle": "Αυτοματοποιημένη εγκατάσταση",
-    "autoinstallDirectFileLabel": "'Η επιλογή τοπικού αρχείου:",
-    "autoinstallDirectFileButtonLabel": "Επιλογή αρχείου...",
+    "autoinstallDirectFileLabel": "Ή επιλέξτε ένα τοπικό αρχείο:",
+    "autoinstallDirectFileButtonLabel": "Επιλογή αρχείου…",
     "autoinstallDirectFileClearButtonLabel": "Εκκαθάριση αρχείου",
     "autoinstallDirectFilePickerTitle": "Επιλογή αρχείου",
-    "autoinstallDirectFilePickerFilterLabel": "YAML αρχεία",
+    "autoinstallDirectFilePickerFilterLabel": "Αρχεία YAML",
     "successIconSemanticLabel": "Επιτυχία",
     "closeIconSemanticLabel": "Κλείσιμο",
     "maximizeIconSemanticLabel": "Μεγιστοποίηση",
-    "minimizeIconSemanticLabel": "Ελαχιστοποίηση"
+    "minimizeIconSemanticLabel": "Ελαχιστοποίηση",
+    "appTitle": "Πρόγραμμα εγκατάστασης Ubuntu Desktop",
+    "autoinstallDirectHeader": "Εισαγωγή αρχείου αυτόματης εγκατάστασης",
+    "autoinstallDirectUrlLabel": "Μπορείτε να εισαγάγετε τη διεύθυνση URL ενός αρχείου αυτόματης εγκατάστασης:",
+    "autoinstallDirectImportButtonLabel": "Εισαγωγή",
+    "autoinstallDirectErrorNetworkTitle": "Το αρχείο αυτόματης εγκατάστασης δεν είναι προσβάσιμο",
+    "autoinstallDirectErrorNetworkBody": "Ελέγξτε αν η διεύθυνση URL είναι σωστή, δοκιμάστε τη σύνδεσή σας στο διαδίκτυο ή προσπαθήστε ξανά αργότερα.",
+    "autoinstallDirectErrorInvalidUrlTitle": "Μη έγκυρο URL",
+    "autoinstallDirectErrorInvalidUrlBody": "Ελέγξτε αν η διεύθυνση URL είναι σωστή ή επιλέξτε ένα τοπικό αρχείο.",
+    "autoinstallDirectErrorInvalidContentTitle": "Μη έγκυρο αρχείο αυτόματης εγκατάστασης",
+    "autoinstallDirectErrorInvalidContentBody": "Ελέγξτε το αρχείο ή δώστε ένα διαφορετικό.",
+    "autoinstallDirectErrorFileSystemTitle": "Το αρχείο αυτόματης εγκατάστασης δεν είναι αναγνώσιμο",
+    "autoinstallDirectErrorFileSystemBody": "Ελέγξτε τα δικαιώματά σας ή δώστε ένα διαφορετικό αρχείο.",
+    "autoinstallDirectErrorUnkownTitle": "Άγνωστο σφάλμα",
+    "autoinstallTitle": "Τύπος εγκατάστασης",
+    "autoinstallHeader": "Πώς θα θέλατε να εγκαταστήσετε το {DISTRO};",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "Εισαγάγετε τη διεύθυνση URL του autoinstall.yaml ή την τοπική διαδρομή του αρχείου:",
+    "autoinstallInteractiveOption": "Διαδραστική εγκατάσταση",
+    "autoinstallInteractiveDescription": "Για χρήστες που επιθυμούν να καθοδηγηθούν βήμα προς βήμα κατά την εγκατάσταση.",
+    "autoinstallDirectOption": "Αυτοματοποιημένη με αρχείο autoinstall",
+    "autoinstallDirectDescription": "Για προχωρημένους χρήστες που διαθέτουν αρχείο autoinstall.yaml για ομοιόμορφες και επαναλήψιμες εγκαταστάσεις συστημάτων.",
+    "autoinstallLandscapeOption": "Αυτοματοποιημένη με το Landscape",
+    "autoinstallLandscapeDescription": "Για χρήστες σε οργανισμούς που παρέχουν αρχείο αυτόματης εγκατάστασης μέσω του Landscape.",
+    "autoinstallErrorMessage": "Μια εντολή στο αρχείο αυτόματης εγκατάστασης απέτυχε να εκτελεστεί κατά την εγκατάσταση.",
+    "autoinstallErrorInstructions": "Θα χρειαστεί να επανεκκινήσετε την εγκατάσταση. Ελέγξτε το αρχείο αυτόματης εγκατάστασης, επιλέξτε έναν διαφορετικό τύπο εγκατάστασης ή επικοινωνήστε με την τεχνική υποστήριξη.",
+    "changeButtonText": "Αλλαγή",
+    "quitButtonText": "Έξοδος από την εγκατάσταση",
+    "loadingPageTitle": "Καλώς ήλθατε στο {DISTRO}",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "Προετοιμασία του {DISTRO}…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "Προειδοποίηση:",
+    "tryOrInstallTitle": "Δοκιμάστε ή εγκαταστήστε το {DISTRO}",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "Τι θέλετε να κάνετε με το {DISTRO};",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "Επιδιόρθωση εγκατάστασης",
+    "tryOrInstallRepairDescription": "Η επιδιόρθωση θα επανεγκαταστήσει όλο το εγκατεστημένο λογισμικό χωρίς να επηρεάσει τα έγγραφα ή τις ρυθμίσεις."
 }
