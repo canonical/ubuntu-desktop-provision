@@ -1053,5 +1053,8 @@
     "tpmActionErrorSupportSingleLabel": "Probatu ondorengo soluzioa, jarri harremanetan IT laguntza-zerbitzuarekin, edo aukeratu beste zifratze metodo bat.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Firmware ezarpenak ez badira automatikoki kargatzen, berrabiarazi eta sakatu ezarpenen tekla behin eta berriro abioan (normalean F2, F10 edo Ezabatu).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Egiaztatu abio seguru modua \"deployed\" gisa ezarria dagoela.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke.",
+    "autoinstallErrorMessage": "Autoinstall fitxategiko komando batek huts egin du instalatu bitartean.",
+    "autoinstallErrorInstructions": "Instalazioa berrabiarazi beharko duzu. Egiaztatu autoinstall fitxategia ondo dagoela, aukeratu beste instalazio mota bat, edo jarri zure IT laguntza zerbitzuarekin harremanetan.",
+    "restartInstaller": "Berrabiarazi instalazioa"
 }
