@@ -71,19 +71,21 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
-              OptionButton<GuidedCapability?>(
-                title: Text(lang.installationTypeTPM),
-                subtitle: Text(
-                  tpmOptionEnabled
-                      ? lang.installationTypeTPMInfoResolute
-                      : lang.installationTypeTPMInfoUnavailable,
+              if (tpmOptionEnabled)
+                OptionButton<GuidedCapability?>(
+                  title: Text(lang.installationTypeTPM),
+                  subtitle: Text(
+                    tpmOptionEnabled
+                        ? lang.installationTypeTPMInfoResolute
+                        : lang.installationTypeTPMInfoUnavailable,
+                  ),
+                  value: GuidedCapability.CORE_BOOT_ENCRYPTED,
+                  groupValue: model.guidedCapability?.clean(),
+                  onChanged: tpmOptionEnabled
+                      ? (v) => model.guidedCapability = v
+                      : null,
+                  isThreeLines: false,
                 ),
-                value: GuidedCapability.CORE_BOOT_ENCRYPTED,
-                groupValue: model.guidedCapability?.clean(),
-                onChanged:
-                    tpmOptionEnabled ? (v) => model.guidedCapability = v : null,
-                isThreeLines: false,
-              ),
               YaruExpandable(
                 expandButtonPosition: YaruExpandableButtonPosition.start,
                 header: Text(lang.installationTypeAdvancedLabel),
@@ -145,27 +147,6 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
           ),
         ),
       ],
-    );
-  }
-}
-
-class TpmOption extends ConsumerWidget {
-  const TpmOption({
-    required this.model,
-    super.key,
-  });
-  final StorageModel model;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final lang = UbuntuBootstrapLocalizations.of(context);
-
-    return OptionButton<GuidedCapability?>(
-      title: Text(lang.installationTypeTPM),
-      subtitle: Text(lang.installationTypeTPMInfoResolute),
-      value: GuidedCapability.CORE_BOOT_ENCRYPTED,
-      groupValue: model.guidedCapability?.clean(),
-      onChanged: (v) => model.guidedCapability = v,
     );
   }
 }
