@@ -1,26 +1,26 @@
 {
-    "welcomePageTitle": "Καλώς Ήρθατε",
-    "welcomeWhatsNew": "Τι νέο υπάρχει?",
-    "welcomeStartSubtitle": "Υποστηρίζοντας μια καθαρότερη εμπειρία χρήστη.",
-    "welcomeStoreSubtitle": "Δεν ήταν πότε πιο εύκολο να βρείτε το αγαπημένο σας λογισμικό.",
-    "welcomeSecurityTitle": "Προχωρημένη Ασφάλεια",
-    "telemetryLabelOff": "Όχι,δεν μοιράζεστε δεδομένα συστήματος",
-    "telemetryLegalLabel": "Νομική λεπτομέρεια",
+    "welcomePageTitle": "Καλώς ορίσατε",
+    "welcomeWhatsNew": "WHAT'S NEW?",
+    "welcomeStartSubtitle": "Υποστηρίζοντας μια πιο καθαρή εμπειρία εγκατάστασης.",
+    "welcomeStoreSubtitle": "Ποτέ δεν ήταν ευκολότερο να βρείτε το αγαπημένο σας λογισμικό.",
+    "welcomeSecurityTitle": "Ενισχυμένη ασφάλεια",
+    "telemetryLabelOff": "Όχι, να μη γίνει κοινοποίηση δεδομένων συστήματος",
+    "telemetryLegalLabel": "Νομική σημείωση",
     "privacyPageTitle": "Υπηρεσίες τοποθεσίας",
-    "privacyLocationTitle": "Ενεργοποίηση υπηρεσιών τοποθεσίας?",
-    "privacyLocationEnable": "Υπηρεσία τοποθεσίας",
+    "privacyLocationTitle": "Ενεργοποίηση υπηρεσιών τοποθεσίας;",
+    "privacyLocationEnable": "Υπηρεσίες τοποθεσίας",
     "ubuntuProPageTitle": "Ubuntu Pro",
     "ubuntuProOnBoardingSkipForNow": "Παράλειψη για τώρα",
     "ubuntuProOnBoardingSkipForNowDescription": "Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.",
     "ubuntuProOnBoardingEnableUbuntuPro": "Ενεργοποίηση Ubuntu-Pro",
     "ubuntuProSucessAttachHeader": "Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα",
     "ubuntuProSucessAttachDescription": "Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.",
-    "telemetryReportLabel": "Δείξε πρώτη αναφορά",
-    "telemetryLabelOn": "Ναι,μοιραστείτε δεδομένα συστήματος με την ομάδα {distro}",
-    "welcomeStoreTitle": "Νέα εμφάνιση Κέντρου Λογισμικού",
-    "welcomePageHeader": "Καλώς Ήρθατε στο {distro}",
-    "ubuntuProSubscriptionFreeForPersonalUse": "Πάντα δωρεάν για προσωπική χρήση.30 ημέρες για επιχειρήσεις.<a href=\"https://{url}\">Μάθετε περισσότερα</a>",
-    "welcomeChangelogLabel": "<a href=\"{url}\">Εμφάνιση Αρχείου Καταγραφής</a>",
+    "telemetryReportLabel": "Εμφάνιση της πρώτης αναφοράς",
+    "telemetryLabelOn": "Ναι, κοινοποίηση δεδομένων συστήματος στην ομάδα του {distro}",
+    "welcomeStoreTitle": "Νέα εμφάνιση για το App Store",
+    "welcomePageHeader": "Καλώς ορίσατε στο {distro}",
+    "ubuntuProSubscriptionFreeForPersonalUse": "Πάντα δωρεάν για προσωπική χρήση. Δοκιμαστική περίοδος 30 ημερών για επιχειρήσεις. <a href=\"https://{url}\">Μάθετε περισσότερα</a>",
+    "welcomeChangelogLabel": "<a href=\"{url}\">Προβολή αρχείου αλλαγών</a>",
     "@welcomeChangelogLabel": {
         "placeholders": {
             "url": {
@@ -31,5 +31,41 @@
     "successIconSemanticLabel": "Επιτυχία",
     "closeIconSemanticLabel": "Κλείσιμο",
     "maximizeIconSemanticLabel": "Μεγιστοποίηση",
-    "minimizeIconSemanticLabel": "Ελαχιστοποίηση"
+    "minimizeIconSemanticLabel": "Ελαχιστοποίηση",
+    "welcomeStartTitle": "Μια απλοποιημένη εκκίνηση",
+    "welcomeSecuritySubtitle": "Νέες επιλογές για κρυπτογράφηση μέσω υλικού (hardware-backed) ή ZFS.",
+    "telemetryPageTitle": "Τηλεμετρία",
+    "telemetryHeader": "Βοηθήστε στη βελτίωση του {distro}",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "Βοηθήστε μας να βελτιώσουμε το {distro} μοιραζόμενοι μαζί μας τα δεδομένα του συστήματός σας. Αυτά περιλαμβάνουν στοιχεία όπως το μοντέλο του υπολογιστή σας, το εγκατεστημένο λογισμικό και την τοποθεσία που επιλέξατε για τη ζώνη ώρας σας.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryReportTitle": "Λεπτομέρειες αναφοράς",
+    "telemetryCollectError": "Αποτυχία συλλογής δεδομένων τηλεμετρίας",
+    "privacyLocationSubtitle": "Επιτρέψτε στις εφαρμογές να γνωρίζουν τη γεωγραφική σας τοποθεσία.\nΜπορείτε να το αλλάξετε αυτό ανά πάσα στιγμή στις Ρυθμίσεις συστήματος.",
+    "privacyPolicyLink": "Προστασία προσωπικών δεδομένων",
+    "ubuntuProMagicAttachInstructions": "Μαγική σύνδεση με αυτόν τον κώδικα στο <a href=\"https://{url}\">{url}</a>",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProHeader": "Σύνδεση αυτού του μηχανήματος",
+    "ubuntuProOrAddTokenManually": "ή προσθέστε ένα διακριτικό (token) μη αυτόματα",
+    "ubuntuProTokenTextfieldHint": "Διακριτικό",
+    "ubuntuProSubscriptionDescription": "Αποκτήστε την πιο ολοκληρωμένη συνδρομή για την ασφάλεια λογισμικού ανοιχτού κώδικα",
+    "ubuntuProTokenAttachButton": "Σύνδεση"
 }
