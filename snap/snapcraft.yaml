@@ -92,7 +92,7 @@ parts:
     plugin: nil
     source: https://github.com/canonical/curtin
     source-type: git
-    source-commit: e8d01e4d8a3c5ce93dcffd5467f3ac089cb8c04b
+    source-commit: 26b9bb247b1997f4a166b17854369a07f4a4d699
     override-pull: |
       craftctl default
       # Since snapcraft 8.14, the tags are not automatically fetched
