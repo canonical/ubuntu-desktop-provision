@@ -1,9 +1,9 @@
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_x.dart';
 import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -149,24 +149,4 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
       ],
     );
   }
-}
-
-extension on GuidedCapability {
-  GuidedCapability clean() => switch (this) {
-// We shouldn't send CORE_BOOT_PREFER_ENCRYPTED to the server
-// See https://github.com/canonical/subiquity/blob/f759d19336c5cc33545755095fcc2aced3ef6a9f/subiquity/common/types.py#L354-L356
-        GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED =>
-          GuidedCapability.CORE_BOOT_ENCRYPTED,
-        _ => this,
-      };
-}
-
-extension on GuidedStorageTarget {
-  String? get tpmDisallowedReason => disallowed
-      .firstWhereOrNull(
-        (e) =>
-            e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
-            e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
-      )
-      ?.message;
 }
