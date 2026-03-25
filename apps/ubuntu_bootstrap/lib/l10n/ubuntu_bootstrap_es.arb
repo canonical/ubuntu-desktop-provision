@@ -341,7 +341,7 @@
     "restartComputerTitle": "¿Reiniciar equipo?",
     "landscapeConfirmPageSuccessInfoTitle": "Ubuntu instalará con la configuración proporcionada por su organización",
     "landscapeConfirmPageSuccessInfoContent": "Puede revisar el archivo autoinstall importado desde Landscape a continuación.",
-    "installationTypeEraseAndInstall": "Elimine {os} e instale {product}",
+    "installationTypeEraseAndInstall": "Eliminar {os} e instalar {product}",
     "landscapeDomainInstructions": "Proporcione su dominio de Landscape de la organización para acceder y obtener un archivo de auto-instalación. Puede obtener es FQDN desde su proveedor IT.",
     "recoveryKeyLinkLabel": "Saber más",
     "recoveryKeyTitleBadgeLabel": "Importante",
