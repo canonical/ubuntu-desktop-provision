@@ -14,7 +14,7 @@
     "identityUsernameInvalidChars": "Αυτό το όνομα περιέχει μη έγκυρους χαρακτήρες.",
     "identityConfirmPasswordLabel": "Επιβεβαίωση κωδικού",
     "identityPasswordMismatch": "Αυτοί οι κωδικοί δεν ταιριάζουν",
-    "networkPageHeader": "Σύνδεση στο διαδίκτυο",
+    "networkPageHeader": "Σύνδεση με το διαδίκτυο",
     "networkWifiOff": "Η ασύρματη δικτύωση είναι απενεργοποιημένη",
     "eulaPageTitle": "Άδεια χρήσης",
     "accessibilityPageTitle": "Προσβασιμότητα",
