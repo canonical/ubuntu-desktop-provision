@@ -1,6 +1,6 @@
 {
     "welcomePageTitle": "Καλώς ορίσατε",
-    "welcomeWhatsNew": "WHAT'S NEW?",
+    "welcomeWhatsNew": "ΤΙ ΝΕΟ ΥΠΑΡΧΕΙ;",
     "welcomeStartSubtitle": "Υποστηρίζοντας μια πιο καθαρή εμπειρία εγκατάστασης.",
     "welcomeStoreSubtitle": "Ποτέ δεν ήταν ευκολότερο να βρείτε το αγαπημένο σας λογισμικό.",
     "welcomeSecurityTitle": "Ενισχυμένη ασφάλεια",
@@ -11,13 +11,13 @@
     "privacyLocationEnable": "Υπηρεσίες τοποθεσίας",
     "ubuntuProPageTitle": "Ubuntu Pro",
     "ubuntuProOnBoardingSkipForNow": "Παράλειψη για τώρα",
-    "ubuntuProOnBoardingSkipForNowDescription": "Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην Λογισμικό και Ενημερώσεις εφαρμογή.",
-    "ubuntuProOnBoardingEnableUbuntuPro": "Ενεργοποίηση Ubuntu-Pro",
+    "ubuntuProOnBoardingSkipForNowDescription": "Μπορείτε πάντα να ενεργοποιήσετε το Ubuntu-Pro αργότερα στην εφαρμογή «Λογισμικό και Ενημερώσεις».",
+    "ubuntuProOnBoardingEnableUbuntuPro": "Ενεργοποίηση του Ubuntu-Pro",
     "ubuntuProSucessAttachHeader": "Ubuntu Pro είναι τώρα ενεργοποιημένο σε αυτό το μηχάνημα",
-    "ubuntuProSucessAttachDescription": "Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην Λογισμικό και Ενημερώσεις εφαρμογή.",
+    "ubuntuProSucessAttachDescription": "Μπορείτε να κάνετε διαχείριση της Pro υπηρεσίας στην εφαρμογή «Λογισμικό και Ενημερώσεις».",
     "telemetryReportLabel": "Εμφάνιση της πρώτης αναφοράς",
     "telemetryLabelOn": "Ναι, κοινοποίηση δεδομένων συστήματος στην ομάδα του {distro}",
-    "welcomeStoreTitle": "Νέα εμφάνιση για το App Store",
+    "welcomeStoreTitle": "Νέα εμφάνιση για το Κέντρο εφαρμογών",
     "welcomePageHeader": "Καλώς ορίσατε στο {distro}",
     "ubuntuProSubscriptionFreeForPersonalUse": "Πάντα δωρεάν για προσωπική χρήση. Δοκιμαστική περίοδος 30 ημερών για επιχειρήσεις. <a href=\"https://{url}\">Μάθετε περισσότερα</a>",
     "welcomeChangelogLabel": "<a href=\"{url}\">Προβολή αρχείου αλλαγών</a>",
@@ -67,5 +67,9 @@
     "ubuntuProOrAddTokenManually": "ή προσθέστε ένα διακριτικό (token) μη αυτόματα",
     "ubuntuProTokenTextfieldHint": "Διακριτικό",
     "ubuntuProSubscriptionDescription": "Αποκτήστε την πιο ολοκληρωμένη συνδρομή για την ασφάλεια λογισμικού ανοιχτού κώδικα",
-    "ubuntuProTokenAttachButton": "Σύνδεση"
+    "ubuntuProTokenAttachButton": "Σύνδεση",
+    "ubuntuProTokenAttachError": "Μη έγκυρο διακριτικό",
+    "ubuntuProTokenAttachSucess": "Έγκυρο διακριτικό",
+    "ubuntuProTokenAttachErrorVariant": "Μη έγκυρο διακριτικό, προσπαθήστε ξανά",
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "Συνδέστε αυτό το μηχάνημα σε μια συνδρομή Ubuntu Pro για ενημερώσεις ασφαλείας σε ένα ευρύτερο φάσμα πακέτων, έως το 2032."
 }
