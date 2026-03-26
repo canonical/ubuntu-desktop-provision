@@ -31,7 +31,7 @@ class _DonePageState extends ConsumerState<DonePage> {
     final mascot = ref.watch(pageImagesProvider).get('done');
     final isCoreDesktop =
         model.provisioningMode == ProvisioningMode.coreDesktop;
-        
+
     final view = View.of(context);
 
     final statusMessage = isCoreDesktop
@@ -42,7 +42,6 @@ class _DonePageState extends ConsumerState<DonePage> {
     if (!_announced) {
       _announced = true;
       WidgetsBinding.instance.addPostFrameCallback((_) {
-
         SemanticsService.sendAnnouncement(
           view,
           '${lang.installationCompleteTitle}. $statusMessage',
