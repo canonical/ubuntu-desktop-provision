@@ -83,5 +83,993 @@
         }
     },
     "tryOrInstallRepairOption": "Επιδιόρθωση εγκατάστασης",
-    "tryOrInstallRepairDescription": "Η επιδιόρθωση θα επανεγκαταστήσει όλο το εγκατεστημένο λογισμικό χωρίς να επηρεάσει τα έγγραφα ή τις ρυθμίσεις."
+    "tryOrInstallRepairDescription": "Η επιδιόρθωση θα επανεγκαταστήσει όλο το εγκατεστημένο λογισμικό χωρίς να επηρεάσει τα έγγραφα ή τις ρυθμίσεις.",
+    "manualPartitioningWarningBody": "Δοκιμάστε κάτι άλλο. Μπορείτε επίσης να <a href=\"\">στείλετε μια αναφορά σφάλματος</a>.",
+    "refreshReady": "Η ενημέρωση είναι έτοιμη",
+    "refreshCurrent": "Η τρέχουσα έκδοση του {snap} είναι η {version}.",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "Ενημέρωση στην έκδοση {version}",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "Η τρέχουσα έκδοση {version} είναι ενημερωμένη.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "Ενημέρωση του {snap}...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "Παρακαλούμε κλείστε το πρόγραμμα εγκατάστασης και εκκινήστε το ξανά για να συνεχίσετε",
+    "refreshCloseLabel": "Κλείσιμο προγράμματος εγκατάστασης",
+    "refreshSnapPrerequisites": "Διασφάλιση προαπαιτούμενων για το {snap}...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "Ανανέωση του {snap}...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCheckRerefresh": "Έλεγχος για εκ νέου ανανέωση του {snap}...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "Προετοιμασία του {snap}...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "Λήψη του {snap}...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "Επαλήθευση του {snap}...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "Προσάρτηση του {snap}...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "Διακοπή των υπηρεσιών του {snap}...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "Αφαίρεση ψευδωνύμων (aliases) του {snap}...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "Αποσύνδεση του {snap}...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "Ενημέρωση πόρων του {snap}...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "Ενημέρωση της γραμμής εντολών πυρήνα (kernel command line) του {snap}...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "Αντιγραφή δεδομένων του {snap}...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "Ρύθμιση προφίλ ασφαλείας του {snap}...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "Σύνδεση του {snap}...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "Σύνδεση βυσμάτων (plugs) και υποδοχών (slots) του {snap}...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "Ορισμός αυτόματων ψευδωνύμων (aliases) του {snap}...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "Ρύθμιση ψευδωνύμων (aliases) του {snap}...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "Εκκίνηση των υπηρεσιών του {snap}...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "Εκκαθάριση του {snap}...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "Κλειδί ανάκτησης",
+    "recoveryKeyTitleBadgeLabel": "Σημαντικό",
+    "recoveryKeyHeader": "Αποθηκεύστε το κλειδί ανάκτησης",
+    "recoveryKeyInfoHeader": "Ενδέχεται να χάσετε όλα τα δεδομένα σας χωρίς κλειδί ανάκτησης",
+    "recoveryKeyTextFieldLabel": "Κλειδί ανάκτησης",
+    "recoveryKeyStorageAdvice": "Θα χρειαστεί να παρέχετε αυτό το κλειδί ανάκτησης εάν η αποκρυπτογράφηση αποτύχει κατά την εκκίνηση. Χωρίς το κλειδί, θα χάσετε την πρόσβαση σε όλα τα δεδομένα σας. Αποθηκεύστε το σε ένα ασφαλές μέρος, όπως έναν διαχειριστή κωδικών πρόσβασης.",
+    "recoveryKeyConfirmation": "Αποθήκευσα το κλειδί ανάκτησής μου σε ασφαλές μέρος",
+    "recoveryKeyLinkLabel": "Μάθετε περισσότερα",
+    "recoveryKeySaveToFileLabel": "Αποθήκευση σε αρχείο",
+    "recoveryKeyShowQrCodeLabel": "Εμφάνιση κώδικα QR",
+    "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Κλειδί ανάκτησης",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "Σαρώστε τον κώδικα QR για να αντιγράψετε το κλειδί ανάκτησης και αποθηκεύστε το σε ένα ασφαλές μέρος, όπως έναν διαχειριστή κωδικών πρόσβασης. Μπορείτε επίσης να το βγάλετε φωτογραφία για μελλοντική χρήση.",
+    "recoveryKeyClipboardNotifiaction": "Αντιγράφηκε στο πρόχειρο",
+    "recoveryKeyExceptionFileSystemTitle": "Το αρχείο κλειδιού ανάκτησης δεν αποθηκεύτηκε",
+    "recoveryKeyExceptionDisallowedPathTitle": "Το αρχείο κλειδιού ανάκτησης δεν μπορεί να αποθηκευτεί σε προσωρινή τοποθεσία",
+    "recoveryKeyExceptionUnknownTitle": "Άγνωστο σφάλμα",
+    "recoveryKeyExceptionFileSystemBody": "Δεν έχετε δικαίωμα εγγραφής σε αυτόν τον φάκελο. Δοκιμάστε μια διαφορετική τοποθεσία ή χρησιμοποιήστε μια άλλη μέθοδο.",
+    "recoveryKeyExceptionDisallowedPathBody": "Δοκιμάστε μια διαφορετική τοποθεσία, όπως μια αφαιρούμενη μονάδα δίσκου, ή χρησιμοποιήστε μια άλλη μέθοδο.",
+    "recoveryKeyFilePickerTitle": "Αποθήκευση αρχείου κλειδιού ανάκτησης",
+    "recoveryKeyFilePickerFilter": "Αρχεία κειμένου",
+    "landscapeMagicAttachInstructions": "Σαρώστε τον κώδικα QR ή εισαγάγετε τον παρακάτω κώδικα στη διεύθυνση <a href=\"https://{url}\">{url}</a>",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "Αυτοματοποιημένη εγκατάσταση",
+    "landscapeHeader": "Σύνδεση στο Landscape",
+    "landscapeDomainHeader": "Εισαγάγετε τον τομέα (FQDN) του Landscape",
+    "landscapeDomainHintText": "Τομέας (FQDN) του Landscape",
+    "landscapeDomainInstructions": "Παρέχετε τον τομέα Landscape του οργανισμού σας για να συνδεθείτε και να ανακτήσετε ένα αρχείο αυτόματης εγκατάστασης. Μπορείτε να λάβετε το FQDN από την τεχνική υποστήριξη (IT support) της εταιρείας σας.",
+    "landscapeDomainTextField": "Τομέας (FQDN) του Landscape",
+    "next": "Επόμενο",
+    "landscapeDomainInvalidDomainWarning": "Μη έγκυρος τομέας, παρακαλώ ελέγξτε τον ή επικοινωνήστε με την τεχνική υποστήριξη",
+    "landscapeDomainNoInternetTitleWarning": "Συνδεθείτε στο διαδίκτυο για να συνεχίσετε",
+    "landscapeDomainNoInternetDescriptionWarning": "Απαιτείται σύνδεση στο διαδίκτυο για την ανάκτηση του αρχείου αυτόματης εγκατάστασης από το Landscape",
+    "landscapeCodeExpiredWarning": "Ο κωδικός έληξε, παρακαλώ δοκιμάστε ξανά",
+    "landscapeLoginFailedWarning": "Η σύνδεση απέτυχε, παρακαλώ δοκιμάστε ξανά",
+    "landscapeErrorPageTitle": "Η αυτοματοποιημένη εγκατάσταση δεν είναι διαθέσιμη για τον λογαριασμό σας",
+    "landscapeErrorPageBody": "Επικοινωνήστε με την τεχνική υποστήριξη (IT support) της εταιρείας σας ή δοκιμάστε μια διαφορετική επιλογή εγκατάστασης.",
+    "landscapeErrorPageCode": "Κωδικός σφάλματος: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Το Ubuntu θα εγκατασταθεί με τις ρυθμίσεις που παρέχονται από τον οργανισμό σας",
+    "landscapeConfirmPageSuccessInfoContent": "Μπορείτε να ελέγξετε το αρχείο αυτόματης εγκατάστασης (autoinstall) που εισήχθη από το Landscape παρακάτω.",
+    "errorIconSemanticLabel": "Σφάλμα",
+    "tpmActionPageTitle": "Δεν ήταν δυνατή η ενεργοποίηση της κρυπτογράφησης με υποστήριξη υλικού (hardware-backed encryption)",
+    "tpmActionBadgeLabel": "Απαιτείται ενέργεια",
+    "tpmActionDetailsLabel": "Τεχνικές λεπτομέρειες",
+    "tpmActionConfirmLabel": "Επιβεβαίωση",
+    "tpmActionSolutionLabel": "Λύση {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionSingleSolutionLabel": "Λύση: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Μάθετε περισσότερα για την κρυπτογράφηση με υποστήριξη υλικού",
+    "tpmActionErrorSupportLabel": "Δοκιμάστε τις παρακάτω λύσεις, επικοινωνήστε με την τεχνική υποστήριξη (IT support) ή επιλέξτε μια διαφορετική μέθοδο κρυπτογράφησης.",
+    "tpmActionErrorSupportSingleLabel": "Δοκιμάστε την παρακάτω λύση, επικοινωνήστε με την τεχνική υποστήριξη ή επιλέξτε μια διαφορετική μέθοδο κρυπτογράφησης.",
+    "tpmActionErrorSupportNoActionLabel": "Επικοινωνήστε με την τεχνική υποστήριξη ή επιλέξτε μια διαφορετική μέθοδο κρυπτογράφησης.",
+    "tpmActionErrorKindInternal": "Εσωτερικό σφάλμα.",
+    "tpmActionErrorKindShutdownRequired": "Απαιτείται απενεργοποίηση.",
+    "tpmActionErrorKindRebootRequired": "Απαιτείται επανεκκίνηση.",
+    "tpmActionErrorKindUnexpectedAction": "Μη αναμενόμενη ενέργεια.",
+    "tpmActionErrorKindMissingArgument": "Λείπει όρισμα.",
+    "tpmActionErrorKindInvalidArgument": "Μη έγκυρο όρισμα.",
+    "tpmActionErrorKindActionFailed": "Η ενέργεια απέτυχε.",
+    "tpmActionErrorKindRunningInVm": "Το τρέχον περιβάλλον είναι μια εικονική μηχανή (virtual machine).",
+    "tpmActionErrorKindSystemNotEfi": "Αυτός ο υπολογιστής χρησιμοποιεί παλαιότερο υλικολογισμικό (legacy BIOS), το οποίο δεν είναι συμβατό με αυτή τη μέθοδο κρυπτογράφησης.",
+    "tpmActionErrorKindEfiVariableAccess": "Υπάρχει πρόβλημα με το υλικολογισμικό (firmware) αυτού του υπολογιστή.",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Αυτός ο υπολογιστής δεν διαθέτει το απαιτούμενο υλικό ασφαλείας (TPM 2.0) για αυτή τη μέθοδο κρυπτογράφησης.",
+    "tpmActionErrorKindTpmDeviceDisabled": "Το TPM αυτού του υπολογιστή είναι απενεργοποιημένο.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "Το TPM αυτού του υπολογιστή χρησιμοποιείται ήδη από άλλο σύστημα ή εφαρμογή.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "Το TPM αυτού του υπολογιστή είναι επί του παρόντος κλειδωμένο.",
+    "tpmActionErrorKindInsufficientTpmStorage": "Το TPM αυτού του υπολογιστή δεν διαθέτει αρκετό διαθέσιμο χώρο αποθήκευσης.",
+    "tpmActionErrorKindUnsupportedPlatform": "Αυτός ο υπολογιστής δεν είναι συμβατός με την κρυπτογράφηση με υποστήριξη υλικού.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "Είναι ενεργοποιημένη η αποσφαλμάτωση (debugging) του UEFI.",
+    "tpmActionErrorKindInsufficientDmaProtection": "Αυτός ο υπολογιστής δεν διαθέτει μια απαιτούμενη λειτουργία ασφαλείας (προστασία DMA).",
+    "tpmActionErrorKindNoKernelIommu": "Αυτός ο υπολογιστής δεν διαθέτει μια απαιτούμενη λειτουργία ασφαλείας (IOMMU).",
+    "tpmActionErrorKindHostSecurity": "Υπάρχει πρόβλημα με τις ρυθμίσεις ασφαλείας (security configuration) αυτού του υπολογιστή.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Υπάρχει λογισμικό που εκτελείται κατά την εκκίνηση και ενδέχεται να εμποδίζει την ασφαλή σύνδεση με το TPM του υπολογιστή.",
+    "tpmActionErrorKindAbsolutePresent": "Είναι ενεργοποιημένη η Μονάδα Διαρκούς Παρουσίας (Absolute Persistence Module) σε αυτόν τον υπολογιστή.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Η ασφαλής εκκίνηση (Secure Boot) είναι απενεργοποιημένη σε αυτόν τον υπολογιστή ή δεν έχει ρυθμιστεί σε κατάσταση ανάπτυξης (deployed mode).",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Ορισμένα από τα πιστοποιητικά που επαληθεύουν το λογισμικό σε αυτόν τον υπολογιστή είναι ληγμένα ή χρησιμοποιούν ασθενή προστασία.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Αυτός ο υπολογιστής χρησιμοποιεί μια μη αυτόματη λίστα επιτρεπόμενων (manual allowlist) για την επαλήθευση του λογισμικού κατά την εκκίνηση.",
+    "tpmActionErrorKindAddonDriversPresent": "Υπάρχουν εγκατεστημένα πρόσθετα προγράμματα οδήγησης.",
+    "tpmActionErrorKindGenericTpm": "Υπάρχει πρόβλημα με το TPM αυτού του υπολογιστή.",
+    "tpmActionErrorKindGenericFirmware": "Υπάρχει πρόβλημα με το υλικολογισμικό (firmware) αυτού του υπολογιστή.",
+    "tpmActionFixActionReboot": "Επανεκκίνηση",
+    "tpmActionFixActionShutdown": "Απενεργοποίηση",
+    "tpmActionFixActionRebootToFwSettings": "Επανεκκίνηση στις ρυθμίσεις υλικολογισμικού",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Εάν οι ρυθμίσεις υλικολογισμικού δεν φορτώσουν αυτόματα, πραγματοποιήστε επανεκκίνηση και πατήστε επανειλημμένα το πλήκτρο ρυθμίσεων κατά την εκκίνηση (συνήθως το F2, το F10 ή το Delete).",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Μη αυτόματη ενεργοποίηση της προστασίας DMA",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Μη αυτόματη εκκαθάριση του TPM",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Μη αυτόματη ενεργοποίηση της ασφαλούς εκκίνησης (Secure Boot)",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Μη αυτόματη ενεργοποίηση του IOMMU",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Μη αυτόματη ενεργοποίηση των συστοιχιών PCR",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Μη αυτόματη ενεργοποίηση του TPM",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Μη αυτόματη εκκαθάριση του TPM",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Μη αυτόματη εκκαθάριση του TPM",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Μη αυτόματη απενεργοποίηση της Μονάδας Διαρκούς Παρουσίας (Absolute Persistence Module)",
+    "tpmActionFixActionContactOem": "Επικοινωνήστε με τον κατασκευαστή",
+    "tpmActionFixActionContactOsVendor": "Επικοινωνήστε με τον προμηθευτή του λειτουργικού συστήματος",
+    "tpmActionFixActionEnableTpmViaFirmware": "Ενεργοποίηση του TPM κατά την επανεκκίνηση",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Ενεργοποίηση και εκκαθάριση του TPM κατά την επανεκκίνηση",
+    "tpmActionFixActionClearTpmViaFirmware": "Εκκαθάριση του TPM κατά την επανεκκίνηση",
+    "tpmActionFixActionClearTpm": "Εκκαθάριση του TPM",
+    "tpmActionFixActionProceed": "Παράλειψη",
+    "tpmActionFixActionRebootDescription": "Επανεκκινήστε τον υπολογιστή για να ολοκληρωθούν οι προηγούμενες ενέργειες.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Η επανεκκίνηση του υπολογιστή ενδέχεται να διορθώσει το πρόβλημα.",
+    "tpmActionFixActionShutdownDescription": "Απενεργοποιήστε τον υπολογιστή για να ολοκληρωθούν οι προηγούμενες ενέργειες.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Μπορείτε να το κάνετε αυτό στις ρυθμίσεις υλικολογισμικού (firmware) του υπολογιστή σας.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Ενδέχεται να μπορείτε να το κάνετε αυτό στις ρυθμίσεις υλικολογισμικού (firmware) του υπολογιστή σας. Ανατρέξτε στην τεκμηρίωση του κατασκευαστή του επεξεργαστή (CPU vendor) για οδηγίες.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Βεβαιωθείτε ότι η λειτουργία της ασφαλούς εκκίνησης (secure boot) είναι ρυθμισμένη σε «deployed» (σε χρήση).",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Αυτή η λειτουργία ενδέχεται να αναφέρεται ως «Virtualization Technology», «VT-d» ή «AMD-Vi».",
+    "tpmActionFixActionProceedDescription": "Η παράβλεψη αυτού του ζητήματος ενδέχεται να οδηγήσει σε μια λιγότερο ασφαλή εγκατάσταση.",
+    "tpmActionRestartLabel": "Επανεκκίνηση",
+    "tpmActionRestartAndEnableTpmLabel": "Επανεκκίνηση και ενεργοποίηση του TPM",
+    "tpmActionRestartAndClearTpmLabel": "Επανεκκίνηση και εκκαθάριση του TPM",
+    "tpmActionIgnoreAndContinueLabel": "Παράλειψη και συνέχιση",
+    "tpmActionFixActionClearTpmWarningTitle": "Η εκκαθάριση του TPM διαγράφει όλα τα κλειδιά κρυπτογράφησης",
+    "tpmActionFixActionClearTpmWarningBody": "Θα χάσετε την πρόσβαση σε όλα τα δεδομένα στους κρυπτογραφημένους δίσκους για τους οποίους δεν διαθέτετε κλειδιά αποκατάστασης. Επίσης, θα σταματήσουν να λειτουργούν άλλες δυνατότητες που εξαρτώνται από το TPM, όπως η επαλήθευση ταυτότητας και τα πιστοποιητικά.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "Κατανοώ τις συνέπειες της εκκαθάρισης του TPM",
+    "tpmActionFixActionCaveatConfirm": "Ενδέχεται να σας ζητηθεί να επιβεβαιώσετε αυτή την ενέργεια κατά την επανεκκίνηση.",
+    "tpmActionFixActionCaveatRetry": "Στη συνέχεια, θα χρειαστεί να ξεκινήσετε την εγκατάσταση ξανά.",
+    "tpmActionErrorTitle": "Αυτή η λύση απέτυχε",
+    "tpmActionErrorDescription": "Δοκιμάστε μια διαφορετική λύση ή επικοινωνήστε με την τεχνική υποστήριξη.",
+    "tryDescription": "Μπορείτε να δοκιμάσετε το {RELEASE} χωρίς να πραγματοποιήσετε καμία αλλαγή στον υπολογιστή σας.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "Εγκαταστήστε το {RELEASE} παράλληλα με το τρέχον λειτουργικό σας σύστημα (ή στη θέση του). Αυτό δεν θα πάρει πολύ χρόνο.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "rstHeader": "Πρέπει να απενεργοποιήσετε το Intel Rapid Storage Technology (RST) για να συνεχίσετε την εγκατάσταση",
+    "rstDisable": "Ο υπολογιστής σας χρησιμοποιεί το Intel RST (Rapid Storage Technology). Μπορείτε να απενεργοποιήσετε το RST είτε στο:",
+    "rstDisableWindows": "... στα Windows, εάν χρησιμοποιείτε μια εγκατάσταση διπλής εκκίνησης (dual boot) με τα Windows",
+    "rstDisableBios": "... στις ρυθμίσεις BIOS",
+    "rstInstructions": "Για οδηγίες, σαρώσετε τον κωδικό QR από μια άλλη συσκευή ή επισκεφθείτε τη διεύθυνση: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "Διαμόρφωση του Secure Boot",
+    "configureSecureBootDescription": "Έχετε επιλέξει την εγκατάσταση λογισμικού προγραμμάτων οδήγησης (drivers) τρίτων κατασκευαστών. Αυτό απαιτεί την απενεργοποίηση του Secure Boot.\nΓια να το κάνετε αυτό, πρέπει να επιλέξετε έναν κωδικό ασφαλείας τώρα και να τον εισαγάγετε όταν γίνει επανεκκίνηση του συστήματος.",
+    "configureSecureBootOption": "Διαμόρφωση του Secure Boot",
+    "chooseSecurityKey": "Επιλέξτε ένα κλειδί ασφαλείας",
+    "confirmSecurityKey": "Επιβεβαιώστε το κλειδί ασφαλείας",
+    "dontInstallDriverSoftwareNow": "Να μην εγκατασταθεί το λογισμικό προγραμμάτων οδήγησης προς το παρόν",
+    "dontInstallDriverSoftwareNowDescription": "Μπορείτε να το εγκαταστήσετε αργότερα από το «Λογισμικό και Ενημερώσεις».",
+    "configureSecureBootSecurityKeyRequired": "Απαιτείται κλειδί ασφαλείας",
+    "secureBootSecurityKeysDontMatch": "Τα κλειδιά ασφαλείας δεν ταιριάζουν",
+    "showSecurityKey": "Εμφάνιση",
+    "hideSecurityKey": "Απόκρυψη",
+    "updatesOtherSoftwarePageTitle": "Εφαρμογές",
+    "updatesOtherSoftwarePageDescription": "Ποιες εφαρμογές θα θέλατε να εγκαταστήσετε για αρχή;",
+    "codecsAndDriversPageTitle": "Βελτιστοποίηση του υπολογιστή σας",
+    "codecsAndDriversPageDescription": "Να εγκατασταθεί το προτεινόμενο ιδιοταγές λογισμικό;",
+    "codecsAndDriversPageBody": "Το {DISTRO} δεν περιλαμβάνει ιδιοταγές λογισμικό από προεπιλογή. Η εγκατάσταση πρόσθετου λογισμικού ενδέχεται να βελτιώσει την απόδοση του υπολογιστή σας.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "Εντοπίστηκε κάρτα γραφικών NVIDIA",
+    "codecsAndDriversNvidiaBody": "Για την καλύτερη δυνατή απόδοση των καρτών γραφικών NVIDIA, συνιστάται ανεπιφύλακτα η εγκατάσταση πρόσθετων προγραμμάτων οδήγησης.",
+    "fullInstallationTitle": "Εκτεταμένη επιλογή",
+    "fullInstallationSubtitle": "Μια επιλογή εργαλείων γραφείου, βοηθητικών προγραμμάτων και προγράμματος περιήγησης ιστού, φιλική προς χρήση χωρίς σύνδεση.",
+    "minimalInstallationTitle": "Προεπιλεγμένη επιλογή",
+    "minimalInstallationSubtitle": "Μόνο τα απαραίτητα: πρόγραμμα περιήγησης ιστού και βασικά βοηθητικά προγράμματα.",
+    "otherOptions": "Άλλες επιλογές",
+    "installThirdPartyTitle": "Εγκατάσταση λογισμικού τρίτων για υλικό γραφικών και Wi-Fi, καθώς και πρόσθετων μορφότυπων πολυμέσων",
+    "installThirdPartySubtitle": "Αυτό το λογισμικό υπόκειται στους όρους άδειας χρήσης που περιλαμβάνονται στην τεκμηρίωσή του. Ορισμένοι εξ αυτών είναι ιδιοταγείς.",
+    "installDriversTitle": "Εγκατάσταση λογισμικού τρίτων για υλικό γραφικών και Wi-Fi",
+    "installDriversSubtitle": "Συμπεριλαμβανομένων, μεταξύ άλλων, των προγραμμάτων οδήγησης NVIDIA και παρόμοιων",
+    "installCodecsTitle": "Λήψη και εγκατάσταση υποστήριξης για πρόσθετους μορφότυπους πολυμέσων",
+    "installCodecsSubtitle": "Συμπεριλαμβανομένων, μεταξύ άλλων, των MP3, MP4, MOV και παρόμοιων",
+    "batteryWarning": "Ο υπολογιστής δεν είναι συνδεδεμένος σε πηγή τροφοδοσίας.",
+    "offlineWarning": "Αυτή τη στιγμή βρίσκεστε εκτός σύνδεσης",
+    "choosePassphraseHeader": "Δημιουργήστε μια συνθηματική φράση",
+    "choosePassphraseBody": "Θα χρειαστεί να εισάγετε τη συνθηματική σας φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. Αυτή η συνθηματική φράση είναι διαφορετική από τον κωδικό πρόσβασης του χρήστη σας.",
+    "choosePassphraseInfoHeader": "Βεβαιωθείτε ότι έχετε αποθηκεύσει τη συνθηματική σας φράση",
+    "choosePassphraseInfoBody": "Αν τη χάσετε, θα χάσετε όλα τα δεδομένα σας.",
+    "chooseOptionalPassphraseInfoHeader": "Φυλάξτε τη συνθηματική σας φράση και το κλειδί ανάκτησης σε ασφαλές μέρος",
+    "chooseOptionalPassphraseInfoBody": "Αν χάσετε τη συνθηματική σας φράση, θα χάσετε όλα τα δεδομένα σας. Η συνθηματική φράση δεν αντικαθιστά το κλειδί ανάκτησης ή τον κωδικό πρόσβασης του χρήστη σας.",
+    "passphrasePageTitle": "Κρυπτογράφηση",
+    "passphrasePageHeaderPassphrase": "Ορίστε μια συνθηματική φράση κρυπτογράφησης",
+    "passphrasePageHeaderPin": "Ορίστε έναν PIN κρυπτογράφησης",
+    "passphrasePageBodyPassphrase": "Θα χρειαστεί να εισάγετε τη συνθηματική σας φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. Αυτή η συνθηματική φράση είναι διαφορετική από τον κωδικό πρόσβασης του χρήστη σας. Θα μπορείτε να την αλλάξετε αργότερα, αλλά όχι να την απενεργοποιήσετε. Αν ξεχάσετε τη συνθηματική σας φράση, μπορείτε να ανακτήσετε την πρόσβαση στον δίσκο χρησιμοποιώντας το κλειδί ανάκτησης.",
+    "passphrasePageBodyPin": "Θα χρειαστεί να εισάγετε το PIN σας κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. Αυτό το PIN είναι διαφορετικό από τον κωδικό πρόσβασης του χρήστη σας. Θα μπορείτε να το αλλάξετε αργότερα, αλλά όχι να το απενεργοποιήσετε. Αν ξεχάσετε το PIN σας, μπορείτε να ανακτήσετε την πρόσβαση στον δίσκο χρησιμοποιώντας το κλειδί ανάκτησης.",
+    "passphrasePageChoosePassphraseHint": "Συνθηματική φράση",
+    "passphrasePageConfirmPassphraseHint": "Επιβεβαίωση συνθηματικής φράσης",
+    "passphrasePageRequiredPassphrase": "Απαιτείται μια συνθηματική φράση",
+    "passphrasePageMismatchPassphrase": "Οι συνθηματικές φράσεις δεν ταιριάζουν",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "Επιβεβαίωση PIN",
+    "passphrasePageRequiredPin": "Απαιτείται PIN",
+    "passphrasePageMismatchPin": "Τα PIN δεν ταιριάζουν",
+    "passphraseTypePassphraseTileTitle": "Απαίτηση συνθηματικής φράσης",
+    "passphraseTypePassphraseTileSubTitle": "Η μέγιστη ασφάλεια. Θα χρειαστεί να εισάγετε μια μεγαλύτερη συνθηματική φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας.",
+    "passphraseTypePinTileTitle": "Απαίτηση PIN",
+    "passphraseTypePinTileSubTitle": "Περισσότερη ασφάλεια. Θα χρειαστεί να εισάγετε έναν αριθμητικό PIN κάθε φορά που ενεργοποιείτε τον υπολογιστή σας.",
+    "passphraseTypeNoneTileTitle": "Αυτόματο ξεκλείδωμα δίσκου",
+    "passphraseTypePageHeader": "Πρόσθετη ασφάλεια",
+    "passphraseTypePageBody": "Από προεπιλογή, η Μονάδα Έμπιστης Πλατφόρμας (TPM) του υπολογιστή θα ξεκλειδώνει τον δίσκο κατά την εκκίνηση. Έχετε επίσης επιλογές για περαιτέρω προστασία των δεδομένων σας.",
+    "passphrasePagePassphraseEntropyBelowMin": "Ασθενής συνθηματική φράση, κάντε την μεγαλύτερη ή πιο περίπλοκη",
+    "passphrasePagePassphraseEntropyBelowOptimal": "Μέτρια συνθηματική φράση, κάντε την μεγαλύτερη ή πιο περίπλοκη για καλύτερη ασφάλεια",
+    "passphrasePagePassphraseEntropyOptimal": "Ισχυρή συνθηματική φράση",
+    "passphrasePagePinEntropyBelowMin": "Ασθενές PIN, κάντε το μεγαλύτερο ή λιγότερο προβλέψιμο",
+    "passphrasePagePinEntropyBelowOptimal": "Μέτριο PIN, κάντε το μεγαλύτερο ή λιγότερο προβλέψιμο για καλύτερη ασφάλεια",
+    "passphrasePagePinEntropyOptimal": "Το PIN έχει επαρκές μήκος",
+    "installationTypeTitle": "Ρύθμιση δίσκου",
+    "installationTypeHeader": "Πώς θέλετε να εγκαταστήσετε το {DISTRO};",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "Αυτός ο υπολογιστής διαθέτει ήδη το {os}. Τι θα θέλατε να κάνετε;",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "Αυτός ο υπολογιστής διαθέτει ήδη τα {os1} και {os2}. Τι θα θέλατε να κάνετε;",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "Αυτός ο υπολογιστής διαθέτει επί του παρόντος πολλαπλά λειτουργικά συστήματα. Τι θα θέλατε να κάνετε;",
+    "installationTypeNoOSDetected": "Αυτός ο υπολογιστής δεν εμφανίζεται να έχει λειτουργικά συστήματα αυτή τη στιγμή. Τι θα θέλατε να κάνετε;",
+    "installationTypeErase": "Διαγραφή δίσκου και εγκατάσταση του {DISTRO}",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Όλα τα δεδομένα και οι κατατμήσεις στον δίσκο θα διαγραφούν, συμπεριλαμβανομένων των λειτουργικών συστημάτων.",
+    "installationTypeAdvancedLabel": "Επιλογές για προχωρημένους",
+    "installationTypeAdvancedTitle": "Κρυπτογράφηση και σύστημα αρχείων",
+    "installationTypeExperimental": "Πειραματικό",
+    "installationTypeNone": "Χωρίς κρυπτογράφηση",
+    "installationTypeNoneInfo": "Τυπικό σύστημα αρχείων χωρίς κρυπτογράφηση.",
+    "installationTypeNoneSelected": "Δεν επιλέχθηκε κανένα",
+    "installationTypeLVM": "Χρήση LVM χωρίς κρυπτογράφηση",
+    "installationTypeLVMSelected": "Επιλέχθηκε LVM",
+    "installationTypeLVMEncryption": "Κρυπτογράφηση με συνθηματική φράση",
+    "installationTypeLVMEncryptionInfoResolute": "Θα χρειαστεί να εισάγετε μια συνθηματική φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Αυτή η επιλογή χρησιμοποιεί LVM με κρυπτογράφηση LUKS.",
+    "installationTypeLVMEncryptionSelected": "Επιλέχθηκαν LVM και κρυπτογράφηση",
+    "installationTypeEncryptInfo": "Θα επιλέξετε ένα κλειδί ασφαλείας στο επόμενο βήμα.",
+    "installationTypeZFS": "Χρήση ZFS χωρίς κρυπτογράφηση",
+    "installationTypeZFSEncryption": "Κρυπτογράφηση με συνθηματική φράση με χρήση ZFS",
+    "installationTypeZFSEncryptionInfo": "Ενσωματωμένη κρυπτογράφηση με ZFS. Θα χρειαστεί να εισάγετε μια συνθηματική φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας.",
+    "installationTypeZFSSelected": "Επιλέχθηκε ZFS",
+    "installationTypeZFSEncryptionSelected": "Επιλέχθηκαν ZFS και κρυπτογράφηση",
+    "installationTypeTPM": "Χρήση κρυπτογράφησης υποστηριζόμενης από υλικό",
+    "installationTypeTPMInfoResolute": "Ο δίσκος θα ξεκλειδώνει αυτόματα κατά την εκκίνηση.",
+    "installationTypeTPMInfoUnavailable": "Μη διαθέσιμο σε αυτόν τον υπολογιστή.",
+    "installationTypeTPMSelected": "Επιλέχθηκε TPM",
+    "installationTypeReinstall": "Διαγραφή του {os} και επανεγκατάσταση",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Προειδοποίηση:</font> Αυτό θα διαγράψει όλα τα προγράμματα, τα έγγραφα, τις φωτογραφίες, τη μουσική και οποιαδήποτε άλλα αρχεία του {os}.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "Εγκατάσταση του {product} παράλληλα με το {os}",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "Εγκατάσταση του {product} παράλληλα με το {os1} και το {os2}",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "Εγκατάσταση του {product} παράλληλα με τα υπάρχοντα λειτουργικά συστήματα",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "Εγκατάσταση του {product} παράλληλα με άλλες κατατμήσεις",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideInfo": "Επιλέξτε μια κατάτμηση για αλλαγή μεγέθους και δημιουργία χώρου για το {product}. Θα μπορείτε να επιλέξετε το λειτουργικό σας σύστημα κατά την εκκίνηση.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "Διαγραφή του {os} και εγκατάσταση του {product}",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Όλα τα αρχεία και τα δεδομένα από την υπάρχουσα εγκατάσταση του {os} θα διαγραφούν οριστικά.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "Μη αυτόματη εγκατάσταση",
+    "installationTypeManualInfo": "Για προχωρημένους χρήστες που επιθυμούν προσαρμοσμένες ρυθμίσεις δίσκου.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Διαγραφή δίσκου και εγκατάσταση του {DISTRO}",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Ξεκινήστε από το μηδέν στον επιλεγμένο δίσκο.",
+    "selectGuidedStorageDriveDropdownLabel": "Επιλογή μονάδας δίσκου:",
+    "selectGuidedStoragePartitionDropdownLabel": "Επιλογή κατάτμησης:",
+    "selectGuidedStorageInfoLabel": "Θα χρησιμοποιηθεί ολόκληρος ο δίσκος:",
+    "selectGuidedStorageInstallNow": "Εγκατάσταση τώρα",
+    "guidedStoragePageHeader": "Επιλέξτε πού θα γίνει η εγκατάσταση του {DISTRO}",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideSpaceDivider": "Κατανείμετε τον χώρο του δίσκου σύροντας το παρακάτω διαχωριστικό:",
+    "installAlongsideHiddenPartitions": "{num} μικρότερες κατατμήσεις είναι κρυφές, χρησιμοποιήστε το <a href=\"{url}\">εργαλείο για προχωρημένους</a> για περισσότερο έλεγχο",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Αλλαγή μεγέθους κατάτμησης",
+    "installAlongsideAllocateSpace": "Εκχώρηση χώρου",
+    "installAlongsideFiles": "Αρχεία",
+    "installAlongsidePartition": "Κατάτμηση:",
+    "installAlongsideSize": "Μέγεθος:",
+    "installAlongsideAvailable": "Διαθέσιμο:",
+    "allocateDiskSpace": "Μη αυτόματη δημιουργία κατατμήσεων",
+    "allocateDiskSpaceInvalidMountPointSlash": "Τα σημεία προσάρτησης πρέπει να ξεκινούν με «/»",
+    "allocateDiskSpaceInvalidMountPointSpace": "Τα σημεία προσάρτησης δεν μπορούν να περιέχουν κενά",
+    "allocateDiskSpaceInvalidMountPointFormat": "Το {format} δεν είναι υποστηριζόμενο σύστημα αρχείων για το {mountpoint}",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "diskHeadersDevice": "Συσκευή",
+    "diskHeadersType": "Τύπος",
+    "diskHeadersMountPoint": "Σημείο προσάρτησης",
+    "diskHeadersSize": "Μέγεθος",
+    "diskHeadersUsed": "Σε χρήση",
+    "diskHeadersSystem": "Λειτουργικό σύστημα",
+    "diskHeadersFormat": "Διαμόρφωση",
+    "freeDiskSpace": "Ελεύθερος χώρος",
+    "newPartitionTable": "Νέος πίνακας κατατμήσεων",
+    "newPartitionTableConfirmationTitle": "Νέα κενή κατάτμηση",
+    "newPartitionTableConfirmationMessage": "Η δημιουργία νέου πίνακα κατατμήσεων σε μια ολόκληρη συσκευή θα καταργήσει όλες τις τρέχουσες κατατμήσεις της. Αυτή η ενέργεια μπορεί να αναιρεθεί εάν χρειαστεί.",
+    "tooManyPrimaryPartitions": "Πάρα πολλές πρωτεύουσες κατατμήσεις",
+    "partitionLimitReached": "Συμπληρώθηκε το όριο",
+    "bootLoaderDevice": "Συσκευή για την εγκατάσταση του προγράμματος εκκίνησης",
+    "partitionCreateTitle": "Δημιουργία κατάτμησης",
+    "partitionEditTitle": "Επεξεργασία κατάτμησης",
+    "partitionSizeLabel": "Μέγεθος:",
+    "partitionTypeLabel": "Τύπος για τη νέα κατάτμηση:",
+    "partitionTypePrimary": "Πρωτεύουσα",
+    "partitionTypeLogical": "Λογική",
+    "partitionLocationLabel": "Θέση για τη νέα κατάτμηση:",
+    "partitionLocationBeginning": "Αρχή αυτού του χώρου",
+    "partitionLocationEnd": "Τέλος αυτού του χώρου",
+    "partitionFormatLabel": "Χρήση ως:",
+    "partitionFormatNone": "Να παραμείνει χωρίς διαμόρφωση",
+    "partitionFormatKeep": "Να παραμείνει η διαμόρφωση ως {format}",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionErase": "Διαμόρφωση της κατάτμησης",
+    "partitionMountPointLabel": "Σημείο προσάρτησης:",
+    "confirmPageTitle": "Έτοιμο για εγκατάσταση",
+    "confirmHeader": "Επανεξέταση των επιλογών σας",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "Καμία",
+    "confirmDevicesTitle": "Συσκευές",
+    "confirmEntryApplications": "Εφαρμογές",
+    "confirmEntryDiskSetup": "Τύπος εγκατάστασης",
+    "confirmEntryDiskEncryption": "Κρυπτογράφηση δίσκου",
+    "confirmEntryInstallationDisk": "Δίσκος για την εγκατάσταση",
+    "confirmEntryProprietarySoftware": "Ιδιοταγές λογισμικό",
+    "confirmSectionGeneralTitle": "Γενικά",
+    "confirmSectionSecurityAndMoreTitle": "Ασφάλεια & περισσότερα",
+    "confirmPartitionsTitle": "Κατατμήσεις",
+    "confirmPartitionTables": "Οι πίνακες κατατμήσεων των ακόλουθων συσκευών έχουν τροποποιηθεί:",
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "Κωδικοποιητές",
+    "confirmProprietarySoftwareCodecsDrivers": "Κωδικοποιητές & προγράμματα οδήγησης",
+    "confirmProprietarySoftwareDrivers": "Προγράμματα οδήγησης",
+    "confirmInstallButton": "Εγκατάσταση",
+    "confirmTableErased": "Διαγράφηκε",
+    "confirmTableUnchanged": "Χωρίς αλλαγή",
+    "confirmTableResized": "Αλλαγή μεγέθους από {oldsize} σε {newsize}",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "Δημιουργήθηκε και διαμορφώθηκε ως {format} με χρήση για το {mountpoint}",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "Διαμορφώθηκε ως {format} με χρήση για το {mountpoint}",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "Χρήση για το {mountpoint}",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "Διαμορφώθηκε ως {format}",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Η εγκατάσταση ολοκληρώθηκε",
+    "readyToUse": "Το {system} έχει εγκατασταθεί και είναι έτοιμο για χρήση",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "Το **{system}** έχει αντιγραφεί στον δίσκο",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "Επανεκκίνηση στο {system}",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Κάντε επανεκκίνηση για να ολοκληρώσετε την εγκατάσταση ή συνεχίστε τη δοκιμή.\nΤυχόν αλλαγές που θα πραγματοποιήσετε καθώς συνεχίζετε τη δοκιμή, δεν θα αποθηκευτούν.",
+    "rebootToConfigureWarning": "Πρέπει να επανεκκινήσετε τον υπολογιστή για να συνεχίσετε τη διαδικασία εγκατάστασης.",
+    "shutdown": "Τερματισμός λειτουργίας",
+    "restartNow": "Επανεκκίνηση αμέσως",
+    "continueTesting": "Συνέχεια δοκιμής",
+    "bitlockerInfoTitle": "Ανιχνεύθηκε BitLocker",
+    "bitlockerInfoDescription": "Μία ή περισσότερες κατατμήσεις είναι κρυπτογραφημένες με BitLocker.",
+    "bitlockerInfoDisable": "Για να κάνετε εγκατάσταση παράλληλα με τα Windows, απενεργοποιήστε το BitLocker στα Windows.",
+    "bitlockerInfoRecovery": "Τα Windows ενδέχεται να ζητήσουν κλειδιά ανάκτησης κατά την εκκίνηση μετά την εγκατάσταση.",
+    "bitlockerInfoInstructions": "Για οδηγίες, επισκεφθείτε τον <a href=\"{url}\">οδηγό BitLocker</a>.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "Ενδέχεται να χάσετε όλα τα δεδομένα σας χωρίς τα κλειδιά ανάκτησης BitLocker",
+    "restartComputer": "Επανεκκίνηση υπολογιστή",
+    "restartComputerTitle": "Επανεκκίνηση υπολογιστή;",
+    "restartInstaller": "Επανεκκίνηση προγράμματος εγκατάστασης",
+    "restartIntoWindows": "Επανεκκίνηση σε Windows",
+    "restartIntoWindowsTitle": "Επανεκκίνηση σε Windows;",
+    "restartIntoWindowsDescription": "Είστε βέβαιοι ότι θέλετε να επανεκκινήσετε τον υπολογιστή σας; Θα χρειαστεί να εκκινήσετε ξανά την εγκατάσταση του {DISTRO} αργότερα για να ολοκληρωθεί η εγκατάσταση του {DISTRO}.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "Καλώς ορίσατε στο {RELEASE}",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "Διαθέσιμα:",
+    "installationSlidesIncluded": "Περιλαμβάνονται:",
+    "installationSlidesWelcomeTitle": "Γρήγορο, δωρεάν και γεμάτο με νέα χαρακτηριστικά",
+    "installationSlidesWelcomeHeader": "Η τελευταία έκδοση του {DISTRO} κάνει τη χρήση του υπολογιστή ευκολότερη από ποτέ.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "Είτε είστε προγραμματιστής, δημιουργός, gamer ή διαχειριστής, θα βρείτε νέα εργαλεία για να βελτιώσετε την παραγωγικότητά σας και να αναβαθμίσετε την εμπειρία σας στο {RELEASE}.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Όλες οι εφαρμογές που χρειάζεστε",
+    "installationSlidesSoftwareBody": "Εγκαταστήστε, διαχειριστείτε και ενημερώστε όλες τις εφαρμογές σας στο Κέντρο Εφαρμογών, συμπεριλαμβανομένων χιλιάδων εφαρμογών τόσο από τα πακέτα «snap» όσο και από το αποθετήριο πακέτων του {DISTRO}.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "Αναπτύξτε κώδικα με τα καλύτερα του ανοικτού κώδικα",
+    "installationSlidesDevelopmentBody": "Το {DISTRO} είναι ο ιδανικός σταθμός εργασίας για ανάπτυξη εφαρμογών ή ιστότοπων, την επιστήμη των δεδομένων και την Τεχνητή Νοημοσύνη/Μηχανική Μάθηση (AI/ML), καθώς και για DevOps και διαχείριση συστημάτων. Κάθε έκδοση του {DISTRO} περιλαμβάνει τις τελευταίες εργαλειοθήκες (toolchains) και υποστηρίζει όλα τα κύρια περιβάλλοντα ανάπτυξης (IDEs).",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "Ενισχύστε τη δημιουργικότητά σας",
+    "installationSlidesCreativityBody": "Αν είστε δημιουργός κινουμένων σχεδίων, σχεδιαστής, δημιουργός βίντεο ή προγραμματιστής παιχνιδιών, είναι εύκολο να μεταφέρετε τις ροές εργασίας σας στο {DISTRO} με υποστήριξη για λογισμικό και εφαρμογές ανοικτού κώδικα και βιομηχανικών προτύπων.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "Εξαιρετικό για παιχνίδια",
+    "installationSlidesGamingBody": "Το {DISTRO} υποστηρίζει τα τελευταία προγράμματα οδήγησης NVIDIA και Mesa για τη βελτίωση της απόδοσης και της συμβατότητας. Χιλιάδες τίτλοι των Windows παίζουν εξαιρετικά στο {DISTRO} μέσω εφαρμογών όπως το Steam, χωρίς πρόσθετες ρυθμίσεις.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityTitle": "Ιδιωτικό και ασφαλές",
+    "installationSlidesSecurityBody": "Το {DISTRO} παρέχει όλα τα εργαλεία που χρειάζεστε για να παραμένετε ασφαλείς και να προστατεύετε την ιδιωτικότητά σας στο διαδίκτυο. Με ενσωματωμένο τείχος προστασίας (firewall), υποστήριξη VPN και μια σειρά από εφαρμογές με επίκεντρο την ιδιωτικότητα, διασφαλίζει ότι έχετε τον πλήρη έλεγχο των δεδομένων σας.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityLts": "Όλες οι εκδόσεις LTS του {DISTRO} συνοδεύονται από πέντε χρόνια ενημερώσεων ασφαλείας, τα οποία επεκτείνονται στα δέκα χρόνια με μια συνδρομή Ubuntu Pro.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "Απογειώστε την παραγωγικότητά σας",
+    "installationSlidesProductivityBody": "Το {DISTRO} Desktop περιλαμβάνει το LibreOffice, μια σουίτα εφαρμογών ανοικτού κώδικα συμβατή με το Microsoft Office για έγγραφα, υπολογιστικά φύλλα και παρουσιάσεις. Επίσης, είναι διαθέσιμα δημοφιλή εργαλεία συνεργασίας.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityTitle": "Πρόσβαση για όλους",
+    "installationSlidesAccessibilityBody": "Στην καρδιά της φιλοσοφίας του {DISTRO} βρίσκεται η πεποίθηση ότι η χρήση του υπολογιστή είναι για όλους. Με προηγμένα εργαλεία προσβασιμότητας και επιλογές για την αλλαγή της γλώσσας, των χρωμάτων και του μεγέθους του κειμένου, το {DISTRO} κάνει την πληροφορική εύκολη — όποιος κι αν είστε, όπου κι αν βρίσκεστε.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityOrca": "Αναγνώστης οθόνης Orca",
+    "installationSlidesAccessibilityLanguages": "Γλωσσική υποστήριξη",
+    "installationSlidesSupportTitle": "Βοήθεια και υποστήριξη",
+    "installationSlidesSupportHeader": "Η επίσημη τεκμηρίωση του {DISTRO} είναι διαθέσιμη τόσο στο διαδίκτυο όσο και μέσω του εικονιδίου «Βοήθεια» στην πλευρική εργαλειοθήκη.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Το Ask Ubuntu καλύπτει ένα ευρύ φάσμα ερωτήσεων και απαντήσεων, ενώ το Ubuntu Discourse παρέχει οδηγούς και συζητήσεις για νέους και έμπειρους χρήστες.",
+    "installationSlidesSupportEnterprise": "Για εταιρικούς χρήστες, η Canonical παρέχει εμπορική υποστήριξη, καθιστώντας εύκολη την ασφαλή εισαγωγή και διαχείριση του Ubuntu στον χώρο εργασίας.",
+    "installationSlidesSupportResources": "Χρήσιμοι πόροι:",
+    "installationSlidesSupportDocumentation": "Επίσημη τεκμηρίωση",
+    "installationSlidesSupportUbuntuPro": "Υποστήριξη εταιρικού επιπέδου 24/7 με το Ubuntu Pro",
+    "nextSlideSemanticLabel": "Επόμενη διαφάνεια",
+    "previousSlideSemanticLabel": "Προηγούμενη διαφάνεια",
+    "playSlideshowSemanticLabel": "Έναρξη παρουσίασης",
+    "pauseSlideshowSemanticLabel": "Παύση παρουσίασης",
+    "toggleLogsSemanticLabel": "Εναλλαγή καταγραφών εγκατάστασης",
+    "copyingFiles": "Αντιγραφή αρχείων…",
+    "installingSystem": "Εγκατάσταση του συστήματος…",
+    "configuringSystem": "Ρύθμιση συστήματος…",
+    "installationFailed": "Αποτυχία εγκατάστασης",
+    "notEnoughDiskSpaceTitle": "Δεν υπάρχει αρκετός χώρος στον δίσκο",
+    "notEnoughDiskSpaceUbuntu": "Δεν υπάρχει αρκετός χώρος στον δίσκο για την εγκατάσταση του {DISTRO}",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "Ο επιλεγμένος δίσκος δεν διαθέτει αρκετό χώρο για την εγκατάσταση του {DISTRO}. Τερματίστε το πρόγραμμα εγκατάστασης για να ελευθερώσετε χώρο ή επιλέξτε έναν άλλο δίσκο.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "Διαθέσιμα:",
+    "notEnoughDiskSpaceRequired": "Απαιτούνται:",
+    "refreshPageTitle": "Διαθέσιμη ενημέρωση",
+    "refreshHeader": "Μια ενημέρωση είναι διαθέσιμη για το πρόγραμμα εγκατάστασης",
+    "refreshUpdateNow": "Ενημέρωση τώρα",
+    "refreshInfo": "Ενημερώστε στην τελευταία έκδοση για βελτιωμένη αξιοπιστία και περισσότερες δυνατότητες."
 }
