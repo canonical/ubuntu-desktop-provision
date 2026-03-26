@@ -70,13 +70,18 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
+    
+
+    final view = View.of(context);
 
     // Initial load announcement
     if (!_announcedInitialState &&
         model.event.action != InstallationAction.none) {
       _announcedInitialState = true;
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        SemanticsService.announce(
+
+        SemanticsService.sendAnnouncement(
+          view,
           model.event.action.localize(lang),
           TextDirection.ltr,
         );
@@ -88,7 +93,9 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
       installModelProvider.select((m) => m.event.action),
       (previous, next) {
         if (previous != next && next != InstallationAction.none) {
-          SemanticsService.announce(
+
+          SemanticsService.sendAnnouncement(
+            view,
             next.localize(lang),
             TextDirection.ltr,
           );
