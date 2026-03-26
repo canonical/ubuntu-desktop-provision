@@ -101,6 +101,7 @@ void main() {
     final storage = MockStorageService();
     when(storage.hasMultipleDisks).thenReturn(false);
     when(storage.guidedCapability).thenReturn(null);
+    when(storage.guidedTarget).thenReturn(null);
 
     final telemetry = MockTelemetryService();
     final model = StorageModel(
