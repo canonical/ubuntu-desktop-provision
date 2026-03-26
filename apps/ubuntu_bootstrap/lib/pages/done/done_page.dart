@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/done/done_model.dart';
@@ -7,7 +8,7 @@ import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class DonePage extends ConsumerWidget with ProvisioningPage {
+class DonePage extends ConsumerStatefulWidget with ProvisioningPage {
   const DonePage({super.key});
 
   @override
@@ -16,13 +17,38 @@ class DonePage extends ConsumerWidget with ProvisioningPage {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<DonePage> createState() => _DonePageState();
+}
+
+class _DonePageState extends ConsumerState<DonePage> {
+  bool _announced = false;
+
+  @override
+  Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(doneModelProvider);
     final theme = Theme.of(context);
     final mascot = ref.watch(pageImagesProvider).get('done');
     final isCoreDesktop =
         model.provisioningMode == ProvisioningMode.coreDesktop;
+
+    final view = View.of(context);
+
+    final statusMessage = isCoreDesktop
+        ? lang.rebootToConfigure(model.productInfo.toString())
+        : lang.readyToUse(model.productInfo.toString());
+
+    // Fire the imperative announcement once the page loads
+    if (!_announced) {
+      _announced = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        SemanticsService.sendAnnouncement(
+          view,
+          '${lang.installationCompleteTitle}. $statusMessage',
+          TextDirection.ltr,
+        );
+      });
+    }
 
     return WizardPage(
       title: YaruWindowTitleBar(
@@ -46,9 +72,7 @@ class DonePage extends ConsumerWidget with ProvisioningPage {
                   ),
                 const SizedBox(),
                 Text(
-                  isCoreDesktop
-                      ? lang.rebootToConfigure(model.productInfo.toString())
-                      : lang.readyToUse(model.productInfo.toString()),
+                  statusMessage,
                   style: theme.textTheme.headlineSmall,
                   textAlign: TextAlign.center,
                 ),
