@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
@@ -57,6 +58,7 @@ class _SlidePage extends ConsumerStatefulWidget {
 
 class _SlidePageState extends ConsumerState<_SlidePage> {
   final _slideController = ValueNotifier(0);
+  bool _announcedInitialState = false;
 
   @override
   void dispose() {
@@ -68,6 +70,32 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
   Widget build(BuildContext context) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(installModelProvider);
+
+    // Initial load announcement
+    if (!_announcedInitialState &&
+        model.event.action != InstallationAction.none) {
+      _announcedInitialState = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        SemanticsService.announce(
+          model.event.action.localize(lang),
+          TextDirection.ltr,
+        );
+      });
+    }
+
+    // Subsequent state change announcements
+    ref.listen(
+      installModelProvider.select((m) => m.event.action),
+      (previous, next) {
+        if (previous != next && next != InstallationAction.none) {
+          SemanticsService.announce(
+            next.localize(lang),
+            TextDirection.ltr,
+          );
+        }
+      },
+    );
+
     final htmlSlides = ref.watch(slidesProvider).slides;
     return WizardPage(
       headerPadding: EdgeInsets.zero,
