@@ -161,24 +161,24 @@ void main() {
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
     expect(
-      find.html(
+      find.text(
         l10n.confirmTableCreatedFormattedMounted(
-          'ext3'.bold(),
-          '/mnt/3'.bold(),
+          'ext3',
+          '/mnt/3',
         ),
       ),
       findsOneWidget,
     );
     expect(
-      find.html(l10n.confirmTableFormatted('ext4'.bold())),
+      find.text(l10n.confirmTableFormatted('ext4')),
       findsOneWidget,
     );
     expect(
-      find.html(l10n.confirmTableMounted('/mnt/5'.bold())),
+      find.text(l10n.confirmTableMounted('/mnt/5')),
       findsOneWidget,
     );
     expect(
-      find.html(l10n.confirmTableResized('123 B'.bold(), '66 B'.bold())),
+      find.text(l10n.confirmTableResized('123 B', '66 B')),
       findsOneWidget,
     );
   });
