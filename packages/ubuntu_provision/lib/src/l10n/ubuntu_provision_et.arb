@@ -31,7 +31,7 @@
     "identityActiveDirectoryInfo": "Sa sisestad domeeni ja muud andmed järgmises sammus.",
     "accessibilityPageTitle": "Hõlpsus",
     "accessibilityPageHeader": "Hõlpsus, juurdepääsetavus ja {DISTRO}",
-    "accessibilityPageBody": "Enne paigaldamist säti {DISTRO} vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistustest.",
+    "accessibilityPageBody": "Enne paigaldamist säti {DISTRO} vastavaks oma eelistustele. Neid saad alati hiljem muuta süsteemi seadistuste rakendusest.",
     "errorPageShowLog": "Näita logi",
     "errorPageHideLog": "Peida logi",
     "restart": "Käivita arvuti uuesti",
@@ -113,5 +113,6 @@
     "minimizeIconSemanticLabel": "Minimeeri",
     "closeIconSemanticLabel": "Sulge",
     "expandIconSemanticLabel": "Laienda vaadet",
-    "collapseIconSemanticLabel": "Ahenda vaadet"
+    "collapseIconSemanticLabel": "Ahenda vaadet",
+    "errorPageTechnicalDetails": "Tehnilised üksikasjad"
 }

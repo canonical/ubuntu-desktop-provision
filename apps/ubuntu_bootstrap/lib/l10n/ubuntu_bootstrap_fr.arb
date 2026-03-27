@@ -516,5 +516,8 @@
             }
         }
     },
-    "tpmActionErrorSupportSingleLabel": "Essayez la solution ci-dessous, contactez le support informatique ou choisissez une méthode de chiffrement différente."
+    "tpmActionErrorSupportSingleLabel": "Essayez la solution ci-dessous, contactez le support informatique ou choisissez une méthode de chiffrement différente.",
+    "autoinstallErrorMessage": "Une commande dans le fichier autoinstall n’a pas fonctionné pendant l’installation.",
+    "autoinstallErrorInstructions": "Vous devrez redémarrer l’installation. Vérifiez le fichier autoinstall, choisissez un autre type d’installation ou contactez votre support informatique.",
+    "restartInstaller": "Redémarrer l’installateur"
 }

@@ -512,5 +512,8 @@
     "tpmActionErrorSupportSingleLabel": "נא לנסות את הפתרון שלהלן, ליצור קשר עם התמיכה הטכנית או לבחור בשיטת הצפנה אחרת.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "אם הגדרות הקושחה לא נטענות אוטומטית, יש להפעיל מחדש וללחוץ על כפתור ההגדרות שוב ושוב במהלך העלייה (בדרך כלל F2,‏ F10 או Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "יש לבדוק שהטעינה המאובטחת מוגדרת ל„מוטמע”.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "היכולת הזאת מוכרת בשמות „טכנולוגיית וירטואליזציה”, „VT-d” או „AMD-Vi”."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "היכולת הזאת מוכרת בשמות „טכנולוגיית וירטואליזציה”, „VT-d” או „AMD-Vi”.",
+    "autoinstallErrorMessage": "הרצת פקודה בקובץ התקנה אוטומטית נכשלה במהלך ההתקנה.",
+    "autoinstallErrorInstructions": "צריך להפעיל את ההתקנה מחדש. יש לבדוק את קובץ ההתקנה האוטומטית, לבחור בסוג התקנה אחר או ליצור קשר עם תמיכת המחשוב שלך (IT).",
+    "restartInstaller": "הפעלת תוכנית ההתקנה מחדש"
 }

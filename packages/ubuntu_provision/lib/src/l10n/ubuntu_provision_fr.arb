@@ -84,7 +84,7 @@
     "eulaAcceptTerms": "J'ai lu et accepté ces termes",
     "accessibilityPageTitle": "Accessibilité",
     "accessibilityPageHeader": "Accessibilité dans {DISTRO}",
-    "accessibilityPageBody": "Personnalisez {DISTRO} selon vos besoins avant de l'installer. Vous pouvez fait des changements plus tard dans les paramètres système.",
+    "accessibilityPageBody": "Personnalisez {DISTRO} selon vos besoins avant de l'installer. Vous pouvez les changer plus tard dans l'app Paramètres.",
     "accessibilitySeeingLabel": "Vision",
     "accessibilityHearingLabel": "Audition",
     "accessibilityTypingLabel": "Saisie",
@@ -113,5 +113,6 @@
     "closeIconSemanticLabel": "Fermer",
     "maximizeIconSemanticLabel": "Maximiser",
     "expandIconSemanticLabel": "Étendre",
-    "collapseIconSemanticLabel": "Réduire"
+    "collapseIconSemanticLabel": "Réduire",
+    "errorPageTechnicalDetails": "Détails techniques"
 }
