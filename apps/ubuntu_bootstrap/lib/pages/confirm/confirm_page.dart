@@ -17,11 +17,10 @@ import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-
 class AccessibleSummaryRow extends StatelessWidget {
   const AccessibleSummaryRow({
-    super.key,
     required this.child,
+    super.key,
   });
 
   final Widget child;
@@ -37,7 +36,6 @@ class AccessibleSummaryRow extends StatelessWidget {
     );
   }
 }
-
 
 class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   const ConfirmPage({super.key});
@@ -203,7 +201,7 @@ class _PartitionTable extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(confirmModelProvider);
     final rows = <Widget>[];
-    
+
     for (final entry in model.partitions.entries) {
       for (final partition in entry.value) {
         final original = model.getOriginalPartition(
@@ -248,7 +246,6 @@ class _PartitionRow extends StatelessWidget {
     required this.partition,
     required this.productInfo,
     this.original,
-    this.padding = const EdgeInsets.symmetric(vertical: 8.0),
     this.showOriginal = false,
   });
 
@@ -256,15 +253,13 @@ class _PartitionRow extends StatelessWidget {
   final Partition partition;
   final ProductInfo productInfo;
   final Partition? original;
-  final EdgeInsets padding;
-  final bool showOriginal;
+  final bool showOriginal; // Note: padding field removed
 
   @override
   Widget build(BuildContext context) {
-    // Wrapped the entire row so Orca reads the label and properties as one continuous item
     return AccessibleSummaryRow(
       child: Padding(
-        padding: padding,
+        padding: const EdgeInsets.symmetric(vertical: 8.0), // Hardcoded here!
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
