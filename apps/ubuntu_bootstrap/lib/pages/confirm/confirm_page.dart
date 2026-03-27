@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/app/installer_model.dart';
@@ -17,6 +16,26 @@ import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
+
+class AccessibleSummaryRow extends StatelessWidget {
+  const AccessibleSummaryRow({
+    required this.child,
+    super.key,
+  });
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Focus(
+      child: Semantics(
+        textField: true,
+        readOnly: true,
+        child: child,
+      ),
+    );
+  }
+}
 
 class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   const ConfirmPage({super.key});
@@ -54,7 +73,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
       ),
       children: [
         if (model.hasBitLocker) ...[
-          BitlockerInfoBox(yaruInfoType: YaruInfoType.warning),
+          const BitlockerInfoBox(yaruInfoType: YaruInfoType.warning),
           const SizedBox(height: kWizardSpacing),
         ],
         if (status?.interactive == false &&
@@ -77,7 +96,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
           children: [
             Expanded(
               child: YaruBorderContainer(
-                constraints: BoxConstraints(minHeight: 300),
+                constraints: const BoxConstraints(minHeight: 300),
                 padding: kWizardTilePadding,
                 borderRadius: kWizardBorderRadius,
                 color: Theme.of(context).colorScheme.primaryContainer,
@@ -118,12 +137,17 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                             },
                           ),
                           const SizedBox(height: kWizardSpacing),
-                          Text(
-                            lang.confirmPartitionsTitle,
-                            style: Theme.of(context).textTheme.titleMedium,
+                          Focus(
+                            child: Semantics(
+                              header: true,
+                              child: Text(
+                                lang.confirmPartitionsTitle,
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                            ),
                           ),
                           const SizedBox(height: kWizardSpacing / 2),
-                          _PartitionTable(),
+                          const _PartitionTable(),
                         ],
                       ),
               ),
@@ -135,13 +159,49 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
   }
 }
 
+class _SummarySection extends StatelessWidget {
+  const _SummarySection({required this.title, required this.entries});
+  final String title;
+  final Map<String, Widget> entries;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Focus(
+          child: Semantics(
+            header: true,
+            child: Text(title, style: Theme.of(context).textTheme.titleMedium),
+          ),
+        ),
+        const SizedBox(height: 8),
+        for (final entry in entries.entries)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4.0),
+            child: AccessibleSummaryRow(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(flex: 2, child: Text('${entry.key}: ')),
+                  Expanded(flex: 3, child: entry.value),
+                ],
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}
+
 class _PartitionTable extends ConsumerWidget {
   const _PartitionTable();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(confirmModelProvider);
-    final rows = <TableRow>[];
+    final rows = <Widget>[];
+
     for (final entry in model.partitions.entries) {
       for (final partition in entry.value) {
         final original = model.getOriginalPartition(
@@ -160,6 +220,7 @@ class _PartitionTable extends ConsumerWidget {
               showOriginal: true,
             ),
           );
+          rows.add(Divider(height: 1, color: Theme.of(context).dividerColor));
         }
         rows.add(
           _PartitionRow(
@@ -169,32 +230,41 @@ class _PartitionTable extends ConsumerWidget {
             productInfo: model.productInfo,
           ),
         );
+        rows.add(Divider(height: 1, color: Theme.of(context).dividerColor));
       }
     }
 
-    return Table(
-      border: TableBorder(
-        horizontalInside: BorderSide(
-          color: Theme.of(context).dividerColor,
-        ),
-      ),
-      children: rows,
-    );
+    if (rows.isNotEmpty) rows.removeLast(); // Remove the trailing divider
+
+    return Column(children: rows);
   }
 }
 
-class _PartitionRow extends TableRow {
-  _PartitionRow({
-    required String sysname,
-    required Partition partition,
-    required ProductInfo productInfo,
-    Partition? original,
-    EdgeInsets padding = const EdgeInsets.symmetric(vertical: 8.0),
-    bool showOriginal = false,
-  }) : super(
+class _PartitionRow extends StatelessWidget {
+  const _PartitionRow({
+    required this.sysname,
+    required this.partition,
+    required this.productInfo,
+    this.original,
+    this.showOriginal = false,
+  });
+
+  final String sysname;
+  final Partition partition;
+  final ProductInfo productInfo;
+  final Partition? original;
+  final bool showOriginal; // Note: padding field removed
+
+  @override
+  Widget build(BuildContext context) {
+    return AccessibleSummaryRow(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0), // Hardcoded here!
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: padding,
+            Expanded(
+              flex: 2,
               child: _PartitionLabel(
                 sysname,
                 partition,
@@ -203,8 +273,8 @@ class _PartitionRow extends TableRow {
                 showOriginal,
               ),
             ),
-            Padding(
-              padding: padding,
+            Expanded(
+              flex: 3,
               child: _PartitionProperties(
                 sysname,
                 partition,
@@ -214,7 +284,10 @@ class _PartitionRow extends TableRow {
               ),
             ),
           ],
-        );
+        ),
+      ),
+    );
+  }
 }
 
 class _PartitionProperties extends StatelessWidget {
@@ -244,25 +317,17 @@ class _PartitionProperties extends StatelessWidget {
     }
     if (partition.resize ?? false) {
       return l10n.confirmTableResized(
-        context.formatByteSize(original?.size ?? 0).bold(),
-        context.formatByteSize(partition.size ?? 0).bold(),
+        context.formatByteSize(original?.size ?? 0),
+        context.formatByteSize(partition.size ?? 0),
       );
     } else if (!preserve && (mount?.isNotEmpty ?? false) && format != null) {
-      return l10n.confirmTableCreatedFormattedMounted(
-        format.bold(),
-        mount!.bold(),
-      );
+      return l10n.confirmTableCreatedFormattedMounted(format, mount!);
     } else if (wipe && (mount?.isNotEmpty ?? false) && format != null) {
-      return l10n.confirmTableFormattedMounted(
-        format.bold(),
-        mount!.bold(),
-      );
+      return l10n.confirmTableFormattedMounted(format, mount!);
     } else if (wipe && format != null) {
-      return l10n.confirmTableFormatted(
-        format.bold(),
-      );
+      return l10n.confirmTableFormatted(format);
     } else if (mount?.isNotEmpty ?? false) {
-      return l10n.confirmTableMounted(mount!.bold());
+      return l10n.confirmTableMounted(mount!);
     } else if (preserve) {
       return l10n.confirmTableUnchanged;
     }
@@ -271,12 +336,7 @@ class _PartitionProperties extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Html(
-      data: properties(context) ?? '',
-      style: {
-        'body': Style(margin: Margins.zero),
-      },
-    );
+    return Text(properties(context) ?? '');
   }
 }
 
@@ -315,7 +375,7 @@ class _PartitionLabel extends StatelessWidget {
           padding: const EdgeInsets.only(top: 2, right: 4),
           child: SizedBox.square(
             dimension: 16,
-            child: StorageIcon(name: name),
+            child: ExcludeSemantics(child: StorageIcon(name: name)),
           ),
         ),
         Flexible(
@@ -323,7 +383,7 @@ class _PartitionLabel extends StatelessWidget {
             TextSpan(
               children: [
                 TextSpan(text: name),
-                WidgetSpan(child: const SizedBox(width: 4)),
+                const WidgetSpan(child: SizedBox(width: 4)),
                 WidgetSpan(
                   alignment: PlaceholderAlignment.baseline,
                   baseline: TextBaseline.alphabetic,
@@ -341,43 +401,6 @@ class _PartitionLabel extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 8),
-      ],
-    );
-  }
-}
-
-class _SummarySection extends StatelessWidget {
-  const _SummarySection({required this.title, required this.entries});
-  final String title;
-  final Map<String, Widget> entries;
-
-  @override
-  Widget build(BuildContext context) {
-    return Table(
-      children: [
-        TableRow(
-          children: [
-            Text(
-              title,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(),
-          ],
-        ),
-        for (final entry in entries.entries) ...[
-          TableRow(
-            children: [
-              SizedBox(height: 8.0),
-              const SizedBox(),
-            ],
-          ),
-          TableRow(
-            children: [
-              Text(entry.key),
-              entry.value,
-            ],
-          ),
-        ],
       ],
     );
   }
@@ -416,23 +439,19 @@ class _InstallationDisk extends ConsumerWidget {
       disk.model,
       disk.vendor,
     ].where((p) => p?.isNotEmpty ?? false).join(' ');
-    return '$fullName <b>${disk.sysname}</b>';
+    return '$fullName ${disk.sysname}';
   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(confirmModelProvider);
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
         for (final disk in model.modifiedDisks)
-          Html(
-            data: _prettyFormatDisk(disk),
-            style: {
-              'body': Style(
-                margin: Margins.zero,
-              ),
-            },
+          Text(
+            _prettyFormatDisk(disk),
             key: ValueKey(disk),
           ),
       ],
@@ -498,6 +517,7 @@ class _ProprietarySoftware extends ConsumerWidget {
   }
 }
 
+// Override the bold extension to return plain strings
 extension HtmlX on String {
-  String bold() => '<b>$this</b>';
+  String bold() => this;
 }
