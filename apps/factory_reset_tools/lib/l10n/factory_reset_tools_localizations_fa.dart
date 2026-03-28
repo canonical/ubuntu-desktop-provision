@@ -107,11 +107,11 @@ class FactoryResetToolsLocalizationsFa extends FactoryResetToolsLocalizations {
   String get ok => 'قبول';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'بستن';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'بیشینه';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'کمینه';
 }

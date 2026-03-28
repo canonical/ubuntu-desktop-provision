@@ -1,9 +1,9 @@
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
+import 'package:ubuntu_bootstrap/pages/storage/storage_x.dart';
 import 'package:ubuntu_bootstrap/widgets/info_badge.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
@@ -71,19 +71,21 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                   groupValue: model.guidedCapability,
                   onChanged: (v) => model.guidedCapability = v!.clean(),
                 ),
-              OptionButton<GuidedCapability?>(
-                title: Text(lang.installationTypeTPM),
-                subtitle: Text(
-                  tpmOptionEnabled
-                      ? lang.installationTypeTPMInfoResolute
-                      : lang.installationTypeTPMInfoUnavailable,
+              if (tpmOptionEnabled)
+                OptionButton<GuidedCapability?>(
+                  title: Text(lang.installationTypeTPM),
+                  subtitle: Text(
+                    tpmOptionEnabled
+                        ? lang.installationTypeTPMInfoResolute
+                        : lang.installationTypeTPMInfoUnavailable,
+                  ),
+                  value: GuidedCapability.CORE_BOOT_ENCRYPTED,
+                  groupValue: model.guidedCapability?.clean(),
+                  onChanged: tpmOptionEnabled
+                      ? (v) => model.guidedCapability = v
+                      : null,
+                  isThreeLines: false,
                 ),
-                value: GuidedCapability.CORE_BOOT_ENCRYPTED,
-                groupValue: model.guidedCapability?.clean(),
-                onChanged:
-                    tpmOptionEnabled ? (v) => model.guidedCapability = v : null,
-                isThreeLines: false,
-              ),
               YaruExpandable(
                 expandButtonPosition: YaruExpandableButtonPosition.start,
                 header: Text(lang.installationTypeAdvancedLabel),
@@ -147,45 +149,4 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
       ],
     );
   }
-}
-
-class TpmOption extends ConsumerWidget {
-  const TpmOption({
-    required this.model,
-    super.key,
-  });
-  final StorageModel model;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final lang = UbuntuBootstrapLocalizations.of(context);
-
-    return OptionButton<GuidedCapability?>(
-      title: Text(lang.installationTypeTPM),
-      subtitle: Text(lang.installationTypeTPMInfoResolute),
-      value: GuidedCapability.CORE_BOOT_ENCRYPTED,
-      groupValue: model.guidedCapability?.clean(),
-      onChanged: (v) => model.guidedCapability = v,
-    );
-  }
-}
-
-extension on GuidedCapability {
-  GuidedCapability clean() => switch (this) {
-// We shouldn't send CORE_BOOT_PREFER_ENCRYPTED to the server
-// See https://github.com/canonical/subiquity/blob/f759d19336c5cc33545755095fcc2aced3ef6a9f/subiquity/common/types.py#L354-L356
-        GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED =>
-          GuidedCapability.CORE_BOOT_ENCRYPTED,
-        _ => this,
-      };
-}
-
-extension on GuidedStorageTarget {
-  String? get tpmDisallowedReason => disallowed
-      .firstWhereOrNull(
-        (e) =>
-            e.capability == GuidedCapability.CORE_BOOT_ENCRYPTED ||
-            e.capability == GuidedCapability.CORE_BOOT_PREFER_ENCRYPTED,
-      )
-      ?.message;
 }

@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Nous sommes désolés, mais nous ne sommes pas sûrs de l\'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d\'installation. Vous pouvez également <a> signaler le problème</a>.';
+      'Nous sommes désolés, mais nous ne sommes pas sûrs de l\'erreur. Vous pouvez essayer de redémarrer votre ordinateur et recommencer le processus d\'installation. Vous pouvez également <a>signaler le problème</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Masquer le journal';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Redémarrer';
@@ -381,8 +384,8 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimiser';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Étendre';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Réduire';
 }

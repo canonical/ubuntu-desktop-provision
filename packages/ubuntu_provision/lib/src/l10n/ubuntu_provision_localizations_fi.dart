@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Piilota loki';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Käynnistä uudelleen';
 
   @override
@@ -363,20 +366,20 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Olen lukenut lisenssiehdot ja hyväksyn ne';
 
   @override
-  String get successIconSemanticLabel => 'Menestys';
+  String get successIconSemanticLabel => 'Valmis';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Sulje';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Suurenna';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Pienennä';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Laajenna';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Supista';
 }

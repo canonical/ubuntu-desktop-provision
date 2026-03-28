@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsSi extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'සටහන් සඟවන්න';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'යළි අරඹන්න';
 
   @override

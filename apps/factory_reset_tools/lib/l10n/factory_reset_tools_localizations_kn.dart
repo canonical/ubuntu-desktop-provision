@@ -9,110 +9,111 @@ class FactoryResetToolsLocalizationsKn extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsKn([String locale = 'kn']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸುವ ಪರಿಕರಗಳು';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸುವ ಪರಿಕರಗಳು';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'ನೀವು ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮವನ್ನು ರಚಿಸಿ';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಲು ಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'USB ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮವನ್ನು ರಚಿಸಿ';
 
   @override
   String get createUsbBody =>
-      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+      'ಸಿಸ್ಟಮ್ ಅನ್ನು ಮರುಸ್ಥಾಪಿಸಲು USB ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮವನ್ನು ರಚಿಸಿ, ಹಾಗೆಯೇ ನಿಮ್ಮ ಉಬುಂಟು ಸ್ಥಾಪನೆಗಳನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ.';
 
   @override
   String get createUsbListExplanation =>
-      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+      'USB ಫ್ಲಾಶ್ ಡ್ರೈವ್ ಆಯ್ಕೆಮಾಡಿ. ಡ್ರೈವ್ **ಕನಿಷ್ಠ 16GB ಸ್ಥಳಾವಕಾಶವನ್ನು ಹೊಂದಿರಬೇಕು.**';
 
   @override
   String get createUsbWarning =>
-      'The flash drive will be reformatted and all data on the drive will be lost.';
+      'ಫ್ಲ್ಯಾಶ್ ಡ್ರೈವ್ ಅನ್ನು ಮರು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ಡ್ರೈವ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾ ಕಳೆದುಹೋಗುತ್ತದೆ.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮ';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'ಯಾವುದೇ ತೆಗೆಯಬಹುದಾದ ಸಂಗ್ರಹಣೆ ಪತ್ತೆಯಾಗಿಲ್ಲ';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'You need a USB storage to create a Factory Reset Media.';
+      'ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮವನ್ನು ರಚಿಸಲು ನಿಮಗೆ USB ಸಂಗ್ರಹಣೆಯ ಅಗತ್ಯವಿದೆ.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle =>
+      'ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಆಯ್ಕೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives =>
+      'ನಾವು ಡ್ರೈವ್‌ಗಳನ್ನು ಪಡೆಯುವವರೆಗೆ ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB ಮರುಹೊಂದಿಸುವ ಮಾಧ್ಯಮ ಸಿದ್ಧವಾಗಿದೆ';
 
   @override
   String get resetMediaReadyBody =>
-      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+      'ನೀವು ಅದನ್ನು ಬಳಸಲು ಬಯಸಿದಾಗ, ದಯವಿಟ್ಟು ನೀವು ಮರುಹೊಂದಿಸಲು ಬಯಸುವ ಕಂಪ್ಯೂಟರ್‌ಗೆ USB ಡ್ರೈವ್ ಅನ್ನು ಸೇರಿಸಿ ಮತ್ತು ಅದನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ.';
 
   @override
-  String get errorLoadingDrives =>
-      'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'ಡ್ರೈವ್‌ಗಳನ್ನು ಪಡೆಯುವಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'ನಕಲು ಮಾಡಲಾಗುತ್ತಿದೆ';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'ಅಂತಿಮಗೊಳಿಸಲಾಗುತ್ತಿದೆ';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'ಮುಗಿದಿದೆಮುಗಿದಿದೆ';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'ವಿಫಲವಾಗಿದೆ';
 
   @override
-  String get error => 'Error';
+  String get error => 'ದೋಷ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ಲೋಡ್ ಆಗುತ್ತಿದೆ...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'ಎಚ್ಚರಿಕೆ';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'ಮರುಸ್ಥಾಪಿಸಿಮರುಸ್ಥಾಪಿಸಿ';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'ಮರುಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'ರಿಫಾರ್ಮ್ಯಾಟ್';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'ಆಜ್ಞೆಯನ್ನು ಚಲಾಯಿಸಲು ವಿಫಲವಾಗಿದೆ';
 
   @override
-  String get close => 'Close';
+  String get close => 'ಮುಚ್ಚಿ';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ಸರಿ';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ಮುಚ್ಚಿ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'ಗರಿಷ್ಠಗೊಳಿಸು';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'ಕಡಿಮೆಗೊಳಿಸು';
 }

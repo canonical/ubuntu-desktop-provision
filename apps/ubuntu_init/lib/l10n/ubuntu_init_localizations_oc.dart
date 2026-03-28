@@ -157,14 +157,14 @@ class UbuntuInitLocalizationsOc extends UbuntuInitLocalizations {
       'Podètz gerir los servicis Pro dins l\'aplicacion Logicial e mesas a jorn.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Capitada';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tampar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 }

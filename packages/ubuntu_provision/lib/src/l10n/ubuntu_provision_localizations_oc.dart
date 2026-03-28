@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben<a>senhalar l’anomalia</a>.';
+      'O planhèm, mas sabèm pas quina error es. Podètz ensajar de reaviar l’ordenador e començar lo processús d’installacion tornamai. Podètz tanben <a>senhalar l’anomalia</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Amagar lo jornal';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Reaviar';
@@ -298,8 +301,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkPageTitle => 'Se connectar a un ret';
 
   @override
-  String get networkPageHeader =>
-      'Connectar aqueste ordenador a internet permetrà a Ubuntu d’installar de logicials suplementaris e de definir vòstre fus orari.\n\nConnectatz un cable Ethernet, o causissètz un ret Wifi';
+  String get networkPageHeader => 'Se connectar a l’internet';
 
   @override
   String get networkPageBody =>
@@ -363,7 +365,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Ai legit e accèpti aqueste tèrmes';
 
   @override
-  String get successIconSemanticLabel => 'Succès';
+  String get successIconSemanticLabel => 'Capitada';
 
   @override
   String get closeIconSemanticLabel => 'Tampar';
@@ -375,8 +377,8 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimizar';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Desplegar';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Replegar';
 }

@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Napló elrejtése';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Újraindítás';
 
   @override
@@ -376,8 +379,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimalizálás';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Kinyitás';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Összecsukás';
 }

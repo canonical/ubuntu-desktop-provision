@@ -112,6 +112,14 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Bagi pengguna dalam organisasi yang menyediakan berkas autoinstall melalui Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Ubah';
 
   @override
@@ -453,8 +461,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Semua data dan partisi di disk akan dihapus, termasuk sistem operasi.';
 
   @override
-  String get installationTypeAdvancedLabel =>
-      'Tampilkan opsi tingkat lanjut...';
+  String get installationTypeAdvancedLabel => 'Opsi tingkat lanjut';
 
   @override
   String get installationTypeAdvancedTitle => 'Enkripsi dan sistem berkas';
@@ -483,12 +490,12 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Anda perlu memasukkan frasa sandi setiap kali Anda menyalakan komputer. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Ini menggunakan LVM dengan enkripsi LUKS.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -522,11 +529,11 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Disk akan membuka kunci secara otomatis saat startup.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Tidak tersedia di komputer ini.';
 
   @override
   String get installationTypeTPMSelected => 'TPM dipilih';
@@ -903,6 +910,9 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Jalankan ulang komputer?';
 
   @override
+  String get restartInstaller => 'Restart installer';
+
+  @override
   String get restartIntoWindows => 'Mulai Ulang Ke Windows';
 
   @override
@@ -952,7 +962,7 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Kembangkan dengan open-source terbaik';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO adalah stasiun kerja yang ideal untuk pengembangan aplikasi dan web, data science dan AI/ML, maupun DevOps dan administrasi. Setiap rilis $DISTRO berisi alat terbaru dan dukungan untuk semua IDE utama.';
   }
 
@@ -1378,269 +1388,294 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Enkripsi yang didukung perangkat keras tidak dapat diaktifkan';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Tindakan diperlukan';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Rincian teknis';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Konfirmasi';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Solusi $n: $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Solution: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel => 'Tautan ke dokumentasi';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Coba solusi di bawah ini, hubungi dukungan TI, atau pilih metode enkripsi yang berbeda.';
+
+  @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Try the solution below, contact IT support, or choose a different encryption method.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Hubungi dukungan TI, atau pilih metode enkripsi yang berbeda.';
 
   @override
   String get tpmActionErrorKindInternal => 'Internal';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired => 'Diperlukan mematikan daya';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired => 'Diperlukan reboot';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => 'Tindakan tidak terduga';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => 'Argumen hilang';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => 'Argumen tidak valid';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => 'Tindakan gagal';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Lingkungan saat ini adalah mesin virtual.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Komputer ini menggunakan firmware lama (BIOS legacy) yang tidak kompatibel dengan metode enkripsi ini.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+      'Ada masalah dengan pengaturan firmware komputer ini.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Komputer ini tidak memiliki perangkat keras keamanan yang diperlukan (TPM 2.0) untuk metode enkripsi ini.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'TPM komputer ini dinonaktifkan.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'TPM komputer ini sudah digunakan oleh sistem atau aplikasi lain.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'TPM komputer ini saat ini terkunci.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'TPM komputer ini tidak memiliki cukup ruang penyimpanan yang tersedia.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Komputer ini tidak kompatibel dengan enkripsi yang didukung perangkat keras.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'Debugging UEFI diaktifkan';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Komputer ini tidak memiliki fitur keamanan yang diperlukan (perlindungan DMA).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+      'Komputer ini tidak memiliki fitur keamanan yang diperlukan (kernel IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'Ada masalah dengan pengaturan keamanan komputer ini.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'Ada perangkat lunak yang berjalan saat startup yang dapat mencegah koneksi aman dengan TPM komputer.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Absolute Persistence Module diaktifkan pada komputer ini.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Secure boot dinonaktifkan pada komputer ini atau tidak dikonfigurasi dalam mode \"deployed\".';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Beberapa sertifikat yang memverifikasi komponen pada komputer ini sudah kedaluwarsa atau menggunakan perlindungan yang lemah.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Komputer ini menggunakan allowlist manual untuk memverifikasi perangkat lunak saat startup.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent => 'Driver tambahan ada';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Ada masalah dengan TPM komputer ini.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Ada masalah dengan firmware komputer ini.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Mulai ulang';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Matikan daya';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Mulai ulang ke pengaturan firmware';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Aktifkan perlindungan DMA secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Bersihkan TPM secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Aktifkan Secure Boot secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Aktifkan perlindungan DMA secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Aktifkan bank PCR secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Aktifkan TPM secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Bersihkan TPM secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Bersihkan TPM secara manual';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Nonaktifkan Absolute Persistence Module secara manual';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Hubungi OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor => 'Hubungi vendor OS';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Aktifkan TPM saat restart';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Aktifkan dan kosongkan TPM saat restart';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Kosongkan TPM saat restart';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Bersihkan TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Abaikan';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Restart komputer untuk menyelesaikan tindakan sebelumnya.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Merestart komputer mungkin dapat memperbaiki masalah.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Matikan komputer untuk menyelesaikan tindakan sebelumnya.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'Anda dapat melakukannya di pengaturan firmware komputer Anda.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Anda mungkin dapat melakukannya di pengaturan firmware komputer Anda. Periksa dokumentasi vendor CPU untuk panduan.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Check secure boot mode is set to \"deployed\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'Mengabaikan masalah dapat mengakibatkan instalasi yang kurang aman.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Mulai ulang';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'Mulai ulang dan aktifkan TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'Mulai ulang dan bersihkan TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Abaikan dan lanjutkan';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Membersihkan TPM akan menghapus semua kunci enkripsi';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Anda akan kehilangan akses ke semua data di drive terenkripsi yang tidak Anda miliki kunci pemulihannya. Ini juga akan merusak fitur lain yang bergantung pada TPM, seperti autentikasi dan sertifikat.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Saya memahami konsekuensi membersihkan TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'Anda mungkin diminta untuk mengonfirmasi tindakan ini saat restart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Setelah itu Anda harus mencoba ulang instalasi dari awal.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Solusi ini gagal';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Coba solusi lain atau hubungi dukungan TI';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Coba yang lain. Anda juga dapat <a href=\"\">mengirim laporan kesalahan</a>.';
 }

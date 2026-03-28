@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => '隐藏日志';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => '重新启动';
 
   @override
@@ -720,4 +723,10 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get minimizeIconSemanticLabel => '最小化';
+
+  @override
+  String get expandIconSemanticLabel => '展開';
+
+  @override
+  String get collapseIconSemanticLabel => '收合';
 }

@@ -7,7 +7,7 @@ import 'package:ubuntu_provision/providers.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class HorizontalPage extends ConsumerWidget {
+class HorizontalPage extends ConsumerStatefulWidget {
   const HorizontalPage({
     required this.windowTitle,
     required this.title,
@@ -16,12 +16,7 @@ class HorizontalPage extends ConsumerWidget {
     this.trailingTitleWidget,
     this.isNextEnabled = true,
     this.managedScrolling = true,
-    this.padding = const EdgeInsets.fromLTRB(
-      kYaruPagePadding,
-      kYaruPagePadding,
-      3 * kYaruPagePadding,
-      kYaruPagePadding,
-    ),
+    this.padding = const EdgeInsets.only(right: 2 * kYaruPagePadding),
     this.bottomBar,
     this.snackBar,
     this.imageTitleWidget,
@@ -81,100 +76,181 @@ class HorizontalPage extends ConsumerWidget {
   final FocusNode? nextFocusNode;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HorizontalPage> createState() => _HorizontalPageState();
+}
+
+class _HorizontalPageState extends ConsumerState<HorizontalPage> {
+  final _controller = ScrollController();
+  bool _showDivider = false;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _checkScrollState());
+    _controller.addListener(_checkScrollState);
+  }
+
+  @override
+  void dispose() {
+    _controller.removeListener(_checkScrollState);
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _checkScrollState() {
+    if (!_controller.hasClients) return;
+    final showDivider = _controller.position.extentAfter > 0;
+    if (showDivider != _showDivider) {
+      setState(() {
+        _showDivider = showDivider;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final image = ref.watch(pageImagesProvider).get(name);
     final windowSize = MediaQuery.of(context).size;
     final isSmallWindow = windowSize.width < 700 || windowSize.height < 500;
-    final adjustedPadding =
-        isSmallWindow ? padding.copyWith(right: 0, left: 0) : padding;
-    final scrollBarPadding =
-        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
-    const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
+    final adjustedPadding = isSmallWindow
+        ? widget.padding.copyWith(right: 0, left: 0)
+        : widget.padding;
     final lang = UbuntuProvisionLocalizations.of(context);
 
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Text(windowTitle),
+        title: Text(widget.windowTitle),
         closeSemanticLabel: lang.closeIconSemanticLabel,
         maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
         minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
-      content: Padding(
-        padding: adjustedPadding,
-        child: Row(
-          children: [
-            if (image != null || imageTitleWidget != null)
-              Expanded(
-                flex: 6,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (image != null) Flexible(child: image),
-                    if (imageTitleWidget != null) ...[
-                      const SizedBox(height: kWizardSpacing),
-                      imageTitleWidget!,
-                    ],
-                  ],
-                ),
-              ),
-            const SizedBox(width: kWizardSpacing),
+      contentPadding: EdgeInsets.zero,
+      headerPadding: EdgeInsets.zero,
+      footer: AnimatedSwitcher(
+        duration: Duration(milliseconds: 100),
+        child: _showDivider ? Divider() : null,
+      ),
+      content: Row(
+        children: [
+          if (image != null || widget.imageTitleWidget != null)
             Expanded(
-              flex: 8,
+              flex: 6,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (!managedScrolling) ...[
-                    const Spacer(),
-                    _Headline(
-                      title: title,
-                      trailingTitleWidget: trailingTitleWidget,
-                    ),
+                  if (image != null) Flexible(child: image),
+                  if (widget.imageTitleWidget != null) ...[
+                    const SizedBox(height: kWizardSpacing),
+                    widget.imageTitleWidget!,
                   ],
-                  Expanded(
-                    flex: managedScrolling ? 1 : _contentFlex,
-                    child: managedScrolling
-                        ? Center(
-                            child: Scrollbar(
-                              thumbVisibility: true,
-                              child: SingleChildScrollView(
-                                primary: true,
-                                padding: hoverPadding +
-                                    EdgeInsets.only(right: scrollBarPadding),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    _Headline(
-                                      title: title,
-                                      trailingTitleWidget: trailingTitleWidget,
-                                    ),
-                                    ...children,
-                                  ],
-                                ),
-                              ),
-                            ),
-                          )
-                        : Column(children: children),
-                  ),
-                  if (!managedScrolling) const Spacer(),
                 ],
               ),
             ),
-          ],
-        ),
+          const SizedBox(width: kWizardSpacing),
+          Expanded(
+            flex: 8,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (!widget.managedScrolling) ...[
+                  const Spacer(),
+                  Padding(
+                    padding: adjustedPadding,
+                    child: _Headline(
+                      title: widget.title,
+                      trailingTitleWidget: widget.trailingTitleWidget,
+                    ),
+                  ),
+                ],
+                Expanded(
+                  flex: widget.managedScrolling ? 1 : widget._contentFlex,
+                  child: widget.managedScrolling
+                      ? _ManagedScrollContainer(
+                          controller: _controller,
+                          checkScrollState: _checkScrollState,
+                          padding: adjustedPadding,
+                          children: [
+                            _Headline(
+                              title: widget.title,
+                              trailingTitleWidget: widget.trailingTitleWidget,
+                            ),
+                            ...widget.children,
+                          ],
+                        )
+                      : Padding(
+                          padding: adjustedPadding,
+                          child: Column(children: widget.children),
+                        ),
+                ),
+                if (!widget.managedScrolling) const Spacer(),
+              ],
+            ),
+          ),
+        ],
       ),
-      snackBar: snackBar,
-      bottomBar: bottomBar ??
+      snackBar: widget.snackBar,
+      bottomBar: widget.bottomBar ??
           WizardBar(
             leading: const BackWizardButton(),
             trailing: [
               NextWizardButton(
-                focusNode: nextFocusNode,
-                onNext: onNext,
-                enabled: isNextEnabled,
+                focusNode: widget.nextFocusNode,
+                onNext: widget.onNext,
+                enabled: widget.isNextEnabled,
               ),
             ],
           ),
+    );
+  }
+}
+
+class _ManagedScrollContainer extends StatelessWidget {
+  const _ManagedScrollContainer({
+    required this.controller,
+    required this.checkScrollState,
+    required this.padding,
+    required this.children,
+  });
+
+  final VoidCallback checkScrollState;
+  final ScrollController controller;
+  final EdgeInsets padding;
+  final List<Widget> children;
+
+  @override
+  Widget build(BuildContext context) {
+    final scrollBarPadding =
+        (ScrollbarTheme.of(context).thickness?.resolve({}) ?? 6) * 4;
+    const hoverPadding = EdgeInsets.only(left: 4, bottom: 4);
+    const scrollViewPadding =
+        EdgeInsets.only(top: 3 * kWizardSpacing, bottom: 3 * kWizardSpacing);
+    return Center(
+      child: NotificationListener<ScrollMetricsNotification>(
+        onNotification: (_) {
+          checkScrollState();
+          return false;
+        },
+        child: PrimaryScrollController(
+          controller: controller,
+          child: Scrollbar(
+            thumbVisibility: true,
+            child: SingleChildScrollView(
+              primary: true,
+              padding: hoverPadding +
+                  EdgeInsets.only(right: scrollBarPadding) +
+                  scrollViewPadding,
+              child: Padding(
+                padding: padding,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: children,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

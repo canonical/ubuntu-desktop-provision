@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Před nastavením si $DISTRO přizpůsobte svým potřebám. Volby si můžete později změnit v Nastavení systému.';
+    return 'Přizpůsobte si $DISTRO svým potřebám, což vám už v rámci instalátoru usnadní jeho použití. Tato nastavení je možné měnit i následně v už nainstalovaném systému a to v „Nastavení systému“.';
   }
 
   @override
@@ -52,7 +52,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get accessibilityVisualAlertsLabel => 'Vizuální upozornění';
 
   @override
-  String get accessibilityStickKeysLabel => 'Lepivé klávesy';
+  String get accessibilityStickKeysLabel => '„Lepivé“ klávesy';
 
   @override
   String get accessibilitySlowKeysLabel => 'Pomalé klávesy';
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Skrýt záznam';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Restartovat';
@@ -375,8 +378,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimalizovat';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Rozbalit';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Sbalit';
 }

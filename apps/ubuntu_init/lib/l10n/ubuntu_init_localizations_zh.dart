@@ -259,10 +259,10 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProHeader => '綁定本機';
 
   @override
-  String get ubuntuProOrAddTokenManually => '或是手動添加一個驗證碼';
+  String get ubuntuProOrAddTokenManually => '或手動新增 token';
 
   @override
-  String get ubuntuProTokenTextfieldHint => '驗證碼';
+  String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
   String get ubuntuProSubscriptionDescription => '取得最廣泛覆蓋的開放來源碼軟體安全訂閱方案';
@@ -276,13 +276,13 @@ class UbuntuInitLocalizationsZhTw extends UbuntuInitLocalizationsZh {
   String get ubuntuProTokenAttachButton => '綁定';
 
   @override
-  String get ubuntuProTokenAttachError => '無效的驗證碼';
+  String get ubuntuProTokenAttachError => '無效 token';
 
   @override
-  String get ubuntuProTokenAttachSucess => '有效的驗證碼';
+  String get ubuntuProTokenAttachSucess => '有效 token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => '無效的驗證碼，請再試一次';
+  String get ubuntuProTokenAttachErrorVariant => '無效 token，請再試一次';
 
   @override
   String get ubuntuProOnBoardingSkipForNow => '先暫時跳過';

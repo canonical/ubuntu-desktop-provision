@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Esconder log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Reiniciar';
 
   @override
@@ -736,4 +739,22 @@ class UbuntuProvisionLocalizationsPtBr extends UbuntuProvisionLocalizationsPt {
 
   @override
   String get eulaAcceptTerms => 'Li e aceito estes termos';
+
+  @override
+  String get successIconSemanticLabel => 'Sucesso';
+
+  @override
+  String get closeIconSemanticLabel => 'Fechar';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximizar';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimizar';
+
+  @override
+  String get expandIconSemanticLabel => 'Expandir';
+
+  @override
+  String get collapseIconSemanticLabel => 'Recolher';
 }

@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ჟურნალის დამალვა';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'გადატვირთვა';
 
   @override
@@ -360,20 +363,20 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'წავიკითხე და ვეთანხმები ამ პირობებს';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'წარმატება';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'დახურვა';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'გაშლა მთელ ეკრანზე';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'ჩაკეცვა';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'ჩამოშლა';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'აკეცვა';
 }

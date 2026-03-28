@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'أخفِ السجل';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'أعِد التشغيل';
 
   @override

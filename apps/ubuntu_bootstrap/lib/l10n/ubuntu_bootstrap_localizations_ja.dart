@@ -108,6 +108,14 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       'Landscape経由で自動インストールファイルが提供されている、組織に所属しているユーザー向けです。';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => '変更';
 
   @override
@@ -354,7 +362,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PINが一致しません';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'パスフレーズが必要です';
+  String get passphraseTypePassphraseTileTitle => 'パスフレーズを要求';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
@@ -872,6 +880,9 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'PCを再起動しますか？';
 
   @override
+  String get restartInstaller => 'Restart installer';
+
+  @override
   String get restartIntoWindows => '再起動して Windows を使用';
 
   @override
@@ -918,7 +929,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationSlidesDevelopmentTitle => '最高のオープンソースを活用して開発';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTROはDevOpsや運用だけでなく、アプリケーションやウェブの開発、データサイエンス、AI/MLにも最適なワークステーションです。$DISTROのリリースごとに、最新のツールチェインやすべての主要なIDEが含まれています。';
   }
 
@@ -1205,7 +1216,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       '起動時に暗号化の解除に失敗した場合、このリカバリーキーを使用することがあります。このキーを失くすと、すべてのデータにアクセスできなくなります。キーはパスワードマネージャーなどどこか安全なところに保存してください。';
 
   @override
-  String get recoveryKeyConfirmation => 'どこか安全なところにリカバリーキーを保存します';
+  String get recoveryKeyConfirmation => '安全なところにリカバリーキーを保存しました';
 
   @override
   String get recoveryKeyLinkLabel => '追加情報';
@@ -1277,7 +1288,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get landscapeDomainTextField => 'Landscapeドメイン(FQDN)';
 
   @override
-  String get next => '次';
+  String get next => '次へ';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
@@ -1349,36 +1360,46 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Solution: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel =>
+      'Learn more about hardware-backed encryption';
 
   @override
   String get tpmActionErrorSupportLabel =>
       'Try the solutions below, contact IT support, or choose a different encryption method.';
 
   @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Try the solution below, contact IT support, or choose a different encryption method.';
+
+  @override
   String get tpmActionErrorSupportNoActionLabel =>
       'Contact IT support, or choose a different encryption method.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal';
+  String get tpmActionErrorKindInternal => 'Internal error.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => 'Action failed.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
@@ -1390,7 +1411,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+      'There is an issue with this computer\'s firmware.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
@@ -1418,7 +1439,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'UEFI debugging is enabled.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
@@ -1426,15 +1447,15 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+      'This computer is missing a required security feature (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'There is an issue with this computer\'s security configuration.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
@@ -1442,18 +1463,19 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Secure boot is disabled in this computer or is not set in deployed mode.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
       'This computer is using a manual allowlist to verify software at startup.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent =>
+      'Add-on drivers are present.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1474,6 +1496,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       'Restart to firmware settings';
 
   @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+
+  @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
       'Enable DMA protection manually';
 
@@ -1487,7 +1513,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Enable IOMMU manually';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -1513,7 +1539,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get tpmActionFixActionContactOem => 'Contact OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
@@ -1545,15 +1571,23 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'You can do this in your computer\'s firmware settings.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Check secure boot mode is set to \"deployed\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'Ignoring this issue might result in a less secure installation.';
 
   @override
   String get tpmActionRestartLabel => 'Restart';
@@ -1581,18 +1615,18 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'You might be asked to confirm this action on restart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Then you will need to start the installation again.';
 
   @override
   String get tpmActionErrorTitle => 'This solution failed';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Try a different solution or contact IT support.';
 
   @override
   String get manualPartitioningWarningBody =>

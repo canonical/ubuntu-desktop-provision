@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ログを非表示';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => '再起動';
 
   @override
@@ -364,8 +367,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => '最小化';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => '広げる';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => '隠す';
 }

@@ -83,6 +83,9 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'பதிவை மறைக்க';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'மறுதொடக்கம்';
 
   @override
@@ -370,17 +373,17 @@ class UbuntuProvisionLocalizationsTa extends UbuntuProvisionLocalizations {
   String get successIconSemanticLabel => 'வெற்றி';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'மூடு';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'பெரியதுபடுத்து';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'சிறியதாக்கு';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'விரிவாக்கு';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'சுருக்கு';
 }

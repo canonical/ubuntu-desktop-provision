@@ -110,11 +110,11 @@ class FactoryResetToolsLocalizationsTa extends FactoryResetToolsLocalizations {
   String get ok => 'சரி';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'மூடு';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'பெரியதுபடுத்து';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'சிறியதாக்கு';
 }

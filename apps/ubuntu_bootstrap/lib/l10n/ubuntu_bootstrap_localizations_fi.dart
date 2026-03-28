@@ -112,6 +112,14 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Käyttäjille, joiden organisaatio tarjoaa autoinstall-tiedoston Landscapen kautta.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Muuta';
 
   @override
@@ -308,15 +316,14 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Tarvitset tunnuslauseen salataksesi tiedostosi. Tunnuslause tulee kirjoittaa joka kerta, kun tietokone käynnistetään.';
+      'Tunnuslause tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä tunnuslause on eri kuin tietokoneen salasana.';
 
   @override
-  String get choosePassphraseInfoHeader =>
-      'Tallenna tunnuslause turvalliseen paikkaan';
+  String get choosePassphraseInfoHeader => 'Pidä tunnuslauseesi turvassa';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Jos unohdat tai kadotat tunnuslauseen, menetät pääsyn tietoihin.';
+      'Jos kadotat sen, menetät pääsyn tietoihin.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -327,91 +334,91 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Jos tunnuslause hukkuu, kaikki tiedot menetetään. Tunnuslause ei korvaa palautusavainta tai käyttäjäns salasanaa.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Salaus';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'Aseta salauksen tunnuslause';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Aseta salauksen PIN-koodi';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Tunnuslause tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä Tunnuslause on eri kuin käyttäjän salasana. Voit muuttaa sitä myöhemmin, mutta sitä ei voi ottaa pois käytöstä. Jos tunnuslause unohdetaan, palautusavainta voi käyttää levyn tietoihin pääsemiseen.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'PIN-koodi tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä PIN-koodi on eri kuin käyttäjän salasana. Voit muuttaa sitä myöhemmin, mutta sitä ei voi ottaa pois käytöstä. Jos PIN-koodi unohdetaan, palautusavainta voi käyttää levyn tietoihin pääsemiseen.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Tunnuslause';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint => 'Vahvista tunnuslause';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase => 'Tunnuslause vaaditaan';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase => 'Tunnuslauseet eivät täsmää';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Vahvista PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'PIN-koodi vaaditaan';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'PIN-koodit eivät täsmää';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Vaadi tunnuslause';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Kaikein turvallisin. Salauslause tulee syöttää joka kerta tietokonetta käynnistettäessä.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Vaadin PIN-koodi';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Turvallisempi. PIN-koodi tulee syöttää joka kerta tietokonetta käynnistettäessä.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Avaa levyn salaus automaattisesti';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Lisäturvaa';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Tietokoneen TPM-moduuli (Trusted Platform Module) avaa lukituksen oletusarvoisesti käynnistettäessä. On myös mahdollista turvata tietoja lisätoimin.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Heikko tunnuslause, syötä pidempi tai monimutkaisempi';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Kohtuullinen tunnuslause, syötä pidempi tai monimutkaisempi turvallisuuden lisäämiseksi';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Vahva tunnuslause';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Heikko PIN-koodi, tee siitä pidempi tai vähemmän ennustettava';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Kohtuullinen PIN-koodi, tee siitä pidempi tai vähemmän ennustettava turvallisuuden lisäämiseksi';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'PIN-koodi on riittävän pitkä';
 
   @override
   String get installationTypeTitle => 'Levyasetukset';
@@ -898,6 +905,9 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Käynnistetäänkö tietokone uudelleen?';
 
   @override
+  String get restartInstaller => 'Restart installer';
+
+  @override
   String get restartIntoWindows => 'Uudelleenkäynnistä Windowsiin';
 
   @override
@@ -947,7 +957,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Kehitä avoimen lähdekoodin parhailla välineillä';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO on erinomainen valinta sovellus- tai web-kehitykseen, datatieteisiin, AI-/ML-työskentelyyn sekä devopsiin ja ylläpitotehtäviin. Jokainen $DISTRO-julkaisu sisältää uusimmat työkalut sekä tuen keskeisimmille sovelluskehitysympäristöille.';
   }
 
@@ -1030,19 +1040,19 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Yritystason 24/7-tuki Ubuntu Pro -tilauksella';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Seuraava dia';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Edellinen dia';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Toista kuvasarja';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Tauko';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Kytke asennuslokit päälle tai pois';
 
   @override
   String get copyingFiles => 'Kopioidaan tiedostoja…';
@@ -1219,74 +1229,74 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'TPM-palautusavain';
+  String get recoveryKeyTitle => 'Palautusavain';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Tärkeää';
 
   @override
-  String get recoveryKeyHeader => 'Luo palautusavain';
+  String get recoveryKeyHeader => 'Tallenna palautusavain';
 
   @override
   String get recoveryKeyInfoHeader =>
       'Saatat menettää kaikki tiedot ilman palautusavainta';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Palautusavain';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'Tallenna palautusavain turvalliseen paikkaan. Sitä voi käyttää levyn salauksen purkuun tietyissä järjestelmämuutostilanteissa. Sitä voidaan tarvita esimerkiksi jos tietokoneen komponentteja vaihdetaan tai sen laiteohjelmisto päivitetään.';
+      'Palautusavain tarvitaan jos salauksen purku epäonnistuu käynnistettäessä. Ilman avainta pääsy tietoihin menetetään. Tallenna se turvalliseen paikkaan, kuten salasanojen hallintasovellukseen.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'Ymmärrän että kaikki tiedot saatetaan menettää, mikäli palautusavainta ei ole tallessa';
+      'Olen tallentanut palautusavaimen turvalliseen paikkaan';
 
   @override
   String get recoveryKeyLinkLabel => 'Lue lisää';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Tallenna tiedostoon';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Näytä QR-koodi';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO-työpöytä - palautusavain';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Skannaa QR-koodi kopioidaksesi palautusavaimen ja tallentaaksesi sen johonkin turvalliseen paikkaan, kuten salasanojen hallintatyökaluun. Voit myös ottaa siitä valokuvan myöhempää käyttöä varten.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Kopioitu leikepöydälle';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Palautusavainta ei tallennettu';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Palautusavainta ei voi tallentaa väliaikaiseen sijaintiin';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Tuntematon virhe';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Tähän kansioon ei ole oikeutta kirjoittaa. Yritä toista sijaintia tai käytä toista tapaa.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Käytä toista sijaintia kuten irrotettavaa asemaa, tai käytä toista tapaa.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle => 'Tallenna palautusavaimen tiedosto';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Tekstitiedostot';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1357,125 +1367,130 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Voit käydä läpi Landscapesta tuodun autoinstall-tiedoston sisältöä alla.';
 
   @override
-  String get successIconSemanticLabel => 'Menestys';
+  String get successIconSemanticLabel => 'Valmis';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Virhe';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Sulje';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Suurenna';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Pienennä';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Laitevarmennettua salausta ei voi ottaa käyttöön';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Toimia vaaditaan';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Tekniset tiedot';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Vahvista';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Ratkaisu $n: $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Solution: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel => 'Linkki ohjeisiin';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Kokeile alla olevia ratkaisuja, ota yhteys IT-tukeen tai valitse toinen salaustapa.';
+
+  @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Try the solution below, contact IT support, or choose a different encryption method.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Ota yhteys IT-tukeen tai valitse toinen salaustapa.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal';
+  String get tpmActionErrorKindInternal => 'Sisäinen';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired => 'Sammuttaminen vaaditaan';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired =>
+      'Uudelleenkäynnistäminen vaaditaan';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => 'Odottamaton toiminto';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => 'Puuttuva valitsin';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => 'Ei kelvollista valitsinta';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => 'Toiminto epäonnistui';
 
   @override
-  String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+  String get tpmActionErrorKindRunningInVm => 'Käynnissä virtuaalikoneessa';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Kyseessä ei ole EFI-järjestelmä';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+  String get tpmActionErrorKindEfiVariableAccess => 'EFI-muuttujiin pääsy';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Ei sopivaa TPM2-laitetta';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM-laite poissa käytöstä';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'TPM-hierarkiat ovat omistettuina';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'TPM-laitteen pois lukitseminen tapahtunut';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'TPM-tallennustilaa ei riittävästi';
 
   @override
-  String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+  String get tpmActionErrorKindUnsupportedPlatform => 'Alustaa ei tuettu';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'UEFI-virheenjäljitys käytössä';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Ei riittävää DMA-suojausta';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+  String get tpmActionErrorKindNoKernelIommu => 'Ei Linux-ytimen IOMMU-tukea';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'There is an issue with this computer\'s security configuration.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
@@ -1483,18 +1498,19 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Virheellinen SecureBoot-tila';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Havaittu heikko SecureBoot-algoritmi';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
       'This computer is using a manual allowlist to verify software at startup.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent =>
+      'Lisäajureita on käytössä';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1505,30 +1521,34 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'There is an issue with this computer\'s firmware.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Käynnistä uudelleen';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Kytke virta pois';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Käynnistää uudelleen laiteohjelmiston asetuksiin';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Ota DMA-suojaus käyttöön käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Tyhjennä TPM käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Ota käyttöön secure boot käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Ota käyttöön DMA-suojaus käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -1536,41 +1556,44 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Ota käyttöön TPM käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Tyhjennä TPM käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Tyhjennä TPM käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
       'Disable Absolute Persistence Module manually';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Ota yhteys valmistajaan';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Ota yhteys käyttöjärjestelmän tekijään';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Ota käyttöön TPM laiteohjelmiston kautta';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Ota käyttöön ja tyhjennä TPM laiteohjelmiston kautta';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Tyhjennä TPM laiteohjelmiston kautta';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Tyhjennä TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Ohita';
 
   @override
   String get tpmActionFixActionRebootDescription =>
@@ -1586,54 +1609,64 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'You can do this in your computer\'s firmware settings.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Check secure boot mode is set to \"deployed\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'Ignoring this issue might result in a less secure installation.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Käynnistä uudelleen';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'Käynnistä uudelleen ja ota käyttöön TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'Käynnistä uudelleen ja tyhjennä TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Ohita ja jatka';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPM:n tyhjentäminen poistaa kaikki salausavaimet';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Pääsy salatuille asemille menetetään, jos palautusavaimia ei ole tallessa. Tämä rikkoo myös muut TPM:ää käyttävät ominaisuudet, kuten tunnistautumisen ja varmenteet.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Ymmärrän TPM:n tyhjentämisen seuraukset';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'You might be asked to confirm this action on restart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Then you will need to start the installation again.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Tämä ratkaisu epäonnistui';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Kokeile toista ratkaisua tai ota yhteys IT-tukeen';
 
   @override
   String get manualPartitioningWarningBody =>

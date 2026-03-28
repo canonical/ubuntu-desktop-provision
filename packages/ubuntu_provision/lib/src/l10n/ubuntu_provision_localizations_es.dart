@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Lo sentimos, pero no estamos seguros de cuál es el error. Puede intentar reiniciar su computadora y comenzar el proceso de instalación nuevamente. También puede <a>informar del problema</a>.';
+      'Lo sentimos, pero no estamos seguros de qué es el error. Puede intentar reiniciar su equipo e iniciar el proceso de instalación de nuevo. También puede <a>informar del problema</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Ocultar registro';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Reiniciar';
@@ -361,20 +364,20 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'He leído y acepto estos términos';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Éxito';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Cerrar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Expandir';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Colapsar';
 }

@@ -13,28 +13,28 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Prieinamumo galimybės $DISTRO sistemoje';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Pradžioje, prisitaikykite $DISTRO savo poreikiams. Vėliau šiuos nustatymus galėsite pakeisti „Sistemos nustatymuose“.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Rega (matymas)';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Klausa (girdėjimas)';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Rašymas';
 
   @override
   String get accessibilityPointingLabel => 'Pointing and clicking';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Mastelio keitimas';
 
   @override
   String get accessibilityHighContrastLabel => 'Didelis kontrastas';
@@ -43,36 +43,36 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Padidintas tekstas';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Sumažinti animacijas';
 
   @override
   String get accessibilityScreenReaderLabel => 'Teksto skaityklė';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Vaizdiniai įspėjimai';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Kibieji klavišai';
 
   @override
   String get accessibilitySlowKeysLabel => 'Lėtieji klavišai';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Pelės valdymas klavišais';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Darbastalio didinimas';
 
   @override
   String get errorPageTitle => 'Kažkas nutiko';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.';
+      'Įvyko nežinoma klaida. Galite pabandyti iš naujo paleisti kompiuterį ir vėl pradėti įdiegimą. Taip pat galite <a>pranešti apie klaidą</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Norėdami išsiųsti automatinę klaidų ataskaitą su aktualia derinimo informacija, įvykdykite komandą <pre>sudo ubuntu-bug $SNAP</pre> terminale arba komandų konsolėje (Alt+F2).';
   }
 
   @override
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Slėpti žurnalą';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Paleisti iš naujo';
@@ -232,11 +235,11 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get activeDirectoryTitle => 'Konfigūruoti „Active Directory“';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Jungtis prie „Active Directory“?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO sklandžiai integruojasi su „Active Directory“, užtikrinant paprastesnį sistemų administravimą.';
   }
 
   @override
@@ -304,7 +307,7 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'Interneto ryšys išplečia sistemos diegimą patikrinant suderinamumą bei atsiunčiant papildomus programų paketus.';
 
   @override
   String get networkWiredOption => 'Naudoti laidinį ryšį';
@@ -353,33 +356,33 @@ class UbuntuProvisionLocalizationsLt extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Aš kol kas nenoriu jungtis prie interneto';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Licencijos sutartis';
 
   @override
   String get eulaReviewTerms => 'Perskaitykite licenciją';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'Norėdami tęsti šio įdiegimo nustatymus, privalote perskaityti licencijos sutarties sąlygas ir su jomis sutikti.';
 
   @override
   String get eulaAcceptTerms => 'Aš perskaičiau ir sutinku su šiomis sąlygomis';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sėkminga';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Užverti';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Išskleisti';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Suskleisti';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Išskleisti';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Suskleisti';
 }

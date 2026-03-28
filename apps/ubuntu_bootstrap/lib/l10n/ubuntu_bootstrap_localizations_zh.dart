@@ -63,7 +63,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectErrorInvalidContentBody => '检查文件或者换个文件。';
 
   @override
-  String get autoinstallDirectErrorFileSystemTitle => '自动安装文件无法读取';
+  String get autoinstallDirectErrorFileSystemTitle => '无法读取自动安装文件';
 
   @override
   String get autoinstallDirectErrorFileSystemBody => '检查您的权限或者换个文件。';
@@ -101,6 +101,14 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   @override
   String get autoinstallLandscapeDescription =>
       '适用于通过 Landscape 提供自动安装文件的组织用户。';
+
+  @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
   @override
   String get changeButtonText => '更改';
@@ -145,7 +153,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return '您可以在不对电脑做任何改动的情况下试用 $RELEASE。';
+    return '您可以在不对计算机做任何改动的情况下试用 $RELEASE。';
   }
 
   @override
@@ -155,12 +163,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return '安装 $RELEASE，并可选择保留或替换您当前的操作系统。这个过程应该不会花费太长时间。';
+    return '安装 $RELEASE，并可选择保留或替换您当前的操作系统。这不会花费太长时间。';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return '您可能想阅读<a href=\"$url\"> 发行注记</a>。';
+    return '您也可阅读<a href=\"$url\"> 发行注记</a>。';
   }
 
   @override
@@ -212,7 +220,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => '安全密钥不匹配';
 
   @override
-  String get showSecurityKey => '显示安全密钥';
+  String get showSecurityKey => '显示';
 
   @override
   String get hideSecurityKey => '隐藏';
@@ -283,13 +291,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get choosePassphraseHeader => '创建密码';
 
   @override
-  String get choosePassphraseBody => '每次启动计算机时您都将需要输入密码。此密码与您的用户密码不同。';
+  String get choosePassphraseBody => '每次启动计算机您都需要输入此密码。此密码不是您的用户密码。';
 
   @override
   String get choosePassphraseInfoHeader => '请务必保存好您的密码';
 
   @override
-  String get choosePassphraseInfoBody => '如果您丢失了密码，所有数据都将丢失。';
+  String get choosePassphraseInfoBody => '如果丢失，所有数据都将丢失。';
 
   @override
   String get chooseOptionalPassphraseInfoHeader => '将您的密码和恢复密钥保存在安全的地方';
@@ -302,18 +310,18 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get passphrasePageTitle => '加密';
 
   @override
-  String get passphrasePageHeaderPassphrase => '设置一个加密密码';
+  String get passphrasePageHeaderPassphrase => '设置加密密码';
 
   @override
-  String get passphrasePageHeaderPin => '设置一个加密PIN';
+  String get passphrasePageHeaderPin => '设置一个加密 PIN 码';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      '您将会在任何时候键入一个密码以打开您的电脑。密码会与您的用户密码不一样。您将可以在以后更改它，但是不能禁用它。如果您忘记了你们的密码，您可以用恢复密钥重新获得访问磁盘的权限。';
+      '每次启动计算机都需要输入密码。 此密码不是您的用户密码。您可以稍后更改它，但是不能禁用。如果忘记了密码，您可以用恢复密钥重新获得访问磁盘的权限。';
 
   @override
   String get passphrasePageBodyPin =>
-      '您将会在任何时候键入一个PIN以打开您的电脑。PIN会与您的用户密码不一样。您将可以在以后更改它，但是不能禁用它。如果您忘记了你们的密码，您可以用恢复密钥重新获得访问磁盘的权限。';
+      '每次启动计算机都需要输入 PIN。 此 PIN 不是您的用户密码。您可以稍后更改它，但是不能禁用。如果忘记了您的 PIN，您可以用恢复密钥重新获得访问磁盘的权限。';
 
   @override
   String get passphrasePageChoosePassphraseHint => '密码';
@@ -322,7 +330,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get passphrasePageConfirmPassphraseHint => '确认密码';
 
   @override
-  String get passphrasePageRequiredPassphrase => '需要一个密码';
+  String get passphrasePageRequiredPassphrase => '需要输入密码';
 
   @override
   String get passphrasePageMismatchPassphrase => '密码不匹配';
@@ -331,56 +339,55 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => '确认PIN';
+  String get passphrasePageConfirmPinHint => '确认 PIN';
 
   @override
-  String get passphrasePageRequiredPin => '需要一个PIN';
+  String get passphrasePageRequiredPin => '需要输入 PIN';
 
   @override
-  String get passphrasePageMismatchPin => 'PIN不匹配';
+  String get passphrasePageMismatchPin => 'PIN 不匹配';
 
   @override
-  String get passphraseTypePassphraseTileTitle => '需要一个密码';
+  String get passphraseTypePassphraseTileTitle => '需要密码';
 
   @override
-  String get passphraseTypePassphraseTileSubTitle =>
-      '最安全。您将会在任何时候需要输入一个更长的密码以打开您的电脑。';
+  String get passphraseTypePassphraseTileSubTitle => '最安全。每次启动计算机都需要输入较长的密码。';
 
   @override
-  String get passphraseTypePinTileTitle => '需要一个PIN';
+  String get passphraseTypePinTileTitle => '需要 PIN';
 
   @override
-  String get passphraseTypePinTileSubTitle => '最安全。您将会在任何时候需要输入一个数字PIN以打开您的电脑。';
+  String get passphraseTypePinTileSubTitle => '最安全。每次启动计算机都需要输入 PIN 码。';
 
   @override
   String get passphraseTypeNoneTileTitle => '自动解锁磁盘';
 
   @override
-  String get passphraseTypePageHeader => '加密PIN或者密码';
+  String get passphraseTypePageHeader => '额外安全措施';
 
   @override
   String get passphraseTypePageBody =>
       '默认情况下，计算机的可信平台模块（TPM）会在开机时解锁磁盘。您也有其他选项来进一步保护您的数据。';
 
   @override
-  String get passphrasePagePassphraseEntropyBelowMin => '弱密码，请使其更长或者更复杂';
+  String get passphrasePagePassphraseEntropyBelowMin => '密码强度低，请提高强度或复杂度';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      '公平的密码，请使它更长或者更复杂以为了更好的安全';
+      '密码强度一般，请提高强度或复杂度以提高安全性';
 
   @override
   String get passphrasePagePassphraseEntropyOptimal => '强密码';
 
   @override
-  String get passphrasePagePinEntropyBelowMin => '弱密码，请使它更长或者更难以猜测';
+  String get passphrasePagePinEntropyBelowMin => 'PIN 强度弱，请使它更长或者更难以猜测';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      '公平的PIN，请使它变得更长或者更难以猜测以更好的安全';
+      'PIN 强度一般，请使它变得更长或者更难以猜测，以提高安全性';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN已经足够长';
+  String get passphrasePagePinEntropyOptimal => 'PIN 已经足够长';
 
   @override
   String get installationTypeTitle => '磁盘设置';
@@ -392,19 +399,19 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeOSDetected(String os) {
-    return '目前此计算机上已安装了 $os。您准备怎么做？';
+    return '目前此计算机上已安装了 $os。您打算怎么做？';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return '目前此计算机已安装了 $os1 与 $os2。您准备怎么做？';
+    return '目前此计算机已安装了 $os1 与 $os2。您打算怎么做？';
   }
 
   @override
-  String get installationTypeMultiOSDetected => '这台计算机已经安装了多个操作系统。您准备怎么做？';
+  String get installationTypeMultiOSDetected => '这台计算机已经安装了多个操作系统。您打算怎么做？';
 
   @override
-  String get installationTypeNoOSDetected => '这台电脑目前没有检测到操作系统。您准备怎么做？';
+  String get installationTypeNoOSDetected => '这台计算机目前没有检测到操作系统。您打算怎么做？';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -418,10 +425,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeAdvancedLabel => '显示高级选项…';
 
   @override
-  String get installationTypeAdvancedTitle => '加密和文件系统';
+  String get installationTypeAdvancedTitle => '加密与文件系统';
 
   @override
-  String get installationTypeExperimental => '实验性';
+  String get installationTypeExperimental => '实验性功能';
 
   @override
   String get installationTypeNone => '无加密';
@@ -430,7 +437,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeNoneInfo => '无加密的标准文件系统。';
 
   @override
-  String get installationTypeNoneSelected => '尚未选择任何安装选项';
+  String get installationTypeNoneSelected => '未选择任何安装选项';
 
   @override
   String get installationTypeLVM => '使用无加密的 LVM（逻辑卷管理）';
@@ -439,7 +446,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMSelected => '已选择配置 LVM';
 
   @override
-  String get installationTypeLVMEncryption => '用密码加密';
+  String get installationTypeLVMEncryption => '使用密码加密';
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
@@ -454,7 +461,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get installationTypeLVMEncryptionSelected => '已选择配置加密的 LVM';
 
   @override
-  String get installationTypeEncryptInfo => '您将在下一步中选择一个安全密钥。';
+  String get installationTypeEncryptInfo => '下一步需要输入一个安全密钥。';
 
   @override
   String get installationTypeZFS => '使用无加密的 ZFS';
@@ -464,13 +471,13 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      '使用 ZFS 进行本地加密。您每次打开计算机时都将需要输入密码。';
+      '使用 ZFS 进行本地加密。每次打开计算机都将需要输入密码。';
 
   @override
   String get installationTypeZFSSelected => '已选择配置 ZFS';
 
   @override
-  String get installationTypeZFSEncryptionSelected => '已选择使用加密 ZFS';
+  String get installationTypeZFSEncryptionSelected => '已选择使用加密的 ZFS';
 
   @override
   String get installationTypeTPM => '启用硬件支持的加密';
@@ -484,7 +491,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       'Not available on this computer.';
 
   @override
-  String get installationTypeTPMSelected => '已选择 TPM';
+  String get installationTypeTPMSelected => '已选择配置 TPM';
 
   @override
   String installationTypeReinstall(String os) {
@@ -493,12 +500,12 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">警告：</font>这将删除您的 $os 中的所有程序、文档、照片、音乐和任何其他文件。';
+    return '<font color=\"$color\">警告：</font>这将删除您的 $os 中所有的程序、文档、照片、音乐和任何其他文件。';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return '在 $os 中安装 $product';
+    return '与 $os 共存安装 $product';
   }
 
   @override
@@ -518,7 +525,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return '选择一个分区来重新调整大小并为 $product 创建空间。您可以在启动时选择您的操作系统。';
+    return '选择一个分区来重新调整大小并为 $product 创建空间。您可以在启动时选择操作系统。';
   }
 
   @override
@@ -528,11 +535,11 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return '来自现存的 $os 安装的文件和数据都将被永久删除。';
+    return '现存 $os 安装中的文件和数据都将被永久删除。';
   }
 
   @override
-  String get installationTypeManual => '手动分区';
+  String get installationTypeManual => '手动安装';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
@@ -618,7 +625,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get diskHeadersSize => '大小';
 
   @override
-  String get diskHeadersUsed => '已使用';
+  String get diskHeadersUsed => '已用';
 
   @override
   String get diskHeadersSystem => '系统';
@@ -627,7 +634,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get diskHeadersFormat => '格式化';
 
   @override
-  String get freeDiskSpace => '剩余空间';
+  String get freeDiskSpace => '空闲空间';
 
   @override
   String get newPartitionTable => '新建分区表';
@@ -637,7 +644,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      '在整个设备上创建一个新的分区表，将删除其当前所有的分区。此操作可在需要时随时撤销。';
+      '在整个设备上创建新的分区表将删除其当前所有的分区。此操作可随时撤销。';
 
   @override
   String get tooManyPrimaryPartitions => '主分区过多';
@@ -693,7 +700,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get partitionMountPointLabel => '挂载点：';
 
   @override
-  String get confirmPageTitle => '准备安装';
+  String get confirmPageTitle => '准备好开始安装';
 
   @override
   String get confirmHeader => '回顾您的选择';
@@ -761,7 +768,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get confirmTableErased => '擦除';
 
   @override
-  String get confirmTableUnchanged => '未保存';
+  String get confirmTableUnchanged => '未更改';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
@@ -793,7 +800,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String readyToUse(String system) {
-    return '$system 已经安装并准备好使用了';
+    return '$system 已安装好并可供使用';
   }
 
   @override
@@ -807,10 +814,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get restartWarningBody => '重新启动以完成安装，也可以继续试用。\n您做出的任何更改都不会被保存。';
+  String get restartWarningBody => '重新启动以完成安装，或者继续试用。\n您所做的任何更改都不会保存。';
 
   @override
-  String get rebootToConfigureWarning => '您需要重新启动计算机，以继续完成安装。';
+  String get rebootToConfigureWarning => '您需要重新启动计算机以继续安装。';
 
   @override
   String get shutdown => '关机';
@@ -822,7 +829,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get continueTesting => '继续试用';
 
   @override
-  String get bitlockerInfoTitle => '已检测到 BitLocker';
+  String get bitlockerInfoTitle => '检测到 BitLocker';
 
   @override
   String get bitlockerInfoDescription => '一个或多个分区由 BitLocker 加密。';
@@ -835,7 +842,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return '指引请参阅 <a href=\"$url\">BitLocker 指南</a>。';
+    return '如需说明，请参阅 <a href=\"$url\">BitLocker 指南</a>。';
   }
 
   @override
@@ -848,7 +855,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => '重新启动计算机？';
 
   @override
-  String get restartIntoWindows => '重启进入 Windows';
+  String get restartInstaller => 'Restart installer';
+
+  @override
+  String get restartIntoWindows => '重启到 Windows';
 
   @override
   String get restartIntoWindowsTitle => '重启到 Windows？';
@@ -879,7 +889,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return '不论你是开发者、创作者、游戏玩家还是管理员，你都能在 $RELEASE 中找到新的工具，以提高生产力并增强使用体验。';
+    return '不论您是开发者、创作者、游戏玩家还是管理员，都能在 $RELEASE 中找到新的工具，提高生产力并增强使用体验。';
   }
 
   @override
@@ -887,23 +897,23 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return '在 Ubuntu 软件中心安装、管理和更新所有应用程序，包括来自 Snap Store 和 $DISTRO 存档的成千上万应用程序。';
+    return '在 Ubuntu 软件中心安装、管理和更新应用程序，包括来自 Snap Store 和 $DISTRO 存档的成千上万应用程序。';
   }
 
   @override
-  String get installationSlidesDevelopmentTitle => '利用最好的开源软件进行开发';
+  String get installationSlidesDevelopmentTitle => '汇聚开源精粹，助力开发';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO 是应用程序或 Web 开发、数据科学和 AI/ML 以及 DevOps 和管理的理想工作站。每个 $DISTRO 版本都包含最新的工具链，并支持所有主要的 IDE。';
   }
 
   @override
-  String get installationSlidesCreativityTitle => '激发你的创造力';
+  String get installationSlidesCreativityTitle => '激发您的创造力';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return '如果您是动画师、设计师、视频创作者或游戏开发人员，$DISTRO 的开源和行业标准软件和应用程序的支持，让你能够轻松地将你的工作流程引入其中。';
+    return '如果您是动画师、设计师、视频创作者或游戏开发人员，您能够轻松地将您的工作流程引入 $DISTRO，其有开源和行业标准软件与应用程序的支持。';
   }
 
   @override
@@ -988,7 +998,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => '暂停幻灯片放映';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => '安装日志';
 
   @override
   String get copyingFiles => '正在复制文件……';
@@ -1305,17 +1315,16 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get minimizeIconSemanticLabel => '最小化';
 
   @override
-  String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+  String get tpmActionPageTitle => '硬件加密';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => '需要操作';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => '技术细节';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => '确认';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
@@ -1323,68 +1332,70 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Solution: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel =>
+      'Learn more about hardware-backed encryption';
 
   @override
   String get tpmActionErrorSupportLabel =>
       'Try the solutions below, contact IT support, or choose a different encryption method.';
 
   @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Try the solution below, contact IT support, or choose a different encryption method.';
+
+  @override
   String get tpmActionErrorSupportNoActionLabel =>
       'Contact IT support, or choose a different encryption method.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal';
+  String get tpmActionErrorKindInternal => '内部';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired => '需要关机';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired => '需要重启';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => '意外操作';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => '缺少参数';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => '参数无效';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => '操作失败';
 
   @override
-  String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+  String get tpmActionErrorKindRunningInVm => '在虚拟机中运行';
 
   @override
-  String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+  String get tpmActionErrorKindSystemNotEfi => '非 EFI 系统';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+  String get tpmActionErrorKindEfiVariableAccess => 'EFI 变量访问';
 
   @override
-  String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+  String get tpmActionErrorKindNoSuitableTpm2Device => '无适用的 TPM2 设备';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM 设备已禁用';
 
   @override
-  String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+  String get tpmActionErrorKindTpmHierarchiesOwned => 'TPM 层级所有权';
 
   @override
-  String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+  String get tpmActionErrorKindTpmDeviceLockoutLockedOut => 'TPM 设备锁定';
 
   @override
-  String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+  String get tpmActionErrorKindInsufficientTpmStorage => 'TPM 存储空间不足';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
@@ -1392,7 +1403,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'UEFI debugging is enabled.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
@@ -1400,15 +1411,15 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+      'This computer is missing a required security feature (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'There is an issue with this computer\'s security configuration.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
@@ -1416,18 +1427,19 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Secure boot is disabled in this computer or is not set in deployed mode.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
       'This computer is using a manual allowlist to verify software at startup.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent =>
+      'Add-on drivers are present.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1448,6 +1460,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       'Restart to firmware settings';
 
   @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+
+  @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
       'Enable DMA protection manually';
 
@@ -1461,7 +1477,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Enable IOMMU manually';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -1487,7 +1503,7 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get tpmActionFixActionContactOem => 'Contact OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
@@ -1519,15 +1535,23 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'You can do this in your computer\'s firmware settings.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Check secure boot mode is set to \"deployed\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'Ignoring this issue might result in a less secure installation.';
 
   @override
   String get tpmActionRestartLabel => 'Restart';
@@ -1555,18 +1579,18 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'You might be asked to confirm this action on restart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Then you will need to start the installation again.';
 
   @override
   String get tpmActionErrorTitle => 'This solution failed';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Try a different solution or contact IT support.';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1923,11 +1947,11 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get passphraseTypeNoneTileTitle => '自動解鎖磁碟';
 
   @override
-  String get passphraseTypePageHeader => '加密 PIN 碼或密碼';
+  String get passphraseTypePageHeader => '額外的安全措施';
 
   @override
   String get passphraseTypePageBody =>
-      '預設情況下，電腦的 Trusted Platform Module (TPM) 會在啟動時解除鎖定磁碟。不過，您也可以要求輸入 PIN 碼或密碼，以進一步保護資料。';
+      '預設情況下，電腦的 Trusted Platform Module (TPM) 會在啟動時解除鎖定磁碟。您還有其他選項可進一步保護您的資料。';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin => '密碼薄弱，請使其更長或更複雜';
@@ -2445,7 +2469,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationSlidesDevelopmentTitle => '站在開源的肩膀上進行開發';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO 乃一個理想的工作站，適合研發應用程式、網站、資料科學、人工智慧/機器學習，以及進行 DevOps 和系統管理。每一個 $DISTRO 版本皆包含最新的工具鏈，並支援所有主流的開發環境 (IDE)。';
   }
 
@@ -2853,4 +2877,192 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get minimizeIconSemanticLabel => '最小化';
+
+  @override
+  String get tpmActionPageTitle => '無法啟用硬體支援的加密功能';
+
+  @override
+  String get tpmActionBadgeLabel => '需要採取行動';
+
+  @override
+  String get tpmActionDetailsLabel => '技術細節';
+
+  @override
+  String get tpmActionConfirmLabel => '確認';
+
+  @override
+  String tpmActionSolutionLabel(int n, String text) {
+    return '解決方案 $n: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel => '文件連結';
+
+  @override
+  String get tpmActionErrorSupportLabel => '請嘗試以下解決方案、聯絡 IT 支援人員，或選擇其他加密方式。';
+
+  @override
+  String get tpmActionErrorSupportNoActionLabel => '聯絡 IT 支援人員，或選擇其他加密方式。';
+
+  @override
+  String get tpmActionErrorKindInternal => '內部';
+
+  @override
+  String get tpmActionErrorKindShutdownRequired => '需要關機';
+
+  @override
+  String get tpmActionErrorKindRebootRequired => '需要重新啟動';
+
+  @override
+  String get tpmActionErrorKindUnexpectedAction => '意外操作';
+
+  @override
+  String get tpmActionErrorKindMissingArgument => '缺少參數';
+
+  @override
+  String get tpmActionErrorKindInvalidArgument => '無效參數';
+
+  @override
+  String get tpmActionErrorKindActionFailed => '操作失敗';
+
+  @override
+  String get tpmActionErrorKindRunningInVm => '在虛擬機中執行';
+
+  @override
+  String get tpmActionErrorKindSystemNotEfi => '系統非 EFI';
+
+  @override
+  String get tpmActionErrorKindEfiVariableAccess => 'EFI 變數存取';
+
+  @override
+  String get tpmActionErrorKindNoSuitableTpm2Device => '沒有合適的 TPM2 裝置';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM 裝置已停用';
+
+  @override
+  String get tpmActionErrorKindTpmHierarchiesOwned => 'TPM 層級所有權';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceLockoutLockedOut => 'TPM 裝置鎖定狀態為鎖定';
+
+  @override
+  String get tpmActionErrorKindInsufficientTpmStorage => 'TPM 儲存空間不足';
+
+  @override
+  String get tpmActionErrorKindUnsupportedPlatform => '不支援的平台';
+
+  @override
+  String get tpmActionErrorKindUefiDebuggingEnabled => '已啟用 UEFI 除錯功能';
+
+  @override
+  String get tpmActionErrorKindInsufficientDmaProtection => 'DMA 保護不足';
+
+  @override
+  String get tpmActionErrorKindNoKernelIommu => '無核心 IOMMU';
+
+  @override
+  String get tpmActionErrorKindHostSecurity => '主機安全';
+
+  @override
+  String get tpmActionErrorKindSysPrepApplicationsPresent => '系統預備應用程式現況';
+
+  @override
+  String get tpmActionErrorKindAbsolutePresent => '絕對的當下';
+
+  @override
+  String get tpmActionErrorKindInvalidSecureBootMode => '無效的安全啟動模式';
+
+  @override
+  String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
+      '偵測到安全啟動演算法有缺陷';
+
+  @override
+  String get tpmActionFixActionReboot => '重新啟動';
+
+  @override
+  String get tpmActionFixActionShutdown => '關閉電源';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettings => '重啟進入韌體設定';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
+      '手動啟用 DMA 保護';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
+      '手動清除 TPM';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
+      '手動啟用安全啟動';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommu => '手動啟用 DMA 保護';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
+      '手動啟用PCR庫';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
+      '手動啟用 TPM';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
+      '手動清除 TPM';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
+      '手動清除 TPM';
+
+  @override
+  String get tpmActionFixActionContactOem => '聯絡 OEM 廠商';
+
+  @override
+  String get tpmActionFixActionContactOsVendor => '聯絡 OS 供應商';
+
+  @override
+  String get tpmActionFixActionEnableTpmViaFirmware => '透過韌體啟用 TPM';
+
+  @override
+  String get tpmActionFixActionEnableAndClearTpmViaFirmware => '透過韌體啟用和清除 TPM';
+
+  @override
+  String get tpmActionFixActionClearTpmViaFirmware => '透過韌體清除 TPM';
+
+  @override
+  String get tpmActionFixActionClearTpm => '清除 TPM';
+
+  @override
+  String get tpmActionFixActionProceed => '忽略';
+
+  @override
+  String get tpmActionRestartLabel => '重新啟動';
+
+  @override
+  String get tpmActionRestartAndEnableTpmLabel => '重新啟動並啟用 TPM';
+
+  @override
+  String get tpmActionRestartAndClearTpmLabel => '重新啟動並清除 TPM';
+
+  @override
+  String get tpmActionIgnoreAndContinueLabel => '忽略並繼續';
+
+  @override
+  String get tpmActionFixActionClearTpmWarningTitle => '清除 TPM 將刪除所有加密金鑰';
+
+  @override
+  String get tpmActionFixActionClearTpmWarningBody =>
+      '您將無法存取所有未持有復原金鑰的加密磁碟機中的資料。此操作亦將導致其他依賴 TPM 的功能失效，例如驗證機制與憑證服務。';
+
+  @override
+  String get tpmActionFixActionClearTpmConfirmationLabel => '我理解清除 TPM 的後果';
+
+  @override
+  String get tpmActionErrorTitle => '此解決方案失敗';
+
+  @override
+  String get tpmActionErrorDescription => '嘗試其他解決方案或聯絡 IT 技術支援';
 }

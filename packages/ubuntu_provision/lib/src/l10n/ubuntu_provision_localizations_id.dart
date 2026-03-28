@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Sembunyikan log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Jalankan Ulang';
 
   @override
@@ -378,8 +381,8 @@ class UbuntuProvisionLocalizationsId extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimalkan';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Perluas';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Kuncupkan';
 }

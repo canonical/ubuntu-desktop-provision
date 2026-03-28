@@ -24,29 +24,29 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get startFactoryReset => 'Starta fabriksåterställning';
 
   @override
-  String get createUsbTitle => 'Skapa ett USB återställningsmedia';
+  String get createUsbTitle => 'Skapa ett USB-återställningsmedia';
 
   @override
   String get createUsbBody =>
-      'Skapa ett USB återställningsmedia för att återställa systemet samt anpassa dina Ubuntu installationer.';
+      'Skapa ett USB-återställningsmedia för att återställa systemet samt anpassa dina Ubuntu-installationer.';
 
   @override
   String get createUsbListExplanation =>
-      'Välj en USB flashenhet. Enheten måste ha minst **16 GB utrymme.**';
+      'Välj en USB-flashenhet. Enheten måste ha minst **16 GB utrymme.**';
 
   @override
   String get createUsbWarning =>
-      'Flashenheten kommer att omformateras och all data på enheten går förlorad.';
+      'Flashenheten kommer att formateras om och all data på enheten går förlorad.';
 
   @override
-  String get resetMediaTitle => 'USB återställningsmedia';
+  String get resetMediaTitle => 'USB-återställningsmedia';
 
   @override
-  String get noMediaDetected => 'Ingen borttagbar lagring har upptäckts';
+  String get noMediaDetected => 'Ingen flyttbar lagring har upptäckts';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'Du behöver USB lagring för att skapa ett fabriksåterställnings media.';
+      'Du behöver USB-lagring för att skapa ett fabriksåterställningsmedia.';
 
   @override
   String get factoryResetTitle =>
@@ -56,11 +56,11 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get loadingDrives => 'Vänta medan vi hämtar enheterna.';
 
   @override
-  String get resetMediaReadyTitle => 'USB återställningsmedia är redo';
+  String get resetMediaReadyTitle => 'USB-återställningsmedia är redo';
 
   @override
   String get resetMediaReadyBody =>
-      'När du vill använda det, sätt in USB enheten i den dator du vill återställa och starta om den.';
+      'När du vill använda det, sätt in USB-enheten i den dator du vill återställa och starta om den.';
 
   @override
   String get errorLoadingDrives =>
@@ -85,7 +85,7 @@ class FactoryResetToolsLocalizationsSv extends FactoryResetToolsLocalizations {
   String get error => 'Fel';
 
   @override
-  String get loading => 'Laddar...';
+  String get loading => 'Läser in...';
 
   @override
   String get warning => 'Varning';

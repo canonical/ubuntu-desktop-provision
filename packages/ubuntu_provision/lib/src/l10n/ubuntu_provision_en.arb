@@ -9,7 +9,7 @@
       }
     }
   },
-  "accessibilityPageBody": "Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.",
+  "accessibilityPageBody": "Customise {DISTRO} to your needs before you set up. You can change them later in the Settings app.",
   "@accessibilityPageBody": {
     "placeholders": {
       "DISTRO": {
@@ -43,6 +43,7 @@
   },
   "errorPageShowLog": "Show log",
   "errorPageHideLog": "Hide log",
+  "errorPageTechnicalDetails": "Technical details",
   "restart": "Restart",
   "close": "Close",
   "timezonePageTitle": "Select your timezone",

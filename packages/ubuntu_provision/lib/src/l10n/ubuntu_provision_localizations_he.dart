@@ -22,7 +22,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'ראיה';
+  String get accessibilitySeeingLabel => 'ראייה';
 
   @override
   String get accessibilityHearingLabel => 'שמיעה';
@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר גם <a>לדווח על התקלה</a>.';
+      'אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר לנסות <a>לדווח על התקלה</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'הסתרת היומן';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'הפעלה מחדש';
@@ -106,32 +109,31 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get keyboardTestHint => 'ניתן להקליד כאן כדי לבדוק את המקלדת שלך';
 
   @override
-  String get keyboardDetectTitle => 'איתור פריסת המקלדת';
+  String get keyboardDetectTitle => 'זיהוי פריסת המקלדת';
 
   @override
   String get keyboardDetectButton => 'זיהוי';
 
   @override
-  String get keyboardVariantLabel => 'הגוון מקלדת:';
+  String get keyboardVariantLabel => 'נא לבחור את הגוון המקלדת שלך:';
 
   @override
   String get keyboardPressKeyLabel => 'נא ללחוץ על אחד מהתווים הבאים:';
 
   @override
-  String get keyboardKeyPresentLabel => 'האם המקש הבא קיים במקלדת שלך?';
+  String get keyboardKeyPresentLabel => 'האם התו הבא קיים במקלדת שלך?';
 
   @override
   String get themePageTitle => 'נא לבחור את ערכת העיצוב שלך';
 
   @override
-  String get themePageHeader =>
-      'תמיד ניתן לשנות את זה מאוחר יותר בהגדרות המראה.';
+  String get themePageHeader => 'תמיד ניתן לשנות זאת מאוחר יותר בהגדרות המראה.';
 
   @override
   String get themeDark => 'כהה';
 
   @override
-  String get themeLight => 'בהיר';
+  String get themeLight => 'בהירה';
 
   @override
   String localePageTitle(String DISTRO) {
@@ -142,7 +144,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get localeHeader => 'נא לבחור שפה:';
 
   @override
-  String get identityPageTitle => 'הקמת החשבון שלך';
+  String get identityPageTitle => 'יצירת החשבון שלך';
 
   @override
   String get identityAutoLogin => 'כניסה אוטומטית';
@@ -151,7 +153,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityRequirePassword => 'דרישת הסיסמה שלי לצורך כניסה';
 
   @override
-  String get identityRealNameLabel => 'שמך';
+  String get identityRealNameLabel => 'השם שלך';
 
   @override
   String get identityRealNameRequired => 'דרוש שם';
@@ -173,16 +175,16 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityHostnameTooLong => 'שם המחשב הזה ארוך מדי.';
 
   @override
-  String get identityInvalidHostname => 'שם המחשב שגוי';
+  String get identityInvalidHostname => 'שם המחשב אינו תקני';
 
   @override
-  String get identityUsernameLabel => 'נא לבחור שם משתמש';
+  String get identityUsernameLabel => 'שם המשתמש שלך (באותיות לטיניות)';
 
   @override
   String get identityUsernameRequired => 'דרוש שם משתמש';
 
   @override
-  String get identityInvalidUsername => 'שם המשתמש שגוי';
+  String get identityInvalidUsername => 'שם המשתמש אינו תקני';
 
   @override
   String get identityUsernameInUse => 'שם משתמש זה כבר קיים.';
@@ -194,19 +196,19 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityUsernameTooLong => 'השם הזה ארוך מדי.';
 
   @override
-  String get identityUsernameInvalidChars => 'השם הזה מכיל תווים שגויים.';
+  String get identityUsernameInvalidChars => 'שם זה מכיל תווים לא תקניים.';
 
   @override
-  String get identityPasswordLabel => 'נא לבחור סיסמה';
+  String get identityPasswordLabel => 'סיסמה';
 
   @override
   String get identityPasswordRequired => 'דרושה סיסמה';
 
   @override
-  String get identityConfirmPasswordLabel => 'אישור הסיסמה שלך';
+  String get identityConfirmPasswordLabel => 'אישור הסיסמה';
 
   @override
-  String get identityPasswordMismatch => 'הסיסמאות סותרות זו את זו';
+  String get identityPasswordMismatch => 'הסיסמאות אינן זהות';
 
   @override
   String get identityPasswordShow => 'חשיפה';
@@ -219,13 +221,13 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
 
   @override
   String get identityActiveDirectoryInfo =>
-      'אפשר למלא את פרטי שם התחום (דומיין) ופרטים נוספים בצעד הבא.';
+      'יהיה אפשר להקליד את שם התחום (דומיין) ופרטים נוספים בשלב הבא.';
 
   @override
-  String get activeDirectoryTitle => 'הגדרת Active Directory';
+  String get activeDirectoryTitle => 'כניסה אל Active Directory';
 
   @override
-  String get activeDirectoryHeader => 'להיכנס ל־Active Directory?';
+  String get activeDirectoryHeader => 'להיכנס אל Active Directory?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
@@ -245,7 +247,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainTooLong => 'ארוך מדי';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'תווים שגויים';
+  String get activeDirectoryDomainInvalidChars => 'תווים לא תקניים';
 
   @override
   String get activeDirectoryDomainStartDot => 'מתחיל בנקודה (.)';
@@ -272,7 +274,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get activeDirectoryAdminEmpty => 'חובה';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'תווים שגויים';
+  String get activeDirectoryAdminInvalidChars => 'תווים לא תקניים';
 
   @override
   String get activeDirectoryPasswordLabel => 'סיסמה';
@@ -318,7 +320,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkWifiOption => 'התחברות לרשת אלחוטית';
 
   @override
-  String get networkWifiOff => 'רשת אלחוטית מושבתת';
+  String get networkWifiOff => 'הרשת האלחוטית מושבתת';
 
   @override
   String get networkWifiNone => 'לא זוהו התקני רשת אלחוטית';
@@ -340,7 +342,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'שם הרשת נחוץ';
 
   @override
-  String get networkNoneOption => 'לא רוצה להתחבר לאינטרנט כרגע';
+  String get networkNoneOption => 'לא להתחבר לאינטרנט בשלב זה';
 
   @override
   String get eulaPageTitle => 'הסכם רישוי';
@@ -353,7 +355,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
       'כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.';
 
   @override
-  String get eulaAcceptTerms => 'קראתי והתנאים האלה מקובלים עליי';
+  String get eulaAcceptTerms => 'קראתי וקיבלתי את התנאים האלה';
 
   @override
   String get successIconSemanticLabel => 'הצליח';
@@ -368,8 +370,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'מזעור';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'הרחבה';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'צמצום';
 }

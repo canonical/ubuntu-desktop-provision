@@ -48,6 +48,7 @@ class WizardPage extends StatefulWidget {
     this.content,
     this.contentPadding = kWizardPadding,
     this.contentSpacing = kWizardSpacing,
+    this.footer,
     this.snackBar,
     this.bottomBar,
   });
@@ -65,6 +66,9 @@ class WizardPage extends StatefulWidget {
 
   /// A content widget laid out below the header.
   final Widget? content;
+
+  /// A footer widget below the content.
+  final Widget? footer;
 
   /// Padding around the content widget.
   ///
@@ -125,6 +129,7 @@ class _WizardPageState extends State<WizardPage> {
                 child: widget.content,
               ),
             ),
+            if (widget.footer != null) widget.footer!,
             SizedBox(height: widget.contentSpacing),
           ],
         ),

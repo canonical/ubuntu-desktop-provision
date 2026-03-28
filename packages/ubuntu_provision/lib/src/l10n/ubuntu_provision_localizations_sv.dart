@@ -9,11 +9,11 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsSv([String locale = 'sv']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Tillgänglighet';
+  String get accessibilityPageTitle => 'Hjälpmedel';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Tillgänglighet i $DISTRO';
+    return 'Hjälpmedel i $DISTRO';
   }
 
   @override
@@ -22,7 +22,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seende';
+  String get accessibilitySeeingLabel => 'Syn';
 
   @override
   String get accessibilityHearingLabel => 'Hörsel';
@@ -43,7 +43,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get accessibilityLargeTextLabel => 'Stor text';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Minska animation';
+  String get accessibilityReduceAnimationLabel => 'Minska animeringar';
 
   @override
   String get accessibilityScreenReaderLabel => 'Skärmläsare';
@@ -58,13 +58,13 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get accessibilitySlowKeysLabel => 'Långsamma tangenter';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mus tangenter';
+  String get accessibilityMouseKeysLabel => 'Mustangenter';
 
   @override
   String get accessibilityDesktopZoomLabel => 'Skrivbordszoom';
 
   @override
-  String get errorPageTitle => 'Något gick fel';
+  String get errorPageTitle => 'Någonting gick fel';
 
   @override
   String get errorPageUnexpected =>
@@ -72,7 +72,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'För att skicka en automatiserad buggrapport som inkluderar relevant felsökningsinformation, vänligen kör <pre>sudo ubuntu-bug$SNAP</pre> i en terminal, eller från kommandokonsolen (Alt+F2).';
+    return 'För att skicka en automatiserad felrapport som inkluderar relevant felsökningsinformation, kör <pre>sudo ubuntu-bug$SNAP</pre> i en terminal eller från kommandokonsolen (Alt+F2).';
   }
 
   @override
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Dölj logg';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Starta om';
@@ -112,11 +115,10 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get keyboardDetectButton => 'Upptäck';
 
   @override
-  String get keyboardVariantLabel => 'Tangentbordsvariant:';
+  String get keyboardVariantLabel => 'Välj din tangentbordsvariant:';
 
   @override
-  String get keyboardPressKeyLabel =>
-      'Vänligen tryck på en av följande tangenter:';
+  String get keyboardPressKeyLabel => 'Tryck på en av följande tangenter:';
 
   @override
   String get keyboardKeyPresentLabel =>
@@ -130,10 +132,10 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
       'Du kan alltid ändra detta senare i utseendeinställningarna.';
 
   @override
-  String get themeDark => 'Mörk';
+  String get themeDark => 'Mörkt';
 
   @override
-  String get themeLight => 'Ljus';
+  String get themeLight => 'Ljust';
 
   @override
   String localePageTitle(String DISTRO) {
@@ -144,7 +146,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Välj ditt språk:';
 
   @override
-  String get identityPageTitle => 'Ställ in ditt konto';
+  String get identityPageTitle => 'Skapa ditt konto';
 
   @override
   String get identityAutoLogin => 'Logga in automatiskt';
@@ -178,7 +180,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get identityInvalidHostname => 'Datornamnet är ogiltigt';
 
   @override
-  String get identityUsernameLabel => 'Välj ett användarnamn';
+  String get identityUsernameLabel => 'Ditt användarnamn';
 
   @override
   String get identityUsernameRequired => 'Ett användarnamn krävs';
@@ -187,7 +189,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get identityInvalidUsername => 'Användarnamnet är ogiltigt';
 
   @override
-  String get identityUsernameInUse => 'Det användarnamnet existerar redan.';
+  String get identityUsernameInUse => 'Det användarnamnet finns redan.';
 
   @override
   String get identityUsernameSystemReserved =>
@@ -201,13 +203,13 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
       'Det namnet innehåller ogiltiga tecken.';
 
   @override
-  String get identityPasswordLabel => 'Välj ett lösenord';
+  String get identityPasswordLabel => 'Lösenord';
 
   @override
   String get identityPasswordRequired => 'Ett lösenord krävs';
 
   @override
-  String get identityConfirmPasswordLabel => 'Bekräfta ditt lösenord';
+  String get identityConfirmPasswordLabel => 'Bekräfta lösenordet';
 
   @override
   String get identityPasswordMismatch => 'Lösenorden stämmer inte överens';
@@ -226,7 +228,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
       'Du anger domän och andra detaljer i nästa steg.';
 
   @override
-  String get activeDirectoryTitle => 'Konfigurera Active Directory';
+  String get activeDirectoryTitle => 'Logga in med Active Directory';
 
   @override
   String get activeDirectoryHeader => 'Logga in med Active Directory?';
@@ -246,7 +248,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get activeDirectoryDomainEmpty => 'Krävs';
 
   @override
-  String get activeDirectoryDomainTooLong => 'För lång';
+  String get activeDirectoryDomainTooLong => 'För långt';
 
   @override
   String get activeDirectoryDomainInvalidChars => 'Ogiltiga tecken';
@@ -269,10 +271,10 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
       'Innehåller flera sekvenserade punkter (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domän hittades inte';
+  String get activeDirectoryDomainNotFound => 'Domänen hittades inte';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domän gå med användare';
+  String get activeDirectoryAdminLabel => 'Användare för att gå med i domän';
 
   @override
   String get activeDirectoryAdminEmpty => 'Krävs';
@@ -292,17 +294,17 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String get activeDirectoryErrorMessage =>
-      'Tyvärr, Active Directory kan inte ställas in just nu. när ditt system är igång, besök <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> för hjälp.';
+      'Tyvärr, Active Directory kan inte konfigureras just nu. När ditt system är igång och kör kan du besöka <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> för hjälp.';
 
   @override
-  String get networkPageTitle => 'Anslut till ett nätverk';
+  String get networkPageTitle => 'Internetanslutning';
 
   @override
   String get networkPageHeader => 'Anslut till internet';
 
   @override
   String get networkPageBody =>
-      'En internetanslutning kommer att förbättra din installation med kompatibilitetskontroll och extra paket för programvara.';
+      'En internetanslutning kommer att förbättra din installation med kompatibilitetskontroll och extra programvarupaket.';
 
   @override
   String get networkWiredOption => 'Använd trådbunden anslutning';
@@ -321,7 +323,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get networkWiredEnable => 'Aktivera trådbunden';
 
   @override
-  String get networkWifiOption => 'Anslut till ett Wi-Fi nätverk';
+  String get networkWifiOption => 'Anslut till ett Wi-Fi-nätverk';
 
   @override
   String get networkWifiOff => 'Trådlöst nätverk inaktiverat';
@@ -346,13 +348,13 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get networkHiddenWifiNameRequired => 'Ett nätverksnamn krävs';
 
   @override
-  String get networkNoneOption => 'Jag vill inte ansluta till internet just nu';
+  String get networkNoneOption => 'Anslut inte till internet';
 
   @override
   String get eulaPageTitle => 'Licensavtal';
 
   @override
-  String get eulaReviewTerms => 'Läs licensvillkoren';
+  String get eulaReviewTerms => 'Granska licensvillkoren';
 
   @override
   String get eulaReadAndAcceptTerms =>
@@ -362,7 +364,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Jag har läst och accepterar dessa villkor';
 
   @override
-  String get successIconSemanticLabel => 'Lyckats';
+  String get successIconSemanticLabel => 'Lyckades';
 
   @override
   String get closeIconSemanticLabel => 'Stäng';
@@ -374,8 +376,8 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimera';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Expandera';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Fäll ihop';
 }

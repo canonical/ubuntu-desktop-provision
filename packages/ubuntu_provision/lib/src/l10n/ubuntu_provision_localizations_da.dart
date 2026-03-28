@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skjul log';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Genstart';
 
   @override

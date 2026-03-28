@@ -112,6 +112,14 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Pels utilizaires d’organizacions que fornisson un fichièr autoinstal via Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Modificar';
 
   @override
@@ -312,15 +320,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Avètz besonh d\'una frasa secrèta per chifrar vòstres fichièrs. Vos serà demandada vòstra frasa secrèta cada còp qu\'aviatz vòstre ordenador.';
+      'Auretz besonh de picar una frasa secrèta cada còp qu\'aviatz vòstre ordenador. Aquesta frasa secrèta es diferenta del senhal de l\'utilizaire.';
 
   @override
   String get choosePassphraseInfoHeader =>
-      'Gardatz vòstra frasa secrèta en luòc segur';
+      'Asseguratz-vos de gardarvòstra frasa secrèta en luòc segur';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Se perdètz vòstra frasa secrèta, perdretz totas vòstras donadas.';
+      'Se la perdètz, perdretz totas vòstras donadas.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -331,13 +339,14 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Se perdètz la frasa secrèta, perdretz totas las donadas. La frasa secrèta remplaçarà pas la clau de recuperacion o lo senhal utilizaire.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Chiframent';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Definir una frasa secrèta de chiframent';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Definir un PIN de chiframent';
 
   @override
   String get passphrasePageBodyPassphrase =>
@@ -348,48 +357,52 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Frasa secrèta';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'Confirmar la frasa secrèta';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase =>
+      'Una frasa secrèta es requerida';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'Las frasas secrètas correspondon pas';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Confirmar lo PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Un PIN es requerit';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'Los PIN correspondon pas';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle => 'Requerís una frasa secrèta';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Requerir un PIN';
 
   @override
   String get passphraseTypePinTileSubTitle =>
       'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle =>
+      'Desverrolhar lo disc automaticament';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Seguretat addicionala';
 
   @override
   String get passphraseTypePageBody =>
@@ -404,7 +417,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Fair passphrase, make it longer or more complex for better security';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal => 'Frasa secrèta fòrta';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
@@ -415,7 +428,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Fair PIN, make it longer or less predictable for better security';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'Lo PIN es sufisentament long';
 
   @override
   String get installationTypeTitle => 'Tipe d’installacion';
@@ -453,8 +466,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Totas las donadas sul disc seràn espotidas, tanben los sistèmas operatius.';
 
   @override
-  String get installationTypeAdvancedLabel =>
-      'Mostrar las opcions avançadas...';
+  String get installationTypeAdvancedLabel => 'Opcions avançadas';
 
   @override
   String get installationTypeAdvancedTitle =>
@@ -907,6 +919,9 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Reaviar l\'ordenador ?';
 
   @override
+  String get restartInstaller => 'Restart installer';
+
+  @override
   String get restartIntoWindows => 'Reaviar jos Windows';
 
   @override
@@ -956,7 +971,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Desvolopatz amb çò melhor del monde liure';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO es un pòst de trabalh ideal pel desvolopament de logicials o web, las sciéncias de las donadas, l’intelligéncia artificiala e l’aprentissatge automatic, mas tanben pel devops e l’administracion. Totas las versions de $DISTRO incluson las darrièras cadenas d’aisinas e prenon en carga totes los principals environaments de desvolopament integrats.';
   }
 
@@ -996,7 +1011,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop inclutz LibreOffice, una seguida burotica liura compatibla amb Microsoft Office pels documents, fuèlhs de calcul e las presentacion. D’espleches de collaboracion populars son tanben disponibles.';
+    return '$DISTRO Desktop inclutz LibreOffice, una seguida burotica liura compatibla amb Microsoft Office pels documents, fuèlhs de calcul e las presentacions. D’espleches de collaboracion populars son tanben disponibles.';
   }
 
   @override
@@ -1041,19 +1056,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Assisténcia professionala disponibla 24h de 24h e 7 jorns de 7 amb Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'diapositiva seguenta';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Diapositiva precedent';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Jogar lo diaporama';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Pausar lo diaporama';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Alternar los jornals d\'installacion';
 
   @override
   String get copyingFiles => 'Còpia dels fichièrs…';
@@ -1229,7 +1244,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get recoveryKeyTitle => 'Clau de recuperacion del TPM';
+  String get recoveryKeyTitle => 'Clau de recuperacion';
 
   @override
   String get recoveryKeyTitleBadgeLabel => 'Important';
@@ -1256,14 +1271,14 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get recoveryKeyLinkLabel => 'Ne saber mai';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Salvar dins un fichièr';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Mostrar lo còdi QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Burèu – Clau de recuperacion';
   }
 
   @override
@@ -1271,29 +1286,30 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Copiada al quichapapièrs';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Fichièr de clau de recuperacion non salvagardat';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Lo fichièr de clau de recuperacion se pòt pas enregistrar dins un emplaçament temporari';
 
   @override
   String get recoveryKeyExceptionUnknownTitle => 'Error desconeguda';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Avètz pas l’autorizacion d’escriure dins aqueste dossièr. Ensajatz un luòc diferent o un autre metòde.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Ensajatz un emplaçament diferent, coma un lector amovible o un utilizatz un autre metòde.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Salvar lo fichièr de clau de recuperacion';
 
   @override
   String get recoveryKeyFilePickerFilter => 'Fichièr tèxt';
@@ -1367,69 +1383,79 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Podètz repassar lo fichièr d\'autoinstall importat de Landscape çai jos.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Capitada';
 
   @override
   String get errorIconSemanticLabel => 'Error';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tampar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 
   @override
   String get tpmActionPageTitle =>
       'Hardware-backed encryption could not be enabled';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Accion requerida';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Detalhs tecnics';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Confirmar';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Solucion $n : $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Solucion : $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel =>
+      'Learn more about hardware-backed encryption';
 
   @override
   String get tpmActionErrorSupportLabel =>
       'Try the solutions below, contact IT support, or choose a different encryption method.';
 
   @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Try the solution below, contact IT support, or choose a different encryption method.';
+
+  @override
   String get tpmActionErrorSupportNoActionLabel =>
       'Contact IT support, or choose a different encryption method.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal';
+  String get tpmActionErrorKindInternal => 'Error intèrna.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired => 'Extincion requerida.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired => 'Reaviada requerida.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => 'Paramètre mancant.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => 'Paramètre invalid.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => 'Action failed.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
@@ -1441,7 +1467,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+      'There is an issue with this computer\'s firmware.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
@@ -1469,7 +1495,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'UEFI debugging is enabled.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
@@ -1477,15 +1503,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+      'This computer is missing a required security feature (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'There is an issue with this computer\'s security configuration.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
@@ -1493,18 +1519,19 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Secure boot is disabled in this computer or is not set in deployed mode.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
       'This computer is using a manual allowlist to verify software at startup.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent =>
+      'Add-on drivers are present.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1525,6 +1552,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Restart to firmware settings';
 
   @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+
+  @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
       'Enable DMA protection manually';
 
@@ -1538,7 +1569,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Enable IOMMU manually';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -1564,7 +1595,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get tpmActionFixActionContactOem => 'Contact OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
@@ -1596,15 +1627,23 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'You can do this in your computer\'s firmware settings.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Check secure boot mode is set to \"deployed\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'Ignoring this issue might result in a less secure installation.';
 
   @override
   String get tpmActionRestartLabel => 'Restart';
@@ -1632,18 +1671,18 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'You might be asked to confirm this action on restart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Then you will need to start the installation again.';
 
   @override
   String get tpmActionErrorTitle => 'This solution failed';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Try a different solution or contact IT support.';
 
   @override
   String get manualPartitioningWarningBody =>

@@ -113,6 +113,14 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
       'For users in organizations that provide an autoinstall file via Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Alterar';
 
   @override
@@ -908,6 +916,9 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Restart computer?';
 
   @override
+  String get restartInstaller => 'Restart installer';
+
+  @override
   String get restartIntoWindows => 'Reiniciar no Windows';
 
   @override
@@ -957,7 +968,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
       'Desenvolva com o melhor do código aberto';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return 'O $DISTRO é a estação de trabalho ideal para o desenvolvimento de aplicações ou web, ciência de dados e IA/ML, bem como devops e administração. Cada lançamento do $DISTRO inclui as mais recentes cadeias de ferramentas e suporta todas as principais IDEs.';
   }
 
@@ -1399,36 +1410,46 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Solution: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel =>
+      'Learn more about hardware-backed encryption';
 
   @override
   String get tpmActionErrorSupportLabel =>
       'Try the solutions below, contact IT support, or choose a different encryption method.';
 
   @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Try the solution below, contact IT support, or choose a different encryption method.';
+
+  @override
   String get tpmActionErrorSupportNoActionLabel =>
       'Contact IT support, or choose a different encryption method.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal';
+  String get tpmActionErrorKindInternal => 'Internal error.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => 'Action failed.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
@@ -1440,7 +1461,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+      'There is an issue with this computer\'s firmware.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
@@ -1468,7 +1489,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'UEFI debugging is enabled.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
@@ -1476,15 +1497,15 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+      'This computer is missing a required security feature (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'There is an issue with this computer\'s security configuration.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
@@ -1492,18 +1513,19 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Secure boot is disabled in this computer or is not set in deployed mode.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
       'This computer is using a manual allowlist to verify software at startup.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent =>
+      'Add-on drivers are present.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1524,6 +1546,10 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
       'Restart to firmware settings';
 
   @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+
+  @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
       'Enable DMA protection manually';
 
@@ -1537,7 +1563,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Enable IOMMU manually';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -1563,7 +1589,7 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   String get tpmActionFixActionContactOem => 'Contact OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
@@ -1595,15 +1621,23 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'You can do this in your computer\'s firmware settings.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Check secure boot mode is set to \"deployed\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'Ignoring this issue might result in a less secure installation.';
 
   @override
   String get tpmActionRestartLabel => 'Restart';
@@ -1631,18 +1665,18 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'You might be asked to confirm this action on restart.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Then you will need to start the installation again.';
 
   @override
   String get tpmActionErrorTitle => 'This solution failed';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Try a different solution or contact IT support.';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1662,6 +1696,69 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   }
 
   @override
+  String get autoinstallDirectTitle => 'Instalação automatizada';
+
+  @override
+  String get autoinstallDirectHeader =>
+      'Importar arquivo de instalação automática';
+
+  @override
+  String get autoinstallDirectUrlLabel =>
+      'Você pode inserir a URL de um arquivo de instalação automática:';
+
+  @override
+  String get autoinstallDirectFileLabel => 'Ou selecione um arquivo local:';
+
+  @override
+  String get autoinstallDirectFileButtonLabel => 'Selecione o arquivo...';
+
+  @override
+  String get autoinstallDirectFileClearButtonLabel => 'Limpar arquivo';
+
+  @override
+  String get autoinstallDirectFilePickerTitle => 'Selecione o arquivo';
+
+  @override
+  String get autoinstallDirectFilePickerFilterLabel => 'Arquivos YAML';
+
+  @override
+  String get autoinstallDirectImportButtonLabel => 'Importar';
+
+  @override
+  String get autoinstallDirectErrorNetworkTitle =>
+      'O arquivo de instalação automática está inacessível';
+
+  @override
+  String get autoinstallDirectErrorNetworkBody =>
+      'Verifique se o URL está correto, teste sua conexão com a internet ou tente novamente mais tarde.';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL Invalida';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlBody =>
+      'Verifique se o URL está correto ou selecione um arquivo local.';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentTitle =>
+      'Arquivo de instalação automática inválido';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentBody =>
+      'Verifique o arquivo ou forneça um diferente.';
+
+  @override
+  String get autoinstallDirectErrorFileSystemTitle =>
+      'O arquivo de instalação automática não pode ser lido';
+
+  @override
+  String get autoinstallDirectErrorFileSystemBody =>
+      'Verifique suas permissões ou forneça um arquivo diferente.';
+
+  @override
+  String get autoinstallDirectErrorUnkownTitle => 'Erro desconhecido';
+
+  @override
   String get autoinstallTitle => 'Tipo de instalação';
 
   @override
@@ -1679,6 +1776,21 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String get autoinstallInteractiveDescription =>
       'Para usuários que desejam ser guiados passo a passo durante a instalação.';
+
+  @override
+  String get autoinstallDirectOption =>
+      'Automatizado com arquivo de instalação automática';
+
+  @override
+  String get autoinstallDirectDescription =>
+      'Para usuários avançados que possuem um arquivo autoinstall.yaml para configurações de sistema consistentes e repetíveis.';
+
+  @override
+  String get autoinstallLandscapeOption => 'Automatizado com Landscape';
+
+  @override
+  String get autoinstallLandscapeDescription =>
+      'Para usuários em organizações que fornecem um arquivo de instalação automática via Landscape.';
 
   @override
   String get changeButtonText => 'Alterar';
@@ -1745,7 +1857,18 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get rstTitle => 'O RST está habilitado';
 
   @override
-  String get rstHeader => 'Desligue o RST para continuar';
+  String get rstHeader => 'Desligue o RST para continuar a instalação';
+
+  @override
+  String get rstDisable =>
+      'Seu computador utiliza a tecnologia Intel RST (Rapid Storage Technology). Você pode desativar o RST em:';
+
+  @override
+  String get rstDisableWindows =>
+      'Windows, se você estiver usando uma configuração de inicialização dupla com o Windows';
+
+  @override
+  String get rstDisableBios => 'Configurações de Inicialização';
 
   @override
   String rstInstructions(String url) {
@@ -1868,14 +1991,109 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get choosePassphraseBody =>
-      'Você precisa de uma senha para criptografar seus arquivos. Você será solicitado a fornecer sua senha toda vez que ligar o computador.';
+      'Você precisará inserir sua senha sempre que ligar o computador. Essa senha é diferente da sua senha de usuário.';
 
   @override
   String get choosePassphraseInfoHeader => 'Certifique-se de salvar sua senha';
 
   @override
   String get choosePassphraseInfoBody =>
-      'Se você perder sua senha, perderá todos os seus dados.';
+      'Se você perde-la, perderá todos os seus dados.';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader =>
+      'Guarde sua senha e chave de recuperação em um local seguro';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody =>
+      'Se você perder sua senha, perderá todos os seus dados. A senha não substitui a chave de recuperação nem a sua senha de usuário.';
+
+  @override
+  String get passphrasePageTitle => 'Criptografar';
+
+  @override
+  String get passphrasePageHeaderPassphrase => 'Definir senha de criptografia';
+
+  @override
+  String get passphrasePageHeaderPin => 'Definir PIN de criptografia';
+
+  @override
+  String get passphrasePageBodyPassphrase =>
+      'Você precisará inserir sua senha sempre que ligar o computador. Essa senha é diferente da sua senha de usuário. Você poderá alterá-la posteriormente, mas não desativá-la. Caso se esqueça da sua senha, poderá recuperar o acesso ao disco utilizando a chave de recuperação.';
+
+  @override
+  String get passphrasePageBodyPin =>
+      'Você precisará inserir seu PIN sempre que ligar o computador. Este PIN é diferente da sua senha de usuário. Você poderá alterá-lo posteriormente, mas não desativá-lo. Caso esqueça seu PIN, você poderá recuperar o acesso ao disco usando a chave de recuperação.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Senha';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirmar a senha';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'É necessária uma senha';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'As senhas não coincidem';
+
+  @override
+  String get passphrasePageChoosePinHint => 'PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirmar o PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'Um PIN é requerido';
+
+  @override
+  String get passphrasePageMismatchPin => 'Os PINs não combinam';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Exigir uma senha';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Extremamente seguro. Você precisará inserir uma senha mais longa sempre que ligar o computador.';
+
+  @override
+  String get passphraseTypePinTileTitle => 'Exigir um PIN';
+
+  @override
+  String get passphraseTypePinTileSubTitle =>
+      'Mais seguro. Você precisará inserir um PIN numérico sempre que ligar o computador.';
+
+  @override
+  String get passphraseTypeNoneTileTitle => 'Desbloquear disco automaticamente';
+
+  @override
+  String get passphraseTypePageHeader => 'Segurança adicional';
+
+  @override
+  String get passphraseTypePageBody =>
+      'Por padrão, o Trusted Platform Module (TPM) do computador desbloqueará o disco durante a inicialização. Você também tem opções para proteger ainda mais seus dados.';
+
+  @override
+  String get passphrasePagePassphraseEntropyBelowMin =>
+      'Senha fraca, torne-a mais longa ou mais complexa';
+
+  @override
+  String get passphrasePagePassphraseEntropyBelowOptimal =>
+      'Senha adequada: torne-a mais longa ou mais complexa para maior segurança';
+
+  @override
+  String get passphrasePagePassphraseEntropyOptimal => 'Senha forte';
+
+  @override
+  String get passphrasePagePinEntropyBelowMin =>
+      'PIN fraco, torna-o mais longo ou menos previsível';
+
+  @override
+  String get passphrasePagePinEntropyBelowOptimal =>
+      'PIN justo, torne-o mais longo ou menos previsível para maior segurança';
+
+  @override
+  String get passphrasePagePinEntropyOptimal => 'O PIN é longo o suficiente';
 
   @override
   String get installationTypeTitle => 'Tipo de instalação';
@@ -1910,31 +2128,36 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get installationTypeEraseInfo =>
-      'Comece do zero no disco selecionado.';
+      'Todos os dados e partições do disco serão apagados, incluindo os sistemas operacionais.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Recursos avançados...';
+  String get installationTypeAdvancedLabel => 'Mostrar opções avançadas...';
 
   @override
-  String get installationTypeAdvancedTitle => 'Recursos avançados';
+  String get installationTypeAdvancedTitle =>
+      'Criptografia e sistema de arquivos';
 
   @override
   String get installationTypeExperimental => 'Experimental';
 
   @override
-  String get installationTypeNone => 'Nada';
+  String get installationTypeNone => 'Sem criptografia';
+
+  @override
+  String get installationTypeNoneInfo =>
+      'Sistema de arquivos padrão sem criptografia.';
 
   @override
   String get installationTypeNoneSelected => 'Nada selecionado';
 
   @override
-  String get installationTypeLVM => 'Use LVM';
+  String get installationTypeLVM => 'Use LVM sem criptografia';
 
   @override
   String get installationTypeLVMSelected => 'LVM selecionado';
 
   @override
-  String get installationTypeLVMEncryption => 'Use LVM e criptografia';
+  String get installationTypeLVMEncryption => 'Criptografar com um senha';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -1945,11 +2168,15 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
       'Você deverá escolher uma chave de segurança no próximo passo.';
 
   @override
-  String get installationTypeZFS => 'EXPERIMENTAL: Apagar o disco e usar ZFS';
+  String get installationTypeZFS => 'Use ZFS sem criptografia';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Apague o disco e use ZFS com criptografia';
+      'Criptografe com uma senha usando ZFS.';
+
+  @override
+  String get installationTypeZFSEncryptionInfo =>
+      'Criptografia nativa com ZFS. Você precisará inserir uma senha sempre que ligar o computador.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS selecionado';
@@ -1959,8 +2186,7 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
       'ZFS e criptografia selecionados';
 
   @override
-  String get installationTypeTPM =>
-      'EXPERIMENTAL: Habilitar criptografia completa de disco com suporte de hardware';
+  String get installationTypeTPM => 'Use criptografia com suporte de hardware';
 
   @override
   String get installationTypeTPMSelected => 'TPM selecionado';
@@ -1987,7 +2213,7 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Instale $product junto com eles';
+    return 'Instale o $product juntamente com os sistemas operacionais existentes';
   }
 
   @override
@@ -1997,7 +2223,17 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Documentos, músicas, e outros arquivos pessoais serão mantidos. Você poderá selecionar qual sistema operacional usar cada vez que o computador iniciar.';
+    return 'Selecione uma partição para redimensionar e criar espaço para o $product. Você pode escolher seu sistema operacional durante a inicialização.';
+  }
+
+  @override
+  String installationTypeEraseAndInstall(String os, String product) {
+    return 'Apague o $os e instale o $product';
+  }
+
+  @override
+  String installationTypeEraseAndInstallInfo(String os) {
+    return 'Todos os arquivos e dados da instalação atual do $os serão excluídos permanentemente.';
   }
 
   @override
@@ -2071,6 +2307,12 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
       'Pontos de montagem não podem conter espaços';
+
+  @override
+  String allocateDiskSpaceInvalidMountPointFormat(
+      String mountpoint, String format) {
+    return '$format não é um sistema de arquivos compatível com $mountpoint';
+  }
 
   @override
   String get diskHeadersDevice => 'Dispositivo';
@@ -2184,7 +2426,7 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get confirmEntryApplications => 'Aplicativos';
 
   @override
-  String get confirmEntryDiskSetup => 'Configuração do disco';
+  String get confirmEntryDiskSetup => 'Tipo de instalação';
 
   @override
   String get confirmEntryDiskEncryption => 'Criptografia de disco';
@@ -2226,6 +2468,37 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   String get confirmInstallButton => 'Instalar';
 
   @override
+  String get confirmTableErased => 'Apagado';
+
+  @override
+  String get confirmTableUnchanged => 'Inalterado';
+
+  @override
+  String confirmTableResized(String oldsize, String newsize) {
+    return 'Redimensionado de $oldsize para $newsize';
+  }
+
+  @override
+  String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
+    return 'Criado e formatado como $format usado para $mountpoint';
+  }
+
+  @override
+  String confirmTableFormattedMounted(String format, String mountpoint) {
+    return 'Formatado como $format usado para $mountpoint';
+  }
+
+  @override
+  String confirmTableMounted(String mountpoint) {
+    return 'Usado para $mountpoint';
+  }
+
+  @override
+  String confirmTableFormatted(String format) {
+    return 'Formatado como $format';
+  }
+
+  @override
   String get installationCompleteTitle => 'Instalação concluída';
 
   @override
@@ -2259,6 +2532,36 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
 
   @override
   String get continueTesting => 'Continuar testando';
+
+  @override
+  String get bitlockerInfoTitle => 'BitLocker detectado';
+
+  @override
+  String get bitlockerInfoDescription =>
+      'Uma ou mais partições estão criptografadas com o BitLocker.';
+
+  @override
+  String get bitlockerInfoDisable =>
+      'Para instalar em conjunto com o Windows, desative o BitLocker no Windows.';
+
+  @override
+  String get bitlockerInfoRecovery =>
+      'O Windows pode solicitar chaves de recuperação na inicialização após a instalação.';
+
+  @override
+  String bitlockerInfoInstructions(String url) {
+    return 'Para obter instruções, visite o <a href=\"$url\">Guia do BitLocker</a>.';
+  }
+
+  @override
+  String get bitlockerWarningTitle =>
+      'Você pode perder todos os seus dados sem as chaves de recuperação do BitLocker';
+
+  @override
+  String get restartComputer => 'Reinicie o computador';
+
+  @override
+  String get restartComputerTitle => 'Reiniciar o computador?';
 
   @override
   String get restartIntoWindows => 'Reiniciar no Windows';
@@ -2310,7 +2613,7 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
       'Desenvolva com o melhor do código aberto';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return '$DISTRO é a estação de trabalho ideal para o desenvolvimento de aplicativos ou web, ciência de dados e IA/AM, bem como DevOps e administração. Cada versão do $DISTRO inclui as mais recentes cadeias de ferramentas e suporta todos os principais IDEs.';
   }
 
@@ -2391,6 +2694,21 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   @override
   String get installationSlidesSupportUbuntuPro =>
       'Suporte 24/7 de nível empresarial com Ubuntu Pro';
+
+  @override
+  String get nextSlideSemanticLabel => 'Próximo slide';
+
+  @override
+  String get previousSlideSemanticLabel => 'Slide anterior';
+
+  @override
+  String get playSlideshowSemanticLabel => 'Reproduzir apresentação de slides';
+
+  @override
+  String get pauseSlideshowSemanticLabel => 'Pausar apresentação de slides';
+
+  @override
+  String get toggleLogsSemanticLabel => 'Alternar registros de instalação';
 
   @override
   String get copyingFiles => 'Copiando arquivos…';
@@ -2568,5 +2886,284 @@ class UbuntuBootstrapLocalizationsPtBr extends UbuntuBootstrapLocalizationsPt {
   }
 
   @override
-  String get recoveryKeyTitle => 'Chave de recuperação do TPM';
+  String get recoveryKeyTitle => 'Chave de recuperação';
+
+  @override
+  String get recoveryKeyTitleBadgeLabel => 'Importante';
+
+  @override
+  String get recoveryKeyHeader => 'Guarde sua chave de recuperação';
+
+  @override
+  String get recoveryKeyInfoHeader =>
+      'Você pode perder todos os seus dados sem uma chave de recuperação';
+
+  @override
+  String get recoveryKeyTextFieldLabel => 'Chave de recuperação';
+
+  @override
+  String get recoveryKeyStorageAdvice =>
+      'Você precisará fornecer esta chave de recuperação caso a descriptografia falhe durante a inicialização. Sem a chave, você perderá o acesso a todos os seus dados. Guarde-a em um local seguro, como um gerenciador de senhas.';
+
+  @override
+  String get recoveryKeyConfirmation =>
+      'Guardei minha chave de recuperação em um lugar seguro';
+
+  @override
+  String get recoveryKeyLinkLabel => 'Saber mais';
+
+  @override
+  String get recoveryKeySaveToFileLabel => 'Salvar em arquivo';
+
+  @override
+  String get recoveryKeyShowQrCodeLabel => 'Mostrar código QR';
+
+  @override
+  String recoveryKeyQrDialogTitle(String DISTRO) {
+    return '$DISTRO Desktop - Chave de recuperação';
+  }
+
+  @override
+  String get recoveryKeyQrDialogBody =>
+      'Escaneie o código QR para copiar a chave de recuperação e salve-a em um local seguro, como um gerenciador de senhas. Você também pode tirar uma foto para usar posteriormente.';
+
+  @override
+  String get recoveryKeyClipboardNotifiaction =>
+      'Copiado para a área de transferência';
+
+  @override
+  String get recoveryKeyExceptionFileSystemTitle =>
+      'O arquivo da chave de recuperação não foi salvo';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathTitle =>
+      'O arquivo da chave de recuperação não pode ser salvo em um local temporário';
+
+  @override
+  String get recoveryKeyExceptionUnknownTitle => 'Erro desconhecido';
+
+  @override
+  String get recoveryKeyExceptionFileSystemBody =>
+      'Você não tem permissão para escrever nessa pasta. Tente um local diferente ou use outro método.';
+
+  @override
+  String get recoveryKeyExceptionDisallowedPathBody =>
+      'Tente um local diferente, como uma unidade removível, ou use outro método.';
+
+  @override
+  String get recoveryKeyFilePickerTitle =>
+      'Salvar arquivo de chave de recuperação';
+
+  @override
+  String get recoveryKeyFilePickerFilter => 'Arquivos de texto';
+
+  @override
+  String landscapeMagicAttachInstructions(String url) {
+    return 'Escaneie o código QR ou insira o código abaixo em <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get landscapePageTitle => 'Instalação automatizada';
+
+  @override
+  String get landscapeHeader => 'Faça login no Landscape';
+
+  @override
+  String get landscapeDomainHeader => 'Insira o domínio Landscape (FQDN)';
+
+  @override
+  String get landscapeDomainHintText => 'Domínio do Landscape (FQDN)';
+
+  @override
+  String get landscapeDomainInstructions =>
+      'Forneça o domínio Landscape da sua organização para fazer login e obter um arquivo de instalação automática. Você pode obter o FQDN com o seu suporte de TI.';
+
+  @override
+  String get landscapeDomainTextField => 'Domínio de Landscape (FQDN)';
+
+  @override
+  String get next => 'Próximo';
+
+  @override
+  String get landscapeDomainInvalidDomainWarning =>
+      'Domínio inválido. Verifique ou entre em contato com seu suporte de TI';
+
+  @override
+  String get landscapeDomainNoInternetTitleWarning =>
+      'Conecte-se à internet para continuar';
+
+  @override
+  String get landscapeDomainNoInternetDescriptionWarning =>
+      'É necessário ter internet para obter o arquivo de instalação automática do Landscape';
+
+  @override
+  String get landscapeCodeExpiredWarning => 'O código expirou, tente novamente';
+
+  @override
+  String get landscapeLoginFailedWarning => 'Falha no login, tente novamente';
+
+  @override
+  String get landscapeErrorPageTitle =>
+      'A instalação automática não está disponível para a sua conta';
+
+  @override
+  String get landscapeErrorPageBody =>
+      'Contate o suporte de TI ou tente uma opção de instalação diferente.';
+
+  @override
+  String landscapeErrorPageCode(String code) {
+    return 'Código de erro: $code';
+  }
+
+  @override
+  String get landscapeConfirmPageSuccessInfoTitle =>
+      'O Ubuntu será instalado com a configuração fornecida pela sua organização';
+
+  @override
+  String get landscapeConfirmPageSuccessInfoContent =>
+      'Você pode consultar o arquivo de instalação automática importado do Landscape abaixo.';
+
+  @override
+  String get successIconSemanticLabel => 'Sucesso';
+
+  @override
+  String get errorIconSemanticLabel => 'Erro';
+
+  @override
+  String get closeIconSemanticLabel => 'Fechar';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximizar';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimizar';
+
+  @override
+  String get tpmActionPageTitle => 'Criptografia com suporte de hardware';
+
+  @override
+  String get tpmActionBadgeLabel => 'Ação necessária';
+
+  @override
+  String get tpmActionDetailsLabel => 'Detalhes técnicos';
+
+  @override
+  String get tpmActionConfirmLabel => 'Confirmar';
+
+  @override
+  String get tpmActionErrorKindInternal => 'Interno';
+
+  @override
+  String get tpmActionErrorKindShutdownRequired => 'Desligamento necessário';
+
+  @override
+  String get tpmActionErrorKindRebootRequired => 'Reinicialização necessária';
+
+  @override
+  String get tpmActionErrorKindUnexpectedAction => 'Ação inesperada';
+
+  @override
+  String get tpmActionErrorKindMissingArgument => 'Argumento Ausente';
+
+  @override
+  String get tpmActionErrorKindInvalidArgument => 'Argumento inválido';
+
+  @override
+  String get tpmActionErrorKindActionFailed => 'Ação Falhou';
+
+  @override
+  String get tpmActionErrorKindRunningInVm => 'Executando em VM';
+
+  @override
+  String get tpmActionErrorKindSystemNotEfi => 'Sistema não EFI';
+
+  @override
+  String get tpmActionErrorKindEfiVariableAccess => 'Acesso variável EFI';
+
+  @override
+  String get tpmActionErrorKindNoSuitableTpm2Device =>
+      'Nenhum dispositivo TPM2 adequado';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceDisabled =>
+      'Dispositivo TPM desativado';
+
+  @override
+  String get tpmActionErrorKindTpmHierarchiesOwned =>
+      'Hierarquias TPM de propriedade';
+
+  @override
+  String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
+      'Bloqueio do dispositivo TPM Bloqueado';
+
+  @override
+  String get tpmActionErrorKindInsufficientTpmStorage =>
+      'Armazenamento insuficiente de TPM';
+
+  @override
+  String get tpmActionErrorKindUnsupportedPlatform =>
+      'Plataforma não suportada';
+
+  @override
+  String get tpmActionErrorKindUefiDebuggingEnabled => 'Depuração UEFI ativada';
+
+  @override
+  String get tpmActionErrorKindInsufficientDmaProtection =>
+      'Proteção DMA insuficiente';
+
+  @override
+  String get tpmActionErrorKindNoKernelIommu => 'Sem IOMMU do kernel';
+
+  @override
+  String get tpmActionErrorKindHostSecurity => 'Segurança do host';
+
+  @override
+  String get tpmActionErrorKindSysPrepApplicationsPresent =>
+      'Apresentam os aplicativos Sys Prep';
+
+  @override
+  String get tpmActionErrorKindAbsolutePresent => 'Presente Absoluto';
+
+  @override
+  String get tpmActionErrorKindInvalidSecureBootMode =>
+      'Modo SecureBoot inválido';
+
+  @override
+  String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
+      'Algoritmo SecureBoot fraco detectado';
+
+  @override
+  String get tpmActionFixActionReboot => 'Reinicializar';
+
+  @override
+  String get tpmActionFixActionShutdown => 'Desligar';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettings =>
+      'Reiniciar para as configurações do firmware';
+
+  @override
+  String get tpmActionFixActionContactOem =>
+      'Entre em contato com o fabricante original (OEM)';
+
+  @override
+  String get tpmActionFixActionContactOsVendor =>
+      'Contate o fornecedor do sistema operacional';
+
+  @override
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Habilitar TPM via firmware';
+
+  @override
+  String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
+      'Ativar e limpar o TPM via firmware';
+
+  @override
+  String get tpmActionFixActionClearTpmViaFirmware => 'Limpar TPM via firmware';
+
+  @override
+  String get tpmActionFixActionClearTpm => 'Limpar TPM';
+
+  @override
+  String get tpmActionFixActionProceed => 'Prosseguir';
 }

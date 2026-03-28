@@ -30,7 +30,7 @@ class UbuntuInitLocalizationsHe extends UbuntuInitLocalizations {
 
   @override
   String get welcomeStoreSubtitle =>
-      'מעולם לא היה קל יותר למצוא את התוכנות המועדפות עליך.';
+      'מעולם לא היה קל יותר למצוא את התוכנות האהובות.';
 
   @override
   String get welcomeSecurityTitle => 'אבטחה משופרת';

@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Kaŝi protokolon';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Restartigi';
 
   @override
@@ -373,8 +376,8 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimumigi';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Malkaŝi';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Kaŝi';
 }

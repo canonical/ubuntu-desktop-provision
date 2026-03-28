@@ -82,7 +82,10 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => '로그 숨기기';
 
   @override
-  String get restart => 'Restart';
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
+  String get restart => '다시 시작';
 
   @override
   String get close => '닫기';

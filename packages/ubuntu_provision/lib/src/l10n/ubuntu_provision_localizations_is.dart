@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsIs extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Customise $DISTRO to your needs before you set up. You can change them later in the Settings app.';
   }
 
   @override
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsIs extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Hide log';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Restart';

@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Вибачте, але ми не впевнені, в чому саме полягає помилка. Ви можете спробувати перезапустити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
+      'Вибачте, але ми не впевнені, чому виникла помилка. Ви можете спробувати перезапустити комп\'ютер і почати процес встановлення заново. Ви також можете <a>повідомити про проблему</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Сховати журнал';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Перезапустити';
@@ -329,7 +332,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiDisabled =>
-      'Для використання Wi-Fi на цьому комп\'ютері має бути ввімкнений бездротовий зв’язок';
+      'Для використання Wi-Fi на цьому комп\'ютері має бути ввімкнений бездротовий зв\'язок';
 
   @override
   String get networkWifiEnable => 'Ввімкнути Wi-Fi';
@@ -373,8 +376,8 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Згорнути';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Розгорнути';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Згорнути';
 }

@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Tá brón orainn, ach níl muid cinnte cad é an earráid. Is féidir leat do ríomhaire a atosú agus an próiseas suiteála a thosú arís. Is féidir leat <a>an cheist a thuairisciú</a> freisin.';
+      'Tá brón orainn, ach nílimid cinnte cad é an earráid. Is féidir leat iarracht a dhéanamh do ríomhaire a atosú agus an próiseas suiteála a thosú arís. Is féidir leat <a>an fhadhb a thuairisciú</a> freisin.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -80,6 +80,9 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageHideLog => 'Folaigh logchomhad';
+
+  @override
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
   String get restart => 'Tosaigh arís';
@@ -375,8 +378,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Íoslaghdaigh';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Leathnaigh';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Laghdaigh';
 }

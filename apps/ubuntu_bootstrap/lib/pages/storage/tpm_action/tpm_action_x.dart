@@ -142,9 +142,9 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
       };
 
   String label(UbuntuBootstrapLocalizations l10n) => switch (type) {
-        CoreBootFixAction.REBOOT ||
+        CoreBootFixAction.REBOOT => l10n.tpmActionRestartLabel,
         CoreBootFixAction.REBOOT_TO_FW_SETTINGS =>
-          l10n.tpmActionRestartLabel,
+          l10n.tpmActionFixActionRebootToFwSettings,
         CoreBootFixAction.ENABLE_TPM_VIA_FIRMWARE =>
           l10n.tpmActionRestartAndEnableTpmLabel,
         CoreBootFixAction.ENABLE_AND_CLEAR_TPM_VIA_FIRMWARE ||
@@ -184,6 +184,24 @@ extension CoreBootFixActionL10n on CoreBootFixActionWithCategoryAndArgs {
         (CoreBootFixAction.PROCEED, _) =>
           l10n.tpmActionFixActionProceedDescription,
         _ => null,
+      };
+
+  String? firmwareHint(
+    UbuntuBootstrapLocalizations l10n, [
+    CoreBootAvailabilityErrorKind? error,
+  ]) =>
+      switch ((type, error)) {
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.INVALID_SECURE_BOOT_MODE
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint,
+        (
+          CoreBootFixAction.REBOOT_TO_FW_SETTINGS,
+          CoreBootAvailabilityErrorKind.NO_KERNEL_IOMMU
+        ) =>
+          l10n.tpmActionFixActionRebootToFwSettingsNoKernelIommuHint,
+        _ => null
       };
 
   String? caveats(UbuntuBootstrapLocalizations l10n) => switch (type) {

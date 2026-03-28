@@ -113,6 +113,14 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'D’úsáideoirí in eagraíochtaí a sholáthraíonn comhad uathshuiteála trí Landscape.';
 
   @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
   String get changeButtonText => 'Athrú';
 
   @override
@@ -454,7 +462,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Scriosfar na sonraí agus na landairí go léir ar an diosca, lena n-áirítear córais oibriúcháin.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Taispeáin ardroghanna...';
+  String get installationTypeAdvancedLabel => 'Roghanna ardleibhéil';
 
   @override
   String get installationTypeAdvancedTitle => 'Criptiú agus córas comhaid';
@@ -483,12 +491,12 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Beidh ort frása faire a iontráil gach uair a chasann tú ar do ríomhaire. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Úsáideann sé seo LVM le criptiú LUKS.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -521,11 +529,11 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Díghlasálfar an diosca go huathoibríoch le linn an tosaithe.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Níl sé ar fáil ar an ríomhaire seo.';
 
   @override
   String get installationTypeTPMSelected => 'TPM roghnaithe';
@@ -868,7 +876,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Caithfidh tú an ríomhaire a atosú chun leanúint leis an bpróiseas suiteála.';
 
   @override
-  String get shutdown => 'Múch';
+  String get shutdown => 'Dún síos';
 
   @override
   String get restartNow => 'Atosaigh anois';
@@ -905,6 +913,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartComputerTitle => 'Atosaigh ríomhaire?';
+
+  @override
+  String get restartInstaller => 'Restart installer';
 
   @override
   String get restartIntoWindows => 'Atosaigh isteach Windows';
@@ -956,7 +967,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Forbairt leis an chuid is fearr de fhoinse oscailte';
 
   @override
-  String installationSlidesDevelopmentBody(String DISTRO) {
+  String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
     return 'Is é $DISTRO an stáisiún oibre idéalach d\'fhorbairt app nó gréasáin, eolaíocht sonraí agus AI / ML chomh maith le devops agus riarachán. Cuimsíonn gach eisiúint $DISTRO na huirlisí is déanaí agus tacaíonn sé le gach IDEs mór.';
   }
 
@@ -1008,7 +1019,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Léitheoir Scáileáin Orca';
+  String get installationSlidesAccessibilityOrca => 'Léitheoir scáileáin Orca';
 
   @override
   String get installationSlidesAccessibilityLanguages => 'Tacaíocht teanga';
@@ -1385,269 +1396,295 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Níorbh fhéidir criptiú crua-earraí-tacaithe a chumasú';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Gníomh riachtanach';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Sonraí teicniúla';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Deimhnigh';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Réiteach $n: $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Link to documentation';
+  String tpmActionSingleSolutionLabel(String text) {
+    return 'Réiteach: $text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel =>
+      'Foghlaim tuilleadh faoi chriptiú atá bunaithe ar chrua-earraí';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Bain triail as na réitigh thíos, déan teagmháil le tacaíocht TF, nó roghnaigh modh criptithe difriúil.';
+
+  @override
+  String get tpmActionErrorSupportSingleLabel =>
+      'Bain triail as an réiteach thíos, déan teagmháil le tacaíocht TF, nó roghnaigh modh criptithe difriúil.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Téigh i dteagmháil le tacaíocht TF, nó roghnaigh modh criptithe difriúil.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal';
+  String get tpmActionErrorKindInternal => 'Earráid inmheánach.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Shutdown Required';
+  String get tpmActionErrorKindShutdownRequired =>
+      'Tá gá le múchadh an chumhachta.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Reboot Required';
+  String get tpmActionErrorKindRebootRequired => 'Tá atosú ag teastáil.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected Action';
+  String get tpmActionErrorKindUnexpectedAction => 'Gníomh gan choinne.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing Argument';
+  String get tpmActionErrorKindMissingArgument => 'Argóint ar iarraidh.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid Argument';
+  String get tpmActionErrorKindInvalidArgument => 'Argóint neamhbhailí.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action Failed';
+  String get tpmActionErrorKindActionFailed => 'Theip ar an ngníomh.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Is meaisín fíorúil an timpeallacht reatha.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Tá an ríomhaire seo ag úsáid seanfhirmchlár (sean-BIOS) nach bhfuil comhoiriúnach leis an modh criptithe seo.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware settings.';
+      'Tá fadhb ann le dochtearraí an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Níl an crua-earraí slándála riachtanacha (TPM 2.0) don mhodh criptithe seo ag an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'Tá TPM an ríomhaire seo díchumasaithe.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'Tá TPM an ríomhaire seo in úsáid cheana féin ag córas nó feidhmchlár eile.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'Tá TPM an ríomhaire seo faoi ghlas faoi láthair.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'Níl dóthain stórais ar fáil ag TPM an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Níl an ríomhaire seo comhoiriúnach le criptiú atá bunaithe ar chrua-earraí.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled';
+      'Tá dífhabhtú UEFI cumasaithe.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Tá gné slándála riachtanach (cosaint DMA) in easnamh ar an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (kernel IOMMU).';
+      'Tá gné slándála riachtanach (IOMMU) in easnamh ar an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security settings.';
+      'Tá fadhb ann le cumraíocht slándála an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that may prevent a secure connection with the computer\'s TPM.';
+      'Tá bogearraí ag rith ag an am tosaithe a d\'fhéadfadh cosc a chur ar nasc slán le TPM an ríomhaire.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Tá an Modúl Buanseasmhachta Absalóideach cumasaithe ar an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not configured in \"deployed\" mode.';
+      'Tá tosaithe slán díchumasaithe ar an ríomhaire seo nó níl sé socraithe i mód imscartha.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying components in this computer are outdated or use weak protection.';
+      'Tá cuid de na bogearraí fíoraithe deimhnithe sa ríomhaire seo as dáta nó úsáideann siad cosaint lag.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Tá an ríomhaire seo ag úsáid liosta ceadanna láimhe chun bogearraí a fhíorú ag am tosaithe.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent => 'Addon Drivers Present';
+  String get tpmActionErrorKindAddonDriversPresent =>
+      'Tá tiománaithe breiseán i láthair.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Tá fadhb ann le TPM an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Tá fadhb ann le dochtearraí an ríomhaire seo.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Atosaigh';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Múch an chumhacht';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Atosaigh chuig socruithe dochtearraí';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      'Mura lódálann socruithe an dochtearraí go huathoibríoch, atosú agus brúigh an eochair socruithe arís agus arís eile le linn an tosaithe (F2, F10 nó Scrios de ghnáth).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Cumasaigh cosaint DMA de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Glan TPM de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Cumasaigh tosaithe slán de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable DMA protection manually';
+      'Cumasaigh IOMMU de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Cumasaigh bainc PCR de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Cumasaigh TPM de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Glan TPM de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Glan TPM de láimh';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Díchumasaigh an Modúl Buanseasmhachta Absalóideach de láimh';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Déan teagmháil le OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS Vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Déan teagmháil le díoltóir an chórais oibriúcháin';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware => 'Cumasaigh TPM ar atosú';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Cumasaigh agus glan TPM ar atosú';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware => 'Glan TPM ar atosú';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Glan TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Déan neamhaird';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Atosaigh an ríomhaire chun na gníomhartha roimhe seo a chríochnú.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'D’fhéadfadh atosú an ríomhaire an fhadhb a réiteach.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Múch an ríomhaire chun na gníomhartha roimhe seo a chur i gcrích.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in you computer\'s firmware settings.';
+      'Is féidir leat é seo a dhéanamh i socruithe dochtearraí do ríomhaire.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You may be able to do this in you computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'B’fhéidir go mbeifeá in ann é seo a dhéanamh i socruithe dochtearraí do ríomhaire. Seiceáil doiciméadacht an tsoláthair LAP le haghaidh treorach.';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      'Seiceáil go bhfuil an modh tosaithe slán socraithe go \"imscartha\".';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      'D’fhéadfaí tagairt don ghné seo mar “Teicneolaíocht Fhíorúlaithe”, “VT-d” nó “AMD-Vi”.';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring the issue may result in a less secure installation.';
+      'D’fhéadfadh sé go mbeadh an suiteáil níos lú slán dá ndéanfaí neamhaird den fhadhb seo.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Atosaigh';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Atosaigh agus cumasaigh TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel => 'Atosaigh agus glan TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel =>
+      'Déan neamhaird agus lean ar aghaidh';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Scriostar na heochracha criptithe go léir nuair a ghlanann tú an TPM';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Caillfidh tú rochtain ar na sonraí go léir i dtiomántáin chriptithe nach bhfuil eochracha aisghabhála agat dóibh. Brisfidh sé gnéithe eile a bhraitheann ar an TPM freisin, amhail fíordheimhniú agus deimhnithe.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Tuigim na hiarmhairtí a bhaineann le glanadh an TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You may be asked to confirm this action on restart.';
+      'D’fhéadfaí iarraidh ort an gníomh seo a dheimhniú nuair a atosófar é.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'You will then have to retry installation from scratch.';
+      'Ansin beidh ort an suiteáil a thosú arís.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Theip ar an réiteach seo';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support';
+      'Bain triail as réiteach difriúil nó déan teagmháil le tacaíocht TF.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Bain triail as rud éigin eile. Féadfaidh tú <a href=\"\">tuairisc earráide a sheoladh</a> freisin.';
 }

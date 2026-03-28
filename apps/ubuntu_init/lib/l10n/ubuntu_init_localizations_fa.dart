@@ -158,11 +158,11 @@ class UbuntuInitLocalizationsFa extends UbuntuInitLocalizations {
   String get successIconSemanticLabel => 'موفّقیت';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'بستن';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'بیشینه';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'کمینه';
 }

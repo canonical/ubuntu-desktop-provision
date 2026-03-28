@@ -9,371 +9,374 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsUg([String locale = 'ug']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'قولايلىق';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO دىكى قولايلىقلىقى';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'تەڭشەشتىن ئىلگىرى ئېھتىياجىڭىزغا ئاساسەن $DISTRO نى خاسلاشتۇرالايسىز. كېيىن ئۇلارنى سىستېما تەڭشىكىدىن ئۆزگەرتەلەيسىز.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'كۆرۈش سېزىمى';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'ئاڭلاش سېزىمى';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'كىرگۈزۈش';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'نىشانلاش ۋە چېكىش';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'نىسبەت';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'يۇقىرى سېلىشتۇرما';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'چوڭ تېكىست';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'جانلاندۇرۇمنى ئازايتىش';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'ئېكران ئوقۇغۇچ';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'كۆرۈنمە ئاگاھلاندۇرۇش';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'يېپىشقاق كۇنۇپكا';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'ئاستا كۇنۇپكا';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'چاشقىنەك كۇنۇپكىسى';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'ئۈستەلئۈستى نىسبىتى';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'كاشىلا كۆرۈلدى';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.';
+      'كەچۈرۈڭ، قانداق خاتالىق كۆرۈلگەنلىكى ئېنىق ئەمەس. كومپيۇتېرىڭىزنى قايتا قوزغىتىپ ئاندىن ئورنىتىش جەريانىنى قايتا باشلاڭ. سىز يەنە <a>مەسىلە مەلۇم قىل</a>الايسىز.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'ئەگەر سازلاش ئۇچۇرىنى ئۆز ئىچىگە ئالغان ئاپتوماتىك كەمتۈك دوكلاتى يوللىماقچى بولسىڭىز، تېرمىنال ياكى بۇيرۇق سۇپىسى(Alt+F2) دا <pre>sudo ubuntu-bug $SNAP</pre> نى ئىجرا قىلىڭ.';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'خاتىرە كۆرسەت';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'خاتىرە يوشۇر';
 
   @override
-  String get restart => 'Restart';
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
-  String get close => 'Close';
+  String get restart => 'قايتا قوزغات';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get close => 'ياپ';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezonePageTitle => 'ۋاقىت رايونى تاللىنىدۇ';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneLocationLabel => 'ئورۇن';
 
   @override
-  String get keyboardTitle => 'Keyboard layout';
+  String get timezoneTimezoneLabel => 'ۋاقىت رايونى';
 
   @override
-  String get keyboardHeader => 'Select your keyboard layout';
+  String get keyboardTitle => 'ھەرپتاختا ئورۇنلاشتۇرۇلۇشى';
 
   @override
-  String get keyboardTestHint => 'Type here to test your keyboard';
+  String get keyboardHeader => 'ھەرپتاختا ئورۇنلاشتۇرۇلۇشى تاللىنىدۇ';
 
   @override
-  String get keyboardDetectTitle => 'Detect keyboard layout';
+  String get keyboardTestHint => 'ھەرپتاختىڭىزنى سىناش ئۈچۈن بۇ جايغا كىرگۈزۈڭ';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectTitle => 'ھەرپتاختا جايلاشتۇرۇشنى بايقايدۇ';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardDetectButton => 'بايقا';
 
   @override
-  String get keyboardPressKeyLabel => 'Please press one of the following keys:';
+  String get keyboardVariantLabel => 'ھەرپتاختا ئورۇنلاشتۇرۇلۇشى تاللىنىدۇ:';
+
+  @override
+  String get keyboardPressKeyLabel => 'تۆۋەندىكى كۇنۇپكىلاردىن بىرنى بېسىڭ:';
 
   @override
   String get keyboardKeyPresentLabel =>
-      'Is the following key present on your keyboard?';
+      'ھەرپتاختىڭىزدا تۆۋەندىكى كۇنۇپكىلار بارمۇ؟';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'ئۆرنەك تاللىنىدۇ';
 
   @override
   String get themePageHeader =>
-      'You can always change this later in the appearance settings.';
+      'كېيىن قىياپەت تەڭشىكىدىن خالىغان ۋاقىتتا ئۆزگەرتەلەيسىز.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'قاراڭغۇ';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'يورۇق';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO غا خۇش كەلدىڭىز';
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'تىل تاللىنىدۇ:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'ھېسابىڭىز قۇرۇلىدۇ';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'ئۆزلۈكىدىن تىزىمغا كىرىدۇ';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'تىزىمغا كىرگەندە ئىم سورايدۇ';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'ئاتىڭىز';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'ئىسىم زۆرۈر';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'ئىسىم بەك ئۇزۇن.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'كومپيۇتېرىڭىزنىڭ ئىسمى';
 
   @override
   String get identityHostnameInfo =>
-      'The name it uses when it talks to other computers.';
+      'باشقا كومپيۇتېرلار بىلەن ئالاقە قىلغاندا بۇ كومپيۇتېر ئىشلىتىدىغان ئىسم.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'كومپيۇتېر ئىسمى زۆرۈر';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'كومپيۇتېر ئىسمى بەك ئۇزۇن.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'كومپيۇتېر ئىسمى ئىناۋەتسىز';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'ئىشلەتكۈچى ئاتىڭىز';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'ئىشلەتكۈچى ئاتى زۆرۈر';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'ئىشلەتكۈچى ئاتى ئىناۋەتسىز';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'ئىشلەتكۈچى ئاتى مەۋجۇت.';
 
   @override
   String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+      'بۇ ئات سىستېمىنىڭ ئىشلىتىشى ئۈچۈن قالدۇرۇلغان.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'ئىسىم بەك ئۇزۇن.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+  String get identityUsernameInvalidChars => 'ئىسىمدا ئىناۋەتسىز ھەرپ بار.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'ئىم';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'ئىم زۆرۈر';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'ئىم جەزملە';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'ئىم ماسلاشمىدى';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'كۆرسەت';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'يوشۇر';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'ئاكتىپ مۇندەرىجىنى ئىشلىتىدۇ';
 
   @override
   String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+      'كېيىنكى قەدەمدە دائىرە ۋە باشقا تەپسىلاتلارنى كىرگۈزەلەيسىز.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle =>
+      'ئاكتىپ مۇندەرىجىگە تىزىمغا كىرىش سەپلىمىسى';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'ئاكتىپ مۇندەرىجىگە تىزىمغا كىرەمدۇ؟';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return 'باشقۇرۇش ئاسان بولۇشى ئۈچۈن $DISTRO ئاكتىپ مۇندەرىجە بىلەن زىچ توپلاشتۇرۇپ لايىھەلىگەن.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection => 'دائىرە باغلىنىشىنى سىنا';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'دائىرە';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'زۆرۈر';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'بەك ئۇزۇن';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'ئىناۋەتسىز ھەرپ';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'چېكىت (.) تىن باشلىنىدۇ';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'چېكىت (.) بىلەن ئاخىرلىشىدۇ';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen => 'سىزىقچە (-) بىلەن باشلىنىدۇ';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'سىزىقچە (-) بىلەن ئاخىرلىشىدۇ';
 
   @override
   String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+      'تەرتىپلىك كۆپ چېكىت (..) بار';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'دائىرە تېپىلمىدى';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'دائىرىگە قوشۇلغان ئىشلەتكۈچى';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'زۆرۈر';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'ئىناۋەتسىز ھەرپ';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'ئىم';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'زۆرۈر';
 
   @override
   String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+      'ئاكتىپ مۇندەرىجىگە ئۇلىنىش تەڭشەشتە خاتالىق';
 
   @override
   String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+      'كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'ئىنتېرنېت باغلىنىشى';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'ئىنتېرنېتقا باغلا';
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'ئىنتېرنېتقا باغلانغاندىن كېيىن، ماسلىشىشچانلىق تەكشۈرۈشى ۋە قوشۇمچە يۇمشاق دېتال بوغچىسى ئورنىتىشىڭىزنى ياخشىلايدۇ.';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'سىملىق تور باغلىنىشى ئىشلىتىدۇ';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'ھېچقانداق سىملىق تور باغلىنىشى بايقالمىدى';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'سىملىق تور باغلىنىشى تاقاق';
 
   @override
   String get networkWiredDisabled =>
-      'To use Ethernet on this computer, a wired connection must be enabled';
+      'بۇ كومپيۇتېردىكى دائىرىلىك تورنى ئىشلىتىشتە، سىملىق تور چوقۇم قوزغىتىلىشى كېرەك';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'سىملىق تورنى قوزغات';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'Wi-Fi تورىغا باغلان';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'سىمسىز تور چەكلەنگەن';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'ھېچقانداق Wi-Fi تورى بايقالمىدى';
 
   @override
   String get networkWifiDisabled =>
-      'To use Wi-Fi on this computer, wireless networking must be enabled';
+      'بۇ كومپيۇتېردىكى Wi-Fi يەنى سىمسىز تورنى ئىشلىتىشتە، سىمسىز تور چوقۇم قوزغىتىلىشى كېرەك';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'Wi-Fi نى قوزغات';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'يوشۇرۇن Wi-Fi تورىغا باغلىنىدۇ';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'تور ئىسمى';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'تور ئىسمى زۆرۈر';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'ئىنتېرنېتقا باغلىما';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'ئىجازەت كېلىشىمى';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'ئىجازەتنامە ماددىلىرىنى كۆرسىتىدۇ';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'بۇ كومپيۇتېرنى تەڭشەشنى داۋاملاشتۇرسىڭىز، چوقۇم ئىجازەت كېلىشىمىنىڭ ماددىلىرىنى ئوقۇپ ۋە قوشۇلىسىز.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'بۇ ماددىلارنى ئوقۇدۇم ۋە قوشۇلىمەن';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'مۇۋەپپەقىيەتلىك';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'ياپ';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'چوڭايت';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'كىچىكلەت';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'ياي';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'يىغ';
 }

@@ -108,11 +108,11 @@ class FactoryResetToolsLocalizationsKa extends FactoryResetToolsLocalizations {
   String get ok => 'დიახ';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'დახურვა';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'გაშლა მთელ ეკრანზე';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'ჩაკეცვა';
 }

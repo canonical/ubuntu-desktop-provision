@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Схаваць журнал';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Перазапусціць';
 
   @override

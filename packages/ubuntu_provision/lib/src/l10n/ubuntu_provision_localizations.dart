@@ -258,7 +258,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @accessibilityPageBody.
   ///
   /// In en, this message translates to:
-  /// **'Customise {DISTRO} to your needs before you set up. You can change them later in System Settings.'**
+  /// **'Customise {DISTRO} to your needs before you set up. You can change them later in the Settings app.'**
   String accessibilityPageBody(String DISTRO);
 
   /// No description provided for @accessibilitySeeingLabel.
@@ -374,6 +374,12 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'Hide log'**
   String get errorPageHideLog;
+
+  /// No description provided for @errorPageTechnicalDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Technical details'**
+  String get errorPageTechnicalDetails;
 
   /// No description provided for @restart.
   ///

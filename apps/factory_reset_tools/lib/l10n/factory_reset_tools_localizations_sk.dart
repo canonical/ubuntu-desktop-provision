@@ -28,7 +28,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
 
   @override
   String get createUsbBody =>
-      'Vytvorte USB médium na obnovenie systému ako aj prispôsobenie inštalácií Ubuntu.';
+      'Vytvorte USB médium na obnovenie systému a prispôsobenie vašich inštalácií Ubuntu.';
 
   @override
   String get createUsbListExplanation =>
@@ -60,7 +60,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
 
   @override
   String get resetMediaReadyBody =>
-      'Keď ho chcete použiť, prosím vložte USB disk do počítača, ktorí chcete obnoviť a reštartujte ho.';
+      'Keď ho chcete použiť, prosím, vložte USB disk do počítača, ktorý chcete obnoviť, a reštartujte ho.';
 
   @override
   String get errorLoadingDrives =>
@@ -100,7 +100,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get reformat => 'Preformátovať';
 
   @override
-  String get failed => 'Spustenie príkazu zlyhalo';
+  String get failed => 'Zlyhalo spustenie príkazu';
 
   @override
   String get close => 'Zavrieť';

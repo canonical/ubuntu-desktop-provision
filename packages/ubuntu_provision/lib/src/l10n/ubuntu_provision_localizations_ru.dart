@@ -82,6 +82,9 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Скрыть журнал';
 
   @override
+  String get errorPageTechnicalDetails => 'Technical details';
+
+  @override
   String get restart => 'Перезагрузить';
 
   @override
@@ -377,8 +380,8 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Свернуть';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Расширить';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Свернуть';
 }

@@ -9,98 +9,101 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsEu([String locale = 'eu']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Erabilerraztasuna';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return 'Erabilerraztasuna ${DISTRO}n';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Customise $DISTRO to your needs before you set up. You can change them later in System Settings.';
+    return 'Pertsonalizatu $DISTRO zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Sistemaren ezarpenetan.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'Ikusmena';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'Entzumena';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'Idazketa';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'Erakustea eta klik egitea';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'Zooma';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'Kontraste handia';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'Testu handia';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'Gutxitu animazioak';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'Pantaila irakurlea';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'Abisu bisualak';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'Tekla itsaskorrak';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'Tekla motelak';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'Sagu-teklak';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'Mahaigainaren zooma';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'Arazo bat egon da';
 
   @override
   String get errorPageUnexpected =>
-      'We\'re sorry, but we\'re not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.';
+      'Sentitzen dugu, baina ez dakigu ziur zein izan den errorea. Ordenagailua berrabiarazi eta instalazio prozesua berriro abiatzen saia zaitezke. Nahi baduzu, <a>arazoaren berri eman</a> dezakezu.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug $SNAP</pre> in a terminal, or from the command console (Alt+F2).';
+    return 'Errore-txosten automatizatua bidaltzeko (arazteko beharrezko informazioarekin), exekutatu <pre>sudo ubuntu-bug $SNAP</pre> terminal batean, edo komando-kontsolan (Alt+F2).';
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'Erakutsi erregistroa';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'Ezkutatu erregistroa';
 
   @override
-  String get restart => 'Restart';
+  String get errorPageTechnicalDetails => 'Technical details';
 
   @override
-  String get close => 'Close';
+  String get restart => 'Berrabiarazi';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get close => 'Itxi';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezonePageTitle => 'Hautatu zure ordu-eremua';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneLocationLabel => 'Kokalekua';
+
+  @override
+  String get timezoneTimezoneLabel => 'Ordu-eremua';
 
   @override
   String get keyboardTitle => 'Teklatuaren diseinua';
 
   @override
-  String get keyboardHeader => 'Aukeratu zure teklatuaren diseinua:';
+  String get keyboardHeader => 'Hautatu teklatuaren diseinua';
 
   @override
   String get keyboardTestHint => 'Idatzi hemen zure teklatua probatzeko';
@@ -109,10 +112,10 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'Detektatu teklatuaren diseinua';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'Antzeman';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'Hautatu teklatuaren aldaera:';
 
   @override
   String get keyboardPressKeyLabel =>
@@ -123,185 +126,189 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
       'Hurrengo tekla zure teklatuan al dago?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'Aukeratu gaia';
 
   @override
   String get themePageHeader =>
-      'You can always change this later in the appearance settings.';
+      'Edozein unetan alda dezakezu hau itxura ezarpenetan.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'Iluna';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'Argia';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Ongi etorri ${DISTRO}ra';
   }
 
   @override
   String get localeHeader => 'Aukeratu zure hizkuntza:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'Sortu kontua';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'Hasi saioa automatikoki';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'Eskatu pasahitza saioa hasteko';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'Zure izena';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'Izena beharrezkoa da';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'Izena luzeegia da.';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'Ordenagailuaren izena';
 
   @override
   String get identityHostnameInfo =>
-      'The name it uses when it talks to other computers.';
+      'Beste ordenagailuekin komunikatzean erabiliko duen izena.';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'Ordenagailuaren izena beharrezkoa da';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'Ordenagailuaren izena luzeegia da.';
 
   @override
-  String get identityInvalidHostname => 'The computer name is invalid';
+  String get identityInvalidHostname => 'Ordenagailuaren izena baliogabea da';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'Erabiltzaile-izena';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'Erabiltzaile-izena beharrezkoa da';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername => 'Erabiltzaile-izena baliogabea da';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse =>
+      'Dagoeneko existitzen da erabiltzaile-izen hori.';
 
   @override
   String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+      'Izen hori sistemak erabiltzeko erreserbatuta dago.';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'Izen hori luzeegia da.';
 
   @override
   String get identityUsernameInvalidChars =>
-      'That name contains invalid characters.';
+      'Izen horrek karaktere baliogabeak ditu.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'Pasahitza';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'Pasahitza beharrezkoa da';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'Berretsi pasahitza';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'Pasahitzak ez datoz bat';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'Erakutsi';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'Ezkutatu';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'Erabili Active Directory';
 
   @override
   String get identityActiveDirectoryInfo =>
-      'You\'ll enter domain and other details in the next step.';
+      'Domeinua eta bestelako xehetasunak hurrengo urratsean sartuko dituzu.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'Hasi saioa Active Directoryn';
 
   @override
-  String get activeDirectoryHeader => 'Log into Active Directory?';
+  String get activeDirectoryHeader => 'Active Directoryn saioa hasi?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO is designed to integrate seamlessly with Active Directory for easier administration.';
+    return '$DISTRO Active Directoryrekin oztoporik gabe integratzeko diseinatuta dago, administrazioa errazteko.';
   }
 
   @override
-  String get activeDirectoryTestConnection => 'Test domain connectivity';
+  String get activeDirectoryTestConnection =>
+      'Probatu domeinuaren konektagarritasuna';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'Domeinua';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'Beharrezkoa';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'Luzeegia';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'Karaktere baliogabeak';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'Puntu (.) batekin hasten da';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'Puntu (.) batekin amaitzen da';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'Marratxo (-) batekin hasten da';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen =>
+      'Marratxo (-) batekin amaitzen da';
 
   @override
   String get activeDirectoryDomainMultipleDots =>
-      'Contains multiple sequenced dots (..)';
+      'Puntu bat baino gehiago ditu jarraian (..)';
 
   @override
-  String get activeDirectoryDomainNotFound => 'Domain not found';
+  String get activeDirectoryDomainNotFound => 'Ez da domeinua aurkitu';
 
   @override
-  String get activeDirectoryAdminLabel => 'Domain join user';
+  String get activeDirectoryAdminLabel => 'Domeinura batzeko erabiltzailea';
 
   @override
-  String get activeDirectoryAdminEmpty => 'Required';
+  String get activeDirectoryAdminEmpty => 'Beharrezkoa';
 
   @override
-  String get activeDirectoryAdminInvalidChars => 'Invalid characters';
+  String get activeDirectoryAdminInvalidChars => 'Karaktere baliogabeak';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'Pasahitza';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'Beharrezkoa';
 
   @override
   String get activeDirectoryErrorTitle =>
-      'Error configuring connection to Active Directory';
+      'Errorea Active Directoryrako konexioa konfiguratzean';
 
   @override
   String get activeDirectoryErrorMessage =>
-      'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
+      'Une honetan ezin da Active Directory konfiguratu. Sistema martxan dagoenean, bisitatu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> laguntza lortzeko.';
 
   @override
   String get networkPageTitle => 'Konektatu internetera';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'Konektatu Internetera';
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'Interneterako konexioak instalazioa hobetuko du, bateragarritasun-egiaztatzeak eginez eta software pakete gehigarria instalatuz.';
 
   @override
   String get networkWiredOption => 'Erabili kable bidezko konexioa';
@@ -348,33 +355,33 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get networkNoneOption => 'Ez dut internetera konektatu nahi oraingoz';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'Lizentziaren onarpena';
 
   @override
-  String get eulaReviewTerms => 'Review the license terms';
+  String get eulaReviewTerms => 'Berrikusi lizentziaren baldintzak';
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'To continue setting up this machine, you must read and accept the license agreement terms.';
+      'Makina hau konfiguratzen jarraitzeko, aurrena lizentziaren baldintzak irakurri eta onartu behar dituzu.';
 
   @override
-  String get eulaAcceptTerms => 'I have read and accept these terms';
+  String get eulaAcceptTerms => 'Baldintza hauek irakurri eta onartzen ditut';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Dena ondo joan da';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Itxi';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizatu';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Txikitu';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Zabaldu';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Tolestu';
 }

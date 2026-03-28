@@ -46,7 +46,7 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
 
   @override
   String get noMediaDetectedSubtitle =>
-      'K vytvoření média pro obnovení do výchozího nastavení potřebujete USB úložiště.';
+      'K vytvoření média pro vrácení do výchozího nastavení potřebujete USB úložiště.';
 
   @override
   String get factoryResetTitle =>
@@ -56,11 +56,12 @@ class FactoryResetToolsLocalizationsCs extends FactoryResetToolsLocalizations {
   String get loadingDrives => 'Vyčkejte, než budou načteny disky.';
 
   @override
-  String get resetMediaReadyTitle => 'USB médium pro resetování je připraveno';
+  String get resetMediaReadyTitle =>
+      'USB médium pro vrácení do výchozího stavu je připraveno';
 
   @override
   String get resetMediaReadyBody =>
-      'Pokud ho chcete použít, vložte USB disk do počítače, který chcete vrátit na výchozí a ten zrestartujte.';
+      'Pokud ho chcete použít, připojte USB disk k počítači, který chcete vrátit do výchozího stavu a ten zrestartujte.';
 
   @override
   String get errorLoadingDrives => 'Při načítání disků došlo k chybě.';
