@@ -190,7 +190,7 @@
     "choosePassphraseRequired": "Необхідна парольна фраза",
     "choosePassphraseMismatch": "Парольні фрази не збігаються",
     "choosePassphraseInfoHeader": "Обов'язково збережіть свою парольну фразу",
-    "choosePassphraseInfoBody": "Якщо ви його загубите, ви втратите всі свої дані.",
+    "choosePassphraseInfoBody": "Якщо ви її загубите, ви втратите всі свої дані.",
     "createPassphrase": "Створіть парольну фразу",
     "confirmPassphrase": "Підтвердьте парольну фразу",
     "installationTypeHeader": "Як ви бажаєте встановити {DISTRO}?",
