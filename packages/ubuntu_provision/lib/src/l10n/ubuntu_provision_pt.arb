@@ -3,7 +3,7 @@
     "timezoneLocationLabel": "Localização",
     "timezoneTimezoneLabel": "Fuso horário",
     "keyboardTitle": "Disposição do teclado",
-    "keyboardHeader": "Selecione o layout do seu teclado",
+    "keyboardHeader": "Selecione a disposição do seu teclado",
     "keyboardTestHint": "Digite aqui para testar o seu teclado",
     "keyboardDetectTitle": "Detetar a disposição do teclado",
     "keyboardDetectButton": "Detetar",
@@ -101,19 +101,19 @@
     "eulaReviewTerms": "Revise os termos da licença",
     "eulaReadAndAcceptTerms": "Para continuar configurando esta máquina, você deve ler e aceitar os termos do contrato de licença.",
     "eulaAcceptTerms": "Li e aceito estes termos",
-    "accessibilitySeeingLabel": "Vendo",
+    "accessibilitySeeingLabel": "Ver",
     "accessibilityHearingLabel": "Audição",
-    "accessibilityTypingLabel": "Digitando",
-    "accessibilityPointingLabel": "Apontando e clicando",
+    "accessibilityTypingLabel": "Digitação",
+    "accessibilityPointingLabel": "Apontar e clicar",
     "accessibilityZoomLabel": "Zoom",
     "accessibilityHighContrastLabel": "Alto contraste",
-    "accessibilityLargeTextLabel": "Texto caixa alta",
+    "accessibilityLargeTextLabel": "Letras grandes",
     "accessibilityReduceAnimationLabel": "Reduzir animação",
-    "accessibilityScreenReaderLabel": "Leitor de tela",
+    "accessibilityScreenReaderLabel": "Leitor de ecrã",
     "accessibilityVisualAlertsLabel": "Alertas visuais",
     "accessibilityStickKeysLabel": "Teclas de aderência",
     "accessibilitySlowKeysLabel": "Teclas lentas",
-    "accessibilityMouseKeysLabel": "Teclas do mouse",
+    "accessibilityMouseKeysLabel": "Teclas do rato",
     "accessibilityDesktopZoomLabel": "Zoom na área de trabalho",
     "errorPageTitle": "Algo deu errado",
     "networkPageBody": "Uma conexão com a Internet melhorará sua instalação com verificação de compatibilidade e pacotes de software extras.",
@@ -126,7 +126,7 @@
         }
     },
     "errorPageShowLog": "Mostrar log",
-    "accessibilityPageBody": "Personalize {DISTRO} de acordo com suas necessidades antes da configuração. Você pode alterá-lo posteriormente nas Configurações do Sistema.",
+    "accessibilityPageBody": "Personalize o {DISTRO} de acordo com as suas necessidades antes de o configurar. Pode alterá-las mais tarde na aplicação de Definições.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -134,6 +134,13 @@
             }
         }
     },
-    "errorPageUnexpected": "Lamentamos, mas não sabemos qual é o erro. Você pode tentar reiniciar o computador e iniciar o processo de instalação novamente. Você também pode <a>relatar o problema</a>.",
-    "errorPageHideLog": "Esconder log"
+    "errorPageUnexpected": "Lamentamos, mas não sabemos qual é o erro. Pode tentar reiniciar o computador e iniciar o processo de instalação novamente. Também pode <a>relatar o problema</a>.",
+    "errorPageHideLog": "Esconder log",
+    "errorPageTechnicalDetails": "Detalhes técnicos",
+    "successIconSemanticLabel": "Sucesso",
+    "closeIconSemanticLabel": "Fechar",
+    "maximizeIconSemanticLabel": "Maximizar",
+    "minimizeIconSemanticLabel": "Minimizar",
+    "expandIconSemanticLabel": "Expandir",
+    "collapseIconSemanticLabel": "Recolher"
 }
