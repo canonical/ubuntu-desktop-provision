@@ -13,7 +13,7 @@
             }
         }
     },
-    "accessibilityPageBody": "ປັບແຕ່ງ {DISTRO} ຕາມຄວາມຕ້ອງການຂອງທ່ານກ່ອນຕິດດັ້ັ້ງ. ທ່ານສາມາດປ່ຽນແປງພາຍຫຼັງໄດ້ໃນການຕັ້ງຄ່າລະບົບ.",
+    "accessibilityPageBody": "ປັບແຕ່ງ {DISTRO} ຕາມຄວາມຕ້ອງການຂອງທ່ານກ່ອນທີ່ທ່ານຈະຕັ້ງຄ່າ. ທ່ານສາມາດປ່ຽນແປງພວກມັນໄດ້ໃນພາຍຫຼັງໃນແອັບການຕັ້ງຄ່າ.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -36,7 +36,7 @@
     "accessibilityMouseKeysLabel": "ປຸ່ມບັງຄັບເມົາສ໌",
     "accessibilityDesktopZoomLabel": "ການຂະຫຍາຍໜ້າຈໍ",
     "errorPageTitle": "ມີບາງຢ່າງຜິດພາດ",
-    "errorPageUnexpected": "ຂໍອະໄພ, ພວກເຮົາບໍ່ແນ່ໃຈວ່າເກີດຂໍ້ຜິດພາດຫຍັງຂຶ້ນ. ທ່ານສາມາດລອງເລີ່ມລະບົບຄອມພິວເຕີໃໝ່ ແລະ ເລີ່ມຂັ້ນຕອນການຕິດຕັ້ງອີກຄັ້ງ. ທ່ານຍັງສາມາດ <a>ລາຍງານບັນຫາ</a> ໄດ້.",
+    "errorPageUnexpected": "ຂໍອະໄພ, ພວກເຮົາບໍ່ແນ່ໃຈວ່າຂໍ້ຜິດພາດແມ່ນຫຍັງ. ທ່ານສາມາດລອງເລີ່ມຄອມພິວເຕີຂອງທ່ານໃໝ່ ແລະ ເລີ່ມຂະບວນການຕິດຕັ້ງໃໝ່ອີກຄັ້ງ. ທ່ານຍັງສາມາດ <a>ລາຍງານບັນຫາ</a> ໄດ້.",
     "errorPageUbuntuBug": "ເພື່ອສົ່ງລາຍງານຂໍ້ຜິດພາດແບບອັດຕະໂນມັດ ລວມທັງຂໍ້ມູນດີບັກທີ່ກ່ຽວຂ້ອງ, ກະລຸນາແລ່ນຄຳສັ່ງ <pre>sudo ubuntu-bug {SNAP}</pre> ໃນເທີມິນຽນ (terminal), ຫຼື ຈາກຄອນໂຊນຄຳສັ່ງ (Alt+F2).",
     "@errorPageUbuntuBug": {
         "placeholders": {
@@ -148,5 +148,6 @@
     "eulaReadAndAcceptTerms": "ເພື່ອສືບຕໍ່ການຕັ້ງຄ່າເຄື່ອງນີ້, ທ່ານຕ້ອງອ່ານ ແລະ ຍອມຮັບເງື່ອນໄຂຂອງຂໍ້ຕົກລົງໃບອະນຸຍາດ.",
     "eulaAcceptTerms": "ຂ້າພະເຈົ້າໄດ້ອ່ານ ແລະ ຍອມຮັບເງື່ອນໄຂເຫຼົ່ານີ້",
     "expandIconSemanticLabel": "ຂະຫຍາຍອອກ",
-    "collapseIconSemanticLabel": "ຫຍໍ້ເຂົ້າ"
+    "collapseIconSemanticLabel": "ຫຍໍ້ເຂົ້າ",
+    "errorPageTechnicalDetails": "ລາຍລະອຽດດ້ານເຕັກນິກ"
 }
