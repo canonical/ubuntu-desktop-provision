@@ -8,7 +8,11 @@ final _log = Logger('sound_service');
 class SoundService {
   Future<void> play(String id) async {
     try {
-      final result = await Process.run('canberra-gtk-play', ['--id=$id']);
+      final result = await Process.run(
+        'canberra-gtk-play',
+        ['--id=$id'],
+        environment: {'LD_LIBRARY_PATH': ''},
+      );
       if (result.exitCode != 0) {
         _log.error(
           'Error playing sound with id: $id: process exited with ${result.exitCode}. stdout: ${result.stdout}, stderr: ${result.stderr}',
