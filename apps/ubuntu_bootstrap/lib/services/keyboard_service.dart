@@ -87,11 +87,11 @@ class SubiquityKeyboardService implements KeyboardService {
 
   @override
   Future<void> setInputSource(KeyboardSetting setting, {String? user}) async {
+    await _subiquity.setInputSource(setting, user: user);
     if (liveRun) {
       unawaited(_setXkbInputSource(setting));
       await _setGsettingsInputSource(setting);
     }
-    return _subiquity.setInputSource(setting, user: user);
   }
 
   @override
