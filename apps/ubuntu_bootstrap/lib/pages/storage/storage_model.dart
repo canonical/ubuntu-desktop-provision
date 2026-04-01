@@ -286,6 +286,8 @@ class StorageModel extends SafeChangeNotifier {
       return 'use_zfs';
     } else if (guidedCapability == GuidedCapability.LVM_LUKS) {
       return 'use_crypto';
+    } else if (guidedCapability == GuidedCapability.CORE_BOOT_ENCRYPTED) {
+      return 'use_tpmfde';
     } else if (type == StorageType.erase) {
       return 'use_device';
     } else if (type == StorageType.alongside) {
