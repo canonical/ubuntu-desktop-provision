@@ -89,6 +89,66 @@ void main() {
     ).called(1);
   });
 
+  test('set input source (non-latin)', () async {
+    const nonLatinKeyboardSetup = KeyboardSetup(
+      setting: KeyboardSetting(layout: 'af'),
+      layouts: [
+        KeyboardLayout(
+          code: 'us',
+          name: 'English (US)',
+          variants: [
+            KeyboardVariant(code: '', name: 'English (US)'),
+          ],
+        ),
+        KeyboardLayout(
+          code: 'af',
+          name: 'Afghani',
+          variants: [KeyboardVariant(code: '', name: 'Afghani')],
+        ),
+      ],
+    );
+    final client = MockSubiquityClient();
+    when(client.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu'))
+        .thenAnswer((_) async {});
+
+    final service = SubiquityKeyboardService(
+      client,
+      inputSourceSettings: inputSourceSettings,
+      runProcess: mockProcess.run,
+      liveRun: true,
+    );
+    await service.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu');
+
+    verify(client.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu'))
+        .called(1);
+
+    verify(
+      inputSourceSettings.set(
+        'sources',
+        DBusArray(
+          DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
+          [
+            DBusStruct([
+              const DBusString('xkb'),
+              const DBusString('af'),
+            ]),
+            DBusStruct([
+              const DBusString('xkb'),
+              const DBusString('us'),
+            ]),
+          ],
+        ),
+      ),
+    ).called(1);
+
+    verify(
+      mockProcess.run(
+        'setxkbmap',
+        ['-layout', 'af'],
+      ),
+    ).called(1);
+  });
+
   test('get keyboard step', () async {
     final client = MockSubiquityClient();
     when(client.getKeyboardStep(any)).thenAnswer(
