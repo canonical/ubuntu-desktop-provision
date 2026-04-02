@@ -79,7 +79,7 @@
     "networkNoneOption": "今はインターネットに接続しない",
     "accessibilityPageTitle": "アクセシビリティ",
     "networkPageBody": "インターネットに接続すると、互換性チェックを行ったり追加のソフトウェアパッケージをインストールできるようになります。",
-    "accessibilityPageBody": "セットアップの前に、必要に応じて {DISTRO} をカスタマイズしてください。あとでシステム設定で変更もできます。",
+    "accessibilityPageBody": "セットアップの前に、必要に応じて {DISTRO} をカスタマイズしてください。あとで設定アプリでも変更できます。",
     "errorPageTitle": "何か問題が発生しました",
     "errorPageUnexpected": "すみません、なにかエラーが起きました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。",
     "activeDirectoryHeader": "Active Directoryにログインしますか?",
