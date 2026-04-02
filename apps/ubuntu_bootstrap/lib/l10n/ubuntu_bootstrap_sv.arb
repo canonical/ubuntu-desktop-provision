@@ -518,5 +518,8 @@
     "tpmActionErrorSupportSingleLabel": "Testa lösningen nedanför, kontakta IT-supporten, eller välj en annan krypteringsmetod.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Om inställningar för fast programvara inte läses in automatiskt, starta om och tryck på inställningstangenten upprepade gånger under uppstarten (ofta F2, F10 eller Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrollera att secure boot-läge är inställt till ”distribuerat”.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funktionen kan benämnas ”Virtualiseringsteknologi”, ”VT-d” eller ”AMD-Vi”."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funktionen kan benämnas ”Virtualiseringsteknologi”, ”VT-d” eller ”AMD-Vi”.",
+    "autoinstallErrorMessage": "Ett kommando i autoinstallationsfilen kördes inte korrekt vid installationen.",
+    "autoinstallErrorInstructions": "Du kommer att behöva starta om installationen. Kontrollera autoinstallationsfilen, välj en annan installationstyp, eller kontakta din IT-support.",
+    "restartInstaller": "Starta om installationsprogram"
 }

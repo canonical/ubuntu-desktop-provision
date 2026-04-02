@@ -79,7 +79,7 @@
     "networkNoneOption": "Прямо сейчас я не хочу подключаться к Интернету",
     "accessibilityPageTitle": "Специальные возможности",
     "accessibilityPageHeader": "Специальные возможности в {DISTRO}",
-    "accessibilityPageBody": "Настройте {DISTRO} перед установкой в соответствии с вашими предпочтениями. Вы можете изменить это позже в Настройках.",
+    "accessibilityPageBody": "Настройте {DISTRO} под свои потребности перед началом работы. Позже Вы сможете изменить эти параметры в Настройках.",
     "accessibilitySeeingLabel": "Зрение",
     "accessibilityHearingLabel": "Слух",
     "accessibilityTypingLabel": "Ввод текста",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Развернуть",
     "minimizeIconSemanticLabel": "Свернуть",
     "expandIconSemanticLabel": "Расширить",
-    "collapseIconSemanticLabel": "Свернуть"
+    "collapseIconSemanticLabel": "Свернуть",
+    "errorPageTechnicalDetails": "Технические сведения"
 }

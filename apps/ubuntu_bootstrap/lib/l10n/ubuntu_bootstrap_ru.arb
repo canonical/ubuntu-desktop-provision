@@ -194,7 +194,7 @@
     "refreshSnapSetupProfiles": "Настройка профилей безопасности {snap}…",
     "refreshSnapCopyData": "Копирование данных {snap}…",
     "refreshSnapLink": "Соединение {snap}…",
-    "refreshSnapAutoConnect": "Подключение вилок и слотов {snap}...",
+    "refreshSnapAutoConnect": "Подключение разъёмов и слотов {snap}...",
     "refreshSnapSetAutoAliases": "Настройка автоматических псевдонимов {snap}...",
     "refreshSnapSetupAliases": "Настройка псевдонимов {snap}...",
     "refreshSnapStartServices": "Запуск сервисов {snap}…",
@@ -308,9 +308,9 @@
     "autoinstallDirectOption": "Автоматизировано с помощью файла автоустановки",
     "autoinstallDirectDescription": "Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.",
     "chooseOptionalPassphraseHeader": "Создать фразу (необязательно)",
-    "recoveryKeyInfoHeader": "Без ключа восстановления вы можете потерять все свои данные",
-    "recoveryKeyConfirmation": "Я сохранил свой ключ восстановления в безопасном месте",
-    "recoveryKeyHeader": "Сохранить ваш ключ восстановления",
+    "recoveryKeyInfoHeader": "Без ключа восстановления Вы можете потерять все свои данные",
+    "recoveryKeyConfirmation": "Ключ восстановления сохранён в безопасном месте",
+    "recoveryKeyHeader": "Сохраните ключ восстановления",
     "recoveryKeyStorageAdvice": "Вам нужно будет предоставить этот ключ восстановления, если во время запуска не удаётся провести расшифровку. Без ключа вы потеряете доступ ко всем своим данным. Сохраните его в безопасном месте, например, в менеджере паролей.",
     "chooseOptionalPassphraseBody": "Парольная фраза поможет защитить Ваши данные даже в том случае, если оборудование будет взломано. Пароль нужно будет вводить каждый раз, когда Вы включаете компьютер. Удалить её впоследствии будет невозможно",
     "chooseOptionalPassphraseInfoBody": "Если потеряете парольную фразу, Вы потеряете все свои данные. Парольная фраза не заменяет ключ восстановления или пароль пользователя.",
@@ -518,5 +518,8 @@
     "tpmActionErrorSupportSingleLabel": "Попробуйте приведенное ниже решение, обратитесь в службу IT-поддержки или выберите другой метод шифрования.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Если настройки прошивки не загружаются автоматически, перезапустите компьютер и несколько раз нажмите клавишу настроек во время запуска (обычно F2, F10 или Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Убедитесь, что режим безопасной загрузки установлен на «развернуто».",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Эта функция может называться «Технология виртуализации», «VT-d» или «AMD-Vi»."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Эта функция может называться «Технология виртуализации», «VT-d» или «AMD-Vi».",
+    "autoinstallErrorMessage": "В процессе установки не удалось выполнить команду в файле autoinstall.",
+    "autoinstallErrorInstructions": "Вам необходимо перезапустить установку. Проверьте файл autoinstall, выберите другой тип установки или обратитесь в службу IT-поддержки.",
+    "restartInstaller": "Перезапустить установку"
 }
