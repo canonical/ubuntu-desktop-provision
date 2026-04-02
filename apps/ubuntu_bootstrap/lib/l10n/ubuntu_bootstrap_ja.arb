@@ -491,5 +491,34 @@
     "rstDisable": "このPCではIntel RST (Rapid Storage Technology)を使用しています。RSTを無効にしてください:",
     "rstDisableWindows": "Windowsでデュアルブートしている場合",
     "installationTypeTPMInfoResolute": "起動中にディスクの暗号化が自動解除されます。",
-    "restartInstaller": "インストーラーを再起動"
+    "restartInstaller": "インストーラーを再起動",
+    "autoinstallErrorMessage": "インストール中の自動インストールファイルにあるコマンドの実行に失敗しました。",
+    "autoinstallErrorInstructions": "インストールをやり直してください。自動インストールファイルを確認するか、別のインストールの種類を選択するか、ITサポートに連絡してください。",
+    "installationTypeTPMInfoUnavailable": "このコンピューターでは選択できません。",
+    "installationTypeLVMEncryptionInfoResolute": "コンピューターに電源を入れるたびにパスフレーズを入力する必要があります。{advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "LVM+LUKS暗号化を使用しています。",
+    "tpmActionPageTitle": "ハードウェアバックエンド暗号化を有効にできません",
+    "tpmActionErrorKindInternal": "内部エラー。",
+    "tpmActionErrorKindShutdownRequired": "電源オフが必要です。",
+    "tpmActionErrorKindRebootRequired": "再起動が必要です。",
+    "tpmActionErrorKindRunningInVm": "現在の環境は仮想マシンです。",
+    "tpmActionErrorKindSystemNotEfi": "このコンピューターはこの暗号化方法と互換性のない古いファームウェア（レガシーBIOS）を使用しています。",
+    "tpmActionErrorKindEfiVariableAccess": "このコンピューターのファームウェアに問題があります。",
+    "tpmActionErrorKindNoSuitableTpm2Device": "このコンピューターはこの暗号化方法に必要なセキュリティハードウェア（TPM 2.0）がありません。",
+    "tpmActionErrorKindTpmDeviceDisabled": "このコンピューターのTPMが無効になっています。",
+    "tpmActionErrorKindTpmHierarchiesOwned": "このコンピューターのTPMはすでにほかのシステムまたはアプリケーションで使用されています。",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "このコンピューターのTPMは現在ロックされています。",
+    "tpmActionErrorKindInsufficientTpmStorage": "このコンピューターのTPMには充分なストレージがありません。",
+    "tpmActionErrorKindUnsupportedPlatform": "このコンピューターはハードウェアバックエンド暗号化と互換性がありません。",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFIデバッギングが有効になっています。",
+    "tpmActionErrorKindInsufficientDmaProtection": "このコンピューターには必要なセキュリティ機能（DMAプロテクション）がありません。",
+    "tpmActionErrorKindNoKernelIommu": "このコンピューターには必要なセキュリティ機能（IOMMU）がありません。",
+    "tpmActionErrorKindHostSecurity": "このコンピューターのセキュリティ設定には問題があります。"
 }
