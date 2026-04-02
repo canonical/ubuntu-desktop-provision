@@ -183,8 +183,8 @@ class _SummarySection extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(flex: 2, child: Text('${entry.key}: ')),
-                  Expanded(flex: 3, child: entry.value),
+                  Expanded(child: Text('${entry.key}: ')),
+                  Expanded(child: entry.value),
                 ],
               ),
             ),
@@ -253,18 +253,17 @@ class _PartitionRow extends StatelessWidget {
   final Partition partition;
   final ProductInfo productInfo;
   final Partition? original;
-  final bool showOriginal; // Note: padding field removed
+  final bool showOriginal;
 
   @override
   Widget build(BuildContext context) {
     return AccessibleSummaryRow(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0), // Hardcoded here!
+        padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 2,
               child: _PartitionLabel(
                 sysname,
                 partition,
@@ -274,7 +273,6 @@ class _PartitionRow extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 3,
               child: _PartitionProperties(
                 sysname,
                 partition,
@@ -515,9 +513,4 @@ class _ProprietarySoftware extends ConsumerWidget {
       },
     );
   }
-}
-
-// Override the bold extension to return plain strings
-extension HtmlX on String {
-  String bold() => this;
 }
