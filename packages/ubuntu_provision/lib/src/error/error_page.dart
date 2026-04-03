@@ -102,12 +102,14 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Semantics(
-                        focused: true,
-                        header: true,
-                        child: Text(
-                          errorDetails?.title ?? lang.errorPageTitle,
-                          style: Theme.of(context).textTheme.titleLarge,
+                      Focus(
+                        autofocus: true,
+                        child: Semantics(
+                          // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
+                          child: Text(
+                            errorDetails?.title ?? lang.errorPageTitle,
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
                         ),
                       ),
                       SizedBox(height: kWizardSpacing),
