@@ -504,7 +504,7 @@
         }
     },
     "installationTypeLVMEncryptionInfo2": "LVM+LUKS暗号化を使用しています。",
-    "tpmActionPageTitle": "ハードウェアバックエンド暗号化を有効にできません",
+    "tpmActionPageTitle": "ハードウェアベースの暗号化を有効にできません",
     "tpmActionErrorKindInternal": "内部エラー。",
     "tpmActionErrorKindShutdownRequired": "電源オフが必要です。",
     "tpmActionErrorKindRebootRequired": "再起動が必要です。",
@@ -516,7 +516,7 @@
     "tpmActionErrorKindTpmHierarchiesOwned": "このコンピューターのTPMはすでにほかのシステムまたはアプリケーションで使用されています。",
     "tpmActionErrorKindTpmDeviceLockoutLockedOut": "このコンピューターのTPMは現在ロックされています。",
     "tpmActionErrorKindInsufficientTpmStorage": "このコンピューターのTPMには充分なストレージがありません。",
-    "tpmActionErrorKindUnsupportedPlatform": "このコンピューターはハードウェアバックエンド暗号化と互換性がありません。",
+    "tpmActionErrorKindUnsupportedPlatform": "このコンピューターはハードウェアベースの暗号化と互換性がありません。",
     "tpmActionErrorKindUefiDebuggingEnabled": "UEFIデバッギングが有効になっています。",
     "tpmActionErrorKindInsufficientDmaProtection": "このコンピューターには必要なセキュリティ機能（DMAプロテクション）がありません。",
     "tpmActionErrorKindNoKernelIommu": "このコンピューターには必要なセキュリティ機能（IOMMU）がありません。",
