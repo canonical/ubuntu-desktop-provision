@@ -119,7 +119,7 @@
     "installationTypeLVMEncryptionSelected": "LVM и шифрование выбраны",
     "showSecurityKey": "Показать",
     "installCodecsTitle": "Загрузить и установить поддержку дополнительных медиаформатов",
-    "installDriversTitle": "Установка программного обеспечения сторонних производителей для графики и Wi-Fi оборудования",
+    "installDriversTitle": "Установить ПО сторонних производителей для графики и Wi-Fi",
     "installCodecsSubtitle": "Включая, но не ограничиваясь, MP3, MP4, MOV и подобными им",
     "installDriversSubtitle": "Включая, но не ограничиваясь драйверами NVIDIA и другими подобными устройствами",
     "restartNow": "Перезагрузить",
