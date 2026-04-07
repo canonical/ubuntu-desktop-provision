@@ -111,6 +111,7 @@ void main() {
     final progress = tester.widget<CircularProgressIndicator>(indicator);
     expect(progress, isNotNull);
     expect(progress.value, 0.25);
+    expect(find.text('25%'), findsOneWidget);
 
     expect(find.byType(OutlinedButton), findsNothing);
   });
