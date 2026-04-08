@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:path/path.dart' as p;
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/main.dart' as app;
@@ -79,6 +80,10 @@ void main() {
       locale: locale,
       timezone: timezone,
     );
+    await verifyTelemetryFile({
+      'Language': 'fr',
+      'PartitionMethod': 'use_device',
+    });
   });
 
   testWidgets('OEM', (tester) async {
@@ -107,6 +112,10 @@ void main() {
     await expectLater(windowClosed, completes);
 
     await verifySubiquityConfig(identity: const Identity());
+    await verifyTelemetryFile({
+      'OEM': true,
+      'PartitionMethod': 'use_device',
+    });
   });
 
   testWidgets('LVM Encrypted', (tester) async {
@@ -150,6 +159,9 @@ void main() {
       identity: identity,
       capability: GuidedCapability.LVM_LUKS,
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'use_crypto',
+    });
   });
 
   testWidgets('LVM Encrypted alongside Windows', (tester) async {
@@ -198,6 +210,9 @@ void main() {
       identity: identity,
       capability: GuidedCapability.LVM_LUKS,
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'use_crypto',
+    });
   });
 
   testWidgets('ZFS unencrypted', (tester) async {
@@ -239,6 +254,9 @@ void main() {
       identity: identity,
       capability: GuidedCapability.ZFS,
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'use_zfs',
+    });
   });
 
   testWidgets('ZFS encrypted', (tester) async {
@@ -282,6 +300,9 @@ void main() {
       identity: identity,
       capability: GuidedCapability.ZFS_LUKS_KEYSTORE,
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'use_crypto_zfs',
+    });
   });
 
   testWidgets('tpm', (tester) async {
@@ -333,6 +354,9 @@ void main() {
       identity: identity,
       capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'use_tpmfde',
+    });
   });
 
   testWidgets(
@@ -394,6 +418,9 @@ void main() {
         identity: identity,
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       );
+      await verifyTelemetryFile({
+        'PartitionMethod': 'use_tpmfde',
+      });
     },
   );
 
@@ -459,6 +486,9 @@ void main() {
         identity: identity,
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
       );
+      await verifyTelemetryFile({
+        'PartitionMethod': 'use_tpmfde',
+      });
     },
   );
 
@@ -551,6 +581,9 @@ void main() {
         ),
       ],
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'manual',
+    });
   });
 
   // threebuntu-on-msdos has three existing ubuntu partitions:
@@ -741,6 +774,9 @@ void main() {
         ),
       ],
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'resize_use_free',
+    });
   });
 
   testWidgets('alongside windows', (tester) async {
@@ -797,6 +833,9 @@ void main() {
         ),
       ],
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'resize_use_free',
+    });
   });
 
   testWidgets('resize existing ubuntu alongside windows with bitlocker',
@@ -899,6 +938,9 @@ void main() {
         ),
       ],
     );
+    await verifyTelemetryFile({
+      'PartitionMethod': 'resize_use_free',
+    });
   });
 
   testWidgets('welcome', (tester) async {
@@ -1028,6 +1070,9 @@ Future<void> eraseInstallTest({
         );
       }
     }
+    await verifyTelemetryFile({
+      'PartitionMethod': 'replace_partition',
+    });
   }
 }
 
@@ -1147,6 +1192,17 @@ Future<void> verifySubiquityConfig({
       default:
         break;
     }
+  }
+}
+
+Future<void> verifyTelemetryFile(Map<String, dynamic> telemetry) async {
+  final exe = Platform.resolvedExecutable;
+  final path = '${p.dirname(exe)}/.${p.basename(exe)}/telemetry';
+  await expectLater(path, existsLater);
+
+  final yaml = loadYaml(File(path).readAsStringSync());
+  for (final entry in telemetry.entries) {
+    expect(yaml[entry.key], equals(entry.value));
   }
 }
 
