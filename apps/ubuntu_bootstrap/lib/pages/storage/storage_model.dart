@@ -287,6 +287,8 @@ class StorageModel extends SafeChangeNotifier {
       return 'use_lvm';
     } else if (guidedCapability == GuidedCapability.ZFS) {
       return 'use_zfs';
+    } else if (guidedCapability == GuidedCapability.ZFS_LUKS_KEYSTORE) {
+      return 'use_crypto_zfs';
     } else if (guidedCapability == GuidedCapability.LVM_LUKS) {
       return 'use_crypto';
     } else if (guidedCapability == GuidedCapability.CORE_BOOT_ENCRYPTED) {
