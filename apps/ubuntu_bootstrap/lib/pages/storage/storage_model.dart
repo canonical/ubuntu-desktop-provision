@@ -253,11 +253,7 @@ class StorageModel extends SafeChangeNotifier {
 
   /// Saves the storage type selection.
   Future<void> save() async {
-    final partitionMethod = _resolvePartitionMethod();
-    if (partitionMethod != null) {
-      await _telemetry?.addMetric('PartitionMethod', partitionMethod);
-    }
-
+    await writeTelemetry();
     _storage.guidedTarget = switch (_type) {
       StorageTypeAlongside() => _firstTarget<GuidedStorageTargetResize>() ??
           _firstTarget<GuidedStorageTargetUseGap>(),
@@ -273,6 +269,13 @@ class StorageModel extends SafeChangeNotifier {
             .contains(guidedCapability) ==
         false) {
       _storage.guidedCapability = guidedTarget?.allowed.firstOrNull;
+    }
+  }
+
+  Future<void> writeTelemetry() async {
+    final partitionMethod = _resolvePartitionMethod();
+    if (partitionMethod != null) {
+      await _telemetry?.addMetric('PartitionMethod', partitionMethod);
     }
   }
 
