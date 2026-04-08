@@ -311,6 +311,9 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
   }
   final telemetry = getService<TelemetryService>();
 
+  final isOem = (await tryGetService<ConfigService>()?.provisioningMode) ==
+      ProvisioningMode.oem;
+
   final services = [
     getService<InstallerService>().init(),
     tryGetService<DesktopService>()?.inhibit() ?? Future.value(),
@@ -318,7 +321,7 @@ Future<void> _initInstallerApp(Endpoint endpoint) async {
     geo.init(),
     telemetry.init({
       'Type': 'Flutter',
-      'OEM': false,
+      'OEM': isOem,
       'Media': getService<ProductService>().getProductInfo().toString(),
     }),
   ];
