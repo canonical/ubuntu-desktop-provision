@@ -1,0 +1,27 @@
+name: Snap
+
+on:
+  push:
+    branches:
+      - snap/**
+  pull_request:
+    branches:
+      - snap/**
+  workflow_dispatch:
+
+jobs:
+  snap:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: snapcore/action-build@v1
+        with:
+          snapcraft-channel: 7.x
+        id: snapcraft
+      - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch'
+        with:
+          name: 'snap'
+          path: ${{steps.snapcraft.outputs.snap}}
