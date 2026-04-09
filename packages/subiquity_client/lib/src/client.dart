@@ -202,13 +202,18 @@ class SubiquityClient {
 
   Future<IdentityData> getIdentity() async {
     final request = await _openUrl('GET', 'identity');
-    return _receive('identity()', request, IdentityData.fromJson);
+    return _receive(
+      'identity()',
+      request,
+      IdentityData.fromJson,
+      (method, _) => _formatResponseLog(method, ''),
+    );
   }
 
   Future<void> setIdentity(IdentityData identity) async {
     final request = await _openUrl('POST', 'identity');
     request.write(jsonEncode(identity.toJson()));
-    await _receive('setIdentity($identity)', request);
+    await _receive('setIdentity()', request);
   }
 
   Future<UsernameValidation> validateUsername(String username) async {

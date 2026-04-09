@@ -164,7 +164,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
     _realName.value ??= identity.realname.orIfEmpty(null);
     _hostname.value ??= identity.hostname.orIfEmpty(null);
     _username.value ??= identity.username.orIfEmpty(null);
-    _log.info('Loaded identity: $identity');
+    _log.info('Loaded identity');
     _productName.value = await _readProductName();
     _log.info('Read product name: ${_productName.value}');
 
@@ -182,7 +182,7 @@ class IdentityModel extends SafeChangeNotifier with PropertyStreamNotifier {
       password: password,
       autoLogin: autoLogin,
     );
-    _log.info('Saved identity: $identity');
+    _log.info('Saved identity');
 
     await _telemetry?.addMetric('UseActiveDirectory', useActiveDirectory);
 
