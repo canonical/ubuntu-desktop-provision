@@ -1,5 +1,5 @@
 name: ubuntu-desktop-bootstrap
-version: git
+adopt-info: version
 summary: Ubuntu Desktop Bootstrap
 description: |
   A modern implementation of the Ubuntu Desktop installer.
@@ -287,3 +287,18 @@ parts:
       done
       sed -i 's/mkdir "$tmpmnt"/mkdir -p "$tmpmnt"/' \
           usr/lib/os-probes/50mounted-tests
+
+  version:
+    plugin: nil
+    source: .
+    source-type: git
+    override-build: |
+      version=$(
+          git describe --match "ubuntu-desktop-bootstrap/*" |
+              sed -E 's#^ubuntu-desktop-bootstrap/##' |
+              sed -E 's#-[0-9]+-g([0-9a-f]+)$#-\1#'
+      )
+      if [ -n "$(git status --porcelain)" ]; then
+          version="${version}.dirty"
+      fi
+      craftctl set version="${version}"
