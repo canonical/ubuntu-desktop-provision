@@ -605,5 +605,14 @@
     "tpmActionFixActionRebootToFwSettingsDescription": "Voit tehdä tämän tietokoneesi laiteohjelmiston asetuksissa.",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tätä ominaisuutta saatetaan kutsua termein \"Virtualization Technology\", \"VT-d\" tai \"AMD-Vi\".",
     "tpmActionFixActionProceedDescription": "Tämän ongelman ohittaminen saattaa johtaa vähemmän turvalliseen asennukseen.",
-    "manualPartitioningWarningBody": "Kokeile jotain muuta. Voit myös <a href=\"\">lähettää virheraportin</a>."
+    "manualPartitioningWarningBody": "Kokeile jotain muuta. Voit myös <a href=\"\">lähettää virheraportin</a>.",
+    "tpmActionErrorKindAbsolutePresent": "Absolute Persitence -moduuli on käytössä tällä tietokoneella.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Tämä tietokone käyttää käsin säädettyä sallittujen ohjelmistojen luetteloa niiden todentamiseen käynnistettäessä.",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Jos laiteohjelmiston asetukset eivät lataudu automaattisesti, käynnistä tietokone uudelleen ja paina asetukset-painiketta toistuvasti käynnistyksen aikana (yleensä näppäin F2, F10 tai Delete).",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Ota PCR-muistipankit käyttöön käsin",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Ota Absolute Persistence -moduuli pois käytöstä käsin",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Tämä voi olla mahdollista tietokoneen laiteohjelmiston asetuksissa. Lue suoritinvalmistajan dokumentaatiosta lisää ohjeita.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Tarkista että turvakäynnistyksen (secure boot) tila on asetettu tilaan ”deployed”.",
+    "tpmActionFixActionCaveatConfirm": "Tämä toiminto saattaa vaatia vahvistamista tietokonetta uudelleen käynnistettäessä.",
+    "tpmActionFixActionCaveatRetry": "Tämän jälkeen sinun tulee käynnistää asennus uudelleen."
 }
