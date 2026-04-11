@@ -480,5 +480,7 @@
     "tpmActionFixActionClearTpmWarningBody": "您將無法存取所有未持有復原金鑰的加密磁碟機中的資料。此操作亦將導致其他依賴 TPM 的功能失效，例如驗證機制與憑證服務。",
     "tpmActionFixActionClearTpmConfirmationLabel": "我理解清除 TPM 的後果",
     "tpmActionErrorTitle": "此解決方案失敗",
-    "tpmActionErrorDescription": "嘗試其他解決方案或聯絡 IT 技術支援"
+    "tpmActionErrorDescription": "嘗試其他解決方案或聯絡 IT 技術支援",
+    "autoinstallErrorMessage": "安裝過程中，自動安裝檔中的一個命令執行失敗。",
+    "autoinstallErrorInstructions": "您需要重新執行安裝程序。請檢查自動安裝檔、選擇其他安裝類型，或聯絡您的 IT 支援部門。"
 }
