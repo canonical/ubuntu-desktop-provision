@@ -425,7 +425,7 @@
     "tpmActionDocumentationLinkLabel": "Дізнайтеся більше про апаратне шифрування",
     "tpmActionErrorKindInternal": "Внутрішня помилка.",
     "tpmActionErrorKindShutdownRequired": "Потрібне вимкнення живлення.",
-    "tpmActionErrorKindRebootRequired": "Потрібно перезавантаження.",
+    "tpmActionErrorKindRebootRequired": "Потрібне перезавантаження.",
     "tpmActionErrorKindUnexpectedAction": "Неочікувана дія.",
     "tpmActionErrorKindMissingArgument": "Відсутній аргумент.",
     "tpmActionErrorKindInvalidArgument": "Недійсний аргумент.",
