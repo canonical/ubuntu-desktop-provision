@@ -1200,10 +1200,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_localizations
-      sha256: "05b50217c9ba39c088e41d4494210b12f94701f1f5d4c6fa5faad46a19be0de9"
+      sha256: a2cdc05d00caf65025fbdca18d13cfe6ed47f55f0804c0ed0e38bf3d4daa3021
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.2+2"
+    version: "0.5.2+3"
   ubuntu_logger:
     dependency: "direct main"
     description:
