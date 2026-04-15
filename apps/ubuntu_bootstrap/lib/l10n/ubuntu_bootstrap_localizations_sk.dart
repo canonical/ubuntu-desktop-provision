@@ -36,7 +36,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileClearButtonLabel => 'Vymazať súbor';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Zvoľte súbor';
+  String get autoinstallDirectFilePickerTitle => 'Výber súboru';
 
   @override
   String get autoinstallDirectFilePickerFilterLabel => 'Súbory YAML';
@@ -113,11 +113,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Príkaz v autoinstalačnom súbore sa počas inštalácie nepodarilo spustiť.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Bude potrebné reštartovať inštaláciu. Skontrolujte autoinstalačný súbor, vyberte iný typ inštalácie alebo kontaktujte svoju IT podporu.';
 
   @override
   String get changeButtonText => 'Zmeniť';
@@ -908,7 +908,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Reštartovať počítač?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Reštartovať inštalátor';
 
   @override
   String get restartIntoWindows => 'Reštartovať do Windows';

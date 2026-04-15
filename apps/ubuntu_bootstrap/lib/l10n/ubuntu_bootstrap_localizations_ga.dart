@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.';
 
   @override
   String get changeButtonText => 'Athrú';
@@ -915,7 +915,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Atosaigh ríomhaire?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Atosaigh an suiteálaí';
 
   @override
   String get restartIntoWindows => 'Atosaigh isteach Windows';

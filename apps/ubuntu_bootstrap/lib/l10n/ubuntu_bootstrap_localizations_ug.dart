@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'ئورنىتىش جەريانىدا ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدىكى بۇيرۇقنى ئىجرا قىلالمىدى.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'ئورنىتىشنى قايتا قوزغىتىشىڭىز كېرەك. ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى تەكشۈرۈپ، پەرقلىق ئورنىتىش تۈرىنى تاللاڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ.';
 
   @override
   String get changeButtonText => 'ئۆزگەرت';

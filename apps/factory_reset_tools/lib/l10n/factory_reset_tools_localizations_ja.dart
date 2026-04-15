@@ -104,11 +104,11 @@ class FactoryResetToolsLocalizationsJa extends FactoryResetToolsLocalizations {
   String get ok => 'OK';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => '閉じる';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '最大化';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => '最小化';
 }

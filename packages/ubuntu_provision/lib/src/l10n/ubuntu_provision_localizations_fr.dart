@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personnalisez $DISTRO selon vos besoins avant de l\'installer. Vous pouvez fait des changements plus tard dans les paramètres système.';
+    return 'Personnalisez $DISTRO selon vos besoins avant de l\'installer. Vous pouvez les changer plus tard dans l\'app Paramètres.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Masquer le journal';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Détails techniques';
 
   @override
   String get restart => 'Redémarrer';

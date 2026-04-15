@@ -18,20 +18,20 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personalize $DISTRO de acordo com suas necessidades antes da configuração. Você pode alterá-lo posteriormente nas Configurações do Sistema.';
+    return 'Personalize o $DISTRO de acordo com as suas necessidades antes de o configurar. Pode alterá-las mais tarde na aplicação de Definições.';
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Vendo';
+  String get accessibilitySeeingLabel => 'Ver';
 
   @override
   String get accessibilityHearingLabel => 'Audição';
 
   @override
-  String get accessibilityTypingLabel => 'Digitando';
+  String get accessibilityTypingLabel => 'Digitação';
 
   @override
-  String get accessibilityPointingLabel => 'Apontando e clicando';
+  String get accessibilityPointingLabel => 'Apontar e clicar';
 
   @override
   String get accessibilityZoomLabel => 'Zoom';
@@ -40,13 +40,13 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get accessibilityHighContrastLabel => 'Alto contraste';
 
   @override
-  String get accessibilityLargeTextLabel => 'Texto caixa alta';
+  String get accessibilityLargeTextLabel => 'Letras grandes';
 
   @override
   String get accessibilityReduceAnimationLabel => 'Reduzir animação';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Leitor de tela';
+  String get accessibilityScreenReaderLabel => 'Leitor de ecrã';
 
   @override
   String get accessibilityVisualAlertsLabel => 'Alertas visuais';
@@ -58,7 +58,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get accessibilitySlowKeysLabel => 'Teclas lentas';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Teclas do mouse';
+  String get accessibilityMouseKeysLabel => 'Teclas do rato';
 
   @override
   String get accessibilityDesktopZoomLabel => 'Zoom na área de trabalho';
@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Lamentamos, mas não sabemos qual é o erro. Você pode tentar reiniciar o computador e iniciar o processo de instalação novamente. Você também pode <a>relatar o problema</a>.';
+      'Lamentamos, mas não sabemos qual é o erro. Pode tentar reiniciar o computador e iniciar o processo de instalação novamente. Também pode <a>relatar o problema</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Esconder log';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Detalhes técnicos';
 
   @override
   String get restart => 'Reiniciar';
@@ -103,7 +103,7 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Disposição do teclado';
 
   @override
-  String get keyboardHeader => 'Selecione o layout do seu teclado';
+  String get keyboardHeader => 'Selecione a disposição do seu teclado';
 
   @override
   String get keyboardTestHint => 'Digite aqui para testar o seu teclado';
@@ -365,22 +365,22 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get eulaAcceptTerms => 'Li e aceito estes termos';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Sucesso';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Fechar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Expandir';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Recolher';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

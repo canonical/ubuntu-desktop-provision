@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Настройте $DISTRO перед установкой в соответствии с вашими предпочтениями. Вы можете изменить это позже в Настройках.';
+    return 'Настройте $DISTRO под свои потребности перед началом работы. Позже Вы сможете изменить эти параметры в Настройках.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsRu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Скрыть журнал';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Технические сведения';
 
   @override
   String get restart => 'Перезагрузить';

@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Adaptu $DISTRO al viaj bezonoj dum la instalado. Vi povas poste ŝanĝi la agordojn per Sistemaj Agordoj.';
+    return 'Adaptu $DISTRO al viaj bezonoj dum la instalado. Vi povas poste ŝanĝi la agordojn per la programo Agordoj.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsEo extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Kaŝi protokolon';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Teĥnikaj detaloj';
 
   @override
   String get restart => 'Restartigi';

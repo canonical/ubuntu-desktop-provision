@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'התאמת $DISTRO לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר בהגדרות המערכת.';
+    return 'התאמת $DISTRO לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר ביישום ההגדרות.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'הסתרת היומן';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'פרטים טכניים';
 
   @override
   String get restart => 'הפעלה מחדש';

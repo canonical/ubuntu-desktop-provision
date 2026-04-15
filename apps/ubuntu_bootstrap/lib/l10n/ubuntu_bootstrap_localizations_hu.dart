@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Az automatikus telepítési fájlban lévő egyik parancs futtatása nem sikerült a telepítés során.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Újra kell majd indítania a telepítést. Ellenőrizze az automatikus telepítési fájlt, válasszon másik telepítési típust, vagy vegye fel a kapcsolatot az IT-támogatással.';
 
   @override
   String get changeButtonText => 'Változtatás';
@@ -918,7 +918,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Újraindítja a számítógépet?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Telepítő újraindítása';
 
   @override
   String get restartIntoWindows => 'Újraindítás és Windows használata';

@@ -9,110 +9,112 @@ class FactoryResetToolsLocalizationsGl extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsGl([String locale = 'gl']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Ferramentas de restablecemento de fábrica';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Ferramentas de restablecemento de fábrica';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Que che gustaría facer?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Crear un soporte de restablecemento';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Iniciar restablecemento de fábrica';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Crear unha unidade de restablecemento USB';
 
   @override
   String get createUsbBody =>
-      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+      'Crea unha unidade USB de reinicio para restaurar o sistema, así como para personalizar as túas instalacións de Ubuntu.';
 
   @override
   String get createUsbListExplanation =>
-      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+      'Selecciona unha unidade flash USB. A unidade debe ter **polo menos 16 GB de espazo.**';
 
   @override
   String get createUsbWarning =>
-      'The flash drive will be reformatted and all data on the drive will be lost.';
+      'A unidade flash formatearase e perderanse todos os datos que conteña.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'Medio de restablecemento USB';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected =>
+      'Non se detectou ningún almacenamento extraíble';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'You need a USB storage to create a Factory Reset Media.';
+      'Necesitas un dispositivo de almacenamento USB para crear un soporte de restablecemento de fábrica.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle =>
+      'Selecciona unha opción para iniciar o restablecemento de fábrica';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Agarde mentres recuperamos as unidades.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle =>
+      'O soporte USB de restablecemento está listo';
 
   @override
   String get resetMediaReadyBody =>
-      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+      'Cando queiras usalo, insire a unidade USB no ordenador que queres restablecer e reiníciao.';
 
   @override
-  String get errorLoadingDrives =>
-      'An error occurred while fetching the drives.';
+  String get errorLoadingDrives => 'Ocorreu un erro ao recuperar as unidades.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Iniciando';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Copiando';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Finalizando';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Finalizado';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Fallou';
 
   @override
-  String get error => 'Error';
+  String get error => 'Erro';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Cargando...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Aviso';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Restaurar';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Reiniciar';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Reformatar';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Fallou a execución do comando';
 
   @override
   String get close => 'Pechar';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Aceptar';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Pechar';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximizar';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimizar';
 }

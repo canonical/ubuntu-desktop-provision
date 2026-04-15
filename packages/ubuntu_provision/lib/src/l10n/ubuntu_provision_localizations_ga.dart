@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Saincheap $DISTRO le do chuid riachtanas sula gcuireann tú ar bun. Is féidir leat iad a athrú níos déanaí i Socruithe Córais.';
+    return 'Saincheap $DISTRO de réir do riachtanais sula ndéanann tú é a shocrú. Is féidir leat iad a athrú níos déanaí san aip Socruithe.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Folaigh logchomhad';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Sonraí teicniúla';
 
   @override
   String get restart => 'Tosaigh arís';

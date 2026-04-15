@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Během instalace se nepodařilo spustit příkaz v souboru autoinstall.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Budete muset restartovat instalaci. Zkontrolujte soubor autoinstall, vyberte jiný typ instalace nebo kontaktujte IT podporu.';
 
   @override
   String get changeButtonText => 'Změnit';
@@ -911,7 +911,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Restartovat počítač?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Restartovat instalační program';
 
   @override
   String get restartIntoWindows => 'Restartovat do Windows';

@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Passen Sie $DISTRO an Ihre Bedürfnisse an, bevor Sie es einrichten. Sie können sie später in den Systemeinstellungen ändern.';
+    return 'Passen Sie $DISTRO an Ihre Bedürfnisse an, bevor Sie es einrichten. Sie können sie später in der Einstellungen-App ändern.';
   }
 
   @override
@@ -52,7 +52,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get accessibilityVisualAlertsLabel => 'Visuelle Warnhinweise';
 
   @override
-  String get accessibilityStickKeysLabel => 'Haftbare Tasten';
+  String get accessibilityStickKeysLabel => 'Einrastfunktion';
 
   @override
   String get accessibilitySlowKeysLabel => 'Langsame Tasten';
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsDe extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Protokoll ausblenden';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Technische Details';
 
   @override
   String get restart => 'Neustart';

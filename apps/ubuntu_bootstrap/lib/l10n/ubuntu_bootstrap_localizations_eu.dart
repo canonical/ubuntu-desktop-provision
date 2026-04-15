@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Autoinstall fitxategiko komando batek huts egin du instalatu bitartean.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Instalazioa berrabiarazi beharko duzu. Egiaztatu autoinstall fitxategia ondo dagoela, aukeratu beste instalazio mota bat, edo jarri zure IT laguntza zerbitzuarekin harremanetan.';
 
   @override
   String get changeButtonText => 'Aldatu';
@@ -911,7 +911,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Ordenagailua berrabiarazi?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Berrabiarazi instalazioa';
 
   @override
   String get restartIntoWindows => 'Berrabiarazi Windowsera';
@@ -964,7 +964,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
-    return '$DISTRO lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta AArako (adimen artifiziala) / ikasketa automatikorako, hala nola devops eta administraziorako. ${DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.';
+    return '$DISTRO lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta adimen artifizialerako (AA) / ikasketa automatikorako, hala nola devops eta administraziorako. ${DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.';
   }
 
   @override
@@ -980,7 +980,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '${DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka, errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute ${DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.';
+    return '${DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute ${DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.';
   }
 
   @override
@@ -988,7 +988,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '${DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebakiarekin eta VPN euskarriarekin eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.';
+    return '${DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebaki eta VPN euskarriarekin, eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.';
   }
 
   @override
@@ -1002,7 +1002,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return 'Mahaigainerako ${DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarriak diren aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.';
+    return 'Mahaigainerako ${DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarria den aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.';
   }
 
   @override

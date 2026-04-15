@@ -113,11 +113,11 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'ຄຳສັ່ງໃນໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດເຮັດວຽກລົ້ມເຫຼວໃນລະຫວ່າງການຕິດຕັ້ງ.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'ທ່ານຈະຕ້ອງໄດ້ເລີ່ມການຕິດຕັ້ງໃໝ່. ກວດສອບໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດ, ເລືອກຮູບແບບການຕິດຕັ້ງແບບອື່ນ ຫຼື ຕິດຕໍ່ຝ່າຍສະໜັບສະໜູນໄອທີຂອງທ່ານ.';
 
   @override
   String get changeButtonText => 'ປ່ຽນ';
@@ -177,7 +177,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'ທ່ານອາດຈະຕ້ອງການອ່ານ <a href=\"$url\">ບັນທຶກການປ່ອຍລຸ້ນໃໝ່</a>.';
+    return 'ທ່ານອາດຈະຕ້ອງການອ່ານ <a href=\"$url\">ໝາຍເຫດການປ່ອຍ</a>.';
   }
 
   @override
@@ -456,7 +456,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ຂໍ້ມູນ ແລະ ພາທິຊັນທັງໝົດໃນດິດຈະຖືກລຶບ, ລວມທັງລະບົບປະຕິບັດການຕ່າງໆ.';
 
   @override
-  String get installationTypeAdvancedLabel => 'ສະແດງຕົວເລືອກຂັ້ນສູງ...';
+  String get installationTypeAdvancedLabel => 'ຕົວເລືອກຂັ້ນສູງ';
 
   @override
   String get installationTypeAdvancedTitle => 'ການເຂົ້າລະຫັດ ແລະ ລະບົບໄຟລ໌';
@@ -485,12 +485,12 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'ທ່ານຈະຕ້ອງໄດ້ປ້ອນລະຫັດຜ່ານທຸກໆຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີຂອງທ່ານ. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'ນີ້ແມ່ນການໃຊ້ LVM ທີ່ມີການເຂົ້າລະຫັດ LUKS.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -523,11 +523,11 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'ດິສກ໌ຈະຖືກປົດລັອກໂດຍອັດຕະໂນມັດໃນລະຫວ່າງການເລີ່ມຕົ້ນລະບົບ.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'ບໍ່ມີໃຫ້ໃຊ້ໃນຄອມພິວເຕີເຄື່ອງນີ້.';
 
   @override
   String get installationTypeTPMSelected => 'ເລືອກ TPM ແລ້ວ';
@@ -797,7 +797,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'ຕົວຖອດລະຫັດ';
 
   @override
   String get confirmProprietarySoftwareCodecsDrivers => 'Codecs ແລະ ໄດຣເວີ';
@@ -905,7 +905,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'ຣີສະຕາດຄອມພິວເຕີບໍ່?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'ເລີ່ມຕົວຕິດຕັ້ງໃໝ່';
 
   @override
   String get restartIntoWindows => 'ຣີສະຕາດເຂົ້າສູ່ Windows';
@@ -1008,7 +1008,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'ໂປຣແກຣມອ່ານໜ້າຈໍ Orca';
+  String get installationSlidesAccessibilityOrca => 'ຕົວອ່ານໜ້າຈໍ Orca';
 
   @override
   String get installationSlidesAccessibilityLanguages => 'ການຮອງຮັບພາສາ';
@@ -1399,11 +1399,12 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'ວິທີແກ້ໄຂ: $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'ລິ້ງໄປຫາເອກະສານ';
+  String get tpmActionDocumentationLinkLabel =>
+      'ຮຽນຮູ້ເພີ່ມເຕີມກ່ຽວກັບການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ';
 
   @override
   String get tpmActionErrorSupportLabel =>
@@ -1411,109 +1412,115 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'ລອງວິທີແກ້ໄຂຂ້າງລຸ່ມນີ້, ຕິດຕໍ່ຝ່າຍສະໜັບສະໜູນໄອທີ ຫຼື ເລືອກວິທີການເຂົ້າລະຫັດແບບອື່ນ.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
       'ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT, ຫຼື ເລືອກວິທີການເຂົ້າລະຫັດແບບອື່ນ.';
 
   @override
-  String get tpmActionErrorKindInternal => 'ພາຍໃນ';
+  String get tpmActionErrorKindInternal => 'ເກີດຂໍ້ຜິດພາດພາຍໃນ.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'ຕ້ອງການປິດເຄື່ອງ';
+  String get tpmActionErrorKindShutdownRequired => 'ຈຳເປັນຕ້ອງປິດເຄື່ອງ.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'ຈຳເປັນຕ້ອງຣີສະຕາດ';
+  String get tpmActionErrorKindRebootRequired => 'ຈຳເປັນຕ້ອງເລີ່ມລະບົບໃໝ່.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'ການດຳເນີນການທີ່ບໍ່ຄາດຄິດ';
+  String get tpmActionErrorKindUnexpectedAction => 'ການກະທຳທີ່ບໍ່ຄາດຄິດ.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Argument ຫາຍໄປ';
+  String get tpmActionErrorKindMissingArgument => 'ຂາດອາກິວເມນ.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Argument ບໍ່ຖືກຕ້ອງ';
+  String get tpmActionErrorKindInvalidArgument => 'ອາກິວເມນບໍ່ຖືກຕ້ອງ.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'ການດຳເນີນການລົ້ມເຫຼວ';
+  String get tpmActionErrorKindActionFailed => 'ການດຳເນີນການລົ້ມເຫຼວ.';
 
   @override
-  String get tpmActionErrorKindRunningInVm => 'ກຳລັງເຮັດວຽກໃນ VM';
+  String get tpmActionErrorKindRunningInVm =>
+      'ສະພາບແວດລ້ອມໃນປັດຈຸບັນແມ່ນເຄື່ອງສະເໝືອນ.';
 
   @override
-  String get tpmActionErrorKindSystemNotEfi => 'ລະບົບບໍ່ແມ່ນ EFI';
+  String get tpmActionErrorKindSystemNotEfi =>
+      'ຄອມພິວເຕີເຄື່ອງນີ້ກຳລັງໃຊ້ເຟີມແວລຸ້ນເກົ່າ (BIOS ແບບເກົ່າ) ທີ່ບໍ່ຮອງຮັບກັບວິທີການເຂົ້າລະຫັດນີ້.';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess => 'ການເຂົ້າເຖິງຕົວປ່ຽນ EFI';
+  String get tpmActionErrorKindEfiVariableAccess =>
+      'ມີບັນຫາກັບເຟີມແວຂອງຄອມພິວເຕີເຄື່ອງນີ້.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'ບໍ່ພົບອຸປະກອນ TPM2 ທີ່ເໝາະສົມ';
+      'ຄອມພິວເຕີນີ້ບໍ່ມີຮາດແວດ້ານຄວາມປອດໄພທີ່ຈຳເປັນ (TPM 2.0) ສຳລັບວິທີການເຂົ້າລະຫັດນີ້.';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled => 'ອຸປະກອນ TPM ຖືກປິດໃຊ້ງານ';
+  String get tpmActionErrorKindTpmDeviceDisabled =>
+      'TPM ຂອງຄອມພິວເຕີເຄື່ອງນີ້ຖືກປິດໃຊ້ງານ.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'TPM Hierarchies ຖືກຄອບຄອງ';
+      'TPM ຂອງຄອມພິວເຕີເຄື່ອງນີ້ ຖືກນຳໃຊ້ໂດຍລະບົບ ຫຼື ແອັບພລິເຄຊັນອື່ນຢູ່ແລ້ວ.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'ອຸປະກອນ TPM ຖືກລັອກ (Lockout)';
+      'TPM ຂອງຄອມພິວເຕີເຄື່ອງນີ້ຖືກລັອກຢູ່.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'ພື້ນທີ່ຈັດເກັບ TPM ບໍ່ພຽງພໍ';
+      'TPM ຂອງຄອມພິວເຕີເຄື່ອງນີ້ມີພື້ນທີ່ຈັດເກັບບໍ່ພຽງພໍ.';
 
   @override
-  String get tpmActionErrorKindUnsupportedPlatform => 'ແພລດຟອມທີ່ບໍ່ຮອງຮັບ';
+  String get tpmActionErrorKindUnsupportedPlatform =>
+      'ຄອມພິວເຕີເຄື່ອງນີ້ບໍ່ຮອງຮັບການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'ເປີດໃຊ້ງານການ Debug UEFI';
+      'ເປີດການແກ້ໄຂຈຸດບົກຜ່ອງ UEFI ແລ້ວ.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'ການປົກປ້ອງ DMA ບໍ່ພຽງພໍ';
+      'ຄອມພິວເຕີເຄື່ອງນີ້ຂາດຄຸນສົມບັດຄວາມປອດໄພທີ່ຈຳເປັນ (ການປ້ອງກັນ DMA).';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu => 'ບໍ່ມີ Kernel IOMMU';
+  String get tpmActionErrorKindNoKernelIommu =>
+      'ຄອມພິວເຕີເຄື່ອງນີ້ຂາດຄຸນສົມບັດດ້ານຄວາມປອດໄພທີ່ຈຳເປັນ (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'ຄວາມປອດໄພຂອງໂຮສ (Host Security)';
+      'ມີບັນຫາກັບການຕັ້ງຄ່າຄວາມປອດໄພຂອງຄອມພິວເຕີນີ້.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'ມີແອັບພລິເຄຊັນ Sys Prep';
+      'ມີຊອບແວທີ່ກຳລັງເຮັດວຽກໃນຕອນເລີ່ມຕົ້ນລະບົບ ເຊິ່ງອາດຈະຂັດຂວາງການເຊື່ອມຕໍ່ທີ່ປອດໄພກັບ TPM ຂອງຄອມພິວເຕີ.';
 
   @override
-  String get tpmActionErrorKindAbsolutePresent => 'ມີລະບົບ Absolute';
+  String get tpmActionErrorKindAbsolutePresent =>
+      'Absolute Persistence Module ຖືກເປີດນຳໃຊ້ໃນຄອມພິວເຕີນີ້.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'ໂໝດ SecureBoot ບໍ່ຖືກຕ້ອງ';
+      'Secure boot ຖືກປິດໃຊ້ງານຢູ່ໃນຄອມພິວເຕີນີ້ ຫຼື ບໍ່ໄດ້ຖືກຕັ້ງຢູ່ໃນໂໝດນຳໃຊ້.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'ກວດພົບ Algorithm ຂອງ SecureBoot ທີ່ອ່ອນແອ';
+      'ໃບຢັ້ງຢືນບາງອັນທີ່ໃຊ້ກວດສອບຊອບແວໃນຄອມພິວເຕີເຄື່ອງນີ້ ແມ່ນລ້າສະໄໝ ຫຼື ໃຊ້ການປ້ອງກັນທີ່ອ່ອນແອ.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'ການຢືນຢັນ Secure Boot ກ່ອນເຂົ້າ OS ໂດຍ Digests ທີ່ລົງທະບຽນ';
+      'ຄອມພິວເຕີເຄື່ອງນີ້ກຳລັງໃຊ້ລາຍການອະນຸຍາດແບບຈັດການດ້ວຍຕົນເອງ ເພື່ອກວດສອບຊອບແວໃນຕອນເລີ່ມເຄື່ອງ.';
 
   @override
-  String get tpmActionErrorKindAddonDriversPresent =>
-      'ມີໄດຣເວີເສີມ (Addon Drivers)';
+  String get tpmActionErrorKindAddonDriversPresent => 'ມີໄດເວີສ່ວນເສີມຢູ່.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'ມີບັນຫາກັບ TPM ຂອງຄອມພິວເຕີເຄື່ອງນີ້.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'ມີບັນຫາກັບເຟີມແວຂອງຄອມພິວເຕີເຄື່ອງນີ້.';
 
   @override
   String get tpmActionFixActionReboot => 'ຣີສະຕາດ';
@@ -1527,7 +1534,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'ຖ້າຫາກການຕັ້ງຄ່າເຟີມແວບໍ່ໂຫຼດຂຶ້ນມາໂດຍອັດຕະໂນມັດ, ໃຫ້ເລີ່ມລະບົບໃໝ່ ແລະ ກົດປຸ່ມຕັ້ງຄ່າຊ້ຳໆ ໃນລະຫວ່າງການເລີ່ມຕົ້ນລະບົບ (ໂດຍທົ່ວໄປແມ່ນ F2, F10 ຫຼື Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
@@ -1543,7 +1550,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'ເປີດໃຊ້ການປົກປ້ອງ DMA ດ້ວຍຕົນເອງ';
+      'ເປີດນຳໃຊ້ IOMMU ດ້ວຍຕົນເອງ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -1563,24 +1570,26 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'ປິດນຳໃຊ້ Absolute Persistence Module ດ້ວຍຕົນເອງ';
 
   @override
   String get tpmActionFixActionContactOem => 'ຕິດຕໍ່ OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'ຕິດຕໍ່ຜູ້ຂາຍ OS';
+  String get tpmActionFixActionContactOsVendor =>
+      'ຕິດຕໍ່ຜູ້ສະໜອງລະບົບປະຕິບັດການ';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware =>
-      'ເປີດໃຊ້ງານ TPM ຜ່ານເຟີມແວ';
+      'ເປີດນຳໃຊ້ TPM ເມື່ອເລີ່ມລະບົບໃໝ່';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'ເປີດໃຊ້ງານ ແລະ ລ້າງຄ່າ TPM ຜ່ານເຟີມແວ';
+      'ເປີດນຳໃຊ້ ແລະ ລ້າງ TPM ເມື່ອເລີ່ມລະບົບໃໝ່';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'ລ້າງຄ່າ TPM ຜ່ານເຟີມແວ';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'ລ້າງ TPM ເມື່ອເລີ່ມລະບົບໃໝ່';
 
   @override
   String get tpmActionFixActionClearTpm => 'ລ້າງຄ່າ TPM';
@@ -1590,35 +1599,35 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'ເລີ່ມລະບົບໃໝ່ເພື່ອໃຫ້ການດຳເນີນການກ່ອນໜ້ານີ້ສຳເລັດ.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'ການເລີ່ມຄອມພິວເຕີໃໝ່ອາດຈະແກ້ໄຂບັນຫາໄດ້.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'ປິດຄອມພິວເຕີເພື່ອໃຫ້ການດຳເນີນການກ່ອນໜ້ານີ້ສຳເລັດ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'ທ່ານສາມາດເຮັດສິ່ງນີ້ໄດ້ໃນການຕັ້ງຄ່າເຟີມແວຂອງຄອມພິວເຕີຂອງທ່ານ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'ທ່ານອາດຈະສາມາດເຮັດສິ່ງນີ້ໄດ້ໃນການຕັ້ງຄ່າເຟີມແວຂອງຄອມພິວເຕີຂອງທ່ານ. ກວດເບິ່ງເອກະສານຄູ່ມືຂອງຜູ້ຜະລິດຊີພີຢູສຳລັບຄຳແນະນຳ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'ກວດເບິ່ງວ່າໂໝດບູດແບບປອດໄພຖືກຕັ້ງເປັນ \"deployed\".';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'ຄຸນສົມບັດນີ້ອາດຈະຖືກເອີ້ນວ່າ \"Virtualization Technology\", \"VT-d\" ຫຼື \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'ການລະເລີຍບັນຫານີ້ອາດຈະເຮັດໃຫ້ການຕິດຕັ້ງມີຄວາມປອດໄພໜ້ອຍລົງ.';
 
   @override
   String get tpmActionRestartLabel => 'ຣີສະຕາດ';
@@ -1646,20 +1655,20 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'ທ່ານອາດຈະຖືກຂໍໃຫ້ຢືນຢັນການດຳເນີນການນີ້ເມື່ອເລີ່ມລະບົບໃໝ່.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'ຈາກນັ້ນ ທ່ານຈະຕ້ອງໄດ້ເລີ່ມການຕິດຕັ້ງຄືນໃໝ່.';
 
   @override
   String get tpmActionErrorTitle => 'ວິທີແກ້ໄຂນີ້ລົ້ມເຫຼວ';
 
   @override
   String get tpmActionErrorDescription =>
-      'ລອງວິທີແກ້ໄຂອື່ນ ຫຼື ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອດ້ານ IT';
+      'ລອງໃຊ້ວິທີແກ້ໄຂອື່ນ ຫຼື ຕິດຕໍ່ພາກສ່ວນຊ່ວຍເຫຼືອດ້ານໄອທີ.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'ລອງວິທີອື່ນ. ທ່ານຍັງສາມາດ <a>ສົ່ງລາຍງານຂໍ້ຜິດພາດ</a>.';
+      'ລອງວິທີອື່ນເບິ່ງ. ທ່ານຍັງສາມາດ <a href=\"\">ສົ່ງລາຍງານຂໍ້ຜິດພາດ</a>.';
 }

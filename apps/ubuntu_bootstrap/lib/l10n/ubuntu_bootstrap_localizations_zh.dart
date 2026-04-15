@@ -1695,6 +1695,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
       '供給透過 Landscape 提供自動安裝檔的組織中使用者。';
 
   @override
+  String get autoinstallErrorMessage => '安裝過程中，自動安裝檔中的一個命令執行失敗。';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      '您需要重新執行安裝程序。請檢查自動安裝檔、選擇其他安裝類型，或聯絡您的 IT 支援部門。';
+
+  @override
   String get changeButtonText => '變更';
 
   @override
@@ -1751,7 +1758,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return '您也可以閱覽<a href=\"$url\">產品發布說明</a>。';
+    return '您或許想閱讀<a href=\"$url\">發行說明</a>。';
   }
 
   @override
@@ -2006,7 +2013,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeEraseInfo => '磁碟上的所有資料和磁碟分割區都會被刪除，包括作業系統。';
 
   @override
-  String get installationTypeAdvancedLabel => '顯示進階選項...';
+  String get installationTypeAdvancedLabel => '進階選項';
 
   @override
   String get installationTypeAdvancedTitle => '加密和檔案系統';
@@ -2031,6 +2038,14 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get installationTypeLVMEncryption => '使用密碼加密';
+
+  @override
+  String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
+    return '每次開機時，您都需要輸入密碼。$advancedHint';
+  }
+
+  @override
+  String get installationTypeLVMEncryptionInfo2 => '此處採用搭配 LUKS 加密的 LVM。';
 
   @override
   String get installationTypeLVMEncryptionSelected => '已選用 LVM 及加密';
@@ -2058,6 +2073,12 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get installationTypeTPM => '使用硬體支援的加密';
 
   @override
+  String get installationTypeTPMInfoResolute => '磁碟將在啟動時自動解鎖。';
+
+  @override
+  String get installationTypeTPMInfoUnavailable => '此電腦上無法使用。';
+
+  @override
   String get installationTypeTPMSelected => '已選用 TPM 加密';
 
   @override
@@ -2067,7 +2088,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">警告：</font>這將會刪除 $os 下的全部應用程式、文件、圖片、音樂等檔案。';
+    return '<font color=\"$color\"><font color=\"$color\">警告：</font>這將會刪除 $os 下的全部應用程式、文件、圖片、音樂等檔案。';
   }
 
   @override
@@ -2421,6 +2442,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get restartComputerTitle => '重新啟動電腦？';
+
+  @override
+  String get restartInstaller => '重新啟動安裝程式';
 
   @override
   String get restartIntoWindows => '重啟進入 Windows';
@@ -2896,86 +2920,115 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => '文件連結';
+  String tpmActionSingleSolutionLabel(String text) {
+    return '解決方案：$text';
+  }
+
+  @override
+  String get tpmActionDocumentationLinkLabel => '進一步了解硬體級加密';
 
   @override
   String get tpmActionErrorSupportLabel => '請嘗試以下解決方案、聯絡 IT 支援人員，或選擇其他加密方式。';
 
   @override
+  String get tpmActionErrorSupportSingleLabel =>
+      '請嘗試以下解決方案、聯絡 IT 支援部門，或選擇其他加密方式。';
+
+  @override
   String get tpmActionErrorSupportNoActionLabel => '聯絡 IT 支援人員，或選擇其他加密方式。';
 
   @override
-  String get tpmActionErrorKindInternal => '內部';
+  String get tpmActionErrorKindInternal => '內部錯誤。';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => '需要關機';
+  String get tpmActionErrorKindShutdownRequired => '需要關閉電源。';
 
   @override
-  String get tpmActionErrorKindRebootRequired => '需要重新啟動';
+  String get tpmActionErrorKindRebootRequired => '需要重新啟動。';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => '意外操作';
+  String get tpmActionErrorKindUnexpectedAction => '非預期動作。';
 
   @override
-  String get tpmActionErrorKindMissingArgument => '缺少參數';
+  String get tpmActionErrorKindMissingArgument => '缺少參數。';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => '無效參數';
+  String get tpmActionErrorKindInvalidArgument => '無效參數。';
 
   @override
-  String get tpmActionErrorKindActionFailed => '操作失敗';
+  String get tpmActionErrorKindActionFailed => '操作失敗。';
 
   @override
-  String get tpmActionErrorKindRunningInVm => '在虛擬機中執行';
+  String get tpmActionErrorKindRunningInVm => '目前環境為虛擬機器。';
 
   @override
-  String get tpmActionErrorKindSystemNotEfi => '系統非 EFI';
+  String get tpmActionErrorKindSystemNotEfi =>
+      '這台電腦使用的是舊版韌體（傳統 BIOS），與此加密方法不相容。';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess => 'EFI 變數存取';
+  String get tpmActionErrorKindEfiVariableAccess => '這台電腦的韌體出現問題。';
 
   @override
-  String get tpmActionErrorKindNoSuitableTpm2Device => '沒有合適的 TPM2 裝置';
+  String get tpmActionErrorKindNoSuitableTpm2Device =>
+      '這台電腦未配備此加密方法所需的安全硬體（TPM 2.0）。';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM 裝置已停用';
+  String get tpmActionErrorKindTpmDeviceDisabled => '這台電腦的 TPM 已停用。';
 
   @override
-  String get tpmActionErrorKindTpmHierarchiesOwned => 'TPM 層級所有權';
+  String get tpmActionErrorKindTpmHierarchiesOwned =>
+      '這台電腦的 TPM 目前正被其他系統或應用程式所使用。';
 
   @override
-  String get tpmActionErrorKindTpmDeviceLockoutLockedOut => 'TPM 裝置鎖定狀態為鎖定';
+  String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
+      '這台電腦的 TPM 目前處於鎖定狀態。';
 
   @override
-  String get tpmActionErrorKindInsufficientTpmStorage => 'TPM 儲存空間不足';
+  String get tpmActionErrorKindInsufficientTpmStorage => '這台電腦的 TPM 可用儲存空間不足。';
 
   @override
-  String get tpmActionErrorKindUnsupportedPlatform => '不支援的平台';
+  String get tpmActionErrorKindUnsupportedPlatform => '這台電腦不支援硬體加密。';
 
   @override
-  String get tpmActionErrorKindUefiDebuggingEnabled => '已啟用 UEFI 除錯功能';
+  String get tpmActionErrorKindUefiDebuggingEnabled => '已啟用 UEFI 除錯功能。';
 
   @override
-  String get tpmActionErrorKindInsufficientDmaProtection => 'DMA 保護不足';
+  String get tpmActionErrorKindInsufficientDmaProtection =>
+      '這台電腦缺少一項必要的安全功能（DMA 保護）。';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu => '無核心 IOMMU';
+  String get tpmActionErrorKindNoKernelIommu => '這台電腦缺少一項必要的安全功能（IOMMU）。';
 
   @override
-  String get tpmActionErrorKindHostSecurity => '主機安全';
+  String get tpmActionErrorKindHostSecurity => '這台電腦的安全設定有問題。';
 
   @override
-  String get tpmActionErrorKindSysPrepApplicationsPresent => '系統預備應用程式現況';
+  String get tpmActionErrorKindSysPrepApplicationsPresent =>
+      '系統啟動時有軟體正在執行，這可能會阻礙與電腦 TPM 建立安全連線。';
 
   @override
-  String get tpmActionErrorKindAbsolutePresent => '絕對的當下';
+  String get tpmActionErrorKindAbsolutePresent => '此電腦已啟用「絕對持久性模組」。';
 
   @override
-  String get tpmActionErrorKindInvalidSecureBootMode => '無效的安全啟動模式';
+  String get tpmActionErrorKindInvalidSecureBootMode =>
+      '此電腦已停用安全開機功能，或未設定為部署模式。';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      '偵測到安全啟動演算法有缺陷';
+      '這台電腦中部分用於驗證軟體的憑證已過期，或採用了安全性較低的加密方式。';
+
+  @override
+  String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
+      '這台電腦在開機時會使用手動白名單來驗證軟體。';
+
+  @override
+  String get tpmActionErrorKindAddonDriversPresent => '已安裝附加驅動程式。';
+
+  @override
+  String get tpmActionErrorKindGenericTpm => '這台電腦的 TPM 出現問題。';
+
+  @override
+  String get tpmActionErrorKindGenericFirmware => '這台電腦的韌體出現問題。';
 
   @override
   String get tpmActionFixActionReboot => '重新啟動';
@@ -2985,6 +3038,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get tpmActionFixActionRebootToFwSettings => '重啟進入韌體設定';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInstructions =>
+      '如果韌體設定無法自動載入，請重新啟動系統，並在開機過程中反覆按下設定鍵（通常為 F2、F10 或 Delete）。';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
@@ -2999,7 +3056,7 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
       '手動啟用安全啟動';
 
   @override
-  String get tpmActionFixActionRebootToFwSettingsNoKernelIommu => '手動啟用 DMA 保護';
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommu => '手動啟用 IOMMU';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
@@ -3018,25 +3075,59 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
       '手動清除 TPM';
 
   @override
+  String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
+      '手動停用「絕對持久化模組」';
+
+  @override
   String get tpmActionFixActionContactOem => '聯絡 OEM 廠商';
 
   @override
   String get tpmActionFixActionContactOsVendor => '聯絡 OS 供應商';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => '透過韌體啟用 TPM';
+  String get tpmActionFixActionEnableTpmViaFirmware => '重新啟動時啟用 TPM';
 
   @override
-  String get tpmActionFixActionEnableAndClearTpmViaFirmware => '透過韌體啟用和清除 TPM';
+  String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
+      '在重新啟動時啟用及清除 TPM';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => '透過韌體清除 TPM';
+  String get tpmActionFixActionClearTpmViaFirmware => '重新啟動時清除 TPM';
 
   @override
   String get tpmActionFixActionClearTpm => '清除 TPM';
 
   @override
   String get tpmActionFixActionProceed => '忽略';
+
+  @override
+  String get tpmActionFixActionRebootDescription => '請重新啟動電腦以完成先前操作。';
+
+  @override
+  String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
+      '重新啟動電腦可能會解決這個問題。';
+
+  @override
+  String get tpmActionFixActionShutdownDescription => '請關閉電腦以完成先前的操作。';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsDescription =>
+      '您可以在電腦的韌體設定中進行此操作。';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
+      '您或許可在電腦的韌體設定中進行此操作。請參閱 CPU 製造商的說明文件以獲取指引。';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
+      '請確認安全開機模式已設定為「已部署」。';
+
+  @override
+  String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
+      '此功能可能稱為「虛擬化技術」、「VT-d」或「AMD-Vi」。';
+
+  @override
+  String get tpmActionFixActionProceedDescription => '若忽略此問題，可能會導致安裝安全性降低。';
 
   @override
   String get tpmActionRestartLabel => '重新啟動';
@@ -3061,8 +3152,18 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get tpmActionFixActionClearTpmConfirmationLabel => '我理解清除 TPM 的後果';
 
   @override
+  String get tpmActionFixActionCaveatConfirm => '重新啟動時，系統可能會要求您確認此操作。';
+
+  @override
+  String get tpmActionFixActionCaveatRetry => '那麼您就需要重新開始安裝。';
+
+  @override
   String get tpmActionErrorTitle => '此解決方案失敗';
 
   @override
-  String get tpmActionErrorDescription => '嘗試其他解決方案或聯絡 IT 技術支援';
+  String get tpmActionErrorDescription => '請嘗試其他解決方案，或聯絡 IT 支援部門。';
+
+  @override
+  String get manualPartitioningWarningBody =>
+      '請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。';
 }

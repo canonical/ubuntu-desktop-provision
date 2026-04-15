@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'セットアップの前に、必要に応じて $DISTRO をカスタマイズしてください。あとでシステム設定で変更もできます。';
+    return 'セットアップの前に、必要に応じて $DISTRO をカスタマイズしてください。あとで設定アプリでも変更できます。';
   }
 
   @override
@@ -64,7 +64,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get accessibilityDesktopZoomLabel => 'デスクトップの拡大表示';
 
   @override
-  String get errorPageTitle => '何かがおかしいです';
+  String get errorPageTitle => '何か問題が発生しました';
 
   @override
   String get errorPageUnexpected =>
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ログを非表示';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => '技術的な詳細';
 
   @override
   String get restart => '再起動';
@@ -137,7 +137,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return '$DISTROへ、ようこそ';
+    return '$DISTROにようこそ';
   }
 
   @override
@@ -189,7 +189,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityUsernameInUse => 'そのユーザー名はすでに存在します。';
 
   @override
-  String get identityUsernameSystemReserved => 'その名前はシステムが使用するため、予約されています。';
+  String get identityUsernameSystemReserved => 'その名前はシステム用に予約されています。';
 
   @override
   String get identityUsernameTooLong => 'その名前は長すぎます。';
@@ -216,20 +216,20 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityPasswordHide => '非表示';
 
   @override
-  String get identityActiveDirectoryOption => 'アクティブディレクトリを使用する';
+  String get identityActiveDirectoryOption => 'Active Directoryを使用する';
 
   @override
   String get identityActiveDirectoryInfo => '次のステップでドメインやその他の詳細を入力します。';
 
   @override
-  String get activeDirectoryTitle => 'アクティブディレクトリの設定';
+  String get activeDirectoryTitle => 'Active Directoryにログイン';
 
   @override
-  String get activeDirectoryHeader => 'アクティブディレクトリにログインしますか？';
+  String get activeDirectoryHeader => 'Active Directoryにログインしますか?';
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return '$DISTRO は簡単な操作でシームレスにアクティブディレクトリに統合するよう設計されています。';
+    return '$DISTRO は簡単な操作でシームレスにActive Directoryに統合するよう設計されています。';
   }
 
   @override
@@ -281,7 +281,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get activeDirectoryPasswordEmpty => '必須';
 
   @override
-  String get activeDirectoryErrorTitle => 'アクティブディレクトリへの接続設定エラー';
+  String get activeDirectoryErrorTitle => 'Active Directoryへの接続設定エラー';
 
   @override
   String get activeDirectoryErrorMessage =>
@@ -295,7 +295,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String get networkPageBody =>
-      'インターネット接続を行うとインストールの際の互換性チェックと、さまざまなソフトウェアパッケージの取得を改善します。';
+      'インターネットに接続すると、互換性チェックを行ったり追加のソフトウェアパッケージをインストールできるようになります。';
 
   @override
   String get networkWiredOption => '有線接続を使用';
@@ -349,10 +349,10 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String get eulaReadAndAcceptTerms =>
-      'マシンのセットアップを継続するには、許諾書条件を読んで同意する必要があります。';
+      'コンピューターのセットアップを継続するには、ライセンス条項を読んで同意する必要があります。';
 
   @override
-  String get eulaAcceptTerms => 'よく読んで許諾書条件に同意しました';
+  String get eulaAcceptTerms => 'ライセンス条項を読み同意しました';
 
   @override
   String get successIconSemanticLabel => '成功';

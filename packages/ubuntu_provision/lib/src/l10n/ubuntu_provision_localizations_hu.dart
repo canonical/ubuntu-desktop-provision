@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Szabja személyre a(z) $DISTRO disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a rendszerbeállításokban.';
+    return 'Szabja személyre a(z) $DISTRO disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a Beállítások alkalmazásban.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Napló elrejtése';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Műszaki részletek';
 
   @override
   String get restart => 'Újraindítás';

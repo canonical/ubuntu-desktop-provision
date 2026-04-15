@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'В процессе установки не удалось выполнить команду в файле autoinstall.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Вам необходимо перезапустить установку. Проверьте файл autoinstall, выберите другой тип установки или обратитесь в службу IT-поддержки.';
 
   @override
   String get changeButtonText => 'Изменить';
@@ -293,7 +293,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get installDriversTitle =>
-      'Установка программного обеспечения сторонних производителей для графики и Wi-Fi оборудования';
+      'Установить ПО сторонних производителей для графики и Wi-Fi';
 
   @override
   String get installDriversSubtitle =>
@@ -911,7 +911,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Перезагрузить компьютер?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Перезапустить установку';
 
   @override
   String get restartIntoWindows => 'Перезагрузить в Windows';
@@ -1213,7 +1213,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Подключение вилок и слотов $snap...';
+    return 'Подключение разъёмов и слотов $snap...';
   }
 
   @override
@@ -1243,11 +1243,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitleBadgeLabel => 'Важное';
 
   @override
-  String get recoveryKeyHeader => 'Сохранить ваш ключ восстановления';
+  String get recoveryKeyHeader => 'Сохраните ключ восстановления';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'Без ключа восстановления вы можете потерять все свои данные';
+      'Без ключа восстановления Вы можете потерять все свои данные';
 
   @override
   String get recoveryKeyTextFieldLabel => 'Ключ восстановления';
@@ -1258,7 +1258,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyConfirmation =>
-      'Я сохранил свой ключ восстановления в безопасном месте';
+      'Ключ восстановления сохранён в безопасном месте';
 
   @override
   String get recoveryKeyLinkLabel => 'Подробнее';

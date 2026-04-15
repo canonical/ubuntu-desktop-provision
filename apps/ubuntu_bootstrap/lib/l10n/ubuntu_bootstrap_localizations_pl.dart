@@ -115,11 +115,11 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Polecenie w pliku autoinstalacji nie zostało uruchomione podczas instalacji.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Konieczne będzie ponowne uruchomienie instalacji. Sprawdź plik autoinstalacji, wybierz inny typ instalacji lub skontaktuj się z pomocą techniczną.';
 
   @override
   String get changeButtonText => 'Zmień';
@@ -914,7 +914,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Uruchomić ponownie komputer?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Uruchom ponownie instalator';
 
   @override
   String get restartIntoWindows => 'Uruchom ponownie do Windows';

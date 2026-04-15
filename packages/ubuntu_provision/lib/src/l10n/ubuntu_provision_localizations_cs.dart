@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Přizpůsobte si $DISTRO svým potřebám, což vám už v rámci instalátoru usnadní jeho použití. Tato nastavení je možné měnit i následně v už nainstalovaném systému a to v „Nastavení systému“.';
+    return 'Přizpůsobte si $DISTRO svým potřebám, což vám už v rámci instalátoru usnadní jeho použití. Tato nastavení je možné měnit i následně v už nainstalovaném systému a to v aplikaci „Nastavení“.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skrýt záznam';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Technické detaily';
 
   @override
   String get restart => 'Restartovat';
