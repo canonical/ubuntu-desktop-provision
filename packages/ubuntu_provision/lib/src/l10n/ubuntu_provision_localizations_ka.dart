@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'მოარგეთ $DISTRO თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, სისტემის მორგების ფანჯარაში შეგეძლებათ.';
+    return 'მოარგეთ $DISTRO თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, მორგების ფანჯარაში შეგეძლებათ.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ჟურნალის დამალვა';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'ტექნიკური დეტალები';
 
   @override
   String get restart => 'გადატვირთვა';

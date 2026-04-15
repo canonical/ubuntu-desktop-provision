@@ -46,22 +46,22 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Archivo auto-instalar no es alcanzable';
+      'El archivo de instalación automática no es accesible';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Compruebe si la URL es correcta, pruebe su conexión a Internet, o inténtelo más tarde.';
+      'Compruebe si el URL es correcto, pruebe su conexión a Internet, o inténtelo más tarde.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'URL no válida';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'URL no válido';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Compruebe si es correcta la URL o seleccione un archivo local.';
+      'Compruebe si el URL es correcto o seleccione un archivo local.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Archivo de auto-instalación no válido';
+      'Archivo de instalación automática no válido';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
@@ -69,7 +69,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'El archivo auto-instalar no es legible';
+      'El archivo de instalación automática no es legible';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
@@ -88,7 +88,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallInstructions =>
-      'Ingresa la URL de autoinstall.yaml o la ruta del archivo local:';
+      'Introduzca el URL o la ruta al archivo local autoinstall.yaml:';
 
   @override
   String get autoinstallInteractiveOption => 'Instalación interactiva';
@@ -98,14 +98,14 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Para usuarios que quieran ser guiados paso a paso durante la instalación.';
 
   @override
-  String get autoinstallDirectOption => 'Automático con archivo autoinstall';
+  String get autoinstallDirectOption => 'Automatizada con archivo autoinstall';
 
   @override
   String get autoinstallDirectDescription =>
       'Para usuarios avanzados quienes tengan un autoinstall.yaml para configuraciones del sistema consistente y repetible.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automático con Landscape';
+  String get autoinstallLandscapeOption => 'Automatizada con Landscape';
 
   @override
   String get autoinstallLandscapeDescription =>
@@ -113,11 +113,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'No se pudo ejecutar una orden del archivo de instalación automática.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Deberá reiniciar la instalación. Compruebe el archivo de instalación automática, elija otro tipo de instalación, o contacte al personal de sistemas.';
 
   @override
   String get changeButtonText => 'Cambiar';
@@ -576,7 +576,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Elimine $os e instale $product';
+    return 'Eliminar $os e instalar $product';
   }
 
   @override
@@ -915,7 +915,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => '¿Reiniciar equipo?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Reiniciar instalador';
 
   @override
   String get restartIntoWindows => 'Reiniciar en Windows';
@@ -950,21 +950,21 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Tanto si eres desarrollador, creador, jugador o administrador, en $RELEASE encontrarás nuevas herramientas para mejorar tu productividad y mejorar tu experiencia.';
+    return 'Tanto si programa, crea contenido, juega o administra TI, en $RELEASE encontrará herramientas nuevas para mejorar su productividad y su experiencia.';
   }
 
   @override
   String get installationSlidesSoftwareTitle =>
-      'Todas las aplicaciones que necesitas';
+      'Todas las aplicaciones que necesita';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Instala, gestiona y actualiza todas tus aplicaciones en Ubuntu Software, incluyendo miles de aplicaciones tanto de Snap Store como del archivo $DISTRO.';
+    return 'Instale, gestione y actualice todos sus programas en Software de Ubuntu, que abarca miles de aplicaciones tanto de la tienda de snaps como del archivo de $DISTRO.';
   }
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Desarrolla con lo mejor del código abierto';
+      'Desarrolle con lo mejor del código abierto';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
@@ -972,7 +972,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Potencia tu creatividad';
+  String get installationSlidesCreativityTitle => 'Potencie su creatividad';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
@@ -1415,11 +1415,12 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Solución: $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Enlace a la documentación';
+  String get tpmActionDocumentationLinkLabel =>
+      'Conozca más sobre el cifrado por hardware';
 
   @override
   String get tpmActionErrorSupportLabel =>
@@ -1427,32 +1428,32 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Pruebe esta solución, contacte al personal de sistemas, o elija otro método de cifrado.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
       'Contacte con el mantenimiento IT, o elija un método diferente de cifrado.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Interno';
+  String get tpmActionErrorKindInternal => 'Error interno.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Apagado Requerido';
+  String get tpmActionErrorKindShutdownRequired => 'Se requiere apagar.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Rearranque Requerido';
+  String get tpmActionErrorKindRebootRequired => 'Se requiere reiniciar.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Acción Inesperada';
+  String get tpmActionErrorKindUnexpectedAction => 'Acción inesperada.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Argumento Ausente';
+  String get tpmActionErrorKindMissingArgument => 'Falta un argumento.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Argumento No Válido';
+  String get tpmActionErrorKindInvalidArgument => 'Argumento no válido.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Acción Incorrecta';
+  String get tpmActionErrorKindActionFailed => 'Falló una acción.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
@@ -1492,7 +1493,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'Depuración de UEFI está habilitada';
+      'La depuración de UEFI está activada.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
@@ -1528,7 +1529,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Unidades Añadidas Presentes';
+      'Hay controladores presentes a través de complementos.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1554,7 +1555,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Habilitar manualmente la protección DMA';
+      'Activar protección DMA manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
@@ -1562,19 +1563,19 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Habilitar arranque seguro manualmente';
+      'Activar arranque seguro manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Habilitar protección DMA manualmente';
+      'Activar IOMMU manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Habilitar bancos PCR manualmente';
+      'Activar bancos de PCR manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Habilitar TPM manualmente';
+      'Activar TPM manualmente';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
@@ -1642,13 +1643,13 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Se hace caso omiso al asunto puede resultar en una instalación menos segura.';
+      'Hacer caso omiso al problema puede resultar en una instalación menos segura.';
 
   @override
   String get tpmActionRestartLabel => 'Reiniciar';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Reiniciar y habilitar TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Reiniciar y activar TPM';
 
   @override
   String get tpmActionRestartAndClearTpmLabel => 'Reiniciar y purgar TPM';
@@ -1658,7 +1659,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Purgando el TPM borra todas las llaves de cifrado';
+      'Purgar el TPM borra todas las claves de cifrado';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
@@ -1666,22 +1667,22 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'Yo comprendo las consecuencias de purga del TPM';
+      'Comprendo las consecuencias de purgar el TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'Puede ser preguntado para confirmar esta acción al reiniciar.';
+      'Puede que deba confirmar esta acción al reiniciar.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Entonces tendrá que reintentar la instalación desde el comienzo.';
+      'Luego tendrá que iniciar la instalación otra vez.';
 
   @override
   String get tpmActionErrorTitle => 'Esta solución ha fallado';
 
   @override
   String get tpmActionErrorDescription =>
-      'Intente una solución diferente o contacte con el mantenimiento de IT';
+      'Pruebe una solución diferente o póngase en contacto con el personal de sistemas.';
 
   @override
   String get manualPartitioningWarningBody =>

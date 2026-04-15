@@ -2,9 +2,9 @@
     "keyboardTitle": "Teklatuaren diseinua",
     "keyboardHeader": "Hautatu teklatuaren diseinua",
     "keyboardTestHint": "Idatzi hemen zure teklatua probatzeko",
-    "keyboardDetectTitle": "Detektatu teklatuaren diseinua",
+    "keyboardDetectTitle": "Antzeman teklatuaren diseinua",
     "keyboardPressKeyLabel": "Mesedez, sakatu hurrengo tekletariko bat:",
-    "keyboardKeyPresentLabel": "Hurrengo tekla zure teklatuan al dago?",
+    "keyboardKeyPresentLabel": "Tekla hau zure teklatuan al dago?",
     "localeHeader": "Aukeratu zure hizkuntza:",
     "networkPageTitle": "Konektatu internetera",
     "networkWiredOption": "Erabili kable bidezko konexioa",
@@ -30,7 +30,7 @@
             }
         }
     },
-    "accessibilityPageBody": "Pertsonalizatu {DISTRO} zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Sistemaren ezarpenetan.",
+    "accessibilityPageBody": "Pertsonalizatu {DISTRO} zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Ezarpenak aplikazioan.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -148,5 +148,6 @@
     "maximizeIconSemanticLabel": "Maximizatu",
     "minimizeIconSemanticLabel": "Txikitu",
     "expandIconSemanticLabel": "Zabaldu",
-    "collapseIconSemanticLabel": "Tolestu"
+    "collapseIconSemanticLabel": "Tolestu",
+    "errorPageTechnicalDetails": "Xehetasun teknikoak"
 }

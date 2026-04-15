@@ -1104,5 +1104,7 @@
     "tpmActionErrorSupportSingleLabel": "تۆۋەندىكى لايىھەنى سىناڭ، ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ ياكى پەرقلىق شىفىرلاش ئۇسۇلىنى تاللاڭ.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "ئەگەر مۇقىم دېتال تەڭشىكى ئۆزلۈكىدىن يۈكلەنمىسە، قايتا قوزغىتىپ ۋە قوزغىلىۋاتقاندا تەڭشەك كۇنۇپكىسى تەكرار بېسىلىدۇ (ئادەتتە F2، F10 ياكى Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "بىخەتەر قوزغىتىش ھالىتىنىڭ «ئورنىتىلغان» غا تەڭشەلگەنلىكىنى تەكشۈرىدۇ.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "بۇ ئىقتىدار «كۆرۈنۈشلەشتۈرۈش تېخنىكىسى»، «VT-d» ياكى «AMD-Vi\"» دەپ ئاتىلىشى مۇمكىن."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "بۇ ئىقتىدار «كۆرۈنۈشلەشتۈرۈش تېخنىكىسى»، «VT-d» ياكى «AMD-Vi\"» دەپ ئاتىلىشى مۇمكىن.",
+    "autoinstallErrorMessage": "ئورنىتىش جەريانىدا ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدىكى بۇيرۇقنى ئىجرا قىلالمىدى.",
+    "autoinstallErrorInstructions": "ئورنىتىشنى قايتا قوزغىتىشىڭىز كېرەك. ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى تەكشۈرۈپ، پەرقلىق ئورنىتىش تۈرىنى تاللاڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ."
 }

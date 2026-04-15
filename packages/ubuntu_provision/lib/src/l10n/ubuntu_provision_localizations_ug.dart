@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'تەڭشەشتىن ئىلگىرى ئېھتىياجىڭىزغا ئاساسەن $DISTRO نى خاسلاشتۇرالايسىز. كېيىن ئۇلارنى سىستېما تەڭشىكىدىن ئۆزگەرتەلەيسىز.';
+    return 'تەڭشەشتىن ئىلگىرى ئېھتىياجىڭىزغا ئاساسەن $DISTRO نى خاسلاشتۇرالايسىز. كېيىن ئۇلارنى تەڭشەك ئەپتىن ئۆزگەرتەلەيسىز.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'خاتىرە يوشۇر';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'تېخنىكىلىق تەپسىلات';
 
   @override
   String get restart => 'قايتا قوزغات';

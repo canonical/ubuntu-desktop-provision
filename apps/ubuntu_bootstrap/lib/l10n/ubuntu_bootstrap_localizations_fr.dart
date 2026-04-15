@@ -113,11 +113,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Une commande dans le fichier autoinstall n’a pas fonctionné pendant l’installation.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Vous devrez redémarrer l’installation. Vérifiez le fichier autoinstall, choisissez un autre type d’installation ou contactez votre support informatique.';
 
   @override
   String get changeButtonText => 'Changer';
@@ -921,7 +921,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Redémarrer l\'ordinateur ?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Redémarrer l’installateur';
 
   @override
   String get restartIntoWindows => 'Redémarrer sous Windows';
@@ -1458,7 +1458,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindInvalidArgument => 'Argument invalide.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action échouée.';
+  String get tpmActionErrorKindActionFailed => 'Échec de l’action.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>

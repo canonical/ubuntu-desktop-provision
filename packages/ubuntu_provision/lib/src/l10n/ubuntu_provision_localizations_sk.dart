@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Prispôsobte si $DISTRO svojim potrebám ešte pred nastavením. Neskôr ich môžete upraviť v nastaveniach systému.';
+    return 'Prispôsobte si $DISTRO svojim potrebám ešte pred nastavením. Neskôr ich môžete zmeniť v aplikácii Nastavenia.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skryť denník';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Technické podrobnosti';
 
   @override
   String get restart => 'Reštartovať';

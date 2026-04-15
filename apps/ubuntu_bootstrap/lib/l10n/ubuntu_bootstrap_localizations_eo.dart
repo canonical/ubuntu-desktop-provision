@@ -115,11 +115,11 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.';
 
   @override
   String get changeButtonText => 'Ŝanĝi';
@@ -908,7 +908,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Ĉu restartigi komputilon?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Relanĉi instalilon';
 
   @override
   String get restartIntoWindows => 'Restartigi al Windows';

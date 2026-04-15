@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Pertsonalizatu $DISTRO zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Sistemaren ezarpenetan.';
+    return 'Pertsonalizatu $DISTRO zure beharretara egokitzeko, dena martxan jarri aurretik. Gero ere izango duzu hau aldatzeko aukera Ezarpenak aplikazioan.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Ezkutatu erregistroa';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Xehetasun teknikoak';
 
   @override
   String get restart => 'Berrabiarazi';
@@ -109,7 +109,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get keyboardTestHint => 'Idatzi hemen zure teklatua probatzeko';
 
   @override
-  String get keyboardDetectTitle => 'Detektatu teklatuaren diseinua';
+  String get keyboardDetectTitle => 'Antzeman teklatuaren diseinua';
 
   @override
   String get keyboardDetectButton => 'Antzeman';
@@ -122,8 +122,7 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
       'Mesedez, sakatu hurrengo tekletariko bat:';
 
   @override
-  String get keyboardKeyPresentLabel =>
-      'Hurrengo tekla zure teklatuan al dago?';
+  String get keyboardKeyPresentLabel => 'Tekla hau zure teklatuan al dago?';
 
   @override
   String get themePageTitle => 'Aukeratu gaia';

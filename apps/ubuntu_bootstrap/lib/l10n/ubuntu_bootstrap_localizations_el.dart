@@ -9,7 +9,7 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsEl([String locale = 'el']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Πρόγραμμα εγκατάστασης Ubuntu Desktop';
 
   @override
   String windowTitle(String RELEASE) {
@@ -20,17 +20,18 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectTitle => 'Αυτοματοποιημένη εγκατάσταση';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader =>
+      'Εισαγωγή αρχείου αυτόματης εγκατάστασης';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'Μπορείτε να εισαγάγετε τη διεύθυνση URL ενός αρχείου αυτόματης εγκατάστασης:';
 
   @override
-  String get autoinstallDirectFileLabel => '\'Η επιλογή τοπικού αρχείου:';
+  String get autoinstallDirectFileLabel => 'Ή επιλέξτε ένα τοπικό αρχείο:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Επιλογή αρχείου...';
+  String get autoinstallDirectFileButtonLabel => 'Επιλογή αρχείου…';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Εκκαθάριση αρχείου';
@@ -39,121 +40,122 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFilePickerTitle => 'Επιλογή αρχείου';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML αρχεία';
+  String get autoinstallDirectFilePickerFilterLabel => 'Αρχεία YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Εισαγωγή';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'Το αρχείο αυτόματης εγκατάστασης δεν είναι προσβάσιμο';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'Ελέγξτε αν η διεύθυνση URL είναι σωστή, δοκιμάστε τη σύνδεσή σας στο διαδίκτυο ή προσπαθήστε ξανά αργότερα.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Μη έγκυρο URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'Ελέγξτε αν η διεύθυνση URL είναι σωστή ή επιλέξτε ένα τοπικό αρχείο.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'Μη έγκυρο αρχείο αυτόματης εγκατάστασης';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'Ελέγξτε το αρχείο ή δώστε ένα διαφορετικό.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'Το αρχείο αυτόματης εγκατάστασης δεν είναι αναγνώσιμο';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'Ελέγξτε τα δικαιώματά σας ή δώστε ένα διαφορετικό αρχείο.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Άγνωστο σφάλμα';
 
   @override
-  String get autoinstallTitle => 'Type of installation';
+  String get autoinstallTitle => 'Τύπος εγκατάστασης';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'How would you like to install $DISTRO?';
+    return 'Πώς θα θέλατε να εγκαταστήσετε το $DISTRO;';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'Εισαγάγετε τη διεύθυνση URL του autoinstall.yaml ή την τοπική διαδρομή του αρχείου:';
 
   @override
-  String get autoinstallInteractiveOption => 'Interactive installation';
+  String get autoinstallInteractiveOption => 'Διαδραστική εγκατάσταση';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'Για χρήστες που επιθυμούν να καθοδηγηθούν βήμα προς βήμα κατά την εγκατάσταση.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption =>
+      'Αυτοματοποιημένη με αρχείο autoinstall';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'Για προχωρημένους χρήστες που διαθέτουν αρχείο autoinstall.yaml για ομοιόμορφες και επαναλήψιμες εγκαταστάσεις συστημάτων.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'Αυτοματοποιημένη με το Landscape';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'Για χρήστες σε οργανισμούς που παρέχουν αρχείο αυτόματης εγκατάστασης μέσω του Landscape.';
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Μια εντολή στο αρχείο αυτόματης εγκατάστασης απέτυχε να εκτελεστεί κατά την εγκατάσταση.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Θα χρειαστεί να επανεκκινήσετε την εγκατάσταση. Ελέγξτε το αρχείο αυτόματης εγκατάστασης, επιλέξτε έναν διαφορετικό τύπο εγκατάστασης ή επικοινωνήστε με την τεχνική υποστήριξη.';
 
   @override
-  String get changeButtonText => 'Change';
+  String get changeButtonText => 'Αλλαγή';
 
   @override
-  String get quitButtonText => 'Quit installation';
+  String get quitButtonText => 'Έξοδος από την εγκατάσταση';
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return 'Καλώς ήλθατε στο $DISTRO';
   }
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'Preparing $DISTRO…';
+    return 'Προετοιμασία του $DISTRO…';
   }
 
   @override
-  String get warningLabel => 'Warning:';
+  String get warningLabel => 'Προειδοποίηση:';
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'Try or install $DISTRO';
+    return 'Δοκιμάστε ή εγκαταστήστε το $DISTRO';
   }
 
   @override
   String tryOrInstallHeader(String DISTRO) {
-    return 'What do you want to do with $DISTRO?';
+    return 'Τι θέλετε να κάνετε με το $DISTRO;';
   }
 
   @override
-  String get tryOrInstallRepairOption => 'Repair installation';
+  String get tryOrInstallRepairOption => 'Επιδιόρθωση εγκατάστασης';
 
   @override
   String get tryOrInstallRepairDescription =>
-      'Repairing will reinstall all installed software without touching documents or settings.';
+      'Η επιδιόρθωση θα επανεγκαταστήσει όλο το εγκατεστημένο λογισμικό χωρίς να επηρεάσει τα έγγραφα ή τις ρυθμίσεις.';
 
   @override
   String tryOption(String RELEASE) {
@@ -162,7 +164,7 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'You can try $RELEASE without making any changes to your computer.';
+    return 'Μπορείτε να δοκιμάσετε το $RELEASE χωρίς να πραγματοποιήσετε καμία αλλαγή στον υπολογιστή σας.';
   }
 
   @override
@@ -172,583 +174,597 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+    return 'Εγκαταστήστε το $RELEASE παράλληλα με το τρέχον λειτουργικό σας σύστημα (ή στη θέση του). Αυτό δεν θα πάρει πολύ χρόνο.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'Ίσως θέλετε να διαβάσετε τις <a href=\"$url\">σημειώσεις έκδοσης</a>.';
+    return 'Μπορείτε να διαβάσετε τις <a href=\"$url\">σημειώσεις έκδοσης</a>.';
   }
 
   @override
-  String get rstTitle => 'Απενεργοποίηση του RST';
+  String get rstTitle => 'Ανιχνεύθηκε RST';
 
   @override
-  String get rstHeader => 'You must disable RST to continue installation';
+  String get rstHeader =>
+      'Πρέπει να απενεργοποιήσετε το Intel Rapid Storage Technology (RST) για να συνεχίσετε την εγκατάσταση';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'Ο υπολογιστής σας χρησιμοποιεί το Intel RST (Rapid Storage Technology). Μπορείτε να απενεργοποιήσετε το RST είτε στο:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      '... στα Windows, εάν χρησιμοποιείτε μια εγκατάσταση διπλής εκκίνησης (dual boot) με τα Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => '... στις ρυθμίσεις BIOS';
 
   @override
   String rstInstructions(String url) {
-    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+    return 'Για οδηγίες, σαρώσετε τον κωδικό QR από μια άλλη συσκευή ή επισκεφθείτε τη διεύθυνση: <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle => 'Διαμόρφωση του Secure Boot';
 
   @override
   String get configureSecureBootDescription =>
-      'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+      'Έχετε επιλέξει την εγκατάσταση λογισμικού προγραμμάτων οδήγησης (drivers) τρίτων κατασκευαστών. Αυτό απαιτεί την απενεργοποίηση του Secure Boot.\nΓια να το κάνετε αυτό, πρέπει να επιλέξετε έναν κωδικό ασφαλείας τώρα και να τον εισαγάγετε όταν γίνει επανεκκίνηση του συστήματος.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'Διαμόρφωση του Secure Boot';
 
   @override
-  String get chooseSecurityKey => 'Choose a security key';
+  String get chooseSecurityKey => 'Επιλέξτε ένα κλειδί ασφαλείας';
 
   @override
-  String get confirmSecurityKey => 'Confirm the security key';
+  String get confirmSecurityKey => 'Επιβεβαιώστε το κλειδί ασφαλείας';
 
   @override
   String get dontInstallDriverSoftwareNow =>
-      'Don\'t install the driver software for now';
+      'Να μην εγκατασταθεί το λογισμικό προγραμμάτων οδήγησης προς το παρόν';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'You can install it later from Software & Updates.';
+      'Μπορείτε να το εγκαταστήσετε αργότερα από το «Λογισμικό και Ενημερώσεις».';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
-      'Security key is required';
+      'Απαιτείται κλειδί ασφαλείας';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch =>
+      'Τα κλειδιά ασφαλείας δεν ταιριάζουν';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'Εμφάνιση';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'Απόκρυψη';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'Applications';
+  String get updatesOtherSoftwarePageTitle => 'Εφαρμογές';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
-      'What apps would you like to install to start with?';
+      'Ποιες εφαρμογές θα θέλατε να εγκαταστήσετε για αρχή;';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'Βελτιστοποίηση του υπολογιστή σας';
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'Να εγκατασταθεί το προτεινόμενο ιδιοταγές λογισμικό;';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return 'Το $DISTRO δεν περιλαμβάνει ιδιοταγές λογισμικό από προεπιλογή. Η εγκατάσταση πρόσθετου λογισμικού ενδέχεται να βελτιώσει την απόδοση του υπολογιστή σας.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote => 'Εντοπίστηκε κάρτα γραφικών NVIDIA';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+      'Για την καλύτερη δυνατή απόδοση των καρτών γραφικών NVIDIA, συνιστάται ανεπιφύλακτα η εγκατάσταση πρόσθετων προγραμμάτων οδήγησης.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'Εκτεταμένη επιλογή';
 
   @override
   String get fullInstallationSubtitle =>
-      'An offline-friendly selection of office tools, utilities and web browser.';
+      'Μια επιλογή εργαλείων γραφείου, βοηθητικών προγραμμάτων και προγράμματος περιήγησης ιστού, φιλική προς χρήση χωρίς σύνδεση.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'Προεπιλεγμένη επιλογή';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Just the essentials, web browser and basic utilities.';
+      'Μόνο τα απαραίτητα: πρόγραμμα περιήγησης ιστού και βασικά βοηθητικά προγράμματα.';
 
   @override
-  String get otherOptions => 'Other options';
+  String get otherOptions => 'Άλλες επιλογές';
 
   @override
   String get installThirdPartyTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+      'Εγκατάσταση λογισμικού τρίτων για υλικό γραφικών και Wi-Fi, καθώς και πρόσθετων μορφότυπων πολυμέσων';
 
   @override
   String get installThirdPartySubtitle =>
-      'This software is subject to license terms included with its documentation. Some are proprietary.';
+      'Αυτό το λογισμικό υπόκειται στους όρους άδειας χρήσης που περιλαμβάνονται στην τεκμηρίωσή του. Ορισμένοι εξ αυτών είναι ιδιοταγείς.';
 
   @override
   String get installDriversTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware';
+      'Εγκατάσταση λογισμικού τρίτων για υλικό γραφικών και Wi-Fi';
 
   @override
   String get installDriversSubtitle =>
-      'Including but not limited to NVIDIA drivers and similar';
+      'Συμπεριλαμβανομένων, μεταξύ άλλων, των προγραμμάτων οδήγησης NVIDIA και παρόμοιων';
 
   @override
   String get installCodecsTitle =>
-      'Download and install support for additional media formats';
+      'Λήψη και εγκατάσταση υποστήριξης για πρόσθετους μορφότυπους πολυμέσων';
 
   @override
   String get installCodecsSubtitle =>
-      'Including but not limited to MP3, MP4, MOV and similar';
+      'Συμπεριλαμβανομένων, μεταξύ άλλων, των MP3, MP4, MOV και παρόμοιων';
 
   @override
   String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+      'Ο υπολογιστής δεν είναι συνδεδεμένος σε πηγή τροφοδοσίας.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'Αυτή τη στιγμή βρίσκεστε εκτός σύνδεσης';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'Δημιουργήστε μια συνθηματική φράση';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'Θα χρειαστεί να εισάγετε τη συνθηματική σας φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. Αυτή η συνθηματική φράση είναι διαφορετική από τον κωδικό πρόσβασης του χρήστη σας.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader =>
+      'Βεβαιωθείτε ότι έχετε αποθηκεύσει τη συνθηματική σας φράση';
 
   @override
   String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+      'Αν τη χάσετε, θα χάσετε όλα τα δεδομένα σας.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'Φυλάξτε τη συνθηματική σας φράση και το κλειδί ανάκτησης σε ασφαλές μέρος';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'Αν χάσετε τη συνθηματική σας φράση, θα χάσετε όλα τα δεδομένα σας. Η συνθηματική φράση δεν αντικαθιστά το κλειδί ανάκτησης ή τον κωδικό πρόσβασης του χρήστη σας.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'Κρυπτογράφηση';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase =>
+      'Ορίστε μια συνθηματική φράση κρυπτογράφησης';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'Ορίστε έναν PIN κρυπτογράφησης';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'Θα χρειαστεί να εισάγετε τη συνθηματική σας φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. Αυτή η συνθηματική φράση είναι διαφορετική από τον κωδικό πρόσβασης του χρήστη σας. Θα μπορείτε να την αλλάξετε αργότερα, αλλά όχι να την απενεργοποιήσετε. Αν ξεχάσετε τη συνθηματική σας φράση, μπορείτε να ανακτήσετε την πρόσβαση στον δίσκο χρησιμοποιώντας το κλειδί ανάκτησης.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'Θα χρειαστεί να εισάγετε το PIN σας κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. Αυτό το PIN είναι διαφορετικό από τον κωδικό πρόσβασης του χρήστη σας. Θα μπορείτε να το αλλάξετε αργότερα, αλλά όχι να το απενεργοποιήσετε. Αν ξεχάσετε το PIN σας, μπορείτε να ανακτήσετε την πρόσβαση στον δίσκο χρησιμοποιώντας το κλειδί ανάκτησης.';
 
   @override
-  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+  String get passphrasePageChoosePassphraseHint => 'Συνθηματική φράση';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+  String get passphrasePageConfirmPassphraseHint =>
+      'Επιβεβαίωση συνθηματικής φράσης';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+  String get passphrasePageRequiredPassphrase =>
+      'Απαιτείται μια συνθηματική φράση';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+  String get passphrasePageMismatchPassphrase =>
+      'Οι συνθηματικές φράσεις δεν ταιριάζουν';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
 
   @override
-  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+  String get passphrasePageConfirmPinHint => 'Επιβεβαίωση PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'A PIN is required';
+  String get passphrasePageRequiredPin => 'Απαιτείται PIN';
 
   @override
-  String get passphrasePageMismatchPin => 'The PINs do not match';
+  String get passphrasePageMismatchPin => 'Τα PIN δεν ταιριάζουν';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle =>
+      'Απαίτηση συνθηματικής φράσης';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+      'Η μέγιστη ασφάλεια. Θα χρειαστεί να εισάγετε μια μεγαλύτερη συνθηματική φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Απαίτηση PIN';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'More secure. You will need to enter a numeric PIN every time you turn on your computer.';
+      'Περισσότερη ασφάλεια. Θα χρειαστεί να εισάγετε έναν αριθμητικό PIN κάθε φορά που ενεργοποιείτε τον υπολογιστή σας.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Unlock disk automatically';
+  String get passphraseTypeNoneTileTitle => 'Αυτόματο ξεκλείδωμα δίσκου';
 
   @override
-  String get passphraseTypePageHeader => 'Additional security';
+  String get passphraseTypePageHeader => 'Πρόσθετη ασφάλεια';
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'Από προεπιλογή, η Μονάδα Έμπιστης Πλατφόρμας (TPM) του υπολογιστή θα ξεκλειδώνει τον δίσκο κατά την εκκίνηση. Έχετε επίσης επιλογές για περαιτέρω προστασία των δεδομένων σας.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
-      'Weak passphrase, make it longer or more complex';
+      'Ασθενής συνθηματική φράση, κάντε την μεγαλύτερη ή πιο περίπλοκη';
 
   @override
   String get passphrasePagePassphraseEntropyBelowOptimal =>
-      'Fair passphrase, make it longer or more complex for better security';
+      'Μέτρια συνθηματική φράση, κάντε την μεγαλύτερη ή πιο περίπλοκη για καλύτερη ασφάλεια';
 
   @override
-  String get passphrasePagePassphraseEntropyOptimal => 'Strong passphrase';
+  String get passphrasePagePassphraseEntropyOptimal =>
+      'Ισχυρή συνθηματική φράση';
 
   @override
   String get passphrasePagePinEntropyBelowMin =>
-      'Weak PIN, make it longer or less predictable';
+      'Ασθενές PIN, κάντε το μεγαλύτερο ή λιγότερο προβλέψιμο';
 
   @override
   String get passphrasePagePinEntropyBelowOptimal =>
-      'Fair PIN, make it longer or less predictable for better security';
+      'Μέτριο PIN, κάντε το μεγαλύτερο ή λιγότερο προβλέψιμο για καλύτερη ασφάλεια';
 
   @override
-  String get passphrasePagePinEntropyOptimal => 'PIN is long enough';
+  String get passphrasePagePinEntropyOptimal => 'Το PIN έχει επαρκές μήκος';
 
   @override
-  String get installationTypeTitle => 'Disk setup';
+  String get installationTypeTitle => 'Ρύθμιση δίσκου';
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'How do you want to install $DISTRO?';
+    return 'Πώς θέλετε να εγκαταστήσετε το $DISTRO;';
   }
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'This computer currently has $os on it. What would you like to do?';
+    return 'Αυτός ο υπολογιστής διαθέτει ήδη το $os. Τι θα θέλατε να κάνετε;';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'This computer currently has $os1 and $os2 on it. What would you like to do?';
+    return 'Αυτός ο υπολογιστής διαθέτει ήδη τα $os1 και $os2. Τι θα θέλατε να κάνετε;';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'This computer currently has multiple operating systems on it. What would you like to do?';
+      'Αυτός ο υπολογιστής διαθέτει επί του παρόντος πολλαπλά λειτουργικά συστήματα. Τι θα θέλατε να κάνετε;';
 
   @override
   String get installationTypeNoOSDetected =>
-      'This computer currently has no detected operating systems. What would you like to do?';
+      'Αυτός ο υπολογιστής δεν εμφανίζεται να έχει λειτουργικά συστήματα αυτή τη στιγμή. Τι θα θέλατε να κάνετε;';
 
   @override
   String installationTypeErase(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Διαγραφή δίσκου και εγκατάσταση του $DISTRO';
   }
 
   @override
   String get installationTypeEraseInfo =>
-      'All data and partitions on the disk will be erased, including operating systems.';
+      'Όλα τα δεδομένα και οι κατατμήσεις στον δίσκο θα διαγραφούν, συμπεριλαμβανομένων των λειτουργικών συστημάτων.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Advanced options';
+  String get installationTypeAdvancedLabel => 'Επιλογές για προχωρημένους';
 
   @override
-  String get installationTypeAdvancedTitle => 'Encryption and file system';
+  String get installationTypeAdvancedTitle =>
+      'Κρυπτογράφηση και σύστημα αρχείων';
 
   @override
-  String get installationTypeExperimental => 'Experimental';
+  String get installationTypeExperimental => 'Πειραματικό';
 
   @override
-  String get installationTypeNone => 'No encryption';
+  String get installationTypeNone => 'Χωρίς κρυπτογράφηση';
 
   @override
   String get installationTypeNoneInfo =>
-      'Standard file system without encryption.';
+      'Τυπικό σύστημα αρχείων χωρίς κρυπτογράφηση.';
 
   @override
-  String get installationTypeNoneSelected => 'None selected';
+  String get installationTypeNoneSelected => 'Δεν επιλέχθηκε κανένα';
 
   @override
-  String get installationTypeLVM => 'Use LVM without encryption';
+  String get installationTypeLVM => 'Χρήση LVM χωρίς κρυπτογράφηση';
 
   @override
-  String get installationTypeLVMSelected => 'LVM selected';
+  String get installationTypeLVMSelected => 'Επιλέχθηκε LVM';
 
   @override
-  String get installationTypeLVMEncryption => 'Encrypt with a passphrase';
+  String get installationTypeLVMEncryption =>
+      'Κρυπτογράφηση με συνθηματική φράση';
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Θα χρειαστεί να εισάγετε μια συνθηματική φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Αυτή η επιλογή χρησιμοποιεί LVM με κρυπτογράφηση LUKS.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
-      'LVM and encryption selected';
+      'Επιλέχθηκαν LVM και κρυπτογράφηση';
 
   @override
   String get installationTypeEncryptInfo =>
-      'You will choose a security key in the next step.';
+      'Θα επιλέξετε ένα κλειδί ασφαλείας στο επόμενο βήμα.';
 
   @override
-  String get installationTypeZFS => 'Use ZFS without encryption';
+  String get installationTypeZFS => 'Χρήση ZFS χωρίς κρυπτογράφηση';
 
   @override
   String get installationTypeZFSEncryption =>
-      'Encrypt with a passphrase using ZFS';
+      'Κρυπτογράφηση με συνθηματική φράση με χρήση ZFS';
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.';
+      'Ενσωματωμένη κρυπτογράφηση με ZFS. Θα χρειαστεί να εισάγετε μια συνθηματική φράση κάθε φορά που ενεργοποιείτε τον υπολογιστή σας.';
 
   @override
-  String get installationTypeZFSSelected => 'ZFS selected';
+  String get installationTypeZFSSelected => 'Επιλέχθηκε ZFS';
 
   @override
   String get installationTypeZFSEncryptionSelected =>
-      'ZFS and encryption selected';
+      'Επιλέχθηκαν ZFS και κρυπτογράφηση';
 
   @override
-  String get installationTypeTPM => 'Use hardware-backed encryption';
+  String get installationTypeTPM =>
+      'Χρήση κρυπτογράφησης υποστηριζόμενης από υλικό';
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Ο δίσκος θα ξεκλειδώνει αυτόματα κατά την εκκίνηση.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Μη διαθέσιμο σε αυτόν τον υπολογιστή.';
 
   @override
-  String get installationTypeTPMSelected => 'TPM selected';
+  String get installationTypeTPMSelected => 'Επιλέχθηκε TPM';
 
   @override
   String installationTypeReinstall(String os) {
-    return 'Erase $os and reinstall';
+    return 'Διαγραφή του $os και επανεγκατάσταση';
   }
 
   @override
   String installationTypeReinstallWarning(String color, String os) {
-    return '<font color=\"$color\">Warning:</font> This will delete all your $os programs, documents, photos, music, and any other files.';
+    return '<font color=\"$color\">Προειδοποίηση:</font> Αυτό θα διαγράψει όλα τα προγράμματα, τα έγγραφα, τις φωτογραφίες, τη μουσική και οποιαδήποτε άλλα αρχεία του $os.';
   }
 
   @override
   String installationTypeAlongside(String product, String os) {
-    return 'Install $product alongside $os';
+    return 'Εγκατάσταση του $product παράλληλα με το $os';
   }
 
   @override
   String installationTypeAlongsideDual(String product, String os1, String os2) {
-    return 'Install $product alongside $os1 and $os2';
+    return 'Εγκατάσταση του $product παράλληλα με το $os1 και το $os2';
   }
 
   @override
   String installationTypeAlongsideMulti(String product) {
-    return 'Install $product alongside existing operating systems';
+    return 'Εγκατάσταση του $product παράλληλα με τα υπάρχοντα λειτουργικά συστήματα';
   }
 
   @override
   String installationTypeAlongsideUnknown(String product) {
-    return 'Install $product alongside other partitions';
+    return 'Εγκατάσταση του $product παράλληλα με άλλες κατατμήσεις';
   }
 
   @override
   String installationTypeAlongsideInfo(String product) {
-    return 'Select a partition to resize and create space for $product. You can choose your operating system during boot.';
+    return 'Επιλέξτε μια κατάτμηση για αλλαγή μεγέθους και δημιουργία χώρου για το $product. Θα μπορείτε να επιλέξετε το λειτουργικό σας σύστημα κατά την εκκίνηση.';
   }
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Erase $os and install $product';
+    return 'Διαγραφή του $os και εγκατάσταση του $product';
   }
 
   @override
   String installationTypeEraseAndInstallInfo(String os) {
-    return 'All files and data from the existing $os installation will be permanently deleted.';
+    return 'Όλα τα αρχεία και τα δεδομένα από την υπάρχουσα εγκατάσταση του $os θα διαγραφούν οριστικά.';
   }
 
   @override
-  String get installationTypeManual => 'Manual installation';
+  String get installationTypeManual => 'Μη αυτόματη εγκατάσταση';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'For advanced users seeking customized disk setups.';
+    return 'Για προχωρημένους χρήστες που επιθυμούν προσαρμοσμένες ρυθμίσεις δίσκου.';
   }
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Erase disk and install $DISTRO';
+    return 'Διαγραφή δίσκου και εγκατάσταση του $DISTRO';
   }
 
   @override
   String get selectGuidedStorageInfo =>
-      'Start from scratch on your selected disk.';
+      'Ξεκινήστε από το μηδέν στον επιλεγμένο δίσκο.';
 
   @override
-  String get selectGuidedStorageDriveDropdownLabel => 'Select drive:';
+  String get selectGuidedStorageDriveDropdownLabel => 'Επιλογή μονάδας δίσκου:';
 
   @override
-  String get selectGuidedStoragePartitionDropdownLabel => 'Select partition:';
+  String get selectGuidedStoragePartitionDropdownLabel => 'Επιλογή κατάτμησης:';
 
   @override
-  String get selectGuidedStorageInfoLabel => 'The entire disk will be used:';
+  String get selectGuidedStorageInfoLabel =>
+      'Θα χρησιμοποιηθεί ολόκληρος ο δίσκος:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Install now';
+  String get selectGuidedStorageInstallNow => 'Εγκατάσταση τώρα';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
-    return 'Choose where to install $DISTRO';
+    return 'Επιλέξτε πού θα γίνει η εγκατάσταση του $DISTRO';
   }
 
   @override
   String get installAlongsideSpaceDivider =>
-      'Allocate drive space by dragging the divider below:';
+      'Κατανείμετε τον χώρο του δίσκου σύροντας το παρακάτω διαχωριστικό:';
 
   @override
   String installAlongsideHiddenPartitions(int num, String url) {
-    return '$num smaller partitions are hidden, use the <a href=\"$url\">advanced partitioning tool</a> for more control';
+    return '$num μικρότερες κατατμήσεις είναι κρυφές, χρησιμοποιήστε το <a href=\"$url\">εργαλείο για προχωρημένους</a> για περισσότερο έλεγχο';
   }
 
   @override
-  String get installAlongsideResizePartition => 'Resize partition';
+  String get installAlongsideResizePartition => 'Αλλαγή μεγέθους κατάτμησης';
 
   @override
-  String get installAlongsideAllocateSpace => 'Allocate space';
+  String get installAlongsideAllocateSpace => 'Εκχώρηση χώρου';
 
   @override
-  String get installAlongsideFiles => 'Files';
+  String get installAlongsideFiles => 'Αρχεία';
 
   @override
-  String get installAlongsidePartition => 'Partition:';
+  String get installAlongsidePartition => 'Κατάτμηση:';
 
   @override
-  String get installAlongsideSize => 'Size:';
+  String get installAlongsideSize => 'Μέγεθος:';
 
   @override
-  String get installAlongsideAvailable => 'Available:';
+  String get installAlongsideAvailable => 'Διαθέσιμο:';
 
   @override
-  String get allocateDiskSpace => 'Manual partitioning';
+  String get allocateDiskSpace => 'Μη αυτόματη δημιουργία κατατμήσεων';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSlash =>
-      'Mount points must start with \"/\"';
+      'Τα σημεία προσάρτησης πρέπει να ξεκινούν με «/»';
 
   @override
   String get allocateDiskSpaceInvalidMountPointSpace =>
-      'Mount points cannot contain spaces';
+      'Τα σημεία προσάρτησης δεν μπορούν να περιέχουν κενά';
 
   @override
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format) {
-    return '$format is not a supported filesystem for $mountpoint';
+    return 'Το $format δεν είναι υποστηριζόμενο σύστημα αρχείων για το $mountpoint';
   }
 
   @override
-  String get diskHeadersDevice => 'Device';
+  String get diskHeadersDevice => 'Συσκευή';
 
   @override
-  String get diskHeadersType => 'Type';
+  String get diskHeadersType => 'Τύπος';
 
   @override
-  String get diskHeadersMountPoint => 'Mount point';
+  String get diskHeadersMountPoint => 'Σημείο προσάρτησης';
 
   @override
-  String get diskHeadersSize => 'Size';
+  String get diskHeadersSize => 'Μέγεθος';
 
   @override
-  String get diskHeadersUsed => 'Used';
+  String get diskHeadersUsed => 'Σε χρήση';
 
   @override
-  String get diskHeadersSystem => 'System';
+  String get diskHeadersSystem => 'Λειτουργικό σύστημα';
 
   @override
-  String get diskHeadersFormat => 'Format';
+  String get diskHeadersFormat => 'Διαμόρφωση';
 
   @override
-  String get freeDiskSpace => 'Free space';
+  String get freeDiskSpace => 'Ελεύθερος χώρος';
 
   @override
-  String get newPartitionTable => 'New partition table';
+  String get newPartitionTable => 'Νέος πίνακας κατατμήσεων';
 
   @override
-  String get newPartitionTableConfirmationTitle => 'New empty partition';
+  String get newPartitionTableConfirmationTitle => 'Νέα κενή κατάτμηση';
 
   @override
   String get newPartitionTableConfirmationMessage =>
-      'Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.';
+      'Η δημιουργία νέου πίνακα κατατμήσεων σε μια ολόκληρη συσκευή θα καταργήσει όλες τις τρέχουσες κατατμήσεις της. Αυτή η ενέργεια μπορεί να αναιρεθεί εάν χρειαστεί.';
 
   @override
-  String get tooManyPrimaryPartitions => 'Too many primary partitions';
+  String get tooManyPrimaryPartitions => 'Πάρα πολλές πρωτεύουσες κατατμήσεις';
 
   @override
-  String get partitionLimitReached => 'Limit reached';
+  String get partitionLimitReached => 'Συμπληρώθηκε το όριο';
 
   @override
-  String get bootLoaderDevice => 'Device for boot loader installation';
+  String get bootLoaderDevice =>
+      'Συσκευή για την εγκατάσταση του προγράμματος εκκίνησης';
 
   @override
-  String get partitionCreateTitle => 'Create partition';
+  String get partitionCreateTitle => 'Δημιουργία κατάτμησης';
 
   @override
-  String get partitionEditTitle => 'Edit partition';
+  String get partitionEditTitle => 'Επεξεργασία κατάτμησης';
 
   @override
-  String get partitionSizeLabel => 'Size:';
+  String get partitionSizeLabel => 'Μέγεθος:';
 
   @override
-  String get partitionTypeLabel => 'Type for the new partition:';
+  String get partitionTypeLabel => 'Τύπος για τη νέα κατάτμηση:';
 
   @override
-  String get partitionTypePrimary => 'Primary';
+  String get partitionTypePrimary => 'Πρωτεύουσα';
 
   @override
-  String get partitionTypeLogical => 'Logical';
+  String get partitionTypeLogical => 'Λογική';
 
   @override
-  String get partitionLocationLabel => 'Location for the new partition:';
+  String get partitionLocationLabel => 'Θέση για τη νέα κατάτμηση:';
 
   @override
-  String get partitionLocationBeginning => 'Beginning of this space';
+  String get partitionLocationBeginning => 'Αρχή αυτού του χώρου';
 
   @override
-  String get partitionLocationEnd => 'End of this space';
+  String get partitionLocationEnd => 'Τέλος αυτού του χώρου';
 
   @override
-  String get partitionFormatLabel => 'Used as:';
+  String get partitionFormatLabel => 'Χρήση ως:';
 
   @override
-  String get partitionFormatNone => 'Leave unformatted';
+  String get partitionFormatNone => 'Να παραμείνει χωρίς διαμόρφωση';
 
   @override
   String partitionFormatKeep(String format) {
-    return 'Leave formatted as $format';
+    return 'Να παραμείνει η διαμόρφωση ως $format';
   }
 
   @override
-  String get partitionErase => 'Format the partition';
+  String get partitionErase => 'Διαμόρφωση της κατάτμησης';
 
   @override
-  String get partitionMountPointLabel => 'Mount point:';
+  String get partitionMountPointLabel => 'Σημείο προσάρτησης:';
 
   @override
-  String get confirmPageTitle => 'Ready to install';
+  String get confirmPageTitle => 'Έτοιμο για εγκατάσταση';
 
   @override
-  String get confirmHeader => 'Review your choices';
+  String get confirmHeader => 'Επανεξέταση των επιλογών σας';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -760,38 +776,38 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   String get confirmDiskEncryptionTPM => 'TPM';
 
   @override
-  String get confirmDiskEncryptionNone => 'None';
+  String get confirmDiskEncryptionNone => 'Καμία';
 
   @override
-  String get confirmDevicesTitle => 'Devices';
+  String get confirmDevicesTitle => 'Συσκευές';
 
   @override
-  String get confirmEntryApplications => 'Applications';
+  String get confirmEntryApplications => 'Εφαρμογές';
 
   @override
-  String get confirmEntryDiskSetup => 'Type of installation';
+  String get confirmEntryDiskSetup => 'Τύπος εγκατάστασης';
 
   @override
-  String get confirmEntryDiskEncryption => 'Disk encryption';
+  String get confirmEntryDiskEncryption => 'Κρυπτογράφηση δίσκου';
 
   @override
-  String get confirmEntryInstallationDisk => 'Installation disk';
+  String get confirmEntryInstallationDisk => 'Δίσκος για την εγκατάσταση';
 
   @override
-  String get confirmEntryProprietarySoftware => 'Proprietary software';
+  String get confirmEntryProprietarySoftware => 'Ιδιοταγές λογισμικό';
 
   @override
-  String get confirmSectionGeneralTitle => 'General';
+  String get confirmSectionGeneralTitle => 'Γενικά';
 
   @override
-  String get confirmSectionSecurityAndMoreTitle => 'Security & more';
+  String get confirmSectionSecurityAndMoreTitle => 'Ασφάλεια & περισσότερα';
 
   @override
-  String get confirmPartitionsTitle => 'Partitions';
+  String get confirmPartitionsTitle => 'Κατατμήσεις';
 
   @override
   String get confirmPartitionTables =>
-      'The partition tables of the following devices are changed:';
+      'Οι πίνακες κατατμήσεων των ακόλουθων συσκευών έχουν τροποποιηθεί:';
 
   @override
   String confirmPartitionTable(String serial, String path) {
@@ -799,875 +815,889 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get confirmProprietarySoftwareCodecs => 'Codecs';
+  String get confirmProprietarySoftwareCodecs => 'Κωδικοποιητές';
 
   @override
-  String get confirmProprietarySoftwareCodecsDrivers => 'Codecs & drivers';
+  String get confirmProprietarySoftwareCodecsDrivers =>
+      'Κωδικοποιητές & προγράμματα οδήγησης';
 
   @override
-  String get confirmProprietarySoftwareDrivers => 'Drivers';
+  String get confirmProprietarySoftwareDrivers => 'Προγράμματα οδήγησης';
 
   @override
-  String get confirmInstallButton => 'Install';
+  String get confirmInstallButton => 'Εγκατάσταση';
 
   @override
-  String get confirmTableErased => 'Erased';
+  String get confirmTableErased => 'Διαγράφηκε';
 
   @override
-  String get confirmTableUnchanged => 'Unchanged';
+  String get confirmTableUnchanged => 'Χωρίς αλλαγή';
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Resized from $oldsize to $newsize';
+    return 'Αλλαγή μεγέθους από $oldsize σε $newsize';
   }
 
   @override
   String confirmTableCreatedFormattedMounted(String format, String mountpoint) {
-    return 'Created and formatted as $format used for $mountpoint';
+    return 'Δημιουργήθηκε και διαμορφώθηκε ως $format με χρήση για το $mountpoint';
   }
 
   @override
   String confirmTableFormattedMounted(String format, String mountpoint) {
-    return 'Formatted as $format used for $mountpoint';
+    return 'Διαμορφώθηκε ως $format με χρήση για το $mountpoint';
   }
 
   @override
   String confirmTableMounted(String mountpoint) {
-    return 'Used for $mountpoint';
+    return 'Χρήση για το $mountpoint';
   }
 
   @override
   String confirmTableFormatted(String format) {
-    return 'Formatted as $format';
+    return 'Διαμορφώθηκε ως $format';
   }
 
   @override
-  String get installationCompleteTitle => 'Installation complete';
+  String get installationCompleteTitle => 'Η εγκατάσταση ολοκληρώθηκε';
 
   @override
   String readyToUse(String system) {
-    return '$system is installed and ready to use';
+    return 'Το $system έχει εγκατασταθεί και είναι έτοιμο για χρήση';
   }
 
   @override
   String rebootToConfigure(String system) {
-    return '**$system** has been copied to the disk';
+    return 'Το **$system** έχει αντιγραφεί στον δίσκο';
   }
 
   @override
   String restartInto(String system) {
-    return 'Restart into $system';
+    return 'Επανεκκίνηση στο $system';
   }
 
   @override
   String get restartWarningBody =>
-      'Restart to complete the installation or continue testing.\nAny changes you make will not be saved.';
+      'Κάντε επανεκκίνηση για να ολοκληρώσετε την εγκατάσταση ή συνεχίστε τη δοκιμή.\nΤυχόν αλλαγές που θα πραγματοποιήσετε καθώς συνεχίζετε τη δοκιμή, δεν θα αποθηκευτούν.';
 
   @override
   String get rebootToConfigureWarning =>
-      'You have to restart the computer to continue the installation process.';
+      'Πρέπει να επανεκκινήσετε τον υπολογιστή για να συνεχίσετε τη διαδικασία εγκατάστασης.';
 
   @override
-  String get shutdown => 'Shut down';
+  String get shutdown => 'Τερματισμός λειτουργίας';
 
   @override
-  String get restartNow => 'Restart now';
+  String get restartNow => 'Επανεκκίνηση τώρα';
 
   @override
-  String get continueTesting => 'Continue testing';
+  String get continueTesting => 'Συνέχεια δοκιμής';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker detected';
+  String get bitlockerInfoTitle => 'Ανιχνεύθηκε BitLocker';
 
   @override
   String get bitlockerInfoDescription =>
-      'One or more partitions are encrypted with BitLocker.';
+      'Μία ή περισσότερες κατατμήσεις είναι κρυπτογραφημένες με BitLocker.';
 
   @override
   String get bitlockerInfoDisable =>
-      'To install alongside Windows, disable BitLocker in Windows.';
+      'Για να κάνετε εγκατάσταση παράλληλα με τα Windows, απενεργοποιήστε το BitLocker στα Windows.';
 
   @override
   String get bitlockerInfoRecovery =>
-      'Windows may request recovery keys on boot after installation.';
+      'Τα Windows ενδέχεται να ζητήσουν κλειδιά ανάκτησης κατά την εκκίνηση μετά την εγκατάσταση.';
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'For instructions, visit the <a href=\"$url\">BitLocker guide</a>.';
+    return 'Για οδηγίες, επισκεφθείτε τον <a href=\"$url\">οδηγό BitLocker</a>.';
   }
 
   @override
   String get bitlockerWarningTitle =>
-      'You may lose all your data without BitLocker recovery keys';
+      'Ενδέχεται να χάσετε όλα τα δεδομένα σας χωρίς τα κλειδιά ανάκτησης BitLocker';
 
   @override
-  String get restartComputer => 'Restart computer';
+  String get restartComputer => 'Επανεκκίνηση υπολογιστή';
 
   @override
-  String get restartComputerTitle => 'Restart computer?';
+  String get restartComputerTitle => 'Επανεκκίνηση υπολογιστή;';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Επανεκκίνηση προγράμματος εγκατάστασης';
 
   @override
-  String get restartIntoWindows => 'Restart into Windows';
+  String get restartIntoWindows => 'Επανεκκίνηση σε Windows';
 
   @override
-  String get restartIntoWindowsTitle => 'Restart into Windows?';
+  String get restartIntoWindowsTitle => 'Επανεκκίνηση σε Windows;';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Are you sure you want to restart your computer? You will need to restart the $DISTRO installation later to finish installing $DISTRO.';
+    return 'Είστε βέβαιοι ότι θέλετε να επανεκκινήσετε τον υπολογιστή σας; Θα χρειαστεί να εκκινήσετε ξανά την εγκατάσταση του $DISTRO αργότερα για να ολοκληρωθεί η εγκατάσταση του $DISTRO.';
   }
 
   @override
   String installationSlidesTitle(String RELEASE) {
-    return 'Welcome to $RELEASE';
+    return 'Καλώς ορίσατε στο $RELEASE';
   }
 
   @override
-  String get installationSlidesAvailable => 'Available:';
+  String get installationSlidesAvailable => 'Διαθέσιμα:';
 
   @override
-  String get installationSlidesIncluded => 'Included:';
+  String get installationSlidesIncluded => 'Περιλαμβάνονται:';
 
   @override
   String get installationSlidesWelcomeTitle =>
-      'Fast, free and full of new features';
+      'Γρήγορο, δωρεάν και γεμάτο με νέα χαρακτηριστικά';
 
   @override
   String installationSlidesWelcomeHeader(String DISTRO) {
-    return 'The latest version of $DISTRO makes computing easier than ever.';
+    return 'Η τελευταία έκδοση του $DISTRO κάνει τη χρήση του υπολογιστή ευκολότερη από ποτέ.';
   }
 
   @override
   String installationSlidesWelcomeBody(String RELEASE) {
-    return 'Whether you\'re a developer, creator, gamer or administrator you\'ll find new tools to improve your productivity and enhance your experience in $RELEASE.';
+    return 'Είτε είστε προγραμματιστής, δημιουργός, gamer ή διαχειριστής, θα βρείτε νέα εργαλεία για να βελτιώσετε την παραγωγικότητά σας και να αναβαθμίσετε την εμπειρία σας στο $RELEASE.';
   }
 
   @override
-  String get installationSlidesSoftwareTitle => 'All the applications you need';
+  String get installationSlidesSoftwareTitle =>
+      'Όλες οι εφαρμογές που χρειάζεστε';
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and $DISTRO archive.';
+    return 'Εγκαταστήστε, διαχειριστείτε και ενημερώστε όλες τις εφαρμογές σας στο Κέντρο Εφαρμογών, συμπεριλαμβανομένων χιλιάδων εφαρμογών τόσο από τα πακέτα «snap» όσο και από το αποθετήριο πακέτων του $DISTRO.';
   }
 
   @override
   String get installationSlidesDevelopmentTitle =>
-      'Develop with the best of open source';
+      'Αναπτύξτε κώδικα με τα καλύτερα του ανοικτού κώδικα';
 
   @override
   String installationSlidesDevelopmentBody(String DISTRO, Object OS) {
-    return '$DISTRO is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every $DISTRO release includes the latest toolchains and supports all major IDEs.';
+    return 'Το $DISTRO είναι ο ιδανικός σταθμός εργασίας για ανάπτυξη εφαρμογών ή ιστότοπων, την επιστήμη των δεδομένων και την Τεχνητή Νοημοσύνη/Μηχανική Μάθηση (AI/ML), καθώς και για DevOps και διαχείριση συστημάτων. Κάθε έκδοση του $DISTRO περιλαμβάνει τις τελευταίες εργαλειοθήκες (toolchains) και υποστηρίζει όλα τα κύρια περιβάλλοντα ανάπτυξης (IDEs).';
   }
 
   @override
-  String get installationSlidesCreativityTitle => 'Enhance your creativity';
+  String get installationSlidesCreativityTitle =>
+      'Ενισχύστε τη δημιουργικότητά σας';
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'If you\'re an animator, designer, video creator or game developer it\'s easy to bring your workflows to $DISTRO with support for open source and industry standard software and applications.';
+    return 'Αν είστε δημιουργός κινουμένων σχεδίων, σχεδιαστής, δημιουργός βίντεο ή προγραμματιστής παιχνιδιών, είναι εύκολο να μεταφέρετε τις ροές εργασίας σας στο $DISTRO με υποστήριξη για λογισμικό και εφαρμογές ανοικτού κώδικα και βιομηχανικών προτύπων.';
   }
 
   @override
-  String get installationSlidesGamingTitle => 'Great for gaming';
+  String get installationSlidesGamingTitle => 'Εξαιρετικό για παιχνίδια';
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on $DISTRO via applications like Steam with no additional configuration.';
+    return 'Το $DISTRO υποστηρίζει τα τελευταία προγράμματα οδήγησης NVIDIA και Mesa για τη βελτίωση της απόδοσης και της συμβατότητας. Χιλιάδες τίτλοι των Windows παίζουν εξαιρετικά στο $DISTRO μέσω εφαρμογών όπως το Steam, χωρίς πρόσθετες ρυθμίσεις.';
   }
 
   @override
-  String get installationSlidesSecurityTitle => 'Private and secure';
+  String get installationSlidesSecurityTitle => 'Ιδιωτικό και ασφαλές';
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.';
+    return 'Το $DISTRO παρέχει όλα τα εργαλεία που χρειάζεστε για να παραμένετε ασφαλείς και να προστατεύετε την ιδιωτικότητά σας στο διαδίκτυο. Με ενσωματωμένο τείχος προστασίας (firewall), υποστήριξη VPN και μια σειρά από εφαρμογές με επίκεντρο την ιδιωτικότητα, διασφαλίζει ότι έχετε τον πλήρη έλεγχο των δεδομένων σας.';
   }
 
   @override
   String installationSlidesSecurityLts(String DISTRO) {
-    return 'All $DISTRO LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.';
+    return 'Όλες οι εκδόσεις LTS του $DISTRO συνοδεύονται από πέντε χρόνια ενημερώσεων ασφαλείας, τα οποία επεκτείνονται στα δέκα χρόνια με μια συνδρομή Ubuntu Pro.';
   }
 
   @override
   String get installationSlidesProductivityTitle =>
-      'Power up your productivity';
+      'Απογειώστε την παραγωγικότητά σας';
 
   @override
   String installationSlidesProductivityBody(String DISTRO) {
-    return '$DISTRO Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.';
+    return 'Το $DISTRO Desktop περιλαμβάνει το LibreOffice, μια σουίτα εφαρμογών ανοικτού κώδικα συμβατή με το Microsoft Office για έγγραφα, υπολογιστικά φύλλα και παρουσιάσεις. Επίσης, είναι διαθέσιμα δημοφιλή εργαλεία συνεργασίας.';
   }
 
   @override
-  String get installationSlidesAccessibilityTitle => 'Access for everyone';
+  String get installationSlidesAccessibilityTitle => 'Πρόσβαση για όλους';
 
   @override
   String installationSlidesAccessibilityBody(String DISTRO) {
-    return 'At the heart of the $DISTRO philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, $DISTRO makes computing easy - whoever and wherever you are.';
+    return 'Στην καρδιά της φιλοσοφίας του $DISTRO βρίσκεται η πεποίθηση ότι η χρήση του υπολογιστή είναι για όλους. Με προηγμένα εργαλεία προσβασιμότητας και επιλογές για την αλλαγή της γλώσσας, των χρωμάτων και του μεγέθους του κειμένου, το $DISTRO κάνει την πληροφορική εύκολη — όποιος κι αν είστε, όπου κι αν βρίσκεστε.';
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca screen reader';
+  String get installationSlidesAccessibilityOrca => 'Αναγνώστης οθόνης Orca';
 
   @override
-  String get installationSlidesAccessibilityLanguages => 'Language support';
+  String get installationSlidesAccessibilityLanguages => 'Γλωσσική υποστήριξη';
 
   @override
-  String get installationSlidesSupportTitle => 'Help and support';
+  String get installationSlidesSupportTitle => 'Βοήθεια και υποστήριξη';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'The official $DISTRO documentation is available both online and via the Help icon in the dock.';
+    return 'Η επίσημη τεκμηρίωση του $DISTRO είναι διαθέσιμη τόσο στο διαδίκτυο όσο και μέσω του εικονιδίου «Βοήθεια» στην πλευρική εργαλειοθήκη.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.';
+      'Το Ask Ubuntu καλύπτει ένα ευρύ φάσμα ερωτήσεων και απαντήσεων, ενώ το Ubuntu Discourse παρέχει οδηγούς και συζητήσεις για νέους και έμπειρους χρήστες.';
 
   @override
   String get installationSlidesSupportEnterprise =>
-      'For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.';
+      'Για εταιρικούς χρήστες, η Canonical παρέχει εμπορική υποστήριξη, καθιστώντας εύκολη την ασφαλή εισαγωγή και διαχείριση του Ubuntu στον χώρο εργασίας.';
 
   @override
-  String get installationSlidesSupportResources => 'Helpful resources:';
+  String get installationSlidesSupportResources => 'Χρήσιμοι πόροι:';
 
   @override
-  String get installationSlidesSupportDocumentation => 'Official documentation';
+  String get installationSlidesSupportDocumentation => 'Επίσημη τεκμηρίωση';
 
   @override
   String get installationSlidesSupportUbuntuPro =>
-      'Enterprise-grade 24/7 support with Ubuntu Pro';
+      'Υποστήριξη εταιρικού επιπέδου 24/7 με το Ubuntu Pro';
 
   @override
-  String get nextSlideSemanticLabel => 'Next slide';
+  String get nextSlideSemanticLabel => 'Επόμενη διαφάνεια';
 
   @override
-  String get previousSlideSemanticLabel => 'Previous slide';
+  String get previousSlideSemanticLabel => 'Προηγούμενη διαφάνεια';
 
   @override
-  String get playSlideshowSemanticLabel => 'Play slideshow';
+  String get playSlideshowSemanticLabel => 'Έναρξη παρουσίασης';
 
   @override
-  String get pauseSlideshowSemanticLabel => 'Pause slideshow';
+  String get pauseSlideshowSemanticLabel => 'Παύση παρουσίασης';
 
   @override
-  String get toggleLogsSemanticLabel => 'Toggle install logs';
+  String get toggleLogsSemanticLabel => 'Εναλλαγή καταγραφών εγκατάστασης';
 
   @override
-  String get copyingFiles => 'Copying files…';
+  String get copyingFiles => 'Αντιγραφή αρχείων…';
 
   @override
-  String get installingSystem => 'Installing the system…';
+  String get installingSystem => 'Εγκατάσταση του συστήματος…';
 
   @override
-  String get configuringSystem => 'Setting up the system…';
+  String get configuringSystem => 'Ρύθμιση συστήματος…';
 
   @override
-  String get installationFailed => 'Installation failed';
+  String get installationFailed => 'Αποτυχία εγκατάστασης';
 
   @override
-  String get notEnoughDiskSpaceTitle => 'Not enough disk space';
+  String get notEnoughDiskSpaceTitle => 'Δεν υπάρχει αρκετός χώρος στον δίσκο';
 
   @override
   String notEnoughDiskSpaceUbuntu(String DISTRO) {
-    return 'Not enough disk space to install $DISTRO';
+    return 'Δεν υπάρχει αρκετός χώρος στον δίσκο για την εγκατάσταση του $DISTRO';
   }
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'The selected disk does not have enough disk space to install $DISTRO. Quit the installer to make space available or select another disk.';
+    return 'Ο επιλεγμένος δίσκος δεν διαθέτει αρκετό χώρο για την εγκατάσταση του $DISTRO. Τερματίστε το πρόγραμμα εγκατάστασης για να ελευθερώσετε χώρο ή επιλέξτε έναν άλλο δίσκο.';
   }
 
   @override
-  String get notEnoughDiskSpaceAvailable => 'Available:';
+  String get notEnoughDiskSpaceAvailable => 'Διαθέσιμα:';
 
   @override
-  String get notEnoughDiskSpaceRequired => 'Required:';
+  String get notEnoughDiskSpaceRequired => 'Απαιτούνται:';
 
   @override
-  String get refreshPageTitle => 'Update available';
+  String get refreshPageTitle => 'Διαθέσιμη ενημέρωση';
 
   @override
-  String get refreshHeader => 'An update is available for the installer';
+  String get refreshHeader =>
+      'Μια ενημέρωση είναι διαθέσιμη για το πρόγραμμα εγκατάστασης';
 
   @override
-  String get refreshUpdateNow => 'Update now';
+  String get refreshUpdateNow => 'Ενημέρωση τώρα';
 
   @override
   String get refreshInfo =>
-      'Update to the latest version for improved reliability and more features.';
+      'Ενημερώστε στην τελευταία έκδοση για βελτιωμένη αξιοπιστία και περισσότερες δυνατότητες.';
 
   @override
-  String get refreshReady => 'Update ready';
+  String get refreshReady => 'Η ενημέρωση είναι έτοιμη';
 
   @override
   String refreshCurrent(String snap, String version) {
-    return 'The current $snap version is $version.';
+    return 'Η τρέχουσα έκδοση του $snap είναι η $version.';
   }
 
   @override
   String refreshInstall(String version) {
-    return 'Update to version $version';
+    return 'Ενημέρωση στην έκδοση $version';
   }
 
   @override
   String refreshUpToDate(String version) {
-    return 'The current version $version is up-to-date.';
+    return 'Η τρέχουσα έκδοση $version είναι ενημερωμένη.';
   }
 
   @override
   String refreshUpdating(String snap) {
-    return 'Updating $snap...';
+    return 'Ενημέρωση του $snap...';
   }
 
   @override
   String get refreshRestart =>
-      'Please close the installer and relaunch to continue';
+      'Παρακαλούμε κλείστε το πρόγραμμα εγκατάστασης και εκκινήστε το ξανά για να συνεχίσετε';
 
   @override
-  String get refreshCloseLabel => 'Close installer';
+  String get refreshCloseLabel => 'Κλείσιμο προγράμματος εγκατάστασης';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Ensuring $snap prerequisites...';
+    return 'Διασφάλιση προαπαιτούμενων για το $snap...';
   }
 
   @override
   String refreshSnapRefresh(String snap) {
-    return 'Refreshing $snap...';
+    return 'Ανανέωση του $snap...';
   }
 
   @override
   String refreshSnapCheckRerefresh(String snap) {
-    return 'Checking $snap re-refresh...';
+    return 'Έλεγχος για εκ νέου ανανέωση του $snap...';
   }
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparing $snap...';
+    return 'Προετοιμασία του $snap...';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Downloading $snap...';
+    return 'Λήψη του $snap...';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validating $snap...';
+    return 'Επαλήθευση του $snap...';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Mounting $snap...';
+    return 'Προσάρτηση του $snap...';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Stopping $snap services...';
+    return 'Διακοπή των υπηρεσιών του $snap...';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Removing $snap aliases...';
+    return 'Αφαίρεση ψευδωνύμων (aliases) του $snap...';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Unlinking $snap...';
+    return 'Αποσύνδεση του $snap...';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Updating $snap assets...';
+    return 'Ενημέρωση πόρων του $snap...';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Updating $snap kernel command line...';
+    return 'Ενημέρωση της γραμμής εντολών πυρήνα (kernel command line) του $snap...';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copying $snap data...';
+    return 'Αντιγραφή δεδομένων του $snap...';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Setting up $snap security profiles...';
+    return 'Ρύθμιση προφίλ ασφαλείας του $snap...';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Linking $snap...';
+    return 'Σύνδεση του $snap...';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Connecting $snap plugs and slots...';
+    return 'Σύνδεση βυσμάτων (plugs) και υποδοχών (slots) του $snap...';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Setting automatic $snap aliases...';
+    return 'Ορισμός αυτόματων ψευδωνύμων (aliases) του $snap...';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Setting up $snap aliases...';
+    return 'Ρύθμιση ψευδωνύμων (aliases) του $snap...';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Starting $snap services...';
+    return 'Εκκίνηση των υπηρεσιών του $snap...';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Cleaning up $snap...';
+    return 'Εκκαθάριση του $snap...';
   }
 
   @override
-  String get recoveryKeyTitle => 'Recovery key';
+  String get recoveryKeyTitle => 'Κλειδί ανάκτησης';
 
   @override
-  String get recoveryKeyTitleBadgeLabel => 'Important';
+  String get recoveryKeyTitleBadgeLabel => 'Σημαντικό';
 
   @override
-  String get recoveryKeyHeader => 'Save your recovery key';
+  String get recoveryKeyHeader => 'Αποθηκεύστε το κλειδί ανάκτησης';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'You may lose all your data without a recovery key';
+      'Ενδέχεται να χάσετε όλα τα δεδομένα σας χωρίς κλειδί ανάκτησης';
 
   @override
-  String get recoveryKeyTextFieldLabel => 'Recovery key';
+  String get recoveryKeyTextFieldLabel => 'Κλειδί ανάκτησης';
 
   @override
   String get recoveryKeyStorageAdvice =>
-      'You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.';
+      'Θα χρειαστεί να παρέχετε αυτό το κλειδί ανάκτησης εάν η αποκρυπτογράφηση αποτύχει κατά την εκκίνηση. Χωρίς το κλειδί, θα χάσετε την πρόσβαση σε όλα τα δεδομένα σας. Αποθηκεύστε το σε ένα ασφαλές μέρος, όπως έναν διαχειριστή κωδικών πρόσβασης.';
 
   @override
   String get recoveryKeyConfirmation =>
-      'I saved my recovery key somewhere safe';
+      'Αποθήκευσα το κλειδί ανάκτησής μου σε ασφαλές μέρος';
 
   @override
-  String get recoveryKeyLinkLabel => 'Learn more';
+  String get recoveryKeyLinkLabel => 'Μάθετε περισσότερα';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Save to file';
+  String get recoveryKeySaveToFileLabel => 'Αποθήκευση σε αρχείο';
 
   @override
-  String get recoveryKeyShowQrCodeLabel => 'Show QR code';
+  String get recoveryKeyShowQrCodeLabel => 'Εμφάνιση κώδικα QR';
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Desktop - Recovery key';
+    return '$DISTRO Desktop - Κλειδί ανάκτησης';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.';
+      'Σαρώστε τον κώδικα QR για να αντιγράψετε το κλειδί ανάκτησης και αποθηκεύστε το σε ένα ασφαλές μέρος, όπως έναν διαχειριστή κωδικών πρόσβασης. Μπορείτε επίσης να το βγάλετε φωτογραφία για μελλοντική χρήση.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copied to clipboard';
+  String get recoveryKeyClipboardNotifiaction => 'Αντιγράφηκε στο πρόχειρο';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'Το αρχείο κλειδιού ανάκτησης δεν αποθηκεύτηκε';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Το αρχείο κλειδιού ανάκτησης δεν μπορεί να αποθηκευτεί σε προσωρινή τοποθεσία';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Άγνωστο σφάλμα';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Δεν έχετε δικαίωμα εγγραφής σε αυτόν τον φάκελο. Δοκιμάστε μια διαφορετική τοποθεσία ή χρησιμοποιήστε μια άλλη μέθοδο.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Δοκιμάστε μια διαφορετική τοποθεσία, όπως μια αφαιρούμενη μονάδα δίσκου, ή χρησιμοποιήστε μια άλλη μέθοδο.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Αποθήκευση αρχείου κλειδιού ανάκτησης';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'Αρχεία κειμένου';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
-    return 'Scan the QR code or enter the code below at <a href=\"https://$url\">$url</a>';
+    return 'Σαρώστε τον κώδικα QR ή εισαγάγετε τον παρακάτω κώδικα στη διεύθυνση <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get landscapePageTitle => 'Automated installation';
+  String get landscapePageTitle => 'Αυτοματοποιημένη εγκατάσταση';
 
   @override
-  String get landscapeHeader => 'Log in to Landscape';
+  String get landscapeHeader => 'Σύνδεση στο Landscape';
 
   @override
-  String get landscapeDomainHeader => 'Enter Landscape domain (FQDN)';
+  String get landscapeDomainHeader =>
+      'Εισαγάγετε τον τομέα (FQDN) του Landscape';
 
   @override
-  String get landscapeDomainHintText => 'Landscape domain (FQDN)';
+  String get landscapeDomainHintText => 'Τομέας (FQDN) του Landscape';
 
   @override
   String get landscapeDomainInstructions =>
-      'Provide your organization\'s Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.';
+      'Παρέχετε τον τομέα Landscape του οργανισμού σας για να συνδεθείτε και να ανακτήσετε ένα αρχείο αυτόματης εγκατάστασης. Μπορείτε να λάβετε το FQDN από την τεχνική υποστήριξη (IT support) της εταιρείας σας.';
 
   @override
-  String get landscapeDomainTextField => 'Landscape domain (FQDN)';
+  String get landscapeDomainTextField => 'Τομέας (FQDN) του Landscape';
 
   @override
-  String get next => 'Next';
+  String get next => 'Επόμενο';
 
   @override
   String get landscapeDomainInvalidDomainWarning =>
-      'Invalid domain, please check or contact your IT support';
+      'Μη έγκυρος τομέας, παρακαλώ ελέγξτε τον ή επικοινωνήστε με την τεχνική υποστήριξη';
 
   @override
   String get landscapeDomainNoInternetTitleWarning =>
-      'Connect to the internet to continue';
+      'Συνδεθείτε στο διαδίκτυο για να συνεχίσετε';
 
   @override
   String get landscapeDomainNoInternetDescriptionWarning =>
-      'Internet is needed to fetch the autoinstall file from Landscape';
+      'Απαιτείται σύνδεση στο διαδίκτυο για την ανάκτηση του αρχείου αυτόματης εγκατάστασης από το Landscape';
 
   @override
-  String get landscapeCodeExpiredWarning => 'Code expired, please try again';
+  String get landscapeCodeExpiredWarning =>
+      'Ο κωδικός έληξε, παρακαλώ δοκιμάστε ξανά';
 
   @override
-  String get landscapeLoginFailedWarning => 'Login failed, please try again';
+  String get landscapeLoginFailedWarning =>
+      'Η σύνδεση απέτυχε, παρακαλώ δοκιμάστε ξανά';
 
   @override
   String get landscapeErrorPageTitle =>
-      'Automated install is not available for your account';
+      'Η αυτοματοποιημένη εγκατάσταση δεν είναι διαθέσιμη για τον λογαριασμό σας';
 
   @override
   String get landscapeErrorPageBody =>
-      'Contact your IT support or try a different installation option.';
+      'Επικοινωνήστε με την τεχνική υποστήριξη (IT support) της εταιρείας σας ή δοκιμάστε μια διαφορετική επιλογή εγκατάστασης.';
 
   @override
   String landscapeErrorPageCode(String code) {
-    return 'Error code: $code';
+    return 'Κωδικός σφάλματος: $code';
   }
 
   @override
   String get landscapeConfirmPageSuccessInfoTitle =>
-      'Ubuntu will install with the configuration provided by your organization';
+      'Το Ubuntu θα εγκατασταθεί με τις ρυθμίσεις που παρέχονται από τον οργανισμό σας';
 
   @override
   String get landscapeConfirmPageSuccessInfoContent =>
-      'You can review the autoinstall file imported from Landscape below.';
+      'Μπορείτε να ελέγξετε το αρχείο αυτόματης εγκατάστασης (autoinstall) που εισήχθη από το Landscape παρακάτω.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Επιτυχία';
 
   @override
-  String get errorIconSemanticLabel => 'Error';
+  String get errorIconSemanticLabel => 'Σφάλμα';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Κλείσιμο';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Μεγιστοποίηση';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Ελαχιστοποίηση';
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'Δεν ήταν δυνατή η ενεργοποίηση της κρυπτογράφησης με υποστήριξη υλικού (hardware-backed encryption)';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionBadgeLabel => 'Απαιτείται ενέργεια';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionDetailsLabel => 'Τεχνικές λεπτομέρειες';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionConfirmLabel => 'Επιβεβαίωση';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Λύση $n: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Λύση: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Μάθετε περισσότερα για την κρυπτογράφηση με υποστήριξη υλικού';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Δοκιμάστε τις παρακάτω λύσεις, επικοινωνήστε με την τεχνική υποστήριξη (IT support) ή επιλέξτε μια διαφορετική μέθοδο κρυπτογράφησης.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Δοκιμάστε την παρακάτω λύση, επικοινωνήστε με την τεχνική υποστήριξη ή επιλέξτε μια διαφορετική μέθοδο κρυπτογράφησης.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Επικοινωνήστε με την τεχνική υποστήριξη ή επιλέξτε μια διαφορετική μέθοδο κρυπτογράφησης.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Εσωτερικό σφάλμα.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Απαιτείται απενεργοποίηση.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'Απαιτείται επανεκκίνηση.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Μη αναμενόμενη ενέργεια.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Λείπει όρισμα.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'Μη έγκυρο όρισμα.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Η ενέργεια απέτυχε.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'Το τρέχον περιβάλλον είναι μια εικονική μηχανή (virtual machine).';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Αυτός ο υπολογιστής χρησιμοποιεί παλαιότερο υλικολογισμικό (legacy BIOS), το οποίο δεν είναι συμβατό με αυτή τη μέθοδο κρυπτογράφησης.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Υπάρχει πρόβλημα με το υλικολογισμικό (firmware) αυτού του υπολογιστή.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Αυτός ο υπολογιστής δεν διαθέτει το απαιτούμενο υλικό ασφαλείας (TPM 2.0) για αυτή τη μέθοδο κρυπτογράφησης.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'Το TPM αυτού του υπολογιστή είναι απενεργοποιημένο.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'Το TPM αυτού του υπολογιστή χρησιμοποιείται ήδη από άλλο σύστημα ή εφαρμογή.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'Το TPM αυτού του υπολογιστή είναι επί του παρόντος κλειδωμένο.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'Το TPM αυτού του υπολογιστή δεν διαθέτει αρκετό διαθέσιμο χώρο αποθήκευσης.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Αυτός ο υπολογιστής δεν είναι συμβατός με την κρυπτογράφηση με υποστήριξη υλικού.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'Είναι ενεργοποιημένη η αποσφαλμάτωση (debugging) του UEFI.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'Αυτός ο υπολογιστής δεν διαθέτει μια απαιτούμενη λειτουργία ασφαλείας (προστασία DMA).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'Αυτός ο υπολογιστής δεν διαθέτει μια απαιτούμενη λειτουργία ασφαλείας (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Υπάρχει πρόβλημα με τις ρυθμίσεις ασφαλείας (security configuration) αυτού του υπολογιστή.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Υπάρχει λογισμικό που εκτελείται κατά την εκκίνηση και ενδέχεται να εμποδίζει την ασφαλή σύνδεση με το TPM του υπολογιστή.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Είναι ενεργοποιημένη η Μονάδα Διαρκούς Παρουσίας (Absolute Persistence Module) σε αυτόν τον υπολογιστή.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'Η ασφαλής εκκίνηση (Secure Boot) είναι απενεργοποιημένη σε αυτόν τον υπολογιστή ή δεν έχει ρυθμιστεί σε κατάσταση ανάπτυξης (deployed mode).';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Ορισμένα από τα πιστοποιητικά που επαληθεύουν το λογισμικό σε αυτόν τον υπολογιστή είναι ληγμένα ή χρησιμοποιούν ασθενή προστασία.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Αυτός ο υπολογιστής χρησιμοποιεί μια μη αυτόματη λίστα επιτρεπόμενων (manual allowlist) για την επαλήθευση του λογισμικού κατά την εκκίνηση.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Υπάρχουν εγκατεστημένα πρόσθετα προγράμματα οδήγησης.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Υπάρχει πρόβλημα με το TPM αυτού του υπολογιστή.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Υπάρχει πρόβλημα με το υλικολογισμικό (firmware) αυτού του υπολογιστή.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Επανεκκίνηση';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Κλείσιμο συσκευής';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Επανεκκίνηση στις ρυθμίσεις υλικολογισμικού';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Εάν οι ρυθμίσεις υλικολογισμικού δεν φορτώσουν αυτόματα, πραγματοποιήστε επανεκκίνηση και πατήστε επανειλημμένα το πλήκτρο ρυθμίσεων κατά την εκκίνηση (συνήθως το F2, το F10 ή το Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Μη αυτόματη ενεργοποίηση της προστασίας DMA';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Μη αυτόματη εκκαθάριση του TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Μη αυτόματη ενεργοποίηση της ασφαλούς εκκίνησης (Secure Boot)';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'Μη αυτόματη ενεργοποίηση του IOMMU';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Μη αυτόματη ενεργοποίηση των συστοιχιών PCR';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Μη αυτόματη ενεργοποίηση του TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Μη αυτόματη εκκαθάριση του TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Μη αυτόματη εκκαθάριση του TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Μη αυτόματη απενεργοποίηση της Μονάδας Διαρκούς Παρουσίας (Absolute Persistence Module)';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem =>
+      'Επικοινωνήστε με τον κατασκευαστή';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Επικοινωνήστε με τον προμηθευτή του λειτουργικού συστήματος';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Ενεργοποίηση του TPM κατά την επανεκκίνηση';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Ενεργοποίηση και εκκαθάριση του TPM κατά την επανεκκίνηση';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Εκκαθάριση του TPM κατά την επανεκκίνηση';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Εκκαθάριση του TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Παράλειψη';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Επανεκκινήστε τον υπολογιστή για να ολοκληρωθούν οι προηγούμενες ενέργειες.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Η επανεκκίνηση του υπολογιστή ενδέχεται να διορθώσει το πρόβλημα.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Απενεργοποιήστε τον υπολογιστή για να ολοκληρωθούν οι προηγούμενες ενέργειες.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Μπορείτε να το κάνετε αυτό στις ρυθμίσεις υλικολογισμικού (firmware) του υπολογιστή σας.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Ενδέχεται να μπορείτε να το κάνετε αυτό στις ρυθμίσεις υλικολογισμικού (firmware) του υπολογιστή σας. Ανατρέξτε στην τεκμηρίωση του κατασκευαστή του επεξεργαστή (CPU vendor) για οδηγίες.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Βεβαιωθείτε ότι η λειτουργία της ασφαλούς εκκίνησης (secure boot) είναι ρυθμισμένη σε «deployed» (σε χρήση).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Αυτή η λειτουργία ενδέχεται να αναφέρεται ως «Virtualization Technology», «VT-d» ή «AMD-Vi».';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Η παράβλεψη αυτού του ζητήματος ενδέχεται να οδηγήσει σε μια λιγότερο ασφαλή εγκατάσταση.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Επανεκκίνηση';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'Επανεκκίνηση και ενεργοποίηση του TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'Επανεκκίνηση και εκκαθάριση του TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Παράλειψη και συνέχιση';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Η εκκαθάριση του TPM διαγράφει όλα τα κλειδιά κρυπτογράφησης';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Θα χάσετε την πρόσβαση σε όλα τα δεδομένα στους κρυπτογραφημένους δίσκους για τους οποίους δεν διαθέτετε κλειδιά αποκατάστασης. Επίσης, θα σταματήσουν να λειτουργούν άλλες δυνατότητες που εξαρτώνται από το TPM, όπως η επαλήθευση ταυτότητας και τα πιστοποιητικά.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Κατανοώ τις συνέπειες της εκκαθάρισης του TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Ενδέχεται να σας ζητηθεί να επιβεβαιώσετε αυτή την ενέργεια κατά την επανεκκίνηση.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Στη συνέχεια, θα χρειαστεί να ξεκινήσετε την εγκατάσταση ξανά.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Αυτή η λύση απέτυχε';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Δοκιμάστε μια διαφορετική λύση ή επικοινωνήστε με την τεχνική υποστήριξη.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Δοκιμάστε κάτι άλλο. Μπορείτε επίσης να <a href=\"\">στείλετε μια αναφορά σφάλματος</a>.';
 }

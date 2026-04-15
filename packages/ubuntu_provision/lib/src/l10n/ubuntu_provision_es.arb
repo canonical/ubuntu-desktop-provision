@@ -89,7 +89,7 @@
     "accessibilityVisualAlertsLabel": "Alertas visuales",
     "accessibilityStickKeysLabel": "Teclas persistentes",
     "accessibilityPageHeader": "Accesibilidad en {DISTRO}",
-    "accessibilityPageBody": "Personalice {DISTRO} según sus necesidades antes de la puesta en marcha. Puede cambiarlo más tarde en Configuración del sistema.",
+    "accessibilityPageBody": "Personalice {DISTRO} según sus necesidades antes de la puesta en marcha. Puede cambiarlo más tarde en la aplicación Configuración.",
     "accessibilityScreenReaderLabel": "Lector de pantalla",
     "accessibilitySlowKeysLabel": "Teclas lentas",
     "accessibilityMouseKeysLabel": "Teclas de ratón",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Maximizar",
     "minimizeIconSemanticLabel": "Minimizar",
     "expandIconSemanticLabel": "Expandir",
-    "collapseIconSemanticLabel": "Colapsar"
+    "collapseIconSemanticLabel": "Colapsar",
+    "errorPageTechnicalDetails": "Detalles técnicos"
 }

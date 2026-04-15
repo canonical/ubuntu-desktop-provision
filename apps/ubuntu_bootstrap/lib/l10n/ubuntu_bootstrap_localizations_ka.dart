@@ -462,8 +462,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'დისკის ყველა დანაყოფზე ყველა მონაცემი წაიშლება ოპერაციული სისტემების ჩათვლით.';
 
   @override
-  String get installationTypeAdvancedLabel =>
-      'დამატებითი პარამეტრების ჩვენება...';
+  String get installationTypeAdvancedLabel => 'დამატებითი პარამეტრები';
 
   @override
   String get installationTypeAdvancedTitle => 'დაშიფვრა და ფაილური სისტემა';
@@ -874,7 +873,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'დაყენების პროცესის გასაგრძელებლად საჭიროა, გადატვირთოთ კომპიუტერი.';
 
   @override
-  String get shutdown => 'გამორთვა';
+  String get shutdown => 'მუშაობის დასრულება';
 
   @override
   String get restartNow => 'გადატვირთვა ახლავე';
@@ -1392,7 +1391,8 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get minimizeIconSemanticLabel => 'ჩაკეცვა';
 
   @override
-  String get tpmActionPageTitle => 'აპარატურით მხარდაჭერილი დაშიფვრა';
+  String get tpmActionPageTitle =>
+      'აპარატურით მხარდაჭერილი დაშიფვრის ჩართვა შეუძლებელია';
 
   @override
   String get tpmActionBadgeLabel => 'საჭიროა ქმედება';
@@ -1405,7 +1405,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'გადაწყვეტა $n: $text';
   }
 
   @override
@@ -1415,7 +1415,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'გაიგეთ მეტი აპარატურით მხარდაჭერილი დაშიფვრის შესახებ';
 
   @override
   String get tpmActionErrorSupportLabel =>
@@ -1430,87 +1430,93 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'Contact IT support, or choose a different encryption method.';
 
   @override
-  String get tpmActionErrorKindInternal => 'შიდა';
+  String get tpmActionErrorKindInternal => 'შიდა შეცდომა.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'საჭიროა გამორთვა';
+  String get tpmActionErrorKindShutdownRequired => 'საჭიროა გამორთვა.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'საჭიროა გადატვირთვა';
+  String get tpmActionErrorKindRebootRequired => 'საჭიროა გადატვირთვა.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'მოულოდნელი ქმედება';
+  String get tpmActionErrorKindUnexpectedAction => 'მოულოდნელი ქმედება.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'ნაკლული არგუმენტი';
+  String get tpmActionErrorKindMissingArgument => 'ნაკლული არგუმენტი.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'არასწორი არგუმენტი';
+  String get tpmActionErrorKindInvalidArgument => 'არასწორი არგუმენტი.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'ქმედება ჩავარდა';
+  String get tpmActionErrorKindActionFailed => 'ქმედება ჩავარდა.';
 
   @override
-  String get tpmActionErrorKindRunningInVm => 'გაშვებულია ვმ-ში';
+  String get tpmActionErrorKindRunningInVm =>
+      'მიმდინარე გარემო ვირტუალური მანქანაა.';
 
   @override
-  String get tpmActionErrorKindSystemNotEfi => 'სისტემაში EFI ჩართული არაა';
+  String get tpmActionErrorKindSystemNotEfi =>
+      'ეს კომპიუტერი იყენებს ძველ აპარატურას (BIOS) რომელიც ამ დაშიფვრის მეთოდთან თავსებადი არაა.';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess => 'წვდომა EFI-ის ცვლადებთან';
+  String get tpmActionErrorKindEfiVariableAccess =>
+      'ამ კომპიუტეირს მიკროკოდში აღმოჩენილია პრობლემა.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'შესაბამისი TPM2 მოწყობილობის გარეშე';
+      'ამ კომპიუტერს არ გააჩნია აუცილებელი უსაფრთხოების აპარატურა (TMP 2.0) ამ დაშიფვრის მეთოდისთვის.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'TPM-ის მოწყობილობა გამორთულია';
+      'ამ კომპიუტერის TPM-ის მოწყობილობა გამორთულია.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'TPM-ის საკუთარი იერარქია';
+      'ამ კომპიუტერის TMP უკვე გამოიყენება სხვა სისტემის, ან აპლიკაციის მიერ.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'TPM მოწყობილობის დაბლოკვა დაბლოკილია';
+      'ამ კომპიუტერის TPM ამჟამად დაბლოკილია.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'არასაკმარისი TPM-ის საცავი';
+      'ამ კომპიუტერის TMP-ზე საცავი საკმარისი არაა.';
 
   @override
-  String get tpmActionErrorKindUnsupportedPlatform => 'მხარდაუჭერელი პლატფორმა';
+  String get tpmActionErrorKindUnsupportedPlatform =>
+      'ეს კომპიუტერი აპარატურით მხარდაჭერილ დაშიფვრასთან თავსებადი არაა.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI-ის გამართვა ჩართულია';
+      'UEFI-ის გამართვა ჩართულია.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'არასაკმარისი DMA-ის დაცვა';
+      'ამ კომპიუტერს აუცილებელი უსაფრთხოების ფუნქცია (DMA-ის დაცვა) აკლია.';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu => 'ბირთვის IOMMU-ის გარეშე';
+  String get tpmActionErrorKindNoKernelIommu =>
+      'ამ კომპიუტერს აუცილებელი უსაფრთხოების ფუნქცია (IOMMU) აკლია.';
 
   @override
-  String get tpmActionErrorKindHostSecurity => 'ჰოსტის უსაფრთხოება';
+  String get tpmActionErrorKindHostSecurity =>
+      'ამ კომპიუტერის უსაფრთხოების კონფიგურაციაში აღმოჩენილია პრობლემა.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'აღმოჩენილია სისტემის მომზადების აპლიკაციები';
+      'ჩართვისას გაშვებულია პროგრამა, რომელმაც, შეიძლება, ამ კომპიუტერის TPM-თან უსაფრთო კავშირს ხელი შეუშალოს.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'აბსოლუტური მნიშვნელობა არსებობს';
+      'ამ კომპიუტერში ჩართულია აბსოლუტური მუდმივობის მოდული.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'არასწორი SecureBoot-ის რეჟიმი';
+      'ამ კომპიუტერზე უსაფრთხო ჩატვირთვა გამორთულია, ან გაშლილ რეჟიმზე არ აყენია.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'აღმოჩენილია SecureBoot-ის სუსტი ალგორითმი';
+      'ამ კომპიუტერში არსებული ზოგიერთი სერტიფიკატი, რომლებიც პროგრამებს ამოწმებს, შეიძლება, მოძველებულია, ან იყენებს სუსტ დაცვას.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
@@ -1583,25 +1589,25 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionContactOsVendor =>
-      'დაკავშირება ოს-ის მომწოდებელთან';
+      'დაუკავშირდით ოს-ის მომწოდებელს';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware =>
-      'TPM-ის ჩართვა მიკროკოდიდან';
+      'TPM-ის ჩართვა გადატვირთვისას';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'TPM-ის ჩართვა და გასუფთავება მიკროკოდიდან';
+      'TPM-ის ჩართვა და გასუფთავება გადატვირთვისას';
 
   @override
   String get tpmActionFixActionClearTpmViaFirmware =>
-      'TPM-ის გასუფთავება მიკროკოდიდან';
+      'TPM-ის გასუფთავება გადატვირთვისას';
 
   @override
   String get tpmActionFixActionClearTpm => 'TPM-ის გასუფთავება';
 
   @override
-  String get tpmActionFixActionProceed => 'გაგრძელება';
+  String get tpmActionFixActionProceed => 'იგნორი';
 
   @override
   String get tpmActionFixActionRebootDescription =>

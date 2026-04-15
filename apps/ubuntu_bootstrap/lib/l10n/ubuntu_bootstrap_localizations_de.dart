@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Ein Befehl in der autoinstall-Datei konnte während der Installation nicht ausgeführt werden.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Sie müssen die Installation neu starten. Überprüfen Sie die autoinstall-Datei, wählen Sie eine andere Installationsart oder wenden Sie sich an Ihren IT-Support.';
 
   @override
   String get changeButtonText => 'Ändern';
@@ -921,7 +921,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Computer neu starten?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Installationsprogramm neu starten';
 
   @override
   String get restartIntoWindows => 'Neustart in Windows';
@@ -1025,7 +1025,8 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca-Screenreader';
+  String get installationSlidesAccessibilityOrca =>
+      'Orca-Bildschirmleseprogram';
 
   @override
   String get installationSlidesAccessibilityLanguages => 'Sprachunterstützung';

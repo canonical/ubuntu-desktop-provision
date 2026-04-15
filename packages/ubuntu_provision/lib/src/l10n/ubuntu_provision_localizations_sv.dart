@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Anpassa $DISTRO för att passa dina behov innan du installerar. Du kan ändra dem senare i Systeminställningar.';
+    return 'Anpassa $DISTRO till dina behov innan du installerar. Du kan ändra dem senare i appen Inställningar.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Dölj logg';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Tekniska detaljer';
 
   @override
   String get restart => 'Starta om';

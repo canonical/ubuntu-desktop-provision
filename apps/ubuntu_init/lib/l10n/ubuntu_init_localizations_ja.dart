@@ -13,7 +13,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(String distro) {
-    return '$distro にようこそ';
+    return '$distro へようこそ';
   }
 
   @override
@@ -114,7 +114,7 @@ class UbuntuInitLocalizationsJa extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return '個人用途は常に無料です。エンタープライズ向けは30日間無料体験です。<a href=\"https://$url\">詳細</a>';
+    return '個人利用の場合は常に無料です。エンタープライズ向けは30日間無料体験です。<a href=\"https://$url\">詳細</a>';
   }
 
   @override

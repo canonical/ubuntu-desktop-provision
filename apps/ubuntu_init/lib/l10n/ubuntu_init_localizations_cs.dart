@@ -145,7 +145,7 @@ class UbuntuInitLocalizationsCs extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Připojte tento počítač k předplatnému Ubuntu Pro pro aktualizace zabezpečení v širší řadě balíčků do roku 2032.';
+      'Připojte tento počítač k předplatnému Ubuntu Pro pro aktualizace zabezpečení v širší škále balíčků do roku 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader =>

@@ -24,11 +24,11 @@ class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
   String get startFactoryReset => 'Iniciar restablecimiento de fábrica';
 
   @override
-  String get createUsbTitle => 'Crear un medio USB de restablecimiento';
+  String get createUsbTitle => 'Crear un soporte USB de restablecimiento';
 
   @override
   String get createUsbBody =>
-      'Cree un medio USB de restablecimiento para restaurar el sistema y personalizar sus instalaciones de Ubuntu.';
+      'Cree un soporte USB de restablecimiento para restaurar el sistema y personalizar sus instalaciones de Ubuntu.';
 
   @override
   String get createUsbListExplanation =>
@@ -36,7 +36,7 @@ class FactoryResetToolsLocalizationsEs extends FactoryResetToolsLocalizations {
 
   @override
   String get createUsbWarning =>
-      'La unidad de almacenamiento se dará formato y se perderán todos los datos que contenga.';
+      'La unidad de almacenamiento se formateará y se perderán todos los datos que contenga.';
 
   @override
   String get resetMediaTitle => 'Soporte USB de restablecimiento';

@@ -91,14 +91,14 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallInteractiveDescription =>
-      'インストール中ガイドに従ってインストールしたいユーザー向けです。';
+      '一歩ずつガイドに従ってインストールしたいユーザー向けです。';
 
   @override
   String get autoinstallDirectOption => '自動インストールファイルによる自動化';
 
   @override
   String get autoinstallDirectDescription =>
-      '一貫性と再現性を確保したシステムセットアップのためautoinstall.yamlを使用する上級ユーザー向けです。';
+      'autoinstall.yamlを使用して一貫性と再現性のあるシステムセットアップを行う上級ユーザー向けです。';
 
   @override
   String get autoinstallLandscapeOption => 'Landscapeによる自動化';
@@ -109,11 +109,11 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'インストール中の自動インストールファイルにあるコマンドの実行に失敗しました。';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'インストールをやり直してください。自動インストールファイルを確認するか、別のインストールの種類を選択するか、ITサポートに連絡してください。';
 
   @override
   String get changeButtonText => '変更';
@@ -123,7 +123,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingPageTitle(String DISTRO) {
-    return '$DISTRO へようこそ';
+    return '$DISTRO にようこそ';
   }
 
   @override
@@ -247,7 +247,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO は既定ではプロプライエタリなソフトウェアは含みません。追加のソフトウェアをインストールすると、コンピューターのパフォーマンスが改善するかもしれません。';
+    return '$DISTRO は既定ではプロプライエタリなソフトウェアは含まれていません。追加のソフトウェアをインストールすると、コンピューターのパフォーマンスが改善するかもしれません。';
   }
 
   @override
@@ -411,7 +411,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeHeader(String DISTRO) {
-    return 'どうやって $DISTRO をインストールしますか？';
+    return '$DISTRO をどのようにインストールしますか？';
   }
 
   @override
@@ -441,7 +441,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'OSを含むすべてのデータとパーティションは削除されます。';
 
   @override
-  String get installationTypeAdvancedLabel => '高度な機能を表示…';
+  String get installationTypeAdvancedLabel => '高度なオプション...';
 
   @override
   String get installationTypeAdvancedTitle => '暗号化とファイルシステム';
@@ -469,12 +469,11 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'コンピューターに電源を入れるたびにパスフレーズを入力する必要があります。$advancedHint';
   }
 
   @override
-  String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+  String get installationTypeLVMEncryptionInfo2 => 'LVM+LUKS暗号化を使用しています。';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVMと暗号化を選択';
@@ -502,12 +501,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeTPM => 'ハードウェアベースのディスク暗号化を使用';
 
   @override
-  String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+  String get installationTypeTPMInfoResolute => '起動中にディスクの暗号化が自動解除されます。';
 
   @override
-  String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+  String get installationTypeTPMInfoUnavailable => 'このコンピューターでは選択できません。';
 
   @override
   String get installationTypeTPMSelected => 'TPMを選択';
@@ -836,7 +833,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get restartWarningBody =>
-      'インストール完了のため再起動するか、試用を継続するかを選択してください。\nいかなる変更点も保存しないのでご注意ください。';
+      'インストールを完了するため再起動するか、試用を継続するかを選択してください。\nいかなる変更点も保存されません。';
 
   @override
   String get rebootToConfigureWarning => 'インストール処理の継続のためコンピューターを再起動してください。';
@@ -880,13 +877,13 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'PCを再起動しますか？';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'インストーラーを再起動';
 
   @override
-  String get restartIntoWindows => '再起動して Windows を使用';
+  String get restartIntoWindows => '再起動してWindowsを使用';
 
   @override
-  String get restartIntoWindowsTitle => 'Windowsに再起動しますか？';
+  String get restartIntoWindowsTitle => '再起動してWindowsを使用しますか？';
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
@@ -1065,7 +1062,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get refreshUpdateNow => '今すぐアップデート';
 
   @override
-  String get refreshInfo => '最新バージョンにアップデートすると、信頼性が改善し機能が増えます。';
+  String get refreshInfo => '最新バージョンにアップデートすると、信頼性が上がり多くの機能が利用できます。';
 
   @override
   String get refreshReady => 'アップデートの準備完了';
@@ -1091,7 +1088,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => '続けるには、一旦閉じてもう一度インストーラーを起動してください';
+  String get refreshRestart => '続けるには、インストーラーを閉じてもう一度起動してください';
 
   @override
   String get refreshCloseLabel => 'インストーラーを閉じる';
@@ -1342,8 +1339,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get minimizeIconSemanticLabel => '最小化';
 
   @override
-  String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+  String get tpmActionPageTitle => 'ハードウェアベースの暗号化を有効にできません';
 
   @override
   String get tpmActionBadgeLabel => 'Action required';
@@ -1381,13 +1377,13 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       'Contact IT support, or choose a different encryption method.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => '内部エラー。';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => '電源オフが必要です。';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => '再起動が必要です。';
 
   @override
   String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
@@ -1402,56 +1398,52 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindActionFailed => 'Action failed.';
 
   @override
-  String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+  String get tpmActionErrorKindRunningInVm => '現在の環境は仮想マシンです。';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'このコンピューターはこの暗号化方法と互換性のない古いファームウェア（レガシーBIOS）を使用しています。';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'このコンピューターのファームウェアに問題があります。';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'このコンピューターはこの暗号化方法に必要なセキュリティハードウェア（TPM 2.0）がありません。';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+  String get tpmActionErrorKindTpmDeviceDisabled => 'このコンピューターのTPMが無効になっています。';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'このコンピューターのTPMはすでにほかのシステムまたはアプリケーションで使用されています。';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'このコンピューターのTPMは現在ロックされています。';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'このコンピューターのTPMには充分なストレージがありません。';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'このコンピューターはハードウェアベースの暗号化と互換性がありません。';
 
   @override
-  String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+  String get tpmActionErrorKindUefiDebuggingEnabled => 'UEFIデバッギングが有効になっています。';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'このコンピューターには必要なセキュリティ機能（DMAプロテクション）がありません。';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'このコンピューターには必要なセキュリティ機能（IOMMU）がありません。';
 
   @override
-  String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+  String get tpmActionErrorKindHostSecurity => 'このコンピューターのセキュリティ設定には問題があります。';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>

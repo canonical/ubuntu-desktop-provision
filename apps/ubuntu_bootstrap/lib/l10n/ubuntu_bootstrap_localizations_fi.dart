@@ -113,11 +113,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Komento autoinstall-tiedostossa epäonnistui suorituksessa asennuksen aikana.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Asennus tulee käynnistää uudelleen. Tarkista autoinstall-tiedosto, valitse eri asennustyyppi tai ota yhteys IT-tukeen.';
 
   @override
   String get changeButtonText => 'Muuta';
@@ -456,7 +456,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Kaikki tiedot ja osiot levyllä poistetaan, mukaan lukien käyttöjärjestelmä.';
 
   @override
-  String get installationTypeAdvancedLabel => 'Näytä edistyneet asetukset...';
+  String get installationTypeAdvancedLabel => 'Edistyneet asetukset';
 
   @override
   String get installationTypeAdvancedTitle => 'Salaus ja tiedostojärjestelmä';
@@ -485,12 +485,12 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Sinun tulee kirjoittaa tunnuslause aina kun käynnistät tietokoneen. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Tämä käyttää LVM:ää LUKS-salauksella.';
 
   @override
   String get installationTypeLVMEncryptionSelected => 'LVM ja salaus valittu';
@@ -522,11 +522,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'Levyn salaus avautuu automaattisesti käynnistyksen yhteydessä.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'Ei saatavilla tällä tietokoneella.';
 
   @override
   String get installationTypeTPMSelected => 'TPM valittu';
@@ -905,7 +905,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Käynnistetäänkö tietokone uudelleen?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Käynnistä asennusohjelma uudelleen';
 
   @override
   String get restartIntoWindows => 'Uudelleenkäynnistä Windowsiin';
@@ -1401,11 +1401,12 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Ratkaisu: $text';
   }
 
   @override
-  String get tpmActionDocumentationLinkLabel => 'Linkki ohjeisiin';
+  String get tpmActionDocumentationLinkLabel =>
+      'Lue lisää laitteistopohjaisesta salauksesta';
 
   @override
   String get tpmActionErrorSupportLabel =>
@@ -1413,112 +1414,117 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Kokeile alla olevaa ratkaisua, ota yhteys IT-tukeen tai valitse eri salausmenetelmä.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
       'Ota yhteys IT-tukeen tai valitse toinen salaustapa.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Sisäinen';
+  String get tpmActionErrorKindInternal => 'Sisäinen virhe.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Sammuttaminen vaaditaan';
+  String get tpmActionErrorKindShutdownRequired => 'Sammuttaminen vaaditaan.';
 
   @override
   String get tpmActionErrorKindRebootRequired =>
-      'Uudelleenkäynnistäminen vaaditaan';
+      'Uudelleenkäynnistäminen vaaditaan.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Odottamaton toiminto';
+  String get tpmActionErrorKindUnexpectedAction => 'Odottamaton toiminto.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Puuttuva valitsin';
+  String get tpmActionErrorKindMissingArgument => 'Puuttuva valitsin.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Ei kelvollista valitsinta';
+  String get tpmActionErrorKindInvalidArgument => 'Virheellinen valitsin.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Toiminto epäonnistui';
+  String get tpmActionErrorKindActionFailed => 'Toiminto epäonnistui.';
 
   @override
-  String get tpmActionErrorKindRunningInVm => 'Käynnissä virtuaalikoneessa';
+  String get tpmActionErrorKindRunningInVm =>
+      'Nykyinen ympäristö on virtuaalikone.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'Kyseessä ei ole EFI-järjestelmä';
+      'Tämä tietokone käyttää vanhempaa laiteohjelmistoa (perinteistä BIOS:ia), joka ei ole yhteensopiva tämän salausmenetelmän kanssa.';
 
   @override
-  String get tpmActionErrorKindEfiVariableAccess => 'EFI-muuttujiin pääsy';
+  String get tpmActionErrorKindEfiVariableAccess =>
+      'Tämän tietokoneen laiteohjelmiston kanssa on ongelma.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'Ei sopivaa TPM2-laitetta';
+      'Tässä tietokoneessa ei ole vaadittua tietoturvalaitteistoa (TPM 2.0) tätä salausmenetelmää varten.';
 
   @override
-  String get tpmActionErrorKindTpmDeviceDisabled => 'TPM-laite poissa käytöstä';
+  String get tpmActionErrorKindTpmDeviceDisabled =>
+      'Tämän tietokoneen TPM-laite on pois käytöstä.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'TPM-hierarkiat ovat omistettuina';
+      'Tämän tietokoneen TPM-laite on jo toisen järjestelmän tai sovelluksen käytössä.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'TPM-laitteen pois lukitseminen tapahtunut';
+      'Tämän tietokoneen TPM-laite on tällä hetkellä lukittu.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'TPM-tallennustilaa ei riittävästi';
+      'Tämän tietokoneen TPM-laitteella ei ole tarpeeksi tallennustilaa.';
 
   @override
-  String get tpmActionErrorKindUnsupportedPlatform => 'Alustaa ei tuettu';
+  String get tpmActionErrorKindUnsupportedPlatform =>
+      'Tämä tietokone ei ole yhteensopiva laitteistopohjaisen salauksen kanssa.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI-virheenjäljitys käytössä';
+      'UEFI-virheenjäljitys käytössä.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'Ei riittävää DMA-suojausta';
+      'Tältä tietokoneelta puuttuu vaadittu tietoturvaominaisuus (DMA-suojaus).';
 
   @override
-  String get tpmActionErrorKindNoKernelIommu => 'Ei Linux-ytimen IOMMU-tukea';
+  String get tpmActionErrorKindNoKernelIommu =>
+      'Tältä tietokoneelta puuttuu vaadittu tietoturvaominaisuus (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Tämän tietokoneen tietoturva-asetusten kanssa on ongelma.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Käynnistyksen yhteydessä on suoritettava ohjelmisto, joka saattaa estää suojatun yhteyden tietokoneen TPM-laitteen kanssa.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'Absolute Persitence -moduuli on käytössä tällä tietokoneella.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Virheellinen SecureBoot-tila';
+      'Secure Boot on poissa käytöstä tällä tietokoneella tai ei ole asetettu oikeaan tilaan.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Havaittu heikko SecureBoot-algoritmi';
+      'Jotkin varmenteita tarkistavat ohjelmistot tällå tietokoneella eivät ole ajan tasalla tai käyttävät heikkoa suojausta.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Tämä tietokone käyttää käsin säädettyä sallittujen ohjelmistojen luetteloa niiden todentamiseen käynnistettäessä.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Lisäajureita on käytössä';
+      'Lisäajureita on käytössä.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Tämän tietokoneen TPM-laitteen kanssa on ongelma.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Tämän tietokoneen laiteohjelmiston kanssa on ongelma.';
 
   @override
   String get tpmActionFixActionReboot => 'Käynnistä uudelleen';
@@ -1532,7 +1538,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Jos laiteohjelmiston asetukset eivät lataudu automaattisesti, käynnistä tietokone uudelleen ja paina asetukset-painiketta toistuvasti käynnistyksen aikana (yleensä näppäin F2, F10 tai Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
@@ -1548,11 +1554,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Ota käyttöön DMA-suojaus käsin';
+      'Ota käyttöön IOMMU käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Ota PCR-muistipankit käyttöön käsin';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
@@ -1568,7 +1574,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Ota Absolute Persistence -moduuli pois käytöstä käsin';
 
   @override
   String get tpmActionFixActionContactOem => 'Ota yhteys valmistajaan';
@@ -1579,15 +1585,15 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware =>
-      'Ota käyttöön TPM laiteohjelmiston kautta';
+      'Ota käyttöön TPM käynnistettäessä uudelleen';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Ota käyttöön ja tyhjennä TPM laiteohjelmiston kautta';
+      'Ota käyttöön ja tyhjennä TPM käynnistettäessä uudelleen';
 
   @override
   String get tpmActionFixActionClearTpmViaFirmware =>
-      'Tyhjennä TPM laiteohjelmiston kautta';
+      'Tyhjennä TPM käynnistettäessä uudelleen';
 
   @override
   String get tpmActionFixActionClearTpm => 'Tyhjennä TPM';
@@ -1597,35 +1603,35 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Käynnistä tietokone uudelleen viimeistelläksesi aiemmat toiminnot.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Tietokoneen käynnistäminen uudelleen saattaa korjata ongelman.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Sammuta tietokone viimeistelläksesi aiemmat toiminnot.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Voit tehdä tämän tietokoneesi laiteohjelmiston asetuksissa.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'Tämä voi olla mahdollista tietokoneen laiteohjelmiston asetuksissa. Lue suoritinvalmistajan dokumentaatiosta lisää ohjeita.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Tarkista että turvakäynnistyksen (secure boot) tila on asetettu tilaan ”deployed”.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Tätä ominaisuutta saatetaan kutsua termein \"Virtualization Technology\", \"VT-d\" tai \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Tämän ongelman ohittaminen saattaa johtaa vähemmän turvalliseen asennukseen.';
 
   @override
   String get tpmActionRestartLabel => 'Käynnistä uudelleen';
@@ -1655,20 +1661,20 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'Tämä toiminto saattaa vaatia vahvistamista tietokonetta uudelleen käynnistettäessä.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Tämän jälkeen sinun tulee käynnistää asennus uudelleen.';
 
   @override
   String get tpmActionErrorTitle => 'Tämä ratkaisu epäonnistui';
 
   @override
   String get tpmActionErrorDescription =>
-      'Kokeile toista ratkaisua tai ota yhteys IT-tukeen';
+      'Kokeile toista ratkaisua tai ota yhteys IT-tukeen.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Kokeile jotain muuta. Voit myös <a href=\"\">lähettää virheraportin</a>.';
 }

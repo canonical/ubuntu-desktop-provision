@@ -383,7 +383,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return '在設定之前，請依照您的需求自訂 $DISTRO。您也可以安裝後在「系統設定」中變更這些設定。';
+    return '在設定之前，請依照您的需求自訂 $DISTRO。您稍後可在「設定」應用程式中進行變更。';
   }
 
   @override
@@ -433,7 +433,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get errorPageUnexpected =>
-      '很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。';
+      '很抱歉，我們無法確定錯誤原因。您可以嘗試重新啟動電腦，然後再次執行安裝程序。您也可以 <a>回報此問題</a>。';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -445,6 +445,9 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get errorPageHideLog => '隱藏運行紀錄';
+
+  @override
+  String get errorPageTechnicalDetails => '技術細節';
 
   @override
   String get restart => '重新啟動';

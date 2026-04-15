@@ -853,7 +853,7 @@
     "installationTypeLVMEncryptionInfo2": "Honek LVM darabil LUKS zifratzearekin.",
     "installationTypeTPMInfoResolute": "Diskoa automatikoki desblokeatuko da abioan.",
     "installationTypeTPMInfoUnavailable": "Ez dago erabilgarri ordenagailu honetan.",
-    "installationSlidesDevelopmentBody": "{DISTRO} lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta AArako (adimen artifiziala) / ikasketa automatikorako, hala nola devops eta administraziorako. {DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.",
+    "installationSlidesDevelopmentBody": "{DISTRO} lan-estazio paregabea da aplikazio edo web garapenerako, datuen zientziarako eta adimen artifizialerako (AA) / ikasketa automatikorako, hala nola devops eta administraziorako. {DISTRO}ren bertsio bakoitzak azkeneko tresna-kateak ditu barnean, eta IDE nagusiekin bateragarria da.",
     "@installationSlidesDevelopmentBody": {
         "placeholders": {
             "DISTRO": {
@@ -871,7 +871,7 @@
         }
     },
     "installationSlidesGamingTitle": "Jokatzeko aparta",
-    "installationSlidesGamingBody": "{DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka, errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute {DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.",
+    "installationSlidesGamingBody": "{DISTRO}k azken NVIDIA eta Mesa kontrolatzaileen euskarria dauka errendimendua eta bateragarritasuna hobetzeko. Milaka Windowseko tituluk arazorik gabe funtzionatzen dute {DISTRO}n Steam bezalako aplikazioen bitartez eta konfigurazio gehigarririk gabe.",
     "@installationSlidesGamingBody": {
         "placeholders": {
             "DISTRO": {
@@ -880,7 +880,7 @@
         }
     },
     "installationSlidesSecurityTitle": "Pribatua eta segurua",
-    "installationSlidesSecurityBody": "{DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebakiarekin eta VPN euskarriarekin eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.",
+    "installationSlidesSecurityBody": "{DISTRO}k linean pribatutasuna eta segurtasuna mantentzeko behar dituzun tresna guztiak eskaintzen dizkizu. Integratutako suebaki eta VPN euskarriarekin, eta pribatutasunean oinarritutako aplikazio piloarekin, zure datuen erabateko kontrola zeure esku duzu.",
     "@installationSlidesSecurityBody": {
         "placeholders": {
             "DISTRO": {
@@ -888,7 +888,7 @@
             }
         }
     },
-    "installationSlidesProductivityBody": "Mahaigainerako {DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarriak diren aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.",
+    "installationSlidesProductivityBody": "Mahaigainerako {DISTRO}k LibreOffice dakar berekin: dokumentuak, kalkulu-orriak eta aurkezpenak kudeatzeko Microsoft Officerekin bateragarria den aplikazio sorta. Lankidetza tresna ezagunenak ere erabilgarri dituzu.",
     "@installationSlidesProductivityBody": {
         "placeholders": {
             "DISTRO": {
@@ -1053,5 +1053,8 @@
     "tpmActionErrorSupportSingleLabel": "Probatu ondorengo soluzioa, jarri harremanetan IT laguntza-zerbitzuarekin, edo aukeratu beste zifratze metodo bat.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Firmware ezarpenak ez badira automatikoki kargatzen, berrabiarazi eta sakatu ezarpenen tekla behin eta berriro abioan (normalean F2, F10 edo Ezabatu).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Egiaztatu abio seguru modua \"deployed\" gisa ezarria dagoela.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke.",
+    "autoinstallErrorMessage": "Autoinstall fitxategiko komando batek huts egin du instalatu bitartean.",
+    "autoinstallErrorInstructions": "Instalazioa berrabiarazi beharko duzu. Egiaztatu autoinstall fitxategia ondo dagoela, aukeratu beste instalazio mota bat, edo jarri zure IT laguntza zerbitzuarekin harremanetan.",
+    "restartInstaller": "Berrabiarazi instalazioa"
 }

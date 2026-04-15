@@ -274,7 +274,7 @@
     "autoinstallDirectUrlLabel": "Zadajte URL súboru pre autoinštaláciu:",
     "autoinstallDirectFileLabel": "Alebo vyberte miestny súbor:",
     "autoinstallDirectFileButtonLabel": "Vybrať súbor...",
-    "autoinstallDirectFilePickerTitle": "Zvoľte súbor",
+    "autoinstallDirectFilePickerTitle": "Výber súboru",
     "autoinstallDirectFilePickerFilterLabel": "Súbory YAML",
     "autoinstallDirectImportButtonLabel": "Importovať",
     "installationTypeEraseAndInstall": "Vymazať {os} a nainštalovať {product}",
@@ -517,5 +517,8 @@
     "tpmActionErrorSupportSingleLabel": "Skúste riešenie uvedené nižšie, kontaktujte IT podporu alebo zvoľte inú metódu šifrovania.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Ak sa nastavenia firmvéru nenačítajú automaticky, reštartujte počítač a počas spúšťania opakovane stláčajte kláves pre vstup do nastavení (zvyčajne F2, F10 alebo Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Skontrolujte, či je režim Secure Boot nastavený na „deployed“.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Táto funkcia môže byť označená ako „Virtualization Technology“, „VT-d“ alebo „AMD‑Vi“."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Táto funkcia môže byť označená ako „Virtualization Technology“, „VT-d“ alebo „AMD‑Vi“.",
+    "autoinstallErrorMessage": "Príkaz v autoinstalačnom súbore sa počas inštalácie nepodarilo spustiť.",
+    "autoinstallErrorInstructions": "Bude potrebné reštartovať inštaláciu. Skontrolujte autoinstalačný súbor, vyberte iný typ inštalácie alebo kontaktujte svoju IT podporu.",
+    "restartInstaller": "Reštartovať inštalátor"
 }
