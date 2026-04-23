@@ -178,7 +178,7 @@
     "installationTypeTPMSelected": "TPM seleccionat",
     "installationTypeTPM": "Utilizar lo chiframent material",
     "fullInstallationTitle": "Installacion complèta",
-    "refreshPageTitle": "Mesa a jorn disponible",
+    "refreshPageTitle": "Mesa a jorn disponibla",
     "refreshInstall": "Metre a jorn cap a la version {version}",
     "refreshCurrent": "La version actuala de {snap} es {version}.",
     "refreshSnapRefresh": "Actualizacion de {snap}...",
