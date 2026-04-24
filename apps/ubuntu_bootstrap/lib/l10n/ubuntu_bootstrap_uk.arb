@@ -23,7 +23,7 @@
     "dontInstallDriverSoftwareNow": "Наразі не встановлювати програмне забезпечення драйвера",
     "rstInstructions": "Для отримання інструкцій відкрийте цю сторінку на телефоні або іншому пристрої: <a href=\"https://{url}\">{url}</a>",
     "dontInstallDriverSoftwareNowDescription": "Ви можете встановити його пізніше з розділу \"Програми та оновлення\".",
-    "readyToUse": "{system} встановлена та готова до користування",
+    "readyToUse": "{system} встановлена та готова до використання",
     "installationTypeAdvancedLabel": "Додаткові параметри",
     "installAlongsideHiddenPartitions": "{num} менших розділів приховано, скористайтеся <a href=\"{url}\">розширеним інструментом розбиття на розділи</a> для більшого контролю",
     "partitionLocationEnd": "Кінець цього простору",
