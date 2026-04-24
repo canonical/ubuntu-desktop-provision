@@ -139,7 +139,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                           const SizedBox(height: kWizardSpacing),
                           Focus(
                             child: Semantics(
-                              header: true,
+                              // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
                               child: Text(
                                 lang.confirmPartitionsTitle,
                                 style: Theme.of(context).textTheme.titleMedium,
@@ -171,7 +171,7 @@ class _SummarySection extends StatelessWidget {
       children: [
         Focus(
           child: Semantics(
-            header: true,
+            // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
             child: Text(title, style: Theme.of(context).textTheme.titleMedium),
           ),
         ),
