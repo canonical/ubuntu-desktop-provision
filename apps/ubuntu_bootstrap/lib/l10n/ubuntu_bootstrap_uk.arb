@@ -401,7 +401,7 @@
     "closeIconSemanticLabel": "Закрити",
     "maximizeIconSemanticLabel": "Розгорнути",
     "minimizeIconSemanticLabel": "Згорнути",
-    "tpmActionPageTitle": "Апаратне шифрування не може бути увімекнено",
+    "tpmActionPageTitle": "Апаратне шифрування не може бути увімкнено",
     "tpmActionDetailsLabel": "Технічні деталі",
     "tpmActionErrorKindNoSuitableTpm2Device": "Цей комп'ютер не має необхідного апаратного модуля безпеки (TPM 2.0) для цього методу шифрування.",
     "tpmActionErrorSupportNoActionLabel": "Зверніться до ІТ-підтримки або виберіть інший метод шифрування.",
