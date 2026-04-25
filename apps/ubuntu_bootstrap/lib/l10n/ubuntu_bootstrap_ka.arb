@@ -892,5 +892,64 @@
             }
         }
     },
-    "tpmActionDocumentationLinkLabel": "გაიგეთ მეტი აპარატურით მხარდაჭერილი დაშიფვრის შესახებ"
+    "tpmActionDocumentationLinkLabel": "გაიგეთ მეტი აპარატურით მხარდაჭერილი დაშიფვრის შესახებ",
+    "tpmActionSingleSolutionLabel": "ამოხსნა: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInstaller": "დაყენების პროგრამის თავიდან გაშვება",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPM-ის ხელით გასუფთავება",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "IOMMU-ის ხელით ჩართვა",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPM-ის ხელით ჩართვა",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM-ის ხელით გასუფთავება",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPM-ის ხელით გასუფთავება",
+    "tpmActionIgnoreAndContinueLabel": "გამოტოვება და გაგრძელება",
+    "tpmActionErrorTitle": "ეს ამოხსნა ჩავარდა",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA დაცვის ხელით ჩართვა",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "უსაფრთხო ჩატვირთვის ხელით ჩართვა",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR ბანკების ხელით ჩართვა",
+    "tpmActionRestartAndEnableTpmLabel": "გადატვირთვა და TPM-ის ჩართვა",
+    "tpmActionRestartAndClearTpmLabel": "გადატვირთვა და TPM-ის გასუფთავება",
+    "tpmActionRestartLabel": "გადატვირთვა",
+    "tpmActionErrorKindAddonDriversPresent": "არსებობს დამატებითი დრაივერები.",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "აბსოლუტური მდგრადობის მოდულის ხელით გამორთვა",
+    "installationTypeTPMInfoUnavailable": "ამ კომპიუტერზე ხელმისაწვდომი არაა.",
+    "installationTypeLVMEncryptionInfo2": "ეს იყენებს LVM-ს LUKS დაშიფვრით.",
+    "tpmActionFixActionClearTpmWarningTitle": "TPM-ის გასუფთავება ყველა დაშიფვრის გასაღებს წაშლის",
+    "tpmActionFixActionRebootDescription": "გადატვირთეთ კომპიუტერი წინა ქმედებების დასასრულებლად.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "კომპიუტერის გადატვირთვამ, შეიძლება, პრობლემები მოაგვაროს.",
+    "installationTypeTPMInfoResolute": "დისკი ჩატვირთვისას ავტომატურად განიბლოკება.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "მე მესმის TPM-ის გასუფთავების შედეგები",
+    "tpmActionErrorDescription": "სცადეთ სხვა გადაწყვეტილება, ან დაუკავშირდით IT მხარდაჭერის გუნდს.",
+    "tpmActionErrorKindGenericTpm": "ამ კომპიუტერის TPM-ს პრობლემები აქვს.",
+    "tpmActionErrorKindGenericFirmware": "ამ კომპიუტერის მიკროკოდში აღმოჩენილია პრობლემები.",
+    "tpmActionFixActionShutdownDescription": "გამორთეთ კომპიუტერი წინა ქმედებების დასასრულებლად.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "დარწმუნდით, რომ უსაფრთხო ჩატვირთვის რეჟიმი დაყენებულია მნიშვნელობაზე \"deployed\".",
+    "tpmActionErrorSupportNoActionLabel": "დაუკავშირდით IT მხარდაჭერის გუნდს, ან აირჩიეთ სხვა დაშიფვრის მეთოდი.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "ამისი გაკეთება კომპიუტერის მიკროკოდის პარამეტრებში შეგიძლიათ.",
+    "tpmActionFixActionCaveatRetry": "შემდეგ საჭირო იქნება, დაყენება თავიდან დაიწყოთ.",
+    "tpmActionFixActionProceedDescription": "ამ პრობლემის იგნორმა, შეიძლება, ნაკლებად დაცულ სისტემამდე მიგიყვანოთ.",
+    "tpmActionFixActionCaveatConfirm": "შეიძლება, ამ ქმედების დადასტურება გადატვირთვისას მოგთხოვოთ.",
+    "manualPartitioningWarningBody": "სცადეთ რამე სხვა. ასევე შეგიძლიათ, <a href=\"\">გამოაგზავნოთ ანგარიში შეცდომის შესახებ</a>.",
+    "autoinstallErrorMessage": "ბრძანება ავტოდაყენების ფაილიდან დაყენებისას ავარიულად დასრულდა.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "ეს კომპიუტერი იყენებს მორგებულ დაშვებულ სიას გაშვებისას პროგრამების გადასამოწმებლად.",
+    "autoinstallErrorInstructions": "დაგჭირდებათ, დაყენება თავიდან დაიწყოთ. შეამოწმეთ ავტოდაყენების ფაილი, აირჩიეთ სხვა დაყენების ტიპი, ან დაუკავშირდით თქვენს IT მხარდაჭერის გუნდს.",
+    "installationTypeLVMEncryptionInfoResolute": "საკვანძო ფრაზის შეყვანა კომპიუტერის ყოველი ჩართვისას დაგჭირდებათ. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionErrorSupportLabel": "სცადეთ ქვემოთ ჩამოთვლილი გადაწყვეტილებები, დაუკავშირდით IT მხარდაჭერის გუნდს, ან აირჩიეთ სხვა დაშიფვრის მეთოდი.",
+    "tpmActionErrorSupportSingleLabel": "სცადეთ ქვემოთ აღწერილი გადაწყვეტა, დაუკავშირდით IT მხარდაჭერის გუნდს, ან აირჩიეთ სხვა მხარდაჭერის მეთოდი.",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "თუ მიკროკოდის პარამეტრები ავტომატურად არ იტვირთება, გადატვირთეთ და დააჭირეთ მორგების ღილაკს ბევრჯერ კომპიუტერის ჩართვისას (ჩვეულებრივ, ესაა ღილაკები F2, F10, ან Delete).",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "შეიძლება, ამისი გაკეთება თქვენი კომპიუტერის მიკროკოდის პარამეტრებში მოგიწიოთ. მეტი დეტალებისთვის გადაამოწმეთ CPU-ის მომწოდებლის დოკუმენტაცია.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "ამ ფუნქციას შეიძლება, ერქვას \"Virtualization Technology\", \"VT-d\", ან \"AMD-Vi\".",
+    "tpmActionFixActionClearTpmWarningBody": "დაკარგავთ წვდომას მონაცემებთან დაშიფრულ დისკებზე, რომლებისთვისაც აღდგენის გასაღებები არ გაქვთ. ის ასევე გააფუჭებს სხვა ისეთ TPM-ზე დამოკიდებულ ფუნქციებს, როგორიცაა ავთენტიკაცია და სერტიფიკატები."
 }
