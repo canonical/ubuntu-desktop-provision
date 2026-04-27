@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsEu extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Izena luzeegia da.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Ordenagailuaren izena';
 
   @override

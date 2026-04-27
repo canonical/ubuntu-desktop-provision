@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'ئىسىم بەك ئۇزۇن.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'كومپيۇتېرىڭىزنىڭ ئىسمى';
 
   @override

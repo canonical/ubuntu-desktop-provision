@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'نام بیش از حد طولانی است.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'نام رایانه‌تان';
 
   @override

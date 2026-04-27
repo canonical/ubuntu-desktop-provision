@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Meno je príliš dlhé.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Názov pre váš počítač';
 
   @override

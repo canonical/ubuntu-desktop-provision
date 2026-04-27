@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsFi extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Nimi on liian pitkä.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Tietokoneen nimi';
 
   @override

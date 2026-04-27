@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Navnet er for langt.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Datamaskinens navn';
 
   @override

@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
 
   @override

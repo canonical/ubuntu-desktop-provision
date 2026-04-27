@@ -162,6 +162,9 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => '名字过长。';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => '您的电脑主机名';
 
   @override
