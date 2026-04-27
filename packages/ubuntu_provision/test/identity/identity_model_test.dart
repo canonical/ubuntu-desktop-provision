@@ -389,6 +389,14 @@ void main() {
       'passwd',
       isFalse,
     );
+    testValid(
+      'real:name:with:colon',
+      'host',
+      'user',
+      'passwd',
+      'passwd',
+      isFalse,
+    );
   });
 
   test('server validation', () async {
