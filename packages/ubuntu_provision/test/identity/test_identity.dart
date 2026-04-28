@@ -40,6 +40,7 @@ IdentityModel buildIdentityModel({
   when(model.autoLogin).thenReturn(autoLogin ?? false);
   when(model.showPassword).thenReturn(showPassword ?? false);
   when(model.usernameOk).thenReturn(true);
+  when(model.realNameOk).thenReturn(true);
   when(model.usernameValidation).thenReturn(UsernameValidation.OK);
   when(model.isConnected).thenReturn(isConnected ?? false);
   when(model.hasActiveDirectorySupport)

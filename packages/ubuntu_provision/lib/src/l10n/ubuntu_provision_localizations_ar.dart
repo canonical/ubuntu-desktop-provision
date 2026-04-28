@@ -162,6 +162,9 @@ class UbuntuProvisionLocalizationsAr extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'هذا الاسم طويل جدًا.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'اسم الحاسوب';
 
   @override

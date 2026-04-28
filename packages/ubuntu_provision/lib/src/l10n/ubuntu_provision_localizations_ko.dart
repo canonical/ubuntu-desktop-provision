@@ -162,6 +162,9 @@ class UbuntuProvisionLocalizationsKo extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => '너무 긴 이름입니다.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => '컴퓨터 이름';
 
   @override

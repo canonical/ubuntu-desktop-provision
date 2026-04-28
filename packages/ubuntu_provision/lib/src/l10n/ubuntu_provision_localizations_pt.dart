@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Esse nome é demasiado comprido.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Nome do seu computador';
 
   @override

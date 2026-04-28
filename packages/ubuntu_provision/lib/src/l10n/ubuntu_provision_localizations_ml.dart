@@ -166,6 +166,9 @@ class UbuntuProvisionLocalizationsMl extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'നിങ്ങളുടെ കമ്പ്യൂട്ടറിന്റെ പേര്';
 
   @override

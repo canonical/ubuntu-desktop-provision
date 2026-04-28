@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsCy extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Enw eich cyfrifiadur';
 
   @override
