@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'ຊື່ນັ້ນຍາວເກີນໄປ.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'ຊື່ຄອມພິວເຕີຂອງທ່ານ';
 
   @override

@@ -16,6 +16,8 @@ class RealNameFormField extends ConsumerWidget {
     final realName =
         ref.watch(identityModelProvider.select((model) => model.realName));
 
+    final model = ref.read(identityModelProvider);
+
     return ValidatedFormField(
       autofocus: true,
       labelText: lang.identityRealNameLabel,
@@ -30,6 +32,10 @@ class RealNameFormField extends ConsumerWidget {
         MaxLengthValidator(
           kMaxRealNameLength,
           errorText: lang.identityRealNameTooLong,
+        ),
+        CallbackValidator(
+          (_) => model.realNameOk,
+          errorText: lang.identityInvalidRealName,
         ),
       ]),
       onChanged: (value) async {

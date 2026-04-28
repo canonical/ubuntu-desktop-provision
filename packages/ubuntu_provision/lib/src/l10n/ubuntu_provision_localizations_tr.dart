@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsTr extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Bu isim çok uzun.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Bilgisayar adı';
 
   @override

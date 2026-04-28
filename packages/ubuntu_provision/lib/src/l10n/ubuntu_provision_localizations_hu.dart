@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Ez a név túl hosszú.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'A számítógépének neve';
 
   @override

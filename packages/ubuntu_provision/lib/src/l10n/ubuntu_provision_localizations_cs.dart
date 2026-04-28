@@ -165,6 +165,9 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Jméno je příliš dlouhé.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Název pro váš počítač';
 
   @override

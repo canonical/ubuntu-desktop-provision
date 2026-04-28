@@ -531,6 +531,12 @@ abstract class UbuntuProvisionLocalizations {
   /// **'That name is too long.'**
   String get identityRealNameTooLong;
 
+  /// No description provided for @identityInvalidRealName.
+  ///
+  /// In en, this message translates to:
+  /// **'The name is invalid'**
+  String get identityInvalidRealName;
+
   /// No description provided for @identityHostnameLabel.
   ///
   /// In en, this message translates to:

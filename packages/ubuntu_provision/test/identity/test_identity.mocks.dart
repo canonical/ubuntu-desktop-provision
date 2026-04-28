@@ -122,6 +122,12 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
       ) as bool);
 
   @override
+  bool get realNameOk => (super.noSuchMethod(
+        Invocation.getter(#realNameOk),
+        returnValue: false,
+      ) as bool);
+
+  @override
   bool get showPassword => (super.noSuchMethod(
         Invocation.getter(#showPassword),
         returnValue: false,

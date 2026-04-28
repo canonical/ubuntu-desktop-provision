@@ -167,6 +167,9 @@ class UbuntuProvisionLocalizationsEl extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Αυτό το όνομα είναι πολύ μεγάλο.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Το όνομα του υπολογιστή σας';
 
   @override

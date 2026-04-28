@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsDa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Navnet er for langt.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Din computers navn';
 
   @override

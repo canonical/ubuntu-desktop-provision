@@ -166,6 +166,9 @@ class UbuntuProvisionLocalizationsKn extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'ಆ ಹೆಸರು ತುಂಬಾ ಉದ್ದವಾಗಿದೆ.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಹೆಸರು';
 
   @override

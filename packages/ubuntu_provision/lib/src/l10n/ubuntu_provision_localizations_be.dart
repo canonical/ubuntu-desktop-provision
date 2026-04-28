@@ -166,6 +166,9 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Гэта імя занадта доўгае.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Імя вашага камп\'ютара';
 
   @override

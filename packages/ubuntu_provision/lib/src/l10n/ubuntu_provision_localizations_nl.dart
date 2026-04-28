@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Die naam is te lang.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'De naam van de computer';
 
   @override

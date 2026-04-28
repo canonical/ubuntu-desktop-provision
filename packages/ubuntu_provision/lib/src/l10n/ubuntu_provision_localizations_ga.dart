@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Tá an t-ainm sin rófhada.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Ainm do ríomhaire';
 
   @override
