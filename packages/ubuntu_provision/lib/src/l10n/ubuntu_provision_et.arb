@@ -114,5 +114,6 @@
     "closeIconSemanticLabel": "Sulge",
     "expandIconSemanticLabel": "Laienda vaadet",
     "collapseIconSemanticLabel": "Ahenda vaadet",
-    "errorPageTechnicalDetails": "Tehnilised üksikasjad"
+    "errorPageTechnicalDetails": "Tehnilised üksikasjad",
+    "identityInvalidRealName": "See nimi on vigane"
 }
