@@ -114,5 +114,6 @@
     "successIconSemanticLabel": "Erfolg",
     "expandIconSemanticLabel": "Aufklappen",
     "collapseIconSemanticLabel": "Einklappen",
-    "errorPageTechnicalDetails": "Technische Details"
+    "errorPageTechnicalDetails": "Technische Details",
+    "identityInvalidRealName": "Der Name ist ungültig"
 }
