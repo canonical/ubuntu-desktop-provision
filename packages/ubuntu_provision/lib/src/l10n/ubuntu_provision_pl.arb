@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimalizuj",
     "expandIconSemanticLabel": "Rozwiń",
     "collapseIconSemanticLabel": "Zwiń",
-    "errorPageTechnicalDetails": "Szczegóły techniczne"
+    "errorPageTechnicalDetails": "Szczegóły techniczne",
+    "identityInvalidRealName": "Imię i nazwisko jest nieprawidłowe"
 }
