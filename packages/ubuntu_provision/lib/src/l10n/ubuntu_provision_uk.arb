@@ -114,5 +114,6 @@
     "closeIconSemanticLabel": "Закрити",
     "expandIconSemanticLabel": "Розгорнути",
     "collapseIconSemanticLabel": "Згорнути",
-    "errorPageTechnicalDetails": "Технічні деталі"
+    "errorPageTechnicalDetails": "Технічні деталі",
+    "identityInvalidRealName": "Ім'я недійсне"
 }
