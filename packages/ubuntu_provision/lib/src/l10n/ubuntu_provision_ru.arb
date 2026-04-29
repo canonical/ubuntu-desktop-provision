@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Свернуть",
     "expandIconSemanticLabel": "Расширить",
     "collapseIconSemanticLabel": "Свернуть",
-    "errorPageTechnicalDetails": "Технические сведения"
+    "errorPageTechnicalDetails": "Технические сведения",
+    "identityInvalidRealName": "Имя введено неверно"
 }
