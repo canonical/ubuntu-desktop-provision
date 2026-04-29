@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimera",
     "expandIconSemanticLabel": "Expandera",
     "collapseIconSemanticLabel": "Fäll ihop",
-    "errorPageTechnicalDetails": "Tekniska detaljer"
+    "errorPageTechnicalDetails": "Tekniska detaljer",
+    "identityInvalidRealName": "Namnet är ogiltigt"
 }
