@@ -149,5 +149,6 @@
     "minimizeIconSemanticLabel": "Txikitu",
     "expandIconSemanticLabel": "Zabaldu",
     "collapseIconSemanticLabel": "Tolestu",
-    "errorPageTechnicalDetails": "Xehetasun teknikoak"
+    "errorPageTechnicalDetails": "Xehetasun teknikoak",
+    "identityInvalidRealName": "Izena baliogabea da"
 }
