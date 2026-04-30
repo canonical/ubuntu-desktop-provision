@@ -114,5 +114,6 @@
     "closeIconSemanticLabel": "Fermi",
     "expandIconSemanticLabel": "Malkaŝi",
     "collapseIconSemanticLabel": "Kaŝi",
-    "errorPageTechnicalDetails": "Teĥnikaj detaloj"
+    "errorPageTechnicalDetails": "Teĥnikaj detaloj",
+    "identityInvalidRealName": "La nomo ne validas"
 }
