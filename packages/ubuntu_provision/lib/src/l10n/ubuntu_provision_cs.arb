@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimalizovat",
     "expandIconSemanticLabel": "Rozbalit",
     "collapseIconSemanticLabel": "Sbalit",
-    "errorPageTechnicalDetails": "Technické detaily"
+    "errorPageTechnicalDetails": "Technické detaily",
+    "identityInvalidRealName": "Jméno je neplatné"
 }
