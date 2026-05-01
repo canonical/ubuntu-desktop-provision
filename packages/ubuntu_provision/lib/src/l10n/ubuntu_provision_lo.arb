@@ -149,5 +149,6 @@
     "eulaAcceptTerms": "ຂ້າພະເຈົ້າໄດ້ອ່ານ ແລະ ຍອມຮັບເງື່ອນໄຂເຫຼົ່ານີ້",
     "expandIconSemanticLabel": "ຂະຫຍາຍອອກ",
     "collapseIconSemanticLabel": "ຫຍໍ້ເຂົ້າ",
-    "errorPageTechnicalDetails": "ລາຍລະອຽດດ້ານເຕັກນິກ"
+    "errorPageTechnicalDetails": "ລາຍລະອຽດດ້ານເຕັກນິກ",
+    "identityInvalidRealName": "ຊື່ບໍ່ຖືກຕ້ອງ"
 }
