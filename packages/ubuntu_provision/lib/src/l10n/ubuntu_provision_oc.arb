@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimizar",
     "collapseIconSemanticLabel": "Replegar",
     "expandIconSemanticLabel": "Desplegar",
-    "errorPageTechnicalDetails": "Detalhs tecnics"
+    "errorPageTechnicalDetails": "Detalhs tecnics",
+    "identityInvalidRealName": "Lo nom es invalid"
 }
