@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Íoslaghdaigh",
     "expandIconSemanticLabel": "Leathnaigh",
     "collapseIconSemanticLabel": "Laghdaigh",
-    "errorPageTechnicalDetails": "Sonraí teicniúla"
+    "errorPageTechnicalDetails": "Sonraí teicniúla",
+    "identityInvalidRealName": "Tá an t-ainm neamhbhailí"
 }
