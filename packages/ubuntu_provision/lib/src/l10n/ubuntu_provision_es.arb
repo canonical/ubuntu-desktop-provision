@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimizar",
     "expandIconSemanticLabel": "Expandir",
     "collapseIconSemanticLabel": "Colapsar",
-    "errorPageTechnicalDetails": "Detalles técnicos"
+    "errorPageTechnicalDetails": "Detalles técnicos",
+    "identityInvalidRealName": "El nombre no es válido"
 }
