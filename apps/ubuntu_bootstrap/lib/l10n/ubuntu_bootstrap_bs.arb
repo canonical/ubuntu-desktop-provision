@@ -1,3 +1,29 @@
 {
-  "@@locale": "bs"
+    "@@locale": "bs",
+    "appTitle": "Instalacijski program za Ubuntu računar",
+    "windowTitle": "Instaliraj {RELEASE}",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "Automatizirana instalacija",
+    "autoinstallDirectHeader": "Uvezi datoteku za automatsku instalaciju",
+    "autoinstallDirectUrlLabel": "Možete unijeti URL datoteke za automatsku instalaciju:",
+    "autoinstallDirectFileLabel": "Ili odaberite lokalnu datoteku:",
+    "autoinstallDirectFileButtonLabel": "Odaberite datoteku...",
+    "autoinstallDirectFileClearButtonLabel": "Obriši datoteku",
+    "autoinstallDirectFilePickerTitle": "Odaberite datoteku",
+    "autoinstallDirectFilePickerFilterLabel": "YAML datoteke",
+    "autoinstallDirectImportButtonLabel": "Uvoz",
+    "autoinstallDirectErrorNetworkTitle": "Datoteka za automatsku instalaciju nije dostupna",
+    "autoinstallDirectErrorNetworkBody": "Provjerite je li URL ispravan, testirajte internetsku vezu ili pokušajte kasnije.",
+    "autoinstallDirectErrorInvalidUrlTitle": "Nevažeći URL",
+    "autoinstallDirectErrorInvalidUrlBody": "Provjerite je li URL ispravan ili odaberite lokalnu datoteku.",
+    "autoinstallDirectErrorInvalidContentTitle": "Nevažeća datoteka za automatsku instalaciju",
+    "autoinstallDirectErrorInvalidContentBody": "Provjerite datoteku ili dostavite drugu.",
+    "autoinstallDirectErrorFileSystemBody": "Provjerite svoja dopuštenja ili dostavite drugu datoteku.",
+    "autoinstallDirectErrorUnkownTitle": "Nepoznata greška"
 }
