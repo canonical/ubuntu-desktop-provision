@@ -1,3 +1,8 @@
 {
-    "accessibilityPageTitle": "Pristupačnost"
+    "accessibilityPageTitle": "Pristupačnost",
+    "restart": "Ponovo pokreni",
+    "close": "Zatvori",
+    "closeIconSemanticLabel": "Zatvori",
+    "maximizeIconSemanticLabel": "Uvećaj",
+    "minimizeIconSemanticLabel": "Umanji"
 }
