@@ -44,7 +44,6 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
           enabled: directModel.localPath == null,
           initialValue: directModel.url,
           onChanged: notifier.setUrl,
-          maxLines: null,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: (_) => directModel.error != null ? '' : null,
         ),
