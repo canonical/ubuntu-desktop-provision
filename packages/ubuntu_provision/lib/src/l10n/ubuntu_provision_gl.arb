@@ -31,7 +31,7 @@
     "accessibilitySlowKeysLabel": "Chaves lentas",
     "accessibilityMouseKeysLabel": "Chaves de rato",
     "accessibilityDesktopZoomLabel": "Ampliación do escritorio",
-    "errorPageTitle": "Algo foi mal",
+    "errorPageTitle": "Algo fallou",
     "errorPageUnexpected": "Sentímolo, pero non estamos seguros de cal é o erro. Podes tentar reiniciar o ordenador e comezar o proceso de instalación de novo. Tamén podes <a>informar do problema</a>.",
     "errorPageUbuntuBug": "Para enviar un informe de bechos automatizado que inclúa información de depuración relevante, execute <pre>sudo ubuntu-bug {SNAP}</pre> nun terminal ou dende a consola de comandos (Alt+F2).",
     "@errorPageUbuntuBug": {
@@ -149,5 +149,6 @@
     "minimizeIconSemanticLabel": "Minimizar",
     "expandIconSemanticLabel": "Despregar",
     "collapseIconSemanticLabel": "Contraer",
-    "activeDirectoryTestConnection": "Probar a conectividade do dominio"
+    "activeDirectoryTestConnection": "Probar a conectividade do dominio",
+    "identityInvalidRealName": "O nome non é válido"
 }
