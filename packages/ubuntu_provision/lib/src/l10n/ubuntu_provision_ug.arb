@@ -149,5 +149,6 @@
         }
     },
     "activeDirectoryErrorMessage": "كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ.",
-    "errorPageTechnicalDetails": "تېخنىكىلىق تەپسىلات"
+    "errorPageTechnicalDetails": "تېخنىكىلىق تەپسىلات",
+    "identityInvalidRealName": "ئات ئىناۋەتسىز"
 }
