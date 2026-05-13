@@ -48,7 +48,7 @@
             }
         }
     },
-    "accessibilityPageBody": "Personalitzeu {DISTRO} a les vostres necessitats abans de la posada en marxa. Podeu fer canvis més tard a la Configuració del Sistema.",
+    "accessibilityPageBody": "Personalitzeu {DISTRO} a les vostres necessitats abans de la posada en marxa. Podeu fer canvis més tard a l'aplicació Paràmetres.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -71,7 +71,7 @@
     "accessibilityMouseKeysLabel": "Tecles del ratolí",
     "accessibilityDesktopZoomLabel": "Ampliació de l'escriptori",
     "errorPageTitle": "S'ha produït un error",
-    "errorPageUnexpected": "No estem segurs de quin és l'error. Podeu provar de reiniciar l'ordinador i tornar a iniciar el procés d'instal·lació. També podeu <a>informar del problema</a>.",
+    "errorPageUnexpected": "Ho sentim, no tenim seguretat de quin és l'error. Podeu provar de reiniciar l'ordinador i tornar a iniciar el procés d'instal·lació. També podeu <a>informar del problema</a>.",
     "errorPageUbuntuBug": "Per enviar un informe d'error automatitzat que inclogui informació de depuració rellevant, executeu <pre>sudo ubuntu-bug {SNAP}</pre> en un terminal, o des de la línia d'ordres (Alt+F2).",
     "@errorPageUbuntuBug": {
         "placeholders": {
@@ -146,5 +146,9 @@
     "successIconSemanticLabel": "Èxit",
     "closeIconSemanticLabel": "Tanca",
     "maximizeIconSemanticLabel": "Maximitza",
-    "minimizeIconSemanticLabel": "Minimitza"
+    "minimizeIconSemanticLabel": "Minimitza",
+    "errorPageTechnicalDetails": "Detalls tècnics",
+    "identityInvalidRealName": "El nom no és vàlid",
+    "expandIconSemanticLabel": "Expandeix",
+    "collapseIconSemanticLabel": "Col·lapsa"
 }
