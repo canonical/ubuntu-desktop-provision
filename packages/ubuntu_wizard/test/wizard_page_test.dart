@@ -498,10 +498,22 @@ void main() {
 
     // The page indicator is wrapped in ExcludeSemantics so individual dots
     // are hidden from assistive technology.
-    expect(find.byType(ExcludeSemantics), findsOneWidget);
+    final semanticsWidget = find.byKey(const ValueKey('wizard-step-indicator'));
+    expect(
+      find.descendant(
+        of: semanticsWidget,
+        matching: find.byType(ExcludeSemantics),
+      ),
+      findsOneWidget,
+    );
 
-    // The immediate parent of ExcludeSemantics must be Semantics, not Focus.
-    final excludeElement = tester.element(find.byType(ExcludeSemantics));
+    // The immediate parent of ExcludeSemantics must be Semantics.
+    final excludeElement = tester.element(
+      find.descendant(
+        of: semanticsWidget,
+        matching: find.byType(ExcludeSemantics),
+      ),
+    );
     Widget? immediateParentWidget;
     excludeElement.visitAncestorElements((element) {
       immediateParentWidget = element.widget;
@@ -545,11 +557,14 @@ void main() {
 
     // No semantics label should be present.
     expect(
-      find.bySemanticsLabel(RegExp(r'Should not appear')),
+      find.bySemanticsLabel(RegExp('Should not appear')),
       findsNothing,
     );
     // ExcludeSemantics is not added when there is no label.
-    expect(find.byType(ExcludeSemantics), findsNothing);
+    expect(
+      find.byKey(const ValueKey('wizard-step-indicator')),
+      findsNothing,
+    );
 
     handle.dispose();
   });
@@ -584,7 +599,7 @@ void main() {
 
     expect(find.bySemanticsLabel('Override 3/5'), findsOneWidget);
     expect(
-      find.bySemanticsLabel(RegExp(r'Inherited')),
+      find.bySemanticsLabel(RegExp('Inherited')),
       findsNothing,
     );
 
