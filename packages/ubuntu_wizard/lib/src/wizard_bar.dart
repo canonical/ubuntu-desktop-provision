@@ -59,15 +59,13 @@ class _WizardBarState extends State<WizardBar> {
       length: totalSteps,
       itemSizeBuilder: (index, selectedIndex, length) =>
           Size.square(index == selectedIndex ? 12.0 : 8.0),
-      layoutDelegate:
-          YaruPageIndicatorSteppedDelegate(baseItemSpacing: 8),
+      layoutDelegate: YaruPageIndicatorSteppedDelegate(baseItemSpacing: 8),
     );
 
     // Steps are 0-indexed internally; convert to 1-based for screen readers.
-    final label =
-        widget.stepSemanticsLabel?.call(currentStep + 1, totalSteps) ??
-            WizardBar.defaultStepSemanticsLabel
-                ?.call(currentStep + 1, totalSteps);
+    final label = widget.stepSemanticsLabel
+            ?.call(currentStep + 1, totalSteps) ??
+        WizardBar.defaultStepSemanticsLabel?.call(currentStep + 1, totalSteps);
     if (label == null) return indicator;
 
     return Focus(

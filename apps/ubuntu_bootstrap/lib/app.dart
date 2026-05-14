@@ -290,7 +290,7 @@ class _InstallerApp extends ConsumerWidget {
             // so screen readers announce the current step.
             final l10n = UbuntuBootstrapLocalizations.of(context);
             WizardBar.defaultStepSemanticsLabel = l10n.stepIndicatorLabel;
-            
+
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const LoadingPage();
             } else if (snapshot.hasError) {
