@@ -22,9 +22,9 @@ const kWizardBarSpacing = 8.0;
 /// ```
 class WizardBarTheme extends InheritedWidget {
   const WizardBarTheme({
-    super.key,
     required this.stepSemanticsLabel,
     required super.child,
+    super.key,
   });
 
   /// Builder that returns a semantic label for the step indicator.
@@ -99,6 +99,7 @@ class _WizardBarState extends State<WizardBar> {
     if (label == null) return indicator;
 
     return Semantics(
+      key: const ValueKey('wizard-step-indicator'),
       label: label,
       child: ExcludeSemantics(child: indicator),
     );
