@@ -1681,4 +1681,9 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'باشقىنى سىناڭ. يەنە <a href=\"\">خاتالىق دوكلاتى يوللا</a>يالايسىز.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

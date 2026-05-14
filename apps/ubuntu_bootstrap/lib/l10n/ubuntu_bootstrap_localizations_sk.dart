@@ -1675,4 +1675,9 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Skúste niečo iné. Môžete tiež <a href=\"\">odoslať chybové hlásenie</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }
