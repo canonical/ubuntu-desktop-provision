@@ -7,6 +7,41 @@ import 'package:yaru/yaru.dart';
 /// The spacing between Continue and Back buttons.
 const kWizardBarSpacing = 8.0;
 
+/// Scopes a default step-semantics-label builder to all descendant
+/// [WizardBar] widgets that do not provide their own
+/// [WizardBar.stepSemanticsLabel].
+///
+/// Place this above the navigator (or any common ancestor of all [WizardBar]
+/// widgets) to apply a localized label without modifying each call site:
+/// ```dart
+/// WizardBarTheme(
+///   stepSemanticsLabel: (step, total) =>
+///       l10n.stepIndicatorLabel(step, total),
+///   child: ...,
+/// )
+/// ```
+class WizardBarTheme extends InheritedWidget {
+  const WizardBarTheme({
+    super.key,
+    required this.stepSemanticsLabel,
+    required super.child,
+  });
+
+  /// Builder that returns a semantic label for the step indicator.
+  ///
+  /// Applied to all descendant [WizardBar] widgets that have no per-widget
+  /// [WizardBar.stepSemanticsLabel] set.
+  final String? Function(int currentStep, int totalSteps) stepSemanticsLabel;
+
+  /// Returns the nearest [WizardBarTheme] ancestor, or `null` if none exists.
+  static WizardBarTheme? maybeOf(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<WizardBarTheme>();
+
+  @override
+  bool updateShouldNotify(WizardBarTheme oldWidget) =>
+      stepSemanticsLabel != oldWidget.stepSemanticsLabel;
+}
+
 class WizardBar extends StatefulWidget {
   const WizardBar({
     super.key,
@@ -27,24 +62,11 @@ class WizardBar extends StatefulWidget {
 
   /// Builder that returns a semantic label for the step indicator.
   ///
-  /// When provided, the step indicator is wrapped in a [Semantics] widget
-  /// with this label, communicating the current step to screen readers.
-  /// For example: `(currentStep, totalSteps) => 'Step $currentStep of $totalSteps'`.
+  /// When provided, this takes precedence over any [WizardBarTheme] ancestor.
+  /// Return `null` to explicitly suppress the semantics label for this bar.
   ///
-  /// If `null`, falls back to the static [defaultStepSemanticsLabel].
+  /// If omitted (`null`), falls back to the nearest [WizardBarTheme] ancestor.
   final String? Function(int currentStep, int totalSteps)? stepSemanticsLabel;
-
-  /// Global default builder for step semantic labels.
-  ///
-  /// Set this once at app startup with a localized string to apply
-  /// semantics to all [WizardBar] instances without modifying each call site:
-  /// ```dart
-  /// final l10n = UbuntuBootstrapLocalizations.of(context);
-  /// WizardBar.defaultStepSemanticsLabel = (step, total) =>
-  ///     l10n.stepIndicatorLabel(step, total);
-  /// ```
-  static String? Function(int currentStep, int totalSteps)?
-      defaultStepSemanticsLabel;
 
   @override
   State<WizardBar> createState() => _WizardBarState();
@@ -62,19 +84,23 @@ class _WizardBarState extends State<WizardBar> {
       layoutDelegate: YaruPageIndicatorSteppedDelegate(baseItemSpacing: 8),
     );
 
-    // Steps are 0-indexed internally; convert to 1-based for screen readers.
-    final label = widget.stepSemanticsLabel
-            ?.call(currentStep + 1, totalSteps) ??
-        WizardBar.defaultStepSemanticsLabel?.call(currentStep + 1, totalSteps);
+    // If a per-widget builder is provided, use it exclusively (even if it
+    // returns null to suppress the label). Otherwise fall back to the
+    // inherited WizardBarTheme.
+    final String? label;
+    if (widget.stepSemanticsLabel != null) {
+      // Steps are 0-indexed internally; convert to 1-based for screen readers.
+      label = widget.stepSemanticsLabel!.call(currentStep + 1, totalSteps);
+    } else {
+      label = WizardBarTheme.maybeOf(context)
+          ?.stepSemanticsLabel
+          .call(currentStep + 1, totalSteps);
+    }
     if (label == null) return indicator;
 
-    return Focus(
-      canRequestFocus: true,
-      descendantsAreFocusable: false,
-      child: Semantics(
-        label: label,
-        child: ExcludeSemantics(child: indicator),
-      ),
+    return Semantics(
+      label: label,
+      child: ExcludeSemantics(child: indicator),
     );
   }
 
