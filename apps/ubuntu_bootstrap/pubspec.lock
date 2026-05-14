@@ -1261,10 +1261,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_widgets
-      sha256: "89bc60189fd2902f9e3829be1d5a378e121771fd1f16b76927f2c9e4f4f02e5a"
+      sha256: "7eaa3bcfde7197c8ae18e4546339316fa95d445e3fa8e1fdb2d3c2ea569a5d38"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.0"
+    version: "0.8.1"
   ubuntu_wizard:
     dependency: "direct main"
     description:
