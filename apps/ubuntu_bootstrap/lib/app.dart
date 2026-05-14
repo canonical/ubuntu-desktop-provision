@@ -286,6 +286,11 @@ class _InstallerApp extends ConsumerWidget {
         child: FutureBuilder<void>(
           future: init,
           builder: (context, snapshot) {
+            // Provide a localized semantic label for the step indicator
+            // so screen readers announce the current step.
+            final l10n = UbuntuBootstrapLocalizations.of(context);
+            WizardBar.defaultStepSemanticsLabel = l10n.stepIndicatorLabel;
+            
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const LoadingPage();
             } else if (snapshot.hasError) {
