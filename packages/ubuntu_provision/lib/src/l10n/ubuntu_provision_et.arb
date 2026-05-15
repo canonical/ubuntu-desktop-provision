@@ -23,7 +23,7 @@
     "identityInvalidHostname": "See arvutinimi on vigane",
     "identityUsernameLabel": "Sinu kasutajanimi",
     "identityUsernameRequired": "Kasutajanime sisestamine on kohustuslik",
-    "identityInvalidUsername": "See kasutajanimi on vigane",
+    "identityInvalidUsername": "See kasutajanimi on vigane: esimene märk peab olema väiketäht ning võib sisaldada vaid väiketähti, numbreid, sidekriipse ja alakriipse.",
     "identityUsernameInUse": "Selline kasutajanimi on juba olemas.",
     "identityUsernameSystemReserved": "Selline kasutajanimi on reserveeritud vaid operatsioonisüsteemi jaoks.",
     "identityPasswordLabel": "Salasõna",
