@@ -242,7 +242,10 @@ class WifiListTile extends ConsumerWidget {
                 ? SizedBox(
                     width: iconSize,
                     height: iconSize,
-                    child: const YaruCircularProgressIndicator(strokeWidth: 3),
+                    child: Semantics(
+                      label: lang.networkWifiConnecting,
+                      child: const YaruCircularProgressIndicator(strokeWidth: 3),
+                    ),
                   )
                 : null,
             children: accessPoints,
