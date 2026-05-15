@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Názov počítača je neplatný",
     "identityUsernameLabel": "Vaše používateľské meno",
     "identityUsernameRequired": "Používateľské meno je povinné",
-    "identityInvalidUsername": "Používateľské meno je neplatné",
+    "identityInvalidUsername": "Používateľské meno je neplatné: musí začínať malým písmenom a môže obsahovať iba malé písmená, číslice, pomlčky a podčiarkovníky.",
     "identityUsernameInUse": "Toto používateľské meno už existuje.",
     "identityUsernameSystemReserved": "Tento názov je vyhradený pre systémové použitie.",
     "identityUsernameTooLong": "Toto meno je príliš dlhé.",
