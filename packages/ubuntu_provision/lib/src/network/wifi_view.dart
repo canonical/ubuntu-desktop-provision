@@ -251,7 +251,10 @@ class WifiListTile extends ConsumerWidget {
   }
 }
 
-String _wifiSemanticsLabel(AccessPoint model, UbuntuProvisionLocalizations lang) {
+String _wifiSemanticsLabel(
+  AccessPoint model,
+  UbuntuProvisionLocalizations lang,
+) {
   final strength = (model.strength ~/ 20 + 1).clamp(1, 5);
   final strengthLabel = switch (strength) {
     1 => lang.networkWifiSignalNone,
@@ -261,8 +264,9 @@ String _wifiSemanticsLabel(AccessPoint model, UbuntuProvisionLocalizations lang)
     5 => lang.networkWifiSignalExcellent,
     _ => '',
   };
-  final securityLabel =
-      model.isOpen ? lang.networkWifiOpenNetwork : lang.networkWifiSecureNetwork;
+  final securityLabel = model.isOpen
+      ? lang.networkWifiOpenNetwork
+      : lang.networkWifiSecureNetwork;
   return '$strengthLabel, $securityLabel';
 }
 
