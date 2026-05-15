@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/l10n.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_tile.dart';
@@ -178,16 +179,23 @@ class WifiListTile extends ConsumerWidget {
     AccessPoint accessPoint,
     WifiDevice device,
     double? iconSize,
+    UbuntuProvisionLocalizations lang,
   ) {
     if (device.isActiveAccessPoint(accessPoint)) {
       if (device.isConnecting) {
         return SizedBox(
           width: iconSize,
           height: iconSize,
-          child: const YaruCircularProgressIndicator(strokeWidth: 3),
+          child: Semantics(
+            label: lang.networkWifiConnecting,
+            child: const YaruCircularProgressIndicator(strokeWidth: 3),
+          ),
         );
       } else {
-        return const Icon(YaruIcons.ok_simple);
+        return Semantics(
+          label: lang.networkWifiConnected,
+          child: const Icon(YaruIcons.ok_simple),
+        );
       }
     } else {
       return const SizedBox.shrink();
@@ -197,6 +205,7 @@ class WifiListTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final device = ref.watch(wifiDeviceProvider(deviceIndex));
+    final lang = NetworkLocalizations.of(context);
     final textColor = Theme.of(context).textTheme.titleMedium!.color;
     final iconSize = IconTheme.of(context).size;
 
@@ -205,12 +214,15 @@ class WifiListTile extends ConsumerWidget {
         ThemedListTile(
           key: ValueKey(accessPoint.name),
           title: Text(accessPoint.name),
-          leading: _leadingIcon(accessPoint, device, iconSize),
+          leading: _leadingIcon(accessPoint, device, iconSize, lang),
           selected: selected && device.isSelectedAccessPoint(accessPoint),
-          trailing: SizedBox(
-            width: iconSize,
-            height: iconSize,
-            child: Icon(_wifiIcon(accessPoint)),
+          trailing: Semantics(
+            label: _wifiSemanticsLabel(accessPoint, lang),
+            child: SizedBox(
+              width: iconSize,
+              height: iconSize,
+              child: Icon(_wifiIcon(accessPoint)),
+            ),
           ),
           onTap: () {
             device.selectAccessPoint(accessPoint);
@@ -237,6 +249,21 @@ class WifiListTile extends ConsumerWidget {
           )
         : Column(children: accessPoints);
   }
+}
+
+String _wifiSemanticsLabel(AccessPoint model, UbuntuProvisionLocalizations lang) {
+  final strength = (model.strength ~/ 20 + 1).clamp(1, 5);
+  final strengthLabel = switch (strength) {
+    1 => lang.networkWifiSignalNone,
+    2 => lang.networkWifiSignalWeak,
+    3 => lang.networkWifiSignalOk,
+    4 => lang.networkWifiSignalGood,
+    5 => lang.networkWifiSignalExcellent,
+    _ => '',
+  };
+  final securityLabel =
+      model.isOpen ? lang.networkWifiOpenNetwork : lang.networkWifiSecureNetwork;
+  return '$strengthLabel, $securityLabel';
 }
 
 IconData _wifiIcon(AccessPoint model) {
