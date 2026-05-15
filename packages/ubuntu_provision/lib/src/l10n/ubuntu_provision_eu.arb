@@ -96,7 +96,7 @@
     "identityInvalidHostname": "Ordenagailuaren izena baliogabea da",
     "identityUsernameLabel": "Erabiltzaile-izena",
     "identityUsernameRequired": "Erabiltzaile-izena beharrezkoa da",
-    "identityInvalidUsername": "Erabiltzaile-izena baliogabea da",
+    "identityInvalidUsername": "Erabiltzaile-izena baliogabea da: minuskulaz hasi behar da, eta hizki xeheak, digituak, marratxoak eta azpimarrak soilik eduki ditzake.",
     "identityUsernameInUse": "Dagoeneko existitzen da erabiltzaile-izen hori.",
     "identityUsernameSystemReserved": "Izen hori sistemak erabiltzeko erreserbatuta dago.",
     "identityUsernameTooLong": "Izen hori luzeegia da.",
