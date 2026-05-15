@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Nazwa komputera jest nieprawidłowa",
     "identityUsernameLabel": "Wybierz nazwę użytkownika",
     "identityUsernameRequired": "Wymagane jest podanie nazwy użytkownika",
-    "identityInvalidUsername": "Nazwa użytkownika jest nieprawidłowa",
+    "identityInvalidUsername": "Nazwa użytkownika jest nieprawidłowa: musi zaczynać się małą literą i może zawierać wyłącznie małe litery, cyfry, łączniki oraz znaki podkreślenia.",
     "identityUsernameInUse": "Ta nazwa użytkownika już istnieje.",
     "identityUsernameSystemReserved": "Ta nazwa jest zarezerwowana na użytek systemu.",
     "identityUsernameTooLong": "Ta nazwa jest za długa.",
