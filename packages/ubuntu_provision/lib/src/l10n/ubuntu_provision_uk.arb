@@ -24,7 +24,7 @@
     "identityInvalidHostname": "Ім'я комп'ютера вказано невірно",
     "identityUsernameLabel": "Оберіть ім'я користувача",
     "identityUsernameRequired": "Потрібно ввести ім'я користувача",
-    "identityInvalidUsername": "Ім'я користувача вказано невірно",
+    "identityInvalidUsername": "Ім'я користувача недійсне: воно повинно починатися з малої літери та містити лише малі літери, цифри, дефіси та підкреслення.",
     "identityUsernameInUse": "Таке ім'я користувача вже існує.",
     "identityUsernameSystemReserved": "Це ім'я зарезервоване для використання в системі.",
     "identityUsernameTooLong": "Це ім'я занадто довге.",
