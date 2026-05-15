@@ -98,10 +98,14 @@ class _WizardBarState extends State<WizardBar> {
     }
     if (label == null) return indicator;
 
-    return Semantics(
-      key: const ValueKey('wizard-step-indicator'),
-      label: label,
-      child: ExcludeSemantics(child: indicator),
+    return Focus(
+      canRequestFocus: true,
+      descendantsAreFocusable: false,
+      child: Semantics(
+        key: const ValueKey('wizard-step-indicator'),
+        label: label,
+        child: ExcludeSemantics(child: indicator),
+      ),
     );
   }
 
