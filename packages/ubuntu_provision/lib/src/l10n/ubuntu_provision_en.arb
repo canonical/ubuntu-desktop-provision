@@ -84,7 +84,7 @@
   "identityInvalidHostname": "The computer name is invalid",
   "identityUsernameLabel": "Your username",
   "identityUsernameRequired": "A username is required",
-  "identityInvalidUsername": "The username is invalid",
+  "identityInvalidUsername": "The username is invalid: it must start with a lowercase letter and may only contain lowercase letters, digits, hyphens, and underscores.",
   "identityUsernameInUse": "That user name already exists.",
   "identityUsernameSystemReserved": "That name is reserved for system usage.",
   "identityUsernameTooLong": "That name is too long.",

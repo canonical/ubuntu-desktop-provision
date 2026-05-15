@@ -190,7 +190,8 @@ class UbuntuProvisionLocalizationsMr extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'A username is required';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername =>
+      'The username is invalid: it must start with a lowercase letter and may only contain lowercase letters, digits, hyphens, and underscores.';
 
   @override
   String get identityUsernameInUse => 'That user name already exists.';

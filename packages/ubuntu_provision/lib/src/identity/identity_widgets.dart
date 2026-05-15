@@ -115,6 +115,7 @@ class UsernameFormField extends ConsumerWidget {
     final model = ref.read(identityModelProvider);
 
     return ValidatedFormField(
+      errorMaxLines: 2,
       labelText: lang.identityUsernameLabel,
       successWidget: SuccessIcon(
         semanticLabel: lang.successIconSemanticLabel,

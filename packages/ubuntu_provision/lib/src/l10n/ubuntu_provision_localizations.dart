@@ -582,7 +582,7 @@ abstract class UbuntuProvisionLocalizations {
   /// No description provided for @identityInvalidUsername.
   ///
   /// In en, this message translates to:
-  /// **'The username is invalid'**
+  /// **'The username is invalid: it must start with a lowercase letter and may only contain lowercase letters, digits, hyphens, and underscores.'**
   String get identityInvalidUsername;
 
   /// No description provided for @identityUsernameInUse.
