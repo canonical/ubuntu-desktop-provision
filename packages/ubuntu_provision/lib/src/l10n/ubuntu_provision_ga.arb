@@ -53,7 +53,7 @@
     "identityInvalidHostname": "Tá ainm an ríomhaire neamhbhailí",
     "identityUsernameLabel": "D'ainm úsáideora",
     "identityUsernameRequired": "Tá ainm úsáideora de dhíth",
-    "identityInvalidUsername": "Tá an t-ainm úsáideora neamhbhailí",
+    "identityInvalidUsername": "Tá an t-ainm úsáideora neamhbhailí: ní mór dó tosú le litir bheag agus ní fhéadfaidh sé ach litreacha beaga, digití, fleiscíní agus fo-línte a bheith ann.",
     "identityUsernameInUse": "Tá an t-ainm úsáideora sin ann cheana féin.",
     "identityUsernameSystemReserved": "Tá an t-ainm sin curtha in áirithe d'úsáid an chórais.",
     "identityPasswordLabel": "Pasfhocal",
