@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Недопустимое имя компьютера",
     "identityUsernameLabel": "Выберите имя пользователя",
     "identityUsernameRequired": "Необходимо имя пользователя",
-    "identityInvalidUsername": "Недопустимое имя пользователя",
+    "identityInvalidUsername": "Недопустимое имя пользователя: оно должно начинаться со строчной и может содержать только строчные буквы, цифры, дефисы и подчёркивания.",
     "identityUsernameInUse": "Это имя пользователя уже существует.",
     "identityUsernameSystemReserved": "Это имя зарезервировано для использования системой.",
     "identityUsernameTooLong": "Это имя слишком длинное.",
