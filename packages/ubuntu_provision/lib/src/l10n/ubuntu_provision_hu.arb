@@ -29,7 +29,7 @@
     "identityInvalidHostname": "A számítógép neve érvénytelen",
     "identityUsernameLabel": "Az Ön felhasználóneve",
     "identityUsernameRequired": "A felhasználónév megadása kötelező",
-    "identityInvalidUsername": "A felhasználónév érvénytelen",
+    "identityInvalidUsername": "A felhasználónév érvénytelen: kisbetűvel kell kezdődnie, és csak kisbetűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat.",
     "identityUsernameInUse": "Ez a felhasználónév már létezik.",
     "identityUsernameSystemReserved": "Ez a név a rendszer számára van fenntartva.",
     "identityUsernameTooLong": "Ez a név túl hosszú.",
@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimalizálás",
     "expandIconSemanticLabel": "Kinyitás",
     "collapseIconSemanticLabel": "Összecsukás",
-    "errorPageTechnicalDetails": "Műszaki részletek"
+    "errorPageTechnicalDetails": "Műszaki részletek",
+    "identityInvalidRealName": "A név érvénytelen"
 }
