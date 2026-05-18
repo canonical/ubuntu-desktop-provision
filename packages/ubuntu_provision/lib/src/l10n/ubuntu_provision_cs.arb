@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Tento název pro počítač nelze použít",
     "identityUsernameLabel": "Vaše uživatelské jméno",
     "identityUsernameRequired": "Je třeba zadat uživatelské jméno",
-    "identityInvalidUsername": "Toto uživatelské jméno nelze použít",
+    "identityInvalidUsername": "Uživatelské jméno je neplatné: musí začínat malým písmenem a může obsahovat pouze malá písmena, číslice, pomlčky a podtržítka.",
     "identityUsernameInUse": "Toto uživatelské jméno už existuje.",
     "identityUsernameSystemReserved": "Toto jméno je vyhrazeno pro využití systémem.",
     "identityUsernameTooLong": "Toto jméno je příliš dlouhé.",
