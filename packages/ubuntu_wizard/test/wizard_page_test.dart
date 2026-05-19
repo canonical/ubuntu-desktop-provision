@@ -415,6 +415,197 @@ void main() {
     );
   });
 
+  testWidgets('step semantics label - per-widget builder (1-based)',
+      (tester) async {
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Wizard(
+          userData: const WizardData(totalSteps: 5),
+          routes: {
+            '/foo': WizardRoute(
+              builder: (_) => WizardPage(
+                bottomBar: WizardBar(
+                  stepSemanticsLabel: (step, total) => 'Step $step of $total',
+                ),
+              ),
+              userData: const WizardRouteData(step: 0),
+            ),
+          },
+          initialRoute: '/foo',
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // 0-indexed step 0 should be announced as step 1.
+    expect(find.bySemanticsLabel('Step 1 of 5'), findsOneWidget);
+
+    handle.dispose();
+  });
+
+  testWidgets('step semantics label - WizardBarTheme fallback', (tester) async {
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: WizardBarTheme(
+          stepSemanticsLabel: (step, total) => 'Inherited $step/$total',
+          child: Wizard(
+            userData: const WizardData(totalSteps: 3),
+            routes: {
+              '/bar': WizardRoute(
+                builder: (_) => const WizardPage(bottomBar: WizardBar()),
+                userData: const WizardRouteData(step: 1),
+              ),
+            },
+            initialRoute: '/bar',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Step 1 (0-indexed) should be announced as step 2.
+    expect(find.bySemanticsLabel('Inherited 2/3'), findsOneWidget);
+
+    handle.dispose();
+  });
+
+  testWidgets('step semantics label - child dot semantics excluded',
+      (tester) async {
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: WizardBarTheme(
+          stepSemanticsLabel: (step, total) => 'Step $step of $total',
+          child: Wizard(
+            userData: const WizardData(totalSteps: 3),
+            routes: {
+              '/baz': WizardRoute(
+                builder: (_) => const WizardPage(bottomBar: WizardBar()),
+                userData: const WizardRouteData(step: 0),
+              ),
+            },
+            initialRoute: '/baz',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // The page indicator is wrapped in ExcludeSemantics so individual dots
+    // are hidden from assistive technology.
+    final semanticsWidget = find.byKey(const ValueKey('wizard-step-indicator'));
+    expect(
+      find.descendant(
+        of: semanticsWidget,
+        matching: find.byType(ExcludeSemantics),
+      ),
+      findsOneWidget,
+    );
+
+    // The immediate parent of ExcludeSemantics must be Semantics.
+    final excludeElement = tester.element(
+      find.descendant(
+        of: semanticsWidget,
+        matching: find.byType(ExcludeSemantics),
+      ),
+    );
+    Widget? immediateParentWidget;
+    excludeElement.visitAncestorElements((element) {
+      immediateParentWidget = element.widget;
+      return false;
+    });
+    expect(immediateParentWidget, isA<Semantics>());
+
+    // The label is accessible via the semantics tree.
+    expect(find.bySemanticsLabel('Step 1 of 3'), findsOneWidget);
+
+    handle.dispose();
+  });
+
+  testWidgets('step semantics label - per-widget null suppresses theme',
+      (tester) async {
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: WizardBarTheme(
+          stepSemanticsLabel: (step, total) => 'Should not appear',
+          child: Wizard(
+            userData: const WizardData(totalSteps: 4),
+            routes: {
+              '/qux': WizardRoute(
+                builder: (_) => WizardPage(
+                  bottomBar: WizardBar(
+                    // Returning null opts this bar out of any semantics label.
+                    stepSemanticsLabel: (step, total) => null,
+                  ),
+                ),
+                userData: const WizardRouteData(step: 0),
+              ),
+            },
+            initialRoute: '/qux',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // No semantics label should be present.
+    expect(
+      find.bySemanticsLabel(RegExp('Should not appear')),
+      findsNothing,
+    );
+    // ExcludeSemantics is not added when there is no label.
+    expect(
+      find.byKey(const ValueKey('wizard-step-indicator')),
+      findsNothing,
+    );
+
+    handle.dispose();
+  });
+
+  testWidgets('step semantics label - per-widget overrides WizardBarTheme',
+      (tester) async {
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: WizardBarTheme(
+          stepSemanticsLabel: (step, total) => 'Inherited $step/$total',
+          child: Wizard(
+            userData: const WizardData(totalSteps: 5),
+            routes: {
+              '/quux': WizardRoute(
+                builder: (_) => WizardPage(
+                  bottomBar: WizardBar(
+                    stepSemanticsLabel: (step, total) =>
+                        'Override $step/$total',
+                  ),
+                ),
+                userData: const WizardRouteData(step: 2),
+              ),
+            },
+            initialRoute: '/quux',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.bySemanticsLabel('Override 3/5'), findsOneWidget);
+    expect(
+      find.bySemanticsLabel(RegExp('Inherited')),
+      findsNothing,
+    );
+
+    handle.dispose();
+  });
+
   testWidgets('loading indicator', (tester) async {
     await tester.pumpWidget(
       const MaterialApp(

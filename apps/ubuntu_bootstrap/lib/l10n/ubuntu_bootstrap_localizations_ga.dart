@@ -1687,4 +1687,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Bain triail as rud éigin eile. Féadfaidh tú <a href=\"\">tuairisc earráide a sheoladh</a> freisin.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

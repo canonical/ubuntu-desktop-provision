@@ -1114,5 +1114,16 @@
   "tpmActionFixActionCaveatRetry": "Then you will need to start the installation again.",
   "tpmActionErrorTitle": "This solution failed",
   "tpmActionErrorDescription": "Try a different solution or contact IT support.",
-  "manualPartitioningWarningBody": "Try something else. You may also <a href=\"\">send an error report</a>."
+  "manualPartitioningWarningBody": "Try something else. You may also <a href=\"\">send an error report</a>.",
+  "stepIndicatorLabel": "Step {CURRENT_STEP} of {TOTAL_STEPS}",
+  "@stepIndicatorLabel": {
+    "placeholders": {
+      "CURRENT_STEP": {
+        "type": "int"
+      },
+      "TOTAL_STEPS": {
+        "type": "int"
+      }
+    }
+  }
 }

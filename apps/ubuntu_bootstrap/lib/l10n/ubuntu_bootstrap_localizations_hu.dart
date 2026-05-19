@@ -1690,4 +1690,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Próbáljon valami mást. <a href=\"\">Küldhet hibajelentést is</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

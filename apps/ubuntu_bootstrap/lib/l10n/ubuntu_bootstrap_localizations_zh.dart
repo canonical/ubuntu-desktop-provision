@@ -1595,6 +1595,11 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Try something else. You may also <a href=\"\">send an error report</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
