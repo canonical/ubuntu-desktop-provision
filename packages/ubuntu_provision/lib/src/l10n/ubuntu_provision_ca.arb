@@ -23,7 +23,7 @@
     "identityInvalidHostname": "El nom de l'ordinador no és vàlid",
     "identityUsernameLabel": "Trieu un nom d'usuari",
     "identityUsernameRequired": "Cal un nom d'usuari",
-    "identityInvalidUsername": "El nom d'usuari no és vàlid",
+    "identityInvalidUsername": "El nom d'usuari no és vàlid: ha de començar amb una lletra minúscula i sols pot contenir lletres minúscules, nombres, guionets o barres baixes.",
     "identityUsernameTooLong": "Aquest nom és massa llarg.",
     "identityPasswordLabel": "Trieu una contrasenya",
     "identityPasswordRequired": "Cal una contrasenya",
