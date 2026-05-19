@@ -944,6 +944,60 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'Collapse'**
   String get collapseIconSemanticLabel;
+
+  /// No description provided for @networkWifiSignalNone.
+  ///
+  /// In en, this message translates to:
+  /// **'No signal'**
+  String get networkWifiSignalNone;
+
+  /// No description provided for @networkWifiSignalWeak.
+  ///
+  /// In en, this message translates to:
+  /// **'Weak signal'**
+  String get networkWifiSignalWeak;
+
+  /// No description provided for @networkWifiSignalOk.
+  ///
+  /// In en, this message translates to:
+  /// **'OK signal'**
+  String get networkWifiSignalOk;
+
+  /// No description provided for @networkWifiSignalGood.
+  ///
+  /// In en, this message translates to:
+  /// **'Good signal'**
+  String get networkWifiSignalGood;
+
+  /// No description provided for @networkWifiSignalExcellent.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent signal'**
+  String get networkWifiSignalExcellent;
+
+  /// No description provided for @networkWifiOpenNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Open network'**
+  String get networkWifiOpenNetwork;
+
+  /// No description provided for @networkWifiSecureNetwork.
+  ///
+  /// In en, this message translates to:
+  /// **'Secure network'**
+  String get networkWifiSecureNetwork;
+
+  /// No description provided for @networkWifiConnecting.
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting…'**
+  String get networkWifiConnecting;
+
+  /// No description provided for @networkWifiConnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Connected'**
+  String get networkWifiConnected;
 }
 
 class _UbuntuProvisionLocalizationsDelegate

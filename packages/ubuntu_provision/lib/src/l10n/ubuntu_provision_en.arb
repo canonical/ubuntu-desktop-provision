@@ -151,5 +151,14 @@
   "maximizeIconSemanticLabel": "Maximize",
   "minimizeIconSemanticLabel": "Minimize",
   "expandIconSemanticLabel": "Expand",
-  "collapseIconSemanticLabel": "Collapse"
+  "collapseIconSemanticLabel": "Collapse",
+  "networkWifiSignalNone": "No signal",
+  "networkWifiSignalWeak": "Weak signal",
+  "networkWifiSignalOk": "OK signal",
+  "networkWifiSignalGood": "Good signal",
+  "networkWifiSignalExcellent": "Excellent signal",
+  "networkWifiOpenNetwork": "Open network",
+  "networkWifiSecureNetwork": "Secure network",
+  "networkWifiConnecting": "Connecting…",
+  "networkWifiConnected": "Connected"
 }
