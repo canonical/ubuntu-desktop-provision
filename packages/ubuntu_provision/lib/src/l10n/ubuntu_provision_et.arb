@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Laienda vaadet",
     "collapseIconSemanticLabel": "Ahenda vaadet",
     "errorPageTechnicalDetails": "Tehnilised üksikasjad",
-    "identityInvalidRealName": "See nimi on vigane"
+    "identityInvalidRealName": "See nimi on vigane",
+    "networkWifiSignalNone": "WiFi võrgulevi pole",
+    "networkWifiSignalWeak": "Nõrk WiFi võrgulevi",
+    "networkWifiSignalOk": "Tavaline WiFi võrgulevi",
+    "networkWifiSignalGood": "Hea WiFi võrgulevi",
+    "networkWifiSignalExcellent": "Suurepärane WiFi võrgulevi",
+    "networkWifiOpenNetwork": "Avatud võrk",
+    "networkWifiSecureNetwork": "Turvaline võrk",
+    "networkWifiConnecting": "Ühendan…",
+    "networkWifiConnected": "Ühendatud"
 }
