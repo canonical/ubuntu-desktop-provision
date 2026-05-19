@@ -1683,4 +1683,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Provu ion alian. Vi ankaŭ rajtas <a href=\"\">raporti la eraron</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

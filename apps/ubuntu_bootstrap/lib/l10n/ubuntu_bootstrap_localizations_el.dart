@@ -1700,4 +1700,9 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Δοκιμάστε κάτι άλλο. Μπορείτε επίσης να <a href=\"\">στείλετε μια αναφορά σφάλματος</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }
