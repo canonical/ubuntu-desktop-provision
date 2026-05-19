@@ -240,13 +240,21 @@ void main() {
 
     expect(
       find.bySemanticsLabel(
-        '${l10n.networkWifiSignalExcellent}, ${l10n.networkWifiOpenNetwork}',
+        RegExp(
+          RegExp.escape(
+            '${l10n.networkWifiSignalExcellent}, ${l10n.networkWifiOpenNetwork}',
+          ),
+        ),
       ),
       findsOneWidget,
     );
     expect(
       find.bySemanticsLabel(
-        '${l10n.networkWifiSignalWeak}, ${l10n.networkWifiSecureNetwork}',
+        RegExp(
+          RegExp.escape(
+            '${l10n.networkWifiSignalWeak}, ${l10n.networkWifiSecureNetwork}',
+          ),
+        ),
       ),
       findsOneWidget,
     );
@@ -319,12 +327,12 @@ void main() {
     // "Connecting…" appears at both device-level (ExpansionTile trailing)
     // and AP-level (leading icon) for device1's connecting state.
     expect(
-      find.bySemanticsLabel(l10n.networkWifiConnecting),
+      find.bySemanticsLabel(RegExp(RegExp.escape(l10n.networkWifiConnecting))),
       findsNWidgets(2),
     );
     // "Connected" appears at AP-level for device2's active (non-connecting) AP.
     expect(
-      find.bySemanticsLabel(l10n.networkWifiConnected),
+      find.bySemanticsLabel(RegExp(RegExp.escape(l10n.networkWifiConnected))),
       findsOneWidget,
     );
 

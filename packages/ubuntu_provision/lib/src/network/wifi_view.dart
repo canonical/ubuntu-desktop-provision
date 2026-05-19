@@ -244,7 +244,8 @@ class WifiListTile extends ConsumerWidget {
                     height: iconSize,
                     child: Semantics(
                       label: lang.networkWifiConnecting,
-                      child: const YaruCircularProgressIndicator(strokeWidth: 3),
+                      child:
+                          const YaruCircularProgressIndicator(strokeWidth: 3),
                     ),
                   )
                 : null,
