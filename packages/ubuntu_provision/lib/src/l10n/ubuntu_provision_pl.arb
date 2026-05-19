@@ -115,5 +115,11 @@
     "expandIconSemanticLabel": "Rozwiń",
     "collapseIconSemanticLabel": "Zwiń",
     "errorPageTechnicalDetails": "Szczegóły techniczne",
-    "identityInvalidRealName": "Imię i nazwisko jest nieprawidłowe"
+    "identityInvalidRealName": "Imię i nazwisko jest nieprawidłowe",
+    "networkWifiSignalNone": "Brak sygnału",
+    "networkWifiSignalWeak": "Sygnał słaby",
+    "networkWifiSignalOk": "Sygnał OK",
+    "networkWifiSignalGood": "Sygnał dobry",
+    "networkWifiSignalExcellent": "Sygnał znakomity",
+    "networkWifiOpenNetwork": "Sieć otwarta"
 }
