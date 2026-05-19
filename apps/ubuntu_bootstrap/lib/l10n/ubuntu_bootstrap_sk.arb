@@ -520,5 +520,16 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Táto funkcia môže byť označená ako \"Virtualization Technology\", \"VT-d\" alebo \"AMD-V\".",
     "autoinstallErrorMessage": "Príkaz v súbore automatickej inštalácie zlyhal počas inštalácie.",
     "autoinstallErrorInstructions": "Budete musieť reštartovať inštaláciu. Skontrolujte súbor automatickej inštalácie, vyberte iný typ inštalácie alebo kontaktujte svoju IT podporu.",
-    "restartInstaller": "Reštartovať inštalátor"
+    "restartInstaller": "Reštartovať inštalátor",
+    "stepIndicatorLabel": "Krok {CURRENT_STEP} z {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
