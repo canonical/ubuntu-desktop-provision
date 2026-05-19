@@ -255,12 +255,13 @@ class WifiListTile extends ConsumerWidget {
   }
 }
 
+int _wifiStrength(AccessPoint model) => (model.strength ~/ 20 + 1).clamp(1, 5);
+
 String _wifiSemanticsLabel(
   AccessPoint model,
   UbuntuProvisionLocalizations lang,
 ) {
-  final strength = (model.strength ~/ 20 + 1).clamp(1, 5);
-  final strengthLabel = switch (strength) {
+  final strengthLabel = switch (_wifiStrength(model)) {
     1 => lang.networkWifiSignalNone,
     2 => lang.networkWifiSignalWeak,
     3 => lang.networkWifiSignalOk,
@@ -275,28 +276,24 @@ String _wifiSemanticsLabel(
 }
 
 IconData _wifiIcon(AccessPoint model) {
-  final strength = (model.strength ~/ 20 + 1).clamp(1, 5);
+  final strength = _wifiStrength(model);
   return model.isOpen ? _wifiIconOpen(strength) : _wifiIconLock(strength);
 }
 
-IconData _wifiIconOpen(int strength) {
-  const icons = <int, IconData>{
-    1: YaruIcons.network_wireless_signal_none,
-    2: YaruIcons.network_wireless_signal_weak,
-    3: YaruIcons.network_wireless_signal_ok,
-    4: YaruIcons.network_wireless_signal_good,
-    5: YaruIcons.network_wireless_signal_excellent,
-  };
-  return icons[strength]!;
-}
+IconData _wifiIconOpen(int strength) => switch (strength) {
+      1 => YaruIcons.network_wireless_signal_none,
+      2 => YaruIcons.network_wireless_signal_weak,
+      3 => YaruIcons.network_wireless_signal_ok,
+      4 => YaruIcons.network_wireless_signal_good,
+      5 => YaruIcons.network_wireless_signal_excellent,
+      _ => YaruIcons.network_wireless_signal_none,
+    };
 
-IconData _wifiIconLock(int strength) {
-  const icons = <int, IconData>{
-    1: YaruIcons.network_wireless_signal_none_secure,
-    2: YaruIcons.network_wireless_signal_weak_secure,
-    3: YaruIcons.network_wireless_signal_ok_secure,
-    4: YaruIcons.network_wireless_signal_good_secure,
-    5: YaruIcons.network_wireless_signal_excellent_secure,
-  };
-  return icons[strength]!;
-}
+IconData _wifiIconLock(int strength) => switch (strength) {
+      1 => YaruIcons.network_wireless_signal_none_secure,
+      2 => YaruIcons.network_wireless_signal_weak_secure,
+      3 => YaruIcons.network_wireless_signal_ok_secure,
+      4 => YaruIcons.network_wireless_signal_good_secure,
+      5 => YaruIcons.network_wireless_signal_excellent_secure,
+      _ => YaruIcons.network_wireless_signal_none_secure,
+    };
