@@ -121,5 +121,8 @@
     "networkWifiSignalOk": "Sygnał OK",
     "networkWifiSignalGood": "Sygnał dobry",
     "networkWifiSignalExcellent": "Sygnał znakomity",
-    "networkWifiOpenNetwork": "Sieć otwarta"
+    "networkWifiOpenNetwork": "Sieć otwarta",
+    "networkWifiSecureNetwork": "Sieć zabezpieczona",
+    "networkWifiConnecting": "Łączenie…",
+    "networkWifiConnected": "Połączono"
 }
