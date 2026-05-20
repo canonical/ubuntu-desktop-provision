@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Étendre",
     "collapseIconSemanticLabel": "Réduire",
     "errorPageTechnicalDetails": "Détails techniques",
-    "identityInvalidRealName": "Le nom est invalide"
+    "identityInvalidRealName": "Le nom est invalide",
+    "networkWifiSignalNone": "Pas de signal",
+    "networkWifiSignalWeak": "Signal faible",
+    "networkWifiSignalOk": "Signal OK",
+    "networkWifiSignalGood": "Signal bon",
+    "networkWifiSignalExcellent": "Signal excellent",
+    "networkWifiOpenNetwork": "Réseau ouvert",
+    "networkWifiSecureNetwork": "Réseau sécurisé",
+    "networkWifiConnecting": "Connexion …",
+    "networkWifiConnected": "Connecté"
 }
