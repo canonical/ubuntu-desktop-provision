@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Розгорнути",
     "collapseIconSemanticLabel": "Згорнути",
     "errorPageTechnicalDetails": "Технічні деталі",
-    "identityInvalidRealName": "Ім'я недійсне"
+    "identityInvalidRealName": "Ім'я недійсне",
+    "networkWifiSignalNone": "Немає сигналу",
+    "networkWifiSignalWeak": "Слабкий сигнал",
+    "networkWifiSignalOk": "Сигнал OK",
+    "networkWifiSignalGood": "Хороший сигнал",
+    "networkWifiSignalExcellent": "Відмінний сигнал",
+    "networkWifiOpenNetwork": "Відкрита мережа",
+    "networkWifiSecureNetwork": "Безпечна мережа",
+    "networkWifiConnecting": "Підключення…",
+    "networkWifiConnected": "Підключено"
 }
