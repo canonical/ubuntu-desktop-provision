@@ -150,5 +150,14 @@
     "expandIconSemanticLabel": "Zabaldu",
     "collapseIconSemanticLabel": "Tolestu",
     "errorPageTechnicalDetails": "Xehetasun teknikoak",
-    "identityInvalidRealName": "Izena baliogabea da"
+    "identityInvalidRealName": "Izena baliogabea da",
+    "networkWifiSignalNone": "Seinalerik ez",
+    "networkWifiSignalWeak": "Seinale ahula",
+    "networkWifiSignalOk": "Seinale egokia",
+    "networkWifiSignalGood": "Seinale ona",
+    "networkWifiSignalExcellent": "Seinale bikaina",
+    "networkWifiOpenNetwork": "Sare irekia",
+    "networkWifiSecureNetwork": "Sare segurua",
+    "networkWifiConnecting": "Konektatzen…",
+    "networkWifiConnected": "Konektatuta"
 }
