@@ -72,7 +72,7 @@
     "identityInvalidHostname": "كومپيۇتېر ئىسمى ئىناۋەتسىز",
     "identityUsernameLabel": "ئىشلەتكۈچى ئاتىڭىز",
     "identityUsernameRequired": "ئىشلەتكۈچى ئاتى زۆرۈر",
-    "identityInvalidUsername": "ئىشلەتكۈچى ئاتى ئىناۋەتسىز",
+    "identityInvalidUsername": "ئىشلەتكۈچى ئاتى ئىناۋەتسى: ئۇ چوقۇم كىچىك ھەرپتىن باشلىنىدۇ ۋە پەقەت كىچىك ھەرپ، سان، سىزىقچە ۋە ئاستى سىزىقنى ئۆز ئىچىگە ئالسا بولىدۇ.",
     "identityUsernameInUse": "ئىشلەتكۈچى ئاتى مەۋجۇت.",
     "identityUsernameSystemReserved": "بۇ ئات سىستېمىنىڭ ئىشلىتىشى ئۈچۈن قالدۇرۇلغان.",
     "identityUsernameTooLong": "ئىسىم بەك ئۇزۇن.",
