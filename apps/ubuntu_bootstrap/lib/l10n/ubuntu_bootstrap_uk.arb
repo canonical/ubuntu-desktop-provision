@@ -509,5 +509,16 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Ця функція може мати назву «Virtualization Technology», «VT-d» або «AMD-Vi».",
     "autoinstallErrorMessage": "Команду у файлі автоматичного встановлення не вдалося виконати під час встановлення.",
     "autoinstallErrorInstructions": "Вам потрібно буде перезапустити встановлення. Перевірте файл автоматичного встановлення, виберіть інший тип встановлення або зверніться до ІТ-підтримки.",
-    "restartInstaller": "Перезапустити встановлювач"
+    "restartInstaller": "Перезапустити встановлювач",
+    "stepIndicatorLabel": "{CURRENT_STEP} крок із {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
