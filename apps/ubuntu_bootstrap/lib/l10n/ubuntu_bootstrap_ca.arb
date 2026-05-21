@@ -1035,5 +1035,16 @@
     "tpmActionFixActionCaveatRetry": "Després haureu de tornar a iniciar la instal·lació.",
     "tpmActionErrorTitle": "Aquesta solució ha fallat",
     "tpmActionErrorDescription": "Proveu una solució diferent o contacteu amb el suport informàtic.",
-    "manualPartitioningWarningBody": "Prova una altra cosa. També podeu <a href=\"\">enviar un informe d'error</a>."
+    "manualPartitioningWarningBody": "Prova una altra cosa. També podeu <a href=\"\">enviar un informe d'error</a>.",
+    "stepIndicatorLabel": "Pas {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
