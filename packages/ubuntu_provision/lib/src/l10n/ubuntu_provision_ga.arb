@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Leathnaigh",
     "collapseIconSemanticLabel": "Laghdaigh",
     "errorPageTechnicalDetails": "Sonraí teicniúla",
-    "identityInvalidRealName": "Tá an t-ainm neamhbhailí"
+    "identityInvalidRealName": "Tá an t-ainm neamhbhailí",
+    "networkWifiSignalNone": "Gan comhartha",
+    "networkWifiSignalWeak": "Comhartha lag",
+    "networkWifiSignalOk": "Comhartha ceart go leor",
+    "networkWifiSignalGood": "Comhartha maith",
+    "networkWifiSignalExcellent": "Comhartha den scoth",
+    "networkWifiOpenNetwork": "Líonra oscailte",
+    "networkWifiSecureNetwork": "Líonra slán",
+    "networkWifiConnecting": "Ag ceangal…",
+    "networkWifiConnected": "Ceangailte"
 }
