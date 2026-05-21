@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Der Computername ist ungültig",
     "identityUsernameLabel": "Einen Benutzernamen auswählen",
     "identityUsernameRequired": "Ein Benutzername ist erforderlich",
-    "identityInvalidUsername": "Der Benutzername ist ungültig",
+    "identityInvalidUsername": "Der Benutzername ist ungültig: Er muss mit einem Kleinbuchstaben beginnen und darf nur Kleinbuchstaben, Ziffern, Bindestriche und Unterstriche enthalten.",
     "identityUsernameInUse": "Dieser Benutzername existiert bereits.",
     "identityUsernameSystemReserved": "Dieser Name ist für die Systemnutzung reserviert.",
     "identityUsernameTooLong": "Dieser Name ist zu lang.",
@@ -115,5 +115,7 @@
     "expandIconSemanticLabel": "Aufklappen",
     "collapseIconSemanticLabel": "Einklappen",
     "errorPageTechnicalDetails": "Technische Details",
-    "identityInvalidRealName": "Der Name ist ungültig"
+    "identityInvalidRealName": "Der Name ist ungültig",
+    "networkWifiSignalNone": "Kein Signal",
+    "networkWifiSignalWeak": "Schwaches Signal"
 }
