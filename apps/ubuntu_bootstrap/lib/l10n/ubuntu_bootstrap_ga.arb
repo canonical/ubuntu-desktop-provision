@@ -518,5 +518,16 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "D’fhéadfaí tagairt don ghné seo mar “Teicneolaíocht Fhíorúlaithe”, “VT-d” nó “AMD-Vi”.",
     "autoinstallErrorMessage": "Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.",
     "autoinstallErrorInstructions": "Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.",
-    "restartInstaller": "Atosaigh an suiteálaí"
+    "restartInstaller": "Atosaigh an suiteálaí",
+    "stepIndicatorLabel": "Céim {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
