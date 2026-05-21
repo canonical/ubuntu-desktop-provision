@@ -117,5 +117,12 @@
     "errorPageTechnicalDetails": "Technische Details",
     "identityInvalidRealName": "Der Name ist ungültig",
     "networkWifiSignalNone": "Kein Signal",
-    "networkWifiSignalWeak": "Schwaches Signal"
+    "networkWifiSignalWeak": "Schwaches Signal",
+    "networkWifiSignalOk": "Signal in Ordnung",
+    "networkWifiSignalGood": "Gutes Signal",
+    "networkWifiSignalExcellent": "Ausgezeichnetes Signal",
+    "networkWifiOpenNetwork": "Offenes Netzwerk",
+    "networkWifiSecureNetwork": "Sicheres Netzwerk",
+    "networkWifiConnecting": "Wird verbunden …",
+    "networkWifiConnected": "Verbunden"
 }
