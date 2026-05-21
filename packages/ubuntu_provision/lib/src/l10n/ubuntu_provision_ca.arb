@@ -150,5 +150,14 @@
     "errorPageTechnicalDetails": "Detalls tècnics",
     "identityInvalidRealName": "El nom no és vàlid",
     "expandIconSemanticLabel": "Expandeix",
-    "collapseIconSemanticLabel": "Col·lapsa"
+    "collapseIconSemanticLabel": "Col·lapsa",
+    "networkWifiSignalNone": "No hi ha senyal",
+    "networkWifiSignalWeak": "Senyal feble",
+    "networkWifiSignalOk": "Senyal correcta",
+    "networkWifiSignalGood": "Senyal bona",
+    "networkWifiSignalExcellent": "Senyal excel·lent",
+    "networkWifiOpenNetwork": "Xarxa oberta",
+    "networkWifiSecureNetwork": "Xarxa segura",
+    "networkWifiConnecting": "S'està connectant…",
+    "networkWifiConnected": "Connectat"
 }
