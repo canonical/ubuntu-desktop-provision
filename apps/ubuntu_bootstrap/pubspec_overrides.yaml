@@ -1,0 +1,15 @@
+dependency_overrides:
+  flutter_html:
+    git:
+      url: https://github.com/d-loose/flutter_html
+      ref: img-remove-vertical-align
+  flutter_html_svg:
+    git:
+      url: https://github.com/d-loose/flutter_html
+      ref: img-remove-vertical-align
+      path: packages/flutter_html_svg
+  flutter_html_table:
+    git:
+      url: https://github.com/d-loose/flutter_html
+      ref: img-remove-vertical-align
+      path: packages/flutter_html_table

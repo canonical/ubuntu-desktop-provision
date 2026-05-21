@@ -350,26 +350,29 @@ packages:
   flutter_html:
     dependency: "direct main"
     description:
-      name: flutter_html
-      sha256: "38a2fd702ffdf3243fb7441ab58aa1bc7e6922d95a50db76534de8260638558d"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: img-remove-vertical-align
+      resolved-ref: ca76de91cae09c301061420267f024c92438f11e
+      url: "https://github.com/d-loose/flutter_html"
+    source: git
     version: "3.0.0"
   flutter_html_svg:
     dependency: "direct main"
     description:
-      name: flutter_html_svg
-      sha256: "76f59c238571333d95271817c3d94688b3c4dca2735552e481e49039d3efdb13"
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/flutter_html_svg"
+      ref: img-remove-vertical-align
+      resolved-ref: ca76de91cae09c301061420267f024c92438f11e
+      url: "https://github.com/d-loose/flutter_html"
+    source: git
     version: "3.0.0"
   flutter_html_table:
     dependency: "direct main"
     description:
-      name: flutter_html_table
-      sha256: de15300b1f6d8014e1702e7edfdf3411f362c8fb753e89bac4c99215ea94a4d8
-      url: "https://pub.dev"
-    source: hosted
+      path: "packages/flutter_html_table"
+      ref: img-remove-vertical-align
+      resolved-ref: ca76de91cae09c301061420267f024c92438f11e
+      url: "https://github.com/d-loose/flutter_html"
+    source: git
     version: "3.0.0"
   flutter_layout_grid:
     dependency: transitive
