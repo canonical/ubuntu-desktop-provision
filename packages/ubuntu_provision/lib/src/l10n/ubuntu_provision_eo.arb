@@ -29,7 +29,7 @@
     "identityInvalidHostname": "La nomo de komputilo ne validas",
     "identityUsernameLabel": "Elektu salutnomon",
     "identityUsernameRequired": "Salutnomo bezoniĝas",
-    "identityInvalidUsername": "La salutnomo ne validas",
+    "identityInvalidUsername": "La salutnomo ne validas; ĝi devas komenciĝi per minuskla litero kaj povas nur enhavi minusklajn literojn, ciferojn, streketojn kaj substrekojn.",
     "identityUsernameInUse": "Tiu salutnomo jam ekzistas.",
     "identityUsernameSystemReserved": "Tiu salutnomo estas rezervita por sistema uzado.",
     "identityUsernameTooLong": "Tiu salutnomo estas tro longa.",
@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Malkaŝi",
     "collapseIconSemanticLabel": "Kaŝi",
     "errorPageTechnicalDetails": "Teĥnikaj detaloj",
-    "identityInvalidRealName": "La nomo ne validas"
+    "identityInvalidRealName": "La nomo ne validas",
+    "networkWifiSignalNone": "Sen signalo",
+    "networkWifiSignalWeak": "Malbona signalo",
+    "networkWifiSignalGood": "Bona signalo",
+    "networkWifiSignalExcellent": "Bonega signalo",
+    "networkWifiSignalOk": "Boneta signalo",
+    "networkWifiOpenNetwork": "Malfermita reto",
+    "networkWifiSecureNetwork": "Sekura reto",
+    "networkWifiConnecting": "Konektante…",
+    "networkWifiConnected": "Konektite"
 }
