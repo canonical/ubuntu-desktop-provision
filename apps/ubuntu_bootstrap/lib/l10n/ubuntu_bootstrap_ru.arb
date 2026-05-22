@@ -521,5 +521,16 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Эта функция может называться «Технология виртуализации», «VT-d» или «AMD-Vi».",
     "autoinstallErrorMessage": "В процессе установки не удалось выполнить команду в файле autoinstall.",
     "autoinstallErrorInstructions": "Вам необходимо перезапустить установку. Проверьте файл autoinstall, выберите другой тип установки или обратитесь в службу IT-поддержки.",
-    "restartInstaller": "Перезапустить установку"
+    "restartInstaller": "Перезапустить установку",
+    "stepIndicatorLabel": "Шаг {CURRENT_STEP} из {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
