@@ -521,5 +521,16 @@
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolu, ĉu la reĝimo de sekura praŝargo estas «disponebla».",
     "autoinstallErrorMessage": "Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.",
     "autoinstallErrorInstructions": "Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.",
-    "restartInstaller": "Relanĉi instalilon"
+    "restartInstaller": "Relanĉi instalilon",
+    "stepIndicatorLabel": "Paŝo {CURRENT_STEP} el {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
