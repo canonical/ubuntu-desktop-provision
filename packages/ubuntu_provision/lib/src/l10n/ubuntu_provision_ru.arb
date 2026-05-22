@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Расширить",
     "collapseIconSemanticLabel": "Свернуть",
     "errorPageTechnicalDetails": "Технические сведения",
-    "identityInvalidRealName": "Имя введено неверно"
+    "identityInvalidRealName": "Имя введено неверно",
+    "networkWifiSignalNone": "Нет сигнала",
+    "networkWifiSignalWeak": "Слабый сигнал",
+    "networkWifiSignalOk": "Неплохой сигнал",
+    "networkWifiSignalGood": "Хороший сигнал",
+    "networkWifiSignalExcellent": "Отличный сигнал",
+    "networkWifiOpenNetwork": "Открытая сеть",
+    "networkWifiSecureNetwork": "Безопасная сеть",
+    "networkWifiConnecting": "Подключение…",
+    "networkWifiConnected": "Подключено"
 }
