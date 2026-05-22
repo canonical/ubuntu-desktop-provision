@@ -576,7 +576,7 @@ class SubiquityClient {
       request,
       (json) {
         if (json == null || json is! Map<String, dynamic>) {
-          json = <String, dynamic>{};
+          return AdConnectionInfo.fromJson({});
         }
         return AdConnectionInfo.fromJson(json);
       },
