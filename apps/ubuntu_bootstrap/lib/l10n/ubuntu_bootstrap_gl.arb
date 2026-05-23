@@ -708,7 +708,7 @@
     "installationSlidesAccessibilityOrca": "Lector de pantalla Orca",
     "installationSlidesAccessibilityLanguages": "Compatibilidade lingüística",
     "installationSlidesSupportTitle": "Axuda e asistencia",
-    "installationSlidesSupportHeader": "A documentación oficial de {DISTRO} está dispoñible tanto en liña como a través da icona de Axuda no dock.",
+    "installationSlidesSupportHeader": "A documentación oficial de {DISTRO} está dispoñíbel tanto en liña como a través da icona de Axuda no dock.",
     "@installationSlidesSupportHeader": {
         "placeholders": {
             "DISTRO": {
@@ -906,7 +906,7 @@
     "landscapeDomainNoInternetDescriptionWarning": "Necesítase internet para obter o ficheiro de instalación automática de Landscape",
     "landscapeCodeExpiredWarning": "Código caducado. Ténteo de novo",
     "landscapeLoginFailedWarning": "Fallou o inicio de sesión. Téntao de novo",
-    "landscapeErrorPageTitle": "A instalación automática non está dispoñible para a túa conta",
+    "landscapeErrorPageTitle": "A instalación automática non está dispoñíbel para a túa conta",
     "landscapeErrorPageBody": "Ponte en contacto co servizo de asistencia informática ou proba unha opción de instalación diferente.",
     "landscapeErrorPageCode": "Código de erro: {code}",
     "@landscapeErrorPageCode": {
@@ -1045,7 +1045,7 @@
     "recoveryKeyInfoHeader": "Podes perder todos os teus datos sen unha chave de recuperación",
     "recoveryKeyTextFieldLabel": "Chave de recuperación",
     "tpmActionErrorKindShutdownRequired": "É necesario apagar.",
-    "tpmActionErrorKindInsufficientTpmStorage": "O TPM deste ordenador non ten almacenamento suficiente dispoñible.",
+    "tpmActionErrorKindInsufficientTpmStorage": "O TPM deste ordenador non ten almacenamento suficiente dispoñíbel.",
     "tpmActionErrorKindUnsupportedPlatform": "Este ordenador non é compatible co cifrado con hardware.",
     "tpmActionErrorKindUefiDebuggingEnabled": "A depuración UEFI está activada.",
     "tpmActionErrorKindInsufficientDmaProtection": "A este ordenador fáltalle unha función de seguranza obrigatoria (protección DMA).",
@@ -1098,5 +1098,16 @@
     "tpmActionFixActionCaveatRetry": "Entón terás que iniciar a instalación de novo.",
     "tpmActionErrorTitle": "Esta solución fallou",
     "tpmActionErrorDescription": "Proba unha solución diferente ou ponte en contacto co servizo de asistencia informática.",
-    "manualPartitioningWarningBody": "Proba con outra cousa. Tamén podes <a href=\"\">enviar un informe de erros</a>."
+    "manualPartitioningWarningBody": "Proba con outra cousa. Tamén podes <a href=\"\">enviar un informe de erros</a>.",
+    "stepIndicatorLabel": "Paso {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
