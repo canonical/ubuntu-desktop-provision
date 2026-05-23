@@ -25,7 +25,7 @@
     "accessibilityHighContrastLabel": "Contraste alto",
     "accessibilityLargeTextLabel": "Texto grande",
     "accessibilityReduceAnimationLabel": "Reduce animación",
-    "accessibilityScreenReaderLabel": "Lector de pantaia",
+    "accessibilityScreenReaderLabel": "Lector de pantalla",
     "accessibilityVisualAlertsLabel": "Alertas visuais",
     "accessibilityStickKeysLabel": "Chaves pegañentas",
     "accessibilitySlowKeysLabel": "Chaves lentas",
@@ -82,7 +82,7 @@
     "identityInvalidHostname": "O nome do equipo non é válido",
     "identityUsernameLabel": "Escolla un nome de usuario",
     "identityUsernameRequired": "Requírese un nome de usuario",
-    "identityInvalidUsername": "O nome de usuario non é válido",
+    "identityInvalidUsername": "O nome de usuario non é válido: debe comezar por unha letra minúscula e só pode conter letras minúsculas, díxitos, guións e guións baixos.",
     "identityUsernameInUse": "Xa existe un usuario con este nome.",
     "identityUsernameSystemReserved": "Ese nome está reservado para uso do sistema.",
     "identityUsernameTooLong": "Ese nome é demasiado longo.",
@@ -150,5 +150,14 @@
     "expandIconSemanticLabel": "Despregar",
     "collapseIconSemanticLabel": "Contraer",
     "activeDirectoryTestConnection": "Probar a conectividade do dominio",
-    "identityInvalidRealName": "O nome non é válido"
+    "identityInvalidRealName": "O nome non é válido",
+    "networkWifiSignalNone": "Sen sinal",
+    "networkWifiSignalWeak": "Sinal feble",
+    "networkWifiSignalOk": "Sinal OK",
+    "networkWifiSignalGood": "Sinal boa",
+    "networkWifiSignalExcellent": "Sinal excelente",
+    "networkWifiOpenNetwork": "Rede aberta",
+    "networkWifiSecureNetwork": "Rede segura",
+    "networkWifiConnecting": "Conectando…",
+    "networkWifiConnected": "Conectado"
 }
