@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Expandera",
     "collapseIconSemanticLabel": "Fäll ihop",
     "errorPageTechnicalDetails": "Tekniska detaljer",
-    "identityInvalidRealName": "Namnet är ogiltigt"
+    "identityInvalidRealName": "Namnet är ogiltigt",
+    "networkWifiSignalNone": "Ingen signal",
+    "networkWifiSignalWeak": "Svag signal",
+    "networkWifiSignalOk": "Måttlig signal",
+    "networkWifiSignalGood": "Bra signal",
+    "networkWifiSignalExcellent": "Stark signal",
+    "networkWifiOpenNetwork": "Öppet nätverk",
+    "networkWifiSecureNetwork": "Säkert nätverk",
+    "networkWifiConnecting": "Ansluter…",
+    "networkWifiConnected": "Ansluten"
 }
