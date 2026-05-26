@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Rozbalit",
     "collapseIconSemanticLabel": "Sbalit",
     "errorPageTechnicalDetails": "Technické detaily",
-    "identityInvalidRealName": "Jméno je neplatné"
+    "identityInvalidRealName": "Jméno je neplatné",
+    "networkWifiSignalNone": "Žádný signál",
+    "networkWifiSignalWeak": "Slabý signál",
+    "networkWifiSignalOk": "Signál OK",
+    "networkWifiSignalGood": "Dobrý signál",
+    "networkWifiSignalExcellent": "Vynikající signál",
+    "networkWifiOpenNetwork": "Otevřená síť",
+    "networkWifiSecureNetwork": "Zabezpečená síť",
+    "networkWifiConnecting": "Připojování…",
+    "networkWifiConnected": "Připojeno"
 }
