@@ -521,5 +521,16 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tato funkce může být označována jako „virtualizační technologie“, „VT-d“ nebo „AMD-Vi“.",
     "autoinstallErrorMessage": "Během instalace se nepodařilo spustit příkaz v souboru autoinstall.",
     "autoinstallErrorInstructions": "Budete muset restartovat instalaci. Zkontrolujte soubor autoinstall, vyberte jiný typ instalace nebo kontaktujte IT podporu.",
-    "restartInstaller": "Restartovat instalační program"
+    "restartInstaller": "Restartovat instalační program",
+    "stepIndicatorLabel": "Krok {CURRENT_STEP} z {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
