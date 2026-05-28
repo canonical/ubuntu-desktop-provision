@@ -188,13 +188,8 @@ parts:
       craftctl default
 
       if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
-        FLUTTER_VERSION=3.38.9
+        FLUTTER_VERSION=3.44.0
         git clone -b ${FLUTTER_VERSION} --depth 1 https://github.com/flutter/flutter.git
-
-        # Apply tool patch for riscv64 support
-        curl -L -o "$CRAFT_PART_SRC/flutter/riscv64-tool.patch" "https://flutter-experimental.ubuntu.com/tool/${FLUTTER_VERSION}.patch"
-        git -C $CRAFT_PART_SRC/flutter apply riscv64-tool.patch
-        rm $CRAFT_PART_SRC/flutter/riscv64-tool.patch
       else
         FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
         git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
