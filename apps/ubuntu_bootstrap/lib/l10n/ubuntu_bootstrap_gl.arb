@@ -101,7 +101,7 @@
             }
         }
     },
-    "tryDescription": "Podes probar {RELEASE} sen facer ningún cambio no teu ordenador.",
+    "tryDescription": "Podes probar {RELEASE} sen facer ningún cambio no teu computador.",
     "@tryDescription": {
         "placeholders": {
             "RELEASE": {
@@ -135,7 +135,7 @@
     },
     "rstTitle": "RST detectado",
     "rstHeader": "Debe desactivar RST para continuar coa instalación",
-    "rstDisable": "O teu ordenador usa Intel RST (Rapid Storage Technology). Podes desactivar RST en:",
+    "rstDisable": "O teu computador usa Intel RST (Rapid Storage Technology). Podes desactivar RST en:",
     "rstDisableWindows": "Windows, se estás a usar unha configuración de arranque dual con Windows",
     "rstDisableBios": "Parámetros da BIOS",
     "rstInstructions": "Para obter instrucións, escanea o código QR noutro dispositivo ou visita: <a href=\"https://{url}\">{url}</a>",
@@ -152,16 +152,16 @@
     "chooseSecurityKey": "Escolla unha chave de seguranza",
     "confirmSecurityKey": "Confirme a chave de seguranza",
     "dontInstallDriverSoftwareNow": "Non instalar o software do controlador por agora",
-    "dontInstallDriverSoftwareNowDescription": "Podes instalalo máis tarde dende Software e actualizacións.",
+    "dontInstallDriverSoftwareNowDescription": "Podes instalalo máis tarde desde Software e actualizacións.",
     "configureSecureBootSecurityKeyRequired": "Precísase da chave de seguranza",
     "secureBootSecurityKeysDontMatch": "As chaves de seguranza non coinciden",
     "showSecurityKey": "Amosar",
     "hideSecurityKey": "Agochar",
     "updatesOtherSoftwarePageTitle": "Aplicacións",
     "updatesOtherSoftwarePageDescription": "Que aplicacións queres instalar para comezar?",
-    "codecsAndDriversPageTitle": "Optimice o seu ordenador",
+    "codecsAndDriversPageTitle": "Optimice o seu computador",
     "codecsAndDriversPageDescription": "Instalar software propietario recomendado?",
-    "codecsAndDriversPageBody": "{DISTRO} non inclúe software propietario por defecto. A instalación de software adicional pode mellorar o rendemento do teu ordenador.",
+    "codecsAndDriversPageBody": "{DISTRO} non inclúe software propietario por defecto. A instalación de software adicional pode mellorar o rendemento do teu computador.",
     "@codecsAndDriversPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -182,10 +182,10 @@
     "installDriversSubtitle": "Incluíndo, entre outros, controladores NVIDIA e similares",
     "installCodecsTitle": "Descargar e instalar compatibilidade con formatos multimedia adicionais",
     "installCodecsSubtitle": "Incluíndo, entre outros, MP3, MP4, MOV e similares",
-    "batteryWarning": "O ordenador non está conectado a unha fonte de alimentación.",
+    "batteryWarning": "O computador non está conectado a unha fonte de alimentación.",
     "offlineWarning": "Estás desconectado/a actualmente",
     "choosePassphraseHeader": "Crear unha frase de paso",
-    "choosePassphraseBody": "Terás que introducir a túa frase de paso cada vez que acendas o ordenador. Esta frase de paso é diferente do teu contrasinal de usuario.",
+    "choosePassphraseBody": "Terás que introducir a túa frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario.",
     "choosePassphraseInfoHeader": "Asegúrate de gardar a túa frase de paso",
     "choosePassphraseInfoBody": "Se a perdes, perderás todos os teus datos.",
     "chooseOptionalPassphraseInfoHeader": "Garda a túa frase de paso e a túa chave de recuperación nun lugar seguro",
@@ -193,8 +193,8 @@
     "passphrasePageTitle": "Cifrado",
     "passphrasePageHeaderPassphrase": "Definir unha frase de paso cifrada",
     "passphrasePageHeaderPin": "Definir un PIN cifrado",
-    "passphrasePageBodyPassphrase": "Terás que introducir a túa frase de paso cada vez que acendas o ordenador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.",
-    "passphrasePageBodyPin": "Terás que introducir o teu PIN cada vez que acendas o ordenador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.",
+    "passphrasePageBodyPassphrase": "Terás que introducir a túa frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.",
+    "passphrasePageBodyPin": "Terás que introducir o teu PIN cada vez que acendas o computador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.",
     "passphrasePageChoosePassphraseHint": "Frase de paso",
     "passphrasePageConfirmPassphraseHint": "Confirmar frase de paso",
     "passphrasePageRequiredPassphrase": "Precísase dunha frase de paso",
@@ -204,12 +204,12 @@
     "passphrasePageRequiredPin": "Requírese un PIN",
     "passphrasePageMismatchPin": "Os PINs non coinciden",
     "passphraseTypePassphraseTileTitle": "Requírese unha frase de paso",
-    "passphraseTypePassphraseTileSubTitle": "Máis seguro. Terás que introducir unha frase de paso máis longa cada vez que acendas o ordenador.",
+    "passphraseTypePassphraseTileSubTitle": "Máis seguro. Terás que introducir unha frase de paso máis longa cada vez que acendas o computador.",
     "passphraseTypePinTileTitle": "Requirir un PIN",
-    "passphraseTypePinTileSubTitle": "Máis seguro. Terás que introducir un PIN numérico cada vez que acendas o ordenador.",
+    "passphraseTypePinTileSubTitle": "Máis seguro. Terás que introducir un PIN numérico cada vez que acendas o computador.",
     "passphraseTypeNoneTileTitle": "Desbloquear o disco automaticamente",
     "passphraseTypePageHeader": "Seguranza adicional",
-    "passphraseTypePageBody": "Por defecto, o módulo de plataforma fiable (TPM) do ordenador desbloqueará o disco durante o inicio. Tamén tes opcións para protexer aínda máis os teus datos.",
+    "passphraseTypePageBody": "Por defecto, o módulo de plataforma fiable (TPM) do computador desbloqueará o disco durante o inicio. Tamén tes opcións para protexer aínda máis os teus datos.",
     "passphrasePagePassphraseEntropyBelowMin": "Frase de paso feble, faina máis longa ou máis complexa",
     "passphrasePagePassphraseEntropyBelowOptimal": "Frase de paso xusta, faina máis longa ou máis complexa para unha mellor seguranza",
     "passphrasePagePassphraseEntropyOptimal": "Frase de paso forte",
@@ -225,7 +225,7 @@
             }
         }
     },
-    "installationTypeOSDetected": "Este ordenador ten actualmente {os} instalado. Que queres facer?",
+    "installationTypeOSDetected": "Este computador ten actualmente {os} instalado. Que queres facer?",
     "@installationTypeOSDetected": {
         "placeholders": {
             "os": {
@@ -233,7 +233,7 @@
             }
         }
     },
-    "installationTypeDualOSDetected": "Este ordenador ten actualmente {os1} e {os2} instalados. Que queres facer?",
+    "installationTypeDualOSDetected": "Este computador ten actualmente {os1} e {os2} instalados. Que queres facer?",
     "@installationTypeDualOSDetected": {
         "placeholders": {
             "os1": {
@@ -244,8 +244,8 @@
             }
         }
     },
-    "installationTypeMultiOSDetected": "Actualmente este ordenador ten varios sistemas operativos instalados. Que queres facer?",
-    "installationTypeNoOSDetected": "Actualmente este ordenador non ten ningún sistema operativo detectado. Que queres facer?",
+    "installationTypeMultiOSDetected": "Actualmente este computador ten varios sistemas operativos instalados. Que queres facer?",
+    "installationTypeNoOSDetected": "Actualmente este computador non ten ningún sistema operativo detectado. Que queres facer?",
     "installationTypeErase": "Limpar o disco e instalar {DISTRO}",
     "@installationTypeErase": {
         "placeholders": {
@@ -264,7 +264,7 @@
     "installationTypeLVM": "Usar LVM sen cifrado",
     "installationTypeLVMSelected": "LVM seleccionado",
     "installationTypeLVMEncryption": "Cifrado con frase de paso",
-    "installationTypeLVMEncryptionInfoResolute": "Terás que introducir unha frase de paso cada vez que acendas o ordenador. {advancedHint}",
+    "installationTypeLVMEncryptionInfoResolute": "Terás que introducir unha frase de paso cada vez que acendas o computador. {advancedHint}",
     "@installationTypeLVMEncryptionInfoResolute": {
         "placeholders": {
             "advancedHint": {
@@ -277,12 +277,12 @@
     "installationTypeEncryptInfo": "Escollerás unha chave de seguranza no seguinte paso.",
     "installationTypeZFS": "Usar ZFS sen cifrado",
     "installationTypeZFSEncryption": "Cifrar cunha frase de paso usando ZFS",
-    "installationTypeZFSEncryptionInfo": "Cifrado nativo con ZFS. Terás que introducir unha frase de paso cada vez que acendas o ordenador.",
+    "installationTypeZFSEncryptionInfo": "Cifrado nativo con ZFS. Terás que introducir unha frase de paso cada vez que acendas o computador.",
     "installationTypeZFSSelected": "ZFS seleccionado",
     "installationTypeZFSEncryptionSelected": "ZFS e cifrado seleccionados",
     "installationTypeTPM": "Usar cifrado con respaldo de hardware",
     "installationTypeTPMInfoResolute": "O disco desbloquearase automaticamente durante o inicio.",
-    "installationTypeTPMInfoUnavailable": "Non dispoñíbel neste ordenador.",
+    "installationTypeTPMInfoUnavailable": "Non dispoñíbel neste computador.",
     "installationTypeTPMSelected": "TPM seleccionado",
     "installationTypeReinstall": "Borrar {os} e reinstalar",
     "@installationTypeReinstall": {
@@ -502,7 +502,7 @@
     "confirmInstallButton": "Instalar",
     "confirmTableErased": "Borrado",
     "confirmTableUnchanged": "Non modificado",
-    "confirmTableResized": "Redimensionado dende {oldsize} a {newsize}",
+    "confirmTableResized": "Redimensionado desde {oldsize} a {newsize}",
     "@confirmTableResized": {
         "placeholders": {
             "oldsize": {
@@ -577,7 +577,7 @@
         }
     },
     "restartWarningBody": "Reinicia para completar a instalación ou continuar as probas.\nNon se gardarán os cambios que fagas.",
-    "rebootToConfigureWarning": "Tes que reiniciar o ordenador para continuar co proceso de instalación.",
+    "rebootToConfigureWarning": "Tes que reiniciar o computador para continuar co proceso de instalación.",
     "shutdown": "Apagar",
     "restartNow": "Reiniciar agora",
     "continueTesting": "Continuar probando",
@@ -594,12 +594,12 @@
         }
     },
     "bitlockerWarningTitle": "Podes perder todos os teus datos sen as chaves de recuperación de BitLocker",
-    "restartComputer": "Reiniciar o ordenador",
-    "restartComputerTitle": "Reiniciar o ordenador?",
+    "restartComputer": "Reiniciar o computador",
+    "restartComputerTitle": "Reiniciar o computador?",
     "restartInstaller": "Reiniciar o instalador",
     "restartIntoWindows": "Reiniciar en Windows",
     "restartIntoWindowsTitle": "Reiniciar en Windows?",
-    "restartIntoWindowsDescription": "Seguro que queres reiniciar o ordenador? Terás que reiniciar a instalación de {DISTRO} máis tarde para rematar de instalar {DISTRO}.",
+    "restartIntoWindowsDescription": "Seguro que queres reiniciar o computador? Terás que reiniciar a instalación de {DISTRO} máis tarde para rematar de instalar {DISTRO}.",
     "@restartIntoWindowsDescription": {
         "placeholders": {
             "DISTRO": {
@@ -953,12 +953,12 @@
     "tpmActionErrorKindInvalidArgument": "Argumento non válido.",
     "tpmActionErrorKindActionFailed": "Fallou a acción.",
     "tpmActionErrorKindRunningInVm": "O entorno actual é unha máquina virtual.",
-    "tpmActionErrorKindSystemNotEfi": "Este ordenador usa un firmware antigo (BIOS herdado) que non é compatible con este método de cifrado.",
-    "tpmActionErrorKindEfiVariableAccess": "Hai un problema co firmware deste ordenador.",
+    "tpmActionErrorKindSystemNotEfi": "Este computador usa un firmware antigo (BIOS herdado) que non é compatible con este método de cifrado.",
+    "tpmActionErrorKindEfiVariableAccess": "Hai un problema co firmware deste computador.",
     "tpmActionErrorKindNoSuitableTpm2Device": "Este computador non ten o hardware de seguranza necesario (TPM 2.0) para este método de cifrado.",
-    "tpmActionErrorKindTpmDeviceDisabled": "O TPM deste ordenador está desactivado.",
+    "tpmActionErrorKindTpmDeviceDisabled": "O TPM deste computador está desactivado.",
     "tpmActionErrorKindTpmHierarchiesOwned": "O TPM deste computador xa está a ser usado por outro sistema ou aplicación.",
-    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "O TPM deste ordenador está bloqueado actualmente.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "O TPM deste computador está bloqueado actualmente.",
     "refreshSnapUpdateAssets": "Actualizando os recursos de {snap}...",
     "@refreshSnapUpdateAssets": {
         "placeholders": {
@@ -1045,30 +1045,30 @@
     "recoveryKeyInfoHeader": "Podes perder todos os teus datos sen unha chave de recuperación",
     "recoveryKeyTextFieldLabel": "Chave de recuperación",
     "tpmActionErrorKindShutdownRequired": "É necesario apagar.",
-    "tpmActionErrorKindInsufficientTpmStorage": "O TPM deste ordenador non ten almacenamento suficiente dispoñíbel.",
-    "tpmActionErrorKindUnsupportedPlatform": "Este ordenador non é compatible co cifrado con hardware.",
+    "tpmActionErrorKindInsufficientTpmStorage": "O TPM deste computador non ten almacenamento suficiente dispoñíbel.",
+    "tpmActionErrorKindUnsupportedPlatform": "Este computador non é compatible co cifrado con hardware.",
     "tpmActionErrorKindUefiDebuggingEnabled": "A depuración UEFI está activada.",
-    "tpmActionErrorKindInsufficientDmaProtection": "A este ordenador fáltalle unha función de seguranza obrigatoria (protección DMA).",
-    "tpmActionErrorKindNoKernelIommu": "A este ordenador fáltalle unha función de seguranza obrigatoria (IOMMU).",
-    "tpmActionErrorKindHostSecurity": "Hai un problema coa configuración de seguranza deste ordenador.",
+    "tpmActionErrorKindInsufficientDmaProtection": "A este computador fáltalle unha función de seguranza obrigatoria (protección DMA).",
+    "tpmActionErrorKindNoKernelIommu": "A este computador fáltalle unha función de seguranza obrigatoria (IOMMU).",
+    "tpmActionErrorKindHostSecurity": "Hai un problema coa configuración de seguranza deste computador.",
     "tpmActionErrorKindSysPrepApplicationsPresent": "Hai software que se executa ao inicio e que pode impedir unha conexión segura co TPM do computador.",
     "tpmActionErrorKindAbsolutePresent": "O Módulo de Persistencia Absoluta está activado neste computador.",
-    "tpmActionErrorKindInvalidSecureBootMode": "O arranque seguro está desactivado neste ordenador ou non está configurado no modo despregado.",
-    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Algúns dos certificados que verifican o software neste ordenador están desactualizados ou usan unha protección débil.",
-    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Este ordenador está a usar unha lista de permisos manual para verificar o software ao iniciar.",
+    "tpmActionErrorKindInvalidSecureBootMode": "O arranque seguro está desactivado neste computador ou non está configurado no modo despregado.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Algúns dos certificados que verifican o software neste computador están desactualizados ou usan unha protección débil.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Este computador está a usar unha lista de permisos manual para verificar o software ao iniciar.",
     "tpmActionErrorKindAddonDriversPresent": "Hai controladores complementarios presentes.",
-    "tpmActionErrorKindGenericTpm": "Hai un problema co TPM deste ordenador.",
-    "tpmActionErrorKindGenericFirmware": "Hai un problema co firmware deste ordenador.",
+    "tpmActionErrorKindGenericTpm": "Hai un problema co TPM deste computador.",
+    "tpmActionErrorKindGenericFirmware": "Hai un problema co firmware deste computador.",
     "tpmActionFixActionReboot": "Reiniciar",
     "tpmActionFixActionShutdown": "Apagar",
     "tpmActionFixActionRebootToFwSettings": "Reiniciar na configuración do firmware",
-    "tpmActionFixActionRebootToFwSettingsInstructions": "Se a configuración do firmware non se carga automaticamente, reinicie o ordenador e prema a tecla de configuración repetidamente durante o inicio (normalmente F2, F10 ou Supr).",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Se a configuración do firmware non se carga automaticamente, reinicie o computador e prema a tecla de configuración repetidamente durante o inicio (normalmente F2, F10 ou Supr).",
     "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Activar a protección DMA manualmente",
     "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Borrar TPM manualmente",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Activar o arranque seguro manualmente",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Activar IOMMU manualmente",
-    "tpmActionFixActionRebootToFwSettingsDescription": "Podes facelo na configuración do firmware do teu ordenador.",
-    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "É posíbel que poidas facelo na configuración do firmware do teu ordenador. Consulta a documentación do provedor da CPU para obter orientación.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Podes facelo na configuración do firmware do teu computador.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "É posíbel que poidas facelo na configuración do firmware do teu computador. Consulta a documentación do provedor da CPU para obter orientación.",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Comprobe que o modo de arranque seguro estea configurado como \"implementado\".",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Esta funcionalidade podería denominarse \"Tecnoloxía de virtualización\", \"VT-d\" ou \"AMD-Vi\".",
     "tpmActionFixActionProceedDescription": "Ignorar este problema pode resultar nunha instalación menos segura.",
@@ -1089,9 +1089,9 @@
     "tpmActionFixActionClearTpmViaFirmware": "Purgar o TPM ao reiniciar",
     "tpmActionFixActionClearTpm": "Purgar TPM",
     "tpmActionFixActionProceed": "Ignorar",
-    "tpmActionFixActionRebootDescription": "Reinicie o ordenador para completar as accións anteriores.",
-    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Reiniciar o ordenador pode solucionar o problema.",
-    "tpmActionFixActionShutdownDescription": "Apaga o ordenador para completar as accións anteriores.",
+    "tpmActionFixActionRebootDescription": "Reinicie o computador para completar as accións anteriores.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Reiniciar o computador pode solucionar o problema.",
+    "tpmActionFixActionShutdownDescription": "Apaga o computador para completar as accións anteriores.",
     "tpmActionFixActionClearTpmWarningBody": "Perderás o acceso a todos os datos das unidades cifradas para as que non teñas claves de recuperación. Tamén se producirán erros noutras funcións que dependen do TPM, como a autenticación e os certificados.",
     "tpmActionFixActionClearTpmConfirmationLabel": "Entendo as consecuencias de purgar o TPM",
     "tpmActionFixActionCaveatConfirm": "É posíbel que se che pida que confirmes esta acción ao reiniciar.",
