@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'ئورنىتىش جەريانىدا ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدىكى بۇيرۇقنى ئىجرا قىلالمىدى.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'ئورنىتىشنى قايتا قوزغىتىشىڭىز كېرەك. ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى تەكشۈرۈپ، پەرقلىق ئورنىتىش تۈرىنى تاللاڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ.';
 

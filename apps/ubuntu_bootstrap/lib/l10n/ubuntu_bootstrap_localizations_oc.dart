@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Una comanda dins lo fichièr d\'autoinstallacion a pas pogut s\'executar pendent l\'installacion.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Vos caldrà tornar aviar l\'installacion. Verificatz lo fichièr autoinstall, causissètz un autre tipe d\'installacion, o contactatz vòstra assisténcia informatica.';
 

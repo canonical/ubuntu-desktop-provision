@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.';
 

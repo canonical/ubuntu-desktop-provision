@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
       'Polecenie w pliku autoinstalacji nie zostało uruchomione podczas instalacji.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Konieczne będzie ponowne uruchomienie instalacji. Sprawdź plik autoinstalacji, wybierz inny typ instalacji lub skontaktuj się z pomocą techniczną.';
 

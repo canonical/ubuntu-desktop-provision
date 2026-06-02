@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Paigalduse ajal ei õnnestunud käivitada automaatse paigalduse failis leidunud käsku.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Sa pead paigaldusega uuesti alustama. Kontrolli automaatse paigalduse faili õigsust, vali mõni muu paigaldustüüp või küsi abi oma IT-toelt.';
 

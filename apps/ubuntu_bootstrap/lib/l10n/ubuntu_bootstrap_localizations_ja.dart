@@ -112,6 +112,18 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       'インストール中の自動インストールファイルにあるコマンドの実行に失敗しました。';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'インストールをやり直してください。自動インストールファイルを確認するか、別のインストールの種類を選択するか、ITサポートに連絡してください。';
 

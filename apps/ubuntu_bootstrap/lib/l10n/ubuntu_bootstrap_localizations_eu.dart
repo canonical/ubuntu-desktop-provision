@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Autoinstall fitxategiko komando batek huts egin du instalatu bitartean.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Instalazioa berrabiarazi beharko duzu. Egiaztatu autoinstall fitxategia ondo dagoela, aukeratu beste instalazio mota bat, edo jarri zure IT laguntza zerbitzuarekin harremanetan.';
 

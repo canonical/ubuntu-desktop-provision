@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'Μια εντολή στο αρχείο αυτόματης εγκατάστασης απέτυχε να εκτελεστεί κατά την εγκατάσταση.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Θα χρειαστεί να επανεκκινήσετε την εγκατάσταση. Ελέγξτε το αρχείο αυτόματης εγκατάστασης, επιλέξτε έναν διαφορετικό τύπο εγκατάστασης ή επικοινωνήστε με την τεχνική υποστήριξη.';
 

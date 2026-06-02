@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'הרצת פקודה בקובץ התקנה אוטומטית נכשלה במהלך ההתקנה.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'צריך להפעיל את ההתקנה מחדש. יש לבדוק את קובץ ההתקנה האוטומטית, לבחור בסוג התקנה אחר או ליצור קשר עם תמיכת המחשוב שלך (IT).';
 

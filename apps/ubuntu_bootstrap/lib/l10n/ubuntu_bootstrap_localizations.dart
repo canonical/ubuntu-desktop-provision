@@ -423,6 +423,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'A command in the autoinstall file failed to run during installation.'**
   String get autoinstallErrorMessage;
 
+  /// No description provided for @autoinstallGenericErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The installation will be unable to proceed with the provided autoinstall file.'**
+  String get autoinstallGenericErrorMessage;
+
+  /// No description provided for @autoinstallValidationErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with the provided autoinstall file.'**
+  String get autoinstallValidationErrorMessage;
+
+  /// No description provided for @autoinstallCloudInitSchemaValidationErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with the cloud-init user data provided in the autoinstall file.'**
+  String get autoinstallCloudInitSchemaValidationErrorMessage;
+
   /// No description provided for @autoinstallErrorInstructions.
   ///
   /// In en, this message translates to:

@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Komento autoinstall-tiedostossa epäonnistui suorituksessa asennuksen aikana.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Asennus tulee käynnistää uudelleen. Tarkista autoinstall-tiedosto, valitse eri asennustyyppi tai ota yhteys IT-tukeen.';
 

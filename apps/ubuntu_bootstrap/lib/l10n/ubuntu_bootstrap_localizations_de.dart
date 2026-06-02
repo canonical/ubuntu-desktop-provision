@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
       'Ein Befehl in der autoinstall-Datei konnte während der Installation nicht ausgeführt werden.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Sie müssen die Installation neu starten. Überprüfen Sie die autoinstall-Datei, wählen Sie eine andere Installationsart oder wenden Sie sich an Ihren IT-Support.';
 

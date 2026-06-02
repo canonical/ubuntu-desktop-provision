@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
       'Príkaz v autoinstalačnom súbore sa počas inštalácie nepodarilo spustiť.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Bude potrebné reštartovať inštaláciu. Skontrolujte autoinstalačný súbor, vyberte iný typ inštalácie alebo kontaktujte svoju IT podporu.';
 

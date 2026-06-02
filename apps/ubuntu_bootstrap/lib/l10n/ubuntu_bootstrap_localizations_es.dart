@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'No se pudo ejecutar una orden del archivo de instalación automática.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Deberá reiniciar la instalación. Compruebe el archivo de instalación automática, elija otro tipo de instalación, o contacte al personal de sistemas.';
 

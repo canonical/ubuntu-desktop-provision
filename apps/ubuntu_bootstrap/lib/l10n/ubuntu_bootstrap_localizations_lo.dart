@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ຄຳສັ່ງໃນໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດເຮັດວຽກລົ້ມເຫຼວໃນລະຫວ່າງການຕິດຕັ້ງ.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'ທ່ານຈະຕ້ອງໄດ້ເລີ່ມການຕິດຕັ້ງໃໝ່. ກວດສອບໄຟລ໌ຕິດຕັ້ງອັດຕະໂນມັດ, ເລືອກຮູບແບບການຕິດຕັ້ງແບບອື່ນ ຫຼື ຕິດຕໍ່ຝ່າຍສະໜັບສະໜູນໄອທີຂອງທ່ານ.';
 

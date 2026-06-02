@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.';
 

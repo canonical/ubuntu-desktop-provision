@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Ett kommando i autoinstallationsfilen kördes inte korrekt vid installationen.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'The installation will be unable to proceed with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Du kommer att behöva starta om installationen. Kontrollera autoinstallationsfilen, välj en annan installationstyp, eller kontakta din IT-support.';
 
