@@ -188,15 +188,16 @@ extension on ApplicationStatus {
         ApplicationStatus(
           state: ApplicationState.ERROR,
           nonreportableError: NonReportableError(
-            cause: 'AutoinstallUserSuppliedCmdError',
+            cause: final cause,
             message: final message,
             details: final details,
-          )
-        ) =>
+          ),
+        )
+            when _autoinstallMessage(cause, l10n) != null =>
           ErrorDetails(
             title: l10n.installationFailed,
             message: [
-              l10n.autoinstallErrorMessage,
+              _autoinstallMessage(cause, l10n)!,
               l10n.autoinstallErrorInstructions,
             ],
             details: [
@@ -208,75 +209,19 @@ extension on ApplicationStatus {
             },
             actionLabel: l10n.restartInstaller,
           ),
-        ApplicationStatus(
-          state: ApplicationState.ERROR,
-          nonreportableError: NonReportableError(
-            cause: 'AutoinstallError',
-            message: final message,
-            details: final details,
-          )
-        ) =>
-          ErrorDetails(
-            title: l10n.installationFailed,
-            message: [
-              l10n.autoinstallGenericErrorMessage,
-              l10n.autoinstallErrorInstructions,
-            ],
-            details: [
-              message,
-              details,
-            ].nonNulls.join('\n'),
-            action: (ref) async {
-              await ref.read(autoinstallModelProvider.notifier).restart();
-            },
-            actionLabel: l10n.restartInstaller,
-          ),
-        ApplicationStatus(
-          state: ApplicationState.ERROR,
-          nonreportableError: NonReportableError(
-            cause: 'AutoinstallValidationError',
-            message: final message,
-            details: final details,
-          )
-        ) =>
-          ErrorDetails(
-            title: l10n.installationFailed,
-            message: [
-              l10n.autoinstallValidationErrorMessage,
-              l10n.autoinstallErrorInstructions,
-            ],
-            details: [
-              message,
-              details,
-            ].nonNulls.join('\n'),
-            action: (ref) async {
-              await ref.read(autoinstallModelProvider.notifier).restart();
-            },
-            actionLabel: l10n.restartInstaller,
-          ),
-        ApplicationStatus(
-          state: ApplicationState.ERROR,
-          nonreportableError: NonReportableError(
-            cause: 'CloudInitSchemaValidationError',
-            message: final message,
-            details: final details,
-          )
-        ) =>
-          ErrorDetails(
-            title: l10n.installationFailed,
-            message: [
-              l10n.autoinstallCloudInitSchemaValidationErrorMessage,
-              l10n.autoinstallErrorInstructions,
-            ],
-            details: [
-              message,
-              details,
-            ].nonNulls.join('\n'),
-            action: (ref) async {
-              await ref.read(autoinstallModelProvider.notifier).restart();
-            },
-            actionLabel: l10n.restartInstaller,
-          ),
+        _ => null,
+      };
+
+  String? _autoinstallMessage(
+    String? cause,
+    UbuntuBootstrapLocalizations l10n,
+  ) =>
+      switch (cause) {
+        'AutoinstallUserSuppliedCmdError' => l10n.autoinstallErrorMessage,
+        'AutoinstallError' => l10n.autoinstallGenericErrorMessage,
+        'AutoinstallValidationError' => l10n.autoinstallValidationErrorMessage,
+        'CloudInitSchemaValidationError' =>
+          l10n.autoinstallCloudInitSchemaValidationErrorMessage,
         _ => null,
       };
 }
