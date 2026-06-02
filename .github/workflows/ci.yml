@@ -219,6 +219,8 @@ jobs:
   go-sanity:
     name: "Go: Code sanity"
     runs-on: ubuntu-24.04
+    env:
+      GOTOOLCHAIN: local
     steps:
       - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
