@@ -208,6 +208,75 @@ extension on ApplicationStatus {
             },
             actionLabel: l10n.restartInstaller,
           ),
+        ApplicationStatus(
+          state: ApplicationState.ERROR,
+          nonreportableError: NonReportableError(
+            cause: 'AutoinstallError',
+            message: final message,
+            details: final details,
+          )
+        ) =>
+          ErrorDetails(
+            title: l10n.installationFailed,
+            message: [
+              l10n.autoinstallGenericErrorMessage,
+              l10n.autoinstallErrorInstructions,
+            ],
+            details: [
+              message,
+              details,
+            ].nonNulls.join('\n'),
+            action: (ref) async {
+              await ref.read(autoinstallModelProvider.notifier).restart();
+            },
+            actionLabel: l10n.restartInstaller,
+          ),
+        ApplicationStatus(
+          state: ApplicationState.ERROR,
+          nonreportableError: NonReportableError(
+            cause: 'AutoinstallValidationError',
+            message: final message,
+            details: final details,
+          )
+        ) =>
+          ErrorDetails(
+            title: l10n.installationFailed,
+            message: [
+              l10n.autoinstallValidationErrorMessage,
+              l10n.autoinstallErrorInstructions,
+            ],
+            details: [
+              message,
+              details,
+            ].nonNulls.join('\n'),
+            action: (ref) async {
+              await ref.read(autoinstallModelProvider.notifier).restart();
+            },
+            actionLabel: l10n.restartInstaller,
+          ),
+        ApplicationStatus(
+          state: ApplicationState.ERROR,
+          nonreportableError: NonReportableError(
+            cause: 'CloudInitSchemaValidationError',
+            message: final message,
+            details: final details,
+          )
+        ) =>
+          ErrorDetails(
+            title: l10n.installationFailed,
+            message: [
+              l10n.autoinstallCloudInitSchemaValidationErrorMessage,
+              l10n.autoinstallErrorInstructions,
+            ],
+            details: [
+              message,
+              details,
+            ].nonNulls.join('\n'),
+            action: (ref) async {
+              await ref.read(autoinstallModelProvider.notifier).restart();
+            },
+            actionLabel: l10n.restartInstaller,
+          ),
         _ => null,
       };
 }
