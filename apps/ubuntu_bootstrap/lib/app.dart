@@ -283,15 +283,27 @@ class _InstallerApp extends ConsumerWidget {
           rootBundle,
           package: 'ubuntu_bootstrap',
         ),
-        child: FutureBuilder<void>(
-          future: init,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const LoadingPage();
-            } else if (snapshot.hasError) {
-              return const ErrorPage(allowRestart: false);
-            }
-            return InstallerWizard(key: ValueKey(ref.watch(restartProvider)));
+        child: Builder(
+          builder: (context) {
+            // Provide a localized semantic label for the step indicator
+            // so screen readers announce the current step.
+            final l10n = UbuntuBootstrapLocalizations.of(context);
+            return WizardBarTheme(
+              stepSemanticsLabel: l10n.stepIndicatorLabel,
+              child: FutureBuilder<void>(
+                future: init,
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return const LoadingPage();
+                  } else if (snapshot.hasError) {
+                    return const ErrorPage(allowRestart: false);
+                  }
+                  return InstallerWizard(
+                    key: ValueKey(ref.watch(restartProvider)),
+                  );
+                },
+              ),
+            );
           },
         ),
       ),

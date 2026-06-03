@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ubuntu_provision/l10n.dart';
 import 'package:ubuntu_provision/src/network/connect_model.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_tile.dart';
@@ -178,16 +179,23 @@ class WifiListTile extends ConsumerWidget {
     AccessPoint accessPoint,
     WifiDevice device,
     double? iconSize,
+    UbuntuProvisionLocalizations lang,
   ) {
     if (device.isActiveAccessPoint(accessPoint)) {
       if (device.isConnecting) {
         return SizedBox(
           width: iconSize,
           height: iconSize,
-          child: const YaruCircularProgressIndicator(strokeWidth: 3),
+          child: Semantics(
+            label: lang.networkWifiConnecting,
+            child: const YaruCircularProgressIndicator(strokeWidth: 3),
+          ),
         );
       } else {
-        return const Icon(YaruIcons.ok_simple);
+        return Semantics(
+          label: lang.networkWifiConnected,
+          child: const Icon(YaruIcons.ok_simple),
+        );
       }
     } else {
       return const SizedBox.shrink();
@@ -197,6 +205,7 @@ class WifiListTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final device = ref.watch(wifiDeviceProvider(deviceIndex));
+    final lang = NetworkLocalizations.of(context);
     final textColor = Theme.of(context).textTheme.titleMedium!.color;
     final iconSize = IconTheme.of(context).size;
 
@@ -205,12 +214,15 @@ class WifiListTile extends ConsumerWidget {
         ThemedListTile(
           key: ValueKey(accessPoint.name),
           title: Text(accessPoint.name),
-          leading: _leadingIcon(accessPoint, device, iconSize),
+          leading: _leadingIcon(accessPoint, device, iconSize, lang),
           selected: selected && device.isSelectedAccessPoint(accessPoint),
-          trailing: SizedBox(
-            width: iconSize,
-            height: iconSize,
-            child: Icon(_wifiIcon(accessPoint)),
+          trailing: Semantics(
+            label: _wifiSemanticsLabel(accessPoint, lang),
+            child: SizedBox(
+              width: iconSize,
+              height: iconSize,
+              child: Icon(_wifiIcon(accessPoint)),
+            ),
           ),
           onTap: () {
             device.selectAccessPoint(accessPoint);
@@ -230,7 +242,11 @@ class WifiListTile extends ConsumerWidget {
                 ? SizedBox(
                     width: iconSize,
                     height: iconSize,
-                    child: const YaruCircularProgressIndicator(strokeWidth: 3),
+                    child: Semantics(
+                      label: lang.networkWifiConnecting,
+                      child:
+                          const YaruCircularProgressIndicator(strokeWidth: 3),
+                    ),
                   )
                 : null,
             children: accessPoints,
@@ -239,29 +255,45 @@ class WifiListTile extends ConsumerWidget {
   }
 }
 
+int _wifiStrength(AccessPoint model) => (model.strength ~/ 20 + 1).clamp(1, 5);
+
+String _wifiSemanticsLabel(
+  AccessPoint model,
+  UbuntuProvisionLocalizations lang,
+) {
+  final strengthLabel = switch (_wifiStrength(model)) {
+    1 => lang.networkWifiSignalNone,
+    2 => lang.networkWifiSignalWeak,
+    3 => lang.networkWifiSignalOk,
+    4 => lang.networkWifiSignalGood,
+    5 => lang.networkWifiSignalExcellent,
+    _ => '',
+  };
+  final securityLabel = model.isOpen
+      ? lang.networkWifiOpenNetwork
+      : lang.networkWifiSecureNetwork;
+  return '$strengthLabel, $securityLabel';
+}
+
 IconData _wifiIcon(AccessPoint model) {
-  final strength = (model.strength ~/ 20 + 1).clamp(1, 5);
+  final strength = _wifiStrength(model);
   return model.isOpen ? _wifiIconOpen(strength) : _wifiIconLock(strength);
 }
 
-IconData _wifiIconOpen(int strength) {
-  const icons = <int, IconData>{
-    1: YaruIcons.network_wireless_signal_none,
-    2: YaruIcons.network_wireless_signal_weak,
-    3: YaruIcons.network_wireless_signal_ok,
-    4: YaruIcons.network_wireless_signal_good,
-    5: YaruIcons.network_wireless_signal_excellent,
-  };
-  return icons[strength]!;
-}
+IconData _wifiIconOpen(int strength) => switch (strength) {
+      1 => YaruIcons.network_wireless_signal_none,
+      2 => YaruIcons.network_wireless_signal_weak,
+      3 => YaruIcons.network_wireless_signal_ok,
+      4 => YaruIcons.network_wireless_signal_good,
+      5 => YaruIcons.network_wireless_signal_excellent,
+      _ => YaruIcons.network_wireless_signal_none,
+    };
 
-IconData _wifiIconLock(int strength) {
-  const icons = <int, IconData>{
-    1: YaruIcons.network_wireless_signal_none_secure,
-    2: YaruIcons.network_wireless_signal_weak_secure,
-    3: YaruIcons.network_wireless_signal_ok_secure,
-    4: YaruIcons.network_wireless_signal_good_secure,
-    5: YaruIcons.network_wireless_signal_excellent_secure,
-  };
-  return icons[strength]!;
-}
+IconData _wifiIconLock(int strength) => switch (strength) {
+      1 => YaruIcons.network_wireless_signal_none_secure,
+      2 => YaruIcons.network_wireless_signal_weak_secure,
+      3 => YaruIcons.network_wireless_signal_ok_secure,
+      4 => YaruIcons.network_wireless_signal_good_secure,
+      5 => YaruIcons.network_wireless_signal_excellent_secure,
+      _ => YaruIcons.network_wireless_signal_none_secure,
+    };

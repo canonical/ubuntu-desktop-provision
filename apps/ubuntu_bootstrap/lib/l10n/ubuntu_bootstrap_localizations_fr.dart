@@ -1693,4 +1693,9 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Essayez autre chose. Vous pouvez également <a href=\"\">envoyer un rapport d’erreur</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

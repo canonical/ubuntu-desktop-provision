@@ -194,6 +194,151 @@ void main() {
     expect(find.text(l10n.networkWifiNone), findsOneWidget);
   });
 
+  testWidgets('wifi semantics - signal and security labels', (tester) async {
+    final handle = tester.ensureSemantics();
+
+    final device = MockWifiDevice();
+    when(device.model).thenReturn('device');
+    when(device.scanning).thenReturn(false);
+    when(device.isConnecting).thenReturn(false);
+    when(device.isAvailable).thenReturn(true);
+    when(device.isActive).thenReturn(false);
+
+    final apOpen = MockAccessPoint();
+    when(apOpen.name).thenReturn('open_ap');
+    when(apOpen.strength).thenReturn(80);
+    when(apOpen.isOpen).thenReturn(true);
+
+    final apSecure = MockAccessPoint();
+    when(apSecure.name).thenReturn('secure_ap');
+    when(apSecure.strength).thenReturn(20);
+    when(apSecure.isOpen).thenReturn(false);
+
+    when(device.accessPoints).thenReturn([apOpen, apSecure]);
+    when(device.isActiveAccessPoint(any)).thenReturn(false);
+    when(device.isSelectedAccessPoint(any)).thenReturn(false);
+
+    final model = buildWifiModel(devices: [device], isEnabled: true);
+
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: Material(
+          child: WifiView(
+            expanded: true,
+            onEnabled: () {},
+            onSelected: (device, accessPoint) {},
+          ),
+        ),
+      ),
+    );
+
+    final context = tester.element(find.byType(WifiListView));
+    final l10n = NetworkLocalizations.of(context);
+
+    expect(
+      find.bySemanticsLabel(
+        RegExp(
+          RegExp.escape(
+            '${l10n.networkWifiSignalExcellent}, ${l10n.networkWifiOpenNetwork}',
+          ),
+        ),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.bySemanticsLabel(
+        RegExp(
+          RegExp.escape(
+            '${l10n.networkWifiSignalWeak}, ${l10n.networkWifiSecureNetwork}',
+          ),
+        ),
+      ),
+      findsOneWidget,
+    );
+
+    handle.dispose();
+  });
+
+  testWidgets('wifi semantics - connection state labels', (tester) async {
+    final handle = tester.ensureSemantics();
+
+    // Device 1: connecting with active AP
+    final device1 = MockWifiDevice();
+    when(device1.model).thenReturn('device1');
+    when(device1.scanning).thenReturn(false);
+    when(device1.isConnecting).thenReturn(true);
+    when(device1.isAvailable).thenReturn(true);
+    when(device1.isActive).thenReturn(true);
+
+    final ap1 = MockAccessPoint();
+    when(ap1.name).thenReturn('ap1');
+    when(ap1.strength).thenReturn(80);
+    when(ap1.isOpen).thenReturn(true);
+    when(device1.accessPoints).thenReturn([ap1]);
+    when(device1.isActiveAccessPoint(ap1)).thenReturn(true);
+    when(device1.isSelectedAccessPoint(ap1)).thenReturn(false);
+
+    // Device 2: connected (active AP, not connecting)
+    final device2 = MockWifiDevice();
+    when(device2.model).thenReturn('device2');
+    when(device2.scanning).thenReturn(false);
+    when(device2.isConnecting).thenReturn(false);
+    when(device2.isAvailable).thenReturn(true);
+    when(device2.isActive).thenReturn(true);
+
+    final ap2 = MockAccessPoint();
+    when(ap2.name).thenReturn('ap2');
+    when(ap2.strength).thenReturn(80);
+    when(ap2.isOpen).thenReturn(true);
+    when(device2.accessPoints).thenReturn([ap2]);
+    when(device2.isActiveAccessPoint(ap2)).thenReturn(true);
+    when(device2.isSelectedAccessPoint(ap2)).thenReturn(true);
+
+    final model = buildWifiModel(
+      devices: [device1, device2],
+      isEnabled: true,
+    );
+
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: Material(
+          child: Column(
+            children: [
+              WifiView(
+                expanded: true,
+                onEnabled: () {},
+                onSelected: (device, accessPoint) {},
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    final context = tester.element(find.byType(WifiListView));
+    final l10n = NetworkLocalizations.of(context);
+
+    // "Connecting…" appears at both device-level (ExpansionTile trailing)
+    // and AP-level (leading icon) for device1's connecting state.
+    expect(
+      find.bySemanticsLabel(RegExp(RegExp.escape(l10n.networkWifiConnecting))),
+      findsNWidgets(2),
+    );
+    // "Connected" appears at AP-level for device2's active (non-connecting) AP.
+    expect(
+      find.bySemanticsLabel(RegExp(RegExp.escape(l10n.networkWifiConnected))),
+      findsOneWidget,
+    );
+
+    handle.dispose();
+  });
+
   testWidgets('starts periodic scanning', (tester) async {
     final model = buildWifiModel();
 
