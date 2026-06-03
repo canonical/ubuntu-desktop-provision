@@ -66,11 +66,6 @@ parts:
     source-commit: &commit-ref 0f280bdd96530a115ba0d0d7a72c8d418a189f8f
     source-type: git
     build-attributes: [enable-patchelf]
-    stage-packages:
-      - to riscv64:
-        - libc6
-        - libc6-dev
-        - libgcc-s1
     override-build: |
       if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
         export FLUTTER_STORAGE_BASE_URL=https://flutter-experimental.ubuntu.com
@@ -239,6 +234,22 @@ parts:
   libraries:
     plugin: nil
     build-attributes: [enable-patchelf]
+    stage:
+      - to riscv64:
+        # libc6-dev (pulled in as a dependency of libglib2.0-dev and other -dev
+        # packages) ships static archives and GNU ld linker scripts for libc/libm.
+        # On riscv64 the linker scripts cause libm.a to be included in every -lm
+        # link; libm.a in glibc 2.39 has undefined __frexp/__ldexp that only exist
+        # in libc.a, so building libhandy_flutter.so fails with "undefined
+        # reference to __frexp".  Excluding static archives and the unversioned
+        # .so linker scripts from stage forces the Flutter build to fall back to
+        # the system's real libm.so.6/libc.so.6 (pure dynamic linking), where all
+        # symbols are resolved at run-time.
+        - "*"
+        - -usr/lib/riscv64-linux-gnu/libc.a
+        - -usr/lib/riscv64-linux-gnu/libm.a
+        - -usr/lib/riscv64-linux-gnu/libc.so
+        - -usr/lib/riscv64-linux-gnu/libm.so
     stage-packages:
       - libatk1.0-0t64
       - libcairo-gobject2
@@ -308,6 +319,13 @@ parts:
       - -usr/lib/pkgconfig
       - -usr/share/pkgconfig
       - -usr/lib/${CRAFT_ARCH_TRIPLET}/libgallium*
+      - to riscv64:
+        # These are excluded from stage (see the stage: filter above); list them
+        # here too so snapcraft does not try to copy absent files during prime.
+        - -usr/lib/riscv64-linux-gnu/libc.a
+        - -usr/lib/riscv64-linux-gnu/libm.a
+        - -usr/lib/riscv64-linux-gnu/libc.so
+        - -usr/lib/riscv64-linux-gnu/libm.so
 
   dri-no-patchelf:
     after: [libraries]
