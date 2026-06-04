@@ -55,7 +55,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 2e8d70ee20871c2683e36cbde3a360a0a73108c9
+    source-commit: &commit-ref fe2a2ed8a4a6ef6c13bede22fd56f10a0b4a8f20
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -74,7 +74,7 @@ parts:
     plugin: nil
     source: https://git.launchpad.net/curtin
     source-type: git
-    source-commit: 8bc0121d6809719a611f3f9db9630122b0e8ed8f
+    source-commit: 8c8ca80d22572e068a89badbbd53d6590ab9f17d
     override-pull: |
       craftctl default
       PACKAGED_VERSION="$(git describe --long --abbrev=9 --match=[0-9][0-9]*)"
@@ -98,7 +98,7 @@ parts:
     plugin: nil
     source: https://github.com/canonical/probert.git
     source-type: git
-    source-commit: 26175bb2fb952335cc652c602e7c5ae6ef7ac82b
+    source-commit: cd86d1ed29e8da70ceead08697e62b3b09643b03
     override-build: *pyinstall
     build-packages:
       - python3-pip
