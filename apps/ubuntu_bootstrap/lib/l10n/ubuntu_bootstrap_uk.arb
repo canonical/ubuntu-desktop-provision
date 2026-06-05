@@ -520,5 +520,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Встановлення не може продовжуватися за допомогою наданого файлу автоматичного встановлення.",
+    "autoinstallValidationErrorMessage": "Виникла проблема з наданим файлом для автоматичної інсталяції.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Виникла проблема з даними користувача cloud-init, вказаними у файлі автоінсталяції."
 }
