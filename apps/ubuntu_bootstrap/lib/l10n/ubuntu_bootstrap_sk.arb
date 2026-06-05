@@ -531,5 +531,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Inštalácia nemôže pokračovať s poskytnutým súborom automatickej inštalácie.",
+    "autoinstallValidationErrorMessage": "V poskytnutom súbore automatickej inštalácie sa vyskytol problém.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "V používateľských údajoch cloud-init uvedených v súbore automatickej inštalácie sa vyskytol problém."
 }
