@@ -532,5 +532,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Nie można kontynuować instalacji przy użyciu dostarczonego pliku autoinstalacji.",
+    "autoinstallValidationErrorMessage": "Wystąpił problem z dostarczonym plikiem autoinstalacji.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Wystąpił problem z danymi użytkownika cloud-init dostarczonymi w pliku autoinstalacji."
 }
