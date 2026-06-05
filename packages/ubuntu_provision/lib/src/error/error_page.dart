@@ -112,26 +112,23 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                       ),
                       SizedBox(height: kWizardSpacing),
                       ...content,
+                      SizedBox(height: kWizardSpacing),
+                      if (errorDetails?.action != null)
+                        PushButton.elevated(
+                          onPressed: () => errorDetails!.action!.call(ref),
+                          child: Text(errorDetails!.actionLabel!),
+                        ),
                       if (errorDetails?.details != null) ...[
                         const SizedBox(height: kWizardSpacing),
                         YaruExpandable(
                           expandButtonPosition:
                               YaruExpandableButtonPosition.start,
                           header: Text(lang.errorPageTechnicalDetails),
-                          child: TextFormField(
-                            style: TextStyle(
-                              inherit: false,
-                              color: Theme.of(context).colorScheme.onSurface,
-                              fontSize: Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium!
-                                  .fontSize,
-                              fontFamily: 'Ubuntu Mono',
-                              textBaseline: TextBaseline.alphabetic,
-                            ),
-                            initialValue: errorDetails!.details,
-                            readOnly: true,
-                            maxLines: null,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Text(errorDetails!.details!),
+                            ],
                           ),
                         ),
                       ],
@@ -180,11 +177,6 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                   model.copyWith(isLogVisible: !model.isLogVisible);
             },
           ),
-          if (errorDetails?.action != null)
-            PushButton.elevated(
-              onPressed: () => errorDetails!.action!.call(ref),
-              child: Text(errorDetails!.actionLabel!),
-            ),
           if (allowRestart)
             WizardButton(
               label: lang.restart,
