@@ -426,7 +426,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @autoinstallGenericErrorMessage.
   ///
   /// In en, this message translates to:
-  /// **'The installation will be unable to proceed with the provided autoinstall file.'**
+  /// **'Installation cannot continue with the provided autoinstall file.'**
   String get autoinstallGenericErrorMessage;
 
   /// No description provided for @autoinstallValidationErrorMessage.

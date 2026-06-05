@@ -118,7 +118,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'The installation will be unable to proceed with the provided autoinstall file.';
+      'Installation cannot continue with the provided autoinstall file.';
 
   @override
   String get autoinstallValidationErrorMessage =>
