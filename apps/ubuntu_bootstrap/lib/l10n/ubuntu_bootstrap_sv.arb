@@ -532,5 +532,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Installationen kan inte fortsätta med den här autoinstall-filen.",
+    "autoinstallValidationErrorMessage": "Det finns ett problem med den angivna autoinstall-filen.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Det finns ett problem med användardatan för cloud-init som finns i autoinstall-filen."
 }
