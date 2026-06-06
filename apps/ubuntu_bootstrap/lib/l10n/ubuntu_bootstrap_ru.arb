@@ -532,5 +532,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Установка не может быть продолжена с использованием предоставленного файла autoinstall.",
+    "autoinstallValidationErrorMessage": "В файле autoinstall обнаружена проблема.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Возникла проблема с данными пользователя cloud-init, указанными в файле autoinstall."
 }
