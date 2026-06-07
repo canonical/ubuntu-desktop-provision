@@ -1067,5 +1067,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Instalazioak ezin du aurrera egin hautatutako autoinstall fitxategiarekin.",
+    "autoinstallValidationErrorMessage": "Arazoren bat dago hautatutako autoinstall fitxategiarekin.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin."
 }
