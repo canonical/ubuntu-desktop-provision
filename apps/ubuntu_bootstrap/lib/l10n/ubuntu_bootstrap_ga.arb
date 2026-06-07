@@ -529,5 +529,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Ní féidir leanúint leis an suiteáil leis an gcomhad uath-suiteála a cuireadh ar fáil.",
+    "autoinstallValidationErrorMessage": "Tá fadhb leis an gcomhad uath-suiteála a cuireadh ar fáil.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Tá fadhb ann leis na sonraí úsáideora cloud-init a chuirtear ar fáil sa chomhad uathsuiteála."
 }
