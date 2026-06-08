@@ -7,6 +7,41 @@ import 'package:yaru/yaru.dart';
 /// The spacing between Continue and Back buttons.
 const kWizardBarSpacing = 8.0;
 
+/// Scopes a default step-semantics-label builder to all descendant
+/// [WizardBar] widgets that do not provide their own
+/// [WizardBar.stepSemanticsLabel].
+///
+/// Place this above the navigator (or any common ancestor of all [WizardBar]
+/// widgets) to apply a localized label without modifying each call site:
+/// ```dart
+/// WizardBarTheme(
+///   stepSemanticsLabel: (step, total) =>
+///       l10n.stepIndicatorLabel(step, total),
+///   child: ...,
+/// )
+/// ```
+class WizardBarTheme extends InheritedWidget {
+  const WizardBarTheme({
+    required this.stepSemanticsLabel,
+    required super.child,
+    super.key,
+  });
+
+  /// Builder that returns a semantic label for the step indicator.
+  ///
+  /// Applied to all descendant [WizardBar] widgets that have no per-widget
+  /// [WizardBar.stepSemanticsLabel] set.
+  final String? Function(int currentStep, int totalSteps) stepSemanticsLabel;
+
+  /// Returns the nearest [WizardBarTheme] ancestor, or `null` if none exists.
+  static WizardBarTheme? maybeOf(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<WizardBarTheme>();
+
+  @override
+  bool updateShouldNotify(WizardBarTheme oldWidget) =>
+      stepSemanticsLabel != oldWidget.stepSemanticsLabel;
+}
+
 class WizardBar extends StatefulWidget {
   const WizardBar({
     super.key,
@@ -18,17 +53,62 @@ class WizardBar extends StatefulWidget {
       kYaruPagePadding,
       kYaruPagePadding,
     ),
+    this.stepSemanticsLabel,
   });
 
   final Widget? leading;
   final List<Widget>? trailing;
   final EdgeInsetsGeometry padding;
 
+  /// Builder that returns a semantic label for the step indicator.
+  ///
+  /// When provided, this takes precedence over any [WizardBarTheme] ancestor.
+  /// Return `null` to explicitly suppress the semantics label for this bar.
+  ///
+  /// If omitted (`null`), falls back to the nearest [WizardBarTheme] ancestor.
+  final String? Function(int currentStep, int totalSteps)? stepSemanticsLabel;
+
   @override
   State<WizardBar> createState() => _WizardBarState();
 }
 
 class _WizardBarState extends State<WizardBar> {
+  Widget? _buildPageIndicator(int? currentStep, int? totalSteps) {
+    if (currentStep == null || totalSteps == null) return null;
+
+    final indicator = YaruPageIndicator.builder(
+      page: currentStep,
+      length: totalSteps,
+      itemSizeBuilder: (index, selectedIndex, length) =>
+          Size.square(index == selectedIndex ? 12.0 : 8.0),
+      layoutDelegate: YaruPageIndicatorSteppedDelegate(baseItemSpacing: 8),
+    );
+
+    // If a per-widget builder is provided, use it exclusively (even if it
+    // returns null to suppress the label). Otherwise fall back to the
+    // inherited WizardBarTheme.
+    final String? label;
+    if (widget.stepSemanticsLabel != null) {
+      // Steps are 0-indexed internally; convert to 1-based for screen readers.
+      label = widget.stepSemanticsLabel!.call(currentStep + 1, totalSteps);
+    } else {
+      label = WizardBarTheme.maybeOf(context)
+          ?.stepSemanticsLabel
+          .call(currentStep + 1, totalSteps);
+    }
+    if (label == null) return indicator;
+
+    return Focus(
+      canRequestFocus: true,
+      descendantsAreFocusable: false,
+      child: Semantics(
+        key: const ValueKey('wizard-step-indicator'),
+        label: label,
+        child: ExcludeSemantics(child: indicator),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final wizardScope = Wizard.maybeOf(context);
@@ -44,16 +124,7 @@ class _WizardBarState extends State<WizardBar> {
         constraints: BoxConstraints(maxHeight: kPushButtonSize.height),
         child: NavigationToolbar(
           leading: widget.leading,
-          middle: currentStep != null && totalSteps != null
-              ? YaruPageIndicator.builder(
-                  page: currentStep,
-                  length: totalSteps,
-                  itemSizeBuilder: (index, selectedIndex, length) =>
-                      Size.square(index == selectedIndex ? 12.0 : 8.0),
-                  layoutDelegate:
-                      YaruPageIndicatorSteppedDelegate(baseItemSpacing: 8),
-                )
-              : null,
+          middle: _buildPageIndicator(currentStep, totalSteps),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,

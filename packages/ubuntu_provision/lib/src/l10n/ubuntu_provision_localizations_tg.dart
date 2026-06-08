@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsTg extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'That name is too long.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Your computer\'s name';
 
   @override
@@ -186,7 +189,8 @@ class UbuntuProvisionLocalizationsTg extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'A username is required';
 
   @override
-  String get identityInvalidUsername => 'The username is invalid';
+  String get identityInvalidUsername =>
+      'The username is invalid: it must start with a lowercase letter and may only contain lowercase letters, digits, hyphens, and underscores.';
 
   @override
   String get identityUsernameInUse => 'That user name already exists.';
@@ -379,4 +383,31 @@ class UbuntuProvisionLocalizationsTg extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Collapse';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

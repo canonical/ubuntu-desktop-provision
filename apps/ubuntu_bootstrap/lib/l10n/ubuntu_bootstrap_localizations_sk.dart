@@ -36,7 +36,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectFileClearButtonLabel => 'Vymazať súbor';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Zvoľte súbor';
+  String get autoinstallDirectFilePickerTitle => 'Výber súboru';
 
   @override
   String get autoinstallDirectFilePickerFilterLabel => 'Súbory YAML';
@@ -113,11 +113,23 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Príkaz v autoinstalačnom súbore sa počas inštalácie nepodarilo spustiť.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Bude potrebné reštartovať inštaláciu. Skontrolujte autoinstalačný súbor, vyberte iný typ inštalácie alebo kontaktujte svoju IT podporu.';
 
   @override
   String get changeButtonText => 'Zmeniť';
@@ -908,7 +920,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Reštartovať počítač?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Reštartovať inštalátor';
 
   @override
   String get restartIntoWindows => 'Reštartovať do Windows';
@@ -1675,4 +1687,9 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Skúste niečo iné. Môžete tiež <a href=\"\">odoslať chybové hlásenie</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

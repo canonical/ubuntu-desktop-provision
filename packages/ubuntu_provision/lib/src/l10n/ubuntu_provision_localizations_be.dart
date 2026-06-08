@@ -166,6 +166,9 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Гэта імя занадта доўгае.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Імя вашага камп\'ютара';
 
   @override
@@ -383,4 +386,31 @@ class UbuntuProvisionLocalizationsBe extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Collapse';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

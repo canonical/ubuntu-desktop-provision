@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
       'A command in the autoinstall file failed to run during installation.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
@@ -1681,6 +1693,11 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Try something else. You may also <a href=\"\">send an error report</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

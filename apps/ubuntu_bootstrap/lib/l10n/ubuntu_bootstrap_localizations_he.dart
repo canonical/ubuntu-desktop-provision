@@ -115,11 +115,23 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'הרצת פקודה בקובץ התקנה אוטומטית נכשלה במהלך ההתקנה.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'צריך להפעיל את ההתקנה מחדש. יש לבדוק את קובץ ההתקנה האוטומטית, לבחור בסוג התקנה אחר או ליצור קשר עם תמיכת המחשוב שלך (IT).';
 
   @override
   String get changeButtonText => 'שינוי';
@@ -895,7 +907,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'להפעיל את המחשב מחדש?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'הפעלת תוכנית ההתקנה מחדש';
 
   @override
   String get restartIntoWindows => 'להפעיל מחדש אל Windows';
@@ -1653,4 +1665,9 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'עדיף לנסות משהו אחר. אפשר גם <a href=\"\">לדווח על שגיאה</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

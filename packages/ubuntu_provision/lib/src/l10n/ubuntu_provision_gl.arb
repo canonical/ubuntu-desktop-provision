@@ -1,4 +1,153 @@
 {
-  "close": "Pechar",
-  "@close": {}
+    "close": "Pechar",
+    "accessibilityPageTitle": "Accesibilidade",
+    "accessibilityPageHeader": "Accesibilidade en {DISTRO}",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "Personalice {DISTRO} segundo as súas necesidades antes da posta en marcha. Pode cambialo máis tarde na aplicación Preferencias.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilitySeeingLabel": "Vendo",
+    "accessibilityHearingLabel": "Ouvido",
+    "accessibilityTypingLabel": "Escribindo",
+    "accessibilityPointingLabel": "Sinalando e premendo",
+    "accessibilityZoomLabel": "Ampliar",
+    "accessibilityHighContrastLabel": "Contraste alto",
+    "accessibilityLargeTextLabel": "Texto grande",
+    "accessibilityReduceAnimationLabel": "Reduce animación",
+    "accessibilityScreenReaderLabel": "Lector de pantaia",
+    "accessibilityVisualAlertsLabel": "Alertas visuais",
+    "accessibilityStickKeysLabel": "Chaves pegañentas",
+    "accessibilitySlowKeysLabel": "Chaves lentas",
+    "accessibilityMouseKeysLabel": "Chaves de rato",
+    "accessibilityDesktopZoomLabel": "Ampliación do escritorio",
+    "errorPageTitle": "Algo foi mal",
+    "errorPageUnexpected": "Sentímolo, pero non estamos seguros de cal é o erro. Podes tentar reiniciar o ordenador e comezar o proceso de instalación de novo. Tamén podes <a>informar do problema</a>.",
+    "errorPageUbuntuBug": "Para enviar un informe de bechos automatizado que inclúa información de depuración relevante, execute <pre>sudo ubuntu-bug {SNAP}</pre> nun terminal ou dende a consola de comandos (Alt+F2).",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "errorPageShowLog": "Amosar rexistro",
+    "errorPageHideLog": "Agochar rexistro",
+    "errorPageTechnicalDetails": "Detalles técnicos",
+    "restart": "Reiniciar",
+    "timezonePageTitle": "Selecciona o teu fuso horario",
+    "timezoneLocationLabel": "Localización",
+    "timezoneTimezoneLabel": "Fuso horario",
+    "keyboardTitle": "Disposición do teclado",
+    "keyboardHeader": "Selecciona a túa disposición de teclado",
+    "keyboardTestHint": "Escriba aquí para probar o teclado",
+    "keyboardDetectTitle": "Detectar a disposición do teclado",
+    "keyboardDetectButton": "Detectar",
+    "keyboardVariantLabel": "Selecciona a variante de teclado:",
+    "keyboardPressKeyLabel": "Prema algunha das seguintes teclas:",
+    "keyboardKeyPresentLabel": "Existe a seguinte tecla no seu teclado?",
+    "themePageTitle": "Escolla o tema",
+    "themePageHeader": "Sempre podes mudar este despois nas preferencias de apariencia.",
+    "themeDark": "Escuro",
+    "themeLight": "Claro",
+    "localePageTitle": "Benvido a {DISTRO}",
+    "@localePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "localeHeader": "Escolle o teu idioma:",
+    "identityPageTitle": "Crea a túa conta",
+    "identityAutoLogin": "Acceder automáticamente",
+    "identityRequirePassword": "Requirir o meu contrasinal para inicar sesións",
+    "identityRealNameLabel": "O teu nome",
+    "identityRealNameRequired": "É necesario un nome",
+    "identityRealNameTooLong": "Ese nome é demasiado longo.",
+    "identityHostnameLabel": "O nome do teu equipo",
+    "identityHostnameInfo": "O nome que usa cando se comunica con outros equipos.",
+    "identityHostnameRequired": "Requírese un nome do equipo",
+    "identityHostnameTooLong": "Ese nome de equipo é demasiado longo.",
+    "identityInvalidHostname": "O nome do equipo non é válido",
+    "identityUsernameLabel": "Escolla un nome de usuario",
+    "identityUsernameRequired": "Requírese un nome de usuario",
+    "identityInvalidUsername": "O nome de usuario non é válido",
+    "identityUsernameInUse": "Xa existe un usuario con este nome.",
+    "identityUsernameSystemReserved": "Ese nome está reservado para uso do sistema.",
+    "identityUsernameTooLong": "Ese nome é demasiado longo.",
+    "identityUsernameInvalidChars": "Ese nome contén caracteres nulos.",
+    "identityPasswordLabel": "Contrasinal",
+    "identityPasswordRequired": "Requírese un contrasinal",
+    "identityConfirmPasswordLabel": "Confirma o contrasinal",
+    "identityPasswordMismatch": "Os contrasinais non coinciden",
+    "identityPasswordShow": "Amosar",
+    "identityPasswordHide": "Agochar",
+    "identityActiveDirectoryOption": "Empregar Active Directory",
+    "identityActiveDirectoryInfo": "No paso seguinte vai introducir o dominio e demais detalles.",
+    "activeDirectoryTitle": "Inicie sesión en Active Directory",
+    "activeDirectoryHeader": "Iniciar sesión en Active Directory?",
+    "activeDirectoryInfo": "{DISTRO} está deseñada para integrarse sen problemas con Active Directory para facilitar a administración.",
+    "@activeDirectoryInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryDomainLabel": "Dominio",
+    "activeDirectoryDomainEmpty": "Requirido",
+    "activeDirectoryDomainTooLong": "Demasiado tempo",
+    "activeDirectoryDomainInvalidChars": "Caracteres non válidos",
+    "activeDirectoryDomainStartDot": "Comeza con un punto (.)",
+    "activeDirectoryDomainEndDot": "Remata con un punto (.)",
+    "activeDirectoryDomainStartHyphen": "Comeza cun guión (-)",
+    "activeDirectoryDomainEndHyphen": "Remata cun guión (-)",
+    "activeDirectoryDomainMultipleDots": "Contén varios puntos secuenciados (..)",
+    "activeDirectoryDomainNotFound": "Non se atopou o dominio",
+    "activeDirectoryAdminLabel": "Usuario que se une ao dominio",
+    "activeDirectoryAdminEmpty": "Requirido",
+    "activeDirectoryAdminInvalidChars": "Caracteres non válidos",
+    "activeDirectoryPasswordLabel": "Contrasinal",
+    "activeDirectoryPasswordEmpty": "Requirido",
+    "activeDirectoryErrorTitle": "Produciuse un erro ao configurar Active Directory",
+    "activeDirectoryErrorMessage": "Sentímolo, non se pode configurar Active Directory neste momento. Unha vez que o sistema estea en funcionamento, visite <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> para obter axuda.",
+    "networkPageTitle": "Conexión de internet",
+    "networkPageHeader": "Conectar a internet",
+    "networkPageBody": "Unha conexión a internet mellorará a instalación cunha comprobación de compatibilidade e paquetes de software adicionais.",
+    "networkWiredOption": "Usar conexión por cable",
+    "networkWiredNone": "Non se detectou conexión por cable",
+    "networkWiredOff": "A conexión por cable está desactivada",
+    "networkWiredDisabled": "Para utilizar Ethernet neste ordenador, debe estar activada unha conexión por cable",
+    "networkWiredEnable": "Activar por cable",
+    "networkWifiOption": "Conectarse a unha rede wifi",
+    "networkWifiOff": "Conexión sen fíos desactivada",
+    "networkWifiNone": "Non se detectaron dispositivos wifi",
+    "networkWifiDisabled": "Para utilizar a wifi neste ordenador, a rede sen fíos debe estar activada",
+    "networkWifiEnable": "Activar wifi",
+    "networkHiddenWifiOption": "Conectarse a unha rede wifi oculta",
+    "networkHiddenWifiNameLabel": "Nome de rede",
+    "networkHiddenWifiNameRequired": "Requírese un nome de rede",
+    "networkNoneOption": "Non te conectes á internet",
+    "eulaPageTitle": "Acordo de licenza",
+    "eulaReviewTerms": "Revisar os termos da licenza",
+    "eulaReadAndAcceptTerms": "Para continuar coa configuración desta máquina, debes ler e aceptar os termos do acordo de licenza.",
+    "eulaAcceptTerms": "Lin e acepto estos termos",
+    "successIconSemanticLabel": "Éxito",
+    "closeIconSemanticLabel": "Pechar",
+    "maximizeIconSemanticLabel": "Maximizar",
+    "minimizeIconSemanticLabel": "Minimizar",
+    "expandIconSemanticLabel": "Despregar",
+    "collapseIconSemanticLabel": "Contraer",
+    "activeDirectoryTestConnection": "Probar a conectividade do dominio"
 }

@@ -166,6 +166,9 @@ class UbuntuProvisionLocalizationsKn extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'ಆ ಹೆಸರು ತುಂಬಾ ಉದ್ದವಾಗಿದೆ.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ಹೆಸರು';
 
   @override
@@ -385,4 +388,31 @@ class UbuntuProvisionLocalizationsKn extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'ಕುಗ್ಗಿಸು';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

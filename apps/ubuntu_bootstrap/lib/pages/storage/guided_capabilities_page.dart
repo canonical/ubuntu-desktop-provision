@@ -27,6 +27,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(storageModelProvider);
+    final notifier = ref.read(storageModelProvider.notifier);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final experimentalBadgeText =
         UbuntuBootstrapLocalizations.of(context).installationTypeExperimental;
@@ -39,7 +40,7 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [
-          NextWizardButton(),
+          NextWizardButton(onNext: notifier.writeTelemetry),
         ],
       ),
       children: [

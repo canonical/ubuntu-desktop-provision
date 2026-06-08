@@ -253,11 +253,7 @@ class StorageModel extends SafeChangeNotifier {
 
   /// Saves the storage type selection.
   Future<void> save() async {
-    final partitionMethod = _resolvePartitionMethod();
-    if (partitionMethod != null) {
-      await _telemetry?.addMetric('PartitionMethod', partitionMethod);
-    }
-
+    await writeTelemetry();
     _storage.guidedTarget = switch (_type) {
       StorageTypeAlongside() => _firstTarget<GuidedStorageTargetResize>() ??
           _firstTarget<GuidedStorageTargetUseGap>(),
@@ -276,6 +272,13 @@ class StorageModel extends SafeChangeNotifier {
     }
   }
 
+  Future<void> writeTelemetry() async {
+    final partitionMethod = _resolvePartitionMethod();
+    if (partitionMethod != null) {
+      await _telemetry?.addMetric('PartitionMethod', partitionMethod);
+    }
+  }
+
   String? _resolvePartitionMethod() {
     // All possible values for the partition method
     // were extracted from Ubiquity's ubi-partman.py
@@ -284,6 +287,8 @@ class StorageModel extends SafeChangeNotifier {
       return 'use_lvm';
     } else if (guidedCapability == GuidedCapability.ZFS) {
       return 'use_zfs';
+    } else if (guidedCapability == GuidedCapability.ZFS_LUKS_KEYSTORE) {
+      return 'use_crypto_zfs';
     } else if (guidedCapability == GuidedCapability.LVM_LUKS) {
       return 'use_crypto';
     } else if (guidedCapability == GuidedCapability.CORE_BOOT_ENCRYPTED) {

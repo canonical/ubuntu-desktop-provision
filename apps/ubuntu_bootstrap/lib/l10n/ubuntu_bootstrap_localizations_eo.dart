@@ -115,11 +115,23 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.';
 
   @override
   String get changeButtonText => 'Ŝanĝi';
@@ -908,7 +920,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Ĉu restartigi komputilon?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Relanĉi instalilon';
 
   @override
   String get restartIntoWindows => 'Restartigi al Windows';
@@ -1683,4 +1695,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Provu ion alian. Vi ankaŭ rajtas <a href=\"\">raporti la eraron</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

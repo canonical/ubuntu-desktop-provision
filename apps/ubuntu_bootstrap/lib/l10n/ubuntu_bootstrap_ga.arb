@@ -515,5 +515,8 @@
     "tpmActionErrorSupportSingleLabel": "Bain triail as an réiteach thíos, déan teagmháil le tacaíocht TF, nó roghnaigh modh criptithe difriúil.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Mura lódálann socruithe an dochtearraí go huathoibríoch, atosú agus brúigh an eochair socruithe arís agus arís eile le linn an tosaithe (F2, F10 nó Scrios de ghnáth).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Seiceáil go bhfuil an modh tosaithe slán socraithe go \"imscartha\".",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "D’fhéadfaí tagairt don ghné seo mar “Teicneolaíocht Fhíorúlaithe”, “VT-d” nó “AMD-Vi”."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "D’fhéadfaí tagairt don ghné seo mar “Teicneolaíocht Fhíorúlaithe”, “VT-d” nó “AMD-Vi”.",
+    "autoinstallErrorMessage": "Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.",
+    "autoinstallErrorInstructions": "Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.",
+    "restartInstaller": "Atosaigh an suiteálaí"
 }

@@ -518,5 +518,8 @@
     "tpmActionErrorSupportSingleLabel": "Provu la ĉi-suban solvon, kontaktu teĥnikan asiston, aŭ elektu alian ĉifran metodon.",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Ĉi tiu funkcio eble nomiĝas «Virtualiga Teĥniko», «VT-d», aŭ «AMD-Vi».",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Se mikroprogramaj agordoj ne ŝargiĝas aŭtomate, restartigu la komputilon, kaj dum starto ripete premadu la klavon por agordoj (ofte F2, F10, aŭ Forigi).",
-    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolu, ĉu la reĝimo de sekura praŝargo estas «disponebla»."
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolu, ĉu la reĝimo de sekura praŝargo estas «disponebla».",
+    "autoinstallErrorMessage": "Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.",
+    "autoinstallErrorInstructions": "Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.",
+    "restartInstaller": "Relanĉi instalilon"
 }

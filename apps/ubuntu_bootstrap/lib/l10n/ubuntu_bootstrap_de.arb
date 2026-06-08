@@ -165,7 +165,7 @@
     "installationSlidesProductivityBody": "{DISTRO} Desktop enthält LibreOffice, eine Suite von Microsoft Office-kompatiblen quelloffenen Anwendungen für Dokumente, Tabellenkalkulationen und Präsentationen. Beliebte Werkzeuge für die Zusammenarbeit sind ebenfalls verfügbar.",
     "installationSlidesSupportHeader": "Die offizielle {DISTRO}-Dokumentation ist sowohl online als auch über das Hilfesymbol im Dock verfügbar.",
     "installationSlidesDevelopmentTitle": "Entwickeln Sie mit dem Besten aus Open Source",
-    "installationSlidesAccessibilityOrca": "Orca-Screenreader",
+    "installationSlidesAccessibilityOrca": "Orca-Bildschirmleseprogram",
     "rstHeader": "Zum Fortsetzen der Installation müssen Sie RST deaktivieren",
     "restartIntoWindowsTitle": "Neustart in Windows hinein?",
     "bitlockerHeader": "Schalten Sie BitLocker aus, um fortzufahren",
@@ -515,5 +515,8 @@
     "tpmActionErrorSupportSingleLabel": "Probieren Sie die unten stehende Lösung aus, wenden Sie sich an den IT-Support oder wählen Sie eine andere Verschlüsselungsmethode aus.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Wenn die Firmware-Einstellungen nicht automatisch geladen werden, starten Sie neu und drücken Sie während des Startvorgangs wiederholt die Einstellungstaste (in der Regel F2, F10 oder Entf).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Überprüfen Sie, ob der Secure-Boot-Modus auf „deployed“ eingestellt ist.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Diese Funktion kann als „Virtualisierungstechnologie“, „VT-d“ oder „AMD-Vi“ bezeichnet werden."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Diese Funktion kann als „Virtualisierungstechnologie“, „VT-d“ oder „AMD-Vi“ bezeichnet werden.",
+    "autoinstallErrorMessage": "Ein Befehl in der autoinstall-Datei konnte während der Installation nicht ausgeführt werden.",
+    "autoinstallErrorInstructions": "Sie müssen die Installation neu starten. Überprüfen Sie die autoinstall-Datei, wählen Sie eine andere Installationsart oder wenden Sie sich an Ihren IT-Support.",
+    "restartInstaller": "Installationsprogramm neu starten"
 }
