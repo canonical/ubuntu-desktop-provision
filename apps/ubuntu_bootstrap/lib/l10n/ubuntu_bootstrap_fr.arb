@@ -532,5 +532,6 @@
         }
     },
     "autoinstallGenericErrorMessage": "L'installation ne peut pas se poursuivre avec le fichier d'auto-installation fourni.",
-    "autoinstallValidationErrorMessage": "Il y a un problème avec le fichier d'auto-installation fourni."
+    "autoinstallValidationErrorMessage": "Il y a un problème avec le fichier d'auto-installation fourni.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Il y a un problème avec les données utilisateur cloud-init fournies dans le fichier d'installation automatique."
 }
