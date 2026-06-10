@@ -1109,5 +1109,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "A instalación non pode continuar co ficheiro de instalación automática proporcionado.",
+    "autoinstallValidationErrorMessage": "Hai un problema co ficheiro de instalación automática proporcionado.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Hai un problema cos datos de usuario de cloud-init proporcionados no ficheiro de instalación automática."
 }
