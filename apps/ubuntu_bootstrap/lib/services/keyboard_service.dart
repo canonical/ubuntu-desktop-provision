@@ -68,13 +68,19 @@ class SubiquityKeyboardService implements KeyboardService {
     @visibleForTesting GSettings? inputSourceSettings,
     @visibleForTesting
     Future<ProcessResult> Function(String, List<String>)? runProcess,
+    @visibleForTesting
+    Future<void> Function(String layout, String variant)? setLocale1X11Keyboard,
   })  : _inputSourceSettings = inputSourceSettings ??
             createService<GSettings, String>('org.gnome.desktop.input-sources'),
-        _runProcess = runProcess ?? Process.run;
+        _runProcess = runProcess ?? Process.run,
+        _setLocale1X11KeyboardImpl =
+            setLocale1X11Keyboard ?? _defaultSetLocale1X11Keyboard;
 
   final SubiquityClient _subiquity;
   final GSettings _inputSourceSettings;
   final Future<ProcessResult> Function(String, List<String>) _runProcess;
+  final Future<void> Function(String layout, String variant)
+      _setLocale1X11KeyboardImpl;
   final bool liveRun;
 
   @override
@@ -91,6 +97,7 @@ class SubiquityKeyboardService implements KeyboardService {
     if (liveRun) {
       unawaited(_setXkbInputSource(setting));
       await _setGsettingsInputSource(setting);
+      await _setLocale1InputSource(setting);
     }
   }
 
@@ -110,12 +117,13 @@ class SubiquityKeyboardService implements KeyboardService {
       await _inputSourceSettings.set(
         'sources',
         DBusArray(
-            DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
-            [
-              DBusStruct([const DBusString('xkb'), DBusString(xkbString)]),
-              if (nonLatinLayouts.contains(setting.layout))
-                DBusStruct([const DBusString('xkb'), DBusString('us')]),
-            ]),
+          DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
+          [
+            DBusStruct([const DBusString('xkb'), DBusString(xkbString)]),
+            if (nonLatinLayouts.contains(setting.layout))
+              DBusStruct([const DBusString('xkb'), DBusString('us')]),
+          ],
+        ),
       );
     } on Exception catch (e) {
       _log.error('Failed to set input source via gsettings', e);
@@ -123,16 +131,60 @@ class SubiquityKeyboardService implements KeyboardService {
   }
 
   Future<void> _setXkbInputSource(KeyboardSetting setting) async {
-    final result = await _runProcess(
-      'setxkbmap',
-      [
-        '-layout',
-        setting.layout,
-        if (setting.variant.isNotEmpty) ...['-variant', setting.variant],
-      ],
-    );
+    final result = await _runProcess('setxkbmap', [
+      '-layout',
+      setting.layout,
+      if (setting.variant.isNotEmpty) ...['-variant', setting.variant],
+    ]);
     if (result.exitCode != 0) {
       _log.error('Failed to set input source via setxkbmap', result.stderr);
     }
+  }
+
+  Future<void> _setLocale1InputSource(KeyboardSetting setting) async {
+    // Call org.freedesktop.locale1 SetX11Keyboard() to store the layout in a
+    // desktop-agnostic way. Desktops such as KDE Plasma (with FollowLocale1=true
+    // in kxkbrc) will pick this up without needing any desktop-specific calls.
+    try {
+      final layout = nonLatinLayouts.contains(setting.layout)
+          ? '${setting.layout},us'
+          : setting.layout;
+      final variant = nonLatinLayouts.contains(setting.layout)
+          ? '${setting.variant},'
+          : setting.variant;
+      await _setLocale1X11KeyboardImpl(layout, variant);
+    } on Exception catch (e) {
+      _log.error('Failed to set input source via locale1', e);
+    }
+  }
+}
+
+Future<void> _defaultSetLocale1X11Keyboard(
+  String layout,
+  String variant,
+) async {
+  final client = DBusClient.system();
+  try {
+    final locale1 = DBusRemoteObject(
+      client,
+      name: 'org.freedesktop.locale1',
+      path: DBusObjectPath('/org/freedesktop/locale1'),
+    );
+    final args = [
+      DBusString(layout), // x11Layout
+      const DBusString(''), // x11Model
+      DBusString(variant), // x11Variant
+      const DBusString(''), // x11Options
+      const DBusBoolean(false), // convert (do not propagate to vconsole)
+      const DBusBoolean(false), // interactive (no polkit prompt)
+    ];
+    await locale1.callMethod(
+      'org.freedesktop.locale1',
+      'SetX11Keyboard',
+      args,
+      replySignature: DBusSignature(''),
+    );
+  } finally {
+    await client.close();
   }
 }
