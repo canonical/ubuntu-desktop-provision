@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Az automatikus telepítési fájlban lévő egyik parancs futtatása nem sikerült a telepítés során.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Újra kell majd indítania a telepítést. Ellenőrizze az automatikus telepítési fájlt, válasszon másik telepítési típust, vagy vegye fel a kapcsolatot az IT-támogatással.';
 
@@ -1690,4 +1702,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Próbáljon valami mást. <a href=\"\">Küldhet hibajelentést is</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

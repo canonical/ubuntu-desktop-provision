@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.';
 
@@ -1687,4 +1699,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Bain triail as rud éigin eile. Féadfaidh tú <a href=\"\">tuairisc earráide a sheoladh</a> freisin.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

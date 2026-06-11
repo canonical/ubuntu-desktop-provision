@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
       'Polecenie w pliku autoinstalacji nie zostało uruchomione podczas instalacji.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Konieczne będzie ponowne uruchomienie instalacji. Sprawdź plik autoinstalacji, wybierz inny typ instalacji lub skontaktuj się z pomocą techniczną.';
 
@@ -1684,4 +1696,9 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Wypróbuj coś innego. Możesz również <a href=\"\">wysłać raport o błędzie</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

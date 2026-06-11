@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'ئورنىتىش جەريانىدا ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدىكى بۇيرۇقنى ئىجرا قىلالمىدى.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'ئورنىتىشنى قايتا قوزغىتىشىڭىز كېرەك. ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى تەكشۈرۈپ، پەرقلىق ئورنىتىش تۈرىنى تاللاڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ.';
 
@@ -1681,4 +1693,9 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'باشقىنى سىناڭ. يەنە <a href=\"\">خاتالىق دوكلاتى يوللا</a>يالايسىز.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

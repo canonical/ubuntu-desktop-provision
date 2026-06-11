@@ -112,6 +112,18 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       'インストール中の自動インストールファイルにあるコマンドの実行に失敗しました。';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'インストールをやり直してください。自動インストールファイルを確認するか、別のインストールの種類を選択するか、ITサポートに連絡してください。';
 
@@ -1623,4 +1635,9 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Try something else. You may also <a href=\"\">send an error report</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

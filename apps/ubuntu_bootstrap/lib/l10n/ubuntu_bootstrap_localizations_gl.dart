@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Non se puido executar un comando no ficheiro de auto-instalación durante a instalación.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Terás que reiniciar a instalación. Comproba o ficheiro de auto-instalación, escolle un tipo de instalación diferente ou ponte en contacto co teu servizo de asistencia informática.';
 
@@ -1690,4 +1702,9 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Proba con outra cousa. Tamén podes <a href=\"\">enviar un informe de erros</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Komento autoinstall-tiedostossa epäonnistui suorituksessa asennuksen aikana.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Asennus tulee käynnistää uudelleen. Tarkista autoinstall-tiedosto, valitse eri asennustyyppi tai ota yhteys IT-tukeen.';
 
@@ -1677,4 +1689,9 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Kokeile jotain muuta. Voit myös <a href=\"\">lähettää virheraportin</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

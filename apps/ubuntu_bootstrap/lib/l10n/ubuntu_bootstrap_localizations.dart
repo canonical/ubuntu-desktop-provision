@@ -423,6 +423,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'A command in the autoinstall file failed to run during installation.'**
   String get autoinstallErrorMessage;
 
+  /// No description provided for @autoinstallGenericErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Installation cannot continue with the provided autoinstall file.'**
+  String get autoinstallGenericErrorMessage;
+
+  /// No description provided for @autoinstallValidationErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with the provided autoinstall file.'**
+  String get autoinstallValidationErrorMessage;
+
+  /// No description provided for @autoinstallCloudInitSchemaValidationErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with the cloud-init user data provided in the autoinstall file.'**
+  String get autoinstallCloudInitSchemaValidationErrorMessage;
+
   /// No description provided for @autoinstallErrorInstructions.
   ///
   /// In en, this message translates to:
@@ -2925,6 +2943,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Try something else. You may also <a href=\"\">send an error report</a>.'**
   String get manualPartitioningWarningBody;
+
+  /// No description provided for @stepIndicatorLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {CURRENT_STEP} of {TOTAL_STEPS}'**
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS);
 }
 
 class _UbuntuBootstrapLocalizationsDelegate

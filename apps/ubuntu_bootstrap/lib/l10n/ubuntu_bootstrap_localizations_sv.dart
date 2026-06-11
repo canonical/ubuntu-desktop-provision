@@ -117,6 +117,18 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Ett kommando i autoinstallationsfilen kördes inte korrekt vid installationen.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Du kommer att behöva starta om installationen. Kontrollera autoinstallationsfilen, välj en annan installationstyp, eller kontakta din IT-support.';
 
@@ -1675,4 +1687,9 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Prova någonting annat. Du kan också <a href=\"\">skicka en felrapport</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

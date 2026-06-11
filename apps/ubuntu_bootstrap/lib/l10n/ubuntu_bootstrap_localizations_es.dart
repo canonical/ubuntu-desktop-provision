@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'No se pudo ejecutar una orden del archivo de instalación automática.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'Deberá reiniciar la instalación. Compruebe el archivo de instalación automática, elija otro tipo de instalación, o contacte al personal de sistemas.';
 
@@ -1687,4 +1699,9 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Intente algo más. Puede además <a href=\"\">enviar un informe de error</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }
