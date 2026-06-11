@@ -114,11 +114,11 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Ett kommando i autoinstallationsfilen kördes inte korrekt vid installationen.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Du kommer att behöva starta om installationen. Kontrollera autoinstallationsfilen, välj en annan installationstyp, eller kontakta din IT-support.';
 
   @override
   String get changeButtonText => 'Ändra';
@@ -909,7 +909,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Starta om datorn?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Starta om installationsprogram';
 
   @override
   String get restartIntoWindows => 'Starta om till Windows';
@@ -1675,4 +1675,9 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Prova någonting annat. Du kan också <a href=\"\">skicka en felrapport</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

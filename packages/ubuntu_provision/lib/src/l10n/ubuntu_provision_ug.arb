@@ -8,7 +8,7 @@
             }
         }
     },
-    "accessibilityPageBody": "تەڭشەشتىن ئىلگىرى ئېھتىياجىڭىزغا ئاساسەن {DISTRO} نى خاسلاشتۇرالايسىز. كېيىن ئۇلارنى سىستېما تەڭشىكىدىن ئۆزگەرتەلەيسىز.",
+    "accessibilityPageBody": "تەڭشەشتىن ئىلگىرى ئېھتىياجىڭىزغا ئاساسەن {DISTRO} نى خاسلاشتۇرالايسىز. كېيىن ئۇلارنى تەڭشەك ئەپتىن ئۆزگەرتەلەيسىز.",
     "@accessibilityPageBody": {
         "placeholders": {
             "DISTRO": {
@@ -148,5 +148,6 @@
             }
         }
     },
-    "activeDirectoryErrorMessage": "كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ."
+    "activeDirectoryErrorMessage": "كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ.",
+    "errorPageTechnicalDetails": "تېخنىكىلىق تەپسىلات"
 }

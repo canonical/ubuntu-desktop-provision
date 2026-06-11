@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Szabja személyre a(z) $DISTRO disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a rendszerbeállításokban.';
+    return 'Szabja személyre a(z) $DISTRO disztribúciót az igényei szerint, mielőtt beállítja. Ezeket később megváltoztathatja a Beállítások alkalmazásban.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Napló elrejtése';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Műszaki részletek';
 
   @override
   String get restart => 'Újraindítás';
@@ -163,6 +163,9 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
 
   @override
   String get identityRealNameTooLong => 'Ez a név túl hosszú.';
+
+  @override
+  String get identityInvalidRealName => 'The name is invalid';
 
   @override
   String get identityHostnameLabel => 'A számítógépének neve';
@@ -383,4 +386,31 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Összecsukás';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

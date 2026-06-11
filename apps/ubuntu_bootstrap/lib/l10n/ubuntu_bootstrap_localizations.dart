@@ -2925,6 +2925,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Try something else. You may also <a href=\"\">send an error report</a>.'**
   String get manualPartitioningWarningBody;
+
+  /// No description provided for @stepIndicatorLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {CURRENT_STEP} of {TOTAL_STEPS}'**
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS);
 }
 
 class _UbuntuBootstrapLocalizationsDelegate

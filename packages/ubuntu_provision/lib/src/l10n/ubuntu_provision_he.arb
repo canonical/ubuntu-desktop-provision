@@ -77,7 +77,7 @@
     "networkHiddenWifiNameLabel": "שם הרשת",
     "networkHiddenWifiNameRequired": "שם הרשת נחוץ",
     "networkNoneOption": "לא להתחבר לאינטרנט בשלב זה",
-    "accessibilityPageBody": "התאמת {DISTRO} לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר בהגדרות המערכת.",
+    "accessibilityPageBody": "התאמת {DISTRO} לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר ביישום ההגדרות.",
     "accessibilitySeeingLabel": "ראייה",
     "accessibilityZoomLabel": "תקריב",
     "accessibilityHighContrastLabel": "ניגודיות גבוהה",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "הגדלה",
     "minimizeIconSemanticLabel": "מזעור",
     "expandIconSemanticLabel": "הרחבה",
-    "collapseIconSemanticLabel": "צמצום"
+    "collapseIconSemanticLabel": "צמצום",
+    "errorPageTechnicalDetails": "פרטים טכניים"
 }

@@ -84,7 +84,7 @@
     "accessibilityScreenReaderLabel": "Čtečka obrazovky",
     "accessibilityVisualAlertsLabel": "Vizuální upozornění",
     "accessibilityPageHeader": "Přístupnost v {DISTRO}",
-    "accessibilityPageBody": "Přizpůsobte si {DISTRO} svým potřebám, což vám už v rámci instalátoru usnadní jeho použití. Tato nastavení je možné měnit i následně v už nainstalovaném systému a to v „Nastavení systému“.",
+    "accessibilityPageBody": "Přizpůsobte si {DISTRO} svým potřebám, což vám už v rámci instalátoru usnadní jeho použití. Tato nastavení je možné měnit i následně v už nainstalovaném systému a to v aplikaci „Nastavení“.",
     "accessibilityPageTitle": "Přístupnost",
     "accessibilitySeeingLabel": "Zrak",
     "accessibilityHearingLabel": "Sluch",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Maximalizovat",
     "minimizeIconSemanticLabel": "Minimalizovat",
     "expandIconSemanticLabel": "Rozbalit",
-    "collapseIconSemanticLabel": "Sbalit"
+    "collapseIconSemanticLabel": "Sbalit",
+    "errorPageTechnicalDetails": "Technické detaily"
 }

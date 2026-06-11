@@ -79,8 +79,8 @@
     "networkHiddenWifiNameRequired": "網路名稱為必填欄位",
     "close": "關閉",
     "restart": "重新啟動",
-    "accessibilityPageBody": "在設定之前，請依照您的需求自訂 {DISTRO}。您也可以安裝後在「系統設定」中變更這些設定。",
-    "errorPageUnexpected": "很抱歉，我們並不確定具體發生了什麼錯誤。您可以試著重新啟動您的電腦並再次進行系統安裝流程。您也可以<a>回報問題</a>。",
+    "accessibilityPageBody": "在設定之前，請依照您的需求自訂 {DISTRO}。您稍後可在「設定」應用程式中進行變更。",
+    "errorPageUnexpected": "很抱歉，我們無法確定錯誤原因。您可以嘗試重新啟動電腦，然後再次執行安裝程序。您也可以 <a>回報此問題</a>。",
     "activeDirectoryInfo": "為管理方便，{DISTRO} 被設計成可以無縫整合至 Active Directory。",
     "eulaPageTitle": "授權合約",
     "eulaReviewTerms": "檢視授權條款",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "最大化",
     "minimizeIconSemanticLabel": "最小化",
     "expandIconSemanticLabel": "展開",
-    "collapseIconSemanticLabel": "收合"
+    "collapseIconSemanticLabel": "收合",
+    "errorPageTechnicalDetails": "技術細節"
 }

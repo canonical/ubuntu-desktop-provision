@@ -164,6 +164,9 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'نام بیش از حد طولانی است.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'نام رایانه‌تان';
 
   @override
@@ -378,4 +381,31 @@ class UbuntuProvisionLocalizationsFa extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'جمع‌کردن';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

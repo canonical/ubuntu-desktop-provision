@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Anpassa $DISTRO för att passa dina behov innan du installerar. Du kan ändra dem senare i Systeminställningar.';
+    return 'Anpassa $DISTRO till dina behov innan du installerar. Du kan ändra dem senare i appen Inställningar.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Dölj logg';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Tekniska detaljer';
 
   @override
   String get restart => 'Starta om';
@@ -162,6 +162,9 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String get identityRealNameTooLong => 'Det namnet är för långt.';
+
+  @override
+  String get identityInvalidRealName => 'The name is invalid';
 
   @override
   String get identityHostnameLabel => 'Din dators namn';
@@ -380,4 +383,31 @@ class UbuntuProvisionLocalizationsSv extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Fäll ihop';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Prispôsobte si $DISTRO svojim potrebám ešte pred nastavením. Neskôr ich môžete upraviť v nastaveniach systému.';
+    return 'Prispôsobte si $DISTRO svojim potrebám ešte pred nastavením. Neskôr ich môžete zmeniť v aplikácii Nastavenia.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Skryť denník';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Technické podrobnosti';
 
   @override
   String get restart => 'Reštartovať';
@@ -163,6 +163,9 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get identityRealNameTooLong => 'Meno je príliš dlhé.';
+
+  @override
+  String get identityInvalidRealName => 'The name is invalid';
 
   @override
   String get identityHostnameLabel => 'Názov pre váš počítač';
@@ -385,4 +388,31 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Zbaliť';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

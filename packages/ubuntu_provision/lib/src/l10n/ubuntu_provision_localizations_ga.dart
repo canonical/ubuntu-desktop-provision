@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Saincheap $DISTRO le do chuid riachtanas sula gcuireann tú ar bun. Is féidir leat iad a athrú níos déanaí i Socruithe Córais.';
+    return 'Saincheap $DISTRO de réir do riachtanais sula ndéanann tú é a shocrú. Is féidir leat iad a athrú níos déanaí san aip Socruithe.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Folaigh logchomhad';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Sonraí teicniúla';
 
   @override
   String get restart => 'Tosaigh arís';
@@ -162,6 +162,9 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String get identityRealNameTooLong => 'Tá an t-ainm sin rófhada.';
+
+  @override
+  String get identityInvalidRealName => 'The name is invalid';
 
   @override
   String get identityHostnameLabel => 'Ainm do ríomhaire';
@@ -382,4 +385,31 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Laghdaigh';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }
