@@ -51,13 +51,19 @@ class RefreshView extends ConsumerWidget {
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
-        Text(
-          switch (state) {
-            RefreshStateStatus() => l10n.refreshHeader,
-            RefreshStateDone() => l10n.refreshReady,
-            _ => ''
-          },
-          style: Theme.of(context).textTheme.titleLarge,
+        Focus(
+          autofocus: true,
+          child: Semantics(
+            // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
+            child: Text(
+              switch (state) {
+                RefreshStateStatus() => l10n.refreshHeader,
+                RefreshStateDone() => l10n.refreshReady,
+                _ => ''
+              },
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+          ),
         ),
         const Flexible(child: SizedBox(height: kWizardSpacing / 2)),
         Text(
