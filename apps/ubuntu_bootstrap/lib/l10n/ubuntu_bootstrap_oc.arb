@@ -509,5 +509,19 @@
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "D'unes certificats que verifican los logicials sus aqueste ordenador son obsolèts o utilizan una proteccion febla.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Aqueste ordenador utiliza una lista d'autorizacions manuala per verificar los logicials a l'aviada.",
     "tpmActionErrorKindAddonDriversPresent": "De pilòts suplementaris son presents.",
-    "tpmActionErrorKindGenericTpm": "I a un problèma amb lo TPM d’aqueste ordenador."
+    "tpmActionErrorKindGenericTpm": "I a un problèma amb lo TPM d’aqueste ordenador.",
+    "autoinstallGenericErrorMessage": "Se pòt pas contunhar l'installacion amb lo fichièr autoinstall provesit.",
+    "autoinstallValidationErrorMessage": "I a de problèmas amb lo fichièr d'autoinstallacion provesit.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "I a un problèma amb las donadas d'utilizaire cloud-init provesidas dins lo fichièr d'autoinstallacion.",
+    "stepIndicatorLabel": "Etapa {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
