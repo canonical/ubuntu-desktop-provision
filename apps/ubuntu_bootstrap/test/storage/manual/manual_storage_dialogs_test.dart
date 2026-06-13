@@ -21,6 +21,51 @@ import 'package:yaru_test/yaru_test.dart';
 import 'test_manual_storage.dart';
 
 void main() {
+  testWidgets('create partition dropdowns expose semantic labels and values',
+      (tester) async {
+    final disk = fakeDisk();
+    const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    showCreatePartitionDialog(
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      gap,
+    );
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(ManualStoragePage));
+
+    expect(
+      find.byWidgetPredicate(
+        (widget) =>
+            widget is Semantics &&
+            widget.properties.label == tester.lang.partitionSizeLabel &&
+            widget.properties.value == DataUnit.megabytes.l10n(context),
+      ),
+      findsAtLeastNWidgets(1),
+    );
+
+    expect(
+      find.byWidgetPredicate(
+        (widget) =>
+            widget is Semantics &&
+            widget.properties.label == tester.lang.partitionFormatLabel &&
+            widget.properties.value == PartitionFormat.defaultValue.displayName,
+      ),
+      findsAtLeastNWidgets(1),
+    );
+  });
+
   testWidgets('create partition', (tester) async {
     final disk = fakeDisk();
     const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
