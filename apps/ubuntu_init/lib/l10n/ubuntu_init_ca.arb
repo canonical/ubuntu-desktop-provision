@@ -1,52 +1,61 @@
 {
     "welcomePageTitle": "Us donem la benvinguda",
-    "@welcomePageTitle": {},
     "welcomePageHeader": "Us donem la benvinguda a {distro}",
-    "@welcomePageHeader": {},
     "welcomeWhatsNew": "NOVETATS",
-    "@welcomeWhatsNew": {},
     "welcomeStartTitle": "Un inici àgil",
-    "@welcomeStartTitle": {},
     "welcomeStoreSubtitle": "Mai no ha estat més fàcil trobar el vostre programari preferit.",
-    "@welcomeStoreSubtitle": {},
     "telemetryHeader": "Ajudeu perquè l’{distro} sigui millor",
-    "@telemetryHeader": {},
     "welcomeSecuritySubtitle": "Opcions noves per al xifrat per maquinari o mitjançant el ZFS.",
-    "@welcomeSecuritySubtitle": {},
     "welcomeChangelogLabel": "<a href=\"{url}\">Vegeu el registre de canvis</a>",
-    "@welcomeChangelogLabel": {},
     "telemetryDescription": "Compartiu dades anònimament amb l’{distro} perquè puguem millorar la vostra experiència.",
-    "@telemetryDescription": {},
     "telemetryLabelOff": "No, no comparteixis dades del sistema",
-    "@telemetryLabelOff": {},
     "telemetryLegalLabel": "Informació legal",
-    "@telemetryLegalLabel": {},
     "privacyLocationTitle": "Voleu activar els serveis d’ubicació?",
-    "@privacyLocationTitle": {},
     "privacyPolicyLink": "Privadesa de les dades",
-    "@privacyPolicyLink": {},
-    "ubuntuProPageTitle": "Ubuntu Pro",
-    "@ubuntuProPageTitle": {},
+    "ubuntuProPageTitle": "Ubuntu Pro",
     "welcomeSecurityTitle": "Seguretat millorada",
-    "@welcomeSecurityTitle": {},
     "welcomeStoreTitle": "Botiga d’aplicacions amb un aspecte nou",
-    "@welcomeStoreTitle": {},
     "telemetryReportLabel": "Detalls de l’informe",
-    "@telemetryReportLabel": {},
     "telemetryReportTitle": "Detalls de l’informe",
-    "@telemetryReportTitle": {},
     "telemetryPageTitle": "Telemetria",
-    "@telemetryPageTitle": {},
     "privacyPageTitle": "Serveis d’ubicació",
-    "@privacyPageTitle": {},
     "privacyLocationSubtitle": "Permeteu que les aplicacions coneguin la vostra ubicació geogràfica.\nPodeu canviar-ho en qualsevol moment als Paràmetres del sistema.",
-    "@privacyLocationSubtitle": {},
     "privacyLocationEnable": "Serveis d’ubicació",
-    "@privacyLocationEnable": {},
     "telemetryLabelOn": "Sí, vull compartir dades del sistema amb l’equip de l’{distro}",
-    "@telemetryLabelOn": {},
     "welcomeStartSubtitle": "Afavoreix una experiència d’instal·lació més senzilla.",
-    "@welcomeStartSubtitle": {},
     "telemetryCollectError": "Ha fallat la col·lecció de dades de telemetria",
-    "@telemetryCollectError": {}
+    "ubuntuProMagicAttachInstructions": "Magic adjunta aquest codi a <a href=\"https://{url}\">{url}</a>",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProHeader": "Adjunta aquesta màquina",
+    "ubuntuProOrAddTokenManually": "o afegeix un testimoni manualment",
+    "ubuntuProTokenTextfieldHint": "Testimoni",
+    "ubuntuProSubscriptionDescription": "Aconsegueix la subscripció més completa per a la seguretat del programari de codi obert",
+    "ubuntuProSubscriptionFreeForPersonalUse": "Sempre lliure per a ús personal. Assaig de 30 dies per a empreses. <a href=\"https://{url}\">Més informació</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "Adjunta",
+    "ubuntuProTokenAttachError": "Testimoni no vàlid",
+    "ubuntuProTokenAttachSucess": "Testimoni vàlid",
+    "ubuntuProTokenAttachErrorVariant": "Testimoni no vàlid, torneu-ho a provar",
+    "ubuntuProOnBoardingSkipForNow": "Omet per ara",
+    "ubuntuProOnBoardingSkipForNowDescription": "Sempre podeu activar Ubuntu Pro més tard a través de l'aplicació d'actualitzacions de programari.",
+    "ubuntuProOnBoardingEnableUbuntuPro": "Habilita l'Ubuntu Pro",
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "Adjunteu aquesta màquina a una subscripció d'Ubuntu Pro per a actualitzacions de seguretat en una gamma més àmplia de paquets, fins al 2032.",
+    "ubuntuProSucessAttachHeader": "Ubuntu Pro ara està habilitat en aquesta màquina",
+    "ubuntuProSucessAttachDescription": "Podeu gestionar els vostres serveis Pro a l'aplicació d'actualitzacions de programari.",
+    "successIconSemanticLabel": "Èxit",
+    "closeIconSemanticLabel": "Tanca",
+    "maximizeIconSemanticLabel": "Maximitza",
+    "minimizeIconSemanticLabel": "Minimitza"
 }

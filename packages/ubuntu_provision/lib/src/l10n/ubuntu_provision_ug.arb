@@ -72,7 +72,7 @@
     "identityInvalidHostname": "كومپيۇتېر ئىسمى ئىناۋەتسىز",
     "identityUsernameLabel": "ئىشلەتكۈچى ئاتىڭىز",
     "identityUsernameRequired": "ئىشلەتكۈچى ئاتى زۆرۈر",
-    "identityInvalidUsername": "ئىشلەتكۈچى ئاتى ئىناۋەتسىز",
+    "identityInvalidUsername": "ئىشلەتكۈچى ئاتى ئىناۋەتسى: ئۇ چوقۇم كىچىك ھەرپتىن باشلىنىدۇ ۋە پەقەت كىچىك ھەرپ، سان، سىزىقچە ۋە ئاستى سىزىقنى ئۆز ئىچىگە ئالسا بولىدۇ.",
     "identityUsernameInUse": "ئىشلەتكۈچى ئاتى مەۋجۇت.",
     "identityUsernameSystemReserved": "بۇ ئات سىستېمىنىڭ ئىشلىتىشى ئۈچۈن قالدۇرۇلغان.",
     "identityUsernameTooLong": "ئىسىم بەك ئۇزۇن.",
@@ -149,5 +149,6 @@
         }
     },
     "activeDirectoryErrorMessage": "كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ.",
-    "errorPageTechnicalDetails": "تېخنىكىلىق تەپسىلات"
+    "errorPageTechnicalDetails": "تېخنىكىلىق تەپسىلات",
+    "identityInvalidRealName": "ئات ئىناۋەتسىز"
 }

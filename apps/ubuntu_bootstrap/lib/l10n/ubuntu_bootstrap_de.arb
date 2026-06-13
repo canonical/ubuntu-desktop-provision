@@ -280,7 +280,7 @@
     "installationTypeEraseAndInstallInfo": "Alle Dateien und Daten der bestehenden Installation von {os} werden endgültig gelöscht.",
     "autoinstallDirectHeader": "Autoinstall-Datei importieren",
     "autoinstallDirectFileLabel": "Oder wählen Sie eine lokale Datei aus:",
-    "autoinstallDirectFileButtonLabel": "Datei auswählen...",
+    "autoinstallDirectFileButtonLabel": "Datei auswählen ...",
     "chooseOptionalPassphraseBody": "Mit einer Passphrase können Sie Ihre Daten schützen, selbst wenn Ihre Hardware kompromittiert wird. Sie müssen die Passphrase jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Sie können sie später nicht mehr entfernen",
     "landscapeLoginFailedWarning": "Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut",
     "recoveryKeyInfoBody": "Besorgen Sie sich einen Wiederherstellungsschlüssel, sobald Sie sich zum ersten Mal bei {distro} anmelden, und bewahren Sie ihn an einem sicheren Ort auf.",
@@ -518,5 +518,19 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Diese Funktion kann als „Virtualisierungstechnologie“, „VT-d“ oder „AMD-Vi“ bezeichnet werden.",
     "autoinstallErrorMessage": "Ein Befehl in der autoinstall-Datei konnte während der Installation nicht ausgeführt werden.",
     "autoinstallErrorInstructions": "Sie müssen die Installation neu starten. Überprüfen Sie die autoinstall-Datei, wählen Sie eine andere Installationsart oder wenden Sie sich an Ihren IT-Support.",
-    "restartInstaller": "Installationsprogramm neu starten"
+    "restartInstaller": "Installationsprogramm neu starten",
+    "stepIndicatorLabel": "Schritt {CURRENT_STEP} von {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Die Installation kann mit der bereitgestellten autoinstall-Datei nicht fortgesetzt werden.",
+    "autoinstallValidationErrorMessage": "Es gibt ein Problem mit der bereitgestellten autoinstall-Datei.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init."
 }

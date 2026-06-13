@@ -35,7 +35,7 @@
     "tryOrInstallTitle": "Prova o instal·la {DISTRO}",
     "chooseSecurityKey": "Trieu una clau de seguretat",
     "confirmSecurityKey": "Confirmeu la clau de seguretat",
-    "installationTypeAdvancedLabel": "Mostra les característiques avançades…",
+    "installationTypeAdvancedLabel": "Opcions avançades",
     "installationTypeAdvancedTitle": "Encriptació i sistema de fitxers",
     "selectGuidedStorageInstallNow": "Instal·la ara",
     "confirmInstallButton": "Comença a instal·lar",
@@ -275,7 +275,7 @@
     "bitlockerWarningTitle": "Podeu perdre totes les vostres dades sense claus de recuperació de BitLocker",
     "restartComputer": "Reinicia l'ordinador",
     "restartComputerTitle": "Voleu reiniciar l'ordinador?",
-    "restartIntoWindows": "Reiniciar a WIndows",
+    "restartIntoWindows": "Reinicia a Windows",
     "restartIntoWindowsTitle": "Voleu reiniciar a Windows?",
     "restartIntoWindowsDescription": "Segur que voleu reiniciar l'ordinador? Haureu de reiniciar la instal·lació {DISTRO} més tard per finalitzar la instal·lació de {DISTRO}.",
     "@restartIntoWindowsDescription": {
@@ -926,5 +926,125 @@
     "newPartitionTableConfirmationMessage": "La creació d'una nova taula de particions per a un dispositiu complet eliminarà totes les particions actuals. Aquesta operació es pot desfer si és necessari.",
     "tooManyPrimaryPartitions": "Massa particions primàries",
     "partitionLimitReached": "Límit assolit",
-    "bootLoaderDevice": "Dispositiu per a la instal·lació del carregador d'arrencada"
+    "bootLoaderDevice": "Dispositiu per a la instal·lació del carregador d'arrencada",
+    "autoinstallErrorMessage": "No s'ha pogut executar una ordre al fitxer d'instal·lació automàtica durant la instal·lació.",
+    "autoinstallErrorInstructions": "Haureu de reiniciar la instal·lació. Comproveu el fitxer d'instal·lació automàtica, trieu un tipus d'instal·lació diferent o contacteu amb el vostre suport informàtic.",
+    "installationTypeLVMEncryptionInfoResolute": "Haureu d'introduir una contrasenya cada vegada que engegueu l'ordinador. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Això utilitza LVM amb xifratge LUKS.",
+    "installationTypeTPMInfoResolute": "El disc es desbloquejarà automàticament durant l'inici.",
+    "installationTypeTPMInfoUnavailable": "No està disponible en aquest ordinador.",
+    "restartInstaller": "Reinicia l'instal·lador",
+    "tpmActionPageTitle": "No s'ha pogut habilitar l'encriptatge amb suport de maquinari",
+    "tpmActionBadgeLabel": "Acció requerida",
+    "tpmActionDetailsLabel": "Dades tècniques",
+    "tpmActionConfirmLabel": "Confirmació",
+    "tpmActionSolutionLabel": "Solució {n}: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionSingleSolutionLabel": "Solució: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Més informació sobre l'encriptatge amb suport de maquinari",
+    "tpmActionErrorSupportLabel": "Proveu les solucions següents, contacteu amb el suport de TI o trieu un mètode d'encriptació diferent.",
+    "tpmActionErrorSupportSingleLabel": "Proveu la solució següent, contacteu amb el suport de TI o trieu un mètode d'encriptació diferent.",
+    "tpmActionErrorSupportNoActionLabel": "Contacteu amb el suport de TI o trieu un mètode d'encriptació diferent.",
+    "tpmActionErrorKindInternal": "Error intern.",
+    "tpmActionErrorKindShutdownRequired": "Es requereix apagat.",
+    "tpmActionErrorKindRebootRequired": "Cal reiniciar.",
+    "tpmActionErrorKindUnexpectedAction": "Acció inesperada.",
+    "tpmActionErrorKindMissingArgument": "Falta l'argument.",
+    "tpmActionErrorKindInvalidArgument": "L'argument no és vàlid.",
+    "tpmActionErrorKindActionFailed": "Ha fallat l'acció.",
+    "tpmActionErrorKindRunningInVm": "L'entorn actual és una màquina virtual.",
+    "tpmActionErrorKindSystemNotEfi": "Aquest ordinador està utilitzant microprogramari antic (BIOS antic) que no és compatible amb aquest mètode d'encriptació.",
+    "tpmActionErrorKindEfiVariableAccess": "Hi ha un problema amb el microprogramari d'aquest ordinador.",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Aquest ordinador no té el maquinari de seguretat requerit (TPM 2.0) per a aquest mètode d'encriptació.",
+    "tpmActionErrorKindTpmDeviceDisabled": "El TPM d'aquest ordinador està desactivat.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "El TPM d'aquest ordinador ja està en ús per un altre sistema o aplicació.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "El TPM d'aquest ordinador està bloquejat.",
+    "tpmActionErrorKindInsufficientTpmStorage": "El TPM d'aquest ordinador no té prou emmagatzematge disponible.",
+    "tpmActionErrorKindUnsupportedPlatform": "Aquest ordinador no és compatible amb l'encriptació amb maquinari.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "La depuració UEFI està activada.",
+    "tpmActionErrorKindInsufficientDmaProtection": "A aquest ordinador li falta una característica de seguretat requerida (protecció DMA).",
+    "tpmActionErrorKindNoKernelIommu": "A aquest ordinador li falta una funció de seguretat requerida (IOMMU).",
+    "tpmActionErrorKindHostSecurity": "Hi ha un problema amb la configuració de seguretat d'aquest ordinador.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Hi ha programari en execució a l'inici que podria evitar una connexió segura amb el TPM de l'ordinador.",
+    "tpmActionErrorKindAbsolutePresent": "El mòdul de persistència absoluta està habilitat en aquest ordinador.",
+    "tpmActionErrorKindInvalidSecureBootMode": "L'arrencada segura està desactivada en aquest ordinador o no està configurada en mode desplegat.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Alguns dels certificats que verifiquen programari en aquest ordinador estan desactualitzats o utilitzen una protecció feble.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Aquest ordinador està utilitzant una llista de permisos manual per verificar el programari en iniciar.",
+    "tpmActionErrorKindAddonDriversPresent": "Hi ha controladors de complements.",
+    "tpmActionErrorKindGenericTpm": "Hi ha un problema amb el TPM d'aquest ordinador.",
+    "tpmActionErrorKindGenericFirmware": "Hi ha un problema amb el microprogramari d'aquest ordinador.",
+    "tpmActionFixActionReboot": "Reinicia",
+    "tpmActionFixActionShutdown": "Apaga",
+    "tpmActionFixActionRebootToFwSettings": "Reinicia a la configuració del microprogramari",
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Si la configuració del microprogramari no es carrega automàticament, reinicieu i premeu la tecla de configuració repetidament durant l'inici (comunament F2, F10 o Suprimeix).",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Activa la protecció DMA manualment",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Neteja el TPM manualment",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Habilita l'arrencada segura manualment",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Habilita l'IOMMU manualment",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Habilita manualment els bancs PCR",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Activa manualment el TPM",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Neteja el TPM manualment",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Neteja el TPM manualment",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Inhabilita manualment el mòdul de persistència absoluta",
+    "tpmActionFixActionContactOem": "Contacta amb OEM",
+    "tpmActionFixActionContactOsVendor": "Contacta amb el proveïdor del SO",
+    "tpmActionFixActionEnableTpmViaFirmware": "Habilita el TPM en reiniciar",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Habilita i neteja el TPM en reiniciar",
+    "tpmActionFixActionClearTpmViaFirmware": "Neteja el TPM en reiniciar",
+    "tpmActionFixActionClearTpm": "Neteja TPM",
+    "tpmActionFixActionProceed": "Ignora",
+    "tpmActionFixActionRebootDescription": "Reinicia l'ordinador per a completar les accions anteriors.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Reiniciar l'ordinador pot solucionar el problema.",
+    "tpmActionFixActionShutdownDescription": "Apaga l'ordinador per a completar les accions anteriors.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Podeu fer-ho a la configuració del microprogramari del vostre ordinador.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "És possible que pugueu fer-ho a la configuració del microprogramari del vostre ordinador. Comproveu la documentació del proveïdor de la CPU per a la seva orientació.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "El mode d'arrencada segur està establert a «desplegat».",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Aquesta característica pot ser coneguda com a \"Tecnologia de virtualització\", \"VT-d\" o \"AMD-Vi\".",
+    "tpmActionFixActionProceedDescription": "Ignorar aquest problema podria resultar en una instal·lació menys segura.",
+    "tpmActionRestartLabel": "Reinicia",
+    "tpmActionRestartAndEnableTpmLabel": "Reinicia i habilita el TPM",
+    "tpmActionRestartAndClearTpmLabel": "Reinicia i neteja TPM",
+    "tpmActionIgnoreAndContinueLabel": "Ignora i continua",
+    "tpmActionFixActionClearTpmWarningTitle": "Netejant el TPM s'esborraran totes les claus de xifratge",
+    "tpmActionFixActionClearTpmWarningBody": "Perdràs accés a totes les dades en unitats encriptades per a les quals no tens claus de recuperació. També trencarà altres característiques que depenen del TPM, com l'autenticació i els certificats.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "Entenc les conseqüències de netejar el TPM",
+    "tpmActionFixActionCaveatConfirm": "És possible que se us demani que confirmeu aquesta acció en reiniciar.",
+    "tpmActionFixActionCaveatRetry": "Després haureu de tornar a iniciar la instal·lació.",
+    "tpmActionErrorTitle": "Aquesta solució ha fallat",
+    "tpmActionErrorDescription": "Proveu una solució diferent o contacteu amb el suport informàtic.",
+    "manualPartitioningWarningBody": "Prova una altra cosa. També podeu <a href=\"\">enviar un informe d'error</a>.",
+    "stepIndicatorLabel": "Pas {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
