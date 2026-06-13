@@ -532,5 +532,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallGenericErrorMessage": "Instalado ne povas kompletiĝi per la provizita dosiero por aŭtomata instalado.",
+    "autoinstallValidationErrorMessage": "Ekzistas problemo pri la provizita dosiero por aŭtomata instalado.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Ekzistas problemo pri la datenoj pri uzantoj por cloud-init en la dosiero por aŭtomata instalado."
 }
