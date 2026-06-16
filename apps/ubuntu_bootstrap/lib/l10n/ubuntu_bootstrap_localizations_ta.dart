@@ -1085,6 +1085,9 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'ச்லைடுசோ இடைநிறுத்தம்';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'பதிவுகளை நிறுவவும்';
 
   @override

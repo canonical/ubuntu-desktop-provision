@@ -4,7 +4,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 import '../test_utils.dart';
@@ -13,6 +12,7 @@ void main() {
   testWidgets('can open links', (tester) async {
     final urlLauncher = MockUrlLauncher();
     registerMockService<UrlLauncher>(urlLauncher);
+    when(urlLauncher.launchUrl(any)).thenAnswer((_) async => true);
 
     await tester.pumpApp(
       (context) => const ProviderScope(
@@ -22,12 +22,37 @@ void main() {
       ),
     );
 
-    Future<void> expectLaunchUrl(String label, String url) async {
-      when(urlLauncher.launchUrl(url)).thenAnswer((_) async => true);
-      await tester.tapLink(label);
-      verify(urlLauncher.launchUrl(url)).called(1);
-    }
+    await tester.tap(find.text('link'));
+    await tester.pump();
 
-    await expectLaunchUrl('link', 'https://help.ubuntu.com');
+    verify(urlLauncher.launchUrl('https://help.ubuntu.com')).called(1);
+  });
+
+  testWidgets('links are exposed to screen readers', (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml('<a href="https://help.ubuntu.com">link</a>'),
+        ),
+      ),
+    );
+
+    expect(
+      tester.getSemantics(find.bySemanticsLabel('link')),
+      matchesSemantics(
+        label: 'link',
+        isLink: true,
+        isFocusable: true,
+        hasTapAction: true,
+        hasFocusAction: true,
+      ),
+    );
+
+    handle.dispose();
   });
 }

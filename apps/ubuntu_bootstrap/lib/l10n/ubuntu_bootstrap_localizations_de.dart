@@ -1087,6 +1087,9 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Präsentation anhalten';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'Installationsprotokolle umschalten';
 
   @override

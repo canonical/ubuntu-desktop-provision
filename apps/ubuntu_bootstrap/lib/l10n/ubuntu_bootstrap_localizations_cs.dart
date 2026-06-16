@@ -1074,6 +1074,9 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pozastavit prezentaci';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel =>
       'Vyp/zap. zaznamenávání událostí při instalaci';
 

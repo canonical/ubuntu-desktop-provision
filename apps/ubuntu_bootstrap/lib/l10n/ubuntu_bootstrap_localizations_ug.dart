@@ -1074,6 +1074,9 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'تام تەسۋىرنى ۋاقىتلىق توختىتىدۇ';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'ئورنىتىش خاتىرىسىنى ئالماشتۇرىدۇ';
 
   @override

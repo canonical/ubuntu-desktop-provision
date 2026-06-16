@@ -1077,6 +1077,9 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'სლაიდშოუს პაუზა';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'დაყენების ჟურნალის გადართვა';
 
   @override
