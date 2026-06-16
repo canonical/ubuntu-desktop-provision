@@ -1078,6 +1078,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Diavetítés szüneteltetése';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel =>
       'Telepítési naplók be- vagy kikapcsolása';
 

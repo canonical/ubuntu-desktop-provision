@@ -1079,6 +1079,9 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pausa la presentació';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'Commuta els registres d\'instal·lació';
 
   @override

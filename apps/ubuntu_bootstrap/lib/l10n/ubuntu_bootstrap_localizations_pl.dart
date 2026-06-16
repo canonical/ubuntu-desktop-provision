@@ -1072,6 +1072,9 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Wstrzymaj pokaz slajdów';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'Przełącz dzienniki instalacji';
 
   @override

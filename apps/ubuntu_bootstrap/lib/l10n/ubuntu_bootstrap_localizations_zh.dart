@@ -1010,6 +1010,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => '暂停幻灯片放映';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => '安装日志';
 
   @override

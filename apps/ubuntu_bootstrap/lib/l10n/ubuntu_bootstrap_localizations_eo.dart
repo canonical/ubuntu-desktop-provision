@@ -1066,6 +1066,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Ĉesigi foliumadon';
 
   @override
+  String get slideshowSemanticLabel => 'Installation slideshow';
+
+  @override
   String get toggleLogsSemanticLabel => 'Baskuligi instalan protokolon';
 
   @override
