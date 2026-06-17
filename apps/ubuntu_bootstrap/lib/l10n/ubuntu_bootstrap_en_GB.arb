@@ -1,1 +1,203 @@
-{}
+{
+    "successIconSemanticLabel": "Success",
+    "closeIconSemanticLabel": "Close",
+    "maximizeIconSemanticLabel": "Maximise",
+    "minimizeIconSemanticLabel": "Minimise",
+    "appTitle": "Ubuntu Desktop Installer",
+    "windowTitle": "Install {RELEASE}",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "Automated installation",
+    "autoinstallDirectHeader": "Import autoinstall file",
+    "autoinstallDirectUrlLabel": "You can enter the URL of an autoinstall file:",
+    "autoinstallDirectFileLabel": "Or select a local file:",
+    "autoinstallDirectFileButtonLabel": "Select file...",
+    "autoinstallDirectFileClearButtonLabel": "Clear file",
+    "autoinstallDirectFilePickerTitle": "Choose file",
+    "autoinstallDirectFilePickerFilterLabel": "YAML files",
+    "autoinstallDirectImportButtonLabel": "Import",
+    "autoinstallDirectErrorNetworkTitle": "Autoinstall file is not reachable",
+    "autoinstallDirectErrorNetworkBody": "Check the URL is correct, test your internet connection, or try later.",
+    "autoinstallDirectErrorInvalidUrlTitle": "Invalid URL",
+    "autoinstallDirectErrorInvalidUrlBody": "Check the URL is correct or select a local file.",
+    "autoinstallDirectErrorInvalidContentTitle": "Invalid autoinstall file",
+    "autoinstallDirectErrorInvalidContentBody": "Check the file or provide a different one.",
+    "autoinstallDirectErrorFileSystemTitle": "Autoinstall file is not readable",
+    "autoinstallDirectErrorFileSystemBody": "Check your permissions or provide a different file.",
+    "autoinstallDirectErrorUnkownTitle": "Unknown error",
+    "autoinstallTitle": "Type of installation",
+    "autoinstallHeader": "How would you like to install {DISTRO}?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "Enter the autoinstall.yaml URL or local file path:",
+    "autoinstallInteractiveOption": "Interactive installation",
+    "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
+    "autoinstallDirectOption": "Automated with autoinstall file",
+    "autoinstallDirectDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
+    "autoinstallLandscapeOption": "Automated with Landscape",
+    "autoinstallLandscapeDescription": "For users in organisations that provide an autoinstall file via Landscape.",
+    "autoinstallErrorMessage": "A command in the autoinstall file failed to run during installation.",
+    "autoinstallGenericErrorMessage": "Installation cannot continue with the provided autoinstall file.",
+    "autoinstallValidationErrorMessage": "There is an issue with the provided autoinstall file.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "There is an issue with the cloud-init user data provided in the autoinstall file.",
+    "autoinstallErrorInstructions": "You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.",
+    "changeButtonText": "Change",
+    "quitButtonText": "Quit installation",
+    "loadingPageTitle": "Welcome to {DISTRO}",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "Preparing {DISTRO}…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "Warning:",
+    "tryOrInstallTitle": "Try or install {DISTRO}",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "What do you want to do with {DISTRO}?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "Repair installation",
+    "tryOrInstallRepairDescription": "Repairing will reinstall all installed software without touching documents or settings.",
+    "tryOption": "Try {RELEASE}",
+    "@tryOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryDescription": "You can try {RELEASE} without making any changes to your computer.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installOption": "Install {RELEASE}",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "Install {RELEASE} alongside (or instead of) your current operating system. This shouldn't take too long.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "You may wish to read the <a href=\"{url}\">release notes</a>.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstTitle": "RST detected",
+    "rstHeader": "You must disable RST to continue installation",
+    "rstDisable": "Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:",
+    "rstDisableWindows": "Windows, if you are using a dual boot setup with Windows",
+    "rstDisableBios": "The BIOS settings",
+    "rstInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "Configure Secure Boot",
+    "configureSecureBootDescription": "You've chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.",
+    "configureSecureBootOption": "Configure Secure Boot",
+    "chooseSecurityKey": "Choose a security key",
+    "confirmSecurityKey": "Confirm the security key",
+    "dontInstallDriverSoftwareNow": "Don't install the driver software for now",
+    "dontInstallDriverSoftwareNowDescription": "You can install it later from Software & Updates.",
+    "configureSecureBootSecurityKeyRequired": "Security key is required",
+    "secureBootSecurityKeysDontMatch": "Security keys do not match",
+    "showSecurityKey": "Show",
+    "hideSecurityKey": "Hide",
+    "updatesOtherSoftwarePageTitle": "Applications",
+    "updatesOtherSoftwarePageDescription": "What apps would you like to install to start with?",
+    "codecsAndDriversPageTitle": "Optimise your computer",
+    "codecsAndDriversPageDescription": "Install recommended proprietary software?",
+    "codecsAndDriversPageBody": "{DISTRO} ships with no proprietary software by default. Installing additional software may improve your computer's performance.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "NVIDIA graphics card detected",
+    "codecsAndDriversNvidiaBody": "For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.",
+    "fullInstallationTitle": "Extended selection",
+    "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities and web browser.",
+    "minimalInstallationTitle": "Default selection",
+    "minimalInstallationSubtitle": "Just the essentials, web browser and basic utilities.",
+    "otherOptions": "Other options",
+    "installThirdPartyTitle": "Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats",
+    "installThirdPartySubtitle": "This software is subject to licence terms included with its documentation. Some are proprietary.",
+    "installDriversTitle": "Install third-party software for graphics and Wi-Fi hardware",
+    "installDriversSubtitle": "Including but not limited to NVIDIA drivers and similar",
+    "installCodecsTitle": "Download and install support for additional media formats",
+    "installCodecsSubtitle": "Including but not limited to MP3, MP4, MOV and similar",
+    "batteryWarning": "The computer is not plugged in to a power source.",
+    "offlineWarning": "You are currently offline",
+    "choosePassphraseHeader": "Create a passphrase",
+    "choosePassphraseBody": "You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.",
+    "choosePassphraseInfoHeader": "Make sure to save your passphrase",
+    "choosePassphraseInfoBody": "If you lose it, you will lose all your data.",
+    "chooseOptionalPassphraseInfoHeader": "Store your passphrase and recovery key somewhere safe",
+    "chooseOptionalPassphraseInfoBody": "If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.",
+    "passphrasePageTitle": "Encryption",
+    "passphrasePageHeaderPassphrase": "Set an encryption passphrase",
+    "passphrasePageHeaderPin": "Set an encryption PIN",
+    "passphrasePageBodyPassphrase": "You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.",
+    "passphrasePageBodyPin": "You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.",
+    "passphrasePageChoosePassphraseHint": "Passphrase",
+    "passphrasePageConfirmPassphraseHint": "Confirm passphrase",
+    "passphrasePageRequiredPassphrase": "A passphrase is required",
+    "passphrasePageMismatchPassphrase": "The passphrases do not match",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "Confirm PIN",
+    "passphrasePageRequiredPin": "A PIN is required",
+    "passphrasePageMismatchPin": "The PINs do not match",
+    "passphraseTypePassphraseTileTitle": "Require a passphrase",
+    "passphraseTypePassphraseTileSubTitle": "Most secure. You will need to enter a longer passphrase every time you turn on your computer."
+}
