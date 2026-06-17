@@ -1,1 +1,163 @@
-{}
+{
+    "accessibilityPageTitle": "Accessibility",
+    "accessibilityPageHeader": "Accessibility in {DISTRO}",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "Customise {DISTRO} to your needs before you set up. You can change them later in the Settings app.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilitySeeingLabel": "Seeing",
+    "accessibilityHearingLabel": "Hearing",
+    "accessibilityTypingLabel": "Typing",
+    "accessibilityPointingLabel": "Pointing and clicking",
+    "accessibilityZoomLabel": "Zoom",
+    "accessibilityHighContrastLabel": "High contrast",
+    "accessibilityLargeTextLabel": "Large text",
+    "accessibilityReduceAnimationLabel": "Reduce animation",
+    "accessibilityScreenReaderLabel": "Screen reader",
+    "accessibilityVisualAlertsLabel": "Visual alerts",
+    "accessibilityStickKeysLabel": "Sticky keys",
+    "accessibilitySlowKeysLabel": "Slow keys",
+    "accessibilityMouseKeysLabel": "Mouse keys",
+    "accessibilityDesktopZoomLabel": "Desktop zoom",
+    "errorPageTitle": "Something went wrong",
+    "errorPageUnexpected": "We're sorry, but we're not sure what the error is. You can try restarting your computer and start the installation process again. You can also <a>report the issue</a>.",
+    "errorPageUbuntuBug": "To send an automated bug report including relevant debug information, please run <pre>sudo ubuntu-bug {SNAP}</pre> in a terminal, or from the command console (Alt+F2).",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "errorPageShowLog": "Show log",
+    "errorPageHideLog": "Hide log",
+    "errorPageTechnicalDetails": "Technical details",
+    "restart": "Restart",
+    "close": "Close",
+    "timezonePageTitle": "Select your timezone",
+    "timezoneLocationLabel": "Location",
+    "timezoneTimezoneLabel": "Timezone",
+    "keyboardTitle": "Keyboard layout",
+    "keyboardHeader": "Select your keyboard layout",
+    "keyboardTestHint": "Type here to test your keyboard",
+    "keyboardDetectTitle": "Detect keyboard layout",
+    "keyboardDetectButton": "Detect",
+    "keyboardVariantLabel": "Select your keyboard variant:",
+    "keyboardPressKeyLabel": "Please press one of the following keys:",
+    "keyboardKeyPresentLabel": "Is the following key present on your keyboard?",
+    "themePageTitle": "Choose your theme",
+    "themePageHeader": "You can always change this later in the appearance settings.",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "localePageTitle": "Welcome to {DISTRO}",
+    "@localePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "localeHeader": "Choose your language:",
+    "identityPageTitle": "Create your account",
+    "identityAutoLogin": "Log in automatically",
+    "identityRequirePassword": "Require my password to log in",
+    "identityRealNameLabel": "Your name",
+    "identityRealNameRequired": "A name is required",
+    "identityRealNameTooLong": "That name is too long.",
+    "identityInvalidRealName": "The name is invalid",
+    "identityHostnameLabel": "Your computer's name",
+    "identityHostnameInfo": "The name it uses when it talks to other computers.",
+    "identityHostnameRequired": "A computer name is required",
+    "identityHostnameTooLong": "That computer name is too long.",
+    "identityInvalidHostname": "The computer name is invalid",
+    "identityUsernameLabel": "Your username",
+    "identityUsernameRequired": "A username is required",
+    "identityInvalidUsername": "The username is invalid: it must start with a lowercase letter and may only contain lowercase letters, digits, hyphens, and underscores.",
+    "identityUsernameInUse": "That user name already exists.",
+    "identityUsernameSystemReserved": "That name is reserved for system usage.",
+    "identityUsernameTooLong": "That name is too long.",
+    "identityUsernameInvalidChars": "That name contains invalid characters.",
+    "identityPasswordLabel": "Password",
+    "identityPasswordRequired": "A password is required",
+    "identityConfirmPasswordLabel": "Confirm password",
+    "identityPasswordMismatch": "The passwords do not match",
+    "identityPasswordShow": "Show",
+    "identityPasswordHide": "Hide",
+    "identityActiveDirectoryOption": "Use Active Directory",
+    "identityActiveDirectoryInfo": "You'll enter domain and other details in the next step.",
+    "activeDirectoryTitle": "Log into Active Directory",
+    "activeDirectoryHeader": "Log into Active Directory?",
+    "activeDirectoryInfo": "{DISTRO} is designed to integrate seamlessly with Active Directory for easier administration.",
+    "@activeDirectoryInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryTestConnection": "Test domain connectivity",
+    "activeDirectoryDomainLabel": "Domain",
+    "activeDirectoryDomainEmpty": "Required",
+    "activeDirectoryDomainTooLong": "Too long",
+    "activeDirectoryDomainInvalidChars": "Invalid characters",
+    "activeDirectoryDomainStartDot": "Starts with a dot (.)",
+    "activeDirectoryDomainEndDot": "Ends with a dot (.)",
+    "activeDirectoryDomainStartHyphen": "Starts with a hyphen (-)",
+    "activeDirectoryDomainEndHyphen": "Ends with a hyphen (-)",
+    "activeDirectoryDomainMultipleDots": "Contains multiple sequenced dots (..)",
+    "activeDirectoryDomainNotFound": "Domain not found",
+    "activeDirectoryAdminLabel": "Domain join user",
+    "activeDirectoryAdminEmpty": "Required",
+    "activeDirectoryAdminInvalidChars": "Invalid characters",
+    "activeDirectoryPasswordLabel": "Password",
+    "activeDirectoryPasswordEmpty": "Required",
+    "activeDirectoryErrorTitle": "Error configuring connection to Active Directory",
+    "activeDirectoryErrorMessage": "Sorry, Active Directory can't be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.",
+    "networkPageTitle": "Internet connection",
+    "networkPageHeader": "Connect to the internet",
+    "networkPageBody": "An internet connection will improve your installation with compatibility check and extra software packages.",
+    "networkWiredOption": "Use wired connection",
+    "networkWiredNone": "No wired connection detected",
+    "networkWiredOff": "Wired connection is turned off",
+    "networkWiredDisabled": "To use Ethernet on this computer, a wired connection must be enabled",
+    "networkWiredEnable": "Enable wired",
+    "networkWifiOption": "Connect to a Wi-Fi network",
+    "networkWifiOff": "Wireless networking disabled",
+    "networkWifiNone": "No Wi-Fi devices detected",
+    "networkWifiDisabled": "To use Wi-Fi on this computer, wireless networking must be enabled",
+    "networkWifiEnable": "Enable Wi-Fi",
+    "networkHiddenWifiOption": "Connect to a hidden Wi-Fi network",
+    "networkHiddenWifiNameLabel": "Network name",
+    "networkHiddenWifiNameRequired": "A network name is required",
+    "networkNoneOption": "Do not connect to the internet",
+    "eulaPageTitle": "Licence agreement",
+    "eulaReviewTerms": "Review the licence terms",
+    "eulaReadAndAcceptTerms": "To continue setting up this machine, you must read and accept the licence agreement terms.",
+    "eulaAcceptTerms": "I have read and accept these terms",
+    "successIconSemanticLabel": "Success",
+    "closeIconSemanticLabel": "Close",
+    "maximizeIconSemanticLabel": "Maximise",
+    "minimizeIconSemanticLabel": "Minimise",
+    "expandIconSemanticLabel": "Expand",
+    "collapseIconSemanticLabel": "Collapse",
+    "networkWifiSignalNone": "No signal",
+    "networkWifiSignalWeak": "Weak signal",
+    "networkWifiSignalOk": "OK signal",
+    "networkWifiSignalGood": "Good signal",
+    "networkWifiSignalExcellent": "Excellent signal",
+    "networkWifiOpenNetwork": "Open network",
+    "networkWifiSecureNetwork": "Secure network",
+    "networkWifiConnecting": "Connecting…",
+    "networkWifiConnected": "Connected"
+}
