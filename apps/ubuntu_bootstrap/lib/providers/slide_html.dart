@@ -81,9 +81,16 @@ class SlideHtml extends StatelessWidget {
             return Container(
               padding:
                   padding?.resolve(direction) ?? margin?.resolve(direction),
-              child: Text(
-                extensionContext.element!.text,
-                style: textStyle,
+              // The slide's body text is announced as a whole when the
+              // slideshow gains focus (see slide_view.dart's slideSemanticTexts).
+              // Excluding the individual paragraphs from semantics prevents a
+              // screen reader from re-reading the slide body when the user tabs
+              // to the slide's links.
+              child: ExcludeSemantics(
+                child: Text(
+                  extensionContext.element!.text,
+                  style: textStyle,
+                ),
               ),
             );
           },

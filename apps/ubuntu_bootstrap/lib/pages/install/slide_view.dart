@@ -22,12 +22,12 @@ class SlideView extends StatefulWidget {
     this.autofocus = false,
     this.focusNode,
     this.onSlide,
-  }) : assert(slides.isNotEmpty),
-       assert(
-         slideSemanticTexts == null ||
-             slideSemanticTexts.length == slides.length,
-         'slideSemanticTexts must have the same length as slides',
-       );
+  })  : assert(slides.isNotEmpty),
+        assert(
+          slideSemanticTexts == null ||
+              slideSemanticTexts.length == slides.length,
+          'slideSemanticTexts must have the same length as slides',
+        );
 
   /// Controls the current slide.
   final ValueNotifier<int> controller;
@@ -137,11 +137,20 @@ class _SlideViewState extends State<SlideView> {
 
   @override
   Widget build(BuildContext context) {
+    // The whole-slide text is announced only while the slideshow itself holds
+    // primary focus. When focus descends into a slide's interactive child
+    // (e.g. a link), `_hasPrimaryFocus` is false, so the container exposes no
+    // label at all. This matters because a screen reader re-announces an
+    // ancestor group's name when focus moves into it; leaving the label null
+    // prevents the slide (or even the short slideshow label) from being
+    // re-read each time the user tabs to a link. The slide's own rendered
+    // paragraphs are excluded from semantics (see slide_html.dart) so they are
+    // not re-read either; the links remain individually focusable.
     final slideText =
         _hasPrimaryFocus ? (widget.slideSemanticTexts?[currentSlide]) : null;
-    final label = (widget.semanticLabel != null && slideText != null)
-        ? '${widget.semanticLabel}\n$slideText'
-        : widget.semanticLabel ?? slideText;
+    final label = _hasPrimaryFocus
+        ? [widget.semanticLabel, slideText].whereType<String>().join('\n')
+        : null;
     return Focus(
       autofocus: widget.autofocus,
       focusNode: _effectiveFocusNode,
@@ -164,81 +173,82 @@ class _SlideViewState extends State<SlideView> {
         focused: _hasPrimaryFocus,
         explicitChildNodes: true,
         child: MediaQuery(
-            data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
-            child: Theme(
-              data: Theme.of(context).copyWith(
-                textTheme: Theme.of(context).textTheme.apply(fontSizeFactor: 1.5),
-              ),
-              child: ValueListenableBuilder<int>(
-                valueListenable: widget.controller,
-                builder: (context, value, child) {
-                  return AnimatedSwitcher(
-                    duration: const Duration(seconds: 1),
-                    layoutBuilder: (currentChild, previousChildren) => Stack(
-                      fit: StackFit.expand,
+          data:
+              MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
+          child: Theme(
+            data: Theme.of(context).copyWith(
+              textTheme: Theme.of(context).textTheme.apply(fontSizeFactor: 1.5),
+            ),
+            child: ValueListenableBuilder<int>(
+              valueListenable: widget.controller,
+              builder: (context, value, child) {
+                return AnimatedSwitcher(
+                  duration: const Duration(seconds: 1),
+                  layoutBuilder: (currentChild, previousChildren) => Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      ...previousChildren,
+                      if (currentChild != null) currentChild,
+                    ],
+                  ),
+                  transitionBuilder: (child, animation) {
+                    final isExiting = animation is ReverseAnimation;
+                    if (isExiting) {
+                      final firstHalf = CurvedAnimation(
+                        parent: animation,
+                        curve: const Interval(0.5, 1.0),
+                      );
+                      return FadeTransition(
+                        opacity: firstHalf
+                            .drive(CurveTween(curve: Curves.easeOutExpo)),
+                        child: SlideTransition(
+                          position: firstHalf.drive(
+                            Tween(
+                              begin: const Offset(0, -0.05),
+                              end: Offset.zero,
+                            ).chain(CurveTween(curve: Curves.fastOutSlowIn)),
+                          ),
+                          textDirection: Directionality.of(context),
+                          child: child,
+                        ),
+                      );
+                    } else {
+                      final secondHalf = CurvedAnimation(
+                        parent: animation,
+                        curve: const Interval(0.5, 1.0),
+                      );
+                      return FadeTransition(
+                        opacity:
+                            secondHalf.drive(CurveTween(curve: Curves.easeIn)),
+                        child: SlideTransition(
+                          position: secondHalf.drive(
+                            Tween(
+                              begin: const Offset(0, 0.05),
+                              end: Offset.zero,
+                            ).chain(CurveTween(curve: Curves.fastOutSlowIn)),
+                          ),
+                          textDirection: Directionality.of(context),
+                          child: child,
+                        ),
+                      );
+                    }
+                  },
+                  child: KeyedSubtree(
+                    key: ValueKey(value),
+                    child: Row(
                       children: [
-                        ...previousChildren,
-                        if (currentChild != null) currentChild,
+                        Expanded(
+                          child: widget.slides[value],
+                        ),
                       ],
                     ),
-                    transitionBuilder: (child, animation) {
-                      final isExiting = animation is ReverseAnimation;
-                      if (isExiting) {
-                        final firstHalf = CurvedAnimation(
-                          parent: animation,
-                          curve: const Interval(0.5, 1.0),
-                        );
-                        return FadeTransition(
-                          opacity: firstHalf
-                              .drive(CurveTween(curve: Curves.easeOutExpo)),
-                          child: SlideTransition(
-                            position: firstHalf.drive(
-                              Tween(
-                                begin: const Offset(0, -0.05),
-                                end: Offset.zero,
-                              ).chain(CurveTween(curve: Curves.fastOutSlowIn)),
-                            ),
-                            textDirection: Directionality.of(context),
-                            child: child,
-                          ),
-                        );
-                      } else {
-                        final secondHalf = CurvedAnimation(
-                          parent: animation,
-                          curve: const Interval(0.5, 1.0),
-                        );
-                        return FadeTransition(
-                          opacity: secondHalf
-                              .drive(CurveTween(curve: Curves.easeIn)),
-                          child: SlideTransition(
-                            position: secondHalf.drive(
-                              Tween(
-                                begin: const Offset(0, 0.05),
-                                end: Offset.zero,
-                              ).chain(CurveTween(curve: Curves.fastOutSlowIn)),
-                            ),
-                            textDirection: Directionality.of(context),
-                            child: child,
-                          ),
-                        );
-                      }
-                    },
-                    child: KeyedSubtree(
-                      key: ValueKey(value),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: widget.slides[value],
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
+                  ),
+                );
+              },
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }
