@@ -20,8 +20,8 @@
     "identityAutoLogin": "自动登录",
     "identityRequirePassword": "登录时需要密码",
     "identityRealNameLabel": "您的姓名",
-    "identityRealNameRequired": "需要名字",
-    "identityRealNameTooLong": "名字过长。",
+    "identityRealNameRequired": "需要姓名",
+    "identityRealNameTooLong": "姓名过长。",
     "identityHostnameLabel": "您的电脑主机名",
     "identityHostnameInfo": "与其他计算机联络时使用的名称。",
     "identityHostnameRequired": "需要计算机名称",
@@ -111,5 +111,6 @@
     "successIconSemanticLabel": "成功",
     "closeIconSemanticLabel": "关闭",
     "maximizeIconSemanticLabel": "最大化",
-    "minimizeIconSemanticLabel": "最小化"
+    "minimizeIconSemanticLabel": "最小化",
+    "identityInvalidRealName": "姓名无效"
 }
