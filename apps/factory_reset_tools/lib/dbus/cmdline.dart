@@ -95,6 +95,20 @@ class RebootCommand extends Command<void> {
     await pkttyagent.start();
     try {
       await startCommandViaDbus(ResetOptionType.fromString(argResults.rest[0]));
+    } on RebootFailedException catch (e) {
+      stderr
+        ..writeln(e.message)
+        ..writeln()
+        ..writeln(
+          'The selected option has been set up and will be used on the next '
+          'boot, but the system could not restart by itself. This usually '
+          'happens when another program, such as this terminal, prevents the '
+          'system from rebooting.',
+        )
+        ..writeln()
+        ..writeln('Please close any running programs and reboot manually to '
+            'continue.');
+      exit(1);
     } finally {
       pkttyagent.stop();
     }

@@ -10,6 +10,23 @@ import 'package:yaml/yaml.dart';
 const defaultFilePath = '/usr/share/desktop-provision';
 const defaultFileName = 'reset.yaml';
 
+/// DBus error name used to report a boot option which has been set up
+/// successfully, but where rebooting the system failed.
+const rebootFailedErrorName =
+    'com.canonical.oem.FactoryResetTools.Error.RebootFailed';
+
+/// Thrown when the boot option has been applied but the system could not be
+/// rebooted, for instance because another program inhibits the reboot or
+/// because we lack the privileges to ignore those inhibitors.
+class RebootFailedException implements Exception {
+  RebootFailedException(this.message);
+
+  final String message;
+
+  @override
+  String toString() => message;
+}
+
 enum ResetOptionType {
   factoryReset('factory-reset'),
   fwSetup('fwsetup');
@@ -62,11 +79,19 @@ class GrubBootOption extends BootOption {
       name: 'org.freedesktop.login1',
       path: DBusObjectPath('/org/freedesktop/login1'),
     );
-    await loginObject.callMethod(
-      'org.freedesktop.login1.Manager',
-      'Reboot',
-      [const DBusBoolean(true)],
-    );
+    try {
+      await loginObject.callMethod(
+        'org.freedesktop.login1.Manager',
+        'Reboot',
+        [const DBusBoolean(false)],
+      );
+    } on DBusMethodResponseException catch (e) {
+      throw RebootFailedException(
+        'Failed to reboot the system automatically ($e).',
+      );
+    } finally {
+      await dbusClient.close();
+    }
   }
 }
 
@@ -188,10 +213,22 @@ Future<void> startCommandViaDbus(
   // as service is activated by dbus call, we should try to rerun if dbus gives
   // error
   const retryRunner = RetryOptions(maxAttempts: 5);
-  await retryRunner.retry(
-    () => object.callReboot(type.value),
-    retryIf: (e) =>
-        e is DBusMethodResponseException &&
-        e.errorName == 'org.freedesktop.DBus.Error.UnknownObject',
-  );
+  try {
+    await retryRunner.retry(
+      () => object.callReboot(type.value),
+      retryIf: (e) =>
+          e is DBusMethodResponseException &&
+          e.errorName == 'org.freedesktop.DBus.Error.UnknownObject',
+    );
+  } on DBusMethodResponseException catch (e) {
+    if (e.errorName == rebootFailedErrorName) {
+      final values = e.response.values;
+      throw RebootFailedException(
+        values.isNotEmpty && values.first is DBusString
+            ? values.first.asString()
+            : 'Failed to reboot the system automatically.',
+      );
+    }
+    rethrow;
+  }
 }

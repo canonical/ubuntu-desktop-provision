@@ -48,7 +48,14 @@ class FactoryResetToolsObject extends ComCanonicalOemFactoryResetTools {
       return DBusMethodErrorResponse.authFailed();
     }
 
-    await startCommand(ResetOptionType.fromString(rebootOption));
+    try {
+      await startCommand(ResetOptionType.fromString(rebootOption));
+    } on RebootFailedException catch (e) {
+      return DBusMethodErrorResponse(
+        rebootFailedErrorName,
+        [DBusString(e.message)],
+      );
+    }
     return DBusMethodSuccessResponse();
   }
 }
