@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:ubuntu_bootstrap/pages/install/slide_transitions.dart';
+
 /// The default interval for automatic slide changes.
 const kDefaultSlideInterval = Duration(seconds: 25);
 
@@ -145,72 +147,28 @@ class _SlideViewState extends State<SlideView> {
               MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
           child: Theme(
             data: Theme.of(context).copyWith(
+              pageTransitionsTheme: const SlideTransitionsTheme(),
               textTheme: Theme.of(context).textTheme.apply(fontSizeFactor: 1.5),
             ),
             child: ValueListenableBuilder<int>(
               valueListenable: widget.controller,
               builder: (context, value, child) {
-                return AnimatedSwitcher(
-                  duration: const Duration(seconds: 1),
-                  layoutBuilder: (currentChild, previousChildren) => Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      ...previousChildren,
-                      if (currentChild != null) currentChild,
-                    ],
-                  ),
-                  transitionBuilder: (child, animation) {
-                    final isExiting = animation is ReverseAnimation;
-                    if (isExiting) {
-                      final firstHalf = CurvedAnimation(
-                        parent: animation,
-                        curve: const Interval(0.5, 1.0),
-                      );
-                      return FadeTransition(
-                        opacity: firstHalf
-                            .drive(CurveTween(curve: Curves.easeOutExpo)),
-                        child: SlideTransition(
-                          position: firstHalf.drive(
-                            Tween(
-                              begin: const Offset(0, -0.05),
-                              end: Offset.zero,
-                            ).chain(CurveTween(curve: Curves.fastOutSlowIn)),
+                final pages = [
+                  for (var i = 0; i <= value; ++i)
+                    SlidePage(
+                      key: ValueKey(i),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: widget.slides[i],
                           ),
-                          textDirection: Directionality.of(context),
-                          child: child,
-                        ),
-                      );
-                    } else {
-                      final secondHalf = CurvedAnimation(
-                        parent: animation,
-                        curve: const Interval(0.5, 1.0),
-                      );
-                      return FadeTransition(
-                        opacity:
-                            secondHalf.drive(CurveTween(curve: Curves.easeIn)),
-                        child: SlideTransition(
-                          position: secondHalf.drive(
-                            Tween(
-                              begin: const Offset(0, 0.05),
-                              end: Offset.zero,
-                            ).chain(CurveTween(curve: Curves.fastOutSlowIn)),
-                          ),
-                          textDirection: Directionality.of(context),
-                          child: child,
-                        ),
-                      );
-                    }
-                  },
-                  child: KeyedSubtree(
-                    key: ValueKey(value),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: widget.slides[value],
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
+                ];
+                return Navigator(
+                  pages: pages,
+                  onDidRemovePage: pages.remove,
                 );
               },
             ),
