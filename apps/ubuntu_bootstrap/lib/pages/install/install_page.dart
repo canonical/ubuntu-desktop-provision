@@ -83,8 +83,6 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
           SlideView(
             controller: _slideController,
             interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
-            semanticLabel: lang.slideshowSemanticLabel,
-            slideSemanticTexts: htmlSlides.map((s) => s.semanticText).toList(),
             slides: htmlSlides,
           ),
           Positioned.fill(

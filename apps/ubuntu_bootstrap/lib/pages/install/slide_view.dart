@@ -15,32 +15,18 @@ class SlideView extends StatefulWidget {
     required this.controller,
     required this.slides,
     super.key,
-    this.semanticLabel,
-    this.slideSemanticTexts,
     this.interval = kDefaultSlideInterval,
     this.wrap = false,
     this.autofocus = false,
     this.focusNode,
     this.onSlide,
-  })  : assert(slides.isNotEmpty),
-        assert(
-          slideSemanticTexts == null ||
-              slideSemanticTexts.length == slides.length,
-          'slideSemanticTexts must have the same length as slides',
-        );
+  }) : assert(slides.isNotEmpty);
 
   /// Controls the current slide.
   final ValueNotifier<int> controller;
 
   /// The list of slides to show.
   final List<Widget> slides;
-
-  /// Semantic label for the slideshow container (for screen readers).
-  final String? semanticLabel;
-
-  /// Per-slide plain-text descriptions merged into the container label so that
-  /// screen readers can read slide content in Tab navigation mode.
-  final List<String>? slideSemanticTexts;
 
   /// The interval for automatic slide changes. Defaults to [kDefaultSlideInterval].
   final Duration interval;
@@ -64,7 +50,6 @@ class SlideView extends StatefulWidget {
 class _SlideViewState extends State<SlideView> {
   Timer? _timer;
   late final FocusNode _internalFocusNode;
-  bool _hasPrimaryFocus = false;
 
   FocusNode get _effectiveFocusNode => widget.focusNode ?? _internalFocusNode;
 
@@ -72,7 +57,6 @@ class _SlideViewState extends State<SlideView> {
   void initState() {
     super.initState();
     _internalFocusNode = FocusNode();
-    _effectiveFocusNode.addListener(_onFocusNodeChange);
     widget.controller.addListener(_onSlideChanged);
     widget.controller.addListener(restartTimer);
     restartTimer();
@@ -88,15 +72,8 @@ class _SlideViewState extends State<SlideView> {
 
   void _onSlideChanged() => setState(() {});
 
-  void _onFocusNodeChange() {
-    setState(() {
-      _hasPrimaryFocus = _effectiveFocusNode.hasPrimaryFocus;
-    });
-  }
-
   @override
   void dispose() {
-    _effectiveFocusNode.removeListener(_onFocusNodeChange);
     _internalFocusNode.dispose();
     widget.controller.removeListener(_onSlideChanged);
     widget.controller.removeListener(restartTimer);
@@ -137,22 +114,15 @@ class _SlideViewState extends State<SlideView> {
 
   @override
   Widget build(BuildContext context) {
-    // The whole-slide text is announced only while the slideshow itself holds
-    // primary focus. When focus descends into a slide's interactive child
-    // (e.g. a link), `_hasPrimaryFocus` is false, so the container exposes no
-    // label at all. This matters because a screen reader re-announces an
-    // ancestor group's name when focus moves into it; leaving the label null
-    // prevents the slide (or even the short slideshow label) from being
-    // re-read each time the user tabs to a link. The slide's own rendered
-    // paragraphs are excluded from semantics (see slide_html.dart) so they are
-    // not re-read either; the links remain individually focusable.
-    final slideText =
-        _hasPrimaryFocus ? (widget.slideSemanticTexts?[currentSlide]) : null;
-    final label = _hasPrimaryFocus
-        ? [widget.semanticLabel, slideText].whereType<String>().join('\n')
-        : null;
+    // The slideshow container is a non-traversable region: `skipTraversal`
+    // keeps it out of the Tab order (so there is no extra blank tab stop) while
+    // still receiving arrow-key events that bubble up from the focused slide or
+    // link. Each slide exposes its own body text as a single focusable node and
+    // its links as separate focusable nodes (see slide_html.dart), so the
+    // container itself carries no label - a label here would make a screen
+    // reader re-read the whole slide whenever focus moved to a link.
     return Focus(
-      autofocus: widget.autofocus,
+      skipTraversal: true,
       focusNode: _effectiveFocusNode,
       includeSemantics: false,
       onKeyEvent: (_, event) {
@@ -168,9 +138,7 @@ class _SlideViewState extends State<SlideView> {
         return KeyEventResult.ignored;
       },
       child: Semantics(
-        label: label,
-        focusable: true,
-        focused: _hasPrimaryFocus,
+        container: true,
         explicitChildNodes: true,
         child: MediaQuery(
           data:
