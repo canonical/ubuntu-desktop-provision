@@ -1065,9 +1065,6 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'ຢຸດສະໄລ້ໂຊຊົ່ວຄາວ';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'ເປີດ/ປິດ ບັນທຶກການຕິດຕັ້ງ';
 
   @override

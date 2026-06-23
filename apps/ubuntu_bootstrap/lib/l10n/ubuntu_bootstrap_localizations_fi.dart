@@ -1064,9 +1064,6 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Tauko';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Kytke asennuslokit päälle tai pois';
 
   @override

@@ -1080,9 +1080,6 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'ಸ್ಲೈಡ್‌ಶೋ ವಿರಾಮಗೊಳಿಸಿ';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'ಇನ್‌ಸ್ಟಾಲ್ ಲಾಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡಿ';
 
   @override

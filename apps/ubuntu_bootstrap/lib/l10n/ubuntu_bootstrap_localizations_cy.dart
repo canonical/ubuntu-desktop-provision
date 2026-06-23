@@ -1066,9 +1066,6 @@ class UbuntuBootstrapLocalizationsCy extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pause slideshow';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Toggle install logs';
 
   @override

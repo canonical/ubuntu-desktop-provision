@@ -1066,9 +1066,6 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pozastaviť prezentáciu';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel =>
       'Prepínať zobrazenie inštalačných záznamov';
 

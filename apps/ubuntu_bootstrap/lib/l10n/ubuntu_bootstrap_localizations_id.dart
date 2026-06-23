@@ -1069,9 +1069,6 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Jedakan pertunjukan salindia';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Jungkitkan log instalasi';
 
   @override

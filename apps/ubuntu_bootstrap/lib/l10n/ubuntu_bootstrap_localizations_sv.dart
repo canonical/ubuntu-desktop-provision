@@ -1067,9 +1067,6 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pausa bildspel';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Växla installationsloggar';
 
   @override
