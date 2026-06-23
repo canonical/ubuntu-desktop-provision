@@ -20,29 +20,12 @@ class SlideHtml extends StatelessWidget {
     this.data, {
     this.index,
     this.locale,
-    this.autofocus = false,
     super.key,
   });
 
   final String data;
   final int? index;
   final String? locale;
-
-  /// Whether the slide's body text should request focus when first built. This
-  /// lets a screen reader announce the slide as soon as it appears.
-  final bool autofocus;
-
-  /// Returns the plain text content of this slide for screen reader labels.
-  ///
-  /// Strips the HTML and CSS, removes decorative bullets, collapses whitespace.
-  String get semanticText => data
-      .replaceAll(RegExp(r'<style[^>]*>.*?</style>', dotAll: true), '')
-      .replaceAll(RegExp(r'<[^>]+>'), ' ')
-      .replaceAll(_bullet, ' ')
-      .replaceAll(RegExp(r'[ \t]+'), ' ')
-      .replaceAll(RegExp(r'\n +'), '\n')
-      .replaceAll(RegExp(r'\n{3,}'), '\n\n')
-      .trim();
 
   /// Wraps the slide's body text in a `<slidetext>` element so it is rendered
   /// as a single, focusable semantics node (see the `slidetext` extension in
@@ -144,7 +127,6 @@ class SlideHtml extends StatelessWidget {
               child: Semantics(
                 label: label,
                 child: Focus(
-                  autofocus: autofocus,
                   child: ExcludeSemantics(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

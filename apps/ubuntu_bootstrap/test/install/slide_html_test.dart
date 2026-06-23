@@ -99,12 +99,61 @@ void main() {
     handle.dispose();
   });
 
-  test('semanticText strips decorative bullets', () {
-    const slide = SlideHtml(
-      '<p>\u2022 first</p><p>\u2022 second</p>',
+  testWidgets(
+      'decorative spacing does not leak a blank label into the semantics tree',
+      (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    // Mirrors slide 9's link column: an image, <br> line breaks and empty
+    // <p></p> spacers around the "<bullet> <link>" rows. Previously this
+    // whitespace bubbled up into an ancestor node's label, which a screen
+    // reader announced as an empty item (a "blank" tab stop).
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml(
+            '<html><body><table><tr>'
+            '<td class="long-text"><p>Help and support</p></td>'
+            '<td>'
+            '<img src="discourse.svg" />'
+            '<br />'
+            '<p></p>'
+            '\u2022 <a href="https://help.ubuntu.com">Official documentation</a>'
+            '<br />'
+            '<p></p>'
+            '\u2022 <a href="https://askubuntu.com">Ask Ubuntu</a>'
+            '<br />'
+            '</td>'
+            '</tr></table></body></html>',
+          ),
+        ),
+      ),
     );
-    expect(slide.semanticText, isNot(contains('\u2022')));
-    expect(slide.semanticText, contains('first'));
-    expect(slide.semanticText, contains('second'));
+    await tester.pumpAndSettle();
+
+    // No semantics node may carry a whitespace-only label (an empty label is
+    // fine; a non-empty but blank one is what a screen reader reads as "blank").
+    void expectNoBlankLabel(SemanticsNode node) {
+      final label = node.getSemanticsData().label;
+      expect(
+        label.isNotEmpty && label.trim().isEmpty,
+        isFalse,
+        reason: 'a node exposes a blank (whitespace-only) label: "$label"',
+      );
+      node.visitChildren((child) {
+        expectNoBlankLabel(child);
+        return true;
+      });
+    }
+
+    expectNoBlankLabel(
+      // ignore: deprecated_member_use
+      tester.binding.pipelineOwner.semanticsOwner!.rootSemanticsNode!,
+    );
+
+    handle.dispose();
   });
 }
