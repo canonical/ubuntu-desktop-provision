@@ -156,4 +156,54 @@ void main() {
 
     handle.dispose();
   });
+
+  testWidgets(
+      'links in a slide without a body-text cell stay separate focusable nodes',
+      (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    // A slide that has links but no dedicated "long-text" body cell must not be
+    // wrapped in a single <slidetext> node, or the links would become
+    // descendants of the body node and a screen reader would re-read the whole
+    // slide when tabbing to a link. This exercises the defensive branch in
+    // _wrapBodyText that leaves such markup untouched.
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml(
+            '<html><body>'
+            '<p>Help and support</p>'
+            '\u2022 <a href="https://help.ubuntu.com">Official documentation</a>'
+            '\u2022 <a href="https://askubuntu.com">Ask Ubuntu</a>'
+            '</body></html>',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Each link is its own node, labelled with exactly the link text...
+    for (final label in const ['Official documentation', 'Ask Ubuntu']) {
+      final linkNode = tester.getSemantics(find.bySemanticsLabel(label));
+      expect(linkNode.label, label);
+      expect(linkNode.hasFlag(SemanticsFlag.isLink), isTrue);
+
+      // ...and no ancestor merges the body text together with the link, so the
+      // slide is not re-read when focus reaches the link.
+      var node = linkNode.parent;
+      while (node != null) {
+        expect(
+          node.getSemanticsData().label,
+          isNot(contains('Help and support')),
+          reason: 'an ancestor merges the body text with the "$label" link',
+        );
+        node = node.parent;
+      }
+    }
+
+    handle.dispose();
+  });
 }
