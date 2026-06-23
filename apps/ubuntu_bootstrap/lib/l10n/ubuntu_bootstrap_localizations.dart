@@ -1978,12 +1978,6 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Pause slideshow'**
   String get pauseSlideshowSemanticLabel;
 
-  /// No description provided for @slideshowSemanticLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Installation slideshow'**
-  String get slideshowSemanticLabel;
-
   /// No description provided for @toggleLogsSemanticLabel.
   ///
   /// In en, this message translates to:

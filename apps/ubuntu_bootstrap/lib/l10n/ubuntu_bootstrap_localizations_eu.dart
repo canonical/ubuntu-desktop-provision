@@ -1074,9 +1074,6 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pausatu diapositibak';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Erakutsi / ezkutatu erregistroak';
 
   @override

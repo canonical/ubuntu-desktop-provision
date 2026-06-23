@@ -718,7 +718,6 @@
   "previousSlideSemanticLabel": "Previous slide",
   "playSlideshowSemanticLabel": "Play slideshow",
   "pauseSlideshowSemanticLabel": "Pause slideshow",
-  "slideshowSemanticLabel": "Installation slideshow",
   "toggleLogsSemanticLabel": "Toggle install logs",
   "copyingFiles": "Copying files…",
   "installingSystem": "Installing the system…",

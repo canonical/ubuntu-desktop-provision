@@ -1079,9 +1079,6 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Sos an taispeántas sleamhnán';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Logaí suiteála a scoránaigh';
 
   @override

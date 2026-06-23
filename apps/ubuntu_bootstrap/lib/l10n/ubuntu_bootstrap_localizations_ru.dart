@@ -1076,9 +1076,6 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Приостановить показ слайдов';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Включить ведение журнала установки';
 
   @override

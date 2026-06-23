@@ -1066,9 +1066,6 @@ class UbuntuBootstrapLocalizationsFa extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'مکث نمایش صفحه‌ها';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'تغییر وضعیت گزارش‌های نصب';
 
   @override

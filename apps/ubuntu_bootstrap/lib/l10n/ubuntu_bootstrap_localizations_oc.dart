@@ -1083,9 +1083,6 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get pauseSlideshowSemanticLabel => 'Pausar lo diaporama';
 
   @override
-  String get slideshowSemanticLabel => 'Installation slideshow';
-
-  @override
   String get toggleLogsSemanticLabel => 'Alternar los jornals d\'installacion';
 
   @override
