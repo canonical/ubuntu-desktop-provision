@@ -34,7 +34,7 @@ void main() {
         '\u2022 <a href="https://askubuntu.com">Ask Ubuntu</a>'
         '</td>'
         '</tr></table></body></html>';
-    const slide = SlideHtml(slideHtml, autofocus: true);
+    const slide = SlideHtml(slideHtml);
 
     await tester.pumpApp(
       (context) => ProviderScope(
@@ -62,7 +62,19 @@ void main() {
     expect(bodyNode.label, isNot(contains('Official documentation')));
     expect(bodyNode.label, isNot(contains('Ask Ubuntu')));
 
-    // Tabbing away from the body lands on the first link.
+    // The slideshow does not steal focus (see WCAG 3.2.1/2.4.3): tabbing into
+    // it lands on the body text first...
+    await tester.sendKeyEvent(LogicalKeyboardKey.tab);
+    await tester.pumpAndSettle();
+    expect(
+      tester
+          .getSemantics(find.bySemanticsLabel(RegExp('Help and support')))
+          .hasFlag(SemanticsFlag.isFocused),
+      isTrue,
+      reason: 'the slide body should be the first tab stop',
+    );
+
+    // ...and tabbing again lands on the first link.
     await tester.sendKeyEvent(LogicalKeyboardKey.tab);
     await tester.pumpAndSettle();
 
