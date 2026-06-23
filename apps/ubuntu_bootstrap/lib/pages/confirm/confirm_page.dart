@@ -183,7 +183,7 @@ class _SummarySection extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(child: Text('${entry.key}: ')),
+                  Expanded(child: Text(entry.key)),
                   Expanded(child: entry.value),
                 ],
               ),
