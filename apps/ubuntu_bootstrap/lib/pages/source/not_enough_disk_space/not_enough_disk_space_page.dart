@@ -83,12 +83,15 @@ class NotEnoughDiskSpacePage extends ConsumerWidget with ProvisioningPage {
             ),
           ],
         ),
-        ElevatedButton(
-          onPressed: () async {
-            await YaruWindow.of(context).close();
-            // TODO: tell subiquity to quit?
-          },
-          child: Text(lang.quitButtonText),
+        YaruFocusBorder.primary(
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
+          child: ElevatedButton(
+            onPressed: () async {
+              await YaruWindow.of(context).close();
+              // TODO: tell subiquity to quit?
+            },
+            child: Text(lang.quitButtonText),
+          ),
         ),
       ].withSpacing(kWizardSpacing),
     );

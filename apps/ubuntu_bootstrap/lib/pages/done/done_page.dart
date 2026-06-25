@@ -89,20 +89,28 @@ class _DonePageState extends ConsumerState<DonePage> {
                     children: [
                       if (!isCoreDesktop) ...[
                         Expanded(
-                          child: OutlinedButton(
-                            onPressed: YaruWindow.of(context).close,
-                            child: Text(lang.continueTesting),
+                          child: YaruFocusBorder.primary(
+                            borderRadius:
+                                BorderRadius.circular(kYaruButtonRadius),
+                            child: OutlinedButton(
+                              onPressed: YaruWindow.of(context).close,
+                              child: Text(lang.continueTesting),
+                            ),
                           ),
                         ),
                         const SizedBox(width: kWizardSpacing),
                       ],
                       Expanded(
-                        child: ElevatedButton(
-                          onPressed: () async {
-                            final window = YaruWindow.of(context);
-                            await model.reboot().then((_) => window.close());
-                          },
-                          child: Text(lang.restartNow),
+                        child: YaruFocusBorder.primary(
+                          borderRadius:
+                              BorderRadius.circular(kYaruButtonRadius),
+                          child: ElevatedButton(
+                            onPressed: () async {
+                              final window = YaruWindow.of(context);
+                              await model.reboot().then((_) => window.close());
+                            },
+                            child: Text(lang.restartNow),
+                          ),
                         ),
                       ),
                     ],

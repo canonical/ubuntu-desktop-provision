@@ -10,6 +10,7 @@ import 'package:ubuntu_bootstrap/pages/refresh/refresh_x.dart';
 import 'package:ubuntu_bootstrap/ubuntu_bootstrap.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 
 String get snapName =>
     Platform.environment['SNAP_NAME'] ??
@@ -86,18 +87,21 @@ class RefreshView extends ConsumerWidget {
           maintainState: true,
           maintainAnimation: true,
           visible: state.available || state.ready,
-          child: ElevatedButton(
-            onPressed: state.maybeMap(
-              status: (_) => onRefresh,
-              done: (_) => onQuit,
-              error: (_) => onQuit,
-              orElse: () => null,
-            ),
-            child: state.maybeMap(
-              status: (s) => Text(l10n.refreshUpdateNow),
-              done: (_) => Text(l10n.refreshCloseLabel),
-              error: (_) => Text(l10n.refreshCloseLabel),
-              orElse: () => const SizedBox.shrink(),
+          child: YaruFocusBorder.primary(
+            borderRadius: BorderRadius.circular(kYaruButtonRadius),
+            child: ElevatedButton(
+              onPressed: state.maybeMap(
+                status: (_) => onRefresh,
+                done: (_) => onQuit,
+                error: (_) => onQuit,
+                orElse: () => null,
+              ),
+              child: state.maybeMap(
+                status: (s) => Text(l10n.refreshUpdateNow),
+                done: (_) => Text(l10n.refreshCloseLabel),
+                error: (_) => Text(l10n.refreshCloseLabel),
+                orElse: () => const SizedBox.shrink(),
+              ),
             ),
           ),
         ),

@@ -191,22 +191,25 @@ class _ActionBodyState extends ConsumerState<_ActionBody> {
           ],
           Row(
             children: [
-              OutlinedButton(
-                onPressed: isConfirmed && !widget.isLoading && error == null
-                    ? tryPerformAction
-                    : null,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(widget.action.label(lang)),
-                    if (widget.isLoading)
-                      SizedBox.square(
-                        dimension: IconTheme.of(context).size,
-                        child: const YaruCircularProgressIndicator(
-                          strokeWidth: 3,
+              YaruFocusBorder.primary(
+                borderRadius: BorderRadius.circular(kYaruButtonRadius),
+                child: OutlinedButton(
+                  onPressed: isConfirmed && !widget.isLoading && error == null
+                      ? tryPerformAction
+                      : null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(widget.action.label(lang)),
+                      if (widget.isLoading)
+                        SizedBox.square(
+                          dimension: IconTheme.of(context).size,
+                          child: const YaruCircularProgressIndicator(
+                            strokeWidth: 3,
+                          ),
                         ),
-                      ),
-                  ].withSpacing(kWizardSpacing / 2),
+                    ].withSpacing(kWizardSpacing / 2),
+                  ),
                 ),
               ),
             ],

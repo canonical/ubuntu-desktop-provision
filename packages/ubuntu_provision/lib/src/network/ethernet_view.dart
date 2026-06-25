@@ -54,12 +54,15 @@ class EthernetView extends ConsumerWidget {
           children: [
             Text(lang.networkWiredDisabled),
             const SizedBox(height: 16),
-            OutlinedButton(
-              onPressed: () {
-                model.enable();
-                onEnabled();
-              },
-              child: Text(lang.networkWiredEnable),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: () {
+                  model.enable();
+                  onEnabled();
+                },
+                child: Text(lang.networkWiredEnable),
+              ),
             ),
           ],
         ),

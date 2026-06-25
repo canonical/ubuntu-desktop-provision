@@ -69,34 +69,37 @@ class _NextButton extends ConsumerWidget {
     final theme = Theme.of(context);
     final l10n = UbuntuBootstrapLocalizations.of(context);
 
-    return ElevatedButton(
-      style: theme.filledButtonTheme.style?.copyWith(
-        minimumSize: WidgetStateProperty.all(kPushButtonSize),
-      ),
-      onPressed:
-          landscapeModel.error == null && (landscapeModel.domainUrl != '')
-              ? () async {
-                  if (await ref
-                      .read(landscapeDataModelProvider.notifier)
-                      .attach()) {
-                    if (context.mounted) await Wizard.of(context).next();
+    return YaruFocusBorder.primary(
+      borderRadius: BorderRadius.circular(kYaruButtonRadius),
+      child: ElevatedButton(
+        style: theme.filledButtonTheme.style?.copyWith(
+          minimumSize: WidgetStateProperty.all(kPushButtonSize),
+        ),
+        onPressed:
+            landscapeModel.error == null && (landscapeModel.domainUrl != '')
+                ? () async {
+                    if (await ref
+                        .read(landscapeDataModelProvider.notifier)
+                        .attach()) {
+                      if (context.mounted) await Wizard.of(context).next();
+                    }
                   }
-                }
-              : null,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (landscapeModel.isLoading) ...[
-            SizedBox.square(
-              dimension: 16.0,
-              child: YaruCircularProgressIndicator(
-                strokeWidth: 2,
+                : null,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (landscapeModel.isLoading) ...[
+              SizedBox.square(
+                dimension: 16.0,
+                child: YaruCircularProgressIndicator(
+                  strokeWidth: 2,
+                ),
               ),
-            ),
-            const SizedBox(width: 8),
+              const SizedBox(width: 8),
+            ],
+            if (!landscapeModel.isLoading) Text(l10n.next),
           ],
-          if (!landscapeModel.isLoading) Text(l10n.next),
-        ],
+        ),
       ),
     );
   }
