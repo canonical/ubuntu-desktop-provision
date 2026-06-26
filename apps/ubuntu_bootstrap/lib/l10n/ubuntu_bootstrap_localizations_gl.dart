@@ -1547,6 +1547,10 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Hai controladores complementarios presentes.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Hai un problema co TPM deste ordenador.';
 

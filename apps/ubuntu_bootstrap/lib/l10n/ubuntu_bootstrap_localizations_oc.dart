@@ -1545,6 +1545,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'De pilòts suplementaris son presents.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'I a un problèma amb lo TPM d’aqueste ordenador.';
 

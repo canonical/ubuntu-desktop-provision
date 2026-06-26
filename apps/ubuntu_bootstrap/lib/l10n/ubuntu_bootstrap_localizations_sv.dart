@@ -1533,6 +1533,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Tilläggsdrivrutiner finns.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Det finns ett problem med TPM på den här datorn.';
 

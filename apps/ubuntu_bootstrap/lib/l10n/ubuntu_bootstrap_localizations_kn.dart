@@ -1539,6 +1539,10 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'Addon ಡ್ರೈವರ್‌ಗಳು ಪ್ರಸ್ತುತ';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'There is an issue with this computer\'s TPM.';
 

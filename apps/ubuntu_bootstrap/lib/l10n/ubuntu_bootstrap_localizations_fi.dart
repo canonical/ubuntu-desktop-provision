@@ -1531,6 +1531,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Lisäajureita on käytössä.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Tämän tietokoneen TPM-laitteen kanssa on ongelma.';
 

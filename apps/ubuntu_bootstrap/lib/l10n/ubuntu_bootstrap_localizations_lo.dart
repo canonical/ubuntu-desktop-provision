@@ -1527,6 +1527,10 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindAddonDriversPresent => 'ມີໄດເວີສ່ວນເສີມຢູ່.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'ມີບັນຫາກັບ TPM ຂອງຄອມພິວເຕີເຄື່ອງນີ້.';
 
