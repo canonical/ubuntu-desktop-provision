@@ -1511,6 +1511,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'Add-on drivers are present.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm => 'יש תקלה עם ה־TPM של המחשב הזה.';
 
   @override

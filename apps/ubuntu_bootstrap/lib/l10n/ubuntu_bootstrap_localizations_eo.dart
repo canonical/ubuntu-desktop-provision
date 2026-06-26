@@ -1535,6 +1535,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Ekzistas aldona zorgilo.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Ekzistas problemo pri la Fidata Platforma Modulo (TPM) de ĉi tiu komputilo.';
 

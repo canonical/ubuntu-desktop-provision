@@ -1545,6 +1545,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindAddonDriversPresent => 'சொருகு இயக்கிகள் உள்ளன';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer does not have a hardware root of trust.';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'இந்தக் கணினியின் TPM இல் சிக்கல் உள்ளது.';
 
