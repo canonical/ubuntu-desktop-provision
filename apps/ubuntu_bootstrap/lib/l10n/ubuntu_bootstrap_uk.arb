@@ -523,5 +523,6 @@
     },
     "autoinstallGenericErrorMessage": "Встановлення не може продовжуватися за допомогою наданого файлу автоматичного встановлення.",
     "autoinstallValidationErrorMessage": "Виникла проблема з наданим файлом для автоматичної інсталяції.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Виникла проблема з даними користувача cloud-init, вказаними у файлі автоінсталяції."
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Виникла проблема з даними користувача cloud-init, вказаними у файлі автоінсталяції.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "У цьому комп’ютері відсутня необхідна функція безпеки (апаратний корінь довіри)."
 }
