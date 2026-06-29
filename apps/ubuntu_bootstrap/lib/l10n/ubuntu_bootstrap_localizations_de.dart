@@ -1555,7 +1555,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer does not have a hardware root of trust.';
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

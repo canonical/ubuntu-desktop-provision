@@ -1076,7 +1076,7 @@
   "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Some of the certificates verifying software in this computer are outdated or use weak protection.",
   "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "This computer is using a manual allowlist to verify software at startup.",
   "tpmActionErrorKindAddonDriversPresent": "Add-on drivers are present.",
-  "tpmActionErrorKindNoHardwareRootOfTrust": "This computer does not have a hardware root of trust.",
+  "tpmActionErrorKindNoHardwareRootOfTrust": "This computer is missing a required security feature (hardware root of trust).",
   "tpmActionErrorKindGenericTpm": "There is an issue with this computer's TPM.",
   "tpmActionErrorKindGenericFirmware": "There is an issue with this computer's firmware.",
   "tpmActionFixActionReboot": "Restart",

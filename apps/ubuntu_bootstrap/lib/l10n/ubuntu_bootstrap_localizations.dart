@@ -2695,7 +2695,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @tpmActionErrorKindNoHardwareRootOfTrust.
   ///
   /// In en, this message translates to:
-  /// **'This computer does not have a hardware root of trust.'**
+  /// **'This computer is missing a required security feature (hardware root of trust).'**
   String get tpmActionErrorKindNoHardwareRootOfTrust;
 
   /// No description provided for @tpmActionErrorKindGenericTpm.
