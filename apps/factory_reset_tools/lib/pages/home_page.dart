@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,15 +21,21 @@ class HomePage extends StatelessWidget {
       children: [
         Row(
           children: [
-            FilledButton(
-              onPressed: () =>
-                  Wizard.of(context).jump(ResetToolsRoutes.mediaSelector.name),
-              child: Text(lang.createResetMedia),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: FilledButton(
+                onPressed: () => Wizard.of(context)
+                    .jump(ResetToolsRoutes.mediaSelector.name),
+                child: Text(lang.createResetMedia),
+              ),
             ),
-            FilledButton(
-              onPressed: () =>
-                  Wizard.of(context).jump(ResetToolsRoutes.factoryReset.name),
-              child: Text(lang.startFactoryReset),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: FilledButton(
+                onPressed: () =>
+                    Wizard.of(context).jump(ResetToolsRoutes.factoryReset.name),
+                child: Text(lang.startFactoryReset),
+              ),
             ),
           ].withSpacing(kWizardSpacing),
         ),

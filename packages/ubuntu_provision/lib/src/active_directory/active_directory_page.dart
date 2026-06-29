@@ -6,6 +6,7 @@ import 'package:ubuntu_provision/src/active_directory/active_directory_dialogs.d
 import 'package:ubuntu_provision/src/active_directory/active_directory_widgets.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 
 class ActiveDirectoryPage extends ConsumerWidget with ProvisioningPage {
   const ActiveDirectoryPage({super.key});
@@ -50,10 +51,13 @@ class ActiveDirectoryPage extends ConsumerWidget with ProvisioningPage {
         const SizedBox(height: kWizardSpacing),
         Align(
           alignment: AlignmentDirectional.centerStart,
-          child: FilledButton(
-            onPressed:
-                ref.read(activeDirectoryModelProvider).pingDomainController,
-            child: Text(lang.activeDirectoryTestConnection),
+          child: YaruFocusBorder.primary(
+            borderRadius: BorderRadius.circular(kYaruButtonRadius),
+            child: FilledButton(
+              onPressed:
+                  ref.read(activeDirectoryModelProvider).pingDomainController,
+              child: Text(lang.activeDirectoryTestConnection),
+            ),
           ),
         ),
         const SizedBox(height: kWizardSpacing),

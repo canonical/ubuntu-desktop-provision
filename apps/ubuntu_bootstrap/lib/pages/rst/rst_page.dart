@@ -47,22 +47,23 @@ class RstPage extends ConsumerWidget with ProvisioningPage {
           onLinkTap: (url, _, __) => launchUrl(url!),
         ),
         const SizedBox(height: kWizardSpacing),
-        ElevatedButton(
-          onPressed: () async {
-            final window = YaruWindow.of(context);
-            final confirmed = await showConfirmationDialog(
-              context,
-              title: lang.restartComputerTitle,
-              message: lang.restartIntoWindowsDescription(flavor.displayName),
-              okLabel: UbuntuLocalizations.of(context).restartLabel,
-              okElevated: true,
-            );
-            if (confirmed) {
-              await model.reboot().then((_) => window.close());
-            }
-          },
-          child: Text(
-            lang.restartComputer,
+        YaruFocusBorder.primary(
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
+          child: ElevatedButton(
+            onPressed: () async {
+              final window = YaruWindow.of(context);
+              final confirmed = await showConfirmationDialog(
+                context,
+                title: lang.restartComputerTitle,
+                message: lang.restartIntoWindowsDescription(flavor.displayName),
+                okLabel: UbuntuLocalizations.of(context).restartLabel,
+                okElevated: true,
+              );
+              if (confirmed) {
+                await model.reboot().then((_) => window.close());
+              }
+            },
+            child: Text(lang.restartComputer),
           ),
         ),
       ],

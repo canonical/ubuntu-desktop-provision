@@ -212,51 +212,58 @@ class PartitionButtonRow extends ConsumerWidget {
                       (model.selectedGap?.tooManyPrimaryPartitions ?? false)
                           ? lang.tooManyPrimaryPartitions
                           : '',
+                  child: YaruFocusBorder.primary(
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        side: BorderSide.none,
+                        shape: const RoundedRectangleBorder(),
+                      ),
+                      onPressed: model.canAddPartition
+                          ? () => showCreatePartitionDialog(
+                                context,
+                                model.selectedDisk!,
+                                model.selectedGap!,
+                              )
+                          : null,
+                      child: const Icon(Icons.add),
+                    ),
+                  ),
+                ),
+                const VerticalDivider(width: 1),
+                YaruFocusBorder.primary(
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       side: BorderSide.none,
                       shape: const RoundedRectangleBorder(),
                     ),
-                    onPressed: model.canAddPartition
-                        ? () => showCreatePartitionDialog(
+                    onPressed:
+                        model.canRemovePartition && !model.waitingForReply
+                            ? () => model.deletePartition(
+                                  model.selectedDisk!,
+                                  model.selectedPartition!,
+                                )
+                            : null,
+                    child: const Icon(Icons.remove),
+                  ),
+                ),
+                const VerticalDivider(width: 1),
+                YaruFocusBorder.primary(
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide.none,
+                      shape: const RoundedRectangleBorder(),
+                    ),
+                    onPressed: model.canEditPartition
+                        ? () => showEditPartitionDialog(
                               context,
                               model.selectedDisk!,
-                              model.selectedGap!,
+                              model.selectedPartition!,
+                              model.selectedConfig,
+                              model.trailingGap,
                             )
                         : null,
-                    child: const Icon(Icons.add),
+                    child: Text(lang.changeButtonText),
                   ),
-                ),
-                const VerticalDivider(width: 1),
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide.none,
-                    shape: const RoundedRectangleBorder(),
-                  ),
-                  onPressed: model.canRemovePartition && !model.waitingForReply
-                      ? () => model.deletePartition(
-                            model.selectedDisk!,
-                            model.selectedPartition!,
-                          )
-                      : null,
-                  child: const Icon(Icons.remove),
-                ),
-                const VerticalDivider(width: 1),
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide.none,
-                    shape: const RoundedRectangleBorder(),
-                  ),
-                  onPressed: model.canEditPartition
-                      ? () => showEditPartitionDialog(
-                            context,
-                            model.selectedDisk!,
-                            model.selectedPartition!,
-                            model.selectedConfig,
-                            model.trailingGap,
-                          )
-                      : null,
-                  child: Text(lang.changeButtonText),
                 ),
               ],
             ),
@@ -265,17 +272,23 @@ class PartitionButtonRow extends ConsumerWidget {
         const Spacer(),
         OverflowBar(
           children: [
-            OutlinedButton(
-              onPressed: model.canReformatDisk
-                  ? () => _maybeReformatDisk(context, ref)
-                  : null,
-              child: Text(lang.newPartitionTable),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: model.canReformatDisk
+                    ? () => _maybeReformatDisk(context, ref)
+                    : null,
+                child: Text(lang.newPartitionTable),
+              ),
             ),
           ],
         ),
-        OutlinedButton(
-          onPressed: model.resetStorage,
-          child: Text(UbuntuLocalizations.of(context).revertLabel),
+        YaruFocusBorder.primary(
+          borderRadius: BorderRadius.circular(kYaruButtonRadius),
+          child: OutlinedButton(
+            onPressed: model.resetStorage,
+            child: Text(UbuntuLocalizations.of(context).revertLabel),
+          ),
         ),
       ],
     );
