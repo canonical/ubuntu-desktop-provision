@@ -1544,6 +1544,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Hay controladores presentes a través de complementos.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Hay un asunto con este TPM del equipo.';
 

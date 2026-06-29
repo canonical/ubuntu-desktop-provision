@@ -1545,6 +1545,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Kiegészítő illesztőprogramok találhatók.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Probléma van a számítógép TPM-jével.';
 

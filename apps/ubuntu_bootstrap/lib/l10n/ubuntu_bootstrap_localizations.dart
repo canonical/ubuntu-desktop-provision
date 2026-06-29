@@ -2692,6 +2692,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Add-on drivers are present.'**
   String get tpmActionErrorKindAddonDriversPresent;
 
+  /// No description provided for @tpmActionErrorKindNoHardwareRootOfTrust.
+  ///
+  /// In en, this message translates to:
+  /// **'This computer is missing a required security feature (hardware root of trust).'**
+  String get tpmActionErrorKindNoHardwareRootOfTrust;
+
   /// No description provided for @tpmActionErrorKindGenericTpm.
   ///
   /// In en, this message translates to:

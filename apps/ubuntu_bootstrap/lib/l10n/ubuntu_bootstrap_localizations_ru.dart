@@ -1537,6 +1537,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Присутствуют доп. драйверы.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Проблема с модулем TPM этого компьютера.';
 

@@ -1553,6 +1553,10 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'Υπάρχουν εγκατεστημένα πρόσθετα προγράμματα οδήγησης.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Υπάρχει πρόβλημα με το TPM αυτού του υπολογιστή.';
 

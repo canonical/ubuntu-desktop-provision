@@ -1535,6 +1535,10 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'قوشۇلما قوزغاتقۇ مەۋجۇت.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'بۇ كومپيۇتېرنىڭ TPM دا مەسىلە بار.';
 

@@ -1538,6 +1538,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Jsou přítomny dodatečné ovladače.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Je problém s TPM zařízením tohoto počítače.';
 

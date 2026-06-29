@@ -1533,6 +1533,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindAddonDriversPresent => 'Driver tambahan ada';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Ada masalah dengan TPM komputer ini.';
 
