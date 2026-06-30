@@ -502,5 +502,20 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tootja võib seda funktsionaalsust nimetada kui „Virtualization Technology“, „VT-d“ või „AMD-Vi“.",
     "autoinstallErrorMessage": "Paigalduse ajal ei õnnestunud käivitada automaatse paigalduse failis leidunud käsku.",
     "autoinstallErrorInstructions": "Sa pead paigaldusega uuesti alustama. Kontrolli automaatse paigalduse faili õigsust, vali mõni muu paigaldustüüp või küsi abi oma IT-toelt.",
-    "restartInstaller": "Käivita paigaldaja uuesti"
+    "restartInstaller": "Käivita paigaldaja uuesti",
+    "stepIndicatorLabel": "Samm {CURRENT_STEP} / {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Paigalduse jätkamine pole lisatud automaatse paigalduse faili alusel võimalik.",
+    "autoinstallValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem, mis on seotud cloud-init'i kasutajaandmetega.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Sellest arvutist on puudu turvalisusega seotud funktsionaalsus (raudvarapõhise usaldusahela lähtelahendus)."
 }

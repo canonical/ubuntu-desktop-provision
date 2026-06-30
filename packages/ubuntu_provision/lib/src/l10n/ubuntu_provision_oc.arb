@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Lo nom de l’ordenador es invalid",
     "identityUsernameLabel": "Causissètz un nom d’utilizaire",
     "identityUsernameRequired": "Cal un nom d’utilizaire",
-    "identityInvalidUsername": "Lo nom d’utilizaire es invalid",
+    "identityInvalidUsername": "Lo nom d'utilizaire es invalid : deu començar per una letra minuscula e pòt pas conténer que de letras minusculas, de chifras, de jonhents e de jonhents basses.",
     "identityUsernameInUse": "Aqueste nom d’utilizaire existís ja.",
     "identityUsernameSystemReserved": "Aqueste nom es reservat per l’usatge del sistèma.",
     "identityUsernameTooLong": "Aqueste nom es tròp long.",
@@ -114,5 +114,6 @@
     "minimizeIconSemanticLabel": "Minimizar",
     "collapseIconSemanticLabel": "Replegar",
     "expandIconSemanticLabel": "Desplegar",
-    "errorPageTechnicalDetails": "Detalhs tecnics"
+    "errorPageTechnicalDetails": "Detalhs tecnics",
+    "identityInvalidRealName": "Lo nom es invalid"
 }

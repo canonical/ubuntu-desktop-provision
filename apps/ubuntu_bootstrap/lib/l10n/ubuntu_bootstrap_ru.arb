@@ -203,7 +203,7 @@
     "recoveryKeyCommand": "Чтобы получить ключ восстановления, завершите установку, перезапустите компьютер и выполните следующую команду в терминале:",
     "recoveryKeyWarning": "<font color=\"{color}\">Предупреждение:</font> Если вы потеряете этот ключ безопасности, то все данные будут потеряны. Если вам нужно, запишите свой ключ и храните его в любом безопасном месте.",
     "refreshSnapCheckRerefresh": "Проверка обновления данных {snap}…",
-    "fullInstallationSubtitle": "Удобный для работы в автономном режиме набор офисных инструментов, утилит и веб-браузер.",
+    "fullInstallationSubtitle": "Удобный для работы в офлайн-режиме набор офисных программ, утилиты и веб-браузер.",
     "minimalInstallationTitle": "Стандартная установка",
     "minimalInstallationSubtitle": "Только некоторые инструменты, веб-браузер и базовые утилиты.",
     "fullInstallationTitle": "Расширенная установка",
@@ -521,5 +521,20 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Эта функция может называться «Технология виртуализации», «VT-d» или «AMD-Vi».",
     "autoinstallErrorMessage": "В процессе установки не удалось выполнить команду в файле autoinstall.",
     "autoinstallErrorInstructions": "Вам необходимо перезапустить установку. Проверьте файл autoinstall, выберите другой тип установки или обратитесь в службу IT-поддержки.",
-    "restartInstaller": "Перезапустить установку"
+    "restartInstaller": "Перезапустить установку",
+    "stepIndicatorLabel": "Шаг {CURRENT_STEP} из {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Установка не может быть продолжена с использованием предоставленного файла autoinstall.",
+    "autoinstallValidationErrorMessage": "В файле autoinstall обнаружена проблема.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Возникла проблема с данными пользователя cloud-init, указанными в файле autoinstall.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "На этом компьютере отсутствует необходимая функция безопасности (аппаратный корень доверия)."
 }

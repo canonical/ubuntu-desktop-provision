@@ -521,5 +521,20 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funkcja ta może być nazwana „Virtualization Technology”, „VT-d” lub „AMD-Vi”.",
     "autoinstallErrorMessage": "Polecenie w pliku autoinstalacji nie zostało uruchomione podczas instalacji.",
     "autoinstallErrorInstructions": "Konieczne będzie ponowne uruchomienie instalacji. Sprawdź plik autoinstalacji, wybierz inny typ instalacji lub skontaktuj się z pomocą techniczną.",
-    "restartInstaller": "Uruchom ponownie instalator"
+    "restartInstaller": "Uruchom ponownie instalator",
+    "stepIndicatorLabel": "Krok {CURRENT_STEP} z {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Nie można kontynuować instalacji przy użyciu dostarczonego pliku autoinstalacji.",
+    "autoinstallValidationErrorMessage": "Wystąpił problem z dostarczonym plikiem autoinstalacji.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Wystąpił problem z danymi użytkownika cloud-init dostarczonymi w pliku autoinstalacji.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania)."
 }

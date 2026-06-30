@@ -521,5 +521,20 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funktionen kan benämnas ”Virtualiseringsteknologi”, ”VT-d” eller ”AMD-Vi”.",
     "autoinstallErrorMessage": "Ett kommando i autoinstallationsfilen kördes inte korrekt vid installationen.",
     "autoinstallErrorInstructions": "Du kommer att behöva starta om installationen. Kontrollera autoinstallationsfilen, välj en annan installationstyp, eller kontakta din IT-support.",
-    "restartInstaller": "Starta om installationsprogram"
+    "restartInstaller": "Starta om installationsprogram",
+    "stepIndicatorLabel": "Steg {CURRENT_STEP} av {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Installationen kan inte fortsätta med den här autoinstall-filen.",
+    "autoinstallValidationErrorMessage": "Det finns ett problem med den angivna autoinstall-filen.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Det finns ett problem med användardatan för cloud-init som finns i autoinstall-filen.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Datorn saknar nödvändig säkerhetsfunktionalitet (root-of-trust i hårdvara)."
 }
