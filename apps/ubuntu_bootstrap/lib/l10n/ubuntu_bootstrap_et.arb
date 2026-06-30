@@ -516,5 +516,6 @@
     },
     "autoinstallGenericErrorMessage": "Paigalduse jätkamine pole lisatud automaatse paigalduse faili alusel võimalik.",
     "autoinstallValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem, mis on seotud cloud-init'i kasutajaandmetega."
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem, mis on seotud cloud-init'i kasutajaandmetega.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Sellest arvutist on puudu turvalisusega seotud funktsionaalsus (raudvarapõhise usaldusahela lähtelahendus)."
 }
