@@ -532,6 +532,7 @@
         }
     },
     "autoinstallGenericErrorMessage": "L'installation ne peut pas se poursuivre avec le fichier d'auto-installation fourni.",
-    "autoinstallValidationErrorMessage": "Il y a un problème avec le fichier d'auto-installation fourni.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Il y a un problème avec les données utilisateur cloud-init fournies dans le fichier d'installation automatique."
+    "autoinstallValidationErrorMessage": "Il y a un problème avec le fichier autoinstall fourni.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Il y a un problème avec les données utilisateur cloud-init fournies dans le fichier d'installation automatique.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Il manque une fonctionnalité de sécurité requise à cet ordinateur (racine matérielle de confiance)."
 }
