@@ -28,14 +28,22 @@ class PassphraseTypeModel extends SafeChangeNotifier {
       _log.info('no TPM/FDE support, skipping');
       return false;
     }
+    supportedTypes.clear();
     final encryptionFeatures = await _service.getCoreBootEncryptionFeatures();
-    if (encryptionFeatures.isEmpty) {
+    final encryptionRequirements =
+        await _service.getCoreBootEncryptionRequirements();
+    if (encryptionFeatures.isEmpty && encryptionRequirements.isEmpty) {
       _service.passphraseType = PassphraseType.none;
-      _log.info('no additional encryption features available, skipping');
+      supportedTypes.add(PassphraseType.none);
+      _log.info(
+        'no additional encryption features available and none required, skipping',
+      );
       return false;
     }
-    supportedTypes.clear();
-    supportedTypes.add(PassphraseType.none);
+    if (!encryptionRequirements
+        .contains(CoreBootEncryptionRequirement.VOLUMES_AUTH)) {
+      supportedTypes.add(PassphraseType.none);
+    }
     supportedTypes.addAll(
       encryptionFeatures.map(
         (f) => switch (f) {
