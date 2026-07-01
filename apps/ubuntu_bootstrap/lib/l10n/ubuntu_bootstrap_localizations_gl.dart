@@ -423,6 +423,10 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Por defecto, o módulo de plataforma fiable (TPM) do ordenador desbloqueará o disco durante o inicio. Tamén tes opcións para protexer aínda máis os teus datos.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frase de paso feble, faina máis longa ou máis complexa';
 

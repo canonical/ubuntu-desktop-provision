@@ -409,6 +409,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'כברירת מחדל, מודול הפלטפורמה המאובטחת (TPM) ישחרר את נעילת הכונן בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'מילת צופן חלשה, נא להאריך או לסבך אותה';
 

@@ -411,6 +411,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Tietokoneen TPM-moduuli (Trusted Platform Module) avaa lukituksen oletusarvoisesti käynnistettäessä. On myös mahdollista turvata tietoja lisätoimin.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Heikko tunnuslause, syötä pidempi tai monimutkaisempi';
 

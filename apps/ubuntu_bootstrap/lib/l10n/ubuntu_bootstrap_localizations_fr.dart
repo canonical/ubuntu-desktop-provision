@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
       'Par défaut, le module de plateforme sécurisée (TPM) de l’ordinateur déverrouille le disque au démarrage. Vous avez également des options pour protéger davantage vos données.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Phrase de passe faible, faites-la plus longue ou plus complexe';
 

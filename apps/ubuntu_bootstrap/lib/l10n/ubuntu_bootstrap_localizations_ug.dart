@@ -414,6 +414,10 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا كومپيۇتېرنىڭ ئىشەنچ سۇپا مودېلى (TPM) نىڭ قۇلۇپى ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'ئاجىز ئىم ئىبارە، ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ';
 

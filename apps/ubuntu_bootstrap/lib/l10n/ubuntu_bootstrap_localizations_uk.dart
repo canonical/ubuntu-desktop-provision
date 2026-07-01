@@ -418,6 +418,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'За замовчуванням, модуль Trusted Platform Module (TPM) комп\'ютера розблоковує диск під час запуску. Також ви маєте опцію додаткового захисту своїх даних.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Слабкий пароль, зробіть його довшим або складнішим';
 

@@ -1212,9 +1212,13 @@ abstract class EntropyResponse with _$EntropyResponse {
       _$EntropyResponseFromJson(json);
 }
 
-enum CoreBootEncryptionFeatures {
+enum CoreBootEncryptionFeature {
   PASSPHRASE_AUTH,
   PIN_AUTH,
+}
+
+enum CoreBootEncryptionRequirement {
+  VOLUMES_AUTH,
 }
 
 @freezed

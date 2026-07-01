@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'ნაგულისხმევად კომპიუტერის სანდო პლატფორმის მოდული (TPM) განბლოკავს დისკს კომპიუტერის ჩართვისას. ასევე გაქვთ არჩევანი, კიდევ უფრო მეტადაც კი დაიცვათ თქვენი მონაცემები.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'საკვანძო ფრაზა სუსტია. გახადეთ ის უფრო გრძელი და რთული';
 

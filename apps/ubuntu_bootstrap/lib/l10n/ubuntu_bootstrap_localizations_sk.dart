@@ -415,6 +415,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
       'Predvolene disk odomkne modul Trusted Platform Module (TPM) počas spustenia systému. Môžete si však zvoliť aj ďalšie možnosti na lepšiu ochranu údajov.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Slabá prístupová fráza, vytvorte dlhšiu alebo zložitejšiu';
 

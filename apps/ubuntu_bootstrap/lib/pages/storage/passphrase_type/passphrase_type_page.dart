@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart';
@@ -37,7 +38,12 @@ class PassphraseTypePage extends ConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(l10n.passphraseTypePageBody),
+              Text(
+                model.encryptionRequirements
+                        .contains(CoreBootEncryptionRequirement.VOLUMES_AUTH)
+                    ? l10n.passphraseTypePageBodyAuthRequired
+                    : l10n.passphraseTypePageBody,
+              ),
               Html(
                 data: '<a href="$_fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
                 style: {

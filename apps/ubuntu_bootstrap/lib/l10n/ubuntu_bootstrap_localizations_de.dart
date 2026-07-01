@@ -423,6 +423,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
       'Standardmäßig entsperrt das Trusted Platform Module (TPM) des Computers die Festplatte während des Startvorgangs. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Schwache Passphrase, verlängern Sie sie oder machen Sie sie komplexer';
 
