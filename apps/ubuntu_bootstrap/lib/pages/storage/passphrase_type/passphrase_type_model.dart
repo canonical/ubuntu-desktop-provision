@@ -18,6 +18,7 @@ class PassphraseTypeModel extends SafeChangeNotifier {
   final StorageService _service;
   final _passphraseType = ValueNotifier(PassphraseType.passphrase);
   final Set<PassphraseType> supportedTypes = {};
+  final List<CoreBootEncryptionRequirement> encryptionRequirements = [];
 
   Future<bool> init() async {
     _passphraseType.value = _service.passphraseType;
@@ -29,9 +30,11 @@ class PassphraseTypeModel extends SafeChangeNotifier {
       return false;
     }
     supportedTypes.clear();
+    encryptionRequirements.clear();
+
     final encryptionFeatures = await _service.getCoreBootEncryptionFeatures();
-    final encryptionRequirements =
-        await _service.getCoreBootEncryptionRequirements();
+    encryptionRequirements
+        .addAll(await _service.getCoreBootEncryptionRequirements());
     if (encryptionFeatures.isEmpty && encryptionRequirements.isEmpty) {
       _service.passphraseType = PassphraseType.none;
       supportedTypes.add(PassphraseType.none);
