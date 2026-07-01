@@ -750,6 +750,11 @@ void main() {
       final response = await client.getCoreBootEncryptionFeaturesV2();
       expect(response, isList);
     });
+
+    test('get core boot encryption requirements v2', () async {
+      final response = await client.getCoreBootEncryptionRequirementsV2();
+      expect(response, isList);
+    });
   });
 
   group('tpm fde action api', () {
