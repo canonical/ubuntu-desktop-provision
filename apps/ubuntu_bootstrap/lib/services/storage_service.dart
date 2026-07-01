@@ -211,7 +211,7 @@ class StorageService {
   }
 
   /// Returns the list of supported TPM/FDE encryption methods
-  Future<List<CoreBootEncryptionFeatures>> getCoreBootEncryptionFeatures() {
+  Future<List<CoreBootEncryptionFeature>> getCoreBootEncryptionFeatures() {
     return _client.getCoreBootEncryptionFeaturesV2();
   }
 }

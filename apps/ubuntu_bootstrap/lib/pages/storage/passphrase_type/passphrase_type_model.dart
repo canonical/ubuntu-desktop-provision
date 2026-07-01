@@ -39,9 +39,8 @@ class PassphraseTypeModel extends SafeChangeNotifier {
     supportedTypes.addAll(
       encryptionFeatures.map(
         (f) => switch (f) {
-          CoreBootEncryptionFeatures.PIN_AUTH => PassphraseType.pin,
-          CoreBootEncryptionFeatures.PASSPHRASE_AUTH =>
-            PassphraseType.passphrase
+          CoreBootEncryptionFeature.PIN_AUTH => PassphraseType.pin,
+          CoreBootEncryptionFeature.PASSPHRASE_AUTH => PassphraseType.passphrase
         },
       ),
     );
