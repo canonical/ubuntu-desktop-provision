@@ -497,6 +497,20 @@ class SubiquityClient {
     );
   }
 
+  Future<List<CoreBootEncryptionRequirement>>
+      getCoreBootEncryptionRequirementsV2() async {
+    final request =
+        await _openUrl('GET', 'storage/v2/core_boot_encryption_requirements');
+    return _receive(
+      'getCoreBootEncryptionRequirementsV2',
+      request,
+      (List<Object?> values) => values
+          .cast<String>()
+          .map(CoreBootEncryptionRequirement.values.byName)
+          .toList(),
+    );
+  }
+
   Future<void> reboot({bool immediate = false}) async {
     final params = {
       'mode': jsonEncode('REBOOT'),
