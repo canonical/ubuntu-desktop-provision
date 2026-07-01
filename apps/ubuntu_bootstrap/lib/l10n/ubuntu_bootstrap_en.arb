@@ -202,6 +202,7 @@
   "passphraseTypeNoneTileTitle": "Unlock disk automatically",
   "passphraseTypePageHeader": "Additional security",
   "passphraseTypePageBody": "By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.",
+  "passphraseTypePageBodyAuthRequired": "Setting a passphrase or PIN on startup is required due to this computer's hardware configuration.",
   "passphrasePagePassphraseEntropyBelowMin": "Weak passphrase, make it longer or more complex",
   "passphrasePagePassphraseEntropyBelowOptimal": "Fair passphrase, make it longer or more complex for better security",
   "passphrasePagePassphraseEntropyOptimal": "Strong passphrase",

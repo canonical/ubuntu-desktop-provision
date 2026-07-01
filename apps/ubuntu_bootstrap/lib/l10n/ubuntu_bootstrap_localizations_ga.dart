@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'De réir réamhshocraithe, díghlasálfaidh Modúl Ardáin Iontaofa (TPM) an ríomhaire an diosca le linn tosaithe. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Pasfrása lag, déan níos faide nó níos casta é';
 

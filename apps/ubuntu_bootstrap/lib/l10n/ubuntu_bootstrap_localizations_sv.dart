@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Som standard låser datorns Trusted Platform Module (TPM) upp disken under uppstart. Du har också alternativ för att ytterligare skydda din data.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Svag lösenfras, gör den längre eller mer komplex';
 

@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Alapértelmezetten a számítógép platformmegbízhatósági modulja (TPM) feloldja a lemezt az indítás során. Az adatok további védelmére is vannak lehetőségek.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Gyenge jelmondat, növelje meg a hosszát vagy tegye bonyolultabbá';
 

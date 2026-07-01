@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Per defecte, el mòdul de plataforma de confiança de l\'ordinador (TPM) desbloquejarà el disc durant l\'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Contrasenya feble, feu-la més llarga i més complexa';
 

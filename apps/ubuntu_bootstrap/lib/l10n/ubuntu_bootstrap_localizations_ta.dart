@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (TPM) துவக்கத்தின் போது வட்டைத் திறக்கும். உங்கள் தரவை மேலும் பாதுகாப்பதற்கான விருப்பங்களும் உள்ளன.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'பலவீனமான கடவுச்சொல், அதை நீண்டதாகவோ அல்லது சிக்கலானதாகவோ செய்யுங்கள்';
 
