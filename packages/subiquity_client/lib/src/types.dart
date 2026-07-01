@@ -1217,6 +1217,10 @@ enum CoreBootEncryptionFeature {
   PIN_AUTH,
 }
 
+enum CoreBootEncryptionRequirement {
+  VOLUMES_AUTH,
+}
+
 @freezed
 abstract class CoreBootFixEncryptionSupport
     with _$CoreBootFixEncryptionSupport {
