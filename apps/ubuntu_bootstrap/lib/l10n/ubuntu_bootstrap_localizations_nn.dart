@@ -413,6 +413,10 @@ class UbuntuBootstrapLocalizationsNn extends UbuntuBootstrapLocalizations {
       'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Weak passphrase, make it longer or more complex';
 

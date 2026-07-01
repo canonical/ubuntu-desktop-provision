@@ -418,6 +418,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Snadno prolomitelná heslová fráze – prodlužte jí a/nebo přidejte na komplexitě';
 

@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
       'Varsayılan olarak, bilgisayarın Güvenilir Platform Modülü (TPM), başlatma sırasında diskin kilidini açacaktır. Ancak, verilerinizi daha fazla korumak için bir PIN veya parola da isteyebilirsiniz.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Zayıf parola cümlesi, daha uzun veya daha karmaşık hale getirin';
 

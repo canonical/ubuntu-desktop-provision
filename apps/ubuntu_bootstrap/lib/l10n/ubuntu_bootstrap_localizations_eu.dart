@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Pasaesaldi ahula, egizu luzeagoa edo konplexuagoa';
 
