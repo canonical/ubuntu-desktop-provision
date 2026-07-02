@@ -11,7 +11,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 const _fdeLink =
-    'https://documentation.ubuntu.com/desktop/en/latest/explanation/hardware-backed-disk-encryption/#encryption-passphrase';
+    'https://ubuntu.com/desktop/docs/en/latest/explanation/hardware-backed-disk-encryption/#tpm-fde-encryption-passphrase';
 
 class PassphraseTypePage extends ConsumerWidget {
   const PassphraseTypePage({super.key});
