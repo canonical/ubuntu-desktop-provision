@@ -44,6 +44,18 @@ class PassphraseTypePage extends ConsumerWidget {
                     ? l10n.passphraseTypePageBodyAuthRequired
                     : l10n.passphraseTypePageBody,
               ),
+              const SizedBox(height: kWizardSpacing),
+              ...model.supportedTypes.map(
+                (type) {
+                  return OptionButton(
+                    title: Text(type.localizedTileTitle(l10n)),
+                    value: type,
+                    groupValue: model.passphraseType,
+                    onChanged: (type) => model.passphraseType = type!,
+                  );
+                },
+              ).withSpacing(kWizardSpacing / 2),
+              const SizedBox(height: kWizardSpacing / 2),
               Html(
                 data: '<a href="$_fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
                 style: {
@@ -56,20 +68,6 @@ class PassphraseTypePage extends ConsumerWidget {
                 shrinkWrap: true,
                 onLinkTap: (url, __, ___) => launchUrl(url!),
               ),
-              const SizedBox(height: kWizardSpacing),
-              ...model.supportedTypes.map(
-                (type) {
-                  final subtitle = type.localizedTileSubTitle(l10n);
-                  return OptionButton(
-                    title: Text(type.localizedTileTitle(l10n)),
-                    subtitle: subtitle != null ? Text(subtitle) : null,
-                    isThreeLines: subtitle != null,
-                    value: type,
-                    groupValue: model.passphraseType,
-                    onChanged: (type) => model.passphraseType = type!,
-                  );
-                },
-              ).withSpacing(kWizardSpacing / 2),
             ],
           ),
         ),
