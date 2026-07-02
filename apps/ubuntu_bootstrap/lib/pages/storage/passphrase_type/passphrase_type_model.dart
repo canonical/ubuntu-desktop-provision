@@ -55,6 +55,7 @@ class PassphraseTypeModel extends SafeChangeNotifier {
         },
       ),
     );
+    _passphraseType.value = _service.passphraseType = supportedTypes.first;
     _log.info('available encryption features: $supportedTypes');
     return true;
   }
