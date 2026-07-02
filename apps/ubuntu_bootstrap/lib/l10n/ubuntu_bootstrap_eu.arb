@@ -1070,5 +1070,6 @@
     },
     "autoinstallGenericErrorMessage": "Instalazioak ezin du aurrera egin hautatutako autoinstall fitxategiarekin.",
     "autoinstallValidationErrorMessage": "Arazoren bat dago hautatutako autoinstall fitxategiarekin.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin."
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du."
 }
