@@ -532,5 +532,6 @@
     },
     "autoinstallGenericErrorMessage": "Die Installation kann mit der bereitgestellten autoinstall-Datei nicht fortgesetzt werden.",
     "autoinstallValidationErrorMessage": "Es gibt ein Problem mit der bereitgestellten autoinstall-Datei.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init."
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Auf diesem Computer fehlt eine erforderliche Sicherheitsfunktion (Hardware-Vertrauensanker)."
 }
