@@ -870,7 +870,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePassphraseTileTitle.
   ///
   /// In en, this message translates to:
-  /// **'Require a passphrase'**
+  /// **'Require a passphrase on startup'**
   String get passphraseTypePassphraseTileTitle;
 
   /// No description provided for @passphraseTypePassphraseTileSubTitle.
@@ -882,7 +882,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePinTileTitle.
   ///
   /// In en, this message translates to:
-  /// **'Require a PIN'**
+  /// **'Require a PIN on startup'**
   String get passphraseTypePinTileTitle;
 
   /// No description provided for @passphraseTypePinTileSubTitle.
@@ -906,13 +906,13 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePageBody.
   ///
   /// In en, this message translates to:
-  /// **'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.'**
+  /// **'By default, the disk will unlock automatically on startup. You also have options to further protect your data.'**
   String get passphraseTypePageBody;
 
   /// No description provided for @passphraseTypePageBodyAuthRequired.
   ///
   /// In en, this message translates to:
-  /// **'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.'**
+  /// **'Hardware-backed encryption requires additional security in this computer.'**
   String get passphraseTypePageBodyAuthRequired;
 
   /// No description provided for @passphrasePagePassphraseEntropyBelowMin.
