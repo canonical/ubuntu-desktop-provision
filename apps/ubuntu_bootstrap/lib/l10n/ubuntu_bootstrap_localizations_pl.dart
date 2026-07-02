@@ -419,7 +419,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Setting a passphrase or PIN on startup is required due to this computer\'s hardware configuration.';
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
