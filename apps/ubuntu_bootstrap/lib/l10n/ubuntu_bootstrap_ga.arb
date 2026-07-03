@@ -532,5 +532,6 @@
     },
     "autoinstallGenericErrorMessage": "Ní féidir leanúint leis an suiteáil leis an gcomhad uath-suiteála a cuireadh ar fáil.",
     "autoinstallValidationErrorMessage": "Tá fadhb leis an gcomhad uath-suiteála a cuireadh ar fáil.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Tá fadhb ann leis na sonraí úsáideora cloud-init a chuirtear ar fáil sa chomhad uathsuiteála."
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Tá fadhb ann leis na sonraí úsáideora cloud-init a chuirtear ar fáil sa chomhad uathsuiteála.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Tá gné slándála riachtanach (fréamh iontaoibhe crua-earraí) in easnamh ar an ríomhaire seo."
 }
