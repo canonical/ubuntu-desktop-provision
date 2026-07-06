@@ -369,8 +369,8 @@
     "passphrasePageHeaderPin": "Ustaw kod PIN szyfrowania",
     "passphrasePageConfirmPinHint": "Potwierdź kod PIN",
     "passphrasePageMismatchPin": "Kody PIN nie pasują do siebie",
-    "passphraseTypePassphraseTileTitle": "Wymagaj hasła",
-    "passphraseTypePinTileTitle": "Wymagaj kodu PIN",
+    "passphraseTypePassphraseTileTitle": "Wymagaj hasła podczas uruchamiania",
+    "passphraseTypePinTileTitle": "Wymagaj kodu PIN podczas uruchamiania",
     "passphraseTypeNoneTileTitle": "Odblokuj dysk automatycznie",
     "passphraseTypePageHeader": "Dodatkowe zabezpieczenia",
     "passphrasePageRequiredPin": "Wymagany jest kod PIN",
@@ -379,7 +379,7 @@
     "passphrasePageRequiredPassphrase": "Wymagane jest hasło",
     "passphrasePageBodyPin": "Wymagane będzie podanie kodu PIN każdym razem, gdy włączysz komputer. Ten kod PIN różni się od hasła użytkownika. Będzie można go później zmienić, ale nie wyłączyć. Jeśli zapomnisz kodu PIN, możesz odzyskać dostęp do dysku, używając klucza odzyskiwania.",
     "passphraseTypePassphraseTileSubTitle": "Najbezpieczniejsze. Wymagane będzie wpisanie dłuższego hasło za każdym razem, gdy włączysz komputer.",
-    "passphraseTypePageBody": "Domyślnie moduł TPM (Trusted Platform Module) komputera odblokuje dysk podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.",
+    "passphraseTypePageBody": "Domyślnie dysk odblokuje się automatycznie podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.",
     "passphrasePageConfirmPassphraseHint": "Potwierdź hasło",
     "passphrasePageTitle": "Szyfrowanie",
     "passphrasePageChoosePassphraseHint": "Hasło",
@@ -536,5 +536,6 @@
     "autoinstallGenericErrorMessage": "Nie można kontynuować instalacji przy użyciu dostarczonego pliku autoinstalacji.",
     "autoinstallValidationErrorMessage": "Wystąpił problem z dostarczonym plikiem autoinstalacji.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Wystąpił problem z danymi użytkownika cloud-init dostarczonymi w pliku autoinstalacji.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania).",
+    "passphraseTypePageBodyAuthRequired": "Sprzętowe szyfrowanie wymaga dodatkowych zabezpieczeń na tym komputerze."
 }
