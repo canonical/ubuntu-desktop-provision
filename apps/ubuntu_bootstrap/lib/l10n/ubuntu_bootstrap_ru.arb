@@ -380,9 +380,9 @@
     "passphraseTypePageHeader": "Дополнительная безопасность",
     "passphraseTypePinTileSubTitle": "Наиболее безопасно. Вам придется вводить числовой PIN-код каждый раз при включении компьютера.",
     "passphraseTypePassphraseTileSubTitle": "Наиболее безопасно. Вам придётся вводить более длинную парольную фразу каждый раз при включении компьютера.",
-    "passphraseTypePassphraseTileTitle": "Требовать парольную фразу",
-    "passphraseTypePinTileTitle": "Требовать PIN-код",
-    "passphraseTypePageBody": "По умолчанию Trusted Platform Module (TPM) компьютера разблокирует диск во время запуска. Однако у вас есть и другие варианты дополнительной защиты своих данных.",
+    "passphraseTypePassphraseTileTitle": "Требовать парольную фразу при запуске",
+    "passphraseTypePinTileTitle": "Требовать PIN-код при запуске",
+    "passphraseTypePageBody": "По умолчанию диск будет автоматически разблокироваться при запуске. Вы также можете настроить дополнительные параметры для защиты своих данных.",
     "passphraseTypeNoneTileTitle": "Разблокировать диск автоматически",
     "passphrasePagePassphraseEntropyBelowMin": "Слабая парольная фраза, сделайте её длиннее или сложнее",
     "passphrasePagePassphraseEntropyBelowOptimal": "Подходящая парольная фраза, но для большей безопасности можете сделать её длиннее или более сложной",
@@ -536,5 +536,6 @@
     "autoinstallGenericErrorMessage": "Установка не может быть продолжена с использованием предоставленного файла autoinstall.",
     "autoinstallValidationErrorMessage": "В файле autoinstall обнаружена проблема.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Возникла проблема с данными пользователя cloud-init, указанными в файле autoinstall.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "На этом компьютере отсутствует необходимая функция безопасности (аппаратный корень доверия)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "На этом компьютере отсутствует необходимая функция безопасности (аппаратный корень доверия).",
+    "passphraseTypePageBodyAuthRequired": "Для аппаратного шифрования на этом компьютере требуются дополнительные меры безопасности."
 }
