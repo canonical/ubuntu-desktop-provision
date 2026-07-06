@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Vaikimisi eemaldab selle arvuti Trusted Platform Module (TPM) lukustuse automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Salafraas on kehv, palun muuda ta pikemaks ja keerukamaks';
 

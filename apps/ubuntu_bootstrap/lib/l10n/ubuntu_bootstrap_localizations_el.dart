@@ -423,6 +423,10 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'Από προεπιλογή, η Μονάδα Έμπιστης Πλατφόρμας (TPM) του υπολογιστή θα ξεκλειδώνει τον δίσκο κατά την εκκίνηση. Έχετε επίσης επιλογές για περαιτέρω προστασία των δεδομένων σας.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Ασθενής συνθηματική φράση, κάντε την μεγαλύτερη ή πιο περίπλοκη';
 

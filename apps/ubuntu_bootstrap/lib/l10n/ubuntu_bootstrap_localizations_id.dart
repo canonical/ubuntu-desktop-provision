@@ -416,6 +416,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Secara baku, Trusted Platform Module (TPM) komputer akan membuka kunci disk selama awal mula. Anda juga punya opsi untuk melindungi data Anda lebih lanjut.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frasa sandi lemah, buat itu lebih panjang atau lebih rumit';
 

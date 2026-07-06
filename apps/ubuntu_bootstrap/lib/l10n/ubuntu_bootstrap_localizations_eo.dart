@@ -415,6 +415,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Apriore, la Fidata Platforma Modulo (TPM) de la komputilo malŝlosos la diskon dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'La pasfrazo estas tro malforta; plilongigu aŭ kompliku ĝin';
 

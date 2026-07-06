@@ -418,6 +418,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
       'Domyślnie moduł TPM (Trusted Platform Module) komputera odblokuje dysk podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Słabe hasło, wydłuż je lub zwiększ złożoność';
 

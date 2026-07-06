@@ -421,6 +421,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Per defaut, lo Modul de platafòrma de fisança (TPM) de l\'ordenador desverrolharà lo disc a l\'aviada. Avètz tanben d\'opcions per protegir encara mai vòstras donadas.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frasa secrèta febla, fasètz-la mai longa o mai complèxa';
 

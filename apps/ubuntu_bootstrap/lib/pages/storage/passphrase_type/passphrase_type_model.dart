@@ -18,6 +18,7 @@ class PassphraseTypeModel extends SafeChangeNotifier {
   final StorageService _service;
   final _passphraseType = ValueNotifier(PassphraseType.passphrase);
   final Set<PassphraseType> supportedTypes = {};
+  final List<CoreBootEncryptionRequirement> encryptionRequirements = [];
 
   Future<bool> init() async {
     _passphraseType.value = _service.passphraseType;
@@ -28,14 +29,24 @@ class PassphraseTypeModel extends SafeChangeNotifier {
       _log.info('no TPM/FDE support, skipping');
       return false;
     }
+    supportedTypes.clear();
+    encryptionRequirements.clear();
+
     final encryptionFeatures = await _service.getCoreBootEncryptionFeatures();
-    if (encryptionFeatures.isEmpty) {
+    encryptionRequirements
+        .addAll(await _service.getCoreBootEncryptionRequirements());
+    if (encryptionFeatures.isEmpty && encryptionRequirements.isEmpty) {
       _service.passphraseType = PassphraseType.none;
-      _log.info('no additional encryption features available, skipping');
+      supportedTypes.add(PassphraseType.none);
+      _log.info(
+        'no additional encryption features available and none required, skipping',
+      );
       return false;
     }
-    supportedTypes.clear();
-    supportedTypes.add(PassphraseType.none);
+    if (!encryptionRequirements
+        .contains(CoreBootEncryptionRequirement.VOLUMES_AUTH)) {
+      supportedTypes.add(PassphraseType.none);
+    }
     supportedTypes.addAll(
       encryptionFeatures.map(
         (f) => switch (f) {
@@ -44,6 +55,7 @@ class PassphraseTypeModel extends SafeChangeNotifier {
         },
       ),
     );
+    _passphraseType.value = _service.passphraseType = supportedTypes.first;
     _log.info('available encryption features: $supportedTypes');
     return true;
   }

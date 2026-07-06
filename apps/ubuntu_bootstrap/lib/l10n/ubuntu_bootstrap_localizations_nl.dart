@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
       'Standaard ontgrendelt de Trusted Platform Module (TPM) van de computer de schijf tijdens het opstarten. Bovendien zijn er mogelijkheden om uw gegevens verder te beschermen.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Zwakke wachtwoordzin, maak het langer of meer complex';
 

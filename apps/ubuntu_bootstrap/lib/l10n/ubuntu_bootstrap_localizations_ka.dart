@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'ნაგულისხმევად კომპიუტერის სანდო პლატფორმის მოდული (TPM) განბლოკავს დისკს კომპიუტერის ჩართვისას. ასევე გაქვთ არჩევანი, კიდევ უფრო მეტადაც კი დაიცვათ თქვენი მონაცემები.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'საკვანძო ფრაზა სუსტია. გახადეთ ის უფრო გრძელი და რთული';
 

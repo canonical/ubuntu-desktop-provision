@@ -423,6 +423,10 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ, ಕಂಪ್ಯೂಟರ್‌ನ ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮಾಡ್ಯೂಲ್ (TPM) ಪ್ರಾರಂಭದ ಸಮಯದಲ್ಲಿ ಡಿಸ್ಕ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಮತ್ತಷ್ಟು ರಕ್ಷಿಸಲು ನಿಮಗೆ ಆಯ್ಕೆಗಳಿವೆ.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'ದುರ್ಬಲ ಪಾಸ್‌ಫ್ರೇಸ್, ಅದನ್ನು ಉದ್ದ ಅಥವಾ ಹೆಚ್ಚು ಸಂಕೀರ್ಣಗೊಳಿಸಿ';
 

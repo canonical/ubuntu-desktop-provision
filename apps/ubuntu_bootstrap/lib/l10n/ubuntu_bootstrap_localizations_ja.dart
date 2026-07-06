@@ -398,6 +398,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       '既定では、このPCのTPMが起動時にディスクの暗号化を解除します。データ保護のため追加のオプションもあります。';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       '弱いパスフレーズ。長くするかもっと複雑にしてください';
 

@@ -34,19 +34,6 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
               _ => lang.tpmActionErrorSupportLabel
             },
           ),
-          Html(
-            data:
-                '<a href="$_tpmDocumenationUrl">${lang.tpmActionDocumentationLinkLabel}</a>',
-            style: {
-              'body': Style(margin: Margins.zero),
-              'a': Style(
-                color: Theme.of(context).colorScheme.link,
-                textDecoration: TextDecoration.none,
-              ),
-            },
-            shrinkWrap: true,
-            onLinkTap: (url, __, ___) => launchUrl(url!),
-          ),
         ].withSpacing(kWizardSpacing / 2),
       if (model.actions.isNotEmpty) ...[
         const SizedBox(height: kWizardSpacing / 2),
@@ -75,6 +62,20 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
           ],
         ),
       ],
+      const SizedBox(height: kWizardSpacing / 2),
+      Html(
+        data:
+            '<a href="$_tpmDocumenationUrl">${lang.tpmActionDocumentationLinkLabel}</a>',
+        style: {
+          'body': Style(margin: Margins.zero),
+          'a': Style(
+            color: Theme.of(context).colorScheme.link,
+            textDecoration: TextDecoration.none,
+          ),
+        },
+        shrinkWrap: true,
+        onLinkTap: (url, __, ___) => launchUrl(url!),
+      ),
       if (model.tpmError != null) ...[
         const SizedBox(height: kWizardSpacing / 2),
         YaruExpandable(

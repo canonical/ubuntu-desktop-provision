@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Alapértelmezetten a számítógép platformmegbízhatósági modulja (TPM) feloldja a lemezt az indítás során. Az adatok további védelmére is vannak lehetőségek.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Gyenge jelmondat, növelje meg a hosszát vagy tegye bonyolultabbá';
 

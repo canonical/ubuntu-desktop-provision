@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
       'Per impostazione predefinita, il Trusted Platform Module (TPM) del computer sbloccherà il disco all\'avvio. Sono disponibili anche opzioni per proteggere ulteriormente i dati.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frase segreta debole, rendila più lunga o più complessa';
 

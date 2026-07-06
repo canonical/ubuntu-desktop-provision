@@ -382,6 +382,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       '默认情况下，计算机的可信平台模块（TPM）会在开机时解锁磁盘。您也有其他选项来进一步保护您的数据。';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin => '密码强度低，请提高强度或复杂度';
 
   @override
