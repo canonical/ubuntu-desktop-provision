@@ -136,15 +136,18 @@ class _WizardButtonState extends State<WizardButton> {
       buttonFactory = PushButton.filled;
     }
 
-    return buttonFactory(
-      onPressed: maybeActivate,
-      focusNode: widget.focusNode,
-      child: showSpinner
-          ? SizedBox.square(
-              dimension: IconTheme.of(context).size,
-              child: const YaruCircularProgressIndicator(strokeWidth: 3),
-            )
-          : Text(widget.label!),
+    return YaruFocusBorder.primary(
+      borderRadius: BorderRadius.circular(kYaruButtonRadius),
+      child: buttonFactory(
+        onPressed: maybeActivate,
+        focusNode: widget.focusNode,
+        child: showSpinner
+            ? SizedBox.square(
+                dimension: IconTheme.of(context).size,
+                child: const YaruCircularProgressIndicator(strokeWidth: 3),
+              )
+            : Text(widget.label!),
+      ),
     );
   }
 
