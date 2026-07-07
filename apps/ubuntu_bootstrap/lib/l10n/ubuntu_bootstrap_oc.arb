@@ -371,8 +371,8 @@
     "passphrasePageRequiredPassphrase": "Una frasa secrèta es requerida",
     "passphrasePageMismatchPassphrase": "Las frasas secrètas correspondon pas",
     "passphrasePageMismatchPin": "Los PIN correspondon pas",
-    "passphraseTypePassphraseTileTitle": "Requerís una frasa secrèta",
-    "passphraseTypePinTileTitle": "Requerir un PIN",
+    "passphraseTypePassphraseTileTitle": "Requerir una frasa secrèta a l’aviada",
+    "passphraseTypePinTileTitle": "Requerir un PIN a l’aviada",
     "passphraseTypeNoneTileTitle": "Desverrolhar lo disc automaticament",
     "passphrasePagePinEntropyOptimal": "Lo PIN es sufisentament long",
     "toggleLogsSemanticLabel": "Alternar los jornals d'installacion",
@@ -523,5 +523,7 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "passphraseTypePageBodyAuthRequired": "Lo chiframent material demanda una seguretat de mai dins aquel ordenador.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "A aquel ordenador li manca una foncionalitat de seguretat requesida (raiç de fisança materiala)."
 }
