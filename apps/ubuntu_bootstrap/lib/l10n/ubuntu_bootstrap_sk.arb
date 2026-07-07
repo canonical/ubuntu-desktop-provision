@@ -373,8 +373,8 @@
     "passphrasePageConfirmPinHint": "Potvrdiť PIN",
     "passphrasePageRequiredPin": "Je vyžadovaný PIN",
     "passphrasePageMismatchPin": "PINy sa nezhodujú",
-    "passphraseTypePassphraseTileTitle": "Vyžadovať prístupovú frázu",
-    "passphraseTypePinTileTitle": "Vyžadovať PIN",
+    "passphraseTypePassphraseTileTitle": "Vyžadovať prístupovú frázu pri spustení",
+    "passphraseTypePinTileTitle": "Vyžadovať PIN pri spustení",
     "passphraseTypeNoneTileTitle": "Odomknúť disk automaticky",
     "passphraseTypePageHeader": "Dodatočná bezpečnosť",
     "passphrasePageHeaderPassphrase": "Nastaviť šifrovaciu frázu",
@@ -383,7 +383,7 @@
     "passphrasePageBodyPin": "PIN budete musieť zadať pri každom zapnutí počítača. Tento PIN sa líši od vášho používateľského hesla. Neskôr ho budete môcť zmeniť, ale nie vypnúť. Ak zabudnete svoj PIN, môžete získať prístup k disku pomocou kľúča na obnovenie.",
     "passphrasePageTitle": "Šifrovanie",
     "passphraseTypePinTileSubTitle": "Bezpečnejšie. Pri každom zapnutí počítača budete musieť zadať číselný PIN.",
-    "passphraseTypePageBody": "Predvolene odomyká disk Trusted Platform Module (TPM) počítača pri spustení. Máte tiež možnosti na ďalšie zabezpečenie vašich dát.",
+    "passphraseTypePageBody": "Predvolene sa disk pri spustení odomkne automaticky. Na zvýšenie ochrany svojich údajov môžete využiť aj ďalšie možnosti.",
     "passphrasePagePassphraseEntropyOptimal": "Silná prístupová fráza",
     "passphrasePagePinEntropyBelowMin": "Slabý PIN, urobte ho dlhší alebo menej predvídateľný",
     "passphrasePagePinEntropyBelowOptimal": "Priemerný PIN, urobte ho dlhší alebo menej predvídateľný pre lepšiu bezpečnosť",
@@ -535,5 +535,6 @@
     "autoinstallGenericErrorMessage": "Inštalácia nemôže pokračovať s poskytnutým súborom automatickej inštalácie.",
     "autoinstallValidationErrorMessage": "V poskytnutom súbore automatickej inštalácie sa vyskytol problém.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "V používateľských údajoch cloud-init uvedených v súbore automatickej inštalácie sa vyskytol problém.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postráda požadovanú bezpečnostnú funkciu (hardvérový koreň dôvery)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postráda požadovanú bezpečnostnú funkciu (hardvérový koreň dôvery).",
+    "passphraseTypePageBodyAuthRequired": "Hardvérovo podporované šifrovanie vyžaduje dodatočné bezpečnostné prvky v tomto počítači."
 }
