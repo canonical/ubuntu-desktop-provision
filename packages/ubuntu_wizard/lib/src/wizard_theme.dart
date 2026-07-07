@@ -64,6 +64,9 @@ extension WizardThemeDataX on ThemeData {
   ThemeData _customizeColors(bool highContrast) {
     final errorColor = YaruColors.from(brightness).error;
     return copyWith(
+      // Suppress the Material InkWell focus-highlight overlay. Visual focus
+      // indication is handled exclusively by YaruFocusBorder ring.
+      focusColor: Colors.transparent,
       colorScheme: colorScheme.copyWith(
         error: errorColor,
       ),
