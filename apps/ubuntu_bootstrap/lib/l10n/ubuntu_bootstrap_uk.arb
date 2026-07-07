@@ -372,17 +372,17 @@
     "passphrasePageRequiredPassphrase": "Необхідна парольна фраза",
     "passphrasePageChoosePinHint": "PIN-код",
     "passphrasePageConfirmPinHint": "Підтвердьте PIN-код",
-    "passphraseTypePassphraseTileTitle": "Вимагати парольну фразу",
+    "passphraseTypePassphraseTileTitle": "Вимагати парольну фразу під час запуску",
     "passphraseTypeNoneTileTitle": "Розблокувати диск автоматично",
     "passphraseTypePageHeader": "Додаткова безпека",
-    "passphraseTypePinTileTitle": "Вимагати PIN-код",
+    "passphraseTypePinTileTitle": "Вимагати PIN-код під час запуску",
     "passphrasePageBodyPassphrase": "Вам потрібно буде вводити пароль кожного разу, коли ви вмикаєте комп'ютер. Цей пароль відрізняється від вашого пароля користувача. Ви зможете змінити його пізніше, але не зможете вимкнути. Якщо ви забули пароль, ви можете відновити доступ до диска за допомогою ключа відновлення.",
     "passphrasePageBodyPin": "Вам потрібно буде вводити PIN-код кожного разу, коли ви вмикаєте комп'ютер. Цей PIN-код відрізняється від вашого пароля користувача. Ви зможете змінити його пізніше, але не зможете вимкнути. Якщо ви забули PIN-код, ви можете відновити доступ до диска за допомогою ключа відновлення.",
     "passphrasePageMismatchPassphrase": "Парольні фрази не збігаються",
     "passphrasePageRequiredPin": "Необхідний PIN-код",
     "passphrasePageMismatchPin": "PIN-коди не збігаються",
     "passphraseTypePassphraseTileSubTitle": "Найбільш безпечно. Вам потрібно буде вводити довшу парольну фразу кожного разу, коли ви вмикаєте комп'ютер.",
-    "passphraseTypePageBody": "За замовчуванням, модуль Trusted Platform Module (TPM) комп'ютера розблоковує диск під час запуску. Також ви маєте опцію додаткового захисту своїх даних.",
+    "passphraseTypePageBody": "За замовчуванням диск розблокується автоматично під час запуску. Крім того, у вас є можливості додаткового захисту ваших даних.",
     "passphraseTypePinTileSubTitle": "Більш безпечно. Вам потрібно буде вводити цифровий PIN-код кожного разу, коли ви вмикаєте комп'ютер.",
     "passphrasePageHeaderPassphrase": "Встановити пароль для шифрування",
     "passphrasePagePassphraseEntropyOptimal": "Надійна парольна фраза",
@@ -524,5 +524,6 @@
     "autoinstallGenericErrorMessage": "Встановлення не може продовжуватися за допомогою наданого файлу автоматичного встановлення.",
     "autoinstallValidationErrorMessage": "Виникла проблема з наданим файлом для автоматичної інсталяції.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Виникла проблема з даними користувача cloud-init, вказаними у файлі автоінсталяції.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "У цьому комп’ютері відсутня необхідна функція безпеки (апаратний корінь довіри)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "У цьому комп’ютері відсутня необхідна функція безпеки (апаратний корінь довіри).",
+    "passphraseTypePageBodyAuthRequired": "Шифрування з апаратним забезпеченням вимагає додаткових заходів безпеки на цьому комп’ютері."
 }
