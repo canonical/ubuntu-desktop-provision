@@ -57,8 +57,13 @@ class OptionButton<T> extends StatelessWidget {
             contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             value: value,
             groupValue: groupValue,
-            onChanged: onChanged,
-          ),
+            onChanged: onChanged,            control: ExcludeFocus(
+              child: YaruRadio<T>(
+                value: value,
+                groupValue: groupValue,
+                onChanged: onChanged,
+              ),
+            ),          ),
         ),
       ),
     );

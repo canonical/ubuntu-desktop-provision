@@ -287,3 +287,38 @@ class NextWizardButton extends StatelessWidget {
     );
   }
 }
+
+/// A [Focus] widget that draws a Yaru-style focus border ring when focused.
+///
+/// Use this as a drop-in replacement for [Focus] on non-interactive but
+/// focusable elements such as accessible read-only text and section headers.
+class FocusBorderFocus extends StatelessWidget {
+  const FocusBorderFocus({
+    required this.child,
+    super.key,
+    this.autofocus = false,
+    this.focusNode,
+    this.skipTraversal = false,
+    this.descendantsAreFocusable = true,
+  });
+
+  final Widget child;
+  final bool autofocus;
+  final FocusNode? focusNode;
+  final bool skipTraversal;
+  final bool descendantsAreFocusable;
+
+  @override
+  Widget build(BuildContext context) {
+    return YaruFocusBorder.primary(
+      borderRadius: BorderRadius.circular(kYaruButtonRadius),
+      child: Focus(
+        autofocus: autofocus,
+        focusNode: focusNode,
+        skipTraversal: skipTraversal,
+        descendantsAreFocusable: descendantsAreFocusable,
+        child: child,
+      ),
+    );
+  }
+}

@@ -91,6 +91,13 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
           value: skipPro,
           groupValue: model.skipPro,
           onChanged: (value) => model.skipPro = value ?? false,
+          control: ExcludeFocus(
+            child: YaruRadio<bool>(
+              value: skipPro,
+              groupValue: model.skipPro,
+              onChanged: (value) => model.skipPro = value ?? false,
+            ),
+          ),
         ),
       ),
     );

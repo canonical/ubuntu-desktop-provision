@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/src/wizard_button.dart';
 import 'package:ubuntu_wizard/src/wizard_data.dart';
 import 'package:wizard_router/wizard_router.dart';
 import 'package:yaru/yaru.dart';
@@ -98,8 +99,7 @@ class _WizardBarState extends State<WizardBar> {
     }
     if (label == null) return indicator;
 
-    return Focus(
-      canRequestFocus: true,
+    return FocusBorderFocus(
       descendantsAreFocusable: false,
       child: Semantics(
         key: const ValueKey('wizard-step-indicator'),

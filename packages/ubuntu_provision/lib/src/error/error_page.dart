@@ -102,7 +102,7 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Focus(
+                      FocusBorderFocus(
                         autofocus: true,
                         child: Semantics(
                           // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
