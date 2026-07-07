@@ -352,15 +352,15 @@
     "recoveryKeyExceptionFileSystemBody": "Du har inte behörighet att skriva till den mappen. Försök med en annan plats eller använd en annan metod.",
     "recoveryKeyExceptionFileSystemTitle": "Återställningsnyckelfilen sparades inte",
     "recoveryKeyExceptionUnknownTitle": "Okänt fel",
-    "passphraseTypePinTileTitle": "Kräv en PIN-kod",
+    "passphraseTypePinTileTitle": "Kräv en PIN-kod vid uppstart",
     "passphrasePageBodyPassphrase": "Du måste ange din lösenfras varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer bort din lösenfras kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.",
     "passphrasePageBodyPin": "Du måste ange din PIN-kod varje gång du startar datorn. Denna PIN-kod skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer bort din PIN-kod kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.",
     "passphraseTypePinTileSubTitle": "Mer säker. Du måste ange en numerisk PIN-kod varje gång du startar datorn.",
     "recoveryKeyTextFieldLabel": "Återställningsnyckel",
-    "passphraseTypePassphraseTileTitle": "Kräv en lösenfras",
+    "passphraseTypePassphraseTileTitle": "Kräv en lösenfras vid uppstart",
     "passphrasePageConfirmPinHint": "Bekräfta PIN-kod",
     "passphraseTypeNoneTileTitle": "Lås upp disk automatiskt",
-    "passphraseTypePageBody": "Som standard låser datorns Trusted Platform Module (TPM) upp disken under uppstart. Du har också alternativ för att ytterligare skydda din data.",
+    "passphraseTypePageBody": "Som standard låses disken upp automatiskt under uppstart. Du har också andra alternativ för att ytterligare skydda din data.",
     "passphrasePageTitle": "Kryptering",
     "passphrasePageHeaderPassphrase": "Ställ in en krypteringslösenfras",
     "passphrasePageHeaderPin": "Ställ in en krypterings-PIN",
@@ -536,5 +536,6 @@
     "autoinstallGenericErrorMessage": "Installationen kan inte fortsätta med den här autoinstall-filen.",
     "autoinstallValidationErrorMessage": "Det finns ett problem med den angivna autoinstall-filen.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Det finns ett problem med användardatan för cloud-init som finns i autoinstall-filen.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "Datorn saknar nödvändig säkerhetsfunktionalitet (root-of-trust i hårdvara)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Datorn saknar nödvändig säkerhetsfunktionalitet (root-of-trust i hårdvara).",
+    "passphraseTypePageBodyAuthRequired": "Hårdvarubaserad kryptering kräver ytterligare säkerhetsfunktionalitet i den här datorn."
 }
