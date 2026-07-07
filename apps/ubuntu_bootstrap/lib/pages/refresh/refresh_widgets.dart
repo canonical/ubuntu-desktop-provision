@@ -52,7 +52,7 @@ class RefreshView extends ConsumerWidget {
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
-        Focus(
+        FocusBorderFocus(
           autofocus: true,
           child: Semantics(
             // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
