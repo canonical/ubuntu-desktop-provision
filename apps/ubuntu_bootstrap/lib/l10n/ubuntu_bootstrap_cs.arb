@@ -353,13 +353,13 @@
     "passphrasePageRequiredPassphrase": "Je zapotřebí zadat šifrovací heslo",
     "passphrasePageMismatchPassphrase": "Zadání šifrovacího hesla se neshodují",
     "passphrasePageChoosePinHint": "PIN kód",
-    "passphraseTypePassphraseTileTitle": "Vyžadovat šifrovací heslo",
-    "passphraseTypePinTileTitle": "Vyžadovat PIN kód",
+    "passphraseTypePassphraseTileTitle": "Vyžadovat šifrovací heslo při spuštění",
+    "passphraseTypePinTileTitle": "Vyžadovat PIN kód při spuštění",
     "passphraseTypeNoneTileTitle": "Odemykat disk automaticky",
     "passphraseTypePageHeader": "Dodatečné zabezpečení",
     "recoveryKeyFilePickerTitle": "Uložit soubor se záchranným klíčem",
     "recoveryKeyFilePickerFilter": "Textové soubory",
-    "passphraseTypePageBody": "Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.",
+    "passphraseTypePageBody": "Ve výchozím stavu se disk při spuštění automaticky odemkne. Máte také možnost svá data zabezpečit více.",
     "passphrasePageRequiredPin": "Je zapotřebí zadat PIN kód",
     "recoveryKeyTitleBadgeLabel": "Důležité",
     "recoveryKeyTextFieldLabel": "Záchranný klíč",
@@ -401,7 +401,7 @@
     "closeIconSemanticLabel": "Zavřít",
     "maximizeIconSemanticLabel": "Maximalizovat",
     "minimizeIconSemanticLabel": "Minimalizovat",
-    "tpmActionPageTitle": "Šifrování jištěné hardwarem nebylo možné zapnout",
+    "tpmActionPageTitle": "Šifrování obsluhované hardwarem nebylo možné zapnout",
     "tpmActionBadgeLabel": "Vyžadována akce",
     "tpmActionDetailsLabel": "Technické detaily",
     "tpmActionConfirmLabel": "Potvrdit",
@@ -536,5 +536,6 @@
     "autoinstallGenericErrorMessage": "Instalace nemůže pokračovat s poskytnutým souborem autoinstall.",
     "autoinstallValidationErrorMessage": "Vyskytl se problém s poskytnutým souborem autoinstall.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Vyskytl se problém s uživatelskými daty cloud-init uvedenými v souboru autoinstall.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry).",
+    "passphraseTypePageBodyAuthRequired": "Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení."
 }
