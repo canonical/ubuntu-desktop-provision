@@ -203,13 +203,13 @@
     "passphrasePageConfirmPinHint": "Confirmar o PIN",
     "passphrasePageRequiredPin": "Requírese un PIN",
     "passphrasePageMismatchPin": "Os PINs non coinciden",
-    "passphraseTypePassphraseTileTitle": "Requírese unha frase de paso",
+    "passphraseTypePassphraseTileTitle": "Solicitar unha frase de paso ao iniciar",
     "passphraseTypePassphraseTileSubTitle": "Máis seguro. Terás que introducir unha frase de paso máis longa cada vez que acendas o computador.",
-    "passphraseTypePinTileTitle": "Requirir un PIN",
+    "passphraseTypePinTileTitle": "Requirir un PIN ao iniciar",
     "passphraseTypePinTileSubTitle": "Máis seguro. Terás que introducir un PIN numérico cada vez que acendas o computador.",
     "passphraseTypeNoneTileTitle": "Desbloquear o disco automaticamente",
     "passphraseTypePageHeader": "Seguranza adicional",
-    "passphraseTypePageBody": "Por defecto, o módulo de plataforma fiable (TPM) do computador desbloqueará o disco durante o inicio. Tamén tes opcións para protexer aínda máis os teus datos.",
+    "passphraseTypePageBody": "Por defecto, o disco desbloquearase automaticamente ao iniciar. Tamén tes opcións para protexer aínda máis os teus datos.",
     "passphrasePagePassphraseEntropyBelowMin": "Frase de paso feble, faina máis longa ou máis complexa",
     "passphrasePagePassphraseEntropyBelowOptimal": "Frase de paso xusta, faina máis longa ou máis complexa para unha mellor seguranza",
     "passphrasePagePassphraseEntropyOptimal": "Frase de paso forte",
@@ -1112,5 +1112,7 @@
     },
     "autoinstallGenericErrorMessage": "A instalación non pode continuar co ficheiro de instalación automática proporcionado.",
     "autoinstallValidationErrorMessage": "Hai un problema co ficheiro de instalación automática proporcionado.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Hai un problema cos datos de usuario de cloud-init proporcionados no ficheiro de instalación automática."
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Hai un problema cos datos de usuario de cloud-init proporcionados no ficheiro de instalación automática.",
+    "passphraseTypePageBodyAuthRequired": "O cifrado con respaldo de hardware require seguranza adicional neste computador.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "A este ordenador fáltalle unha característica de seguranza obrigatoria (raíz de confianza do hardware)."
 }
