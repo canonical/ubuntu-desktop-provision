@@ -140,13 +140,13 @@
     "passphrasePageConfirmPinHint": "Berretsi PINa",
     "passphrasePageRequiredPin": "PINa beharrezkoa da",
     "passphrasePageMismatchPin": "PINak ez datoz bat",
-    "passphraseTypePassphraseTileTitle": "Eskatu pasaesaldia",
+    "passphraseTypePassphraseTileTitle": "Eskatu pasaesaldia abioan",
     "passphraseTypePassphraseTileSubTitle": "Seguruena. Pasaesaldi luzeago bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
-    "passphraseTypePinTileTitle": "Eskatu PINa",
+    "passphraseTypePinTileTitle": "Eskatu PINa abioan",
     "passphraseTypePinTileSubTitle": "Seguruagoa. Zenbakizko PIN bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
     "passphraseTypeNoneTileTitle": "Desblokeatu diskoa automatikoki",
     "passphraseTypePageHeader": "Segurtasun gehigarria",
-    "passphraseTypePageBody": "Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.",
+    "passphraseTypePageBody": "Defektuz, diskoa automatikoki desblokeatuko da abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.",
     "passphrasePagePassphraseEntropyBelowMin": "Pasaesaldi ahula, egizu luzeagoa edo konplexuagoa",
     "passphrasePagePassphraseEntropyBelowOptimal": "Baleko pasaesaldia, egizu luzeagoa edo konplexuagoa segurtasuna areagotzeko",
     "passphrasePagePassphraseEntropyOptimal": "Pasaesaldi sendoa",
@@ -1071,5 +1071,6 @@
     "autoinstallGenericErrorMessage": "Instalazioak ezin du aurrera egin hautatutako autoinstall fitxategiarekin.",
     "autoinstallValidationErrorMessage": "Arazoren bat dago hautatutako autoinstall fitxategiarekin.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du.",
+    "passphraseTypePageBodyAuthRequired": "Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan."
 }
