@@ -14,7 +14,8 @@ void main() {
     List<CoreBootEncryptionFeatures> features,
     bool pageShown,
     List<CoreBootEncryptionRequirement> requirements,
-    Set<PassphraseType> supportedTypes
+    Set<PassphraseType> supportedTypes,
+    PassphraseType defaultType,
   })>[
     (
       name: 'no features or requirements',
@@ -22,13 +23,15 @@ void main() {
       requirements: [],
       pageShown: false,
       supportedTypes: {PassphraseType.none},
+      defaultType: PassphraseType.none,
     ),
     (
       name: 'passphrase supported, no requirements',
       features: [CoreBootEncryptionFeatures.PASSPHRASE_AUTH],
       requirements: [],
-      pageShown: true,
+      pageShown: false,
       supportedTypes: {PassphraseType.none, PassphraseType.passphrase},
+      defaultType: PassphraseType.none,
     ),
     (
       name: 'pin/pass supported and required',
@@ -39,6 +42,7 @@ void main() {
       requirements: [CoreBootEncryptionRequirement.VOLUMES_AUTH],
       pageShown: true,
       supportedTypes: {PassphraseType.pin, PassphraseType.passphrase},
+      defaultType: PassphraseType.pin,
     ),
   ]) {
     test(testCase.name, () async {
@@ -54,6 +58,7 @@ void main() {
 
       expect(await model.init(), equals(testCase.pageShown));
       expect(model.supportedTypes, equals(testCase.supportedTypes));
+      expect(model.passphraseType, equals(testCase.defaultType));
     });
   }
 }

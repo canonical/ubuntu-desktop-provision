@@ -35,14 +35,6 @@ class PassphraseTypeModel extends SafeChangeNotifier {
     final encryptionFeatures = await _service.getCoreBootEncryptionFeatures();
     encryptionRequirements
         .addAll(await _service.getCoreBootEncryptionRequirements());
-    if (encryptionFeatures.isEmpty && encryptionRequirements.isEmpty) {
-      _service.passphraseType = PassphraseType.none;
-      supportedTypes.add(PassphraseType.none);
-      _log.info(
-        'no additional encryption features available and none required, skipping',
-      );
-      return false;
-    }
     if (!encryptionRequirements
         .contains(CoreBootEncryptionRequirement.VOLUMES_AUTH)) {
       supportedTypes.add(PassphraseType.none);
@@ -56,6 +48,15 @@ class PassphraseTypeModel extends SafeChangeNotifier {
         },
       ),
     );
+
+    if (encryptionRequirements.isEmpty) {
+      _passphraseType.value = _service.passphraseType = PassphraseType.none;
+      _log.info(
+        'no additional encryption features required, skipping',
+      );
+      return false;
+    }
+
     _passphraseType.value = _service.passphraseType = supportedTypes.first;
     _log.info('available encryption features: $supportedTypes');
     return true;
