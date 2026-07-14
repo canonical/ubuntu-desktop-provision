@@ -32,6 +32,7 @@ class OptionButton<T> extends StatelessWidget {
       alignment: AlignmentDirectional.centerStart,
       child: YaruFocusBorder.primary(
         borderRadius: kWizardBorderRadius,
+        borderPadding: YaruFocusBorderPadding.small,
         child: YaruBorderContainer(
           color: isSelected
               ? colorScheme.primary.withValues(alpha: 0.2)
