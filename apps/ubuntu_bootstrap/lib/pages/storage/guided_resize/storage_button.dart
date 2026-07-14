@@ -25,6 +25,7 @@ class StorageButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return YaruFocusBorder.primary(
+      borderRadius: BorderRadius.zero,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           shape: const RoundedRectangleBorder(),
