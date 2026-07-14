@@ -186,13 +186,13 @@
     "passphrasePageConfirmPinHint": "Confirma el PIN",
     "passphrasePageRequiredPin": "Es requereix un PIN",
     "passphrasePageMismatchPin": "Els PIN no concorden",
-    "passphraseTypePassphraseTileTitle": "Requereix una contrasenya",
+    "passphraseTypePassphraseTileTitle": "Requereix una contrasenya a l'inici",
     "passphraseTypePassphraseTileSubTitle": "El més segur. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya més llarga.",
-    "passphraseTypePinTileTitle": "Requereix un PIN",
+    "passphraseTypePinTileTitle": "Requereix un PIN a l'inici",
     "passphraseTypePinTileSubTitle": "El més segur. S'ha d'introduir un PIN numèric cada vegada que engegueu l'ordinador.",
     "passphraseTypeNoneTileTitle": "Desbloqueja el disc automàticament",
     "passphraseTypePageHeader": "Seguretat addicional",
-    "passphraseTypePageBody": "Per defecte, el mòdul de plataforma de confiança de l'ordinador (TPM) desbloquejarà el disc durant l'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.",
+    "passphraseTypePageBody": "Per defecte, el disc es durant l'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.",
     "successIconSemanticLabel": "Èxit",
     "confirmTableCreatedFormattedMounted": "Creat i formatat com {format} utilitzat per a {mountpoint}",
     "@confirmTableCreatedFormattedMounted": {
@@ -1050,5 +1050,6 @@
     "autoinstallGenericErrorMessage": "La instal·lació no pot continuar sense el fitxer d'auto-instal·lació proveït.",
     "autoinstallValidationErrorMessage": "Hi ha una incidència amb el fitxer d'auto-instal·lació proveït.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Hi ha una incidència amb les dades d'usuari de cloud-init proveïdes al fitxer d'auto-instal·lació.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "A aquest ordinador li falta una característica requerida de seguretat (arrel de maquinari de confiança)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "A aquest ordinador li falta una característica requerida de seguretat (arrel de maquinari de confiança).",
+    "passphraseTypePageBodyAuthRequired": "L'encriptació basada en el maquinari requereix de seguretat addicional a aquest ordinador."
 }
