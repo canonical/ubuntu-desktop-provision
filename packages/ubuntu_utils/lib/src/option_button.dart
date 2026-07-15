@@ -40,8 +40,7 @@ class _OptionButtonState<T> extends State<OptionButton<T>> {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final isSelected = widget.value == widget.groupValue;
-    final showFocusBorder =
-        YaruTheme.maybeOf(context)?.focusBorders ?? false;
+    final showFocusBorder = YaruTheme.maybeOf(context)?.focusBorders ?? false;
 
     return Align(
       alignment: AlignmentDirectional.centerStart,

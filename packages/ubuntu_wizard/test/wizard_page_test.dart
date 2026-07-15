@@ -609,9 +609,11 @@ void main() {
   testWidgets('loading indicator', (tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: WizardButton(
-          label: 'button',
-          loading: true,
+        home: Scaffold(
+          body: WizardButton(
+            label: 'button',
+            loading: true,
+          ),
         ),
       ),
     );
@@ -626,8 +628,10 @@ void main() {
 
     await tester.pumpWidget(
       const MaterialApp(
-        home: WizardButton(
-          label: 'button',
+        home: Scaffold(
+          body: WizardButton(
+            label: 'button',
+          ),
         ),
       ),
     );

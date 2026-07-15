@@ -85,6 +85,8 @@ class _WizardButtonState extends State<WizardButton> {
   bool get loading => widget.loading || activating;
   bool showSpinner = false;
   Timer? _loadingTimer;
+  late final _internalFocusNode = FocusNode();
+  FocusNode get _effectiveFocusNode => widget.focusNode ?? _internalFocusNode;
 
   @override
   void didUpdateWidget(WizardButton oldWidget) {
@@ -136,11 +138,31 @@ class _WizardButtonState extends State<WizardButton> {
       buttonFactory = PushButton.filled;
     }
 
-    return YaruFocusBorder.primary(
-      borderRadius: BorderRadius.circular(kYaruButtonRadius),
+    return ListenableBuilder(
+      listenable: _effectiveFocusNode,
+      builder: (context, child) {
+        final showFocusBorder =
+            YaruTheme.maybeOf(context)?.focusBorders ?? false;
+        return AnimatedContainer(
+          duration: Durations.medium1,
+          foregroundDecoration: showFocusBorder
+              ? BoxDecoration(
+                  border: BoxBorder.all(
+                    strokeAlign: BorderSide.strokeAlignOutside,
+                    color: _effectiveFocusNode.hasFocus
+                        ? Theme.of(context).colorScheme.primary
+                        : Colors.transparent,
+                    width: kYaruFocusBorderWidth,
+                  ),
+                  borderRadius: BorderRadius.circular(kYaruButtonRadius),
+                )
+              : null,
+          child: child,
+        );
+      },
       child: buttonFactory(
         onPressed: maybeActivate,
-        focusNode: widget.focusNode,
+        focusNode: _effectiveFocusNode,
         child: showSpinner
             ? SizedBox.square(
                 dimension: IconTheme.of(context).size,
@@ -168,6 +190,7 @@ class _WizardButtonState extends State<WizardButton> {
   @override
   void dispose() {
     _loadingTimer?.cancel();
+    _internalFocusNode.dispose();
     super.dispose();
   }
 }
