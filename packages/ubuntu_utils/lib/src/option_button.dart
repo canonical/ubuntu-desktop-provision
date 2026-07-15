@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class OptionButton<T> extends StatelessWidget {
+class OptionButton<T> extends StatefulWidget {
   const OptionButton({
     required this.title,
     required this.value,
@@ -23,16 +23,46 @@ class OptionButton<T> extends StatelessWidget {
   final ValueChanged<T?>? onChanged;
 
   @override
+  State<OptionButton<T>> createState() => _OptionButtonState<T>();
+}
+
+class _OptionButtonState<T> extends State<OptionButton<T>> {
+  late final _focusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _focusNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final isSelected = value == groupValue;
+    final isSelected = widget.value == widget.groupValue;
+    final showFocusBorder =
+        YaruTheme.maybeOf(context)?.focusBorders ?? false;
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: YaruFocusBorder.primary(
-        borderRadius: kWizardBorderRadius,
-        borderPadding: YaruFocusBorderPadding.small,
+      child: ListenableBuilder(
+        listenable: _focusNode,
+        builder: (context, child) => AnimatedContainer(
+          duration: Durations.medium1,
+          foregroundDecoration: showFocusBorder
+              ? BoxDecoration(
+                  border: BoxBorder.all(
+                    strokeAlign: BorderSide.strokeAlignOutside,
+                    color: _focusNode.hasFocus
+                        ? colorScheme.primary
+                        : Colors.transparent,
+                    width: kYaruFocusBorderWidth,
+                  ),
+                  borderRadius: kWizardBorderRadius,
+                )
+              : null,
+          child: child,
+        ),
         child: YaruBorderContainer(
           color: isSelected
               ? colorScheme.primary.withValues(alpha: 0.2)
@@ -48,30 +78,31 @@ class OptionButton<T> extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
             child: YaruRadioListTile<T>(
               hasFocusBorder: false,
+              focusNode: _focusNode,
               control: ExcludeFocus(
                 child: YaruRadio<T>(
-                  value: value,
-                  groupValue: groupValue,
-                  onChanged: onChanged,
+                  value: widget.value,
+                  groupValue: widget.groupValue,
+                  onChanged: widget.onChanged,
                 ),
               ),
               title: Wrap(
                 alignment: WrapAlignment.spaceBetween,
                 children: [
-                  title,
-                  if (trailing != null) ...[
-                    trailing!,
+                  widget.title,
+                  if (widget.trailing != null) ...[
+                    widget.trailing!,
                   ],
                 ],
               ),
-              subtitle: subtitle,
+              subtitle: widget.subtitle,
               contentPadding: const EdgeInsets.symmetric(
                 horizontal: 16,
                 vertical: 12,
               ),
-              value: value,
-              groupValue: groupValue,
-              onChanged: onChanged,
+              value: widget.value,
+              groupValue: widget.groupValue,
+              onChanged: widget.onChanged,
             ),
           ),
         ),
