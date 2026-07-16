@@ -136,6 +136,7 @@ class _AccessibilityListTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final model = ref.watch(accessibilityModelProvider);
+    final isActive = model.activeOptions.contains(id);
     return Column(
       children: [
         const Divider(),
@@ -146,8 +147,14 @@ class _AccessibilityListTile extends ConsumerWidget {
             ),
             child: Text(title),
           ),
-          value: model.activeOptions.contains(id),
+          value: isActive,
           onChanged: (_) => model.toggleOption(id),
+          control: ExcludeFocus(
+            child: YaruSwitch(
+              value: isActive,
+              onChanged: (_) => model.toggleOption(id),
+            ),
+          ),
         ),
       ],
     );

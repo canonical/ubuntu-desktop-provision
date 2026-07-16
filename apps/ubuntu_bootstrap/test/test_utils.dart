@@ -52,11 +52,14 @@ extension WidgetTesterX on WidgetTester {
               onNext: (settings) => '/next',
             ),
             '/next': WizardRoute(
-              builder: (_) => const Row(
-                children: [
-                  Text('Next page'),
-                  BackWizardButton(),
-                ],
+              builder: (_) => const Material(
+                type: MaterialType.transparency,
+                child: Row(
+                  children: [
+                    Text('Next page'),
+                    BackWizardButton(),
+                  ],
+                ),
               ),
             ),
           },

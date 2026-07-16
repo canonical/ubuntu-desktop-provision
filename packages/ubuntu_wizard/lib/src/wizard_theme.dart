@@ -64,6 +64,9 @@ extension WizardThemeDataX on ThemeData {
   ThemeData _customizeColors(bool highContrast) {
     final errorColor = YaruColors.from(brightness).error;
     return copyWith(
+      // Suppress the Material InkWell focus-highlight overlay. Visual focus
+      // indication is handled exclusively by YaruFocusBorder ring.
+      focusColor: Colors.transparent,
       colorScheme: colorScheme.copyWith(
         error: errorColor,
       ),
@@ -83,10 +86,6 @@ extension WizardThemeDataX on ThemeData {
           }
           return textStyle.copyWith(color: colorScheme.onSurfaceVariant);
         }),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: colorScheme.onSurface),
-          borderRadius: BorderRadius.circular(kYaruButtonRadius),
-        ),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: errorColor),
           borderRadius: BorderRadius.circular(kYaruButtonRadius),
@@ -109,6 +108,26 @@ extension WizardThemeDataX on ThemeData {
         ...extensions.values,
         YaruTitleBarThemeData(
           backgroundColor: WidgetStatePropertyAll(colorScheme.surface),
+        ),
+        // When focusBorders are enabled (YaruFocusBorder ring shown), suppress
+        // the inner circle focus indicator so it isn't drawn twice.
+        YaruCheckboxThemeData(
+          indicatorColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.focused)) return Colors.transparent;
+            return null; // keep hover indicator from default
+          }),
+        ),
+        YaruRadioThemeData(
+          indicatorColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.focused)) return Colors.transparent;
+            return null;
+          }),
+        ),
+        YaruSwitchThemeData(
+          indicatorColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.focused)) return Colors.transparent;
+            return null;
+          }),
         ),
       ],
     );

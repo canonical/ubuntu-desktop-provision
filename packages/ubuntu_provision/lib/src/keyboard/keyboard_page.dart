@@ -4,6 +4,7 @@ import 'package:ubuntu_provision/src/widgets/themed_list_tile.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 
 class KeyboardPage extends ConsumerWidget with ProvisioningPage {
   const KeyboardPage({super.key});
@@ -27,17 +28,20 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
       windowTitle: lang.keyboardTitle,
       title: lang.keyboardHeader,
       trailingTitleWidget: model.canDetectLayout
-          ? OutlinedButton(
-              child: Text(lang.keyboardDetectButton),
-              onPressed: () async {
-                final result = await showDetectKeyboardDialog(context);
-                if (result != null) {
-                  await model.trySelectLayoutVariant(
-                    result.layout,
-                    result.variant,
-                  );
-                }
-              },
+          ? YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                child: Text(lang.keyboardDetectButton),
+                onPressed: () async {
+                  final result = await showDetectKeyboardDialog(context);
+                  if (result != null) {
+                    await model.trySelectLayoutVariant(
+                      result.layout,
+                      result.variant,
+                    );
+                  }
+                },
+              ),
             )
           : null,
       managedScrolling: false,
@@ -72,15 +76,18 @@ class KeyboardPage extends ConsumerWidget with ProvisioningPage {
               Text(lang.keyboardVariantLabel),
               const SizedBox(width: kWizardSpacing),
               Expanded(
-                child: MenuButtonBuilder<int>(
-                  selected: model.selectedVariantIndex,
-                  values: List.generate(model.variantCount, (index) => index),
-                  itemBuilder: (context, index, child) {
-                    return index < 0 || index >= model.variantCount
-                        ? const SizedBox.shrink()
-                        : Text(model.variantName(index));
-                  },
-                  onSelected: model.selectVariant,
+                child: YaruFocusBorder.primary(
+                  borderRadius: BorderRadius.circular(kYaruButtonRadius),
+                  child: MenuButtonBuilder<int>(
+                    selected: model.selectedVariantIndex,
+                    values: List.generate(model.variantCount, (index) => index),
+                    itemBuilder: (context, index, child) {
+                      return index < 0 || index >= model.variantCount
+                          ? const SizedBox.shrink()
+                          : Text(model.variantName(index));
+                    },
+                    onSelected: model.selectVariant,
+                  ),
                 ),
               ),
             ],
