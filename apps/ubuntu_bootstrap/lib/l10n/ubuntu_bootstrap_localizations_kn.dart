@@ -1694,6 +1694,9 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'ಬೇರೆ ಪರಿಹಾರವನ್ನು ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ IT ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Try something else. You may also <a href=\"\">send an error report</a>.';
 

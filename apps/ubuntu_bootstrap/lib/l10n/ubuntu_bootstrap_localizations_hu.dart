@@ -1700,6 +1700,9 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Próbáljon másik megoldást, vagy vegye fel a kapcsolatot az IT-támogatással.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Próbáljon valami mást. <a href=\"\">Küldhet hibajelentést is</a>.';
 

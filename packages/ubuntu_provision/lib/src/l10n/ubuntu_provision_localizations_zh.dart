@@ -397,6 +397,9 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Connected';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).

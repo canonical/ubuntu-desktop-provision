@@ -998,6 +998,12 @@ abstract class UbuntuProvisionLocalizations {
   /// In en, this message translates to:
   /// **'Connected'**
   String get networkWifiConnected;
+
+  /// No description provided for @logViewSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Log'**
+  String get logViewSemanticLabel;
 }
 
 class _UbuntuProvisionLocalizationsDelegate
