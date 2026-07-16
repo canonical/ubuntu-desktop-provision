@@ -1709,6 +1709,9 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'வேறு தீர்வை முயற்சிக்கவும் அல்லது IT ஆதரவைத் தொடர்பு கொள்ளவும்';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'வேறு ஏதாவது முயற்சிக்கவும். நீங்கள் <a href=\"\">ஒரு பிழை அறிக்கையையும் அனுப்பலாம்</a>.';
 

@@ -2950,6 +2950,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Try a different solution or contact IT support.'**
   String get tpmActionErrorDescription;
 
+  /// No description provided for @installationLogSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Installation log'**
+  String get installationLogSemanticLabel;
+
   /// No description provided for @manualPartitioningWarningBody.
   ///
   /// In en, this message translates to:

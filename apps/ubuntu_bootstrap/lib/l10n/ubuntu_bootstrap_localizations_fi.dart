@@ -1695,6 +1695,9 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Kokeile toista ratkaisua tai ota yhteys IT-tukeen.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Kokeile jotain muuta. Voit myös <a href=\"\">lähettää virheraportin</a>.';
 

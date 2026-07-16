@@ -1696,6 +1696,9 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Coba solusi lain atau hubungi dukungan TI';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Coba yang lain. Anda juga dapat <a href=\"\">mengirim laporan kesalahan</a>.';
 

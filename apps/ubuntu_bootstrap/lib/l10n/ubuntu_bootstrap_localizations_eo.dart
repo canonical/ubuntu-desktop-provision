@@ -1701,6 +1701,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Provu alian solvon, aŭ kontaktu teĥnikan asiston.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Provu ion alian. Vi ankaŭ rajtas <a href=\"\">raporti la eraron</a>.';
 

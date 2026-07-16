@@ -1705,6 +1705,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Bain triail as réiteach difriúil nó déan teagmháil le tacaíocht TF.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Bain triail as rud éigin eile. Féadfaidh tú <a href=\"\">tuairisc earráide a sheoladh</a> freisin.';
 

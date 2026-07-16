@@ -1613,6 +1613,9 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       'Try a different solution or contact IT support.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Try something else. You may also <a href=\"\">send an error report</a>.';
 

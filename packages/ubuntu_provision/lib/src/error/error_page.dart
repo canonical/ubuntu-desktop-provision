@@ -149,7 +149,10 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                 curve: Curves.easeIn,
                 duration: const Duration(milliseconds: 150),
                 offset: Offset(0, model.isLogVisible ? 0 : 1),
-                child: JournalView(journal: model.logStream),
+                child: JournalView(
+                    journal: model.logStream,
+                    semanticLabel: lang.logViewSemanticLabel,
+                  ),
               ),
             ),
           ),

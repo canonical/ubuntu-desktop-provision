@@ -1689,6 +1689,9 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ລອງໃຊ້ວິທີແກ້ໄຂອື່ນ ຫຼື ຕິດຕໍ່ພາກສ່ວນຊ່ວຍເຫຼືອດ້ານໄອທີ.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'ລອງວິທີອື່ນເບິ່ງ. ທ່ານຍັງສາມາດ <a href=\"\">ສົ່ງລາຍງານຂໍ້ຜິດພາດ</a>.';
 

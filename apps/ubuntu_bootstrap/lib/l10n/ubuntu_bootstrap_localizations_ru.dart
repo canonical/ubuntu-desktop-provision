@@ -1699,6 +1699,9 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Попробуйте другое решение или обратитесь в службу IT-поддержки.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Попробуйте что-нибудь еще. Вы также можете <a href=\"\">отправить отчет об ошибке</a>.';
 

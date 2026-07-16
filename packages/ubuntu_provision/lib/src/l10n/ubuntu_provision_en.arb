@@ -160,5 +160,6 @@
   "networkWifiOpenNetwork": "Open network",
   "networkWifiSecureNetwork": "Secure network",
   "networkWifiConnecting": "Connecting…",
-  "networkWifiConnected": "Connected"
+  "networkWifiConnected": "Connected",
+  "logViewSemanticLabel": "Log"
 }

@@ -1693,6 +1693,9 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
       'Vyskúšajte iné riešenie alebo kontaktujte IT podporu.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Skúste niečo iné. Môžete tiež <a href=\"\">odoslať chybové hlásenie</a>.';
 

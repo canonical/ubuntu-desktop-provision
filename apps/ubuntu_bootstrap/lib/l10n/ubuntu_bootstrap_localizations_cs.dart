@@ -1700,6 +1700,9 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Zkuste jiné řešení nebo se obraťte na podporu IT.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Zkuste něco jiného. Je také možné <a href=\"\">odeslat hlášení o chybě</a>.';
 

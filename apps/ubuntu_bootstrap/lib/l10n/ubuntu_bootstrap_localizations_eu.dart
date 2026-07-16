@@ -1701,6 +1701,9 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Probatu beste soluzioren bat, edo jarri harremanetan IT laguntza zerbitzuarekin.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Probatu beste zerbait. Horrez gain, <a href=\"\">errore-txosten bat bidal</a> dezakezu.';
 

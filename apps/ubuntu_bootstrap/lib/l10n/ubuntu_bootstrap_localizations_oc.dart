@@ -1707,6 +1707,9 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Ensajatz una solucion diferenta o contactatz l’assisténcia informatica.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Ensajatz quicòm mai. Podètz tanben <a href=\"\">enviar un rapòrt d’error</a>.';
 
