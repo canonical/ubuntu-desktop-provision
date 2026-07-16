@@ -5,6 +5,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_model.dart';
 import 'package:ubuntu_bootstrap/pages/install/install_page.dart';
 import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
 import 'package:yaru/icons.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -155,5 +156,65 @@ void main() {
 
     final continueTestingButton = find.button(l10n.continueTesting);
     expect(continueTestingButton, findsNothing);
+  });
+
+  testWidgets('opening log moves focus directly to log content', (tester) async {
+    // Start with log hidden, then show it; focus should land on the TextField
+    // inside JournalView without requiring an extra Tab press.
+    final model = buildInstallModel(isLogVisible: false);
+    await tester.pumpApp((_) => buildPage(model));
+    await tester.pumpAndSettle();
+
+    when(model.isLogVisible).thenReturn(true);
+    await tester.pumpContainer('log visible', (_) => buildPage(model));
+    await tester.pumpAndSettle();
+
+    // Primary focus should be somewhere inside JournalView — not on a
+    // non-interactive ancestor and not inside the hidden SlideView.
+    final focused = tester.binding.focusManager.primaryFocus;
+    expect(focused, isNotNull);
+    // The focused node should not be inside the SlideView (which is excluded
+    // from focus when the log is visible).
+    expect(
+      focused!.context != null &&
+          find
+              .ancestor(
+                of: find.byElementPredicate((e) => e == focused.context),
+                matching: find.byType(SlideView),
+              )
+              .evaluate()
+              .isNotEmpty,
+      isFalse,
+      reason: 'focus should not be in SlideView when log is open',
+    );
+  });
+
+  testWidgets('closing log returns focus to slide content', (tester) async {
+    // Start with log visible, then hide it; focus should return to the slides.
+    final model = buildInstallModel(isLogVisible: true);
+    await tester.pumpApp((_) => buildPage(model));
+    await tester.pumpAndSettle();
+
+    when(model.isLogVisible).thenReturn(false);
+    await tester.pumpContainer('log hidden', (_) => buildPage(model));
+    await tester.pumpAndSettle();
+
+    // Focus should be somewhere inside the SlideView, not in the log.
+    final focused = tester.binding.focusManager.primaryFocus;
+    expect(focused, isNotNull);
+    expect(
+      focused!.context != null &&
+          find
+              .ancestor(
+                of: find.byElementPredicate(
+                  (e) => e == focused.context,
+                ),
+                matching: find.byType(SlideView),
+              )
+              .evaluate()
+              .isNotEmpty,
+      isTrue,
+      reason: 'focus should return to the SlideView when log is closed',
+    );
   });
 }
