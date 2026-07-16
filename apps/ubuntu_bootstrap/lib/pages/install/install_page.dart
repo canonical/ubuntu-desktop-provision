@@ -99,13 +99,9 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
         WidgetsBinding.instance.addPostFrameCallback((_) {
           if (!mounted) return;
           if (isVisible) {
-            // Focus the first traversable descendant (the inner TextField
-            // inside LogView) directly, so the user doesn't need an extra
-            // Tab press after the log opens.
-            final firstChild = _logFocusNode.descendants
-                .where((n) => !n.skipTraversal && n.canRequestFocus)
-                .firstOrNull;
-            (firstChild ?? _logFocusNode).requestFocus();
+            // JournalView's _onFocusChange will redirect to the first
+            // traversable descendant (the inner TextField) automatically.
+            _logFocusNode.requestFocus();
           } else {
             // Return focus to the first traversable node in the slides when
             // the log is dismissed.
