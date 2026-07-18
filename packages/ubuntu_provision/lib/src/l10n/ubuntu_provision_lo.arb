@@ -85,7 +85,7 @@
     "identityInvalidHostname": "ຊື່ຄອມພິວເຕີບໍ່ຖືກຕ້ອງ",
     "identityUsernameLabel": "ຊື່ຜູ້ໃຊ້ຂອງທ່ານ",
     "identityUsernameRequired": "ຈຳເປັນຕ້ອງໃສ່ຊື່ຜູ້ໃຊ້",
-    "identityInvalidUsername": "ຊື່ຜູ້ໃຊ້ບໍ່ຖືກຕ້ອງ",
+    "identityInvalidUsername": "ຊື່ຜູ້ໃຊ້ບໍ່ຖືກຕ້ອງ: ມັນຕ້ອງຂຶ້ນຕົ້ນດ້ວຍໂຕພິມນ້ອຍ ແລະ ອາດປະກອບມີພຽງແຕ່ ໂຕພິມນ້ອຍ, ຕົວເລກ, ຂີດຕໍ່, ແລະ ຂີດກ້ອງ ເທົ່ານັ້ນ.",
     "identityUsernameInUse": "ມີຊື່ຜູ້ໃຊ້ນັ້ນຢູ່ແລ້ວ.",
     "identityUsernameSystemReserved": "ຊື່ນັ້ນຖືກສະຫງວນໄວ້ສຳລັບການນຳໃຊ້ຂອງລະບົບ.",
     "identityUsernameTooLong": "ຊື່ນັ້ນຍາວເກີນໄປ.",
@@ -150,5 +150,14 @@
     "expandIconSemanticLabel": "ຂະຫຍາຍອອກ",
     "collapseIconSemanticLabel": "ຫຍໍ້ເຂົ້າ",
     "errorPageTechnicalDetails": "ລາຍລະອຽດດ້ານເຕັກນິກ",
-    "identityInvalidRealName": "ຊື່ບໍ່ຖືກຕ້ອງ"
+    "identityInvalidRealName": "ຊື່ບໍ່ຖືກຕ້ອງ",
+    "networkWifiSignalNone": "ບໍ່ມີສັນຍານ",
+    "networkWifiSignalWeak": "ສັນຍານອ່ອນ",
+    "networkWifiSignalOk": "ສັນຍານພໍໃຊ້",
+    "networkWifiSignalGood": "ສັນຍານດີ",
+    "networkWifiSignalExcellent": "ສັນຍານດີຫຼາຍ",
+    "networkWifiOpenNetwork": "ເຄືອຂ່າຍເປີດ",
+    "networkWifiSecureNetwork": "ເຄືອຂ່າຍປອດໄພ",
+    "networkWifiConnecting": "ກຳລັງເຊື່ອມຕໍ່…",
+    "networkWifiConnected": "ເຊື່ອມຕໍ່ແລ້ວ"
 }
