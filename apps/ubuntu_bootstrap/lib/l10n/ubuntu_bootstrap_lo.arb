@@ -190,13 +190,13 @@
     "passphrasePageConfirmPinHint": "ຢືນຢັນ PIN",
     "passphrasePageRequiredPin": "ຈຳເປັນຕ້ອງມີ PIN",
     "passphrasePageMismatchPin": "PIN ບໍ່ກົງກັນ",
-    "passphraseTypePassphraseTileTitle": "ຕ້ອງການວະລີຜ່ານ",
+    "passphraseTypePassphraseTileTitle": "ຕ້ອງການວະລີຜ່ານຕອນເລີ່ມລະບົບ",
     "passphraseTypePassphraseTileSubTitle": "ປອດໄພທີ່ສຸດ. ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທີ່ຍາວກວ່າທຸກຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີ.",
-    "passphraseTypePinTileTitle": "ຕ້ອງການ PIN",
+    "passphraseTypePinTileTitle": "ຕ້ອງການລະຫັດ PIN ຕອນເລີ່ມລະບົບ",
     "passphraseTypePinTileSubTitle": "ປອດໄພກວ່າ. ທ່ານຈະຕ້ອງປ້ອນລະຫັດ PIN ຕົວເລກທຸກຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີ.",
     "passphraseTypeNoneTileTitle": "ປົດລັອກດິດໂດຍອັດຕະໂນມັດ",
     "passphraseTypePageHeader": "ຄວາມປອດໄພເພີ່ມເຕີມ",
-    "passphraseTypePageBody": "ໂດຍຄ່າເລີ່ມຕົ້ນ, Trusted Platform Module (TPM) ຂອງຄອມພິວເຕີຈະປົດລັອກ ດິດໃນລະຫວ່າງການເລີ່ມຕົ້ນ. ທ່ານຍັງມີທາງເລືອກໃນການປົກປ້ອງຂໍ້ມູນຂອງທ່ານເພີ່ມເຕີມ.",
+    "passphraseTypePageBody": "ໂດຍຄ່າເລີ່ມຕົ້ນ, ດິສກ໌ຈະຖືກປົດລັອກໂດຍອັດຕະໂນມັດຕອນເລີ່ມລະບົບ. ທ່ານຍັງມີຕົວເລືອກເພື່ອປົກປ້ອງຂໍ້ມູນຂອງທ່ານເພີ່ມເຕີມ.",
     "passphrasePagePassphraseEntropyBelowMin": "ວະລີຜ່ານອ່ອນແອ, ກະລຸນາເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຊັບຊ້ອນກວ່ານີ້",
     "passphrasePagePassphraseEntropyBelowOptimal": "ວະລີຜ່ານພໍໃຊ້ໄດ້, ເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຊັບຊ້ອນກວ່ານີ້ເພື່ອຄວາມປອດໄພທີ່ດີກວ່າ",
     "passphrasePagePassphraseEntropyOptimal": "ວະລີຜ່ານທີ່ແຂງແກ່ນ",
@@ -1122,5 +1122,21 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "ຄຸນສົມບັດນີ້ອາດຈະຖືກເອີ້ນວ່າ \"Virtualization Technology\", \"VT-d\" ຫຼື \"AMD-Vi\".",
     "tpmActionFixActionProceedDescription": "ການລະເລີຍບັນຫານີ້ອາດຈະເຮັດໃຫ້ການຕິດຕັ້ງມີຄວາມປອດໄພໜ້ອຍລົງ.",
     "tpmActionFixActionCaveatConfirm": "ທ່ານອາດຈະຖືກຂໍໃຫ້ຢືນຢັນການດຳເນີນການນີ້ເມື່ອເລີ່ມລະບົບໃໝ່.",
-    "tpmActionFixActionCaveatRetry": "ຈາກນັ້ນ ທ່ານຈະຕ້ອງໄດ້ເລີ່ມການຕິດຕັ້ງຄືນໃໝ່."
+    "tpmActionFixActionCaveatRetry": "ຈາກນັ້ນ ທ່ານຈະຕ້ອງໄດ້ເລີ່ມການຕິດຕັ້ງຄືນໃໝ່.",
+    "stepIndicatorLabel": "ຂັ້ນຕອນທີ {CURRENT_STEP} ຈາກ {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "ການຕິດຕັ້ງບໍ່ສາມາດດຳເນີນການຕໍ່ໄດ້ດ້ວຍໄຟລ໌ autoinstall ທີ່ໃຫ້ມາ.",
+    "autoinstallValidationErrorMessage": "ມີບັນຫາກັບໄຟລ໌ autoinstall ທີ່ໃຫ້ມາ.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "ມີບັນຫາກັບຂໍ້ມູນຜູ້ໃຊ້ cloud-init ທີ່ໃຫ້ມາໃນໄຟລ໌ autoinstall.",
+    "passphraseTypePageBodyAuthRequired": "ການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ ຕ້ອງການຄວາມປອດໄພເພີ່ມເຕີມໃນຄອມພິວເຕີເຄື່ອງນີ້.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "ຄອມພິວເຕີເຄື່ອງນີ້ຂາດຄຸນສົມບັດຄວາມປອດໄພທີ່ຈຳເປັນ (hardware root of trust)."
 }
