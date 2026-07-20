@@ -11,7 +11,7 @@ void main() {
   Logger.setup();
   for (final testCase in <({
     String name,
-    List<CoreBootEncryptionFeature> features,
+    List<CoreBootEncryptionFeatures> features,
     bool pageShown,
     List<CoreBootEncryptionRequirement> requirements,
     Set<PassphraseType> supportedTypes
@@ -25,7 +25,7 @@ void main() {
     ),
     (
       name: 'passphrase supported, no requirements',
-      features: [CoreBootEncryptionFeature.PASSPHRASE_AUTH],
+      features: [CoreBootEncryptionFeatures.PASSPHRASE_AUTH],
       requirements: [],
       pageShown: true,
       supportedTypes: {PassphraseType.none, PassphraseType.passphrase},
@@ -33,8 +33,8 @@ void main() {
     (
       name: 'pin/pass supported and required',
       features: [
-        CoreBootEncryptionFeature.PIN_AUTH,
-        CoreBootEncryptionFeature.PASSPHRASE_AUTH,
+        CoreBootEncryptionFeatures.PIN_AUTH,
+        CoreBootEncryptionFeatures.PASSPHRASE_AUTH,
       ],
       requirements: [CoreBootEncryptionRequirement.VOLUMES_AUTH],
       pageShown: true,
