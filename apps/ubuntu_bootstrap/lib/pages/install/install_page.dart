@@ -110,15 +110,16 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
         maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
         minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
-      content: ExcludeFocus(
-        child: Stack(
-          children: [
-            SlideView(
-              controller: _slideController,
-              interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
-              slides: htmlSlides,
-            ),
-            Positioned.fill(
+      content: Stack(
+        children: [
+          SlideView(
+            controller: _slideController,
+            interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
+            slides: htmlSlides,
+          ),
+          Positioned.fill(
+            child: ExcludeFocus(
+              excluding: !model.isLogVisible,
               child: AnimatedOpacity(
                 curve: Curves.easeIn,
                 duration: const Duration(milliseconds: 150),
@@ -131,8 +132,8 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomBar: ValueListenableBuilder(
         valueListenable: _slideController,
