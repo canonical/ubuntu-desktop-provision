@@ -58,10 +58,17 @@ class TpmActionModel extends SafeChangeNotifier {
 
   Future<void> _updateGuidedStorage() async {
     final response = await _storage.getGuidedStorage();
+    final selectedTarget = _storage.guidedTarget;
+    if (selectedTarget is! GuidedStorageTargetReformat) {
+      _disallowedTarget = null;
+      return;
+    }
     _disallowedTarget = response.targets
         .whereType<GuidedStorageTargetReformat>()
-        .where((t) => t.hasDisallowedTpmCapability)
-        .firstOrNull;
+        .firstWhereOrNull(
+          (t) =>
+              t.hasDisallowedTpmCapability && t.diskId == selectedTarget.diskId,
+        );
   }
 
   Future<SubiquityException?> performAction(
