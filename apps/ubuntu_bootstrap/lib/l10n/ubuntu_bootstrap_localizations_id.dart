@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'A command in the autoinstall file failed to run during installation.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
@@ -402,6 +414,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'Secara baku, Trusted Platform Module (TPM) komputer akan membuka kunci disk selama awal mula. Anda juga punya opsi untuk melindungi data Anda lebih lanjut.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1521,6 +1537,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindAddonDriversPresent => 'Driver tambahan ada';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Ada masalah dengan TPM komputer ini.';
 
@@ -1678,4 +1698,9 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Coba yang lain. Anda juga dapat <a href=\"\">mengirim laporan kesalahan</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

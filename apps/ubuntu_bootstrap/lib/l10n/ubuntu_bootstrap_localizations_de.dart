@@ -114,11 +114,23 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Ein Befehl in der autoinstall-Datei konnte während der Installation nicht ausgeführt werden.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Sie müssen die Installation neu starten. Überprüfen Sie die autoinstall-Datei, wählen Sie eine andere Installationsart oder wenden Sie sich an Ihren IT-Support.';
 
   @override
   String get changeButtonText => 'Ändern';
@@ -409,6 +421,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'Standardmäßig entsperrt das Trusted Platform Module (TPM) des Computers die Festplatte während des Startvorgangs. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -921,7 +937,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Computer neu starten?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Installationsprogramm neu starten';
 
   @override
   String get restartIntoWindows => 'Neustart in Windows';
@@ -1025,7 +1041,8 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationSlidesAccessibilityOrca => 'Orca-Screenreader';
+  String get installationSlidesAccessibilityOrca =>
+      'Orca-Bildschirmleseprogram';
 
   @override
   String get installationSlidesAccessibilityLanguages => 'Sprachunterstützung';
@@ -1541,6 +1558,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
       'Zusatztreiber sind vorhanden.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Es gibt ein Problem mit dem TPM dieses Computers.';
 
@@ -1697,4 +1718,9 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Versuchen Sie etwas anderes. Sie können auch einen <a href=\"\">Fehlerbericht senden</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

@@ -114,11 +114,23 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'В процессе установки не удалось выполнить команду в файле autoinstall.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Вам необходимо перезапустить установку. Проверьте файл autoinstall, выберите другой тип установки или обратитесь в службу IT-поддержки.';
 
   @override
   String get changeButtonText => 'Изменить';
@@ -293,7 +305,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get installDriversTitle =>
-      'Установка программного обеспечения сторонних производителей для графики и Wi-Fi оборудования';
+      'Установить ПО сторонних производителей для графики и Wi-Fi';
 
   @override
   String get installDriversSubtitle =>
@@ -402,6 +414,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'По умолчанию Trusted Platform Module (TPM) компьютера разблокирует диск во время запуска. Однако у вас есть и другие варианты дополнительной защиты своих данных.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -911,7 +927,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Перезагрузить компьютер?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Перезапустить установку';
 
   @override
   String get restartIntoWindows => 'Перезагрузить в Windows';
@@ -1213,7 +1229,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Подключение вилок и слотов $snap...';
+    return 'Подключение разъёмов и слотов $snap...';
   }
 
   @override
@@ -1243,11 +1259,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitleBadgeLabel => 'Важное';
 
   @override
-  String get recoveryKeyHeader => 'Сохранить ваш ключ восстановления';
+  String get recoveryKeyHeader => 'Сохраните ключ восстановления';
 
   @override
   String get recoveryKeyInfoHeader =>
-      'Без ключа восстановления вы можете потерять все свои данные';
+      'Без ключа восстановления Вы можете потерять все свои данные';
 
   @override
   String get recoveryKeyTextFieldLabel => 'Ключ восстановления';
@@ -1258,7 +1274,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyConfirmation =>
-      'Я сохранил свой ключ восстановления в безопасном месте';
+      'Ключ восстановления сохранён в безопасном месте';
 
   @override
   String get recoveryKeyLinkLabel => 'Подробнее';
@@ -1525,6 +1541,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
       'Присутствуют доп. драйверы.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Проблема с модулем TPM этого компьютера.';
 
@@ -1681,4 +1701,9 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Попробуйте что-нибудь еще. Вы также можете <a href=\"\">отправить отчет об ошибке</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

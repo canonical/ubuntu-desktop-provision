@@ -116,6 +116,18 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
       'A command in the autoinstall file failed to run during installation.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
@@ -379,14 +391,15 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'The PINs do not match';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle =>
+      'Require a passphrase on startup';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Require a PIN on startup';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -400,7 +413,11 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'By default, the disk will unlock automatically on startup. You also have options to further protect your data.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1520,6 +1537,10 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
       'Add-on drivers are present.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'There is an issue with this computer\'s TPM.';
 
@@ -1673,4 +1694,9 @@ class UbuntuBootstrapLocalizationsNb extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Try something else. You may also <a href=\"\">send an error report</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

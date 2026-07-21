@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   meta: ^1.11.0
   path: ^1.8.3
-  ubuntu_localizations: ^0.5.2+2
+  ubuntu_localizations: ^0.5.2+3
   ubuntu_logger: ^0.2.1
   ubuntu_service: ^0.4.0
   ubuntu_wizard: ^0.1.0

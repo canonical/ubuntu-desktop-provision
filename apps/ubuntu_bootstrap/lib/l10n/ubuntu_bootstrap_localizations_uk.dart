@@ -116,11 +116,23 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Команду у файлі автоматичного встановлення не вдалося виконати під час встановлення.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Вам потрібно буде перезапустити встановлення. Перевірте файл автоматичного встановлення, виберіть інший тип встановлення або зверніться до ІТ-підтримки.';
 
   @override
   String get changeButtonText => 'Змінити';
@@ -237,14 +249,13 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get secureBootSecurityKeysDontMatch => 'Не збігаються ключі захисту';
 
   @override
-  String get showSecurityKey => 'Показати ключ безпеки';
+  String get showSecurityKey => 'Показати';
 
   @override
   String get hideSecurityKey => 'Сховати';
 
   @override
-  String get updatesOtherSoftwarePageTitle =>
-      'Оновлення та інше програмне забезпечення';
+  String get updatesOtherSoftwarePageTitle => 'Застосунки';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
@@ -329,7 +340,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseInfoBody =>
-      'Якщо ви його загубите, ви втратите всі свої дані.';
+      'Якщо ви її загубите, ви втратите всі свої дані.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
@@ -405,6 +416,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'За замовчуванням, модуль Trusted Platform Module (TPM) комп\'ютера розблоковує диск під час запуску. Також ви маєте опцію додаткового захисту своїх даних.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -587,7 +602,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get installationTypeManual => 'Щось інше';
+  String get installationTypeManual => 'Ручна інсталяція';
 
   @override
   String installationTypeManualInfo(String DISTRO) {
@@ -755,7 +770,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get confirmPageTitle => 'Записати зміни на диск';
 
   @override
-  String get confirmHeader => 'Переглянути свій вибір';
+  String get confirmHeader => 'Перегляньте свій вибір';
 
   @override
   String get confirmDiskEncryptionLVM => 'LUKS (LVM)';
@@ -915,7 +930,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Перезапустити комп\'ютер?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Перезапустити встановлювач';
 
   @override
   String get restartIntoWindows => 'Перезапустити у Windows';
@@ -1437,7 +1452,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Потрібне вимкнення живлення.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Потрібно перезавантаження.';
+  String get tpmActionErrorKindRebootRequired => 'Потрібне перезавантаження.';
 
   @override
   String get tpmActionErrorKindUnexpectedAction => 'Неочікувана дія.';
@@ -1526,6 +1541,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Присутні додаткові драйвери.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1686,4 +1705,9 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Спробуйте щось інше. Ви також можете <a href=\"\">надіслати звіт про помилку</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

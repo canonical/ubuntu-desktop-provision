@@ -88,7 +88,7 @@
     "accessibilityReduceAnimationLabel": "ანიმაციის შემცირება",
     "accessibilityPageTitle": "წვდომადობა",
     "accessibilityPageHeader": "წვდომადობა {DISTRO}-ში",
-    "accessibilityPageBody": "მოარგეთ {DISTRO} თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, სისტემის მორგების ფანჯარაში შეგეძლებათ.",
+    "accessibilityPageBody": "მოარგეთ {DISTRO} თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, მორგების ფანჯარაში შეგეძლებათ.",
     "accessibilitySeeingLabel": "მხედველობა",
     "accessibilityHearingLabel": "სმენა",
     "accessibilityTypingLabel": "კრეფა",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "გაშლა მთელ ეკრანზე",
     "minimizeIconSemanticLabel": "ჩაკეცვა",
     "expandIconSemanticLabel": "ჩამოშლა",
-    "collapseIconSemanticLabel": "აკეცვა"
+    "collapseIconSemanticLabel": "აკეცვა",
+    "errorPageTechnicalDetails": "ტექნიკური დეტალები"
 }

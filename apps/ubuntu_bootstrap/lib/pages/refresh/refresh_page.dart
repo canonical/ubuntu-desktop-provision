@@ -24,11 +24,7 @@ class RefreshPage extends ConsumerWidget with ProvisioningPage {
 
     return WizardPage(
       title: YaruWindowTitleBar(
-        title: Semantics(
-          focused: true,
-          header: true,
-          child: Text(l10n.refreshPageTitle),
-        ),
+        title: Text(l10n.refreshPageTitle),
         style: model.state.busy
             ? YaruTitleBarStyle.undecorated
             : YaruTitleBarStyle.normal,

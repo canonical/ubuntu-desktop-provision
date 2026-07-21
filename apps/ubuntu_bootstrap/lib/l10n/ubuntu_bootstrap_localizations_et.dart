@@ -115,11 +115,23 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Paigalduse ajal ei õnnestunud käivitada automaatse paigalduse failis leidunud käsku.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Sa pead paigaldusega uuesti alustama. Kontrolli automaatse paigalduse faili õigsust, vali mõni muu paigaldustüüp või küsi abi oma IT-toelt.';
 
   @override
   String get changeButtonText => 'Muuda';
@@ -403,6 +415,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'Vaikimisi eemaldab selle arvuti Trusted Platform Module (TPM) lukustuse automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -910,7 +926,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Kas taaskäivitame arvuti?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Käivita paigaldaja uuesti';
 
   @override
   String get restartIntoWindows => 'Taaskäivita arvuti ja laadi Windows';
@@ -1530,6 +1546,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Täiendavad draiverid on olemas.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Selle arvuti TPM-iga on seotud üks viga.';
 
@@ -1688,4 +1708,9 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Palun proovi mõnda muud võimalust. Lisaks võid <a href=\"\">meile saata veateate</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

@@ -793,15 +793,27 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
       ) as _i5.Future<_i2.EntropyResponse?>);
 
   @override
-  _i5.Future<List<_i2.CoreBootEncryptionFeatures>>
+  _i5.Future<List<_i2.CoreBootEncryptionFeature>>
       getCoreBootEncryptionFeaturesV2() => (super.noSuchMethod(
             Invocation.method(
               #getCoreBootEncryptionFeaturesV2,
               [],
             ),
-            returnValue: _i5.Future<List<_i2.CoreBootEncryptionFeatures>>.value(
-                <_i2.CoreBootEncryptionFeatures>[]),
-          ) as _i5.Future<List<_i2.CoreBootEncryptionFeatures>>);
+            returnValue: _i5.Future<List<_i2.CoreBootEncryptionFeature>>.value(
+                <_i2.CoreBootEncryptionFeature>[]),
+          ) as _i5.Future<List<_i2.CoreBootEncryptionFeature>>);
+
+  @override
+  _i5.Future<List<_i2.CoreBootEncryptionRequirement>>
+      getCoreBootEncryptionRequirementsV2() => (super.noSuchMethod(
+            Invocation.method(
+              #getCoreBootEncryptionRequirementsV2,
+              [],
+            ),
+            returnValue:
+                _i5.Future<List<_i2.CoreBootEncryptionRequirement>>.value(
+                    <_i2.CoreBootEncryptionRequirement>[]),
+          ) as _i5.Future<List<_i2.CoreBootEncryptionRequirement>>);
 
   @override
   _i5.Future<void> reboot({bool? immediate = false}) => (super.noSuchMethod(

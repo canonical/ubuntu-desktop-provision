@@ -115,11 +115,23 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'הרצת פקודה בקובץ התקנה אוטומטית נכשלה במהלך ההתקנה.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'צריך להפעיל את ההתקנה מחדש. יש לבדוק את קובץ ההתקנה האוטומטית, לבחור בסוג התקנה אחר או ליצור קשר עם תמיכת המחשוב שלך (IT).';
 
   @override
   String get changeButtonText => 'שינוי';
@@ -395,6 +407,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'כברירת מחדל, מודול הפלטפורמה המאובטחת (TPM) ישחרר את נעילת הכונן בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -895,7 +911,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'להפעיל את המחשב מחדש?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'הפעלת תוכנית ההתקנה מחדש';
 
   @override
   String get restartIntoWindows => 'להפעיל מחדש אל Windows';
@@ -1499,6 +1515,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
       'Add-on drivers are present.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm => 'יש תקלה עם ה־TPM של המחשב הזה.';
 
   @override
@@ -1653,4 +1673,9 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'עדיף לנסות משהו אחר. אפשר גם <a href=\"\">לדווח על שגיאה</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

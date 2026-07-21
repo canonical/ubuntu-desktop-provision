@@ -120,5 +120,6 @@
     "expandIconSemanticLabel": "Laajenna",
     "maximizeIconSemanticLabel": "Suurenna",
     "collapseIconSemanticLabel": "Supista",
-    "minimizeIconSemanticLabel": "Pienennä"
+    "minimizeIconSemanticLabel": "Pienennä",
+    "errorPageTechnicalDetails": "Tekniset yksityiskohdat"
 }

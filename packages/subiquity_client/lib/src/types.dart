@@ -915,6 +915,7 @@ enum CoreBootAvailabilityErrorKind {
   INVALID_SECURE_BOOT_MODE,
   WEAK_SECURE_BOOT_ALGORITHM_DETECTED,
   PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS,
+  NO_HARDWARE_ROOT_OF_TRUST,
 }
 
 enum CoreBootFixAction {
@@ -1211,9 +1212,13 @@ abstract class EntropyResponse with _$EntropyResponse {
       _$EntropyResponseFromJson(json);
 }
 
-enum CoreBootEncryptionFeatures {
+enum CoreBootEncryptionFeature {
   PASSPHRASE_AUTH,
   PIN_AUTH,
+}
+
+enum CoreBootEncryptionRequirement {
+  VOLUMES_AUTH,
 }
 
 @freezed

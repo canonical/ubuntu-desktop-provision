@@ -115,11 +115,23 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.';
 
   @override
   String get changeButtonText => 'Ŝanĝi';
@@ -401,6 +413,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'Apriore, la Fidata Platforma Modulo (TPM) de la komputilo malŝlosos la diskon dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -908,7 +924,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Ĉu restartigi komputilon?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Relanĉi instalilon';
 
   @override
   String get restartIntoWindows => 'Restartigi al Windows';
@@ -1523,6 +1539,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Ekzistas aldona zorgilo.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Ekzistas problemo pri la Fidata Platforma Modulo (TPM) de ĉi tiu komputilo.';
 
@@ -1683,4 +1703,9 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Provu ion alian. Vi ankaŭ rajtas <a href=\"\">raporti la eraron</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

@@ -114,11 +114,23 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.';
 
   @override
   String get changeButtonText => 'Athrú';
@@ -403,6 +415,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'De réir réamhshocraithe, díghlasálfaidh Modúl Ardáin Iontaofa (TPM) an ríomhaire an diosca le linn tosaithe. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -915,7 +931,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Atosaigh ríomhaire?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Atosaigh an suiteálaí';
 
   @override
   String get restartIntoWindows => 'Atosaigh isteach Windows';
@@ -1532,6 +1548,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Tá tiománaithe breiseán i láthair.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Tá fadhb ann le TPM an ríomhaire seo.';
 
@@ -1687,4 +1707,9 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Bain triail as rud éigin eile. Féadfaidh tú <a href=\"\">tuairisc earráide a sheoladh</a> freisin.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

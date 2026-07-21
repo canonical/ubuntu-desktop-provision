@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'მოარგეთ $DISTRO თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, სისტემის მორგების ფანჯარაში შეგეძლებათ.';
+    return 'მოარგეთ $DISTRO თქვენს საჭიროებებს, სანამ დააყენებთ. პარამეტრების შეცვლა მოგვიანებით, მორგების ფანჯარაში შეგეძლებათ.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ჟურნალის დამალვა';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'ტექნიკური დეტალები';
 
   @override
   String get restart => 'გადატვირთვა';
@@ -162,6 +162,9 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
 
   @override
   String get identityRealNameTooLong => 'სახელი მეტისმეტად გრძელია.';
+
+  @override
+  String get identityInvalidRealName => 'The name is invalid';
 
   @override
   String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
@@ -379,4 +382,31 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'აკეცვა';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

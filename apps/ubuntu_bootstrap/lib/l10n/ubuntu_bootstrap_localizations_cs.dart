@@ -114,11 +114,23 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Během instalace se nepodařilo spustit příkaz v souboru autoinstall.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Budete muset restartovat instalaci. Zkontrolujte soubor autoinstall, vyberte jiný typ instalace nebo kontaktujte IT podporu.';
 
   @override
   String get changeButtonText => 'Změnit';
@@ -404,6 +416,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -911,7 +927,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Restartovat počítač?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Restartovat instalační program';
 
   @override
   String get restartIntoWindows => 'Restartovat do Windows';
@@ -1526,6 +1542,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Jsou přítomny dodatečné ovladače.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Je problém s TPM zařízením tohoto počítače.';
 
@@ -1682,4 +1702,9 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Zkuste něco jiného. Je také možné <a href=\"\">odeslat hlášení o chybě</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

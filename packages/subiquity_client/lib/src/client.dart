@@ -202,13 +202,18 @@ class SubiquityClient {
 
   Future<IdentityData> getIdentity() async {
     final request = await _openUrl('GET', 'identity');
-    return _receive('identity()', request, IdentityData.fromJson);
+    return _receive(
+      'identity()',
+      request,
+      IdentityData.fromJson,
+      (method, _) => _formatResponseLog(method, ''),
+    );
   }
 
   Future<void> setIdentity(IdentityData identity) async {
     final request = await _openUrl('POST', 'identity');
     request.write(jsonEncode(identity.toJson()));
-    await _receive('setIdentity($identity)', request);
+    await _receive('setIdentity()', request);
   }
 
   Future<UsernameValidation> validateUsername(String username) async {
@@ -478,7 +483,7 @@ class SubiquityClient {
     );
   }
 
-  Future<List<CoreBootEncryptionFeatures>>
+  Future<List<CoreBootEncryptionFeature>>
       getCoreBootEncryptionFeaturesV2() async {
     final request =
         await _openUrl('GET', 'storage/v2/core_boot_encryption_features');
@@ -487,7 +492,21 @@ class SubiquityClient {
       request,
       (List<Object?> values) => values
           .cast<String>()
-          .map(CoreBootEncryptionFeatures.values.byName)
+          .map(CoreBootEncryptionFeature.values.byName)
+          .toList(),
+    );
+  }
+
+  Future<List<CoreBootEncryptionRequirement>>
+      getCoreBootEncryptionRequirementsV2() async {
+    final request =
+        await _openUrl('GET', 'storage/v2/core_boot_encryption_requirements');
+    return _receive(
+      'getCoreBootEncryptionRequirementsV2',
+      request,
+      (List<Object?> values) => values
+          .cast<String>()
+          .map(CoreBootEncryptionRequirement.values.byName)
           .toList(),
     );
   }
@@ -571,7 +590,7 @@ class SubiquityClient {
       request,
       (json) {
         if (json == null || json is! Map<String, dynamic>) {
-          json = <String, dynamic>{};
+          return AdConnectionInfo.fromJson({});
         }
         return AdConnectionInfo.fromJson(json);
       },

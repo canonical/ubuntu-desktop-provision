@@ -227,6 +227,16 @@ class MockStorageModel extends _i1.Mock implements _i3.StorageModel {
       ) as _i8.Future<void>);
 
   @override
+  _i8.Future<void> writeTelemetry() => (super.noSuchMethod(
+        Invocation.method(
+          #writeTelemetry,
+          [],
+        ),
+        returnValue: _i8.Future<void>.value(),
+        returnValueForMissingStub: _i8.Future<void>.value(),
+      ) as _i8.Future<void>);
+
+  @override
   _i8.Future<void> resetStorage() => (super.noSuchMethod(
         Invocation.method(
           #resetStorage,

@@ -102,36 +102,35 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Semantics(
-                        focused: true,
-                        header: true,
-                        child: Text(
-                          errorDetails?.title ?? lang.errorPageTitle,
-                          style: Theme.of(context).textTheme.titleLarge,
+                      Focus(
+                        autofocus: true,
+                        child: Semantics(
+                          // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
+                          child: Text(
+                            errorDetails?.title ?? lang.errorPageTitle,
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
                         ),
                       ),
                       SizedBox(height: kWizardSpacing),
                       ...content,
+                      SizedBox(height: kWizardSpacing),
+                      if (errorDetails?.action != null)
+                        PushButton.elevated(
+                          onPressed: () => errorDetails!.action!.call(ref),
+                          child: Text(errorDetails!.actionLabel!),
+                        ),
                       if (errorDetails?.details != null) ...[
                         const SizedBox(height: kWizardSpacing),
                         YaruExpandable(
                           expandButtonPosition:
                               YaruExpandableButtonPosition.start,
                           header: Text(lang.errorPageTechnicalDetails),
-                          child: TextFormField(
-                            style: TextStyle(
-                              inherit: false,
-                              color: Theme.of(context).colorScheme.onSurface,
-                              fontSize: Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium!
-                                  .fontSize,
-                              fontFamily: 'Ubuntu Mono',
-                              textBaseline: TextBaseline.alphabetic,
-                            ),
-                            initialValue: errorDetails!.details,
-                            readOnly: true,
-                            maxLines: null,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Text(errorDetails!.details!),
+                            ],
                           ),
                         ),
                       ],
@@ -180,11 +179,6 @@ class ErrorPage extends ConsumerWidget with ProvisioningPage {
                   model.copyWith(isLogVisible: !model.isLogVisible);
             },
           ),
-          if (errorDetails?.action != null)
-            PushButton.elevated(
-              onPressed: () => errorDetails!.action!.call(ref),
-              child: Text(errorDetails!.actionLabel!),
-            ),
           if (allowRestart)
             WizardButton(
               label: lang.restart,

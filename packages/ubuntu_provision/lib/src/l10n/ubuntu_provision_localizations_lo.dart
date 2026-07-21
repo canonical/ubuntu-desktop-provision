@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'ປັບແຕ່ງ $DISTRO ຕາມຄວາມຕ້ອງການຂອງທ່ານກ່ອນຕິດດັ້ັ້ງ. ທ່ານສາມາດປ່ຽນແປງພາຍຫຼັງໄດ້ໃນການຕັ້ງຄ່າລະບົບ.';
+    return 'ປັບແຕ່ງ $DISTRO ຕາມຄວາມຕ້ອງການຂອງທ່ານກ່ອນທີ່ທ່ານຈະຕັ້ງຄ່າ. ທ່ານສາມາດປ່ຽນແປງພວກມັນໄດ້ໃນພາຍຫຼັງໃນແອັບການຕັ້ງຄ່າ.';
   }
 
   @override
@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'ຂໍອະໄພ, ພວກເຮົາບໍ່ແນ່ໃຈວ່າເກີດຂໍ້ຜິດພາດຫຍັງຂຶ້ນ. ທ່ານສາມາດລອງເລີ່ມລະບົບຄອມພິວເຕີໃໝ່ ແລະ ເລີ່ມຂັ້ນຕອນການຕິດຕັ້ງອີກຄັ້ງ. ທ່ານຍັງສາມາດ <a>ລາຍງານບັນຫາ</a> ໄດ້.';
+      'ຂໍອະໄພ, ພວກເຮົາບໍ່ແນ່ໃຈວ່າຂໍ້ຜິດພາດແມ່ນຫຍັງ. ທ່ານສາມາດລອງເລີ່ມຄອມພິວເຕີຂອງທ່ານໃໝ່ ແລະ ເລີ່ມຂະບວນການຕິດຕັ້ງໃໝ່ອີກຄັ້ງ. ທ່ານຍັງສາມາດ <a>ລາຍງານບັນຫາ</a> ໄດ້.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'ເຊື່ອງບັນທຶກ';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'ລາຍລະອຽດດ້ານເຕັກນິກ';
 
   @override
   String get restart => 'ເລີ່ມລະບົບໃໝ່';
@@ -163,6 +163,9 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
 
   @override
   String get identityRealNameTooLong => 'ຊື່ນັ້ນຍາວເກີນໄປ.';
+
+  @override
+  String get identityInvalidRealName => 'The name is invalid';
 
   @override
   String get identityHostnameLabel => 'ຊື່ຄອມພິວເຕີຂອງທ່ານ';
@@ -380,4 +383,31 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'ຫຍໍ້ເຂົ້າ';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

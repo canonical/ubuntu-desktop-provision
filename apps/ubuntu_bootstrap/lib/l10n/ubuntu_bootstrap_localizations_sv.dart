@@ -114,11 +114,23 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Ett kommando i autoinstallationsfilen kördes inte korrekt vid installationen.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Du kommer att behöva starta om installationen. Kontrollera autoinstallationsfilen, välj en annan installationstyp, eller kontakta din IT-support.';
 
   @override
   String get changeButtonText => 'Ändra';
@@ -403,6 +415,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'Som standard låser datorns Trusted Platform Module (TPM) upp disken under uppstart. Du har också alternativ för att ytterligare skydda din data.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -909,7 +925,7 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Starta om datorn?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Starta om installationsprogram';
 
   @override
   String get restartIntoWindows => 'Starta om till Windows';
@@ -1521,6 +1537,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Tilläggsdrivrutiner finns.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'Det finns ett problem med TPM på den här datorn.';
 
@@ -1675,4 +1695,9 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'Prova någonting annat. Du kan också <a href=\"\">skicka en felrapport</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

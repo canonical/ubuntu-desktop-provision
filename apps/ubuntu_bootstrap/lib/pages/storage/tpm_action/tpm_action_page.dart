@@ -22,40 +22,32 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
   Widget build(BuildContext context, WidgetRef ref) {
     final lang = UbuntuBootstrapLocalizations.of(context);
     final model = ref.watch(tpmActionModelProvider);
+    final actions = model.actions;
+    final actionsKey = ValueKey(
+      actions.map((a) => '${a.type.name}:${a.args}').join('|'),
+    );
 
     final children = [
       if (model.tpmError != null)
         ...[
           Text(model.tpmError!.kind.label(lang)),
           Text(
-            switch (model.actions.length) {
+            switch (actions.length) {
               0 => lang.tpmActionErrorSupportNoActionLabel,
               1 => lang.tpmActionErrorSupportSingleLabel,
               _ => lang.tpmActionErrorSupportLabel
             },
           ),
-          Html(
-            data:
-                '<a href="$_tpmDocumenationUrl">${lang.tpmActionDocumentationLinkLabel}</a>',
-            style: {
-              'body': Style(margin: Margins.zero),
-              'a': Style(
-                color: Theme.of(context).colorScheme.link,
-                textDecoration: TextDecoration.none,
-              ),
-            },
-            shrinkWrap: true,
-            onLinkTap: (url, __, ___) => launchUrl(url!),
-          ),
         ].withSpacing(kWizardSpacing / 2),
-      if (model.actions.isNotEmpty) ...[
+      if (actions.isNotEmpty) ...[
         const SizedBox(height: kWizardSpacing / 2),
         YaruExpansionPanel(
+          key: actionsKey,
           shrinkWrap: true,
           headers: [
-            for (final (i, action) in model.actions.indexed)
+            for (final (i, action) in actions.indexed)
               Text(
-                model.actions.length > 1
+                actions.length > 1
                     ? lang.tpmActionSolutionLabel(
                         i + 1,
                         action.title(lang, model.tpmError?.kind),
@@ -66,7 +58,7 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
               ),
           ],
           children: [
-            for (final action in model.actions)
+            for (final action in actions)
               _ActionBody(
                 action: action,
                 errorKind: model.tpmError?.kind,
@@ -75,6 +67,20 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
           ],
         ),
       ],
+      const SizedBox(height: kWizardSpacing / 2),
+      Html(
+        data:
+            '<a href="$_tpmDocumenationUrl">${lang.tpmActionDocumentationLinkLabel}</a>',
+        style: {
+          'body': Style(margin: Margins.zero),
+          'a': Style(
+            color: Theme.of(context).colorScheme.link,
+            textDecoration: TextDecoration.none,
+          ),
+        },
+        shrinkWrap: true,
+        onLinkTap: (url, __, ___) => launchUrl(url!),
+      ),
       if (model.tpmError != null) ...[
         const SizedBox(height: kWizardSpacing / 2),
         YaruExpandable(

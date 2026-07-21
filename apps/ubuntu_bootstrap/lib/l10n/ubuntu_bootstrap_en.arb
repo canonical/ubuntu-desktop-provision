@@ -44,6 +44,9 @@
   "autoinstallLandscapeOption": "Automated with Landscape",
   "autoinstallLandscapeDescription": "For users in organizations that provide an autoinstall file via Landscape.",
   "autoinstallErrorMessage": "A command in the autoinstall file failed to run during installation.",
+  "autoinstallGenericErrorMessage": "Installation cannot continue with the provided autoinstall file.",
+  "autoinstallValidationErrorMessage": "There is an issue with the provided autoinstall file.",
+  "autoinstallCloudInitSchemaValidationErrorMessage": "There is an issue with the cloud-init user data provided in the autoinstall file.",
   "autoinstallErrorInstructions": "You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.",
   "changeButtonText": "Change",
   "quitButtonText": "Quit installation",
@@ -192,13 +195,14 @@
   "passphrasePageConfirmPinHint": "Confirm PIN",
   "passphrasePageRequiredPin": "A PIN is required",
   "passphrasePageMismatchPin": "The PINs do not match",
-  "passphraseTypePassphraseTileTitle": "Require a passphrase",
+  "passphraseTypePassphraseTileTitle": "Require a passphrase on startup",
   "passphraseTypePassphraseTileSubTitle": "Most secure. You will need to enter a longer passphrase every time you turn on your computer.",
-  "passphraseTypePinTileTitle": "Require a PIN",
+  "passphraseTypePinTileTitle": "Require a PIN on startup",
   "passphraseTypePinTileSubTitle": "More secure. You will need to enter a numeric PIN every time you turn on your computer.",
   "passphraseTypeNoneTileTitle": "Unlock disk automatically",
   "passphraseTypePageHeader": "Additional security",
-  "passphraseTypePageBody": "By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.",
+  "passphraseTypePageBody": "By default, the disk will unlock automatically on startup. You also have options to further protect your data.",
+  "passphraseTypePageBodyAuthRequired": "Hardware-backed encryption requires additional security in this computer.",
   "passphrasePagePassphraseEntropyBelowMin": "Weak passphrase, make it longer or more complex",
   "passphrasePagePassphraseEntropyBelowOptimal": "Fair passphrase, make it longer or more complex for better security",
   "passphrasePagePassphraseEntropyOptimal": "Strong passphrase",
@@ -1073,6 +1077,7 @@
   "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Some of the certificates verifying software in this computer are outdated or use weak protection.",
   "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "This computer is using a manual allowlist to verify software at startup.",
   "tpmActionErrorKindAddonDriversPresent": "Add-on drivers are present.",
+  "tpmActionErrorKindNoHardwareRootOfTrust": "This computer is missing a required security feature (hardware root of trust).",
   "tpmActionErrorKindGenericTpm": "There is an issue with this computer's TPM.",
   "tpmActionErrorKindGenericFirmware": "There is an issue with this computer's firmware.",
   "tpmActionFixActionReboot": "Restart",
@@ -1114,5 +1119,16 @@
   "tpmActionFixActionCaveatRetry": "Then you will need to start the installation again.",
   "tpmActionErrorTitle": "This solution failed",
   "tpmActionErrorDescription": "Try a different solution or contact IT support.",
-  "manualPartitioningWarningBody": "Try something else. You may also <a href=\"\">send an error report</a>."
+  "manualPartitioningWarningBody": "Try something else. You may also <a href=\"\">send an error report</a>.",
+  "stepIndicatorLabel": "Step {CURRENT_STEP} of {TOTAL_STEPS}",
+  "@stepIndicatorLabel": {
+    "placeholders": {
+      "CURRENT_STEP": {
+        "type": "int"
+      },
+      "TOTAL_STEPS": {
+        "type": "int"
+      }
+    }
+  }
 }

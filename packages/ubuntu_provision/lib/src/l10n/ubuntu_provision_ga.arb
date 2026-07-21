@@ -104,7 +104,7 @@
     "eulaReadAndAcceptTerms": "Chun leanúint ar aghaidh ag bunú an mheaisín seo, ní mór duit téarmaí an chomhaontaithe ceadúnais a léamh agus glacadh leo.",
     "eulaAcceptTerms": "Léigh mé agus glacaim leis na téarmaí seo",
     "accessibilityPageHeader": "Inrochtaineacht i {DISTRO}",
-    "accessibilityPageBody": "Saincheap {DISTRO} le do chuid riachtanas sula gcuireann tú ar bun. Is féidir leat iad a athrú níos déanaí i Socruithe Córais.",
+    "accessibilityPageBody": "Saincheap {DISTRO} de réir do riachtanais sula ndéanann tú é a shocrú. Is féidir leat iad a athrú níos déanaí san aip Socruithe.",
     "accessibilityPageTitle": "Inrochtaineacht",
     "accessibilitySeeingLabel": "Ag féachaint",
     "accessibilityHearingLabel": "Éisteacht",
@@ -113,5 +113,6 @@
     "maximizeIconSemanticLabel": "Uasmhéadaigh",
     "minimizeIconSemanticLabel": "Íoslaghdaigh",
     "expandIconSemanticLabel": "Leathnaigh",
-    "collapseIconSemanticLabel": "Laghdaigh"
+    "collapseIconSemanticLabel": "Laghdaigh",
+    "errorPageTechnicalDetails": "Sonraí teicniúla"
 }

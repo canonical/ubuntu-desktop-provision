@@ -47,17 +47,23 @@ class RefreshView extends ConsumerWidget {
               state.progress! > 0 &&
               state.progress! < 1,
           child: Text(
-            '${(state.progress ?? 0 * 100).ceil()}%',
+            '${((state.progress ?? 0) * 100).ceil()}%',
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
-        Text(
-          switch (state) {
-            RefreshStateStatus() => l10n.refreshHeader,
-            RefreshStateDone() => l10n.refreshReady,
-            _ => ''
-          },
-          style: Theme.of(context).textTheme.titleLarge,
+        Focus(
+          autofocus: true,
+          child: Semantics(
+            // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
+            child: Text(
+              switch (state) {
+                RefreshStateStatus() => l10n.refreshHeader,
+                RefreshStateDone() => l10n.refreshReady,
+                _ => ''
+              },
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+          ),
         ),
         const Flexible(child: SizedBox(height: kWizardSpacing / 2)),
         Text(

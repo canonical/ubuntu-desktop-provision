@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personalizatz $DISTRO coma avètz mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard als paramètres sistèma.';
+    return 'Personalizatz $DISTRO coma avètz mestièr abans de lo metre en plaça. Podètz cambiar aquò mai tard dins l’aplicacion Paramètres.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Amagar lo jornal';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Detalhs tecnics';
 
   @override
   String get restart => 'Reaviar';
@@ -147,7 +147,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get localeHeader => 'Causissètz vòstra lenga :';
 
   @override
-  String get identityPageTitle => 'Configuratz vòstre compte';
+  String get identityPageTitle => 'Creatz vòstre compte';
 
   @override
   String get identityAutoLogin => 'Se connectar automaticament';
@@ -166,6 +166,9 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Aqueste nom es tròp long.';
 
   @override
+  String get identityInvalidRealName => 'The name is invalid';
+
+  @override
   String get identityHostnameLabel => 'Lo nom de l’ordenador';
 
   @override
@@ -173,7 +176,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
       'Lo nom qu’utiliza per comunicar amb d’autres ordenadors.';
 
   @override
-  String get identityHostnameRequired => 'Un nom d’ordenador es requerit';
+  String get identityHostnameRequired => 'Cal un nom per l’ordenador';
 
   @override
   String get identityHostnameTooLong => 'Aqueste nom d’ordenador es tròp long.';
@@ -185,10 +188,10 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get identityUsernameLabel => 'Causissètz un nom d’utilizaire';
 
   @override
-  String get identityUsernameRequired => 'Un nom d’utilizaire es requerit';
+  String get identityUsernameRequired => 'Cal un nom d’utilizaire';
 
   @override
-  String get identityInvalidUsername => 'Lo nom d’utilizaire es requerit';
+  String get identityInvalidUsername => 'Lo nom d’utilizaire es invalid';
 
   @override
   String get identityUsernameInUse => 'Aqueste nom d’utilizaire existís ja.';
@@ -205,10 +208,10 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
       'Aqueste nom conten de caractèrs invalids.';
 
   @override
-  String get identityPasswordLabel => 'Causissètz un senhal';
+  String get identityPasswordLabel => 'Senhal';
 
   @override
-  String get identityPasswordRequired => 'Un senhal es requerit';
+  String get identityPasswordRequired => 'Cal un senhal';
 
   @override
   String get identityConfirmPasswordLabel => 'Confirmatz lo senhal';
@@ -230,7 +233,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
       'Picaretz lo domeni e los autres detalhs a l’etapa que ven.';
 
   @override
-  String get activeDirectoryTitle => 'Configurar Active Directory';
+  String get activeDirectoryTitle => 'Se connectar a Active Directory';
 
   @override
   String get activeDirectoryHeader => 'Volètz accedir a Active Directory ?';
@@ -298,7 +301,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
       'O planhèm, se pòt pas configurar Active Directory pel moment. Un còp lo sistèma operacional, consultatz <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per d’ajuda.';
 
   @override
-  String get networkPageTitle => 'Se connectar a un ret';
+  String get networkPageTitle => 'Se connectar a Internet';
 
   @override
   String get networkPageHeader => 'Se connectar a l’internet';
@@ -324,26 +327,26 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
   String get networkWiredEnable => 'Activar la connexion filara';
 
   @override
-  String get networkWifiOption => 'Se connectar a un ret Wifi';
+  String get networkWifiOption => 'Se connectar a un ret Wi-Fi';
 
   @override
   String get networkWifiOff => 'Lo ret sens fial es desactivat';
 
   @override
-  String get networkWifiNone => 'Cap de periferic Wifi pas detectat';
+  String get networkWifiNone => 'Cap de periferic Wi-Fi pas detectat';
 
   @override
   String get networkWifiDisabled =>
-      'Per utilizar lo Wifi sus aqueste ordenador, lo ret sens fial deu èsser activat';
+      'Per utilizar lo Wi-Fi sus aqueste ordenador, lo ret sens fil deu èsser activat';
 
   @override
-  String get networkWifiEnable => 'Activar lo Wifi';
+  String get networkWifiEnable => 'Activar lo Wi-Fi';
 
   @override
-  String get networkHiddenWifiOption => 'Se connectar a una ret Wi-Fi amagada';
+  String get networkHiddenWifiOption => 'Se connectar a un ret Wi-Fi amagat';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Nom de la ret';
+  String get networkHiddenWifiNameLabel => 'Nom del ret';
 
   @override
   String get networkHiddenWifiNameRequired => 'Un nom de ret es requerit';
@@ -381,4 +384,31 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String get collapseIconSemanticLabel => 'Replegar';
+
+  @override
+  String get networkWifiSignalNone => 'No signal';
+
+  @override
+  String get networkWifiSignalWeak => 'Weak signal';
+
+  @override
+  String get networkWifiSignalOk => 'OK signal';
+
+  @override
+  String get networkWifiSignalGood => 'Good signal';
+
+  @override
+  String get networkWifiSignalExcellent => 'Excellent signal';
+
+  @override
+  String get networkWifiOpenNetwork => 'Open network';
+
+  @override
+  String get networkWifiSecureNetwork => 'Secure network';
+
+  @override
+  String get networkWifiConnecting => 'Connecting…';
+
+  @override
+  String get networkWifiConnected => 'Connected';
 }

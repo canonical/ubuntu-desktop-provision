@@ -518,5 +518,8 @@
     "tpmActionErrorSupportSingleLabel": "Vyzkoušejte níže uvedené řešení, kontaktujte IT podporu nebo zvolte jinou metodu šifrování.",
     "tpmActionFixActionRebootToFwSettingsInstructions": "Pokud se nastavení firmwaru nenačtou automaticky, restartujte počítač a během spouštění opakovaně stiskněte klávesu nastavení (obvykle F2, F10 nebo Delete).",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Zkontrolujte, zda je režim secure boot nastaven na „nasazeno“.",
-    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tato funkce může být označována jako „virtualizační technologie“, „VT-d“ nebo „AMD-Vi“."
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tato funkce může být označována jako „virtualizační technologie“, „VT-d“ nebo „AMD-Vi“.",
+    "autoinstallErrorMessage": "Během instalace se nepodařilo spustit příkaz v souboru autoinstall.",
+    "autoinstallErrorInstructions": "Budete muset restartovat instalaci. Zkontrolujte soubor autoinstall, vyberte jiný typ instalace nebo kontaktujte IT podporu.",
+    "restartInstaller": "Restartovat instalační program"
 }

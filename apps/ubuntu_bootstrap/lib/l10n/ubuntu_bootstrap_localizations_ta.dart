@@ -118,6 +118,18 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'A command in the autoinstall file failed to run during installation.';
 
   @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
   String get autoinstallErrorInstructions =>
       'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
 
@@ -406,6 +418,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   @override
   String get passphraseTypePageBody =>
       'இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (TPM) துவக்கத்தின் போது வட்டைத் திறக்கும். உங்கள் தரவை மேலும் பாதுகாப்பதற்கான விருப்பங்களும் உள்ளன.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1533,6 +1549,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   String get tpmActionErrorKindAddonDriversPresent => 'சொருகு இயக்கிகள் உள்ளன';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
       'இந்தக் கணினியின் TPM இல் சிக்கல் உள்ளது.';
 
@@ -1691,4 +1711,9 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
   @override
   String get manualPartitioningWarningBody =>
       'வேறு ஏதாவது முயற்சிக்கவும். நீங்கள் <a href=\"\">ஒரு பிழை அறிக்கையையும் அனுப்பலாம்</a>.';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+  }
 }

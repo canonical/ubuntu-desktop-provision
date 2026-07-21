@@ -423,6 +423,24 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'A command in the autoinstall file failed to run during installation.'**
   String get autoinstallErrorMessage;
 
+  /// No description provided for @autoinstallGenericErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Installation cannot continue with the provided autoinstall file.'**
+  String get autoinstallGenericErrorMessage;
+
+  /// No description provided for @autoinstallValidationErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with the provided autoinstall file.'**
+  String get autoinstallValidationErrorMessage;
+
+  /// No description provided for @autoinstallCloudInitSchemaValidationErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with the cloud-init user data provided in the autoinstall file.'**
+  String get autoinstallCloudInitSchemaValidationErrorMessage;
+
   /// No description provided for @autoinstallErrorInstructions.
   ///
   /// In en, this message translates to:
@@ -852,7 +870,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePassphraseTileTitle.
   ///
   /// In en, this message translates to:
-  /// **'Require a passphrase'**
+  /// **'Require a passphrase on startup'**
   String get passphraseTypePassphraseTileTitle;
 
   /// No description provided for @passphraseTypePassphraseTileSubTitle.
@@ -864,7 +882,7 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePinTileTitle.
   ///
   /// In en, this message translates to:
-  /// **'Require a PIN'**
+  /// **'Require a PIN on startup'**
   String get passphraseTypePinTileTitle;
 
   /// No description provided for @passphraseTypePinTileSubTitle.
@@ -888,8 +906,14 @@ abstract class UbuntuBootstrapLocalizations {
   /// No description provided for @passphraseTypePageBody.
   ///
   /// In en, this message translates to:
-  /// **'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.'**
+  /// **'By default, the disk will unlock automatically on startup. You also have options to further protect your data.'**
   String get passphraseTypePageBody;
+
+  /// No description provided for @passphraseTypePageBodyAuthRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Hardware-backed encryption requires additional security in this computer.'**
+  String get passphraseTypePageBodyAuthRequired;
 
   /// No description provided for @passphrasePagePassphraseEntropyBelowMin.
   ///
@@ -2674,6 +2698,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Add-on drivers are present.'**
   String get tpmActionErrorKindAddonDriversPresent;
 
+  /// No description provided for @tpmActionErrorKindNoHardwareRootOfTrust.
+  ///
+  /// In en, this message translates to:
+  /// **'This computer is missing a required security feature (hardware root of trust).'**
+  String get tpmActionErrorKindNoHardwareRootOfTrust;
+
   /// No description provided for @tpmActionErrorKindGenericTpm.
   ///
   /// In en, this message translates to:
@@ -2925,6 +2955,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Try something else. You may also <a href=\"\">send an error report</a>.'**
   String get manualPartitioningWarningBody;
+
+  /// No description provided for @stepIndicatorLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Step {CURRENT_STEP} of {TOTAL_STEPS}'**
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS);
 }
 
 class _UbuntuBootstrapLocalizationsDelegate
