@@ -69,6 +69,13 @@ class TpmActionModel extends SafeChangeNotifier {
           (t) =>
               t.hasDisallowedTpmCapability && t.diskId == selectedTarget.diskId,
         );
+    final newTarget = response.targets
+        .whereType<GuidedStorageTargetReformat>()
+        .firstWhereOrNull((t) => t.diskId == selectedTarget.diskId);
+    if (selectedTarget != newTarget) {
+      _log.info('updating guided target');
+      _storage.guidedTarget = newTarget;
+    }
   }
 
   Future<SubiquityException?> performAction(
