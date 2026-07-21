@@ -29,7 +29,7 @@
     "identityInvalidHostname": "שם המחשב אינו תקני",
     "identityUsernameLabel": "שם המשתמש שלך (באותיות לטיניות)",
     "identityUsernameRequired": "דרוש שם משתמש",
-    "identityInvalidUsername": "שם המשתמש אינו תקני",
+    "identityInvalidUsername": "שם המשתמש שגוי: הוא חייב להתחיל באות לטינית קטנה ויכול להיות מורכב רק מאותיות לטיניות קטנות, ספרות, מינוסים וקווים תחתיים.",
     "identityUsernameInUse": "שם משתמש זה כבר קיים.",
     "identityUsernameSystemReserved": "שם זה שמור לטובת המערכת.",
     "identityUsernameTooLong": "השם הזה ארוך מדי.",
@@ -114,5 +114,15 @@
     "minimizeIconSemanticLabel": "מזעור",
     "expandIconSemanticLabel": "הרחבה",
     "collapseIconSemanticLabel": "צמצום",
-    "errorPageTechnicalDetails": "פרטים טכניים"
+    "errorPageTechnicalDetails": "פרטים טכניים",
+    "identityInvalidRealName": "השם שגוי",
+    "networkWifiSignalNone": "אין אות",
+    "networkWifiSignalWeak": "אות חלש",
+    "networkWifiSignalOk": "אות סביר",
+    "networkWifiSignalGood": "אות טוב",
+    "networkWifiSignalExcellent": "אות מעולה",
+    "networkWifiOpenNetwork": "רשת פתוחה",
+    "networkWifiSecureNetwork": "רשת מאובטחת",
+    "networkWifiConnecting": "התחברות…",
+    "networkWifiConnected": "מחובר"
 }
