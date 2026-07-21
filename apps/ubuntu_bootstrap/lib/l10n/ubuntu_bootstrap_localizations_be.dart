@@ -358,11 +358,11 @@ class UbuntuBootstrapLocalizationsBe extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'You will need to enter the passphrase every time you start your computer. This passphrase is different from your user password. You can change it later in the Security Center.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'You will need to enter the PIN every time you start your computer. This PIN is different from your user password. You can change it later in the Security Center.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
