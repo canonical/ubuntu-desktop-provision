@@ -364,8 +364,8 @@
     "recoveryKeyFilePickerFilter": "קובצי טקסט",
     "passphraseTypePassphraseTileSubTitle": "הכי מאובטח. יש למלא מילת צופן ארוכה עם כל הדלקה של המחשב שלך.",
     "passphrasePageConfirmPinHint": "אישור קוד אישי",
-    "passphraseTypePageBody": "כברירת מחדל, מודול הפלטפורמה המאובטחת (TPM) ישחרר את נעילת הכונן בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.",
-    "passphrasePageBodyPin": "יש להקליד קוד אישי עם כל הדלקה של המחשב. הקוד האישי הזה שונה מסיסמת המשתמש שלך. אפשר לשנות אותו בהמשך אך לא להשבית אותו. אם שכחת את הקוד האישי שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.",
+    "passphraseTypePageBody": "כברירת מחדל, נעילת הכונן תשוחרר אוטומטית בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.",
+    "passphrasePageBodyPin": "יש להקליד קוד אישי עם כל הדלקה של המחשב. הקוד האישי הזה שונה מסיסמת המשתמש שלך. אפשר לשנות אותו בהמשך דרך מרכז האבטחה.",
     "passphrasePageHeaderPassphrase": "הגדרת מילת צופן להצפנה",
     "passphrasePageHeaderPin": "הגדרת קוד הצפנה אישי",
     "passphrasePageChoosePassphraseHint": "מילת צופן",
@@ -373,18 +373,18 @@
     "passphrasePageMismatchPassphrase": "מילות הצופן לא תואמות",
     "passphrasePageRequiredPassphrase": "דרושה מילת צופן",
     "passphrasePageConfirmPassphraseHint": "אישור מילת צופן",
-    "passphraseTypePassphraseTileTitle": "לדרוש מילת צופן",
+    "passphraseTypePassphraseTileTitle": "לדרוש מילת צופן עם העלייה",
     "passphrasePageMismatchPin": "הקודים האישיים לא תואמים",
     "passphraseTypePageHeader": "אבטחה נוספת",
     "passphraseTypeNoneTileTitle": "לשחרר את נעילת הכונן אוטומטית",
-    "passphraseTypePinTileTitle": "לדרוש קוד אישי",
+    "passphraseTypePinTileTitle": "לדרוש קוד אישי עם העלייה",
     "recoveryKeyExceptionDisallowedPathBody": "נא לנסות מקום אחר כגון כונן נתיק או להשתמש בשיטה אחרת.",
     "recoveryKeyFilePickerTitle": "שמירת קובץ מפתח שחזור",
     "recoveryKeyExceptionFileSystemTitle": "קובץ מפתח השחזור לא נשמר",
     "recoveryKeyExceptionDisallowedPathTitle": "לא ניתן לשמור את קובץ מפתח השחזור במקום זמני",
     "passphraseTypePinTileSubTitle": "מאובטח יותר. יש להקליד קוד אישי מספרי עם כל הדלקה של המחשב שלך.",
     "recoveryKeyExceptionFileSystemBody": "אין לך הרשאה לכתוב לתיקייה הזאת. נא לנסות מקום אחר או להשתמש בשיטה אחרת.",
-    "passphrasePageBodyPassphrase": "יש למלא את מילת הצופן שלך עם כל הדלקה של המחשב. מילת הצופן הזאת שונה מסיסמת המשתמש שלך. אפשר לשנות אותה אחר כך אבל לא להשבית אותה. אם שכחת את מילת הצופן שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.",
+    "passphrasePageBodyPassphrase": "יש למלא את מילת הצופן עם כל הדלקה של המחשב. מילת הצופן הזאת שונה מסיסמת המשתמש שלך. אפשר לשנות אותה בהמשך דרך מרכז האבטחה.",
     "passphrasePagePassphraseEntropyBelowMin": "מילת צופן חלשה, נא להאריך או לסבך אותה",
     "passphrasePagePassphraseEntropyBelowOptimal": "מילת צופן סבירה, נא להאריך או לסבך אותה לשיפור האבטחה",
     "passphrasePagePassphraseEntropyOptimal": "מילת צופן חזקה",
@@ -515,5 +515,21 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "היכולת הזאת מוכרת בשמות „טכנולוגיית וירטואליזציה”, „VT-d” או „AMD-Vi”.",
     "autoinstallErrorMessage": "הרצת פקודה בקובץ התקנה אוטומטית נכשלה במהלך ההתקנה.",
     "autoinstallErrorInstructions": "צריך להפעיל את ההתקנה מחדש. יש לבדוק את קובץ ההתקנה האוטומטית, לבחור בסוג התקנה אחר או ליצור קשר עם תמיכת המחשוב שלך (IT).",
-    "restartInstaller": "הפעלת תוכנית ההתקנה מחדש"
+    "restartInstaller": "הפעלת תוכנית ההתקנה מחדש",
+    "autoinstallGenericErrorMessage": "ההתקנה לא יכולה להמשיך עם קובץ ההתקנה האוטומטית (autoinstall) שסופק.",
+    "autoinstallValidationErrorMessage": "יש איזו בעיה עם קובץ ההתקנה האוטומטית (autoinstall) שסופק.",
+    "passphraseTypePageBodyAuthRequired": "הצפנה בגיבוי חומרה דורשת אבטחה נוספת במחשב הזה.",
+    "tpmActionErrorKindAddonDriversPresent": "מנהלי התקני תוספים קיימים.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "למחשב הזה חסרה יכולת אבטחה נחוצה (שורש אמון חומרה).",
+    "stepIndicatorLabel": "שלב {CURRENT_STEP} מתוך {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
