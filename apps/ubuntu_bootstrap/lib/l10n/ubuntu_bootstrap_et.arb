@@ -346,13 +346,13 @@
     "recoveryKeyFilePickerTitle": "Salvesta taastevõti failina",
     "recoveryKeyFilePickerFilter": "Tekstifailid",
     "recoveryKeyExceptionUnknownTitle": "Tundmatu viga",
-    "passphrasePageBodyPin": "Pead selle PIN-koodi sisestama igal arvuti käivituskorral. See PIN-kood ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta, kuid mitte välja lülitada. Kui peaksid PIN-koodi unustama, siis saad ligipääsu andmekandjale taastada taastevõtmega.",
+    "passphrasePageBodyPin": "Pead selle PIN-koodi sisestama igal arvuti käivituskorral. See PIN-kood ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta Turvakeskusest.",
     "passphrasePageMismatchPin": "PIN-koodid ei klapi omavahel",
     "passphraseTypePageHeader": "Täiendav turvalisus",
     "passphrasePageConfirmPinHint": "Korda PIN-koodi",
     "passphraseTypePinTileTitle": "Eelda PIN-koodi kasutamist käivitamisel",
     "passphraseTypeNoneTileTitle": "Eemalda andmekandja lukustus automaatselt",
-    "passphrasePageBodyPassphrase": "Pead selle salafraasi sisestama igal arvuti käivituskorral. See salafraas ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta, kuid mitte välja lülitada. Kui peaksid salafraasi unustama, siis saad ligipääsu andmekandjale taastada taastevõtmega.",
+    "passphrasePageBodyPassphrase": "Pead selle salafraasi sisestama igal arvuti käivituskorral. See salafraas ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta Turvakeskusest.",
     "passphrasePageHeaderPin": "Seadista krüptimise PIN-kood",
     "passphraseTypePassphraseTileSubTitle": "Kõige turvalisem. Igal arvuti sisselülitamisel pead sisestama salafraasi.",
     "passphraseTypePageBody": "Vaikimisi avaneb ketta lukustus automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.",
@@ -518,5 +518,6 @@
     "autoinstallValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem, mis on seotud cloud-init'i kasutajaandmetega.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Sellest arvutist on puudu turvalisusega seotud funktsionaalsus (raudvarapõhise usaldusahela lähtelahendus).",
-    "passphraseTypePageBodyAuthRequired": "Raudvarapõhine krüptimine eeldab täiendava turvafunktsionaalsuse olemasolu arvutis."
+    "passphraseTypePageBodyAuthRequired": "Raudvarapõhine krüptimine eeldab täiendava turvafunktsionaalsuse olemasolu arvutis.",
+    "tpmActionPageTitleActionable": "Raudvarapõhise krüptimisega seoses tekkis üks probleem"
 }
