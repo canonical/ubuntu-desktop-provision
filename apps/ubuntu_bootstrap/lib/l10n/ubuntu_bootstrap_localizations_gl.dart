@@ -1419,6 +1419,10 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Non se puido activar o cifrado con respaldo de hardware';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Acción requirida';
 
   @override

@@ -1425,6 +1425,10 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'Δεν ήταν δυνατή η ενεργοποίηση της κρυπτογράφησης με υποστήριξη υλικού (hardware-backed encryption)';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Απαιτείται ενέργεια';
 
   @override

@@ -1415,6 +1415,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Níorbh fhéidir criptiú crua-earraí-tacaithe a chumasú';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Gníomh riachtanach';
 
   @override

@@ -1334,6 +1334,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => '硬件加密';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => '需要操作';
 
   @override

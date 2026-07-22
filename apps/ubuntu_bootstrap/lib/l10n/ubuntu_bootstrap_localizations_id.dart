@@ -1407,6 +1407,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Enkripsi yang didukung perangkat keras tidak dapat diaktifkan';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Tindakan diperlukan';
 
   @override

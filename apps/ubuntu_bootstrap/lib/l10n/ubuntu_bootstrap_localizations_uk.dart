@@ -1410,6 +1410,10 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
       'Апаратне шифрування не може бути увімекнено';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Потрібна дія';
 
   @override

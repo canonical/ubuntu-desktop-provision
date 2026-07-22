@@ -1419,6 +1419,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'வன்பொருள் உதவி குறியாக்கத்தை இயக்க முடியவில்லை';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'நடவடிக்கை தேவை';
 
   @override

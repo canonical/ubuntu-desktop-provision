@@ -1408,6 +1408,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Nie można włączyć szyfrowania sprzętowego';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Wymagana czynność';
 
   @override

@@ -1405,6 +1405,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
       'Hardvérom podporované šifrovanie sa nepodarilo zapnúť';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Vyžaduje sa akcia';
 
   @override

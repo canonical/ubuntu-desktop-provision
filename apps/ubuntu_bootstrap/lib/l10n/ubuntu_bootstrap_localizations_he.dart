@@ -1384,6 +1384,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'לא ניתן להפעיל הצפנה בגיבוי חומרה';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'נדרשת התערבות';
 
   @override

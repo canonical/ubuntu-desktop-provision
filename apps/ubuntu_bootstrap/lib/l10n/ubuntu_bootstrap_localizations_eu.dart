@@ -1409,6 +1409,10 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Ezin izan da hardware bidezko zifratzea gaitu';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Ekintza beharrezkoa da';
 
   @override

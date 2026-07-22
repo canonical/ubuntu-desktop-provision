@@ -1412,6 +1412,10 @@ class UbuntuBootstrapLocalizationsPt extends UbuntuBootstrapLocalizations {
       'Hardware-backed encryption could not be enabled';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Action required';
 
   @override
