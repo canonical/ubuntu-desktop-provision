@@ -1411,6 +1411,10 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'აპარატურით მხარდაჭერილი დაშიფვრის ჩართვა შეუძლებელია';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'საჭიროა ქმედება';
 
   @override

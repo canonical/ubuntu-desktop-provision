@@ -1412,6 +1412,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Raudvarapõhist krüptimist ei saanud sisse lülitada';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Vajalik on kasutaja sekkumine';
 
   @override

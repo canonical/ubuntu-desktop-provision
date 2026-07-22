@@ -112,7 +112,9 @@ class TpmActionPage extends ConsumerWidget with ProvisioningPage {
 
     return HorizontalPage(
       windowTitle: lang.installationTypeAdvancedTitle,
-      title: lang.tpmActionPageTitle,
+      title: (model.tpmError?.actions.isEmpty ?? true)
+          ? lang.tpmActionPageTitle
+          : lang.tpmActionPageTitleActionable,
       bottomBar: WizardBar(
         leading: const BackWizardButton(),
         trailing: [if (model.isFixed) NextWizardButton()],

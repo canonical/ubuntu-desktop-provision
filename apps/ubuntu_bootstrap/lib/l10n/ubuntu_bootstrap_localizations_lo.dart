@@ -1400,6 +1400,10 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ບໍ່ສາມາດເປີດໃຊ້ງານການເຂົ້າລະຫັດທີ່ຮອງຮັບໂດຍຮາດແວໄດ້';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'ຈຳເປັນຕ້ອງມີການດຳເນີນການ';
 
   @override

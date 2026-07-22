@@ -1402,6 +1402,10 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Laitevarmennettua salausta ei voi ottaa käyttöön';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Toimia vaaditaan';
 
   @override

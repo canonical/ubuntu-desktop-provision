@@ -1405,6 +1405,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Hårdvarubaserad kryptering kunde inte aktiveras';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Åtgärd krävs';
 
   @override

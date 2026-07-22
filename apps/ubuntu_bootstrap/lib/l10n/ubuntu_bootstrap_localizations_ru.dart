@@ -1410,6 +1410,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Не удалось включить аппаратное шифрование';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Требуется действие';
 
   @override

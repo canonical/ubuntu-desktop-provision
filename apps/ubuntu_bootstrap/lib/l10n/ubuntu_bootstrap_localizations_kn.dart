@@ -1419,6 +1419,10 @@ class UbuntuBootstrapLocalizationsKn extends UbuntuBootstrapLocalizations {
       'ಹಾರ್ಡ್‌ವೇರ್-ಬೆಂಬಲಿತ ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಲಿಲ್ಲ';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'ಕ್ರಮ ಅಗತ್ಯವಿದೆ';
 
   @override

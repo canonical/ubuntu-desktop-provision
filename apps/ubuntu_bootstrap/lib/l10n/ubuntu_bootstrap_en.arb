@@ -1025,6 +1025,7 @@
   "maximizeIconSemanticLabel": "Maximize",
   "minimizeIconSemanticLabel": "Minimize",
   "tpmActionPageTitle": "Hardware-backed encryption could not be enabled",
+  "tpmActionPageTitleActionable": "There is an issue with hardware-backed encryption",
   "tpmActionBadgeLabel": "Action required",
   "tpmActionDetailsLabel": "Technical details",
   "tpmActionConfirmLabel": "Confirm",
