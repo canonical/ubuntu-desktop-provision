@@ -1417,6 +1417,10 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'A hardveresen támogatott titkosítást nem sikerült engedélyezni';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Művelet szükséges';
 
   @override

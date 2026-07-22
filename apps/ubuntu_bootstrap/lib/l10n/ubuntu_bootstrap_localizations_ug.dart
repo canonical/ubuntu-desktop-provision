@@ -1407,6 +1407,10 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'قاتتىق دېتال قوللايدىغان شىفىرلاشنى قوزغاتقىلى بولمايدۇ';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'زۆرۈر مەشغۇلات';
 
   @override

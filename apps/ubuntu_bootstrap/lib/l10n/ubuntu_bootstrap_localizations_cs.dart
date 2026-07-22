@@ -1410,6 +1410,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Šifrování jištěné hardwarem nebylo možné zapnout';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Vyžadována akce';
 
   @override

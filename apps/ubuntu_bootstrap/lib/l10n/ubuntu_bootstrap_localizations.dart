@@ -2488,6 +2488,12 @@ abstract class UbuntuBootstrapLocalizations {
   /// **'Hardware-backed encryption could not be enabled'**
   String get tpmActionPageTitle;
 
+  /// No description provided for @tpmActionPageTitleActionable.
+  ///
+  /// In en, this message translates to:
+  /// **'There is an issue with hardware-backed encryption'**
+  String get tpmActionPageTitleActionable;
+
   /// No description provided for @tpmActionBadgeLabel.
   ///
   /// In en, this message translates to:

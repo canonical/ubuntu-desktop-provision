@@ -1416,6 +1416,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'El cifrado con hardware en segundo plano no pudo ser habilitado';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Acción requerida';
 
   @override

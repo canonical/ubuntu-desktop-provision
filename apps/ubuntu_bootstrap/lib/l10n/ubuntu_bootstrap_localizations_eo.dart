@@ -1407,6 +1407,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Ne povas ŝalti aparato-bazan ĉifradon';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Ago necesas';
 
   @override
