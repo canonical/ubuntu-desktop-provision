@@ -528,6 +528,44 @@ void main() {
     },
   );
 
+  testWidgets(
+    'tpm action api no hwrot',
+    (tester) async {
+      await tester.runApp(
+        () => app.main([
+          '--source-catalog=examples/sources/tpm.yaml',
+          '--dry-run-config=examples/dry-run-configs/tpm.yaml',
+          '--',
+          '--bootloader=uefi',
+        ]),
+      );
+
+      await tester.pumpAndSettle();
+      await tester.testLocalePage();
+      await tester.testAccessibilityPage();
+      await tester.testKeyboardPage();
+      await tester.testNetworkPage(mode: ConnectMode.none);
+      await tester.testRefreshPage();
+      await tester.testAutoinstallPage();
+      await tester.testSourceSelectionPage(
+        sourceId: 'src-no-hwrot',
+      );
+      await tester.testCodecsAndDriversPage();
+
+      await tester.testStoragePage(
+        type: StorageType.erase,
+      );
+      await tester.testGuidedCapabilityPage(
+        guidedCapability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+      );
+      await tester.testTpmActionPage(action: CoreBootFixAction.PROCEED);
+      await tester.testPassphraseTypePage(
+        passphraseType: PassphraseType.pin,
+        disallowedPassphraseTypes: [PassphraseType.none],
+      );
+    },
+  );
+
   testWidgets('manual partitioning', (tester) async {
     final storage = [
       fakeDisk(
