@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Som standard låser datorns Trusted Platform Module (TPM) upp disken under uppstart. Du har också alternativ för att ytterligare skydda din data.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Svag lösenfras, gör den längre eller mer komplex';
 
@@ -1401,6 +1405,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Hårdvarubaserad kryptering kunde inte aktiveras';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Åtgärd krävs';
 
   @override
@@ -1531,6 +1539,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Tilläggsdrivrutiner finns.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

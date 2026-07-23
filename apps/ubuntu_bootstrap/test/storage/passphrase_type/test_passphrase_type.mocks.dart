@@ -3,10 +3,11 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i4;
-import 'dart:ui' as _i5;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i6;
 
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:subiquity_client/subiquity_client.dart' as _i4;
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart'
     as _i2;
 import 'package:ubuntu_bootstrap/services.dart' as _i3;
@@ -41,6 +42,13 @@ class MockPassphraseTypeModel extends _i1.Mock
       ) as Set<_i3.PassphraseType>);
 
   @override
+  List<_i4.CoreBootEncryptionRequirement> get encryptionRequirements =>
+      (super.noSuchMethod(
+        Invocation.getter(#encryptionRequirements),
+        returnValue: <_i4.CoreBootEncryptionRequirement>[],
+      ) as List<_i4.CoreBootEncryptionRequirement>);
+
+  @override
   _i3.PassphraseType get passphraseType => (super.noSuchMethod(
         Invocation.getter(#passphraseType),
         returnValue: _i3.PassphraseType.passphrase,
@@ -68,16 +76,16 @@ class MockPassphraseTypeModel extends _i1.Mock
       ) as bool);
 
   @override
-  _i4.Future<bool> init() => (super.noSuchMethod(
+  _i5.Future<bool> init() => (super.noSuchMethod(
         Invocation.method(
           #init,
           [],
         ),
-        returnValue: _i4.Future<bool>.value(false),
-      ) as _i4.Future<bool>);
+        returnValue: _i5.Future<bool>.value(false),
+      ) as _i5.Future<bool>);
 
   @override
-  void addListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -86,7 +94,7 @@ class MockPassphraseTypeModel extends _i1.Mock
       );
 
   @override
-  void removeListener(_i5.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

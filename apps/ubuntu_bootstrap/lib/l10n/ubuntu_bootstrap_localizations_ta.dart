@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'இயல்பாக, கணினியின் நம்பகமான இயங்குதள தொகுதி (TPM) துவக்கத்தின் போது வட்டைத் திறக்கும். உங்கள் தரவை மேலும் பாதுகாப்பதற்கான விருப்பங்களும் உள்ளன.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'பலவீனமான கடவுச்சொல், அதை நீண்டதாகவோ அல்லது சிக்கலானதாகவோ செய்யுங்கள்';
 
@@ -1415,6 +1419,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
       'வன்பொருள் உதவி குறியாக்கத்தை இயக்க முடியவில்லை';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'நடவடிக்கை தேவை';
 
   @override
@@ -1543,6 +1551,10 @@ class UbuntuBootstrapLocalizationsTa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent => 'சொருகு இயக்கிகள் உள்ளன';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

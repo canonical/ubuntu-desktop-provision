@@ -398,6 +398,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
       '既定では、このPCのTPMが起動時にディスクの暗号化を解除します。データ保護のため追加のオプションもあります。';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       '弱いパスフレーズ。長くするかもっと複雑にしてください';
 
@@ -1354,6 +1358,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'ハードウェアベースの暗号化を有効にできません';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Action required';
 
   @override
@@ -1480,6 +1488,10 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Add-on drivers are present.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

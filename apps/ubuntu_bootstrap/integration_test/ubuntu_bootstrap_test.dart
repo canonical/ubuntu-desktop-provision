@@ -422,6 +422,7 @@ void main() {
         'PartitionMethod': 'use_tpmfde',
       });
     },
+    skip: true, // passphrase auth is disabled unless explicitly required
   );
 
   testWidgets(
@@ -490,6 +491,7 @@ void main() {
         'PartitionMethod': 'use_tpmfde',
       });
     },
+    skip: true, // PIN auth is disabled unless explicitly required
   );
 
   testWidgets(

@@ -415,6 +415,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
       'Predvolene disk odomkne modul Trusted Platform Module (TPM) počas spustenia systému. Môžete si však zvoliť aj ďalšie možnosti na lepšiu ochranu údajov.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Slabá prístupová fráza, vytvorte dlhšiu alebo zložitejšiu';
 
@@ -1401,6 +1405,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
       'Hardvérom podporované šifrovanie sa nepodarilo zapnúť';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Vyžaduje sa akcia';
 
   @override
@@ -1531,6 +1539,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Prítomné doplnkové ovládače.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
