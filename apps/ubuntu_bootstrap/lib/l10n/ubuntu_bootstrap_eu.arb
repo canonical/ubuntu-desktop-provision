@@ -130,8 +130,8 @@
     "passphrasePageTitle": "Zifratzea",
     "passphrasePageHeaderPassphrase": "Ezarri zifratzeko pasaesaldia",
     "passphrasePageHeaderPin": "Ezarri zifratzeko PINa",
-    "passphrasePageBodyPassphrase": "Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. Pasaesaldia ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.",
-    "passphrasePageBodyPin": "PINa sartu beharko duzu ordenagailua pizten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. PINa ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.",
+    "passphrasePageBodyPassphrase": "Pasaesaldia sartu beharko duzu ordenagailua abiarazten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago alda dezakezu Segurtasun Zentrotik.",
+    "passphrasePageBodyPin": "PINa sartu beharko duzu ordenagailua abiarazten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago alda dezakezu Segurtasun Zentrotik.",
     "passphrasePageChoosePassphraseHint": "Pasaesaldia",
     "passphrasePageConfirmPassphraseHint": "Berretsi pasaesaldia",
     "passphrasePageRequiredPassphrase": "Pasaesaldia beharrezkoa da",
@@ -1072,5 +1072,6 @@
     "autoinstallValidationErrorMessage": "Arazoren bat dago hautatutako autoinstall fitxategiarekin.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du.",
-    "passphraseTypePageBodyAuthRequired": "Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan."
+    "passphraseTypePageBodyAuthRequired": "Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan.",
+    "tpmActionPageTitleActionable": "Arazo bat dago hardware bidezko zifratzearekin"
 }
