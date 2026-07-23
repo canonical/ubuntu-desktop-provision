@@ -96,7 +96,7 @@
     "identityInvalidHostname": "Ordenagailuaren izena baliogabea da",
     "identityUsernameLabel": "Erabiltzaile-izena",
     "identityUsernameRequired": "Erabiltzaile-izena beharrezkoa da",
-    "identityInvalidUsername": "Erabiltzaile-izena baliogabea da",
+    "identityInvalidUsername": "Erabiltzaile-izena baliogabea da: minuskulaz hasi behar da, eta hizki xeheak, digituak, marratxoak eta azpimarrak soilik eduki ditzake.",
     "identityUsernameInUse": "Dagoeneko existitzen da erabiltzaile-izen hori.",
     "identityUsernameSystemReserved": "Izen hori sistemak erabiltzeko erreserbatuta dago.",
     "identityUsernameTooLong": "Izen hori luzeegia da.",
@@ -149,5 +149,15 @@
     "minimizeIconSemanticLabel": "Txikitu",
     "expandIconSemanticLabel": "Zabaldu",
     "collapseIconSemanticLabel": "Tolestu",
-    "errorPageTechnicalDetails": "Xehetasun teknikoak"
+    "errorPageTechnicalDetails": "Xehetasun teknikoak",
+    "identityInvalidRealName": "Izena baliogabea da",
+    "networkWifiSignalNone": "Seinalerik ez",
+    "networkWifiSignalWeak": "Seinale ahula",
+    "networkWifiSignalOk": "Seinale egokia",
+    "networkWifiSignalGood": "Seinale ona",
+    "networkWifiSignalExcellent": "Seinale bikaina",
+    "networkWifiOpenNetwork": "Sare irekia",
+    "networkWifiSecureNetwork": "Sare segurua",
+    "networkWifiConnecting": "Konektatzen…",
+    "networkWifiConnected": "Konektatuta"
 }

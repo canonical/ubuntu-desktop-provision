@@ -280,7 +280,7 @@
     "installationTypeEraseAndInstallInfo": "Alle Dateien und Daten der bestehenden Installation von {os} werden endgültig gelöscht.",
     "autoinstallDirectHeader": "Autoinstall-Datei importieren",
     "autoinstallDirectFileLabel": "Oder wählen Sie eine lokale Datei aus:",
-    "autoinstallDirectFileButtonLabel": "Datei auswählen...",
+    "autoinstallDirectFileButtonLabel": "Datei auswählen ...",
     "chooseOptionalPassphraseBody": "Mit einer Passphrase können Sie Ihre Daten schützen, selbst wenn Ihre Hardware kompromittiert wird. Sie müssen die Passphrase jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Sie können sie später nicht mehr entfernen",
     "landscapeLoginFailedWarning": "Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut",
     "recoveryKeyInfoBody": "Besorgen Sie sich einen Wiederherstellungsschlüssel, sobald Sie sich zum ersten Mal bei {distro} anmelden, und bewahren Sie ihn an einem sicheren Ort auf.",
@@ -365,7 +365,7 @@
     "recoveryKeyFilePickerFilter": "Textdateien",
     "recoveryKeyExceptionDisallowedPathTitle": "Die Wiederherstellungsschlüsseldatei kann nicht an einem temporären Ort gespeichert werden",
     "recoveryKeyExceptionFileSystemTitle": "Wiederherstellungsschlüsseldatei nicht gespeichert",
-    "passphraseTypePageBody": "Standardmäßig entsperrt das Trusted Platform Module (TPM) des Computers die Festplatte während des Startvorgangs. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.",
+    "passphraseTypePageBody": "Standardmäßig wird die Festplatte beim Startvorgang automatisch entsperrt. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.",
     "passphrasePageBodyPassphrase": "Sie müssen Ihre Passphrase jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Diese Passphrase unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später ändern, aber nicht deaktivieren. Wenn Sie Ihre Passphrase vergessen haben, können Sie mit dem Wiederherstellungsschlüssel wieder Zugriff auf die Festplatte erhalten.",
     "passphrasePageRequiredPin": "Eine PIN ist erforderlich",
     "passphrasePageMismatchPassphrase": "Die Passphrasen stimmen nicht überein",
@@ -382,8 +382,8 @@
     "passphrasePageChoosePinHint": "PIN",
     "passphrasePageConfirmPinHint": "PIN bestätigen",
     "passphrasePageMismatchPin": "Die PINs stimmen nicht überein",
-    "passphraseTypePassphraseTileTitle": "Eine Passphrase erforderlich machen",
-    "passphraseTypePinTileTitle": "Eine PIN erforderlich machen",
+    "passphraseTypePassphraseTileTitle": "Beim Start eine Passphrase erforderlich machen",
+    "passphraseTypePinTileTitle": "Beim Start eine PIN erforderlich machen",
     "passphraseTypeNoneTileTitle": "Festplatte automatisch entsperren",
     "passphrasePagePassphraseEntropyBelowMin": "Schwache Passphrase, verlängern Sie sie oder machen Sie sie komplexer",
     "passphrasePagePassphraseEntropyBelowOptimal": "Angemessene Passphrase, machen Sie sie länger oder komplexer, um die Sicherheit zu erhöhen",
@@ -518,5 +518,21 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Diese Funktion kann als „Virtualisierungstechnologie“, „VT-d“ oder „AMD-Vi“ bezeichnet werden.",
     "autoinstallErrorMessage": "Ein Befehl in der autoinstall-Datei konnte während der Installation nicht ausgeführt werden.",
     "autoinstallErrorInstructions": "Sie müssen die Installation neu starten. Überprüfen Sie die autoinstall-Datei, wählen Sie eine andere Installationsart oder wenden Sie sich an Ihren IT-Support.",
-    "restartInstaller": "Installationsprogramm neu starten"
+    "restartInstaller": "Installationsprogramm neu starten",
+    "stepIndicatorLabel": "Schritt {CURRENT_STEP} von {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Die Installation kann mit der bereitgestellten autoinstall-Datei nicht fortgesetzt werden.",
+    "autoinstallValidationErrorMessage": "Es gibt ein Problem mit der bereitgestellten autoinstall-Datei.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Auf diesem Computer fehlt eine erforderliche Sicherheitsfunktion (Hardware-Vertrauensanker).",
+    "passphraseTypePageBodyAuthRequired": "Für die hardwaregestützte Verschlüsselung sind zusätzliche Sicherheitsmaßnahmen auf diesem Computer erforderlich."
 }

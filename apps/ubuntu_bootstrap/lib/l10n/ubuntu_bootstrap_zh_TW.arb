@@ -520,5 +520,20 @@
     "tpmActionFixActionProceedDescription": "若忽略此問題，可能會導致安裝安全性降低。",
     "tpmActionFixActionCaveatConfirm": "重新啟動時，系統可能會要求您確認此操作。",
     "tpmActionFixActionCaveatRetry": "那麼您就需要重新開始安裝。",
-    "manualPartitioningWarningBody": "請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。"
+    "manualPartitioningWarningBody": "請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。",
+    "autoinstallGenericErrorMessage": "無法繼續使用提供的自動安裝檔進行安裝。",
+    "autoinstallValidationErrorMessage": "提供的自動安裝檔出現問題。",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "自動安裝檔中提供的 cloud-init 使用者資料存在問題。",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "這台電腦缺少一項必要的安全功能（硬體信任根）。",
+    "stepIndicatorLabel": "步驟 {CURRENT_STEP} / {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }

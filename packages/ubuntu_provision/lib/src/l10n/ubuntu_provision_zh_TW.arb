@@ -16,7 +16,7 @@
     "identityHostnameRequired": "電腦名稱為必填欄位",
     "identityHostnameTooLong": "該電腦名稱太長。",
     "identityInvalidHostname": "該電腦名稱無效",
-    "identityInvalidUsername": "該使用者名稱無效",
+    "identityInvalidUsername": "使用者名稱無效：必須以小寫字母開頭，且僅能包含小寫字母、數字、連字號和底線。",
     "identityUsernameSystemReserved": "該使用者名稱已為系統使用而保留。",
     "identityUsernameTooLong": "該使用者名稱太長。",
     "identityUsernameInvalidChars": "該使用者名稱包含無效字元。",
@@ -114,5 +114,15 @@
     "minimizeIconSemanticLabel": "最小化",
     "expandIconSemanticLabel": "展開",
     "collapseIconSemanticLabel": "收合",
-    "errorPageTechnicalDetails": "技術細節"
+    "errorPageTechnicalDetails": "技術細節",
+    "identityInvalidRealName": "名稱無效",
+    "networkWifiSignalNone": "無訊號",
+    "networkWifiSignalWeak": "微弱訊號",
+    "networkWifiSignalOk": "訊號正常",
+    "networkWifiSignalGood": "訊號良好",
+    "networkWifiSignalExcellent": "訊號極佳",
+    "networkWifiOpenNetwork": "開放式網路",
+    "networkWifiSecureNetwork": "安全網路",
+    "networkWifiConnecting": "連線中…",
+    "networkWifiConnected": "已連線"
 }

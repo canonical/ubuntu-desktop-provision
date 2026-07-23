@@ -140,13 +140,13 @@
     "passphrasePageConfirmPinHint": "Berretsi PINa",
     "passphrasePageRequiredPin": "PINa beharrezkoa da",
     "passphrasePageMismatchPin": "PINak ez datoz bat",
-    "passphraseTypePassphraseTileTitle": "Eskatu pasaesaldia",
+    "passphraseTypePassphraseTileTitle": "Eskatu pasaesaldia abioan",
     "passphraseTypePassphraseTileSubTitle": "Seguruena. Pasaesaldi luzeago bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
-    "passphraseTypePinTileTitle": "Eskatu PINa",
+    "passphraseTypePinTileTitle": "Eskatu PINa abioan",
     "passphraseTypePinTileSubTitle": "Seguruagoa. Zenbakizko PIN bat sartu beharko duzu ordenagailua pizten duzun aldiro.",
     "passphraseTypeNoneTileTitle": "Desblokeatu diskoa automatikoki",
     "passphraseTypePageHeader": "Segurtasun gehigarria",
-    "passphraseTypePageBody": "Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.",
+    "passphraseTypePageBody": "Defektuz, diskoa automatikoki desblokeatuko da abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.",
     "passphrasePagePassphraseEntropyBelowMin": "Pasaesaldi ahula, egizu luzeagoa edo konplexuagoa",
     "passphrasePagePassphraseEntropyBelowOptimal": "Baleko pasaesaldia, egizu luzeagoa edo konplexuagoa segurtasuna areagotzeko",
     "passphrasePagePassphraseEntropyOptimal": "Pasaesaldi sendoa",
@@ -1056,5 +1056,21 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Eginbide hau \"Birtualizatze teknologia (Virtualization Technology)\", \"VT-d\" edo \"AMD-Vi\" gisa aipatua ager daiteke.",
     "autoinstallErrorMessage": "Autoinstall fitxategiko komando batek huts egin du instalatu bitartean.",
     "autoinstallErrorInstructions": "Instalazioa berrabiarazi beharko duzu. Egiaztatu autoinstall fitxategia ondo dagoela, aukeratu beste instalazio mota bat, edo jarri zure IT laguntza zerbitzuarekin harremanetan.",
-    "restartInstaller": "Berrabiarazi instalazioa"
+    "restartInstaller": "Berrabiarazi instalazioa",
+    "stepIndicatorLabel": "{CURRENT_STEP} / {TOTAL_STEPS} urratsa",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Instalazioak ezin du aurrera egin hautatutako autoinstall fitxategiarekin.",
+    "autoinstallValidationErrorMessage": "Arazoren bat dago hautatutako autoinstall fitxategiarekin.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du.",
+    "passphraseTypePageBodyAuthRequired": "Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan."
 }

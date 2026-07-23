@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Ce nom d’ordinateur est invalide",
     "identityUsernameLabel": "Votre nom d’utilisateur",
     "identityUsernameRequired": "Un nom d’utilisateur est requis",
-    "identityInvalidUsername": "Ce nom d’utilisateur est invalide",
+    "identityInvalidUsername": "Le nom d’utilisateur n’est pas valide : il doit commencer par une lettre minuscule et ne peut contenir que des lettres minuscules, des chiffres, des tirets et des traits de soulignement.",
     "identityUsernameInUse": "Ce nom d’utilisateur existe déjà.",
     "identityUsernameSystemReserved": "Ce nom est réservé pour le système.",
     "identityUsernameTooLong": "Ce nom est trop long.",
@@ -114,5 +114,15 @@
     "maximizeIconSemanticLabel": "Maximiser",
     "expandIconSemanticLabel": "Étendre",
     "collapseIconSemanticLabel": "Réduire",
-    "errorPageTechnicalDetails": "Détails techniques"
+    "errorPageTechnicalDetails": "Détails techniques",
+    "identityInvalidRealName": "Le nom est invalide",
+    "networkWifiSignalNone": "Pas de signal",
+    "networkWifiSignalWeak": "Signal faible",
+    "networkWifiSignalOk": "Signal OK",
+    "networkWifiSignalGood": "Signal bon",
+    "networkWifiSignalExcellent": "Signal excellent",
+    "networkWifiOpenNetwork": "Réseau ouvert",
+    "networkWifiSecureNetwork": "Réseau sécurisé",
+    "networkWifiConnecting": "Connexion …",
+    "networkWifiConnected": "Connecté"
 }

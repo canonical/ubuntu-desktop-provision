@@ -367,11 +367,11 @@
     "passphrasePageChoosePinHint": "UAP",
     "passphrasePageRequiredPin": "Tá UAP ag teastáil",
     "passphrasePageMismatchPin": "Ní hionann na UAPanna",
-    "passphraseTypePassphraseTileTitle": "Éiligh frása faire",
-    "passphraseTypePinTileTitle": "Éiligh UAP",
+    "passphraseTypePassphraseTileTitle": "Éiligh frása faire ag am tosaithe",
+    "passphraseTypePinTileTitle": "Éiligh PIN ag am tosaithe",
     "passphraseTypePinTileSubTitle": "Níos sláine. Beidh ort UAP uimhriúil a iontráil gach uair a chasann tú ar do ríomhaire.",
     "passphraseTypePageHeader": "Slándáil bhreise",
-    "passphraseTypePageBody": "De réir réamhshocraithe, díghlasálfaidh Modúl Ardáin Iontaofa (TPM) an ríomhaire an diosca le linn tosaithe. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.",
+    "passphraseTypePageBody": "De réir réamhshocraithe, díghlasálfar an diosca go huathoibríoch ar thosú. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.",
     "passphrasePageConfirmPinHint": "Deimhnigh an UAP",
     "passphrasePageHeaderPassphrase": "Socraigh frása faire criptithe",
     "passphrasePageTitle": "Criptiú",
@@ -518,5 +518,21 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "D’fhéadfaí tagairt don ghné seo mar “Teicneolaíocht Fhíorúlaithe”, “VT-d” nó “AMD-Vi”.",
     "autoinstallErrorMessage": "Theip ar ordú sa chomhad uath-suiteála a rith le linn na suiteála.",
     "autoinstallErrorInstructions": "Beidh ort an suiteáil a atosú. Seiceáil an comhad uath-shuiteála, roghnaigh cineál suiteála difriúil, nó déan teagmháil le do thacaíocht TF.",
-    "restartInstaller": "Atosaigh an suiteálaí"
+    "restartInstaller": "Atosaigh an suiteálaí",
+    "stepIndicatorLabel": "Céim {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Ní féidir leanúint leis an suiteáil leis an gcomhad uath-suiteála a cuireadh ar fáil.",
+    "autoinstallValidationErrorMessage": "Tá fadhb leis an gcomhad uath-suiteála a cuireadh ar fáil.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Tá fadhb ann leis na sonraí úsáideora cloud-init a chuirtear ar fáil sa chomhad uathsuiteála.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Tá gné slándála riachtanach (fréamh iontaoibhe crua-earraí) in easnamh ar an ríomhaire seo.",
+    "passphraseTypePageBodyAuthRequired": "Éilíonn criptiú atá bunaithe ar chrua-earraí slándáil bhreise sa ríomhaire seo."
 }

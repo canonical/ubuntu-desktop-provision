@@ -360,11 +360,11 @@
     "passphrasePageConfirmPinHint": "Konfirmi PIN",
     "passphrasePageRequiredPin": "PIN estas postulata",
     "passphraseTypeNoneTileTitle": "Malŝlosi diskon aŭtomate",
-    "passphraseTypePassphraseTileTitle": "Postuli pasfrazon",
+    "passphraseTypePassphraseTileTitle": "Postuli pasfrazon dum starto",
     "passphrasePageMismatchPin": "La PIN-oj ne kongruas",
     "passphraseTypePassphraseTileSubTitle": "Plej sekura. Vi devos tajpi longan pasfrazon por startigi vian komputilon.",
     "passphraseTypePinTileSubTitle": "Pli sekura. Vi devos tajpi numeran PIN por startigi vian komputilon.",
-    "passphraseTypePageBody": "Apriore, la Fidata Platforma Modulo (TPM) de la komputilo malŝlosos la diskon dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.",
+    "passphraseTypePageBody": "Apriore, la disko malŝlosiĝos aŭtomate dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.",
     "passphrasePagePassphraseEntropyBelowMin": "La pasfrazo estas tro malforta; plilongigu aŭ kompliku ĝin",
     "passphrasePagePassphraseEntropyBelowOptimal": "La pasfrazo estas malforteta; por pli da sekureco, plilongigu aŭ kompliku ĝin",
     "passphrasePagePinEntropyOptimal": "PIN esta sufiĉe longa",
@@ -389,7 +389,7 @@
     },
     "passphrasePageBodyPassphrase": "Vi devos tajpi vian pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian pasfrazon, vi povos atingi la diskon per la restaŭra ŝlosilo.",
     "passphraseTypePageHeader": "Plia sekureco",
-    "passphraseTypePinTileTitle": "Postuli PIN",
+    "passphraseTypePinTileTitle": "Postuli PIN dum starto",
     "passphrasePageBodyPin": "Vi devos tajpi vian PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian PIN, vi povos atingi la diskon per la restaŭra ŝlosilo.",
     "nextSlideSemanticLabel": "Sekva paĝo",
     "previousSlideSemanticLabel": "Antaŭa paĝo",
@@ -521,5 +521,21 @@
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Kontrolu, ĉu la reĝimo de sekura praŝargo estas «disponebla».",
     "autoinstallErrorMessage": "Komando en la aŭtomatinstala dosiero malsukcesis ruliĝi dum instalado.",
     "autoinstallErrorInstructions": "Vi devos rekomenci instaladon. Kontrolu la aŭtomatinstalan dosieron, elektu alispecan instaladon, aŭ kontaktu vian teĥnikan asiston.",
-    "restartInstaller": "Relanĉi instalilon"
+    "restartInstaller": "Relanĉi instalilon",
+    "stepIndicatorLabel": "Paŝo {CURRENT_STEP} el {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Instalado ne povas kompletiĝi per la provizita dosiero por aŭtomata instalado.",
+    "autoinstallValidationErrorMessage": "Ekzistas problemo pri la provizita dosiero por aŭtomata instalado.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Ekzistas problemo pri la datenoj pri uzantoj por cloud-init en la dosiero por aŭtomata instalado.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Je ĉi tiu komputilo mankas necesa sekuriga funkcio (nome, aparata fidradiko).",
+    "passphraseTypePageBodyAuthRequired": "Aparatobaza ĉifrado postulas plian sekurecon je ĉi tiu komputilo."
 }

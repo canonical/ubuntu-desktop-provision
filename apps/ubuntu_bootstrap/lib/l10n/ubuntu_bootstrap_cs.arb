@@ -347,19 +347,19 @@
     "passphrasePageTitle": "Šifrování",
     "passphrasePageHeaderPassphrase": "Nastavit šifrovací heslo",
     "passphrasePageHeaderPin": "Nastavit PIN k šifrování",
-    "passphrasePageBodyPin": "PIN kód bude třeba zadávat pokaždé, když zapnete/restartujete počítač. Není to to samé, co heslo do systému. Později ho bude možné změnit, ale už ne zrušit. Pokud PIN kód zapomenete, je možné znovuzískat přístup k disku pomocí záchranného klíče.",
+    "passphrasePageBodyPin": "PIN kód bude třeba zadávat pokaždé, když počítač zapnete. Není to to samé, co heslo do systému. V případě potřeby je možné si PIN pak kdykoli změnit v Centru zabezpečení.",
     "passphrasePageChoosePassphraseHint": "Šifrovací heslo",
     "passphrasePageConfirmPassphraseHint": "Potvrdit zadání šifrovacího hesla",
     "passphrasePageRequiredPassphrase": "Je zapotřebí zadat šifrovací heslo",
     "passphrasePageMismatchPassphrase": "Zadání šifrovacího hesla se neshodují",
     "passphrasePageChoosePinHint": "PIN kód",
-    "passphraseTypePassphraseTileTitle": "Vyžadovat šifrovací heslo",
-    "passphraseTypePinTileTitle": "Vyžadovat PIN kód",
+    "passphraseTypePassphraseTileTitle": "Vyžadovat šifrovací heslo při spuštění",
+    "passphraseTypePinTileTitle": "Vyžadovat PIN kód při spuštění",
     "passphraseTypeNoneTileTitle": "Odemykat disk automaticky",
     "passphraseTypePageHeader": "Dodatečné zabezpečení",
     "recoveryKeyFilePickerTitle": "Uložit soubor se záchranným klíčem",
     "recoveryKeyFilePickerFilter": "Textové soubory",
-    "passphraseTypePageBody": "Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.",
+    "passphraseTypePageBody": "Ve výchozím stavu se disk při spuštění automaticky odemkne. Máte také možnost svá data zabezpečit více.",
     "passphrasePageRequiredPin": "Je zapotřebí zadat PIN kód",
     "recoveryKeyTitleBadgeLabel": "Důležité",
     "recoveryKeyTextFieldLabel": "Záchranný klíč",
@@ -378,7 +378,7 @@
     "passphraseTypePinTileSubTitle": "Bezpečnější. Při každém zapnutí/restartu počítače bude třeba zadat číselný PIN kód.",
     "passphrasePageConfirmPinHint": "Potvrzení zadání PIN kódu",
     "passphrasePageMismatchPin": "Zadání PIN kódu se neshodují",
-    "passphrasePageBodyPassphrase": "Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete/restartujete. Je třeba, aby nebylo stejné, jako heslo, kterým se hlásíte do systému. Následně je možné ho i měnit, ale už ho nepůjde zrušit. V případě, že rozšifrovávací heslo ztratíte, je možné znovuzískat přístup k disku pomocí záchranného klíče.",
+    "passphrasePageBodyPassphrase": "Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete. Není to to samé, co heslo do systému. V případě potřeby je možné si toto heslo pak kdykoli změnit v Centru zabezpečení.",
     "recoveryKeyExceptionDisallowedPathBody": "Zkuste jiné umístění, jako například vyjímatelný disk, nebo použijte jinou metodu.",
     "passphraseTypePassphraseTileSubTitle": "Nejlépe zabezpečené. Při každém zapnutí/restartu počítače bude třeba zadat delší rozšifrovávací heslo.",
     "recoveryKeyExceptionFileSystemTitle": "Soubor se záchranným klíčem neuložen",
@@ -401,7 +401,7 @@
     "closeIconSemanticLabel": "Zavřít",
     "maximizeIconSemanticLabel": "Maximalizovat",
     "minimizeIconSemanticLabel": "Minimalizovat",
-    "tpmActionPageTitle": "Šifrování jištěné hardwarem nebylo možné zapnout",
+    "tpmActionPageTitle": "Šifrování obsluhované hardwarem nebylo možné zapnout",
     "tpmActionBadgeLabel": "Vyžadována akce",
     "tpmActionDetailsLabel": "Technické detaily",
     "tpmActionConfirmLabel": "Potvrdit",
@@ -521,5 +521,22 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Tato funkce může být označována jako „virtualizační technologie“, „VT-d“ nebo „AMD-Vi“.",
     "autoinstallErrorMessage": "Během instalace se nepodařilo spustit příkaz v souboru autoinstall.",
     "autoinstallErrorInstructions": "Budete muset restartovat instalaci. Zkontrolujte soubor autoinstall, vyberte jiný typ instalace nebo kontaktujte IT podporu.",
-    "restartInstaller": "Restartovat instalační program"
+    "restartInstaller": "Restartovat instalační program",
+    "stepIndicatorLabel": "Krok {CURRENT_STEP} z {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Instalace nemůže pokračovat s poskytnutým souborem autoinstall.",
+    "autoinstallValidationErrorMessage": "Vyskytl se problém s poskytnutým souborem autoinstall.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Vyskytl se problém s uživatelskými daty cloud-init uvedenými v souboru autoinstall.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry).",
+    "passphraseTypePageBodyAuthRequired": "Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení.",
+    "tpmActionPageTitleActionable": "Je problém s na hardware založeném šifrování"
 }

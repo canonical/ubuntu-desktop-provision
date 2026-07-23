@@ -369,17 +369,17 @@
     "passphrasePageHeaderPin": "Ustaw kod PIN szyfrowania",
     "passphrasePageConfirmPinHint": "Potwierdź kod PIN",
     "passphrasePageMismatchPin": "Kody PIN nie pasują do siebie",
-    "passphraseTypePassphraseTileTitle": "Wymagaj hasła",
-    "passphraseTypePinTileTitle": "Wymagaj kodu PIN",
+    "passphraseTypePassphraseTileTitle": "Wymagaj hasła podczas uruchamiania",
+    "passphraseTypePinTileTitle": "Wymagaj kodu PIN podczas uruchamiania",
     "passphraseTypeNoneTileTitle": "Odblokuj dysk automatycznie",
     "passphraseTypePageHeader": "Dodatkowe zabezpieczenia",
     "passphrasePageRequiredPin": "Wymagany jest kod PIN",
-    "passphrasePageBodyPassphrase": "Wymagane będzie podanie hasła za każdym razem, gdy włączysz komputer. To hasło różni się od hasła użytkownika. Będzie można je później zmienić, ale nie wyłączyć. Jeśli zapomnisz hasła, możesz odzyskać dostęp do dysku, używając klucza odzyskiwania.",
+    "passphrasePageBodyPassphrase": "Wymagane będzie wpisanie hasła przy każdym uruchomieniu komputera. To hasło różni się od hasła użytkownika. Możesz je później zmienić w Centrum zabezpieczeń.",
     "passphraseTypePinTileSubTitle": "Bezpieczniejsze. Wymagane będzie wpisanie numerycznego kodu PIN za każdym razem, gdy włączysz komputer.",
     "passphrasePageRequiredPassphrase": "Wymagane jest hasło",
-    "passphrasePageBodyPin": "Wymagane będzie podanie kodu PIN każdym razem, gdy włączysz komputer. Ten kod PIN różni się od hasła użytkownika. Będzie można go później zmienić, ale nie wyłączyć. Jeśli zapomnisz kodu PIN, możesz odzyskać dostęp do dysku, używając klucza odzyskiwania.",
+    "passphrasePageBodyPin": "Wymagane będzie wpisanie kodu PIN przy każdym uruchomieniu komputera. Ten kod PIN różni się od hasła użytkownika. Możesz go później zmienić w Centrum zabezpieczeń.",
     "passphraseTypePassphraseTileSubTitle": "Najbezpieczniejsze. Wymagane będzie wpisanie dłuższego hasło za każdym razem, gdy włączysz komputer.",
-    "passphraseTypePageBody": "Domyślnie moduł TPM (Trusted Platform Module) komputera odblokuje dysk podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.",
+    "passphraseTypePageBody": "Domyślnie dysk odblokuje się automatycznie podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.",
     "passphrasePageConfirmPassphraseHint": "Potwierdź hasło",
     "passphrasePageTitle": "Szyfrowanie",
     "passphrasePageChoosePassphraseHint": "Hasło",
@@ -521,5 +521,22 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Funkcja ta może być nazwana „Virtualization Technology”, „VT-d” lub „AMD-Vi”.",
     "autoinstallErrorMessage": "Polecenie w pliku autoinstalacji nie zostało uruchomione podczas instalacji.",
     "autoinstallErrorInstructions": "Konieczne będzie ponowne uruchomienie instalacji. Sprawdź plik autoinstalacji, wybierz inny typ instalacji lub skontaktuj się z pomocą techniczną.",
-    "restartInstaller": "Uruchom ponownie instalator"
+    "restartInstaller": "Uruchom ponownie instalator",
+    "stepIndicatorLabel": "Krok {CURRENT_STEP} z {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "autoinstallGenericErrorMessage": "Nie można kontynuować instalacji przy użyciu dostarczonego pliku autoinstalacji.",
+    "autoinstallValidationErrorMessage": "Wystąpił problem z dostarczonym plikiem autoinstalacji.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Wystąpił problem z danymi użytkownika cloud-init dostarczonymi w pliku autoinstalacji.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania).",
+    "passphraseTypePageBodyAuthRequired": "Sprzętowe szyfrowanie wymaga dodatkowych zabezpieczeń na tym komputerze.",
+    "tpmActionPageTitleActionable": "Występuje problem z szyfrowaniem sprzętowym"
 }

@@ -178,7 +178,7 @@
     "installationTypeTPMSelected": "TPM seleccionat",
     "installationTypeTPM": "Utilizar lo chiframent material",
     "fullInstallationTitle": "Installacion complèta",
-    "refreshPageTitle": "Mesa a jorn disponible",
+    "refreshPageTitle": "Mesa a jorn disponibla",
     "refreshInstall": "Metre a jorn cap a la version {version}",
     "refreshCurrent": "La version actuala de {snap} es {version}.",
     "refreshSnapRefresh": "Actualizacion de {snap}...",
@@ -371,8 +371,8 @@
     "passphrasePageRequiredPassphrase": "Una frasa secrèta es requerida",
     "passphrasePageMismatchPassphrase": "Las frasas secrètas correspondon pas",
     "passphrasePageMismatchPin": "Los PIN correspondon pas",
-    "passphraseTypePassphraseTileTitle": "Requerís una frasa secrèta",
-    "passphraseTypePinTileTitle": "Requerir un PIN",
+    "passphraseTypePassphraseTileTitle": "Requerir una frasa secrèta a l’aviada",
+    "passphraseTypePinTileTitle": "Requerir un PIN a l’aviada",
     "passphraseTypeNoneTileTitle": "Desverrolhar lo disc automaticament",
     "passphrasePagePinEntropyOptimal": "Lo PIN es sufisentament long",
     "toggleLogsSemanticLabel": "Alternar los jornals d'installacion",
@@ -509,5 +509,21 @@
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "D'unes certificats que verifican los logicials sus aqueste ordenador son obsolèts o utilizan una proteccion febla.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Aqueste ordenador utiliza una lista d'autorizacions manuala per verificar los logicials a l'aviada.",
     "tpmActionErrorKindAddonDriversPresent": "De pilòts suplementaris son presents.",
-    "tpmActionErrorKindGenericTpm": "I a un problèma amb lo TPM d’aqueste ordenador."
+    "tpmActionErrorKindGenericTpm": "I a un problèma amb lo TPM d’aqueste ordenador.",
+    "autoinstallGenericErrorMessage": "Se pòt pas contunhar l'installacion amb lo fichièr autoinstall provesit.",
+    "autoinstallValidationErrorMessage": "I a de problèmas amb lo fichièr d'autoinstallacion provesit.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "I a un problèma amb las donadas d'utilizaire cloud-init provesidas dins lo fichièr d'autoinstallacion.",
+    "stepIndicatorLabel": "Etapa {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "passphraseTypePageBodyAuthRequired": "Lo chiframent material demanda una seguretat de mai dins aquel ordenador.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "A aquel ordenador li manca una foncionalitat de seguretat requesida (raiç de fisança materiala)."
 }

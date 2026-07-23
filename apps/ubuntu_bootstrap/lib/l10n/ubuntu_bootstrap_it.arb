@@ -538,5 +538,12 @@
     "closeIconSemanticLabel": "Chiudi",
     "maximizeIconSemanticLabel": "Massimizza",
     "minimizeIconSemanticLabel": "Minimizza",
-    "bitlockerWarningTitle": "Puoi perdere tutti i tuoi dati senza le chiavi di recupero BitLocker"
+    "bitlockerWarningTitle": "Puoi perdere tutti i tuoi dati senza le chiavi di recupero BitLocker",
+    "recoveryKeyExceptionFileSystemTitle": "File della chiave di ripristino non salvato",
+    "recoveryKeyExceptionDisallowedPathTitle": "Impossibile salvare il file della chiave di ripristino in una posizione temporanea",
+    "recoveryKeyExceptionUnknownTitle": "Errore sconosciuto",
+    "recoveryKeyExceptionFileSystemBody": "Non hai i permessi per scrivere in quella cartella. Prova a scegliere una posizione diversa o usa un altro metodo.",
+    "recoveryKeyExceptionDisallowedPathBody": "Prova una posizione diversa, ad esempio un'unità rimovibile, oppure usa un altro metodo.",
+    "recoveryKeyFilePickerTitle": "Salva il file della chiave di ripristino",
+    "recoveryKeyFilePickerFilter": "File di testo"
 }

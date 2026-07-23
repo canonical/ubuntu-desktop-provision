@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Недопустимое имя компьютера",
     "identityUsernameLabel": "Выберите имя пользователя",
     "identityUsernameRequired": "Необходимо имя пользователя",
-    "identityInvalidUsername": "Недопустимое имя пользователя",
+    "identityInvalidUsername": "Недопустимое имя пользователя: оно должно начинаться со строчной и может содержать только строчные буквы, цифры, дефисы и подчёркивания.",
     "identityUsernameInUse": "Это имя пользователя уже существует.",
     "identityUsernameSystemReserved": "Это имя зарезервировано для использования системой.",
     "identityUsernameTooLong": "Это имя слишком длинное.",
@@ -114,5 +114,15 @@
     "minimizeIconSemanticLabel": "Свернуть",
     "expandIconSemanticLabel": "Расширить",
     "collapseIconSemanticLabel": "Свернуть",
-    "errorPageTechnicalDetails": "Технические сведения"
+    "errorPageTechnicalDetails": "Технические сведения",
+    "identityInvalidRealName": "Имя введено неверно",
+    "networkWifiSignalNone": "Нет сигнала",
+    "networkWifiSignalWeak": "Слабый сигнал",
+    "networkWifiSignalOk": "Неплохой сигнал",
+    "networkWifiSignalGood": "Хороший сигнал",
+    "networkWifiSignalExcellent": "Отличный сигнал",
+    "networkWifiOpenNetwork": "Открытая сеть",
+    "networkWifiSecureNetwork": "Безопасная сеть",
+    "networkWifiConnecting": "Подключение…",
+    "networkWifiConnected": "Подключено"
 }
