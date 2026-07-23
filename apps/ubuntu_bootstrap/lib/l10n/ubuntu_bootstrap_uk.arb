@@ -525,5 +525,6 @@
     "autoinstallValidationErrorMessage": "Виникла проблема з наданим файлом для автоматичної інсталяції.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Виникла проблема з даними користувача cloud-init, вказаними у файлі автоінсталяції.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "У цьому комп’ютері відсутня необхідна функція безпеки (апаратний корінь довіри).",
-    "passphraseTypePageBodyAuthRequired": "Шифрування з апаратним забезпеченням вимагає додаткових заходів безпеки на цьому комп’ютері."
+    "passphraseTypePageBodyAuthRequired": "Шифрування з апаратним забезпеченням вимагає додаткових заходів безпеки на цьому комп’ютері.",
+    "tpmActionPageTitleActionable": "Виникла проблема з шифруванням, що забезпечується апаратними засобами"
 }
