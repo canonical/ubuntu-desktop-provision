@@ -347,7 +347,7 @@
     "passphrasePageTitle": "Šifrování",
     "passphrasePageHeaderPassphrase": "Nastavit šifrovací heslo",
     "passphrasePageHeaderPin": "Nastavit PIN k šifrování",
-    "passphrasePageBodyPin": "PIN kód bude třeba zadávat pokaždé, když zapnete/restartujete počítač. Není to to samé, co heslo do systému. Později ho bude možné změnit, ale už ne zrušit. Pokud PIN kód zapomenete, je možné znovuzískat přístup k disku pomocí záchranného klíče.",
+    "passphrasePageBodyPin": "PIN kód bude třeba zadávat pokaždé, když počítač zapnete. Není to to samé, co heslo do systému. V případě potřeby je možné si PIN pak kdykoli změnit v Centru zabezpečení.",
     "passphrasePageChoosePassphraseHint": "Šifrovací heslo",
     "passphrasePageConfirmPassphraseHint": "Potvrdit zadání šifrovacího hesla",
     "passphrasePageRequiredPassphrase": "Je zapotřebí zadat šifrovací heslo",
@@ -378,7 +378,7 @@
     "passphraseTypePinTileSubTitle": "Bezpečnější. Při každém zapnutí/restartu počítače bude třeba zadat číselný PIN kód.",
     "passphrasePageConfirmPinHint": "Potvrzení zadání PIN kódu",
     "passphrasePageMismatchPin": "Zadání PIN kódu se neshodují",
-    "passphrasePageBodyPassphrase": "Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete/restartujete. Je třeba, aby nebylo stejné, jako heslo, kterým se hlásíte do systému. Následně je možné ho i měnit, ale už ho nepůjde zrušit. V případě, že rozšifrovávací heslo ztratíte, je možné znovuzískat přístup k disku pomocí záchranného klíče.",
+    "passphrasePageBodyPassphrase": "Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete. Není to to samé, co heslo do systému. V případě potřeby je možné si toto heslo pak kdykoli změnit v Centru zabezpečení.",
     "recoveryKeyExceptionDisallowedPathBody": "Zkuste jiné umístění, jako například vyjímatelný disk, nebo použijte jinou metodu.",
     "passphraseTypePassphraseTileSubTitle": "Nejlépe zabezpečené. Při každém zapnutí/restartu počítače bude třeba zadat delší rozšifrovávací heslo.",
     "recoveryKeyExceptionFileSystemTitle": "Soubor se záchranným klíčem neuložen",
@@ -537,5 +537,6 @@
     "autoinstallValidationErrorMessage": "Vyskytl se problém s poskytnutým souborem autoinstall.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Vyskytl se problém s uživatelskými daty cloud-init uvedenými v souboru autoinstall.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry).",
-    "passphraseTypePageBodyAuthRequired": "Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení."
+    "passphraseTypePageBodyAuthRequired": "Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení.",
+    "tpmActionPageTitleActionable": "Je problém s na hardware založeném šifrování"
 }
