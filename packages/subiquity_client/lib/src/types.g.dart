@@ -1060,6 +1060,8 @@ const _$CoreBootAvailabilityErrorKindEnumMap = {
       'WEAK_SECURE_BOOT_ALGORITHM_DETECTED',
   CoreBootAvailabilityErrorKind.PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS:
       'PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS',
+  CoreBootAvailabilityErrorKind.NO_HARDWARE_ROOT_OF_TRUST:
+      'NO_HARDWARE_ROOT_OF_TRUST',
 };
 
 _CoreBootFixActionWithArgs _$CoreBootFixActionWithArgsFromJson(

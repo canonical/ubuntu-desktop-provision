@@ -68,6 +68,8 @@ extension CoreBootAvailabilityErrorKindL10n on CoreBootAvailabilityErrorKind {
         CoreBootAvailabilityErrorKind
               .PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS =>
           l10n.tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests,
+        CoreBootAvailabilityErrorKind.NO_HARDWARE_ROOT_OF_TRUST =>
+          l10n.tpmActionErrorKindNoHardwareRootOfTrust,
       };
 }
 

@@ -421,6 +421,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Per defaut, lo Modul de platafòrma de fisança (TPM) de l\'ordenador desverrolharà lo disc a l\'aviada. Avètz tanben d\'opcions per protegir encara mai vòstras donadas.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frasa secrèta febla, fasètz-la mai longa o mai complèxa';
 
@@ -1413,6 +1417,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Lo chiframent material a pas pogut èsser activat';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Accion requerida';
 
   @override
@@ -1543,6 +1551,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'De pilòts suplementaris son presents.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

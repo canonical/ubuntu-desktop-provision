@@ -414,6 +414,10 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا كومپيۇتېرنىڭ ئىشەنچ سۇپا مودېلى (TPM) نىڭ قۇلۇپى ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'ئاجىز ئىم ئىبارە، ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ';
 
@@ -1403,6 +1407,10 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'قاتتىق دېتال قوللايدىغان شىفىرلاشنى قوزغاتقىلى بولمايدۇ';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'زۆرۈر مەشغۇلات';
 
   @override
@@ -1533,6 +1541,10 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'قوشۇلما قوزغاتقۇ مەۋجۇت.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

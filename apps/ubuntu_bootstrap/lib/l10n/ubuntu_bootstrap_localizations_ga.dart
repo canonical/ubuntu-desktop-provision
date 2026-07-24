@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'De réir réamhshocraithe, díghlasálfaidh Modúl Ardáin Iontaofa (TPM) an ríomhaire an diosca le linn tosaithe. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Pasfrása lag, déan níos faide nó níos casta é';
 
@@ -1411,6 +1415,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Níorbh fhéidir criptiú crua-earraí-tacaithe a chumasú';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Gníomh riachtanach';
 
   @override
@@ -1542,6 +1550,10 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Tá tiománaithe breiseán i láthair.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

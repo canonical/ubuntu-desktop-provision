@@ -214,6 +214,12 @@ class StorageService {
   Future<List<CoreBootEncryptionFeatures>> getCoreBootEncryptionFeatures() {
     return _client.getCoreBootEncryptionFeaturesV2();
   }
+
+  /// Returns the list of TPM/FDE encryption requirements
+  Future<List<CoreBootEncryptionRequirement>>
+      getCoreBootEncryptionRequirements() {
+    return _client.getCoreBootEncryptionRequirementsV2();
+  }
 }
 
 extension GuidedStorageTargetTpmX on GuidedStorageTarget {

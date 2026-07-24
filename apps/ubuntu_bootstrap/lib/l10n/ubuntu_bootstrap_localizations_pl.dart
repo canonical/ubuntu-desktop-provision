@@ -418,6 +418,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
       'Domyślnie moduł TPM (Trusted Platform Module) komputera odblokuje dysk podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Słabe hasło, wydłuż je lub zwiększ złożoność';
 
@@ -1404,6 +1408,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Nie można włączyć szyfrowania sprzętowego';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Wymagana czynność';
 
   @override
@@ -1536,6 +1544,10 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Dostępne są dodatkowe sterowniki.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

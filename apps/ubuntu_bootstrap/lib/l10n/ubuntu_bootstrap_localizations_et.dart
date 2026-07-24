@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Vaikimisi eemaldab selle arvuti Trusted Platform Module (TPM) lukustuse automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Salafraas on kehv, palun muuda ta pikemaks ja keerukamaks';
 
@@ -1408,6 +1412,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Raudvarapõhist krüptimist ei saanud sisse lülitada';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Vajalik on kasutaja sekkumine';
 
   @override
@@ -1540,6 +1548,10 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Täiendavad draiverid on olemas.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

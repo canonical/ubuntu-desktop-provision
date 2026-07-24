@@ -411,6 +411,10 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ໂດຍຄ່າເລີ່ມຕົ້ນ, Trusted Platform Module (TPM) ຂອງຄອມພິວເຕີຈະປົດລັອກ ດິດໃນລະຫວ່າງການເລີ່ມຕົ້ນ. ທ່ານຍັງມີທາງເລືອກໃນການປົກປ້ອງຂໍ້ມູນຂອງທ່ານເພີ່ມເຕີມ.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'ວະລີຜ່ານອ່ອນແອ, ກະລຸນາເຮັດໃຫ້ຍາວກວ່າ ຫຼື ຊັບຊ້ອນກວ່ານີ້';
 
@@ -1396,6 +1400,10 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ບໍ່ສາມາດເປີດໃຊ້ງານການເຂົ້າລະຫັດທີ່ຮອງຮັບໂດຍຮາດແວໄດ້';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'ຈຳເປັນຕ້ອງມີການດຳເນີນການ';
 
   @override
@@ -1525,6 +1533,10 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent => 'ມີໄດເວີສ່ວນເສີມຢູ່.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

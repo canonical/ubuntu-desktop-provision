@@ -418,6 +418,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Snadno prolomitelná heslová fráze – prodlužte jí a/nebo přidejte na komplexitě';
 
@@ -1406,6 +1410,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Šifrování jištěné hardwarem nebylo možné zapnout';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Vyžadována akce';
 
   @override
@@ -1536,6 +1544,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Jsou přítomny dodatečné ovladače.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

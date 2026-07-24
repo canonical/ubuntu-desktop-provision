@@ -15,6 +15,20 @@ void main() {
     diskId: 'diskA',
     allowed: [GuidedCapability.DIRECT, GuidedCapability.CORE_BOOT_ENCRYPTED],
   );
+  final smallDiskTpmTarget = GuidedStorageTargetReformat(
+    diskId: 'diskB',
+    allowed: [],
+    disallowed: [
+      GuidedDisallowedCapability(
+        capability: GuidedCapability.DIRECT,
+        reason: GuidedDisallowedCapabilityReason.TOO_SMALL,
+      ),
+      GuidedDisallowedCapability(
+        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        reason: GuidedDisallowedCapabilityReason.TOO_SMALL,
+      ),
+    ],
+  );
   final defunctTpmTarget = GuidedStorageTargetReformat(
     diskId: 'diskA',
     disallowed: [
@@ -56,29 +70,40 @@ void main() {
       (
         name: 'no tpm fde',
         capability: GuidedCapability.DIRECT,
-        target: nonTpmTarget,
+        selectedTarget: nonTpmTarget,
+        targets: [nonTpmTarget],
         skipPage: true,
       ),
       (
         name: 'tpm fde without errors',
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        target: tpmTarget,
+        selectedTarget: tpmTarget,
+        targets: [tpmTarget],
+        skipPage: true,
+      ),
+      (
+        name: 'tpm fde + errors for other disk',
+        capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
+        selectedTarget: tpmTarget,
+        targets: [smallDiskTpmTarget, tpmTarget],
         skipPage: true,
       ),
       (
         name: 'tpm fde with errors',
         capability: GuidedCapability.CORE_BOOT_ENCRYPTED,
-        target: defunctTpmTarget,
+        selectedTarget: defunctTpmTarget,
+        targets: [defunctTpmTarget],
         skipPage: false,
       ),
     ]) {
       test(testCase.name, () async {
         final storage = MockStorageService();
         when(storage.guidedCapability).thenReturn(testCase.capability);
+        when(storage.guidedTarget).thenReturn(testCase.selectedTarget);
         when(storage.getGuidedStorage()).thenAnswer(
           (_) async => GuidedStorageResponseV2(
             status: ProbeStatus.DONE,
-            targets: [testCase.target],
+            targets: testCase.targets,
           ),
         );
         final subiquity = MockSubiquityClient();
@@ -93,6 +118,7 @@ void main() {
     final storage = MockStorageService();
     when(storage.guidedCapability)
         .thenReturn(GuidedCapability.CORE_BOOT_ENCRYPTED);
+    when(storage.guidedTarget).thenReturn(defunctTpmTarget);
     when(storage.getGuidedStorage()).thenAnswer(
       (_) async => GuidedStorageResponseV2(
         status: ProbeStatus.DONE,
@@ -115,6 +141,7 @@ void main() {
     when(storage.getGuidedStorage()).thenAnswer(
       (_) async => GuidedStorageResponseV2(status: ProbeStatus.DONE),
     );
+    when(storage.guidedTarget).thenReturn(defunctTpmTarget);
     final subiquity = MockSubiquityClient();
 
     final model = TpmActionModel(storage, subiquity);
@@ -145,12 +172,13 @@ void main() {
   test('automatically trigger subsequent reboot action', () async {
     var calls = 0;
     final storage = MockStorageService();
+    when(storage.guidedTarget).thenReturn(defunctTpmTarget);
     when(storage.getGuidedStorage()).thenAnswer(
       (_) async => GuidedStorageResponseV2(
         status: ProbeStatus.DONE,
         targets: [
           GuidedStorageTarget.reformat(
-            diskId: 'disk',
+            diskId: 'diskA',
             disallowed: [
               GuidedDisallowedCapability(
                 capability: GuidedCapability.CORE_BOOT_ENCRYPTED,

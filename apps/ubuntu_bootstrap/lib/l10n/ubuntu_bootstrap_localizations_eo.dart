@@ -415,6 +415,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
       'Apriore, la Fidata Platforma Modulo (TPM) de la komputilo malŝlosos la diskon dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'La pasfrazo estas tro malforta; plilongigu aŭ kompliku ĝin';
 
@@ -1403,6 +1407,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Ne povas ŝalti aparato-bazan ĉifradon';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Ago necesas';
 
   @override
@@ -1533,6 +1541,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Ekzistas aldona zorgilo.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

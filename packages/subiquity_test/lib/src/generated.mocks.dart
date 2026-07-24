@@ -804,6 +804,18 @@ class MockSubiquityClient extends _i1.Mock implements _i4.SubiquityClient {
           ) as _i5.Future<List<_i2.CoreBootEncryptionFeatures>>);
 
   @override
+  _i5.Future<List<_i2.CoreBootEncryptionRequirement>>
+      getCoreBootEncryptionRequirementsV2() => (super.noSuchMethod(
+            Invocation.method(
+              #getCoreBootEncryptionRequirementsV2,
+              [],
+            ),
+            returnValue:
+                _i5.Future<List<_i2.CoreBootEncryptionRequirement>>.value(
+                    <_i2.CoreBootEncryptionRequirement>[]),
+          ) as _i5.Future<List<_i2.CoreBootEncryptionRequirement>>);
+
+  @override
   _i5.Future<void> reboot({bool? immediate = false}) => (super.noSuchMethod(
         Invocation.method(
           #reboot,
