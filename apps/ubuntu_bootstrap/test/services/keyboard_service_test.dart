@@ -12,14 +12,19 @@ import '../test_utils.dart';
 void main() {
   late MockGSettings inputSourceSettings;
   late MockProcess mockProcess;
+  late MockLocale1 mockLocale1;
 
   setUp(() {
     inputSourceSettings = MockGSettings();
     when(inputSourceSettings.set(any, any)).thenAnswer((_) async {});
 
     mockProcess = MockProcess();
-    when(mockProcess.run(any, any))
-        .thenAnswer((_) async => ProcessResult(0, 0, '', ''));
+    when(
+      mockProcess.run(any, any),
+    ).thenAnswer((_) async => ProcessResult(0, 0, '', ''));
+
+    mockLocale1 = MockLocale1();
+    when(mockLocale1.setX11Keyboard(any, any)).thenAnswer((_) async {});
   });
 
   test('get keyboard', () async {
@@ -30,6 +35,7 @@ void main() {
       client,
       inputSourceSettings: inputSourceSettings,
       runProcess: mockProcess.run,
+      setLocale1X11Keyboard: mockLocale1.setX11Keyboard,
     );
     expect(await service.getKeyboard(), equals(keyboardSetup));
 
@@ -44,6 +50,7 @@ void main() {
       client,
       inputSourceSettings: inputSourceSettings,
       runProcess: mockProcess.run,
+      setLocale1X11Keyboard: mockLocale1.setX11Keyboard,
     );
     await service.setKeyboard(keyboardSetup.setting);
 
@@ -52,19 +59,22 @@ void main() {
 
   test('set input source', () async {
     final client = MockSubiquityClient();
-    when(client.setInputSource(keyboardSetup.setting, user: 'ubuntu'))
-        .thenAnswer((_) async {});
+    when(
+      client.setInputSource(keyboardSetup.setting, user: 'ubuntu'),
+    ).thenAnswer((_) async {});
 
     final service = SubiquityKeyboardService(
       client,
       inputSourceSettings: inputSourceSettings,
       runProcess: mockProcess.run,
+      setLocale1X11Keyboard: mockLocale1.setX11Keyboard,
       liveRun: true,
     );
     await service.setInputSource(keyboardSetup.setting, user: 'ubuntu');
 
-    verify(client.setInputSource(keyboardSetup.setting, user: 'ubuntu'))
-        .called(1);
+    verify(
+      client.setInputSource(keyboardSetup.setting, user: 'ubuntu'),
+    ).called(1);
 
     verify(
       inputSourceSettings.set(
@@ -82,11 +92,11 @@ void main() {
     ).called(1);
 
     verify(
-      mockProcess.run(
-        'setxkbmap',
-        ['-layout', 'us', '-variant', 'altgr-intl'],
-      ),
+      mockProcess.run('setxkbmap', ['-layout', 'us', '-variant', 'altgr-intl']),
     ).called(1);
+
+    // locale1 is called for desktop-agnostic persistence (e.g. KDE Plasma)
+    verify(mockLocale1.setX11Keyboard('us', 'altgr-intl')).called(1);
   });
 
   test('set input source (non-latin)', () async {
@@ -96,9 +106,7 @@ void main() {
         KeyboardLayout(
           code: 'us',
           name: 'English (US)',
-          variants: [
-            KeyboardVariant(code: '', name: 'English (US)'),
-          ],
+          variants: [KeyboardVariant(code: '', name: 'English (US)')],
         ),
         KeyboardLayout(
           code: 'af',
@@ -108,19 +116,22 @@ void main() {
       ],
     );
     final client = MockSubiquityClient();
-    when(client.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu'))
-        .thenAnswer((_) async {});
+    when(
+      client.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu'),
+    ).thenAnswer((_) async {});
 
     final service = SubiquityKeyboardService(
       client,
       inputSourceSettings: inputSourceSettings,
       runProcess: mockProcess.run,
+      setLocale1X11Keyboard: mockLocale1.setX11Keyboard,
       liveRun: true,
     );
     await service.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu');
 
-    verify(client.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu'))
-        .called(1);
+    verify(
+      client.setInputSource(nonLatinKeyboardSetup.setting, user: 'ubuntu'),
+    ).called(1);
 
     verify(
       inputSourceSettings.set(
@@ -128,25 +139,17 @@ void main() {
         DBusArray(
           DBusSignature.struct([DBusSignature.string, DBusSignature.string]),
           [
-            DBusStruct([
-              const DBusString('xkb'),
-              const DBusString('af'),
-            ]),
-            DBusStruct([
-              const DBusString('xkb'),
-              const DBusString('us'),
-            ]),
+            DBusStruct([const DBusString('xkb'), const DBusString('af')]),
+            DBusStruct([const DBusString('xkb'), const DBusString('us')]),
           ],
         ),
       ),
     ).called(1);
 
-    verify(
-      mockProcess.run(
-        'setxkbmap',
-        ['-layout', 'af'],
-      ),
-    ).called(1);
+    verify(mockProcess.run('setxkbmap', ['-layout', 'af'])).called(1);
+
+    // Non-latin layouts get a US fallback added in the locale1 call too
+    verify(mockLocale1.setX11Keyboard('af,us', ',')).called(1);
   });
 
   test('get keyboard step', () async {
@@ -159,6 +162,7 @@ void main() {
       client,
       inputSourceSettings: inputSourceSettings,
       runProcess: mockProcess.run,
+      setLocale1X11Keyboard: mockLocale1.setX11Keyboard,
     );
     await service.getKeyboardStep('1');
 
@@ -177,4 +181,17 @@ class MockProcess extends Mock implements _Process {
         Invocation.method(#run, [executable, arguments]),
         returnValue: Future.value(ProcessResult(0, 0, '', '')),
       ) as Future<ProcessResult>;
+}
+
+abstract class _Locale1 {
+  Future<void> setX11Keyboard(String? layout, String? variant);
+}
+
+class MockLocale1 extends Mock implements _Locale1 {
+  @override
+  Future<void> setX11Keyboard(String? layout, String? variant) =>
+      super.noSuchMethod(
+        Invocation.method(#setX11Keyboard, [layout, variant]),
+        returnValue: Future<void>.value(),
+      ) as Future<void>;
 }
