@@ -366,10 +366,10 @@
     "recoveryKeyExceptionDisallowedPathTitle": "Die Wiederherstellungsschlüsseldatei kann nicht an einem temporären Ort gespeichert werden",
     "recoveryKeyExceptionFileSystemTitle": "Wiederherstellungsschlüsseldatei nicht gespeichert",
     "passphraseTypePageBody": "Standardmäßig wird die Festplatte beim Startvorgang automatisch entsperrt. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.",
-    "passphrasePageBodyPassphrase": "Sie müssen Ihre Passphrase jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Diese Passphrase unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später ändern, aber nicht deaktivieren. Wenn Sie Ihre Passphrase vergessen haben, können Sie mit dem Wiederherstellungsschlüssel wieder Zugriff auf die Festplatte erhalten.",
+    "passphrasePageBodyPassphrase": "Sie müssen die Passphrase bei jedem Start Ihres Computers eingeben. Diese Passphrase unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später im Sicherheitszentrum ändern.",
     "passphrasePageRequiredPin": "Eine PIN ist erforderlich",
     "passphrasePageMismatchPassphrase": "Die Passphrasen stimmen nicht überein",
-    "passphrasePageBodyPin": "Sie müssen Ihre PIN jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Diese PIN unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später ändern, aber nicht deaktivieren. Wenn Sie Ihre PIN vergessen haben, können Sie mit dem Wiederherstellungsschlüssel wieder Zugriff auf die Festplatte erhalten.",
+    "passphrasePageBodyPin": "Sie müssen die PIN bei jedem Start Ihres Computers eingeben. Diese PIN unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später im Sicherheitszentrum ändern.",
     "passphraseTypePinTileSubTitle": "Sicherer. Sie müssen jedes Mal eine numerische PIN eingeben, wenn Sie Ihren Computer einschalten.",
     "passphrasePageConfirmPassphraseHint": "Passphrase bestätigen",
     "passphraseTypePassphraseTileSubTitle": "Am sichersten. Sie müssen jedes Mal eine längere Passphrase eingeben, wenn Sie Ihren Computer einschalten.",
@@ -534,5 +534,6 @@
     "autoinstallValidationErrorMessage": "Es gibt ein Problem mit der bereitgestellten autoinstall-Datei.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Auf diesem Computer fehlt eine erforderliche Sicherheitsfunktion (Hardware-Vertrauensanker).",
-    "passphraseTypePageBodyAuthRequired": "Für die hardwaregestützte Verschlüsselung sind zusätzliche Sicherheitsmaßnahmen auf diesem Computer erforderlich."
+    "passphraseTypePageBodyAuthRequired": "Für die hardwaregestützte Verschlüsselung sind zusätzliche Sicherheitsmaßnahmen auf diesem Computer erforderlich.",
+    "tpmActionPageTitleActionable": "Es gibt ein Problem mit der Hardware-gestützten Verschlüsselung"
 }
