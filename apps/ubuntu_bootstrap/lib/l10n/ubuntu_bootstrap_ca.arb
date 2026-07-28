@@ -1051,5 +1051,6 @@
     "autoinstallValidationErrorMessage": "Hi ha una incidència amb el fitxer d'auto-instal·lació proveït.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Hi ha una incidència amb les dades d'usuari de cloud-init proveïdes al fitxer d'auto-instal·lació.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "A aquest ordinador li falta una característica requerida de seguretat (arrel de maquinari de confiança).",
-    "passphraseTypePageBodyAuthRequired": "L'encriptació basada en el maquinari requereix de seguretat addicional a aquest ordinador."
+    "passphraseTypePageBodyAuthRequired": "L'encriptació basada en el maquinari requereix de seguretat addicional a aquest ordinador.",
+    "tpmActionPageTitleActionable": "Hi ha una incidència amb l'encriptació basada en maquinari"
 }
