@@ -387,10 +387,10 @@
             }
         }
     },
-    "passphrasePageBodyPassphrase": "Vi devos tajpi vian pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian pasfrazon, vi povos atingi la diskon per la restaŭra ŝlosilo.",
+    "passphrasePageBodyPassphrase": "Vi devos tajpi la pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste ĉe la Sekureca Centro.",
     "passphraseTypePageHeader": "Plia sekureco",
     "passphraseTypePinTileTitle": "Postuli PIN dum starto",
-    "passphrasePageBodyPin": "Vi devos tajpi vian PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian PIN, vi povos atingi la diskon per la restaŭra ŝlosilo.",
+    "passphrasePageBodyPin": "Vi devos tajpi la PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste ĉe la Sekureca Centro.",
     "nextSlideSemanticLabel": "Sekva paĝo",
     "previousSlideSemanticLabel": "Antaŭa paĝo",
     "pauseSlideshowSemanticLabel": "Ĉesigi foliumadon",
@@ -537,5 +537,6 @@
     "autoinstallValidationErrorMessage": "Ekzistas problemo pri la provizita dosiero por aŭtomata instalado.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Ekzistas problemo pri la datenoj pri uzantoj por cloud-init en la dosiero por aŭtomata instalado.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Je ĉi tiu komputilo mankas necesa sekuriga funkcio (nome, aparata fidradiko).",
-    "passphraseTypePageBodyAuthRequired": "Aparatobaza ĉifrado postulas plian sekurecon je ĉi tiu komputilo."
+    "passphraseTypePageBodyAuthRequired": "Aparatobaza ĉifrado postulas plian sekurecon je ĉi tiu komputilo.",
+    "tpmActionPageTitleActionable": "Ekzistas problemo pri la aparato-baza ĉifrado"
 }
