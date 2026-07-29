@@ -150,5 +150,14 @@
     },
     "activeDirectoryErrorMessage": "كەچۈرۈڭ ، ئاكتىپ مۇندەرىجە ھازىرچە قۇرۇلمايدۇ. سىستېمىڭىز قوزغالغاندىن كېيىن <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> نى زىيارەت قىلىڭ.",
     "errorPageTechnicalDetails": "تېخنىكىلىق تەپسىلات",
-    "identityInvalidRealName": "ئات ئىناۋەتسىز"
+    "identityInvalidRealName": "ئات ئىناۋەتسىز",
+    "networkWifiSignalNone": "سىگنال يوق",
+    "networkWifiSignalWeak": "ئاجىز سىگنال",
+    "networkWifiSignalOk": "ئادەتتىكى سىگنال",
+    "networkWifiSignalGood": "ياخشى سىگنال",
+    "networkWifiSignalExcellent": "كۈچلۈك سىگنال",
+    "networkWifiOpenNetwork": "ئوچۇق تور",
+    "networkWifiSecureNetwork": "بىخەتەر تور",
+    "networkWifiConnecting": "باغلىنىۋاتىدۇ…",
+    "networkWifiConnected": "باغلاندى"
 }
