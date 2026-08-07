@@ -115,5 +115,14 @@
     "collapseIconSemanticLabel": "Replegar",
     "expandIconSemanticLabel": "Desplegar",
     "errorPageTechnicalDetails": "Detalhs tecnics",
-    "identityInvalidRealName": "Lo nom es invalid"
+    "identityInvalidRealName": "Lo nom es invalid",
+    "networkWifiSignalNone": "Cap de senhal",
+    "networkWifiSignalWeak": "Senhal feble",
+    "networkWifiSignalOk": "Senhal corrècte",
+    "networkWifiSignalGood": "Senhal bon",
+    "networkWifiSignalExcellent": "Senhal excellent",
+    "networkWifiOpenNetwork": "Ret dobèrt",
+    "networkWifiSecureNetwork": "Ret securizat",
+    "networkWifiConnecting": "Connexion…",
+    "networkWifiConnected": "Connectat"
 }
