@@ -195,7 +195,7 @@
     "installationTypeLVMEncryption": "Krüpti salafraasiga",
     "installationTypeLVM": "Kasuta ilma krüptimata LVM-i",
     "installationTypeTPM": "Kasuta raudvarapõhist krüptimist",
-    "selectGuidedStorageInstallNow": "Paiglada nüüd",
+    "selectGuidedStorageInstallNow": "Paigalda kohe",
     "guidedStoragePageHeader": "Vali, kuhu soovid {DISTRO} paigaldada",
     "allocateDiskSpace": "Käsitsi partitsioneerimine",
     "diskHeadersSystem": "Süsteem",
