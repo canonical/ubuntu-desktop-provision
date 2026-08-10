@@ -772,7 +772,7 @@ enum ProbeStatus {
   DONE,
 }
 
-enum Bootloader {
+enum FirmwareType {
   NONE,
   BIOS,
   UEFI,
@@ -1020,7 +1020,8 @@ abstract class StorageResponse with _$StorageResponse {
   const factory StorageResponse({
     required ProbeStatus status,
     ErrorReportRef? errorReport,
-    Bootloader? bootloader,
+    FirmwareType? firmwareType,
+    FirmwareType? bootloader,
     List<dynamic>? origConfig,
     List<dynamic>? config,
     Map<String, dynamic>? dasd,
