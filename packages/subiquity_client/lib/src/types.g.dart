@@ -1185,7 +1185,10 @@ _StorageResponse _$StorageResponseFromJson(Map<String, dynamic> json) =>
           ? null
           : ErrorReportRef.fromJson(
               json['error_report'] as Map<String, dynamic>),
-      bootloader: $enumDecodeNullable(_$BootloaderEnumMap, json['bootloader']),
+      firmwareType:
+          $enumDecodeNullable(_$FirmwareTypeEnumMap, json['firmware_type']),
+      bootloader:
+          $enumDecodeNullable(_$FirmwareTypeEnumMap, json['bootloader']),
       origConfig: json['orig_config'] as List<dynamic>?,
       config: json['config'] as List<dynamic>?,
       dasd: json['dasd'] as Map<String, dynamic>?,
@@ -1196,7 +1199,8 @@ Map<String, dynamic> _$StorageResponseToJson(_StorageResponse instance) =>
     <String, dynamic>{
       'status': _$ProbeStatusEnumMap[instance.status]!,
       'error_report': instance.errorReport?.toJson(),
-      'bootloader': _$BootloaderEnumMap[instance.bootloader],
+      'firmware_type': _$FirmwareTypeEnumMap[instance.firmwareType],
+      'bootloader': _$FirmwareTypeEnumMap[instance.bootloader],
       'orig_config': instance.origConfig,
       'config': instance.config,
       'dasd': instance.dasd,
@@ -1209,11 +1213,11 @@ const _$ProbeStatusEnumMap = {
   ProbeStatus.DONE: 'DONE',
 };
 
-const _$BootloaderEnumMap = {
-  Bootloader.NONE: 'NONE',
-  Bootloader.BIOS: 'BIOS',
-  Bootloader.UEFI: 'UEFI',
-  Bootloader.PREP: 'PREP',
+const _$FirmwareTypeEnumMap = {
+  FirmwareType.NONE: 'NONE',
+  FirmwareType.BIOS: 'BIOS',
+  FirmwareType.UEFI: 'UEFI',
+  FirmwareType.PREP: 'PREP',
 };
 
 _StorageResponseV2 _$StorageResponseV2FromJson(Map<String, dynamic> json) =>
