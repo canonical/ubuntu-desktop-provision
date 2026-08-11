@@ -138,39 +138,24 @@ class _WizardButtonState extends State<WizardButton> {
       buttonFactory = PushButton.filled;
     }
 
-    return ListenableBuilder(
-      listenable: _effectiveFocusNode,
-      builder: (context, child) {
-        final showFocusBorder =
-            YaruTheme.maybeOf(context)?.focusBorders ?? false;
-        return AnimatedContainer(
-          duration: Durations.medium1,
-          foregroundDecoration: showFocusBorder
-              ? BoxDecoration(
-                  border: BoxBorder.all(
-                    strokeAlign: BorderSide.strokeAlignOutside,
-                    color: _effectiveFocusNode.hasFocus
-                        ? Theme.of(context).colorScheme.primary
-                        : Colors.transparent,
-                    width: kYaruFocusBorderWidth,
-                  ),
-                  borderRadius: BorderRadius.circular(kYaruButtonRadius),
-                )
-              : null,
-          child: child,
-        );
-      },
-      child: buttonFactory(
-        onPressed: maybeActivate,
-        focusNode: _effectiveFocusNode,
-        child: showSpinner
-            ? SizedBox.square(
-                dimension: IconTheme.of(context).size,
-                child: const YaruCircularProgressIndicator(strokeWidth: 3),
-              )
-            : Text(widget.label!),
-      ),
+    final button = buttonFactory(
+      onPressed: maybeActivate,
+      focusNode: _effectiveFocusNode,
+      child: showSpinner
+          ? SizedBox.square(
+              dimension: IconTheme.of(context).size,
+              child: const YaruCircularProgressIndicator(strokeWidth: 3),
+            )
+          : Text(widget.label!),
     );
+
+    return YaruTheme.maybeOf(context)?.focusBorders ?? false
+        ? YaruFocusBorder.primary(
+            borderRadius: BorderRadius.circular(kYaruButtonRadius),
+            borderPadding: YaruFocusBorderPadding.small,
+            child: button,
+          )
+        : button;
   }
 
   void _startLoadingTimer() {
