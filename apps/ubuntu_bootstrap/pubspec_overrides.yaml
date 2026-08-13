@@ -1,3 +1,4 @@
+# melos_managed_dependency_overrides: landscape_client,landscape_stubs,provd_client,subiquity_client,subiquity_test,ubuntu_init,ubuntu_provision,ubuntu_provision_test,ubuntu_utils,ubuntu_wizard
 dependency_overrides:
   flutter_html:
     git:
@@ -13,3 +14,23 @@ dependency_overrides:
       url: https://github.com/d-loose/flutter_html
       ref: img-remove-vertical-align
       path: packages/flutter_html_table
+  landscape_client:
+    path: ../../packages/landscape_client
+  landscape_stubs:
+    path: ../../packages/landscape_stubs
+  provd_client:
+    path: ../../packages/provd_client
+  subiquity_client:
+    path: ../../packages/subiquity_client
+  subiquity_test:
+    path: ../../packages/subiquity_test
+  ubuntu_init:
+    path: ../ubuntu_init
+  ubuntu_provision:
+    path: ../../packages/ubuntu_provision
+  ubuntu_provision_test:
+    path: ../../packages/ubuntu_provision_test
+  ubuntu_utils:
+    path: ../../packages/ubuntu_utils
+  ubuntu_wizard:
+    path: ../../packages/ubuntu_wizard
