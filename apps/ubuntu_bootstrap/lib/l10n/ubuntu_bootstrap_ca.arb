@@ -1,930 +1,1022 @@
 {
-    "@@locale": "ca",
-    "welcome": "Us donem la benvinguda",
-    "rstTitle": "S'ha detectat RST",
-    "updatesOtherSoftwarePageDescription": "Quines aplicacions us agradaria instal·lar per començar?",
-    "otherOptions": "Altres opcions",
-    "installationTypeTitle": "Configuració del disc",
-    "installationTypeNoOSDetected": "Aquest ordinador no duu cap sistema operatiu que s'hagi detectat. Què voleu fer?",
-    "installationTypeNone": "Sense encriptació",
-    "installationTypeNoneSelected": "Cap seleccionat",
-    "installationTypeLVMSelected": "Seleccionat LVM",
-    "installationTypeEncryptInfo": "En el pas següent triareu la clau de seguretat.",
-    "installationTypeZFSSelected": "Seleccionat ZFS",
-    "installationTypeManual": "Alguna altra cosa",
-    "selectGuidedStorageDropdownLabel": "Seleccioneu la unitat:",
-    "selectGuidedStorageInfoLabel": "S'utilitzarà el disc sencer:",
-    "diskHeadersDevice": "Dispositiu",
-    "diskHeadersType": "Tipus",
-    "diskHeadersMountPoint": "Punt de muntatge",
-    "diskHeadersSize": "Mida",
-    "diskHeadersUsed": "En ús",
-    "diskHeadersSystem": "Sistema",
-    "freeDiskSpace": "Espai lliure",
-    "partitionCreateTitle": "Crea una partició",
-    "partitionEditTitle": "Edita la partició",
-    "partitionTypePrimary": "Primària",
-    "partitionTypeLogical": "Lògica",
-    "partitionLocationBeginning": "Començament d'aquest espai",
-    "partitionLocationEnd": "Final d'aquest espai",
-    "bitlockerTitle": "Desactiva el BitLocker",
-    "updatesOtherSoftwarePageTitle": "Actualitzacions i altre programari",
-    "partitionSizeLabel": "Mida:",
-    "appTitle": "Instal·lador de l'Ubuntu per a l'escriptori",
-    "changeButtonText": "Canvia",
-    "tryOrInstallTitle": "Prova o instal·la {DISTRO}",
-    "chooseSecurityKey": "Trieu una clau de seguretat",
-    "confirmSecurityKey": "Confirmeu la clau de seguretat",
-    "installationTypeAdvancedLabel": "Mostra les característiques avançades…",
-    "installationTypeAdvancedTitle": "Encriptació i sistema de fitxers",
-    "selectGuidedStorageInstallNow": "Instal·la ara",
-    "confirmInstallButton": "Comença a instal·lar",
-    "newPartitionTable": "Taula de particions nova",
-    "partitionTypeLabel": "Tipus de partició nova:",
-    "partitionLocationLabel": "Ubicació de la partició nova:",
-    "partitionErase": "Formata la partició",
-    "partitionMountPointLabel": "Punt de muntatge:",
-    "shutdown": "Atura",
-    "installationCompleteTitle": "S'ha completat la instal·lació",
-    "installationTypeOSDetected": "L’ordinador actualment duu el sistema {os}. Què voleu fer?",
-    "installationTypeAlongsideInfo": "Seleccioneu una partició per redimensionar i crear espai per a {product}. Podeu triar el vostre sistema operatiu durant l'arrencada.",
-    "windowTitle": "Instal·lació del sistema {RELEASE}",
-    "tryOrInstallRepairOption": "Repara la instal·lació",
-    "tryOrInstallRepairDescription": "La reparació reinstal·larà tot el programari instal·lat sense tocar els documents ni la configuració.",
-    "tryOption": "Prova el sistema {RELEASE}",
-    "tryDescription": "Podeu provar {RELEASE} sense fer cap canvi al vostre ordinador.",
-    "installOption": "Instal·la el sistema {RELEASE}",
-    "installDescription": "Instal·lar {RELEASE} al costat (o en lloc de) del vostre sistema operatiu actual. Això no hauria de trigar massa.",
-    "tryOrInstallReleaseNotesLabel": "És possible que vulgueu llegir la <a href=\"{url}\"> nota de llançament</a>.",
-    "rstDescription": "Aquest ordinador utilitza Intel RST (Tecnologia d'emmagatzematge ràpid). Heu de desactivar RST a Windows abans d'instal·lar Ubuntu.",
-    "rstInstructions": "Per a obtenir instruccions, obriu aquesta pàgina en un telèfon o un altre dispositiu: <a href=\"https://{url}\">{url}</a>",
-    "configureSecureBootTitle": "Configura l'arrencada segura",
-    "copyingFiles": "S’estan copiant els fitxers…",
-    "installationFailed": "Ha fallat la instal·lació",
-    "installationTypeMultiOSDetected": "Aquest ordinador duu diversos sistemes operatius. Què voleu fer?",
-    "installAlongsideFiles": "Fitxers",
-    "installAlongsideSpaceDivider": "Reserveu espai de disc arrossegant el divisor de més avall:",
-    "installAlongsidePartition": "Partició:",
-    "installAlongsideSize": "Mida:",
-    "installAlongsideAvailable": "Disponible:",
-    "confirmPartitionChanges": "S’aplicaran els canvis següents a les particions:",
-    "installationTypeDualOSDetected": "L’ordinador actualment duu els sistemes {os1} i {os2}. Què voleu fer?",
-    "quitButtonText": "Surt de la instal·lació",
-    "configuringSystem": "S’està configurant el sistema…",
-    "installingSystem": "S’està instal·lant el sistema…",
-    "configureSecureBootOption": "Configurar Arrencada Segura",
-    "configureSecureBootSecurityKeyRequired": "Es requereix la clau de seguretat",
-    "secureBootSecurityKeysDontMatch": "Les claus de seguretat no coincideixen",
-    "configureSecureBootDescription": "Has triat per instal·lar programari de control·ladors de tercers. Això requereix desactivar Arrencada Segura,\nPer fer això, has de escogir una clau de seguretat ara i introduir-la després de reiniciar el sistema.",
-    "autoinstallDirectTitle": "Instal·lació automatitzada",
-    "autoinstallDirectHeader": "Importa el fitxer autoinstall",
-    "autoinstallDirectUrlLabel": "Podeu introduir l'URL d'un fitxer autoinstall:",
-    "autoinstallDirectFileLabel": "O seleccioneu un fitxer local:",
-    "autoinstallDirectFileButtonLabel": "Seleccioneu el fitxer...",
-    "autoinstallDirectFileClearButtonLabel": "Esborra el fitxer",
-    "autoinstallDirectFilePickerTitle": "Trieu el fitxer",
-    "autoinstallDirectFilePickerFilterLabel": "Fitxers YAML",
-    "autoinstallDirectImportButtonLabel": "Importa",
-    "autoinstallDirectErrorNetworkTitle": "El fitxer autoinstall no és accessible",
-    "autoinstallDirectErrorNetworkBody": "Comproveu si l'URL és correcte, proveu la connexió a Internet, o proveu més tard.",
-    "autoinstallDirectErrorInvalidUrlTitle": "URL no vàlida",
-    "autoinstallDirectErrorInvalidUrlBody": "Comproveu que l'URL sigui correcta o seleccioneu un fitxer local.",
-    "autoinstallDirectErrorInvalidContentTitle": "Fitxer autoinstall invàlid",
-    "autoinstallDirectErrorInvalidContentBody": "Comproveu el fitxer o proveu-ne un altre.",
-    "autoinstallDirectErrorFileSystemTitle": "No es pot llegir el fitxer autoinstall",
-    "autoinstallDirectErrorFileSystemBody": "Comproveu els permisos o proporcioneu un fitxer diferent.",
-    "autoinstallDirectErrorUnkownTitle": "Error desconegut",
-    "autoinstallTitle": "Tipus d'instal·lació",
-    "autoinstallHeader": "Com us agradaria instal·lar {DISTRO}?",
-    "@autoinstallHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "autoinstallInstructions": "Entreu l'autoinstall.yaml URL o un camí de fitxer local:",
-    "autoinstallInteractiveOption": "Instal·lació Interactiva",
-    "autoinstallInteractiveDescription": "Per als usuaris que vulguin una guia pas a pas durant la instal·lació.",
-    "autoinstallDirectOption": "Automatitzat amb fitxer autoinstall",
-    "autoinstallDirectDescription": "Per a usuaris avançats que tinguin una autoinstall.yaml per a configuracions de sistema consistents i repetibles.",
-    "autoinstallLandscapeOption": "Automatitzat amb el Landscape",
-    "autoinstallLandscapeDescription": "Per als usuaris en organitzacions que proporcionen un fitxer autoinstall mitjançant Landscape.",
-    "loadingPageTitle": "Us donem la benvinguda a {DISTRO}",
-    "@loadingPageTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "loadingHeader": "S'està preparant {DISTRO}…",
-    "@loadingHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "warningLabel": "Advertiment:",
-    "tryOrInstallHeader": "Què voleu fer amb {DISTRO}?",
-    "@tryOrInstallHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "rstHeader": "Heu de desactivar RST per continuar la instal·lació",
-    "rstDisable": "El vostre ordinador utilitza Intel RST (tecnologia d'emmagatzematge ràpid). Podeu desactivar RST o bé a:",
-    "rstDisableWindows": "Windows, si utilitzeu una configuració d'arrencada dual amb Windows",
-    "rstDisableBios": "La configuració de BIOS",
-    "dontInstallDriverSoftwareNow": "No instal·leu el programari del controlador per ara",
-    "dontInstallDriverSoftwareNowDescription": "El podeu instal·lar més tard des de Programari i Actualitzacions.",
-    "showSecurityKey": "Mostra",
-    "hideSecurityKey": "Amaga",
-    "codecsAndDriversPageTitle": "Optimitzeu el vostre ordinador",
-    "codecsAndDriversPageDescription": "Voleu instal·lar programari propietari recomanat?",
-    "codecsAndDriversPageBody": "{DISTRO} es distribueix sense programari privat per defecte. La instal·lació de programari addicional pot millorar el rendiment del vostre ordinador.",
-    "@codecsAndDriversPageBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "codecsAndDriversNvidiaNote": "S'ha detectat una targeta gràfica NVIDIA",
-    "codecsAndDriversNvidiaBody": "Per al millor rendiment de les targetes gràfiques NVIDIA és molt recomanable instal·lar controladors addicionals.",
-    "fullInstallationTitle": "Selecció ampliada",
-    "fullInstallationSubtitle": "Una selecció d’eines d’oficina, utilitats i navegador web per a ús fàcil fora de línia.",
-    "minimalInstallationTitle": "Selecció predeterminada",
-    "minimalInstallationSubtitle": "Només els imprescindibles, el navegador web i les utilitats bàsiques.",
-    "installThirdPartyTitle": "Instal·leu programari de tercers per a gràfics i maquinari Wi-Fi, així com formats de mitjans addicionals",
-    "installThirdPartySubtitle": "Aquest programari està subjecte als terminis de llicència inclosos amb la seva documentació. Alguns són propietaris.",
-    "installDriversTitle": "Instal·leu el programari de tercers per a gràfics i maquinari Wi-Fi",
-    "installDriversSubtitle": "Incloent-hi però no limitat a controladors NVIDIA i similars",
-    "installCodecsTitle": "Descàrrega i instal·lació de suport per a formats de mitjans addicionals",
-    "installCodecsSubtitle": "Incloent-hi però no limitat a MP3, MP4, MOV i similars",
-    "batteryWarning": "L'ordinador no està connectat a una font d'alimentació.",
-    "offlineWarning": "Actualment esteu fora de línia",
-    "choosePassphraseHeader": "Crea una contrasenya",
-    "choosePassphraseBody": "Haureu d'introduir la vostra contrasenya cada vegada que engegueu l'ordinador. Aquesta contrasenya és diferent de la vostra contrasenya d'usuari.",
-    "choosePassphraseInfoHeader": "Assegureu-vos de guardar la vostra contrasenya",
-    "choosePassphraseInfoBody": "Si la perdeu, perdreu totes les vostres dades.",
-    "chooseOptionalPassphraseInfoHeader": "Emmagatzemeu la contrasenya i la clau de recuperació en algun lloc segur",
-    "chooseOptionalPassphraseInfoBody": "Si perdeu la vostra contrasenya, perdreu totes les vostres dades. La contrasenya no substitueix la clau de recuperació o la contrasenya d'usuari.",
-    "passphrasePageTitle": "Encriptació",
-    "passphrasePageHeaderPassphrase": "Estableix una contrasenya d'encriptació",
-    "passphrasePageHeaderPin": "Establiu un PIN d'encriptació",
-    "passphrasePageBodyPassphrase": "Cada vegada que engegueu l'ordinador haureu d'introduir la contrasenya. Aquesta contrasenya és diferent de la vostra contrasenya d'usuari. Podreu canviar-la més tard, però no desactivar-la. Si us oblideu de la contrasenya, podeu recuperar l'accés al disc usant la clau de recuperació.",
-    "passphrasePageBodyPin": "Cal que introduïu el PIN cada vegada que engegueu el vostre ordinador. Aquest PIN és diferent de la vostra contrasenya d'usuari. Podràs canviar-lo més tard, però no desactivar-lo. Si us oblideu el vostre PIN, podeu recuperar l'accés al disc mitjançant la clau de recuperació.",
-    "passphrasePageChoosePassphraseHint": "Contrasenya",
-    "passphrasePageConfirmPassphraseHint": "Confirma la contrasenya",
-    "passphrasePageRequiredPassphrase": "Es requereix una contrasenya",
-    "passphrasePageMismatchPassphrase": "Les contrasenyes no concorden",
-    "passphrasePageChoosePinHint": "PIN",
-    "passphrasePageConfirmPinHint": "Confirma el PIN",
-    "passphrasePageRequiredPin": "Es requereix un PIN",
-    "passphrasePageMismatchPin": "Els PIN no concorden",
-    "passphraseTypePassphraseTileTitle": "Requereix una contrasenya",
-    "passphraseTypePassphraseTileSubTitle": "El més segur. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya més llarga.",
-    "passphraseTypePinTileTitle": "Requereix un PIN",
-    "passphraseTypePinTileSubTitle": "El més segur. S'ha d'introduir un PIN numèric cada vegada que engegueu l'ordinador.",
-    "passphraseTypeNoneTileTitle": "Desbloqueja el disc automàticament",
-    "passphraseTypePageHeader": "Seguretat addicional",
-    "passphraseTypePageBody": "Per defecte, el mòdul de plataforma de confiança de l'ordinador (TPM) desbloquejarà el disc durant l'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.",
-    "successIconSemanticLabel": "Èxit",
-    "confirmTableCreatedFormattedMounted": "Creat i formatat com {format} utilitzat per a {mountpoint}",
-    "@confirmTableCreatedFormattedMounted": {
-        "placeholders": {
-            "format": {
-                "type": "String"
-            },
-            "mountpoint": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmTableFormattedMounted": "Formatat com {format} utilitzat per a {mountpoint}",
-    "@confirmTableFormattedMounted": {
-        "placeholders": {
-            "format": {
-                "type": "String"
-            },
-            "mountpoint": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmTableMounted": "Utilitzat per a {mountpoint}",
-    "@confirmTableMounted": {
-        "placeholders": {
-            "mountpoint": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmTableFormatted": "Formatat com {format}",
-    "@confirmTableFormatted": {
-        "placeholders": {
-            "format": {
-                "type": "String"
-            }
-        }
-    },
-    "readyToUse": "{system} està instal·lat i a punt per utilitzar",
-    "@readyToUse": {
-        "placeholders": {
-            "system": {
-                "type": "String"
-            }
-        }
-    },
-    "rebootToConfigure": "**{system}** s'ha copiat al disc",
-    "@rebootToConfigure": {
-        "placeholders": {
-            "system": {
-                "type": "String"
-            }
-        }
-    },
-    "restartInto": "Reinicia a {system}",
-    "@restartInto": {
-        "placeholders": {
-            "system": {
-                "type": "String"
-            }
-        }
-    },
-    "restartWarningBody": "Reinicia la instal·lació o continua provant.\nEls canvis que feu no es guardaran.",
-    "rebootToConfigureWarning": "Heu de reiniciar l'ordinador per continuar el procés d'instal·lació.",
-    "restartNow": "Reinicia ara",
-    "continueTesting": "Continua la prova",
-    "bitlockerInfoTitle": "S'ha detectat el BitLocker",
-    "bitlockerInfoDescription": "Una o més particions estan encriptades amb el BitLocker.",
-    "bitlockerInfoDisable": "Per instal·lar al costat de Windows, desactiveu BitLocker a Windows.",
-    "bitlockerInfoRecovery": "Windows pot sol·licitar claus de recuperació en l'arrencada després de la instal·lació.",
-    "bitlockerInfoInstructions": "Per obtenir instruccions, visiteu la guia <a href=\"{url}\">BitLocker</a>.",
-    "@bitlockerInfoInstructions": {
-        "placeholders": {
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "bitlockerWarningTitle": "Podeu perdre totes les vostres dades sense claus de recuperació de BitLocker",
-    "restartComputer": "Reinicia l'ordinador",
-    "restartComputerTitle": "Voleu reiniciar l'ordinador?",
-    "restartIntoWindows": "Reiniciar a WIndows",
-    "restartIntoWindowsTitle": "Voleu reiniciar a Windows?",
-    "restartIntoWindowsDescription": "Segur que voleu reiniciar l'ordinador? Haureu de reiniciar la instal·lació {DISTRO} més tard per finalitzar la instal·lació de {DISTRO}.",
-    "@restartIntoWindowsDescription": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesTitle": "Us donem la benvinguda a {RELEASE}",
-    "@installationSlidesTitle": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesAvailable": "Disponible:",
-    "installationSlidesIncluded": "Inclòs:",
-    "installationSlidesWelcomeTitle": "Ràpid, gratuït i ple de novetats",
-    "installationSlidesWelcomeHeader": "L'última versió de {DISTRO} fa que la informàtica sigui més fàcil que mai.",
-    "@installationSlidesWelcomeHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesWelcomeBody": "Tant si feu desenvolupament, creació, jocs o administració trobareu eines noves per millorar la vostra productivitat i realçar la vostra experiència dins {RELEASE}.",
-    "@installationSlidesWelcomeBody": {
-        "placeholders": {
-            "RELEASE": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSoftwareTitle": "Totes les aplicacions que us calen",
-    "installationSlidesSoftwareBody": "Instal·leu, gestioneu i actualitzeu totes les vostres aplicacions a Programari de l'Ubuntu, incloent-hi milers d'aplicacions tant de la Snap Store com dels dipòsits de {DISTRO}.",
-    "@installationSlidesSoftwareBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesDevelopmentTitle": "Desenvolupeu amb el millor de codi obert",
-    "installationSlidesDevelopmentBody": "{DISTRO} és l'estació de treball ideal per al desenvolupament d'aplicacions o web, ciència de dades i AI /ML, així com operacions de desenvolupament i administració. Totes les versions {DISTRO} inclouen les últimes cadenes d'eines i suporten tots els IDE principals.",
-    "@installationSlidesDevelopmentBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesCreativityTitle": "Potencieu la creativitat",
-    "installationSlidesCreativityBody": "Si feu animació, disseny, creació de vídeo o desenvolupament de jocs, és fàcil mantenir els vostres fluxos de treball a {DISTRO} amb suport per a programari i aplicacions de codi obert amb estàndard industrial.",
-    "@installationSlidesCreativityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesGamingTitle": "Genial per jugar",
-    "installationSlidesGamingBody": "{DISTRO} suporta els últims controladors NVIDIA i Mesa per millorar el rendiment i la compatibilitat. Milers de títols del Windows es poden jugar perfectament a {DISTRO} mitjançant aplicacions com Steam sense cap configuració addicional.",
-    "@installationSlidesGamingBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSecurityTitle": "Privat i segur",
-    "installationSlidesSecurityBody": "{DISTRO} ofereix totes les eines necessàries per la privacitat i seguretat a Internet. Amb suport incorporat de tallafocs i VPN i un munt d'aplicacions centrades en la privacitat per assegurar que teniu control ple de les vostres dades.",
-    "@installationSlidesSecurityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSecurityLts": "Tots els llançaments {DISTRO} LTS vénen amb cinc anys de pegats de seguretat inclosos, que s'estén a deu anys amb una subscripció d'Ubuntu Pro.",
-    "@installationSlidesSecurityLts": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesProductivityTitle": "Incrementeu la vostra productivitat",
-    "installationSlidesProductivityBody": "{DISTRO} L'escriptori inclou LibreOffice, un conjunt d'aplicacions de codi obert compatibles amb Microsoft Office per a documents, fulls de càlcul i presentacions. També hi ha eines de col·laboració populars.",
-    "@installationSlidesProductivityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesAccessibilityTitle": "Accés per a tothom",
-    "installationSlidesAccessibilityBody": "En el cor de la filosofia {DISTRO} hi ha la creença que la informàtica és per a tothom. Amb les eines avançades per a l'accessibilitat i les opcions per canviar la llengua, l'esquema de colors i la mida del text, {DISTRO} fa que la informàtica sigui fàcil, tant se val qui sigueu i on estigueu.",
-    "@installationSlidesAccessibilityBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesAccessibilityOrca": "Lector de pantalla Orca",
-    "installationSlidesAccessibilityLanguages": "Compatibilitat lingüística",
-    "installationSlidesSupportTitle": "Ajuda i assistència",
-    "installationSlidesSupportHeader": "La documentació oficial {DISTRO} està disponible tant en línia com a través de la icona Ajuda de l'acoblador.",
-    "@installationSlidesSupportHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationSlidesSupportCommunity": "Ask Ubuntu cobreix una sèrie de preguntes i respostes i l'Ubuntu Discourse proporciona guies i discussions per a usuaris nous i experimentats.",
-    "installationSlidesSupportEnterprise": "Per a usuaris corporatius Canonical proveeix suport comercial per facilitar l'adopció i gestió de l'Ubuntu al lloc de treball.",
-    "installationSlidesSupportResources": "Recursos útils:",
-    "installationSlidesSupportDocumentation": "Documentació oficial",
-    "installationSlidesSupportUbuntuPro": "Suport 24/7 de nivell empresarial amb Ubuntu Pro",
-    "nextSlideSemanticLabel": "Diapositiva següent",
-    "previousSlideSemanticLabel": "Diapositiva anterior",
-    "playSlideshowSemanticLabel": "Presentació de diapositives",
-    "pauseSlideshowSemanticLabel": "Pausa la presentació",
-    "toggleLogsSemanticLabel": "Commuta els registres d'instal·lació",
-    "notEnoughDiskSpaceTitle": "No hi ha prou espai al disc",
-    "notEnoughDiskSpaceUbuntu": "No hi ha prou espai de disc per instal·lar {DISTRO}",
-    "@notEnoughDiskSpaceUbuntu": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "notEnoughDiskSpaceBody": "El disc seleccionat no té prou espai per instal·lar {DISTRO}. Sortiu de l'instal·lador per fer més espai o seleccioneu un altre disc.",
-    "@notEnoughDiskSpaceBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "notEnoughDiskSpaceAvailable": "Disponible:",
-    "notEnoughDiskSpaceRequired": "Requerit:",
-    "refreshPageTitle": "Actualització disponible",
-    "refreshHeader": "Hi ha una actualització disponible per a l'instal·lador",
-    "refreshUpdateNow": "Actualitza ara",
-    "refreshInfo": "Actualitza a l'ultima versió per a una fiabilitat millorada i més característiques.",
-    "refreshReady": "Actualització a punt",
-    "refreshCurrent": "La versió actual de {snap} és {version}.",
-    "@refreshCurrent": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            },
-            "version": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshInstall": "Actualització a la versió {version}",
-    "@refreshInstall": {
-        "placeholders": {
-            "version": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshUpToDate": "La versió actual {version} està actualitzada.",
-    "@refreshUpToDate": {
-        "placeholders": {
-            "version": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshUpdating": "S'està actualitzant {snap}...",
-    "@refreshUpdating": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshRestart": "Si us plau, tanqueu l'instal·lador i rellançeu per continuar",
-    "refreshCloseLabel": "Tanca l'instal·lador",
-    "refreshSnapPrerequisites": "Assegurant els prerequisits de {snap}...",
-    "@refreshSnapPrerequisites": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapRefresh": "S'està actualitzant {snap}...",
-    "@refreshSnapRefresh": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapCheckRerefresh": "S'està comprovant l'actualització de {snap}...",
-    "@refreshSnapCheckRerefresh": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapPrepare": "S'està preparant {snap}...",
-    "@refreshSnapPrepare": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapDownload": "S'està descarregant {snap}...",
-    "@refreshSnapDownload": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapValidate": "S'està validant {snap}...",
-    "@refreshSnapValidate": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapMount": "S'està muntant {snap}...",
-    "@refreshSnapMount": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapStopServices": "S'estan aturant els serveis {snap}...",
-    "@refreshSnapStopServices": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapRemoveAliases": "S'estan eliminant els àlies de {snap}...",
-    "@refreshSnapRemoveAliases": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapUnlink": "S'està desvinculant {snap}...",
-    "@refreshSnapUnlink": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapUpdateAssets": "S'estan actualitzant els recursos de {snap}...",
-    "@refreshSnapUpdateAssets": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapUpdateKernelCommandLine": "S'està actualitzant la línia d'ordre del nucli de {snap}...",
-    "@refreshSnapUpdateKernelCommandLine": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapCopyData": "S'estan copiant les dades de {snap}...",
-    "@refreshSnapCopyData": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapSetupProfiles": "S'estan establint els perfils de seguretat de {snap}...",
-    "@refreshSnapSetupProfiles": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapLink": "S'està enllaçant {snap}...",
-    "@refreshSnapLink": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapAutoConnect": "S'estan connectant les connexions i dispositius de {snap}...",
-    "@refreshSnapAutoConnect": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapSetAutoAliases": "S'estan establint els àlies automàtics de {snap}...",
-    "@refreshSnapSetAutoAliases": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapSetupAliases": "S'estan establint els àlies de {snap}...",
-    "@refreshSnapSetupAliases": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapStartServices": "S'estan iniciant els serveis de {snap}...",
-    "@refreshSnapStartServices": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "refreshSnapCleanup": "S'està netejant {snap}...",
-    "@refreshSnapCleanup": {
-        "placeholders": {
-            "snap": {
-                "type": "String"
-            }
-        }
-    },
-    "recoveryKeyTitle": "Clau de recuperació",
-    "recoveryKeyTitleBadgeLabel": "Important",
-    "recoveryKeyHeader": "Deseu la vostra clau de recuperació",
-    "recoveryKeyInfoHeader": "Podeu perdre totes les vostres dades sense clau de recuperació",
-    "recoveryKeyTextFieldLabel": "Clau de recuperació",
-    "recoveryKeyStorageAdvice": "Us caldrà proporcionar aquesta clau de recuperació si la desencriptació falla durant l'arrencada. Sense la clau, perdreu l’accés a totes les vostres dades. Deseu-la en un lloc segur, com ara un gestor de contrasenyes.",
-    "recoveryKeyConfirmation": "He guardat la meva clau de recuperació en algun lloc segur",
-    "recoveryKeyLinkLabel": "Més informació",
-    "recoveryKeySaveToFileLabel": "Desa a un fitxer",
-    "recoveryKeyShowQrCodeLabel": "Mostra el codi QR",
-    "recoveryKeyQrDialogTitle": "{DISTRO} Escriptori - Clau de recuperació",
-    "@recoveryKeyQrDialogTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "recoveryKeyQrDialogBody": "Escanegeu el codi QR per copiar la clau de recuperació i guardar-la en algun lloc segur, com ara un gestor de contrasenyes. També podeu fer una foto per a un ús futur.",
-    "recoveryKeyClipboardNotifiaction": "Copiat al portaretalls",
-    "recoveryKeyExceptionFileSystemTitle": "No s'ha desat la clau de recuperació",
-    "recoveryKeyExceptionDisallowedPathTitle": "El fitxer clau de recuperació no es pot desar en una ubicació temporal",
-    "recoveryKeyExceptionUnknownTitle": "Error desconegut",
-    "recoveryKeyExceptionFileSystemBody": "No teniu permís per escriure a aquesta carpeta. Proveu un lloc diferent o un altre mètode.",
-    "recoveryKeyExceptionDisallowedPathBody": "Proveu una ubicació diferent, com ara una unitat extraïble o utilitzeu un altre mètode.",
-    "recoveryKeyFilePickerTitle": "Desa el fitxer de clau de recuperació",
-    "recoveryKeyFilePickerFilter": "Fitxers de text",
-    "landscapeMagicAttachInstructions": "Escanegeu el codi QR o introduïu el codi següent a <a href=\"https://{url}\">{url}</a>",
-    "@landscapeMagicAttachInstructions": {
-        "placeholders": {
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "landscapePageTitle": "Instal·lació automatitzada",
-    "landscapeHeader": "Inicieu sessió a Landscape",
-    "landscapeDomainHeader": "Entreu el domini de Landscape (FQDN)",
-    "landscapeDomainHintText": "Domini de Landscape (FQDN)",
-    "landscapeDomainInstructions": "Proporcioneu el domini de Landscape de la vostra organització per iniciar sessió i obtenir un fitxer autoinstall. Podeu obtenir el FQDN del vostre suport informàtic.",
-    "landscapeDomainTextField": "Domini de Landscape (FQDN)",
-    "next": "Seguent",
-    "landscapeDomainInvalidDomainWarning": "Domini invàlid, si us plau comproveu-ho o contacteu el vostre suport informàtic",
-    "landscapeDomainNoInternetTitleWarning": "Connecta't a Internet per continuar",
-    "landscapeDomainNoInternetDescriptionWarning": "Cal Internet per obtenir l'arxiu autoinstall de Landscape",
-    "landscapeCodeExpiredWarning": "Codi caducat, torneu-ho a provar",
-    "landscapeLoginFailedWarning": "Inici de sessió fallit, si us plau torneu a provar",
-    "landscapeErrorPageTitle": "La instal·lació automatitzada no està disponible per al vostre compte",
-    "landscapeErrorPageBody": "Contacteu el vostre suport informàtic o proveu una opció d'instal·lació diferent.",
-    "landscapeErrorPageCode": "Codi d'error: {code}",
-    "@landscapeErrorPageCode": {
-        "placeholders": {
-            "code": {
-                "type": "String"
-            }
-        }
-    },
-    "landscapeConfirmPageSuccessInfoTitle": "L'Ubuntu s'instal·larà amb la configuració proporcionada per la vostra organització",
-    "landscapeConfirmPageSuccessInfoContent": "Podeu revisar el fitxer autoinstall importat de Landscape a sota.",
-    "errorIconSemanticLabel": "Error",
-    "closeIconSemanticLabel": "Tanca",
-    "maximizeIconSemanticLabel": "Maximitza",
-    "minimizeIconSemanticLabel": "Minimitza",
-    "passphrasePagePassphraseEntropyBelowMin": "Contrasenya feble, feu-la més llarga i més complexa",
-    "passphrasePagePassphraseEntropyBelowOptimal": "Contrasenya suficient, feu-la més llarga o més complexa per a més seguretat",
-    "passphrasePagePassphraseEntropyOptimal": "Contrasenya forta",
-    "passphrasePagePinEntropyBelowMin": "PIN feble, feu-lo més fort o menys predictible",
-    "passphrasePagePinEntropyBelowOptimal": "PIN suficient, feu-lo més llarg o menys predictible per a una seguretat millor",
-    "passphrasePagePinEntropyOptimal": "El PIN és suficientment llarg",
-    "installationTypeHeader": "Com voleu instal·lar {DISTRO}?",
-    "@installationTypeHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeErase": "Esborreu el disc i instal·leu {DISTRO}",
-    "@installationTypeErase": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeEraseInfo": "Totes les dades i particions del disc seran esborrades, incloent-hi els sistemes operatius.",
-    "installationTypeExperimental": "Experimental",
-    "installationTypeNoneInfo": "Sistema de fitxers estàndard sense encriptació.",
-    "installationTypeLVM": "Useu LVM sense encriptació",
-    "installationTypeLVMEncryption": "Encripta amb una contrasenya",
-    "installationTypeLVMEncryptionInfo": "Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya. Això utilitza l'encriptació LUKS amb LVM.",
-    "installationTypeLVMEncryptionSelected": "Seleccionats LVM i encriptació",
-    "installationTypeZFS": "Usa ZFS sense encriptació",
-    "installationTypeZFSEncryption": "Encripta amb una contrasenya usant ZFS",
-    "installationTypeZFSEncryptionInfo": "Encriptació nativa amb ZVS. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya.",
-    "installationTypeZFSEncryptionSelected": "ZFS i encriptació seleccionats",
-    "installationTypeTPM": "Utilitza l'encriptació amb suport de maquinari",
-    "installationTypeTPMInfo": "<a href=\"{url}\">Llegiu sobre l'encriptació TPM</a> abans de triar aquesta opció. Això pot no funcionar amb el vostre maquinari o version futures de {DISTRO}.",
-    "@installationTypeTPMInfo": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            },
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeTPMSelected": "TPM seleccionat",
-    "installationTypeReinstall": "Esborra {os} i reinstal·la",
-    "@installationTypeReinstall": {
-        "placeholders": {
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "partitionFormatLabel": "Usat com:",
-    "partitionFormatNone": "Deixa sense formatar",
-    "partitionFormatKeep": "Deixa format com {format}",
-    "@partitionFormatKeep": {
-        "placeholders": {
-            "format": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmPageTitle": "A punt per instal·lar",
-    "confirmHeader": "Reviseu les vostres eleccions",
-    "confirmDiskEncryptionLVM": "LUKS (LVM)",
-    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
-    "confirmDiskEncryptionTPM": "TPM",
-    "confirmDiskEncryptionNone": "Cap",
-    "confirmDevicesTitle": "Dispositius",
-    "confirmEntryApplications": "Aplicacions",
-    "confirmEntryDiskSetup": "Tipus d'instal·lació",
-    "confirmEntryDiskEncryption": "Encriptació de disc",
-    "confirmEntryInstallationDisk": "Disc d'Instal·lació",
-    "confirmEntryProprietarySoftware": "Programari propietari",
-    "confirmSectionGeneralTitle": "General",
-    "confirmSectionSecurityAndMoreTitle": "Seguretat i més",
-    "confirmPartitionsTitle": "Particions",
-    "confirmPartitionTables": "Les taules de partició dels dispositius següents es canvien:",
-    "confirmPartitionTable": "{serial} ({path})",
-    "@confirmPartitionTable": {
-        "description": "An entry for a disk whose partition table is being changed",
-        "placeholders": {
-            "serial": {
-                "type": "String"
-            },
-            "path": {
-                "type": "String"
-            }
-        }
-    },
-    "confirmProprietarySoftwareCodecs": "Còdecs",
-    "confirmProprietarySoftwareCodecsDrivers": "Còdecs i controladors",
-    "confirmProprietarySoftwareDrivers": "Controladors",
-    "confirmTableErased": "Esborrat",
-    "confirmTableUnchanged": "Sense canvis",
-    "confirmTableResized": "Redimensionat de {oldsize} a {newsize}",
-    "@confirmTableResized": {
-        "placeholders": {
-            "oldsize": {
-                "type": "String"
-            },
-            "newsize": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeReinstallWarning": "<font color=\"{color}\"> Atenció:</font> Això eliminarà tots els programes, documents, fotos, música i qualsevol altre fitxer de {os}.",
-    "@installationTypeReinstallWarning": {
-        "placeholders": {
-            "color": {
-                "type": "String"
-            },
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongside": "Instal·leu {product} al costat de {os}",
-    "@installationTypeAlongside": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            },
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideDual": "Instal·leu {product} juntament amb {os1} i {os2}",
-    "@installationTypeAlongsideDual": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            },
-            "os1": {
-                "type": "String"
-            },
-            "os2": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideMulti": "Instal·leu {product} al costat dels sistemes operatius existents",
-    "@installationTypeAlongsideMulti": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeAlongsideUnknown": "Instal·leu {product} al costat d'altres particions",
-    "@installationTypeAlongsideUnknown": {
-        "placeholders": {
-            "product": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeEraseAndInstall": "Esborra {os} i instal·la {product}",
-    "@installationTypeEraseAndInstall": {
-        "placeholders": {
-            "os": {
-                "type": "String"
-            },
-            "product": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeEraseAndInstallInfo": "Tots els fitxers i dades de la instal·lació existent de {os} seran esborrats permanentment.",
-    "@installationTypeEraseAndInstallInfo": {
-        "placeholders": {
-            "os": {
-                "type": "String"
-            }
-        }
-    },
-    "installationTypeManualInfo": "Per a usuaris avançats que busquen configuracions de disc personalitzades.",
-    "@installationTypeManualInfo": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "selectGuidedStoragePageTitle": "Esborra el disc i instal·la ${DISTRO}",
-    "@selectGuidedStoragePageTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "selectGuidedStorageInfo": "Comença des de zero al disc seleccionat.",
-    "selectGuidedStorageDriveDropdownLabel": "Seleccioneu la unitat:",
-    "selectGuidedStoragePartitionDropdownLabel": "Seleccioneu la partició:",
-    "guidedStoragePageHeader": "Trieu on instal·lar {DISTRO}",
-    "@guidedStoragePageHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "installAlongsideHiddenPartitions": "{num} les particions més petites s'amaguen, utilitzeu l'eina de particions <a href=\"{url}\">avançada</a> per a més control",
-    "@installAlongsideHiddenPartitions": {
-        "placeholders": {
-            "num": {
-                "type": "int"
-            },
-            "url": {
-                "type": "String"
-            }
-        }
-    },
-    "installAlongsideResizePartition": "Redimensiona la partició",
-    "installAlongsideAllocateSpace": "Assigna espai",
-    "allocateDiskSpace": "Partició manual",
-    "allocateDiskSpaceInvalidMountPointSlash": "Els punts de muntatge han de començar amb \"/\"",
-    "allocateDiskSpaceInvalidMountPointSpace": "Els punts de muntatge no poden contenir espais",
-    "allocateDiskSpaceInvalidMountPointFormat": "{format} no és un sistema de fitxers compatible amb {mountpoint}",
-    "@allocateDiskSpaceInvalidMountPointFormat": {
-        "placeholders": {
-            "mountpoint": {
-                "type": "String"
-            },
-            "format": {
-                "type": "String"
-            }
-        }
-    },
-    "diskHeadersFormat": "Format",
-    "newPartitionTableConfirmationTitle": "Nova partició buida",
-    "newPartitionTableConfirmationMessage": "La creació d'una nova taula de particions per a un dispositiu complet eliminarà totes les particions actuals. Aquesta operació es pot desfer si és necessari.",
-    "tooManyPrimaryPartitions": "Massa particions primàries",
-    "partitionLimitReached": "Límit assolit",
-    "bootLoaderDevice": "Dispositiu per a la instal·lació del carregador d'arrencada"
+  "@@locale": "ca",
+  "welcome": "Us donem la benvinguda",
+  "rstTitle": "S'ha detectat RST",
+  "updatesOtherSoftwarePageDescription": "Quines aplicacions us agradaria instal·lar per començar?",
+  "otherOptions": "Altres opcions",
+  "installationTypeTitle": "Configuració del disc",
+  "installationTypeNoOSDetected": "Aquest ordinador no duu cap sistema operatiu que s'hagi detectat. Què voleu fer?",
+  "installationTypeNone": "Sense encriptació",
+  "installationTypeNoneSelected": "Cap seleccionat",
+  "installationTypeLVMSelected": "Seleccionat LVM",
+  "installationTypeEncryptInfo": "En el pas següent triareu la clau de seguretat.",
+  "installationTypeZFSSelected": "Seleccionat ZFS",
+  "installationTypeManual": "Alguna altra cosa",
+  "selectGuidedStorageDropdownLabel": "Seleccioneu la unitat:",
+  "selectGuidedStorageInfoLabel": "S'utilitzarà el disc sencer:",
+  "diskHeadersDevice": "Dispositiu",
+  "diskHeadersType": "Tipus",
+  "diskHeadersMountPoint": "Punt de muntatge",
+  "diskHeadersSize": "Mida",
+  "diskHeadersUsed": "En ús",
+  "diskHeadersSystem": "Sistema",
+  "freeDiskSpace": "Espai lliure",
+  "partitionCreateTitle": "Crea una partició",
+  "partitionEditTitle": "Edita la partició",
+  "partitionTypePrimary": "Primària",
+  "partitionTypeLogical": "Lògica",
+  "partitionLocationBeginning": "Començament d'aquest espai",
+  "partitionLocationEnd": "Final d'aquest espai",
+  "bitlockerTitle": "Desactiva el BitLocker",
+  "updatesOtherSoftwarePageTitle": "Actualitzacions i altre programari",
+  "partitionSizeLabel": "Mida:",
+  "appTitle": "Instal·lador de l'Ubuntu per a l'escriptori",
+  "changeButtonText": "Canvia",
+  "tryOrInstallTitle": "Prova o instal·la {DISTRO}",
+  "chooseSecurityKey": "Trieu una clau de seguretat",
+  "confirmSecurityKey": "Confirmeu la clau de seguretat",
+  "installationTypeAdvancedLabel": "Opcions avançades",
+  "installationTypeAdvancedTitle": "Encriptació i sistema de fitxers",
+  "selectGuidedStorageInstallNow": "Instal·la ara",
+  "confirmInstallButton": "Comença a instal·lar",
+  "newPartitionTable": "Taula de particions nova",
+  "partitionTypeLabel": "Tipus de partició nova:",
+  "partitionLocationLabel": "Ubicació de la partició nova:",
+  "partitionErase": "Formata la partició",
+  "partitionMountPointLabel": "Punt de muntatge:",
+  "shutdown": "Atura",
+  "installationCompleteTitle": "S'ha completat la instal·lació",
+  "installationTypeOSDetected": "L’ordinador actualment duu el sistema {os}. Què voleu fer?",
+  "installationTypeAlongsideInfo": "Seleccioneu una partició per redimensionar i crear espai per a {product}. Podeu triar el vostre sistema operatiu durant l'arrencada.",
+  "windowTitle": "Instal·lació del sistema {RELEASE}",
+  "tryOrInstallRepairOption": "Repara la instal·lació",
+  "tryOrInstallRepairDescription": "La reparació reinstal·larà tot el programari instal·lat sense tocar els documents ni la configuració.",
+  "tryOption": "Prova el sistema {RELEASE}",
+  "tryDescription": "Podeu provar {RELEASE} sense fer cap canvi al vostre ordinador.",
+  "installOption": "Instal·la el sistema {RELEASE}",
+  "installDescription": "Instal·lar {RELEASE} al costat (o en lloc de) del vostre sistema operatiu actual. Això no hauria de trigar massa.",
+  "tryOrInstallReleaseNotesLabel": "És possible que vulgueu llegir la <a href=\"{url}\"> nota de llançament</a>.",
+  "rstDescription": "Aquest ordinador utilitza Intel RST (Tecnologia d'emmagatzematge ràpid). Heu de desactivar RST a Windows abans d'instal·lar Ubuntu.",
+  "rstInstructions": "Per a obtenir instruccions, obriu aquesta pàgina en un telèfon o un altre dispositiu: <a href=\"https://{url}\">{url}</a>",
+  "configureSecureBootTitle": "Configura l'arrencada segura",
+  "copyingFiles": "S’estan copiant els fitxers…",
+  "installationFailed": "Ha fallat la instal·lació",
+  "installationTypeMultiOSDetected": "Aquest ordinador duu diversos sistemes operatius. Què voleu fer?",
+  "installAlongsideFiles": "Fitxers",
+  "installAlongsideSpaceDivider": "Reserveu espai de disc arrossegant el divisor de més avall:",
+  "installAlongsidePartition": "Partició:",
+  "installAlongsideSize": "Mida:",
+  "installAlongsideAvailable": "Disponible:",
+  "confirmPartitionChanges": "S’aplicaran els canvis següents a les particions:",
+  "installationTypeDualOSDetected": "L’ordinador actualment duu els sistemes {os1} i {os2}. Què voleu fer?",
+  "quitButtonText": "Surt de la instal·lació",
+  "configuringSystem": "S’està configurant el sistema…",
+  "installingSystem": "S’està instal·lant el sistema…",
+  "configureSecureBootOption": "Configurar Arrencada Segura",
+  "configureSecureBootSecurityKeyRequired": "Es requereix la clau de seguretat",
+  "secureBootSecurityKeysDontMatch": "Les claus de seguretat no coincideixen",
+  "configureSecureBootDescription": "Has triat per instal·lar programari de control·ladors de tercers. Això requereix desactivar Arrencada Segura,\nPer fer això, has de escogir una clau de seguretat ara i introduir-la després de reiniciar el sistema.",
+  "autoinstallDirectTitle": "Instal·lació automatitzada",
+  "autoinstallDirectHeader": "Importa el fitxer autoinstall",
+  "autoinstallDirectUrlLabel": "Podeu introduir l'URL d'un fitxer autoinstall:",
+  "autoinstallDirectFileLabel": "O seleccioneu un fitxer local:",
+  "autoinstallDirectFileButtonLabel": "Seleccioneu el fitxer...",
+  "autoinstallDirectFileClearButtonLabel": "Esborra el fitxer",
+  "autoinstallDirectFilePickerTitle": "Trieu el fitxer",
+  "autoinstallDirectFilePickerFilterLabel": "Fitxers YAML",
+  "autoinstallDirectImportButtonLabel": "Importa",
+  "autoinstallDirectErrorNetworkTitle": "El fitxer autoinstall no és accessible",
+  "autoinstallDirectErrorNetworkBody": "Comproveu si l'URL és correcte, proveu la connexió a Internet, o proveu més tard.",
+  "autoinstallDirectErrorInvalidUrlTitle": "URL no vàlida",
+  "autoinstallDirectErrorInvalidUrlBody": "Comproveu que l'URL sigui correcta o seleccioneu un fitxer local.",
+  "autoinstallDirectErrorInvalidContentTitle": "Fitxer autoinstall invàlid",
+  "autoinstallDirectErrorInvalidContentBody": "Comproveu el fitxer o proveu-ne un altre.",
+  "autoinstallDirectErrorFileSystemTitle": "No es pot llegir el fitxer autoinstall",
+  "autoinstallDirectErrorFileSystemBody": "Comproveu els permisos o proporcioneu un fitxer diferent.",
+  "autoinstallDirectErrorUnkownTitle": "Error desconegut",
+  "autoinstallTitle": "Tipus d'instal·lació",
+  "autoinstallHeader": "Com us agradaria instal·lar {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Entreu l'autoinstall.yaml URL o un camí de fitxer local:",
+  "autoinstallInteractiveOption": "Instal·lació Interactiva",
+  "autoinstallInteractiveDescription": "Per als usuaris que vulguin una guia pas a pas durant la instal·lació.",
+  "autoinstallDirectOption": "Automatitzat amb fitxer autoinstall",
+  "autoinstallDirectDescription": "Per a usuaris avançats que tinguin una autoinstall.yaml per a configuracions de sistema consistents i repetibles.",
+  "autoinstallLandscapeOption": "Automatitzat amb el Landscape",
+  "autoinstallLandscapeDescription": "Per als usuaris en organitzacions que proporcionen un fitxer autoinstall mitjançant Landscape.",
+  "loadingPageTitle": "Us donem la benvinguda a {DISTRO}",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "loadingHeader": "S'està preparant {DISTRO}…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Advertiment:",
+  "tryOrInstallHeader": "Què voleu fer amb {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "rstHeader": "Heu de desactivar RST per continuar la instal·lació",
+  "rstDisable": "El vostre ordinador utilitza Intel RST (tecnologia d'emmagatzematge ràpid). Podeu desactivar RST o bé a:",
+  "rstDisableWindows": "Windows, si utilitzeu una configuració d'arrencada dual amb Windows",
+  "rstDisableBios": "La configuració de BIOS",
+  "dontInstallDriverSoftwareNow": "No instal·leu el programari del controlador per ara",
+  "dontInstallDriverSoftwareNowDescription": "El podeu instal·lar més tard des de Programari i Actualitzacions.",
+  "showSecurityKey": "Mostra",
+  "hideSecurityKey": "Amaga",
+  "codecsAndDriversPageTitle": "Optimitzeu el vostre ordinador",
+  "codecsAndDriversPageDescription": "Voleu instal·lar programari propietari recomanat?",
+  "codecsAndDriversPageBody": "{DISTRO} es distribueix sense programari privat per defecte. La instal·lació de programari addicional pot millorar el rendiment del vostre ordinador.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "S'ha detectat una targeta gràfica NVIDIA",
+  "codecsAndDriversNvidiaBody": "Per al millor rendiment de les targetes gràfiques NVIDIA és molt recomanable instal·lar controladors addicionals.",
+  "fullInstallationTitle": "Selecció ampliada",
+  "fullInstallationSubtitle": "Una selecció d’eines d’oficina, utilitats i navegador web per a ús fàcil fora de línia.",
+  "minimalInstallationTitle": "Selecció predeterminada",
+  "minimalInstallationSubtitle": "Només els imprescindibles, el navegador web i les utilitats bàsiques.",
+  "installThirdPartyTitle": "Instal·leu programari de tercers per a gràfics i maquinari Wi-Fi, així com formats de mitjans addicionals",
+  "installThirdPartySubtitle": "Aquest programari està subjecte als terminis de llicència inclosos amb la seva documentació. Alguns són propietaris.",
+  "installDriversTitle": "Instal·leu el programari de tercers per a gràfics i maquinari Wi-Fi",
+  "installDriversSubtitle": "Incloent-hi però no limitat a controladors NVIDIA i similars",
+  "installCodecsTitle": "Descàrrega i instal·lació de suport per a formats de mitjans addicionals",
+  "installCodecsSubtitle": "Incloent-hi però no limitat a MP3, MP4, MOV i similars",
+  "batteryWarning": "L'ordinador no està connectat a una font d'alimentació.",
+  "offlineWarning": "Actualment esteu fora de línia",
+  "choosePassphraseHeader": "Crea una contrasenya",
+  "choosePassphraseBody": "Haureu d'introduir la vostra contrasenya cada vegada que engegueu l'ordinador. Aquesta contrasenya és diferent de la vostra contrasenya d'usuari.",
+  "choosePassphraseInfoHeader": "Assegureu-vos de guardar la vostra contrasenya",
+  "choosePassphraseInfoBody": "Si la perdeu, perdreu totes les vostres dades.",
+  "chooseOptionalPassphraseInfoHeader": "Emmagatzemeu la contrasenya i la clau de recuperació en algun lloc segur",
+  "chooseOptionalPassphraseInfoBody": "Si perdeu la vostra contrasenya, perdreu totes les vostres dades. La contrasenya no substitueix la clau de recuperació o la contrasenya d'usuari.",
+  "passphrasePageTitle": "Encriptació",
+  "passphrasePageHeaderPassphrase": "Estableix una contrasenya d'encriptació",
+  "passphrasePageHeaderPin": "Establiu un PIN d'encriptació",
+  "passphrasePageBodyPassphrase": "Cada vegada que engegueu l'ordinador haureu d'introduir la contrasenya. Aquesta contrasenya és diferent de la vostra contrasenya d'usuari. Podreu canviar-la més tard al Centre de seguretat.",
+  "passphrasePageBodyPin": "Cal que introduïu el PIN cada vegada que engegueu el vostre ordinador. Aquest PIN és diferent de la vostra contrasenya d'usuari. Podreu canviar-lo més tard al Centre de Seguretat.",
+  "passphrasePageChoosePassphraseHint": "Contrasenya",
+  "passphrasePageConfirmPassphraseHint": "Confirma la contrasenya",
+  "passphrasePageRequiredPassphrase": "Es requereix una contrasenya",
+  "passphrasePageMismatchPassphrase": "Les contrasenyes no concorden",
+  "passphrasePageChoosePinHint": "PIN",
+  "passphrasePageConfirmPinHint": "Confirma el PIN",
+  "passphrasePageRequiredPin": "Es requereix un PIN",
+  "passphrasePageMismatchPin": "Els PIN no concorden",
+  "passphraseTypePassphraseTileTitle": "Requereix una contrasenya a l'inici",
+  "passphraseTypePassphraseTileSubTitle": "El més segur. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya més llarga.",
+  "passphraseTypePinTileTitle": "Requereix un PIN a l'inici",
+  "passphraseTypePinTileSubTitle": "El més segur. S'ha d'introduir un PIN numèric cada vegada que engegueu l'ordinador.",
+  "passphraseTypeNoneTileTitle": "Desbloqueja el disc automàticament",
+  "passphraseTypePageHeader": "Seguretat addicional",
+  "passphraseTypePageBody": "Per defecte, el disc es durant l'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.",
+  "successIconSemanticLabel": "Èxit",
+  "confirmTableCreatedFormattedMounted": "Creat i formatat com {format} utilitzat per a {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formatat com {format} utilitzat per a {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Utilitzat per a {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formatat com {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "readyToUse": "{system} està instal·lat i a punt per utilitzar",
+  "@readyToUse": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigure": "**{system}** s'ha copiat al disc",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartInto": "Reinicia a {system}",
+  "@restartInto": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Reinicia la instal·lació o continua provant.\nEls canvis que feu no es guardaran.",
+  "rebootToConfigureWarning": "Heu de reiniciar l'ordinador per continuar el procés d'instal·lació.",
+  "restartNow": "Reinicia ara",
+  "continueTesting": "Continua la prova",
+  "bitlockerInfoTitle": "S'ha detectat el BitLocker",
+  "bitlockerInfoDescription": "Una o més particions estan encriptades amb el BitLocker.",
+  "bitlockerInfoDisable": "Per instal·lar al costat de Windows, desactiveu BitLocker a Windows.",
+  "bitlockerInfoRecovery": "Windows pot sol·licitar claus de recuperació en l'arrencada després de la instal·lació.",
+  "bitlockerInfoInstructions": "Per obtenir instruccions, visiteu la guia <a href=\"{url}\">BitLocker</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "Podeu perdre totes les vostres dades sense claus de recuperació de BitLocker",
+  "restartComputer": "Reinicia l'ordinador",
+  "restartComputerTitle": "Voleu reiniciar l'ordinador?",
+  "restartIntoWindows": "Reinicia a Windows",
+  "restartIntoWindowsTitle": "Voleu reiniciar a Windows?",
+  "restartIntoWindowsDescription": "Segur que voleu reiniciar l'ordinador? Haureu de reiniciar la instal·lació {DISTRO} més tard per finalitzar la instal·lació de {DISTRO}.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesTitle": "Us donem la benvinguda a {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "Disponible:",
+  "installationSlidesIncluded": "Inclòs:",
+  "installationSlidesWelcomeTitle": "Ràpid, gratuït i ple de novetats",
+  "installationSlidesWelcomeHeader": "L'última versió de {DISTRO} fa que la informàtica sigui més fàcil que mai.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeBody": "Tant si feu desenvolupament, creació, jocs o administració trobareu eines noves per millorar la vostra productivitat i realçar la vostra experiència dins {RELEASE}.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareTitle": "Totes les aplicacions que us calen",
+  "installationSlidesSoftwareBody": "Instal·leu, gestioneu i actualitzeu totes les vostres aplicacions a Programari de l'Ubuntu, incloent-hi milers d'aplicacions tant de la Snap Store com dels dipòsits de {DISTRO}.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesDevelopmentTitle": "Desenvolupeu amb el millor de codi obert",
+  "installationSlidesDevelopmentBody": "{DISTRO} és l'estació de treball ideal per al desenvolupament d'aplicacions o web, ciència de dades i AI /ML, així com operacions de desenvolupament i administració. Totes les versions {DISTRO} inclouen les últimes cadenes d'eines i suporten tots els IDE principals.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesCreativityTitle": "Potencieu la creativitat",
+  "installationSlidesCreativityBody": "Si feu animació, disseny, creació de vídeo o desenvolupament de jocs, és fàcil mantenir els vostres fluxos de treball a {DISTRO} amb suport per a programari i aplicacions de codi obert amb estàndard industrial.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Genial per jugar",
+  "installationSlidesGamingBody": "{DISTRO} suporta els últims controladors NVIDIA i Mesa per millorar el rendiment i la compatibilitat. Milers de títols del Windows es poden jugar perfectament a {DISTRO} mitjançant aplicacions com Steam sense cap configuració addicional.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityTitle": "Privat i segur",
+  "installationSlidesSecurityBody": "{DISTRO} ofereix totes les eines necessàries per la privacitat i seguretat a Internet. Amb suport incorporat de tallafocs i VPN i un munt d'aplicacions centrades en la privacitat per assegurar que teniu control ple de les vostres dades.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "Tots els llançaments {DISTRO} LTS vénen amb cinc anys de pegats de seguretat inclosos, que s'estén a deu anys amb una subscripció d'Ubuntu Pro.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityTitle": "Incrementeu la vostra productivitat",
+  "installationSlidesProductivityBody": "{DISTRO} L'escriptori inclou LibreOffice, un conjunt d'aplicacions de codi obert compatibles amb Microsoft Office per a documents, fulls de càlcul i presentacions. També hi ha eines de col·laboració populars.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityTitle": "Accés per a tothom",
+  "installationSlidesAccessibilityBody": "En el cor de la filosofia {DISTRO} hi ha la creença que la informàtica és per a tothom. Amb les eines avançades per a l'accessibilitat i les opcions per canviar la llengua, l'esquema de colors i la mida del text, {DISTRO} fa que la informàtica sigui fàcil, tant se val qui sigueu i on estigueu.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityOrca": "Lector de pantalla Orca",
+  "installationSlidesAccessibilityLanguages": "Compatibilitat lingüística",
+  "installationSlidesSupportTitle": "Ajuda i assistència",
+  "installationSlidesSupportHeader": "La documentació oficial {DISTRO} està disponible tant en línia com a través de la icona Ajuda de l'acoblador.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu cobreix una sèrie de preguntes i respostes i l'Ubuntu Discourse proporciona guies i discussions per a usuaris nous i experimentats.",
+  "installationSlidesSupportEnterprise": "Per a usuaris corporatius Canonical proveeix suport comercial per facilitar l'adopció i gestió de l'Ubuntu al lloc de treball.",
+  "installationSlidesSupportResources": "Recursos útils:",
+  "installationSlidesSupportDocumentation": "Documentació oficial",
+  "installationSlidesSupportUbuntuPro": "Suport 24/7 de nivell empresarial amb Ubuntu Pro",
+  "nextSlideSemanticLabel": "Diapositiva següent",
+  "previousSlideSemanticLabel": "Diapositiva anterior",
+  "playSlideshowSemanticLabel": "Presentació de diapositives",
+  "pauseSlideshowSemanticLabel": "Pausa la presentació",
+  "toggleLogsSemanticLabel": "Commuta els registres d'instal·lació",
+  "notEnoughDiskSpaceTitle": "No hi ha prou espai al disc",
+  "notEnoughDiskSpaceUbuntu": "No hi ha prou espai de disc per instal·lar {DISTRO}",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "El disc seleccionat no té prou espai per instal·lar {DISTRO}. Sortiu de l'instal·lador per fer més espai o seleccioneu un altre disc.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceAvailable": "Disponible:",
+  "notEnoughDiskSpaceRequired": "Requerit:",
+  "refreshPageTitle": "Actualització disponible",
+  "refreshHeader": "Hi ha una actualització disponible per a l'instal·lador",
+  "refreshUpdateNow": "Actualitza ara",
+  "refreshInfo": "Actualitza a l'ultima versió per a una fiabilitat millorada i més característiques.",
+  "refreshReady": "Actualització a punt",
+  "refreshCurrent": "La versió actual de {snap} és {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Actualització a la versió {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "La versió actual {version} està actualitzada.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "S'està actualitzant {snap}...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Si us plau, tanqueu l'instal·lador i rellançeu per continuar",
+  "refreshCloseLabel": "Tanca l'instal·lador",
+  "refreshSnapPrerequisites": "Assegurant els prerequisits de {snap}...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "S'està actualitzant {snap}...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "S'està comprovant l'actualització de {snap}...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "S'està preparant {snap}...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "S'està descarregant {snap}...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "S'està validant {snap}...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "S'està muntant {snap}...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "S'estan aturant els serveis {snap}...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "S'estan eliminant els àlies de {snap}...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "S'està desvinculant {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "S'estan actualitzant els recursos de {snap}...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "S'està actualitzant la línia d'ordre del nucli de {snap}...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "S'estan copiant les dades de {snap}...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "S'estan establint els perfils de seguretat de {snap}...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "S'està enllaçant {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "S'estan connectant les connexions i dispositius de {snap}...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "S'estan establint els àlies automàtics de {snap}...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "S'estan establint els àlies de {snap}...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "S'estan iniciant els serveis de {snap}...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "S'està netejant {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "Clau de recuperació",
+  "recoveryKeyTitleBadgeLabel": "Important",
+  "recoveryKeyHeader": "Deseu la vostra clau de recuperació",
+  "recoveryKeyInfoHeader": "Podeu perdre totes les vostres dades sense clau de recuperació",
+  "recoveryKeyTextFieldLabel": "Clau de recuperació",
+  "recoveryKeyStorageAdvice": "Us caldrà proporcionar aquesta clau de recuperació si la desencriptació falla durant l'arrencada. Sense la clau, perdreu l’accés a totes les vostres dades. Deseu-la en un lloc segur, com ara un gestor de contrasenyes.",
+  "recoveryKeyConfirmation": "He guardat la meva clau de recuperació en algun lloc segur",
+  "recoveryKeyLinkLabel": "Més informació",
+  "recoveryKeySaveToFileLabel": "Desa a un fitxer",
+  "recoveryKeyShowQrCodeLabel": "Mostra el codi QR",
+  "recoveryKeyQrDialogTitle": "{DISTRO} Escriptori - Clau de recuperació",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Escanegeu el codi QR per copiar la clau de recuperació i guardar-la en algun lloc segur, com ara un gestor de contrasenyes. També podeu fer una foto per a un ús futur.",
+  "recoveryKeyClipboardNotifiaction": "Copiat al portaretalls",
+  "recoveryKeyExceptionFileSystemTitle": "No s'ha desat la clau de recuperació",
+  "recoveryKeyExceptionDisallowedPathTitle": "El fitxer clau de recuperació no es pot desar en una ubicació temporal",
+  "recoveryKeyExceptionUnknownTitle": "Error desconegut",
+  "recoveryKeyExceptionFileSystemBody": "No teniu permís per escriure a aquesta carpeta. Proveu un lloc diferent o un altre mètode.",
+  "recoveryKeyExceptionDisallowedPathBody": "Proveu una ubicació diferent, com ara una unitat extraïble o utilitzeu un altre mètode.",
+  "recoveryKeyFilePickerTitle": "Desa el fitxer de clau de recuperació",
+  "recoveryKeyFilePickerFilter": "Fitxers de text",
+  "landscapeMagicAttachInstructions": "Escanegeu el codi QR o introduïu el codi següent a <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapePageTitle": "Instal·lació automatitzada",
+  "landscapeHeader": "Inicieu sessió a Landscape",
+  "landscapeDomainHeader": "Entreu el domini de Landscape (FQDN)",
+  "landscapeDomainHintText": "Domini de Landscape (FQDN)",
+  "landscapeDomainInstructions": "Proporcioneu el domini de Landscape de la vostra organització per iniciar sessió i obtenir un fitxer autoinstall. Podeu obtenir el FQDN del vostre suport informàtic.",
+  "landscapeDomainTextField": "Domini de Landscape (FQDN)",
+  "next": "Seguent",
+  "landscapeDomainInvalidDomainWarning": "Domini invàlid, si us plau comproveu-ho o contacteu el vostre suport informàtic",
+  "landscapeDomainNoInternetTitleWarning": "Connecta't a Internet per continuar",
+  "landscapeDomainNoInternetDescriptionWarning": "Cal Internet per obtenir l'arxiu autoinstall de Landscape",
+  "landscapeCodeExpiredWarning": "Codi caducat, torneu-ho a provar",
+  "landscapeLoginFailedWarning": "Inici de sessió fallit, si us plau torneu a provar",
+  "landscapeErrorPageTitle": "La instal·lació automatitzada no està disponible per al vostre compte",
+  "landscapeErrorPageBody": "Contacteu el vostre suport informàtic o proveu una opció d'instal·lació diferent.",
+  "landscapeErrorPageCode": "Codi d'error: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "L'Ubuntu s'instal·larà amb la configuració proporcionada per la vostra organització",
+  "landscapeConfirmPageSuccessInfoContent": "Podeu revisar el fitxer autoinstall importat de Landscape a sota.",
+  "errorIconSemanticLabel": "Error",
+  "closeIconSemanticLabel": "Tanca",
+  "maximizeIconSemanticLabel": "Maximitza",
+  "minimizeIconSemanticLabel": "Minimitza",
+  "passphrasePagePassphraseEntropyBelowMin": "Contrasenya feble, feu-la més llarga i més complexa",
+  "passphrasePagePassphraseEntropyBelowOptimal": "Contrasenya suficient, feu-la més llarga o més complexa per a més seguretat",
+  "passphrasePagePassphraseEntropyOptimal": "Contrasenya forta",
+  "passphrasePagePinEntropyBelowMin": "PIN feble, feu-lo més fort o menys predictible",
+  "passphrasePagePinEntropyBelowOptimal": "PIN suficient, feu-lo més llarg o menys predictible per a una seguretat millor",
+  "passphrasePagePinEntropyOptimal": "El PIN és suficientment llarg",
+  "installationTypeHeader": "Com voleu instal·lar {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeErase": "Esborreu el disc i instal·leu {DISTRO}",
+  "@installationTypeErase": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "Totes les dades i particions del disc seran esborrades, incloent-hi els sistemes operatius.",
+  "installationTypeExperimental": "Experimental",
+  "installationTypeNoneInfo": "Sistema de fitxers estàndard sense encriptació.",
+  "installationTypeLVM": "Useu LVM sense encriptació",
+  "installationTypeLVMEncryption": "Encripta amb una contrasenya",
+  "installationTypeLVMEncryptionInfo": "Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya. Això utilitza l'encriptació LUKS amb LVM.",
+  "installationTypeLVMEncryptionSelected": "Seleccionats LVM i encriptació",
+  "installationTypeZFS": "Usa ZFS sense encriptació",
+  "installationTypeZFSEncryption": "Encripta amb una contrasenya usant ZFS",
+  "installationTypeZFSEncryptionInfo": "Encriptació nativa amb ZVS. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya.",
+  "installationTypeZFSEncryptionSelected": "ZFS i encriptació seleccionats",
+  "installationTypeTPM": "Utilitza l'encriptació amb suport de maquinari",
+  "installationTypeTPMInfo": "<a href=\"{url}\">Llegiu sobre l'encriptació TPM</a> abans de triar aquesta opció. Això pot no funcionar amb el vostre maquinari o version futures de {DISTRO}.",
+  "@installationTypeTPMInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeTPMSelected": "TPM seleccionat",
+  "installationTypeReinstall": "Esborra {os} i reinstal·la",
+  "@installationTypeReinstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "partitionFormatLabel": "Usat com:",
+  "partitionFormatNone": "Deixa sense formatar",
+  "partitionFormatKeep": "Deixa format com {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmPageTitle": "A punt per instal·lar",
+  "confirmHeader": "Reviseu les vostres eleccions",
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "confirmDiskEncryptionTPM": "TPM",
+  "confirmDiskEncryptionNone": "Cap",
+  "confirmDevicesTitle": "Dispositius",
+  "confirmEntryApplications": "Aplicacions",
+  "confirmEntryDiskSetup": "Tipus d'instal·lació",
+  "confirmEntryDiskEncryption": "Encriptació de disc",
+  "confirmEntryInstallationDisk": "Disc d'Instal·lació",
+  "confirmEntryProprietarySoftware": "Programari propietari",
+  "confirmSectionGeneralTitle": "General",
+  "confirmSectionSecurityAndMoreTitle": "Seguretat i més",
+  "confirmPartitionsTitle": "Particions",
+  "confirmPartitionTables": "Les taules de partició dels dispositius següents es canvien:",
+  "confirmPartitionTable": "{serial} ({path})",
+  "@confirmPartitionTable": {
+    "description": "An entry for a disk whose partition table is being changed",
+    "placeholders": {
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareCodecs": "Còdecs",
+  "confirmProprietarySoftwareCodecsDrivers": "Còdecs i controladors",
+  "confirmProprietarySoftwareDrivers": "Controladors",
+  "confirmTableErased": "Esborrat",
+  "confirmTableUnchanged": "Sense canvis",
+  "confirmTableResized": "Redimensionat de {oldsize} a {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeReinstallWarning": "<font color=\"{color}\"> Atenció:</font> Això eliminarà tots els programes, documents, fotos, música i qualsevol altre fitxer de {os}.",
+  "@installationTypeReinstallWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongside": "Instal·leu {product} al costat de {os}",
+  "@installationTypeAlongside": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideDual": "Instal·leu {product} juntament amb {os1} i {os2}",
+  "@installationTypeAlongsideDual": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideMulti": "Instal·leu {product} al costat dels sistemes operatius existents",
+  "@installationTypeAlongsideMulti": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideUnknown": "Instal·leu {product} al costat d'altres particions",
+  "@installationTypeAlongsideUnknown": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "Esborra {os} i instal·la {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "Tots els fitxers i dades de la instal·lació existent de {os} seran esborrats permanentment.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeManualInfo": "Per a usuaris avançats que busquen configuracions de disc personalitzades.",
+  "@installationTypeManualInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePageTitle": "Esborra el disc i instal·la ${DISTRO}",
+  "@selectGuidedStoragePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Comença des de zero al disc seleccionat.",
+  "selectGuidedStorageDriveDropdownLabel": "Seleccioneu la unitat:",
+  "selectGuidedStoragePartitionDropdownLabel": "Seleccioneu la partició:",
+  "guidedStoragePageHeader": "Trieu on instal·lar {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideHiddenPartitions": "{num} les particions més petites s'amaguen, utilitzeu l'eina de particions <a href=\"{url}\">avançada</a> per a més control",
+  "@installAlongsideHiddenPartitions": {
+    "placeholders": {
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideResizePartition": "Redimensiona la partició",
+  "installAlongsideAllocateSpace": "Assigna espai",
+  "allocateDiskSpace": "Partició manual",
+  "allocateDiskSpaceInvalidMountPointSlash": "Els punts de muntatge han de començar amb \"/\"",
+  "allocateDiskSpaceInvalidMountPointSpace": "Els punts de muntatge no poden contenir espais",
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} no és un sistema de fitxers compatible amb {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "diskHeadersFormat": "Format",
+  "newPartitionTableConfirmationTitle": "Nova partició buida",
+  "newPartitionTableConfirmationMessage": "La creació d'una nova taula de particions per a un dispositiu complet eliminarà totes les particions actuals. Aquesta operació es pot desfer si és necessari.",
+  "tooManyPrimaryPartitions": "Massa particions primàries",
+  "partitionLimitReached": "Límit assolit",
+  "bootLoaderDevice": "Dispositiu per a la instal·lació del carregador d'arrencada",
+  "autoinstallErrorMessage": "No s'ha pogut executar una ordre al fitxer d'instal·lació automàtica durant la instal·lació.",
+  "autoinstallErrorInstructions": "Haureu de reiniciar la instal·lació. Comproveu el fitxer d'instal·lació automàtica, trieu un tipus d'instal·lació diferent o contacteu amb el vostre suport informàtic.",
+  "installationTypeLVMEncryptionInfoResolute": "Haureu d'introduir una contrasenya cada vegada que engegueu l'ordinador. {advancedHint}",
+  "installationTypeLVMEncryptionInfo2": "Això utilitza LVM amb xifratge LUKS.",
+  "installationTypeTPMInfoResolute": "El disc es desbloquejarà automàticament durant l'inici.",
+  "installationTypeTPMInfoUnavailable": "No està disponible en aquest ordinador.",
+  "restartInstaller": "Reinicia l'instal·lador",
+  "tpmActionPageTitle": "No s'ha pogut habilitar l'encriptatge amb suport de maquinari",
+  "tpmActionBadgeLabel": "Acció requerida",
+  "tpmActionDetailsLabel": "Dades tècniques",
+  "tpmActionConfirmLabel": "Confirmació",
+  "tpmActionSolutionLabel": "Solució {n}: {text}",
+  "tpmActionSingleSolutionLabel": "Solució: {text}",
+  "tpmActionDocumentationLinkLabel": "Més informació sobre l'encriptatge amb suport de maquinari",
+  "tpmActionErrorSupportLabel": "Proveu les solucions següents, contacteu amb el suport de TI o trieu un mètode d'encriptació diferent.",
+  "tpmActionErrorSupportSingleLabel": "Proveu la solució següent, contacteu amb el suport de TI o trieu un mètode d'encriptació diferent.",
+  "tpmActionErrorSupportNoActionLabel": "Contacteu amb el suport de TI o trieu un mètode d'encriptació diferent.",
+  "tpmActionErrorKindInternal": "Error intern.",
+  "tpmActionErrorKindShutdownRequired": "Es requereix apagat.",
+  "tpmActionErrorKindRebootRequired": "Cal reiniciar.",
+  "tpmActionErrorKindUnexpectedAction": "Acció inesperada.",
+  "tpmActionErrorKindMissingArgument": "Falta l'argument.",
+  "tpmActionErrorKindInvalidArgument": "L'argument no és vàlid.",
+  "tpmActionErrorKindActionFailed": "Ha fallat l'acció.",
+  "tpmActionErrorKindRunningInVm": "L'entorn actual és una màquina virtual.",
+  "tpmActionErrorKindSystemNotEfi": "Aquest ordinador està utilitzant microprogramari antic (BIOS antic) que no és compatible amb aquest mètode d'encriptació.",
+  "tpmActionErrorKindEfiVariableAccess": "Hi ha un problema amb el microprogramari d'aquest ordinador.",
+  "tpmActionErrorKindNoSuitableTpm2Device": "Aquest ordinador no té el maquinari de seguretat requerit (TPM 2.0) per a aquest mètode d'encriptació.",
+  "tpmActionErrorKindTpmDeviceDisabled": "El TPM d'aquest ordinador està desactivat.",
+  "tpmActionErrorKindTpmHierarchiesOwned": "El TPM d'aquest ordinador ja està en ús per un altre sistema o aplicació.",
+  "tpmActionErrorKindTpmDeviceLockoutLockedOut": "El TPM d'aquest ordinador està bloquejat.",
+  "tpmActionErrorKindInsufficientTpmStorage": "El TPM d'aquest ordinador no té prou emmagatzematge disponible.",
+  "tpmActionErrorKindUnsupportedPlatform": "Aquest ordinador no és compatible amb l'encriptació amb maquinari.",
+  "tpmActionErrorKindUefiDebuggingEnabled": "La depuració UEFI està activada.",
+  "tpmActionErrorKindInsufficientDmaProtection": "A aquest ordinador li falta una característica de seguretat requerida (protecció DMA).",
+  "tpmActionErrorKindNoKernelIommu": "A aquest ordinador li falta una funció de seguretat requerida (IOMMU).",
+  "tpmActionErrorKindHostSecurity": "Hi ha un problema amb la configuració de seguretat d'aquest ordinador.",
+  "tpmActionErrorKindSysPrepApplicationsPresent": "Hi ha programari en execució a l'inici que podria evitar una connexió segura amb el TPM de l'ordinador.",
+  "tpmActionErrorKindAbsolutePresent": "El mòdul de persistència absoluta està habilitat en aquest ordinador.",
+  "tpmActionErrorKindInvalidSecureBootMode": "L'arrencada segura està desactivada en aquest ordinador o no està configurada en mode desplegat.",
+  "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Alguns dels certificats que verifiquen programari en aquest ordinador estan desactualitzats o utilitzen una protecció feble.",
+  "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Aquest ordinador està utilitzant una llista de permisos manual per verificar el programari en iniciar.",
+  "tpmActionErrorKindAddonDriversPresent": "Hi ha controladors de complements.",
+  "tpmActionErrorKindGenericTpm": "Hi ha un problema amb el TPM d'aquest ordinador.",
+  "tpmActionErrorKindGenericFirmware": "Hi ha un problema amb el microprogramari d'aquest ordinador.",
+  "tpmActionFixActionReboot": "Reinicia",
+  "tpmActionFixActionShutdown": "Apaga",
+  "tpmActionFixActionRebootToFwSettings": "Reinicia a la configuració del microprogramari",
+  "tpmActionFixActionRebootToFwSettingsInstructions": "Si la configuració del microprogramari no es carrega automàticament, reinicieu i premeu la tecla de configuració repetidament durant l'inici (comunament F2, F10 o Suprimeix).",
+  "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Activa la protecció DMA manualment",
+  "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Neteja el TPM manualment",
+  "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Habilita l'arrencada segura manualment",
+  "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Habilita l'IOMMU manualment",
+  "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Habilita manualment els bancs PCR",
+  "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Activa manualment el TPM",
+  "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Neteja el TPM manualment",
+  "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Neteja el TPM manualment",
+  "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Inhabilita manualment el mòdul de persistència absoluta",
+  "tpmActionFixActionContactOem": "Contacta amb OEM",
+  "tpmActionFixActionContactOsVendor": "Contacta amb el proveïdor del SO",
+  "tpmActionFixActionEnableTpmViaFirmware": "Habilita el TPM en reiniciar",
+  "tpmActionFixActionEnableAndClearTpmViaFirmware": "Habilita i neteja el TPM en reiniciar",
+  "tpmActionFixActionClearTpmViaFirmware": "Neteja el TPM en reiniciar",
+  "tpmActionFixActionClearTpm": "Neteja TPM",
+  "tpmActionFixActionProceed": "Ignora",
+  "tpmActionFixActionRebootDescription": "Reinicia l'ordinador per a completar les accions anteriors.",
+  "tpmActionFixActionRebootTpmDeviceFailureDescription": "Reiniciar l'ordinador pot solucionar el problema.",
+  "tpmActionFixActionShutdownDescription": "Apaga l'ordinador per a completar les accions anteriors.",
+  "tpmActionFixActionRebootToFwSettingsDescription": "Podeu fer-ho a la configuració del microprogramari del vostre ordinador.",
+  "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "És possible que pugueu fer-ho a la configuració del microprogramari del vostre ordinador. Comproveu la documentació del proveïdor de la CPU per a la seva orientació.",
+  "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "El mode d'arrencada segur està establert a «desplegat».",
+  "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Aquesta característica pot ser coneguda com a \"Tecnologia de virtualització\", \"VT-d\" o \"AMD-Vi\".",
+  "tpmActionFixActionProceedDescription": "Ignorar aquest problema podria resultar en una instal·lació menys segura.",
+  "tpmActionRestartLabel": "Reinicia",
+  "tpmActionRestartAndEnableTpmLabel": "Reinicia i habilita el TPM",
+  "tpmActionRestartAndClearTpmLabel": "Reinicia i neteja TPM",
+  "tpmActionIgnoreAndContinueLabel": "Ignora i continua",
+  "tpmActionFixActionClearTpmWarningTitle": "Netejant el TPM s'esborraran totes les claus de xifratge",
+  "tpmActionFixActionClearTpmWarningBody": "Perdràs accés a totes les dades en unitats encriptades per a les quals no tens claus de recuperació. També trencarà altres característiques que depenen del TPM, com l'autenticació i els certificats.",
+  "tpmActionFixActionClearTpmConfirmationLabel": "Entenc les conseqüències de netejar el TPM",
+  "tpmActionFixActionCaveatConfirm": "És possible que se us demani que confirmeu aquesta acció en reiniciar.",
+  "tpmActionFixActionCaveatRetry": "Després haureu de tornar a iniciar la instal·lació.",
+  "tpmActionErrorTitle": "Aquesta solució ha fallat",
+  "tpmActionErrorDescription": "Proveu una solució diferent o contacteu amb el suport informàtic.",
+  "manualPartitioningWarningBody": "Prova una altra cosa. També podeu <a href=\"\">enviar un informe d'error</a>.",
+  "stepIndicatorLabel": "Pas {CURRENT_STEP} de {TOTAL_STEPS}",
+  "autoinstallGenericErrorMessage": "La instal·lació no pot continuar sense el fitxer d'auto-instal·lació proveït.",
+  "autoinstallValidationErrorMessage": "Hi ha una incidència amb el fitxer d'auto-instal·lació proveït.",
+  "autoinstallCloudInitSchemaValidationErrorMessage": "Hi ha una incidència amb les dades d'usuari de cloud-init proveïdes al fitxer d'auto-instal·lació.",
+  "tpmActionErrorKindNoHardwareRootOfTrust": "A aquest ordinador li falta una característica requerida de seguretat (arrel de maquinari de confiança).",
+  "passphraseTypePageBodyAuthRequired": "L'encriptació basada en el maquinari requereix de seguretat addicional a aquest ordinador.",
+  "tpmActionPageTitleActionable": "Hi ha una incidència amb l'encriptació basada en maquinari"
 }
