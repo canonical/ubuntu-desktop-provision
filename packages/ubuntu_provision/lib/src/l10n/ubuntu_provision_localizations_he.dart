@@ -162,7 +162,7 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'השם ארוך מדי.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'השם שגוי';
 
   @override
   String get identityHostnameLabel => 'שם המחשב שלך';
@@ -187,7 +187,8 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'דרוש שם משתמש';
 
   @override
-  String get identityInvalidUsername => 'שם המשתמש אינו תקני';
+  String get identityInvalidUsername =>
+      'שם המשתמש שגוי: הוא חייב להתחיל באות לטינית קטנה ויכול להיות מורכב רק מאותיות לטיניות קטנות, ספרות, מינוסים וקווים תחתיים.';
 
   @override
   String get identityUsernameInUse => 'שם משתמש זה כבר קיים.';
@@ -379,29 +380,29 @@ class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'צמצום';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'אין אות';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'אות חלש';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'אות סביר';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'אות טוב';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'אות מעולה';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'רשת פתוחה';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'רשת מאובטחת';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'התחברות…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'מחובר';
 }

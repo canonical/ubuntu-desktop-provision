@@ -9,110 +9,111 @@ class FactoryResetToolsLocalizationsBs extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'Alati za vraćanje na fabričke postavke';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'Alati za vraćanje na fabričke postavke';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'Šta biste željeli raditi?';
 
   @override
-  String get createResetMedia => 'Create reset media';
+  String get createResetMedia => 'Kreiraj medije za resetiranje';
 
   @override
-  String get startFactoryReset => 'Start factory reset';
+  String get startFactoryReset => 'Započni vraćanje na fabričke postavke';
 
   @override
-  String get createUsbTitle => 'Create a USB reset media';
+  String get createUsbTitle => 'Kreiraj USB medij za resetovanje';
 
   @override
   String get createUsbBody =>
-      'Create a USB reset media to restore the system, as well as customising your Ubuntu installations.';
+      'Napravite USB medij za resetiranje kako biste vratili sistem u prvobitno stanje, kao i prilagodili svoje Ubuntu instalacije.';
 
   @override
   String get createUsbListExplanation =>
-      'Select a USB flash drive. The drive must have **at least 16GB of space.**';
+      'Odaberite USB fleš disk. Disk mora imati **najmanje 16 GB prostora.**';
 
   @override
   String get createUsbWarning =>
-      'The flash drive will be reformatted and all data on the drive will be lost.';
+      'Flash disk će biti preformatiran i svi podaci na disku će biti izgubljeni.';
 
   @override
-  String get resetMediaTitle => 'USB reset media';
+  String get resetMediaTitle => 'USB medij za resetovanje';
 
   @override
-  String get noMediaDetected => 'No removable storage is detected';
+  String get noMediaDetected => 'Nije otkriveno uklonjivo skladište';
 
   @override
   String get noMediaDetectedSubtitle =>
-      'You need a USB storage to create a Factory Reset Media.';
+      'Potrebno vam je USB skladište za kreiranje medija za vraćanje na fabričke postavke.';
 
   @override
-  String get factoryResetTitle => 'Select an option to start factory reset';
+  String get factoryResetTitle =>
+      'Odaberite opciju za pokretanje vraćanja na fabričke postavke';
 
   @override
-  String get loadingDrives => 'Please wait while we fetch the drives.';
+  String get loadingDrives => 'Molim pričekajte dok povežemo diskove.';
 
   @override
-  String get resetMediaReadyTitle => 'USB reset media is ready';
+  String get resetMediaReadyTitle => 'USB medij za resetovanje je spreman';
 
   @override
   String get resetMediaReadyBody =>
-      'When you want to use it, please insert the USB drive into the computer you want to reset and restart it.';
+      'Kada ga želite koristiti, umetnite USB disk u računar koji želite resetirati i ponovo ga pokrenite.';
 
   @override
   String get errorLoadingDrives =>
-      'An error occurred while fetching the drives.';
+      'Došlo je do greške prilikom povezivanja diskova.';
 
   @override
-  String get resetMediaInitializing => 'Initializing';
+  String get resetMediaInitializing => 'Inicijalizacija';
 
   @override
-  String get resetMediaCopying => 'Copying';
+  String get resetMediaCopying => 'Kopiranje';
 
   @override
-  String get resetMediaFinalizing => 'Finalizing';
+  String get resetMediaFinalizing => 'Završavanje';
 
   @override
-  String get resetMediaFinished => 'Finished';
+  String get resetMediaFinished => 'Završeno';
 
   @override
-  String get resetMediaFailed => 'Failed';
+  String get resetMediaFailed => 'Neuspješno';
 
   @override
-  String get error => 'Error';
+  String get error => 'Greška';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Učitavanje...';
 
   @override
-  String get warning => 'Warning';
+  String get warning => 'Upozorenje';
 
   @override
-  String get restore => 'Restore';
+  String get restore => 'Vrati';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Ponovo pokreni';
 
   @override
-  String get reformat => 'Reformat';
+  String get reformat => 'Reformatiranje';
 
   @override
-  String get failed => 'Failed to run command';
+  String get failed => 'Nije uspjelo izvršavanje naredbe';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zatvori';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zatvori';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Uvećaj';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Umanji';
 }

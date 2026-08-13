@@ -62,7 +62,7 @@ class FactoryResetToolsLocalizationsGl extends FactoryResetToolsLocalizations {
 
   @override
   String get resetMediaReadyBody =>
-      'Cando queiras usalo, insire a unidade USB no ordenador que queres restablecer e reiníciao.';
+      'Cando queiras usalo, insire a unidade USB no computador que queres restablecer e reiníciao.';
 
   @override
   String get errorLoadingDrives => 'Ocorreu un erro ao recuperar as unidades.';

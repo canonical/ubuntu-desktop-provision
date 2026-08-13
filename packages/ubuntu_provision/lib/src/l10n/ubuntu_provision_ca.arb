@@ -1,150 +1,163 @@
 {
-    "timezonePageTitle": "On sou?",
-    "timezoneLocationLabel": "Ubicació",
-    "timezoneTimezoneLabel": "Fus horari",
-    "keyboardTitle": "Disposició de teclat",
-    "keyboardHeader": "Trieu la vostra distribució de teclat",
-    "keyboardTestHint": "Escriviu aquí per provar el vostre teclat",
-    "keyboardDetectTitle": "Detecta la disposició del teclat",
-    "keyboardPressKeyLabel": "Premeu una de les tecles següents:",
-    "keyboardKeyPresentLabel": "Teniu la tecla següent al vostre teclat?",
-    "themePageTitle": "Trieu l’aspecte",
-    "themeDark": "Fosc",
-    "themeLight": "Clar",
-    "localeHeader": "Trieu la vostra llengua:",
-    "identityPageTitle": "Qui sou?",
-    "identityAutoLogin": "Entra de manera automàtica",
-    "identityRequirePassword": "Fes que calgui una contrasenya per a entrar",
-    "identityRealNameLabel": "El vostre nom",
-    "identityRealNameRequired": "Cal un nom",
-    "identityHostnameLabel": "El nom de l'ordinador",
-    "identityHostnameInfo": "El nom que utilitza quan es comunica amb altres ordinadors.",
-    "identityHostnameRequired": "Cal un nom per a l'ordinador",
-    "identityInvalidHostname": "El nom de l'ordinador no és vàlid",
-    "identityUsernameLabel": "Trieu un nom d'usuari",
-    "identityUsernameRequired": "Cal un nom d'usuari",
-    "identityInvalidUsername": "El nom d'usuari no és vàlid",
-    "identityUsernameTooLong": "Aquest nom és massa llarg.",
-    "identityPasswordLabel": "Trieu una contrasenya",
-    "identityPasswordRequired": "Cal una contrasenya",
-    "identityConfirmPasswordLabel": "Confirmeu la contrasenya",
-    "identityPasswordMismatch": "Les contrasenyes no coincideixen",
-    "networkPageTitle": "Connecta a internet",
-    "networkWiredDisabled": "Per poder fer servir Ethernet a aquest ordinador, la connexió cablejada ha d'estar habilitada",
-    "networkWifiOption": "Connectar a una xarxa Wi-Fi",
-    "networkWifiOff": "Xarxa sense fils deshabilitada",
-    "networkHiddenWifiOption": "Connecta a una xarxa Wi-Fi oculta",
-    "networkHiddenWifiNameLabel": "Nom a la xarxa",
-    "networkHiddenWifiNameRequired": "Cal un nom de xarxa",
-    "networkNoneOption": "Ara mateix no vull connectar-me a Internet",
-    "close": "Tanca",
-    "restart": "Reinicia",
-    "accessibilityPageTitle": "Accessibilitat",
-    "accessibilityPageHeader": "Accessibilitat a {DISTRO}",
-    "@accessibilityPageHeader": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "accessibilityPageBody": "Personalitzeu {DISTRO} a les vostres necessitats abans de la posada en marxa. Podeu fer canvis més tard a la Configuració del Sistema.",
-    "@accessibilityPageBody": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "accessibilitySeeingLabel": "Visió",
-    "accessibilityHearingLabel": "Audició",
-    "accessibilityTypingLabel": "Escriptura",
-    "accessibilityPointingLabel": "Apuntar i fer clic",
-    "accessibilityZoomLabel": "Escala",
-    "accessibilityHighContrastLabel": "Contrast alt",
-    "accessibilityLargeTextLabel": "Text gran",
-    "accessibilityReduceAnimationLabel": "Redueix l'animació",
-    "accessibilityScreenReaderLabel": "Lector de pantalla",
-    "accessibilityVisualAlertsLabel": "Alertes visuals",
-    "accessibilityStickKeysLabel": "Tecles permanents",
-    "accessibilitySlowKeysLabel": "Tecles lentes",
-    "accessibilityMouseKeysLabel": "Tecles del ratolí",
-    "accessibilityDesktopZoomLabel": "Ampliació de l'escriptori",
-    "errorPageTitle": "S'ha produït un error",
-    "errorPageUnexpected": "No estem segurs de quin és l'error. Podeu provar de reiniciar l'ordinador i tornar a iniciar el procés d'instal·lació. També podeu <a>informar del problema</a>.",
-    "errorPageUbuntuBug": "Per enviar un informe d'error automatitzat que inclogui informació de depuració rellevant, executeu <pre>sudo ubuntu-bug {SNAP}</pre> en un terminal, o des de la línia d'ordres (Alt+F2).",
-    "@errorPageUbuntuBug": {
-        "placeholders": {
-            "SNAP": {
-                "type": "String"
-            }
-        }
-    },
-    "errorPageShowLog": "Mostra el registre",
-    "errorPageHideLog": "Amaga el registre",
-    "keyboardDetectButton": "Detecta",
-    "keyboardVariantLabel": "Seleccioneu la variant del teclat:",
-    "themePageHeader": "Podeu canviar-ho més endavant a la configuració de l'aparença.",
-    "localePageTitle": "Us donem la benvinguda a {DISTRO}",
-    "@localePageTitle": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "identityRealNameTooLong": "Aquest nom és massa llarg.",
-    "identityHostnameTooLong": "El nom de l'ordinador és massa llarg.",
-    "identityUsernameInUse": "Aquest nom d'usuari ja existeix.",
-    "identityUsernameSystemReserved": "Aquest nom està reservat per a ús del sistema.",
-    "identityUsernameInvalidChars": "Aquest nom conté caràcters no vàlids.",
-    "identityPasswordShow": "Mostra",
-    "identityPasswordHide": "Amaga",
-    "identityActiveDirectoryOption": "Fes servir l'Active Directory",
-    "identityActiveDirectoryInfo": "En el següent pas introduireu el domini i altres detalls.",
-    "activeDirectoryTitle": "Inicia la sessió a l'Active Directory",
-    "activeDirectoryHeader": "Voleu iniciar sessió a l'Active Directory?",
-    "activeDirectoryInfo": "{DISTRO} està dissenyat per a integrar-se perfectament amb l'Active Directory per a una administració més fàcil.",
-    "@activeDirectoryInfo": {
-        "placeholders": {
-            "DISTRO": {
-                "type": "String"
-            }
-        }
-    },
-    "activeDirectoryTestConnection": "Prova la connectivitat del domini",
-    "activeDirectoryDomainLabel": "Domini",
-    "activeDirectoryDomainEmpty": "Obligatori",
-    "activeDirectoryDomainTooLong": "Massa llarg",
-    "activeDirectoryDomainInvalidChars": "Caràcters no vàlids",
-    "activeDirectoryDomainStartDot": "Comença amb un punt (.)",
-    "activeDirectoryDomainEndDot": "Acaba amb un punt (.)",
-    "activeDirectoryDomainStartHyphen": "Comença amb un guionet (-)",
-    "activeDirectoryDomainEndHyphen": "Acaba amb un guionet (-)",
-    "activeDirectoryDomainMultipleDots": "Conté múltiples punts seguits (..)",
-    "activeDirectoryDomainNotFound": "No s'ha trobat el domini",
-    "activeDirectoryAdminLabel": "Usuari a unir al domini",
-    "activeDirectoryAdminEmpty": "Obligatori",
-    "activeDirectoryAdminInvalidChars": "Caràcters no vàlids",
-    "activeDirectoryPasswordLabel": "Contrasenya",
-    "activeDirectoryPasswordEmpty": "Obligatori",
-    "activeDirectoryErrorTitle": "S'ha produït un error en configurar la connexió a l'Active Directory",
-    "activeDirectoryErrorMessage": "L'Active Directory no es pot configurar en aquest moment. Un cop el sistema estigui en funcionament, visiteu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per obtenir ajuda.",
-    "networkPageHeader": "Connecteu-vos a Internet",
-    "networkPageBody": "Una connexió a internet millorarà la vostra instal·lació amb la verificació de compatibilitat i paquets de programari addicionals.",
-    "networkWiredOption": "Utilitza la connexió per cable",
-    "networkWiredNone": "No s'ha detectat cap connexió per cable",
-    "networkWiredOff": "La connexió per cable està desactivada",
-    "networkWiredEnable": "Habilita la connexió per cable",
-    "networkWifiNone": "No s'ha detectat cap dispositiu Wi-Fi",
-    "networkWifiDisabled": "Per utilitzar Wi-Fi en aquest ordinador, cal habilitar la xarxa sense fils",
-    "networkWifiEnable": "Habilita Wi-Fi",
-    "eulaPageTitle": "Acord de llicència",
-    "eulaReviewTerms": "Reviseu els termes de la llicència",
-    "eulaReadAndAcceptTerms": "Per continuar configurant aquesta màquina, heu de llegir i acceptar els termes de l'acord de llicència.",
-    "eulaAcceptTerms": "He llegit i accepto aquests termes",
-    "successIconSemanticLabel": "Èxit",
-    "closeIconSemanticLabel": "Tanca",
-    "maximizeIconSemanticLabel": "Maximitza",
-    "minimizeIconSemanticLabel": "Minimitza"
+  "timezonePageTitle": "On sou?",
+  "timezoneLocationLabel": "Ubicació",
+  "timezoneTimezoneLabel": "Fus horari",
+  "keyboardTitle": "Disposició de teclat",
+  "keyboardHeader": "Trieu la vostra distribució de teclat",
+  "keyboardTestHint": "Escriviu aquí per provar el vostre teclat",
+  "keyboardDetectTitle": "Detecta la disposició del teclat",
+  "keyboardPressKeyLabel": "Premeu una de les tecles següents:",
+  "keyboardKeyPresentLabel": "Teniu la tecla següent al vostre teclat?",
+  "themePageTitle": "Trieu l’aspecte",
+  "themeDark": "Fosc",
+  "themeLight": "Clar",
+  "localeHeader": "Trieu la vostra llengua:",
+  "identityPageTitle": "Qui sou?",
+  "identityAutoLogin": "Entra de manera automàtica",
+  "identityRequirePassword": "Fes que calgui una contrasenya per a entrar",
+  "identityRealNameLabel": "El vostre nom",
+  "identityRealNameRequired": "Cal un nom",
+  "identityHostnameLabel": "El nom de l'ordinador",
+  "identityHostnameInfo": "El nom que utilitza quan es comunica amb altres ordinadors.",
+  "identityHostnameRequired": "Cal un nom per a l'ordinador",
+  "identityInvalidHostname": "El nom de l'ordinador no és vàlid",
+  "identityUsernameLabel": "Trieu un nom d'usuari",
+  "identityUsernameRequired": "Cal un nom d'usuari",
+  "identityInvalidUsername": "El nom d'usuari no és vàlid: ha de començar amb una lletra minúscula i sols pot contenir lletres minúscules, nombres, guionets o barres baixes.",
+  "identityUsernameTooLong": "Aquest nom és massa llarg.",
+  "identityPasswordLabel": "Trieu una contrasenya",
+  "identityPasswordRequired": "Cal una contrasenya",
+  "identityConfirmPasswordLabel": "Confirmeu la contrasenya",
+  "identityPasswordMismatch": "Les contrasenyes no coincideixen",
+  "networkPageTitle": "Connecta a internet",
+  "networkWiredDisabled": "Per poder fer servir Ethernet a aquest ordinador, la connexió cablejada ha d'estar habilitada",
+  "networkWifiOption": "Connectar a una xarxa Wi-Fi",
+  "networkWifiOff": "Xarxa sense fils deshabilitada",
+  "networkHiddenWifiOption": "Connecta a una xarxa Wi-Fi oculta",
+  "networkHiddenWifiNameLabel": "Nom a la xarxa",
+  "networkHiddenWifiNameRequired": "Cal un nom de xarxa",
+  "networkNoneOption": "Ara mateix no vull connectar-me a Internet",
+  "close": "Tanca",
+  "restart": "Reinicia",
+  "accessibilityPageTitle": "Accessibilitat",
+  "accessibilityPageHeader": "Accessibilitat a {DISTRO}",
+  "@accessibilityPageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilityPageBody": "Personalitzeu {DISTRO} a les vostres necessitats abans de la posada en marxa. Podeu fer canvis més tard a l'aplicació Paràmetres.",
+  "@accessibilityPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "accessibilitySeeingLabel": "Visió",
+  "accessibilityHearingLabel": "Audició",
+  "accessibilityTypingLabel": "Escriptura",
+  "accessibilityPointingLabel": "Apuntar i fer clic",
+  "accessibilityZoomLabel": "Escala",
+  "accessibilityHighContrastLabel": "Contrast alt",
+  "accessibilityLargeTextLabel": "Text gran",
+  "accessibilityReduceAnimationLabel": "Redueix l'animació",
+  "accessibilityScreenReaderLabel": "Lector de pantalla",
+  "accessibilityVisualAlertsLabel": "Alertes visuals",
+  "accessibilityStickKeysLabel": "Tecles permanents",
+  "accessibilitySlowKeysLabel": "Tecles lentes",
+  "accessibilityMouseKeysLabel": "Tecles del ratolí",
+  "accessibilityDesktopZoomLabel": "Ampliació de l'escriptori",
+  "errorPageTitle": "S'ha produït un error",
+  "errorPageUnexpected": "Ho sentim, no tenim seguretat de quin és l'error. Podeu provar de reiniciar l'ordinador i tornar a iniciar el procés d'instal·lació. També podeu <a>informar del problema</a>.",
+  "errorPageUbuntuBug": "Per enviar un informe d'error automatitzat que inclogui informació de depuració rellevant, executeu <pre>sudo ubuntu-bug {SNAP}</pre> en un terminal, o des de la línia d'ordres (Alt+F2).",
+  "@errorPageUbuntuBug": {
+    "placeholders": {
+      "SNAP": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPageShowLog": "Mostra el registre",
+  "errorPageHideLog": "Amaga el registre",
+  "keyboardDetectButton": "Detecta",
+  "keyboardVariantLabel": "Seleccioneu la variant del teclat:",
+  "themePageHeader": "Podeu canviar-ho més endavant a la configuració de l'aparença.",
+  "localePageTitle": "Us donem la benvinguda a {DISTRO}",
+  "@localePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "identityRealNameTooLong": "Aquest nom és massa llarg.",
+  "identityHostnameTooLong": "El nom de l'ordinador és massa llarg.",
+  "identityUsernameInUse": "Aquest nom d'usuari ja existeix.",
+  "identityUsernameSystemReserved": "Aquest nom està reservat per a ús del sistema.",
+  "identityUsernameInvalidChars": "Aquest nom conté caràcters no vàlids.",
+  "identityPasswordShow": "Mostra",
+  "identityPasswordHide": "Amaga",
+  "identityActiveDirectoryOption": "Fes servir l'Active Directory",
+  "identityActiveDirectoryInfo": "En el següent pas introduireu el domini i altres detalls.",
+  "activeDirectoryTitle": "Inicia la sessió a l'Active Directory",
+  "activeDirectoryHeader": "Voleu iniciar sessió a l'Active Directory?",
+  "activeDirectoryInfo": "{DISTRO} està dissenyat per a integrar-se perfectament amb l'Active Directory per a una administració més fàcil.",
+  "@activeDirectoryInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "activeDirectoryTestConnection": "Prova la connectivitat del domini",
+  "activeDirectoryDomainLabel": "Domini",
+  "activeDirectoryDomainEmpty": "Obligatori",
+  "activeDirectoryDomainTooLong": "Massa llarg",
+  "activeDirectoryDomainInvalidChars": "Caràcters no vàlids",
+  "activeDirectoryDomainStartDot": "Comença amb un punt (.)",
+  "activeDirectoryDomainEndDot": "Acaba amb un punt (.)",
+  "activeDirectoryDomainStartHyphen": "Comença amb un guionet (-)",
+  "activeDirectoryDomainEndHyphen": "Acaba amb un guionet (-)",
+  "activeDirectoryDomainMultipleDots": "Conté múltiples punts seguits (..)",
+  "activeDirectoryDomainNotFound": "No s'ha trobat el domini",
+  "activeDirectoryAdminLabel": "Usuari a unir al domini",
+  "activeDirectoryAdminEmpty": "Obligatori",
+  "activeDirectoryAdminInvalidChars": "Caràcters no vàlids",
+  "activeDirectoryPasswordLabel": "Contrasenya",
+  "activeDirectoryPasswordEmpty": "Obligatori",
+  "activeDirectoryErrorTitle": "S'ha produït un error en configurar la connexió a l'Active Directory",
+  "activeDirectoryErrorMessage": "L'Active Directory no es pot configurar en aquest moment. Un cop el sistema estigui en funcionament, visiteu <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per obtenir ajuda.",
+  "networkPageHeader": "Connecteu-vos a Internet",
+  "networkPageBody": "Una connexió a internet millorarà la vostra instal·lació amb la verificació de compatibilitat i paquets de programari addicionals.",
+  "networkWiredOption": "Utilitza la connexió per cable",
+  "networkWiredNone": "No s'ha detectat cap connexió per cable",
+  "networkWiredOff": "La connexió per cable està desactivada",
+  "networkWiredEnable": "Habilita la connexió per cable",
+  "networkWifiNone": "No s'ha detectat cap dispositiu Wi-Fi",
+  "networkWifiDisabled": "Per utilitzar Wi-Fi en aquest ordinador, cal habilitar la xarxa sense fils",
+  "networkWifiEnable": "Habilita Wi-Fi",
+  "eulaPageTitle": "Acord de llicència",
+  "eulaReviewTerms": "Reviseu els termes de la llicència",
+  "eulaReadAndAcceptTerms": "Per continuar configurant aquesta màquina, heu de llegir i acceptar els termes de l'acord de llicència.",
+  "eulaAcceptTerms": "He llegit i accepto aquests termes",
+  "successIconSemanticLabel": "Èxit",
+  "closeIconSemanticLabel": "Tanca",
+  "maximizeIconSemanticLabel": "Maximitza",
+  "minimizeIconSemanticLabel": "Minimitza",
+  "errorPageTechnicalDetails": "Detalls tècnics",
+  "identityInvalidRealName": "El nom no és vàlid",
+  "expandIconSemanticLabel": "Expandeix",
+  "collapseIconSemanticLabel": "Col·lapsa",
+  "networkWifiSignalNone": "No hi ha senyal",
+  "networkWifiSignalWeak": "Senyal feble",
+  "networkWifiSignalOk": "Senyal correcta",
+  "networkWifiSignalGood": "Senyal bona",
+  "networkWifiSignalExcellent": "Senyal excel·lent",
+  "networkWifiOpenNetwork": "Xarxa oberta",
+  "networkWifiSecureNetwork": "Xarxa segura",
+  "networkWifiConnecting": "S'està connectant…",
+  "networkWifiConnected": "Connectat"
 }

@@ -114,7 +114,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'ბრძანება ავტოდაყენების ფაილიდან დაყენებისას ავარიულად დასრულდა.';
 
   @override
   String get autoinstallGenericErrorMessage =>
@@ -130,7 +130,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'დაგჭირდებათ, დაყენება თავიდან დაიწყოთ. შეამოწმეთ ავტოდაყენების ფაილი, აირჩიეთ სხვა დაყენების ტიპი, ან დაუკავშირდით თქვენს IT მხარდაჭერის გუნდს.';
 
   @override
   String get changeButtonText => 'შეცვლა';
@@ -507,12 +507,12 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'საკვანძო ფრაზის შეყვანა კომპიუტერის ყოველი ჩართვისას დაგჭირდებათ. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'ეს იყენებს LVM-ს LUKS დაშიფვრით.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -546,11 +546,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'დისკი ჩატვირთვისას ავტომატურად განიბლოკება.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'ამ კომპიუტერზე ხელმისაწვდომი არაა.';
 
   @override
   String get installationTypeTPMSelected => 'არჩეულია TPM';
@@ -928,7 +928,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'გადავტვირთო კომპიუტერი?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'დაყენების პროგრამის თავიდან გაშვება';
 
   @override
   String get restartIntoWindows => 'Windows-ში გადატვირთვა';
@@ -1430,7 +1430,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'ამოხსნა: $text';
   }
 
   @override
@@ -1439,15 +1439,15 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'სცადეთ ქვემოთ ჩამოთვლილი გადაწყვეტილებები, დაუკავშირდით IT მხარდაჭერის გუნდს, ან აირჩიეთ სხვა დაშიფვრის მეთოდი.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'სცადეთ ქვემოთ აღწერილი გადაწყვეტა, დაუკავშირდით IT მხარდაჭერის გუნდს, ან აირჩიეთ სხვა მხარდაჭერის მეთოდი.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'დაუკავშირდით IT მხარდაჭერის გუნდს, ან აირჩიეთ სხვა დაშიფვრის მეთოდი.';
 
   @override
   String get tpmActionErrorKindInternal => 'შიდა შეცდომა.';
@@ -1540,11 +1540,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'ეს კომპიუტერი იყენებს მორგებულ დაშვებულ სიას გაშვებისას პროგრამების გადასამოწმებლად.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'არსებობს დამატებითი დრაივერები.';
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
@@ -1552,11 +1552,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'ამ კომპიუტერის TPM-ს პრობლემები აქვს.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'ამ კომპიუტერის მიკროკოდში აღმოჩენილია პრობლემები.';
 
   @override
   String get tpmActionFixActionReboot => 'გადატვირთვა';
@@ -1570,43 +1570,43 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'თუ მიკროკოდის პარამეტრები ავტომატურად არ იტვირთება, გადატვირთეთ და დააჭირეთ მორგების ღილაკს ბევრჯერ კომპიუტერის ჩართვისას (ჩვეულებრივ, ესაა ღილაკები F2, F10, ან Delete).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'DMA დაცვის ხელით ჩართვა';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'TPM-ის ხელით გასუფთავება';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'უსაფრთხო ჩატვირთვის ხელით ჩართვა';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'IOMMU-ის ხელით ჩართვა';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'PCR ბანკების ხელით ჩართვა';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'TPM-ის ხელით ჩართვა';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'TPM-ის ხელით გასუფთავება';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'TPM-ის ხელით გასუფთავება';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'აბსოლუტური მდგრადობის მოდულის ხელით გამორთვა';
 
   @override
   String get tpmActionFixActionContactOem => 'კავშირი OEM-თან';
@@ -1635,78 +1635,80 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'გადატვირთეთ კომპიუტერი წინა ქმედებების დასასრულებლად.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'კომპიუტერის გადატვირთვამ, შეიძლება, პრობლემები მოაგვაროს.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'გამორთეთ კომპიუტერი წინა ქმედებების დასასრულებლად.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'ამისი გაკეთება კომპიუტერის მიკროკოდის პარამეტრებში შეგიძლიათ.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'შეიძლება, ამისი გაკეთება თქვენი კომპიუტერის მიკროკოდის პარამეტრებში მოგიწიოთ. მეტი დეტალებისთვის გადაამოწმეთ CPU-ის მომწოდებლის დოკუმენტაცია.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'დარწმუნდით, რომ უსაფრთხო ჩატვირთვის რეჟიმი დაყენებულია მნიშვნელობაზე \"deployed\".';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'ამ ფუნქციას შეიძლება, ერქვას \"Virtualization Technology\", \"VT-d\", ან \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'ამ პრობლემის იგნორმა, შეიძლება, ნაკლებად დაცულ სისტემამდე მიგიყვანოთ.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'გადატვირთვა';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel =>
+      'გადატვირთვა და TPM-ის ჩართვა';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel =>
+      'გადატვირთვა და TPM-ის გასუფთავება';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'გამოტოვება და გაგრძელება';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'TPM-ის გასუფთავება ყველა დაშიფვრის გასაღებს წაშლის';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'დაკარგავთ წვდომას მონაცემებთან დაშიფრულ დისკებზე, რომლებისთვისაც აღდგენის გასაღებები არ გაქვთ. ის ასევე გააფუჭებს სხვა ისეთ TPM-ზე დამოკიდებულ ფუნქციებს, როგორიცაა ავთენტიკაცია და სერტიფიკატები.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'მე მესმის TPM-ის გასუფთავების შედეგები';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'შეიძლება, ამ ქმედების დადასტურება გადატვირთვისას მოგთხოვოთ.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'შემდეგ საჭირო იქნება, დაყენება თავიდან დაიწყოთ.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'ეს ამოხსნა ჩავარდა';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'სცადეთ სხვა გადაწყვეტილება, ან დაუკავშირდით IT მხარდაჭერის გუნდს.';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'სცადეთ რამე სხვა. ასევე შეგიძლიათ, <a href=\"\">გამოაგზავნოთ ანგარიში შეცდომის შესახებ</a>.';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

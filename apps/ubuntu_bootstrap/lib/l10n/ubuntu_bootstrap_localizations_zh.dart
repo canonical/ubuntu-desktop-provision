@@ -103,12 +103,10 @@ class UbuntuBootstrapLocalizationsZh extends UbuntuBootstrapLocalizations {
       '适用于通过 Landscape 提供自动安装文件的组织用户。';
 
   @override
-  String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+  String get autoinstallErrorMessage => '自动安装文件中的一个命令执行失败。';
 
   @override
-  String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+  String get autoinstallGenericErrorMessage => '无法继续使用提供的自动安装文件进行安装。';
 
   @override
   String get autoinstallValidationErrorMessage =>
@@ -1727,6 +1725,16 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get autoinstallErrorMessage => '安裝過程中，自動安裝檔中的一個命令執行失敗。';
 
   @override
+  String get autoinstallGenericErrorMessage => '無法繼續使用提供的自動安裝檔進行安裝。';
+
+  @override
+  String get autoinstallValidationErrorMessage => '提供的自動安裝檔出現問題。';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      '自動安裝檔中提供的 cloud-init 使用者資料存在問題。';
+
+  @override
   String get autoinstallErrorInstructions =>
       '您需要重新執行安裝程序。請檢查自動安裝檔、選擇其他安裝類型，或聯絡您的 IT 支援部門。';
 
@@ -1937,11 +1945,11 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      '每次開啟電腦時，您都需要輸入密碼。此密碼與您的使用者密碼不同。您稍後可以變更它，但無法停用它。如果您忘記密碼，您可以使用復原金鑰重新存取磁碟。';
+      '每次啟動電腦時，您都需要輸入這組密碼短語。這組密碼短語與您的使用者密碼不同。您稍後可在「安全中心」中變更它。';
 
   @override
   String get passphrasePageBodyPin =>
-      '每次開啟電腦時，您都需要輸入 PIN 碼。此 PIN 碼與您的使用者密碼不同。您稍後可以變更它，但無法停用。如果您忘記 PIN 碼，您可以使用復原金鑰重新存取磁碟。';
+      '每次啟動電腦時，您都需要輸入 PIN 碼。此 PIN 碼與您的使用者密碼不同。您稍後可在「安全中心」中變更此 PIN 碼。';
 
   @override
   String get passphrasePageChoosePassphraseHint => '密碼';
@@ -1968,13 +1976,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get passphrasePageMismatchPin => 'PIN 碼不符合';
 
   @override
-  String get passphraseTypePassphraseTileTitle => '需要密碼';
+  String get passphraseTypePassphraseTileTitle => '啟動時需輸入密碼短語';
 
   @override
   String get passphraseTypePassphraseTileSubTitle => '最安全。每次開啟電腦時，您都需要輸入較長的密碼。';
 
   @override
-  String get passphraseTypePinTileTitle => '需要 PIN 碼';
+  String get passphraseTypePinTileTitle => '開機時需輸入 PIN 碼';
 
   @override
   String get passphraseTypePinTileSubTitle => '更安全。每次開啟電腦時，您都需要輸入數字 PIN 碼。';
@@ -1987,7 +1995,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get passphraseTypePageBody =>
-      '預設情況下，電腦的 Trusted Platform Module (TPM) 會在啟動時解除鎖定磁碟。您還有其他選項可進一步保護您的資料。';
+      '預設情況下，磁碟會在啟動時自動解鎖。您也可以選擇其他選項來進一步保護您的資料。';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired => '硬體級加密需要這台電腦具備額外的安全措施。';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin => '密碼薄弱，請使其更長或更複雜';
@@ -2935,6 +2946,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get tpmActionPageTitle => '無法啟用硬體支援的加密功能';
 
   @override
+  String get tpmActionPageTitleActionable => '硬體支援的加密功能出現了問題';
+
+  @override
   String get tpmActionBadgeLabel => '需要採取行動';
 
   @override
@@ -3052,6 +3066,10 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent => '已安裝附加驅動程式。';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      '這台電腦缺少一項必要的安全功能（硬體信任根）。';
 
   @override
   String get tpmActionErrorKindGenericTpm => '這台電腦的 TPM 出現問題。';
@@ -3195,4 +3213,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String get manualPartitioningWarningBody =>
       '請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。';
+
+  @override
+  String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
+    return '步驟 $CURRENT_STEP / $TOTAL_STEPS';
+  }
 }

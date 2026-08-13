@@ -64,7 +64,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get accessibilityDesktopZoomLabel => '桌面缩放';
 
   @override
-  String get errorPageTitle => '出问题了';
+  String get errorPageTitle => '出现了一些问题';
 
   @override
   String get errorPageUnexpected =>
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => '隐藏日志';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => '技术细节';
 
   @override
   String get restart => '重新启动';
@@ -156,13 +156,13 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get identityRealNameLabel => '您的姓名';
 
   @override
-  String get identityRealNameRequired => '需要名字';
+  String get identityRealNameRequired => '需要姓名';
 
   @override
-  String get identityRealNameTooLong => '名字过长。';
+  String get identityRealNameTooLong => '姓名过长。';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => '姓名无效';
 
   @override
   String get identityHostnameLabel => '您的电脑主机名';
@@ -186,7 +186,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => '需要用户名';
 
   @override
-  String get identityInvalidUsername => '用户名无效';
+  String get identityInvalidUsername => '用户名无效：必须以小写字母开头，并且只能包含小写字母、数字、连字号和底线。';
 
   @override
   String get identityUsernameInUse => '这个用户名已经存在。';
@@ -366,37 +366,37 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => '最小化';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => '展开';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => '收起';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => '没有信号';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => '微弱信号';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => '信号正常';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => '信号良好';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => '信号优良';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => '开放式网络';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => '安全网络';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => '正在链接…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => '已连接';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -557,6 +557,9 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get identityRealNameTooLong => '該姓名太長。';
 
   @override
+  String get identityInvalidRealName => '名稱無效';
+
+  @override
   String get identityHostnameLabel => '您電腦的名稱';
 
   @override
@@ -578,7 +581,8 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
   String get identityUsernameRequired => '使用者名稱為必填欄位';
 
   @override
-  String get identityInvalidUsername => '該使用者名稱無效';
+  String get identityInvalidUsername =>
+      '使用者名稱無效：必須以小寫字母開頭，且僅能包含小寫字母、數字、連字號和底線。';
 
   @override
   String get identityUsernameInUse => '該使用者名稱已存在。';
@@ -762,4 +766,31 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get collapseIconSemanticLabel => '收合';
+
+  @override
+  String get networkWifiSignalNone => '無訊號';
+
+  @override
+  String get networkWifiSignalWeak => '微弱訊號';
+
+  @override
+  String get networkWifiSignalOk => '訊號正常';
+
+  @override
+  String get networkWifiSignalGood => '訊號良好';
+
+  @override
+  String get networkWifiSignalExcellent => '訊號極佳';
+
+  @override
+  String get networkWifiOpenNetwork => '開放式網路';
+
+  @override
+  String get networkWifiSecureNetwork => '安全網路';
+
+  @override
+  String get networkWifiConnecting => '連線中…';
+
+  @override
+  String get networkWifiConnected => '已連線';
 }

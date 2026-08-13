@@ -119,15 +119,15 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Paigalduse jätkamine pole lisatud automaatse paigalduse faili alusel võimalik.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Lisatud automaatse paigalduse failis on viga või probleem.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Lisatud automaatse paigalduse failis on viga või probleem, mis on seotud cloud-init\'i kasutajaandmetega.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -360,11 +360,11 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Pead selle salafraasi sisestama igal arvuti käivituskorral. See salafraas ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta, kuid mitte välja lülitada. Kui peaksid salafraasi unustama, siis saad ligipääsu andmekandjale taastada taastevõtmega.';
+      'Pead selle salafraasi sisestama igal arvuti käivituskorral. See salafraas ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta Turvakeskusest.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Pead selle PIN-koodi sisestama igal arvuti käivituskorral. See PIN-kood ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta, kuid mitte välja lülitada. Kui peaksid PIN-koodi unustama, siis saad ligipääsu andmekandjale taastada taastevõtmega.';
+      'Pead selle PIN-koodi sisestama igal arvuti käivituskorral. See PIN-kood ei ole sama, kui sinu salasõna. Vajadusel saad teda hiljem muuta Turvakeskusest.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Salafraas';
@@ -392,14 +392,16 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN-koodid ei klapi omavahel';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Eelda salafraasi kasutamist';
+  String get passphraseTypePassphraseTileTitle =>
+      'Eelda salafraasi kasutamist käivitamisel';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Kõige turvalisem. Igal arvuti sisselülitamisel pead sisestama salafraasi.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Eelda PIN-koodi kasutamist';
+  String get passphraseTypePinTileTitle =>
+      'Eelda PIN-koodi kasutamist käivitamisel';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -414,11 +416,11 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Vaikimisi eemaldab selle arvuti Trusted Platform Module (TPM) lukustuse automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.';
+      'Vaikimisi avaneb ketta lukustus automaatselt. Lisaks on sul täiendavad võimalused oma andmete kaitsmiseks.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'Raudvarapõhine krüptimine eeldab täiendava turvafunktsionaalsuse olemasolu arvutis.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -625,7 +627,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
   String get selectGuidedStorageInfoLabel => 'Kasuta kogu ketast:';
 
   @override
-  String get selectGuidedStorageInstallNow => 'Paiglada nüüd';
+  String get selectGuidedStorageInstallNow => 'Paigalda kohe';
 
   @override
   String guidedStoragePageHeader(String DISTRO) {
@@ -1413,7 +1415,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'Raudvarapõhise krüptimisega seoses tekkis üks probleem';
 
   @override
   String get tpmActionBadgeLabel => 'Vajalik on kasutaja sekkumine';
@@ -1551,7 +1553,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'Sellest arvutist on puudu turvalisusega seotud funktsionaalsus (raudvarapõhise usaldusahela lähtelahendus).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1715,6 +1717,6 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Samm $CURRENT_STEP / $TOTAL_STEPS';
   }
 }
