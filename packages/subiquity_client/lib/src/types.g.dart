@@ -1176,6 +1176,8 @@ const _$GuidedDisallowedCapabilityReasonEnumMap = {
       'CORE_BOOT_ENCRYPTION_UNAVAILABLE',
   GuidedDisallowedCapabilityReason.NOT_UEFI: 'NOT_UEFI',
   GuidedDisallowedCapabilityReason.THIRD_PARTY_DRIVERS: 'THIRD_PARTY_DRIVERS',
+  GuidedDisallowedCapabilityReason.INCOMPATIBLE_LOCATION:
+      'INCOMPATIBLE_LOCATION',
 };
 
 _StorageResponse _$StorageResponseFromJson(Map<String, dynamic> json) =>
