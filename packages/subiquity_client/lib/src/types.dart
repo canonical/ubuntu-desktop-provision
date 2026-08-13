@@ -772,6 +772,10 @@ enum ProbeStatus {
   DONE,
 }
 
+enum Bootloader {
+  GRUB,
+}
+
 enum FirmwareType {
   NONE,
   BIOS,
@@ -951,6 +955,7 @@ enum GuidedDisallowedCapabilityReason {
   CORE_BOOT_ENCRYPTION_UNAVAILABLE,
   NOT_UEFI,
   THIRD_PARTY_DRIVERS,
+  INCOMPATIBLE_LOCATION,
 }
 
 @freezed
