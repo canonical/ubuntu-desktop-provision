@@ -178,7 +178,7 @@
     "installationTypeTPMSelected": "TPM seleccionat",
     "installationTypeTPM": "Utilizar lo chiframent material",
     "fullInstallationTitle": "Installacion complèta",
-    "refreshPageTitle": "Mesa a jorn disponible",
+    "refreshPageTitle": "Mesa a jorn disponibla",
     "refreshInstall": "Metre a jorn cap a la version {version}",
     "refreshCurrent": "La version actuala de {snap} es {version}.",
     "refreshSnapRefresh": "Actualizacion de {snap}...",
@@ -371,8 +371,8 @@
     "passphrasePageRequiredPassphrase": "Una frasa secrèta es requerida",
     "passphrasePageMismatchPassphrase": "Las frasas secrètas correspondon pas",
     "passphrasePageMismatchPin": "Los PIN correspondon pas",
-    "passphraseTypePassphraseTileTitle": "Requerís una frasa secrèta",
-    "passphraseTypePinTileTitle": "Requerir un PIN",
+    "passphraseTypePassphraseTileTitle": "Requerir una frasa secrèta a l’aviada",
+    "passphraseTypePinTileTitle": "Requerir un PIN a l’aviada",
     "passphraseTypeNoneTileTitle": "Desverrolhar lo disc automaticament",
     "passphrasePagePinEntropyOptimal": "Lo PIN es sufisentament long",
     "toggleLogsSemanticLabel": "Alternar los jornals d'installacion",
@@ -420,11 +420,11 @@
     "tpmActionErrorKindInvalidArgument": "Paramètre invalid.",
     "autoinstallErrorMessage": "Una comanda dins lo fichièr d'autoinstallacion a pas pogut s'executar pendent l'installacion.",
     "autoinstallErrorInstructions": "Vos caldrà tornar aviar l'installacion. Verificatz lo fichièr autoinstall, causissètz un autre tipe d'installacion, o contactatz vòstra assisténcia informatica.",
-    "passphrasePageBodyPassphrase": "Vos caldrà picar vòstra frasa secrèta cada còp qu'aviaretz l’ordenador. Aquesta frasa secrèta es diferenta de vòstre senhal d'utilizaire. La poiretz modificar mai tard, mas pas la desactivar. Se doblidatz vòstra frasa secrèta, poiretz tornar accedir al disc en utilizant la clau de recuperacion.",
-    "passphrasePageBodyPin": "Vos caldrà sasir vòstre PIN a cada còp qu'aviaretz l’ordenador. Aqueste PIN es diferent de vòstre senhal d'utilizaire. Lo poiretz cambiar mai tard, mas pas lo desactivar. Se doblidatz vòstre PIN, poiretz tornar accedir al disc en utilizant la clau de recuperacion.",
+    "passphrasePageBodyPassphrase": "Vos caldrà picar la frasa secrèta cada còp qu'aviaretz l’ordenador. Aquesta frasa secrèta es diferenta de vòstre senhal d'utilizaire. La poiretz cambiar mai tard dins lo Centre de seguretat.",
+    "passphrasePageBodyPin": "Vos caldrà picar lo còde PIN cada còp qu'aviatz l’ordenador. Aqueste còde PIN es diferent de vòstre senhal d'utilizaire. Lo poiretz modificar mai tard dins lo Centre de seguretat.",
     "passphraseTypePassphraseTileSubTitle": "Lo mai segur. Vos caldrà picar una frasa de pas mai longa cada còp qu'aviaretz vòstre ordenador.",
     "passphraseTypePinTileSubTitle": "Lo mai segur. Vos caldrà picar un PIN numeric cada còp qu'aviaretz vòstre ordenador.",
-    "passphraseTypePageBody": "Per defaut, lo Modul de platafòrma de fisança (TPM) de l'ordenador desverrolharà lo disc a l'aviada. Avètz tanben d'opcions per protegir encara mai vòstras donadas.",
+    "passphraseTypePageBody": "Per defaut, lo disc se desverrolharà automaticament a l'aviada. Avètz tanben d'opcions per protegir mai vòstras donadas.",
     "passphrasePagePassphraseEntropyBelowMin": "Frasa secrèta febla, fasètz-la mai longa o mai complèxa",
     "passphrasePagePassphraseEntropyBelowOptimal": "Frasa secrèta passabla, fasètz-la mai longa o mai complèxa per una melhora seguretat",
     "passphrasePagePinEntropyBelowMin": "PIN feble, fasètz-lo mai long o mens previsible",
@@ -509,5 +509,22 @@
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "D'unes certificats que verifican los logicials sus aqueste ordenador son obsolèts o utilizan una proteccion febla.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Aqueste ordenador utiliza una lista d'autorizacions manuala per verificar los logicials a l'aviada.",
     "tpmActionErrorKindAddonDriversPresent": "De pilòts suplementaris son presents.",
-    "tpmActionErrorKindGenericTpm": "I a un problèma amb lo TPM d’aqueste ordenador."
+    "tpmActionErrorKindGenericTpm": "I a un problèma amb lo TPM d’aqueste ordenador.",
+    "autoinstallGenericErrorMessage": "Se pòt pas contunhar l'installacion amb lo fichièr autoinstall provesit.",
+    "autoinstallValidationErrorMessage": "I a de problèmas amb lo fichièr d'autoinstallacion provesit.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "I a un problèma amb las donadas d'utilizaire cloud-init provesidas dins lo fichièr d'autoinstallacion.",
+    "stepIndicatorLabel": "Etapa {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "passphraseTypePageBodyAuthRequired": "Lo chiframent material demanda una seguretat de mai dins aquel ordenador.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "A aquel ordenador li manca una foncionalitat de seguretat requesida (raiç de fisança materiala).",
+    "tpmActionPageTitleActionable": "I a un problèma amb lo chiframent material"
 }

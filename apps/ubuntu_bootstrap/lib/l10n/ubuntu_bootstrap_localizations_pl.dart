@@ -119,15 +119,15 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Nie można kontynuować instalacji przy użyciu dostarczonego pliku autoinstalacji.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Wystąpił problem z dostarczonym plikiem autoinstalacji.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Wystąpił problem z danymi użytkownika cloud-init dostarczonymi w pliku autoinstalacji.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -363,11 +363,11 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Wymagane będzie podanie hasła za każdym razem, gdy włączysz komputer. To hasło różni się od hasła użytkownika. Będzie można je później zmienić, ale nie wyłączyć. Jeśli zapomnisz hasła, możesz odzyskać dostęp do dysku, używając klucza odzyskiwania.';
+      'Wymagane będzie wpisanie hasła przy każdym uruchomieniu komputera. To hasło różni się od hasła użytkownika. Możesz je później zmienić w Centrum zabezpieczeń.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Wymagane będzie podanie kodu PIN każdym razem, gdy włączysz komputer. Ten kod PIN różni się od hasła użytkownika. Będzie można go później zmienić, ale nie wyłączyć. Jeśli zapomnisz kodu PIN, możesz odzyskać dostęp do dysku, używając klucza odzyskiwania.';
+      'Wymagane będzie wpisanie kodu PIN przy każdym uruchomieniu komputera. Ten kod PIN różni się od hasła użytkownika. Możesz go później zmienić w Centrum zabezpieczeń.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Hasło';
@@ -394,14 +394,16 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'Kody PIN nie pasują do siebie';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Wymagaj hasła';
+  String get passphraseTypePassphraseTileTitle =>
+      'Wymagaj hasła podczas uruchamiania';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Najbezpieczniejsze. Wymagane będzie wpisanie dłuższego hasło za każdym razem, gdy włączysz komputer.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Wymagaj kodu PIN';
+  String get passphraseTypePinTileTitle =>
+      'Wymagaj kodu PIN podczas uruchamiania';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -415,11 +417,11 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Domyślnie moduł TPM (Trusted Platform Module) komputera odblokuje dysk podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.';
+      'Domyślnie dysk odblokuje się automatycznie podczas uruchamiania. Masz również możliwości dodatkowej ochrony swoich danych.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'Sprzętowe szyfrowanie wymaga dodatkowych zabezpieczeń na tym komputerze.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1409,7 +1411,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'Występuje problem z szyfrowaniem sprzętowym';
 
   @override
   String get tpmActionBadgeLabel => 'Wymagana czynność';
@@ -1547,7 +1549,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1711,6 +1713,6 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Krok $CURRENT_STEP z $TOTAL_STEPS';
   }
 }

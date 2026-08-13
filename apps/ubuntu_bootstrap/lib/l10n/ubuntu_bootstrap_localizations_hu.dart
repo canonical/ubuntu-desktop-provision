@@ -1328,7 +1328,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Helyreállítási kulcs fájljának mentése';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Szövegfájlok';
+  String get recoveryKeyFilePickerFilter => 'Szöveges fájlok';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

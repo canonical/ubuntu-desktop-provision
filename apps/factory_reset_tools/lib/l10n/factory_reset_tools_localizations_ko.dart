@@ -108,7 +108,7 @@ class FactoryResetToolsLocalizationsKo extends FactoryResetToolsLocalizations {
   String get closeIconSemanticLabel => '닫기';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => '최대화';
 
   @override
   String get minimizeIconSemanticLabel => 'Minimize';

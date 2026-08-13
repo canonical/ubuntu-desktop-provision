@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Datornamnet är ogiltigt",
     "identityUsernameLabel": "Ditt användarnamn",
     "identityUsernameRequired": "Ett användarnamn krävs",
-    "identityInvalidUsername": "Användarnamnet är ogiltigt",
+    "identityInvalidUsername": "Användarnamnet är ogiltigt: det måste inledas med en liten bokstav, och får bara innehålla små bokstäver, siffror, bindestreck och understreck.",
     "identityUsernameInUse": "Det användarnamnet finns redan.",
     "identityUsernameSystemReserved": "Det namnet är reserverat för systemanvändning.",
     "identityUsernameTooLong": "Det namnet är för långt.",
@@ -114,5 +114,15 @@
     "minimizeIconSemanticLabel": "Minimera",
     "expandIconSemanticLabel": "Expandera",
     "collapseIconSemanticLabel": "Fäll ihop",
-    "errorPageTechnicalDetails": "Tekniska detaljer"
+    "errorPageTechnicalDetails": "Tekniska detaljer",
+    "identityInvalidRealName": "Namnet är ogiltigt",
+    "networkWifiSignalNone": "Ingen signal",
+    "networkWifiSignalWeak": "Svag signal",
+    "networkWifiSignalOk": "Måttlig signal",
+    "networkWifiSignalGood": "Bra signal",
+    "networkWifiSignalExcellent": "Stark signal",
+    "networkWifiOpenNetwork": "Öppet nätverk",
+    "networkWifiSecureNetwork": "Säkert nätverk",
+    "networkWifiConnecting": "Ansluter…",
+    "networkWifiConnected": "Ansluten"
 }

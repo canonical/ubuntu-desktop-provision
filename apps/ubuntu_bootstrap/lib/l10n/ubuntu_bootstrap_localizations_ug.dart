@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'تەمىنلىگەن ئۆزلۈكىدىن ئورنىتىش ھۆججىتى سەۋەبىدىن ئورنىتىش داۋاملاشمايدۇ.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'تەمىنلىگەن ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدە مەسىلە بار.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدە تەمىنلەنگەن cloud-init ئىشلەتكۈچى ئۇچۇرىدا مەسىلە بار.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -359,11 +359,11 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر ئىم ئىبارىنى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.';
+      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن بىخەتەرلىك مەركىزىدە ئۆزگەرتەلەيسىز.';
 
   @override
   String get passphrasePageBodyPin =>
-      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا PIN كىرگۈزۈشىڭىز كېرەك. بۇ PIN ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر PIN نى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.';
+      'كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا PIN كىرگۈزۈشىڭىز كېرەك. بۇ PIN ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن بىخەتەرلىك مەركىزىدە ئۆزگەرتەلەيسىز.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'ئىم ئىبارە';
@@ -390,14 +390,15 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN ماس كەلمىدى';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'ئىم ئىبارە زۆرۈر';
+  String get passphraseTypePassphraseTileTitle =>
+      'قوزغىتىلغاندا ئىم ئىبارە زۆرۈر';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'ئەڭ بىخەتەر. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك.';
 
   @override
-  String get passphraseTypePinTileTitle => 'PIN زۆرۈر';
+  String get passphraseTypePinTileTitle => 'قوزغىتىلغاندا PIN زۆرۈر';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -411,11 +412,11 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا كومپيۇتېرنىڭ ئىشەنچ سۇپا مودېلى (TPM) نىڭ قۇلۇپى ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.';
+      'كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا دىسكا قۇلۇپى ئۆزلۈكىدىن ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'بۇ كومپيۇتېردا قاتتىق دېتال ئاساسىدىكى شىفىرلاش قوشۇمچە بىخەتەرلىك بىلەن تەمىنلىشى زۆرۈر.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -925,7 +926,7 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'كومپيۇتېرنى قايتا قوزغىتامدۇ؟';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'ئورناتقۇچنى قايتا قوزغات';
 
   @override
   String get restartIntoWindows => 'قايتا قوزغىتىپ Windows قا كىرىدۇ';
@@ -1408,7 +1409,7 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'قاتتىق دېتال ئاساسىدىكى شىفىرلاشتا مەسىلە بار';
 
   @override
   String get tpmActionBadgeLabel => 'زۆرۈر مەشغۇلات';
@@ -1544,7 +1545,7 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'بۇ كومپيۇتېردا زۆرۈر بولغان بىخەتەرلىك ئىقتىدارى كەم (قاتتىق دېتال ئىشەنچ غولى).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1708,6 +1709,6 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'باسقۇچ $CURRENT_STEP/$TOTAL_STEPS';
   }
 }

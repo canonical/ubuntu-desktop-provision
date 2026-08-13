@@ -1307,28 +1307,29 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'File della chiave di ripristino non salvato';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Impossibile salvare il file della chiave di ripristino in una posizione temporanea';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Errore sconosciuto';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Non hai i permessi per scrivere in quella cartella. Prova a scegliere una posizione diversa o usa un altro metodo.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Prova una posizione diversa, ad esempio un\'unità rimovibile, oppure usa un altro metodo.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Salva il file della chiave di ripristino';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'File di testo';
 
   @override
   String landscapeMagicAttachInstructions(String url) {

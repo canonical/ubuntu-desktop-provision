@@ -364,7 +364,7 @@
     "recoveryKeyExceptionUnknownTitle": "Ismeretlen hiba",
     "recoveryKeyExceptionFileSystemBody": "Nincs jogosultsága az adott mappába való íráshoz. Próbáljon egy másik helyet, vagy használjon más módszert.",
     "recoveryKeyFilePickerTitle": "Helyreállítási kulcs fájljának mentése",
-    "recoveryKeyFilePickerFilter": "Szövegfájlok",
+    "recoveryKeyFilePickerFilter": "Szöveges fájlok",
     "successIconSemanticLabel": "Sikeres",
     "closeIconSemanticLabel": "Bezárás",
     "maximizeIconSemanticLabel": "Maximalizálás",

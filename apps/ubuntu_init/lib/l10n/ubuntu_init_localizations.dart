@@ -181,6 +181,7 @@ abstract class UbuntuInitLocalizations {
     Locale('dz'),
     Locale('el'),
     Locale('en'),
+    Locale('en', 'GB'),
     Locale('eo'),
     Locale('es'),
     Locale('et'),
@@ -608,6 +609,14 @@ class _UbuntuInitLocalizationsDelegate
 UbuntuInitLocalizations lookupUbuntuInitLocalizations(Locale locale) {
   // Lookup logic when language+country codes are specified.
   switch (locale.languageCode) {
+    case 'en':
+      {
+        switch (locale.countryCode) {
+          case 'GB':
+            return UbuntuInitLocalizationsEnGb();
+        }
+        break;
+      }
     case 'pt':
       {
         switch (locale.countryCode) {

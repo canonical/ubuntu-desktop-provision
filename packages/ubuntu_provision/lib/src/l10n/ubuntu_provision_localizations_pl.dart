@@ -166,7 +166,7 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'To imię i nazwisko jest za długie.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'Imię i nazwisko jest nieprawidłowe';
 
   @override
   String get identityHostnameLabel => 'Nazwa tego komputera';
@@ -193,7 +193,8 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
       'Wymagane jest podanie nazwy użytkownika';
 
   @override
-  String get identityInvalidUsername => 'Nazwa użytkownika jest nieprawidłowa';
+  String get identityInvalidUsername =>
+      'Nazwa użytkownika jest nieprawidłowa: musi zaczynać się małą literą i może zawierać wyłącznie małe litery, cyfry, łączniki oraz znaki podkreślenia.';
 
   @override
   String get identityUsernameInUse => 'Ta nazwa użytkownika już istnieje.';
@@ -389,29 +390,29 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'Zwiń';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'Brak sygnału';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'Sygnał słaby';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'Sygnał OK';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'Sygnał dobry';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'Sygnał znakomity';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'Sieć otwarta';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'Sieć zabezpieczona';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'Łączenie…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'Połączono';
 }

@@ -119,15 +119,15 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'A instalación non pode continuar co ficheiro de instalación automática proporcionado.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Hai un problema co ficheiro de instalación automática proporcionado.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Hai un problema cos datos de usuario de cloud-init proporcionados no ficheiro de instalación automática.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -176,7 +176,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'Podes probar $RELEASE sen facer ningún cambio no teu ordenador.';
+    return 'Podes probar $RELEASE sen facer ningún cambio no teu computador.';
   }
 
   @override
@@ -202,7 +202,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get rstDisable =>
-      'O teu ordenador usa Intel RST (Rapid Storage Technology). Podes desactivar RST en:';
+      'O teu computador usa Intel RST (Rapid Storage Technology). Podes desactivar RST en:';
 
   @override
   String get rstDisableWindows =>
@@ -238,7 +238,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'Podes instalalo máis tarde dende Software e actualizacións.';
+      'Podes instalalo máis tarde desde Software e actualizacións.';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
@@ -262,7 +262,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Que aplicacións queres instalar para comezar?';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimice o seu ordenador';
+  String get codecsAndDriversPageTitle => 'Optimice o seu computador';
 
   @override
   String get codecsAndDriversPageDescription =>
@@ -270,7 +270,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO non inclúe software propietario por defecto. A instalación de software adicional pode mellorar o rendemento do teu ordenador.';
+    return '$DISTRO non inclúe software propietario por defecto. A instalación de software adicional pode mellorar o rendemento do teu computador.';
   }
 
   @override
@@ -324,7 +324,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get batteryWarning =>
-      'O ordenador non está conectado a unha fonte de alimentación.';
+      'O computador non está conectado a unha fonte de alimentación.';
 
   @override
   String get offlineWarning => 'Estás desconectado/a actualmente';
@@ -334,7 +334,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Terás que introducir a túa frase de paso cada vez que acendas o ordenador. Esta frase de paso é diferente do teu contrasinal de usuario.';
+      'Terás que introducir a túa frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario.';
 
   @override
   String get choosePassphraseInfoHeader =>
@@ -364,11 +364,11 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Terás que introducir a túa frase de paso cada vez que acendas o ordenador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.';
+      'Terás que introducir a túa frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Terás que introducir o teu PIN cada vez que acendas o ordenador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.';
+      'Terás que introducir o teu PIN cada vez que acendas o computador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Frase de paso';
@@ -398,18 +398,18 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePassphraseTileTitle =>
-      'Requírese unha frase de paso';
+      'Solicitar unha frase de paso ao iniciar';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Máis seguro. Terás que introducir unha frase de paso máis longa cada vez que acendas o ordenador.';
+      'Máis seguro. Terás que introducir unha frase de paso máis longa cada vez que acendas o computador.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Requirir un PIN';
+  String get passphraseTypePinTileTitle => 'Requirir un PIN ao iniciar';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'Máis seguro. Terás que introducir un PIN numérico cada vez que acendas o ordenador.';
+      'Máis seguro. Terás que introducir un PIN numérico cada vez que acendas o computador.';
 
   @override
   String get passphraseTypeNoneTileTitle =>
@@ -420,11 +420,11 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Por defecto, o módulo de plataforma fiable (TPM) do ordenador desbloqueará o disco durante o inicio. Tamén tes opcións para protexer aínda máis os teus datos.';
+      'Por defecto, o disco desbloquearase automaticamente ao iniciar. Tamén tes opcións para protexer aínda máis os teus datos.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'O cifrado con respaldo de hardware require seguranza adicional neste computador.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -459,21 +459,21 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeOSDetected(String os) {
-    return 'Este ordenador ten actualmente $os instalado. Que queres facer?';
+    return 'Este computador ten actualmente $os instalado. Que queres facer?';
   }
 
   @override
   String installationTypeDualOSDetected(String os1, String os2) {
-    return 'Este ordenador ten actualmente $os1 e $os2 instalados. Que queres facer?';
+    return 'Este computador ten actualmente $os1 e $os2 instalados. Que queres facer?';
   }
 
   @override
   String get installationTypeMultiOSDetected =>
-      'Actualmente este ordenador ten varios sistemas operativos instalados. Que queres facer?';
+      'Actualmente este computador ten varios sistemas operativos instalados. Que queres facer?';
 
   @override
   String get installationTypeNoOSDetected =>
-      'Actualmente este ordenador non ten ningún sistema operativo detectado. Que queres facer?';
+      'Actualmente este computador non ten ningún sistema operativo detectado. Que queres facer?';
 
   @override
   String installationTypeErase(String DISTRO) {
@@ -514,7 +514,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'Terás que introducir unha frase de paso cada vez que acendas o ordenador. $advancedHint';
+    return 'Terás que introducir unha frase de paso cada vez que acendas o computador. $advancedHint';
   }
 
   @override
@@ -538,7 +538,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeZFSEncryptionInfo =>
-      'Cifrado nativo con ZFS. Terás que introducir unha frase de paso cada vez que acendas o ordenador.';
+      'Cifrado nativo con ZFS. Terás que introducir unha frase de paso cada vez que acendas o computador.';
 
   @override
   String get installationTypeZFSSelected => 'ZFS seleccionado';
@@ -556,7 +556,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Non dispoñíbel neste ordenador.';
+      'Non dispoñíbel neste computador.';
 
   @override
   String get installationTypeTPMSelected => 'TPM seleccionado';
@@ -847,7 +847,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String confirmTableResized(String oldsize, String newsize) {
-    return 'Redimensionado dende $oldsize a $newsize';
+    return 'Redimensionado desde $oldsize a $newsize';
   }
 
   @override
@@ -894,7 +894,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get rebootToConfigureWarning =>
-      'Tes que reiniciar o ordenador para continuar co proceso de instalación.';
+      'Tes que reiniciar o computador para continuar co proceso de instalación.';
 
   @override
   String get shutdown => 'Apagar';
@@ -930,10 +930,10 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Podes perder todos os teus datos sen as chaves de recuperación de BitLocker';
 
   @override
-  String get restartComputer => 'Reiniciar o ordenador';
+  String get restartComputer => 'Reiniciar o computador';
 
   @override
-  String get restartComputerTitle => 'Reiniciar o ordenador?';
+  String get restartComputerTitle => 'Reiniciar o computador?';
 
   @override
   String get restartInstaller => 'Reiniciar o instalador';
@@ -946,7 +946,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String restartIntoWindowsDescription(String DISTRO) {
-    return 'Seguro que queres reiniciar o ordenador? Terás que reiniciar a instalación de $DISTRO máis tarde para rematar de instalar $DISTRO.';
+    return 'Seguro que queres reiniciar o computador? Terás que reiniciar a instalación de $DISTRO máis tarde para rematar de instalar $DISTRO.';
   }
 
   @override
@@ -1050,7 +1050,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'A documentación oficial de $DISTRO está dispoñible tanto en liña como a través da icona de Axuda no dock.';
+    return 'A documentación oficial de $DISTRO está dispoñíbel tanto en liña como a través da icona de Axuda no dock.';
   }
 
   @override
@@ -1380,7 +1380,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeErrorPageTitle =>
-      'A instalación automática non está dispoñible para a túa conta';
+      'A instalación automática non está dispoñíbel para a túa conta';
 
   @override
   String get landscapeErrorPageBody =>
@@ -1484,11 +1484,11 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'Este ordenador usa un firmware antigo (BIOS herdado) que non é compatible con este método de cifrado.';
+      'Este computador usa un firmware antigo (BIOS herdado) que non é compatible con este método de cifrado.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'Hai un problema co firmware deste ordenador.';
+      'Hai un problema co firmware deste computador.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
@@ -1496,7 +1496,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'O TPM deste ordenador está desactivado.';
+      'O TPM deste computador está desactivado.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
@@ -1504,15 +1504,15 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'O TPM deste ordenador está bloqueado actualmente.';
+      'O TPM deste computador está bloqueado actualmente.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'O TPM deste ordenador non ten almacenamento suficiente dispoñible.';
+      'O TPM deste computador non ten almacenamento suficiente dispoñíbel.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'Este ordenador non é compatible co cifrado con hardware.';
+      'Este computador non é compatible co cifrado con hardware.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
@@ -1520,15 +1520,15 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'A este ordenador fáltalle unha función de seguranza obrigatoria (protección DMA).';
+      'A este computador fáltalle unha función de seguranza obrigatoria (protección DMA).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'A este ordenador fáltalle unha función de seguranza obrigatoria (IOMMU).';
+      'A este computador fáltalle unha función de seguranza obrigatoria (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'Hai un problema coa configuración de seguranza deste ordenador.';
+      'Hai un problema coa configuración de seguranza deste computador.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
@@ -1540,15 +1540,15 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'O arranque seguro está desactivado neste ordenador ou non está configurado no modo despregado.';
+      'O arranque seguro está desactivado neste computador ou non está configurado no modo despregado.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Algúns dos certificados que verifican o software neste ordenador están desactualizados ou usan unha protección débil.';
+      'Algúns dos certificados que verifican o software neste computador están desactualizados ou usan unha protección débil.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'Este ordenador está a usar unha lista de permisos manual para verificar o software ao iniciar.';
+      'Este computador está a usar unha lista de permisos manual para verificar o software ao iniciar.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
@@ -1556,15 +1556,15 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'A este ordenador fáltalle unha característica de seguranza obrigatoria (raíz de confianza do hardware).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'Hai un problema co TPM deste ordenador.';
+      'Hai un problema co TPM deste computador.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'Hai un problema co firmware deste ordenador.';
+      'Hai un problema co firmware deste computador.';
 
   @override
   String get tpmActionFixActionReboot => 'Reiniciar';
@@ -1578,7 +1578,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'Se a configuración do firmware non se carga automaticamente, reinicie o ordenador e prema a tecla de configuración repetidamente durante o inicio (normalmente F2, F10 ou Supr).';
+      'Se a configuración do firmware non se carga automaticamente, reinicie o computador e prema a tecla de configuración repetidamente durante o inicio (normalmente F2, F10 ou Supr).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
@@ -1642,23 +1642,23 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Reinicie o ordenador para completar as accións anteriores.';
+      'Reinicie o computador para completar as accións anteriores.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Reiniciar o ordenador pode solucionar o problema.';
+      'Reiniciar o computador pode solucionar o problema.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Apaga o ordenador para completar as accións anteriores.';
+      'Apaga o computador para completar as accións anteriores.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'Podes facelo na configuración do firmware do teu ordenador.';
+      'Podes facelo na configuración do firmware do teu computador.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'É posíbel que poidas facelo na configuración do firmware do teu ordenador. Consulta a documentación do provedor da CPU para obter orientación.';
+      'É posíbel que poidas facelo na configuración do firmware do teu computador. Consulta a documentación do provedor da CPU para obter orientación.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
@@ -1717,6 +1717,6 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Paso $CURRENT_STEP de $TOTAL_STEPS';
   }
 }

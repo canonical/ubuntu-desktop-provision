@@ -352,23 +352,23 @@
     "passphrasePageTitle": "加密",
     "passphrasePageHeaderPassphrase": "設定加密密碼",
     "passphrasePageHeaderPin": "設定加密 PIN 碼",
-    "passphrasePageBodyPassphrase": "每次開啟電腦時，您都需要輸入密碼。此密碼與您的使用者密碼不同。您稍後可以變更它，但無法停用它。如果您忘記密碼，您可以使用復原金鑰重新存取磁碟。",
-    "passphrasePageBodyPin": "每次開啟電腦時，您都需要輸入 PIN 碼。此 PIN 碼與您的使用者密碼不同。您稍後可以變更它，但無法停用。如果您忘記 PIN 碼，您可以使用復原金鑰重新存取磁碟。",
+    "passphrasePageBodyPassphrase": "每次啟動電腦時，您都需要輸入這組密碼短語。這組密碼短語與您的使用者密碼不同。您稍後可在「安全中心」中變更它。",
+    "passphrasePageBodyPin": "每次啟動電腦時，您都需要輸入 PIN 碼。此 PIN 碼與您的使用者密碼不同。您稍後可在「安全中心」中變更此 PIN 碼。",
     "passphrasePageChoosePassphraseHint": "密碼",
     "passphrasePageConfirmPassphraseHint": "確認密碼",
     "passphrasePageRequiredPassphrase": "需要輸入密碼",
     "passphrasePageMismatchPin": "PIN 碼不符合",
     "passphrasePageMismatchPassphrase": "密碼不符合",
     "passphrasePageRequiredPin": "需要輸入 PIN 碼",
-    "passphraseTypePassphraseTileTitle": "需要密碼",
+    "passphraseTypePassphraseTileTitle": "啟動時需輸入密碼短語",
     "passphrasePageChoosePinHint": "PIN 碼",
     "passphrasePageConfirmPinHint": "確認 PIN 碼",
     "passphraseTypePassphraseTileSubTitle": "最安全。每次開啟電腦時，您都需要輸入較長的密碼。",
-    "passphraseTypePinTileTitle": "需要 PIN 碼",
+    "passphraseTypePinTileTitle": "開機時需輸入 PIN 碼",
     "passphraseTypePinTileSubTitle": "更安全。每次開啟電腦時，您都需要輸入數字 PIN 碼。",
     "passphraseTypeNoneTileTitle": "自動解鎖磁碟",
     "passphraseTypePageHeader": "額外的安全措施",
-    "passphraseTypePageBody": "預設情況下，電腦的 Trusted Platform Module (TPM) 會在啟動時解除鎖定磁碟。您還有其他選項可進一步保護您的資料。",
+    "passphraseTypePageBody": "預設情況下，磁碟會在啟動時自動解鎖。您也可以選擇其他選項來進一步保護您的資料。",
     "recoveryKeySaveToFileLabel": "儲存至檔案",
     "recoveryKeyShowQrCodeLabel": "顯示 QR code",
     "passphrasePagePassphraseEntropyBelowMin": "密碼薄弱，請使其更長或更複雜",
@@ -520,5 +520,22 @@
     "tpmActionFixActionProceedDescription": "若忽略此問題，可能會導致安裝安全性降低。",
     "tpmActionFixActionCaveatConfirm": "重新啟動時，系統可能會要求您確認此操作。",
     "tpmActionFixActionCaveatRetry": "那麼您就需要重新開始安裝。",
-    "manualPartitioningWarningBody": "請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。"
+    "manualPartitioningWarningBody": "請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。",
+    "autoinstallGenericErrorMessage": "無法繼續使用提供的自動安裝檔進行安裝。",
+    "autoinstallValidationErrorMessage": "提供的自動安裝檔出現問題。",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "自動安裝檔中提供的 cloud-init 使用者資料存在問題。",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "這台電腦缺少一項必要的安全功能（硬體信任根）。",
+    "stepIndicatorLabel": "步驟 {CURRENT_STEP} / {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "passphraseTypePageBodyAuthRequired": "硬體級加密需要這台電腦具備額外的安全措施。",
+    "tpmActionPageTitleActionable": "硬體支援的加密功能出現了問題"
 }
