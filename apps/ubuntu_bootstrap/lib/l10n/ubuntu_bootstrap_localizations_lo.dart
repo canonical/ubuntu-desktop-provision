@@ -117,15 +117,15 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'ການຕິດຕັ້ງບໍ່ສາມາດດຳເນີນການຕໍ່ໄດ້ດ້ວຍໄຟລ໌ autoinstall ທີ່ໃຫ້ມາ.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'ມີບັນຫາກັບໄຟລ໌ autoinstall ທີ່ໃຫ້ມາ.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'ມີບັນຫາກັບຂໍ້ມູນຜູ້ໃຊ້ cloud-init ທີ່ໃຫ້ມາໃນໄຟລ໌ autoinstall.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -387,14 +387,15 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN ບໍ່ກົງກັນ';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'ຕ້ອງການວະລີຜ່ານ';
+  String get passphraseTypePassphraseTileTitle =>
+      'ຕ້ອງການວະລີຜ່ານຕອນເລີ່ມລະບົບ';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'ປອດໄພທີ່ສຸດ. ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທີ່ຍາວກວ່າທຸກຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີ.';
 
   @override
-  String get passphraseTypePinTileTitle => 'ຕ້ອງການ PIN';
+  String get passphraseTypePinTileTitle => 'ຕ້ອງການລະຫັດ PIN ຕອນເລີ່ມລະບົບ';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -408,11 +409,11 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'ໂດຍຄ່າເລີ່ມຕົ້ນ, Trusted Platform Module (TPM) ຂອງຄອມພິວເຕີຈະປົດລັອກ ດິດໃນລະຫວ່າງການເລີ່ມຕົ້ນ. ທ່ານຍັງມີທາງເລືອກໃນການປົກປ້ອງຂໍ້ມູນຂອງທ່ານເພີ່ມເຕີມ.';
+      'ໂດຍຄ່າເລີ່ມຕົ້ນ, ດິສກ໌ຈະຖືກປົດລັອກໂດຍອັດຕະໂນມັດຕອນເລີ່ມລະບົບ. ທ່ານຍັງມີຕົວເລືອກເພື່ອປົກປ້ອງຂໍ້ມູນຂອງທ່ານເພີ່ມເຕີມ.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'ການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ ຕ້ອງການຄວາມປອດໄພເພີ່ມເຕີມໃນຄອມພິວເຕີເຄື່ອງນີ້.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1536,7 +1537,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'ຄອມພິວເຕີເຄື່ອງນີ້ຂາດຄຸນສົມບັດຄວາມປອດໄພທີ່ຈຳເປັນ (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1698,6 +1699,6 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'ຂັ້ນຕອນທີ $CURRENT_STEP ຈາກ $TOTAL_STEPS';
   }
 }

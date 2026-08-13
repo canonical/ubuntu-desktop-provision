@@ -97,73 +97,74 @@ class UbuntuInitLocalizationsCa extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Magic attach with this code at <a href=\"https://$url\">$url</a>';
+    return 'Magic adjunta aquest codi a <a href=\"https://$url\">$url</a>';
   }
 
   @override
-  String get ubuntuProPageTitle => 'Ubuntu Pro';
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
 
   @override
-  String get ubuntuProHeader => 'Attach this machine';
+  String get ubuntuProHeader => 'Adjunta aquesta màquina';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'or add a token manually';
+  String get ubuntuProOrAddTokenManually => 'o afegeix un testimoni manualment';
 
   @override
-  String get ubuntuProTokenTextfieldHint => 'Token';
+  String get ubuntuProTokenTextfieldHint => 'Testimoni';
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Get the most comprehensive subscription for open-source software security';
+      'Aconsegueix la subscripció més completa per a la seguretat del programari de codi obert';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Always free for personal use. 30-days trial for enterprises. <a href=\"https://$url\">Learn more</a>';
+    return 'Sempre lliure per a ús personal. Assaig de 30 dies per a empreses. <a href=\"https://$url\">Més informació</a>';
   }
 
   @override
-  String get ubuntuProTokenAttachButton => 'Attach';
+  String get ubuntuProTokenAttachButton => 'Adjunta';
 
   @override
-  String get ubuntuProTokenAttachError => 'Invalid token';
+  String get ubuntuProTokenAttachError => 'Testimoni no vàlid';
 
   @override
-  String get ubuntuProTokenAttachSucess => 'Valid token';
+  String get ubuntuProTokenAttachSucess => 'Testimoni vàlid';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant => 'Invalid token, retry';
+  String get ubuntuProTokenAttachErrorVariant =>
+      'Testimoni no vàlid, torneu-ho a provar';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Skip for now';
+  String get ubuntuProOnBoardingSkipForNow => 'Omet per ara';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'You can always enable Ubuntu Pro later via the Software & Updates application.';
+      'Sempre podeu activar Ubuntu Pro més tard a través de l\'aplicació d\'actualitzacions de programari.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Enable Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Habilita l\'Ubuntu Pro';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.';
+      'Adjunteu aquesta màquina a una subscripció d\'Ubuntu Pro per a actualitzacions de seguretat en una gamma més àmplia de paquets, fins al 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
-      'Ubuntu Pro is now enabled in this machine';
+      'Ubuntu Pro ara està habilitat en aquesta màquina';
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'You can manage your Pro services in the Software & Updates application.';
+      'Podeu gestionar els vostres serveis Pro a l\'aplicació d\'actualitzacions de programari.';
 
   @override
-  String get successIconSemanticLabel => 'Success';
+  String get successIconSemanticLabel => 'Èxit';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Tanca';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Maximitza';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Minimitza';
 }

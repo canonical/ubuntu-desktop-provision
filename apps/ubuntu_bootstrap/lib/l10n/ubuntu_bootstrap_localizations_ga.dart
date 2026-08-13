@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Ní féidir leanúint leis an suiteáil leis an gcomhad uath-suiteála a cuireadh ar fáil.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Tá fadhb leis an gcomhad uath-suiteála a cuireadh ar fáil.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Tá fadhb ann leis na sonraí úsáideora cloud-init a chuirtear ar fáil sa chomhad uathsuiteála.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -361,11 +361,11 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Beidh ort do phasfhocal a iontráil gach uair a chasann tú ar do ríomhaire. Tá an pasfhocal seo difriúil ó do phasfhocal úsáideora. Beidh tú in ann é a athrú níos déanaí, ach ní bheidh tú in ann é a dhíchumasú. Má dhéanann tú dearmad ar do phasfhocal, is féidir leat rochtain a fháil ar an diosca arís trí úsáid a bhaint as an eochair aisghabhála.';
+      'Beidh ort an frása faire a iontráil gach uair a thosóidh tú do ríomhaire. Tá an frása faire seo difriúil ó d’fhocal faire úsáideora. Is féidir leat é a athrú níos déanaí san Ionad Slándála.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Beidh ort do UAP a iontráil gach uair a chasann tú ar do ríomhaire. Tá an UAP seo difriúil ó do phasfhocal úsáideora. Beidh tú in ann é a athrú níos déanaí, ach ní bheidh tú in ann é a dhíchumasú. Má dhéanann tú dearmad ar do UAP, is féidir leat rochtain a fháil ar an diosca arís trí úsáid a bhaint as an eochair aisghabhála.';
+      'Beidh ort an PIN a iontráil gach uair a thosóidh tú do ríomhaire. Tá an PIN seo difriúil ó do phasfhocal úsáideora. Is féidir leat é a athrú níos déanaí san Ionad Slándála.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Pasfrása';
@@ -392,14 +392,15 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'Ní hionann na UAPanna';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Éiligh frása faire';
+  String get passphraseTypePassphraseTileTitle =>
+      'Éiligh frása faire ag am tosaithe';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Is sláine. Beidh ort frása faire níos faide a iontráil gach uair a chasann tú ar do ríomhaire.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Éiligh UAP';
+  String get passphraseTypePinTileTitle => 'Éiligh PIN ag am tosaithe';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -414,11 +415,11 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'De réir réamhshocraithe, díghlasálfaidh Modúl Ardáin Iontaofa (TPM) an ríomhaire an diosca le linn tosaithe. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.';
+      'De réir réamhshocraithe, díghlasálfar an diosca go huathoibríoch ar thosú. Tá roghanna agat freisin chun do shonraí a chosaint tuilleadh.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'Éilíonn criptiú atá bunaithe ar chrua-earraí slándáil bhreise sa ríomhaire seo.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1416,7 +1417,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'Tá fadhb ann le criptiú atá bunaithe ar chrua-earraí';
 
   @override
   String get tpmActionBadgeLabel => 'Gníomh riachtanach';
@@ -1553,7 +1554,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'Tá gné slándála riachtanach (fréamh iontaoibhe crua-earraí) in easnamh ar an ríomhaire seo.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1714,6 +1715,6 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Céim $CURRENT_STEP de $TOTAL_STEPS';
   }
 }

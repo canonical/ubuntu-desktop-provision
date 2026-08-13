@@ -9,111 +9,111 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'منصِّب سطح مكتب Ubuntu';
+  String get appTitle => 'مثبِّت نظام Ubuntu Desktop';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'تنصيب $RELEASE';
+    return 'ثبّت $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'تنصيب آلي';
+  String get autoinstallDirectTitle => 'تثبيت آلي';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader => 'أدخل ملف تحميل آلي';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'يمكنك أن تدخل رابط ملف التحميل الآلي:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'أو إختر ملف محلّي:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'إختر ملفًا...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'إخلي الملف';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'إختر ملفًا';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'ملفات YAML';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'أدخِل';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'ملف التحميل الآلي غير قابل للوصول';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'تحقَّق من صحّة الرابط، إختبر إتصالك بالإنترنت، أو جرب مرة أخرى لاحقَا.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'رابط غير صحيح';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'تحقَّق من الرابط أو إختر ملف محلي.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'ملف تحميل آلي غير صحيح';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'تحقَّق من الملف أو قدِّم ملفًا آخر.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Autoinstall file is not readable';
+      'ملف التحميل الآلي غير قابل للتحليل';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'تحقَّق من صلاحياتك أو قدِّم ملفًا آخر.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'خطأ مجهول';
 
   @override
   String get autoinstallTitle => 'نوع التثبيت';
 
   @override
   String autoinstallHeader(String DISTRO) {
-    return 'كيف تريد تنصيب $DISTRO؟';
+    return 'كيف تريد تثبيت $DISTRO؟';
   }
 
   @override
   String get autoinstallInstructions =>
-      'Enter the autoinstall.yaml URL or local file path:';
+      'أدخِل رابط ملف الـ autoinstall.yaml أو مسار الملف:';
 
   @override
-  String get autoinstallInteractiveOption => 'تنصيب تفاعلي';
+  String get autoinstallInteractiveOption => 'تثبيت تفاعلي';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'For users who want to be guided step by step through the installation.';
+      'للمستخدمين الذين يرغبون في إرشادهم خطوة بخطوة خلال التثبيت.';
 
   @override
-  String get autoinstallDirectOption => 'Automated with autoinstall file';
+  String get autoinstallDirectOption => 'مُؤتمَت بملف تحميل آلي';
 
   @override
   String get autoinstallDirectDescription =>
-      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+      'للمستخدين المتقدمين الذين يحوزون ملفًا للتحميل الآلي لتحقيق أنظمة متوافقة وقابلة للتكرار.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automated with Landscape';
+  String get autoinstallLandscapeOption => 'مُؤتمَت من خلال Landscape';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'For users in organizations that provide an autoinstall file via Landscape.';
+      'للمستخدمين في المنظمات التي توفِّر ملفات تحميل آلي عبر Landscape.';
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'لقد فشل أمرٌ في ملف التحميل الآلي خلال التثبيت.';
 
   @override
   String get autoinstallGenericErrorMessage =>
@@ -129,7 +129,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'سيجب عليك أن تعيد التثبيت. تحقَّق من ملف التثبيت الآلي، أو إختر نوعًا آخرًا من التثبيت، أو تواصل مع الدعم الفني الخاص بك.';
 
   @override
   String get changeButtonText => 'تغيير';
@@ -144,7 +144,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String loadingHeader(String DISTRO) {
-    return 'يحضَّؤ $DISTRO…';
+    return 'يتم تجهيز $DISTRO…';
   }
 
   @override
@@ -152,7 +152,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String tryOrInstallTitle(String DISTRO) {
-    return 'جرب او ثبت $DISTRO';
+    return 'جرب او ثبِّت $DISTRO';
   }
 
   @override
@@ -161,7 +161,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get tryOrInstallRepairOption => 'تصليح المثبت';
+  String get tryOrInstallRepairOption => 'صلِّح التثبيت';
 
   @override
   String get tryOrInstallRepairDescription =>
@@ -179,35 +179,35 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String installOption(String RELEASE) {
-    return 'ثبت $RELEASE';
+    return 'ثبّت $RELEASE';
   }
 
   @override
   String installDescription(String RELEASE) {
-    return 'ثبت $RELEASE بجانب او بدلا من نظامك الحالي. لا ينبغي لهذا الإجراء اخذ الكثير من الوقت.';
+    return 'ثبّت $RELEASE بجانب - او بدلا من - نظامك الحالي. لا ينبغي لذلك أن يأخذ الكثير من الوقت.';
   }
 
   @override
   String tryOrInstallReleaseNotesLabel(String url) {
-    return 'قد ترغب في قراءة </a> ملاحظات الإصدار <a href=\"$url\">.';
+    return 'قد ترغب في قراءة <a href=\"$url\">ملاحظات الإصدار</a>.';
   }
 
   @override
   String get rstTitle => 'تم تشغيل RST';
 
   @override
-  String get rstHeader => 'قم بإيقاف RST للمتابعة';
+  String get rstHeader => 'يجب عليك أن توقِف RST لمتابعة التثبيت';
 
   @override
   String get rstDisable =>
-      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+      'يستخدم جهازك تقنية Intel RST (Rapid Storage Technology). يمكنك إيقاف RST من خلال:';
 
   @override
   String get rstDisableWindows =>
-      'Windows, if you are using a dual boot setup with Windows';
+      'نظام Windows، إن كنت تستخدم نظام تشغيل مزدوج مع Windows';
 
   @override
-  String get rstDisableBios => 'The BIOS settings';
+  String get rstDisableBios => 'أو إعدادات ال BIOS';
 
   @override
   String rstInstructions(String url) {
@@ -215,146 +215,144 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get configureSecureBootTitle => 'Configure Secure Boot';
+  String get configureSecureBootTitle =>
+      'إضبط إعدادات Secure Boot (التشغيل الآمن)';
 
   @override
   String get configureSecureBootDescription =>
-      'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+      'لقد قمت باختيار تثبيت برامج تعريف من جهات خارجية. ذلط يتطلب إيقاف Secure Boot.\nلفعل ذلك، يجب أن تحدّد مفتاح أمان مؤقت الآن، ثم تستخدمه عندما يعاد تشغيل النظام لأول مرة.';
 
   @override
-  String get configureSecureBootOption => 'Configure Secure Boot';
+  String get configureSecureBootOption => 'إضبط إعدادات Secure Boot';
 
   @override
-  String get chooseSecurityKey => 'اختيار مفتاح أمان';
+  String get chooseSecurityKey => 'اختار مفتاح أمان';
 
   @override
-  String get confirmSecurityKey => 'تأكيد مفتاح الأمان';
+  String get confirmSecurityKey => 'أكِّد مفتاح الأمان';
 
   @override
   String get dontInstallDriverSoftwareNow =>
-      'Don\'t install the driver software for now';
+      'لا تثبّت برامج التعريف في الوقت الحالي';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'You can install it later from Software & Updates.';
+      'بإمكانك تثبيتها لاحقَا من برنامج Software & Updates.';
 
   @override
-  String get configureSecureBootSecurityKeyRequired =>
-      'Security key is required';
+  String get configureSecureBootSecurityKeyRequired => 'مفتاح الأمان إجباري';
 
   @override
-  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+  String get secureBootSecurityKeysDontMatch => 'لا تتطابق مفاتيح الأمان';
 
   @override
-  String get showSecurityKey => 'Show';
+  String get showSecurityKey => 'أظهِر';
 
   @override
-  String get hideSecurityKey => 'Hide';
+  String get hideSecurityKey => 'أخفِ';
 
   @override
-  String get updatesOtherSoftwarePageTitle => 'التطبيقات والتحديثات';
+  String get updatesOtherSoftwarePageTitle => 'التطبيقات';
 
   @override
   String get updatesOtherSoftwarePageDescription =>
-      'ما التطبيقات التي ترغب في تثبيتها ابتداءً؟';
+      'ما التطبيقات التي ترغب في تثبيتها للابتداء بها؟';
 
   @override
-  String get codecsAndDriversPageTitle => 'Optimise your computer';
+  String get codecsAndDriversPageTitle => 'حسِّن من جهازِك';
 
   @override
   String get codecsAndDriversPageDescription =>
-      'Install recommended proprietary software?';
+      'هل يتم تثبيت البرمجيّات الملكيّة الموصى بها؟';
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+    return '$DISTRO لا يحتوي على أية برامج ممتلكة بالإفتراض. تثبيت برامج زائدة قد يحسّن من أداء جهازك.';
   }
 
   @override
-  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+  String get codecsAndDriversNvidiaNote =>
+      'لقد تم اكتشاف بطاقة رسوميّات من شركة NVIDIA';
 
   @override
   String get codecsAndDriversNvidiaBody =>
-      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+      'للأداء الأحسن مع بطاقات رسوميات NVIDIA، يستحسن بقوة تثبيت برامج تعريف زائدة.';
 
   @override
-  String get fullInstallationTitle => 'Extended selection';
+  String get fullInstallationTitle => 'المجموعة المكتملة';
 
   @override
   String get fullInstallationSubtitle =>
-      'An offline-friendly selection of office tools, utilities and web browser.';
+      'مجموعة من الأدوات المكتبية التي تعمل بدون اتصال والأدوات المساعدة ومتصفح الإنترنت.';
 
   @override
-  String get minimalInstallationTitle => 'Default selection';
+  String get minimalInstallationTitle => 'المجموعة الأساسية';
 
   @override
   String get minimalInstallationSubtitle =>
-      'Just the essentials, web browser and basic utilities.';
+      'مجرد الضروريات، متصفح الإنترنت وأدوات أساسية.';
 
   @override
   String get otherOptions => 'خيارات أخرى';
 
   @override
   String get installThirdPartyTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+      'ثبّت برامج من جهات خارجية للرسوميّات وبطاقة الـ Wi-Fi، مع صيغ وسائط إضافيّة';
 
   @override
   String get installThirdPartySubtitle =>
-      'This software is subject to license terms included with its documentation. Some are proprietary.';
+      'هذه البرمجيّات خاضعة لشروط ترخيص مشمولة في وثائقها. بعضها ملكيّ.';
 
   @override
   String get installDriversTitle =>
-      'Install third-party software for graphics and Wi-Fi hardware';
+      'ثبّت برمجيّات من جهات خارجية للرسوميّات وبطاقة الـ Wi-Fi';
 
   @override
   String get installDriversSubtitle =>
-      'Including but not limited to NVIDIA drivers and similar';
+      'ممّا يتضمن على سبيل المثال لا الحصر برامج تعريف NVIDIA وما شابه';
 
   @override
-  String get installCodecsTitle =>
-      'Download and install support for additional media formats';
+  String get installCodecsTitle => 'حمّل وثبّت دعم صيغ الوسائط الإضافيّة';
 
   @override
   String get installCodecsSubtitle =>
-      'Including but not limited to MP3, MP4, MOV and similar';
+      'ممّا يتضمن على سبيل المثال لا الحصر MP3, MP4, MOV وما شابه';
 
   @override
-  String get batteryWarning =>
-      'The computer is not plugged in to a power source.';
+  String get batteryWarning => 'هذا الجهاز ليس متصلًا بالكهرباء.';
 
   @override
-  String get offlineWarning => 'You are currently offline';
+  String get offlineWarning => 'أنت حاليًا غير متصل بالإنترنت';
 
   @override
-  String get choosePassphraseHeader => 'Create a passphrase';
+  String get choosePassphraseHeader => 'أنشئ عبارة مرور';
 
   @override
   String get choosePassphraseBody =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+      'سوف يجب عليك إدخال عبارة مرورك كلّما قمت بتشغيل جهازك. تلك عبارة المرور مختلفة عن كلمة سر المستخدم الخاص بك.';
 
   @override
-  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+  String get choosePassphraseInfoHeader => 'تأكد من حفظ عبارة مرورك';
 
   @override
-  String get choosePassphraseInfoBody =>
-      'If you lose it, you will lose all your data.';
+  String get choosePassphraseInfoBody => 'إن فقدتها، ستفقد كل بياناتك.';
 
   @override
   String get chooseOptionalPassphraseInfoHeader =>
-      'Store your passphrase and recovery key somewhere safe';
+      'إحفظ عبارة مرورك ومفتاح الاسترداد في مكان آمن';
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+      'إن فقدت عبارة مرورك، ستفقد كل بياناتك. عبارة المرور لا تستبدل مفتاح الاسترداد أو كلمة سر المستخدم الخاص بك.';
 
   @override
-  String get passphrasePageTitle => 'Encryption';
+  String get passphrasePageTitle => 'التشفير';
 
   @override
-  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+  String get passphrasePageHeaderPassphrase => 'حدّد عبارة مرور التشفير';
 
   @override
-  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+  String get passphrasePageHeaderPin => 'حدّد رقم سرّي للتشفير';
 
   @override
   String get passphrasePageBodyPassphrase =>
@@ -1113,7 +1111,7 @@ class UbuntuBootstrapLocalizationsAr extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshInfo =>
-      'حدِّث إلى آخر إصدار من أجل استقرارية محسنة ومزايا إضافية.';
+      'حدِّث إلى الإصدار الأخير من أجل اعتماديّة محسنة ومزايا إضافيّة.';
 
   @override
   String get refreshReady => 'Update ready';

@@ -9,63 +9,64 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Instalacijski program za Ubuntu računar';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Instaliraj $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Automatizirana instalacija';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader =>
+      'Uvezi datoteku za automatsku instalaciju';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'Možete unijeti URL datoteke za automatsku instalaciju:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Ili odaberite lokalnu datoteku:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Odaberite datoteku...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Obriši datoteku';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Odaberite datoteku';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML datoteke';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Uvoz';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'Datoteka za automatsku instalaciju nije dostupna';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'Provjerite je li URL ispravan, testirajte internetsku vezu ili pokušajte kasnije.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Nevažeći URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'Provjerite je li URL ispravan ili odaberite lokalnu datoteku.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'Nevažeća datoteka za automatsku instalaciju';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'Provjerite datoteku ili dostavite drugu.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
@@ -73,10 +74,10 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'Provjerite svoja dopuštenja ili dostavite drugu datoteku.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Nepoznata greška';
 
   @override
   String get autoinstallTitle => 'Type of installation';
