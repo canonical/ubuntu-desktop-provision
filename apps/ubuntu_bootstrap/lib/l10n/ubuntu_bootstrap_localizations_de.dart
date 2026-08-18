@@ -31,7 +31,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
       'Oder wählen Sie eine lokale Datei aus:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Datei auswählen...';
+  String get autoinstallDirectFileButtonLabel => 'Datei auswählen ...';
 
   @override
   String get autoinstallDirectFileClearButtonLabel => 'Datei leeren';
@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Die Installation kann mit der bereitgestellten autoinstall-Datei nicht fortgesetzt werden.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Es gibt ein Problem mit der bereitgestellten autoinstall-Datei.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -365,11 +365,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Sie müssen Ihre Passphrase jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Diese Passphrase unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später ändern, aber nicht deaktivieren. Wenn Sie Ihre Passphrase vergessen haben, können Sie mit dem Wiederherstellungsschlüssel wieder Zugriff auf die Festplatte erhalten.';
+      'Sie müssen die Passphrase bei jedem Start Ihres Computers eingeben. Diese Passphrase unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später im Sicherheitszentrum ändern.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Sie müssen Ihre PIN jedes Mal eingeben, wenn Sie Ihren Computer einschalten. Diese PIN unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später ändern, aber nicht deaktivieren. Wenn Sie Ihre PIN vergessen haben, können Sie mit dem Wiederherstellungsschlüssel wieder Zugriff auf die Festplatte erhalten.';
+      'Sie müssen die PIN bei jedem Start Ihres Computers eingeben. Diese PIN unterscheidet sich von Ihrem Benutzerpasswort. Sie können sie später im Sicherheitszentrum ändern.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -399,14 +399,15 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePassphraseTileTitle =>
-      'Eine Passphrase erforderlich machen';
+      'Beim Start eine Passphrase erforderlich machen';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Am sichersten. Sie müssen jedes Mal eine längere Passphrase eingeben, wenn Sie Ihren Computer einschalten.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Eine PIN erforderlich machen';
+  String get passphraseTypePinTileTitle =>
+      'Beim Start eine PIN erforderlich machen';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -420,7 +421,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Standardmäßig entsperrt das Trusted Platform Module (TPM) des Computers die Festplatte während des Startvorgangs. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.';
+      'Standardmäßig wird die Festplatte beim Startvorgang automatisch entsperrt. Sie haben außerdem weitere Optionen, um Ihre Daten zusätzlich zu schützen.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Für die hardwaregestützte Verschlüsselung sind zusätzliche Sicherheitsmaßnahmen auf diesem Computer erforderlich.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1421,6 +1426,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
       'Hardware-gestützte Verschlüsselung konnte nicht aktiviert werden';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'Es gibt ein Problem mit der Hardware-gestützten Verschlüsselung';
+
+  @override
   String get tpmActionBadgeLabel => 'Handlungsbedarf';
 
   @override
@@ -1552,6 +1561,10 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Zusatztreiber sind vorhanden.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'Auf diesem Computer fehlt eine erforderliche Sicherheitsfunktion (Hardware-Vertrauensanker).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1713,6 +1726,6 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Schritt $CURRENT_STEP von $TOTAL_STEPS';
   }
 }

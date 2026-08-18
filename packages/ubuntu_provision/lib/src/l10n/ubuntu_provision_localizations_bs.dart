@@ -9,7 +9,7 @@ class UbuntuProvisionLocalizationsBs extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'Pristupačnost';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
@@ -85,10 +85,10 @@ class UbuntuProvisionLocalizationsBs extends UbuntuProvisionLocalizations {
   String get errorPageTechnicalDetails => 'Technical details';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'Ponovo pokreni';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zatvori';
 
   @override
   String get timezonePageTitle => 'Select your timezone';
@@ -370,13 +370,13 @@ class UbuntuProvisionLocalizationsBs extends UbuntuProvisionLocalizations {
   String get successIconSemanticLabel => 'Success';
 
   @override
-  String get closeIconSemanticLabel => 'Close';
+  String get closeIconSemanticLabel => 'Zatvori';
 
   @override
-  String get maximizeIconSemanticLabel => 'Maximize';
+  String get maximizeIconSemanticLabel => 'Uvećaj';
 
   @override
-  String get minimizeIconSemanticLabel => 'Minimize';
+  String get minimizeIconSemanticLabel => 'Umanji';
 
   @override
   String get expandIconSemanticLabel => 'Expand';

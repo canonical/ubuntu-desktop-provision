@@ -164,7 +164,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Tá an t-ainm sin rófhada.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'Tá an t-ainm neamhbhailí';
 
   @override
   String get identityHostnameLabel => 'Ainm do ríomhaire';
@@ -189,7 +189,8 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'Tá ainm úsáideora de dhíth';
 
   @override
-  String get identityInvalidUsername => 'Tá an t-ainm úsáideora neamhbhailí';
+  String get identityInvalidUsername =>
+      'Tá an t-ainm úsáideora neamhbhailí: ní mór dó tosú le litir bheag agus ní fhéadfaidh sé ach litreacha beaga, digití, fleiscíní agus fo-línte a bheith ann.';
 
   @override
   String get identityUsernameInUse =>
@@ -387,29 +388,29 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'Laghdaigh';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'Gan comhartha';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'Comhartha lag';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'Comhartha ceart go leor';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'Comhartha maith';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'Comhartha den scoth';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'Líonra oscailte';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'Líonra slán';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'Ag ceangal…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'Ceangailte';
 }

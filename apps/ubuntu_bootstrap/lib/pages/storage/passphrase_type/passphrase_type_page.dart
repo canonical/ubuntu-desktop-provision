@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart';
@@ -10,7 +11,7 @@ import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
 const _fdeLink =
-    'https://documentation.ubuntu.com/desktop/en/latest/explanation/hardware-backed-disk-encryption/#encryption-passphrase';
+    'https://ubuntu.com/desktop/docs/en/latest/explanation/hardware-backed-disk-encryption/#tpm-fde-encryption-passphrase';
 
 class PassphraseTypePage extends ConsumerWidget {
   const PassphraseTypePage({super.key});
@@ -37,7 +38,24 @@ class PassphraseTypePage extends ConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(l10n.passphraseTypePageBody),
+              Text(
+                model.encryptionRequirements
+                        .contains(CoreBootEncryptionRequirement.VOLUMES_AUTH)
+                    ? l10n.passphraseTypePageBodyAuthRequired
+                    : l10n.passphraseTypePageBody,
+              ),
+              const SizedBox(height: kWizardSpacing),
+              ...model.supportedTypes.map(
+                (type) {
+                  return OptionButton(
+                    title: Text(type.localizedTileTitle(l10n)),
+                    value: type,
+                    groupValue: model.passphraseType,
+                    onChanged: (type) => model.passphraseType = type!,
+                  );
+                },
+              ).withSpacing(kWizardSpacing / 2),
+              const SizedBox(height: kWizardSpacing / 2),
               Html(
                 data: '<a href="$_fdeLink">${l10n.recoveryKeyLinkLabel}</a>',
                 style: {
@@ -50,20 +68,6 @@ class PassphraseTypePage extends ConsumerWidget {
                 shrinkWrap: true,
                 onLinkTap: (url, __, ___) => launchUrl(url!),
               ),
-              const SizedBox(height: kWizardSpacing),
-              ...model.supportedTypes.map(
-                (type) {
-                  final subtitle = type.localizedTileSubTitle(l10n);
-                  return OptionButton(
-                    title: Text(type.localizedTileTitle(l10n)),
-                    subtitle: subtitle != null ? Text(subtitle) : null,
-                    isThreeLines: subtitle != null,
-                    value: type,
-                    groupValue: model.passphraseType,
-                    onChanged: (type) => model.passphraseType = type!,
-                  );
-                },
-              ).withSpacing(kWizardSpacing / 2),
             ],
           ),
         ),

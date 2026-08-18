@@ -358,11 +358,11 @@ class UbuntuBootstrapLocalizationsEn extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'You will need to enter the passphrase every time you start your computer. This passphrase is different from your user password. You can change it later in the Security Center.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'You will need to enter the PIN every time you start your computer. This PIN is different from your user password. You can change it later in the Security Center.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -389,14 +389,15 @@ class UbuntuBootstrapLocalizationsEn extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'The PINs do not match';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle =>
+      'Require a passphrase on startup';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Require a PIN on startup';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -410,7 +411,11 @@ class UbuntuBootstrapLocalizationsEn extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'By default, the disk will unlock automatically on startup. You also have options to further protect your data.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1397,6 +1402,10 @@ class UbuntuBootstrapLocalizationsEn extends UbuntuBootstrapLocalizations {
       'Hardware-backed encryption could not be enabled';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Action required';
 
   @override
@@ -1527,6 +1536,10 @@ class UbuntuBootstrapLocalizationsEn extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Add-on drivers are present.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1687,4 +1700,408 @@ class UbuntuBootstrapLocalizationsEn extends UbuntuBootstrapLocalizations {
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
     return 'Step $CURRENT_STEP of $TOTAL_STEPS';
   }
+}
+
+/// The translations for English, as used in the United Kingdom (`en_GB`).
+class UbuntuBootstrapLocalizationsEnGb extends UbuntuBootstrapLocalizationsEn {
+  UbuntuBootstrapLocalizationsEnGb() : super('en_GB');
+
+  @override
+  String get appTitle => 'Ubuntu Desktop Installer';
+
+  @override
+  String windowTitle(String RELEASE) {
+    return 'Install $RELEASE';
+  }
+
+  @override
+  String get autoinstallDirectTitle => 'Automated installation';
+
+  @override
+  String get autoinstallDirectHeader => 'Import autoinstall file';
+
+  @override
+  String get autoinstallDirectUrlLabel =>
+      'You can enter the URL of an autoinstall file:';
+
+  @override
+  String get autoinstallDirectFileLabel => 'Or select a local file:';
+
+  @override
+  String get autoinstallDirectFileButtonLabel => 'Select file...';
+
+  @override
+  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+
+  @override
+  String get autoinstallDirectFilePickerTitle => 'Choose file';
+
+  @override
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+
+  @override
+  String get autoinstallDirectImportButtonLabel => 'Import';
+
+  @override
+  String get autoinstallDirectErrorNetworkTitle =>
+      'Autoinstall file is not reachable';
+
+  @override
+  String get autoinstallDirectErrorNetworkBody =>
+      'Check the URL is correct, test your internet connection, or try later.';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+
+  @override
+  String get autoinstallDirectErrorInvalidUrlBody =>
+      'Check the URL is correct or select a local file.';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentTitle =>
+      'Invalid autoinstall file';
+
+  @override
+  String get autoinstallDirectErrorInvalidContentBody =>
+      'Check the file or provide a different one.';
+
+  @override
+  String get autoinstallDirectErrorFileSystemTitle =>
+      'Autoinstall file is not readable';
+
+  @override
+  String get autoinstallDirectErrorFileSystemBody =>
+      'Check your permissions or provide a different file.';
+
+  @override
+  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+
+  @override
+  String get autoinstallTitle => 'Type of installation';
+
+  @override
+  String autoinstallHeader(String DISTRO) {
+    return 'How would you like to install $DISTRO?';
+  }
+
+  @override
+  String get autoinstallInstructions =>
+      'Enter the autoinstall.yaml URL or local file path:';
+
+  @override
+  String get autoinstallInteractiveOption => 'Interactive installation';
+
+  @override
+  String get autoinstallInteractiveDescription =>
+      'For users who want to be guided step by step through the installation.';
+
+  @override
+  String get autoinstallDirectOption => 'Automated with autoinstall file';
+
+  @override
+  String get autoinstallDirectDescription =>
+      'For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.';
+
+  @override
+  String get autoinstallLandscapeOption => 'Automated with Landscape';
+
+  @override
+  String get autoinstallLandscapeDescription =>
+      'For users in organisations that provide an autoinstall file via Landscape.';
+
+  @override
+  String get autoinstallErrorMessage =>
+      'A command in the autoinstall file failed to run during installation.';
+
+  @override
+  String get autoinstallGenericErrorMessage =>
+      'Installation cannot continue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallValidationErrorMessage =>
+      'There is an issue with the provided autoinstall file.';
+
+  @override
+  String get autoinstallCloudInitSchemaValidationErrorMessage =>
+      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+
+  @override
+  String get autoinstallErrorInstructions =>
+      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+
+  @override
+  String get changeButtonText => 'Change';
+
+  @override
+  String get quitButtonText => 'Quit installation';
+
+  @override
+  String loadingPageTitle(String DISTRO) {
+    return 'Welcome to $DISTRO';
+  }
+
+  @override
+  String loadingHeader(String DISTRO) {
+    return 'Preparing $DISTRO…';
+  }
+
+  @override
+  String get warningLabel => 'Warning:';
+
+  @override
+  String tryOrInstallTitle(String DISTRO) {
+    return 'Try or install $DISTRO';
+  }
+
+  @override
+  String tryOrInstallHeader(String DISTRO) {
+    return 'What do you want to do with $DISTRO?';
+  }
+
+  @override
+  String get tryOrInstallRepairOption => 'Repair installation';
+
+  @override
+  String get tryOrInstallRepairDescription =>
+      'Repairing will reinstall all installed software without touching documents or settings.';
+
+  @override
+  String tryOption(String RELEASE) {
+    return 'Try $RELEASE';
+  }
+
+  @override
+  String tryDescription(String RELEASE) {
+    return 'You can try $RELEASE without making any changes to your computer.';
+  }
+
+  @override
+  String installOption(String RELEASE) {
+    return 'Install $RELEASE';
+  }
+
+  @override
+  String installDescription(String RELEASE) {
+    return 'Install $RELEASE alongside (or instead of) your current operating system. This shouldn\'t take too long.';
+  }
+
+  @override
+  String tryOrInstallReleaseNotesLabel(String url) {
+    return 'You may wish to read the <a href=\"$url\">release notes</a>.';
+  }
+
+  @override
+  String get rstTitle => 'RST detected';
+
+  @override
+  String get rstHeader => 'You must disable RST to continue installation';
+
+  @override
+  String get rstDisable =>
+      'Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:';
+
+  @override
+  String get rstDisableWindows =>
+      'Windows, if you are using a dual boot setup with Windows';
+
+  @override
+  String get rstDisableBios => 'The BIOS settings';
+
+  @override
+  String rstInstructions(String url) {
+    return 'For instructions, scan the QR code on another device or visit: <a href=\"https://$url\">$url</a>';
+  }
+
+  @override
+  String get configureSecureBootTitle => 'Configure Secure Boot';
+
+  @override
+  String get configureSecureBootDescription =>
+      'You\'ve chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.';
+
+  @override
+  String get configureSecureBootOption => 'Configure Secure Boot';
+
+  @override
+  String get chooseSecurityKey => 'Choose a security key';
+
+  @override
+  String get confirmSecurityKey => 'Confirm the security key';
+
+  @override
+  String get dontInstallDriverSoftwareNow =>
+      'Don\'t install the driver software for now';
+
+  @override
+  String get dontInstallDriverSoftwareNowDescription =>
+      'You can install it later from Software & Updates.';
+
+  @override
+  String get configureSecureBootSecurityKeyRequired =>
+      'Security key is required';
+
+  @override
+  String get secureBootSecurityKeysDontMatch => 'Security keys do not match';
+
+  @override
+  String get showSecurityKey => 'Show';
+
+  @override
+  String get hideSecurityKey => 'Hide';
+
+  @override
+  String get updatesOtherSoftwarePageTitle => 'Applications';
+
+  @override
+  String get updatesOtherSoftwarePageDescription =>
+      'What apps would you like to install to start with?';
+
+  @override
+  String get codecsAndDriversPageTitle => 'Optimise your computer';
+
+  @override
+  String get codecsAndDriversPageDescription =>
+      'Install recommended proprietary software?';
+
+  @override
+  String codecsAndDriversPageBody(String DISTRO) {
+    return '$DISTRO ships with no proprietary software by default. Installing additional software may improve your computer\'s performance.';
+  }
+
+  @override
+  String get codecsAndDriversNvidiaNote => 'NVIDIA graphics card detected';
+
+  @override
+  String get codecsAndDriversNvidiaBody =>
+      'For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.';
+
+  @override
+  String get fullInstallationTitle => 'Extended selection';
+
+  @override
+  String get fullInstallationSubtitle =>
+      'An offline-friendly selection of office tools, utilities and web browser.';
+
+  @override
+  String get minimalInstallationTitle => 'Default selection';
+
+  @override
+  String get minimalInstallationSubtitle =>
+      'Just the essentials, web browser and basic utilities.';
+
+  @override
+  String get otherOptions => 'Other options';
+
+  @override
+  String get installThirdPartyTitle =>
+      'Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats';
+
+  @override
+  String get installThirdPartySubtitle =>
+      'This software is subject to licence terms included with its documentation. Some are proprietary.';
+
+  @override
+  String get installDriversTitle =>
+      'Install third-party software for graphics and Wi-Fi hardware';
+
+  @override
+  String get installDriversSubtitle =>
+      'Including but not limited to NVIDIA drivers and similar';
+
+  @override
+  String get installCodecsTitle =>
+      'Download and install support for additional media formats';
+
+  @override
+  String get installCodecsSubtitle =>
+      'Including but not limited to MP3, MP4, MOV and similar';
+
+  @override
+  String get batteryWarning =>
+      'The computer is not plugged in to a power source.';
+
+  @override
+  String get offlineWarning => 'You are currently offline';
+
+  @override
+  String get choosePassphraseHeader => 'Create a passphrase';
+
+  @override
+  String get choosePassphraseBody =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.';
+
+  @override
+  String get choosePassphraseInfoHeader => 'Make sure to save your passphrase';
+
+  @override
+  String get choosePassphraseInfoBody =>
+      'If you lose it, you will lose all your data.';
+
+  @override
+  String get chooseOptionalPassphraseInfoHeader =>
+      'Store your passphrase and recovery key somewhere safe';
+
+  @override
+  String get chooseOptionalPassphraseInfoBody =>
+      'If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.';
+
+  @override
+  String get passphrasePageTitle => 'Encryption';
+
+  @override
+  String get passphrasePageHeaderPassphrase => 'Set an encryption passphrase';
+
+  @override
+  String get passphrasePageHeaderPin => 'Set an encryption PIN';
+
+  @override
+  String get passphrasePageBodyPassphrase =>
+      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageBodyPin =>
+      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+
+  @override
+  String get passphrasePageChoosePassphraseHint => 'Passphrase';
+
+  @override
+  String get passphrasePageConfirmPassphraseHint => 'Confirm passphrase';
+
+  @override
+  String get passphrasePageRequiredPassphrase => 'A passphrase is required';
+
+  @override
+  String get passphrasePageMismatchPassphrase => 'The passphrases do not match';
+
+  @override
+  String get passphrasePageChoosePinHint => 'PIN';
+
+  @override
+  String get passphrasePageConfirmPinHint => 'Confirm PIN';
+
+  @override
+  String get passphrasePageRequiredPin => 'A PIN is required';
+
+  @override
+  String get passphrasePageMismatchPin => 'The PINs do not match';
+
+  @override
+  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+
+  @override
+  String get passphraseTypePassphraseTileSubTitle =>
+      'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
+
+  @override
+  String get successIconSemanticLabel => 'Success';
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximise';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimise';
 }

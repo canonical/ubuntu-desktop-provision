@@ -9,63 +9,64 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
   UbuntuBootstrapLocalizationsBs([String locale = 'bs']) : super(locale);
 
   @override
-  String get appTitle => 'Ubuntu Desktop Installer';
+  String get appTitle => 'Instalacijski program za Ubuntu računar';
 
   @override
   String windowTitle(String RELEASE) {
-    return 'Install $RELEASE';
+    return 'Instaliraj $RELEASE';
   }
 
   @override
-  String get autoinstallDirectTitle => 'Automated installation';
+  String get autoinstallDirectTitle => 'Automatizirana instalacija';
 
   @override
-  String get autoinstallDirectHeader => 'Import autoinstall file';
+  String get autoinstallDirectHeader =>
+      'Uvezi datoteku za automatsku instalaciju';
 
   @override
   String get autoinstallDirectUrlLabel =>
-      'You can enter the URL of an autoinstall file:';
+      'Možete unijeti URL datoteke za automatsku instalaciju:';
 
   @override
-  String get autoinstallDirectFileLabel => 'Or select a local file:';
+  String get autoinstallDirectFileLabel => 'Ili odaberite lokalnu datoteku:';
 
   @override
-  String get autoinstallDirectFileButtonLabel => 'Select file...';
+  String get autoinstallDirectFileButtonLabel => 'Odaberite datoteku...';
 
   @override
-  String get autoinstallDirectFileClearButtonLabel => 'Clear file';
+  String get autoinstallDirectFileClearButtonLabel => 'Obriši datoteku';
 
   @override
-  String get autoinstallDirectFilePickerTitle => 'Choose file';
+  String get autoinstallDirectFilePickerTitle => 'Odaberite datoteku';
 
   @override
-  String get autoinstallDirectFilePickerFilterLabel => 'YAML files';
+  String get autoinstallDirectFilePickerFilterLabel => 'YAML datoteke';
 
   @override
-  String get autoinstallDirectImportButtonLabel => 'Import';
+  String get autoinstallDirectImportButtonLabel => 'Uvoz';
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Autoinstall file is not reachable';
+      'Datoteka za automatsku instalaciju nije dostupna';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Check the URL is correct, test your internet connection, or try later.';
+      'Provjerite je li URL ispravan, testirajte internetsku vezu ili pokušajte kasnije.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Invalid URL';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Nevažeći URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Check the URL is correct or select a local file.';
+      'Provjerite je li URL ispravan ili odaberite lokalnu datoteku.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Invalid autoinstall file';
+      'Nevažeća datoteka za automatsku instalaciju';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Check the file or provide a different one.';
+      'Provjerite datoteku ili dostavite drugu.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
@@ -73,10 +74,10 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Check your permissions or provide a different file.';
+      'Provjerite svoja dopuštenja ili dostavite drugu datoteku.';
 
   @override
-  String get autoinstallDirectErrorUnkownTitle => 'Unknown error';
+  String get autoinstallDirectErrorUnkownTitle => 'Nepoznata greška';
 
   @override
   String get autoinstallTitle => 'Type of installation';
@@ -358,11 +359,11 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password. You will be able to change it later, but not disable it. If you forget your passphrase, you can regain access to the disk by using the recovery key.';
+      'You will need to enter the passphrase every time you start your computer. This passphrase is different from your user password. You can change it later in the Security Center.';
 
   @override
   String get passphrasePageBodyPin =>
-      'You will need to enter your PIN every time you turn on your computer. This PIN is different from your user password. You will be able to change it later, but not disable it. If you forget your PIN, you can regain access to the disk by using the recovery key.';
+      'You will need to enter the PIN every time you start your computer. This PIN is different from your user password. You can change it later in the Security Center.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Passphrase';
@@ -389,14 +390,15 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'The PINs do not match';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Require a passphrase';
+  String get passphraseTypePassphraseTileTitle =>
+      'Require a passphrase on startup';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Most secure. You will need to enter a longer passphrase every time you turn on your computer.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Require a PIN';
+  String get passphraseTypePinTileTitle => 'Require a PIN on startup';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -410,7 +412,11 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'By default, the computer’s Trusted Platform Module (TPM) will unlock the disk during startup. You also have options to further protect your data.';
+      'By default, the disk will unlock automatically on startup. You also have options to further protect your data.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1397,6 +1403,10 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
       'Hardware-backed encryption could not be enabled';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Action required';
 
   @override
@@ -1527,6 +1537,10 @@ class UbuntuBootstrapLocalizationsBs extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Add-on drivers are present.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

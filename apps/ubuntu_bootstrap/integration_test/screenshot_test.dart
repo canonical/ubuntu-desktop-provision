@@ -453,6 +453,7 @@ Future<void> main() async {
       );
     },
     variant: themeVariant,
+    skip: true, // PIN/passphrase auth is disabled unless explicitly required
   );
 
   testWidgets(

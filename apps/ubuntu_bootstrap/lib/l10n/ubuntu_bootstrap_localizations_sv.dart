@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Installationen kan inte fortsätta med den här autoinstall-filen.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Det finns ett problem med den angivna autoinstall-filen.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Det finns ett problem med användardatan för cloud-init som finns i autoinstall-filen.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -361,11 +361,11 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Du måste ange din lösenfras varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer bort din lösenfras kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
+      'Du måste ange lösenfrasen varje gång du startar datorn. Denna lösenfras skiljer sig från ditt användarlösenord. Du kan ändra den senare i Säkerhetscenter.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Du måste ange din PIN-kod varje gång du startar datorn. Denna PIN-kod skiljer sig från ditt användarlösenord. Du kan ändra den senare, men inte inaktivera den. Om du glömmer bort din PIN-kod kan du återfå åtkomst till disken med hjälp av återställningsnyckeln.';
+      'Du måste ange PIN-koden varje gång du startar datorn. Denna PIN-kod skiljer sig från ditt användarlösenord. Du kan ändra den senare i Säkerhetscenter.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Lösenfras';
@@ -393,14 +393,15 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN-koderna matchar inte';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Kräv en lösenfras';
+  String get passphraseTypePassphraseTileTitle =>
+      'Kräv en lösenfras vid uppstart';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Mest säker. Du måste ange en längre lösenfras varje gång du startar datorn.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Kräv en PIN-kod';
+  String get passphraseTypePinTileTitle => 'Kräv en PIN-kod vid uppstart';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -414,7 +415,11 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Som standard låser datorns Trusted Platform Module (TPM) upp disken under uppstart. Du har också alternativ för att ytterligare skydda din data.';
+      'Som standard låses disken upp automatiskt under uppstart. Du har också andra alternativ för att ytterligare skydda din data.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hårdvarubaserad kryptering kräver ytterligare säkerhetsfunktionalitet i den här datorn.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1401,6 +1406,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
       'Hårdvarubaserad kryptering kunde inte aktiveras';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'Det finns ett problem med hårdvarubaserad kryptering';
+
+  @override
   String get tpmActionBadgeLabel => 'Åtgärd krävs';
 
   @override
@@ -1531,6 +1540,10 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Tilläggsdrivrutiner finns.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'Datorn saknar nödvändig säkerhetsfunktionalitet (root-of-trust i hårdvara).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1690,6 +1703,6 @@ class UbuntuBootstrapLocalizationsSv extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Steg $CURRENT_STEP av $TOTAL_STEPS';
   }
 }

@@ -471,5 +471,7 @@
     "tpmActionErrorKindTpmDeviceDisabled": "TPM 设备已禁用",
     "tpmActionErrorKindTpmHierarchiesOwned": "TPM 层级所有权",
     "tpmActionErrorKindTpmDeviceLockoutLockedOut": "TPM 设备锁定",
-    "tpmActionErrorKindInsufficientTpmStorage": "TPM 存储空间不足"
+    "tpmActionErrorKindInsufficientTpmStorage": "TPM 存储空间不足",
+    "autoinstallErrorMessage": "自动安装文件中的一个命令执行失败。",
+    "autoinstallGenericErrorMessage": "无法继续使用提供的自动安装文件进行安装。"
 }

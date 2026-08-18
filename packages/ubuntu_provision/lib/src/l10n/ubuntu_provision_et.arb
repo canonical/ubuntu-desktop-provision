@@ -23,7 +23,7 @@
     "identityInvalidHostname": "See arvutinimi on vigane",
     "identityUsernameLabel": "Sinu kasutajanimi",
     "identityUsernameRequired": "Kasutajanime sisestamine on kohustuslik",
-    "identityInvalidUsername": "See kasutajanimi on vigane",
+    "identityInvalidUsername": "See kasutajanimi on vigane: esimene märk peab olema väiketäht ning võib sisaldada vaid väiketähti, numbreid, sidekriipse ja alakriipse.",
     "identityUsernameInUse": "Selline kasutajanimi on juba olemas.",
     "identityUsernameSystemReserved": "Selline kasutajanimi on reserveeritud vaid operatsioonisüsteemi jaoks.",
     "identityPasswordLabel": "Salasõna",
@@ -114,5 +114,15 @@
     "closeIconSemanticLabel": "Sulge",
     "expandIconSemanticLabel": "Laienda vaadet",
     "collapseIconSemanticLabel": "Ahenda vaadet",
-    "errorPageTechnicalDetails": "Tehnilised üksikasjad"
+    "errorPageTechnicalDetails": "Tehnilised üksikasjad",
+    "identityInvalidRealName": "See nimi on vigane",
+    "networkWifiSignalNone": "WiFi võrgulevi pole",
+    "networkWifiSignalWeak": "Nõrk WiFi võrgulevi",
+    "networkWifiSignalOk": "Tavaline WiFi võrgulevi",
+    "networkWifiSignalGood": "Hea WiFi võrgulevi",
+    "networkWifiSignalExcellent": "Suurepärane WiFi võrgulevi",
+    "networkWifiOpenNetwork": "Avatud võrk",
+    "networkWifiSecureNetwork": "Turvaline võrk",
+    "networkWifiConnecting": "Ühendan…",
+    "networkWifiConnected": "Ühendatud"
 }

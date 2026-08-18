@@ -151,8 +151,8 @@
     "passphrasePageTitle": "شىفىرلاش",
     "passphrasePageHeaderPassphrase": "شىفىرلاش ئىم ئىبارە تەڭشىكى",
     "passphrasePageHeaderPin": "شىفىرلاش PIN تەڭشىكى",
-    "passphrasePageBodyPassphrase": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر ئىم ئىبارىنى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.",
-    "passphrasePageBodyPin": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا PIN كىرگۈزۈشىڭىز كېرەك. بۇ PIN ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن ئۆزگەرتەلەيسىز ئەمما ئۇنى چەكلىيەلمەيسىز. ئەگەر PIN نى ئۇنتۇپ قالسىڭىز، ئەسلىگە كەلتۈرۈش ئاچقۇچى ئارقىلىق دىسكىنى زىيارەت قىلىش ئىجازىتىنى قايتا بېرەلەيسىز.",
+    "passphrasePageBodyPassphrase": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك. بۇ ئىم ئىبارە ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن بىخەتەرلىك مەركىزىدە ئۆزگەرتەلەيسىز.",
+    "passphrasePageBodyPin": "كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا PIN كىرگۈزۈشىڭىز كېرەك. بۇ PIN ئىشلەتكۈچى ئىمدىن پەرقلىق. ئۇنى كېيىن بىخەتەرلىك مەركىزىدە ئۆزگەرتەلەيسىز.",
     "passphrasePageChoosePassphraseHint": "ئىم ئىبارە",
     "passphrasePageConfirmPassphraseHint": "جەزملەش ئىم ئىبارە",
     "passphrasePageRequiredPassphrase": "ئىم ئىبارە زۆرۈر",
@@ -161,13 +161,13 @@
     "passphrasePageConfirmPinHint": "جەزملەش PIN",
     "passphrasePageRequiredPin": "PIN كىرگۈزۈش زۆرۈر",
     "passphrasePageMismatchPin": "PIN ماس كەلمىدى",
-    "passphraseTypePassphraseTileTitle": "ئىم ئىبارە زۆرۈر",
+    "passphraseTypePassphraseTileTitle": "قوزغىتىلغاندا ئىم ئىبارە زۆرۈر",
     "passphraseTypePassphraseTileSubTitle": "ئەڭ بىخەتەر. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق ئىم ئىبارە كىرگۈزۈشىڭىز كېرەك.",
-    "passphraseTypePinTileTitle": "PIN زۆرۈر",
+    "passphraseTypePinTileTitle": "قوزغىتىلغاندا PIN زۆرۈر",
     "passphraseTypePinTileSubTitle": "بىخەتەررەك. كومپيۇتېرىڭىزنى ھەر قېتىم ئاچقاندا ئۇزۇنراق رەقەم PIN كىرگۈزۈشىڭىز كېرەك.",
     "passphraseTypeNoneTileTitle": "دىسكا قۇلۇپىنى ئۆزلۈكىدىن ئاچىدۇ",
     "passphraseTypePageHeader": "قوشۇمچە بىخەتەرلىك",
-    "passphraseTypePageBody": "كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا كومپيۇتېرنىڭ ئىشەنچ سۇپا مودېلى (TPM) نىڭ قۇلۇپى ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.",
+    "passphraseTypePageBody": "كۆڭۈلدىكى ئەھۋالدا، قوزغالغاندا دىسكا قۇلۇپى ئۆزلۈكىدىن ئېچىلىدۇ. سىز يەنە باشقا تاللانما ئارقىلىق سانلىق مەلۇماتلىرىڭىزنى قوغدىيالايسىز.",
     "passphrasePagePassphraseEntropyBelowMin": "ئاجىز ئىم ئىبارە، ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ",
     "passphrasePagePassphraseEntropyBelowOptimal": "ياخشى ئىم ئىبار، تېخىمۇ بىخەتەر بولۇشى ئۈچۈن ئۇزۇنراق ياكى تېخىمۇ مۇرەككەپ قىلىڭ",
     "passphrasePagePassphraseEntropyOptimal": "كۈچلۈك ئىم ئىبارە",
@@ -1106,5 +1106,23 @@
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "بىخەتەر قوزغىتىش ھالىتىنىڭ «ئورنىتىلغان» غا تەڭشەلگەنلىكىنى تەكشۈرىدۇ.",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "بۇ ئىقتىدار «كۆرۈنۈشلەشتۈرۈش تېخنىكىسى»، «VT-d» ياكى «AMD-Vi\"» دەپ ئاتىلىشى مۇمكىن.",
     "autoinstallErrorMessage": "ئورنىتىش جەريانىدا ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدىكى بۇيرۇقنى ئىجرا قىلالمىدى.",
-    "autoinstallErrorInstructions": "ئورنىتىشنى قايتا قوزغىتىشىڭىز كېرەك. ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى تەكشۈرۈپ، پەرقلىق ئورنىتىش تۈرىنى تاللاڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ."
+    "autoinstallErrorInstructions": "ئورنىتىشنى قايتا قوزغىتىشىڭىز كېرەك. ئۆزلۈكىدىن ئورنىتىش ھۆججىتىنى تەكشۈرۈپ، پەرقلىق ئورنىتىش تۈرىنى تاللاڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ.",
+    "restartInstaller": "ئورناتقۇچنى قايتا قوزغات",
+    "autoinstallGenericErrorMessage": "تەمىنلىگەن ئۆزلۈكىدىن ئورنىتىش ھۆججىتى سەۋەبىدىن ئورنىتىش داۋاملاشمايدۇ.",
+    "autoinstallValidationErrorMessage": "تەمىنلىگەن ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدە مەسىلە بار.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "ئۆزلۈكىدىن ئورنىتىش ھۆججىتىدە تەمىنلەنگەن cloud-init ئىشلەتكۈچى ئۇچۇرىدا مەسىلە بار.",
+    "passphraseTypePageBodyAuthRequired": "بۇ كومپيۇتېردا قاتتىق دېتال ئاساسىدىكى شىفىرلاش قوشۇمچە بىخەتەرلىك بىلەن تەمىنلىشى زۆرۈر.",
+    "tpmActionPageTitleActionable": "قاتتىق دېتال ئاساسىدىكى شىفىرلاشتا مەسىلە بار",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "بۇ كومپيۇتېردا زۆرۈر بولغان بىخەتەرلىك ئىقتىدارى كەم (قاتتىق دېتال ئىشەنچ غولى).",
+    "stepIndicatorLabel": "باسقۇچ {CURRENT_STEP}/{TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }
