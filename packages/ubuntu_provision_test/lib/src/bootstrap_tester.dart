@@ -425,12 +425,13 @@ extension UbuntuBootstrapPageTester on WidgetTester {
           forUser: false,
         ).label(l10n),
       );
-      await pump();
+      await pumpAndSettle();
     }
   }
 
   Future<void> testPassphraseTypePage({
     PassphraseType passphraseType = PassphraseType.none,
+    List<PassphraseType> disallowedPassphraseTypes = const [],
     String? screenshot,
   }) async {
     await pumpUntilPage(PassphraseTypePage);
@@ -442,6 +443,13 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
     if (screenshot != null) {
       await takeScreenshot(screenshot);
+    }
+
+    for (final disallowedPassphraseType in disallowedPassphraseTypes) {
+      expect(
+        find.text(disallowedPassphraseType.localizedTileTitle(l10n)),
+        findsNothing,
+      );
     }
 
     await tap(find.text(passphraseType.localizedTileTitle(l10n)));

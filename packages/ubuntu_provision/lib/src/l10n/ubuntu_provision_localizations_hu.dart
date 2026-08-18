@@ -165,7 +165,7 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Ez a név túl hosszú.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'A név érvénytelen';
 
   @override
   String get identityHostnameLabel => 'A számítógépének neve';
@@ -191,7 +191,8 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'A felhasználónév megadása kötelező';
 
   @override
-  String get identityInvalidUsername => 'A felhasználónév érvénytelen';
+  String get identityInvalidUsername =>
+      'A felhasználónév érvénytelen: kisbetűvel kell kezdődnie, és csak kisbetűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat.';
 
   @override
   String get identityUsernameInUse => 'Ez a felhasználónév már létezik.';

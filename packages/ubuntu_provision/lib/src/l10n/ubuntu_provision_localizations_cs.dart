@@ -165,7 +165,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Jméno je příliš dlouhé.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'Jméno je neplatné';
 
   @override
   String get identityHostnameLabel => 'Název pro váš počítač';
@@ -190,7 +190,8 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'Je třeba zadat uživatelské jméno';
 
   @override
-  String get identityInvalidUsername => 'Toto uživatelské jméno nelze použít';
+  String get identityInvalidUsername =>
+      'Uživatelské jméno je neplatné: musí začínat malým písmenem a může obsahovat pouze malá písmena, číslice, pomlčky a podtržítka.';
 
   @override
   String get identityUsernameInUse => 'Toto uživatelské jméno už existuje.';
@@ -387,31 +388,31 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'Sbalit';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'Žádný signál';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'Slabý signál';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'Signál OK';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'Dobrý signál';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'Vynikající signál';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'Otevřená síť';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'Zabezpečená síť';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'Připojování…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'Připojeno';
 
   @override
   String get logViewSemanticLabel => 'Log';

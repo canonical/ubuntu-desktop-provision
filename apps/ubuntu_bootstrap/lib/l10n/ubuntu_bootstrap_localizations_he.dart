@@ -119,11 +119,11 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'ההתקנה לא יכולה להמשיך עם קובץ ההתקנה האוטומטית (autoinstall) שסופק.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'יש איזו בעיה עם קובץ ההתקנה האוטומטית (autoinstall) שסופק.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
@@ -354,11 +354,11 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'יש למלא את מילת הצופן שלך עם כל הדלקה של המחשב. מילת הצופן הזאת שונה מסיסמת המשתמש שלך. אפשר לשנות אותה אחר כך אבל לא להשבית אותה. אם שכחת את מילת הצופן שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.';
+      'יש למלא את מילת הצופן עם כל הדלקה של המחשב. מילת הצופן הזאת שונה מסיסמת המשתמש שלך. אפשר לשנות אותה בהמשך דרך מרכז האבטחה.';
 
   @override
   String get passphrasePageBodyPin =>
-      'יש להקליד קוד אישי עם כל הדלקה של המחשב. הקוד האישי הזה שונה מסיסמת המשתמש שלך. אפשר לשנות אותו בהמשך אך לא להשבית אותו. אם שכחת את הקוד האישי שלך, אפשר לשחזר את הגישה לכונן דרך שימוש במפתח שחזור.';
+      'יש להקליד קוד אישי עם כל הדלקה של המחשב. הקוד האישי הזה שונה מסיסמת המשתמש שלך. אפשר לשנות אותו בהמשך דרך מרכז האבטחה.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'מילת צופן';
@@ -385,14 +385,14 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'הקודים האישיים לא תואמים';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'לדרוש מילת צופן';
+  String get passphraseTypePassphraseTileTitle => 'לדרוש מילת צופן עם העלייה';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'הכי מאובטח. יש למלא מילת צופן ארוכה עם כל הדלקה של המחשב שלך.';
 
   @override
-  String get passphraseTypePinTileTitle => 'לדרוש קוד אישי';
+  String get passphraseTypePinTileTitle => 'לדרוש קוד אישי עם העלייה';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -406,7 +406,11 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'כברירת מחדל, מודול הפלטפורמה המאובטחת (TPM) ישחרר את נעילת הכונן בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.';
+      'כברירת מחדל, נעילת הכונן תשוחרר אוטומטית בזמן העלייה. יש אפשרויות נוספות להוספת שכבת הגנה על הנתונים שלך.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'הצפנה בגיבוי חומרה דורשת אבטחה נוספת במחשב הזה.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1380,6 +1384,10 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'לא ניתן להפעיל הצפנה בגיבוי חומרה';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'נדרשת התערבות';
 
   @override
@@ -1508,7 +1516,11 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'מנהלי התקני תוספים קיימים.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'למחשב הזה חסרה יכולת אבטחה נחוצה (שורש אמון חומרה).';
 
   @override
   String get tpmActionErrorKindGenericTpm => 'יש תקלה עם ה־TPM של המחשב הזה.';
@@ -1671,6 +1683,6 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'שלב $CURRENT_STEP מתוך $TOTAL_STEPS';
   }
 }

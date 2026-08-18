@@ -439,7 +439,7 @@
     "tpmActionErrorKindActionFailed": "Falló una acción.",
     "tpmActionErrorKindRunningInVm": "El entorno actual es una máquina virtual.",
     "tpmActionErrorKindSystemNotEfi": "Este equipo está utilizando firmware más antiguo (BIOS heredado) que no es compatible con este método de cifrado.",
-    "tpmActionErrorKindEfiVariableAccess": "Hay un tema con este ajuste del firmware en el equipo.",
+    "tpmActionErrorKindEfiVariableAccess": "Hay un problema con la micromática del equipo.",
     "tpmActionErrorKindNoSuitableTpm2Device": "Este equipo no tiene el hardware de seguridad requerido (TPM 2.0) para este método de cifrado.",
     "tpmActionErrorKindTpmDeviceDisabled": "Este TPM del equipo está inhabilitado.",
     "tpmActionErrorKindTpmHierarchiesOwned": "Este TPM del equipo ya está en uso por otro sistema u otra aplicación.",
@@ -448,19 +448,19 @@
     "tpmActionErrorKindUnsupportedPlatform": "Este equipo no es compatible con cifrado por hardware en segundo plano.",
     "tpmActionErrorKindUefiDebuggingEnabled": "La depuración de UEFI está activada.",
     "tpmActionErrorKindInsufficientDmaProtection": "Este equipo está ausente en una característica de seguridad requerida (protección DMA).",
-    "tpmActionErrorKindNoKernelIommu": "A este equipo le falta una característica de seguridad requerida (kernel IOMMU).",
-    "tpmActionErrorKindHostSecurity": "Hay un asunto con este ajuste de seguridad del equipo.",
+    "tpmActionErrorKindNoKernelIommu": "A este equipo le falta una característica de seguridad requerida (IOMMU).",
+    "tpmActionErrorKindHostSecurity": "Hay un problema con la configuración de seguridad del equipo.",
     "tpmActionErrorKindSysPrepApplicationsPresent": "Hay software ejecutándose al inicio que puede prevenir una conexión segura con el TPM del equipo.",
     "tpmActionErrorKindAbsolutePresent": "Módulo de Persistencia Absoluta está habilitada en este equipo.",
     "tpmActionErrorKindInvalidSecureBootMode": "El arranque seguro está inhabilitado en este equipo o no está configurado en modo \"deployed\".",
     "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Alguno de los certificados verifican componentes en este equipo están obsoletos o utilizan protección débil.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Este equipo está utilizando un listado de permiso manual para verificar el software al arrancar.",
     "tpmActionErrorKindAddonDriversPresent": "Hay controladores presentes a través de complementos.",
-    "tpmActionErrorKindGenericTpm": "Hay un asunto con este TPM del equipo.",
-    "tpmActionErrorKindGenericFirmware": "Hay un asunto con este firmware del equipo.",
+    "tpmActionErrorKindGenericTpm": "Hay un problema con el TPM del equipo.",
+    "tpmActionErrorKindGenericFirmware": "Hay un problema con la micromática del equipo.",
     "tpmActionFixActionReboot": "Reiniciar",
     "tpmActionFixActionShutdown": "Apagar",
-    "tpmActionFixActionRebootToFwSettings": "Reiniciar en los ajustes del firmware",
+    "tpmActionFixActionRebootToFwSettings": "Reiniciar en configuración de micromática",
     "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Activar protección DMA manualmente",
     "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Purgar TPM manualmente",
     "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Activar arranque seguro manualmente",
@@ -480,8 +480,8 @@
     "tpmActionFixActionRebootDescription": "Reinicia el equipo para completar acciones anteriores.",
     "tpmActionFixActionRebootTpmDeviceFailureDescription": "Reiniciar el equipo puede reparar el defecto.",
     "tpmActionFixActionShutdownDescription": "Apagar el equipo para completar acciones anteriores.",
-    "tpmActionFixActionRebootToFwSettingsDescription": "Puede hacer esto en sus ajustes del firmware del equipo.",
-    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Puede ser capaz de hacer esto en su ajustes del firmware del equipo. Compruebe la documentación del proveedor de CPU para guía.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Puede hacerlo en la configuración de micromática del equipo.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Quizá pueda hacerlo en la configuración de micromática del equipo. Revise la documentación del fabricante de la CPU para recibir orientación.",
     "tpmActionFixActionProceedDescription": "Hacer caso omiso al problema puede resultar en una instalación menos segura.",
     "tpmActionRestartLabel": "Reiniciar",
     "tpmActionRestartAndEnableTpmLabel": "Reiniciar y activar TPM",
@@ -506,5 +506,16 @@
             }
         }
     },
-    "tpmActionErrorSupportSingleLabel": "Pruebe esta solución, contacte al personal de sistemas, o elija otro método de cifrado."
+    "tpmActionErrorSupportSingleLabel": "Pruebe esta solución, contacte al personal de sistemas, o elija otro método de cifrado.",
+    "stepIndicatorLabel": "Paso {CURRENT_STEP} de {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }

@@ -9,13 +9,13 @@ class FactoryResetToolsLocalizationsAr extends FactoryResetToolsLocalizations {
   FactoryResetToolsLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'Factory reset tools';
+  String get appTitle => 'أدوات إعادة ضبط المصنع';
 
   @override
-  String get windowTitle => 'Factory reset tools';
+  String get windowTitle => 'أدوات إعادة ضبط المصنع';
 
   @override
-  String get homeTitle => 'What would you like to do?';
+  String get homeTitle => 'ماذا تود أن تفعل؟';
 
   @override
   String get createResetMedia => 'Create reset media';

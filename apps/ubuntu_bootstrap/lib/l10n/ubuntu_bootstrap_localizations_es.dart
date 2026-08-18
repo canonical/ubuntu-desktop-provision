@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Por defecto, el módulo de plataforma de confianza del ordenador (TPM) desbloqueará el disco durante el arranque. También tiene opciones para proteger sus datos de forma adicional.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Contraseña débil, hágala más larga o más compleja';
 
@@ -1412,6 +1416,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'El cifrado con hardware en segundo plano no pudo ser habilitado';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Acción requerida';
 
   @override
@@ -1477,7 +1485,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'Hay un tema con este ajuste del firmware en el equipo.';
+      'Hay un problema con la micromática del equipo.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
@@ -1513,11 +1521,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'A este equipo le falta una característica de seguridad requerida (kernel IOMMU).';
+      'A este equipo le falta una característica de seguridad requerida (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'Hay un asunto con este ajuste de seguridad del equipo.';
+      'Hay un problema con la configuración de seguridad del equipo.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
@@ -1544,12 +1552,16 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Hay controladores presentes a través de complementos.';
 
   @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
+
+  @override
   String get tpmActionErrorKindGenericTpm =>
-      'Hay un asunto con este TPM del equipo.';
+      'Hay un problema con el TPM del equipo.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'Hay un asunto con este firmware del equipo.';
+      'Hay un problema con la micromática del equipo.';
 
   @override
   String get tpmActionFixActionReboot => 'Reiniciar';
@@ -1559,7 +1571,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Reiniciar en los ajustes del firmware';
+      'Reiniciar en configuración de micromática';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
@@ -1639,11 +1651,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'Puede hacer esto en sus ajustes del firmware del equipo.';
+      'Puede hacerlo en la configuración de micromática del equipo.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'Puede ser capaz de hacer esto en su ajustes del firmware del equipo. Compruebe la documentación del proveedor de CPU para guía.';
+      'Quizá pueda hacerlo en la configuración de micromática del equipo. Revise la documentación del fabricante de la CPU para recibir orientación.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
@@ -1705,6 +1717,6 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Paso $CURRENT_STEP de $TOTAL_STEPS';
   }
 }

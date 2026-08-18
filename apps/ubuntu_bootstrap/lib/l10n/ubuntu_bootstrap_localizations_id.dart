@@ -416,6 +416,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
       'Secara baku, Trusted Platform Module (TPM) komputer akan membuka kunci disk selama awal mula. Anda juga punya opsi untuk melindungi data Anda lebih lanjut.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frasa sandi lemah, buat itu lebih panjang atau lebih rumit';
 
@@ -1292,14 +1296,14 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Berkas kunci pemulihan tidak disimpan';
+      'File kunci pemulihan tidak tersimpan';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Berkas kunci pemulihan tidak dapat disimpan di lokasi sementara';
+      'File kunci pemulihan tidak dapat disimpan di lokasi sementara';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Galat tak dikenal';
+  String get recoveryKeyExceptionUnknownTitle => 'Kesalahan tidak diketahui';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
@@ -1307,13 +1311,13 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Cobalah lokasi lain, seperti drive lepas pasang, atau gunakan metode lain.';
+      'Coba lokasi lain, seperti drive yang dapat dilepas, atau gunakan metode lain.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Simpan berkas kunci pemulihan';
+  String get recoveryKeyFilePickerTitle => 'Simpan file kunci pemulihan';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Berkas teks';
+  String get recoveryKeyFilePickerFilter => 'File teks';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1401,6 +1405,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionPageTitle =>
       'Enkripsi yang didukung perangkat keras tidak dapat diaktifkan';
+
+  @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
 
   @override
   String get tpmActionBadgeLabel => 'Tindakan diperlukan';
@@ -1531,6 +1539,10 @@ class UbuntuBootstrapLocalizationsId extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindAddonDriversPresent => 'Driver tambahan ada';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

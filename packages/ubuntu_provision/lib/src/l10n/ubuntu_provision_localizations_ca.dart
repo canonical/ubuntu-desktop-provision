@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personalitzeu $DISTRO a les vostres necessitats abans de la posada en marxa. Podeu fer canvis més tard a la Configuració del Sistema.';
+    return 'Personalitzeu $DISTRO a les vostres necessitats abans de la posada en marxa. Podeu fer canvis més tard a l\'aplicació Paràmetres.';
   }
 
   @override
@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'No estem segurs de quin és l\'error. Podeu provar de reiniciar l\'ordinador i tornar a iniciar el procés d\'instal·lació. També podeu <a>informar del problema</a>.';
+      'Ho sentim, no tenim seguretat de quin és l\'error. Podeu provar de reiniciar l\'ordinador i tornar a iniciar el procés d\'instal·lació. També podeu <a>informar del problema</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Amaga el registre';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Detalls tècnics';
 
   @override
   String get restart => 'Reinicia';
@@ -165,7 +165,7 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Aquest nom és massa llarg.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'El nom no és vàlid';
 
   @override
   String get identityHostnameLabel => 'El nom de l\'ordinador';
@@ -191,7 +191,8 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'Cal un nom d\'usuari';
 
   @override
-  String get identityInvalidUsername => 'El nom d\'usuari no és vàlid';
+  String get identityInvalidUsername =>
+      'El nom d\'usuari no és vàlid: ha de començar amb una lletra minúscula i sols pot contenir lletres minúscules, nombres, guionets o barres baixes.';
 
   @override
   String get identityUsernameInUse => 'Aquest nom d\'usuari ja existeix.';
@@ -382,37 +383,37 @@ class UbuntuProvisionLocalizationsCa extends UbuntuProvisionLocalizations {
   String get minimizeIconSemanticLabel => 'Minimitza';
 
   @override
-  String get expandIconSemanticLabel => 'Expand';
+  String get expandIconSemanticLabel => 'Expandeix';
 
   @override
-  String get collapseIconSemanticLabel => 'Collapse';
+  String get collapseIconSemanticLabel => 'Col·lapsa';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'No hi ha senyal';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'Senyal feble';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'Senyal correcta';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'Senyal bona';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'Senyal excel·lent';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'Xarxa oberta';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'Xarxa segura';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'S\'està connectant…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'Connectat';
 
   @override
   String get logViewSemanticLabel => 'Log';

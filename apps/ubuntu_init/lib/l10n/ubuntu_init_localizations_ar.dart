@@ -9,7 +9,7 @@ class UbuntuInitLocalizationsAr extends UbuntuInitLocalizations {
   UbuntuInitLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get welcomePageTitle => 'Welcome';
+  String get welcomePageTitle => 'أهلًا';
 
   @override
   String welcomePageHeader(String distro) {

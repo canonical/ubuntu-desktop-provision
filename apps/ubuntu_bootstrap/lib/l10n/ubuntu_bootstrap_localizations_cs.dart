@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Instalace nemůže pokračovat s poskytnutým souborem autoinstall.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Vyskytl se problém s poskytnutým souborem autoinstall.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Vyskytl se problém s uživatelskými daty cloud-init uvedenými v souboru autoinstall.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -360,11 +360,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete/restartujete. Je třeba, aby nebylo stejné, jako heslo, kterým se hlásíte do systému. Následně je možné ho i měnit, ale už ho nepůjde zrušit. V případě, že rozšifrovávací heslo ztratíte, je možné znovuzískat přístup k disku pomocí záchranného klíče.';
+      'Rozšifrovávací heslo bude třeba zadat pokaždé, když počítač zapnete. Není to to samé, co heslo do systému. V případě potřeby je možné si toto heslo pak kdykoli změnit v Centru zabezpečení.';
 
   @override
   String get passphrasePageBodyPin =>
-      'PIN kód bude třeba zadávat pokaždé, když zapnete/restartujete počítač. Není to to samé, co heslo do systému. Později ho bude možné změnit, ale už ne zrušit. Pokud PIN kód zapomenete, je možné znovuzískat přístup k disku pomocí záchranného klíče.';
+      'PIN kód bude třeba zadávat pokaždé, když počítač zapnete. Není to to samé, co heslo do systému. V případě potřeby je možné si PIN pak kdykoli změnit v Centru zabezpečení.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Šifrovací heslo';
@@ -394,14 +394,15 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'Zadání PIN kódu se neshodují';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Vyžadovat šifrovací heslo';
+  String get passphraseTypePassphraseTileTitle =>
+      'Vyžadovat šifrovací heslo při spuštění';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Nejlépe zabezpečené. Při každém zapnutí/restartu počítače bude třeba zadat delší rozšifrovávací heslo.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Vyžadovat PIN kód';
+  String get passphraseTypePinTileTitle => 'Vyžadovat PIN kód při spuštění';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -415,7 +416,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Ve výchozím stavu se disk před spouštěním systému odemkne pomocí modulu TPM (Trusted Platform Module) ve vašem počítači. Máte také možnost svá data zabezpečit více.';
+      'Ve výchozím stavu se disk při spuštění automaticky odemkne. Máte také možnost svá data zabezpečit více.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1403,7 +1408,11 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Šifrování jištěné hardwarem nebylo možné zapnout';
+      'Šifrování obsluhované hardwarem nebylo možné zapnout';
+
+  @override
+  String get tpmActionPageTitleActionable =>
+      'Je problém s na hardware založeném šifrování';
 
   @override
   String get tpmActionBadgeLabel => 'Vyžadována akce';
@@ -1536,6 +1545,10 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Jsou přítomny dodatečné ovladače.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1700,6 +1713,6 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Krok $CURRENT_STEP z $TOTAL_STEPS';
   }
 }

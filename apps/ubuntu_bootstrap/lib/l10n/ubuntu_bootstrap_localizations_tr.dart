@@ -417,6 +417,10 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
       'Varsayılan olarak, bilgisayarın Güvenilir Platform Modülü (TPM), başlatma sırasında diskin kilidini açacaktır. Ancak, verilerinizi daha fazla korumak için bir PIN veya parola da isteyebilirsiniz.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Zayıf parola cümlesi, daha uzun veya daha karmaşık hale getirin';
 
@@ -1402,6 +1406,10 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
       'Hardware-backed encryption could not be enabled';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Action required';
 
   @override
@@ -1532,6 +1540,10 @@ class UbuntuBootstrapLocalizationsTr extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Add-on drivers are present.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

@@ -117,15 +117,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Se pòt pas contunhar l\'installacion amb lo fichièr autoinstall provesit.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'I a de problèmas amb lo fichièr d\'autoinstallacion provesit.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'I a un problèma amb las donadas d\'utilizaire cloud-init provesidas dins lo fichièr d\'autoinstallacion.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -362,11 +362,11 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Vos caldrà picar vòstra frasa secrèta cada còp qu\'aviaretz l’ordenador. Aquesta frasa secrèta es diferenta de vòstre senhal d\'utilizaire. La poiretz modificar mai tard, mas pas la desactivar. Se doblidatz vòstra frasa secrèta, poiretz tornar accedir al disc en utilizant la clau de recuperacion.';
+      'Vos caldrà picar la frasa secrèta cada còp qu\'aviaretz l’ordenador. Aquesta frasa secrèta es diferenta de vòstre senhal d\'utilizaire. La poiretz cambiar mai tard dins lo Centre de seguretat.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Vos caldrà sasir vòstre PIN a cada còp qu\'aviaretz l’ordenador. Aqueste PIN es diferent de vòstre senhal d\'utilizaire. Lo poiretz cambiar mai tard, mas pas lo desactivar. Se doblidatz vòstre PIN, poiretz tornar accedir al disc en utilizant la clau de recuperacion.';
+      'Vos caldrà picar lo còde PIN cada còp qu\'aviatz l’ordenador. Aqueste còde PIN es diferent de vòstre senhal d\'utilizaire. Lo poiretz modificar mai tard dins lo Centre de seguretat.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Frasa secrèta';
@@ -396,14 +396,15 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'Los PIN correspondon pas';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Requerís una frasa secrèta';
+  String get passphraseTypePassphraseTileTitle =>
+      'Requerir una frasa secrèta a l’aviada';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Lo mai segur. Vos caldrà picar una frasa de pas mai longa cada còp qu\'aviaretz vòstre ordenador.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Requerir un PIN';
+  String get passphraseTypePinTileTitle => 'Requerir un PIN a l’aviada';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -418,7 +419,11 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Per defaut, lo Modul de platafòrma de fisança (TPM) de l\'ordenador desverrolharà lo disc a l\'aviada. Avètz tanben d\'opcions per protegir encara mai vòstras donadas.';
+      'Per defaut, lo disc se desverrolharà automaticament a l\'aviada. Avètz tanben d\'opcions per protegir mai vòstras donadas.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Lo chiframent material demanda una seguretat de mai dins aquel ordenador.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1113,7 +1118,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Requerit :';
 
   @override
-  String get refreshPageTitle => 'Mesa a jorn disponible';
+  String get refreshPageTitle => 'Mesa a jorn disponibla';
 
   @override
   String get refreshHeader => 'Una mesa a jorn es disponibla per l’installador';
@@ -1413,6 +1418,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Lo chiframent material a pas pogut èsser activat';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'I a un problèma amb lo chiframent material';
+
+  @override
   String get tpmActionBadgeLabel => 'Accion requerida';
 
   @override
@@ -1543,6 +1552,10 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'De pilòts suplementaris son presents.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'A aquel ordenador li manca una foncionalitat de seguretat requesida (raiç de fisança materiala).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1707,6 +1720,6 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Etapa $CURRENT_STEP de $TOTAL_STEPS';
   }
 }

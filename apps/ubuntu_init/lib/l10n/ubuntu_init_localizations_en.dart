@@ -165,3 +165,17 @@ class UbuntuInitLocalizationsEn extends UbuntuInitLocalizations {
   @override
   String get minimizeIconSemanticLabel => 'Minimize';
 }
+
+/// The translations for English, as used in the United Kingdom (`en_GB`).
+class UbuntuInitLocalizationsEnGb extends UbuntuInitLocalizationsEn {
+  UbuntuInitLocalizationsEnGb() : super('en_GB');
+
+  @override
+  String get closeIconSemanticLabel => 'Close';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximise';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimise';
+}

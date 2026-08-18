@@ -117,15 +117,15 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'L\'installation ne peut pas se poursuivre avec le fichier d\'auto-installation fourni.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Il y a un problème avec le fichier autoinstall fourni.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Il y a un problème avec les données utilisateur cloud-init fournies dans le fichier d\'installation automatique.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -361,11 +361,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Vous devrez entrer votre phrase de passe chaque fois que vous allumerez votre ordinateur. Cette phrase de passe est différente de votre mot de passe utilisateur. Vous pourrez la modifier plus tard, mais pas la désactiver. Si vous oubliez votre phrase de passe, vous pourrez récupérer l’accès au disque en utilisant la clé de secours.';
+      'Vous devez saisir la phrase de passe chaque fois que vous démarrez votre ordinateur. Cette phrase de passe est différente du mot de passe utilisateur. Vous pouvez la modifier plus tard dans le Centre de sécurité.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Vous devrez entrer votre code PIN chaque fois que vous allumerez votre ordinateur. Ce code PIN est différent de votre mot de passe utilisateur. Vous pourrez le changer plus tard, mais pas le désactiver. Si vous oubliez votre code PIN, vous pourrez retrouver l’accès au disque en utilisant la clé de secours.';
+      'Vous devrez saisir le code PIN à chaque démarrage de votre ordinateur. Ce code PIN est différent de votre mot de passe utilisateur. Vous pouvez le modifier plus tard dans le Centre de sécurité.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Phrase de passe';
@@ -395,14 +395,14 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePassphraseTileTitle =>
-      'Nécessite une phrase de passe';
+      'Exiger une phrase de passe au démarrage';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Davantage sécurisé. Vous devrez entrer une phrase de passe plus longue chaque fois que vous allumerez votre ordinateur.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Exiger un PIN';
+  String get passphraseTypePinTileTitle => 'Exiger un PIN au démarrage';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -417,7 +417,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Par défaut, le module de plateforme sécurisée (TPM) de l’ordinateur déverrouille le disque au démarrage. Vous avez également des options pour protéger davantage vos données.';
+      'Par défaut, le disque se déverrouillera automatiquement au démarrage. Vous avez également des options pour protéger davantage vos données.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Le chiffrement matériel nécessite une sécurité supplémentaire sur cet ordinateur.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1416,6 +1420,10 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
       'Chiffrement assisté par matériel n’a pas pu être activé';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'Il y a un problème avec le chiffrement matériel';
+
+  @override
   String get tpmActionBadgeLabel => 'Action requise';
 
   @override
@@ -1547,6 +1555,10 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Pilotes supplémentaires sont présents.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'Il manque une fonctionnalité de sécurité requise à cet ordinateur (racine matérielle de confiance).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1711,6 +1723,6 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Étape $CURRENT_STEP sur $TOTAL_STEPS';
   }
 }

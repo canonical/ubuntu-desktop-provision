@@ -423,6 +423,10 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'Από προεπιλογή, η Μονάδα Έμπιστης Πλατφόρμας (TPM) του υπολογιστή θα ξεκλειδώνει τον δίσκο κατά την εκκίνηση. Έχετε επίσης επιλογές για περαιτέρω προστασία των δεδομένων σας.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Ασθενής συνθηματική φράση, κάντε την μεγαλύτερη ή πιο περίπλοκη';
 
@@ -1421,6 +1425,10 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
       'Δεν ήταν δυνατή η ενεργοποίηση της κρυπτογράφησης με υποστήριξη υλικού (hardware-backed encryption)';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
+
+  @override
   String get tpmActionBadgeLabel => 'Απαιτείται ενέργεια';
 
   @override
@@ -1551,6 +1559,10 @@ class UbuntuBootstrapLocalizationsEl extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Υπάρχουν εγκατεστημένα πρόσθετα προγράμματα οδήγησης.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>

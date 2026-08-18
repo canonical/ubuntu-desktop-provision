@@ -29,7 +29,7 @@
     "identityInvalidHostname": "El nombre del equipo no es válido",
     "identityUsernameLabel": "Elija un nombre de usuario",
     "identityUsernameRequired": "Se necesita un nombre de usuario",
-    "identityInvalidUsername": "El nombre de usuario no es válido",
+    "identityInvalidUsername": "El nombre de usuario no es válido: debe comenzar por minúscula y contener solo letras minúsculas, dígitos, guiones y guiones bajos.",
     "identityUsernameInUse": "Ese nombre de usuario ya existe.",
     "identityUsernameSystemReserved": "Ese nombre está reservado para uso del sistema.",
     "identityUsernameTooLong": "Ese nombre es demasiado extenso.",
@@ -113,6 +113,16 @@
     "maximizeIconSemanticLabel": "Maximizar",
     "minimizeIconSemanticLabel": "Minimizar",
     "expandIconSemanticLabel": "Expandir",
-    "collapseIconSemanticLabel": "Colapsar",
-    "errorPageTechnicalDetails": "Detalles técnicos"
+    "collapseIconSemanticLabel": "Contraer",
+    "errorPageTechnicalDetails": "Detalles técnicos",
+    "identityInvalidRealName": "El nombre no es válido",
+    "networkWifiSignalNone": "Ninguna señal",
+    "networkWifiSignalWeak": "Señal débil",
+    "networkWifiSignalGood": "Señal buena",
+    "networkWifiSignalExcellent": "Señal excelente",
+    "networkWifiOpenNetwork": "Red abierta",
+    "networkWifiSecureNetwork": "Red segura",
+    "networkWifiConnecting": "Conectando…",
+    "networkWifiConnected": "Conectado",
+    "networkWifiSignalOk": "Señal aceptable"
 }

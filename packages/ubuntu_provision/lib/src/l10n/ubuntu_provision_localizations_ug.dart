@@ -164,7 +164,7 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'ئىسىم بەك ئۇزۇن.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'ئات ئىناۋەتسىز';
 
   @override
   String get identityHostnameLabel => 'كومپيۇتېرىڭىزنىڭ ئىسمى';
@@ -189,7 +189,8 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'ئىشلەتكۈچى ئاتى زۆرۈر';
 
   @override
-  String get identityInvalidUsername => 'ئىشلەتكۈچى ئاتى ئىناۋەتسىز';
+  String get identityInvalidUsername =>
+      'ئىشلەتكۈچى ئاتى ئىناۋەتسى: ئۇ چوقۇم كىچىك ھەرپتىن باشلىنىدۇ ۋە پەقەت كىچىك ھەرپ، سان، سىزىقچە ۋە ئاستى سىزىقنى ئۆز ئىچىگە ئالسا بولىدۇ.';
 
   @override
   String get identityUsernameInUse => 'ئىشلەتكۈچى ئاتى مەۋجۇت.';
@@ -384,31 +385,31 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'يىغ';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'سىگنال يوق';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'ئاجىز سىگنال';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'ئادەتتىكى سىگنال';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'ياخشى سىگنال';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'كۈچلۈك سىگنال';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'ئوچۇق تور';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'بىخەتەر تور';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'باغلىنىۋاتىدۇ…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'باغلاندى';
 
   @override
   String get logViewSemanticLabel => 'Log';

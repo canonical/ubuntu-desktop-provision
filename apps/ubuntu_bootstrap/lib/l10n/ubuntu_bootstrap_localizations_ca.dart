@@ -113,23 +113,23 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'No s\'ha pogut executar una ordre al fitxer d\'instal·lació automàtica durant la instal·lació.';
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'La instal·lació no pot continuar sense el fitxer d\'auto-instal·lació proveït.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Hi ha una incidència amb el fitxer d\'auto-instal·lació proveït.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Hi ha una incidència amb les dades d\'usuari de cloud-init proveïdes al fitxer d\'auto-instal·lació.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'Haureu de reiniciar la instal·lació. Comproveu el fitxer d\'instal·lació automàtica, trieu un tipus d\'instal·lació diferent o contacteu amb el vostre suport informàtic.';
 
   @override
   String get changeButtonText => 'Canvia';
@@ -363,11 +363,11 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Cada vegada que engegueu l\'ordinador haureu d\'introduir la contrasenya. Aquesta contrasenya és diferent de la vostra contrasenya d\'usuari. Podreu canviar-la més tard, però no desactivar-la. Si us oblideu de la contrasenya, podeu recuperar l\'accés al disc usant la clau de recuperació.';
+      'Cada vegada que engegueu l\'ordinador haureu d\'introduir la contrasenya. Aquesta contrasenya és diferent de la vostra contrasenya d\'usuari. Podreu canviar-la més tard al Centre de seguretat.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Cal que introduïu el PIN cada vegada que engegueu el vostre ordinador. Aquest PIN és diferent de la vostra contrasenya d\'usuari. Podràs canviar-lo més tard, però no desactivar-lo. Si us oblideu el vostre PIN, podeu recuperar l\'accés al disc mitjançant la clau de recuperació.';
+      'Cal que introduïu el PIN cada vegada que engegueu el vostre ordinador. Aquest PIN és diferent de la vostra contrasenya d\'usuari. Podreu canviar-lo més tard al Centre de Seguretat.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Contrasenya';
@@ -395,14 +395,15 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'Els PIN no concorden';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Requereix una contrasenya';
+  String get passphraseTypePassphraseTileTitle =>
+      'Requereix una contrasenya a l\'inici';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'El més segur. Cada vegada que engegueu l’ordinador haureu d’introduir una contrasenya més llarga.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Requereix un PIN';
+  String get passphraseTypePinTileTitle => 'Requereix un PIN a l\'inici';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -417,7 +418,11 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Per defecte, el mòdul de plataforma de confiança de l\'ordinador (TPM) desbloquejarà el disc durant l\'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.';
+      'Per defecte, el disc es durant l\'arrencada. També teniu opcions per protegir les vostres dades de manera addicional.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'L\'encriptació basada en el maquinari requereix de seguretat addicional a aquest ordinador.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -477,8 +482,7 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Totes les dades i particions del disc seran esborrades, incloent-hi els sistemes operatius.';
 
   @override
-  String get installationTypeAdvancedLabel =>
-      'Mostra les característiques avançades…';
+  String get installationTypeAdvancedLabel => 'Opcions avançades';
 
   @override
   String get installationTypeAdvancedTitle =>
@@ -508,12 +512,12 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeLVMEncryptionInfoResolute(String advancedHint) {
-    return 'You will need to enter a passphrase every time you turn on your computer. $advancedHint';
+    return 'Haureu d\'introduir una contrasenya cada vegada que engegueu l\'ordinador. $advancedHint';
   }
 
   @override
   String get installationTypeLVMEncryptionInfo2 =>
-      'This uses LVM with LUKS encryption.';
+      'Això utilitza LVM amb xifratge LUKS.';
 
   @override
   String get installationTypeLVMEncryptionSelected =>
@@ -547,11 +551,11 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get installationTypeTPMInfoResolute =>
-      'The disk will unlock automatically during startup.';
+      'El disc es desbloquejarà automàticament durant l\'inici.';
 
   @override
   String get installationTypeTPMInfoUnavailable =>
-      'Not available on this computer.';
+      'No està disponible en aquest ordinador.';
 
   @override
   String get installationTypeTPMSelected => 'TPM seleccionat';
@@ -931,10 +935,10 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
   String get restartComputerTitle => 'Voleu reiniciar l\'ordinador?';
 
   @override
-  String get restartInstaller => 'Restart installer';
+  String get restartInstaller => 'Reinicia l\'instal·lador';
 
   @override
-  String get restartIntoWindows => 'Reiniciar a WIndows';
+  String get restartIntoWindows => 'Reinicia a Windows';
 
   @override
   String get restartIntoWindowsTitle => 'Voleu reiniciar a Windows?';
@@ -1411,300 +1415,311 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitle =>
-      'Hardware-backed encryption could not be enabled';
+      'No s\'ha pogut habilitar l\'encriptatge amb suport de maquinari';
 
   @override
-  String get tpmActionBadgeLabel => 'Action required';
+  String get tpmActionPageTitleActionable =>
+      'Hi ha una incidència amb l\'encriptació basada en maquinari';
 
   @override
-  String get tpmActionDetailsLabel => 'Technical details';
+  String get tpmActionBadgeLabel => 'Acció requerida';
 
   @override
-  String get tpmActionConfirmLabel => 'Confirm';
+  String get tpmActionDetailsLabel => 'Dades tècniques';
+
+  @override
+  String get tpmActionConfirmLabel => 'Confirmació';
 
   @override
   String tpmActionSolutionLabel(int n, String text) {
-    return 'Solution $n: $text';
+    return 'Solució $n: $text';
   }
 
   @override
   String tpmActionSingleSolutionLabel(String text) {
-    return 'Solution: $text';
+    return 'Solució: $text';
   }
 
   @override
   String get tpmActionDocumentationLinkLabel =>
-      'Learn more about hardware-backed encryption';
+      'Més informació sobre l\'encriptatge amb suport de maquinari';
 
   @override
   String get tpmActionErrorSupportLabel =>
-      'Try the solutions below, contact IT support, or choose a different encryption method.';
+      'Proveu les solucions següents, contacteu amb el suport de TI o trieu un mètode d\'encriptació diferent.';
 
   @override
   String get tpmActionErrorSupportSingleLabel =>
-      'Try the solution below, contact IT support, or choose a different encryption method.';
+      'Proveu la solució següent, contacteu amb el suport de TI o trieu un mètode d\'encriptació diferent.';
 
   @override
   String get tpmActionErrorSupportNoActionLabel =>
-      'Contact IT support, or choose a different encryption method.';
+      'Contacteu amb el suport de TI o trieu un mètode d\'encriptació diferent.';
 
   @override
-  String get tpmActionErrorKindInternal => 'Internal error.';
+  String get tpmActionErrorKindInternal => 'Error intern.';
 
   @override
-  String get tpmActionErrorKindShutdownRequired => 'Power off is required.';
+  String get tpmActionErrorKindShutdownRequired => 'Es requereix apagat.';
 
   @override
-  String get tpmActionErrorKindRebootRequired => 'Restart is required.';
+  String get tpmActionErrorKindRebootRequired => 'Cal reiniciar.';
 
   @override
-  String get tpmActionErrorKindUnexpectedAction => 'Unexpected action.';
+  String get tpmActionErrorKindUnexpectedAction => 'Acció inesperada.';
 
   @override
-  String get tpmActionErrorKindMissingArgument => 'Missing argument.';
+  String get tpmActionErrorKindMissingArgument => 'Falta l\'argument.';
 
   @override
-  String get tpmActionErrorKindInvalidArgument => 'Invalid argument.';
+  String get tpmActionErrorKindInvalidArgument => 'L\'argument no és vàlid.';
 
   @override
-  String get tpmActionErrorKindActionFailed => 'Action failed.';
+  String get tpmActionErrorKindActionFailed => 'Ha fallat l\'acció.';
 
   @override
   String get tpmActionErrorKindRunningInVm =>
-      'The current environment is a virtual machine.';
+      'L\'entorn actual és una màquina virtual.';
 
   @override
   String get tpmActionErrorKindSystemNotEfi =>
-      'This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.';
+      'Aquest ordinador està utilitzant microprogramari antic (BIOS antic) que no és compatible amb aquest mètode d\'encriptació.';
 
   @override
   String get tpmActionErrorKindEfiVariableAccess =>
-      'There is an issue with this computer\'s firmware.';
+      'Hi ha un problema amb el microprogramari d\'aquest ordinador.';
 
   @override
   String get tpmActionErrorKindNoSuitableTpm2Device =>
-      'This computer does not have the required security hardware (TPM 2.0) for this encryption method.';
+      'Aquest ordinador no té el maquinari de seguretat requerit (TPM 2.0) per a aquest mètode d\'encriptació.';
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'This computer\'s TPM is disabled.';
+      'El TPM d\'aquest ordinador està desactivat.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
-      'This computer\'s TPM is already in use by another system or application.';
+      'El TPM d\'aquest ordinador ja està en ús per un altre sistema o aplicació.';
 
   @override
   String get tpmActionErrorKindTpmDeviceLockoutLockedOut =>
-      'This computer\'s TPM is currently locked.';
+      'El TPM d\'aquest ordinador està bloquejat.';
 
   @override
   String get tpmActionErrorKindInsufficientTpmStorage =>
-      'This computer\'s TPM does not have enough storage available.';
+      'El TPM d\'aquest ordinador no té prou emmagatzematge disponible.';
 
   @override
   String get tpmActionErrorKindUnsupportedPlatform =>
-      'This computer is not compatible with hardware-backed encryption.';
+      'Aquest ordinador no és compatible amb l\'encriptació amb maquinari.';
 
   @override
   String get tpmActionErrorKindUefiDebuggingEnabled =>
-      'UEFI debugging is enabled.';
+      'La depuració UEFI està activada.';
 
   @override
   String get tpmActionErrorKindInsufficientDmaProtection =>
-      'This computer is missing a required security feature (DMA protection).';
+      'A aquest ordinador li falta una característica de seguretat requerida (protecció DMA).';
 
   @override
   String get tpmActionErrorKindNoKernelIommu =>
-      'This computer is missing a required security feature (IOMMU).';
+      'A aquest ordinador li falta una funció de seguretat requerida (IOMMU).';
 
   @override
   String get tpmActionErrorKindHostSecurity =>
-      'There is an issue with this computer\'s security configuration.';
+      'Hi ha un problema amb la configuració de seguretat d\'aquest ordinador.';
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'There is software running at startup that might prevent a secure connection with the computer\'s TPM.';
+      'Hi ha programari en execució a l\'inici que podria evitar una connexió segura amb el TPM de l\'ordinador.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
-      'Absolute Persistence Module is enabled in this computer.';
+      'El mòdul de persistència absoluta està habilitat en aquest ordinador.';
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'Secure boot is disabled in this computer or is not set in deployed mode.';
+      'L\'arrencada segura està desactivada en aquest ordinador o no està configurada en mode desplegat.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
-      'Some of the certificates verifying software in this computer are outdated or use weak protection.';
+      'Alguns dels certificats que verifiquen programari en aquest ordinador estan desactualitzats o utilitzen una protecció feble.';
 
   @override
   String get tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests =>
-      'This computer is using a manual allowlist to verify software at startup.';
+      'Aquest ordinador està utilitzant una llista de permisos manual per verificar el programari en iniciar.';
 
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
-      'Add-on drivers are present.';
+      'Hi ha controladors de complements.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'A aquest ordinador li falta una característica requerida de seguretat (arrel de maquinari de confiança).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
-      'There is an issue with this computer\'s TPM.';
+      'Hi ha un problema amb el TPM d\'aquest ordinador.';
 
   @override
   String get tpmActionErrorKindGenericFirmware =>
-      'There is an issue with this computer\'s firmware.';
+      'Hi ha un problema amb el microprogramari d\'aquest ordinador.';
 
   @override
-  String get tpmActionFixActionReboot => 'Restart';
+  String get tpmActionFixActionReboot => 'Reinicia';
 
   @override
-  String get tpmActionFixActionShutdown => 'Power off';
+  String get tpmActionFixActionShutdown => 'Apaga';
 
   @override
   String get tpmActionFixActionRebootToFwSettings =>
-      'Restart to firmware settings';
+      'Reinicia a la configuració del microprogramari';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInstructions =>
-      'If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).';
+      'Si la configuració del microprogramari no es carrega automàticament, reinicieu i premeu la tecla de configuració repetidament durant l\'inici (comunament F2, F10 o Suprimeix).';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection =>
-      'Enable DMA protection manually';
+      'Activa la protecció DMA manualment';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage =>
-      'Clear TPM manually';
+      'Neteja el TPM manualment';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode =>
-      'Enable secure boot manually';
+      'Habilita l\'arrencada segura manualment';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommu =>
-      'Enable IOMMU manually';
+      'Habilita l\'IOMMU manualment';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'Habilita manualment els bancs PCR';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>
-      'Enable TPM manually';
+      'Activa manualment el TPM';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut =>
-      'Clear TPM manually';
+      'Neteja el TPM manualment';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned =>
-      'Clear TPM manually';
+      'Neteja el TPM manualment';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Disable Absolute Persistence Module manually';
+      'Inhabilita manualment el mòdul de persistència absoluta';
 
   @override
-  String get tpmActionFixActionContactOem => 'Contact OEM';
+  String get tpmActionFixActionContactOem => 'Contacta amb OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Contact OS vendor';
+  String get tpmActionFixActionContactOsVendor =>
+      'Contacta amb el proveïdor del SO';
 
   @override
-  String get tpmActionFixActionEnableTpmViaFirmware => 'Enable TPM on restart';
+  String get tpmActionFixActionEnableTpmViaFirmware =>
+      'Habilita el TPM en reiniciar';
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Enable and clear TPM on restart';
+      'Habilita i neteja el TPM en reiniciar';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Clear TPM on restart';
+  String get tpmActionFixActionClearTpmViaFirmware =>
+      'Neteja el TPM en reiniciar';
 
   @override
-  String get tpmActionFixActionClearTpm => 'Clear TPM';
+  String get tpmActionFixActionClearTpm => 'Neteja TPM';
 
   @override
-  String get tpmActionFixActionProceed => 'Ignore';
+  String get tpmActionFixActionProceed => 'Ignora';
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Restart the computer to complete previous actions.';
+      'Reinicia l\'ordinador per a completar les accions anteriors.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
-      'Restarting the computer may fix the issue.';
+      'Reiniciar l\'ordinador pot solucionar el problema.';
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Power off the computer to complete previous actions.';
+      'Apaga l\'ordinador per a completar les accions anteriors.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
-      'You can do this in your computer\'s firmware settings.';
+      'Podeu fer-ho a la configuració del microprogramari del vostre ordinador.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsWithDocsDescription =>
-      'You might be able to do this in your computer\'s firmware settings. Check the documentation of the CPU vendor for guidance.';
+      'És possible que pugueu fer-ho a la configuració del microprogramari del vostre ordinador. Comproveu la documentació del proveïdor de la CPU per a la seva orientació.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'El mode d\'arrencada segur està establert a «desplegat».';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Aquesta característica pot ser coneguda com a \"Tecnologia de virtualització\", \"VT-d\" o \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
-      'Ignoring this issue might result in a less secure installation.';
+      'Ignorar aquest problema podria resultar en una instal·lació menys segura.';
 
   @override
-  String get tpmActionRestartLabel => 'Restart';
+  String get tpmActionRestartLabel => 'Reinicia';
 
   @override
-  String get tpmActionRestartAndEnableTpmLabel => 'Restart and enable TPM';
+  String get tpmActionRestartAndEnableTpmLabel => 'Reinicia i habilita el TPM';
 
   @override
-  String get tpmActionRestartAndClearTpmLabel => 'Restart and clear TPM';
+  String get tpmActionRestartAndClearTpmLabel => 'Reinicia i neteja TPM';
 
   @override
-  String get tpmActionIgnoreAndContinueLabel => 'Ignore and continue';
+  String get tpmActionIgnoreAndContinueLabel => 'Ignora i continua';
 
   @override
   String get tpmActionFixActionClearTpmWarningTitle =>
-      'Clearing the TPM erases all encryption keys';
+      'Netejant el TPM s\'esborraran totes les claus de xifratge';
 
   @override
   String get tpmActionFixActionClearTpmWarningBody =>
-      'You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.';
+      'Perdràs accés a totes les dades en unitats encriptades per a les quals no tens claus de recuperació. També trencarà altres característiques que depenen del TPM, com l\'autenticació i els certificats.';
 
   @override
   String get tpmActionFixActionClearTpmConfirmationLabel =>
-      'I understand the consequences of clearing the TPM';
+      'Entenc les conseqüències de netejar el TPM';
 
   @override
   String get tpmActionFixActionCaveatConfirm =>
-      'You might be asked to confirm this action on restart.';
+      'És possible que se us demani que confirmeu aquesta acció en reiniciar.';
 
   @override
   String get tpmActionFixActionCaveatRetry =>
-      'Then you will need to start the installation again.';
+      'Després haureu de tornar a iniciar la instal·lació.';
 
   @override
-  String get tpmActionErrorTitle => 'This solution failed';
+  String get tpmActionErrorTitle => 'Aquesta solució ha fallat';
 
   @override
   String get tpmActionErrorDescription =>
-      'Try a different solution or contact IT support.';
+      'Proveu una solució diferent o contacteu amb el suport informàtic.';
 
   @override
   String get installationLogSemanticLabel => 'Installation log';
 
   @override
   String get manualPartitioningWarningBody =>
-      'Try something else. You may also <a href=\"\">send an error report</a>.';
+      'Prova una altra cosa. També podeu <a href=\"\">enviar un informe d\'error</a>.';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Pas $CURRENT_STEP de $TOTAL_STEPS';
   }
 }

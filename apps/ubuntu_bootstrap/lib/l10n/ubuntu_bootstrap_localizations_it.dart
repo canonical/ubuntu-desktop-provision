@@ -420,6 +420,10 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
       'Per impostazione predefinita, il Trusted Platform Module (TPM) del computer sbloccherà il disco all\'avvio. Sono disponibili anche opzioni per proteggere ulteriormente i dati.';
 
   @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware-backed encryption requires additional security in this computer.';
+
+  @override
   String get passphrasePagePassphraseEntropyBelowMin =>
       'Frase segreta debole, rendila più lunga o più complessa';
 
@@ -1303,28 +1307,29 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'Recovery key file not saved';
+      'File della chiave di ripristino non salvato';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
-      'Recovery key file cannot be saved in a temporary location';
+      'Impossibile salvare il file della chiave di ripristino in una posizione temporanea';
 
   @override
-  String get recoveryKeyExceptionUnknownTitle => 'Unknown error';
+  String get recoveryKeyExceptionUnknownTitle => 'Errore sconosciuto';
 
   @override
   String get recoveryKeyExceptionFileSystemBody =>
-      'You do not have permission to write to that folder. Try a different location or use another method.';
+      'Non hai i permessi per scrivere in quella cartella. Prova a scegliere una posizione diversa o usa un altro metodo.';
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Try a different location, such as a removable drive, or use another method.';
+      'Prova una posizione diversa, ad esempio un\'unità rimovibile, oppure usa un altro metodo.';
 
   @override
-  String get recoveryKeyFilePickerTitle => 'Save recovery key file';
+  String get recoveryKeyFilePickerTitle =>
+      'Salva il file della chiave di ripristino';
 
   @override
-  String get recoveryKeyFilePickerFilter => 'Text files';
+  String get recoveryKeyFilePickerFilter => 'File di testo';
 
   @override
   String landscapeMagicAttachInstructions(String url) {
@@ -1410,6 +1415,10 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionPageTitle =>
       'Hardware-backed encryption could not be enabled';
+
+  @override
+  String get tpmActionPageTitleActionable =>
+      'There is an issue with hardware-backed encryption';
 
   @override
   String get tpmActionBadgeLabel => 'Action required';
@@ -1542,6 +1551,10 @@ class UbuntuBootstrapLocalizationsIt extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Add-on drivers are present.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'This computer is missing a required security feature (hardware root of trust).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
