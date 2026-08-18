@@ -110,8 +110,11 @@ class _WifiViewState extends ConsumerState<WifiView> {
   }
 }
 
-final wifiDeviceProvider = Provider.family<WifiDevice, int>(
-  (ref, index) => ref.watch(wifiModelProvider).devices[index],
+final wifiDeviceProvider = Provider.family<WifiDevice?, int>(
+  (ref, index) {
+    final devices = ref.watch(wifiModelProvider).devices;
+    return index < devices.length ? devices[index] : null;
+  },
 );
 
 class WifiListView extends ConsumerWidget {
@@ -205,6 +208,7 @@ class WifiListTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final device = ref.watch(wifiDeviceProvider(deviceIndex));
+    if (device == null) return const SizedBox.shrink();
     final lang = NetworkLocalizations.of(context);
     final textColor = Theme.of(context).textTheme.titleMedium!.color;
     final iconSize = IconTheme.of(context).size;
