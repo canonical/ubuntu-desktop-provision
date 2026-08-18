@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -55,7 +54,7 @@ void main() {
     );
     expect(bodyNode.label, contains('Help and support'));
     expect(bodyNode.label, contains('available online'));
-    expect(bodyNode.hasFlag(SemanticsFlag.isFocusable), isTrue);
+    expect(bodyNode, isSemantics(isFocusable: true));
 
     // ...and the body node does not contain any link text, so the links are
     // not part of it.
@@ -67,10 +66,8 @@ void main() {
     await tester.sendKeyEvent(LogicalKeyboardKey.tab);
     await tester.pumpAndSettle();
     expect(
-      tester
-          .getSemantics(find.bySemanticsLabel(RegExp('Help and support')))
-          .hasFlag(SemanticsFlag.isFocused),
-      isTrue,
+      tester.getSemantics(find.bySemanticsLabel(RegExp('Help and support'))),
+      isSemantics(isFocused: true),
       reason: 'the slide body should be the first tab stop',
     );
 
@@ -84,7 +81,7 @@ void main() {
     // The link announces only its own text...
     final linkNode = tester.getSemantics(linkFinder);
     expect(linkNode.label, 'Official documentation');
-    expect(linkNode.hasFlag(SemanticsFlag.isFocused), isTrue);
+    expect(linkNode, isSemantics(isFocused: true));
 
     // ...and none of its ancestors expose the slide body text, so the screen
     // reader does not re-read the whole slide when tabbing to a link.

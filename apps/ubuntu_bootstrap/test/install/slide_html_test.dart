@@ -90,7 +90,7 @@ void main() {
       final node = tester.getSemantics(find.bySemanticsLabel(label));
       expect(node.label, label);
       expect(node.label, isNot(contains('\u2022')));
-      expect(node.hasFlag(SemanticsFlag.isImage), isFalse);
+      expect(node, isSemantics(isImage: false));
     }
 
     // Nothing in the tree is announced as a bullet.
@@ -189,7 +189,7 @@ void main() {
     for (final label in const ['Official documentation', 'Ask Ubuntu']) {
       final linkNode = tester.getSemantics(find.bySemanticsLabel(label));
       expect(linkNode.label, label);
-      expect(linkNode.hasFlag(SemanticsFlag.isLink), isTrue);
+      expect(linkNode, isSemantics(isLink: true));
 
       // ...and no ancestor merges the body text together with the link, so the
       // slide is not re-read when focus reaches the link.
