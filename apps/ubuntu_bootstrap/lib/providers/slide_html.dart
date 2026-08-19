@@ -192,17 +192,31 @@ class SlideHtml extends StatelessWidget {
             );
           },
         ),
-        // A "<bullet> <link>" row, rendered as a block so the slide's links
-        // stack one per line (replacing the removed <br> spacers). The bullet
-        // and link flow inline within the row via [Text.rich].
+        // A "<bullet> <link>" row. The bullet and link are laid out as an
+        // explicit Row of widgets rather than relying on inline WidgetSpan
+        // flow, which positions the links unpredictably (they can wrap beside
+        // the logo or misalign). This keeps every bullet left-aligned with its
+        // link on its own line.
         TagExtension(
           tagsToExtend: {'linkrow'},
           builder: (extensionContext) {
-            return Text.rich(
-              TextSpan(
-                children:
-                    extensionContext.inlineSpanChildren ?? const <InlineSpan>[],
-              ),
+            final children =
+                (extensionContext.inlineSpanChildren ?? const <InlineSpan>[])
+                    .whereType<WidgetSpan>()
+                    .map((span) => span.child)
+                    .toList();
+            return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (var i = 0; i < children.length; i++)
+                  // The link (last child) is flexible so long labels wrap
+                  // within the column instead of overflowing; the bullet keeps
+                  // its intrinsic width.
+                  if (i == children.length - 1)
+                    Flexible(child: children[i])
+                  else
+                    children[i],
+              ],
             );
           },
         ),
@@ -301,6 +315,11 @@ messages: $messages
         'body': Style(margin: Margins.all(0)),
         'bullet': Style(display: Display.inline),
         'slidetext': Style(display: Display.block, margin: Margins.all(0)),
+        // The slide logo is block-level so the link rows below it start on a
+        // fresh line instead of flowing alongside the image (the slide's
+        // <br>/<p> spacers, which used to do this, are removed to keep stray
+        // whitespace out of the semantics tree).
+        'img': Style(display: Display.block),
         // Each "<bullet> <link>" pair is wrapped in a block row (see
         // [_stripDecorativeWhitespace]) so the links stack one per line without
         // needing <br> spacers that would leak whitespace into the slideshow
