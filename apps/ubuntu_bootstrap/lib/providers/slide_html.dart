@@ -154,16 +154,27 @@ class SlideHtml extends StatelessWidget {
             }
             final bytes = base64Decode(src.split('base64,')[1].trim());
             final isSvg = src.startsWith('data:image/svg+xml');
+            final context = extensionContext.buildContext;
+            final direction = context == null
+                ? TextDirection.ltr
+                : Directionality.of(context);
+            final padding = style?.padding?.resolve(direction) ??
+                style?.margin?.resolve(direction);
+            final image = isSvg
+                ? SvgPicture.memory(bytes, width: width, height: height)
+                : Image.memory(
+                    bytes,
+                    width: width,
+                    height: height,
+                    fit: BoxFit.fill,
+                    excludeFromSemantics: true,
+                  );
+            // Honour the image's CSS padding (e.g. the gap below the slide's
+            // logo) which the custom builder would otherwise drop.
             return ExcludeSemantics(
-              child: isSvg
-                  ? SvgPicture.memory(bytes, width: width, height: height)
-                  : Image.memory(
-                      bytes,
-                      width: width,
-                      height: height,
-                      fit: BoxFit.fill,
-                      excludeFromSemantics: true,
-                    ),
+              child: padding != null
+                  ? Padding(padding: padding, child: image)
+                  : image,
             );
           },
         ),
@@ -200,7 +211,15 @@ class SlideHtml extends StatelessWidget {
           builder: (extensionContext) {
             final href = extensionContext.element?.attributes['href'];
             final text = extensionContext.element?.text ?? '';
-            final textStyle = extensionContext.style?.generateTextStyle();
+            // Restore the default hyperlink appearance. The custom builder
+            // replaces flutter_html's built-in <a> rendering, which would
+            // otherwise colour and underline links; without this they render
+            // as plain body text.
+            final textStyle =
+                extensionContext.style?.generateTextStyle().copyWith(
+                      color: Colors.blue,
+                      decoration: TextDecoration.underline,
+                    );
             return MergeSemantics(
               child: Semantics(
                 link: true,

@@ -29,6 +29,25 @@ void main() {
     verify(urlLauncher.launchUrl('https://help.ubuntu.com')).called(1);
   });
 
+  testWidgets('links keep the default hyperlink appearance', (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml('<a href="https://help.ubuntu.com">link</a>'),
+        ),
+      ),
+    );
+
+    // The custom <a> builder must preserve the coloured, underlined link
+    // styling; otherwise links render as plain body text.
+    final text = tester.widget<Text>(find.text('link'));
+    expect(text.style?.color, Colors.blue);
+    expect(text.style?.decoration, TextDecoration.underline);
+  });
+
   testWidgets('links are exposed to screen readers', (tester) async {
     final urlLauncher = MockUrlLauncher();
     registerMockService<UrlLauncher>(urlLauncher);
