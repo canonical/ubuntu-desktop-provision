@@ -154,16 +154,27 @@ class SlideHtml extends StatelessWidget {
             }
             final bytes = base64Decode(src.split('base64,')[1].trim());
             final isSvg = src.startsWith('data:image/svg+xml');
+            final context = extensionContext.buildContext;
+            final direction = context == null
+                ? TextDirection.ltr
+                : Directionality.of(context);
+            final padding = style?.padding?.resolve(direction) ??
+                style?.margin?.resolve(direction);
+            final image = isSvg
+                ? SvgPicture.memory(bytes, width: width, height: height)
+                : Image.memory(
+                    bytes,
+                    width: width,
+                    height: height,
+                    fit: BoxFit.fill,
+                    excludeFromSemantics: true,
+                  );
+            // Honour the image's CSS padding (e.g. the gap below the slide's
+            // logo) which the custom builder would otherwise drop.
             return ExcludeSemantics(
-              child: isSvg
-                  ? SvgPicture.memory(bytes, width: width, height: height)
-                  : Image.memory(
-                      bytes,
-                      width: width,
-                      height: height,
-                      fit: BoxFit.fill,
-                      excludeFromSemantics: true,
-                    ),
+              child: padding != null
+                  ? Padding(padding: padding, child: image)
+                  : image,
             );
           },
         ),
@@ -181,17 +192,31 @@ class SlideHtml extends StatelessWidget {
             );
           },
         ),
-        // A "<bullet> <link>" row, rendered as a block so the slide's links
-        // stack one per line (replacing the removed <br> spacers). The bullet
-        // and link flow inline within the row via [Text.rich].
+        // A "<bullet> <link>" row. The bullet and link are laid out as an
+        // explicit Row of widgets rather than relying on inline WidgetSpan
+        // flow, which positions the links unpredictably (they can wrap beside
+        // the logo or misalign). This keeps every bullet left-aligned with its
+        // link on its own line.
         TagExtension(
           tagsToExtend: {'linkrow'},
           builder: (extensionContext) {
-            return Text.rich(
-              TextSpan(
-                children:
-                    extensionContext.inlineSpanChildren ?? const <InlineSpan>[],
-              ),
+            final children =
+                (extensionContext.inlineSpanChildren ?? const <InlineSpan>[])
+                    .whereType<WidgetSpan>()
+                    .map((span) => span.child)
+                    .toList();
+            return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (var i = 0; i < children.length; i++)
+                  // The link (last child) is flexible so long labels wrap
+                  // within the column instead of overflowing; the bullet keeps
+                  // its intrinsic width.
+                  if (i == children.length - 1)
+                    Flexible(child: children[i])
+                  else
+                    children[i],
+              ],
             );
           },
         ),
@@ -200,7 +225,15 @@ class SlideHtml extends StatelessWidget {
           builder: (extensionContext) {
             final href = extensionContext.element?.attributes['href'];
             final text = extensionContext.element?.text ?? '';
-            final textStyle = extensionContext.style?.generateTextStyle();
+            // Restore the default hyperlink appearance. The custom builder
+            // replaces flutter_html's built-in <a> rendering, which would
+            // otherwise colour and underline links; without this they render
+            // as plain body text.
+            final textStyle =
+                extensionContext.style?.generateTextStyle().copyWith(
+                      color: Colors.blue,
+                      decoration: TextDecoration.underline,
+                    );
             return MergeSemantics(
               child: Semantics(
                 link: true,
@@ -282,6 +315,11 @@ messages: $messages
         'body': Style(margin: Margins.all(0)),
         'bullet': Style(display: Display.inline),
         'slidetext': Style(display: Display.block, margin: Margins.all(0)),
+        // The slide logo is block-level so the link rows below it start on a
+        // fresh line instead of flowing alongside the image (the slide's
+        // <br>/<p> spacers, which used to do this, are removed to keep stray
+        // whitespace out of the semantics tree).
+        'img': Style(display: Display.block),
         // Each "<bullet> <link>" pair is wrapped in a block row (see
         // [_stripDecorativeWhitespace]) so the links stack one per line without
         // needing <br> spacers that would leak whitespace into the slideshow

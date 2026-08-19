@@ -1,7 +1,11 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:html/parser.dart' show parse;
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_bootstrap/services.dart';
@@ -27,6 +31,25 @@ void main() {
     await tester.pump();
 
     verify(urlLauncher.launchUrl('https://help.ubuntu.com')).called(1);
+  });
+
+  testWidgets('links keep the default hyperlink appearance', (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml('<a href="https://help.ubuntu.com">link</a>'),
+        ),
+      ),
+    );
+
+    // The custom <a> builder must preserve the coloured, underlined link
+    // styling; otherwise links render as plain body text.
+    final text = tester.widget<Text>(find.text('link'));
+    expect(text.style?.color, Colors.blue);
+    expect(text.style?.decoration, TextDecoration.underline);
   });
 
   testWidgets('links are exposed to screen readers', (tester) async {
@@ -97,6 +120,68 @@ void main() {
     expect(find.bySemanticsLabel(RegExp('\u2022')), findsNothing);
 
     handle.dispose();
+  });
+
+  testWidgets('bulleted links each render on their own line, left-aligned',
+      (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    tester.view.physicalSize = const Size(4000, 4000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    // Render the real slide 9 (the only slide with a bulleted link column),
+    // inlining its logo as a data URI the way the slides provider does.
+    final raw = File('assets/slides/9/slide_en_US.html').readAsStringSync();
+    final svg = base64Encode(
+      File('assets/slides/9/ubuntu_discourse.svg').readAsBytesSync(),
+    );
+    final html = parse(
+      raw.replaceAll(
+        'src="ubuntu_discourse.svg"',
+        'src="data:image/svg+xml;base64,$svg"',
+      ),
+    ).outerHtml;
+
+    await tester.pumpApp(
+      (context) => ProviderScope(
+        child: Scaffold(body: SlideHtml(html)),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Slide 9 declares a fixed table height that is shorter than its content,
+    // so rendering it outside its usual SlideView surface paints an overflow
+    // warning. It still lays out correctly, so consume the harness-only error.
+    dynamic exception = tester.takeException();
+    while (exception != null) {
+      expect(exception, isA<FlutterError>());
+      exception = tester.takeException();
+    }
+
+    const labels = [
+      'Official documentation',
+      'Ubuntu Discourse',
+      'Enterprise-grade 24/7 support with Ubuntu Pro',
+      'Ask Ubuntu',
+    ];
+    final offsets = [
+      for (final label in labels) tester.getTopLeft(find.text(label)),
+    ];
+
+    // Every link starts at the same x (bullets left-aligned in a column)...
+    for (final o in offsets) {
+      expect(o.dx, moreOrLessEquals(offsets.first.dx, epsilon: 1));
+    }
+    // ...and each link is on its own line, strictly below the previous one.
+    for (var i = 1; i < offsets.length; i++) {
+      expect(
+        offsets[i].dy,
+        greaterThan(offsets[i - 1].dy),
+        reason: '"${labels[i]}" should be below "${labels[i - 1]}"',
+      );
+    }
   });
 
   testWidgets(
