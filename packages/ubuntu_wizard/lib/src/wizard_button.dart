@@ -152,7 +152,6 @@ class _WizardButtonState extends State<WizardButton> {
     return YaruTheme.maybeOf(context)?.focusBorders ?? false
         ? YaruFocusBorder.primary(
             borderRadius: BorderRadius.circular(kYaruButtonRadius),
-            borderPadding: YaruFocusBorderPadding.small,
             child: button,
           )
         : button;

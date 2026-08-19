@@ -63,6 +63,7 @@ class _OptionButtonState<T> extends State<OptionButton<T>> {
               value: widget.value,
               groupValue: widget.groupValue,
               onChanged: widget.onChanged,
+              hasFocusBorder: false,
             ),
           ),
           title: Wrap(
@@ -91,7 +92,6 @@ class _OptionButtonState<T> extends State<OptionButton<T>> {
       child: showFocusBorder
           ? YaruFocusBorder.primary(
               borderRadius: kWizardBorderRadius,
-              borderPadding: YaruFocusBorderPadding.small,
               child: content,
             )
           : content,
