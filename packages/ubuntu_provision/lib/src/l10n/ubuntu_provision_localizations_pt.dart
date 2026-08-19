@@ -411,6 +411,9 @@ class UbuntuProvisionLocalizationsPt extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Connected';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

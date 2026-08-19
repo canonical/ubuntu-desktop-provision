@@ -410,6 +410,9 @@ class UbuntuProvisionLocalizationsEn extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Connected';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }
 
 /// The translations for English, as used in the United Kingdom (`en_GB`).

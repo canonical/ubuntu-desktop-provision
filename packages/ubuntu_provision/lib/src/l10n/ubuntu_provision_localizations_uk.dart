@@ -411,4 +411,7 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Підключено';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }

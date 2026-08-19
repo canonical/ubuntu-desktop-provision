@@ -410,4 +410,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Pripojené';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }

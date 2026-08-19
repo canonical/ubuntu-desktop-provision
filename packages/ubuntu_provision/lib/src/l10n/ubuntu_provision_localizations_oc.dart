@@ -412,4 +412,7 @@ class UbuntuProvisionLocalizationsOc extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Connectat';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }

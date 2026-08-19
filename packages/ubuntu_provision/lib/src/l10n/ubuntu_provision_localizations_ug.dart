@@ -410,4 +410,7 @@ class UbuntuProvisionLocalizationsUg extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'باغلاندى';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }
