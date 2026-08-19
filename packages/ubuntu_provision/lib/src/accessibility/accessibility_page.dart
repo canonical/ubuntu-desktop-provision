@@ -153,6 +153,7 @@ class _AccessibilityListTile extends ConsumerWidget {
             child: YaruSwitch(
               value: isActive,
               onChanged: (_) => model.toggleOption(id),
+              hasFocusBorder: false,
             ),
           ),
         ),
