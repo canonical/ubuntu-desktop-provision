@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
 
-class OptionButton<T> extends StatefulWidget {
+class OptionButton<T> extends StatelessWidget {
   const OptionButton({
     required this.title,
     required this.value,
@@ -23,24 +23,10 @@ class OptionButton<T> extends StatefulWidget {
   final ValueChanged<T?>? onChanged;
 
   @override
-  State<OptionButton<T>> createState() => _OptionButtonState<T>();
-}
-
-class _OptionButtonState<T> extends State<OptionButton<T>> {
-  late final _focusNode = FocusNode();
-
-  @override
-  void dispose() {
-    _focusNode.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final isSelected = widget.value == widget.groupValue;
-    final showFocusBorder = YaruTheme.maybeOf(context)?.focusBorders ?? false;
+    final isSelected = value == groupValue;
 
     final content = YaruBorderContainer(
       color: isSelected
@@ -57,44 +43,38 @@ class _OptionButtonState<T> extends State<OptionButton<T>> {
             .copyWith(fontWeight: FontWeight.bold),
         child: YaruRadioListTile<T>(
           hasFocusBorder: false,
-          focusNode: _focusNode,
           control: ExcludeFocus(
             child: YaruRadio<T>(
-              value: widget.value,
-              groupValue: widget.groupValue,
-              onChanged: widget.onChanged,
+              value: value,
+              groupValue: groupValue,
+              onChanged: onChanged,
               hasFocusBorder: false,
             ),
           ),
           title: Wrap(
             alignment: WrapAlignment.spaceBetween,
             children: [
-              widget.title,
-              if (widget.trailing != null) ...[
-                widget.trailing!,
+              title,
+              if (trailing != null) ...[
+                trailing!,
               ],
             ],
           ),
-          subtitle: widget.subtitle,
+          subtitle: subtitle,
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 16,
             vertical: 12,
           ),
-          value: widget.value,
-          groupValue: widget.groupValue,
-          onChanged: widget.onChanged,
+          value: value,
+          groupValue: groupValue,
+          onChanged: onChanged,
         ),
       ),
     );
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: showFocusBorder
-          ? YaruFocusBorder.primary(
-              borderRadius: kWizardBorderRadius,
-              child: content,
-            )
-          : content,
+      child: content,
     );
   }
 }
