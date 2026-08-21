@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Установка не может быть продолжена с использованием предоставленного файла autoinstall.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'В файле autoinstall обнаружена проблема.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Возникла проблема с данными пользователя cloud-init, указанными в файле autoinstall.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -283,7 +283,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get fullInstallationSubtitle =>
-      'Удобный для работы в автономном режиме набор офисных инструментов, утилит и веб-браузер.';
+      'Удобный для работы в офлайн-режиме набор офисных программ, утилиты и веб-браузер.';
 
   @override
   String get minimalInstallationTitle => 'Стандартная установка';
@@ -360,11 +360,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Каждый раз при включении компьютера вам нужно будет вводить свою парольную фразу. Эта парольная фраза отличается от вашего пароля пользователя. Вы сможете изменить её позже, но не отключить. Если вы забудете свою парольную фразу, то сможете восстановить доступ к диску, используя ключ восстановления.';
+      'Вам потребуется вводить парольную фразу каждый раз при запуске компьютера. Эта парольная фраза отличается от пароля пользователя. Вы сможете изменить её позже в Центре безопасности.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Каждый раз при включении компьютера вам нужно будет вводить свой PIN-код. Этот PIN-код отличается от вашего пароля пользователя. Вы сможете изменить его позже, но не отключить. Если вы забудете свой PIN-код, то сможете восстановить доступ к диску, используя ключ восстановления.';
+      'Вам потребуется вводить PIN-код каждый раз при включении компьютера. Этот PIN-код отличается от пароля пользователя. Вы сможете изменить его позже в Центре безопасности.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Парольная фраза';
@@ -392,14 +392,15 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN-коды не совпадают';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Требовать парольную фразу';
+  String get passphraseTypePassphraseTileTitle =>
+      'Требовать парольную фразу при запуске';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Наиболее безопасно. Вам придётся вводить более длинную парольную фразу каждый раз при включении компьютера.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Требовать PIN-код';
+  String get passphraseTypePinTileTitle => 'Требовать PIN-код при запуске';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -413,7 +414,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'По умолчанию Trusted Platform Module (TPM) компьютера разблокирует диск во время запуска. Однако у вас есть и другие варианты дополнительной защиты своих данных.';
+      'По умолчанию диск будет автоматически разблокироваться при запуске. Вы также можете настроить дополнительные параметры для защиты своих данных.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Для аппаратного шифрования на этом компьютере требуются дополнительные меры безопасности.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1406,6 +1411,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Не удалось включить аппаратное шифрование';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'Существует проблема с аппаратным шифрованием';
+
+  @override
   String get tpmActionBadgeLabel => 'Требуется действие';
 
   @override
@@ -1535,6 +1544,10 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Присутствуют доп. драйверы.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'На этом компьютере отсутствует необходимая функция безопасности (аппаратный корень доверия).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1696,6 +1709,6 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Шаг $CURRENT_STEP из $TOTAL_STEPS';
   }
 }

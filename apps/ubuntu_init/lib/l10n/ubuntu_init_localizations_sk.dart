@@ -13,7 +13,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Vitajte v $distro';
+    return 'Vitajte v systéme $distro';
   }
 
   @override
@@ -26,18 +26,18 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeStartSubtitle => 'Jednoduchšie a prehľadnejšie nastavenie.';
 
   @override
-  String get welcomeStoreTitle => 'Nový vzhľad obchodu s aplikáciami';
+  String get welcomeStoreTitle => 'Nový vzhľad Obchodu s aplikáciami';
 
   @override
   String get welcomeStoreSubtitle =>
-      'Nájsť váš obľúbený softvér nebolo nikdy jednoduchšie.';
+      'Nikdy nebolo jednoduchšie nájsť váš obľúbený softvér.';
 
   @override
-  String get welcomeSecurityTitle => 'Vylepšené zabezpečenie';
+  String get welcomeSecurityTitle => 'Zvýšená bezpečnosť';
 
   @override
   String get welcomeSecuritySubtitle =>
-      'Nové možnosti hardvérového alebo ZFS šifrovania.';
+      'Nové možnosti šifrovania s podporou hardvéru alebo súborového systému ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -54,29 +54,29 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Pomôžte nám zlepšiť $distro zdieľaním systémových údajov. Ide napríklad o model vášho zariadenia, nainštalovaný softvér a polohu, ktorú ste vybrali pre časové pásmo.';
+    return 'Pomôžte nám zlepšiť $distro zdieľaním údajov o vašom systéme. Zahŕňa to napríklad model vášho zariadenia, nainštalovaný softvér a vybrané časové pásmo.';
   }
 
   @override
   String telemetryLabelOn(String distro) {
-    return 'Áno, zdieľať systémové údaje s $distro tímom';
+    return 'Áno, zdieľať údaje o systéme s tímom $distro';
   }
 
   @override
-  String get telemetryLabelOff => 'Nie, nezdieľať systémové údaje';
+  String get telemetryLabelOff => 'Nie, nezdieľať údaje o systéme';
 
   @override
-  String get telemetryReportLabel => 'Zobraziť prvé hlásenie';
+  String get telemetryReportLabel => 'Zobraziť prvú správu';
 
   @override
-  String get telemetryReportTitle => 'Podrobnosti hlásenia';
+  String get telemetryReportTitle => 'Podrobnosti o hlásení';
 
   @override
-  String get telemetryLegalLabel => 'Právne informácie';
+  String get telemetryLegalLabel => 'Právne upozornenie';
 
   @override
   String get telemetryCollectError =>
-      'Zhromažďovanie telemetrických údajov zlyhalo';
+      'Zlyhalo zhromažďovanie telemetrických údajov';
 
   @override
   String get privacyPageTitle => 'Služby určovania polohy';
@@ -86,7 +86,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get privacyLocationSubtitle =>
-      'Umožnite aplikáciám zistiť vašu geografickú polohu.\nNastavenie môžete kedykoľvek zmeniť v Systémových nastaveniach.';
+      'Umožníte aplikáciám zistiť vašu geografickú polohu.\nToto nastavenie môžete kedykoľvek zmeniť v Nastaveniach systému.';
 
   @override
   String get privacyLocationEnable => 'Služby určovania polohy';
@@ -96,7 +96,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String ubuntuProMagicAttachInstructions(String url) {
-    return 'Pripojte sa pomocou tohto kódu na <a href=\"https://$url\">$url</a>';
+    return 'Pripojenie pomocou tohto kódu na adrese <a href=\"https://$url\">$url</a>';
   }
 
   @override
@@ -106,18 +106,18 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProHeader => 'Pripojiť toto zariadenie';
 
   @override
-  String get ubuntuProOrAddTokenManually => 'alebo zadať token manuálne';
+  String get ubuntuProOrAddTokenManually => 'alebo pridať token manuálne';
 
   @override
   String get ubuntuProTokenTextfieldHint => 'Token';
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Získajte najkomplexnejšie predplatné na zabezpečenie open-source softvéru';
+      'Získajte najkomplexnejšie predplatné pre bezpečnosť softvéru s otvoreným zdrojovým kódom';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Vždy zadarmo na osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://$url\">Viac informácií</a>';
+    return 'Vždy zadarmo pre osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://$url\">Zistiť viac</a>';
   }
 
   @override
@@ -130,30 +130,29 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get ubuntuProTokenAttachSucess => 'Platný token';
 
   @override
-  String get ubuntuProTokenAttachErrorVariant =>
-      'Neplatný token, skúste to znova';
+  String get ubuntuProTokenAttachErrorVariant => 'Neplatný token, skúsiť znova';
 
   @override
-  String get ubuntuProOnBoardingSkipForNow => 'Zatiaľ preskočiť';
+  String get ubuntuProOnBoardingSkipForNow => 'Preskočiť teraz';
 
   @override
   String get ubuntuProOnBoardingSkipForNowDescription =>
-      'Ubuntu Pro môžete aktivovať kedykoľvek neskôr prostredníctvom nástroja Softvér a aktualizácie.';
+      'Službu Ubuntu Pro môžete kedykoľvek neskôr povoliť v aplikácii Softvér a aktualizácie.';
 
   @override
-  String get ubuntuProOnBoardingEnableUbuntuPro => 'Aktivovať Ubuntu Pro';
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Povoliť Ubuntu Pro';
 
   @override
   String get ubuntuProOnBoardingEnableUbuntuProDescription =>
-      'Pripojte toto zariadenie k predplatnému Ubuntu Pro a získajte aktualizácie zabezpečenia pre širší rozsah balíkov až do roku 2032.';
+      'Pripojte toto zariadenie k predplatnému Ubuntu Pro pre bezpečnostné aktualizácie širšieho rozsahu balíkov až do roku 2032.';
 
   @override
   String get ubuntuProSucessAttachHeader =>
-      'Ubuntu Pro je teraz aktivované na tomto zariadení';
+      'Služba Ubuntu Pro je na tomto zariadení teraz povolená';
 
   @override
   String get ubuntuProSucessAttachDescription =>
-      'Služby Pro môžete spravovať v nástroji Softvér a aktualizácie.';
+      'Svoje služby Pro môžete spravovať v aplikácii Softvér a aktualizácie.';
 
   @override
   String get successIconSemanticLabel => 'Úspech';

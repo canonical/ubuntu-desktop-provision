@@ -56,7 +56,7 @@ class UbuntuInitLocalizationsEs extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Ayúdenos a mejorar $distro compartiendo los datos de su sistema con nosotros. Esto incluye cosas como el modelo de su máquina, el software instalado y la ubicación que eligió para su zona horaria.';
+    return 'Ayúdenos a mejorar $distro compartiendo los datos de su sistema con nosotros. Esto incluye cosas como el modelo de su máquina, los programas instalados y la ubicación que eligió para su huso horario.';
   }
 
   @override

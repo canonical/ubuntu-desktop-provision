@@ -20795,7 +20795,8 @@ class __$GuidedDisallowedCapabilityCopyWithImpl<$Res>
 mixin _$StorageResponse {
   ProbeStatus get status;
   ErrorReportRef? get errorReport;
-  Bootloader? get bootloader;
+  FirmwareType? get firmwareType;
+  FirmwareType? get bootloader;
   List<dynamic>? get origConfig;
   List<dynamic>? get config;
   Map<String, dynamic>? get dasd;
@@ -20820,6 +20821,8 @@ mixin _$StorageResponse {
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorReport, errorReport) ||
                 other.errorReport == errorReport) &&
+            (identical(other.firmwareType, firmwareType) ||
+                other.firmwareType == firmwareType) &&
             (identical(other.bootloader, bootloader) ||
                 other.bootloader == bootloader) &&
             const DeepCollectionEquality()
@@ -20836,6 +20839,7 @@ mixin _$StorageResponse {
       runtimeType,
       status,
       errorReport,
+      firmwareType,
       bootloader,
       const DeepCollectionEquality().hash(origConfig),
       const DeepCollectionEquality().hash(config),
@@ -20844,7 +20848,7 @@ mixin _$StorageResponse {
 
   @override
   String toString() {
-    return 'StorageResponse(status: $status, errorReport: $errorReport, bootloader: $bootloader, origConfig: $origConfig, config: $config, dasd: $dasd, storageVersion: $storageVersion)';
+    return 'StorageResponse(status: $status, errorReport: $errorReport, firmwareType: $firmwareType, bootloader: $bootloader, origConfig: $origConfig, config: $config, dasd: $dasd, storageVersion: $storageVersion)';
   }
 }
 
@@ -20857,7 +20861,8 @@ abstract mixin class $StorageResponseCopyWith<$Res> {
   $Res call(
       {ProbeStatus status,
       ErrorReportRef? errorReport,
-      Bootloader? bootloader,
+      FirmwareType? firmwareType,
+      FirmwareType? bootloader,
       List<dynamic>? origConfig,
       List<dynamic>? config,
       Map<String, dynamic>? dasd,
@@ -20881,6 +20886,7 @@ class _$StorageResponseCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
     Object? errorReport = freezed,
+    Object? firmwareType = freezed,
     Object? bootloader = freezed,
     Object? origConfig = freezed,
     Object? config = freezed,
@@ -20896,10 +20902,14 @@ class _$StorageResponseCopyWithImpl<$Res>
           ? _self.errorReport
           : errorReport // ignore: cast_nullable_to_non_nullable
               as ErrorReportRef?,
+      firmwareType: freezed == firmwareType
+          ? _self.firmwareType
+          : firmwareType // ignore: cast_nullable_to_non_nullable
+              as FirmwareType?,
       bootloader: freezed == bootloader
           ? _self.bootloader
           : bootloader // ignore: cast_nullable_to_non_nullable
-              as Bootloader?,
+              as FirmwareType?,
       origConfig: freezed == origConfig
           ? _self.origConfig
           : origConfig // ignore: cast_nullable_to_non_nullable
@@ -21030,7 +21040,8 @@ extension StorageResponsePatterns on StorageResponse {
     TResult Function(
             ProbeStatus status,
             ErrorReportRef? errorReport,
-            Bootloader? bootloader,
+            FirmwareType? firmwareType,
+            FirmwareType? bootloader,
             List<dynamic>? origConfig,
             List<dynamic>? config,
             Map<String, dynamic>? dasd,
@@ -21041,8 +21052,15 @@ extension StorageResponsePatterns on StorageResponse {
     final _that = this;
     switch (_that) {
       case _StorageResponse() when $default != null:
-        return $default(_that.status, _that.errorReport, _that.bootloader,
-            _that.origConfig, _that.config, _that.dasd, _that.storageVersion);
+        return $default(
+            _that.status,
+            _that.errorReport,
+            _that.firmwareType,
+            _that.bootloader,
+            _that.origConfig,
+            _that.config,
+            _that.dasd,
+            _that.storageVersion);
       case _:
         return orElse();
     }
@@ -21066,7 +21084,8 @@ extension StorageResponsePatterns on StorageResponse {
     TResult Function(
             ProbeStatus status,
             ErrorReportRef? errorReport,
-            Bootloader? bootloader,
+            FirmwareType? firmwareType,
+            FirmwareType? bootloader,
             List<dynamic>? origConfig,
             List<dynamic>? config,
             Map<String, dynamic>? dasd,
@@ -21076,8 +21095,15 @@ extension StorageResponsePatterns on StorageResponse {
     final _that = this;
     switch (_that) {
       case _StorageResponse():
-        return $default(_that.status, _that.errorReport, _that.bootloader,
-            _that.origConfig, _that.config, _that.dasd, _that.storageVersion);
+        return $default(
+            _that.status,
+            _that.errorReport,
+            _that.firmwareType,
+            _that.bootloader,
+            _that.origConfig,
+            _that.config,
+            _that.dasd,
+            _that.storageVersion);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -21100,7 +21126,8 @@ extension StorageResponsePatterns on StorageResponse {
     TResult? Function(
             ProbeStatus status,
             ErrorReportRef? errorReport,
-            Bootloader? bootloader,
+            FirmwareType? firmwareType,
+            FirmwareType? bootloader,
             List<dynamic>? origConfig,
             List<dynamic>? config,
             Map<String, dynamic>? dasd,
@@ -21110,8 +21137,15 @@ extension StorageResponsePatterns on StorageResponse {
     final _that = this;
     switch (_that) {
       case _StorageResponse() when $default != null:
-        return $default(_that.status, _that.errorReport, _that.bootloader,
-            _that.origConfig, _that.config, _that.dasd, _that.storageVersion);
+        return $default(
+            _that.status,
+            _that.errorReport,
+            _that.firmwareType,
+            _that.bootloader,
+            _that.origConfig,
+            _that.config,
+            _that.dasd,
+            _that.storageVersion);
       case _:
         return null;
     }
@@ -21124,6 +21158,7 @@ class _StorageResponse implements StorageResponse {
   const _StorageResponse(
       {required this.status,
       this.errorReport,
+      this.firmwareType,
       this.bootloader,
       final List<dynamic>? origConfig,
       final List<dynamic>? config,
@@ -21140,7 +21175,9 @@ class _StorageResponse implements StorageResponse {
   @override
   final ErrorReportRef? errorReport;
   @override
-  final Bootloader? bootloader;
+  final FirmwareType? firmwareType;
+  @override
+  final FirmwareType? bootloader;
   final List<dynamic>? _origConfig;
   @override
   List<dynamic>? get origConfig {
@@ -21198,6 +21235,8 @@ class _StorageResponse implements StorageResponse {
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorReport, errorReport) ||
                 other.errorReport == errorReport) &&
+            (identical(other.firmwareType, firmwareType) ||
+                other.firmwareType == firmwareType) &&
             (identical(other.bootloader, bootloader) ||
                 other.bootloader == bootloader) &&
             const DeepCollectionEquality()
@@ -21214,6 +21253,7 @@ class _StorageResponse implements StorageResponse {
       runtimeType,
       status,
       errorReport,
+      firmwareType,
       bootloader,
       const DeepCollectionEquality().hash(_origConfig),
       const DeepCollectionEquality().hash(_config),
@@ -21222,7 +21262,7 @@ class _StorageResponse implements StorageResponse {
 
   @override
   String toString() {
-    return 'StorageResponse(status: $status, errorReport: $errorReport, bootloader: $bootloader, origConfig: $origConfig, config: $config, dasd: $dasd, storageVersion: $storageVersion)';
+    return 'StorageResponse(status: $status, errorReport: $errorReport, firmwareType: $firmwareType, bootloader: $bootloader, origConfig: $origConfig, config: $config, dasd: $dasd, storageVersion: $storageVersion)';
   }
 }
 
@@ -21237,7 +21277,8 @@ abstract mixin class _$StorageResponseCopyWith<$Res>
   $Res call(
       {ProbeStatus status,
       ErrorReportRef? errorReport,
-      Bootloader? bootloader,
+      FirmwareType? firmwareType,
+      FirmwareType? bootloader,
       List<dynamic>? origConfig,
       List<dynamic>? config,
       Map<String, dynamic>? dasd,
@@ -21262,6 +21303,7 @@ class __$StorageResponseCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
     Object? errorReport = freezed,
+    Object? firmwareType = freezed,
     Object? bootloader = freezed,
     Object? origConfig = freezed,
     Object? config = freezed,
@@ -21277,10 +21319,14 @@ class __$StorageResponseCopyWithImpl<$Res>
           ? _self.errorReport
           : errorReport // ignore: cast_nullable_to_non_nullable
               as ErrorReportRef?,
+      firmwareType: freezed == firmwareType
+          ? _self.firmwareType
+          : firmwareType // ignore: cast_nullable_to_non_nullable
+              as FirmwareType?,
       bootloader: freezed == bootloader
           ? _self.bootloader
           : bootloader // ignore: cast_nullable_to_non_nullable
-              as Bootloader?,
+              as FirmwareType?,
       origConfig: freezed == origConfig
           ? _self._origConfig
           : origConfig // ignore: cast_nullable_to_non_nullable

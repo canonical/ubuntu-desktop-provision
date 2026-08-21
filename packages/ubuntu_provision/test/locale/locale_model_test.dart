@@ -110,13 +110,16 @@ void main() {
     final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
     await model.init();
 
+    final englishGb = model.searchLanguage('eng');
+    expect(model.language(englishGb), equals('English (United Kingdom)'));
+    await model.selectLanguage(englishGb);
     final english = model.searchLanguage('eng');
     expect(model.language(english), equals('English'));
     await model.selectLanguage(english);
-    expect(model.searchLanguage('eng'), english);
+    expect(model.searchLanguage('eng'), englishGb);
 
     // next language with the same prefix
-    final spanish = model.searchLanguage('e');
+    final spanish = model.searchLanguage('es');
     expect(model.language(spanish), equals('Español'));
 
     // case-insensitive

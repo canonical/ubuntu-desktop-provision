@@ -119,15 +119,15 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Instalado ne povas kompletiĝi per la provizita dosiero por aŭtomata instalado.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Ekzistas problemo pri la provizita dosiero por aŭtomata instalado.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Ekzistas problemo pri la datenoj pri uzantoj por cloud-init en la dosiero por aŭtomata instalado.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -360,11 +360,11 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Vi devos tajpi vian pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian pasfrazon, vi povos atingi la diskon per la restaŭra ŝlosilo.';
+      'Vi devos tajpi la pasfrazon dum ĉiu starto de via komputilo. La pasfrazo diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste ĉe la Sekureca Centro.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Vi devos tajpi vian PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste sed ne povos malŝalti ĝin. Se vi forgesos vian PIN, vi povos atingi la diskon per la restaŭra ŝlosilo.';
+      'Vi devos tajpi la PIN dum ĉiu starto de via komputilo. La PIN diferencas de la pasvorto de la konto de la uzanto. Vi povos ŝanĝi ĝin poste ĉe la Sekureca Centro.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Pasfrazo';
@@ -391,14 +391,15 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'La PIN-oj ne kongruas';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Postuli pasfrazon';
+  String get passphraseTypePassphraseTileTitle =>
+      'Postuli pasfrazon dum starto';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Plej sekura. Vi devos tajpi longan pasfrazon por startigi vian komputilon.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Postuli PIN';
+  String get passphraseTypePinTileTitle => 'Postuli PIN dum starto';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -412,7 +413,11 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Apriore, la Fidata Platforma Modulo (TPM) de la komputilo malŝlosos la diskon dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.';
+      'Apriore, la disko malŝlosiĝos aŭtomate dum starto. Ankaŭ ekzistas opcioj por plue gardi viajn datenojn.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Aparatobaza ĉifrado postulas plian sekurecon je ĉi tiu komputilo.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1403,6 +1408,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'Ne povas ŝalti aparato-bazan ĉifradon';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'Ekzistas problemo pri la aparato-baza ĉifrado';
+
+  @override
   String get tpmActionBadgeLabel => 'Ago necesas';
 
   @override
@@ -1533,6 +1542,10 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Ekzistas aldona zorgilo.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'Je ĉi tiu komputilo mankas necesa sekuriga funkcio (nome, aparata fidradiko).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1698,6 +1711,6 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Paŝo $CURRENT_STEP el $TOTAL_STEPS';
   }
 }

@@ -483,7 +483,7 @@ class SubiquityClient {
     );
   }
 
-  Future<List<CoreBootEncryptionFeatures>>
+  Future<List<CoreBootEncryptionFeature>>
       getCoreBootEncryptionFeaturesV2() async {
     final request =
         await _openUrl('GET', 'storage/v2/core_boot_encryption_features');
@@ -492,7 +492,21 @@ class SubiquityClient {
       request,
       (List<Object?> values) => values
           .cast<String>()
-          .map(CoreBootEncryptionFeatures.values.byName)
+          .map(CoreBootEncryptionFeature.values.byName)
+          .toList(),
+    );
+  }
+
+  Future<List<CoreBootEncryptionRequirement>>
+      getCoreBootEncryptionRequirementsV2() async {
+    final request =
+        await _openUrl('GET', 'storage/v2/core_boot_encryption_requirements');
+    return _receive(
+      'getCoreBootEncryptionRequirementsV2',
+      request,
+      (List<Object?> values) => values
+          .cast<String>()
+          .map(CoreBootEncryptionRequirement.values.byName)
           .toList(),
     );
   }

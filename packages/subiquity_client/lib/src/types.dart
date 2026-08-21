@@ -773,6 +773,10 @@ enum ProbeStatus {
 }
 
 enum Bootloader {
+  GRUB,
+}
+
+enum FirmwareType {
   NONE,
   BIOS,
   UEFI,
@@ -915,6 +919,7 @@ enum CoreBootAvailabilityErrorKind {
   INVALID_SECURE_BOOT_MODE,
   WEAK_SECURE_BOOT_ALGORITHM_DETECTED,
   PRE_OS_SECURE_BOOT_AUTH_BY_ENROLLED_DIGESTS,
+  NO_HARDWARE_ROOT_OF_TRUST,
 }
 
 enum CoreBootFixAction {
@@ -950,6 +955,7 @@ enum GuidedDisallowedCapabilityReason {
   CORE_BOOT_ENCRYPTION_UNAVAILABLE,
   NOT_UEFI,
   THIRD_PARTY_DRIVERS,
+  INCOMPATIBLE_LOCATION,
 }
 
 @freezed
@@ -1019,7 +1025,8 @@ abstract class StorageResponse with _$StorageResponse {
   const factory StorageResponse({
     required ProbeStatus status,
     ErrorReportRef? errorReport,
-    Bootloader? bootloader,
+    FirmwareType? firmwareType,
+    FirmwareType? bootloader,
     List<dynamic>? origConfig,
     List<dynamic>? config,
     Map<String, dynamic>? dasd,
@@ -1211,9 +1218,13 @@ abstract class EntropyResponse with _$EntropyResponse {
       _$EntropyResponseFromJson(json);
 }
 
-enum CoreBootEncryptionFeatures {
+enum CoreBootEncryptionFeature {
   PASSPHRASE_AUTH,
   PIN_AUTH,
+}
+
+enum CoreBootEncryptionRequirement {
+  VOLUMES_AUTH,
 }
 
 @freezed

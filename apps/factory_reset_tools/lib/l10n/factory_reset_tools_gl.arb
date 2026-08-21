@@ -16,7 +16,7 @@
     "factoryResetTitle": "Selecciona unha opción para iniciar o restablecemento de fábrica",
     "loadingDrives": "Agarde mentres recuperamos as unidades.",
     "resetMediaReadyTitle": "O soporte USB de restablecemento está listo",
-    "resetMediaReadyBody": "Cando queiras usalo, insire a unidade USB no ordenador que queres restablecer e reiníciao.",
+    "resetMediaReadyBody": "Cando queiras usalo, insire a unidade USB no computador que queres restablecer e reiníciao.",
     "errorLoadingDrives": "Ocorreu un erro ao recuperar as unidades.",
     "resetMediaInitializing": "Iniciando",
     "resetMediaCopying": "Copiando",

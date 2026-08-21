@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Instalazioak ezin du aurrera egin hautatutako autoinstall fitxategiarekin.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Arazoren bat dago hautatutako autoinstall fitxategiarekin.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -362,11 +362,11 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Pasaesaldia sartu beharko duzu ordenagailua pizten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. Pasaesaldia ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.';
+      'Pasaesaldia sartu beharko duzu ordenagailua abiarazten duzun aldiro. Pasaesaldi hau ez da erabiltzaile-pasahitza. Geroago alda dezakezu Segurtasun Zentrotik.';
 
   @override
   String get passphrasePageBodyPin =>
-      'PINa sartu beharko duzu ordenagailua pizten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago aldatu ahalko duzu, baina ezingo duzu inoiz ezgaitu. PINa ahazten bazaizu, berriro diskoa atzitu ahal izateko berreskuratze gakoa erabili beharko duzu.';
+      'PINa sartu beharko duzu ordenagailua abiarazten duzun aldiro. PIN hau ez da erabiltzaile-pasahitza. Geroago alda dezakezu Segurtasun Zentrotik.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Pasaesaldia';
@@ -393,14 +393,14 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PINak ez datoz bat';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Eskatu pasaesaldia';
+  String get passphraseTypePassphraseTileTitle => 'Eskatu pasaesaldia abioan';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Seguruena. Pasaesaldi luzeago bat sartu beharko duzu ordenagailua pizten duzun aldiro.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Eskatu PINa';
+  String get passphraseTypePinTileTitle => 'Eskatu PINa abioan';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -414,7 +414,11 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Defektuz, ordenagailuaren konfiantzazko plataforma moduluak (TPM) diskoa desblokeatuko du abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.';
+      'Defektuz, diskoa automatikoki desblokeatuko da abioan. Zure datuak are hobeto babesteko aukerak ere badituzu.';
+
+  @override
+  String get passphraseTypePageBodyAuthRequired =>
+      'Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1405,6 +1409,10 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Ezin izan da hardware bidezko zifratzea gaitu';
 
   @override
+  String get tpmActionPageTitleActionable =>
+      'Arazo bat dago hardware bidezko zifratzearekin';
+
+  @override
   String get tpmActionBadgeLabel => 'Ekintza beharrezkoa da';
 
   @override
@@ -1536,6 +1544,10 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
   @override
   String get tpmActionErrorKindAddonDriversPresent =>
       'Unitate gehigarriak presente daude.';
+
+  @override
+  String get tpmActionErrorKindNoHardwareRootOfTrust =>
+      'Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1698,6 +1710,6 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return '$CURRENT_STEP / $TOTAL_STEPS urratsa';
   }
 }
