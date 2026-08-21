@@ -39,6 +39,16 @@ extension WizardThemeDataX on ThemeData {
         style: MenuItemButton.styleFrom(
           enabledMouseCursor: SystemMouseCursors.basic,
           disabledMouseCursor: SystemMouseCursors.basic,
+        ).copyWith(
+          shape: WidgetStateProperty.resolveWith((states) {
+            final side = states.contains(WidgetState.focused)
+                ? BorderSide(color: colorScheme.primary, width: 2)
+                : BorderSide.none;
+            return RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              side: side,
+            );
+          }),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
