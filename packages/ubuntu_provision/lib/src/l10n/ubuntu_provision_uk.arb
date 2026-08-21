@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Відкрита мережа",
     "networkWifiSecureNetwork": "Безпечна мережа",
     "networkWifiConnecting": "Підключення…",
-    "networkWifiConnected": "Підключено"
+    "networkWifiConnected": "Підключено",
+    "logViewSemanticLabel": "Журнал"
 }
