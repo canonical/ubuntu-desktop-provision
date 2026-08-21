@@ -27,6 +27,7 @@ class OptionButton<T> extends StatelessWidget {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final isSelected = value == groupValue;
+    final showFocusBorder = YaruTheme.maybeOf(context)?.focusBorders ?? false;
 
     final content = YaruBorderContainer(
       color: isSelected
@@ -74,7 +75,12 @@ class OptionButton<T> extends StatelessWidget {
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: content,
+      child: showFocusBorder
+          ? YaruFocusBorder.primary(
+              borderRadius: kWizardBorderRadius,
+              child: content,
+            )
+          : content,
     );
   }
 }
