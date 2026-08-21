@@ -157,7 +157,8 @@ void main() {
     expect(continueTestingButton, findsNothing);
   });
 
-  testWidgets('opening log moves focus directly to log content', (tester) async {
+  testWidgets('opening log moves focus directly to log content',
+      (tester) async {
     // Start with log hidden, then show it; focus should land on the TextField
     // inside JournalView without requiring an extra Tab press.
     final model = buildInstallModel(isLogVisible: false);
