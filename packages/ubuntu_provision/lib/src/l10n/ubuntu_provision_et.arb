@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Avatud võrk",
     "networkWifiSecureNetwork": "Turvaline võrk",
     "networkWifiConnecting": "Ühendan…",
-    "networkWifiConnected": "Ühendatud"
+    "networkWifiConnected": "Ühendatud",
+    "logViewSemanticLabel": "Logi"
 }
