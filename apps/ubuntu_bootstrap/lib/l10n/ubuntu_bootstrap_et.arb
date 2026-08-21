@@ -519,5 +519,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Lisatud automaatse paigalduse failis on viga või probleem, mis on seotud cloud-init'i kasutajaandmetega.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Sellest arvutist on puudu turvalisusega seotud funktsionaalsus (raudvarapõhise usaldusahela lähtelahendus).",
     "passphraseTypePageBodyAuthRequired": "Raudvarapõhine krüptimine eeldab täiendava turvafunktsionaalsuse olemasolu arvutis.",
-    "tpmActionPageTitleActionable": "Raudvarapõhise krüptimisega seoses tekkis üks probleem"
+    "tpmActionPageTitleActionable": "Raudvarapõhise krüptimisega seoses tekkis üks probleem",
+    "installationLogSemanticLabel": "Paigalduse logi"
 }
