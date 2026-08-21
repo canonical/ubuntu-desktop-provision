@@ -69,30 +69,48 @@ class ProOnboardingSelectionTile extends ConsumerWidget {
     final colorScheme = theme.colorScheme;
     final model = ref.watch(ubuntuProModelProvider);
     final isSelected = skipPro == model.skipPro;
-    return Align(
-      alignment: AlignmentDirectional.centerStart,
-      child: YaruBorderContainer(
-        color: isSelected
-            ? colorScheme.primary.withValues(alpha: 0.2)
-            : colorScheme.primaryContainer,
-        border: Border.all(
-          color: isSelected ? colorScheme.primary : theme.dividerColor,
-        ),
-        borderRadius: kWizardBorderRadius,
-        child: YaruRadioListTile(
-          title: Text(
-            label,
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+    final showFocusBorder = YaruTheme.maybeOf(context)?.focusBorders ?? false;
+
+    final content = YaruBorderContainer(
+      color: isSelected
+          ? colorScheme.primary.withValues(alpha: 0.2)
+          : colorScheme.primaryContainer,
+      border: Border.all(
+        color: isSelected ? colorScheme.primary : theme.dividerColor,
+      ),
+      borderRadius: kWizardBorderRadius,
+      child: YaruRadioListTile(
+        hasFocusBorder: false,
+        title: Text(
+          label,
+          style: theme.textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.bold,
           ),
-          subtitle: Text(subtitle),
-          contentPadding: kWizardTilePadding,
-          value: skipPro,
-          groupValue: model.skipPro,
-          onChanged: (value) => model.skipPro = value ?? false,
+        ),
+        subtitle: Text(subtitle),
+        contentPadding: kWizardTilePadding,
+        value: skipPro,
+        groupValue: model.skipPro,
+        onChanged: (value) => model.skipPro = value ?? false,
+        control: ExcludeFocus(
+          child: YaruRadio<bool>(
+            value: skipPro,
+            groupValue: model.skipPro,
+            onChanged: (value) => model.skipPro = value ?? false,
+            hasFocusBorder: false,
+          ),
         ),
       ),
+    );
+
+    return Align(
+      alignment: AlignmentDirectional.centerStart,
+      child: showFocusBorder
+          ? YaruFocusBorder.primary(
+              borderRadius: kWizardBorderRadius,
+              child: content,
+            )
+          : content,
     );
   }
 }

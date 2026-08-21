@@ -46,9 +46,12 @@ class BitlockerInfoBox extends StatelessWidget {
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: kWizardSpacing / 2),
-                  child: OutlinedButton(
-                    onPressed: onPressed,
-                    child: Text(l10n.restartIntoWindows),
+                  child: YaruFocusBorder.primary(
+                    borderRadius: BorderRadius.circular(kYaruButtonRadius),
+                    child: OutlinedButton(
+                      onPressed: onPressed,
+                      child: Text(l10n.restartIntoWindows),
+                    ),
                   ),
                 ),
             ],

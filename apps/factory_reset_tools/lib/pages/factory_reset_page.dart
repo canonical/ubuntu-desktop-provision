@@ -37,9 +37,12 @@ class FactoryResetPage extends ConsumerWidget {
           ),
           content: Text(e.toString()),
           actions: <Widget>[
-            OutlinedButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text(lang.ok),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: () => Navigator.pop(context),
+                child: Text(lang.ok),
+              ),
             ),
           ],
         ),

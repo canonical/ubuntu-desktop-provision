@@ -47,11 +47,14 @@ class DonePage extends ConsumerWidget {
                 ),
                 SizedBox(
                   width: 100,
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      await YaruWindow.of(context).close();
-                    },
-                    child: Text(lang.close),
+                  child: YaruFocusBorder.primary(
+                    borderRadius: BorderRadius.circular(kYaruButtonRadius),
+                    child: ElevatedButton(
+                      onPressed: () async {
+                        await YaruWindow.of(context).close();
+                      },
+                      child: Text(lang.close),
+                    ),
                   ),
                 ),
               ].withSpacing(kWizardSpacing),

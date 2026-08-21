@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
+import 'package:ubuntu_wizard/src/wizard_button.dart';
 import 'package:ubuntu_wizard/src/wizard_data.dart';
 import 'package:wizard_router/wizard_router.dart';
 import 'package:yaru/yaru.dart';
@@ -98,8 +99,7 @@ class _WizardBarState extends State<WizardBar> {
     }
     if (label == null) return indicator;
 
-    return Focus(
-      canRequestFocus: true,
+    return FocusBorderFocus(
       descendantsAreFocusable: false,
       child: Semantics(
         key: const ValueKey('wizard-step-indicator'),
@@ -119,16 +119,22 @@ class _WizardBarState extends State<WizardBar> {
 
     return Hero(
       tag: 'wizard-bottom-bar', // keep in place during page transitions
-      child: Container(
-        margin: widget.padding,
-        constraints: BoxConstraints(maxHeight: kPushButtonSize.height),
-        child: NavigationToolbar(
-          leading: widget.leading,
-          middle: _buildPageIndicator(currentStep, totalSteps),
-          trailing: Row(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: widget.trailing?.withSpacing(kWizardBarSpacing) ?? [],
+      // Material is required here so that InkWell widgets inside the Hero
+      // (e.g. from YaruFocusBorder) can find a Material ancestor when the
+      // Hero is placed in the Overlay during page-transition animations.
+      child: Material(
+        type: MaterialType.transparency,
+        child: Container(
+          margin: widget.padding,
+          constraints: BoxConstraints(maxHeight: kPushButtonSize.height),
+          child: NavigationToolbar(
+            leading: widget.leading,
+            middle: _buildPageIndicator(currentStep, totalSteps),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: widget.trailing?.withSpacing(kWizardBarSpacing) ?? [],
+            ),
           ),
         ),
       ),

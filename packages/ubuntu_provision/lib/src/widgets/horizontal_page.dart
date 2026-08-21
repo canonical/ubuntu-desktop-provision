@@ -273,7 +273,7 @@ class _Headline extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: Focus(
+            child: FocusBorderFocus(
               autofocus: true,
               child: Semantics(
                 // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568

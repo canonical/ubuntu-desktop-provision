@@ -52,29 +52,32 @@ class AutoinstallDirectPage extends ConsumerWidget with ProvisioningPage {
         const SizedBox(height: kWizardSpacing),
         Row(
           children: [
-            OutlinedButton(
-              onPressed: () async {
-                try {
-                  final uri = await showOpenFileDialog(
-                    context: context,
-                    title: lang.autoinstallDirectFilePickerTitle,
-                    filters: [
-                      XdgFileChooserFilter(
-                        lang.autoinstallDirectFilePickerFilterLabel,
-                        [
-                          XdgFileChooserGlobPattern('*.yaml'),
-                          XdgFileChooserGlobPattern('*.yml'),
-                          XdgFileChooserMimeTypePattern('application/yaml'),
-                        ],
-                      ),
-                    ],
-                  );
-                  notifier.setLocalPath(uri);
-                } on XdgPortalRequestFailedException catch (e) {
-                  notifier.setError(e);
-                }
-              },
-              child: Text(lang.autoinstallDirectFileButtonLabel),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: () async {
+                  try {
+                    final uri = await showOpenFileDialog(
+                      context: context,
+                      title: lang.autoinstallDirectFilePickerTitle,
+                      filters: [
+                        XdgFileChooserFilter(
+                          lang.autoinstallDirectFilePickerFilterLabel,
+                          [
+                            XdgFileChooserGlobPattern('*.yaml'),
+                            XdgFileChooserGlobPattern('*.yml'),
+                            XdgFileChooserMimeTypePattern('application/yaml'),
+                          ],
+                        ),
+                      ],
+                    );
+                    notifier.setLocalPath(uri);
+                  } on XdgPortalRequestFailedException catch (e) {
+                    notifier.setError(e);
+                  }
+                },
+                child: Text(lang.autoinstallDirectFileButtonLabel),
+              ),
             ),
             if (directModel.localPath != null) ...[
               const SizedBox(width: 16),
@@ -113,27 +116,30 @@ class _ImportButton extends ConsumerWidget {
     final theme = Theme.of(context);
     final lang = UbuntuBootstrapLocalizations.of(context);
 
-    return ElevatedButton(
-      style: theme.elevatedButtonTheme.style?.copyWith(
-        minimumSize: WidgetStateProperty.all(kPushButtonSize),
-      ),
-      onPressed: directModel.error == null &&
-              (directModel.url.isNotEmpty || directModel.localPath != null) &&
-              !directModel.isLoading
-          ? () async {
-              if (await ref
-                  .read(autoinstallDirectModelProvider.notifier)
-                  .fetchAndWrite()) {
-                await autoinstallNotifier.restart();
+    return YaruFocusBorder.primary(
+      borderRadius: BorderRadius.circular(kYaruButtonRadius),
+      child: ElevatedButton(
+        style: theme.elevatedButtonTheme.style?.copyWith(
+          minimumSize: WidgetStateProperty.all(kPushButtonSize),
+        ),
+        onPressed: directModel.error == null &&
+                (directModel.url.isNotEmpty || directModel.localPath != null) &&
+                !directModel.isLoading
+            ? () async {
+                if (await ref
+                    .read(autoinstallDirectModelProvider.notifier)
+                    .fetchAndWrite()) {
+                  await autoinstallNotifier.restart();
+                }
               }
-            }
-          : null,
-      child: directModel.isLoading
-          ? SizedBox.square(
-              dimension: IconTheme.of(context).size,
-              child: const YaruCircularProgressIndicator(strokeWidth: 3),
-            )
-          : Text(lang.autoinstallDirectImportButtonLabel),
+            : null,
+        child: directModel.isLoading
+            ? SizedBox.square(
+                dimension: IconTheme.of(context).size,
+                child: const YaruCircularProgressIndicator(strokeWidth: 3),
+              )
+            : Text(lang.autoinstallDirectImportButtonLabel),
+      ),
     );
   }
 }

@@ -85,6 +85,8 @@ class _WizardButtonState extends State<WizardButton> {
   bool get loading => widget.loading || activating;
   bool showSpinner = false;
   Timer? _loadingTimer;
+  late final _internalFocusNode = FocusNode();
+  FocusNode get _effectiveFocusNode => widget.focusNode ?? _internalFocusNode;
 
   @override
   void didUpdateWidget(WizardButton oldWidget) {
@@ -136,9 +138,9 @@ class _WizardButtonState extends State<WizardButton> {
       buttonFactory = PushButton.filled;
     }
 
-    return buttonFactory(
+    final button = buttonFactory(
       onPressed: maybeActivate,
-      focusNode: widget.focusNode,
+      focusNode: _effectiveFocusNode,
       child: showSpinner
           ? SizedBox.square(
               dimension: IconTheme.of(context).size,
@@ -146,6 +148,13 @@ class _WizardButtonState extends State<WizardButton> {
             )
           : Text(widget.label!),
     );
+
+    return YaruTheme.maybeOf(context)?.focusBorders ?? false
+        ? YaruFocusBorder.primary(
+            borderRadius: BorderRadius.circular(kYaruButtonRadius),
+            child: button,
+          )
+        : button;
   }
 
   void _startLoadingTimer() {
@@ -165,6 +174,7 @@ class _WizardButtonState extends State<WizardButton> {
   @override
   void dispose() {
     _loadingTimer?.cancel();
+    _internalFocusNode.dispose();
     super.dispose();
   }
 }
@@ -280,6 +290,41 @@ class NextWizardButton extends StatelessWidget {
           }
           onReturn?.call();
         },
+      ),
+    );
+  }
+}
+
+/// A [Focus] widget that draws a Yaru-style focus border ring when focused.
+///
+/// Use this as a drop-in replacement for [Focus] on non-interactive but
+/// focusable elements such as accessible read-only text and section headers.
+class FocusBorderFocus extends StatelessWidget {
+  const FocusBorderFocus({
+    required this.child,
+    super.key,
+    this.autofocus = false,
+    this.focusNode,
+    this.skipTraversal = false,
+    this.descendantsAreFocusable = true,
+  });
+
+  final Widget child;
+  final bool autofocus;
+  final FocusNode? focusNode;
+  final bool skipTraversal;
+  final bool descendantsAreFocusable;
+
+  @override
+  Widget build(BuildContext context) {
+    return YaruFocusBorder.primary(
+      borderRadius: BorderRadius.circular(kYaruButtonRadius),
+      child: Focus(
+        autofocus: autofocus,
+        focusNode: focusNode,
+        skipTraversal: skipTraversal,
+        descendantsAreFocusable: descendantsAreFocusable,
+        child: child,
       ),
     );
   }

@@ -118,36 +118,42 @@ class RecoveryKeyPage extends ConsumerWidget with ProvisioningPage {
         ),
         Wrap(
           children: [
-            OutlinedButton(
-              onPressed: () async {
-                try {
-                  final uri = await showSaveFileDialog(
-                    context: context,
-                    title: l10n.recoveryKeyFilePickerTitle,
-                    defaultFileName: defaultRecoveryKeyFileName,
-                    filters: [
-                      XdgFileChooserFilter(l10n.recoveryKeyFilePickerFilter, [
-                        XdgFileChooserGlobPattern('*.txt'),
-                      ]),
-                    ],
-                  );
-                  if (uri != null) {
-                    await model.writeRecoveryKey(uri);
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: () async {
+                  try {
+                    final uri = await showSaveFileDialog(
+                      context: context,
+                      title: l10n.recoveryKeyFilePickerTitle,
+                      defaultFileName: defaultRecoveryKeyFileName,
+                      filters: [
+                        XdgFileChooserFilter(l10n.recoveryKeyFilePickerFilter, [
+                          XdgFileChooserGlobPattern('*.txt'),
+                        ]),
+                      ],
+                    );
+                    if (uri != null) {
+                      await model.writeRecoveryKey(uri);
+                    }
+                    model.setError(null);
+                  } on Exception catch (e) {
+                    model.setError(RecoveryKeyException.from(e));
                   }
-                  model.setError(null);
-                } on Exception catch (e) {
-                  model.setError(RecoveryKeyException.from(e));
-                }
-              },
-              child: Text(l10n.recoveryKeySaveToFileLabel),
-            ),
-            OutlinedButton(
-              onPressed: () => showDialog(
-                context: context,
-                builder: (_) =>
-                    _RecoveryKeyDialog(recoveryKey: model.recoveryKey),
+                },
+                child: Text(l10n.recoveryKeySaveToFileLabel),
               ),
-              child: Text(l10n.recoveryKeyShowQrCodeLabel),
+            ),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: () => showDialog(
+                  context: context,
+                  builder: (_) =>
+                      _RecoveryKeyDialog(recoveryKey: model.recoveryKey),
+                ),
+                child: Text(l10n.recoveryKeyShowQrCodeLabel),
+              ),
             ),
           ].withSpacing(kWizardSpacing / 2),
         ),

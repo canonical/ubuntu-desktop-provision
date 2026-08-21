@@ -84,12 +84,15 @@ class _WifiViewState extends ConsumerState<WifiView> {
           children: [
             Text(lang.networkWifiDisabled),
             const SizedBox(height: 16),
-            OutlinedButton(
-              onPressed: () {
-                model.enable();
-                widget.onEnabled();
-              },
-              child: Text(lang.networkWifiEnable),
+            YaruFocusBorder.primary(
+              borderRadius: BorderRadius.circular(kYaruButtonRadius),
+              child: OutlinedButton(
+                onPressed: () {
+                  model.enable();
+                  widget.onEnabled();
+                },
+                child: Text(lang.networkWifiEnable),
+              ),
             ),
           ],
         ),
