@@ -537,5 +537,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "V používateľských údajoch cloud-init uvedených v súbore automatickej inštalácie sa vyskytol problém.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postráda požadovanú bezpečnostnú funkciu (hardvérový koreň dôvery).",
     "passphraseTypePageBodyAuthRequired": "Hardvérovo podporované šifrovanie vyžaduje dodatočné bezpečnostné prvky v tomto počítači.",
-    "tpmActionPageTitleActionable": "Vyskytol sa problém so šifrovaním podporovaným hardvérom"
+    "tpmActionPageTitleActionable": "Vyskytol sa problém so šifrovaním podporovaným hardvérom",
+    "installationLogSemanticLabel": "Inštalačný záznam"
 }
