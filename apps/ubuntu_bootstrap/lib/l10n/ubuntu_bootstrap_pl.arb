@@ -538,5 +538,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Wystąpił problem z danymi użytkownika cloud-init dostarczonymi w pliku autoinstalacji.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania).",
     "passphraseTypePageBodyAuthRequired": "Sprzętowe szyfrowanie wymaga dodatkowych zabezpieczeń na tym komputerze.",
-    "tpmActionPageTitleActionable": "Występuje problem z szyfrowaniem sprzętowym"
+    "tpmActionPageTitleActionable": "Występuje problem z szyfrowaniem sprzętowym",
+    "installationLogSemanticLabel": "Dziennik instalacji"
 }
