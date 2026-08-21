@@ -51,10 +51,15 @@ class SlideView extends StatefulWidget {
 
 class _SlideViewState extends State<SlideView> {
   Timer? _timer;
+  late final FocusNode _internalFocusNode;
+
+  FocusNode get _effectiveFocusNode => widget.focusNode ?? _internalFocusNode;
 
   @override
   void initState() {
     super.initState();
+    _internalFocusNode = FocusNode();
+    widget.controller.addListener(_onSlideChanged);
     widget.controller.addListener(restartTimer);
     restartTimer();
   }
@@ -67,8 +72,12 @@ class _SlideViewState extends State<SlideView> {
     }
   }
 
+  void _onSlideChanged() => setState(() {});
+
   @override
   void dispose() {
+    _internalFocusNode.dispose();
+    widget.controller.removeListener(_onSlideChanged);
     widget.controller.removeListener(restartTimer);
     _timer?.cancel();
     super.dispose();
@@ -107,16 +116,35 @@ class _SlideViewState extends State<SlideView> {
 
   @override
   Widget build(BuildContext context) {
-    return CallbackShortcuts(
-      bindings: {
-        const SingleActivator(LogicalKeyboardKey.arrowLeft): previousSlide,
-        const SingleActivator(LogicalKeyboardKey.arrowRight): nextSlide,
+    // The slideshow container is a non-traversable region: `skipTraversal`
+    // keeps it out of the Tab order (so there is no extra blank tab stop) while
+    // still receiving arrow-key events that bubble up from the focused slide or
+    // link. Each slide exposes its own body text as a single focusable node and
+    // its links as separate focusable nodes (see slide_html.dart), so the
+    // container itself carries no label - a label here would make a screen
+    // reader re-read the whole slide whenever focus moved to a link.
+    return Focus(
+      skipTraversal: true,
+      focusNode: _effectiveFocusNode,
+      includeSemantics: false,
+      onKeyEvent: (_, event) {
+        if (event is! KeyDownEvent) return KeyEventResult.ignored;
+        if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+          previousSlide();
+          return KeyEventResult.handled;
+        }
+        if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+          nextSlide();
+          return KeyEventResult.handled;
+        }
+        return KeyEventResult.ignored;
       },
-      child: MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
-        child: Focus(
-          autofocus: widget.autofocus,
-          focusNode: widget.focusNode,
+      child: Semantics(
+        container: true,
+        explicitChildNodes: true,
+        child: MediaQuery(
+          data:
+              MediaQuery.of(context).copyWith(textScaler: TextScaler.noScaling),
           child: Theme(
             data: Theme.of(context).copyWith(
               pageTransitionsTheme: const SlideTransitionsTheme(),

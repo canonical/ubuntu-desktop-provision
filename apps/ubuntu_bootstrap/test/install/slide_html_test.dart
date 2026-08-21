@@ -1,16 +1,39 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:html/parser.dart' show parse;
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_bootstrap/services.dart';
-import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 
 import '../test_utils.dart';
 
 void main() {
   testWidgets('can open links', (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+    when(urlLauncher.launchUrl(any)).thenAnswer((_) async => true);
+
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml('<a href="https://help.ubuntu.com">link</a>'),
+        ),
+      ),
+    );
+
+    await tester.tap(find.text('link'));
+    await tester.pump();
+
+    verify(urlLauncher.launchUrl('https://help.ubuntu.com')).called(1);
+  });
+
+  testWidgets('links keep the default hyperlink appearance', (tester) async {
     final urlLauncher = MockUrlLauncher();
     registerMockService<UrlLauncher>(urlLauncher);
 
@@ -22,12 +45,250 @@ void main() {
       ),
     );
 
-    Future<void> expectLaunchUrl(String label, String url) async {
-      when(urlLauncher.launchUrl(url)).thenAnswer((_) async => true);
-      await tester.tapLink(label);
-      verify(urlLauncher.launchUrl(url)).called(1);
+    // The custom <a> builder must preserve the coloured, underlined link
+    // styling; otherwise links render as plain body text.
+    final text = tester.widget<Text>(find.text('link'));
+    expect(text.style?.color, Colors.blue);
+    expect(text.style?.decoration, TextDecoration.underline);
+  });
+
+  testWidgets('links are exposed to screen readers', (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml('<a href="https://help.ubuntu.com">link</a>'),
+        ),
+      ),
+    );
+
+    expect(
+      tester.getSemantics(find.bySemanticsLabel('link')),
+      matchesSemantics(
+        label: 'link',
+        isLink: true,
+        isFocusable: true,
+        hasTapAction: true,
+        hasFocusAction: true,
+      ),
+    );
+
+    handle.dispose();
+  });
+
+  testWidgets(
+      'tabbing to a link in a bulleted list reads only the link text '
+      '(no bullet or image)', (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    // Mirrors slide 9's link column: a decorative image followed by several
+    // "<bullet> <link>" rows.
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml(
+            '<img src="discourse.svg" />'
+            '\u2022 <a href="https://help.ubuntu.com">Official documentation</a>'
+            '\u2022 <a href="https://discourse.ubuntu.com">Ubuntu Discourse</a>'
+            '\u2022 <a href="https://askubuntu.com">Ask Ubuntu</a>',
+          ),
+        ),
+      ),
+    );
+
+    // Each link is exposed as its own semantics node, labelled with exactly the
+    // link text - no "bullet" character and no "image" leaking in.
+    for (final label in const [
+      'Official documentation',
+      'Ubuntu Discourse',
+      'Ask Ubuntu',
+    ]) {
+      final node = tester.getSemantics(find.bySemanticsLabel(label));
+      expect(node.label, label);
+      expect(node.label, isNot(contains('\u2022')));
+      expect(node, isSemantics(isImage: false));
     }
 
-    await expectLaunchUrl('link', 'https://help.ubuntu.com');
+    // Nothing in the tree is announced as a bullet.
+    expect(find.bySemanticsLabel(RegExp('\u2022')), findsNothing);
+
+    handle.dispose();
+  });
+
+  testWidgets('bulleted links each render on their own line, left-aligned',
+      (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    tester.view.physicalSize = const Size(4000, 4000);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    // Render the real slide 9 (the only slide with a bulleted link column),
+    // inlining its logo as a data URI the way the slides provider does.
+    final raw = File('assets/slides/9/slide_en_US.html').readAsStringSync();
+    final svg = base64Encode(
+      File('assets/slides/9/ubuntu_discourse.svg').readAsBytesSync(),
+    );
+    final html = parse(
+      raw.replaceAll(
+        'src="ubuntu_discourse.svg"',
+        'src="data:image/svg+xml;base64,$svg"',
+      ),
+    ).outerHtml;
+
+    await tester.pumpApp(
+      (context) => ProviderScope(
+        child: Scaffold(body: SlideHtml(html)),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Slide 9 declares a fixed table height that is shorter than its content,
+    // so rendering it outside its usual SlideView surface paints an overflow
+    // warning. It still lays out correctly, so consume the harness-only error.
+    dynamic exception = tester.takeException();
+    while (exception != null) {
+      expect(exception, isA<FlutterError>());
+      exception = tester.takeException();
+    }
+
+    const labels = [
+      'Official documentation',
+      'Ubuntu Discourse',
+      'Enterprise-grade 24/7 support with Ubuntu Pro',
+      'Ask Ubuntu',
+    ];
+    final offsets = [
+      for (final label in labels) tester.getTopLeft(find.text(label)),
+    ];
+
+    // Every link starts at the same x (bullets left-aligned in a column)...
+    for (final o in offsets) {
+      expect(o.dx, moreOrLessEquals(offsets.first.dx, epsilon: 1));
+    }
+    // ...and each link is on its own line, strictly below the previous one.
+    for (var i = 1; i < offsets.length; i++) {
+      expect(
+        offsets[i].dy,
+        greaterThan(offsets[i - 1].dy),
+        reason: '"${labels[i]}" should be below "${labels[i - 1]}"',
+      );
+    }
+  });
+
+  testWidgets(
+      'decorative spacing does not leak a blank label into the semantics tree',
+      (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    // Mirrors slide 9's link column: an image, <br> line breaks and empty
+    // <p></p> spacers around the "<bullet> <link>" rows. Previously this
+    // whitespace bubbled up into an ancestor node's label, which a screen
+    // reader announced as an empty item (a "blank" tab stop).
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml(
+            '<html><body><table><tr>'
+            '<td class="long-text"><p>Help and support</p></td>'
+            '<td>'
+            '<img src="discourse.svg" />'
+            '<br />'
+            '<p></p>'
+            '\u2022 <a href="https://help.ubuntu.com">Official documentation</a>'
+            '<br />'
+            '<p></p>'
+            '\u2022 <a href="https://askubuntu.com">Ask Ubuntu</a>'
+            '<br />'
+            '</td>'
+            '</tr></table></body></html>',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // No semantics node may carry a whitespace-only label (an empty label is
+    // fine; a non-empty but blank one is what a screen reader reads as "blank").
+    void expectNoBlankLabel(SemanticsNode node) {
+      final label = node.getSemanticsData().label;
+      expect(
+        label.isNotEmpty && label.trim().isEmpty,
+        isFalse,
+        reason: 'a node exposes a blank (whitespace-only) label: "$label"',
+      );
+      node.visitChildren((child) {
+        expectNoBlankLabel(child);
+        return true;
+      });
+    }
+
+    expectNoBlankLabel(
+      // ignore: deprecated_member_use
+      tester.binding.pipelineOwner.semanticsOwner!.rootSemanticsNode!,
+    );
+
+    handle.dispose();
+  });
+
+  testWidgets(
+      'links in a slide without a body-text cell stay separate focusable nodes',
+      (tester) async {
+    final urlLauncher = MockUrlLauncher();
+    registerMockService<UrlLauncher>(urlLauncher);
+
+    final handle = tester.ensureSemantics();
+
+    // A slide that has links but no dedicated "long-text" body cell must not be
+    // wrapped in a single <slidetext> node, or the links would become
+    // descendants of the body node and a screen reader would re-read the whole
+    // slide when tabbing to a link. This exercises the defensive branch in
+    // _wrapBodyText that leaves such markup untouched.
+    await tester.pumpApp(
+      (context) => const ProviderScope(
+        child: Scaffold(
+          body: SlideHtml(
+            '<html><body>'
+            '<p>Help and support</p>'
+            '\u2022 <a href="https://help.ubuntu.com">Official documentation</a>'
+            '\u2022 <a href="https://askubuntu.com">Ask Ubuntu</a>'
+            '</body></html>',
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    // Each link is its own node, labelled with exactly the link text...
+    for (final label in const ['Official documentation', 'Ask Ubuntu']) {
+      final linkNode = tester.getSemantics(find.bySemanticsLabel(label));
+      expect(linkNode.label, label);
+      expect(linkNode, isSemantics(isLink: true));
+
+      // ...and no ancestor merges the body text together with the link, so the
+      // slide is not re-read when focus reaches the link.
+      var node = linkNode.parent;
+      while (node != null) {
+        expect(
+          node.getSemanticsData().label,
+          isNot(contains('Help and support')),
+          reason: 'an ancestor merges the body text with the "$label" link',
+        );
+        node = node.parent;
+      }
+    }
+
+    handle.dispose();
   });
 }

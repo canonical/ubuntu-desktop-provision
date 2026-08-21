@@ -1712,6 +1712,9 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Proveu una solució diferent o contacteu amb el suport informàtic.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'Prova una altra cosa. També podeu <a href=\"\">enviar un informe d\'error</a>.';
 

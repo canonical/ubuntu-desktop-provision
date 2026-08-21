@@ -1707,6 +1707,9 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'სცადეთ სხვა გადაწყვეტილება, ან დაუკავშირდით IT მხარდაჭერის გუნდს.';
 
   @override
+  String get installationLogSemanticLabel => 'Installation log';
+
+  @override
   String get manualPartitioningWarningBody =>
       'სცადეთ რამე სხვა. ასევე შეგიძლიათ, <a href=\"\">გამოაგზავნოთ ანგარიში შეცდომის შესახებ</a>.';
 

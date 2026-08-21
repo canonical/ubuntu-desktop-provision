@@ -58,11 +58,15 @@ class _SlidePage extends ConsumerStatefulWidget {
 
 class _SlidePageState extends ConsumerState<_SlidePage> {
   final _slideController = ValueNotifier(0);
+  final _logFocusNode = FocusNode();
+  final _slideViewFocusNode = FocusNode();
   bool _announcedInitialState = false;
 
   @override
   void dispose() {
     _slideController.dispose();
+    _logFocusNode.dispose();
+    _slideViewFocusNode.dispose();
     super.dispose();
   }
 
@@ -85,6 +89,30 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
         );
       });
     }
+
+    // Focus the log view when it becomes visible. Use addPostFrameCallback so
+    // that the ExcludeFocus wrapper in the parent Stack has already updated
+    // (excluding: false) before we request focus.
+    ref.listen(
+      installModelProvider.select((m) => m.isLogVisible),
+      (_, isVisible) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (!mounted) return;
+          if (isVisible) {
+            // JournalView's _onFocusChange will redirect to the first
+            // traversable descendant (the inner TextField) automatically.
+            _logFocusNode.requestFocus();
+          } else {
+            // Return focus to the first traversable node in the slides when
+            // the log is dismissed.
+            final firstChild = _slideViewFocusNode.descendants
+                .where((n) => !n.skipTraversal && n.canRequestFocus)
+                .firstOrNull;
+            (firstChild ?? _slideViewFocusNode).requestFocus();
+          }
+        });
+      },
+    );
 
     // Subsequent state change announcements
     ref.listen(
@@ -110,15 +138,20 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
         maximizeSemanticLabel: lang.maximizeIconSemanticLabel,
         minimizeSemanticLabel: lang.minimizeIconSemanticLabel,
       ),
-      content: ExcludeFocus(
-        child: Stack(
-          children: [
-            SlideView(
+      content: Stack(
+        children: [
+          ExcludeFocus(
+            excluding: model.isLogVisible,
+            child: SlideView(
               controller: _slideController,
               interval: model.isPlaying ? kDefaultSlideInterval : Duration.zero,
               slides: htmlSlides,
+              focusNode: _slideViewFocusNode,
             ),
-            Positioned.fill(
+          ),
+          Positioned.fill(
+            child: ExcludeFocus(
+              excluding: !model.isLogVisible,
               child: AnimatedOpacity(
                 curve: Curves.easeIn,
                 duration: const Duration(milliseconds: 150),
@@ -127,12 +160,16 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
                   curve: Curves.easeIn,
                   duration: const Duration(milliseconds: 150),
                   offset: Offset(0, model.isLogVisible ? 0 : 1),
-                  child: JournalView(journal: model.log),
+                  child: JournalView(
+                    journal: model.log,
+                    focusNode: _logFocusNode,
+                    semanticLabel: lang.installationLogSemanticLabel,
+                  ),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomBar: ValueListenableBuilder(
         valueListenable: _slideController,

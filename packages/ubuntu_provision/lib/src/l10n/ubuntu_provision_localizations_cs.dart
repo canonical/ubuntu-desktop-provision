@@ -413,4 +413,7 @@ class UbuntuProvisionLocalizationsCs extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Připojeno';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }

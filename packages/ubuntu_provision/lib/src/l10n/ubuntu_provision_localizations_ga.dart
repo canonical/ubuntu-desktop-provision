@@ -413,4 +413,7 @@ class UbuntuProvisionLocalizationsGa extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiConnected => 'Ceangailte';
+
+  @override
+  String get logViewSemanticLabel => 'Log';
 }
