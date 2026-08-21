@@ -27,40 +27,60 @@ class OptionButton<T> extends StatelessWidget {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final isSelected = value == groupValue;
+    final showFocusBorder = YaruTheme.maybeOf(context)?.focusBorders ?? false;
+
+    final content = YaruBorderContainer(
+      color: isSelected
+          ? colorScheme.primary.withValues(alpha: 0.2)
+          : colorScheme.primaryContainer,
+      border: Border.all(
+        color: isSelected ? colorScheme.primary : theme.dividerColor,
+      ),
+      borderRadius: kWizardBorderRadius,
+      child: ListTileTheme.merge(
+        titleTextStyle: Theme.of(context)
+            .textTheme
+            .titleMedium!
+            .copyWith(fontWeight: FontWeight.bold),
+        child: YaruRadioListTile<T>(
+          hasFocusBorder: false,
+          control: ExcludeFocus(
+            child: YaruRadio<T>(
+              value: value,
+              groupValue: groupValue,
+              onChanged: onChanged,
+              hasFocusBorder: false,
+            ),
+          ),
+          title: Wrap(
+            alignment: WrapAlignment.spaceBetween,
+            children: [
+              title,
+              if (trailing != null) ...[
+                trailing!,
+              ],
+            ],
+          ),
+          subtitle: subtitle,
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 12,
+          ),
+          value: value,
+          groupValue: groupValue,
+          onChanged: onChanged,
+        ),
+      ),
+    );
 
     return Align(
       alignment: AlignmentDirectional.centerStart,
-      child: YaruBorderContainer(
-        color: isSelected
-            ? colorScheme.primary.withValues(alpha: 0.2)
-            : colorScheme.primaryContainer,
-        border: Border.all(
-          color: isSelected ? colorScheme.primary : theme.dividerColor,
-        ),
-        borderRadius: kWizardBorderRadius,
-        child: ListTileTheme.merge(
-          titleTextStyle: Theme.of(context)
-              .textTheme
-              .titleMedium!
-              .copyWith(fontWeight: FontWeight.bold),
-          child: YaruRadioListTile<T>(
-            title: Wrap(
-              alignment: WrapAlignment.spaceBetween,
-              children: [
-                title,
-                if (trailing != null) ...[
-                  trailing!,
-                ],
-              ],
-            ),
-            subtitle: subtitle,
-            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            value: value,
-            groupValue: groupValue,
-            onChanged: onChanged,
-          ),
-        ),
-      ),
+      child: showFocusBorder
+          ? YaruFocusBorder.primary(
+              borderRadius: kWizardBorderRadius,
+              child: content,
+            )
+          : content,
     );
   }
 }

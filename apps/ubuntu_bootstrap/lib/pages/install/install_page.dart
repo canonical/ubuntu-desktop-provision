@@ -155,49 +155,57 @@ class _SlidePageState extends ConsumerState<_SlidePage> {
             ),
             trailing: Semantics(
               toggled: model.isLogVisible,
-              child: IconButton(
-                icon: Icon(
-                  YaruIcons.terminal,
-                  color: model.isLogVisible
-                      ? Theme.of(context).primaryColor
-                      : null,
-                  semanticLabel: lang.toggleLogsSemanticLabel,
+              child: YaruFocusBorder.primary(
+                child: IconButton(
+                  icon: Icon(
+                    YaruIcons.terminal,
+                    color: model.isLogVisible
+                        ? Theme.of(context).primaryColor
+                        : null,
+                    semanticLabel: lang.toggleLogsSemanticLabel,
+                  ),
+                  onPressed: model.toggleLogVisibility,
                 ),
-                onPressed: model.toggleLogVisibility,
               ),
             ),
             leading: Row(
               children: [
-                IconButton(
-                  onPressed: _slideController.value > 0
-                      ? () => --_slideController.value
-                      : null,
-                  icon: Icon(
-                    YaruIcons.pan_start,
-                    semanticLabel: lang.previousSlideSemanticLabel,
+                YaruFocusBorder.primary(
+                  child: IconButton(
+                    onPressed: _slideController.value > 0
+                        ? () => --_slideController.value
+                        : null,
+                    icon: Icon(
+                      YaruIcons.pan_start,
+                      semanticLabel: lang.previousSlideSemanticLabel,
+                    ),
                   ),
                 ),
                 const SizedBox(width: 10),
-                IconButton(
-                  onPressed: model.togglePlaying,
-                  icon: model.isPlaying
-                      ? Icon(
-                          YaruIcons.media_pause,
-                          semanticLabel: lang.pauseSlideshowSemanticLabel,
-                        )
-                      : Icon(
-                          YaruIcons.media_play,
-                          semanticLabel: lang.playSlideshowSemanticLabel,
-                        ),
+                YaruFocusBorder.primary(
+                  child: IconButton(
+                    onPressed: model.togglePlaying,
+                    icon: model.isPlaying
+                        ? Icon(
+                            YaruIcons.media_pause,
+                            semanticLabel: lang.pauseSlideshowSemanticLabel,
+                          )
+                        : Icon(
+                            YaruIcons.media_play,
+                            semanticLabel: lang.playSlideshowSemanticLabel,
+                          ),
+                  ),
                 ),
                 const SizedBox(width: 10),
-                IconButton(
-                  onPressed: _slideController.value < htmlSlides.length - 1
-                      ? () => ++_slideController.value
-                      : null,
-                  icon: Icon(
-                    YaruIcons.pan_end,
-                    semanticLabel: lang.nextSlideSemanticLabel,
+                YaruFocusBorder.primary(
+                  child: IconButton(
+                    onPressed: _slideController.value < htmlSlides.length - 1
+                        ? () => ++_slideController.value
+                        : null,
+                    icon: Icon(
+                      YaruIcons.pan_end,
+                      semanticLabel: lang.nextSlideSemanticLabel,
+                    ),
                   ),
                 ),
               ],

@@ -27,7 +27,7 @@ class AccessibleSummaryRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Focus(
+    return FocusBorderFocus(
       child: Semantics(
         textField: true,
         readOnly: true,
@@ -137,7 +137,7 @@ class ConfirmPage extends ConsumerWidget with ProvisioningPage {
                             },
                           ),
                           const SizedBox(height: kWizardSpacing),
-                          Focus(
+                          FocusBorderFocus(
                             child: Semantics(
                               // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
                               child: Text(
@@ -169,7 +169,7 @@ class _SummarySection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Focus(
+        FocusBorderFocus(
           child: Semantics(
             // TODO: Re-enable `header: true` once upstream Flutter Linux AT-SPI bug is fixed. https://github.com/flutter/flutter/issues/184568
             child: Text(title, style: Theme.of(context).textTheme.titleMedium),

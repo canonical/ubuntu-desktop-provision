@@ -28,7 +28,6 @@ class WizardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return YaruTheme(
-      data: YaruThemeData(focusBorders: false),
       builder: (context, yaru, child) {
         return MaterialApp(
           locale: locale,
