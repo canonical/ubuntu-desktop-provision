@@ -526,5 +526,6 @@
     },
     "passphraseTypePageBodyAuthRequired": "Lo chiframent material demanda una seguretat de mai dins aquel ordenador.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "A aquel ordenador li manca una foncionalitat de seguretat requesida (raiç de fisança materiala).",
-    "tpmActionPageTitleActionable": "I a un problèma amb lo chiframent material"
+    "tpmActionPageTitleActionable": "I a un problèma amb lo chiframent material",
+    "installationLogSemanticLabel": "Jornal d'installacion"
 }
