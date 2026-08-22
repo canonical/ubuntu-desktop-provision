@@ -537,5 +537,6 @@
         }
     },
     "passphraseTypePageBodyAuthRequired": "硬體級加密需要這台電腦具備額外的安全措施。",
-    "tpmActionPageTitleActionable": "硬體支援的加密功能出現了問題"
+    "tpmActionPageTitleActionable": "硬體支援的加密功能出現了問題",
+    "installationLogSemanticLabel": "安裝記錄"
 }
