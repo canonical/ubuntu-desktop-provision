@@ -538,5 +538,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Det finns ett problem med användardatan för cloud-init som finns i autoinstall-filen.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Datorn saknar nödvändig säkerhetsfunktionalitet (root-of-trust i hårdvara).",
     "passphraseTypePageBodyAuthRequired": "Hårdvarubaserad kryptering kräver ytterligare säkerhetsfunktionalitet i den här datorn.",
-    "tpmActionPageTitleActionable": "Det finns ett problem med hårdvarubaserad kryptering"
+    "tpmActionPageTitleActionable": "Det finns ett problem med hårdvarubaserad kryptering",
+    "installationLogSemanticLabel": "Installationslogg"
 }
