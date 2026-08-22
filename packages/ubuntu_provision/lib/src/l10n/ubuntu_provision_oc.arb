@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Ret dobèrt",
     "networkWifiSecureNetwork": "Ret securizat",
     "networkWifiConnecting": "Connexion…",
-    "networkWifiConnected": "Connectat"
+    "networkWifiConnected": "Connectat",
+    "logViewSemanticLabel": "Jornal"
 }
