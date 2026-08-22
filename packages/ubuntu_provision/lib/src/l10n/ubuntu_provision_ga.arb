@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Líonra oscailte",
     "networkWifiSecureNetwork": "Líonra slán",
     "networkWifiConnecting": "Ag ceangal…",
-    "networkWifiConnected": "Ceangailte"
+    "networkWifiConnected": "Ceangailte",
+    "logViewSemanticLabel": "Logáil"
 }
