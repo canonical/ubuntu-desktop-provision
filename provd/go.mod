@@ -7,7 +7,7 @@ require (
 	github.com/linuxdeepin/go-gir v0.0.0-20251204113853-1873b5530f50
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
-	github.com/stretchr/testify v1.11.1
+	github.com/stretchr/testify v1.12.1
 	github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19
 	github.com/ubuntu/ubuntu-report v1.7.4-0.20240410144652-96f37d845fac
 	google.golang.org/grpc v1.83.0
@@ -18,7 +18,7 @@ require (
 require (
 	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	go.yaml.in/yaml/v3 v3.0.4 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 )
 
 require (
