@@ -535,5 +535,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Es gibt ein Problem mit den in der autoinstall-Datei bereitgestellten Benutzerdaten für cloud-init.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Auf diesem Computer fehlt eine erforderliche Sicherheitsfunktion (Hardware-Vertrauensanker).",
     "passphraseTypePageBodyAuthRequired": "Für die hardwaregestützte Verschlüsselung sind zusätzliche Sicherheitsmaßnahmen auf diesem Computer erforderlich.",
-    "tpmActionPageTitleActionable": "Es gibt ein Problem mit der Hardware-gestützten Verschlüsselung"
+    "tpmActionPageTitleActionable": "Es gibt ein Problem mit der Hardware-gestützten Verschlüsselung",
+    "installationLogSemanticLabel": "Installationsprotokoll"
 }
