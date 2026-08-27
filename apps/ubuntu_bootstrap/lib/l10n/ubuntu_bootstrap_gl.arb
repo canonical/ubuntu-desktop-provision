@@ -193,8 +193,8 @@
     "passphrasePageTitle": "Cifrado",
     "passphrasePageHeaderPassphrase": "Definir unha frase de paso cifrada",
     "passphrasePageHeaderPin": "Definir un PIN cifrado",
-    "passphrasePageBodyPassphrase": "Terás que introducir a túa frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.",
-    "passphrasePageBodyPin": "Terás que introducir o teu PIN cada vez que acendas o computador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.",
+    "passphrasePageBodyPassphrase": "Terás que introducir a frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario. Podes cambiala máis tarde no Centro de Seguranza.",
+    "passphrasePageBodyPin": "Terás que introducir o PIN cada vez que acendas o computador. Este PIN é diferente do teu contrasinal de usuario. Podes cambialo máis tarde no Centro de seguranza.",
     "passphrasePageChoosePassphraseHint": "Frase de paso",
     "passphrasePageConfirmPassphraseHint": "Confirmar frase de paso",
     "passphrasePageRequiredPassphrase": "Precísase dunha frase de paso",
@@ -1114,5 +1114,7 @@
     "autoinstallValidationErrorMessage": "Hai un problema co ficheiro de instalación automática proporcionado.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Hai un problema cos datos de usuario de cloud-init proporcionados no ficheiro de instalación automática.",
     "passphraseTypePageBodyAuthRequired": "O cifrado con respaldo de hardware require seguranza adicional neste computador.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "A este ordenador fáltalle unha característica de seguranza obrigatoria (raíz de confianza do hardware)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "A este ordenador fáltalle unha característica de seguranza obrigatoria (raíz de confianza do hardware).",
+    "tpmActionPageTitleActionable": "Hai un problema co cifrado con respaldo de hardware",
+    "installationLogSemanticLabel": "Rexistro de instalación"
 }
