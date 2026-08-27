@@ -159,5 +159,6 @@
     "networkWifiOpenNetwork": "Rede aberta",
     "networkWifiSecureNetwork": "Rede segura",
     "networkWifiConnecting": "Conectando…",
-    "networkWifiConnected": "Conectado"
+    "networkWifiConnected": "Conectado",
+    "logViewSemanticLabel": "Rexistro"
 }
