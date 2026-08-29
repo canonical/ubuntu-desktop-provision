@@ -20,6 +20,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # html 0.15.7 removed query_selector's matches(), which flutter_html 3.0.0 still calls
+  html: '>=0.15.4 <0.15.7'
   ubuntu_lints: ^0.4.0
   ubuntu_test: ^0.2.2
   yaru_test: ^0.3.0
