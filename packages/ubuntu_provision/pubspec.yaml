@@ -22,6 +22,8 @@ dependencies:
   form_field_validator: ^1.1.0
   freezed_annotation: ^3.1.0
   gsettings: ^0.2.8
+  # html 0.15.7 removed query_selector's matches(), which flutter_html 3.0.0 still calls
+  html: '>=0.15.4 <0.15.7'
   intl: ^0.20.2
   meta: ^1.11.0
   nm: ^0.5.0
