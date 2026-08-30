@@ -23,9 +23,6 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-
-    final model = ref.read(installerModelProvider);
-    model.init();
   }
 
   @override
@@ -45,7 +42,7 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard>
 
   @override
   Widget build(BuildContext context) {
-    final status = ref.watch(installerModelProvider.select((m) => m.status));
+    final status = ref.watch(applicationStatusProvider).valueOrNull;
     if (status?.state == ApplicationState.ERROR) {
       return const _ErrorWizard();
     }
@@ -66,7 +63,6 @@ class _InstallWizard extends ConsumerWidget {
     };
     final totalSteps =
         InstallationStep.values.where((value) => value.discreteStep).length;
-    final hasRoute = ref.read(installerModelProvider).hasRoute;
 
     return WizardBuilder(
       initialRoute: InstallationStep.loading.route,
@@ -96,13 +92,9 @@ class _InstallWizard extends ConsumerWidget {
           builder: (_) => const ErrorPage(allowRestart: true),
         ),
       },
-      predicate: (route) {
-        if (InstallationStep.requiredRoutes.contains(route)) {
-          return true;
-        } else {
-          return hasRoute(route);
-        }
-      },
+      predicate: (route) =>
+          InstallationStep.requiredRoutes.contains(route) ||
+          ref.read(hasRouteProvider(route)),
       observers: [_InstallerObserver(getService<TelemetryService>())],
     );
   }
@@ -167,7 +159,7 @@ class _ErrorWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final status = ref.read(installerModelProvider.select((m) => m.status));
+    final status = ref.read(applicationStatusProvider).valueOrNull;
     return Wizard(
       routes: <String, WizardRoute>{
         InstallationStep.error.route: WizardRoute(

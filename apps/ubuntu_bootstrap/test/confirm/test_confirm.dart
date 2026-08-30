@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/app/installer_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_model.dart';
 import 'package:ubuntu_bootstrap/pages/confirm/confirm_page.dart';
 import 'package:ubuntu_bootstrap/pages/source/source_model.dart';
@@ -56,6 +57,7 @@ Widget buildConfirmPage({
   required ConfirmModel confirm,
   required StorageModel storage,
   required SourceModel source,
+  ApplicationStatus? status,
 }) {
   final udev = MockUdevService();
   final sda = MockUdevDeviceInfo();
@@ -75,6 +77,7 @@ Widget buildConfirmPage({
       confirmModelProvider.overrideWith((_) => confirm),
       storageModelProvider.overrideWith((_) => storage),
       sourceModelProvider.overrideWith((_) => source),
+      applicationStatusProvider.overrideWith((_) => Stream.value(status)),
     ],
     child: const ConfirmPage(),
   );
