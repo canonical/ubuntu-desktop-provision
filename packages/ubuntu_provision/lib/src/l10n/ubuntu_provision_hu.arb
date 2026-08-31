@@ -121,7 +121,7 @@
     "networkWifiSignalOk": "Elfogadható jel",
     "networkWifiSignalGood": "Jó jel",
     "networkWifiSignalExcellent": "Kiváló jel",
-    "networkWifiOpenNetwork": "Hálózat megnyitása",
+    "networkWifiOpenNetwork": "Nyílt hálózat",
     "networkWifiSecureNetwork": "Biztonságos hálózat",
     "networkWifiConnecting": "Csatlakozás…",
     "networkWifiConnected": "Csatlakozva"
