@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Datamaskinsnavnet er ugyldig",
     "identityUsernameLabel": "Velg et brukernavn",
     "identityUsernameRequired": "Et brukernavn er påkrevd",
-    "identityInvalidUsername": "Brukernavnet er ugyldig",
+    "identityInvalidUsername": "Brukernavnet er ugyldig: det må begynne med en liten bokstav og kan bare inneholde små bokstaver, sifre, bindestreker og understreker.",
     "identityUsernameInUse": "Brukernavnet finnes allerede.",
     "identityUsernameSystemReserved": "Navnet er reservert for systembruk.",
     "identityUsernameTooLong": "Navnet er for langt.",
