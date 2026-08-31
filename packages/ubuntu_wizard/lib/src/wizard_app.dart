@@ -30,6 +30,12 @@ class WizardApp extends StatelessWidget {
     return YaruTheme(
       builder: (context, yaru, child) {
         return MaterialApp(
+          builder: (context, child) {
+            return Directionality(
+              textDirection: TextDirection.ltr,
+              child: child ?? const SizedBox.shrink(),
+            );
+          },
           locale: locale,
           onGenerateTitle: (context) {
             final title = onGenerateTitle?.call(context) ?? '';
@@ -39,10 +45,12 @@ class WizardApp extends StatelessWidget {
           theme: (theme ?? flavor?.theme ?? yaru.theme).customize(),
           darkTheme:
               (darkTheme ?? flavor?.darkTheme ?? yaru.darkTheme).customize(),
-          highContrastTheme:
-              yaruHighContrastLight.customize(highContrast: true),
-          highContrastDarkTheme:
-              yaruHighContrastDark.customize(highContrast: true),
+          highContrastTheme: yaruHighContrastLight.customize(
+            highContrast: true,
+          ),
+          highContrastDarkTheme: yaruHighContrastDark.customize(
+            highContrast: true,
+          ),
           debugShowCheckedModeBanner: false,
           localizationsDelegates: localizationsDelegates,
           supportedLocales: supportedLocales,
