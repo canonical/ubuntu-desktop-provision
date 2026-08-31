@@ -37,7 +37,7 @@
     "identityUsernameLabel": "Uw gebruikersnaam",
     "identityUsernameInUse": "Die gebruikersnaam bestaat al.",
     "identityUsernameRequired": "Een gebruikersnaam is nodig",
-    "identityInvalidUsername": "De gebruikersnaam is ongeldig: moet beginnen met een kleine letter en mag enkel kleine letters, cijfers, streepjes en lage streepjes bevatten.",
+    "identityInvalidUsername": "De gebruikersnaam is ongeldig: deze moet beginnen met een kleine letter en mag alleen kleine letters, cijfers, streepjes en liggende streepjes bevatten.",
     "identityUsernameSystemReserved": "Die naam wordt gereserveerd door het systeem.",
     "identityUsernameTooLong": "Die naam is te lang.",
     "identityUsernameInvalidChars": "Die naam bevat ongeldige tekens.",
