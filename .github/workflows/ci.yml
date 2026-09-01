@@ -229,6 +229,7 @@ jobs:
       - name: Go code sanity check
         uses: canonical/desktop-engineering/gh-actions/go/code-sanity@v2
         with:
+          token: ${{ github.token }}
           golangci-lint-configfile: ".golangci.yaml"
           tools-directory: "./provd/tools"
           working-directory: "./provd"
