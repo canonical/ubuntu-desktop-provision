@@ -1705,7 +1705,7 @@ class UbuntuBootstrapLocalizationsCs extends UbuntuBootstrapLocalizations {
       'Zkuste jiné řešení nebo se obraťte na podporu IT.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Záznam instalace';
 
   @override
   String get manualPartitioningWarningBody =>

@@ -114,23 +114,23 @@ class UbuntuBootstrapLocalizationsNl extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallErrorMessage =>
-      'A command in the autoinstall file failed to run during installation.';
+      'Een opdracht in het autoinstall-bestand kon tijdens de installatie niet worden uitgevoerd.';
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'De installatie kan niet verdergaan met het gegeven auto-installatiebestand.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Er is een probleem met het opgegeven autoinstall-bestand.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Er is een probleem met de cloud-init-gebruikersgegevens die zijn opgegeven in het autoinstall-bestand.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.';
+      'U moet de installatie opnieuw starten. Controleer het autoinstall-bestand, kies een ander installatietype of neem contact op met uw IT-ondersteuning.';
 
   @override
   String get changeButtonText => 'Veranderen';

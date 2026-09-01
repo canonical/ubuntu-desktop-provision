@@ -1712,7 +1712,7 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
       'Proovi muud lahendust või küsi abi IT-toelt.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Paigalduse logi';
 
   @override
   String get manualPartitioningWarningBody =>

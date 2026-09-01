@@ -417,5 +417,5 @@ class UbuntuProvisionLocalizationsPl extends UbuntuProvisionLocalizations {
   String get networkWifiConnected => 'Połączono';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'Dziennik';
 }

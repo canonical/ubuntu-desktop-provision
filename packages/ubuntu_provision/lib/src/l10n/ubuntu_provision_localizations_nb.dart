@@ -189,7 +189,8 @@ class UbuntuProvisionLocalizationsNb extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'Et brukernavn er påkrevd';
 
   @override
-  String get identityInvalidUsername => 'Brukernavnet er ugyldig';
+  String get identityInvalidUsername =>
+      'Brukernavnet er ugyldig: det må begynne med en liten bokstav og kan bare inneholde små bokstaver, sifre, bindestreker og understreker.';
 
   @override
   String get identityUsernameInUse => 'Brukernavnet finnes allerede.';

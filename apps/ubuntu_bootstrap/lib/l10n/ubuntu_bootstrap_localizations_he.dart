@@ -127,7 +127,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'יש בעיה עם נתוני המשתמש שסופקו במסגרת cloud-init בקובץ ההתקנה האוטומטית.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -1384,8 +1384,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
   String get tpmActionPageTitle => 'לא ניתן להפעיל הצפנה בגיבוי חומרה';
 
   @override
-  String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+  String get tpmActionPageTitleActionable => 'יש בעיה עם הצפנה בגיבוי חומרה';
 
   @override
   String get tpmActionBadgeLabel => 'נדרשת התערבות';
@@ -1560,7 +1559,7 @@ class UbuntuBootstrapLocalizationsHe extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank =>
-      'Enable PCR banks manually';
+      'הפעלת מאגרי PCR ידנית';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled =>

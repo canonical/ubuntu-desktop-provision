@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Verberg logboek';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Technische details';
 
   @override
   String get restart => 'Herstarten';
@@ -164,7 +164,7 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Die naam is te lang.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'De naam is ongeldig';
 
   @override
   String get identityHostnameLabel => 'De naam van de computer';
@@ -189,7 +189,8 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'Een gebruikersnaam is nodig';
 
   @override
-  String get identityInvalidUsername => 'De gebruikersnaam is ongeldig';
+  String get identityInvalidUsername =>
+      'De gebruikersnaam is ongeldig: deze moet beginnen met een kleine letter en mag alleen kleine letters, cijfers, streepjes en liggende streepjes bevatten.';
 
   @override
   String get identityUsernameInUse => 'Die gebruikersnaam bestaat al.';
@@ -386,32 +387,32 @@ class UbuntuProvisionLocalizationsNl extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'Inklappen';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'Geen signaal';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'Zwak signaal';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'Signaal oké';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'Goed signaal';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'Uitstekend signaal';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'Open netwerk';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'Beveiligd netwerk';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'Verbinden…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'Verbonden';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'Logboek';
 }

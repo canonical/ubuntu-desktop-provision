@@ -1712,7 +1712,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
       'Ensajatz una solucion diferenta o contactatz l’assisténcia informatica.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Jornal d\'installacion';
 
   @override
   String get manualPartitioningWarningBody =>

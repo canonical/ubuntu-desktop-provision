@@ -412,5 +412,5 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get networkWifiConnected => 'Pripojené';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'Záznam';
 }

@@ -364,11 +364,11 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Terás que introducir a túa frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario. Poderás cambiala máis tarde, pero non desactivala. Se esqueces a túa frase de paso, podes recuperar o acceso ao disco usando a chave de recuperación.';
+      'Terás que introducir a frase de paso cada vez que acendas o computador. Esta frase de paso é diferente do teu contrasinal de usuario. Podes cambiala máis tarde no Centro de Seguranza.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Terás que introducir o teu PIN cada vez que acendas o computador. Este PIN é diferente do teu contrasinal de usuario. Poderás cambialo máis tarde, pero non desactivalo. Se esqueces o teu PIN, podes recuperar o acceso ao disco usando a chave de recuperación.';
+      'Terás que introducir o PIN cada vez que acendas o computador. Este PIN é diferente do teu contrasinal de usuario. Podes cambialo máis tarde no Centro de seguranza.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Frase de paso';
@@ -1420,7 +1420,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'Hai un problema co cifrado con respaldo de hardware';
 
   @override
   String get tpmActionBadgeLabel => 'Acción requirida';
@@ -1712,7 +1712,7 @@ class UbuntuBootstrapLocalizationsGl extends UbuntuBootstrapLocalizations {
       'Proba unha solución diferente ou ponte en contacto co servizo de asistencia informática.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Rexistro de instalación';
 
   @override
   String get manualPartitioningWarningBody =>

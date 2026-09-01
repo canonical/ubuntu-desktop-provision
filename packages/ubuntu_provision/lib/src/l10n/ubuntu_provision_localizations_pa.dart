@@ -9,11 +9,11 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
   UbuntuProvisionLocalizationsPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get accessibilityPageTitle => 'Accessibility';
+  String get accessibilityPageTitle => 'ਸੁਲਭਤਾ';
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Accessibility in $DISTRO';
+    return '$DISTRO ਵਿੱਚ ਅਸੈਸਬਿਲਟੀ';
   }
 
   @override
@@ -22,49 +22,49 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get accessibilitySeeingLabel => 'Seeing';
+  String get accessibilitySeeingLabel => 'ਵੇਖਣਾ';
 
   @override
-  String get accessibilityHearingLabel => 'Hearing';
+  String get accessibilityHearingLabel => 'ਸੁਣਨ';
 
   @override
-  String get accessibilityTypingLabel => 'Typing';
+  String get accessibilityTypingLabel => 'ਟਾਈਪਿੰਗ';
 
   @override
-  String get accessibilityPointingLabel => 'Pointing and clicking';
+  String get accessibilityPointingLabel => 'ਪੁਆਇੰਟ ਅਤੇ ਕਲਿੱਕ ਕਰਨਾ';
 
   @override
-  String get accessibilityZoomLabel => 'Zoom';
+  String get accessibilityZoomLabel => 'ਜ਼ੂਮ';
 
   @override
-  String get accessibilityHighContrastLabel => 'High contrast';
+  String get accessibilityHighContrastLabel => 'ਵੱਧ ਕਨਟਰਾਸਟ';
 
   @override
-  String get accessibilityLargeTextLabel => 'Large text';
+  String get accessibilityLargeTextLabel => 'ਵੱਡੀ ਲਿਖਤ';
 
   @override
-  String get accessibilityReduceAnimationLabel => 'Reduce animation';
+  String get accessibilityReduceAnimationLabel => 'ਐਨੀਮੇਸ਼ਨ ਘਟਾਓ';
 
   @override
-  String get accessibilityScreenReaderLabel => 'Screen reader';
+  String get accessibilityScreenReaderLabel => 'ਸਕਰੀਨ ਰੀਡਰ';
 
   @override
-  String get accessibilityVisualAlertsLabel => 'Visual alerts';
+  String get accessibilityVisualAlertsLabel => 'ਦਿੱਖ ਚੇਤਾਵਨੀਆਂ';
 
   @override
-  String get accessibilityStickKeysLabel => 'Sticky keys';
+  String get accessibilityStickKeysLabel => 'ਸਟਿੱਕੀ ਕੁੰਜੀਆਂ';
 
   @override
-  String get accessibilitySlowKeysLabel => 'Slow keys';
+  String get accessibilitySlowKeysLabel => 'ਹੌਲੀ ਕੁੰਜੀਆਂ';
 
   @override
-  String get accessibilityMouseKeysLabel => 'Mouse keys';
+  String get accessibilityMouseKeysLabel => 'ਮਾਊਸ ਕੁੰਜੀਆਂ';
 
   @override
-  String get accessibilityDesktopZoomLabel => 'Desktop zoom';
+  String get accessibilityDesktopZoomLabel => 'ਡੈਸਕਟਾਪ ਜ਼ੂਮ';
 
   @override
-  String get errorPageTitle => 'Something went wrong';
+  String get errorPageTitle => 'ਕੁਝ ਗਲਤ ਵਾਪਰਿਆ ਹੈ';
 
   @override
   String get errorPageUnexpected =>
@@ -76,28 +76,28 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
   }
 
   @override
-  String get errorPageShowLog => 'Show log';
+  String get errorPageShowLog => 'ਲੌਗ ਵੇਖਾਓ';
 
   @override
-  String get errorPageHideLog => 'Hide log';
+  String get errorPageHideLog => 'ਲੌਗ ਲੁਕਾਓ';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'ਤਕਨੀਕੀ ਵੇਰਵੇ';
 
   @override
-  String get restart => 'Restart';
+  String get restart => 'ਮੁੜ-ਚਾਲੂ';
 
   @override
-  String get close => 'Close';
+  String get close => 'ਬੰਦ ਕਰੋ';
 
   @override
-  String get timezonePageTitle => 'Select your timezone';
+  String get timezonePageTitle => 'ਆਪਣਾ ਸਮਾਂ-ਖੇਤਰ ਚੁਣੋ';
 
   @override
-  String get timezoneLocationLabel => 'Location';
+  String get timezoneLocationLabel => 'ਟਿਕਾਣਾ';
 
   @override
-  String get timezoneTimezoneLabel => 'Timezone';
+  String get timezoneTimezoneLabel => 'ਸਮਾਂ-ਖੇਤਰ';
 
   @override
   String get keyboardTitle => 'ਕੀ-ਬੋਰਡ ਲੇਆਉਟ';
@@ -112,10 +112,10 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
   String get keyboardDetectTitle => 'ਕੀਬੋਰਡ ਲੇਆਉਟ ਖੋਜੋ';
 
   @override
-  String get keyboardDetectButton => 'Detect';
+  String get keyboardDetectButton => 'ਪਤਾ ਲਗਾਓ';
 
   @override
-  String get keyboardVariantLabel => 'Select your keyboard variant:';
+  String get keyboardVariantLabel => 'ਆਪਣੇ ਕੀਬੋਰਡ ਦਾ ਵੇਰੀਐਂਟ ਚੁਣੋ:';
 
   @override
   String get keyboardPressKeyLabel => 'ਅੱਗੇ ਦਿੱਤੀਆਂ ਸਵਿੱਚਾਂ ਦੱਬੋ:';
@@ -125,114 +125,114 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
       'ਕੀ ਤੁਹਾਡੇ ਕੀਬੋਰਡ ਉੱਤੇ ਅੱਗੇ ਦਿੱਤੀ ਸਵਿੱਚ ਮੌਜੂਦ ਹੈ?';
 
   @override
-  String get themePageTitle => 'Choose your theme';
+  String get themePageTitle => 'ਆਪਣੇ ਥੀਮ ਨੂੰ ਚੁਣੋ';
 
   @override
   String get themePageHeader =>
       'You can always change this later in the appearance settings.';
 
   @override
-  String get themeDark => 'Dark';
+  String get themeDark => 'ਗੂੜ੍ਹਾ';
 
   @override
-  String get themeLight => 'Light';
+  String get themeLight => 'ਹਲਕਾ';
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Welcome to $DISTRO';
+    return '$DISTRO ਵਿੱਚ ਜੀ ਆਇਆਂ ਨੂੰ';
   }
 
   @override
-  String get localeHeader => 'Choose your language:';
+  String get localeHeader => 'ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ:';
 
   @override
-  String get identityPageTitle => 'Create your account';
+  String get identityPageTitle => 'ਆਪਣਾ ਖਾਤਾ ਬਣਾਓ';
 
   @override
-  String get identityAutoLogin => 'Log in automatically';
+  String get identityAutoLogin => 'ਆਪਣੇ-ਆਪ ਲਾਗਇਨ ਕਰੋ';
 
   @override
-  String get identityRequirePassword => 'Require my password to log in';
+  String get identityRequirePassword => 'ਲਾਗਇਨ ਕਰਨ ਲਈ ਮੇਰਾ ਪਾਸਵਰਡ ਚਾਹੀਦਾ ਹੈ';
 
   @override
-  String get identityRealNameLabel => 'Your name';
+  String get identityRealNameLabel => 'ਤੁਹਾਡਾ ਨਾਂ';
 
   @override
-  String get identityRealNameRequired => 'A name is required';
+  String get identityRealNameRequired => 'ਨਾਂ ਚਾਹੀਦਾ ਹੈ';
 
   @override
-  String get identityRealNameTooLong => 'That name is too long.';
+  String get identityRealNameTooLong => 'ਉਹ ਨਾਂ ਬਹੁਤ ਲੰਮਾ ਹੈ।';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'ਨਾਂ ਵਾਜਬ ਨਹੀਂ ਹੈ';
 
   @override
-  String get identityHostnameLabel => 'Your computer\'s name';
+  String get identityHostnameLabel => 'ਤੁਹਾਡੇ ਕੰਪਿਊਟਰ ਦਾ ਨਾਂ';
 
   @override
   String get identityHostnameInfo =>
-      'The name it uses when it talks to other computers.';
+      'ਉਹ ਨਾਂ, ਜਿਸ ਨੂੰ ਇਹ ਹੋਰ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਵਰਤਦਾ ਹੈ।';
 
   @override
-  String get identityHostnameRequired => 'A computer name is required';
+  String get identityHostnameRequired => 'ਕੰਪਿਊਟਰ ਨਾਂ ਚਾਹੀਦਾ ਹੈ';
 
   @override
-  String get identityHostnameTooLong => 'That computer name is too long.';
+  String get identityHostnameTooLong => 'ਉਹ ਕੰਪਿਊਟਰ ਨਾਂ ਬਹੁਤ ਲੰਮਾ ਹੈ।';
 
   @override
   String get identityInvalidHostname => 'The computer name is invalid';
 
   @override
-  String get identityUsernameLabel => 'Your username';
+  String get identityUsernameLabel => 'ਤੁਹਾਡਾ ਵਰਤੋਂਕਾਰ-ਨਾਂ';
 
   @override
-  String get identityUsernameRequired => 'A username is required';
+  String get identityUsernameRequired => 'ਵਰਤੋਂਕਾਰ-ਨਾਂ ਚਾਹੀਦਾ ਹੈ';
 
   @override
   String get identityInvalidUsername =>
       'The username is invalid: it must start with a lowercase letter and may only contain lowercase letters, digits, hyphens, and underscores.';
 
   @override
-  String get identityUsernameInUse => 'That user name already exists.';
+  String get identityUsernameInUse => 'ਉਹ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ।';
 
   @override
   String get identityUsernameSystemReserved =>
-      'That name is reserved for system usage.';
+      'ਉਹ ਨਾਂ ਸਿਸਟਮ ਵਰਤੋਂ ਲਈ ਰਾਖਵਾਂ ਹੈ।';
 
   @override
-  String get identityUsernameTooLong => 'That name is too long.';
+  String get identityUsernameTooLong => 'ਉਹ ਨਾਂ ਬਹੁਤ ਲੰਮਾ ਹੈ।';
 
   @override
   String get identityUsernameInvalidChars =>
       'That name contains invalid characters.';
 
   @override
-  String get identityPasswordLabel => 'Password';
+  String get identityPasswordLabel => 'ਪਾਸਵਰਡ';
 
   @override
-  String get identityPasswordRequired => 'A password is required';
+  String get identityPasswordRequired => 'ਪਾਸਵਰਡ ਚਾਹੀਦਾ ਹੈ';
 
   @override
-  String get identityConfirmPasswordLabel => 'Confirm password';
+  String get identityConfirmPasswordLabel => 'ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ';
 
   @override
-  String get identityPasswordMismatch => 'The passwords do not match';
+  String get identityPasswordMismatch => 'ਪਾਸਵਰਡ ਮਿਲਦੇ ਨਹੀਂ ਹਨ';
 
   @override
-  String get identityPasswordShow => 'Show';
+  String get identityPasswordShow => 'ਵੇਖਾਓ';
 
   @override
-  String get identityPasswordHide => 'Hide';
+  String get identityPasswordHide => 'ਲੁਕਾਓ';
 
   @override
-  String get identityActiveDirectoryOption => 'Use Active Directory';
+  String get identityActiveDirectoryOption => 'ਐਕਟਿਵ ਡਾਇਰੈਕਟਰੀ ਵਰਤੋ';
 
   @override
   String get identityActiveDirectoryInfo =>
       'You\'ll enter domain and other details in the next step.';
 
   @override
-  String get activeDirectoryTitle => 'Log into Active Directory';
+  String get activeDirectoryTitle => 'ਐਕਟਿਵ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਲਾਗ ਇਨ ਕਰੋ';
 
   @override
   String get activeDirectoryHeader => 'Log into Active Directory?';
@@ -246,28 +246,29 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
   String get activeDirectoryTestConnection => 'Test domain connectivity';
 
   @override
-  String get activeDirectoryDomainLabel => 'Domain';
+  String get activeDirectoryDomainLabel => 'ਡੋਮੇਨ';
 
   @override
-  String get activeDirectoryDomainEmpty => 'Required';
+  String get activeDirectoryDomainEmpty => 'ਲਾਜ਼ਮੀ';
 
   @override
-  String get activeDirectoryDomainTooLong => 'Too long';
+  String get activeDirectoryDomainTooLong => 'ਬਹੁਤ ਲੰਮਾ ਹੈ';
 
   @override
-  String get activeDirectoryDomainInvalidChars => 'Invalid characters';
+  String get activeDirectoryDomainInvalidChars => 'ਗਲਤ ਅੱਖਰ';
 
   @override
-  String get activeDirectoryDomainStartDot => 'Starts with a dot (.)';
+  String get activeDirectoryDomainStartDot => 'ਬਿੰਦੀ (.) ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ';
 
   @override
-  String get activeDirectoryDomainEndDot => 'Ends with a dot (.)';
+  String get activeDirectoryDomainEndDot => 'ਬਿੰਦੀ (.) ਨਾਲ ਖਤਮ ਹੁੰਦਾ ਹੈ';
 
   @override
-  String get activeDirectoryDomainStartHyphen => 'Starts with a hyphen (-)';
+  String get activeDirectoryDomainStartHyphen =>
+      'ਘਟਾਓ (-) ਦੇ ਨਿਸ਼ਾਨ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ';
 
   @override
-  String get activeDirectoryDomainEndHyphen => 'Ends with a hyphen (-)';
+  String get activeDirectoryDomainEndHyphen => 'ਹਾਈਫ਼ਨ (-) ਨਾਲ ਖ਼ਤਮ ਹੁੰਦਾ ਹੈ';
 
   @override
   String get activeDirectoryDomainMultipleDots =>
@@ -286,10 +287,10 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
   String get activeDirectoryAdminInvalidChars => 'Invalid characters';
 
   @override
-  String get activeDirectoryPasswordLabel => 'Password';
+  String get activeDirectoryPasswordLabel => 'ਪਾਸਵਰਡ';
 
   @override
-  String get activeDirectoryPasswordEmpty => 'Required';
+  String get activeDirectoryPasswordEmpty => 'ਲੋੜੀਂਦਾ';
 
   @override
   String get activeDirectoryErrorTitle =>
@@ -300,61 +301,61 @@ class UbuntuProvisionLocalizationsPa extends UbuntuProvisionLocalizations {
       'Sorry, Active Directory can\'t be set up at the moment. Once your system is up and running, visit <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> for help.';
 
   @override
-  String get networkPageTitle => 'Internet connection';
+  String get networkPageTitle => 'ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ';
 
   @override
-  String get networkPageHeader => 'Connect to the internet';
+  String get networkPageHeader => 'ਇੰਟਰਨੈੱਟ ਨਾਲ ਕਨੈਕਟ ਕਰੋ';
 
   @override
   String get networkPageBody =>
-      'An internet connection will improve your installation with compatibility check and extra software packages.';
+      'ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਅਨੁਕੂਲਤਾ ਦੀ ਜਾਂਚ ਅਤੇ ਵਾਧੂ ਸਾਫਟਵੇਅਰ ਪੈਕੇਜਾਂ ਨਾਲ ਤੁਹਾਡੀ ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਸੁਧਾਰੇਗਾ।';
 
   @override
-  String get networkWiredOption => 'Use wired connection';
+  String get networkWiredOption => 'ਤਾਰ ਵਾਲਾ ਕਨੈਕਸ਼ਨ ਵਰਤੋਂ';
 
   @override
-  String get networkWiredNone => 'No wired connection detected';
+  String get networkWiredNone => 'ਕੋਈ ਤਾਰ ਵਾਲਾ ਕਨੈਕਸ਼ਨ ਨਹੀਂ ਮਿਲਿਆ';
 
   @override
-  String get networkWiredOff => 'Wired connection is turned off';
+  String get networkWiredOff => 'ਤਾਰ ਵਾਲਾ ਕਨੈਕਸ਼ਨ ਬੰਦ ਹੈ';
 
   @override
   String get networkWiredDisabled =>
-      'To use Ethernet on this computer, a wired connection must be enabled';
+      'ਇਸ ਕੰਪਿਊਟਰ ਉੱਤੇ ਈਥਰਨੈੱਟ ਵਰਤਣ ਲਈ ਤਾਰ ਵਾਲਾ ਕਨੈਕਸ਼ਨ ਸਮਰੱਥ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ';
 
   @override
-  String get networkWiredEnable => 'Enable wired';
+  String get networkWiredEnable => 'ਤਾਰ ਵਾਲਾ ਸਮਰੱਥ ਕਰੋ';
 
   @override
-  String get networkWifiOption => 'Connect to a Wi-Fi network';
+  String get networkWifiOption => 'ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਕਰੋ';
 
   @override
-  String get networkWifiOff => 'Wireless networking disabled';
+  String get networkWifiOff => 'ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਅਸਮਰੱਥ ਹੈ';
 
   @override
-  String get networkWifiNone => 'No Wi-Fi devices detected';
+  String get networkWifiNone => 'ਕੋਈ ਵਾਈ-ਫਾਈ ਡਿਵਾਈਸ ਨਹੀਂ ਲੱਭਿਆ';
 
   @override
   String get networkWifiDisabled =>
-      'To use Wi-Fi on this computer, wireless networking must be enabled';
+      'ਇਸ ਕੰਪਿਊਟਰ ਉੱਤੇ ਵਾਈ-ਫਾਈ ਵਰਤਣ ਲਈ, ਬੇਤਾਰ ਨੈੱਟਵਰਕਿੰਗ ਸਮਰੱਥ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ';
 
   @override
-  String get networkWifiEnable => 'Enable Wi-Fi';
+  String get networkWifiEnable => 'ਵਾਈ-ਫਾਈ ਸਮਰੱਥ ਕਰੋ';
 
   @override
-  String get networkHiddenWifiOption => 'Connect to a hidden Wi-Fi network';
+  String get networkHiddenWifiOption => 'ਲੁਕਵੇਂ ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਕਰੋ';
 
   @override
-  String get networkHiddenWifiNameLabel => 'Network name';
+  String get networkHiddenWifiNameLabel => 'ਨੈੱਟਵਰਕ ਨਾਂ';
 
   @override
-  String get networkHiddenWifiNameRequired => 'A network name is required';
+  String get networkHiddenWifiNameRequired => 'ਨੈੱਟਵਰਕ ਨਾਂ ਚਾਹੀਦਾ ਹੈ';
 
   @override
-  String get networkNoneOption => 'Do not connect to the internet';
+  String get networkNoneOption => 'ਇੰਟਰਨੈੱਟ ਨਾਲ ਕਨੈਕਟ ਨਾ ਕਰੋ';
 
   @override
-  String get eulaPageTitle => 'License agreement';
+  String get eulaPageTitle => 'ਲਾਇਸੰਸ ਇਕਰਾਰਨਾਮਾ';
 
   @override
   String get eulaReviewTerms => 'Review the license terms';

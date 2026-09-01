@@ -3214,6 +3214,9 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   String get tpmActionErrorDescription => '請嘗試其他解決方案，或聯絡 IT 支援部門。';
 
   @override
+  String get installationLogSemanticLabel => '安裝記錄';
+
+  @override
   String get manualPartitioningWarningBody =>
       '請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。';
 
