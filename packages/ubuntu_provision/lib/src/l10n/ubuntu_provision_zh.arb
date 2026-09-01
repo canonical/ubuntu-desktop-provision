@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "开放式网络",
     "networkWifiSecureNetwork": "安全网络",
     "networkWifiConnecting": "正在链接…",
-    "networkWifiConnected": "已连接"
+    "networkWifiConnected": "已连接",
+    "logViewSemanticLabel": "日志"
 }

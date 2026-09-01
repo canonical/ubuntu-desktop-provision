@@ -1710,7 +1710,7 @@ class UbuntuBootstrapLocalizationsGa extends UbuntuBootstrapLocalizations {
       'Bain triail as réiteach difriúil nó déan teagmháil le tacaíocht TF.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Loga suiteála';
 
   @override
   String get manualPartitioningWarningBody =>

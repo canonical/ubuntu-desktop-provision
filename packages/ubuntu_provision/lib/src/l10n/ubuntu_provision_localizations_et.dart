@@ -419,5 +419,5 @@ class UbuntuProvisionLocalizationsEt extends UbuntuProvisionLocalizations {
   String get networkWifiConnected => 'Ühendatud';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'Logi';
 }

@@ -538,5 +538,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Vyskytl se problém s uživatelskými daty cloud-init uvedenými v souboru autoinstall.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry).",
     "passphraseTypePageBodyAuthRequired": "Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení.",
-    "tpmActionPageTitleActionable": "Je problém s na hardware založeném šifrování"
+    "tpmActionPageTitleActionable": "Je problém s na hardware založeném šifrování",
+    "installationLogSemanticLabel": "Záznam instalace"
 }

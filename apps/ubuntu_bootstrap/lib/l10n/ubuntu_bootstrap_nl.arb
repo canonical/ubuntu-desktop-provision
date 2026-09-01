@@ -383,5 +383,10 @@
     "errorIconSemanticLabel": "Fout",
     "closeIconSemanticLabel": "Sluiten",
     "maximizeIconSemanticLabel": "Maximaliseren",
-    "minimizeIconSemanticLabel": "Minimaliseren"
+    "minimizeIconSemanticLabel": "Minimaliseren",
+    "autoinstallErrorMessage": "Een opdracht in het autoinstall-bestand kon tijdens de installatie niet worden uitgevoerd.",
+    "autoinstallGenericErrorMessage": "De installatie kan niet verdergaan met het gegeven auto-installatiebestand.",
+    "autoinstallValidationErrorMessage": "Er is een probleem met het opgegeven autoinstall-bestand.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Er is een probleem met de cloud-init-gebruikersgegevens die zijn opgegeven in het autoinstall-bestand.",
+    "autoinstallErrorInstructions": "U moet de installatie opnieuw starten. Controleer het autoinstall-bestand, kies een ander installatietype of neem contact op met uw IT-ondersteuning."
 }

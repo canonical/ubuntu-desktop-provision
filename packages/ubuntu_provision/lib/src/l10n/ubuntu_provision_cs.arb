@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Otevřená síť",
     "networkWifiSecureNetwork": "Zabezpečená síť",
     "networkWifiConnecting": "Připojování…",
-    "networkWifiConnected": "Připojeno"
+    "networkWifiConnected": "Připojeno",
+    "logViewSemanticLabel": "Záznam"
 }

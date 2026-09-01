@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Malfermita reto",
     "networkWifiSecureNetwork": "Sekura reto",
     "networkWifiConnecting": "Konektante…",
-    "networkWifiConnected": "Konektite"
+    "networkWifiConnected": "Konektite",
+    "logViewSemanticLabel": "Protokolo"
 }

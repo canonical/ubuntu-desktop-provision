@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Sieć otwarta",
     "networkWifiSecureNetwork": "Sieć zabezpieczona",
     "networkWifiConnecting": "Łączenie…",
-    "networkWifiConnected": "Połączono"
+    "networkWifiConnected": "Połączono",
+    "logViewSemanticLabel": "Dziennik"
 }

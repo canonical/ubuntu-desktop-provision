@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "Öppet nätverk",
     "networkWifiSecureNetwork": "Säkert nätverk",
     "networkWifiConnecting": "Ansluter…",
-    "networkWifiConnected": "Ansluten"
+    "networkWifiConnected": "Ansluten",
+    "logViewSemanticLabel": "Logg"
 }

@@ -538,5 +538,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Ekzistas problemo pri la datenoj pri uzantoj por cloud-init en la dosiero por aŭtomata instalado.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Je ĉi tiu komputilo mankas necesa sekuriga funkcio (nome, aparata fidradiko).",
     "passphraseTypePageBodyAuthRequired": "Aparatobaza ĉifrado postulas plian sekurecon je ĉi tiu komputilo.",
-    "tpmActionPageTitleActionable": "Ekzistas problemo pri la aparato-baza ĉifrado"
+    "tpmActionPageTitleActionable": "Ekzistas problemo pri la aparato-baza ĉifrado",
+    "installationLogSemanticLabel": "Protokolo pri instalado"
 }

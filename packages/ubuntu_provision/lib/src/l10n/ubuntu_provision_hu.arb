@@ -115,5 +115,14 @@
     "expandIconSemanticLabel": "Kinyitás",
     "collapseIconSemanticLabel": "Összecsukás",
     "errorPageTechnicalDetails": "Műszaki részletek",
-    "identityInvalidRealName": "A név érvénytelen"
+    "identityInvalidRealName": "A név érvénytelen",
+    "networkWifiSignalNone": "Nincsen jel",
+    "networkWifiSignalWeak": "Gyenge jel",
+    "networkWifiSignalOk": "Elfogadható jel",
+    "networkWifiSignalGood": "Jó jel",
+    "networkWifiSignalExcellent": "Kiváló jel",
+    "networkWifiOpenNetwork": "Nyílt hálózat",
+    "networkWifiSecureNetwork": "Biztonságos hálózat",
+    "networkWifiConnecting": "Csatlakozás…",
+    "networkWifiConnected": "Csatlakozva"
 }

@@ -399,7 +399,7 @@ class UbuntuProvisionLocalizationsZh extends UbuntuProvisionLocalizations {
   String get networkWifiConnected => '已连接';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => '日志';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -796,4 +796,7 @@ class UbuntuProvisionLocalizationsZhTw extends UbuntuProvisionLocalizationsZh {
 
   @override
   String get networkWifiConnected => '已連線';
+
+  @override
+  String get logViewSemanticLabel => '記錄';
 }

@@ -531,5 +531,8 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "autoinstallCloudInitSchemaValidationErrorMessage": "יש בעיה עם נתוני המשתמש שסופקו במסגרת cloud-init בקובץ ההתקנה האוטומטית.",
+    "tpmActionPageTitleActionable": "יש בעיה עם הצפנה בגיבוי חומרה",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "הפעלת מאגרי PCR ידנית"
 }

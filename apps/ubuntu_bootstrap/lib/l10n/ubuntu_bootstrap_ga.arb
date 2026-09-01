@@ -535,5 +535,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Tá fadhb ann leis na sonraí úsáideora cloud-init a chuirtear ar fáil sa chomhad uathsuiteála.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Tá gné slándála riachtanach (fréamh iontaoibhe crua-earraí) in easnamh ar an ríomhaire seo.",
     "passphraseTypePageBodyAuthRequired": "Éilíonn criptiú atá bunaithe ar chrua-earraí slándáil bhreise sa ríomhaire seo.",
-    "tpmActionPageTitleActionable": "Tá fadhb ann le criptiú atá bunaithe ar chrua-earraí"
+    "tpmActionPageTitleActionable": "Tá fadhb ann le criptiú atá bunaithe ar chrua-earraí",
+    "installationLogSemanticLabel": "Loga suiteála"
 }

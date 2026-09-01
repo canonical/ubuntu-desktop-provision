@@ -538,5 +538,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Возникла проблема с данными пользователя cloud-init, указанными в файле autoinstall.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "На этом компьютере отсутствует необходимая функция безопасности (аппаратный корень доверия).",
     "passphraseTypePageBodyAuthRequired": "Для аппаратного шифрования на этом компьютере требуются дополнительные меры безопасности.",
-    "tpmActionPageTitleActionable": "Существует проблема с аппаратным шифрованием"
+    "tpmActionPageTitleActionable": "Существует проблема с аппаратным шифрованием",
+    "installationLogSemanticLabel": "Журнал установки"
 }
