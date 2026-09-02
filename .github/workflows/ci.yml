@@ -329,9 +329,8 @@ jobs:
 
       - name: Convert Go coverage files to cobertura XML
         run: |
-          go install github.com/axw/gocov/gocov@latest
-          go install github.com/AlekSi/gocov-xml@latest
-          gocov convert /tmp/coverage.out | gocov-xml > coverage/report_co.xml
+          go install github.com/t-yuki/gocover-cobertura@latest
+          $(go env GOPATH)/bin/gocover-cobertura < /tmp/coverage.out > coverage/report_co.xml
 
       - name: Upload coverage reports
         uses: actions/upload-artifact@v7
