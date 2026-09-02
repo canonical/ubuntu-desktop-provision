@@ -44,6 +44,9 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
           ),
         ],
       ),
+      // Same padding as the right side of the page: 2*kYaruPagePadding from the
+      // HorizontalPage and 16 from the OptionButton.
+      imagePadding: const EdgeInsets.all(2 * kYaruPagePadding + 16),
       children: [
         OptionButton(
           value: TryOrInstallOption.installUbuntu,
