@@ -16,6 +16,7 @@ class StorageSizeBox extends StatelessWidget {
     this.minimum = 0,
     this.autofocus = false,
     this.spacing = kWizardBarSpacing,
+    this.unitSemanticLabel,
   });
 
   /// The current value in bytes.
@@ -44,10 +45,35 @@ class StorageSizeBox extends StatelessWidget {
   /// `kButtonBarSpacing`.
   final double spacing;
 
+  /// Optional semantic label for the unit dropdown.
+  final String? unitSemanticLabel;
+
   @override
   Widget build(BuildContext context) {
     final minBytes = fromBytes(minimum, unit);
     final maxBytes = fromBytes(maximum, unit);
+    Widget unitMenuButton = MenuButtonBuilder<DataUnit>(
+      values: DataUnit.values,
+      selected: unit,
+      onSelected: onUnitSelected,
+      itemBuilder: (context, unit, _) {
+        return Text(unit.l10n(context), key: ValueKey(unit));
+      },
+      child: IndexedStack(
+        index: unit.index,
+        children:
+            DataUnit.values.map((unit) => Text(unit.l10n(context))).toList(),
+      ),
+    );
+    if (unitSemanticLabel != null) {
+      unitMenuButton = Semantics(
+        label: unitSemanticLabel,
+        value: unit.l10n(context),
+        button: true,
+        child: unitMenuButton,
+      );
+    }
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -67,20 +93,7 @@ class StorageSizeBox extends StatelessWidget {
         ),
         SizedBox(width: spacing),
         IntrinsicWidth(
-          child: MenuButtonBuilder<DataUnit>(
-            values: DataUnit.values,
-            selected: unit,
-            onSelected: onUnitSelected,
-            itemBuilder: (context, unit, _) {
-              return Text(unit.l10n(context), key: ValueKey(unit));
-            },
-            child: IndexedStack(
-              index: unit.index,
-              children: DataUnit.values
-                  .map((unit) => Text(unit.l10n(context)))
-                  .toList(),
-            ),
-          ),
+          child: unitMenuButton,
         ),
         const Spacer(),
       ],
@@ -97,6 +110,7 @@ class StorageTextBox extends StatelessWidget {
     required this.onSizeChanged,
     required this.onUnitSelected,
     super.key,
+    this.unitSemanticLabel,
   });
 
   /// The current value in bytes.
@@ -117,8 +131,36 @@ class StorageTextBox extends StatelessWidget {
   /// The callback called whenever the user selects a size unit.
   final ValueChanged<DataUnit> onUnitSelected;
 
+  /// Optional semantic label for the unit dropdown.
+  final String? unitSemanticLabel;
+
   @override
   Widget build(BuildContext context) {
+    Widget unitMenuButton = MenuButtonBuilder<DataUnit>(
+      style: OutlinedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+      ),
+      values: const [DataUnit.megabytes, DataUnit.gigabytes],
+      selected: unit,
+      onSelected: onUnitSelected,
+      itemBuilder: (context, unit, _) {
+        return Text(unit.l10n(context), key: ValueKey(unit));
+      },
+      child: IndexedStack(
+        index: unit.index,
+        children:
+            DataUnit.values.map((unit) => Text(unit.l10n(context))).toList(),
+      ),
+    );
+    if (unitSemanticLabel != null) {
+      unitMenuButton = Semantics(
+        label: unitSemanticLabel,
+        value: unit.l10n(context),
+        button: true,
+        child: unitMenuButton,
+      );
+    }
+
     return Row(
       children: [
         SizedBox(
@@ -131,23 +173,7 @@ class StorageTextBox extends StatelessWidget {
         ),
         const SizedBox(width: kWizardBarSpacing),
         IntrinsicWidth(
-          child: MenuButtonBuilder<DataUnit>(
-            style: OutlinedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            ),
-            values: const [DataUnit.megabytes, DataUnit.gigabytes],
-            selected: unit,
-            onSelected: onUnitSelected,
-            itemBuilder: (context, unit, _) {
-              return Text(unit.l10n(context), key: ValueKey(unit));
-            },
-            child: IndexedStack(
-              index: unit.index,
-              children: DataUnit.values
-                  .map((unit) => Text(unit.l10n(context)))
-                  .toList(),
-            ),
-          ),
+          child: unitMenuButton,
         ),
       ],
     );
