@@ -176,7 +176,7 @@ Future<void> _defaultSetLocale1X11Keyboard(
       DBusString(variant), // x11Variant
       const DBusString(''), // x11Options
       const DBusBoolean(false), // convert (do not propagate to vconsole)
-      const DBusBoolean(false), // interactive (no polkit prompt)
+      const DBusBoolean(true), // interactive (allow polkit agent prompt)
     ];
     await locale1.callMethod(
       'org.freedesktop.locale1',
