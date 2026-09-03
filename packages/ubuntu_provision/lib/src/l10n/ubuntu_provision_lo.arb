@@ -159,5 +159,6 @@
     "networkWifiOpenNetwork": "ເຄືອຂ່າຍເປີດ",
     "networkWifiSecureNetwork": "ເຄືອຂ່າຍປອດໄພ",
     "networkWifiConnecting": "ກຳລັງເຊື່ອມຕໍ່…",
-    "networkWifiConnected": "ເຊື່ອມຕໍ່ແລ້ວ"
+    "networkWifiConnected": "ເຊື່ອມຕໍ່ແລ້ວ",
+    "logViewSemanticLabel": "ບັນທືກ"
 }
