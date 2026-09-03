@@ -180,8 +180,8 @@
     "passphrasePageTitle": "ການເຂົ້າລະຫັດ",
     "passphrasePageHeaderPassphrase": "ຕັ້ງຄ່າວະລີຜ່ານການເຂົ້າລະຫັດ",
     "passphrasePageHeaderPin": "ຕັ້ງຄ່າ PIN ການເຂົ້າລະຫັດ",
-    "passphrasePageBodyPassphrase": "ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. ວະລີຜ່ານນີ້ຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນພາຍຫຼັງໄດ້, ແຕ່ບໍ່ສາມາດປິດການໃຊ້ງານມັນໄດ້. ຖ້າທ່ານລືມວະລີຜ່ານ, ທ່ານສາມາດເຂົ້າເຖິງດິດຄືນໄດ້ໂດຍການໃຊ້ຄີກູ້ຄືນ.",
-    "passphrasePageBodyPin": "ທ່ານຈະຕ້ອງປ້ອນ PIN ທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. PIN ນີ້ຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນພາຍຫຼັງໄດ້, ແຕ່ບໍ່ສາມາດປິດການໃຊ້ງານມັນໄດ້. ຖ້າທ່ານລືມ PIN, ທ່ານສາມາດເຂົ້າເຖິງດິດຄືນໄດ້ໂດຍການໃຊ້ຄີກູ້ຄືນ.",
+    "passphrasePageBodyPassphrase": "ເຈົ້າຈະຕ້ອງໄດ້ປ້ອນວະລີຜ່ານທຸກໆຄັ້ງທີ່ເຈົ້າເລີ່ມເຄື່ອງຄອມພິວເຕີຂອງເຈົ້າ. ວະລີຜ່ານນີ້ແມ່ນແຕກຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງເຈົ້າ. ເຈົ້າສາມາດປ່ຽນແປງມັນໄດ້ໃນພາຍຫຼັງຢູ່ທີ່ ສູນຄວາມປອດໄພ.",
+    "passphrasePageBodyPin": "ເຈົ້າຈະຕ້ອງໄດ້ປ້ອນ PIN ທຸກໆຄັ້ງທີ່ເຈົ້າເລີ່ມເຄື່ອງຄອມພິວເຕີຂອງເຈົ້າ. PIN ນີ້ແມ່ນແຕກຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງເຈົ້າ. ເຈົ້າສາມາດປ່ຽນແປງມັນໄດ້ໃນພາຍຫຼັງຢູ່ທີ່ ສູນຄວາມປອດໄພ.",
     "passphrasePageChoosePassphraseHint": "ວະລີຜ່ານ",
     "passphrasePageConfirmPassphraseHint": "ຢືນຢັນວະລີຜ່ານ",
     "passphrasePageRequiredPassphrase": "ຈຳເປັນຕ້ອງມີວະລີຜ່ານ",
@@ -1138,5 +1138,7 @@
     "autoinstallValidationErrorMessage": "ມີບັນຫາກັບໄຟລ໌ autoinstall ທີ່ໃຫ້ມາ.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "ມີບັນຫາກັບຂໍ້ມູນຜູ້ໃຊ້ cloud-init ທີ່ໃຫ້ມາໃນໄຟລ໌ autoinstall.",
     "passphraseTypePageBodyAuthRequired": "ການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ ຕ້ອງການຄວາມປອດໄພເພີ່ມເຕີມໃນຄອມພິວເຕີເຄື່ອງນີ້.",
-    "tpmActionErrorKindNoHardwareRootOfTrust": "ຄອມພິວເຕີເຄື່ອງນີ້ຂາດຄຸນສົມບັດຄວາມປອດໄພທີ່ຈຳເປັນ (hardware root of trust)."
+    "tpmActionErrorKindNoHardwareRootOfTrust": "ຄອມພິວເຕີເຄື່ອງນີ້ຂາດຄຸນສົມບັດຄວາມປອດໄພທີ່ຈຳເປັນ (hardware root of trust).",
+    "installationLogSemanticLabel": "ບັນທຶກການຕິດຕັ້ງ",
+    "tpmActionPageTitleActionable": "ມີບັນຫາກັບການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ"
 }
