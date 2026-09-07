@@ -159,5 +159,6 @@
     "networkWifiOpenNetwork": "Sare irekia",
     "networkWifiSecureNetwork": "Sare segurua",
     "networkWifiConnecting": "Konektatzen…",
-    "networkWifiConnected": "Konektatuta"
+    "networkWifiConnected": "Konektatuta",
+    "logViewSemanticLabel": "Erregistroa"
 }
