@@ -254,7 +254,7 @@ func TestAutoDetectConfig(t *testing.T) {
 
 	configPath := daemon.GenerateTestConfig(t, &config)
 	configNextToBinaryPath := filepath.Join(filepath.Dir(os.Args[0]), "provd.yaml")
-	err := os.Rename(configPath, configNextToBinaryPath)
+	err := os.Rename(configPath, configNextToBinaryPath) //nolint:gosec // Test paths are generated locally and never contain user input.
 	require.NoError(t, err, "Could not relocate provd configuration file in the binary directory")
 	// Remove configuration next binary for other tests to not pick it up.
 	defer os.Remove(configNextToBinaryPath)

@@ -1,5 +1,5 @@
 // Package user implements the User gRPC service.
-package user
+package user //nolint:revive // The package name intentionally matches the User gRPC service.
 
 /*
 #cgo pkg-config: glib-2.0

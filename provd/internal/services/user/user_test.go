@@ -33,7 +33,7 @@ func TestReservedUsernamesFilePaths(t *testing.T) {
 		"Error on invalid group master file path":  {groupMasterFile: "invalid-path", wantErr: true},
 
 		// Unparsable files
-		"Error on unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true},
+		"Error on unparsable passwd master file": {passwdMasterFile: "unparsable-passwd-master", wantErr: true}, //nolint:gosec // This is a test fixture path, not a credential.
 		"Error on unparsable group master file":  {groupMasterFile: "unparsable-group-master", wantErr: true},
 	}
 
