@@ -19,11 +19,11 @@ final keyboardModelProvider =
 /// Implements the business logic of the Keyboard page.
 class KeyboardModel extends SafeChangeNotifier {
   /// Creates a model with the specified service.
-  KeyboardModel(this._service, {@visibleForTesting Platform? platform})
-      : _platform = platform ?? const LocalPlatform();
+  KeyboardModel(this._service, {@visibleForTesting NativePlatform? platform})
+      : _platform = platform ?? Platform.current.nativePlatform!;
 
   final KeyboardService _service;
-  final Platform _platform;
+  final NativePlatform _platform;
   List<KeyboardLayout> _layouts = [];
 
   /// The number of available keyboard layouts.
