@@ -22,6 +22,7 @@ class HorizontalPage extends ConsumerStatefulWidget {
     this.imageTitleWidget,
     int? contentFlex,
     this.nextFocusNode,
+    this.imagePadding,
     super.key,
   })  : assert(
           !managedScrolling || contentFlex == null,
@@ -74,6 +75,9 @@ class HorizontalPage extends ConsumerStatefulWidget {
 
   /// The focus node for the next button.
   final FocusNode? nextFocusNode;
+
+  /// The padding around the page image.
+  final EdgeInsets? imagePadding;
 
   @override
   ConsumerState<HorizontalPage> createState() => _HorizontalPageState();
@@ -139,7 +143,13 @@ class _HorizontalPageState extends ConsumerState<HorizontalPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (image != null) Flexible(child: image),
+                  if (image != null)
+                    Flexible(
+                      child: Padding(
+                        padding: widget.imagePadding ?? EdgeInsets.zero,
+                        child: image,
+                      ),
+                    ),
                   if (widget.imageTitleWidget != null) ...[
                     const SizedBox(height: kWizardSpacing),
                     widget.imageTitleWidget!,
