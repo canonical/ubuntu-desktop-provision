@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:platform/platform.dart';
+import 'package:platform/testing.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_model.dart';
 import 'package:ubuntu_provision/src/services/keyboard_service.dart';
 
@@ -126,7 +126,7 @@ void main() {
 
       model = KeyboardModel(
         service,
-        platform: FakePlatform(environment: {'USERNAME': 'usr'}),
+        platform: TestNativePlatform(environment: {'USERNAME': 'usr'}),
       );
       await model.init();
     });
