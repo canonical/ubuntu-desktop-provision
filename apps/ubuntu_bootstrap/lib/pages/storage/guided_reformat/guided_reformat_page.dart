@@ -42,6 +42,9 @@ class GuidedReformatPage extends ConsumerWidget {
     final model = ref.watch(guidedReformatModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
+    final selectedValue = model.selectedDisk != null
+        ? prettyFormatDisk(context, model.selectedDisk!)
+        : '';
     return HorizontalPage(
       windowTitle: lang.selectGuidedStoragePageTitle(flavor.displayName),
       title:
@@ -64,19 +67,24 @@ class GuidedReformatPage extends ConsumerWidget {
             Text(lang.selectGuidedStorageDriveDropdownLabel),
             const SizedBox(width: kWizardSpacing),
             Expanded(
-              child: MenuButtonBuilder<int>(
-                values: List.generate(model.storages.length, (i) => i),
-                selected: model.selectedIndex,
-                onSelected: model.selectStorage,
-                itemBuilder: (context, index, child) {
-                  final disk = model.getDisk(index);
-                  return disk != null
-                      ? Text(
-                          prettyFormatDisk(context, disk),
-                          key: ValueKey(index),
-                        )
-                      : const SizedBox.shrink();
-                },
+              child: Semantics(
+                label: lang.selectGuidedStorageDriveDropdownLabel,
+                value: selectedValue,
+                button: true,
+                child: MenuButtonBuilder<int>(
+                  values: List.generate(model.storages.length, (i) => i),
+                  selected: model.selectedIndex,
+                  onSelected: model.selectStorage,
+                  itemBuilder: (context, index, child) {
+                    final disk = model.getDisk(index);
+                    return disk != null
+                        ? Text(
+                            prettyFormatDisk(context, disk),
+                            key: ValueKey(index),
+                          )
+                        : const SizedBox.shrink();
+                  },
+                ),
               ),
             ),
           ],
