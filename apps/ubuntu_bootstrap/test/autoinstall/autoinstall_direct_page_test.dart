@@ -27,6 +27,15 @@ void main() {
             ),
         parsedUri: null,
       ),
+      (
+        name: 'url with newline',
+        url: 'https://example.com/autoinstall.yaml\n',
+        expectedError: (UbuntuBootstrapLocalizations l10n) => (
+              l10n.autoinstallDirectErrorInvalidUrlTitle,
+              l10n.autoinstallDirectErrorInvalidUrlBody,
+            ),
+        parsedUri: null,
+      ),
     ]) {
       testWidgets(testCase.name, (tester) async {
         final mockService = registerMockAutoinstallService();
