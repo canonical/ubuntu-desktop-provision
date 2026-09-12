@@ -17,7 +17,7 @@
     "privacyLocationSubtitle": "Umožníte aplikáciám zistiť vašu geografickú polohu.\nToto nastavenie môžete kedykoľvek zmeniť v Nastaveniach systému.",
     "privacyLocationEnable": "Služby určovania polohy",
     "welcomePageTitle": "Vitajte",
-    "welcomePageHeader": "Vitajte v systéme {distro}",
+    "welcomePageHeader": "Vitajte v {distro}",
     "welcomeWhatsNew": "ČO JE NOVÉ?",
     "telemetryHeader": "Pomôžte zlepšiť {distro}",
     "telemetryDescription": "Pomôžte nám zlepšiť {distro} zdieľaním údajov o vašom systéme. Zahŕňa to napríklad model vášho zariadenia, nainštalovaný softvér a vybrané časové pásmo.",

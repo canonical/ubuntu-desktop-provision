@@ -1073,5 +1073,6 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Arazoren bat dago autoinstall fitxategiak dakartzan cloud-init erabiltzaile-datuekin.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du.",
     "passphraseTypePageBodyAuthRequired": "Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan.",
-    "tpmActionPageTitleActionable": "Arazo bat dago hardware bidezko zifratzearekin"
+    "tpmActionPageTitleActionable": "Arazo bat dago hardware bidezko zifratzearekin",
+    "installationLogSemanticLabel": "Instalazioaren erregistroa"
 }
