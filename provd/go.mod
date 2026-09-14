@@ -11,7 +11,7 @@ require (
 	github.com/ubuntu/decorate v0.0.0-20250213124239-8228e241ee19
 	github.com/ubuntu/ubuntu-report v1.7.4
 	google.golang.org/grpc v1.83.2
-	google.golang.org/protobuf v1.36.11
+	google.golang.org/protobuf v1.36.12
 	gopkg.in/yaml.v3 v3.0.1
 )
 
