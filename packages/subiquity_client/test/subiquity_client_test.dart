@@ -356,6 +356,11 @@ void main() {
       expect(response.needBoot, isNotNull);
     });
 
+    test('requirements', () async {
+      final response = await client.getStorageV2();
+      expect(response.requirements, isNotNull);
+    });
+
     test('proxy', () async {
       await client.setProxy('test');
       expect(await client.getProxy(), 'test');
