@@ -21362,6 +21362,326 @@ class __$StorageResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
+mixin _$StorageRequirementStatus {
+  GuidanceMessageKind get kind;
+  bool get satisfied;
+
+  /// Create a copy of StorageRequirementStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $StorageRequirementStatusCopyWith<StorageRequirementStatus> get copyWith =>
+      _$StorageRequirementStatusCopyWithImpl<StorageRequirementStatus>(
+          this as StorageRequirementStatus, _$identity);
+
+  /// Serializes this StorageRequirementStatus to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is StorageRequirementStatus &&
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.satisfied, satisfied) ||
+                other.satisfied == satisfied));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, kind, satisfied);
+
+  @override
+  String toString() {
+    return 'StorageRequirementStatus(kind: $kind, satisfied: $satisfied)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $StorageRequirementStatusCopyWith<$Res> {
+  factory $StorageRequirementStatusCopyWith(StorageRequirementStatus value,
+          $Res Function(StorageRequirementStatus) _then) =
+      _$StorageRequirementStatusCopyWithImpl;
+  @useResult
+  $Res call({GuidanceMessageKind kind, bool satisfied});
+}
+
+/// @nodoc
+class _$StorageRequirementStatusCopyWithImpl<$Res>
+    implements $StorageRequirementStatusCopyWith<$Res> {
+  _$StorageRequirementStatusCopyWithImpl(this._self, this._then);
+
+  final StorageRequirementStatus _self;
+  final $Res Function(StorageRequirementStatus) _then;
+
+  /// Create a copy of StorageRequirementStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? kind = null,
+    Object? satisfied = null,
+  }) {
+    return _then(_self.copyWith(
+      kind: null == kind
+          ? _self.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as GuidanceMessageKind,
+      satisfied: null == satisfied
+          ? _self.satisfied
+          : satisfied // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [StorageRequirementStatus].
+extension StorageRequirementStatusPatterns on StorageRequirementStatus {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_StorageRequirementStatus value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _StorageRequirementStatus() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_StorageRequirementStatus value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StorageRequirementStatus():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_StorageRequirementStatus value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StorageRequirementStatus() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(GuidanceMessageKind kind, bool satisfied)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _StorageRequirementStatus() when $default != null:
+        return $default(_that.kind, _that.satisfied);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(GuidanceMessageKind kind, bool satisfied) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StorageRequirementStatus():
+        return $default(_that.kind, _that.satisfied);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(GuidanceMessageKind kind, bool satisfied)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _StorageRequirementStatus() when $default != null:
+        return $default(_that.kind, _that.satisfied);
+      case _:
+        return null;
+    }
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _StorageRequirementStatus implements StorageRequirementStatus {
+  const _StorageRequirementStatus(
+      {required this.kind, required this.satisfied});
+  factory _StorageRequirementStatus.fromJson(Map<String, dynamic> json) =>
+      _$StorageRequirementStatusFromJson(json);
+
+  @override
+  final GuidanceMessageKind kind;
+  @override
+  final bool satisfied;
+
+  /// Create a copy of StorageRequirementStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$StorageRequirementStatusCopyWith<_StorageRequirementStatus> get copyWith =>
+      __$StorageRequirementStatusCopyWithImpl<_StorageRequirementStatus>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$StorageRequirementStatusToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _StorageRequirementStatus &&
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.satisfied, satisfied) ||
+                other.satisfied == satisfied));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, kind, satisfied);
+
+  @override
+  String toString() {
+    return 'StorageRequirementStatus(kind: $kind, satisfied: $satisfied)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$StorageRequirementStatusCopyWith<$Res>
+    implements $StorageRequirementStatusCopyWith<$Res> {
+  factory _$StorageRequirementStatusCopyWith(_StorageRequirementStatus value,
+          $Res Function(_StorageRequirementStatus) _then) =
+      __$StorageRequirementStatusCopyWithImpl;
+  @override
+  @useResult
+  $Res call({GuidanceMessageKind kind, bool satisfied});
+}
+
+/// @nodoc
+class __$StorageRequirementStatusCopyWithImpl<$Res>
+    implements _$StorageRequirementStatusCopyWith<$Res> {
+  __$StorageRequirementStatusCopyWithImpl(this._self, this._then);
+
+  final _StorageRequirementStatus _self;
+  final $Res Function(_StorageRequirementStatus) _then;
+
+  /// Create a copy of StorageRequirementStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? kind = null,
+    Object? satisfied = null,
+  }) {
+    return _then(_StorageRequirementStatus(
+      kind: null == kind
+          ? _self.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as GuidanceMessageKind,
+      satisfied: null == satisfied
+          ? _self.satisfied
+          : satisfied // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
 mixin _$StorageResponseV2 {
   ProbeStatus get status;
   ErrorReportRef? get errorReport;
@@ -21369,6 +21689,7 @@ mixin _$StorageResponseV2 {
   bool? get needRoot;
   bool? get needBoot;
   int? get installMinimumSize;
+  List<StorageRequirementStatus>? get requirements;
 
   /// Create a copy of StorageResponseV2
   /// with the given fields replaced by the non-null parameter values.
@@ -21395,7 +21716,9 @@ mixin _$StorageResponseV2 {
             (identical(other.needBoot, needBoot) ||
                 other.needBoot == needBoot) &&
             (identical(other.installMinimumSize, installMinimumSize) ||
-                other.installMinimumSize == installMinimumSize));
+                other.installMinimumSize == installMinimumSize) &&
+            const DeepCollectionEquality()
+                .equals(other.requirements, requirements));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -21407,11 +21730,12 @@ mixin _$StorageResponseV2 {
       const DeepCollectionEquality().hash(disks),
       needRoot,
       needBoot,
-      installMinimumSize);
+      installMinimumSize,
+      const DeepCollectionEquality().hash(requirements));
 
   @override
   String toString() {
-    return 'StorageResponseV2(status: $status, errorReport: $errorReport, disks: $disks, needRoot: $needRoot, needBoot: $needBoot, installMinimumSize: $installMinimumSize)';
+    return 'StorageResponseV2(status: $status, errorReport: $errorReport, disks: $disks, needRoot: $needRoot, needBoot: $needBoot, installMinimumSize: $installMinimumSize, requirements: $requirements)';
   }
 }
 
@@ -21427,7 +21751,8 @@ abstract mixin class $StorageResponseV2CopyWith<$Res> {
       List<Disk> disks,
       bool? needRoot,
       bool? needBoot,
-      int? installMinimumSize});
+      int? installMinimumSize,
+      List<StorageRequirementStatus>? requirements});
 
   $ErrorReportRefCopyWith<$Res>? get errorReport;
 }
@@ -21451,6 +21776,7 @@ class _$StorageResponseV2CopyWithImpl<$Res>
     Object? needRoot = freezed,
     Object? needBoot = freezed,
     Object? installMinimumSize = freezed,
+    Object? requirements = freezed,
   }) {
     return _then(_self.copyWith(
       status: null == status
@@ -21477,6 +21803,10 @@ class _$StorageResponseV2CopyWithImpl<$Res>
           ? _self.installMinimumSize
           : installMinimumSize // ignore: cast_nullable_to_non_nullable
               as int?,
+      requirements: freezed == requirements
+          ? _self.requirements
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as List<StorageRequirementStatus>?,
     ));
   }
 
@@ -21594,15 +21924,22 @@ extension StorageResponseV2Patterns on StorageResponseV2 {
             List<Disk> disks,
             bool? needRoot,
             bool? needBoot,
-            int? installMinimumSize)?
+            int? installMinimumSize,
+            List<StorageRequirementStatus>? requirements)?
         $default, {
     required TResult orElse(),
   }) {
     final _that = this;
     switch (_that) {
       case _StorageResponseV2() when $default != null:
-        return $default(_that.status, _that.errorReport, _that.disks,
-            _that.needRoot, _that.needBoot, _that.installMinimumSize);
+        return $default(
+            _that.status,
+            _that.errorReport,
+            _that.disks,
+            _that.needRoot,
+            _that.needBoot,
+            _that.installMinimumSize,
+            _that.requirements);
       case _:
         return orElse();
     }
@@ -21629,14 +21966,21 @@ extension StorageResponseV2Patterns on StorageResponseV2 {
             List<Disk> disks,
             bool? needRoot,
             bool? needBoot,
-            int? installMinimumSize)
+            int? installMinimumSize,
+            List<StorageRequirementStatus>? requirements)
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _StorageResponseV2():
-        return $default(_that.status, _that.errorReport, _that.disks,
-            _that.needRoot, _that.needBoot, _that.installMinimumSize);
+        return $default(
+            _that.status,
+            _that.errorReport,
+            _that.disks,
+            _that.needRoot,
+            _that.needBoot,
+            _that.installMinimumSize,
+            _that.requirements);
       case _:
         throw StateError('Unexpected subclass');
     }
@@ -21662,14 +22006,21 @@ extension StorageResponseV2Patterns on StorageResponseV2 {
             List<Disk> disks,
             bool? needRoot,
             bool? needBoot,
-            int? installMinimumSize)?
+            int? installMinimumSize,
+            List<StorageRequirementStatus>? requirements)?
         $default,
   ) {
     final _that = this;
     switch (_that) {
       case _StorageResponseV2() when $default != null:
-        return $default(_that.status, _that.errorReport, _that.disks,
-            _that.needRoot, _that.needBoot, _that.installMinimumSize);
+        return $default(
+            _that.status,
+            _that.errorReport,
+            _that.disks,
+            _that.needRoot,
+            _that.needBoot,
+            _that.installMinimumSize,
+            _that.requirements);
       case _:
         return null;
     }
@@ -21685,8 +22036,10 @@ class _StorageResponseV2 implements StorageResponseV2 {
       final List<Disk> disks = const [],
       this.needRoot,
       this.needBoot,
-      this.installMinimumSize})
-      : _disks = disks;
+      this.installMinimumSize,
+      final List<StorageRequirementStatus>? requirements})
+      : _disks = disks,
+        _requirements = requirements;
   factory _StorageResponseV2.fromJson(Map<String, dynamic> json) =>
       _$StorageResponseV2FromJson(json);
 
@@ -21709,6 +22062,15 @@ class _StorageResponseV2 implements StorageResponseV2 {
   final bool? needBoot;
   @override
   final int? installMinimumSize;
+  final List<StorageRequirementStatus>? _requirements;
+  @override
+  List<StorageRequirementStatus>? get requirements {
+    final value = _requirements;
+    if (value == null) return null;
+    if (_requirements is EqualUnmodifiableListView) return _requirements;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// Create a copy of StorageResponseV2
   /// with the given fields replaced by the non-null parameter values.
@@ -21739,7 +22101,9 @@ class _StorageResponseV2 implements StorageResponseV2 {
             (identical(other.needBoot, needBoot) ||
                 other.needBoot == needBoot) &&
             (identical(other.installMinimumSize, installMinimumSize) ||
-                other.installMinimumSize == installMinimumSize));
+                other.installMinimumSize == installMinimumSize) &&
+            const DeepCollectionEquality()
+                .equals(other._requirements, _requirements));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -21751,11 +22115,12 @@ class _StorageResponseV2 implements StorageResponseV2 {
       const DeepCollectionEquality().hash(_disks),
       needRoot,
       needBoot,
-      installMinimumSize);
+      installMinimumSize,
+      const DeepCollectionEquality().hash(_requirements));
 
   @override
   String toString() {
-    return 'StorageResponseV2(status: $status, errorReport: $errorReport, disks: $disks, needRoot: $needRoot, needBoot: $needBoot, installMinimumSize: $installMinimumSize)';
+    return 'StorageResponseV2(status: $status, errorReport: $errorReport, disks: $disks, needRoot: $needRoot, needBoot: $needBoot, installMinimumSize: $installMinimumSize, requirements: $requirements)';
   }
 }
 
@@ -21773,7 +22138,8 @@ abstract mixin class _$StorageResponseV2CopyWith<$Res>
       List<Disk> disks,
       bool? needRoot,
       bool? needBoot,
-      int? installMinimumSize});
+      int? installMinimumSize,
+      List<StorageRequirementStatus>? requirements});
 
   @override
   $ErrorReportRefCopyWith<$Res>? get errorReport;
@@ -21798,6 +22164,7 @@ class __$StorageResponseV2CopyWithImpl<$Res>
     Object? needRoot = freezed,
     Object? needBoot = freezed,
     Object? installMinimumSize = freezed,
+    Object? requirements = freezed,
   }) {
     return _then(_StorageResponseV2(
       status: null == status
@@ -21824,6 +22191,10 @@ class __$StorageResponseV2CopyWithImpl<$Res>
           ? _self.installMinimumSize
           : installMinimumSize // ignore: cast_nullable_to_non_nullable
               as int?,
+      requirements: freezed == requirements
+          ? _self._requirements
+          : requirements // ignore: cast_nullable_to_non_nullable
+              as List<StorageRequirementStatus>?,
     ));
   }
 
