@@ -1313,6 +1313,18 @@ abstract class UbuntuBootstrapLocalizations {
   String allocateDiskSpaceInvalidMountPointFormat(
       String mountpoint, String format);
 
+  /// No description provided for @allocateDiskSpaceBootMustBeExt4.
+  ///
+  /// In en, this message translates to:
+  /// **'/boot must be mounted on an ext4 partition'**
+  String get allocateDiskSpaceBootMustBeExt4;
+
+  /// No description provided for @allocateDiskSpaceBootMustBeExt4Info.
+  ///
+  /// In en, this message translates to:
+  /// **'Use an ext4 partition for / or create a separate ext4 partition for /boot'**
+  String get allocateDiskSpaceBootMustBeExt4Info;
+
   /// No description provided for @diskHeadersDevice.
   ///
   /// In en, this message translates to:
@@ -2968,6 +2980,18 @@ abstract class UbuntuBootstrapLocalizations {
   /// In en, this message translates to:
   /// **'Try something else. You may also <a href=\"\">send an error report</a>.'**
   String get manualPartitioningWarningBody;
+
+  /// No description provided for @manualPartitioningBootMustBeExt4WarningTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'/boot must be mounted on an ext4 partition'**
+  String get manualPartitioningBootMustBeExt4WarningTitle;
+
+  /// No description provided for @manualPartitioningBootMustBeExt4WarningBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Use an ext4 partition for / or create a separate ext4 partition for /boot'**
+  String get manualPartitioningBootMustBeExt4WarningBody;
 
   /// No description provided for @stepIndicatorLabel.
   ///
