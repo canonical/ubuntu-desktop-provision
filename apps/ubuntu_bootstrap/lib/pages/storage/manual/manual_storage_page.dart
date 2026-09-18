@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_widgets.dart';
@@ -77,6 +78,15 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          if (model.unmetRequirements
+              .contains(GuidanceMessageKind.USE_EXT4_BOOT)) ...[
+            YaruInfoBox(
+              yaruInfoType: YaruInfoType.warning,
+              title: Text(lang.manualPartitioningBootMustBeExt4WarningTitle),
+              subtitle: Text(lang.manualPartitioningBootMustBeExt4WarningBody),
+            ),
+            const SizedBox(height: kWizardSpacing),
+          ],
           if (model.recoverableError != null) ...[
             YaruInfoBox(
               yaruInfoType: YaruInfoType.danger,
