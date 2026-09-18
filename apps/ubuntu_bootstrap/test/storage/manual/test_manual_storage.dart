@@ -25,6 +25,7 @@ ManualStorageModel buildManualStorageModel({
   int? bootDiskIndex,
   bool? waitingForReply,
   SubiquityRecoverableException? recoverableError,
+  List<GuidanceMessageKind>? unmetRequirements,
 }) {
   final model = MockManualStorageModel();
   when(model.isValid).thenReturn(isValid ?? false);
@@ -52,5 +53,6 @@ ManualStorageModel buildManualStorageModel({
   when(model.bootDiskIndex).thenReturn(bootDiskIndex);
   when(model.waitingForReply).thenReturn(waitingForReply ?? false);
   when(model.recoverableError).thenReturn(recoverableError);
+  when(model.unmetRequirements).thenReturn(unmetRequirements ?? []);
   return model;
 }
