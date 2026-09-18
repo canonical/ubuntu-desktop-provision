@@ -80,8 +80,12 @@ class ManualStorageModel extends SafeChangeNotifier {
   }
 
   /// The requirements that are not met by the current layout.
-  List<StorageRequirementStatus> get unmetRequirements =>
-      _service.requirements?.where((r) => !r.satisfied).toList() ?? const [];
+  List<GuidanceMessageKind> get unmetRequirements =>
+      _service.requirements
+          ?.where((r) => !r.satisfied)
+          .map((r) => r.kind)
+          .toList() ??
+      const [];
 
   /// The list of all disks.
   List<Disk> get disks => _disks;
