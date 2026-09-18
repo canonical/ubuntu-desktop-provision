@@ -29,9 +29,8 @@ class StorageService {
     return _client.getStorageV2().then(_updateStorage);
   }
 
-  bool? _needRoot;
-  bool? _needBoot;
   bool? _hasMultipleDisks;
+  List<StorageRequirementStatus>? _requirements;
   int? _installMinimumSize;
   int? _largestDiskSize;
   List<OsProber>? _existingOS;
@@ -43,11 +42,9 @@ class StorageService {
   /// Whether the system has multiple disks available for guided partitioning.
   bool get hasMultipleDisks => _hasMultipleDisks ?? false;
 
-  /// Whether the storage configuration is missing a root partition.
-  bool get needRoot => _needRoot ?? true;
+  /// The current storage requirements.
+  List<StorageRequirementStatus>? get requirements => _requirements;
 
-  /// Whether the storage configuration is missing a boot partition.
-  bool get needBoot => _needBoot ?? true;
 
   /// Whether Secure Boot is enabled.
   Future<bool> hasSecureBoot() async => false; // TODO: add support for it
@@ -128,8 +125,7 @@ class StorageService {
 
   List<Disk> _updateStorage(StorageResponseV2 response) {
     _log.debug('Update storage: $response');
-    _needRoot = response.needRoot;
-    _needBoot = response.needBoot;
+    _requirements = response.requirements;
     _hasMultipleDisks = response.disks.length > 1;
     _installMinimumSize = response.installMinimumSize;
     _largestDiskSize = response.disks.map((d) => d.size).fold<int>(0, math.max);
