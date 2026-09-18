@@ -148,50 +148,69 @@ void main() {
   });
 
   test('requirements', () async {
-    when(client.getStorageV2())
-        .thenAnswer((_) async => fakeStorageResponse(requirements: [
-              StorageRequirementStatus(
-                  kind: GuidanceMessageKind.MOUNT_ROOT, satisfied: false),
-              StorageRequirementStatus(
-                  kind: GuidanceMessageKind.SELECT_BOOT_DISK, satisfied: true)
-            ]));
+    when(client.getStorageV2()).thenAnswer(
+      (_) async => fakeStorageResponse(
+        requirements: [
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.MOUNT_ROOT,
+            satisfied: false,
+          ),
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.SELECT_BOOT_DISK,
+            satisfied: true,
+          ),
+        ],
+      ),
+    );
 
     final service = StorageService(client);
     await service.getStorage();
 
     expect(
-        service.requirements
-            ?.singleWhere((r) => r.kind == GuidanceMessageKind.MOUNT_ROOT).satisfied,
-        isFalse);
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.MOUNT_ROOT)
+          .satisfied,
+      isFalse,
+    );
 
     expect(
-        service.requirements?.singleWhere(
-            (r) => r.kind == GuidanceMessageKind.SELECT_BOOT_DISK).satisfied,
-        isTrue);
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.SELECT_BOOT_DISK)
+          .satisfied,
+      isTrue,
+    );
 
     when(client.resetStorageV2()).thenAnswer(
-      (_) async => fakeStorageResponse(requirements: [
-        StorageRequirementStatus(
-            kind: GuidanceMessageKind.MOUNT_ROOT, satisfied: false),
-        StorageRequirementStatus(
-          kind: GuidanceMessageKind.SELECT_BOOT_DISK,
-          satisfied: false,
-        ),
-      ], disks: []),
+      (_) async => fakeStorageResponse(
+        requirements: [
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.MOUNT_ROOT,
+            satisfied: false,
+          ),
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.SELECT_BOOT_DISK,
+            satisfied: false,
+          ),
+        ],
+        disks: [],
+      ),
     );
 
     await service.resetStorage();
 
-     expect(
-        service.requirements
-            ?.singleWhere((r) => r.kind == GuidanceMessageKind.MOUNT_ROOT).satisfied,
-        isFalse);
+    expect(
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.MOUNT_ROOT)
+          .satisfied,
+      isFalse,
+    );
 
     expect(
-        service.requirements?.singleWhere(
-            (r) => r.kind == GuidanceMessageKind.SELECT_BOOT_DISK).satisfied,
-        isFalse);
-
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.SELECT_BOOT_DISK)
+          .satisfied,
+      isFalse,
+    );
   });
 
   test('add/edit/remove partition', () async {
