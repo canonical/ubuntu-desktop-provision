@@ -45,7 +45,6 @@ class StorageService {
   /// The current storage requirements.
   List<StorageRequirementStatus>? get requirements => _requirements;
 
-
   /// Whether Secure Boot is enabled.
   Future<bool> hasSecureBoot() async => false; // TODO: add support for it
 
