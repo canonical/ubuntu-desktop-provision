@@ -141,6 +141,25 @@ class GuidedCapabilitiesPage extends ConsumerWidget with ProvisioningPage {
                         onChanged: (v) => model.guidedCapability = v!.clean(),
                       ),
                     ],
+                    if (model.currentTargetSupportsBtrfs)
+                      OptionButton(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              flex: 100,
+                              child: Text('Btrfs'),
+                            ),
+                            InfoBadge(
+                              title: experimentalBadgeText,
+                            ),
+                          ].withSpacing(kWizardSpacing / 2),
+                        ),
+                        isThreeLines: false,
+                        value: GuidedCapability.BTRFS,
+                        groupValue: model.guidedCapability,
+                        onChanged: (v) => model.guidedCapability = v!.clean(),
+                      ),
                   ].withSpacing(kWizardSpacing / 2),
                 ),
               ),

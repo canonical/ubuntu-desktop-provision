@@ -169,6 +169,10 @@ class StorageModel extends SafeChangeNotifier {
       ) ??
       false;
 
+  /// Whether or not the current guided storage target supports btrfs guided capabilities.
+  bool get currentTargetSupportsBtrfs =>
+      guidedTarget?.allowed.any((c) => c == GuidedCapability.BTRFS) ?? false;
+
   /// Whether or not the current guided storage target supports TPM guided capabilities.
   bool get currentTargetSupportsTpm =>
       guidedTarget?.allowed.any(
