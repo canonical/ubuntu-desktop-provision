@@ -30,6 +30,65 @@ Future<void> showCreatePartitionDialog(
       return Consumer(
         builder: (context, ref, child) {
           final model = ref.read(manualStorageModelProvider);
+          final l10n = UbuntuBootstrapLocalizations.of(context);
+          final form = FormLayout(
+            rowSpacing: kWizardSpacing,
+            columnSpacing: kWizardSpacing,
+            rows: [
+              [
+                Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
+                ListenableBuilder(
+                  listenable: Listenable.merge([
+                    partitionSize,
+                    partitionUnit,
+                  ]),
+                  builder: (context, child) {
+                    return StorageSizeBox(
+                      size: partitionSize.value,
+                      unit: partitionUnit.value,
+                      maximum: gap.size,
+                      onSizeChanged: (v) => partitionSize.value = v,
+                      onUnitSelected: (v) => partitionUnit.value = v,
+                    );
+                  },
+                ),
+              ],
+              [
+                Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
+                ValueListenableBuilder(
+                  valueListenable: partitionFormat,
+                  builder: (context, value, child) {
+                    return MenuButtonBuilder<PartitionFormat?>(
+                      entries: [
+                        ...PartitionFormat.supported
+                            .map((f) => MenuButtonEntry(value: f)),
+                        const MenuButtonEntry(value: null, isDivider: true),
+                        const MenuButtonEntry(value: PartitionFormat.swap),
+                        const MenuButtonEntry(value: null, isDivider: true),
+                        const MenuButtonEntry(value: PartitionFormat.none),
+                      ],
+                      selected: partitionFormat.value,
+                      onSelected: (format) => partitionFormat.value = format,
+                      itemBuilder: (context, format, child) => Text(
+                        format?.displayName ?? lang.partitionFormatNone,
+                        key: ValueKey(format?.type),
+                      ),
+                    );
+                  },
+                ),
+              ],
+              [
+                Text(
+                  lang.partitionMountPointLabel,
+                  textAlign: TextAlign.end,
+                ),
+                _PartitionMountField(
+                  partitionFormat: partitionFormat,
+                  partitionMount: partitionMount,
+                ),
+              ],
+            ],
+          );
           return AlertDialog(
             title: YaruDialogTitleBar(
               title: Text(lang.partitionCreateTitle),
@@ -39,59 +98,30 @@ Future<void> showCreatePartitionDialog(
             actionsPadding: const EdgeInsets.all(kYaruPagePadding),
             buttonPadding: EdgeInsets.zero,
             scrollable: true,
-            content: FormLayout(
-              rowSpacing: kWizardSpacing,
-              columnSpacing: kWizardSpacing,
-              rows: [
-                [
-                  Text(lang.partitionSizeLabel, textAlign: TextAlign.end),
-                  ListenableBuilder(
-                    listenable: Listenable.merge([
-                      partitionSize,
-                      partitionUnit,
-                    ]),
-                    builder: (context, child) {
-                      return StorageSizeBox(
-                        size: partitionSize.value,
-                        unit: partitionUnit.value,
-                        maximum: gap.size,
-                        onSizeChanged: (v) => partitionSize.value = v,
-                        onUnitSelected: (v) => partitionUnit.value = v,
-                      );
-                    },
-                  ),
-                ],
-                [
-                  Text(lang.partitionFormatLabel, textAlign: TextAlign.end),
-                  ValueListenableBuilder(
-                    valueListenable: partitionFormat,
-                    builder: (context, value, child) {
-                      return MenuButtonBuilder<PartitionFormat?>(
-                        entries: [
-                          ...PartitionFormat.supported
-                              .map((f) => MenuButtonEntry(value: f)),
-                          const MenuButtonEntry(value: null, isDivider: true),
-                          const MenuButtonEntry(value: PartitionFormat.swap),
-                          const MenuButtonEntry(value: null, isDivider: true),
-                          const MenuButtonEntry(value: PartitionFormat.none),
+            content: Column(
+              children: [
+                form,
+                ListenableBuilder(
+                  listenable:
+                      Listenable.merge([partitionFormat, partitionMount]),
+                  builder: (_, __) {
+                    if (partitionMount.value == '/' &&
+                        partitionFormat.value != PartitionFormat.ext4) {
+                      return Column(
+                        children: [
+                          SizedBox(height: kWizardSpacing),
+                          YaruInfoBox(
+                            yaruInfoType: YaruInfoType.information,
+                            title: Text(l10n.allocateDiskSpaceBootMustBeExt4),
+                            subtitle:
+                                Text(l10n.allocateDiskSpaceBootMustBeExt4Info),
+                          ),
                         ],
-                        selected: partitionFormat.value,
-                        onSelected: (format) => partitionFormat.value = format,
-                        itemBuilder: (context, format, child) => Text(
-                          format?.displayName ?? lang.partitionFormatNone,
-                          key: ValueKey(format?.type),
-                        ),
                       );
-                    },
-                  ),
-                ],
-                [
-                  Text(lang.partitionMountPointLabel, textAlign: TextAlign.end),
-                  _PartitionMountField(
-                    partitionFormat: partitionFormat,
-                    partitionMount: partitionMount,
-                  ),
-                ],
+                    }
+                    return SizedBox.shrink();
+                  },
+                ),
               ],
             ),
             actions: [
