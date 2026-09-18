@@ -180,16 +180,14 @@ StorageResponseV2 fakeStorageResponse({
   ProbeStatus status = ProbeStatus.DONE,
   ErrorReportRef? errorReport,
   List<Disk> disks = const [],
-  bool needBoot = false,
-  bool needRoot = false,
+  List<StorageRequirementStatus> requirements = const [],
   int installMinimumSize = 0,
 }) {
   return StorageResponseV2(
     status: status,
     errorReport: errorReport,
     disks: disks,
-    needBoot: needBoot,
-    needRoot: needRoot,
+    requirements: requirements,
     installMinimumSize: installMinimumSize,
   );
 }
