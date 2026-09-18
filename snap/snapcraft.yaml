@@ -63,7 +63,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref fd120dc8a4987f26bcaff42a0a21345222b2b201
+    source-commit: &commit-ref ed0241fee5bdbd22dbbe48bf4752c20c8fd04ca9
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -85,9 +85,9 @@ parts:
 
   curtin:
     plugin: nil
-    source: https://github.com/canonical/curtin
+    source: https://github.com/Dh2Cool/curtin
     source-type: git
-    source-commit: ec32cf30b7898aa282b8f1f174fe01d50050d0fd
+    source-commit: 7bb8bf04fa433618c580a2b68534532d4e8c898c
     override-pull: |
       craftctl default
       # Since snapcraft 8.14, the tags are not automatically fetched
@@ -111,9 +111,9 @@ parts:
 
   probert:
     plugin: nil
-    source: https://github.com/canonical/probert.git
+    source: https://github.com/Dh2Cool/probert.git
     source-type: git
-    source-commit: 7aa6d895446b8639492e548eb0e3df822d74bb2e
+    source-commit: 59b4ecf79fe93d111204d179adbfd63a3e4ee034
     override-build: *pyinstall
     build-packages:
       - build-essential
@@ -141,6 +141,7 @@ parts:
       - libsystemd0
       - lsb-release
       - ntfs-3g
+      - fatattr
       - python3-aiohttp
       - python3-apport
       - python3-attr
