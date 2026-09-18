@@ -374,8 +374,8 @@ MountedPartitionValidation _validateMountedPartition(
   } else if (mountpoint.contains(' ')) {
     return MountedPartitionValidation.containsSpace;
   } else if (mountpoint == DefaultMountPoint.boot.path &&
-      format == PartitionFormat.vfat) {
-    return MountedPartitionValidation.bootIsVfat;
+      format != PartitionFormat.ext4) {
+    return MountedPartitionValidation.bootIsNotExt4;
   }
   return MountedPartitionValidation.success;
 }
@@ -384,7 +384,7 @@ enum MountedPartitionValidation {
   success,
   noLeadingSlash,
   containsSpace,
-  bootIsVfat;
+  bootIsNotExt4;
 
   String? localize(UbuntuBootstrapLocalizations l10n) => switch (this) {
         MountedPartitionValidation.success => null,
@@ -392,10 +392,7 @@ enum MountedPartitionValidation {
           l10n.allocateDiskSpaceInvalidMountPointSlash,
         MountedPartitionValidation.containsSpace =>
           l10n.allocateDiskSpaceInvalidMountPointSpace,
-        MountedPartitionValidation.bootIsVfat =>
-          l10n.allocateDiskSpaceInvalidMountPointFormat(
-            PartitionFormat.vfat.displayName!,
-            DefaultMountPoint.boot.path,
-          ),
+        MountedPartitionValidation.bootIsNotExt4 =>
+          l10n.allocateDiskSpaceBootMustBeExt4,
       };
 }
