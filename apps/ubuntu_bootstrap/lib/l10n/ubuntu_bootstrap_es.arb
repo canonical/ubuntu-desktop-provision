@@ -390,7 +390,7 @@
     },
     "recoveryKeyQrDialogBody": "Escanee el código QR para copiar la clave de recuperación y guardarla en un lugar seguro, como un gestor de contraseñas. También puede tomarle una foto para usarlo más tarde.",
     "recoveryKeyClipboardNotifiaction": "Se copió en el portapapeles",
-    "recoveryKeyExceptionFileSystemTitle": "No se guardó la clave de recuperación",
+    "recoveryKeyExceptionFileSystemTitle": "No se guardó el archivo de la clave de recuperación",
     "recoveryKeyExceptionDisallowedPathTitle": "El archivo de clave de recuperación no se puede guardar en una ubicación temporal",
     "recoveryKeyExceptionUnknownTitle": "Error desconocido",
     "recoveryKeyExceptionDisallowedPathBody": "Pruebe una ubicación diferente, como una unidad extraíble, o use otro método.",
