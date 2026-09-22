@@ -159,5 +159,6 @@
     "networkWifiOpenNetwork": "ئوچۇق تور",
     "networkWifiSecureNetwork": "بىخەتەر تور",
     "networkWifiConnecting": "باغلىنىۋاتىدۇ…",
-    "networkWifiConnected": "باغلاندى"
+    "networkWifiConnected": "باغلاندى",
+    "logViewSemanticLabel": "خاتىرە"
 }
