@@ -1222,6 +1222,28 @@ const _$FirmwareTypeEnumMap = {
   FirmwareType.PREP: 'PREP',
 };
 
+_StorageRequirementStatus _$StorageRequirementStatusFromJson(
+        Map<String, dynamic> json) =>
+    _StorageRequirementStatus(
+      kind: $enumDecode(_$GuidanceMessageKindEnumMap, json['kind']),
+      satisfied: json['satisfied'] as bool,
+    );
+
+Map<String, dynamic> _$StorageRequirementStatusToJson(
+        _StorageRequirementStatus instance) =>
+    <String, dynamic>{
+      'kind': _$GuidanceMessageKindEnumMap[instance.kind]!,
+      'satisfied': instance.satisfied,
+    };
+
+const _$GuidanceMessageKindEnumMap = {
+  GuidanceMessageKind.MOUNT_ROOT: 'MOUNT_ROOT',
+  GuidanceMessageKind.MOUNT_LOCAL_BOOT: 'MOUNT_LOCAL_BOOT',
+  GuidanceMessageKind.SELECT_BOOT_DISK: 'SELECT_BOOT_DISK',
+  GuidanceMessageKind.USE_EXT4_BOOT: 'USE_EXT4_BOOT',
+  GuidanceMessageKind.BOOT_ON_SIMPLE_SETUP: 'BOOT_ON_SIMPLE_SETUP',
+};
+
 _StorageResponseV2 _$StorageResponseV2FromJson(Map<String, dynamic> json) =>
     _StorageResponseV2(
       status: $enumDecode(_$ProbeStatusEnumMap, json['status']),
@@ -1236,6 +1258,10 @@ _StorageResponseV2 _$StorageResponseV2FromJson(Map<String, dynamic> json) =>
       needRoot: json['need_root'] as bool?,
       needBoot: json['need_boot'] as bool?,
       installMinimumSize: (json['install_minimum_size'] as num?)?.toInt(),
+      requirements: (json['requirements'] as List<dynamic>?)
+          ?.map((e) =>
+              StorageRequirementStatus.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$StorageResponseV2ToJson(_StorageResponseV2 instance) =>
@@ -1246,6 +1272,7 @@ Map<String, dynamic> _$StorageResponseV2ToJson(_StorageResponseV2 instance) =>
       'need_root': instance.needRoot,
       'need_boot': instance.needBoot,
       'install_minimum_size': instance.installMinimumSize,
+      'requirements': instance.requirements?.map((e) => e.toJson()).toList(),
     };
 
 _GuidedResizeValues _$GuidedResizeValuesFromJson(Map<String, dynamic> json) =>

@@ -1037,6 +1037,25 @@ abstract class StorageResponse with _$StorageResponse {
       _$StorageResponseFromJson(json);
 }
 
+enum GuidanceMessageKind {
+  MOUNT_ROOT,
+  MOUNT_LOCAL_BOOT,
+  SELECT_BOOT_DISK,
+  USE_EXT4_BOOT,
+  BOOT_ON_SIMPLE_SETUP,
+}
+
+@freezed
+abstract class StorageRequirementStatus with _$StorageRequirementStatus {
+  const factory StorageRequirementStatus({
+    required GuidanceMessageKind kind,
+    required bool satisfied,
+  }) = _StorageRequirementStatus;
+
+  factory StorageRequirementStatus.fromJson(Map<String, dynamic> json) =>
+      _$StorageRequirementStatusFromJson(json);
+}
+
 @freezed
 abstract class StorageResponseV2 with _$StorageResponseV2 {
   const factory StorageResponseV2({
@@ -1046,6 +1065,7 @@ abstract class StorageResponseV2 with _$StorageResponseV2 {
     bool? needRoot,
     bool? needBoot,
     int? installMinimumSize,
+    List<StorageRequirementStatus>? requirements,
   }) = _StorageResponseV2;
 
   factory StorageResponseV2.fromJson(Map<String, dynamic> json) =>
