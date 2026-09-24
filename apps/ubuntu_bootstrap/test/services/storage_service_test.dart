@@ -147,24 +147,70 @@ void main() {
     verify(client.resetStorageV2()).called(1);
   });
 
-  test('needs', () async {
-    when(client.getStorageV2())
-        .thenAnswer((_) async => fakeStorageResponse(needRoot: true));
+  test('requirements', () async {
+    when(client.getStorageV2()).thenAnswer(
+      (_) async => fakeStorageResponse(
+        requirements: [
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.MOUNT_ROOT,
+            satisfied: false,
+          ),
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.SELECT_BOOT_DISK,
+            satisfied: true,
+          ),
+        ],
+      ),
+    );
 
     final service = StorageService(client);
     await service.getStorage();
 
-    expect(service.needRoot, isTrue);
-    expect(service.needBoot, isFalse);
+    expect(
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.MOUNT_ROOT)
+          .satisfied,
+      isFalse,
+    );
+
+    expect(
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.SELECT_BOOT_DISK)
+          .satisfied,
+      isTrue,
+    );
 
     when(client.resetStorageV2()).thenAnswer(
-      (_) async => fakeStorageResponse(needBoot: true, disks: []),
+      (_) async => fakeStorageResponse(
+        requirements: [
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.MOUNT_ROOT,
+            satisfied: false,
+          ),
+          StorageRequirementStatus(
+            kind: GuidanceMessageKind.SELECT_BOOT_DISK,
+            satisfied: false,
+          ),
+        ],
+        disks: [],
+      ),
     );
 
     await service.resetStorage();
 
-    expect(service.needRoot, isFalse);
-    expect(service.needBoot, isTrue);
+    expect(
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.MOUNT_ROOT)
+          .satisfied,
+      isFalse,
+    );
+
+    expect(
+      service.requirements
+          ?.singleWhere((r) => r.kind == GuidanceMessageKind.SELECT_BOOT_DISK)
+          .satisfied,
+      isFalse,
+    );
   });
 
   test('add/edit/remove partition', () async {

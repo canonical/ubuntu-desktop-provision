@@ -349,4 +349,20 @@ void main() {
       findsOneWidget,
     );
   });
+
+  testWidgets('require /boot to be ext4', (tester) async {
+    final model = buildManualStorageModel(
+      unmetRequirements: [GuidanceMessageKind.USE_EXT4_BOOT],
+    );
+    await tester.pumpApp((_) => buildPage(model));
+
+    final context = tester.element(find.byType(ManualStoragePage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    expect(
+      find.text(l10n.manualPartitioningBootMustBeExt4WarningTitle),
+      findsOneWidget,
+    );
+    expect(find.button(find.nextLabel), isDisabled);
+  });
 }

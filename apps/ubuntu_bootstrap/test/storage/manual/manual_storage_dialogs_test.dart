@@ -6,6 +6,7 @@ import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_test/subiquity_test.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_dialogs.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
@@ -295,5 +296,42 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.button(find.okLabel), isDisabled);
+  });
+
+  testWidgets('show information about /boot when creating non-ext4 /',
+      (tester) async {
+    final disk = fakeDisk();
+    const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    final context = tester.element(find.byType(ManualStoragePage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+
+    showCreatePartitionDialog(
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      gap,
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.menuItem(PartitionFormat.btrfs.displayName));
+    await tester.pumpAndSettle();
+
+    await tester.enterText(find.byType(YaruAutocomplete<String>), '/');
+    await tester.pump();
+
+    expect(find.text(l10n.allocateDiskSpaceBootMustBeExt4), findsOneWidget);
   });
 }

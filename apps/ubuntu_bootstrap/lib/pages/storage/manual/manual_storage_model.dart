@@ -71,7 +71,21 @@ class ManualStorageModel extends SafeChangeNotifier {
   SubiquityRecoverableException? _recoverableError;
 
   /// Whether the current input is valid.
-  bool get isValid => !_service.needRoot && !_service.needBoot;
+  ///
+  /// Requirements are null while probing or after a probe failure; that means
+  /// "not ready", not "all clear", so Next stays blocked until they arrive.
+  bool get isValid {
+    final requirements = _service.requirements;
+    return requirements != null && requirements.every((r) => r.satisfied);
+  }
+
+  /// The requirements that are not met by the current layout.
+  List<GuidanceMessageKind> get unmetRequirements =>
+      _service.requirements
+          ?.where((r) => !r.satisfied)
+          .map((r) => r.kind)
+          .toList() ??
+      const [];
 
   /// The list of all disks.
   List<Disk> get disks => _disks;

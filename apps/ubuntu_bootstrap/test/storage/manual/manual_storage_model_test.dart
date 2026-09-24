@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
@@ -401,21 +402,44 @@ void main() {
     final service = MockStorageService();
     final model = ManualStorageModel(service, MockApportService());
 
-    when(service.needRoot).thenReturn(true);
-    when(service.needBoot).thenReturn(true);
+    when(service.requirements).thenReturn(null);
     expect(model.isValid, isFalse);
 
-    when(service.needRoot).thenReturn(false);
-    when(service.needBoot).thenReturn(true);
-    expect(model.isValid, isFalse);
-
-    when(service.needRoot).thenReturn(true);
-    when(service.needBoot).thenReturn(false);
-    expect(model.isValid, isFalse);
-
-    when(service.needRoot).thenReturn(false);
-    when(service.needBoot).thenReturn(false);
+    when(service.requirements).thenReturn([
+      StorageRequirementStatus(
+        kind: GuidanceMessageKind.MOUNT_ROOT,
+        satisfied: true,
+      ),
+      StorageRequirementStatus(
+        kind: GuidanceMessageKind.SELECT_BOOT_DISK,
+        satisfied: true,
+      ),
+    ]);
     expect(model.isValid, isTrue);
+
+    when(service.requirements).thenReturn([
+      StorageRequirementStatus(
+        kind: GuidanceMessageKind.MOUNT_ROOT,
+        satisfied: false,
+      ),
+      StorageRequirementStatus(
+        kind: GuidanceMessageKind.SELECT_BOOT_DISK,
+        satisfied: true,
+      ),
+    ]);
+    expect(model.isValid, isFalse);
+
+    when(service.requirements).thenReturn([
+      StorageRequirementStatus(
+        kind: GuidanceMessageKind.MOUNT_ROOT,
+        satisfied: true,
+      ),
+      StorageRequirementStatus(
+        kind: GuidanceMessageKind.USE_EXT4_BOOT,
+        satisfied: false,
+      ),
+    ]);
+    expect(model.isValid, isFalse);
   });
 
   test('unusable gap', () async {

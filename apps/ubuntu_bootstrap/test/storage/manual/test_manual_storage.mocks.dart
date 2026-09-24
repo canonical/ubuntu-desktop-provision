@@ -64,6 +64,12 @@ class MockManualStorageModel extends _i1.Mock
       ) as bool);
 
   @override
+  List<_i4.GuidanceMessageKind> get unmetRequirements => (super.noSuchMethod(
+        Invocation.getter(#unmetRequirements),
+        returnValue: <_i4.GuidanceMessageKind>[],
+      ) as List<_i4.GuidanceMessageKind>);
+
+  @override
   List<_i4.Disk> get disks => (super.noSuchMethod(
         Invocation.getter(#disks),
         returnValue: <_i4.Disk>[],

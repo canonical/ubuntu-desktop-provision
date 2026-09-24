@@ -409,18 +409,6 @@ class MockStorageService extends _i1.Mock implements _i12.StorageService {
       ) as bool);
 
   @override
-  bool get needRoot => (super.noSuchMethod(
-        Invocation.getter(#needRoot),
-        returnValue: false,
-      ) as bool);
-
-  @override
-  bool get needBoot => (super.noSuchMethod(
-        Invocation.getter(#needBoot),
-        returnValue: false,
-      ) as bool);
-
-  @override
   _i12.PassphraseType get passphraseType => (super.noSuchMethod(
         Invocation.getter(#passphraseType),
         returnValue: _i12.PassphraseType.passphrase,
