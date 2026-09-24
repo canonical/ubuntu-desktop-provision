@@ -1074,5 +1074,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Ordenagailu honek beharrezko segurtasun eginbide bat (hardwarearen fidagarritasun-erroa) falta du.",
     "passphraseTypePageBodyAuthRequired": "Hardware bidezko zifratzeak segurtasun gehigarria behar du ordenagailu honetan.",
     "tpmActionPageTitleActionable": "Arazo bat dago hardware bidezko zifratzearekin",
-    "installationLogSemanticLabel": "Instalazioaren erregistroa"
+    "installationLogSemanticLabel": "Instalazioaren erregistroa",
+    "allocateDiskSpaceBootMustBeExt4": "/boot ext4 partizio batean muntatu behar da",
+    "allocateDiskSpaceBootMustBeExt4Info": "Erabili ext4 partizio bat / muntatze-puntuarentzat edo sortu aparteko ext4 partizio bat /boot muntatzeko",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot ext4 partizio batean muntatu behar da",
+    "manualPartitioningBootMustBeExt4WarningBody": "Erabili ext4 partizio bat / muntatze-puntuarentzat edo sortu aparteko ext4 partizio bat /boot muntatzeko"
 }
