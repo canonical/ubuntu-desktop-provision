@@ -1013,6 +1013,65 @@ void main() {
     await tester.tapRestartNow();
     await expectLater(windowClosed, completes);
   });
+
+  testWidgets('autoinstall with interactive active directory', (tester) async {
+    // Subiquity has no example file with interactive AD, so write one here.
+    final tempDir = Directory.systemTemp.createTempSync('ubuntu_bootstrap-');
+    addTearDown(() => tempDir.deleteSync(recursive: true));
+    final autoinstall = File(p.join(tempDir.path, 'autoinstall.yaml'))
+      ..writeAsStringSync(r'''
+version: 1
+identity:
+  realname: ''
+  username: ubuntu
+  hostname: ubuntu
+  password: '$6$wdAcoXrU039hKYPd$508Qvbe7ObUnxoj15DRCkzC3qO7edjH0VV7BPNRDYK4QR8ofJaEEF2heacn0QgD.f8pO8SNp83XNdWG6tocBM1'
+active-directory:
+  admin-name: ad-admin
+  domain-name: ad.ubuntu.com
+interactive-sections:
+  - identity
+  - active-directory
+''');
+
+    await tester.runApp(
+      () => app.main(<String>['--', '--autoinstall=${autoinstall.path}']),
+    );
+    await tester.pumpAndSettle();
+
+    await tester.testIdentityPage(
+      identity: const Identity(
+        realname: 'User',
+        hostname: 'ubuntu',
+        username: 'user',
+      ),
+      password: 'password',
+      shouldNavigate: false,
+    );
+    final context = tester.element(find.byType(IdentityPage));
+    final l10n = IdentityLocalizations.of(context);
+    expect(find.checkButton(l10n.identityActiveDirectoryOption), isChecked);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testActiveDirectoryPage(password: 'password');
+    expect(find.text('ad-admin'), findsOneWidget);
+    await tester.tapNext();
+    await tester.pumpAndSettle();
+
+    await tester.testConfirmPage();
+    await tester.testInstallPage();
+    await tester.testDonePage();
+
+    expect(
+      await getService<ActiveDirectoryService>().getJoinResult(),
+      AdJoinResult.OK,
+    );
+
+    final windowClosed = YaruTestWindow.waitForClosed();
+    await tester.tapRestartNow();
+    await expectLater(windowClosed, completes);
+  });
 }
 
 Future<void> eraseInstallTest({
