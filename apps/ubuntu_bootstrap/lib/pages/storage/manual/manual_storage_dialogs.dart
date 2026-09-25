@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
@@ -106,7 +107,9 @@ Future<void> showCreatePartitionDialog(
                       Listenable.merge([partitionFormat, partitionMount]),
                   builder: (_, __) {
                     if (partitionMount.value == '/' &&
-                        partitionFormat.value != PartitionFormat.ext4) {
+                        partitionFormat.value != PartitionFormat.ext4 &&
+                        model.availableRequirements
+                            .contains(GuidanceMessageKind.USE_EXT4_BOOT)) {
                       return Column(
                         children: [
                           SizedBox(height: kWizardSpacing),
