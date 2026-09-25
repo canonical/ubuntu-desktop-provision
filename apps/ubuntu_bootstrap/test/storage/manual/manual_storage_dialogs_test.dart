@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_dialogs.dart';
@@ -302,7 +303,10 @@ void main() {
       (tester) async {
     final disk = fakeDisk();
     const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
-    final model = buildManualStorageModel(selectedDisk: disk);
+    final model = buildManualStorageModel(
+      selectedDisk: disk,
+      availableRequirements: [GuidanceMessageKind.USE_EXT4_BOOT],
+    );
 
     registerMockService<UdevService>(MockUdevService());
 

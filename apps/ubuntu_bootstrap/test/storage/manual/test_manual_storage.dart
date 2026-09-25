@@ -26,6 +26,7 @@ ManualStorageModel buildManualStorageModel({
   bool? waitingForReply,
   SubiquityRecoverableException? recoverableError,
   List<GuidanceMessageKind>? unmetRequirements,
+  List<GuidanceMessageKind>? availableRequirements,
 }) {
   final model = MockManualStorageModel();
   when(model.isValid).thenReturn(isValid ?? false);
@@ -54,5 +55,6 @@ ManualStorageModel buildManualStorageModel({
   when(model.waitingForReply).thenReturn(waitingForReply ?? false);
   when(model.recoverableError).thenReturn(recoverableError);
   when(model.unmetRequirements).thenReturn(unmetRequirements ?? []);
+  when(model.availableRequirements).thenReturn(availableRequirements ?? []);
   return model;
 }

@@ -87,6 +87,10 @@ class ManualStorageModel extends SafeChangeNotifier {
           .toList() ??
       const [];
 
+  /// The list of all requirements provided by subiquity.
+  List<GuidanceMessageKind> get availableRequirements =>
+      _service.requirements?.map((r) => r.kind).toList() ?? const [];
+
   /// The list of all disks.
   List<Disk> get disks => _disks;
 

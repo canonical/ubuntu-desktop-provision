@@ -70,6 +70,13 @@ class MockManualStorageModel extends _i1.Mock
       ) as List<_i4.GuidanceMessageKind>);
 
   @override
+  List<_i4.GuidanceMessageKind> get availableRequirements =>
+      (super.noSuchMethod(
+        Invocation.getter(#availableRequirements),
+        returnValue: <_i4.GuidanceMessageKind>[],
+      ) as List<_i4.GuidanceMessageKind>);
+
+  @override
   List<_i4.Disk> get disks => (super.noSuchMethod(
         Invocation.getter(#disks),
         returnValue: <_i4.Disk>[],
