@@ -60,7 +60,7 @@
     "activeDirectoryDomainInvalidChars": "არასწორი სიმბოლოები",
     "activeDirectoryAdminInvalidChars": "არასწორი სიმბოლოები",
     "identityRealNameRequired": "სახელი აუცილებელია",
-    "identityInvalidUsername": "მომხმარებლის სახელი არასწორია",
+    "identityInvalidUsername": "მომხმარებლის სახელი არასწორია: ის უნდა იწყებოდეს მხედრული ასოთი და შეიძლება, მხოლოდ, შეიცავდეს მხედრულ ასოებს, ციფრებს, ტირეებს და ქვედა ტირეებს.",
     "timezonePageTitle": "აირჩიეთ თქვენი დროის სარტყელი",
     "identityRealNameTooLong": "სახელი მეტისმეტად გრძელია.",
     "identityHostnameRequired": "კომპიუტერის სახელი აუცილებელია",
@@ -114,5 +114,16 @@
     "minimizeIconSemanticLabel": "ჩაკეცვა",
     "expandIconSemanticLabel": "ჩამოშლა",
     "collapseIconSemanticLabel": "აკეცვა",
-    "errorPageTechnicalDetails": "ტექნიკური დეტალები"
+    "errorPageTechnicalDetails": "ტექნიკური დეტალები",
+    "identityInvalidRealName": "სახელი არასწორია",
+    "networkWifiSignalNone": "სიგნალის გარეშე",
+    "networkWifiSignalWeak": "სუსტი სიგნალი",
+    "networkWifiSignalOk": "სიგნალი მისაღებია",
+    "networkWifiSignalGood": "კარგი სიგნალი",
+    "networkWifiSignalExcellent": "შესანიშნავი სიგნალი",
+    "networkWifiOpenNetwork": "ღია ქსელი",
+    "networkWifiSecureNetwork": "დაცული ქსელი",
+    "networkWifiConnecting": "დაკავშირება…",
+    "networkWifiConnected": "დაკავშირებულია",
+    "logViewSemanticLabel": "ჟურნალი"
 }

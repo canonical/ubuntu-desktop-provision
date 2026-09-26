@@ -123,7 +123,7 @@
     "networkWifiSignalExcellent": "Відмінний сигнал",
     "networkWifiOpenNetwork": "Відкрита мережа",
     "networkWifiSecureNetwork": "Безпечна мережа",
-    "networkWifiConnecting": "Підключення…",
-    "networkWifiConnected": "Підключено",
+    "networkWifiConnecting": "Під'єднання…",
+    "networkWifiConnected": "Під'єднано",
     "logViewSemanticLabel": "Журнал"
 }

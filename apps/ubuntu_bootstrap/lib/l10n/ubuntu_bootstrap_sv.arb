@@ -539,5 +539,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Datorn saknar nödvändig säkerhetsfunktionalitet (root-of-trust i hårdvara).",
     "passphraseTypePageBodyAuthRequired": "Hårdvarubaserad kryptering kräver ytterligare säkerhetsfunktionalitet i den här datorn.",
     "tpmActionPageTitleActionable": "Det finns ett problem med hårdvarubaserad kryptering",
-    "installationLogSemanticLabel": "Installationslogg"
+    "installationLogSemanticLabel": "Installationslogg",
+    "allocateDiskSpaceBootMustBeExt4": "/boot måste monteras på en ext4-partition",
+    "allocateDiskSpaceBootMustBeExt4Info": "Använd en ext4-partition för / eller skapa en separat ext4-partition för /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot måste monteras på en ext4-partition",
+    "manualPartitioningBootMustBeExt4WarningBody": "Använd en ext4-partition för / eller skapa en separat ext4-partition för /boot"
 }

@@ -539,5 +539,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Je ĉi tiu komputilo mankas necesa sekuriga funkcio (nome, aparata fidradiko).",
     "passphraseTypePageBodyAuthRequired": "Aparatobaza ĉifrado postulas plian sekurecon je ĉi tiu komputilo.",
     "tpmActionPageTitleActionable": "Ekzistas problemo pri la aparato-baza ĉifrado",
-    "installationLogSemanticLabel": "Protokolo pri instalado"
+    "installationLogSemanticLabel": "Protokolo pri instalado",
+    "allocateDiskSpaceBootMustBeExt4": "/boot devas esti surmetita ĉe ext4-subdisko",
+    "allocateDiskSpaceBootMustBeExt4Info": "Uzu ext4-subdiskon por /, aŭ kreu apartan ext4-subdiskon por /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot devas esti surmetita ĉe ext4-subdisko",
+    "manualPartitioningBootMustBeExt4WarningBody": "Uzu ext4-subdiskon por /, aŭ kreu apartan ext4-subdiskon por /boot"
 }

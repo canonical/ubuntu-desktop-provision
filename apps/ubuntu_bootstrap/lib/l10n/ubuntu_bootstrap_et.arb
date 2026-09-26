@@ -520,5 +520,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Sellest arvutist on puudu turvalisusega seotud funktsionaalsus (raudvarapõhise usaldusahela lähtelahendus).",
     "passphraseTypePageBodyAuthRequired": "Raudvarapõhine krüptimine eeldab täiendava turvafunktsionaalsuse olemasolu arvutis.",
     "tpmActionPageTitleActionable": "Raudvarapõhise krüptimisega seoses tekkis üks probleem",
-    "installationLogSemanticLabel": "Paigalduse logi"
+    "installationLogSemanticLabel": "Paigalduse logi",
+    "allocateDiskSpaceBootMustBeExt4": "/boot kaust peab olema haagitud ext4 failisüsteemiga partitsioonile",
+    "allocateDiskSpaceBootMustBeExt4Info": "Kasuta juurkausta (/) jaoks ext4 failisüsteemi või tee /boot kausta jaoks eraldi partitsioon",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot kaust peab olema haagitud ext4 failisüsteemiga partitsioonile",
+    "manualPartitioningBootMustBeExt4WarningBody": "Kasuta juurkausta (/) jaoks ext4 failisüsteemi või tee /boot kausta jaoks eraldi partitsioon"
 }

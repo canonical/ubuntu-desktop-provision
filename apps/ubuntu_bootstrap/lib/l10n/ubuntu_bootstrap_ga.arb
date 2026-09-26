@@ -536,5 +536,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Tá gné slándála riachtanach (fréamh iontaoibhe crua-earraí) in easnamh ar an ríomhaire seo.",
     "passphraseTypePageBodyAuthRequired": "Éilíonn criptiú atá bunaithe ar chrua-earraí slándáil bhreise sa ríomhaire seo.",
     "tpmActionPageTitleActionable": "Tá fadhb ann le criptiú atá bunaithe ar chrua-earraí",
-    "installationLogSemanticLabel": "Loga suiteála"
+    "installationLogSemanticLabel": "Loga suiteála",
+    "allocateDiskSpaceBootMustBeExt4": "Caithfear /boot a fheistiú ar dheighilt ext4",
+    "allocateDiskSpaceBootMustBeExt4Info": "Úsáid deighilt ext4 le haghaidh / nó cruthaigh deighilt ext4 ar leith le haghaidh /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "Caithfear /boot a fheistiú ar dheighilt ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "Úsáid deighilt ext4 le haghaidh / nó cruthaigh deighilt ext4 ar leith le haghaidh /boot"
 }
