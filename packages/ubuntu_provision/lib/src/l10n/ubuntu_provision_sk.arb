@@ -104,7 +104,7 @@
     "activeDirectoryInfo": "{DISTRO} je navrhnuté na bezproblémovú integráciu s Active Directory pre jednoduchšiu správu.",
     "networkPageBody": "Pripojenie na internet zlepšuje inštaláciu kontrolou kompatibility a dodatočnými balíkmi softvéru.",
     "eulaReviewTerms": "Oboznámiť sa s podmienkami licencie",
-    "eulaAcceptTerms": "Prečítal som si a prijímam tieto podmienky",
+    "eulaAcceptTerms": "Prečítal(a) som si a prijímam tieto podmienky",
     "eulaPageTitle": "Licenčná zmluva",
     "eulaReadAndAcceptTerms": "Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.",
     "errorPageUbuntuBug": "Na odoslanie automatizovaného hlásenia o chybe vrátane ladených informácií spustite v termináli alebo z príkazového riadku (Alt+F2) príkaz <pre>sudo ubuntu-bug {SNAP}</pre>.",
