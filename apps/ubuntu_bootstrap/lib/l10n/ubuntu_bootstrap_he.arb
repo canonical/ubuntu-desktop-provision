@@ -538,5 +538,6 @@
     "allocateDiskSpaceBootMustBeExt4": "חובה לעגן את ‎/boot על מחיצת ext4",
     "allocateDiskSpaceBootMustBeExt4Info": "יש להשתמש במחיצת ext4 עבור / או ליצור מחיצת ext4 נפרדת עבור ‎/boot",
     "installationLogSemanticLabel": "יומן התקנה",
-    "manualPartitioningBootMustBeExt4WarningTitle": "חובה לעגן את ‎/boot על מחיצת ext4"
+    "manualPartitioningBootMustBeExt4WarningTitle": "חובה לעגן את ‎/boot על מחיצת ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "יש להשתמש במחיצת ext4 עבור / או ליצור מחיצת ext4 נפרדת עבור ‎/boot"
 }
