@@ -1,3 +1,5 @@
+import 'package:flutter/gestures.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/src/network/ethernet_view.dart';
@@ -5,6 +7,7 @@ import 'package:ubuntu_provision/src/network/hidden_wifi_view.dart';
 import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_model.dart';
 import 'package:ubuntu_provision/src/network/network_page.dart';
+import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:ubuntu_provision/src/network/wifi_view.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
@@ -86,6 +89,50 @@ void main() {
     await tester.pump();
     await tester.tap(tile);
     expect(model.connectMode, ConnectMode.wifi);
+  });
+
+  testWidgets('double-clicking an access point connects', (tester) async {
+    final model = NetworkModel(MockNetworkService());
+    await tester.pumpApp(
+      (_) => buildNetworkPage(model: model, ethernet: false, wifi: true),
+    );
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(NetworkPage));
+    final wifiModel =
+        ProviderScope.containerOf(context).read(wifiModelProvider);
+    when(wifiModel.connect()).thenAnswer((_) async {});
+
+    final tile = find.listTile('ap').first;
+    await tester.tap(tile);
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.tap(tile);
+    await tester.pump(kDoubleTapTimeout);
+
+    expect(model.connectMode, ConnectMode.wifi);
+    verify(wifiModel.connect()).called(1);
+  });
+
+  testWidgets('double-clicking does not connect while connecting',
+      (tester) async {
+    final model = NetworkModel(MockNetworkService());
+    await tester.pumpApp(
+      (_) => buildNetworkPage(model: model, ethernet: false, wifi: true),
+    );
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(NetworkPage));
+    final wifiModel =
+        ProviderScope.containerOf(context).read(wifiModelProvider);
+    when(wifiModel.isConnecting).thenReturn(true);
+
+    final tile = find.listTile('ap').first;
+    await tester.tap(tile);
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.tap(tile);
+    await tester.pump(kDoubleTapTimeout);
+
+    verifyNever(wifiModel.connect());
   });
 
   testWidgets('initializes and cleans up the model', (tester) async {

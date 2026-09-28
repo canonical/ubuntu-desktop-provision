@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -108,6 +109,73 @@ void main() {
     await tester.tap(ap2);
     expect(selectedDevice, equals(device2));
     expect(selectedAccessPoint, equals(accessPoint2));
+  });
+
+  testWidgets('double-clicking an access point activates it', (tester) async {
+    final device = MockWifiDevice();
+    when(device.model).thenReturn('model');
+    when(device.scanning).thenReturn(false);
+    when(device.isConnecting).thenReturn(false);
+    when(device.isAvailable).thenReturn(true);
+    when(device.isActive).thenReturn(false);
+
+    final accessPoint = MockAccessPoint();
+    when(accessPoint.name).thenReturn('ap');
+    when(accessPoint.strength).thenReturn(1);
+    when(accessPoint.isOpen).thenReturn(true);
+    when(device.accessPoints).thenReturn([accessPoint]);
+    when(device.isSelectedAccessPoint(accessPoint)).thenReturn(false);
+    when(device.isActiveAccessPoint(accessPoint)).thenReturn(false);
+
+    final model = buildWifiModel(devices: [device], isEnabled: true);
+
+    var selected = 0;
+    final activated = <(WifiDevice, AccessPoint)>[];
+
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [
+          wifiModelProvider.overrideWith((_) => model),
+        ],
+        child: Material(
+          child: Column(
+            children: [
+              WifiView(
+                expanded: true,
+                onEnabled: () {},
+                onSelected: (_, __) => selected++,
+                onActivated: (device, accessPoint) =>
+                    activated.add((device, accessPoint)),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    final ap = find.listTile('ap').first;
+
+    // a single click only selects
+    await tester.tap(ap);
+    await tester.pump(kDoubleTapTimeout + const Duration(milliseconds: 1));
+    expect(selected, 1);
+    expect(activated, isEmpty);
+
+    // two slow clicks do not activate
+    await tester.tap(ap);
+    await tester.pump(kDoubleTapTimeout + const Duration(milliseconds: 1));
+    await tester.tap(ap);
+    await tester.pump(kDoubleTapTimeout + const Duration(milliseconds: 1));
+    expect(selected, 3);
+    expect(activated, isEmpty);
+
+    // a double click selects and activates
+    await tester.tap(ap);
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.tap(ap);
+    await tester.pump(kDoubleTapTimeout + const Duration(milliseconds: 1));
+    expect(selected, 5);
+    expect(activated, equals([(device, accessPoint)]));
   });
 
   testWidgets('wifi disabled', (tester) async {

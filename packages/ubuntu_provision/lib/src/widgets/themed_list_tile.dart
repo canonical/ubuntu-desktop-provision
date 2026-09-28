@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:flutter/gestures.dart' show kDoubleTapTimeout;
 import 'package:flutter/material.dart';
 import 'package:yaru/yaru.dart';
 
@@ -7,6 +10,7 @@ class ThemedListTile extends StatefulWidget {
     required this.title,
     super.key,
     this.onTap,
+    this.onDoubleTap,
     this.leading,
     this.trailing,
   });
@@ -18,12 +22,35 @@ class ThemedListTile extends StatefulWidget {
   final Widget? trailing;
   final void Function()? onTap;
 
+  /// Called when the tile is tapped twice in quick succession. The first tap
+  /// still triggers [onTap] immediately, so single taps are not delayed.
+  final void Function()? onDoubleTap;
+
   @override
   State<ThemedListTile> createState() => _ThemedListTileState();
 }
 
 class _ThemedListTileState extends State<ThemedListTile> {
   bool _focused = false;
+  Timer? _doubleTapTimer;
+
+  @override
+  void dispose() {
+    _doubleTapTimer?.cancel();
+    super.dispose();
+  }
+
+  void _handleTap() {
+    widget.onTap?.call();
+    if (widget.onDoubleTap == null) return;
+    if (_doubleTapTimer?.isActive ?? false) {
+      _doubleTapTimer!.cancel();
+      _doubleTapTimer = null;
+      widget.onDoubleTap!();
+    } else {
+      _doubleTapTimer = Timer(kDoubleTapTimeout, () {});
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +76,9 @@ class _ThemedListTileState extends State<ThemedListTile> {
         trailing: widget.trailing,
         title: widget.title,
         selected: widget.selected,
-        onTap: widget.onTap,
+        onTap: widget.onTap != null || widget.onDoubleTap != null
+            ? _handleTap
+            : null,
         selectedColor: theme.textTheme.bodyMedium?.color,
         focusColor: Colors.transparent,
         visualDensity: VisualDensity.compact,
