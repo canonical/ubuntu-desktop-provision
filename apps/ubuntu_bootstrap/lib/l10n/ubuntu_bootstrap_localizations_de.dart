@@ -690,11 +690,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot muss auf einer ext4-Partition eingehängt sein';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Verwenden Sie eine ext4-Partition für / oder erstellen Sie eine separate ext4-Partition für /boot';
 
   @override
   String get diskHeadersDevice => 'Laufwerk';
@@ -1057,7 +1057,7 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
   String get installationSlidesAccessibilityLanguages => 'Sprachunterstützung';
 
   @override
-  String get installationSlidesSupportTitle => 'Hilfe & Unterstützung';
+  String get installationSlidesSupportTitle => 'Hilfe und Unterstützung';
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
@@ -1737,11 +1737,11 @@ class UbuntuBootstrapLocalizationsDe extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot muss auf einer ext4-Partition eingehängt sein';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Verwenden Sie eine ext4-Partition für / oder erstellen Sie eine separate ext4-Partition für /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
