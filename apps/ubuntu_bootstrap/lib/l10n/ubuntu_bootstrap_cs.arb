@@ -539,5 +539,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Tento počítač postrádá potřebnou funkci zabezpečení (hardwarový kořen důvěry).",
     "passphraseTypePageBodyAuthRequired": "Šifrování obsluhované hardwarem vyžaduje v tomto počítači dodatečné zabezpečení.",
     "tpmActionPageTitleActionable": "Je problém s na hardware založeném šifrování",
-    "installationLogSemanticLabel": "Záznam instalace"
+    "installationLogSemanticLabel": "Záznam instalace",
+    "allocateDiskSpaceBootMustBeExt4": "je třeba, aby /boot bylo připojeno jako ext4 oddíl",
+    "allocateDiskSpaceBootMustBeExt4Info": "Použijte ext4 oddíl pro / nebo vytvořte oddělený ext4 oddíl pro /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "Je třeba, aby /boot bylo připojené jako ext4 oddíl",
+    "manualPartitioningBootMustBeExt4WarningBody": "Použijte ext4 oddíl pro / nebo vytvořte oddělený ext4 oddíl pro /boot"
 }

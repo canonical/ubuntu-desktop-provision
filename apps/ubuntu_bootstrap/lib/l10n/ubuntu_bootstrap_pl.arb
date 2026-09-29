@@ -539,5 +539,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "Temu komputerowi brakuje wymaganej funkcji zabezpieczającej (sprzętowe źródło zaufania).",
     "passphraseTypePageBodyAuthRequired": "Sprzętowe szyfrowanie wymaga dodatkowych zabezpieczeń na tym komputerze.",
     "tpmActionPageTitleActionable": "Występuje problem z szyfrowaniem sprzętowym",
-    "installationLogSemanticLabel": "Dziennik instalacji"
+    "installationLogSemanticLabel": "Dziennik instalacji",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot musi być zamontowany na partycji ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "Użyj partycji ext4 dla / lub utwórz oddzielną partycję ext4 dla /boot",
+    "allocateDiskSpaceBootMustBeExt4": "/boot musi być zamontowany na partycji ext4",
+    "allocateDiskSpaceBootMustBeExt4Info": "Użyj partycji ext4 dla / lub utwórz oddzielną partycję ext4 dla /boot"
 }

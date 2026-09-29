@@ -13,12 +13,12 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageHeader(String DISTRO) {
-    return 'Prístupnosť v systéme $DISTRO';
+    return 'Prístupnosť v $DISTRO';
   }
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Prispôsobte si systém $DISTRO podľa svojich potrieb ešte pred nastavením. Tieto nastavenia môžete neskôr zmeniť v aplikácii Nastavenia.';
+    return 'Prispôsobte si $DISTRO podľa svojich potrieb pred nastavením. Neskôr ich zmeníte v aplikácii Nastavenia.';
   }
 
   @override
@@ -68,11 +68,11 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'Ospravedlňujeme sa, ale nevieme, aká chyba nastala. Skúste reštartovať počítač a spustiť inštaláciu znova. Môžete tiež <a>nahlásiť problém</a>.';
+      'Ospravedlňujeme sa, ale nevieme určiť chybu. Skúste reštartovať počítač a spustiť inštaláciu znova. Môžete tiež <a>nahlásiť problém</a>.';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
-    return 'Ak chcete odoslať automatizované hlásenie o chybe vrátane relevantných ladených informácií, spustite v termináli alebo z príkazového riadku (Alt+F2) príkaz <pre>sudo ubuntu-bug $SNAP</pre>.';
+    return 'Na odoslanie automatizovaného hlásenia o chybe vrátane ladených informácií spustite v termináli alebo z príkazového riadku (Alt+F2) príkaz <pre>sudo ubuntu-bug $SNAP</pre>.';
   }
 
   @override
@@ -91,7 +91,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get close => 'Zavrieť';
 
   @override
-  String get timezonePageTitle => 'Vyberte svoje časové pásmo';
+  String get timezonePageTitle => 'Vyberte časové pásmo';
 
   @override
   String get timezoneLocationLabel => 'Lokalita';
@@ -118,18 +118,17 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get keyboardVariantLabel => 'Vyberte variantu klávesnice:';
 
   @override
-  String get keyboardPressKeyLabel =>
-      'Prosím, stlačte jeden z nasledujúcich klávesov:';
+  String get keyboardPressKeyLabel => 'Stlačte jeden z nasledujúcich klávesov:';
 
   @override
   String get keyboardKeyPresentLabel => 'Je na klávesnici nasledujúci kláves?';
 
   @override
-  String get themePageTitle => 'Vyberte si tému';
+  String get themePageTitle => 'Vyberte tému';
 
   @override
   String get themePageHeader =>
-      'Toto nastavenie môžete kedykoľvek neskôr zmeniť v nastaveniach vzhľadu.';
+      'Toto nastavenie môžete neskôr zmeniť v nastaveniach vzhľadu.';
 
   @override
   String get themeDark => 'Tmavá';
@@ -139,14 +138,14 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String localePageTitle(String DISTRO) {
-    return 'Vitajte v systéme $DISTRO';
+    return 'Vitajte v $DISTRO';
   }
 
   @override
   String get localeHeader => 'Vyberte jazyk:';
 
   @override
-  String get identityPageTitle => 'Vytvorte si účet';
+  String get identityPageTitle => 'Vytvorte účet';
 
   @override
   String get identityAutoLogin => 'Prihlásiť sa automaticky';
@@ -161,29 +160,29 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
   String get identityRealNameRequired => 'Meno je povinné';
 
   @override
-  String get identityRealNameTooLong => 'Toto meno je príliš dlhé.';
+  String get identityRealNameTooLong => 'Meno je príliš dlhé.';
 
   @override
   String get identityInvalidRealName => 'Meno je neplatné';
 
   @override
-  String get identityHostnameLabel => 'Názov vášho počítača';
+  String get identityHostnameLabel => 'Názov počítača';
 
   @override
   String get identityHostnameInfo =>
-      'Názov, ktorý počítač používa pri komunikácii s inými počítačmi.';
+      'Názov používaný pri komunikácii s inými počítačmi.';
 
   @override
   String get identityHostnameRequired => 'Názov počítača je povinný';
 
   @override
-  String get identityHostnameTooLong => 'Tento názov počítača je príliš dlhý.';
+  String get identityHostnameTooLong => 'Názov počítača je príliš dlhý.';
 
   @override
   String get identityInvalidHostname => 'Názov počítača je neplatný';
 
   @override
-  String get identityUsernameLabel => 'Vaše používateľské meno';
+  String get identityUsernameLabel => 'Používateľské meno';
 
   @override
   String get identityUsernameRequired => 'Používateľské meno je povinné';
@@ -197,14 +196,13 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get identityUsernameSystemReserved =>
-      'Tento názov je vyhradený pre systémové použitie.';
+      'Tento názov je vyhradený pre systém.';
 
   @override
-  String get identityUsernameTooLong => 'Toto meno je príliš dlhé.';
+  String get identityUsernameTooLong => 'Meno je príliš dlhé.';
 
   @override
-  String get identityUsernameInvalidChars =>
-      'Toto meno obsahuje neplatné znaky.';
+  String get identityUsernameInvalidChars => 'Meno obsahuje neplatné znaky.';
 
   @override
   String get identityPasswordLabel => 'Heslo';
@@ -239,7 +237,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String activeDirectoryInfo(String DISTRO) {
-    return 'Systém $DISTRO je navrhnutý tak, aby sa bezproblémovo integroval s Active Directory pre jednoduchšiu správu.';
+    return '$DISTRO je navrhnuté na bezproblémovú integráciu s Active Directory pre jednoduchšiu správu.';
   }
 
   @override
@@ -307,7 +305,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get networkPageBody =>
-      'Pripojenie na internet zlepšuje inštaláciu pomocou kontroly kompatibility a dodatočných balíkov softvéru.';
+      'Pripojenie na internet zlepšuje inštaláciu kontrolou kompatibility a dodatočnými balíkmi softvéru.';
 
   @override
   String get networkWiredOption => 'Použiť káblové pripojenie';
@@ -320,7 +318,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWiredDisabled =>
-      'Ak chcete na tomto počítači použiť Ethernet, musí byť povolené káblové pripojenie';
+      'Ak chcete použiť Ethernet, musí byť povolené káblové pripojenie';
 
   @override
   String get networkWiredEnable => 'Povoliť káblové pripojenie';
@@ -336,7 +334,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiDisabled =>
-      'Ak chcete na tomto počítači použiť Wi-Fi, musí byť povolené bezdrôtové pripojenie';
+      'Ak chcete použiť Wi-Fi, musí byť povolené bezdrôtové pripojenie';
 
   @override
   String get networkWifiEnable => 'Povoliť Wi-Fi';
@@ -364,7 +362,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
       'Ak chcete pokračovať v nastavovaní tohto počítača, musíte si prečítať a prijať podmienky licenčnej zmluvy.';
 
   @override
-  String get eulaAcceptTerms => 'Prečítal som si a prijímam tieto podmienky';
+  String get eulaAcceptTerms => 'Prečítal(a) som si a prijímam tieto podmienky';
 
   @override
   String get successIconSemanticLabel => 'Úspech';

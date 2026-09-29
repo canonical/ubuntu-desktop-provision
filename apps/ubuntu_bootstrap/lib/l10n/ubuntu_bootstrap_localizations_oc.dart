@@ -310,7 +310,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get installDriversSubtitle =>
-      'Aquestes pilòts son someses a de licéncias que son inclusas dins lor documentacion. Son proprietaris.';
+      'Aquò inclutz mas sens se limitar als pilòts NVIDIA e similars';
 
   @override
   String get installCodecsTitle =>
@@ -610,7 +610,7 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeManualInfo(String DISTRO) {
-    return 'Podètz crear o retalhar las particions vos meteis, o causir mantuna particion per $DISTRO';
+    return 'Pels utilizaires avançats que cèrcan de configuracions de disc personalizadas.';
   }
 
   @override
@@ -686,11 +686,11 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot deu èsser montat sus una particion ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Utilizatz una particion ext4 per / o creatz una particion ext4 separada per /boot';
 
   @override
   String get diskHeadersDevice => 'Disc';
@@ -1162,7 +1162,8 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
   }
 
   @override
-  String get refreshRestart => 'Mercés de reaviar l’installador.';
+  String get refreshRestart =>
+      'Mercés de tampar l’installador e de lo relançar per contunhar';
 
   @override
   String get refreshCloseLabel => 'Tampar l’installador';
@@ -1728,11 +1729,11 @@ class UbuntuBootstrapLocalizationsOc extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot deu èsser montat sus una particion ext4';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Utilizatz una particion ext4 per / o creatz una particion ext4 separada per /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

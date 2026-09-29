@@ -66,7 +66,7 @@
     "networkWiredOption": "Utilizar conexión por cable",
     "networkWiredNone": "No se ha detectado una conexión por cable",
     "networkWiredOff": "La conexión por cable está desactivada",
-    "networkWiredDisabled": "Para utilizar Ethernet en este ordenador, debe activarse una conexión por cable",
+    "networkWiredDisabled": "Para utilizar Ethernet en este equipo, debe activarse una conexión por cable",
     "networkWiredEnable": "Activar por cable",
     "networkWifiOption": "Conectarse a una red Wi-Fi",
     "networkWifiOff": "Red inalámbrica desactivada",
