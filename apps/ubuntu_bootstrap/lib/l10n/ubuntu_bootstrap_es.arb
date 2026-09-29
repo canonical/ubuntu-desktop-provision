@@ -521,7 +521,7 @@
     "autoinstallGenericErrorMessage": "La instalación no puede continuar con el archivo de instalación automática proporcionado.",
     "autoinstallValidationErrorMessage": "Hay un problema con el archivo de instalación automática proporcionado.",
     "autoinstallCloudInitSchemaValidationErrorMessage": "Hay un problema con los datos de usuario de cloud-init que figuran en el archivo de instalación automática.",
-    "passphraseTypePageBodyAuthRequired": "El cifrado mecamático requiere medidas de seguridad adicionales en este equipo.",
+    "passphraseTypePageBodyAuthRequired": "El cifrado respaldado por hardware requiere medidas de seguridad adicionales en este equipo.",
     "tpmActionPageTitleActionable": "Hay un problema con el cifrado mecamático",
     "installationLogSemanticLabel": "Registro de instalación",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Esta función puede denominarse «Tecnología de virtualización», «VT-d» o «AMD-Vi».",
