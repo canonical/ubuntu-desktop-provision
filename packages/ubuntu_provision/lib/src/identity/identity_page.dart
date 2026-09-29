@@ -34,22 +34,13 @@ class IdentityPage extends ConsumerWidget with ProvisioningPage {
         ],
       ),
       children: [
-        Semantics(
-          header: true,
-          label: lang.identityPageTitle,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const RealNameFormField(),
-              const HostnameFormField(),
-              const UsernameFormField(),
-              const PasswordFormField(),
-              const ConfirmPasswordFormField(),
-              const AutoLoginCheckButton(),
-              const UseActiveDirectoryCheckButton(),
-            ].withSpacing(kWizardSpacing),
-          ),
-        ),
+        const RealNameFormField(),
+        const HostnameFormField(),
+        const UsernameFormField(),
+        const PasswordFormField(),
+        const ConfirmPasswordFormField(),
+        const AutoLoginCheckButton(),
+        const UseActiveDirectoryCheckButton(),
       ].withSpacing(kWizardSpacing),
     );
   }
