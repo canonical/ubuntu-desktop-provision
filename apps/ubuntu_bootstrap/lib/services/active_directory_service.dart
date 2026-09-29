@@ -17,7 +17,7 @@ class SubiquityActiveDirectoryService implements ActiveDirectoryService {
 
   @override
   Future<bool> isUsed() async {
-return _used ?? await _isRequestedByAutoinstall();
+    return _used ?? await _isRequestedByAutoinstall();
   }
 
   @override
