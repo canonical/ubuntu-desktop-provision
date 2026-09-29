@@ -117,15 +117,15 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'La instalación no puede continuar con el archivo de instalación automática proporcionado.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Hay un problema con el archivo de instalación automática proporcionado.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Hay un problema con los datos de usuario de cloud-init que figuran en el archivo de instalación automática.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -301,7 +301,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get installThirdPartySubtitle =>
-      'Este software está sujeto a los términos de licencia incluidos en su documentación. Algunos son privativos.';
+      'Estos programas están sujetos a los términos de licencia incluidos en su documentación. Algunos son privativos.';
 
   @override
   String get installDriversTitle =>
@@ -327,11 +327,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get offlineWarning => 'Actualmente no hay conexión';
 
   @override
-  String get choosePassphraseHeader => 'Crear una contraseña';
+  String get choosePassphraseHeader => 'Crear una frase de contraseña';
 
   @override
   String get choosePassphraseBody =>
-      'Necesita una contraseña para cifrar sus archivos. Se le solicitará su contraseña cada vez que encienda su ordenador. Esta contraseña es distinta a la que usa para iniciar sesión con su usuario.';
+      'Tendrá que introducir su frase de acceso cada vez que encienda el equipo. Esta frase es diferente de su contraseña de usuario.';
 
   @override
   String get choosePassphraseInfoHeader =>
@@ -347,37 +347,40 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get chooseOptionalPassphraseInfoBody =>
-      'Si pierde su frase secreta, perderá todos sus datos. La frase de contraseña no remplaza la llave de recuperación o su contraseña de usuario.';
+      'Si pierde su frase secreta, perderá todos sus datos. La frase de acceso no remplaza la llave de recuperación o su contraseña de usuario.';
 
   @override
-  String get passphrasePageTitle => 'Encriptación';
+  String get passphrasePageTitle => 'Cifrado';
 
   @override
   String get passphrasePageHeaderPassphrase =>
-      'Establecer una contraseña de encriptación';
+      'Establecer una frase para cifrado';
 
   @override
-  String get passphrasePageHeaderPin => 'Establecer un PIN de encriptación';
+  String get passphrasePageHeaderPin => 'Establecer un PIN para cifrado';
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Cada vez que encienda el ordenador, deberá introducir la contraseña. Esta contraseña es distinta a la que usa para iniciar sesión como usuario. Puede cambiarla más tarde, pero no desactivarla. Si olvida la contraseña, podrá recuperar el acceso al disco usando la clave de recuperación.';
+      'Tendrá que introducir la frase cada vez que encienda el equipo. Esta frase es diferente de su contraseña de usuario. Puede cambiarla más adelante en el Centro de seguridad.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Cada vez que encienda el ordenador, deberá introducir el PIN. Este PIN es distinto a su contraseña de usuario. Podrá cambiarlo más tarde, pero no desactivarlo. Si olvida su PIN, puede recuperar el acceso al disco usando la clave de recuperación.';
+      'Tendrá que introducir el PIN cada vez que encienda el equipo. Este PIN es diferente de su contraseña de usuario. Puede cambiarlo más adelante en el Centro de seguridad.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Contraseña';
 
   @override
-  String get passphrasePageConfirmPassphraseHint => 'Confirme la contraseña';
+  String get passphrasePageConfirmPassphraseHint =>
+      'Confirme la frase de acceso';
 
   @override
-  String get passphrasePageRequiredPassphrase => 'Se necesita una contraseña';
+  String get passphrasePageRequiredPassphrase =>
+      'Se necesita una frase de acceso';
 
   @override
-  String get passphrasePageMismatchPassphrase => 'Las contraseñas no coinciden';
+  String get passphrasePageMismatchPassphrase =>
+      'Las frases de contraseña no coinciden';
 
   @override
   String get passphrasePageChoosePinHint => 'PIN';
@@ -392,18 +395,19 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'Los PIN no coinciden';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Necesitar una contraseña';
+  String get passphraseTypePassphraseTileTitle =>
+      'Requerir frase de acceso en el arranque';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Lo más seguro. Cada vez que encienda el ordenador, tendrá que introducir una contraseña más larga.';
+      'Lo más seguro. Cada vez que encienda el equipo, tendrá que introducir una frase más extensa.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Necesitar un PIN';
+  String get passphraseTypePinTileTitle => 'Requerir PIN en el arranque';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'Más seguro. Se debe introducir un PIN numérico cada vez que encienda el ordenador.';
+      'Más seguro. Se debe introducir un PIN numérico cada vez que encienda el equipo.';
 
   @override
   String get passphraseTypeNoneTileTitle =>
@@ -414,11 +418,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Por defecto, el módulo de plataforma de confianza del ordenador (TPM) desbloqueará el disco durante el arranque. También tiene opciones para proteger sus datos de forma adicional.';
+      'De forma predeterminada, el disco se desbloqueará automáticamente al arrancar el equipo. También dispone de opciones para proteger aún más sus datos.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'El cifrado respaldado por hardware requiere medidas de seguridad adicionales en este equipo.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -592,7 +596,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String installationTypeEraseAndInstall(String os, String product) {
-    return 'Eliminar $os e instalar $product';
+    return 'Borrar $os e instalar $product';
   }
 
   @override
@@ -610,7 +614,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String selectGuidedStoragePageTitle(String DISTRO) {
-    return 'Borrar el disco e instalar $DISTRO';
+    return 'Borrar disco e instalar $DISTRO';
   }
 
   @override
@@ -897,7 +901,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get rebootToConfigureWarning =>
-      'Debe reiniciar el ordenador para continuar con el proceso de instalación.';
+      'Debe reiniciar el equipo para continuar con el proceso de instalación.';
 
   @override
   String get shutdown => 'Apagar';
@@ -1125,14 +1129,14 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshHeader =>
-      'Existe una actualización disponible para el instalador';
+      'Hay una actualización disponible para el instalador';
 
   @override
   String get refreshUpdateNow => 'Actualizar ahora';
 
   @override
   String get refreshInfo =>
-      'Actualice a la última versión para mejorar la fiabilidad y obtener más funciones.';
+      'Actualice a la versión más reciente para obtener una mayor fiabilidad y más funcionalidades.';
 
   @override
   String get refreshReady => 'Actualización preparada';
@@ -1181,87 +1185,87 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String refreshSnapPrepare(String snap) {
-    return 'Preparando $snap...';
+    return 'Preparando $snap…';
   }
 
   @override
   String refreshSnapDownload(String snap) {
-    return 'Descargando $snap...';
+    return 'Descargando $snap…';
   }
 
   @override
   String refreshSnapValidate(String snap) {
-    return 'Validando $snap...';
+    return 'Validando $snap…';
   }
 
   @override
   String refreshSnapMount(String snap) {
-    return 'Montando $snap...';
+    return 'Montando $snap…';
   }
 
   @override
   String refreshSnapStopServices(String snap) {
-    return 'Deteniendo los servicios $snap...';
+    return 'Deteniendo los servicios de $snap…';
   }
 
   @override
   String refreshSnapRemoveAliases(String snap) {
-    return 'Eliminando el alias $snap...';
+    return 'Quitando los alias de $snap…';
   }
 
   @override
   String refreshSnapUnlink(String snap) {
-    return 'Desvinculando $snap...';
+    return 'Desenlazando $snap…';
   }
 
   @override
   String refreshSnapUpdateAssets(String snap) {
-    return 'Los artículos se están actualizando $snap...';
+    return 'Actualizando los recursos de $snap…';
   }
 
   @override
   String refreshSnapUpdateKernelCommandLine(String snap) {
-    return 'Actualizando la línea de comandos del kernel $snap ...';
+    return 'Actualizando la línea de órdenes del núcleo de $snap…';
   }
 
   @override
   String refreshSnapCopyData(String snap) {
-    return 'Copiando los datos $snap...';
+    return 'Copiando los datos de $snap…';
   }
 
   @override
   String refreshSnapSetupProfiles(String snap) {
-    return 'Configurando los perfiles de seguridad $snap...';
+    return 'Instaurando los perfiles de seguridad de $snap…';
   }
 
   @override
   String refreshSnapLink(String snap) {
-    return 'Enlazando $snap...';
+    return 'Enlazando $snap…';
   }
 
   @override
   String refreshSnapAutoConnect(String snap) {
-    return 'Conectar $snap las conexiones y dispositivos...';
+    return 'Conectando las clavijas y ranuras de $snap…';
   }
 
   @override
   String refreshSnapSetAutoAliases(String snap) {
-    return 'Estableciendo los alias automáticos $snap...';
+    return 'Estableciendo los alias automáticos de $snap…';
   }
 
   @override
   String refreshSnapSetupAliases(String snap) {
-    return 'Configurando los alias $snap...';
+    return 'Instaurando los alias de $snap…';
   }
 
   @override
   String refreshSnapStartServices(String snap) {
-    return 'Iniciando los servicios $snap...';
+    return 'Iniciando los servicios de $snap…';
   }
 
   @override
   String refreshSnapCleanup(String snap) {
-    return 'Limpiando $snap...';
+    return 'Limpiando $snap…';
   }
 
   @override
@@ -1271,7 +1275,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get recoveryKeyTitleBadgeLabel => 'Importante';
 
   @override
-  String get recoveryKeyHeader => 'Guarda tu clave de recuperación';
+  String get recoveryKeyHeader => 'Guarde su clave de recuperación';
 
   @override
   String get recoveryKeyInfoHeader =>
@@ -1289,10 +1293,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'He guardado mi clave de recuperación en un lugar seguro';
 
   @override
-  String get recoveryKeyLinkLabel => 'Saber más';
+  String get recoveryKeyLinkLabel => 'Conocer más';
 
   @override
-  String get recoveryKeySaveToFileLabel => 'Guardar a un archivo';
+  String get recoveryKeySaveToFileLabel => 'Guardar en un archivo';
 
   @override
   String get recoveryKeyShowQrCodeLabel => 'Mostrar código QR';
@@ -1307,11 +1311,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Escanee el código QR para copiar la clave de recuperación y guardarla en un lugar seguro, como un gestor de contraseñas. También puede tomarle una foto para usarlo más tarde.';
 
   @override
-  String get recoveryKeyClipboardNotifiaction => 'Copiada al portapapeles';
+  String get recoveryKeyClipboardNotifiaction => 'Se copió en el portapapeles';
 
   @override
   String get recoveryKeyExceptionFileSystemTitle =>
-      'No se ha guardado la clave de recuperación';
+      'No se guardó el archivo de la clave de recuperación';
 
   @override
   String get recoveryKeyExceptionDisallowedPathTitle =>
@@ -1326,7 +1330,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyExceptionDisallowedPathBody =>
-      'Pruebe una lugar diferente, como una unidad extraíble, o use otro método.';
+      'Pruebe una ubicación diferente, como una unidad extraíble, o use otro método.';
 
   @override
   String get recoveryKeyFilePickerTitle =>
@@ -1425,7 +1429,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'Hay un problema con el cifrado respaldado por hardware';
 
   @override
   String get tpmActionBadgeLabel => 'Acción requerida';
@@ -1545,7 +1549,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'El arranque seguro está inhabilitado en este equipo o no está configurado en modo \"deployed\".';
+      'El arranque seguro está desactivado en este equipo o no está configurado en modo de despliegue.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
@@ -1625,8 +1629,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
   String get tpmActionFixActionContactOem => 'Contacto OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor =>
-      'Contacto con Proveedor de SO';
+  String get tpmActionFixActionContactOsVendor => 'Contactar fabricante del SO';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware =>
@@ -1634,10 +1637,10 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionEnableAndClearTpmViaFirmware =>
-      'Habilitar y purgar TPM al reiniciar';
+      'Activar y purgar TPM al reiniciar';
 
   @override
-  String get tpmActionFixActionClearTpmViaFirmware => 'Purgar TPM en reinicio';
+  String get tpmActionFixActionClearTpmViaFirmware => 'Purgar TPM al reiniciar';
 
   @override
   String get tpmActionFixActionClearTpm => 'Purgar TPM';
@@ -1667,11 +1670,11 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint =>
-      'Check secure boot mode is set to \"deployed\".';
+      'Revise que el modo del arranque seguro sea «de despliegue».';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".';
+      'Esta función puede denominarse «Tecnología de virtualización», «VT-d» o «AMD-Vi».';
 
   @override
   String get tpmActionFixActionProceedDescription =>
@@ -1717,7 +1720,7 @@ class UbuntuBootstrapLocalizationsEs extends UbuntuBootstrapLocalizations {
       'Pruebe una solución diferente o póngase en contacto con el personal de sistemas.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Registro de instalación';
 
   @override
   String get manualPartitioningWarningBody =>

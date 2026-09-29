@@ -1712,7 +1712,7 @@ class UbuntuBootstrapLocalizationsUg extends UbuntuBootstrapLocalizations {
       'باشقا ھەل قىلىش لايىھەسىنى سىناڭ ياكى ئۇچۇر تېخنىكا قوللىغۇچىسى بىلەن ئالاقىلىشىڭ.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'ئورنىتىش خاتىرىسى';
 
   @override
   String get manualPartitioningWarningBody =>

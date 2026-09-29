@@ -676,11 +676,11 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot devas esti surmetita ĉe ext4-subdisko';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Uzu ext4-subdiskon por /, aŭ kreu apartan ext4-subdiskon por /boot';
 
   @override
   String get diskHeadersDevice => 'Aparato';
@@ -1722,11 +1722,11 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot devas esti surmetita ĉe ext4-subdisko';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Uzu ext4-subdiskon por /, aŭ kreu apartan ext4-subdiskon por /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

@@ -680,11 +680,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot должна быть смонтирована на разделе ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Используйте раздел ext4 для / или создайте отдельный раздел ext4 для /boot';
 
   @override
   String get diskHeadersDevice => 'Устройство';
@@ -906,7 +906,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
   String get continueTesting => 'Продолжить тестирование';
 
   @override
-  String get bitlockerInfoTitle => 'BitLocker обнаружен';
+  String get bitlockerInfoTitle => 'Обнаружен BitLocker';
 
   @override
   String get bitlockerInfoDescription =>
@@ -922,7 +922,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String bitlockerInfoInstructions(String url) {
-    return 'Инструкции можно найти в <a href=\"$url\">Руководство по использованию BitLocker</a>.';
+    return 'Инструкции можно найти в <a href=\"$url\">Руководстве по использованию BitLocker</a>.';
   }
 
   @override
@@ -1720,11 +1720,11 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot должна быть смонтирована на раздел ext4';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Используйте раздел ext4 для / или создайте отдельный раздел ext4 для /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

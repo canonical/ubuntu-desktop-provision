@@ -2260,6 +2260,13 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   }
 
   @override
+  String get allocateDiskSpaceBootMustBeExt4 => '/boot 必須掛載在 ext4 分割區上';
+
+  @override
+  String get allocateDiskSpaceBootMustBeExt4Info =>
+      '使用 ext4 分割區作為根分割區 (/)，或為 /boot 建立一個單獨的 ext4 分割區';
+
+  @override
   String get diskHeadersDevice => '裝置';
 
   @override
@@ -3235,6 +3242,14 @@ class UbuntuBootstrapLocalizationsZhTw extends UbuntuBootstrapLocalizationsZh {
   @override
   String get manualPartitioningWarningBody =>
       '請嘗試其他方法。您也可以<a href=\"\">傳送錯誤報告</a>。';
+
+  @override
+  String get manualPartitioningBootMustBeExt4WarningTitle =>
+      '/boot 必須掛載在 ext4 分割區上';
+
+  @override
+  String get manualPartitioningBootMustBeExt4WarningBody =>
+      '使用 ext4 分割區作為根分割區 (/)，或為 /boot 建立一個單獨的 ext4 分割區';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

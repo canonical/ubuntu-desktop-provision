@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'მოწოდებული autoinstall ფაილით დაყენება ვერ გაგრძელდება.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'მოწოდებულ autoinstall ფაილში აღმოჩენილია შეცდომა.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'autoinstall ფაილში მომხმარებლის cloud-init მონაცემებში აღმოჩენილია პრობბლემა.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -361,11 +361,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'თქვენი საკვანძო ფრაზის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს საკვანძო ფრაზა განსხვავდება თქვენი მომხმარებლის პაროლისგან. მისი შეცვლა მოგვიანებით შეგეძლებათ, მაგრამ არა გამორთვა. თუ საკვანძო ფრაზა დაგავიწყდებათ, დისკთან წვდომის დაბრუნებას აღდგენის გასაღებით შეძლებთ.';
+      'თქვენი საკვანძო ფრაზის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს საკვანძო ფრაზა განსხვავდება თქვენი მომხმარებლის პაროლისგან. მისი შეცვლა მოგვიანებით შეგეძლებათ უსაფრთხოების ცენტრში.';
 
   @override
   String get passphrasePageBodyPin =>
-      'თქვენი PIN-კოდის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს PIN-კოდი განსხვავდება თქვენი მომხმარებლის პაროლისგან. მისი შეცვლა მოგვიანებითაც შეგეძლებათ, მაგრამ არა მისი გამორთვა. თუ PIN-კოდი დაგავიწყდებათ, დისკზე წვდომის დაბრუნებას აღდგენის გასაღების გამოყენებით შეძლებთ.';
+      'თქვენი PIN-კოდის შეყვანა დაგჭირდებათ ყოველ ჯერზე, როცა კომპიუტერს ჩართავთ. ეს PIN-კოდი განსხვავდება თქვენი მომხმარებლის პაროლისგან. მისი შეცვლა მოგვიანებითაც შეგეძლებათ უსაფრთხოების ცენტრში.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'საკვანძო ფრაზა';
@@ -393,14 +393,15 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN-კოდები არ ემთხვევა';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'საკვანძო ფრაზის მოთხოვნა';
+  String get passphraseTypePassphraseTileTitle =>
+      'საკვანძო ფრაზის მოთხოვნა გაშვებისას';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'ყველაზე დაცული. დაგჭირდებათ, შეიყვანოთ უფრო გრძელი საკვანძო ფრაზა ყოველ ჯერზე, რამდენჯერაც კომპიუტერს ჩართავთ.';
 
   @override
-  String get passphraseTypePinTileTitle => 'PIN-კოდის მოთხოვნა';
+  String get passphraseTypePinTileTitle => 'PIN-კოდის მოთხოვნა გაშვებისას';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -414,11 +415,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'ნაგულისხმევად კომპიუტერის სანდო პლატფორმის მოდული (TPM) განბლოკავს დისკს კომპიუტერის ჩართვისას. ასევე გაქვთ არჩევანი, კიდევ უფრო მეტადაც კი დაიცვათ თქვენი მონაცემები.';
+      'ნაგულისხმევად დისკი ავტომატურად განიბლოკება კომპიუტერის ჩართვისას. ასევე გაქვთ არჩევანი, კიდევ უფრო მეტადაც კი დაიცვათ თქვენი მონაცემები.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'აპარატურის მიერ მხარდაჭერილ დაშიფვრას ამ კომპიუტერში დამატებითი უსაფრთხოება სჭირდება.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -1420,7 +1421,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'აღმოჩენილია აპარატურით მხარდაჭერილი დაშიფვრის პრობლემა';
 
   @override
   String get tpmActionBadgeLabel => 'საჭიროა ქმედება';
@@ -1556,7 +1557,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'ამ კომპიუტერს აუცილებელი უსაფრთხოების ფუნქცია (ნდობის აპარატურული ფესვი) აკლია.';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1715,7 +1716,7 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
       'სცადეთ სხვა გადაწყვეტილება, ან დაუკავშირდით IT მხარდაჭერის გუნდს.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'დაყენების ჟურნალი';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1731,6 +1732,6 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'ნაბიჯი $CURRENT_STEP / $TOTAL_STEPS';
   }
 }
