@@ -72,15 +72,12 @@ class SubiquityActiveDirectoryService implements ActiveDirectoryService {
     }
   }
 
-  // Autoinstall can't hold the AD password, so the AD page must ask for it.
-  // Check the admin name, not the domain. Subiquity may fill in the domain.
+  // Autoinstall can't hold the AD password, so the AD page must ask for it
+  // when the section is interactive. The admin name is often empty, and
+  // Subiquity may fill the domain from discovery, so neither field decides.
   // Without AD support the checkbox is hidden, so it must stay unticked.
   Future<bool> _isRequestedByAutoinstall() async {
     final sections = await _subiquity.getInteractiveSections() ?? [];
-    if (!sections.contains('active-directory') || !await hasSupport()) {
-      return false;
-    }
-    final info = await _subiquity.getActiveDirectory();
-    return info.adminName.isNotEmpty;
+    return sections.contains('active-directory') && await hasSupport();
   }
 }

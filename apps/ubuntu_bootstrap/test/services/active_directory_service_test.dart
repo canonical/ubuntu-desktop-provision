@@ -134,6 +134,28 @@ void main() {
       expect(await service.isUsed(), isFalse);
     });
 
+    test('is used when autoinstall leaves the admin name empty', () async {
+      final client = createMockSubiquityClient(
+        interactiveSections: ['identity', 'active-directory'],
+        domainName: 'ad.ubuntu.com',
+      );
+
+      final service = SubiquityActiveDirectoryService(client);
+
+      expect(await service.isUsed(), isTrue);
+    });
+
+    test('is used when the interactive section has no names', () async {
+      final client = createMockSubiquityClient(
+        interactiveSections: ['identity', 'active-directory'],
+        domainName: '',
+      );
+
+      final service = SubiquityActiveDirectoryService(client);
+
+      expect(await service.isUsed(), isTrue);
+    });
+
     test('is not used when active directory is not interactive', () async {
       final client = createMockSubiquityClient(
         interactiveSections: ['identity'],
@@ -147,7 +169,8 @@ void main() {
 
     test('is not used with only a discovered domain', () async {
       final client = createMockSubiquityClient(
-        interactiveSections: ['identity', 'active-directory'],
+        interactiveSections: ['identity'],
+        domainName: 'ad.ubuntu.com',
       );
 
       final service = SubiquityActiveDirectoryService(client);
@@ -173,13 +196,14 @@ MockSubiquityClient createMockSubiquityClient({
   required List<String> interactiveSections,
   bool hasSupport = true,
   String adminName = '',
+  String domainName = 'domain',
 }) {
   final client = MockSubiquityClient();
   when(client.getInteractiveSections())
       .thenAnswer((_) async => interactiveSections);
   when(client.hasActiveDirectorySupport()).thenAnswer((_) async => hasSupport);
   when(client.getActiveDirectory()).thenAnswer(
-    (_) async => AdConnectionInfo(adminName: adminName, domainName: 'domain'),
+    (_) async => AdConnectionInfo(adminName: adminName, domainName: domainName),
   );
   return client;
 }
