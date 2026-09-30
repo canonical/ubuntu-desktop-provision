@@ -678,11 +678,11 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot ext4 partizio batean muntatu behar da';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Erabili ext4 partizio bat / muntatze-puntuarentzat edo sortu aparteko ext4 partizio bat /boot muntatzeko';
 
   @override
   String get diskHeadersDevice => 'Gailua';
@@ -1713,7 +1713,7 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
       'Probatu beste soluzioren bat, edo jarri harremanetan IT laguntza zerbitzuarekin.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Instalazioaren erregistroa';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1721,11 +1721,11 @@ class UbuntuBootstrapLocalizationsEu extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot ext4 partizio batean muntatu behar da';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Erabili ext4 partizio bat / muntatze-puntuarentzat edo sortu aparteko ext4 partizio bat /boot muntatzeko';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

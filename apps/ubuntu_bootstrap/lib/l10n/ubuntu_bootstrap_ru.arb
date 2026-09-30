@@ -323,9 +323,9 @@
     "rstDisableWindows": "Windows, если у вас установлено несколько операционных систем, включая Windows",
     "bitlockerInfoDescription": "Один или несколько разделов зашифрованы с помощью Bitlocker.",
     "bitlockerInfoDisable": "Чтобы выполнить установку рядом с Windows, отключите в Windows функцию Bitlocker.",
-    "bitlockerInfoTitle": "BitLocker обнаружен",
+    "bitlockerInfoTitle": "Обнаружен BitLocker",
     "bitlockerInfoRecovery": "Windows может запросить ключи восстановления во время загрузки после завершения установки.",
-    "bitlockerInfoInstructions": "Инструкции можно найти в <a href=\"{url}\">Руководство по использованию BitLocker</a>.",
+    "bitlockerInfoInstructions": "Инструкции можно найти в <a href=\"{url}\">Руководстве по использованию BitLocker</a>.",
     "bitlockerWarningTitle": "Без ключей восстановления BitLocker вы можете потерять все свои данные",
     "installationTypeNoneInfo": "Стандартная файловая система без шифрования.",
     "installationTypeZFSEncryptionInfo": "Встроенное шифрование с помощью ZFS. Вам нужно будет вводить кодовую фразу каждый раз при включении компьютера.",
@@ -539,5 +539,9 @@
     "tpmActionErrorKindNoHardwareRootOfTrust": "На этом компьютере отсутствует необходимая функция безопасности (аппаратный корень доверия).",
     "passphraseTypePageBodyAuthRequired": "Для аппаратного шифрования на этом компьютере требуются дополнительные меры безопасности.",
     "tpmActionPageTitleActionable": "Существует проблема с аппаратным шифрованием",
-    "installationLogSemanticLabel": "Журнал установки"
+    "installationLogSemanticLabel": "Журнал установки",
+    "allocateDiskSpaceBootMustBeExt4": "/boot должна быть смонтирована на разделе ext4",
+    "allocateDiskSpaceBootMustBeExt4Info": "Используйте раздел ext4 для / или создайте отдельный раздел ext4 для /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot должна быть смонтирована на раздел ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "Используйте раздел ext4 для / или создайте отдельный раздел ext4 для /boot"
 }

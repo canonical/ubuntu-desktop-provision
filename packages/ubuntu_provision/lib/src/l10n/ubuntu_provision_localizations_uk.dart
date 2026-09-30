@@ -407,10 +407,10 @@ class UbuntuProvisionLocalizationsUk extends UbuntuProvisionLocalizations {
   String get networkWifiSecureNetwork => 'Безпечна мережа';
 
   @override
-  String get networkWifiConnecting => 'Підключення…';
+  String get networkWifiConnecting => 'Під\'єднання…';
 
   @override
-  String get networkWifiConnected => 'Підключено';
+  String get networkWifiConnected => 'Під\'єднано';
 
   @override
   String get logViewSemanticLabel => 'Журнал';

@@ -356,11 +356,11 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'ທ່ານຈະຕ້ອງປ້ອນວະລີຜ່ານທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. ວະລີຜ່ານນີ້ຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນພາຍຫຼັງໄດ້, ແຕ່ບໍ່ສາມາດປິດການໃຊ້ງານມັນໄດ້. ຖ້າທ່ານລືມວະລີຜ່ານ, ທ່ານສາມາດເຂົ້າເຖິງດິດຄືນໄດ້ໂດຍການໃຊ້ຄີກູ້ຄືນ.';
+      'ທ່ານຈະຕ້ອງໄດ້ປ້ອນວະລີຜ່ານທຸກໆຄັ້ງທີ່ທ່ານເປີດຄອມພິວເຕີຂອງທ່ານ. ວະລີຜ່ານນີ້ແຕກຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນໃນພາຍຫຼັງໄດ້ຢູ່ທີ່ສູນຄວາມປອດໄພ.';
 
   @override
   String get passphrasePageBodyPin =>
-      'ທ່ານຈະຕ້ອງປ້ອນ PIN ທຸກຄັ້ງທີ່ເປີດຄອມພິວເຕີ. PIN ນີ້ຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນພາຍຫຼັງໄດ້, ແຕ່ບໍ່ສາມາດປິດການໃຊ້ງານມັນໄດ້. ຖ້າທ່ານລືມ PIN, ທ່ານສາມາດເຂົ້າເຖິງດິດຄືນໄດ້ໂດຍການໃຊ້ຄີກູ້ຄືນ.';
+      'ທ່ານຈະຕ້ອງປ້ອນ PIN ທຸກຄັ້ງທີ່ທ່ານເລີ່ມຄອມພິວເຕີຂອງທ່ານ. PIN ນີ້ແຕກຕ່າງຈາກລະຫັດຜ່ານຜູ້ໃຊ້ຂອງທ່ານ. ທ່ານສາມາດປ່ຽນມັນໄດ້ໃນພາຍຫຼັງທີ່ສູນຄວາມປອດໄພ.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'ວະລີຜ່ານ';
@@ -1410,7 +1410,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'ມີບັນຫາກັບການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ';
 
   @override
   String get tpmActionBadgeLabel => 'ຈຳເປັນຕ້ອງມີການດຳເນີນການ';
@@ -1702,7 +1702,7 @@ class UbuntuBootstrapLocalizationsLo extends UbuntuBootstrapLocalizations {
       'ລອງໃຊ້ວິທີແກ້ໄຂອື່ນ ຫຼື ຕິດຕໍ່ພາກສ່ວນຊ່ວຍເຫຼືອດ້ານໄອທີ.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'ບັນທຶກການຕິດຕັ້ງ';
 
   @override
   String get manualPartitioningWarningBody =>

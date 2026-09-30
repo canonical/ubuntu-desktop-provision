@@ -20,12 +20,10 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get autoinstallDirectTitle => 'Automatizovaná inštalácia';
 
   @override
-  String get autoinstallDirectHeader =>
-      'Importovať súbor automatickej inštalácie';
+  String get autoinstallDirectHeader => 'Import súboru autoinstall';
 
   @override
-  String get autoinstallDirectUrlLabel =>
-      'Môžete zadať URL adresu súboru automatickej inštalácie:';
+  String get autoinstallDirectUrlLabel => 'Zadajte URL súboru autoinstall:';
 
   @override
   String get autoinstallDirectFileLabel => 'Alebo vyberte lokálny súbor:';
@@ -47,34 +45,34 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectErrorNetworkTitle =>
-      'Súbor automatickej inštalácie nie je dostupný';
+      'Súbor autoinstall nie je dostupný';
 
   @override
   String get autoinstallDirectErrorNetworkBody =>
-      'Skontrolujte, či je URL adresa správna, otestujte svoje internetové pripojenie alebo skúste neskôr.';
+      'Skontrolujte URL, pripojenie alebo skúste neskôr.';
 
   @override
-  String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná URL adresa';
+  String get autoinstallDirectErrorInvalidUrlTitle => 'Neplatná URL';
 
   @override
   String get autoinstallDirectErrorInvalidUrlBody =>
-      'Skontrolujte, či je URL adresa správna, alebo vyberte lokálny súbor.';
+      'Skontrolujte URL alebo vyberte lokálny súbor.';
 
   @override
   String get autoinstallDirectErrorInvalidContentTitle =>
-      'Neplatný súbor automatickej inštalácie';
+      'Neplatný súbor autoinstall';
 
   @override
   String get autoinstallDirectErrorInvalidContentBody =>
-      'Skontrolujte súbor alebo poskytnite iný.';
+      'Skontrolujte súbor alebo použite iný.';
 
   @override
   String get autoinstallDirectErrorFileSystemTitle =>
-      'Súbor automatickej inštalácie nie je čitateľný';
+      'Súbor autoinstall nie je čitateľný';
 
   @override
   String get autoinstallDirectErrorFileSystemBody =>
-      'Skontrolujte svoje oprávnenia alebo poskytnite iný súbor.';
+      'Skontrolujte oprávnenia alebo použite iný súbor.';
 
   @override
   String get autoinstallDirectErrorUnkownTitle => 'Neznáma chyba';
@@ -89,49 +87,48 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallInstructions =>
-      'Zadajte URL adresu alebo cestu k lokálnemu súboru autoinstall.yaml:';
+      'Zadajte URL alebo cestu k súboru autoinstall.yaml:';
 
   @override
   String get autoinstallInteractiveOption => 'Interaktívna inštalácia';
 
   @override
   String get autoinstallInteractiveDescription =>
-      'Pre používateľov, ktorí chcú byť sprevádzaní krok za krokom počas inštalácie.';
+      'Pre používateľov, ktorí chcú byť vedení krok za krokom inštaláciou.';
 
   @override
-  String get autoinstallDirectOption =>
-      'Automatizovaná s súborom automatickej inštalácie';
+  String get autoinstallDirectOption => 'Automatizovaná so súborom autoinstall';
 
   @override
   String get autoinstallDirectDescription =>
-      'Pre pokročilých používateľov, ktorí majú súbor autoinstall.yaml na konzistentné a opakovateľné nastavenie systému.';
+      'Pre pokročilých používateľov so súborom autoinstall.yaml na konzistentné a opakovateľné nastavenia systému.';
 
   @override
-  String get autoinstallLandscapeOption => 'Automatizovaná s Landscape';
+  String get autoinstallLandscapeOption => 'Automatizovaná cez Landscape';
 
   @override
   String get autoinstallLandscapeDescription =>
-      'Pre používateľov v organizáciách, ktoré poskytujú súbor automatickej inštalácie prostredníctvom Landscape.';
+      'Pre používateľov v organizáciách poskytujúcich súbor autoinstall cez Landscape.';
 
   @override
   String get autoinstallErrorMessage =>
-      'Príkaz v súbore automatickej inštalácie zlyhal počas inštalácie.';
+      'Príkaz v súbore autoinstall zlyhal počas inštalácie.';
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Inštalácia nemôže pokračovať s poskytnutým súborom automatickej inštalácie.';
+      'Inštalácia nemôže pokračovať s poskytnutým súborom autoinstall.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'V poskytnutom súbore automatickej inštalácie sa vyskytol problém.';
+      'Problém s poskytnutým súborom autoinstall.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'V používateľských údajoch cloud-init uvedených v súbore automatickej inštalácie sa vyskytol problém.';
+      'Problém s údajmi cloud-init v súbore autoinstall.';
 
   @override
   String get autoinstallErrorInstructions =>
-      'Budete musieť reštartovať inštaláciu. Skontrolujte súbor automatickej inštalácie, vyberte iný typ inštalácie alebo kontaktujte svoju IT podporu.';
+      'Reštartujte inštaláciu. Skontrolujte súbor autoinstall, zmeňte typ inštalácie alebo kontaktujte IT podporu.';
 
   @override
   String get changeButtonText => 'Zmeniť';
@@ -167,7 +164,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tryOrInstallRepairDescription =>
-      'Oprava preinštaluje všetok nainštalovaný softvér bez zásahu do dokumentov alebo nastavení.';
+      'Oprava preinštaluje všetok nainštalovaný softvér bez zásahu do dokumentov či nastavení.';
 
   @override
   String tryOption(String RELEASE) {
@@ -176,7 +173,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String tryDescription(String RELEASE) {
-    return 'Môžete vyskúšať $RELEASE bez akýchkoľvek zmien vo vašom počítači.';
+    return 'Môžete vyskúšať $RELEASE bez zmien vo vašom počítači.';
   }
 
   @override
@@ -186,7 +183,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installDescription(String RELEASE) {
-    return 'Nainštalujte $RELEASE vedľa (alebo namiesto) vášho aktuálneho operačného systému. Toto by nemalo trvať príliš dlho.';
+    return 'Nainštalujte $RELEASE vedľa (alebo namiesto) vášho aktuálneho OS. Nemalo by to trvať príliš dlho.';
   }
 
   @override
@@ -198,15 +195,14 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get rstTitle => 'Zistené RST';
 
   @override
-  String get rstHeader =>
-      'Musíte vypnúť RST, aby ste mohli pokračovať v inštalácii';
+  String get rstHeader => 'Na pokračovanie musíte vypnúť RST';
 
   @override
   String get rstDisable =>
-      'Váš počítač používa Intel RST (Rýchla technológia úložiska). RST môžete vypnúť buď v:';
+      'Váš počítač používa Intel RST (Rapid Storage Technology). Môžete ho vypnúť v:';
 
   @override
-  String get rstDisableWindows => 'Windows, ak používate dual boot s Windows';
+  String get rstDisableWindows => 'Windows, ak používate dual boot';
 
   @override
   String get rstDisableBios => 'Nastaveniach BIOS';
@@ -221,7 +217,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get configureSecureBootDescription =>
-      'Vybrali ste si inštaláciu softvéru tretích strán pre ovládače. To vyžaduje vypnutie Secure Boot.\nNa to musíte teraz vybrať bezpečnostný kľúč a zadať ho pri reštarte systému.';
+      'Vybrali ste inštaláciu ovládačov tretích strán. To vyžaduje vypnutie Secure Boot.\nVyberte teraz bezpečnostný kľúč a zadajte ho pri reštarte.';
 
   @override
   String get configureSecureBootOption => 'Konfigurovať Secure Boot';
@@ -233,12 +229,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get confirmSecurityKey => 'Potvrdiť bezpečnostný kľúč';
 
   @override
-  String get dontInstallDriverSoftwareNow =>
-      'Nainštalovať softvér ovládačov teraz';
+  String get dontInstallDriverSoftwareNow => 'Neinštalovať ovládače teraz';
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'Môžete ho nainštalovať neskôr z Softvér a aktualizácie.';
+      'Môžete ich nainštalovať neskôr zo Softvér a aktualizácie.';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
@@ -270,7 +265,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String codecsAndDriversPageBody(String DISTRO) {
-    return '$DISTRO predvolene neobsahuje žiadny proprietárny softvér. Inštalácia ďalšieho softvéru môže zlepšiť výkon vášho počítača.';
+    return '$DISTRO predvolene neobsahuje proprietárny softvér. Inštalácia ďalšieho softvéru môže zlepšiť výkon.';
   }
 
   @override
@@ -292,7 +287,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get minimalInstallationSubtitle =>
-      'Len to najpodstatnejšie, webové prehliadač a základné utility.';
+      'Len to najpodstatnejšie, webový prehliadač a základné utility.';
 
   @override
   String get otherOptions => 'Ďalšie možnosti';
@@ -311,7 +306,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get installDriversSubtitle =>
-      'Vrátane, ale nie len ovládačov NVIDIA a podobných';
+      'Vrátane, ale nielen ovládačov NVIDIA a podobných';
 
   @override
   String get installCodecsTitle =>
@@ -319,7 +314,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get installCodecsSubtitle =>
-      'Vrátane, ale nie len MP3, MP4, MOV a podobných';
+      'Vrátane, ale nielen MP3, MP4, MOV a podobných';
 
   @override
   String get batteryWarning => 'Počítač nie je pripojený k zdroju napájania.';
@@ -375,7 +370,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageRequiredPassphrase =>
-      'Je vyžadovaná prístupová fráza';
+      'Je potrebné zadať prístupovú frázu';
 
   @override
   String get passphrasePageMismatchPassphrase =>
@@ -388,7 +383,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
   String get passphrasePageConfirmPinHint => 'Potvrdiť PIN';
 
   @override
-  String get passphrasePageRequiredPin => 'Je vyžadovaný PIN';
+  String get passphrasePageRequiredPin => 'Je potrebné zadať PIN';
 
   @override
   String get passphrasePageMismatchPin => 'PINy sa nezhodujú';
@@ -681,11 +676,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot musí byť pripojený na oddiel ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Použite oddiel ext4 pre / alebo vytvorte samostatný oddiel ext4 pre /boot';
 
   @override
   String get diskHeadersDevice => 'Zariadenie';
@@ -1281,7 +1276,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyConfirmation =>
-      'Uložil som svoj kľúč na obnovenie na bezpečné miesto';
+      'Uložil(a) som svoj kľúč na obnovenie na bezpečné miesto';
 
   @override
   String get recoveryKeyLinkLabel => 'Zistiť viac';
@@ -1663,7 +1658,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsNoKernelIommuHint =>
-      'Táto funkcia môže byť označená ako \"Virtualization Technology\", \"VT-d\" alebo \"AMD-V\".';
+      'Táto funkcia môže byť označená ako \"Virtualization Technology\", \"VT-d\" alebo \"AMD-Vi\".';
 
   @override
   String get tpmActionFixActionProceedDescription =>
@@ -1717,11 +1712,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot musí byť pripojený na oddiele typu ext4';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Použite oddiel ext4 pre / alebo vytvorte samostatný oddiel ext4 pre /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

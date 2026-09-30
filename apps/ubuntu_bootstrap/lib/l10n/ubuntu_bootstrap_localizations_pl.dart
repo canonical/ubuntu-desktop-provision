@@ -683,11 +683,11 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot musi być zamontowany na partycji ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Użyj partycji ext4 dla / lub utwórz oddzielną partycję ext4 dla /boot';
 
   @override
   String get diskHeadersDevice => 'Urządzenie';
@@ -1724,11 +1724,11 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot musi być zamontowany na partycji ext4';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Użyj partycji ext4 dla / lub utwórz oddzielną partycję ext4 dla /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

@@ -321,7 +321,7 @@ class UbuntuProvisionLocalizationsEs extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWiredDisabled =>
-      'Para utilizar Ethernet en este ordenador, debe activarse una conexión por cable';
+      'Para utilizar Ethernet en este equipo, debe activarse una conexión por cable';
 
   @override
   String get networkWiredEnable => 'Activar por cable';

@@ -13,7 +13,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String welcomePageHeader(String distro) {
-    return 'Vitajte v systéme $distro';
+    return 'Vitajte v $distro';
   }
 
   @override

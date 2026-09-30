@@ -680,11 +680,11 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot kaust peab olema haagitud ext4 failisüsteemiga partitsioonile';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Kasuta juurkausta (/) jaoks ext4 partitsiooni või tee /boot kausta jaoks eraldi ext4 partitsioon';
 
   @override
   String get diskHeadersDevice => 'Seade';
@@ -1728,11 +1728,11 @@ class UbuntuBootstrapLocalizationsEt extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot kaust peab olema haagitud ext4 failisüsteemiga partitsioonile';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Kasuta juurkausta (/) jaoks ext4 partitsiooni või tee /boot kausta jaoks eraldi ext4 partitsioon';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

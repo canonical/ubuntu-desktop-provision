@@ -85,7 +85,7 @@
     "installationTypeReinstall": "Escafar {os} e reinstallar",
     "installationTypeAlongside": "Installar {product} al costat de {os}",
     "installationTypeManual": "Particionament manual",
-    "installationTypeManualInfo": "Podètz crear o retalhar las particions vos meteis, o causir mantuna particion per {DISTRO}",
+    "installationTypeManualInfo": "Pels utilizaires avançats que cèrcan de configuracions de disc personalizadas.",
     "selectGuidedStoragePageTitle": "Escafar lo disc e installar {DISTRO}",
     "selectGuidedStorageInfoLabel": "Lo disc entièr serà utilizat :",
     "selectGuidedStorageInstallNow": "Installar ara",
@@ -121,7 +121,7 @@
     "installationTypeLVMEncryptionSelected": "LVM e chiframent seleccionats",
     "installDriversTitle": "Installar de logicials tèrces pel material grafic e Wi-Fi",
     "installCodecsTitle": "Telecargar e installar la presa en carga addicionala pels formats multimèdia",
-    "installDriversSubtitle": "Aquestes pilòts son someses a de licéncias que son inclusas dins lor documentacion. Son proprietaris.",
+    "installDriversSubtitle": "Aquò inclutz mas sens se limitar als pilòts NVIDIA e similars",
     "installCodecsSubtitle": "Inclutz sens se limitar als MP3, MP4, MOV e similars",
     "restartNow": "Reaviar ara",
     "continueTesting": "Contunhar d’ensajar",
@@ -191,7 +191,7 @@
     "refreshSnapStopServices": "Arrèst dels servicis {snap}...",
     "refreshSnapMount": "Montatge de {snap}...",
     "refreshUpToDate": "La version actuala {version} es actualizada.",
-    "refreshRestart": "Mercés de reaviar l’installador.",
+    "refreshRestart": "Mercés de tampar l’installador e de lo relançar per contunhar",
     "autoinstallInstructions": "Picatz l’URL de autoinstall.yaml o l’emplaçament del fichièr local :",
     "autoinstallInteractiveOption": "Installacion interactiva",
     "autoinstallAutomatedOption": "Installacion automatizada",
@@ -527,5 +527,9 @@
     "passphraseTypePageBodyAuthRequired": "Lo chiframent material demanda una seguretat de mai dins aquel ordenador.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "A aquel ordenador li manca una foncionalitat de seguretat requesida (raiç de fisança materiala).",
     "tpmActionPageTitleActionable": "I a un problèma amb lo chiframent material",
-    "installationLogSemanticLabel": "Jornal d'installacion"
+    "installationLogSemanticLabel": "Jornal d'installacion",
+    "allocateDiskSpaceBootMustBeExt4": "/boot deu èsser montat sus una particion ext4",
+    "allocateDiskSpaceBootMustBeExt4Info": "Utilizatz una particion ext4 per / o creatz una particion ext4 separada per /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot deu èsser montat sus una particion ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "Utilizatz una particion ext4 per / o creatz una particion ext4 separada per /boot"
 }
