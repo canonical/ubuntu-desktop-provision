@@ -156,23 +156,24 @@ class PasswordFormField extends ConsumerWidget {
     final showPassword =
         ref.watch(identityModelProvider.select((model) => model.showPassword));
 
-    return ValidatedFormField(
-      labelText: lang.identityPasswordLabel,
-      obscureText: !showPassword,
-      successWidget: PasswordStrengthLabel(strength: passwordStrength),
-      initialValue: password,
-      suffixIcon: ShowPasswordButton(
-        value: showPassword,
-        onChanged: (value) =>
-            ref.read(identityModelProvider).showPassword = value,
+    return ShowPasswordFieldBuilder(
+      value: showPassword,
+      onChanged: (value) =>
+          ref.read(identityModelProvider).showPassword = value,
+      builder: (context, suffixIcon) => ValidatedFormField(
+        labelText: lang.identityPasswordLabel,
+        obscureText: !showPassword,
+        successWidget: PasswordStrengthLabel(strength: passwordStrength),
+        initialValue: password,
+        suffixIcon: suffixIcon,
+        validator: RequiredValidator(
+          errorText: lang.identityPasswordRequired,
+        ),
+        onChanged: (value) {
+          final model = ref.read(identityModelProvider);
+          model.password = value;
+        },
       ),
-      validator: RequiredValidator(
-        errorText: lang.identityPasswordRequired,
-      ),
-      onChanged: (value) {
-        final model = ref.read(identityModelProvider);
-        model.password = value;
-      },
     );
   }
 }
@@ -213,21 +214,111 @@ class ConfirmPasswordFormField extends ConsumerWidget {
   }
 }
 
-class ShowPasswordButton extends StatefulWidget {
-  const ShowPasswordButton({
+/// Lays out a password field with a show/hide button drawn over its suffix.
+///
+/// The button is not part of the field's widget subtree. Otherwise it would be
+/// a semantic descendant of the text field, and screen readers announce the
+/// field's label when focus moves to the button.
+class ShowPasswordFieldBuilder extends StatefulWidget {
+  const ShowPasswordFieldBuilder({
     required this.onChanged,
     required this.value,
+    required this.builder,
     super.key,
   });
 
   final ValueChanged<bool> onChanged;
   final bool value;
 
+  /// Builds the field. The given `suffixIcon` reserves the space of the button
+  /// and must be passed to the field's suffix.
+  final Widget Function(BuildContext context, Widget suffixIcon) builder;
+
   @override
-  State<ShowPasswordButton> createState() => _ShowPasswordButtonState();
+  State<ShowPasswordFieldBuilder> createState() =>
+      _ShowPasswordFieldBuilderState();
 }
 
-class _ShowPasswordButtonState extends State<ShowPasswordButton> {
+class _ShowPasswordFieldBuilderState extends State<ShowPasswordFieldBuilder> {
+  final _link = LayerLink();
+  final _buttonKey = GlobalKey();
+  Size _buttonSize = Size.zero;
+
+  @override
+  void initState() {
+    super.initState();
+    // The size-changed notification is not sent for the first layout.
+    WidgetsBinding.instance.addPostFrameCallback((_) => _measureButton());
+  }
+
+  void _measureButton() {
+    final size = _buttonKey.currentContext?.size;
+    if (mounted && size != null && size != _buttonSize) {
+      setState(() => _buttonSize = size);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return NotificationListener<SizeChangedLayoutNotification>(
+      onNotification: (_) {
+        // Notifications are dispatched during layout, when sizes can't be read.
+        WidgetsBinding.instance.addPostFrameCallback((_) => _measureButton());
+        return false;
+      },
+      child: Stack(
+        fit: StackFit.passthrough,
+        children: [
+          widget.builder(
+            context,
+            CompositedTransformTarget(
+              link: _link,
+              child: SizedBox.fromSize(size: _buttonSize),
+            ),
+          ),
+          Positioned(
+            left: 0,
+            top: 0,
+            child: CompositedTransformFollower(
+              link: _link,
+              showWhenUnlinked: false,
+              targetAnchor: Alignment.center,
+              followerAnchor: Alignment.center,
+              child: ConstrainedBox(
+                key: _buttonKey,
+                constraints: const BoxConstraints(
+                  minWidth: kMinInteractiveDimension,
+                  minHeight: kMinInteractiveDimension,
+                ),
+                child: SizeChangedLayoutNotifier(
+                  child: _ShowPasswordButton(
+                    value: widget.value,
+                    onChanged: widget.onChanged,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ShowPasswordButton extends StatefulWidget {
+  const _ShowPasswordButton({
+    required this.onChanged,
+    required this.value,
+  });
+
+  final ValueChanged<bool> onChanged;
+  final bool value;
+
+  @override
+  State<_ShowPasswordButton> createState() => _ShowPasswordButtonState();
+}
+
+class _ShowPasswordButtonState extends State<_ShowPasswordButton> {
   bool _focused = false;
 
   @override
