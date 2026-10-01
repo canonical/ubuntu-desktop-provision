@@ -169,12 +169,14 @@ void main() {
     expect(selected, 3);
     expect(activated, isEmpty);
 
-    // a double click selects and activates
+    // a double click selects on the first click and activates on the second
     await tester.tap(ap);
     await tester.pump(const Duration(milliseconds: 100));
+    expect(selected, 4);
+    expect(activated, isEmpty);
     await tester.tap(ap);
     await tester.pump(kDoubleTapTimeout + const Duration(milliseconds: 1));
-    expect(selected, 5);
+    expect(selected, 4);
     expect(activated, equals([(device, accessPoint)]));
   });
 

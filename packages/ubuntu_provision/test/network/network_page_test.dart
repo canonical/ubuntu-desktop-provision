@@ -88,6 +88,7 @@ void main() {
     expect(tile, findsOneWidget);
     await tester.pump();
     await tester.tap(tile);
+    await tester.pump(kDoubleTapTimeout);
     expect(model.connectMode, ConnectMode.wifi);
   });
 

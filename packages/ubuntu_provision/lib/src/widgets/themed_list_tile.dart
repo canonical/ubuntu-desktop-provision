@@ -1,6 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter/gestures.dart' show kDoubleTapTimeout;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:yaru/yaru.dart';
 
@@ -22,8 +20,8 @@ class ThemedListTile extends StatefulWidget {
   final Widget? trailing;
   final void Function()? onTap;
 
-  /// Called when the tile is tapped twice in quick succession. The first tap
-  /// still triggers [onTap] immediately, so single taps are not delayed.
+  /// Called when the tile is double-clicked. The first click of a double-click
+  /// still triggers [onTap] immediately, so single clicks are not delayed.
   final void Function()? onDoubleTap;
 
   @override
@@ -32,23 +30,13 @@ class ThemedListTile extends StatefulWidget {
 
 class _ThemedListTileState extends State<ThemedListTile> {
   bool _focused = false;
-  Timer? _doubleTapTimer;
 
-  @override
-  void dispose() {
-    _doubleTapTimer?.cancel();
-    super.dispose();
-  }
-
-  void _handleTap() {
-    widget.onTap?.call();
-    if (widget.onDoubleTap == null) return;
-    if (_doubleTapTimer?.isActive ?? false) {
-      _doubleTapTimer!.cancel();
-      _doubleTapTimer = null;
-      widget.onDoubleTap!();
-    } else {
-      _doubleTapTimer = Timer(kDoubleTapTimeout, () {});
+  void _handleSerialTapUp(SerialTapUpDetails details) {
+    switch (details.count) {
+      case 1:
+        widget.onTap?.call();
+      case 2:
+        widget.onDoubleTap?.call();
     }
   }
 
@@ -56,7 +44,7 @@ class _ThemedListTileState extends State<ThemedListTile> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return AnimatedContainer(
+    final tile = AnimatedContainer(
       duration: kThemeAnimationDuration,
       foregroundDecoration: BoxDecoration(
         border: Border.all(
@@ -76,15 +64,31 @@ class _ThemedListTileState extends State<ThemedListTile> {
         trailing: widget.trailing,
         title: widget.title,
         selected: widget.selected,
-        onTap: widget.onTap != null || widget.onDoubleTap != null
-            ? _handleTap
-            : null,
+        onTap: widget.onTap,
         selectedColor: theme.textTheme.bodyMedium?.color,
         focusColor: Colors.transparent,
         visualDensity: VisualDensity.compact,
         selectedTileColor: Colors.transparent,
         shape: Border(),
       ),
+    );
+
+    if (widget.onDoubleTap == null) return tile;
+
+    // SerialTapGestureRecognizer reports every click of a series with its
+    // count, so the first click selects without waiting for a possible second
+    // click, and the second one activates. It wins the gesture arena over the
+    // ListTile's own tap recognizer, so onTap is not called twice. Keyboard
+    // activation still goes through ListTile.onTap.
+    return RawGestureDetector(
+      gestures: {
+        SerialTapGestureRecognizer:
+            GestureRecognizerFactoryWithHandlers<SerialTapGestureRecognizer>(
+          SerialTapGestureRecognizer.new,
+          (recognizer) => recognizer.onSerialTapUp = _handleSerialTapUp,
+        ),
+      },
+      child: tile,
     );
   }
 }
