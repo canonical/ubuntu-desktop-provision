@@ -164,7 +164,7 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'სახელი მეტისმეტად გრძელია.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'სახელი არასწორია';
 
   @override
   String get identityHostnameLabel => 'თქვენი კომპიუტერის სახელი';
@@ -189,7 +189,8 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'მომხმარებლის სახელი აუცილებელია';
 
   @override
-  String get identityInvalidUsername => 'მომხმარებლის სახელი არასწორია';
+  String get identityInvalidUsername =>
+      'მომხმარებლის სახელი არასწორია: ის უნდა იწყებოდეს მხედრული ასოთი და შეიძლება, მხოლოდ, შეიცავდეს მხედრულ ასოებს, ციფრებს, ტირეებს და ქვედა ტირეებს.';
 
   @override
   String get identityUsernameInUse => 'ეს მომხმარებლის სახელი უკვე არსებობს.';
@@ -384,32 +385,32 @@ class UbuntuProvisionLocalizationsKa extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'აკეცვა';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'სიგნალის გარეშე';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'სუსტი სიგნალი';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'სიგნალი მისაღებია';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'კარგი სიგნალი';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'შესანიშნავი სიგნალი';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'ღია ქსელი';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'დაცული ქსელი';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'დაკავშირება…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'დაკავშირებულია';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'ჟურნალი';
 }

@@ -332,7 +332,7 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get choosePassphraseBody =>
-      'Вам потрібно буде вводити пароль кожного разу, коли ви вмикаєте комп\'ютер. Цей пароль відрізняється від вашого пароля користувача.';
+      'Вам потрібно буде вводити пароль за кожного ввімкнення комп\'ютера. Цей пароль відрізняється від вашого пароля користувача.';
 
   @override
   String get choosePassphraseInfoHeader =>
@@ -362,11 +362,11 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Вам доведеться вводити парольну фразу щоразу під час запуску комп’ютера. Ця парольна фраза відрізняється від вашого пароля користувача. Ви зможете змінити її пізніше в «Центрі безпеки».';
+      'Вам доведеться вводити парольну фразу за кожного запуску комп’ютера. Ця парольна фраза відрізняється від вашого пароля користувача. Ви зможете змінити її пізніше в «Центрі безпеки».';
 
   @override
   String get passphrasePageBodyPin =>
-      'Вам доведеться вводити PIN-код щоразу, коли ви вмикаєте комп’ютер. Цей PIN-код відрізняється від вашого пароля користувача. Ви зможете змінити його пізніше в «Центрі безпеки».';
+      'Вам доведеться вводити PIN-код за кожного ввімкнення комп’ютера. Цей PIN-код відрізняється від вашого пароля користувача. Ви зможете змінити його пізніше в «Центрі безпеки».';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Парольна фраза';
@@ -399,24 +399,24 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
-      'Найбільш безпечно. Вам потрібно буде вводити довшу парольну фразу кожного разу, коли ви вмикаєте комп\'ютер.';
+      'Найбезпечніше. Вам потрібно буде вводити довшу парольну фразу за кожного ввімкнення комп\'ютера.';
 
   @override
   String get passphraseTypePinTileTitle => 'Вимагати PIN-код під час запуску';
 
   @override
   String get passphraseTypePinTileSubTitle =>
-      'Більш безпечно. Вам потрібно буде вводити цифровий PIN-код кожного разу, коли ви вмикаєте комп\'ютер.';
+      'Безпечніше. Вам потрібно буде вводити цифровий PIN-код за кожного ввімкнення комп\'ютера.';
 
   @override
-  String get passphraseTypeNoneTileTitle => 'Розблокувати диск автоматично';
+  String get passphraseTypeNoneTileTitle => 'Розблоковувати диск автоматично';
 
   @override
   String get passphraseTypePageHeader => 'Додаткова безпека';
 
   @override
   String get passphraseTypePageBody =>
-      'За замовчуванням диск розблокується автоматично під час запуску. Крім того, у вас є можливості додаткового захисту ваших даних.';
+      'Усталено диск розблокується автоматично під час запуску. Крім того, у вас є можливості додаткового захисту ваших даних.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
@@ -682,11 +682,11 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot має бути змонтований на розділі ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Використовуйте розділ ext4 для каталогу / або створіть окремий розділ ext4 для каталогу /boot';
 
   @override
   String get diskHeadersDevice => 'Пристрій';
@@ -1296,12 +1296,12 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String recoveryKeyQrDialogTitle(String DISTRO) {
-    return '$DISTRO Десктоп - Ключ відновлення';
+    return '$DISTRO для комп\'ютера - Ключ відновлення';
   }
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Відскануйте QR-код, щоб скопіювати ключ відновлення, і збережіть його в безпечному місці, наприклад, у менеджері паролів. Ви також можете сфотографувати його для подальшого використання.';
+      'Зіскануйте QR-код, щоб скопіювати ключ відновлення і збережіть його в безпечному місці, наприклад, у менеджері паролів. Ви також можете сфотографувати його для подальшого використання.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Скопійовано в буфер обміну';
@@ -1723,11 +1723,11 @@ class UbuntuBootstrapLocalizationsUk extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot має бути змонтований на розділі ext4';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Використовуйте розділ ext4 для каталогу / або створіть окремий розділ ext4 для каталогу /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

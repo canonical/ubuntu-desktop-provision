@@ -124,5 +124,6 @@
     "networkWifiOpenNetwork": "רשת פתוחה",
     "networkWifiSecureNetwork": "רשת מאובטחת",
     "networkWifiConnecting": "התחברות…",
-    "networkWifiConnected": "מחובר"
+    "networkWifiConnected": "מחובר",
+    "logViewSemanticLabel": "יומן"
 }

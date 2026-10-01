@@ -536,5 +536,7 @@
     "autoinstallCloudInitSchemaValidationErrorMessage": "Il y a un problème avec les données utilisateur cloud-init fournies dans le fichier d'installation automatique.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "Il manque une fonctionnalité de sécurité requise à cet ordinateur (racine matérielle de confiance).",
     "passphraseTypePageBodyAuthRequired": "Le chiffrement matériel nécessite une sécurité supplémentaire sur cet ordinateur.",
-    "tpmActionPageTitleActionable": "Il y a un problème avec le chiffrement matériel"
+    "tpmActionPageTitleActionable": "Il y a un problème avec le chiffrement matériel",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot doit être monté sur une partition ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "Utilisez une partition ext4 pour / ou créez une partition ext4 séparée pour /boot"
 }

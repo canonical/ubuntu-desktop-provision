@@ -413,5 +413,5 @@ class UbuntuProvisionLocalizationsLo extends UbuntuProvisionLocalizations {
   String get networkWifiConnected => 'ເຊື່ອມຕໍ່ແລ້ວ';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'ບັນທຶກ';
 }
