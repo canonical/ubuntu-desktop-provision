@@ -512,7 +512,7 @@
     "restartInstaller": "Telepítő újraindítása",
     "autoinstallGenericErrorMessage": "A telepítés nem folytatható a megadott automatikus telepítőfájllal.",
     "autoinstallValidationErrorMessage": "Probléma van a megadott automatikus telepítőfájllal.",
-    "autoinstallCloudInitSchemaValidationErrorMessage": "Probléma van az automatikus telepítőfájlban megadott felhő-előkészítés felhasználói adataival.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Probléma van az automatikus telepítőfájlban megadott cloud-init felhasználói adataival.",
     "passphraseTypePageBodyAuthRequired": "A hardveresen támogatott titkosítás további biztonságot igényel ezen a számítógépen.",
     "allocateDiskSpaceBootMustBeExt4": "A /boot könyvtárat egy ext4 partícióra kell csatolni",
     "allocateDiskSpaceBootMustBeExt4Info": "Használjon ext4 partíciót a / gyökérhez, vagy hozzon létre külön ext4 partíciót a /boot könyvtárhoz",
