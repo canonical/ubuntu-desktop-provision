@@ -7,7 +7,7 @@ environment:
   flutter: ">=3.38.1"
 
 dependencies:
-  dbus: ^0.7.10
+  dbus: ^0.8.0
   flutter:
     sdk: flutter
   flutter_spinbox: ^0.13.1

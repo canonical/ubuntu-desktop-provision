@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   collection: ^1.17.0
-  dbus: ^0.7.10
+  dbus: ^0.8.0
   diacritic: ^0.1.5
   file: ^7.0.0
   flutter:
