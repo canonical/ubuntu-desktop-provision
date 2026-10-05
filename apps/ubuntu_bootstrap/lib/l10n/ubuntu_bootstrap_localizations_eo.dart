@@ -1113,7 +1113,7 @@ class UbuntuBootstrapLocalizationsEo extends UbuntuBootstrapLocalizations {
   String get notEnoughDiskSpaceRequired => 'Bezonata:';
 
   @override
-  String get refreshPageTitle => 'Ĝisdatigo estas havebla';
+  String get refreshPageTitle => 'Ĝisdatigo estas disponebla';
 
   @override
   String get refreshHeader => 'Ĝisdatigo pretas por la instalilo';
