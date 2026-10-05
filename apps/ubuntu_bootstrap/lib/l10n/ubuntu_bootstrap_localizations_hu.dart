@@ -118,15 +118,15 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'A telepítés nem folytatható a megadott automatikus telepítőfájllal.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Probléma van a megadott automatikus telepítőfájllal.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
-      'There is an issue with the cloud-init user data provided in the autoinstall file.';
+      'Probléma van az automatikus telepítőfájlban megadott cloud-init felhasználói adataival.';
 
   @override
   String get autoinstallErrorInstructions =>
@@ -364,11 +364,11 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Meg kell adnia a jelmondatát minden alkalommal, amikor bekapcsolja a számítógépet. Ez a jelmondat eltér a felhasználói jelszavától. Később megváltoztathatja, de nem tilthatja le. Ha elfelejti a jelmondatát, akkor a helyreállítási kulcs használatával szerezheti vissza a hozzáférést a lemezhez.';
+      'Meg kell adnia a jelmondatot minden alkalommal, amikor elindítja a számítógépet. Ez a jelmondat eltér a felhasználói jelszavától. Később megváltoztathatja a biztonsági központban.';
 
   @override
   String get passphrasePageBodyPin =>
-      'Meg kell adnia a PIN-kódját minden alkalommal, amikor bekapcsolja a számítógépet. Ez a PIN-kód eltér a felhasználói jelszavától. Később megváltoztathatja, de nem tilthatja le. Ha elfelejti a PIN-kódját, akkor a helyreállítási kulcs használatával szerezheti vissza a hozzáférést a lemezhez.';
+      'Meg kell adnia a PIN-kódot minden alkalommal, amikor elindítja a számítógépet. Ez a PIN-kód eltér a felhasználói jelszavától. Később megváltoztathatja a biztonsági központban.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Jelmondat';
@@ -396,14 +396,16 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'A PIN-kódok nem egyeznek';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Jelmondat megkövetelése';
+  String get passphraseTypePassphraseTileTitle =>
+      'Jelmondat megkövetelése az indításkor';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'A legbiztonságosabb. Hosszabb jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet.';
 
   @override
-  String get passphraseTypePinTileTitle => 'PIN-kód megkövetelése';
+  String get passphraseTypePinTileTitle =>
+      'PIN-kód megkövetelése az indításkor';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -417,11 +419,11 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Alapértelmezetten a számítógép platformmegbízhatósági modulja (TPM) feloldja a lemezt az indítás során. Az adatok további védelmére is vannak lehetőségek.';
+      'Alapértelmezetten a lemez automatikusan feloldódik az indításkor. Lehetőségei vannak az adatok további védelmére is.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
-      'Hardware-backed encryption requires additional security in this computer.';
+      'A hardveresen támogatott titkosítás további biztonságot igényel ezen a számítógépen.';
 
   @override
   String get passphrasePagePassphraseEntropyBelowMin =>
@@ -685,11 +687,11 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      'A /boot könyvtárat egy ext4 partícióra kell csatolni';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Használjon ext4 partíciót a / gyökérhez, vagy hozzon létre külön ext4 partíciót a /boot könyvtárhoz';
 
   @override
   String get diskHeadersDevice => 'Eszköz';
@@ -1426,7 +1428,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionPageTitleActionable =>
-      'There is an issue with hardware-backed encryption';
+      'Probléma van a hardveresen támogatott titkosítással';
 
   @override
   String get tpmActionBadgeLabel => 'Művelet szükséges';
@@ -1562,7 +1564,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindNoHardwareRootOfTrust =>
-      'This computer is missing a required security feature (hardware root of trust).';
+      'Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (hardveres bizalmi gyökér).';
 
   @override
   String get tpmActionErrorKindGenericTpm =>
@@ -1720,7 +1722,7 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
       'Próbáljon másik megoldást, vagy vegye fel a kapcsolatot az IT-támogatással.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Telepítési napló';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1728,14 +1730,14 @@ class UbuntuBootstrapLocalizationsHu extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      'A /boot könyvtárat egy ext4 partícióra kell csatolni';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Használjon ext4 partíciót a / gyökérhez, vagy hozzon létre külön ext4 partíciót a /boot könyvtárhoz';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return '$CURRENT_STEP / $TOTAL_STEPS lépés';
   }
 }

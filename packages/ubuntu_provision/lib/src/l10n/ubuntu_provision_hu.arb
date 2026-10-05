@@ -116,13 +116,14 @@
     "collapseIconSemanticLabel": "Összecsukás",
     "errorPageTechnicalDetails": "Műszaki részletek",
     "identityInvalidRealName": "A név érvénytelen",
-    "networkWifiSignalNone": "Nincsen jel",
+    "networkWifiSignalNone": "Nincs jel",
     "networkWifiSignalWeak": "Gyenge jel",
-    "networkWifiSignalOk": "Elfogadható jel",
+    "networkWifiSignalOk": "Megfelelő jel",
     "networkWifiSignalGood": "Jó jel",
     "networkWifiSignalExcellent": "Kiváló jel",
     "networkWifiOpenNetwork": "Nyílt hálózat",
     "networkWifiSecureNetwork": "Biztonságos hálózat",
-    "networkWifiConnecting": "Csatlakozás…",
-    "networkWifiConnected": "Csatlakozva"
+    "networkWifiConnecting": "Kapcsolódás…",
+    "networkWifiConnected": "Kapcsolódva",
+    "logViewSemanticLabel": "Napló"
 }
