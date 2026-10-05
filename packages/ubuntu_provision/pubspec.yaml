@@ -26,7 +26,7 @@ dependencies:
   html: '>=0.15.4 <0.15.7'
   intl: ^0.20.2
   meta: ^1.11.0
-  nm: ^0.5.0
+  nm: ^0.6.0
   path: ^1.8.3
   platform: ^3.1.2
   safe_change_notifier: ^0.4.0

@@ -34,7 +34,7 @@ dependencies:
   intl: ^0.20.2
   landscape_client: ^0.0.1
   meta: ^1.11.0
-  nm: ^0.5.0
+  nm: ^0.6.0
   path: ^1.8.3
   riverpod_annotation: ^2.6.1
   safe_change_notifier: ^0.4.0
