@@ -33,7 +33,7 @@
     "partitionTypeLogical": "Logiczna",
     "installationTypeAlongside": "Zainstaluj {product} obok {os}",
     "selectGuidedStorageInstallNow": "Zainstaluj teraz",
-    "confirmInstallButton": "Instaluj",
+    "confirmInstallButton": "Zainstaluj",
     "diskHeadersDevice": "Urządzenie",
     "diskHeadersMountPoint": "Punkt montowania",
     "freeDiskSpace": "Wolna przestrzeń",
