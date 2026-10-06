@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -134,6 +136,53 @@ void main() {
     await tester.pump(kDoubleTapTimeout);
 
     verifyNever(wifiModel.connect());
+  });
+
+  testWidgets('double-clicking does not connect when already connected',
+      (tester) async {
+    final model = NetworkModel(MockNetworkService());
+    await tester.pumpApp(
+      (_) => buildNetworkPage(model: model, ethernet: false, wifi: true),
+    );
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(NetworkPage));
+    final wifiModel =
+        ProviderScope.containerOf(context).read(wifiModelProvider);
+    when(wifiModel.canConnect).thenReturn(false);
+
+    final tile = find.listTile('ap').first;
+    await tester.tap(tile);
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.tap(tile);
+    await tester.pump(kDoubleTapTimeout);
+
+    verifyNever(wifiModel.connect());
+  });
+
+  testWidgets('repeated double-clicks connect only once', (tester) async {
+    final model = NetworkModel(MockNetworkService());
+    await tester.pumpApp(
+      (_) => buildNetworkPage(model: model, ethernet: false, wifi: true),
+    );
+    await tester.pumpAndSettle();
+
+    final context = tester.element(find.byType(NetworkPage));
+    final wifiModel =
+        ProviderScope.containerOf(context).read(wifiModelProvider);
+    final completer = Completer<void>();
+    when(wifiModel.connect()).thenAnswer((_) => completer.future);
+
+    final tile = find.listTile('ap').first;
+    for (var i = 0; i < 2; i++) {
+      await tester.tap(tile);
+      await tester.pump(const Duration(milliseconds: 100));
+      await tester.tap(tile);
+      await tester.pump(kDoubleTapTimeout);
+    }
+
+    verify(wifiModel.connect()).called(1);
+    completer.complete();
   });
 
   testWidgets('initializes and cleans up the model', (tester) async {
