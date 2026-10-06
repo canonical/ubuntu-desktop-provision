@@ -66,9 +66,11 @@ class _DonePageState extends ConsumerState<DonePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (mascot != null)
-                  ConstrainedBox(
-                    constraints: const BoxConstraints.tightFor(height: 250),
-                    child: mascot,
+                  Flexible(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 250),
+                      child: mascot,
+                    ),
                   ),
                 const SizedBox(),
                 Text(
