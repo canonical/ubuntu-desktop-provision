@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'page_config_service.dart';
@@ -9,6 +9,7 @@ part of 'page_config_service.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -31,22 +32,30 @@ mixin _$PageConfigEntry {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as PageConfigEntry;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PageConfigEntry &&
-            (identical(other.image, image) || other.image == image) &&
-            (identical(other.imageDark, imageDark) ||
-                other.imageDark == imageDark) &&
-            (identical(other.visible, visible) || other.visible == visible));
+            (identical(other.image, _this.image) ||
+                other.image == _this.image) &&
+            (identical(other.imageDark, _this.imageDark) ||
+                other.imageDark == _this.imageDark) &&
+            (identical(other.visible, _this.visible) ||
+                other.visible == _this.visible));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, image, imageDark, visible);
+  int get hashCode {
+    final _this = this as PageConfigEntry;
+    return Object.hash(
+        runtimeType, _this.image, _this.imageDark, _this.visible);
+  }
 
   @override
   String toString() {
-    return 'PageConfigEntry(image: $image, imageDark: $imageDark, visible: $visible)';
+    final _this = this as PageConfigEntry;
+    return 'PageConfigEntry(image: ${_this.image}, imageDark: ${_this.imageDark}, visible: ${_this.visible})';
   }
 }
 
@@ -76,7 +85,7 @@ class _$PageConfigEntryCopyWithImpl<$Res>
     Object? imageDark = freezed,
     Object? visible = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(PageConfigEntry(
       image: freezed == image
           ? _self.image
           : image // ignore: cast_nullable_to_non_nullable
@@ -294,7 +303,9 @@ class _PageConfigEntry implements PageConfigEntry {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, image, imageDark, visible);
+  int get hashCode {
+    return Object.hash(runtimeType, image, imageDark, visible);
+  }
 
   @override
   String toString() {
@@ -364,20 +375,25 @@ mixin _$PageConfig {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as PageConfig;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PageConfig &&
-            const DeepCollectionEquality().equals(other.pages, pages));
+            const DeepCollectionEquality().equals(other.pages, _this.pages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(pages));
+  int get hashCode {
+    final _this = this as PageConfig;
+    return Object.hash(
+        runtimeType, const DeepCollectionEquality().hash(_this.pages));
+  }
 
   @override
   String toString() {
-    return 'PageConfig(pages: $pages)';
+    final _this = this as PageConfig;
+    return 'PageConfig(pages: ${_this.pages})';
   }
 }
 
@@ -404,7 +420,7 @@ class _$PageConfigCopyWithImpl<$Res> implements $PageConfigCopyWith<$Res> {
   $Res call({
     Object? pages = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(PageConfig(
       pages: null == pages
           ? _self.pages
           : pages // ignore: cast_nullable_to_non_nullable
@@ -581,7 +597,7 @@ extension PageConfigPatterns on PageConfig {
 class _PageConfig implements PageConfig {
   const _PageConfig(
       {@PageConfigEntryConverter()
-      final Map<String, PageConfigEntry> pages = const {}})
+      Map<String, PageConfigEntry> pages = const {}})
       : _pages = pages;
   factory _PageConfig.fromJson(Map<String, dynamic> json) =>
       _$PageConfigFromJson(json);
@@ -616,13 +632,15 @@ class _PageConfig implements PageConfig {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PageConfig &&
-            const DeepCollectionEquality().equals(other._pages, _pages));
+            const DeepCollectionEquality().equals(other.pages, _pages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_pages));
+  int get hashCode {
+    return Object.hash(
+        runtimeType, const DeepCollectionEquality().hash(_pages));
+  }
 
   @override
   String toString() {

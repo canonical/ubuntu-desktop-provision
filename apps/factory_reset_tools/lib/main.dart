@@ -20,6 +20,7 @@ class FactoryResetTools extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ProviderScope(
+      retry: (_, __) => null,
       child: WizardApp(
         onGenerateTitle: (context) {
           return FactoryResetToolsLocalizations.of(context).windowTitle;
