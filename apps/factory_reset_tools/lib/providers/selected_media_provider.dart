@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:factory_reset_tools/dbus/drive_data.dart';
 import 'package:factory_reset_tools/providers/available_media_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 
 final selectedMediaProvider =
     StateNotifierProvider<_SelectedMediaNotifier, DriveData?>(

@@ -3,6 +3,7 @@ import 'package:factory_reset_tools/horizontal_page.dart';
 import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
