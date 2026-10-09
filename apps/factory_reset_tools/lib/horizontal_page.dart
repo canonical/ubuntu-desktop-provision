@@ -78,7 +78,7 @@ class HorizontalPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final windowSize = MediaQuery.of(context).size;
+    final windowSize = MediaQuery.sizeOf(context);
     final isSmallWindow = windowSize.width < 700 || windowSize.height < 500;
     final adjustedPadding =
         isSmallWindow ? padding.copyWith(right: 0, left: 0) : padding;
