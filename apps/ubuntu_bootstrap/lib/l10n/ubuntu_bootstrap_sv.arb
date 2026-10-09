@@ -144,7 +144,7 @@
     "installationSlidesProductivityTitle": "Öka din produktivitet",
     "installationSlidesProductivityBody": "{DISTRO}-skrivbordet innehåller LibreOffice, en samling program med öppen källkod för dokument, kalkylblad och presentationer som är kompatibla med Microsoft Office. Det finns också populära samarbetsverktyg.",
     "installationSlidesAccessibilityTitle": "Åtkomst för alla",
-    "installationSlidesAccessibilityBody": "Kärnan i {DISTRO}s filosofi är övertygelsen att datorer är till för alla. Med avancerade hjälpmedel och alternativ för att ändra språk, färger och textstorlek blir datoranvändning enkel, oavsett vem du är och var du befinner dig.",
+    "installationSlidesAccessibilityBody": "Kärnan i {DISTRO}s filosofi är övertygelsen att datorer är till för alla. Med avancerade hjälpmedel och alternativ för att ändra språk, färger och textstorlek gör {DISTRO} det enkelt att använda datorer – oavsett vem du är och var du befinner dig.",
     "installationSlidesAccessibilityLanguages": "Språkstöd",
     "installationSlidesSupportTitle": "Hjälp och support",
     "installationSlidesSupportCommunity": "Ask Ubuntu innehåller många frågor och svar och Ubuntu Discourse erbjuder guider och diskussioner för både nya och erfarna användare.",
