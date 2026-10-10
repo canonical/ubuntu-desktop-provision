@@ -969,5 +969,9 @@
                 "type": "int"
             }
         }
-    }
+    },
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot დანაყოფი ext4 ტიპის უნდა იყოს",
+    "allocateDiskSpaceBootMustBeExt4": "/boot დანაყოფი ext4 ტიპის უნდა იყოს",
+    "manualPartitioningBootMustBeExt4WarningBody": "გამოიყენეთ ext4 ფაილური სისტემა / დანაყოფისთვის, ან შექმენით ცალკე ext4 დანაყოფი /boot-ისთვის",
+    "allocateDiskSpaceBootMustBeExt4Info": "გამოიყენეთ ext4 ფაილური სისტემა / დანაყოფისთვის, ან შექმენით ცალკე ext4 დანაყოფი /boot-ისთვის"
 }
