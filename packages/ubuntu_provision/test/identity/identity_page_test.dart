@@ -213,6 +213,47 @@ void main() {
     verify(model.showPassword = false).called(1);
   });
 
+  for (final showPassword in [false, true]) {
+    testWidgets('password button semantics (show: $showPassword)',
+        (tester) async {
+      final semantics = tester.ensureSemantics();
+      try {
+        final model = buildIdentityModel(
+          password: 'password',
+          confirmedPassword: 'confirmation',
+          showPassword: showPassword,
+        );
+        await tester.pumpApp((_) => buildIdentityPage(model));
+
+        final context = tester.element(find.byType(IdentityPage));
+        final l10n = IdentityLocalizations.of(context);
+        final label = showPassword
+            ? l10n.identityPasswordHide
+            : l10n.identityPasswordShow;
+        final button = find.button(label);
+        final passwordField = find.textField('password');
+
+        final buttonSemantics = tester.getSemantics(button);
+        expect(buttonSemantics.label, label);
+        expect(
+          tester.getSemantics(passwordField).label,
+          l10n.identityPasswordLabel,
+        );
+
+        // The button must not be a semantic descendant of the text field,
+        // otherwise screen readers announce the field's label for it.
+        for (var node = buttonSemantics.parent;
+            node != null;
+            node = node.parent) {
+          expect(node.label, isNot(contains(l10n.identityPasswordLabel)));
+          expect(node.flagsCollection.isTextField, isFalse);
+        }
+      } finally {
+        semantics.dispose();
+      }
+    });
+  }
+
   testWidgets('save identity', (tester) async {
     final model = buildIdentityModel(isValid: true);
     await tester.pumpApp((_) => buildIdentityPage(model));
