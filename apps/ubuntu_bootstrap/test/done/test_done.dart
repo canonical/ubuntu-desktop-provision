@@ -1,36 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:ubuntu_bootstrap/pages/done/done_model.dart';
 import 'package:ubuntu_bootstrap/pages/done/done_page.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_service/ubuntu_service.dart';
 
 import 'test_done.dart';
 export '../test_utils.dart';
-export 'test_done.mocks.dart';
 
-@GenerateMocks([DoneModel])
-DoneModel buildDoneModel({
+MockSessionService registerMockDoneServices({
   ProductInfo? productInfo,
   ProvisioningMode? provisioningMode,
 }) {
-  final model = MockDoneModel();
-  when(model.productInfo)
+  final product = MockProductService();
+  when(product.getProductInfo())
       .thenReturn(productInfo ?? ProductInfo(name: 'Ubuntu'));
-  when(model.provisioningMode)
-      .thenReturn(provisioningMode ?? ProvisioningMode.standard);
-  return model;
+  registerMockService<ProductService>(product);
+
+  final config = MockConfigService();
+  when(config.provisioningMode)
+      .thenAnswer((_) async => provisioningMode ?? ProvisioningMode.standard);
+  registerMockService<ConfigService>(config);
+
+  final session = MockSessionService();
+  registerMockService<SessionService>(session);
+  return session;
 }
 
-Widget buildPage(DoneModel model) {
+Widget buildPage() {
   final pageImages = PageImages.internal(
     MockPageConfigService(),
     MockThemeVariantService(),
   );
   return ProviderScope(
     overrides: [
-      doneModelProvider.overrideWith((_) => model),
       pageImagesProvider.overrideWith((_) => pageImages),
     ],
     child: const DonePage(),
