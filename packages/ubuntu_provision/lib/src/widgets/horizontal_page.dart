@@ -115,7 +115,7 @@ class _HorizontalPageState extends ConsumerState<HorizontalPage> {
   Widget build(BuildContext context) {
     final name = ModalRoute.of(context)!.settings.name!.replaceFirst('/', '');
     final image = ref.watch(pageImagesProvider).get(name);
-    final windowSize = MediaQuery.of(context).size;
+    final windowSize = MediaQuery.sizeOf(context);
     final isSmallWindow = windowSize.width < 700 || windowSize.height < 500;
     final adjustedPadding = isSmallWindow
         ? widget.padding.copyWith(right: 0, left: 0)

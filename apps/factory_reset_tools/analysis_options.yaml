@@ -1,3 +1,7 @@
+analyzer:
+  exclude:
+    - build/**
+    - linux/**
 include: package:ubuntu_lints/analysis_options.yaml
 
 linter:

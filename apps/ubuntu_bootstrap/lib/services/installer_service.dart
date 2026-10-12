@@ -88,6 +88,7 @@ class InstallerService {
               'refresh-installer' => InstallationStep.refresh.name,
               'source' => InstallationStep.sourceSelection.name,
               'codecs' || 'drivers' => InstallationStep.codecsAndDrivers.name,
+              'active-directory' => InstallationStep.activeDirectory.name,
               _ => 'unknown',
             },
           )

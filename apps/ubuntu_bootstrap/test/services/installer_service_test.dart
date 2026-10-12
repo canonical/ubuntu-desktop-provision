@@ -164,6 +164,22 @@ void main() {
     expect(service.hasRoute('identity'), isFalse);
   });
 
+  test('active directory interactive section', () async {
+    final client = MockSubiquityClient();
+    when(client.getInteractiveSections())
+        .thenAnswer((_) async => ['identity', 'active-directory']);
+    when(client.monitorStatus()).thenAnswer(
+      (_) => Stream.value(fakeApplicationStatus(ApplicationState.WAITING)),
+    );
+
+    final pageConfigService = setupMockPageConfig();
+    final service = InstallerService(client, pageConfig: pageConfigService);
+    await service.load();
+
+    expect(service.hasRoute('identity'), isTrue);
+    expect(service.hasRoute('activeDirectory'), isTrue);
+  });
+
   test('no interactive sections', () async {
     final client = MockSubiquityClient();
     when(client.getInteractiveSections()).thenAnswer((_) async => null);

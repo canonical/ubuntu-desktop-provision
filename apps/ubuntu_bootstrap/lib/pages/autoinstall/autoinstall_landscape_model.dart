@@ -131,6 +131,7 @@ class LandscapeDataModel extends _$LandscapeDataModel {
         next.when(
           data: (value) async {
             await _handleAuthenticationStatus(value.status, value.autoinstall);
+            if (!ref.mounted) return;
             state = state.copyWith(authenticationStatus: value.status);
           },
           loading: () {

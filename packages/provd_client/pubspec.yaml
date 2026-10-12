@@ -14,7 +14,7 @@ dependencies:
   protoc_plugin: ^21.1.2
 
 dev_dependencies:
-  build_runner: ^2.4.8
+  build_runner: ^2.15.1
   mockito: ^5.4.4
   test: any
   ubuntu_lints: ^0.4.0

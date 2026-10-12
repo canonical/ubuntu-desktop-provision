@@ -25,7 +25,7 @@ class TelemetryDialog extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       insetPadding: const EdgeInsets.all(20),
       child: SizedBox.fromSize(
-        size: MediaQuery.of(context).size,
+        size: MediaQuery.sizeOf(context),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

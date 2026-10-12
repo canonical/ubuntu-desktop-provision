@@ -99,7 +99,7 @@ class UbuntuBootstrapLocalizationsRu extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallDirectOption =>
-      'Автоматизировано с помощью файла автоустановки';
+      'Автоматизированно с помощью файла автоустановки';
 
   @override
   String get autoinstallDirectDescription =>
