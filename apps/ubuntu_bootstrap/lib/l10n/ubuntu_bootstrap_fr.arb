@@ -538,5 +538,8 @@
     "passphraseTypePageBodyAuthRequired": "Le chiffrement matériel nécessite une sécurité supplémentaire sur cet ordinateur.",
     "tpmActionPageTitleActionable": "Il y a un problème avec le chiffrement matériel",
     "manualPartitioningBootMustBeExt4WarningTitle": "/boot doit être monté sur une partition ext4",
-    "manualPartitioningBootMustBeExt4WarningBody": "Utilisez une partition ext4 pour / ou créez une partition ext4 séparée pour /boot"
+    "manualPartitioningBootMustBeExt4WarningBody": "Utilisez une partition ext4 pour / ou créez une partition ext4 séparée pour /boot",
+    "allocateDiskSpaceBootMustBeExt4": "/boot doit être monté sur une partition ext4",
+    "allocateDiskSpaceBootMustBeExt4Info": "Utilisez une partition ext4 pour / ou créez une partition ext4 séparée pour /boot",
+    "installationLogSemanticLabel": "Journal d'installation"
 }
