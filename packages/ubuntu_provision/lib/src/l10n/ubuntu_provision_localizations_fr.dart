@@ -421,5 +421,5 @@ class UbuntuProvisionLocalizationsFr extends UbuntuProvisionLocalizations {
   String get networkWifiConnected => 'Connecté';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'Journal';
 }
