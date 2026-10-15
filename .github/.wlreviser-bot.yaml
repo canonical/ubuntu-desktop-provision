@@ -1,0 +1,115 @@
+weblate:
+  api_url: https://hosted.weblate.org/api/
+  project: ubuntu-desktop-translations
+
+github:
+  repository: canonical/ubuntu-desktop-provision
+
+ai:
+  api_url: https://openrouter.ai/api/v1
+  model: google/gemini-3.8-flash
+
+components:
+  - weblate_component: provision-common
+    source_locale: en
+    context_locales: [de, fr, es]
+    format: arb
+    source_file: packages/ubuntu_provision/lib/src/l10n/ubuntu_provision_en.arb
+    path: packages/ubuntu_provision/lib/src/l10n/ubuntu_provision_{locale}.arb
+    push_after_commit: false
+
+  - weblate_component: factory-reset-tools
+    source_locale: en
+    context_locales: [de, fr, es]
+    format: arb
+    source_file: apps/factory_reset_tools/lib/l10n/factory_reset_tools_en.arb
+    path: apps/factory_reset_tools/lib/l10n/factory_reset_tools_{locale}.arb
+    push_after_commit: false    
+
+  - weblate_component: provision-stage-3-bootstrap
+    source_locale: en
+    context_locales: [de, fr, es]
+    format: arb
+    source_file: apps/ubuntu_bootstrap/lib/l10n/ubuntu_bootstrap_en.arb
+    path: apps/ubuntu_bootstrap/lib/l10n/ubuntu_bootstrap_{locale}.arb
+    push_after_commit: false
+
+  - weblate_component: provision-stage-3-bootstrap-slide-1
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/1/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/1/slide_{locale}.html
+    push_after_commit: false    
+
+  - weblate_component: provision-stage-3-bootstrap-slide-2
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/2/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/2/slide_{locale}.html
+    push_after_commit: false     
+
+  - weblate_component: provision-stage-3-bootstrap-slide-3
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/3/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/3/slide_{locale}.html
+    push_after_commit: false       
+
+  - weblate_component: provision-stage-3-bootstrap-slide-4
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/4/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/4/slide_{locale}.html
+    push_after_commit: false
+
+  - weblate_component: provision-stage-3-bootstrap-slide-5
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/5/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/5/slide_{locale}.html
+    push_after_commit: false
+
+  - weblate_component: provision-stage-3-bootstrap-slide-6
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/6/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/6/slide_{locale}.html
+    push_after_commit: false
+
+  - weblate_component: provision-stage-3-bootstrap-slide-7
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/7/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/7/slide_{locale}.html
+    push_after_commit: false
+
+  - weblate_component: provision-stage-3-bootstrap-slide-8
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/8/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/8/slide_{locale}.html
+    push_after_commit: false
+
+  - weblate_component: provision-stage-3-bootstrap-slide-9
+    source_locale: en_US
+    context_locales: [de_DE, fr_FR, es_ES]
+    format: html
+    source_file: apps/ubuntu_bootstrap/assets/slides/9/slide_en_US.html
+    path: apps/ubuntu_bootstrap/assets/slides/9/slide_{locale}.html
+    push_after_commit: false
+
+  - weblate_component: provision-stages-4-and-5-init
+    source_locale: en
+    context_locales: [de, fr, es]
+    format: arb
+    source_file: apps/ubuntu_init/lib/l10n/ubuntu_init_en.arb
+    path: apps/ubuntu_init/lib/l10n/ubuntu_init_{locale}.arb
+    push_after_commit: false    

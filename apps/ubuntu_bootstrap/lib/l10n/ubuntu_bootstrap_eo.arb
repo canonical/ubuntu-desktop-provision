@@ -174,7 +174,7 @@
     "loadingPageTitle": "Bonvenon al {DISTRO}",
     "refreshUpdating": "Ĝisdatigante {snap}…",
     "refreshInstall": "Ĝisdatigi al versio {version}",
-    "refreshPageTitle": "Ĝisdatigo estas havebla",
+    "refreshPageTitle": "Ĝisdatigo estas disponebla",
     "refreshSnapDownload": "Elŝutante {snap}…",
     "refreshSnapUnlink": "Malligante {snap}…",
     "refreshSnapCopyData": "Kopiante datenojn pri {snap}…",

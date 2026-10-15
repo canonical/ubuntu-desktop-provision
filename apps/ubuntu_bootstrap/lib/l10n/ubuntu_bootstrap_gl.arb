@@ -1116,5 +1116,9 @@
     "passphraseTypePageBodyAuthRequired": "O cifrado con respaldo de hardware require seguranza adicional neste computador.",
     "tpmActionErrorKindNoHardwareRootOfTrust": "A este ordenador fáltalle unha característica de seguranza obrigatoria (raíz de confianza do hardware).",
     "tpmActionPageTitleActionable": "Hai un problema co cifrado con respaldo de hardware",
-    "installationLogSemanticLabel": "Rexistro de instalación"
+    "installationLogSemanticLabel": "Rexistro de instalación",
+    "allocateDiskSpaceBootMustBeExt4": "/boot debe montarse nunha partición ext4",
+    "allocateDiskSpaceBootMustBeExt4Info": "Usa unha partición ext4 para / ou crea unha partición ext4 separada para /boot",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot debe montarse nunha partición ext4",
+    "manualPartitioningBootMustBeExt4WarningBody": "Usa unha partición ext4 para / ou crea unha partición ext4 separada para /boot"
 }

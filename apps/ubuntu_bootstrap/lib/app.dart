@@ -230,6 +230,7 @@ Future<void> runInstallerApp(
 
       runApp(
         ProviderScope(
+          retry: (_, __) => null,
           child: _InstallerApp(
             theme: theme,
             darkTheme: darkTheme,

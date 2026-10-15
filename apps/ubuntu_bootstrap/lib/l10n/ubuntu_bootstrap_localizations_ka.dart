@@ -680,11 +680,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot დანაყოფი ext4 ტიპის უნდა იყოს';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'გამოიყენეთ ext4 ფაილური სისტემა / დანაყოფისთვის, ან შექმენით ცალკე ext4 დანაყოფი /boot-ისთვის';
 
   @override
   String get diskHeadersDevice => 'მოწყობილობა';
@@ -1724,11 +1724,11 @@ class UbuntuBootstrapLocalizationsKa extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot დანაყოფი ext4 ტიპის უნდა იყოს';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'გამოიყენეთ ext4 ფაილური სისტემა / დანაყოფისთვის, ან შექმენით ცალკე ext4 დანაყოფი /boot-ისთვის';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

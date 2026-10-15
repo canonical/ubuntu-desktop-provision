@@ -1,7 +1,6 @@
 coverage/
 .idea/
 *.iml
-.vscode/
 /pubspec.lock
 **/pubspec_overrides.yaml
 /*.snap
@@ -37,3 +36,5 @@ provd/vendor/
 
 # Rust target files for mock landscape server
 packages/landscape_mock_server/target
+config.bat
+node_modules

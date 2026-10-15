@@ -12,7 +12,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get appTitle => 'Obnova výrobných nastavení';
 
   @override
-  String get windowTitle => 'Obnovenie výrobných nastavení';
+  String get windowTitle => 'Nástroje na obnovu výrobných nastavení';
 
   @override
   String get homeTitle => 'Čo chcete urobiť?';
@@ -21,28 +21,28 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get createResetMedia => 'Vytvoriť obnovovacie médium';
 
   @override
-  String get startFactoryReset => 'Spustiť obnovenie výrobných nastavení';
+  String get startFactoryReset => 'Spustiť obnovenie nastavení';
 
   @override
   String get createUsbTitle => 'Vytvoriť USB obnovovacie médium';
 
   @override
   String get createUsbBody =>
-      'Vytvorte USB médium na obnovenie systému a prispôsobenie inštalácií Ubuntu.';
+      'Vytvorte USB obnovovacie médium na obnovenie systému a prispôsobenie inštalácií Ubuntu.';
 
   @override
   String get createUsbListExplanation =>
-      'Vyberte USB disk. Musí mať **aspoň 16 GB miesta.**';
+      'Vyberte USB disk. Disk musí mať **aspoň 16 GB miesta.**';
 
   @override
   String get createUsbWarning =>
-      'Disk bude preformátovaný a všetky údaje sa stratia.';
+      'USB disk bude preformátovaný a všetky údaje na disku sa stratia.';
 
   @override
   String get resetMediaTitle => 'USB obnovovacie médium';
 
   @override
-  String get noMediaDetected => 'Nenašla sa žiadna vymeniteľná jednotka';
+  String get noMediaDetected => 'Nebolo zistené žiadne vymeniteľné úložisko';
 
   @override
   String get noMediaDetectedSubtitle =>
@@ -50,7 +50,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
 
   @override
   String get factoryResetTitle =>
-      'Vyberte možnosť na spustenie obnovenia továrenských nastavení';
+      'Vyberte možnosť na spustenie obnovenia výrobných nastavení';
 
   @override
   String get loadingDrives => 'Prosím, počkajte, načítavajú sa jednotky.';
@@ -63,7 +63,8 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
       'Keď ho chcete použiť, vložte USB kľúč do počítača, ktorý chcete resetovať, a reštartujte ho.';
 
   @override
-  String get errorLoadingDrives => 'Chyba pri načítavaní jednotiek.';
+  String get errorLoadingDrives =>
+      'Pri načítavaní jednotiek sa vyskytla chyba.';
 
   @override
   String get resetMediaInitializing => 'Inicializácia';
@@ -75,7 +76,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get resetMediaFinalizing => 'Dokončovanie';
 
   @override
-  String get resetMediaFinished => 'Hotovo';
+  String get resetMediaFinished => 'Dokončené';
 
   @override
   String get resetMediaFailed => 'Zlyhalo';
@@ -99,7 +100,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
   String get reformat => 'Preformátovať';
 
   @override
-  String get failed => 'Príkaz zlyhal';
+  String get failed => 'Spustenie príkazu zlyhalo';
 
   @override
   String get close => 'Zavrieť';

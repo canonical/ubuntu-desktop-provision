@@ -12,6 +12,10 @@
     "gomod",
     "git-submodules"
   ],
+  "postUpdateOptions": [
+    "gomodTidy",
+    "gomodUpdateImportPaths"
+  ],
   "schedule": [
     "after 9am and before 2pm on monday"
   ],

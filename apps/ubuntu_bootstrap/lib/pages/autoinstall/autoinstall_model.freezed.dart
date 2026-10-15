@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'autoinstall_model.dart';
@@ -9,6 +9,7 @@ part of 'autoinstall_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -26,25 +27,31 @@ mixin _$AutoinstallState implements DiagnosticableTreeMixin {
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    final _this = this as AutoinstallState;
     properties
       ..add(DiagnosticsProperty('type', 'AutoinstallState'))
-      ..add(DiagnosticsProperty('type', type));
+      ..add(DiagnosticsProperty('type', _this.type));
   }
 
   @override
   bool operator ==(Object other) {
+    final _this = this as AutoinstallState;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is AutoinstallState &&
-            (identical(other.type, type) || other.type == type));
+            (identical(other.type, _this.type) || other.type == _this.type));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, type);
+  int get hashCode {
+    final _this = this as AutoinstallState;
+    return Object.hash(runtimeType, _this.type);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AutoinstallState(type: $type)';
+    final _this = this as AutoinstallState;
+    return 'AutoinstallState(type: ${_this.type})';
   }
 }
 
@@ -72,7 +79,7 @@ class _$AutoinstallStateCopyWithImpl<$Res>
   $Res call({
     Object? type = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(AutoinstallState(
       type: null == type
           ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -272,7 +279,9 @@ class _AutoinstallState
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, type);
+  int get hashCode {
+    return Object.hash(runtimeType, type);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {

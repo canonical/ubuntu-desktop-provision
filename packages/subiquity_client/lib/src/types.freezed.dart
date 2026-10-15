@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'types.dart';
@@ -9,6 +9,7 @@ part of 'types.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -33,23 +34,31 @@ mixin _$ErrorReportRef {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ErrorReportRef;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ErrorReportRef &&
-            (identical(other.state, state) || other.state == state) &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.seen, seen) || other.seen == seen) &&
-            (identical(other.oopsId, oopsId) || other.oopsId == oopsId));
+            (identical(other.state, _this.state) ||
+                other.state == _this.state) &&
+            (identical(other.base, _this.base) || other.base == _this.base) &&
+            (identical(other.kind, _this.kind) || other.kind == _this.kind) &&
+            (identical(other.seen, _this.seen) || other.seen == _this.seen) &&
+            (identical(other.oopsId, _this.oopsId) ||
+                other.oopsId == _this.oopsId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, state, base, kind, seen, oopsId);
+  int get hashCode {
+    final _this = this as ErrorReportRef;
+    return Object.hash(runtimeType, _this.state, _this.base, _this.kind,
+        _this.seen, _this.oopsId);
+  }
 
   @override
   String toString() {
-    return 'ErrorReportRef(state: $state, base: $base, kind: $kind, seen: $seen, oopsId: $oopsId)';
+    final _this = this as ErrorReportRef;
+    return 'ErrorReportRef(state: ${_this.state}, base: ${_this.base}, kind: ${_this.kind}, seen: ${_this.seen}, oopsId: ${_this.oopsId})';
   }
 }
 
@@ -86,7 +95,7 @@ class _$ErrorReportRefCopyWithImpl<$Res>
     Object? seen = null,
     Object? oopsId = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(ErrorReportRef(
       state: null == state
           ? _self.state
           : state // ignore: cast_nullable_to_non_nullable
@@ -329,7 +338,9 @@ class _ErrorReportRef implements ErrorReportRef {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, state, base, kind, seen, oopsId);
+  int get hashCode {
+    return Object.hash(runtimeType, state, base, kind, seen, oopsId);
+  }
 
   @override
   String toString() {
@@ -416,21 +427,29 @@ mixin _$NonReportableError {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as NonReportableError;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is NonReportableError &&
-            (identical(other.cause, cause) || other.cause == cause) &&
-            (identical(other.message, message) || other.message == message) &&
-            (identical(other.details, details) || other.details == details));
+            (identical(other.cause, _this.cause) ||
+                other.cause == _this.cause) &&
+            (identical(other.message, _this.message) ||
+                other.message == _this.message) &&
+            (identical(other.details, _this.details) ||
+                other.details == _this.details));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, cause, message, details);
+  int get hashCode {
+    final _this = this as NonReportableError;
+    return Object.hash(runtimeType, _this.cause, _this.message, _this.details);
+  }
 
   @override
   String toString() {
-    return 'NonReportableError(cause: $cause, message: $message, details: $details)';
+    final _this = this as NonReportableError;
+    return 'NonReportableError(cause: ${_this.cause}, message: ${_this.message}, details: ${_this.details})';
   }
 }
 
@@ -460,7 +479,7 @@ class _$NonReportableErrorCopyWithImpl<$Res>
     Object? message = null,
     Object? details = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(NonReportableError(
       cause: null == cause
           ? _self.cause
           : cause // ignore: cast_nullable_to_non_nullable
@@ -676,7 +695,9 @@ class _NonReportableError implements NonReportableError {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, cause, message, details);
+  int get hashCode {
+    return Object.hash(runtimeType, cause, message, details);
+  }
 
   @override
   String toString() {
@@ -754,44 +775,51 @@ mixin _$ApplicationStatus {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ApplicationStatus;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ApplicationStatus &&
-            (identical(other.state, state) || other.state == state) &&
-            (identical(other.confirmingTty, confirmingTty) ||
-                other.confirmingTty == confirmingTty) &&
-            (identical(other.error, error) || other.error == error) &&
-            (identical(other.nonreportableError, nonreportableError) ||
-                other.nonreportableError == nonreportableError) &&
-            (identical(other.cloudInitOk, cloudInitOk) ||
-                other.cloudInitOk == cloudInitOk) &&
-            (identical(other.interactive, interactive) ||
-                other.interactive == interactive) &&
-            (identical(other.echoSyslogId, echoSyslogId) ||
-                other.echoSyslogId == echoSyslogId) &&
-            (identical(other.logSyslogId, logSyslogId) ||
-                other.logSyslogId == logSyslogId) &&
-            (identical(other.eventSyslogId, eventSyslogId) ||
-                other.eventSyslogId == eventSyslogId));
+            (identical(other.state, _this.state) ||
+                other.state == _this.state) &&
+            (identical(other.confirmingTty, _this.confirmingTty) ||
+                other.confirmingTty == _this.confirmingTty) &&
+            (identical(other.error, _this.error) ||
+                other.error == _this.error) &&
+            (identical(other.nonreportableError, _this.nonreportableError) ||
+                other.nonreportableError == _this.nonreportableError) &&
+            (identical(other.cloudInitOk, _this.cloudInitOk) ||
+                other.cloudInitOk == _this.cloudInitOk) &&
+            (identical(other.interactive, _this.interactive) ||
+                other.interactive == _this.interactive) &&
+            (identical(other.echoSyslogId, _this.echoSyslogId) ||
+                other.echoSyslogId == _this.echoSyslogId) &&
+            (identical(other.logSyslogId, _this.logSyslogId) ||
+                other.logSyslogId == _this.logSyslogId) &&
+            (identical(other.eventSyslogId, _this.eventSyslogId) ||
+                other.eventSyslogId == _this.eventSyslogId));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      state,
-      confirmingTty,
-      error,
-      nonreportableError,
-      cloudInitOk,
-      interactive,
-      echoSyslogId,
-      logSyslogId,
-      eventSyslogId);
+  int get hashCode {
+    final _this = this as ApplicationStatus;
+    return Object.hash(
+        runtimeType,
+        _this.state,
+        _this.confirmingTty,
+        _this.error,
+        _this.nonreportableError,
+        _this.cloudInitOk,
+        _this.interactive,
+        _this.echoSyslogId,
+        _this.logSyslogId,
+        _this.eventSyslogId);
+  }
 
   @override
   String toString() {
-    return 'ApplicationStatus(state: $state, confirmingTty: $confirmingTty, error: $error, nonreportableError: $nonreportableError, cloudInitOk: $cloudInitOk, interactive: $interactive, echoSyslogId: $echoSyslogId, logSyslogId: $logSyslogId, eventSyslogId: $eventSyslogId)';
+    final _this = this as ApplicationStatus;
+    return 'ApplicationStatus(state: ${_this.state}, confirmingTty: ${_this.confirmingTty}, error: ${_this.error}, nonreportableError: ${_this.nonreportableError}, cloudInitOk: ${_this.cloudInitOk}, interactive: ${_this.interactive}, echoSyslogId: ${_this.echoSyslogId}, logSyslogId: ${_this.logSyslogId}, eventSyslogId: ${_this.eventSyslogId})';
   }
 }
 
@@ -839,7 +867,7 @@ class _$ApplicationStatusCopyWithImpl<$Res>
     Object? logSyslogId = null,
     Object? eventSyslogId = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(ApplicationStatus(
       state: null == state
           ? _self.state
           : state // ignore: cast_nullable_to_non_nullable
@@ -1198,17 +1226,19 @@ class _ApplicationStatus implements ApplicationStatus {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      state,
-      confirmingTty,
-      error,
-      nonreportableError,
-      cloudInitOk,
-      interactive,
-      echoSyslogId,
-      logSyslogId,
-      eventSyslogId);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        state,
+        confirmingTty,
+        error,
+        nonreportableError,
+        cloudInitOk,
+        interactive,
+        echoSyslogId,
+        logSyslogId,
+        eventSyslogId);
+  }
 
   @override
   String toString() {
@@ -1352,21 +1382,27 @@ mixin _$KeyFingerprint {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as KeyFingerprint;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is KeyFingerprint &&
-            (identical(other.keytype, keytype) || other.keytype == keytype) &&
-            (identical(other.fingerprint, fingerprint) ||
-                other.fingerprint == fingerprint));
+            (identical(other.keytype, _this.keytype) ||
+                other.keytype == _this.keytype) &&
+            (identical(other.fingerprint, _this.fingerprint) ||
+                other.fingerprint == _this.fingerprint));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, keytype, fingerprint);
+  int get hashCode {
+    final _this = this as KeyFingerprint;
+    return Object.hash(runtimeType, _this.keytype, _this.fingerprint);
+  }
 
   @override
   String toString() {
-    return 'KeyFingerprint(keytype: $keytype, fingerprint: $fingerprint)';
+    final _this = this as KeyFingerprint;
+    return 'KeyFingerprint(keytype: ${_this.keytype}, fingerprint: ${_this.fingerprint})';
   }
 }
 
@@ -1395,7 +1431,7 @@ class _$KeyFingerprintCopyWithImpl<$Res>
     Object? keytype = null,
     Object? fingerprint = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(KeyFingerprint(
       keytype: null == keytype
           ? _self.keytype
           : keytype // ignore: cast_nullable_to_non_nullable
@@ -1604,7 +1640,9 @@ class _KeyFingerprint implements KeyFingerprint {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, keytype, fingerprint);
+  int get hashCode {
+    return Object.hash(runtimeType, keytype, fingerprint);
+  }
 
   @override
   String toString() {
@@ -1674,36 +1712,42 @@ mixin _$LiveSessionSSHInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as LiveSessionSSHInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is LiveSessionSSHInfo &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.passwordKind, passwordKind) ||
-                other.passwordKind == passwordKind) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
+            (identical(other.username, _this.username) ||
+                other.username == _this.username) &&
+            (identical(other.passwordKind, _this.passwordKind) ||
+                other.passwordKind == _this.passwordKind) &&
+            (identical(other.password, _this.password) ||
+                other.password == _this.password) &&
             const DeepCollectionEquality().equals(
-                other.authorizedKeyFingerprints, authorizedKeyFingerprints) &&
-            const DeepCollectionEquality().equals(other.ips, ips) &&
+                other.authorizedKeyFingerprints,
+                _this.authorizedKeyFingerprints) &&
+            const DeepCollectionEquality().equals(other.ips, _this.ips) &&
             const DeepCollectionEquality()
-                .equals(other.hostKeyFingerprints, hostKeyFingerprints));
+                .equals(other.hostKeyFingerprints, _this.hostKeyFingerprints));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      username,
-      passwordKind,
-      password,
-      const DeepCollectionEquality().hash(authorizedKeyFingerprints),
-      const DeepCollectionEquality().hash(ips),
-      const DeepCollectionEquality().hash(hostKeyFingerprints));
+  int get hashCode {
+    final _this = this as LiveSessionSSHInfo;
+    return Object.hash(
+        runtimeType,
+        _this.username,
+        _this.passwordKind,
+        _this.password,
+        const DeepCollectionEquality().hash(_this.authorizedKeyFingerprints),
+        const DeepCollectionEquality().hash(_this.ips),
+        const DeepCollectionEquality().hash(_this.hostKeyFingerprints));
+  }
 
   @override
   String toString() {
-    return 'LiveSessionSSHInfo(username: $username, passwordKind: $passwordKind, password: $password, authorizedKeyFingerprints: $authorizedKeyFingerprints, ips: $ips, hostKeyFingerprints: $hostKeyFingerprints)';
+    final _this = this as LiveSessionSSHInfo;
+    return 'LiveSessionSSHInfo(username: ${_this.username}, passwordKind: ${_this.passwordKind}, password: ${_this.password}, authorizedKeyFingerprints: ${_this.authorizedKeyFingerprints}, ips: ${_this.ips}, hostKeyFingerprints: ${_this.hostKeyFingerprints})';
   }
 }
 
@@ -1742,7 +1786,7 @@ class _$LiveSessionSSHInfoCopyWithImpl<$Res>
     Object? ips = null,
     Object? hostKeyFingerprints = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(LiveSessionSSHInfo(
       username: null == username
           ? _self.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -1974,9 +2018,9 @@ class _LiveSessionSSHInfo implements LiveSessionSSHInfo {
       {required this.username,
       required this.passwordKind,
       required this.password,
-      required final List<KeyFingerprint> authorizedKeyFingerprints,
-      required final List<String> ips,
-      required final List<KeyFingerprint> hostKeyFingerprints})
+      required List<KeyFingerprint> authorizedKeyFingerprints,
+      required List<String> ips,
+      required List<KeyFingerprint> hostKeyFingerprints})
       : _authorizedKeyFingerprints = authorizedKeyFingerprints,
         _ips = ips,
         _hostKeyFingerprints = hostKeyFingerprints;
@@ -2042,22 +2086,24 @@ class _LiveSessionSSHInfo implements LiveSessionSSHInfo {
             (identical(other.password, password) ||
                 other.password == password) &&
             const DeepCollectionEquality().equals(
-                other._authorizedKeyFingerprints, _authorizedKeyFingerprints) &&
-            const DeepCollectionEquality().equals(other._ips, _ips) &&
+                other.authorizedKeyFingerprints, _authorizedKeyFingerprints) &&
+            const DeepCollectionEquality().equals(other.ips, _ips) &&
             const DeepCollectionEquality()
-                .equals(other._hostKeyFingerprints, _hostKeyFingerprints));
+                .equals(other.hostKeyFingerprints, _hostKeyFingerprints));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      username,
-      passwordKind,
-      password,
-      const DeepCollectionEquality().hash(_authorizedKeyFingerprints),
-      const DeepCollectionEquality().hash(_ips),
-      const DeepCollectionEquality().hash(_hostKeyFingerprints));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        username,
+        passwordKind,
+        password,
+        const DeepCollectionEquality().hash(_authorizedKeyFingerprints),
+        const DeepCollectionEquality().hash(_ips),
+        const DeepCollectionEquality().hash(_hostKeyFingerprints));
+  }
 
   @override
   String toString() {
@@ -2150,25 +2196,30 @@ mixin _$RefreshStatus {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as RefreshStatus;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is RefreshStatus &&
-            (identical(other.availability, availability) ||
-                other.availability == availability) &&
-            (identical(other.currentSnapVersion, currentSnapVersion) ||
-                other.currentSnapVersion == currentSnapVersion) &&
-            (identical(other.newSnapVersion, newSnapVersion) ||
-                other.newSnapVersion == newSnapVersion));
+            (identical(other.availability, _this.availability) ||
+                other.availability == _this.availability) &&
+            (identical(other.currentSnapVersion, _this.currentSnapVersion) ||
+                other.currentSnapVersion == _this.currentSnapVersion) &&
+            (identical(other.newSnapVersion, _this.newSnapVersion) ||
+                other.newSnapVersion == _this.newSnapVersion));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, availability, currentSnapVersion, newSnapVersion);
+  int get hashCode {
+    final _this = this as RefreshStatus;
+    return Object.hash(runtimeType, _this.availability,
+        _this.currentSnapVersion, _this.newSnapVersion);
+  }
 
   @override
   String toString() {
-    return 'RefreshStatus(availability: $availability, currentSnapVersion: $currentSnapVersion, newSnapVersion: $newSnapVersion)';
+    final _this = this as RefreshStatus;
+    return 'RefreshStatus(availability: ${_this.availability}, currentSnapVersion: ${_this.currentSnapVersion}, newSnapVersion: ${_this.newSnapVersion})';
   }
 }
 
@@ -2201,7 +2252,7 @@ class _$RefreshStatusCopyWithImpl<$Res>
     Object? currentSnapVersion = null,
     Object? newSnapVersion = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(RefreshStatus(
       availability: null == availability
           ? _self.availability
           : availability // ignore: cast_nullable_to_non_nullable
@@ -2433,8 +2484,10 @@ class _RefreshStatus implements RefreshStatus {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, availability, currentSnapVersion, newSnapVersion);
+  int get hashCode {
+    return Object.hash(
+        runtimeType, availability, currentSnapVersion, newSnapVersion);
+  }
 
   @override
   String toString() {
@@ -2733,9 +2786,9 @@ extension AnyStepPatterns on AnyStep {
 @JsonMapConverter()
 class StepPressKey implements AnyStep {
   const StepPressKey(
-      {required final List<String> symbols,
-      required final Map<int, String> keycodes,
-      final String? $type})
+      {required List<String> symbols,
+      required Map<int, String> keycodes,
+      String? $type})
       : _symbols = symbols,
         _keycodes = keycodes,
         $type = $type ?? 'StepPressKey';
@@ -2778,16 +2831,18 @@ class StepPressKey implements AnyStep {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is StepPressKey &&
-            const DeepCollectionEquality().equals(other._symbols, _symbols) &&
-            const DeepCollectionEquality().equals(other._keycodes, _keycodes));
+            const DeepCollectionEquality().equals(other.symbols, _symbols) &&
+            const DeepCollectionEquality().equals(other.keycodes, _keycodes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_symbols),
-      const DeepCollectionEquality().hash(_keycodes));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        const DeepCollectionEquality().hash(_symbols),
+        const DeepCollectionEquality().hash(_keycodes));
+  }
 
   @override
   String toString() {
@@ -2839,7 +2894,7 @@ class StepKeyPresent implements AnyStep {
       {required this.symbol,
       required this.yes,
       required this.no,
-      final String? $type})
+      String? $type})
       : $type = $type ?? 'StepKeyPresent';
   factory StepKeyPresent.fromJson(Map<String, dynamic> json) =>
       _$StepKeyPresentFromJson(json);
@@ -2877,7 +2932,9 @@ class StepKeyPresent implements AnyStep {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, symbol, yes, no);
+  int get hashCode {
+    return Object.hash(runtimeType, symbol, yes, no);
+  }
 
   @override
   String toString() {
@@ -2931,8 +2988,7 @@ class _$StepKeyPresentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class StepResult implements AnyStep {
-  const StepResult(
-      {required this.layout, required this.variant, final String? $type})
+  const StepResult({required this.layout, required this.variant, String? $type})
       : $type = $type ?? 'StepResult';
   factory StepResult.fromJson(Map<String, dynamic> json) =>
       _$StepResultFromJson(json);
@@ -2968,7 +3024,9 @@ class StepResult implements AnyStep {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, layout, variant);
+  int get hashCode {
+    return Object.hash(runtimeType, layout, variant);
+  }
 
   @override
   String toString() {
@@ -3032,21 +3090,29 @@ mixin _$KeyboardSetting {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as KeyboardSetting;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is KeyboardSetting &&
-            (identical(other.layout, layout) || other.layout == layout) &&
-            (identical(other.variant, variant) || other.variant == variant) &&
-            (identical(other.toggle, toggle) || other.toggle == toggle));
+            (identical(other.layout, _this.layout) ||
+                other.layout == _this.layout) &&
+            (identical(other.variant, _this.variant) ||
+                other.variant == _this.variant) &&
+            (identical(other.toggle, _this.toggle) ||
+                other.toggle == _this.toggle));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, layout, variant, toggle);
+  int get hashCode {
+    final _this = this as KeyboardSetting;
+    return Object.hash(runtimeType, _this.layout, _this.variant, _this.toggle);
+  }
 
   @override
   String toString() {
-    return 'KeyboardSetting(layout: $layout, variant: $variant, toggle: $toggle)';
+    final _this = this as KeyboardSetting;
+    return 'KeyboardSetting(layout: ${_this.layout}, variant: ${_this.variant}, toggle: ${_this.toggle})';
   }
 }
 
@@ -3076,7 +3142,7 @@ class _$KeyboardSettingCopyWithImpl<$Res>
     Object? variant = null,
     Object? toggle = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(KeyboardSetting(
       layout: null == layout
           ? _self.layout
           : layout // ignore: cast_nullable_to_non_nullable
@@ -3293,7 +3359,9 @@ class _KeyboardSetting implements KeyboardSetting {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, layout, variant, toggle);
+  int get hashCode {
+    return Object.hash(runtimeType, layout, variant, toggle);
+  }
 
   @override
   String toString() {
@@ -3364,20 +3432,25 @@ mixin _$KeyboardVariant {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as KeyboardVariant;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is KeyboardVariant &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.code, _this.code) || other.code == _this.code) &&
+            (identical(other.name, _this.name) || other.name == _this.name));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, code, name);
+  int get hashCode {
+    final _this = this as KeyboardVariant;
+    return Object.hash(runtimeType, _this.code, _this.name);
+  }
 
   @override
   String toString() {
-    return 'KeyboardVariant(code: $code, name: $name)';
+    final _this = this as KeyboardVariant;
+    return 'KeyboardVariant(code: ${_this.code}, name: ${_this.name})';
   }
 }
 
@@ -3406,7 +3479,7 @@ class _$KeyboardVariantCopyWithImpl<$Res>
     Object? code = null,
     Object? name = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(KeyboardVariant(
       code: null == code
           ? _self.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -3614,7 +3687,9 @@ class _KeyboardVariant implements KeyboardVariant {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, code, name);
+  int get hashCode {
+    return Object.hash(runtimeType, code, name);
+  }
 
   @override
   String toString() {
@@ -3681,22 +3756,28 @@ mixin _$KeyboardLayout {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as KeyboardLayout;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is KeyboardLayout &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other.variants, variants));
+            (identical(other.code, _this.code) || other.code == _this.code) &&
+            (identical(other.name, _this.name) || other.name == _this.name) &&
+            const DeepCollectionEquality()
+                .equals(other.variants, _this.variants));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, code, name, const DeepCollectionEquality().hash(variants));
+  int get hashCode {
+    final _this = this as KeyboardLayout;
+    return Object.hash(runtimeType, _this.code, _this.name,
+        const DeepCollectionEquality().hash(_this.variants));
+  }
 
   @override
   String toString() {
-    return 'KeyboardLayout(code: $code, name: $name, variants: $variants)';
+    final _this = this as KeyboardLayout;
+    return 'KeyboardLayout(code: ${_this.code}, name: ${_this.name}, variants: ${_this.variants})';
   }
 }
 
@@ -3726,7 +3807,7 @@ class _$KeyboardLayoutCopyWithImpl<$Res>
     Object? name = null,
     Object? variants = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(KeyboardLayout(
       code: null == code
           ? _self.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -3909,7 +3990,7 @@ class _KeyboardLayout implements KeyboardLayout {
   const _KeyboardLayout(
       {required this.code,
       required this.name,
-      required final List<KeyboardVariant> variants})
+      required List<KeyboardVariant> variants})
       : _variants = variants;
   factory _KeyboardLayout.fromJson(Map<String, dynamic> json) =>
       _$KeyboardLayoutFromJson(json);
@@ -3948,13 +4029,15 @@ class _KeyboardLayout implements KeyboardLayout {
             other is _KeyboardLayout &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other._variants, _variants));
+            const DeepCollectionEquality().equals(other.variants, _variants));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, code, name, const DeepCollectionEquality().hash(_variants));
+  int get hashCode {
+    return Object.hash(runtimeType, code, name,
+        const DeepCollectionEquality().hash(_variants));
+  }
 
   @override
   String toString() {
@@ -4025,21 +4108,28 @@ mixin _$KeyboardSetup {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as KeyboardSetup;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is KeyboardSetup &&
-            (identical(other.setting, setting) || other.setting == setting) &&
-            const DeepCollectionEquality().equals(other.layouts, layouts));
+            (identical(other.setting, _this.setting) ||
+                other.setting == _this.setting) &&
+            const DeepCollectionEquality()
+                .equals(other.layouts, _this.layouts));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, setting, const DeepCollectionEquality().hash(layouts));
+  int get hashCode {
+    final _this = this as KeyboardSetup;
+    return Object.hash(runtimeType, _this.setting,
+        const DeepCollectionEquality().hash(_this.layouts));
+  }
 
   @override
   String toString() {
-    return 'KeyboardSetup(setting: $setting, layouts: $layouts)';
+    final _this = this as KeyboardSetup;
+    return 'KeyboardSetup(setting: ${_this.setting}, layouts: ${_this.layouts})';
   }
 }
 
@@ -4070,7 +4160,7 @@ class _$KeyboardSetupCopyWithImpl<$Res>
     Object? setting = null,
     Object? layouts = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(KeyboardSetup(
       setting: null == setting
           ? _self.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -4257,7 +4347,7 @@ extension KeyboardSetupPatterns on KeyboardSetup {
 @JsonSerializable()
 class _KeyboardSetup implements KeyboardSetup {
   const _KeyboardSetup(
-      {required this.setting, required final List<KeyboardLayout> layouts})
+      {required this.setting, required List<KeyboardLayout> layouts})
       : _layouts = layouts;
   factory _KeyboardSetup.fromJson(Map<String, dynamic> json) =>
       _$KeyboardSetupFromJson(json);
@@ -4293,13 +4383,15 @@ class _KeyboardSetup implements KeyboardSetup {
         (other.runtimeType == runtimeType &&
             other is _KeyboardSetup &&
             (identical(other.setting, setting) || other.setting == setting) &&
-            const DeepCollectionEquality().equals(other._layouts, _layouts));
+            const DeepCollectionEquality().equals(other.layouts, _layouts));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, setting, const DeepCollectionEquality().hash(_layouts));
+  int get hashCode {
+    return Object.hash(
+        runtimeType, setting, const DeepCollectionEquality().hash(_layouts));
+  }
 
   @override
   String toString() {
@@ -4383,27 +4475,33 @@ mixin _$SourceSelection {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SourceSelection;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SourceSelection &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.size, size) || other.size == size) &&
-            (identical(other.variant, variant) || other.variant == variant) &&
-            (identical(other.isDefault, isDefault) ||
-                other.isDefault == isDefault));
+            (identical(other.name, _this.name) || other.name == _this.name) &&
+            (identical(other.description, _this.description) ||
+                other.description == _this.description) &&
+            (identical(other.id, _this.id) || other.id == _this.id) &&
+            (identical(other.size, _this.size) || other.size == _this.size) &&
+            (identical(other.variant, _this.variant) ||
+                other.variant == _this.variant) &&
+            (identical(other.isDefault, _this.isDefault) ||
+                other.isDefault == _this.isDefault));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, description, id, size, variant, isDefault);
+  int get hashCode {
+    final _this = this as SourceSelection;
+    return Object.hash(runtimeType, _this.name, _this.description, _this.id,
+        _this.size, _this.variant, _this.isDefault);
+  }
 
   @override
   String toString() {
-    return 'SourceSelection(name: $name, description: $description, id: $id, size: $size, variant: $variant, isDefault: $isDefault)';
+    final _this = this as SourceSelection;
+    return 'SourceSelection(name: ${_this.name}, description: ${_this.description}, id: ${_this.id}, size: ${_this.size}, variant: ${_this.variant}, isDefault: ${_this.isDefault})';
   }
 }
 
@@ -4442,7 +4540,7 @@ class _$SourceSelectionCopyWithImpl<$Res>
     Object? variant = null,
     Object? isDefault = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SourceSelection(
       name: null == name
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -4696,8 +4794,10 @@ class _SourceSelection implements SourceSelection {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, description, id, size, variant, isDefault);
+  int get hashCode {
+    return Object.hash(
+        runtimeType, name, description, id, size, variant, isDefault);
+  }
 
   @override
   String toString() {
@@ -4790,24 +4890,33 @@ mixin _$SourceSelectionAndSetting {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SourceSelectionAndSetting;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SourceSelectionAndSetting &&
-            const DeepCollectionEquality().equals(other.sources, sources) &&
-            (identical(other.currentId, currentId) ||
-                other.currentId == currentId) &&
-            (identical(other.searchDrivers, searchDrivers) ||
-                other.searchDrivers == searchDrivers));
+            const DeepCollectionEquality()
+                .equals(other.sources, _this.sources) &&
+            (identical(other.currentId, _this.currentId) ||
+                other.currentId == _this.currentId) &&
+            (identical(other.searchDrivers, _this.searchDrivers) ||
+                other.searchDrivers == _this.searchDrivers));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(sources), currentId, searchDrivers);
+  int get hashCode {
+    final _this = this as SourceSelectionAndSetting;
+    return Object.hash(
+        runtimeType,
+        const DeepCollectionEquality().hash(_this.sources),
+        _this.currentId,
+        _this.searchDrivers);
+  }
 
   @override
   String toString() {
-    return 'SourceSelectionAndSetting(sources: $sources, currentId: $currentId, searchDrivers: $searchDrivers)';
+    final _this = this as SourceSelectionAndSetting;
+    return 'SourceSelectionAndSetting(sources: ${_this.sources}, currentId: ${_this.currentId}, searchDrivers: ${_this.searchDrivers})';
   }
 }
 
@@ -4838,7 +4947,7 @@ class _$SourceSelectionAndSettingCopyWithImpl<$Res>
     Object? currentId = null,
     Object? searchDrivers = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SourceSelectionAndSetting(
       sources: null == sources
           ? _self.sources
           : sources // ignore: cast_nullable_to_non_nullable
@@ -5022,7 +5131,7 @@ extension SourceSelectionAndSettingPatterns on SourceSelectionAndSetting {
 @JsonSerializable()
 class _SourceSelectionAndSetting implements SourceSelectionAndSetting {
   const _SourceSelectionAndSetting(
-      {required final List<SourceSelection> sources,
+      {required List<SourceSelection> sources,
       required this.currentId,
       required this.searchDrivers})
       : _sources = sources;
@@ -5064,7 +5173,7 @@ class _SourceSelectionAndSetting implements SourceSelectionAndSetting {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SourceSelectionAndSetting &&
-            const DeepCollectionEquality().equals(other._sources, _sources) &&
+            const DeepCollectionEquality().equals(other.sources, _sources) &&
             (identical(other.currentId, currentId) ||
                 other.currentId == currentId) &&
             (identical(other.searchDrivers, searchDrivers) ||
@@ -5073,8 +5182,13 @@ class _SourceSelectionAndSetting implements SourceSelectionAndSetting {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_sources), currentId, searchDrivers);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        const DeepCollectionEquality().hash(_sources),
+        currentId,
+        searchDrivers);
+  }
 
   @override
   String toString() {
@@ -5151,27 +5265,35 @@ mixin _$ZdevInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ZdevInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ZdevInfo &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.on, on) || other.on == on) &&
-            (identical(other.exists, exists) || other.exists == exists) &&
-            (identical(other.pers, pers) || other.pers == pers) &&
-            (identical(other.auto, auto) || other.auto == auto) &&
-            (identical(other.failed, failed) || other.failed == failed) &&
-            (identical(other.names, names) || other.names == names));
+            (identical(other.id, _this.id) || other.id == _this.id) &&
+            (identical(other.type, _this.type) || other.type == _this.type) &&
+            (identical(other.on, _this.on) || other.on == _this.on) &&
+            (identical(other.exists, _this.exists) ||
+                other.exists == _this.exists) &&
+            (identical(other.pers, _this.pers) || other.pers == _this.pers) &&
+            (identical(other.auto, _this.auto) || other.auto == _this.auto) &&
+            (identical(other.failed, _this.failed) ||
+                other.failed == _this.failed) &&
+            (identical(other.names, _this.names) ||
+                other.names == _this.names));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, type, on, exists, pers, auto, failed, names);
+  int get hashCode {
+    final _this = this as ZdevInfo;
+    return Object.hash(runtimeType, _this.id, _this.type, _this.on,
+        _this.exists, _this.pers, _this.auto, _this.failed, _this.names);
+  }
 
   @override
   String toString() {
-    return 'ZdevInfo(id: $id, type: $type, on: $on, exists: $exists, pers: $pers, auto: $auto, failed: $failed, names: $names)';
+    final _this = this as ZdevInfo;
+    return 'ZdevInfo(id: ${_this.id}, type: ${_this.type}, on: ${_this.on}, exists: ${_this.exists}, pers: ${_this.pers}, auto: ${_this.auto}, failed: ${_this.failed}, names: ${_this.names})';
   }
 }
 
@@ -5212,7 +5334,7 @@ class _$ZdevInfoCopyWithImpl<$Res> implements $ZdevInfoCopyWith<$Res> {
     Object? failed = null,
     Object? names = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(ZdevInfo(
       id: null == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5479,8 +5601,10 @@ class _ZdevInfo implements ZdevInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, type, on, exists, pers, auto, failed, names);
+  int get hashCode {
+    return Object.hash(
+        runtimeType, id, type, on, exists, pers, auto, failed, names);
+  }
 
   @override
   String toString() {
@@ -5582,23 +5706,32 @@ mixin _$NetworkStatus {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as NetworkStatus;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is NetworkStatus &&
-            const DeepCollectionEquality().equals(other.devices, devices) &&
-            (identical(
-                    other.wlanSupportInstallState, wlanSupportInstallState) ||
-                other.wlanSupportInstallState == wlanSupportInstallState));
+            const DeepCollectionEquality()
+                .equals(other.devices, _this.devices) &&
+            (identical(other.wlanSupportInstallState,
+                    _this.wlanSupportInstallState) ||
+                other.wlanSupportInstallState ==
+                    _this.wlanSupportInstallState));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(devices), wlanSupportInstallState);
+  int get hashCode {
+    final _this = this as NetworkStatus;
+    return Object.hash(
+        runtimeType,
+        const DeepCollectionEquality().hash(_this.devices),
+        _this.wlanSupportInstallState);
+  }
 
   @override
   String toString() {
-    return 'NetworkStatus(devices: $devices, wlanSupportInstallState: $wlanSupportInstallState)';
+    final _this = this as NetworkStatus;
+    return 'NetworkStatus(devices: ${_this.devices}, wlanSupportInstallState: ${_this.wlanSupportInstallState})';
   }
 }
 
@@ -5628,7 +5761,7 @@ class _$NetworkStatusCopyWithImpl<$Res>
     Object? devices = null,
     Object? wlanSupportInstallState = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(NetworkStatus(
       devices: null == devices
           ? _self.devices
           : devices // ignore: cast_nullable_to_non_nullable
@@ -5808,7 +5941,7 @@ extension NetworkStatusPatterns on NetworkStatus {
 @JsonSerializable()
 class _NetworkStatus implements NetworkStatus {
   const _NetworkStatus(
-      {required final List<NetDevInfo> devices,
+      {required List<NetDevInfo> devices,
       required this.wlanSupportInstallState})
       : _devices = devices;
   factory _NetworkStatus.fromJson(Map<String, dynamic> json) =>
@@ -5845,7 +5978,7 @@ class _NetworkStatus implements NetworkStatus {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NetworkStatus &&
-            const DeepCollectionEquality().equals(other._devices, _devices) &&
+            const DeepCollectionEquality().equals(other.devices, _devices) &&
             (identical(
                     other.wlanSupportInstallState, wlanSupportInstallState) ||
                 other.wlanSupportInstallState == wlanSupportInstallState));
@@ -5853,8 +5986,10 @@ class _NetworkStatus implements NetworkStatus {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_devices), wlanSupportInstallState);
+  int get hashCode {
+    return Object.hash(runtimeType,
+        const DeepCollectionEquality().hash(_devices), wlanSupportInstallState);
+  }
 
   @override
   String toString() {
@@ -5923,27 +6058,32 @@ mixin _$IdentityData {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as IdentityData;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is IdentityData &&
-            (identical(other.realname, realname) ||
-                other.realname == realname) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.cryptedPassword, cryptedPassword) ||
-                other.cryptedPassword == cryptedPassword) &&
-            (identical(other.hostname, hostname) ||
-                other.hostname == hostname));
+            (identical(other.realname, _this.realname) ||
+                other.realname == _this.realname) &&
+            (identical(other.username, _this.username) ||
+                other.username == _this.username) &&
+            (identical(other.cryptedPassword, _this.cryptedPassword) ||
+                other.cryptedPassword == _this.cryptedPassword) &&
+            (identical(other.hostname, _this.hostname) ||
+                other.hostname == _this.hostname));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, realname, username, cryptedPassword, hostname);
+  int get hashCode {
+    final _this = this as IdentityData;
+    return Object.hash(runtimeType, _this.realname, _this.username,
+        _this.cryptedPassword, _this.hostname);
+  }
 
   @override
   String toString() {
-    return 'IdentityData(realname: $realname, username: $username, cryptedPassword: $cryptedPassword, hostname: $hostname)';
+    final _this = this as IdentityData;
+    return 'IdentityData(realname: ${_this.realname}, username: ${_this.username}, cryptedPassword: ${_this.cryptedPassword}, hostname: ${_this.hostname})';
   }
 }
 
@@ -5977,7 +6117,7 @@ class _$IdentityDataCopyWithImpl<$Res> implements $IdentityDataCopyWith<$Res> {
     Object? cryptedPassword = null,
     Object? hostname = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(IdentityData(
       realname: null == realname
           ? _self.realname
           : realname // ignore: cast_nullable_to_non_nullable
@@ -6220,8 +6360,10 @@ class _IdentityData implements IdentityData {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, realname, username, cryptedPassword, hostname);
+  int get hashCode {
+    return Object.hash(
+        runtimeType, realname, username, cryptedPassword, hostname);
+  }
 
   @override
   String toString() {
@@ -6301,24 +6443,30 @@ mixin _$SSHData {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SSHData;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SSHData &&
-            (identical(other.installServer, installServer) ||
-                other.installServer == installServer) &&
-            (identical(other.allowPw, allowPw) || other.allowPw == allowPw) &&
+            (identical(other.installServer, _this.installServer) ||
+                other.installServer == _this.installServer) &&
+            (identical(other.allowPw, _this.allowPw) ||
+                other.allowPw == _this.allowPw) &&
             const DeepCollectionEquality()
-                .equals(other.authorizedKeys, authorizedKeys));
+                .equals(other.authorizedKeys, _this.authorizedKeys));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, installServer, allowPw,
-      const DeepCollectionEquality().hash(authorizedKeys));
+  int get hashCode {
+    final _this = this as SSHData;
+    return Object.hash(runtimeType, _this.installServer, _this.allowPw,
+        const DeepCollectionEquality().hash(_this.authorizedKeys));
+  }
 
   @override
   String toString() {
-    return 'SSHData(installServer: $installServer, allowPw: $allowPw, authorizedKeys: $authorizedKeys)';
+    final _this = this as SSHData;
+    return 'SSHData(installServer: ${_this.installServer}, allowPw: ${_this.allowPw}, authorizedKeys: ${_this.authorizedKeys})';
   }
 }
 
@@ -6346,7 +6494,7 @@ class _$SSHDataCopyWithImpl<$Res> implements $SSHDataCopyWith<$Res> {
     Object? allowPw = null,
     Object? authorizedKeys = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SSHData(
       installServer: null == installServer
           ? _self.installServer
           : installServer // ignore: cast_nullable_to_non_nullable
@@ -6535,7 +6683,7 @@ class _SSHData implements SSHData {
   const _SSHData(
       {required this.installServer,
       required this.allowPw,
-      final List<String> authorizedKeys = const []})
+      List<String> authorizedKeys = const []})
       : _authorizedKeys = authorizedKeys;
   factory _SSHData.fromJson(Map<String, dynamic> json) =>
       _$SSHDataFromJson(json);
@@ -6577,13 +6725,15 @@ class _SSHData implements SSHData {
                 other.installServer == installServer) &&
             (identical(other.allowPw, allowPw) || other.allowPw == allowPw) &&
             const DeepCollectionEquality()
-                .equals(other._authorizedKeys, _authorizedKeys));
+                .equals(other.authorizedKeys, _authorizedKeys));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, installServer, allowPw,
-      const DeepCollectionEquality().hash(_authorizedKeys));
+  int get hashCode {
+    return Object.hash(runtimeType, installServer, allowPw,
+        const DeepCollectionEquality().hash(_authorizedKeys));
+  }
 
   @override
   String toString() {
@@ -6652,25 +6802,31 @@ mixin _$SSHIdentity {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SSHIdentity;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SSHIdentity &&
-            (identical(other.keyType, keyType) || other.keyType == keyType) &&
-            (identical(other.key, key) || other.key == key) &&
-            (identical(other.keyComment, keyComment) ||
-                other.keyComment == keyComment) &&
-            (identical(other.keyFingerprint, keyFingerprint) ||
-                other.keyFingerprint == keyFingerprint));
+            (identical(other.keyType, _this.keyType) ||
+                other.keyType == _this.keyType) &&
+            (identical(other.key, _this.key) || other.key == _this.key) &&
+            (identical(other.keyComment, _this.keyComment) ||
+                other.keyComment == _this.keyComment) &&
+            (identical(other.keyFingerprint, _this.keyFingerprint) ||
+                other.keyFingerprint == _this.keyFingerprint));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, keyType, key, keyComment, keyFingerprint);
+  int get hashCode {
+    final _this = this as SSHIdentity;
+    return Object.hash(runtimeType, _this.keyType, _this.key, _this.keyComment,
+        _this.keyFingerprint);
+  }
 
   @override
   String toString() {
-    return 'SSHIdentity(keyType: $keyType, key: $key, keyComment: $keyComment, keyFingerprint: $keyFingerprint)';
+    final _this = this as SSHIdentity;
+    return 'SSHIdentity(keyType: ${_this.keyType}, key: ${_this.key}, keyComment: ${_this.keyComment}, keyFingerprint: ${_this.keyFingerprint})';
   }
 }
 
@@ -6701,7 +6857,7 @@ class _$SSHIdentityCopyWithImpl<$Res> implements $SSHIdentityCopyWith<$Res> {
     Object? keyComment = null,
     Object? keyFingerprint = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SSHIdentity(
       keyType: null == keyType
           ? _self.keyType
           : keyType // ignore: cast_nullable_to_non_nullable
@@ -6938,8 +7094,9 @@ class _SSHIdentity implements SSHIdentity {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, keyType, key, keyComment, keyFingerprint);
+  int get hashCode {
+    return Object.hash(runtimeType, keyType, key, keyComment, keyFingerprint);
+  }
 
   @override
   String toString() {
@@ -7016,23 +7173,30 @@ mixin _$SSHFetchIdResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SSHFetchIdResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SSHFetchIdResponse &&
-            (identical(other.status, status) || other.status == status) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
             const DeepCollectionEquality()
-                .equals(other.identities, identities) &&
-            (identical(other.error, error) || other.error == error));
+                .equals(other.identities, _this.identities) &&
+            (identical(other.error, _this.error) ||
+                other.error == _this.error));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status,
-      const DeepCollectionEquality().hash(identities), error);
+  int get hashCode {
+    final _this = this as SSHFetchIdResponse;
+    return Object.hash(runtimeType, _this.status,
+        const DeepCollectionEquality().hash(_this.identities), _this.error);
+  }
 
   @override
   String toString() {
-    return 'SSHFetchIdResponse(status: $status, identities: $identities, error: $error)';
+    final _this = this as SSHFetchIdResponse;
+    return 'SSHFetchIdResponse(status: ${_this.status}, identities: ${_this.identities}, error: ${_this.error})';
   }
 }
 
@@ -7063,7 +7227,7 @@ class _$SSHFetchIdResponseCopyWithImpl<$Res>
     Object? identities = freezed,
     Object? error = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(SSHFetchIdResponse(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -7248,7 +7412,7 @@ extension SSHFetchIdResponsePatterns on SSHFetchIdResponse {
 class _SSHFetchIdResponse implements SSHFetchIdResponse {
   const _SSHFetchIdResponse(
       {required this.status,
-      required final List<SSHIdentity>? identities,
+      required List<SSHIdentity>? identities,
       required this.error})
       : _identities = identities;
   factory _SSHFetchIdResponse.fromJson(Map<String, dynamic> json) =>
@@ -7291,14 +7455,16 @@ class _SSHFetchIdResponse implements SSHFetchIdResponse {
             other is _SSHFetchIdResponse &&
             (identical(other.status, status) || other.status == status) &&
             const DeepCollectionEquality()
-                .equals(other._identities, _identities) &&
+                .equals(other.identities, _identities) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status,
-      const DeepCollectionEquality().hash(_identities), error);
+  int get hashCode {
+    return Object.hash(runtimeType, status,
+        const DeepCollectionEquality().hash(_identities), error);
+  }
 
   @override
   String toString() {
@@ -7374,29 +7540,35 @@ mixin _$ChannelSnapInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ChannelSnapInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ChannelSnapInfo &&
-            (identical(other.channelName, channelName) ||
-                other.channelName == channelName) &&
-            (identical(other.revision, revision) ||
-                other.revision == revision) &&
-            (identical(other.confinement, confinement) ||
-                other.confinement == confinement) &&
-            (identical(other.version, version) || other.version == version) &&
-            (identical(other.size, size) || other.size == size) &&
-            (identical(other.releasedAt, releasedAt) ||
-                other.releasedAt == releasedAt));
+            (identical(other.channelName, _this.channelName) ||
+                other.channelName == _this.channelName) &&
+            (identical(other.revision, _this.revision) ||
+                other.revision == _this.revision) &&
+            (identical(other.confinement, _this.confinement) ||
+                other.confinement == _this.confinement) &&
+            (identical(other.version, _this.version) ||
+                other.version == _this.version) &&
+            (identical(other.size, _this.size) || other.size == _this.size) &&
+            (identical(other.releasedAt, _this.releasedAt) ||
+                other.releasedAt == _this.releasedAt));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, channelName, revision,
-      confinement, version, size, releasedAt);
+  int get hashCode {
+    final _this = this as ChannelSnapInfo;
+    return Object.hash(runtimeType, _this.channelName, _this.revision,
+        _this.confinement, _this.version, _this.size, _this.releasedAt);
+  }
 
   @override
   String toString() {
-    return 'ChannelSnapInfo(channelName: $channelName, revision: $revision, confinement: $confinement, version: $version, size: $size, releasedAt: $releasedAt)';
+    final _this = this as ChannelSnapInfo;
+    return 'ChannelSnapInfo(channelName: ${_this.channelName}, revision: ${_this.revision}, confinement: ${_this.confinement}, version: ${_this.version}, size: ${_this.size}, releasedAt: ${_this.releasedAt})';
   }
 }
 
@@ -7435,7 +7607,7 @@ class _$ChannelSnapInfoCopyWithImpl<$Res>
     Object? size = null,
     Object? releasedAt = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(ChannelSnapInfo(
       channelName: null == channelName
           ? _self.channelName
           : channelName // ignore: cast_nullable_to_non_nullable
@@ -7690,8 +7862,10 @@ class _ChannelSnapInfo implements ChannelSnapInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, channelName, revision,
-      confinement, version, size, releasedAt);
+  int get hashCode {
+    return Object.hash(runtimeType, channelName, revision, confinement, version,
+        size, releasedAt);
+  }
 
   @override
   String toString() {
@@ -7789,41 +7963,50 @@ mixin _$SnapInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SnapInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SnapInfo &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.publisher, publisher) ||
-                other.publisher == publisher) &&
-            (identical(other.verified, verified) ||
-                other.verified == verified) &&
-            (identical(other.starred, starred) || other.starred == starred) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.confinement, confinement) ||
-                other.confinement == confinement) &&
-            (identical(other.license, license) || other.license == license) &&
-            const DeepCollectionEquality().equals(other.channels, channels));
+            (identical(other.name, _this.name) || other.name == _this.name) &&
+            (identical(other.summary, _this.summary) ||
+                other.summary == _this.summary) &&
+            (identical(other.publisher, _this.publisher) ||
+                other.publisher == _this.publisher) &&
+            (identical(other.verified, _this.verified) ||
+                other.verified == _this.verified) &&
+            (identical(other.starred, _this.starred) ||
+                other.starred == _this.starred) &&
+            (identical(other.description, _this.description) ||
+                other.description == _this.description) &&
+            (identical(other.confinement, _this.confinement) ||
+                other.confinement == _this.confinement) &&
+            (identical(other.license, _this.license) ||
+                other.license == _this.license) &&
+            const DeepCollectionEquality()
+                .equals(other.channels, _this.channels));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      name,
-      summary,
-      publisher,
-      verified,
-      starred,
-      description,
-      confinement,
-      license,
-      const DeepCollectionEquality().hash(channels));
+  int get hashCode {
+    final _this = this as SnapInfo;
+    return Object.hash(
+        runtimeType,
+        _this.name,
+        _this.summary,
+        _this.publisher,
+        _this.verified,
+        _this.starred,
+        _this.description,
+        _this.confinement,
+        _this.license,
+        const DeepCollectionEquality().hash(_this.channels));
+  }
 
   @override
   String toString() {
-    return 'SnapInfo(name: $name, summary: $summary, publisher: $publisher, verified: $verified, starred: $starred, description: $description, confinement: $confinement, license: $license, channels: $channels)';
+    final _this = this as SnapInfo;
+    return 'SnapInfo(name: ${_this.name}, summary: ${_this.summary}, publisher: ${_this.publisher}, verified: ${_this.verified}, starred: ${_this.starred}, description: ${_this.description}, confinement: ${_this.confinement}, license: ${_this.license}, channels: ${_this.channels})';
   }
 }
 
@@ -7866,7 +8049,7 @@ class _$SnapInfoCopyWithImpl<$Res> implements $SnapInfoCopyWith<$Res> {
     Object? license = null,
     Object? channels = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SnapInfo(
       name: null == name
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -8133,7 +8316,7 @@ class _SnapInfo implements SnapInfo {
       this.description = '',
       this.confinement = '',
       this.license = '',
-      final List<ChannelSnapInfo> channels = const []})
+      List<ChannelSnapInfo> channels = const []})
       : _channels = channels;
   factory _SnapInfo.fromJson(Map<String, dynamic> json) =>
       _$SnapInfoFromJson(json);
@@ -8202,22 +8385,24 @@ class _SnapInfo implements SnapInfo {
             (identical(other.confinement, confinement) ||
                 other.confinement == confinement) &&
             (identical(other.license, license) || other.license == license) &&
-            const DeepCollectionEquality().equals(other._channels, _channels));
+            const DeepCollectionEquality().equals(other.channels, _channels));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      name,
-      summary,
-      publisher,
-      verified,
-      starred,
-      description,
-      confinement,
-      license,
-      const DeepCollectionEquality().hash(_channels));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        name,
+        summary,
+        publisher,
+        verified,
+        starred,
+        description,
+        confinement,
+        license,
+        const DeepCollectionEquality().hash(_channels));
+  }
 
   @override
   String toString() {
@@ -8324,20 +8509,25 @@ mixin _$Driver {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as Driver;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Driver &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.type, _this.type) || other.type == _this.type) &&
+            (identical(other.name, _this.name) || other.name == _this.name));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, name);
+  int get hashCode {
+    final _this = this as Driver;
+    return Object.hash(runtimeType, _this.type, _this.name);
+  }
 
   @override
   String toString() {
-    return 'Driver(type: $type, name: $name)';
+    final _this = this as Driver;
+    return 'Driver(type: ${_this.type}, name: ${_this.name})';
   }
 }
 
@@ -8364,7 +8554,7 @@ class _$DriverCopyWithImpl<$Res> implements $DriverCopyWith<$Res> {
     Object? type = null,
     Object? name = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(Driver(
       type: null == type
           ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -8571,7 +8761,9 @@ class _Driver implements Driver {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, name);
+  int get hashCode {
+    return Object.hash(runtimeType, type, name);
+  }
 
   @override
   String toString() {
@@ -8636,25 +8828,36 @@ mixin _$DriversResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as DriversResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is DriversResponse &&
-            (identical(other.install, install) || other.install == install) &&
-            const DeepCollectionEquality().equals(other.drivers, drivers) &&
-            (identical(other.localOnly, localOnly) ||
-                other.localOnly == localOnly) &&
-            (identical(other.searchDrivers, searchDrivers) ||
-                other.searchDrivers == searchDrivers));
+            (identical(other.install, _this.install) ||
+                other.install == _this.install) &&
+            const DeepCollectionEquality()
+                .equals(other.drivers, _this.drivers) &&
+            (identical(other.localOnly, _this.localOnly) ||
+                other.localOnly == _this.localOnly) &&
+            (identical(other.searchDrivers, _this.searchDrivers) ||
+                other.searchDrivers == _this.searchDrivers));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, install,
-      const DeepCollectionEquality().hash(drivers), localOnly, searchDrivers);
+  int get hashCode {
+    final _this = this as DriversResponse;
+    return Object.hash(
+        runtimeType,
+        _this.install,
+        const DeepCollectionEquality().hash(_this.drivers),
+        _this.localOnly,
+        _this.searchDrivers);
+  }
 
   @override
   String toString() {
-    return 'DriversResponse(install: $install, drivers: $drivers, localOnly: $localOnly, searchDrivers: $searchDrivers)';
+    final _this = this as DriversResponse;
+    return 'DriversResponse(install: ${_this.install}, drivers: ${_this.drivers}, localOnly: ${_this.localOnly}, searchDrivers: ${_this.searchDrivers})';
   }
 }
 
@@ -8689,7 +8892,7 @@ class _$DriversResponseCopyWithImpl<$Res>
     Object? localOnly = null,
     Object? searchDrivers = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(DriversResponse(
       install: null == install
           ? _self.install
           : install // ignore: cast_nullable_to_non_nullable
@@ -8881,7 +9084,7 @@ extension DriversResponsePatterns on DriversResponse {
 class _DriversResponse implements DriversResponse {
   const _DriversResponse(
       {required this.install,
-      required final List<Driver>? drivers,
+      required List<Driver>? drivers,
       required this.localOnly,
       required this.searchDrivers})
       : _drivers = drivers;
@@ -8926,7 +9129,7 @@ class _DriversResponse implements DriversResponse {
         (other.runtimeType == runtimeType &&
             other is _DriversResponse &&
             (identical(other.install, install) || other.install == install) &&
-            const DeepCollectionEquality().equals(other._drivers, _drivers) &&
+            const DeepCollectionEquality().equals(other.drivers, _drivers) &&
             (identical(other.localOnly, localOnly) ||
                 other.localOnly == localOnly) &&
             (identical(other.searchDrivers, searchDrivers) ||
@@ -8935,8 +9138,14 @@ class _DriversResponse implements DriversResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, install,
-      const DeepCollectionEquality().hash(_drivers), localOnly, searchDrivers);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        install,
+        const DeepCollectionEquality().hash(_drivers),
+        localOnly,
+        searchDrivers);
+  }
 
   @override
   String toString() {
@@ -9014,21 +9223,26 @@ mixin _$OEMResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as OEMResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is OEMResponse &&
             const DeepCollectionEquality()
-                .equals(other.metapackages, metapackages));
+                .equals(other.metapackages, _this.metapackages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(metapackages));
+  int get hashCode {
+    final _this = this as OEMResponse;
+    return Object.hash(
+        runtimeType, const DeepCollectionEquality().hash(_this.metapackages));
+  }
 
   @override
   String toString() {
-    return 'OEMResponse(metapackages: $metapackages)';
+    final _this = this as OEMResponse;
+    return 'OEMResponse(metapackages: ${_this.metapackages})';
   }
 }
 
@@ -9055,7 +9269,7 @@ class _$OEMResponseCopyWithImpl<$Res> implements $OEMResponseCopyWith<$Res> {
   $Res call({
     Object? metapackages = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(OEMResponse(
       metapackages: freezed == metapackages
           ? _self.metapackages
           : metapackages // ignore: cast_nullable_to_non_nullable
@@ -9224,7 +9438,7 @@ extension OEMResponsePatterns on OEMResponse {
 /// @nodoc
 @JsonSerializable()
 class _OEMResponse implements OEMResponse {
-  const _OEMResponse({required final List<String>? metapackages})
+  const _OEMResponse({required List<String>? metapackages})
       : _metapackages = metapackages;
   factory _OEMResponse.fromJson(Map<String, dynamic> json) =>
       _$OEMResponseFromJson(json);
@@ -9260,13 +9474,15 @@ class _OEMResponse implements OEMResponse {
         (other.runtimeType == runtimeType &&
             other is _OEMResponse &&
             const DeepCollectionEquality()
-                .equals(other._metapackages, _metapackages));
+                .equals(other.metapackages, _metapackages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_metapackages));
+  int get hashCode {
+    return Object.hash(
+        runtimeType, const DeepCollectionEquality().hash(_metapackages));
+  }
 
   @override
   String toString() {
@@ -9324,19 +9540,25 @@ mixin _$CodecsData {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CodecsData;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CodecsData &&
-            (identical(other.install, install) || other.install == install));
+            (identical(other.install, _this.install) ||
+                other.install == _this.install));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, install);
+  int get hashCode {
+    final _this = this as CodecsData;
+    return Object.hash(runtimeType, _this.install);
+  }
 
   @override
   String toString() {
-    return 'CodecsData(install: $install)';
+    final _this = this as CodecsData;
+    return 'CodecsData(install: ${_this.install})';
   }
 }
 
@@ -9363,7 +9585,7 @@ class _$CodecsDataCopyWithImpl<$Res> implements $CodecsDataCopyWith<$Res> {
   $Res call({
     Object? install = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(CodecsData(
       install: null == install
           ? _self.install
           : install // ignore: cast_nullable_to_non_nullable
@@ -9564,7 +9786,9 @@ class _CodecsData implements CodecsData {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, install);
+  int get hashCode {
+    return Object.hash(runtimeType, install);
+  }
 
   @override
   String toString() {
@@ -9623,19 +9847,25 @@ mixin _$DriversPayload {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as DriversPayload;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is DriversPayload &&
-            (identical(other.install, install) || other.install == install));
+            (identical(other.install, _this.install) ||
+                other.install == _this.install));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, install);
+  int get hashCode {
+    final _this = this as DriversPayload;
+    return Object.hash(runtimeType, _this.install);
+  }
 
   @override
   String toString() {
-    return 'DriversPayload(install: $install)';
+    final _this = this as DriversPayload;
+    return 'DriversPayload(install: ${_this.install})';
   }
 }
 
@@ -9663,7 +9893,7 @@ class _$DriversPayloadCopyWithImpl<$Res>
   $Res call({
     Object? install = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(DriversPayload(
       install: null == install
           ? _self.install
           : install // ignore: cast_nullable_to_non_nullable
@@ -9864,7 +10094,9 @@ class _DriversPayload implements DriversPayload {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, install);
+  int get hashCode {
+    return Object.hash(runtimeType, install);
+  }
 
   @override
   String toString() {
@@ -9926,21 +10158,28 @@ mixin _$SnapSelection {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SnapSelection;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SnapSelection &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.channel, channel) || other.channel == channel) &&
-            (identical(other.classic, classic) || other.classic == classic));
+            (identical(other.name, _this.name) || other.name == _this.name) &&
+            (identical(other.channel, _this.channel) ||
+                other.channel == _this.channel) &&
+            (identical(other.classic, _this.classic) ||
+                other.classic == _this.classic));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, channel, classic);
+  int get hashCode {
+    final _this = this as SnapSelection;
+    return Object.hash(runtimeType, _this.name, _this.channel, _this.classic);
+  }
 
   @override
   String toString() {
-    return 'SnapSelection(name: $name, channel: $channel, classic: $classic)';
+    final _this = this as SnapSelection;
+    return 'SnapSelection(name: ${_this.name}, channel: ${_this.channel}, classic: ${_this.classic})';
   }
 }
 
@@ -9970,7 +10209,7 @@ class _$SnapSelectionCopyWithImpl<$Res>
     Object? channel = null,
     Object? classic = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SnapSelection(
       name: null == name
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -10187,7 +10426,9 @@ class _SnapSelection implements SnapSelection {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, channel, classic);
+  int get hashCode {
+    return Object.hash(runtimeType, name, channel, classic);
+  }
 
   @override
   String toString() {
@@ -10259,26 +10500,32 @@ mixin _$SnapListResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as SnapListResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is SnapListResponse &&
-            (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality().equals(other.snaps, snaps) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            const DeepCollectionEquality().equals(other.snaps, _this.snaps) &&
             const DeepCollectionEquality()
-                .equals(other.selections, selections));
+                .equals(other.selections, _this.selections));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      const DeepCollectionEquality().hash(snaps),
-      const DeepCollectionEquality().hash(selections));
+  int get hashCode {
+    final _this = this as SnapListResponse;
+    return Object.hash(
+        runtimeType,
+        _this.status,
+        const DeepCollectionEquality().hash(_this.snaps),
+        const DeepCollectionEquality().hash(_this.selections));
+  }
 
   @override
   String toString() {
-    return 'SnapListResponse(status: $status, snaps: $snaps, selections: $selections)';
+    final _this = this as SnapListResponse;
+    return 'SnapListResponse(status: ${_this.status}, snaps: ${_this.snaps}, selections: ${_this.selections})';
   }
 }
 
@@ -10311,7 +10558,7 @@ class _$SnapListResponseCopyWithImpl<$Res>
     Object? snaps = null,
     Object? selections = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(SnapListResponse(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -10496,8 +10743,8 @@ extension SnapListResponsePatterns on SnapListResponse {
 class _SnapListResponse implements SnapListResponse {
   const _SnapListResponse(
       {required this.status,
-      final List<SnapInfo> snaps = const [],
-      final List<SnapSelection> selections = const []})
+      List<SnapInfo> snaps = const [],
+      List<SnapSelection> selections = const []})
       : _snaps = snaps,
         _selections = selections;
   factory _SnapListResponse.fromJson(Map<String, dynamic> json) =>
@@ -10544,18 +10791,20 @@ class _SnapListResponse implements SnapListResponse {
         (other.runtimeType == runtimeType &&
             other is _SnapListResponse &&
             (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality().equals(other._snaps, _snaps) &&
+            const DeepCollectionEquality().equals(other.snaps, _snaps) &&
             const DeepCollectionEquality()
-                .equals(other._selections, _selections));
+                .equals(other.selections, _selections));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      const DeepCollectionEquality().hash(_snaps),
-      const DeepCollectionEquality().hash(_selections));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        status,
+        const DeepCollectionEquality().hash(_snaps),
+        const DeepCollectionEquality().hash(_selections));
+  }
 
   @override
   String toString() {
@@ -10629,22 +10878,27 @@ mixin _$TimeZoneInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as TimeZoneInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is TimeZoneInfo &&
-            (identical(other.timezone, timezone) ||
-                other.timezone == timezone) &&
-            (identical(other.fromGeoip, fromGeoip) ||
-                other.fromGeoip == fromGeoip));
+            (identical(other.timezone, _this.timezone) ||
+                other.timezone == _this.timezone) &&
+            (identical(other.fromGeoip, _this.fromGeoip) ||
+                other.fromGeoip == _this.fromGeoip));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, timezone, fromGeoip);
+  int get hashCode {
+    final _this = this as TimeZoneInfo;
+    return Object.hash(runtimeType, _this.timezone, _this.fromGeoip);
+  }
 
   @override
   String toString() {
-    return 'TimeZoneInfo(timezone: $timezone, fromGeoip: $fromGeoip)';
+    final _this = this as TimeZoneInfo;
+    return 'TimeZoneInfo(timezone: ${_this.timezone}, fromGeoip: ${_this.fromGeoip})';
   }
 }
 
@@ -10672,7 +10926,7 @@ class _$TimeZoneInfoCopyWithImpl<$Res> implements $TimeZoneInfoCopyWith<$Res> {
     Object? timezone = null,
     Object? fromGeoip = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(TimeZoneInfo(
       timezone: null == timezone
           ? _self.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
@@ -10882,7 +11136,9 @@ class _TimeZoneInfo implements TimeZoneInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, timezone, fromGeoip);
+  int get hashCode {
+    return Object.hash(runtimeType, timezone, fromGeoip);
+  }
 
   @override
   String toString() {
@@ -10947,19 +11203,25 @@ mixin _$UbuntuProInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UbuntuProInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UbuntuProInfo &&
-            (identical(other.token, token) || other.token == token));
+            (identical(other.token, _this.token) ||
+                other.token == _this.token));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, token);
+  int get hashCode {
+    final _this = this as UbuntuProInfo;
+    return Object.hash(runtimeType, _this.token);
+  }
 
   @override
   String toString() {
-    return 'UbuntuProInfo(token: $token)';
+    final _this = this as UbuntuProInfo;
+    return 'UbuntuProInfo(token: ${_this.token})';
   }
 }
 
@@ -10987,7 +11249,7 @@ class _$UbuntuProInfoCopyWithImpl<$Res>
   $Res call({
     Object? token = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(UbuntuProInfo(
       token: null == token
           ? _self.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -11188,7 +11450,9 @@ class _UbuntuProInfo implements UbuntuProInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, token);
+  int get hashCode {
+    return Object.hash(runtimeType, token);
+  }
 
   @override
   String toString() {
@@ -11249,21 +11513,27 @@ mixin _$UbuntuProResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UbuntuProResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UbuntuProResponse &&
-            (identical(other.token, token) || other.token == token) &&
-            (identical(other.hasNetwork, hasNetwork) ||
-                other.hasNetwork == hasNetwork));
+            (identical(other.token, _this.token) ||
+                other.token == _this.token) &&
+            (identical(other.hasNetwork, _this.hasNetwork) ||
+                other.hasNetwork == _this.hasNetwork));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, token, hasNetwork);
+  int get hashCode {
+    final _this = this as UbuntuProResponse;
+    return Object.hash(runtimeType, _this.token, _this.hasNetwork);
+  }
 
   @override
   String toString() {
-    return 'UbuntuProResponse(token: $token, hasNetwork: $hasNetwork)';
+    final _this = this as UbuntuProResponse;
+    return 'UbuntuProResponse(token: ${_this.token}, hasNetwork: ${_this.hasNetwork})';
   }
 }
 
@@ -11292,7 +11562,7 @@ class _$UbuntuProResponseCopyWithImpl<$Res>
     Object? token = null,
     Object? hasNetwork = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(UbuntuProResponse(
       token: null == token
           ? _self.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -11501,7 +11771,9 @@ class _UbuntuProResponse implements UbuntuProResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, token, hasNetwork);
+  int get hashCode {
+    return Object.hash(runtimeType, token, hasNetwork);
+  }
 
   @override
   String toString() {
@@ -11568,25 +11840,30 @@ mixin _$UbuntuProGeneralInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UbuntuProGeneralInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UbuntuProGeneralInfo &&
-            (identical(other.eolEsmYear, eolEsmYear) ||
-                other.eolEsmYear == eolEsmYear) &&
-            (identical(other.universePackages, universePackages) ||
-                other.universePackages == universePackages) &&
-            (identical(other.mainPackages, mainPackages) ||
-                other.mainPackages == mainPackages));
+            (identical(other.eolEsmYear, _this.eolEsmYear) ||
+                other.eolEsmYear == _this.eolEsmYear) &&
+            (identical(other.universePackages, _this.universePackages) ||
+                other.universePackages == _this.universePackages) &&
+            (identical(other.mainPackages, _this.mainPackages) ||
+                other.mainPackages == _this.mainPackages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, eolEsmYear, universePackages, mainPackages);
+  int get hashCode {
+    final _this = this as UbuntuProGeneralInfo;
+    return Object.hash(runtimeType, _this.eolEsmYear, _this.universePackages,
+        _this.mainPackages);
+  }
 
   @override
   String toString() {
-    return 'UbuntuProGeneralInfo(eolEsmYear: $eolEsmYear, universePackages: $universePackages, mainPackages: $mainPackages)';
+    final _this = this as UbuntuProGeneralInfo;
+    return 'UbuntuProGeneralInfo(eolEsmYear: ${_this.eolEsmYear}, universePackages: ${_this.universePackages}, mainPackages: ${_this.mainPackages})';
   }
 }
 
@@ -11616,7 +11893,7 @@ class _$UbuntuProGeneralInfoCopyWithImpl<$Res>
     Object? universePackages = null,
     Object? mainPackages = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(UbuntuProGeneralInfo(
       eolEsmYear: freezed == eolEsmYear
           ? _self.eolEsmYear
           : eolEsmYear // ignore: cast_nullable_to_non_nullable
@@ -11844,8 +12121,9 @@ class _UbuntuProGeneralInfo implements UbuntuProGeneralInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, eolEsmYear, universePackages, mainPackages);
+  int get hashCode {
+    return Object.hash(runtimeType, eolEsmYear, universePackages, mainPackages);
+  }
 
   @override
   String toString() {
@@ -11916,22 +12194,27 @@ mixin _$UPCSInitiateResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UPCSInitiateResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UPCSInitiateResponse &&
-            (identical(other.userCode, userCode) ||
-                other.userCode == userCode) &&
-            (identical(other.validitySeconds, validitySeconds) ||
-                other.validitySeconds == validitySeconds));
+            (identical(other.userCode, _this.userCode) ||
+                other.userCode == _this.userCode) &&
+            (identical(other.validitySeconds, _this.validitySeconds) ||
+                other.validitySeconds == _this.validitySeconds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, userCode, validitySeconds);
+  int get hashCode {
+    final _this = this as UPCSInitiateResponse;
+    return Object.hash(runtimeType, _this.userCode, _this.validitySeconds);
+  }
 
   @override
   String toString() {
-    return 'UPCSInitiateResponse(userCode: $userCode, validitySeconds: $validitySeconds)';
+    final _this = this as UPCSInitiateResponse;
+    return 'UPCSInitiateResponse(userCode: ${_this.userCode}, validitySeconds: ${_this.validitySeconds})';
   }
 }
 
@@ -11960,7 +12243,7 @@ class _$UPCSInitiateResponseCopyWithImpl<$Res>
     Object? userCode = null,
     Object? validitySeconds = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(UPCSInitiateResponse(
       userCode: null == userCode
           ? _self.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
@@ -12172,7 +12455,9 @@ class _UPCSInitiateResponse implements UPCSInitiateResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, userCode, validitySeconds);
+  int get hashCode {
+    return Object.hash(runtimeType, userCode, validitySeconds);
+  }
 
   @override
   String toString() {
@@ -12238,21 +12523,27 @@ mixin _$UPCSWaitResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UPCSWaitResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UPCSWaitResponse &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.contractToken, contractToken) ||
-                other.contractToken == contractToken));
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.contractToken, _this.contractToken) ||
+                other.contractToken == _this.contractToken));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status, contractToken);
+  int get hashCode {
+    final _this = this as UPCSWaitResponse;
+    return Object.hash(runtimeType, _this.status, _this.contractToken);
+  }
 
   @override
   String toString() {
-    return 'UPCSWaitResponse(status: $status, contractToken: $contractToken)';
+    final _this = this as UPCSWaitResponse;
+    return 'UPCSWaitResponse(status: ${_this.status}, contractToken: ${_this.contractToken})';
   }
 }
 
@@ -12281,7 +12572,7 @@ class _$UPCSWaitResponseCopyWithImpl<$Res>
     Object? status = null,
     Object? contractToken = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(UPCSWaitResponse(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -12490,7 +12781,9 @@ class _UPCSWaitResponse implements UPCSWaitResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status, contractToken);
+  int get hashCode {
+    return Object.hash(runtimeType, status, contractToken);
+  }
 
   @override
   String toString() {
@@ -12557,23 +12850,29 @@ mixin _$UbuntuProService {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UbuntuProService;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UbuntuProService &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.autoEnabled, autoEnabled) ||
-                other.autoEnabled == autoEnabled));
+            (identical(other.name, _this.name) || other.name == _this.name) &&
+            (identical(other.description, _this.description) ||
+                other.description == _this.description) &&
+            (identical(other.autoEnabled, _this.autoEnabled) ||
+                other.autoEnabled == _this.autoEnabled));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, description, autoEnabled);
+  int get hashCode {
+    final _this = this as UbuntuProService;
+    return Object.hash(
+        runtimeType, _this.name, _this.description, _this.autoEnabled);
+  }
 
   @override
   String toString() {
-    return 'UbuntuProService(name: $name, description: $description, autoEnabled: $autoEnabled)';
+    final _this = this as UbuntuProService;
+    return 'UbuntuProService(name: ${_this.name}, description: ${_this.description}, autoEnabled: ${_this.autoEnabled})';
   }
 }
 
@@ -12603,7 +12902,7 @@ class _$UbuntuProServiceCopyWithImpl<$Res>
     Object? description = null,
     Object? autoEnabled = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(UbuntuProService(
       name: null == name
           ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -12826,7 +13125,9 @@ class _UbuntuProService implements UbuntuProService {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, description, autoEnabled);
+  int get hashCode {
+    return Object.hash(runtimeType, name, description, autoEnabled);
+  }
 
   @override
   String toString() {
@@ -12899,26 +13200,36 @@ mixin _$UbuntuProSubscription {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UbuntuProSubscription;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UbuntuProSubscription &&
-            (identical(other.contractName, contractName) ||
-                other.contractName == contractName) &&
-            (identical(other.accountName, accountName) ||
-                other.accountName == accountName) &&
-            (identical(other.contractToken, contractToken) ||
-                other.contractToken == contractToken) &&
-            const DeepCollectionEquality().equals(other.services, services));
+            (identical(other.contractName, _this.contractName) ||
+                other.contractName == _this.contractName) &&
+            (identical(other.accountName, _this.accountName) ||
+                other.accountName == _this.accountName) &&
+            (identical(other.contractToken, _this.contractToken) ||
+                other.contractToken == _this.contractToken) &&
+            const DeepCollectionEquality()
+                .equals(other.services, _this.services));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, contractName, accountName,
-      contractToken, const DeepCollectionEquality().hash(services));
+  int get hashCode {
+    final _this = this as UbuntuProSubscription;
+    return Object.hash(
+        runtimeType,
+        _this.contractName,
+        _this.accountName,
+        _this.contractToken,
+        const DeepCollectionEquality().hash(_this.services));
+  }
 
   @override
   String toString() {
-    return 'UbuntuProSubscription(contractName: $contractName, accountName: $accountName, contractToken: $contractToken, services: $services)';
+    final _this = this as UbuntuProSubscription;
+    return 'UbuntuProSubscription(contractName: ${_this.contractName}, accountName: ${_this.accountName}, contractToken: ${_this.contractToken}, services: ${_this.services})';
   }
 }
 
@@ -12953,7 +13264,7 @@ class _$UbuntuProSubscriptionCopyWithImpl<$Res>
     Object? contractToken = null,
     Object? services = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(UbuntuProSubscription(
       contractName: null == contractName
           ? _self.contractName
           : contractName // ignore: cast_nullable_to_non_nullable
@@ -13147,7 +13458,7 @@ class _UbuntuProSubscription implements UbuntuProSubscription {
       {required this.contractName,
       required this.accountName,
       required this.contractToken,
-      required final List<UbuntuProService> services})
+      required List<UbuntuProService> services})
       : _services = services;
   factory _UbuntuProSubscription.fromJson(Map<String, dynamic> json) =>
       _$UbuntuProSubscriptionFromJson(json);
@@ -13193,13 +13504,15 @@ class _UbuntuProSubscription implements UbuntuProSubscription {
                 other.accountName == accountName) &&
             (identical(other.contractToken, contractToken) ||
                 other.contractToken == contractToken) &&
-            const DeepCollectionEquality().equals(other._services, _services));
+            const DeepCollectionEquality().equals(other.services, _services));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, contractName, accountName,
-      contractToken, const DeepCollectionEquality().hash(_services));
+  int get hashCode {
+    return Object.hash(runtimeType, contractName, accountName, contractToken,
+        const DeepCollectionEquality().hash(_services));
+  }
 
   @override
   String toString() {
@@ -13279,21 +13592,27 @@ mixin _$UbuntuProCheckTokenAnswer {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as UbuntuProCheckTokenAnswer;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is UbuntuProCheckTokenAnswer &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.subscription, subscription) ||
-                other.subscription == subscription));
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.subscription, _this.subscription) ||
+                other.subscription == _this.subscription));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status, subscription);
+  int get hashCode {
+    final _this = this as UbuntuProCheckTokenAnswer;
+    return Object.hash(runtimeType, _this.status, _this.subscription);
+  }
 
   @override
   String toString() {
-    return 'UbuntuProCheckTokenAnswer(status: $status, subscription: $subscription)';
+    final _this = this as UbuntuProCheckTokenAnswer;
+    return 'UbuntuProCheckTokenAnswer(status: ${_this.status}, subscription: ${_this.subscription})';
   }
 }
 
@@ -13325,7 +13644,7 @@ class _$UbuntuProCheckTokenAnswerCopyWithImpl<$Res>
     Object? status = null,
     Object? subscription = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(UbuntuProCheckTokenAnswer(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -13557,7 +13876,9 @@ class _UbuntuProCheckTokenAnswer implements UbuntuProCheckTokenAnswer {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status, subscription);
+  int get hashCode {
+    return Object.hash(runtimeType, status, subscription);
+  }
 
   @override
   String toString() {
@@ -13642,21 +13963,28 @@ mixin _$TaskProgress {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as TaskProgress;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is TaskProgress &&
-            (identical(other.label, label) || other.label == label) &&
-            (identical(other.done, done) || other.done == done) &&
-            (identical(other.total, total) || other.total == total));
+            (identical(other.label, _this.label) ||
+                other.label == _this.label) &&
+            (identical(other.done, _this.done) || other.done == _this.done) &&
+            (identical(other.total, _this.total) ||
+                other.total == _this.total));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, label, done, total);
+  int get hashCode {
+    final _this = this as TaskProgress;
+    return Object.hash(runtimeType, _this.label, _this.done, _this.total);
+  }
 
   @override
   String toString() {
-    return 'TaskProgress(label: $label, done: $done, total: $total)';
+    final _this = this as TaskProgress;
+    return 'TaskProgress(label: ${_this.label}, done: ${_this.done}, total: ${_this.total})';
   }
 }
 
@@ -13685,7 +14013,7 @@ class _$TaskProgressCopyWithImpl<$Res> implements $TaskProgressCopyWith<$Res> {
     Object? done = null,
     Object? total = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(TaskProgress(
       label: null == label
           ? _self.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -13903,7 +14231,9 @@ class _TaskProgress implements TaskProgress {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, label, done, total);
+  int get hashCode {
+    return Object.hash(runtimeType, label, done, total);
+  }
 
   @override
   String toString() {
@@ -13976,25 +14306,32 @@ mixin _$Task {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as Task;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Task &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.progress, progress) ||
-                other.progress == progress));
+            (identical(other.id, _this.id) || other.id == _this.id) &&
+            (identical(other.kind, _this.kind) || other.kind == _this.kind) &&
+            (identical(other.summary, _this.summary) ||
+                other.summary == _this.summary) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.progress, _this.progress) ||
+                other.progress == _this.progress));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, kind, summary, status, progress);
+  int get hashCode {
+    final _this = this as Task;
+    return Object.hash(runtimeType, _this.id, _this.kind, _this.summary,
+        _this.status, _this.progress);
+  }
 
   @override
   String toString() {
-    return 'Task(id: $id, kind: $kind, summary: $summary, status: $status, progress: $progress)';
+    final _this = this as Task;
+    return 'Task(id: ${_this.id}, kind: ${_this.kind}, summary: ${_this.summary}, status: ${_this.status}, progress: ${_this.progress})';
   }
 }
 
@@ -14031,7 +14368,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
     Object? status = null,
     Object? progress = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(Task(
       id: null == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -14284,8 +14621,9 @@ class _Task implements Task {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, kind, summary, status, progress);
+  int get hashCode {
+    return Object.hash(runtimeType, id, kind, summary, status, progress);
+  }
 
   @override
   String toString() {
@@ -14386,35 +14724,43 @@ mixin _$Change {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as Change;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Change &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality().equals(other.tasks, tasks) &&
-            (identical(other.ready, ready) || other.ready == ready) &&
-            (identical(other.err, err) || other.err == err) &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.id, _this.id) || other.id == _this.id) &&
+            (identical(other.kind, _this.kind) || other.kind == _this.kind) &&
+            (identical(other.summary, _this.summary) ||
+                other.summary == _this.summary) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            const DeepCollectionEquality().equals(other.tasks, _this.tasks) &&
+            (identical(other.ready, _this.ready) ||
+                other.ready == _this.ready) &&
+            (identical(other.err, _this.err) || other.err == _this.err) &&
+            const DeepCollectionEquality().equals(other.data, _this.data));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      kind,
-      summary,
-      status,
-      const DeepCollectionEquality().hash(tasks),
-      ready,
-      err,
-      const DeepCollectionEquality().hash(data));
+  int get hashCode {
+    final _this = this as Change;
+    return Object.hash(
+        runtimeType,
+        _this.id,
+        _this.kind,
+        _this.summary,
+        _this.status,
+        const DeepCollectionEquality().hash(_this.tasks),
+        _this.ready,
+        _this.err,
+        const DeepCollectionEquality().hash(_this.data));
+  }
 
   @override
   String toString() {
-    return 'Change(id: $id, kind: $kind, summary: $summary, status: $status, tasks: $tasks, ready: $ready, err: $err, data: $data)';
+    final _this = this as Change;
+    return 'Change(id: ${_this.id}, kind: ${_this.kind}, summary: ${_this.summary}, status: ${_this.status}, tasks: ${_this.tasks}, ready: ${_this.ready}, err: ${_this.err}, data: ${_this.data})';
   }
 }
 
@@ -14455,7 +14801,7 @@ class _$ChangeCopyWithImpl<$Res> implements $ChangeCopyWith<$Res> {
     Object? err = freezed,
     Object? data = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(Change(
       id: null == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -14666,7 +15012,7 @@ class _Change implements Change {
       required this.kind,
       required this.summary,
       required this.status,
-      required final List<Task> tasks,
+      required List<Task> tasks,
       required this.ready,
       this.err,
       this.data})
@@ -14720,7 +15066,7 @@ class _Change implements Change {
             (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.summary, summary) || other.summary == summary) &&
             (identical(other.status, status) || other.status == status) &&
-            const DeepCollectionEquality().equals(other._tasks, _tasks) &&
+            const DeepCollectionEquality().equals(other.tasks, _tasks) &&
             (identical(other.ready, ready) || other.ready == ready) &&
             (identical(other.err, err) || other.err == err) &&
             const DeepCollectionEquality().equals(other.data, data));
@@ -14728,16 +15074,18 @@ class _Change implements Change {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      kind,
-      summary,
-      status,
-      const DeepCollectionEquality().hash(_tasks),
-      ready,
-      err,
-      const DeepCollectionEquality().hash(data));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        id,
+        kind,
+        summary,
+        status,
+        const DeepCollectionEquality().hash(_tasks),
+        ready,
+        err,
+        const DeepCollectionEquality().hash(data));
+  }
 
   @override
   String toString() {
@@ -14839,21 +15187,28 @@ mixin _$MirrorCheckResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as MirrorCheckResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is MirrorCheckResponse &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.output, output) || other.output == output));
+            (identical(other.url, _this.url) || other.url == _this.url) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.output, _this.output) ||
+                other.output == _this.output));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, url, status, output);
+  int get hashCode {
+    final _this = this as MirrorCheckResponse;
+    return Object.hash(runtimeType, _this.url, _this.status, _this.output);
+  }
 
   @override
   String toString() {
-    return 'MirrorCheckResponse(url: $url, status: $status, output: $output)';
+    final _this = this as MirrorCheckResponse;
+    return 'MirrorCheckResponse(url: ${_this.url}, status: ${_this.status}, output: ${_this.output})';
   }
 }
 
@@ -14883,7 +15238,7 @@ class _$MirrorCheckResponseCopyWithImpl<$Res>
     Object? status = null,
     Object? output = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(MirrorCheckResponse(
       url: null == url
           ? _self.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -15103,7 +15458,9 @@ class _MirrorCheckResponse implements MirrorCheckResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, url, status, output);
+  int get hashCode {
+    return Object.hash(runtimeType, url, status, output);
+  }
 
   @override
   String toString() {
@@ -15175,29 +15532,37 @@ mixin _$MirrorPost {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as MirrorPost;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is MirrorPost &&
-            (identical(other.elected, elected) || other.elected == elected) &&
+            (identical(other.elected, _this.elected) ||
+                other.elected == _this.elected) &&
             const DeepCollectionEquality()
-                .equals(other.candidates, candidates) &&
-            (identical(other.staged, staged) || other.staged == staged) &&
-            (identical(other.useDuringInstallation, useDuringInstallation) ||
-                other.useDuringInstallation == useDuringInstallation));
+                .equals(other.candidates, _this.candidates) &&
+            (identical(other.staged, _this.staged) ||
+                other.staged == _this.staged) &&
+            (identical(
+                    other.useDuringInstallation, _this.useDuringInstallation) ||
+                other.useDuringInstallation == _this.useDuringInstallation));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      elected,
-      const DeepCollectionEquality().hash(candidates),
-      staged,
-      useDuringInstallation);
+  int get hashCode {
+    final _this = this as MirrorPost;
+    return Object.hash(
+        runtimeType,
+        _this.elected,
+        const DeepCollectionEquality().hash(_this.candidates),
+        _this.staged,
+        _this.useDuringInstallation);
+  }
 
   @override
   String toString() {
-    return 'MirrorPost(elected: $elected, candidates: $candidates, staged: $staged, useDuringInstallation: $useDuringInstallation)';
+    final _this = this as MirrorPost;
+    return 'MirrorPost(elected: ${_this.elected}, candidates: ${_this.candidates}, staged: ${_this.staged}, useDuringInstallation: ${_this.useDuringInstallation})';
   }
 }
 
@@ -15231,7 +15596,7 @@ class _$MirrorPostCopyWithImpl<$Res> implements $MirrorPostCopyWith<$Res> {
     Object? staged = freezed,
     Object? useDuringInstallation = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(MirrorPost(
       elected: freezed == elected
           ? _self.elected
           : elected // ignore: cast_nullable_to_non_nullable
@@ -15423,7 +15788,7 @@ extension MirrorPostPatterns on MirrorPost {
 class _MirrorPost implements MirrorPost {
   const _MirrorPost(
       {this.elected,
-      final List<String>? candidates,
+      List<String>? candidates,
       this.staged,
       this.useDuringInstallation})
       : _candidates = candidates;
@@ -15469,7 +15834,7 @@ class _MirrorPost implements MirrorPost {
             other is _MirrorPost &&
             (identical(other.elected, elected) || other.elected == elected) &&
             const DeepCollectionEquality()
-                .equals(other._candidates, _candidates) &&
+                .equals(other.candidates, _candidates) &&
             (identical(other.staged, staged) || other.staged == staged) &&
             (identical(other.useDuringInstallation, useDuringInstallation) ||
                 other.useDuringInstallation == useDuringInstallation));
@@ -15477,12 +15842,14 @@ class _MirrorPost implements MirrorPost {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      elected,
-      const DeepCollectionEquality().hash(_candidates),
-      staged,
-      useDuringInstallation);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        elected,
+        const DeepCollectionEquality().hash(_candidates),
+        staged,
+        useDuringInstallation);
+  }
 
   @override
   String toString() {
@@ -15563,32 +15930,40 @@ mixin _$MirrorGet {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as MirrorGet;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is MirrorGet &&
-            (identical(other.relevant, relevant) ||
-                other.relevant == relevant) &&
-            (identical(other.elected, elected) || other.elected == elected) &&
+            (identical(other.relevant, _this.relevant) ||
+                other.relevant == _this.relevant) &&
+            (identical(other.elected, _this.elected) ||
+                other.elected == _this.elected) &&
             const DeepCollectionEquality()
-                .equals(other.candidates, candidates) &&
-            (identical(other.staged, staged) || other.staged == staged) &&
-            (identical(other.useDuringInstallation, useDuringInstallation) ||
-                other.useDuringInstallation == useDuringInstallation));
+                .equals(other.candidates, _this.candidates) &&
+            (identical(other.staged, _this.staged) ||
+                other.staged == _this.staged) &&
+            (identical(
+                    other.useDuringInstallation, _this.useDuringInstallation) ||
+                other.useDuringInstallation == _this.useDuringInstallation));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      relevant,
-      elected,
-      const DeepCollectionEquality().hash(candidates),
-      staged,
-      useDuringInstallation);
+  int get hashCode {
+    final _this = this as MirrorGet;
+    return Object.hash(
+        runtimeType,
+        _this.relevant,
+        _this.elected,
+        const DeepCollectionEquality().hash(_this.candidates),
+        _this.staged,
+        _this.useDuringInstallation);
+  }
 
   @override
   String toString() {
-    return 'MirrorGet(relevant: $relevant, elected: $elected, candidates: $candidates, staged: $staged, useDuringInstallation: $useDuringInstallation)';
+    final _this = this as MirrorGet;
+    return 'MirrorGet(relevant: ${_this.relevant}, elected: ${_this.elected}, candidates: ${_this.candidates}, staged: ${_this.staged}, useDuringInstallation: ${_this.useDuringInstallation})';
   }
 }
 
@@ -15623,7 +15998,7 @@ class _$MirrorGetCopyWithImpl<$Res> implements $MirrorGetCopyWith<$Res> {
     Object? staged = freezed,
     Object? useDuringInstallation = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(MirrorGet(
       relevant: null == relevant
           ? _self.relevant
           : relevant // ignore: cast_nullable_to_non_nullable
@@ -15820,7 +16195,7 @@ class _MirrorGet implements MirrorGet {
   const _MirrorGet(
       {required this.relevant,
       required this.elected,
-      required final List<String> candidates,
+      required List<String> candidates,
       required this.staged,
       required this.useDuringInstallation})
       : _candidates = candidates;
@@ -15868,7 +16243,7 @@ class _MirrorGet implements MirrorGet {
                 other.relevant == relevant) &&
             (identical(other.elected, elected) || other.elected == elected) &&
             const DeepCollectionEquality()
-                .equals(other._candidates, _candidates) &&
+                .equals(other.candidates, _candidates) &&
             (identical(other.staged, staged) || other.staged == staged) &&
             (identical(other.useDuringInstallation, useDuringInstallation) ||
                 other.useDuringInstallation == useDuringInstallation));
@@ -15876,13 +16251,15 @@ class _MirrorGet implements MirrorGet {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      relevant,
-      elected,
-      const DeepCollectionEquality().hash(_candidates),
-      staged,
-      useDuringInstallation);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        relevant,
+        elected,
+        const DeepCollectionEquality().hash(_candidates),
+        staged,
+        useDuringInstallation);
+  }
 
   @override
   String toString() {
@@ -15968,24 +16345,30 @@ mixin _$AdConnectionInfo {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as AdConnectionInfo;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is AdConnectionInfo &&
-            (identical(other.adminName, adminName) ||
-                other.adminName == adminName) &&
-            (identical(other.domainName, domainName) ||
-                other.domainName == domainName) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            (identical(other.adminName, _this.adminName) ||
+                other.adminName == _this.adminName) &&
+            (identical(other.domainName, _this.domainName) ||
+                other.domainName == _this.domainName) &&
+            (identical(other.password, _this.password) ||
+                other.password == _this.password));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, adminName, domainName, password);
+  int get hashCode {
+    final _this = this as AdConnectionInfo;
+    return Object.hash(
+        runtimeType, _this.adminName, _this.domainName, _this.password);
+  }
 
   @override
   String toString() {
-    return 'AdConnectionInfo(adminName: $adminName, domainName: $domainName, password: $password)';
+    final _this = this as AdConnectionInfo;
+    return 'AdConnectionInfo(adminName: ${_this.adminName}, domainName: ${_this.domainName}, password: ${_this.password})';
   }
 }
 
@@ -16015,7 +16398,7 @@ class _$AdConnectionInfoCopyWithImpl<$Res>
     Object? domainName = null,
     Object? password = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(AdConnectionInfo(
       adminName: null == adminName
           ? _self.adminName
           : adminName // ignore: cast_nullable_to_non_nullable
@@ -16240,7 +16623,9 @@ class _AdConnectionInfo implements AdConnectionInfo {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, adminName, domainName, password);
+  int get hashCode {
+    return Object.hash(runtimeType, adminName, domainName, password);
+  }
 
   @override
   String toString() {
@@ -16313,24 +16698,32 @@ mixin _$OsProber {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as OsProber;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is OsProber &&
-            (identical(other.long, long) || other.long == long) &&
-            (identical(other.label, label) || other.label == label) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.subpath, subpath) || other.subpath == subpath) &&
-            (identical(other.version, version) || other.version == version));
+            (identical(other.long, _this.long) || other.long == _this.long) &&
+            (identical(other.label, _this.label) ||
+                other.label == _this.label) &&
+            (identical(other.type, _this.type) || other.type == _this.type) &&
+            (identical(other.subpath, _this.subpath) ||
+                other.subpath == _this.subpath) &&
+            (identical(other.version, _this.version) ||
+                other.version == _this.version));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, long, label, type, subpath, version);
+  int get hashCode {
+    final _this = this as OsProber;
+    return Object.hash(runtimeType, _this.long, _this.label, _this.type,
+        _this.subpath, _this.version);
+  }
 
   @override
   String toString() {
-    return 'OsProber(long: $long, label: $label, type: $type, subpath: $subpath, version: $version)';
+    final _this = this as OsProber;
+    return 'OsProber(long: ${_this.long}, label: ${_this.label}, type: ${_this.type}, subpath: ${_this.subpath}, version: ${_this.version})';
   }
 }
 
@@ -16365,7 +16758,7 @@ class _$OsProberCopyWithImpl<$Res> implements $OsProberCopyWith<$Res> {
     Object? subpath = freezed,
     Object? version = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(OsProber(
       long: null == long
           ? _self.long
           : long // ignore: cast_nullable_to_non_nullable
@@ -16608,8 +17001,9 @@ class _OsProber implements OsProber {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, long, label, type, subpath, version);
+  int get hashCode {
+    return Object.hash(runtimeType, long, label, type, subpath, version);
+  }
 
   @override
   String toString() {
@@ -16706,20 +17100,26 @@ mixin _$PartitionOrGap {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as PartitionOrGap;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PartitionOrGap &&
-            (identical(other.size, size) || other.size == size) &&
-            (identical(other.offset, offset) || other.offset == offset));
+            (identical(other.size, _this.size) || other.size == _this.size) &&
+            (identical(other.offset, _this.offset) ||
+                other.offset == _this.offset));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, size, offset);
+  int get hashCode {
+    final _this = this as PartitionOrGap;
+    return Object.hash(runtimeType, _this.size, _this.offset);
+  }
 
   @override
   String toString() {
-    return 'PartitionOrGap(size: $size, offset: $offset)';
+    final _this = this as PartitionOrGap;
+    return 'PartitionOrGap(size: ${_this.size}, offset: ${_this.offset})';
   }
 }
 
@@ -17061,7 +17461,7 @@ class Partition implements PartitionOrGap {
       this.number,
       this.preserve,
       this.wipe,
-      final List<String> annotations = const [],
+      List<String> annotations = const [],
       this.mount,
       this.format,
       this.grubDevice,
@@ -17076,7 +17476,7 @@ class Partition implements PartitionOrGap {
       this.effectiveMount,
       this.effectiveFormat,
       this.effectivelyEncrypted,
-      final String? $type})
+      String? $type})
       : _annotations = annotations,
         $type = $type ?? 'Partition';
   factory Partition.fromJson(Map<String, dynamic> json) =>
@@ -17142,7 +17542,7 @@ class Partition implements PartitionOrGap {
                 other.preserve == preserve) &&
             (identical(other.wipe, wipe) || other.wipe == wipe) &&
             const DeepCollectionEquality()
-                .equals(other._annotations, _annotations) &&
+                .equals(other.annotations, _annotations) &&
             (identical(other.mount, mount) || other.mount == mount) &&
             (identical(other.format, format) || other.format == format) &&
             (identical(other.grubDevice, grubDevice) ||
@@ -17166,28 +17566,30 @@ class Partition implements PartitionOrGap {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        size,
-        number,
-        preserve,
-        wipe,
-        const DeepCollectionEquality().hash(_annotations),
-        mount,
-        format,
-        grubDevice,
-        boot,
-        os,
-        offset,
-        estimatedMinSize,
-        resize,
-        path,
-        name,
-        isInUse,
-        effectiveMount,
-        effectiveFormat,
-        effectivelyEncrypted
-      ]);
+  int get hashCode {
+    return Object.hashAll([
+      runtimeType,
+      size,
+      number,
+      preserve,
+      wipe,
+      const DeepCollectionEquality().hash(_annotations),
+      mount,
+      format,
+      grubDevice,
+      boot,
+      os,
+      offset,
+      estimatedMinSize,
+      resize,
+      path,
+      name,
+      isInUse,
+      effectiveMount,
+      effectiveFormat,
+      effectivelyEncrypted
+    ]);
+  }
 
   @override
   String toString() {
@@ -17360,7 +17762,7 @@ class Gap implements PartitionOrGap {
       {required this.offset,
       required this.size,
       required this.usable,
-      final String? $type})
+      String? $type})
       : $type = $type ?? 'Gap';
   factory Gap.fromJson(Map<String, dynamic> json) => _$GapFromJson(json);
 
@@ -17399,7 +17801,9 @@ class Gap implements PartitionOrGap {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, offset, size, usable);
+  int get hashCode {
+    return Object.hash(runtimeType, offset, size, usable);
+  }
 
   @override
   String toString() {
@@ -17466,22 +17870,28 @@ mixin _$ZFS {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ZFS;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ZFS &&
-            (identical(other.volume, volume) || other.volume == volume) &&
+            (identical(other.volume, _this.volume) ||
+                other.volume == _this.volume) &&
             const DeepCollectionEquality()
-                .equals(other.properties, properties));
+                .equals(other.properties, _this.properties));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, volume, const DeepCollectionEquality().hash(properties));
+  int get hashCode {
+    final _this = this as ZFS;
+    return Object.hash(runtimeType, _this.volume,
+        const DeepCollectionEquality().hash(_this.properties));
+  }
 
   @override
   String toString() {
-    return 'ZFS(volume: $volume, properties: $properties)';
+    final _this = this as ZFS;
+    return 'ZFS(volume: ${_this.volume}, properties: ${_this.properties})';
   }
 }
 
@@ -17507,7 +17917,7 @@ class _$ZFSCopyWithImpl<$Res> implements $ZFSCopyWith<$Res> {
     Object? volume = null,
     Object? properties = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(ZFS(
       volume: null == volume
           ? _self.volume
           : volume // ignore: cast_nullable_to_non_nullable
@@ -17682,7 +18092,7 @@ extension ZFSPatterns on ZFS {
 /// @nodoc
 @JsonSerializable()
 class _ZFS implements ZFS {
-  const _ZFS({required this.volume, final Map<String, dynamic>? properties})
+  const _ZFS({required this.volume, Map<String, dynamic>? properties})
       : _properties = properties;
   factory _ZFS.fromJson(Map<String, dynamic> json) => _$ZFSFromJson(json);
 
@@ -17720,13 +18130,15 @@ class _ZFS implements ZFS {
             other is _ZFS &&
             (identical(other.volume, volume) || other.volume == volume) &&
             const DeepCollectionEquality()
-                .equals(other._properties, _properties));
+                .equals(other.properties, _properties));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, volume, const DeepCollectionEquality().hash(_properties));
+  int get hashCode {
+    return Object.hash(
+        runtimeType, volume, const DeepCollectionEquality().hash(_properties));
+  }
 
   @override
   String toString() {
@@ -17792,35 +18204,41 @@ mixin _$ZPool {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ZPool;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ZPool &&
-            (identical(other.pool, pool) || other.pool == pool) &&
-            (identical(other.mountpoint, mountpoint) ||
-                other.mountpoint == mountpoint) &&
-            (identical(other.zfses, zfses) || other.zfses == zfses) &&
+            (identical(other.pool, _this.pool) || other.pool == _this.pool) &&
+            (identical(other.mountpoint, _this.mountpoint) ||
+                other.mountpoint == _this.mountpoint) &&
+            (identical(other.zfses, _this.zfses) ||
+                other.zfses == _this.zfses) &&
             const DeepCollectionEquality()
-                .equals(other.poolProperties, poolProperties) &&
+                .equals(other.poolProperties, _this.poolProperties) &&
             const DeepCollectionEquality()
-                .equals(other.fsProperties, fsProperties) &&
-            (identical(other.defaultFeatures, defaultFeatures) ||
-                other.defaultFeatures == defaultFeatures));
+                .equals(other.fsProperties, _this.fsProperties) &&
+            (identical(other.defaultFeatures, _this.defaultFeatures) ||
+                other.defaultFeatures == _this.defaultFeatures));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      pool,
-      mountpoint,
-      zfses,
-      const DeepCollectionEquality().hash(poolProperties),
-      const DeepCollectionEquality().hash(fsProperties),
-      defaultFeatures);
+  int get hashCode {
+    final _this = this as ZPool;
+    return Object.hash(
+        runtimeType,
+        _this.pool,
+        _this.mountpoint,
+        _this.zfses,
+        const DeepCollectionEquality().hash(_this.poolProperties),
+        const DeepCollectionEquality().hash(_this.fsProperties),
+        _this.defaultFeatures);
+  }
 
   @override
   String toString() {
-    return 'ZPool(pool: $pool, mountpoint: $mountpoint, zfses: $zfses, poolProperties: $poolProperties, fsProperties: $fsProperties, defaultFeatures: $defaultFeatures)';
+    final _this = this as ZPool;
+    return 'ZPool(pool: ${_this.pool}, mountpoint: ${_this.mountpoint}, zfses: ${_this.zfses}, poolProperties: ${_this.poolProperties}, fsProperties: ${_this.fsProperties}, defaultFeatures: ${_this.defaultFeatures})';
   }
 }
 
@@ -17859,7 +18277,7 @@ class _$ZPoolCopyWithImpl<$Res> implements $ZPoolCopyWith<$Res> {
     Object? fsProperties = freezed,
     Object? defaultFeatures = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(ZPool(
       pool: null == pool
           ? _self.pool
           : pool // ignore: cast_nullable_to_non_nullable
@@ -18090,8 +18508,8 @@ class _ZPool implements ZPool {
       {required this.pool,
       required this.mountpoint,
       this.zfses,
-      final Map<String, dynamic>? poolProperties,
-      final Map<String, dynamic>? fsProperties,
+      Map<String, dynamic>? poolProperties,
+      Map<String, dynamic>? fsProperties,
       this.defaultFeatures = true})
       : _poolProperties = poolProperties,
         _fsProperties = fsProperties;
@@ -18152,23 +18570,25 @@ class _ZPool implements ZPool {
                 other.mountpoint == mountpoint) &&
             (identical(other.zfses, zfses) || other.zfses == zfses) &&
             const DeepCollectionEquality()
-                .equals(other._poolProperties, _poolProperties) &&
+                .equals(other.poolProperties, _poolProperties) &&
             const DeepCollectionEquality()
-                .equals(other._fsProperties, _fsProperties) &&
+                .equals(other.fsProperties, _fsProperties) &&
             (identical(other.defaultFeatures, defaultFeatures) ||
                 other.defaultFeatures == defaultFeatures));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      pool,
-      mountpoint,
-      zfses,
-      const DeepCollectionEquality().hash(_poolProperties),
-      const DeepCollectionEquality().hash(_fsProperties),
-      defaultFeatures);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        pool,
+        mountpoint,
+        zfses,
+        const DeepCollectionEquality().hash(_poolProperties),
+        const DeepCollectionEquality().hash(_fsProperties),
+        defaultFeatures);
+  }
 
   @override
   String toString() {
@@ -18287,59 +18707,68 @@ mixin _$Disk {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as Disk;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is Disk &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.label, label) || other.label == label) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.size, size) || other.size == size) &&
+            (identical(other.id, _this.id) || other.id == _this.id) &&
+            (identical(other.label, _this.label) ||
+                other.label == _this.label) &&
+            (identical(other.type, _this.type) || other.type == _this.type) &&
+            (identical(other.size, _this.size) || other.size == _this.size) &&
             const DeepCollectionEquality()
-                .equals(other.usageLabels, usageLabels) &&
+                .equals(other.usageLabels, _this.usageLabels) &&
             const DeepCollectionEquality()
-                .equals(other.partitions, partitions) &&
-            (identical(other.okForGuided, okForGuided) ||
-                other.okForGuided == okForGuided) &&
-            (identical(other.ptable, ptable) || other.ptable == ptable) &&
-            (identical(other.preserve, preserve) ||
-                other.preserve == preserve) &&
-            (identical(other.path, path) || other.path == path) &&
-            (identical(other.bootDevice, bootDevice) ||
-                other.bootDevice == bootDevice) &&
-            (identical(other.canBeBootDevice, canBeBootDevice) ||
-                other.canBeBootDevice == canBeBootDevice) &&
-            (identical(other.model, model) || other.model == model) &&
-            (identical(other.vendor, vendor) || other.vendor == vendor) &&
-            (identical(other.hasInUsePartition, hasInUsePartition) ||
-                other.hasInUsePartition == hasInUsePartition) &&
-            (identical(other.requiresReformat, requiresReformat) ||
-                other.requiresReformat == requiresReformat));
+                .equals(other.partitions, _this.partitions) &&
+            (identical(other.okForGuided, _this.okForGuided) ||
+                other.okForGuided == _this.okForGuided) &&
+            (identical(other.ptable, _this.ptable) ||
+                other.ptable == _this.ptable) &&
+            (identical(other.preserve, _this.preserve) ||
+                other.preserve == _this.preserve) &&
+            (identical(other.path, _this.path) || other.path == _this.path) &&
+            (identical(other.bootDevice, _this.bootDevice) ||
+                other.bootDevice == _this.bootDevice) &&
+            (identical(other.canBeBootDevice, _this.canBeBootDevice) ||
+                other.canBeBootDevice == _this.canBeBootDevice) &&
+            (identical(other.model, _this.model) ||
+                other.model == _this.model) &&
+            (identical(other.vendor, _this.vendor) ||
+                other.vendor == _this.vendor) &&
+            (identical(other.hasInUsePartition, _this.hasInUsePartition) ||
+                other.hasInUsePartition == _this.hasInUsePartition) &&
+            (identical(other.requiresReformat, _this.requiresReformat) ||
+                other.requiresReformat == _this.requiresReformat));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      label,
-      type,
-      size,
-      const DeepCollectionEquality().hash(usageLabels),
-      const DeepCollectionEquality().hash(partitions),
-      okForGuided,
-      ptable,
-      preserve,
-      path,
-      bootDevice,
-      canBeBootDevice,
-      model,
-      vendor,
-      hasInUsePartition,
-      requiresReformat);
+  int get hashCode {
+    final _this = this as Disk;
+    return Object.hash(
+        runtimeType,
+        _this.id,
+        _this.label,
+        _this.type,
+        _this.size,
+        const DeepCollectionEquality().hash(_this.usageLabels),
+        const DeepCollectionEquality().hash(_this.partitions),
+        _this.okForGuided,
+        _this.ptable,
+        _this.preserve,
+        _this.path,
+        _this.bootDevice,
+        _this.canBeBootDevice,
+        _this.model,
+        _this.vendor,
+        _this.hasInUsePartition,
+        _this.requiresReformat);
+  }
 
   @override
   String toString() {
-    return 'Disk(id: $id, label: $label, type: $type, size: $size, usageLabels: $usageLabels, partitions: $partitions, okForGuided: $okForGuided, ptable: $ptable, preserve: $preserve, path: $path, bootDevice: $bootDevice, canBeBootDevice: $canBeBootDevice, model: $model, vendor: $vendor, hasInUsePartition: $hasInUsePartition, requiresReformat: $requiresReformat)';
+    final _this = this as Disk;
+    return 'Disk(id: ${_this.id}, label: ${_this.label}, type: ${_this.type}, size: ${_this.size}, usageLabels: ${_this.usageLabels}, partitions: ${_this.partitions}, okForGuided: ${_this.okForGuided}, ptable: ${_this.ptable}, preserve: ${_this.preserve}, path: ${_this.path}, bootDevice: ${_this.bootDevice}, canBeBootDevice: ${_this.canBeBootDevice}, model: ${_this.model}, vendor: ${_this.vendor}, hasInUsePartition: ${_this.hasInUsePartition}, requiresReformat: ${_this.requiresReformat})';
   }
 }
 
@@ -18396,7 +18825,7 @@ class _$DiskCopyWithImpl<$Res> implements $DiskCopyWith<$Res> {
     Object? hasInUsePartition = null,
     Object? requiresReformat = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(Disk(
       id: null == id
           ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -18729,8 +19158,8 @@ class _Disk implements Disk {
       required this.label,
       required this.type,
       required this.size,
-      required final List<String> usageLabels,
-      required final List<PartitionOrGap> partitions,
+      required List<String> usageLabels,
+      required List<PartitionOrGap> partitions,
       required this.okForGuided,
       required this.ptable,
       required this.preserve,
@@ -18816,9 +19245,9 @@ class _Disk implements Disk {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.size, size) || other.size == size) &&
             const DeepCollectionEquality()
-                .equals(other._usageLabels, _usageLabels) &&
+                .equals(other.usageLabels, _usageLabels) &&
             const DeepCollectionEquality()
-                .equals(other._partitions, _partitions) &&
+                .equals(other.partitions, _partitions) &&
             (identical(other.okForGuided, okForGuided) ||
                 other.okForGuided == okForGuided) &&
             (identical(other.ptable, ptable) || other.ptable == ptable) &&
@@ -18839,24 +19268,26 @@ class _Disk implements Disk {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      label,
-      type,
-      size,
-      const DeepCollectionEquality().hash(_usageLabels),
-      const DeepCollectionEquality().hash(_partitions),
-      okForGuided,
-      ptable,
-      preserve,
-      path,
-      bootDevice,
-      canBeBootDevice,
-      model,
-      vendor,
-      hasInUsePartition,
-      requiresReformat);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        id,
+        label,
+        type,
+        size,
+        const DeepCollectionEquality().hash(_usageLabels),
+        const DeepCollectionEquality().hash(_partitions),
+        okForGuided,
+        ptable,
+        preserve,
+        path,
+        bootDevice,
+        canBeBootDevice,
+        model,
+        vendor,
+        hasInUsePartition,
+        requiresReformat);
+  }
 
   @override
   String toString() {
@@ -19004,21 +19435,26 @@ mixin _$CoreBootFixActionArgs {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CoreBootFixActionArgs;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CoreBootFixActionArgs &&
             const DeepCollectionEquality()
-                .equals(other.errorKinds, errorKinds));
+                .equals(other.errorKinds, _this.errorKinds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(errorKinds));
+  int get hashCode {
+    final _this = this as CoreBootFixActionArgs;
+    return Object.hash(
+        runtimeType, const DeepCollectionEquality().hash(_this.errorKinds));
+  }
 
   @override
   String toString() {
-    return 'CoreBootFixActionArgs(errorKinds: $errorKinds)';
+    final _this = this as CoreBootFixActionArgs;
+    return 'CoreBootFixActionArgs(errorKinds: ${_this.errorKinds})';
   }
 }
 
@@ -19046,7 +19482,7 @@ class _$CoreBootFixActionArgsCopyWithImpl<$Res>
   $Res call({
     Object? errorKinds = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(CoreBootFixActionArgs(
       errorKinds: freezed == errorKinds
           ? _self.errorKinds
           : errorKinds // ignore: cast_nullable_to_non_nullable
@@ -19218,7 +19654,7 @@ extension CoreBootFixActionArgsPatterns on CoreBootFixActionArgs {
 @JsonSerializable()
 class _CoreBootFixActionArgs implements CoreBootFixActionArgs {
   const _CoreBootFixActionArgs(
-      {final List<CoreBootAvailabilityErrorKind>? errorKinds})
+      {List<CoreBootAvailabilityErrorKind>? errorKinds})
       : _errorKinds = errorKinds;
   factory _CoreBootFixActionArgs.fromJson(Map<String, dynamic> json) =>
       _$CoreBootFixActionArgsFromJson(json);
@@ -19255,13 +19691,15 @@ class _CoreBootFixActionArgs implements CoreBootFixActionArgs {
         (other.runtimeType == runtimeType &&
             other is _CoreBootFixActionArgs &&
             const DeepCollectionEquality()
-                .equals(other._errorKinds, _errorKinds));
+                .equals(other.errorKinds, _errorKinds));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_errorKinds));
+  int get hashCode {
+    return Object.hash(
+        runtimeType, const DeepCollectionEquality().hash(_errorKinds));
+  }
 
   @override
   String toString() {
@@ -19322,20 +19760,25 @@ mixin _$CoreBootFixActionWithArgs {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CoreBootFixActionWithArgs;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CoreBootFixActionWithArgs &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.args, args) || other.args == args));
+            (identical(other.type, _this.type) || other.type == _this.type) &&
+            (identical(other.args, _this.args) || other.args == _this.args));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, args);
+  int get hashCode {
+    final _this = this as CoreBootFixActionWithArgs;
+    return Object.hash(runtimeType, _this.type, _this.args);
+  }
 
   @override
   String toString() {
-    return 'CoreBootFixActionWithArgs(type: $type, args: $args)';
+    final _this = this as CoreBootFixActionWithArgs;
+    return 'CoreBootFixActionWithArgs(type: ${_this.type}, args: ${_this.args})';
   }
 }
 
@@ -19366,7 +19809,7 @@ class _$CoreBootFixActionWithArgsCopyWithImpl<$Res>
     Object? type = null,
     Object? args = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(CoreBootFixActionWithArgs(
       type: null == type
           ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -19593,7 +20036,9 @@ class _CoreBootFixActionWithArgs implements CoreBootFixActionWithArgs {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, args);
+  int get hashCode {
+    return Object.hash(runtimeType, type, args);
+  }
 
   @override
   String toString() {
@@ -19679,21 +20124,27 @@ mixin _$CoreBootFixActionWithCategoryAndArgs {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CoreBootFixActionWithCategoryAndArgs;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CoreBootFixActionWithCategoryAndArgs &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.forUser, forUser) || other.forUser == forUser) &&
-            (identical(other.args, args) || other.args == args));
+            (identical(other.type, _this.type) || other.type == _this.type) &&
+            (identical(other.forUser, _this.forUser) ||
+                other.forUser == _this.forUser) &&
+            (identical(other.args, _this.args) || other.args == _this.args));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, forUser, args);
+  int get hashCode {
+    final _this = this as CoreBootFixActionWithCategoryAndArgs;
+    return Object.hash(runtimeType, _this.type, _this.forUser, _this.args);
+  }
 
   @override
   String toString() {
-    return 'CoreBootFixActionWithCategoryAndArgs(type: $type, forUser: $forUser, args: $args)';
+    final _this = this as CoreBootFixActionWithCategoryAndArgs;
+    return 'CoreBootFixActionWithCategoryAndArgs(type: ${_this.type}, forUser: ${_this.forUser}, args: ${_this.args})';
   }
 }
 
@@ -19727,7 +20178,7 @@ class _$CoreBootFixActionWithCategoryAndArgsCopyWithImpl<$Res>
     Object? forUser = null,
     Object? args = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(CoreBootFixActionWithCategoryAndArgs(
       type: null == type
           ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -19968,7 +20419,9 @@ class _CoreBootFixActionWithCategoryAndArgs
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, type, forUser, args);
+  int get hashCode {
+    return Object.hash(runtimeType, type, forUser, args);
+  }
 
   @override
   String toString() {
@@ -20060,22 +20513,29 @@ mixin _$CoreBootEncryptionSupportError {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CoreBootEncryptionSupportError;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CoreBootEncryptionSupportError &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.message, message) || other.message == message) &&
-            const DeepCollectionEquality().equals(other.actions, actions));
+            (identical(other.kind, _this.kind) || other.kind == _this.kind) &&
+            (identical(other.message, _this.message) ||
+                other.message == _this.message) &&
+            const DeepCollectionEquality()
+                .equals(other.actions, _this.actions));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, kind, message, const DeepCollectionEquality().hash(actions));
+  int get hashCode {
+    final _this = this as CoreBootEncryptionSupportError;
+    return Object.hash(runtimeType, _this.kind, _this.message,
+        const DeepCollectionEquality().hash(_this.actions));
+  }
 
   @override
   String toString() {
-    return 'CoreBootEncryptionSupportError(kind: $kind, message: $message, actions: $actions)';
+    final _this = this as CoreBootEncryptionSupportError;
+    return 'CoreBootEncryptionSupportError(kind: ${_this.kind}, message: ${_this.message}, actions: ${_this.actions})';
   }
 }
 
@@ -20109,7 +20569,7 @@ class _$CoreBootEncryptionSupportErrorCopyWithImpl<$Res>
     Object? message = null,
     Object? actions = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(CoreBootEncryptionSupportError(
       kind: null == kind
           ? _self.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -20297,7 +20757,7 @@ class _CoreBootEncryptionSupportError
   const _CoreBootEncryptionSupportError(
       {required this.kind,
       required this.message,
-      required final List<CoreBootFixActionWithCategoryAndArgs> actions})
+      required List<CoreBootFixActionWithCategoryAndArgs> actions})
       : _actions = actions;
   factory _CoreBootEncryptionSupportError.fromJson(Map<String, dynamic> json) =>
       _$CoreBootEncryptionSupportErrorFromJson(json);
@@ -20337,13 +20797,15 @@ class _CoreBootEncryptionSupportError
             other is _CoreBootEncryptionSupportError &&
             (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.message, message) || other.message == message) &&
-            const DeepCollectionEquality().equals(other._actions, _actions));
+            const DeepCollectionEquality().equals(other.actions, _actions));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, kind, message,
-      const DeepCollectionEquality().hash(_actions));
+  int get hashCode {
+    return Object.hash(runtimeType, kind, message,
+        const DeepCollectionEquality().hash(_actions));
+  }
 
   @override
   String toString() {
@@ -20421,24 +20883,31 @@ mixin _$GuidedDisallowedCapability {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as GuidedDisallowedCapability;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GuidedDisallowedCapability &&
-            (identical(other.capability, capability) ||
-                other.capability == capability) &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.message, message) || other.message == message) &&
-            const DeepCollectionEquality().equals(other.errors, errors));
+            (identical(other.capability, _this.capability) ||
+                other.capability == _this.capability) &&
+            (identical(other.reason, _this.reason) ||
+                other.reason == _this.reason) &&
+            (identical(other.message, _this.message) ||
+                other.message == _this.message) &&
+            const DeepCollectionEquality().equals(other.errors, _this.errors));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, capability, reason, message,
-      const DeepCollectionEquality().hash(errors));
+  int get hashCode {
+    final _this = this as GuidedDisallowedCapability;
+    return Object.hash(runtimeType, _this.capability, _this.reason,
+        _this.message, const DeepCollectionEquality().hash(_this.errors));
+  }
 
   @override
   String toString() {
-    return 'GuidedDisallowedCapability(capability: $capability, reason: $reason, message: $message, errors: $errors)';
+    final _this = this as GuidedDisallowedCapability;
+    return 'GuidedDisallowedCapability(capability: ${_this.capability}, reason: ${_this.reason}, message: ${_this.message}, errors: ${_this.errors})';
   }
 }
 
@@ -20473,7 +20942,7 @@ class _$GuidedDisallowedCapabilityCopyWithImpl<$Res>
     Object? message = freezed,
     Object? errors = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(GuidedDisallowedCapability(
       capability: null == capability
           ? _self.capability
           : capability // ignore: cast_nullable_to_non_nullable
@@ -20676,7 +21145,7 @@ class _GuidedDisallowedCapability implements GuidedDisallowedCapability {
       {required this.capability,
       required this.reason,
       this.message,
-      final List<CoreBootEncryptionSupportError>? errors})
+      List<CoreBootEncryptionSupportError>? errors})
       : _errors = errors;
   factory _GuidedDisallowedCapability.fromJson(Map<String, dynamic> json) =>
       _$GuidedDisallowedCapabilityFromJson(json);
@@ -20722,13 +21191,15 @@ class _GuidedDisallowedCapability implements GuidedDisallowedCapability {
                 other.capability == capability) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.message, message) || other.message == message) &&
-            const DeepCollectionEquality().equals(other._errors, _errors));
+            const DeepCollectionEquality().equals(other.errors, _errors));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, capability, reason, message,
-      const DeepCollectionEquality().hash(_errors));
+  int get hashCode {
+    return Object.hash(runtimeType, capability, reason, message,
+        const DeepCollectionEquality().hash(_errors));
+  }
 
   @override
   String toString() {
@@ -20815,40 +21286,46 @@ mixin _$StorageResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as StorageResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is StorageResponse &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.errorReport, errorReport) ||
-                other.errorReport == errorReport) &&
-            (identical(other.firmwareType, firmwareType) ||
-                other.firmwareType == firmwareType) &&
-            (identical(other.bootloader, bootloader) ||
-                other.bootloader == bootloader) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.errorReport, _this.errorReport) ||
+                other.errorReport == _this.errorReport) &&
+            (identical(other.firmwareType, _this.firmwareType) ||
+                other.firmwareType == _this.firmwareType) &&
+            (identical(other.bootloader, _this.bootloader) ||
+                other.bootloader == _this.bootloader) &&
             const DeepCollectionEquality()
-                .equals(other.origConfig, origConfig) &&
-            const DeepCollectionEquality().equals(other.config, config) &&
-            const DeepCollectionEquality().equals(other.dasd, dasd) &&
-            (identical(other.storageVersion, storageVersion) ||
-                other.storageVersion == storageVersion));
+                .equals(other.origConfig, _this.origConfig) &&
+            const DeepCollectionEquality().equals(other.config, _this.config) &&
+            const DeepCollectionEquality().equals(other.dasd, _this.dasd) &&
+            (identical(other.storageVersion, _this.storageVersion) ||
+                other.storageVersion == _this.storageVersion));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      errorReport,
-      firmwareType,
-      bootloader,
-      const DeepCollectionEquality().hash(origConfig),
-      const DeepCollectionEquality().hash(config),
-      const DeepCollectionEquality().hash(dasd),
-      storageVersion);
+  int get hashCode {
+    final _this = this as StorageResponse;
+    return Object.hash(
+        runtimeType,
+        _this.status,
+        _this.errorReport,
+        _this.firmwareType,
+        _this.bootloader,
+        const DeepCollectionEquality().hash(_this.origConfig),
+        const DeepCollectionEquality().hash(_this.config),
+        const DeepCollectionEquality().hash(_this.dasd),
+        _this.storageVersion);
+  }
 
   @override
   String toString() {
-    return 'StorageResponse(status: $status, errorReport: $errorReport, firmwareType: $firmwareType, bootloader: $bootloader, origConfig: $origConfig, config: $config, dasd: $dasd, storageVersion: $storageVersion)';
+    final _this = this as StorageResponse;
+    return 'StorageResponse(status: ${_this.status}, errorReport: ${_this.errorReport}, firmwareType: ${_this.firmwareType}, bootloader: ${_this.bootloader}, origConfig: ${_this.origConfig}, config: ${_this.config}, dasd: ${_this.dasd}, storageVersion: ${_this.storageVersion})';
   }
 }
 
@@ -20893,7 +21370,7 @@ class _$StorageResponseCopyWithImpl<$Res>
     Object? dasd = freezed,
     Object? storageVersion = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(StorageResponse(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -21160,9 +21637,9 @@ class _StorageResponse implements StorageResponse {
       this.errorReport,
       this.firmwareType,
       this.bootloader,
-      final List<dynamic>? origConfig,
-      final List<dynamic>? config,
-      final Map<String, dynamic>? dasd,
+      List<dynamic>? origConfig,
+      List<dynamic>? config,
+      Map<String, dynamic>? dasd,
       this.storageVersion = 1})
       : _origConfig = origConfig,
         _config = config,
@@ -21240,25 +21717,27 @@ class _StorageResponse implements StorageResponse {
             (identical(other.bootloader, bootloader) ||
                 other.bootloader == bootloader) &&
             const DeepCollectionEquality()
-                .equals(other._origConfig, _origConfig) &&
-            const DeepCollectionEquality().equals(other._config, _config) &&
-            const DeepCollectionEquality().equals(other._dasd, _dasd) &&
+                .equals(other.origConfig, _origConfig) &&
+            const DeepCollectionEquality().equals(other.config, _config) &&
+            const DeepCollectionEquality().equals(other.dasd, _dasd) &&
             (identical(other.storageVersion, storageVersion) ||
                 other.storageVersion == storageVersion));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      errorReport,
-      firmwareType,
-      bootloader,
-      const DeepCollectionEquality().hash(_origConfig),
-      const DeepCollectionEquality().hash(_config),
-      const DeepCollectionEquality().hash(_dasd),
-      storageVersion);
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        status,
+        errorReport,
+        firmwareType,
+        bootloader,
+        const DeepCollectionEquality().hash(_origConfig),
+        const DeepCollectionEquality().hash(_config),
+        const DeepCollectionEquality().hash(_dasd),
+        storageVersion);
+  }
 
   @override
   String toString() {
@@ -21379,21 +21858,26 @@ mixin _$StorageRequirementStatus {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as StorageRequirementStatus;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is StorageRequirementStatus &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.satisfied, satisfied) ||
-                other.satisfied == satisfied));
+            (identical(other.kind, _this.kind) || other.kind == _this.kind) &&
+            (identical(other.satisfied, _this.satisfied) ||
+                other.satisfied == _this.satisfied));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, kind, satisfied);
+  int get hashCode {
+    final _this = this as StorageRequirementStatus;
+    return Object.hash(runtimeType, _this.kind, _this.satisfied);
+  }
 
   @override
   String toString() {
-    return 'StorageRequirementStatus(kind: $kind, satisfied: $satisfied)';
+    final _this = this as StorageRequirementStatus;
+    return 'StorageRequirementStatus(kind: ${_this.kind}, satisfied: ${_this.satisfied})';
   }
 }
 
@@ -21422,7 +21906,7 @@ class _$StorageRequirementStatusCopyWithImpl<$Res>
     Object? kind = null,
     Object? satisfied = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(StorageRequirementStatus(
       kind: null == kind
           ? _self.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -21633,7 +22117,9 @@ class _StorageRequirementStatus implements StorageRequirementStatus {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, kind, satisfied);
+  int get hashCode {
+    return Object.hash(runtimeType, kind, satisfied);
+  }
 
   @override
   String toString() {
@@ -21704,38 +22190,44 @@ mixin _$StorageResponseV2 {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as StorageResponseV2;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is StorageResponseV2 &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.errorReport, errorReport) ||
-                other.errorReport == errorReport) &&
-            const DeepCollectionEquality().equals(other.disks, disks) &&
-            (identical(other.needRoot, needRoot) ||
-                other.needRoot == needRoot) &&
-            (identical(other.needBoot, needBoot) ||
-                other.needBoot == needBoot) &&
-            (identical(other.installMinimumSize, installMinimumSize) ||
-                other.installMinimumSize == installMinimumSize) &&
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.errorReport, _this.errorReport) ||
+                other.errorReport == _this.errorReport) &&
+            const DeepCollectionEquality().equals(other.disks, _this.disks) &&
+            (identical(other.needRoot, _this.needRoot) ||
+                other.needRoot == _this.needRoot) &&
+            (identical(other.needBoot, _this.needBoot) ||
+                other.needBoot == _this.needBoot) &&
+            (identical(other.installMinimumSize, _this.installMinimumSize) ||
+                other.installMinimumSize == _this.installMinimumSize) &&
             const DeepCollectionEquality()
-                .equals(other.requirements, requirements));
+                .equals(other.requirements, _this.requirements));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      errorReport,
-      const DeepCollectionEquality().hash(disks),
-      needRoot,
-      needBoot,
-      installMinimumSize,
-      const DeepCollectionEquality().hash(requirements));
+  int get hashCode {
+    final _this = this as StorageResponseV2;
+    return Object.hash(
+        runtimeType,
+        _this.status,
+        _this.errorReport,
+        const DeepCollectionEquality().hash(_this.disks),
+        _this.needRoot,
+        _this.needBoot,
+        _this.installMinimumSize,
+        const DeepCollectionEquality().hash(_this.requirements));
+  }
 
   @override
   String toString() {
-    return 'StorageResponseV2(status: $status, errorReport: $errorReport, disks: $disks, needRoot: $needRoot, needBoot: $needBoot, installMinimumSize: $installMinimumSize, requirements: $requirements)';
+    final _this = this as StorageResponseV2;
+    return 'StorageResponseV2(status: ${_this.status}, errorReport: ${_this.errorReport}, disks: ${_this.disks}, needRoot: ${_this.needRoot}, needBoot: ${_this.needBoot}, installMinimumSize: ${_this.installMinimumSize}, requirements: ${_this.requirements})';
   }
 }
 
@@ -21778,7 +22270,7 @@ class _$StorageResponseV2CopyWithImpl<$Res>
     Object? installMinimumSize = freezed,
     Object? requirements = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(StorageResponseV2(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -22033,11 +22525,11 @@ class _StorageResponseV2 implements StorageResponseV2 {
   const _StorageResponseV2(
       {required this.status,
       this.errorReport,
-      final List<Disk> disks = const [],
+      List<Disk> disks = const [],
       this.needRoot,
       this.needBoot,
       this.installMinimumSize,
-      final List<StorageRequirementStatus>? requirements})
+      List<StorageRequirementStatus>? requirements})
       : _disks = disks,
         _requirements = requirements;
   factory _StorageResponseV2.fromJson(Map<String, dynamic> json) =>
@@ -22095,7 +22587,7 @@ class _StorageResponseV2 implements StorageResponseV2 {
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorReport, errorReport) ||
                 other.errorReport == errorReport) &&
-            const DeepCollectionEquality().equals(other._disks, _disks) &&
+            const DeepCollectionEquality().equals(other.disks, _disks) &&
             (identical(other.needRoot, needRoot) ||
                 other.needRoot == needRoot) &&
             (identical(other.needBoot, needBoot) ||
@@ -22103,20 +22595,22 @@ class _StorageResponseV2 implements StorageResponseV2 {
             (identical(other.installMinimumSize, installMinimumSize) ||
                 other.installMinimumSize == installMinimumSize) &&
             const DeepCollectionEquality()
-                .equals(other._requirements, _requirements));
+                .equals(other.requirements, _requirements));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      status,
-      errorReport,
-      const DeepCollectionEquality().hash(_disks),
-      needRoot,
-      needBoot,
-      installMinimumSize,
-      const DeepCollectionEquality().hash(_requirements));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        status,
+        errorReport,
+        const DeepCollectionEquality().hash(_disks),
+        needRoot,
+        needBoot,
+        installMinimumSize,
+        const DeepCollectionEquality().hash(_requirements));
+  }
 
   @override
   String toString() {
@@ -22233,25 +22727,32 @@ mixin _$GuidedResizeValues {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as GuidedResizeValues;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GuidedResizeValues &&
-            (identical(other.installMax, installMax) ||
-                other.installMax == installMax) &&
-            (identical(other.minimum, minimum) || other.minimum == minimum) &&
-            (identical(other.recommended, recommended) ||
-                other.recommended == recommended) &&
-            (identical(other.maximum, maximum) || other.maximum == maximum));
+            (identical(other.installMax, _this.installMax) ||
+                other.installMax == _this.installMax) &&
+            (identical(other.minimum, _this.minimum) ||
+                other.minimum == _this.minimum) &&
+            (identical(other.recommended, _this.recommended) ||
+                other.recommended == _this.recommended) &&
+            (identical(other.maximum, _this.maximum) ||
+                other.maximum == _this.maximum));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, installMax, minimum, recommended, maximum);
+  int get hashCode {
+    final _this = this as GuidedResizeValues;
+    return Object.hash(runtimeType, _this.installMax, _this.minimum,
+        _this.recommended, _this.maximum);
+  }
 
   @override
   String toString() {
-    return 'GuidedResizeValues(installMax: $installMax, minimum: $minimum, recommended: $recommended, maximum: $maximum)';
+    final _this = this as GuidedResizeValues;
+    return 'GuidedResizeValues(installMax: ${_this.installMax}, minimum: ${_this.minimum}, recommended: ${_this.recommended}, maximum: ${_this.maximum})';
   }
 }
 
@@ -22282,7 +22783,7 @@ class _$GuidedResizeValuesCopyWithImpl<$Res>
     Object? recommended = null,
     Object? maximum = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(GuidedResizeValues(
       installMax: null == installMax
           ? _self.installMax
           : installMax // ignore: cast_nullable_to_non_nullable
@@ -22517,8 +23018,9 @@ class _GuidedResizeValues implements GuidedResizeValues {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, installMax, minimum, recommended, maximum);
+  int get hashCode {
+    return Object.hash(runtimeType, installMax, minimum, recommended, maximum);
+  }
 
   @override
   String toString() {
@@ -22613,24 +23115,30 @@ mixin _$GuidedStorageTarget {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as GuidedStorageTarget;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GuidedStorageTarget &&
-            const DeepCollectionEquality().equals(other.allowed, allowed) &&
             const DeepCollectionEquality()
-                .equals(other.disallowed, disallowed));
+                .equals(other.allowed, _this.allowed) &&
+            const DeepCollectionEquality()
+                .equals(other.disallowed, _this.disallowed));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(allowed),
-      const DeepCollectionEquality().hash(disallowed));
+  int get hashCode {
+    final _this = this as GuidedStorageTarget;
+    return Object.hash(
+        runtimeType,
+        const DeepCollectionEquality().hash(_this.allowed),
+        const DeepCollectionEquality().hash(_this.disallowed));
+  }
 
   @override
   String toString() {
-    return 'GuidedStorageTarget(allowed: $allowed, disallowed: $disallowed)';
+    final _this = this as GuidedStorageTarget;
+    return 'GuidedStorageTarget(allowed: ${_this.allowed}, disallowed: ${_this.disallowed})';
   }
 }
 
@@ -23012,9 +23520,9 @@ class GuidedStorageTargetReformat implements GuidedStorageTarget {
   const GuidedStorageTargetReformat(
       {required this.diskId,
       this.ptable,
-      final List<GuidedCapability> allowed = const [],
-      final List<GuidedDisallowedCapability> disallowed = const [],
-      final String? $type})
+      List<GuidedCapability> allowed = const [],
+      List<GuidedDisallowedCapability> disallowed = const [],
+      String? $type})
       : _allowed = allowed,
         _disallowed = disallowed,
         $type = $type ?? 'GuidedStorageTargetReformat';
@@ -23067,19 +23575,21 @@ class GuidedStorageTargetReformat implements GuidedStorageTarget {
             other is GuidedStorageTargetReformat &&
             (identical(other.diskId, diskId) || other.diskId == diskId) &&
             (identical(other.ptable, ptable) || other.ptable == ptable) &&
-            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality().equals(other.allowed, _allowed) &&
             const DeepCollectionEquality()
-                .equals(other._disallowed, _disallowed));
+                .equals(other.disallowed, _disallowed));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      diskId,
-      ptable,
-      const DeepCollectionEquality().hash(_allowed),
-      const DeepCollectionEquality().hash(_disallowed));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        diskId,
+        ptable,
+        const DeepCollectionEquality().hash(_allowed),
+        const DeepCollectionEquality().hash(_disallowed));
+  }
 
   @override
   String toString() {
@@ -23152,9 +23662,9 @@ class GuidedStorageTargetResize implements GuidedStorageTarget {
       required this.minimum,
       required this.recommended,
       required this.maximum,
-      final List<GuidedCapability> allowed = const [],
-      final List<GuidedDisallowedCapability> disallowed = const [],
-      final String? $type})
+      List<GuidedCapability> allowed = const [],
+      List<GuidedDisallowedCapability> disallowed = const [],
+      String? $type})
       : _allowed = allowed,
         _disallowed = disallowed,
         $type = $type ?? 'GuidedStorageTargetResize';
@@ -23217,23 +23727,25 @@ class GuidedStorageTargetResize implements GuidedStorageTarget {
             (identical(other.recommended, recommended) ||
                 other.recommended == recommended) &&
             (identical(other.maximum, maximum) || other.maximum == maximum) &&
-            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality().equals(other.allowed, _allowed) &&
             const DeepCollectionEquality()
-                .equals(other._disallowed, _disallowed));
+                .equals(other.disallowed, _disallowed));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      diskId,
-      partitionNumber,
-      newSize,
-      minimum,
-      recommended,
-      maximum,
-      const DeepCollectionEquality().hash(_allowed),
-      const DeepCollectionEquality().hash(_disallowed));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        diskId,
+        partitionNumber,
+        newSize,
+        minimum,
+        recommended,
+        maximum,
+        const DeepCollectionEquality().hash(_allowed),
+        const DeepCollectionEquality().hash(_disallowed));
+  }
 
   @override
   String toString() {
@@ -23325,9 +23837,9 @@ class GuidedStorageTargetEraseInstall implements GuidedStorageTarget {
   const GuidedStorageTargetEraseInstall(
       {required this.diskId,
       required this.partitionNumber,
-      final List<GuidedCapability> allowed = const [],
-      final List<GuidedDisallowedCapability> disallowed = const [],
-      final String? $type})
+      List<GuidedCapability> allowed = const [],
+      List<GuidedDisallowedCapability> disallowed = const [],
+      String? $type})
       : _allowed = allowed,
         _disallowed = disallowed,
         $type = $type ?? 'GuidedStorageTargetEraseInstall';
@@ -23381,19 +23893,21 @@ class GuidedStorageTargetEraseInstall implements GuidedStorageTarget {
             (identical(other.diskId, diskId) || other.diskId == diskId) &&
             (identical(other.partitionNumber, partitionNumber) ||
                 other.partitionNumber == partitionNumber) &&
-            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality().equals(other.allowed, _allowed) &&
             const DeepCollectionEquality()
-                .equals(other._disallowed, _disallowed));
+                .equals(other.disallowed, _disallowed));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      diskId,
-      partitionNumber,
-      const DeepCollectionEquality().hash(_allowed),
-      const DeepCollectionEquality().hash(_disallowed));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        diskId,
+        partitionNumber,
+        const DeepCollectionEquality().hash(_allowed),
+        const DeepCollectionEquality().hash(_disallowed));
+  }
 
   @override
   String toString() {
@@ -23462,9 +23976,9 @@ class GuidedStorageTargetUseGap implements GuidedStorageTarget {
   const GuidedStorageTargetUseGap(
       {required this.diskId,
       required this.gap,
-      final List<GuidedCapability> allowed = const [],
-      final List<GuidedDisallowedCapability> disallowed = const [],
-      final String? $type})
+      List<GuidedCapability> allowed = const [],
+      List<GuidedDisallowedCapability> disallowed = const [],
+      String? $type})
       : _allowed = allowed,
         _disallowed = disallowed,
         $type = $type ?? 'GuidedStorageTargetUseGap';
@@ -23517,19 +24031,21 @@ class GuidedStorageTargetUseGap implements GuidedStorageTarget {
             other is GuidedStorageTargetUseGap &&
             (identical(other.diskId, diskId) || other.diskId == diskId) &&
             const DeepCollectionEquality().equals(other.gap, gap) &&
-            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality().equals(other.allowed, _allowed) &&
             const DeepCollectionEquality()
-                .equals(other._disallowed, _disallowed));
+                .equals(other.disallowed, _disallowed));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      diskId,
-      const DeepCollectionEquality().hash(gap),
-      const DeepCollectionEquality().hash(_allowed),
-      const DeepCollectionEquality().hash(_disallowed));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        diskId,
+        const DeepCollectionEquality().hash(gap),
+        const DeepCollectionEquality().hash(_allowed),
+        const DeepCollectionEquality().hash(_disallowed));
+  }
 
   @override
   String toString() {
@@ -23595,9 +24111,9 @@ class _$GuidedStorageTargetUseGapCopyWithImpl<$Res>
 @JsonSerializable()
 class GuidedStorageTargetManual implements GuidedStorageTarget {
   const GuidedStorageTargetManual(
-      {required final List<GuidedCapability> allowed,
-      final List<GuidedDisallowedCapability> disallowed = const [],
-      final String? $type})
+      {required List<GuidedCapability> allowed,
+      List<GuidedDisallowedCapability> disallowed = const [],
+      String? $type})
       : _allowed = allowed,
         _disallowed = disallowed,
         $type = $type ?? 'GuidedStorageTargetManual';
@@ -23645,17 +24161,19 @@ class GuidedStorageTargetManual implements GuidedStorageTarget {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GuidedStorageTargetManual &&
-            const DeepCollectionEquality().equals(other._allowed, _allowed) &&
+            const DeepCollectionEquality().equals(other.allowed, _allowed) &&
             const DeepCollectionEquality()
-                .equals(other._disallowed, _disallowed));
+                .equals(other.disallowed, _disallowed));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_allowed),
-      const DeepCollectionEquality().hash(_disallowed));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        const DeepCollectionEquality().hash(_allowed),
+        const DeepCollectionEquality().hash(_disallowed));
+  }
 
   @override
   String toString() {
@@ -23722,22 +24240,27 @@ mixin _$RecoveryKey {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as RecoveryKey;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is RecoveryKey &&
-            (identical(other.liveLocation, liveLocation) ||
-                other.liveLocation == liveLocation) &&
-            (identical(other.backupLocation, backupLocation) ||
-                other.backupLocation == backupLocation));
+            (identical(other.liveLocation, _this.liveLocation) ||
+                other.liveLocation == _this.liveLocation) &&
+            (identical(other.backupLocation, _this.backupLocation) ||
+                other.backupLocation == _this.backupLocation));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, liveLocation, backupLocation);
+  int get hashCode {
+    final _this = this as RecoveryKey;
+    return Object.hash(runtimeType, _this.liveLocation, _this.backupLocation);
+  }
 
   @override
   String toString() {
-    return 'RecoveryKey(liveLocation: $liveLocation, backupLocation: $backupLocation)';
+    final _this = this as RecoveryKey;
+    return 'RecoveryKey(liveLocation: ${_this.liveLocation}, backupLocation: ${_this.backupLocation})';
   }
 }
 
@@ -23765,7 +24288,7 @@ class _$RecoveryKeyCopyWithImpl<$Res> implements $RecoveryKeyCopyWith<$Res> {
     Object? liveLocation = freezed,
     Object? backupLocation = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(RecoveryKey(
       liveLocation: freezed == liveLocation
           ? _self.liveLocation
           : liveLocation // ignore: cast_nullable_to_non_nullable
@@ -23975,7 +24498,9 @@ class _RecoveryKey implements RecoveryKey {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, liveLocation, backupLocation);
+  int get hashCode {
+    return Object.hash(runtimeType, liveLocation, backupLocation);
+  }
 
   @override
   String toString() {
@@ -24046,33 +24571,47 @@ mixin _$GuidedChoiceV2 {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as GuidedChoiceV2;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GuidedChoiceV2 &&
-            (identical(other.target, target) || other.target == target) &&
-            (identical(other.capability, capability) ||
-                other.capability == capability) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.pin, pin) || other.pin == pin) &&
-            (identical(other.recoveryKey, recoveryKey) ||
-                other.recoveryKey == recoveryKey) &&
-            (identical(other.sizingPolicy, sizingPolicy) ||
-                other.sizingPolicy == sizingPolicy) &&
-            (identical(other.resetPartition, resetPartition) ||
-                other.resetPartition == resetPartition) &&
-            (identical(other.resetPartitionSize, resetPartitionSize) ||
-                other.resetPartitionSize == resetPartitionSize));
+            (identical(other.target, _this.target) ||
+                other.target == _this.target) &&
+            (identical(other.capability, _this.capability) ||
+                other.capability == _this.capability) &&
+            (identical(other.password, _this.password) ||
+                other.password == _this.password) &&
+            (identical(other.pin, _this.pin) || other.pin == _this.pin) &&
+            (identical(other.recoveryKey, _this.recoveryKey) ||
+                other.recoveryKey == _this.recoveryKey) &&
+            (identical(other.sizingPolicy, _this.sizingPolicy) ||
+                other.sizingPolicy == _this.sizingPolicy) &&
+            (identical(other.resetPartition, _this.resetPartition) ||
+                other.resetPartition == _this.resetPartition) &&
+            (identical(other.resetPartitionSize, _this.resetPartitionSize) ||
+                other.resetPartitionSize == _this.resetPartitionSize));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, target, capability, password,
-      pin, recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
+  int get hashCode {
+    final _this = this as GuidedChoiceV2;
+    return Object.hash(
+        runtimeType,
+        _this.target,
+        _this.capability,
+        _this.password,
+        _this.pin,
+        _this.recoveryKey,
+        _this.sizingPolicy,
+        _this.resetPartition,
+        _this.resetPartitionSize);
+  }
 
   @override
   String toString() {
-    return 'GuidedChoiceV2(target: $target, capability: $capability, password: $password, pin: $pin, recoveryKey: $recoveryKey, sizingPolicy: $sizingPolicy, resetPartition: $resetPartition, resetPartitionSize: $resetPartitionSize)';
+    final _this = this as GuidedChoiceV2;
+    return 'GuidedChoiceV2(target: ${_this.target}, capability: ${_this.capability}, password: ${_this.password}, pin: ${_this.pin}, recoveryKey: ${_this.recoveryKey}, sizingPolicy: ${_this.sizingPolicy}, resetPartition: ${_this.resetPartition}, resetPartitionSize: ${_this.resetPartitionSize})';
   }
 }
 
@@ -24118,7 +24657,7 @@ class _$GuidedChoiceV2CopyWithImpl<$Res>
     Object? resetPartition = null,
     Object? resetPartitionSize = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(GuidedChoiceV2(
       target: null == target
           ? _self.target
           : target // ignore: cast_nullable_to_non_nullable
@@ -24458,8 +24997,10 @@ class _GuidedChoiceV2 implements GuidedChoiceV2 {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, target, capability, password,
-      pin, recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
+  int get hashCode {
+    return Object.hash(runtimeType, target, capability, password, pin,
+        recoveryKey, sizingPolicy, resetPartition, resetPartitionSize);
+  }
 
   @override
   String toString() {
@@ -24594,25 +25135,32 @@ mixin _$GuidedStorageResponseV2 {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as GuidedStorageResponseV2;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GuidedStorageResponseV2 &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.errorReport, errorReport) ||
-                other.errorReport == errorReport) &&
-            (identical(other.configured, configured) ||
-                other.configured == configured) &&
-            const DeepCollectionEquality().equals(other.targets, targets));
+            (identical(other.status, _this.status) ||
+                other.status == _this.status) &&
+            (identical(other.errorReport, _this.errorReport) ||
+                other.errorReport == _this.errorReport) &&
+            (identical(other.configured, _this.configured) ||
+                other.configured == _this.configured) &&
+            const DeepCollectionEquality()
+                .equals(other.targets, _this.targets));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status, errorReport, configured,
-      const DeepCollectionEquality().hash(targets));
+  int get hashCode {
+    final _this = this as GuidedStorageResponseV2;
+    return Object.hash(runtimeType, _this.status, _this.errorReport,
+        _this.configured, const DeepCollectionEquality().hash(_this.targets));
+  }
 
   @override
   String toString() {
-    return 'GuidedStorageResponseV2(status: $status, errorReport: $errorReport, configured: $configured, targets: $targets)';
+    final _this = this as GuidedStorageResponseV2;
+    return 'GuidedStorageResponseV2(status: ${_this.status}, errorReport: ${_this.errorReport}, configured: ${_this.configured}, targets: ${_this.targets})';
   }
 }
 
@@ -24650,7 +25198,7 @@ class _$GuidedStorageResponseV2CopyWithImpl<$Res>
     Object? configured = freezed,
     Object? targets = null,
   }) {
-    return _then(_self.copyWith(
+    return _then(GuidedStorageResponseV2(
       status: null == status
           ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -24872,7 +25420,7 @@ class _GuidedStorageResponseV2 implements GuidedStorageResponseV2 {
       {required this.status,
       this.errorReport,
       this.configured,
-      final List<GuidedStorageTarget> targets = const []})
+      List<GuidedStorageTarget> targets = const []})
       : _targets = targets;
   factory _GuidedStorageResponseV2.fromJson(Map<String, dynamic> json) =>
       _$GuidedStorageResponseV2FromJson(json);
@@ -24918,13 +25466,15 @@ class _GuidedStorageResponseV2 implements GuidedStorageResponseV2 {
                 other.errorReport == errorReport) &&
             (identical(other.configured, configured) ||
                 other.configured == configured) &&
-            const DeepCollectionEquality().equals(other._targets, _targets));
+            const DeepCollectionEquality().equals(other.targets, _targets));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, status, errorReport, configured,
-      const DeepCollectionEquality().hash(_targets));
+  int get hashCode {
+    return Object.hash(runtimeType, status, errorReport, configured,
+        const DeepCollectionEquality().hash(_targets));
+  }
 
   @override
   String toString() {
@@ -25038,25 +25588,32 @@ mixin _$AddPartitionV2 {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as AddPartitionV2;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is AddPartitionV2 &&
-            (identical(other.diskId, diskId) || other.diskId == diskId) &&
-            const DeepCollectionEquality().equals(other.partition, partition) &&
-            const DeepCollectionEquality().equals(other.gap, gap));
+            (identical(other.diskId, _this.diskId) ||
+                other.diskId == _this.diskId) &&
+            const DeepCollectionEquality()
+                .equals(other.partition, _this.partition) &&
+            const DeepCollectionEquality().equals(other.gap, _this.gap));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      diskId,
-      const DeepCollectionEquality().hash(partition),
-      const DeepCollectionEquality().hash(gap));
+  int get hashCode {
+    final _this = this as AddPartitionV2;
+    return Object.hash(
+        runtimeType,
+        _this.diskId,
+        const DeepCollectionEquality().hash(_this.partition),
+        const DeepCollectionEquality().hash(_this.gap));
+  }
 
   @override
   String toString() {
-    return 'AddPartitionV2(diskId: $diskId, partition: $partition, gap: $gap)';
+    final _this = this as AddPartitionV2;
+    return 'AddPartitionV2(diskId: ${_this.diskId}, partition: ${_this.partition}, gap: ${_this.gap})';
   }
 }
 
@@ -25086,7 +25643,7 @@ class _$AddPartitionV2CopyWithImpl<$Res>
     Object? partition = freezed,
     Object? gap = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(AddPartitionV2(
       diskId: null == diskId
           ? _self.diskId
           : diskId // ignore: cast_nullable_to_non_nullable
@@ -25302,11 +25859,13 @@ class _AddPartitionV2 implements AddPartitionV2 {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      diskId,
-      const DeepCollectionEquality().hash(partition),
-      const DeepCollectionEquality().hash(gap));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        diskId,
+        const DeepCollectionEquality().hash(partition),
+        const DeepCollectionEquality().hash(gap));
+  }
 
   @override
   String toString() {
@@ -25377,21 +25936,28 @@ mixin _$ModifyPartitionV2 {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ModifyPartitionV2;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ModifyPartitionV2 &&
-            (identical(other.diskId, diskId) || other.diskId == diskId) &&
-            const DeepCollectionEquality().equals(other.partition, partition));
+            (identical(other.diskId, _this.diskId) ||
+                other.diskId == _this.diskId) &&
+            const DeepCollectionEquality()
+                .equals(other.partition, _this.partition));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, diskId, const DeepCollectionEquality().hash(partition));
+  int get hashCode {
+    final _this = this as ModifyPartitionV2;
+    return Object.hash(runtimeType, _this.diskId,
+        const DeepCollectionEquality().hash(_this.partition));
+  }
 
   @override
   String toString() {
-    return 'ModifyPartitionV2(diskId: $diskId, partition: $partition)';
+    final _this = this as ModifyPartitionV2;
+    return 'ModifyPartitionV2(diskId: ${_this.diskId}, partition: ${_this.partition})';
   }
 }
 
@@ -25420,7 +25986,7 @@ class _$ModifyPartitionV2CopyWithImpl<$Res>
     Object? diskId = null,
     Object? partition = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(ModifyPartitionV2(
       diskId: null == diskId
           ? _self.diskId
           : diskId // ignore: cast_nullable_to_non_nullable
@@ -25628,8 +26194,10 @@ class _ModifyPartitionV2 implements ModifyPartitionV2 {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, diskId, const DeepCollectionEquality().hash(partition));
+  int get hashCode {
+    return Object.hash(
+        runtimeType, diskId, const DeepCollectionEquality().hash(partition));
+  }
 
   @override
   String toString() {
@@ -25695,20 +26263,27 @@ mixin _$ReformatDisk {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as ReformatDisk;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is ReformatDisk &&
-            (identical(other.diskId, diskId) || other.diskId == diskId) &&
-            (identical(other.ptable, ptable) || other.ptable == ptable));
+            (identical(other.diskId, _this.diskId) ||
+                other.diskId == _this.diskId) &&
+            (identical(other.ptable, _this.ptable) ||
+                other.ptable == _this.ptable));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, diskId, ptable);
+  int get hashCode {
+    final _this = this as ReformatDisk;
+    return Object.hash(runtimeType, _this.diskId, _this.ptable);
+  }
 
   @override
   String toString() {
-    return 'ReformatDisk(diskId: $diskId, ptable: $ptable)';
+    final _this = this as ReformatDisk;
+    return 'ReformatDisk(diskId: ${_this.diskId}, ptable: ${_this.ptable})';
   }
 }
 
@@ -25736,7 +26311,7 @@ class _$ReformatDiskCopyWithImpl<$Res> implements $ReformatDiskCopyWith<$Res> {
     Object? diskId = null,
     Object? ptable = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(ReformatDisk(
       diskId: null == diskId
           ? _self.diskId
           : diskId // ignore: cast_nullable_to_non_nullable
@@ -25944,7 +26519,9 @@ class _ReformatDisk implements ReformatDisk {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, diskId, ptable);
+  int get hashCode {
+    return Object.hash(runtimeType, diskId, ptable);
+  }
 
   @override
   String toString() {
@@ -26010,21 +26587,26 @@ mixin _$CalculateEntropyRequest {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CalculateEntropyRequest;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CalculateEntropyRequest &&
-            (identical(other.passphrase, passphrase) ||
-                other.passphrase == passphrase) &&
-            (identical(other.pin, pin) || other.pin == pin));
+            (identical(other.passphrase, _this.passphrase) ||
+                other.passphrase == _this.passphrase) &&
+            (identical(other.pin, _this.pin) || other.pin == _this.pin));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, passphrase, pin);
+  int get hashCode {
+    final _this = this as CalculateEntropyRequest;
+    return Object.hash(runtimeType, _this.passphrase, _this.pin);
+  }
 
   @override
   String toString() {
-    return 'CalculateEntropyRequest(passphrase: $passphrase, pin: $pin)';
+    final _this = this as CalculateEntropyRequest;
+    return 'CalculateEntropyRequest(passphrase: ${_this.passphrase}, pin: ${_this.pin})';
   }
 }
 
@@ -26053,7 +26635,7 @@ class _$CalculateEntropyRequestCopyWithImpl<$Res>
     Object? passphrase = freezed,
     Object? pin = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(CalculateEntropyRequest(
       passphrase: freezed == passphrase
           ? _self.passphrase
           : passphrase // ignore: cast_nullable_to_non_nullable
@@ -26263,7 +26845,9 @@ class _CalculateEntropyRequest implements CalculateEntropyRequest {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, passphrase, pin);
+  int get hashCode {
+    return Object.hash(runtimeType, passphrase, pin);
+  }
 
   @override
   String toString() {
@@ -26332,33 +26916,39 @@ mixin _$EntropyResponse {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as EntropyResponse;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is EntropyResponse &&
-            (identical(other.success, success) || other.success == success) &&
-            (identical(other.entropyBits, entropyBits) ||
-                other.entropyBits == entropyBits) &&
-            (identical(other.minEntropyBits, minEntropyBits) ||
-                other.minEntropyBits == minEntropyBits) &&
-            (identical(other.optimalEntropyBits, optimalEntropyBits) ||
-                other.optimalEntropyBits == optimalEntropyBits) &&
+            (identical(other.success, _this.success) ||
+                other.success == _this.success) &&
+            (identical(other.entropyBits, _this.entropyBits) ||
+                other.entropyBits == _this.entropyBits) &&
+            (identical(other.minEntropyBits, _this.minEntropyBits) ||
+                other.minEntropyBits == _this.minEntropyBits) &&
+            (identical(other.optimalEntropyBits, _this.optimalEntropyBits) ||
+                other.optimalEntropyBits == _this.optimalEntropyBits) &&
             const DeepCollectionEquality()
-                .equals(other.failureReasons, failureReasons));
+                .equals(other.failureReasons, _this.failureReasons));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      success,
-      entropyBits,
-      minEntropyBits,
-      optimalEntropyBits,
-      const DeepCollectionEquality().hash(failureReasons));
+  int get hashCode {
+    final _this = this as EntropyResponse;
+    return Object.hash(
+        runtimeType,
+        _this.success,
+        _this.entropyBits,
+        _this.minEntropyBits,
+        _this.optimalEntropyBits,
+        const DeepCollectionEquality().hash(_this.failureReasons));
+  }
 
   @override
   String toString() {
-    return 'EntropyResponse(success: $success, entropyBits: $entropyBits, minEntropyBits: $minEntropyBits, optimalEntropyBits: $optimalEntropyBits, failureReasons: $failureReasons)';
+    final _this = this as EntropyResponse;
+    return 'EntropyResponse(success: ${_this.success}, entropyBits: ${_this.entropyBits}, minEntropyBits: ${_this.minEntropyBits}, optimalEntropyBits: ${_this.optimalEntropyBits}, failureReasons: ${_this.failureReasons})';
   }
 }
 
@@ -26395,7 +26985,7 @@ class _$EntropyResponseCopyWithImpl<$Res>
     Object? optimalEntropyBits = null,
     Object? failureReasons = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(EntropyResponse(
       success: null == success
           ? _self.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -26594,7 +27184,7 @@ class _EntropyResponse implements EntropyResponse {
       required this.entropyBits,
       required this.minEntropyBits,
       required this.optimalEntropyBits,
-      final List<String>? failureReasons})
+      List<String>? failureReasons})
       : _failureReasons = failureReasons;
   factory _EntropyResponse.fromJson(Map<String, dynamic> json) =>
       _$EntropyResponseFromJson(json);
@@ -26645,18 +27235,20 @@ class _EntropyResponse implements EntropyResponse {
             (identical(other.optimalEntropyBits, optimalEntropyBits) ||
                 other.optimalEntropyBits == optimalEntropyBits) &&
             const DeepCollectionEquality()
-                .equals(other._failureReasons, _failureReasons));
+                .equals(other.failureReasons, _failureReasons));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      success,
-      entropyBits,
-      minEntropyBits,
-      optimalEntropyBits,
-      const DeepCollectionEquality().hash(_failureReasons));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        success,
+        entropyBits,
+        minEntropyBits,
+        optimalEntropyBits,
+        const DeepCollectionEquality().hash(_failureReasons));
+  }
 
   @override
   String toString() {
@@ -26743,21 +27335,27 @@ mixin _$CoreBootFixEncryptionSupport {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as CoreBootFixEncryptionSupport;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is CoreBootFixEncryptionSupport &&
-            (identical(other.action, action) || other.action == action) &&
-            (identical(other.systemLabel, systemLabel) ||
-                other.systemLabel == systemLabel));
+            (identical(other.action, _this.action) ||
+                other.action == _this.action) &&
+            (identical(other.systemLabel, _this.systemLabel) ||
+                other.systemLabel == _this.systemLabel));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, action, systemLabel);
+  int get hashCode {
+    final _this = this as CoreBootFixEncryptionSupport;
+    return Object.hash(runtimeType, _this.action, _this.systemLabel);
+  }
 
   @override
   String toString() {
-    return 'CoreBootFixEncryptionSupport(action: $action, systemLabel: $systemLabel)';
+    final _this = this as CoreBootFixEncryptionSupport;
+    return 'CoreBootFixEncryptionSupport(action: ${_this.action}, systemLabel: ${_this.systemLabel})';
   }
 }
 
@@ -26789,7 +27387,7 @@ class _$CoreBootFixEncryptionSupportCopyWithImpl<$Res>
     Object? action = null,
     Object? systemLabel = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(CoreBootFixEncryptionSupport(
       action: null == action
           ? _self.action
           : action // ignore: cast_nullable_to_non_nullable
@@ -27012,7 +27610,9 @@ class _CoreBootFixEncryptionSupport implements CoreBootFixEncryptionSupport {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, action, systemLabel);
+  int get hashCode {
+    return Object.hash(runtimeType, action, systemLabel);
+  }
 
   @override
   String toString() {

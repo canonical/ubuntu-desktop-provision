@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'autoinstall_direct_model.dart';
@@ -9,6 +9,7 @@ part of 'autoinstall_direct_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -29,24 +30,30 @@ mixin _$AutoinstallDirectState {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as AutoinstallDirectState;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is AutoinstallDirectState &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.localPath, localPath) ||
-                other.localPath == localPath) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
-            (identical(other.error, error) || other.error == error));
+            (identical(other.url, _this.url) || other.url == _this.url) &&
+            (identical(other.localPath, _this.localPath) ||
+                other.localPath == _this.localPath) &&
+            (identical(other.isLoading, _this.isLoading) ||
+                other.isLoading == _this.isLoading) &&
+            (identical(other.error, _this.error) ||
+                other.error == _this.error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, url, localPath, isLoading, error);
+  int get hashCode {
+    final _this = this as AutoinstallDirectState;
+    return Object.hash(
+        runtimeType, _this.url, _this.localPath, _this.isLoading, _this.error);
+  }
 
   @override
   String toString() {
-    return 'AutoinstallDirectState(url: $url, localPath: $localPath, isLoading: $isLoading, error: $error)';
+    final _this = this as AutoinstallDirectState;
+    return 'AutoinstallDirectState(url: ${_this.url}, localPath: ${_this.localPath}, isLoading: ${_this.isLoading}, error: ${_this.error})';
   }
 }
 
@@ -83,7 +90,7 @@ class _$AutoinstallDirectStateCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? error = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(AutoinstallDirectState(
       url: null == url
           ? _self.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -324,8 +331,9 @@ class _AutoinstallDirectState implements AutoinstallDirectState {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, url, localPath, isLoading, error);
+  int get hashCode {
+    return Object.hash(runtimeType, url, localPath, isLoading, error);
+  }
 
   @override
   String toString() {
@@ -766,7 +774,9 @@ class AutoinstallDirectErrorUnknown extends AutoinstallDirectError {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, rawError);
+  int get hashCode {
+    return Object.hash(runtimeType, rawError);
+  }
 
   @override
   String toString() {

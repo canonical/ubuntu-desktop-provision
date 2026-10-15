@@ -33,7 +33,7 @@ Future<StepResult?> showDetectKeyboardDialog(BuildContext context) async {
       return ValueListenableBuilder<AnyStep?>(
         valueListenable: detector,
         builder: (context, step, _) {
-          final size = MediaQuery.of(context).size;
+          final size = MediaQuery.sizeOf(context);
           return AlertDialog(
             title: YaruDialogTitleBar(
               title: Text(lang.keyboardDetectTitle),

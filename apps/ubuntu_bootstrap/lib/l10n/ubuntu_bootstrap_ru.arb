@@ -305,7 +305,7 @@
     "autoinstallDirectErrorFileSystemTitle": "Файл автоустановки не доступен для чтения",
     "autoinstallDirectErrorFileSystemBody": "Проверьте права доступа или предоставьте другой файл.",
     "autoinstallDirectErrorUnkownTitle": "Неизвестная ошибка",
-    "autoinstallDirectOption": "Автоматизировано с помощью файла автоустановки",
+    "autoinstallDirectOption": "Автоматизированно с помощью файла автоустановки",
     "autoinstallDirectDescription": "Для опытных пользователей, у которых есть autoinstall.yaml для последовательной и повторяемой настройки системы.",
     "chooseOptionalPassphraseHeader": "Создать фразу (необязательно)",
     "recoveryKeyInfoHeader": "Без ключа восстановления Вы можете потерять все свои данные",

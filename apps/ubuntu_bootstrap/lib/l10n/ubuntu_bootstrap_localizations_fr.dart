@@ -687,11 +687,11 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot doit être monté sur une partition ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Utilisez une partition ext4 pour / ou créez une partition ext4 séparée pour /boot';
 
   @override
   String get diskHeadersDevice => 'Périphérique';
@@ -1723,7 +1723,7 @@ class UbuntuBootstrapLocalizationsFr extends UbuntuBootstrapLocalizations {
       'Essayez une solution différente ou contactez le support informatique.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Journal d\'installation';
 
   @override
   String get manualPartitioningWarningBody =>

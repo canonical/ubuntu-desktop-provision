@@ -42,7 +42,7 @@ class _InstallerWizardState extends ConsumerState<InstallerWizard>
 
   @override
   Widget build(BuildContext context) {
-    final status = ref.watch(applicationStatusProvider).valueOrNull;
+    final status = ref.watch(applicationStatusProvider).value;
     if (status?.state == ApplicationState.ERROR) {
       return const _ErrorWizard();
     }
@@ -159,7 +159,7 @@ class _ErrorWizard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final status = ref.read(applicationStatusProvider).valueOrNull;
+    final status = ref.read(applicationStatusProvider).value;
     return Wizard(
       routes: <String, WizardRoute>{
         InstallationStep.error.route: WizardRoute(
