@@ -10,7 +10,7 @@ mixin ProvisioningPage on Widget {
   /// skipped.
   FutureOr<bool> load(BuildContext context, WidgetRef ref) async => true;
 
-  static AutoDisposeProvider<FocusNode> createNextFocusNodeProvider() {
+  static Provider<FocusNode> createNextFocusNodeProvider() {
     return Provider.autoDispose<FocusNode>((ref) {
       final focusNode = FocusNode();
       ref.onDispose(focusNode.dispose);

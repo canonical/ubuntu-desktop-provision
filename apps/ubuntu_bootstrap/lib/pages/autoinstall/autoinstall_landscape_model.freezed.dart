@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'autoinstall_landscape_model.dart';
@@ -9,6 +9,7 @@ part of 'autoinstall_landscape_model.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -33,40 +34,47 @@ mixin _$LandscapeData {
 
   @override
   bool operator ==(Object other) {
+    final _this = this as LandscapeData;
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is LandscapeData &&
-            (identical(other.userCode, userCode) ||
-                other.userCode == userCode) &&
-            (identical(other.token, token) || other.token == token) &&
-            (identical(other.authenticationStatus, authenticationStatus) ||
-                other.authenticationStatus == authenticationStatus) &&
-            (identical(other.autoinstall, autoinstall) ||
-                other.autoinstall == autoinstall) &&
-            (identical(other.domainUrl, domainUrl) ||
-                other.domainUrl == domainUrl) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading) &&
-            (identical(other.unretriableError, unretriableError) ||
-                other.unretriableError == unretriableError) &&
-            const DeepCollectionEquality().equals(other.error, error));
+            (identical(other.userCode, _this.userCode) ||
+                other.userCode == _this.userCode) &&
+            (identical(other.token, _this.token) ||
+                other.token == _this.token) &&
+            (identical(
+                    other.authenticationStatus, _this.authenticationStatus) ||
+                other.authenticationStatus == _this.authenticationStatus) &&
+            (identical(other.autoinstall, _this.autoinstall) ||
+                other.autoinstall == _this.autoinstall) &&
+            (identical(other.domainUrl, _this.domainUrl) ||
+                other.domainUrl == _this.domainUrl) &&
+            (identical(other.isLoading, _this.isLoading) ||
+                other.isLoading == _this.isLoading) &&
+            (identical(other.unretriableError, _this.unretriableError) ||
+                other.unretriableError == _this.unretriableError) &&
+            const DeepCollectionEquality().equals(other.error, _this.error));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      userCode,
-      token,
-      authenticationStatus,
-      autoinstall,
-      domainUrl,
-      isLoading,
-      unretriableError,
-      const DeepCollectionEquality().hash(error));
+  int get hashCode {
+    final _this = this as LandscapeData;
+    return Object.hash(
+        runtimeType,
+        _this.userCode,
+        _this.token,
+        _this.authenticationStatus,
+        _this.autoinstall,
+        _this.domainUrl,
+        _this.isLoading,
+        _this.unretriableError,
+        const DeepCollectionEquality().hash(_this.error));
+  }
 
   @override
   String toString() {
-    return 'LandscapeData(userCode: $userCode, token: $token, authenticationStatus: $authenticationStatus, autoinstall: $autoinstall, domainUrl: $domainUrl, isLoading: $isLoading, unretriableError: $unretriableError, error: $error)';
+    final _this = this as LandscapeData;
+    return 'LandscapeData(userCode: ${_this.userCode}, token: ${_this.token}, authenticationStatus: ${_this.authenticationStatus}, autoinstall: ${_this.autoinstall}, domainUrl: ${_this.domainUrl}, isLoading: ${_this.isLoading}, unretriableError: ${_this.unretriableError}, error: ${_this.error})';
   }
 }
 
@@ -109,7 +117,7 @@ class _$LandscapeDataCopyWithImpl<$Res>
     Object? unretriableError = null,
     Object? error = freezed,
   }) {
-    return _then(_self.copyWith(
+    return _then(LandscapeData(
       userCode: null == userCode
           ? _self.userCode
           : userCode // ignore: cast_nullable_to_non_nullable
@@ -419,16 +427,18 @@ class _LandscapeData extends LandscapeData {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      userCode,
-      token,
-      authenticationStatus,
-      autoinstall,
-      domainUrl,
-      isLoading,
-      unretriableError,
-      const DeepCollectionEquality().hash(error));
+  int get hashCode {
+    return Object.hash(
+        runtimeType,
+        userCode,
+        token,
+        authenticationStatus,
+        autoinstall,
+        domainUrl,
+        isLoading,
+        unretriableError,
+        const DeepCollectionEquality().hash(error));
+  }
 
   @override
   String toString() {

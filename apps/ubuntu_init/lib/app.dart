@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:path/path.dart' as p;
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';
 import 'package:ubuntu_init/ubuntu_init.dart';
@@ -55,6 +56,7 @@ Future<void> runInitApp(
 
       runApp(
         ProviderScope(
+          retry: (_, __) => null,
           child: _InitApp(
             theme: theme,
             darkTheme: darkTheme,

@@ -389,13 +389,13 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'Összecsukás';
 
   @override
-  String get networkWifiSignalNone => 'Nincsen jel';
+  String get networkWifiSignalNone => 'Nincs jel';
 
   @override
   String get networkWifiSignalWeak => 'Gyenge jel';
 
   @override
-  String get networkWifiSignalOk => 'Elfogadható jel';
+  String get networkWifiSignalOk => 'Megfelelő jel';
 
   @override
   String get networkWifiSignalGood => 'Jó jel';
@@ -410,11 +410,11 @@ class UbuntuProvisionLocalizationsHu extends UbuntuProvisionLocalizations {
   String get networkWifiSecureNetwork => 'Biztonságos hálózat';
 
   @override
-  String get networkWifiConnecting => 'Csatlakozás…';
+  String get networkWifiConnecting => 'Kapcsolódás…';
 
   @override
-  String get networkWifiConnected => 'Csatlakozva';
+  String get networkWifiConnected => 'Kapcsolódva';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'Napló';
 }

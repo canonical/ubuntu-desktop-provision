@@ -372,8 +372,8 @@
     "passphrasePageTitle": "Titkosítás",
     "passphrasePageHeaderPassphrase": "Titkosítási jelmondat beállítása",
     "passphrasePageHeaderPin": "Titkosítási PIN-kód beállítása",
-    "passphrasePageBodyPassphrase": "Meg kell adnia a jelmondatát minden alkalommal, amikor bekapcsolja a számítógépet. Ez a jelmondat eltér a felhasználói jelszavától. Később megváltoztathatja, de nem tilthatja le. Ha elfelejti a jelmondatát, akkor a helyreállítási kulcs használatával szerezheti vissza a hozzáférést a lemezhez.",
-    "passphrasePageBodyPin": "Meg kell adnia a PIN-kódját minden alkalommal, amikor bekapcsolja a számítógépet. Ez a PIN-kód eltér a felhasználói jelszavától. Később megváltoztathatja, de nem tilthatja le. Ha elfelejti a PIN-kódját, akkor a helyreállítási kulcs használatával szerezheti vissza a hozzáférést a lemezhez.",
+    "passphrasePageBodyPassphrase": "Meg kell adnia a jelmondatot minden alkalommal, amikor elindítja a számítógépet. Ez a jelmondat eltér a felhasználói jelszavától. Később megváltoztathatja a biztonsági központban.",
+    "passphrasePageBodyPin": "Meg kell adnia a PIN-kódot minden alkalommal, amikor elindítja a számítógépet. Ez a PIN-kód eltér a felhasználói jelszavától. Később megváltoztathatja a biztonsági központban.",
     "passphrasePageChoosePassphraseHint": "Jelmondat",
     "passphrasePageConfirmPassphraseHint": "Jelmondat megerősítése",
     "passphrasePageRequiredPassphrase": "A jelmondat megadása kötelező",
@@ -382,13 +382,13 @@
     "passphrasePageConfirmPinHint": "PIN-kód megerősítése",
     "passphrasePageRequiredPin": "PIN-kód szükséges",
     "passphrasePageMismatchPin": "A PIN-kódok nem egyeznek",
-    "passphraseTypePassphraseTileTitle": "Jelmondat megkövetelése",
+    "passphraseTypePassphraseTileTitle": "Jelmondat megkövetelése az indításkor",
     "passphraseTypePassphraseTileSubTitle": "A legbiztonságosabb. Hosszabb jelmondatot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet.",
-    "passphraseTypePinTileTitle": "PIN-kód megkövetelése",
+    "passphraseTypePinTileTitle": "PIN-kód megkövetelése az indításkor",
     "passphraseTypePinTileSubTitle": "Biztonságosabb. Számokból álló PIN-kódot kell megadnia minden alkalommal, amikor bekapcsolja a számítógépet.",
     "passphraseTypeNoneTileTitle": "Lemez automatikus feloldása",
     "passphraseTypePageHeader": "További biztonság",
-    "passphraseTypePageBody": "Alapértelmezetten a számítógép platformmegbízhatósági modulja (TPM) feloldja a lemezt az indítás során. Az adatok további védelmére is vannak lehetőségek.",
+    "passphraseTypePageBody": "Alapértelmezetten a lemez automatikusan feloldódik az indításkor. Lehetőségei vannak az adatok további védelmére is.",
     "passphrasePagePassphraseEntropyBelowMin": "Gyenge jelmondat, növelje meg a hosszát vagy tegye bonyolultabbá",
     "passphrasePagePassphraseEntropyBelowOptimal": "Megfelelő jelmondat, de a nagyobb biztonság érdekében növelje meg a hosszát vagy tegye bonyolultabbá",
     "passphrasePagePassphraseEntropyOptimal": "Erős jelmondat",
@@ -509,5 +509,27 @@
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Erre a funkcióra „Virtualization Technology”, „VT-d” vagy „AMD-Vi” néven is hivatkozhatnak.",
     "autoinstallErrorMessage": "Az automatikus telepítési fájlban lévő egyik parancs futtatása nem sikerült a telepítés során.",
     "autoinstallErrorInstructions": "Újra kell majd indítania a telepítést. Ellenőrizze az automatikus telepítési fájlt, válasszon másik telepítési típust, vagy vegye fel a kapcsolatot az IT-támogatással.",
-    "restartInstaller": "Telepítő újraindítása"
+    "restartInstaller": "Telepítő újraindítása",
+    "autoinstallGenericErrorMessage": "A telepítés nem folytatható a megadott automatikus telepítőfájllal.",
+    "autoinstallValidationErrorMessage": "Probléma van a megadott automatikus telepítőfájllal.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Probléma van az automatikus telepítőfájlban megadott cloud-init felhasználói adataival.",
+    "passphraseTypePageBodyAuthRequired": "A hardveresen támogatott titkosítás további biztonságot igényel ezen a számítógépen.",
+    "allocateDiskSpaceBootMustBeExt4": "A /boot könyvtárat egy ext4 partícióra kell csatolni",
+    "allocateDiskSpaceBootMustBeExt4Info": "Használjon ext4 partíciót a / gyökérhez, vagy hozzon létre külön ext4 partíciót a /boot könyvtárhoz",
+    "tpmActionPageTitleActionable": "Probléma van a hardveresen támogatott titkosítással",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Ennek a számítógépnek hiányzik egy szükséges biztonsági funkciója (hardveres bizalmi gyökér).",
+    "installationLogSemanticLabel": "Telepítési napló",
+    "manualPartitioningBootMustBeExt4WarningTitle": "A /boot könyvtárat egy ext4 partícióra kell csatolni",
+    "manualPartitioningBootMustBeExt4WarningBody": "Használjon ext4 partíciót a / gyökérhez, vagy hozzon létre külön ext4 partíciót a /boot könyvtárhoz",
+    "stepIndicatorLabel": "{CURRENT_STEP} / {TOTAL_STEPS} lépés",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    }
 }

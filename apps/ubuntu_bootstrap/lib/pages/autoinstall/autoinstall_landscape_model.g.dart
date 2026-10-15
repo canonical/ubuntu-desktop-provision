@@ -6,41 +6,93 @@ part of 'autoinstall_landscape_model.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(watchResponse)
+final watchResponseProvider = WatchResponseProvider._();
+
+final class WatchResponseProvider extends $FunctionalProvider<
+        AsyncValue<WatchAuthenticationResponse>,
+        WatchAuthenticationResponse,
+        Stream<WatchAuthenticationResponse>>
+    with
+        $FutureModifier<WatchAuthenticationResponse>,
+        $StreamProvider<WatchAuthenticationResponse> {
+  WatchResponseProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'watchResponseProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$watchResponseHash();
+
+  @$internal
+  @override
+  $StreamProviderElement<WatchAuthenticationResponse> $createElement(
+          $ProviderPointer pointer) =>
+      $StreamProviderElement(pointer);
+
+  @override
+  Stream<WatchAuthenticationResponse> create(Ref ref) {
+    return watchResponse(ref);
+  }
+}
+
 String _$watchResponseHash() => r'abaf92b711d72c40b1f6dede0fc0d0466fba978c';
 
-/// See also [watchResponse].
-@ProviderFor(watchResponse)
-final watchResponseProvider =
-    AutoDisposeStreamProvider<WatchAuthenticationResponse>.internal(
-  watchResponse,
-  name: r'watchResponseProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$watchResponseHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef WatchResponseRef
-    = AutoDisposeStreamProviderRef<WatchAuthenticationResponse>;
-String _$landscapeDataModelHash() =>
-    r'faedf2f3eb511fa7295eddde3500ad0af3ebd038';
-
-/// See also [LandscapeDataModel].
 @ProviderFor(LandscapeDataModel)
-final landscapeDataModelProvider =
-    AutoDisposeNotifierProvider<LandscapeDataModel, LandscapeData>.internal(
-  LandscapeDataModel.new,
-  name: r'landscapeDataModelProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$landscapeDataModelHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final landscapeDataModelProvider = LandscapeDataModelProvider._();
 
-typedef _$LandscapeDataModel = AutoDisposeNotifier<LandscapeData>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class LandscapeDataModelProvider
+    extends $NotifierProvider<LandscapeDataModel, LandscapeData> {
+  LandscapeDataModelProvider._()
+      : super(
+          from: null,
+          argument: null,
+          retry: null,
+          name: r'landscapeDataModelProvider',
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
+        );
+
+  @override
+  String debugGetCreateSourceHash() => _$landscapeDataModelHash();
+
+  @$internal
+  @override
+  LandscapeDataModel create() => LandscapeDataModel();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(LandscapeData value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<LandscapeData>(value),
+    );
+  }
+}
+
+String _$landscapeDataModelHash() =>
+    r'05326e2df3f8ff5076f08b99b20203e3096d497c';
+
+abstract class _$LandscapeDataModel extends $Notifier<LandscapeData> {
+  LandscapeData build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<LandscapeData, LandscapeData>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<LandscapeData, LandscapeData>,
+        LandscapeData,
+        Object?,
+        Object?>;
+    return element.handleCreate(ref, build);
+  }
+}

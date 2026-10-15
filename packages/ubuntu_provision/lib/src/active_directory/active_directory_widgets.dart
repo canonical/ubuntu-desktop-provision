@@ -5,7 +5,7 @@ import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_l10n.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_model.dart';
 import 'package:ubuntu_provision/src/identity/identity_widgets.dart'
-    show ShowPasswordButton;
+    show ShowPasswordFieldBuilder;
 // TODO: Generalize password button widget
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
@@ -82,25 +82,26 @@ class PasswordFormField extends ConsumerWidget {
     final showPassword =
         ref.watch(activeDirectoryModelProvider.select((m) => m.showPassword));
 
-    return ValidatedFormField(
-      labelText: lang.activeDirectoryPasswordLabel,
-      obscureText: !showPassword,
-      successWidget: password.isNotEmpty
-          ? SuccessIcon(
-              semanticLabel: lang.successIconSemanticLabel,
-            )
-          : const SizedBox(),
-      initialValue: password,
-      suffixIcon: ShowPasswordButton(
-        value: showPassword,
-        onChanged: (value) =>
-            ref.read(activeDirectoryModelProvider).showPassword = value,
+    return ShowPasswordFieldBuilder(
+      value: showPassword,
+      onChanged: (value) =>
+          ref.read(activeDirectoryModelProvider).showPassword = value,
+      builder: (context, suffixIcon) => ValidatedFormField(
+        labelText: lang.activeDirectoryPasswordLabel,
+        obscureText: !showPassword,
+        successWidget: password.isNotEmpty
+            ? SuccessIcon(
+                semanticLabel: lang.successIconSemanticLabel,
+              )
+            : const SizedBox(),
+        initialValue: password,
+        suffixIcon: suffixIcon,
+        validator: CallbackValidator(
+          (_) => validation == AdPasswordValidation.OK,
+          errorText: validation?.localize(context) ?? '',
+        ),
+        onChanged: ref.read(activeDirectoryModelProvider).setPassword,
       ),
-      validator: CallbackValidator(
-        (_) => validation == AdPasswordValidation.OK,
-        errorText: validation?.localize(context) ?? '',
-      ),
-      onChanged: ref.read(activeDirectoryModelProvider).setPassword,
     );
   }
 }
