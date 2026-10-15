@@ -841,7 +841,7 @@ class UbuntuBootstrapLocalizationsPl extends UbuntuBootstrapLocalizations {
   String get confirmProprietarySoftwareDrivers => 'Sterowniki';
 
   @override
-  String get confirmInstallButton => 'Instaluj';
+  String get confirmInstallButton => 'Zainstaluj';
 
   @override
   String get confirmTableErased => 'Wymazano';
