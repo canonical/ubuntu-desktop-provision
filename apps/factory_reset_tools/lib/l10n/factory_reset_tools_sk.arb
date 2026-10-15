@@ -15,7 +15,7 @@
     "appTitle": "Obnova výrobných nastavení",
     "createUsbWarning": "USB disk bude preformátovaný a všetky údaje na disku sa stratia.",
     "resetMediaReadyTitle": "Obnovovacie médium USB je pripravené",
-    "startFactoryReset": "Spustiť obnovenie nastavení",
+    "startFactoryReset": "Spustiť továrenský reset",
     "resetMediaTitle": "USB obnovovacie médium",
     "noMediaDetected": "Nebolo zistené žiadne vymeniteľné úložisko",
     "resetMediaInitializing": "Inicializácia",
