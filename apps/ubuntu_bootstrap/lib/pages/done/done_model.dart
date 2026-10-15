@@ -1,35 +1,28 @@
-import 'package:flutter_riverpod/legacy.dart';
-import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
 
-final doneModelProvider = ChangeNotifierProvider(
-  (_) => DoneModel(
-    getService<ProductService>(),
-    getService<SessionService>(),
-    getService<ConfigService>(),
-  ),
-);
+part 'done_model.freezed.dart';
+part 'done_model.g.dart';
 
-class DoneModel extends SafeChangeNotifier {
-  DoneModel(
-    this._product,
-    this._session,
-    this._config,
-  );
+@freezed
+abstract class DoneState with _$DoneState {
+  factory DoneState({
+    required ProvisioningMode provisioningMode,
+    required ProductInfo productInfo,
+  }) = _DoneState;
+}
 
-  final ProductService _product;
-  final SessionService _session;
-  final ConfigService _config;
-
-  late final ProvisioningMode _provisioningMode;
-
-  ProvisioningMode get provisioningMode => _provisioningMode;
-  ProductInfo get productInfo => _product.getProductInfo();
-
-  Future<void> init() async {
-    _provisioningMode = await _config.provisioningMode;
+@Riverpod(keepAlive: true)
+class DoneModel extends _$DoneModel {
+  @override
+  Future<DoneState> build() async {
+    return DoneState(
+      provisioningMode: await getService<ConfigService>().provisioningMode,
+      productInfo: getService<ProductService>().getProductInfo(),
+    );
   }
 
-  Future<void> reboot() => _session.reboot();
+  Future<void> reboot() => getService<SessionService>().reboot();
 }
