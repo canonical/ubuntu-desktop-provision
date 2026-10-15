@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -8,6 +9,28 @@ import 'test_done.dart';
 
 void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
+
+  testWidgets('buttons fit on compact displays', (tester) async {
+    final model = buildDoneModel();
+    await tester.pumpApp((_) => buildPage(model));
+
+    tester.view.physicalSize = const Size(640, 480);
+    await tester.pumpAndSettle();
+
+    expect(tester.takeException(), isNull);
+
+    final context = tester.element(find.byType(DonePage));
+    final l10n = UbuntuBootstrapLocalizations.of(context);
+    final buttons = [
+      find.button(l10n.continueTesting),
+      find.button(l10n.restartNow),
+    ];
+
+    for (final button in buttons) {
+      expect(button, findsOneWidget);
+      expect(tester.getRect(button).bottom, lessThanOrEqualTo(480));
+    }
+  });
 
   testWidgets('restart', (tester) async {
     final model = buildDoneModel();
