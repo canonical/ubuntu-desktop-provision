@@ -121,5 +121,15 @@
     "maximizeIconSemanticLabel": "Suurenna",
     "collapseIconSemanticLabel": "Supista",
     "minimizeIconSemanticLabel": "Pienennä",
-    "errorPageTechnicalDetails": "Tekniset yksityiskohdat"
+    "errorPageTechnicalDetails": "Tekniset yksityiskohdat",
+    "identityInvalidRealName": "Nimi on virheellinen",
+    "networkWifiSignalNone": "Ei signaalia",
+    "networkWifiSignalWeak": "Heikko signaali",
+    "networkWifiSignalOk": "Kelvollinen signaali",
+    "networkWifiSignalGood": "Hyvä signaali",
+    "networkWifiSignalExcellent": "Erinomainen signaali",
+    "networkWifiOpenNetwork": "Avoin verkko",
+    "networkWifiSecureNetwork": "Suojattu verkko",
+    "networkWifiConnecting": "Yhdistetään…",
+    "networkWifiConnected": "Yhdistetty"
 }
