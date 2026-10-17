@@ -159,5 +159,6 @@
     "networkWifiOpenNetwork": "Xarxa oberta",
     "networkWifiSecureNetwork": "Xarxa segura",
     "networkWifiConnecting": "S'està connectant…",
-    "networkWifiConnected": "Connectat"
+    "networkWifiConnected": "Connectat",
+    "logViewSemanticLabel": "Registre"
 }
