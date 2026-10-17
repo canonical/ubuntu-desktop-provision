@@ -466,7 +466,7 @@
     "passphraseTypePinTileSubTitle": "Turvallisempi. PIN-koodi tulee syöttää joka kerta tietokonetta käynnistettäessä.",
     "passphraseTypeNoneTileTitle": "Avaa levyn salaus automaattisesti",
     "passphraseTypePageHeader": "Lisäturvaa",
-    "passphraseTypePageBody": "Tietokoneen TPM-moduuli (Trusted Platform Module) avaa lukituksen oletusarvoisesti käynnistettäessä. On myös mahdollista turvata tietoja lisätoimin.",
+    "passphraseTypePageBody": "Oletusarvoisesti levy avautuu salaamattomana automaattisesti koneen käynnistyessä. Voit halutessasi suojata levyn tietoja eri menetelmin.",
     "passphrasePagePassphraseEntropyBelowMin": "Heikko tunnuslause, syötä pidempi tai monimutkaisempi",
     "passphrasePagePassphraseEntropyBelowOptimal": "Kohtuullinen tunnuslause, syötä pidempi tai monimutkaisempi turvallisuuden lisäämiseksi",
     "passphrasePagePassphraseEntropyOptimal": "Vahva tunnuslause",
