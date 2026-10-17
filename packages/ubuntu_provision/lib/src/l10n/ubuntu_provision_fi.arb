@@ -29,7 +29,7 @@
     "identityInvalidHostname": "Tietokoneen nimi on virheellinen",
     "identityUsernameLabel": "Valitse käyttäjätunnus",
     "identityUsernameRequired": "Käyttäjätunnus vaaditaan",
-    "identityInvalidUsername": "Käyttäjätunnus on virheellinen",
+    "identityInvalidUsername": "Käyttäjätunnus on virheellinen: sen tulee alkaa pienellä kirjaimella, ja se voi sisältää vain pieniä kirjaimia, numeroita, yhdysviivoja ja alaviivoja.",
     "identityUsernameInUse": "Kyseinen käyttäjänimi on jo olemassa.",
     "identityUsernameSystemReserved": "Kyseinen nimi on varattu järjestelmän käytettäväksi.",
     "identityUsernameTooLong": "Kyseinen nimi on liian pitkä.",
