@@ -325,7 +325,7 @@ class UbuntuProvisionLocalizationsSk extends UbuntuProvisionLocalizations {
       'Ak chcete na tomto počítači používať sieť Ethernet, musí byť povolené káblové pripojenie';
 
   @override
-  String get networkWiredEnable => 'Povoliť káblové';
+  String get networkWiredEnable => 'Povoliť káblové pripojenie';
 
   @override
   String get networkWifiOption => 'Pripojiť sa k sieti Wi-Fi';

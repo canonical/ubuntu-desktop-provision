@@ -18,7 +18,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
 
   @override
   String accessibilityPageBody(String DISTRO) {
-    return 'Personalizza $DISTRO in base alle tue esigenze prima della configurazione. Puoi modificarli in seguito in Impostazioni di sistema.';
+    return 'Personalizza $DISTRO in base alle tue esigenze prima della configurazione. Puoi modificarli in seguito nelle Impostazioni di sistema.';
   }
 
   @override
@@ -82,7 +82,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get errorPageHideLog => 'Nascondi log';
 
   @override
-  String get errorPageTechnicalDetails => 'Technical details';
+  String get errorPageTechnicalDetails => 'Dettagli tecnici';
 
   @override
   String get restart => 'Riavvia';
@@ -103,7 +103,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get keyboardTitle => 'Disposizione della tastiera';
 
   @override
-  String get keyboardHeader => 'Scegliere la disposizione della tastiera:';
+  String get keyboardHeader => 'Scegliere la disposizione della tastiera';
 
   @override
   String get keyboardTestHint => 'Digitare qui per provare la tastiera';
@@ -164,7 +164,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'Il nome è troppo lungo.';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'Il nome non è valido';
 
   @override
   String get identityHostnameLabel => 'Il nome del computer';
@@ -189,7 +189,8 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'È richiesto un username';
 
   @override
-  String get identityInvalidUsername => 'L\'username non è valido';
+  String get identityInvalidUsername =>
+      'L\'username non è valido: deve iniziare con una lettera minuscola e può contenere solo lettere minuscole, cifre, trattini e trattini bassi.';
 
   @override
   String get identityUsernameInUse => 'Esiste già un utente con quel nome.';
@@ -300,11 +301,10 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
       'Spiacenti, al momento non è possibile configurare Active Directory. Una volta che il sistema è attivo e funzionante, visita <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> per ricevere assistenza.';
 
   @override
-  String get networkPageTitle => 'Connetti alla rete';
+  String get networkPageTitle => 'Connessione internet';
 
   @override
-  String get networkPageHeader =>
-      'Connettere questo computer alla rete permetterà a Ubuntu l\'installazione di software aggiuntivo necessario e a scegliere il tuo fuso orario.\n\nConnetti il computer via cavo Ethernet, o scegli una Rete Wi-Fi';
+  String get networkPageHeader => 'Connetti alla rete';
 
   @override
   String get networkPageBody =>
@@ -337,7 +337,7 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
 
   @override
   String get networkWifiDisabled =>
-      'Per usufruire della Wi-Fi in questo computer, la rete wireless deve essere abilitata';
+      'Per usufruire della connessione Wi-Fi in questo computer, la rete wireless deve essere abilitata';
 
   @override
   String get networkWifiEnable => 'Abilita Wi-Fi';
@@ -387,31 +387,31 @@ class UbuntuProvisionLocalizationsIt extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => 'Riduci';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => 'Nessun segnale';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => 'Segnale debole';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => 'Segnale OK';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => 'Segnale buono';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => 'Segnale eccellente';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'Rete aperta';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => 'Rete sicura';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => 'Connettendo…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => 'Connesso';
 
   @override
   String get logViewSemanticLabel => 'Log';

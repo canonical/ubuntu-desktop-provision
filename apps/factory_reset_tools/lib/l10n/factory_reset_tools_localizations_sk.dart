@@ -60,7 +60,7 @@ class FactoryResetToolsLocalizationsSk extends FactoryResetToolsLocalizations {
 
   @override
   String get resetMediaReadyBody =>
-      'Keď ho chcete použiť, vložte USB kľúč do počítača, ktorý chcete resetovať, a reštartujte ho.';
+      'Keď ho chcete použiť, vložte USB kľúč do počítača, v ktorom chcete obnoviť výrobné nastavenia, a reštartujte ho.';
 
   @override
   String get errorLoadingDrives =>

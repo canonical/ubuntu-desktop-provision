@@ -117,11 +117,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get autoinstallGenericErrorMessage =>
-      'Installation cannot continue with the provided autoinstall file.';
+      'Asennusta ei voi jatkaa annetulla autoinstall-tiedostolla.';
 
   @override
   String get autoinstallValidationErrorMessage =>
-      'There is an issue with the provided autoinstall file.';
+      'Annetussa autoinstall-tiedostossa on ongelma.';
 
   @override
   String get autoinstallCloudInitSchemaValidationErrorMessage =>
@@ -356,11 +356,11 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'Tunnuslause tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä Tunnuslause on eri kuin käyttäjän salasana. Voit muuttaa sitä myöhemmin, mutta sitä ei voi ottaa pois käytöstä. Jos tunnuslause unohdetaan, palautusavainta voi käyttää levyn tietoihin pääsemiseen.';
+      'Tunnuslause tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä tunnuslause on eri kuin käyttäjän salasana. Voit muuttaa sitä myöhemmin tietoturvakeskuksesta.';
 
   @override
   String get passphrasePageBodyPin =>
-      'PIN-koodi tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä PIN-koodi on eri kuin käyttäjän salasana. Voit muuttaa sitä myöhemmin, mutta sitä ei voi ottaa pois käytöstä. Jos PIN-koodi unohdetaan, palautusavainta voi käyttää levyn tietoihin pääsemiseen.';
+      'PIN-koodi tulee syöttää joka kerta tietokonetta käynnistettäessä. Tämä PIN-koodi on eri kuin käyttäjän salasana. Voit muuttaa sitä myöhemmin tietoturvakeskuksesta.';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'Tunnuslause';
@@ -387,14 +387,16 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PIN-koodit eivät täsmää';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'Vaadi tunnuslause';
+  String get passphraseTypePassphraseTileTitle =>
+      'Vaadi tunnuslause käynnistyksen yhteydessä';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       'Kaikein turvallisin. Salauslause tulee syöttää joka kerta tietokonetta käynnistettäessä.';
 
   @override
-  String get passphraseTypePinTileTitle => 'Vaadin PIN-koodi';
+  String get passphraseTypePinTileTitle =>
+      'Vaadi PIN-koodi käynnistyksen yhteydessä';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -408,7 +410,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      'Tietokoneen TPM-moduuli (Trusted Platform Module) avaa lukituksen oletusarvoisesti käynnistettäessä. On myös mahdollista turvata tietoja lisätoimin.';
+      'Oletusarvoisesti levy avautuu salaamattomana automaattisesti koneen käynnistyessä. Voit halutessasi suojata levyn tietoja eri menetelmin.';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
@@ -672,7 +674,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot tulee olla liitetty ext4-osioon';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
@@ -1707,7 +1709,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
       'Kokeile toista ratkaisua tai ota yhteys IT-tukeen.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Asennusloki';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1715,7 +1717,7 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot tulee olla liitetty ext4-osioon';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
@@ -1723,6 +1725,6 @@ class UbuntuBootstrapLocalizationsFi extends UbuntuBootstrapLocalizations {
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {
-    return 'Step $CURRENT_STEP of $TOTAL_STEPS';
+    return 'Vaihe $CURRENT_STEP/$TOTAL_STEPS';
   }
 }
