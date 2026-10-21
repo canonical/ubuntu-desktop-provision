@@ -29,7 +29,7 @@
     "windowTitle": "Nástroje na obnovu výrobných nastavení",
     "createUsbBody": "Vytvorte USB obnovovacie médium na obnovenie systému a prispôsobenie inštalácií Ubuntu.",
     "errorLoadingDrives": "Pri načítavaní jednotiek sa vyskytla chyba.",
-    "resetMediaReadyBody": "Keď ho chcete použiť, vložte USB kľúč do počítača, ktorý chcete resetovať, a reštartujte ho.",
+    "resetMediaReadyBody": "Keď ho chcete použiť, vložte USB kľúč do počítača, v ktorom chcete obnoviť výrobné nastavenia, a reštartujte ho.",
     "restart": "Reštartovať",
     "reformat": "Preformátovať",
     "closeIconSemanticLabel": "Zavrieť",
