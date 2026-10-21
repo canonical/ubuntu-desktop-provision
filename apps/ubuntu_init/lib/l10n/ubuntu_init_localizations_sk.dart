@@ -23,8 +23,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
   String get welcomeStartTitle => 'Zjednodušený štart';
 
   @override
-  String get welcomeStartSubtitle =>
-      'Podpora čistejšieho zážitku z nastavenia.';
+  String get welcomeStartSubtitle => 'Podpora čistejšieho procesu nastavenia.';
 
   @override
   String get welcomeStoreTitle => 'Obchod s aplikáciami v novom vzhľade';
@@ -38,7 +37,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get welcomeSecuritySubtitle =>
-      'Nové možnosti hardvérového alebo ZFS šifrovania.';
+      'Nové možnosti šifrovania s hardvérovou podporou alebo ZFS.';
 
   @override
   String welcomeChangelogLabel(String url) {
@@ -55,7 +54,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String telemetryDescription(String distro) {
-    return 'Pomôžte nám vylepšiť $distro zdieľaním údajov o vašom systéme. Zahŕňa to napríklad model vášho počítača, nainštalovaný softvér a vašu zvolenú časovú zónu.';
+    return 'Pomôžte nám vylepšiť $distro zdieľaním údajov o vašom systéme. Zahŕňa to napríklad model vášho počítača, nainštalovaný softvér a vaše zvolené časové pásmo.';
   }
 
   @override
@@ -87,7 +86,7 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get privacyLocationSubtitle =>
-      'Umožnite aplikáciám zistiť vašu geografickú polohu.\nToto nastavenie môžete kedykoľvek zmeniť v Systémových nastaveniach.';
+      'Umožňuje aplikáciám zistiť vašu geografickú polohu.\nToto nastavenie môžete kedykoľvek zmeniť v Systémových nastaveniach.';
 
   @override
   String get privacyLocationEnable => 'Služby určovania polohy';
@@ -114,11 +113,11 @@ class UbuntuInitLocalizationsSk extends UbuntuInitLocalizations {
 
   @override
   String get ubuntuProSubscriptionDescription =>
-      'Získajte najkomplexnejšie predplatné na ochranu open-source softvéru';
+      'Získajte najkomplexnejšie predplatné na ochranu softvéru s otvoreným zdrojovým kódom';
 
   @override
   String ubuntuProSubscriptionFreeForPersonalUse(String url) {
-    return 'Vždy zdarma pre osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://$url\">Zistiť viac</a>';
+    return 'Vždy zadarmo pre osobné použitie. 30-dňová skúšobná verzia pre podniky. <a href=\"https://$url\">Ďalšie informácie</a>';
   }
 
   @override

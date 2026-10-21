@@ -686,11 +686,11 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get allocateDiskSpaceBootMustBeExt4 =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot s\'ha de muntar en una partició ext4';
 
   @override
   String get allocateDiskSpaceBootMustBeExt4Info =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Utilitzeu una partició ext4 per a / o creeu una partició ext4 separada per a /boot';
 
   @override
   String get diskHeadersDevice => 'Dispositiu';
@@ -1720,7 +1720,7 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
       'Proveu una solució diferent o contacteu amb el suport informàtic.';
 
   @override
-  String get installationLogSemanticLabel => 'Installation log';
+  String get installationLogSemanticLabel => 'Registre d\'instal·lació';
 
   @override
   String get manualPartitioningWarningBody =>
@@ -1728,11 +1728,11 @@ class UbuntuBootstrapLocalizationsCa extends UbuntuBootstrapLocalizations {
 
   @override
   String get manualPartitioningBootMustBeExt4WarningTitle =>
-      '/boot must be mounted on an ext4 partition';
+      '/boot s\'ha de muntar en una partició ext4';
 
   @override
   String get manualPartitioningBootMustBeExt4WarningBody =>
-      'Use an ext4 partition for / or create a separate ext4 partition for /boot';
+      'Utilitzeu una partició ext4 per a / o creeu una partició ext4 separada per a /boot';
 
   @override
   String stepIndicatorLabel(int CURRENT_STEP, int TOTAL_STEPS) {

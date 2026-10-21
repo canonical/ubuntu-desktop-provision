@@ -67,7 +67,7 @@
     "networkWiredNone": "Nebolo zistené žiadne káblové pripojenie",
     "networkWiredOff": "Káblové pripojenie je vypnuté",
     "networkWiredDisabled": "Ak chcete na tomto počítači používať sieť Ethernet, musí byť povolené káblové pripojenie",
-    "networkWiredEnable": "Povoliť káblové",
+    "networkWiredEnable": "Povoliť káblové pripojenie",
     "networkWifiOption": "Pripojiť sa k sieti Wi-Fi",
     "networkWifiOff": "Bezdrôtové siete sú vypnuté",
     "networkWifiNone": "Neboli zistené žiadne zariadenia Wi-Fi",

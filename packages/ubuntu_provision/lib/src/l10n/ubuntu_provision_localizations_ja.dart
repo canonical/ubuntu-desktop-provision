@@ -68,7 +68,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
 
   @override
   String get errorPageUnexpected =>
-      'すみません、なにかエラーが起きました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。';
+      '申し訳ありません、原因不明のエラーが発生しました。コンピューターを再起動してもう一度インストールを開始してみてください。この問題の<a>報告</a>もできます。';
 
   @override
   String errorPageUbuntuBug(String SNAP) {
@@ -162,7 +162,7 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityRealNameTooLong => 'その名前は長すぎます。';
 
   @override
-  String get identityInvalidRealName => 'The name is invalid';
+  String get identityInvalidRealName => 'その名前は使用できません';
 
   @override
   String get identityHostnameLabel => 'コンピューターの名前';
@@ -186,7 +186,8 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get identityUsernameRequired => 'ユーザー名を入力してください';
 
   @override
-  String get identityInvalidUsername => 'このユーザー名は使用できません';
+  String get identityInvalidUsername =>
+      'このユーザー名は使用できません。英小文字で始め、英小文字、数字、ハイフン （-）、アンダースコア（_）のみを使用してください。';
 
   @override
   String get identityUsernameInUse => 'そのユーザー名はすでに存在します。';
@@ -376,32 +377,32 @@ class UbuntuProvisionLocalizationsJa extends UbuntuProvisionLocalizations {
   String get collapseIconSemanticLabel => '隠す';
 
   @override
-  String get networkWifiSignalNone => 'No signal';
+  String get networkWifiSignalNone => '信号なし';
 
   @override
-  String get networkWifiSignalWeak => 'Weak signal';
+  String get networkWifiSignalWeak => '弱い信号';
 
   @override
-  String get networkWifiSignalOk => 'OK signal';
+  String get networkWifiSignalOk => '中程度の信号';
 
   @override
-  String get networkWifiSignalGood => 'Good signal';
+  String get networkWifiSignalGood => '良好な信号';
 
   @override
-  String get networkWifiSignalExcellent => 'Excellent signal';
+  String get networkWifiSignalExcellent => '非常に良好な信号';
 
   @override
-  String get networkWifiOpenNetwork => 'Open network';
+  String get networkWifiOpenNetwork => 'オープンネットワーク';
 
   @override
-  String get networkWifiSecureNetwork => 'Secure network';
+  String get networkWifiSecureNetwork => '保護されたネットワーク';
 
   @override
-  String get networkWifiConnecting => 'Connecting…';
+  String get networkWifiConnecting => '接続しています…';
 
   @override
-  String get networkWifiConnected => 'Connected';
+  String get networkWifiConnected => '接続済み';
 
   @override
-  String get logViewSemanticLabel => 'Log';
+  String get logViewSemanticLabel => 'ログ';
 }

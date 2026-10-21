@@ -343,11 +343,11 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphrasePageBodyPassphrase =>
-      'PCの電源を入れるたびにパスフレーズを入力する必要があります。パスフレーズはユーザーのパスワードとは異なります。後ほど変更はできますが、無効にはできません。パスフレーズを忘れてしまうと、リカバリーキーを使用してディスクにアクセスすることになります。';
+      'PCを起動するたびにパスフレーズを入力する必要があります。パスフレーズはユーザーのパスワードとは異なります。セキュリティ センターで後から変更できます。';
 
   @override
   String get passphrasePageBodyPin =>
-      'PCの電源を入れるたびにPINを入力する必要があります。PINはユーザーのパスワードとは異なります。後ほど変更はできますが、無効にはできません。PINを忘れてしまうと、リカバリーキーを使用してディスクにアクセスすることになります。';
+      'PCを起動するたびにPINを入力する必要があります。PINはユーザーのパスワードとは異なります。セキュリティ センターで後から変更できます。';
 
   @override
   String get passphrasePageChoosePassphraseHint => 'パスフレーズ';
@@ -374,14 +374,14 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get passphrasePageMismatchPin => 'PINが一致しません';
 
   @override
-  String get passphraseTypePassphraseTileTitle => 'パスフレーズを要求';
+  String get passphraseTypePassphraseTileTitle => '起動時にパスフレーズを要求';
 
   @override
   String get passphraseTypePassphraseTileSubTitle =>
       '最も安全です。PCの電源を入れるたびに長いパスフレーズを入力することになります。';
 
   @override
-  String get passphraseTypePinTileTitle => 'PINが必要です';
+  String get passphraseTypePinTileTitle => '起動時にPINを要求';
 
   @override
   String get passphraseTypePinTileSubTitle =>
@@ -395,7 +395,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
 
   @override
   String get passphraseTypePageBody =>
-      '既定では、このPCのTPMが起動時にディスクの暗号化を解除します。データ保護のため追加のオプションもあります。';
+      '既定では、起動時にディスクの暗号化を自動で解除します。データ保護のため追加のオプションもあります。';
 
   @override
   String get passphraseTypePageBodyAuthRequired =>
@@ -457,7 +457,7 @@ class UbuntuBootstrapLocalizationsJa extends UbuntuBootstrapLocalizations {
   String get installationTypeEraseInfo => 'OSを含むすべてのデータとパーティションは削除されます。';
 
   @override
-  String get installationTypeAdvancedLabel => '高度なオプション...';
+  String get installationTypeAdvancedLabel => '高度なオプション';
 
   @override
   String get installationTypeAdvancedTitle => '暗号化とファイルシステム';

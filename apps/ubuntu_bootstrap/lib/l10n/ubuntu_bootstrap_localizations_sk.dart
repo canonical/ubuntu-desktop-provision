@@ -235,7 +235,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get dontInstallDriverSoftwareNowDescription =>
-      'Môžete ho nainštalovať neskôr z Softvér a aktualizácie.';
+      'Môžete ho nainštalovať neskôr z aplikácie Softvér a aktualizácie.';
 
   @override
   String get configureSecureBootSecurityKeyRequired =>
@@ -908,11 +908,11 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get bitlockerInfoDescription =>
-      'Jeden alebo viacero oddielov je šifrovaných pomocou BitLocker.';
+      'Jeden alebo viacero oddielov je zašifrovaných pomocou BitLocker.';
 
   @override
   String get bitlockerInfoDisable =>
-      'Pre inštaláciu vedľa Windows zakážte BitLocker vo Windows.';
+      'Pre inštaláciu vedľa Windows deaktivujte BitLocker vo Windows.';
 
   @override
   String get bitlockerInfoRecovery =>
@@ -978,7 +978,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSoftwareBody(String DISTRO) {
-    return 'Inštalujte, spravujte a aktualizujte všetky svoje aplikácie v Ubuntu Softvér, vrátane tisícov aplikácií z obchodu Snap Store aj archívu $DISTRO.';
+    return 'Inštalujte, spravujte a aktualizujte všetky svoje aplikácie v Ubuntu Softvér, vrátane tisícov aplikácií z obchodu Snap Store aj z archívu $DISTRO.';
   }
 
   @override
@@ -995,7 +995,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesCreativityBody(String DISTRO) {
-    return 'Ak ste animátor, dizajnér, tvorca videí alebo vývojár hier, je jednoduché preniesť svoje pracovné postupy do $DISTRO s podporou open source a štandardného softvéru a aplikácií v odvetví.';
+    return 'Ak ste animátor, dizajnér, tvorca videí alebo vývojár hier, je jednoduché preniesť svoje pracovné postupy do $DISTRO s podporou open source a odvetvovo štandardného softvéru a aplikácií.';
   }
 
   @override
@@ -1003,7 +1003,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesGamingBody(String DISTRO) {
-    return '$DISTRO podporuje najnovšie ovládače NVIDIA a Mesa na zlepšenie výkonu a kompatibility. Tisíce hier z Windows skvelo fungujú na $DISTRO cez aplikácie ako Steam bez ďalšej konfigurácie.';
+    return '$DISTRO podporuje najnovšie ovládače NVIDIA a Mesa na zlepšenie výkonu a kompatibility. Tisíce titulov pre Windows skvelo fungujú na $DISTRO cez aplikácie ako Steam bez ďalšej konfigurácie.';
   }
 
   @override
@@ -1011,7 +1011,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSecurityBody(String DISTRO) {
-    return '$DISTRO poskytuje všetky nástroje, ktoré potrebujete na zachovanie súkromia a bezpečnosti online. So vstavanou podporou firewallu a VPN a množstvom aplikácií zameraných na súkromie, aby ste mali úplnú kontrolu nad svojimi údajmi.';
+    return '$DISTRO poskytuje všetky nástroje, ktoré potrebujete na zachovanie súkromia a bezpečnosti online. S vstavanou podporou firewallu a VPN a množstvom aplikácií zameraných na súkromie, aby ste mali úplnú kontrolu nad svojimi údajmi.';
   }
 
   @override
@@ -1046,12 +1046,12 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String installationSlidesSupportHeader(String DISTRO) {
-    return 'Oficiálna dokumentácia $DISTRO je dostupná online aj cez ikonu Pomocník v doku.';
+    return 'Oficiálna dokumentácia $DISTRO je dostupná online aj cez ikonu Pomoc v dokovacej lište.';
   }
 
   @override
   String get installationSlidesSupportCommunity =>
-      'Ask Ubuntu pokrýva množstvo otázok a odpovedí a Ubuntu Discourse poskytuje sprievodcov a diskusie pre nových aj skúsených používateľov.';
+      'Ask Ubuntu obsahuje množstvo otázok a odpovedí a Ubuntu Discourse poskytuje návody a diskusie pre nových aj skúsených používateľov.';
 
   @override
   String get installationSlidesSupportEnterprise =>
@@ -1104,7 +1104,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String notEnoughDiskSpaceBody(String DISTRO) {
-    return 'Vybratý disk nemá dostatok miesta na inštaláciu $DISTRO. Ukončite inštalátor pre uvoľnenie miesta alebo vyberte iný disk.';
+    return 'Vybratý disk nemá dostatok miesta na inštaláciu $DISTRO. Ukončite inštalátor na uvoľnenie miesta alebo vyberte iný disk.';
   }
 
   @override
@@ -1151,14 +1151,14 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get refreshRestart =>
-      'Zatvorte inštalátor a znova ho spustite pre pokračovanie';
+      'Zatvorte inštalátor a znova ho spustite, aby ste mohli pokračovať';
 
   @override
   String get refreshCloseLabel => 'Zatvoriť inštalátor';
 
   @override
   String refreshSnapPrerequisites(String snap) {
-    return 'Zabezpečujú sa predpoklady $snap...';
+    return 'Zabezpečujú sa požiadavky $snap...';
   }
 
   @override
@@ -1296,7 +1296,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get recoveryKeyQrDialogBody =>
-      'Naskenujte QR kód pre skopírovanie kľúča na obnovenie a jeho uloženie na bezpečné miesto, napríklad do správcu hesiel. Môžete si ho aj odfotiť pre budúce použitie.';
+      'Naskenujte QR kód na skopírovanie kľúča na obnovenie a jeho uloženie na bezpečné miesto, napríklad do správcu hesiel. Môžete si ho aj odfotiť pre budúce použitie.';
 
   @override
   String get recoveryKeyClipboardNotifiaction => 'Skopírované do schránky';
@@ -1345,7 +1345,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get landscapeDomainInstructions =>
-      'Poskytnite doménu Landscape vašej organizácie pre prihlásenie a načítanie súboru autoinstall. FQDN môžete získať od vašej IT podpory.';
+      'Poskytnite doménu Landscape vašej organizácie na prihlásenie a načítanie súboru autoinstall. FQDN môžete získať od vašej IT podpory.';
 
   @override
   String get landscapeDomainTextField => 'Doména Landscape (FQDN)';
@@ -1490,7 +1490,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindTpmDeviceDisabled =>
-      'TPM tohto počítača je zakázané.';
+      'TPM tohto počítača je deaktivované.';
 
   @override
   String get tpmActionErrorKindTpmHierarchiesOwned =>
@@ -1526,7 +1526,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindSysPrepApplicationsPresent =>
-      'Pri spustení je spustený softvér, ktorý môže zabrániť bezpečnému pripojeniu k TPM počítača.';
+      'Pri spustení beží softvér, ktorý môže zabrániť bezpečnému pripojeniu k TPM počítača.';
 
   @override
   String get tpmActionErrorKindAbsolutePresent =>
@@ -1534,7 +1534,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionErrorKindInvalidSecureBootMode =>
-      'V tomto počítači je zakázané secure boot alebo nie je nastavené v režime nasadenia.';
+      'V tomto počítači je vypnuté secure boot alebo nie je nastavené v režime nasadenia.';
 
   @override
   String get tpmActionErrorKindWeakSecureBootAlgorithmDetected =>
@@ -1608,13 +1608,13 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootToFwSettingsAbsolutePresent =>
-      'Zakázať Absolute Persistence Module manuálne';
+      'Deaktivovať Absolute Persistence Module manuálne';
 
   @override
   String get tpmActionFixActionContactOem => 'Kontaktovať OEM';
 
   @override
-  String get tpmActionFixActionContactOsVendor => 'Kontaktovať predajcu OS';
+  String get tpmActionFixActionContactOsVendor => 'Kontaktovať dodávateľa OS';
 
   @override
   String get tpmActionFixActionEnableTpmViaFirmware =>
@@ -1636,7 +1636,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionRebootDescription =>
-      'Reštartujte počítač pre dokončenie predchádzajúcich akcií.';
+      'Reštartujte počítač na dokončenie predchádzajúcich akcií.';
 
   @override
   String get tpmActionFixActionRebootTpmDeviceFailureDescription =>
@@ -1644,7 +1644,7 @@ class UbuntuBootstrapLocalizationsSk extends UbuntuBootstrapLocalizations {
 
   @override
   String get tpmActionFixActionShutdownDescription =>
-      'Vypnite počítač pre dokončenie predchádzajúcich akcií.';
+      'Vypnite počítač na dokončenie predchádzajúcich akcií.';
 
   @override
   String get tpmActionFixActionRebootToFwSettingsDescription =>
