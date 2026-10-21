@@ -78,7 +78,7 @@
     "identityHostnameTooLong": "Il nome del computer è troppo lungo.",
     "identityInvalidHostname": "Il nome del computer non è valido",
     "identityUsernameRequired": "È richiesto un username",
-    "identityInvalidUsername": "L'username non è valido: deve iniziare con un carattere minuscolo e può contenere solo lettere minuscole, numeri o trattini.",
+    "identityInvalidUsername": "L'username non è valido: deve iniziare con una lettera minuscola e può contenere solo lettere minuscole, cifre, trattini e trattini bassi.",
     "identityUsernameInUse": "Esiste già un utente con quel nome.",
     "identityUsernameSystemReserved": "Quel nome è riservato per uso interno al sistema.",
     "identityUsernameTooLong": "Quel nome è troppo lungo.",
