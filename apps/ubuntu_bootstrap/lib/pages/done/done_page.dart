@@ -12,8 +12,9 @@ class DonePage extends ConsumerStatefulWidget with ProvisioningPage {
   const DonePage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) {
-    return ref.read(doneModelProvider).init().then((_) => true);
+  Future<bool> load(BuildContext context, WidgetRef ref) async {
+    await ref.read(doneModelProvider.future);
+    return true;
   }
 
   @override
@@ -25,8 +26,10 @@ class _DonePageState extends ConsumerState<DonePage> {
 
   @override
   Widget build(BuildContext context) {
+    final model = ref.watch(doneModelProvider).value;
+    if (model == null) return const SizedBox.shrink();
+
     final lang = UbuntuBootstrapLocalizations.of(context);
-    final model = ref.watch(doneModelProvider);
     final theme = Theme.of(context);
     final mascot = ref.watch(pageImagesProvider).get('done');
     final isCoreDesktop =
@@ -107,7 +110,10 @@ class _DonePageState extends ConsumerState<DonePage> {
                           child: ElevatedButton(
                             onPressed: () async {
                               final window = YaruWindow.of(context);
-                              await model.reboot().then((_) => window.close());
+                              await ref
+                                  .read(doneModelProvider.notifier)
+                                  .reboot();
+                              await window.close();
                             },
                             child: Text(lang.restartNow),
                           ),

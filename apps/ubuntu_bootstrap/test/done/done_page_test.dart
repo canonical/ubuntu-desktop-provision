@@ -10,8 +10,9 @@ void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
 
   testWidgets('restart', (tester) async {
-    final model = buildDoneModel();
-    await tester.pumpApp((_) => buildPage(model));
+    final session = registerMockDoneServices();
+    await tester.pumpApp((_) => buildPage());
+    await tester.pump();
 
     final context = tester.element(find.byType(DonePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -23,14 +24,15 @@ void main() {
 
     await tester.tap(restartButton);
     await tester.pump();
-    verify(model.reboot()).called(1);
+    verify(session.reboot()).called(1);
 
     await expectLater(windowClosed, completes);
   });
 
   testWidgets('continue testing', (tester) async {
-    final model = buildDoneModel();
-    await tester.pumpApp((_) => buildPage(model));
+    final session = registerMockDoneServices();
+    await tester.pumpApp((_) => buildPage());
+    await tester.pump();
 
     final context = tester.element(find.byType(DonePage));
     final l10n = UbuntuBootstrapLocalizations.of(context);
@@ -42,7 +44,7 @@ void main() {
 
     await tester.tap(continueButton);
     await tester.pump();
-    verifyNever(model.reboot());
+    verifyNever(session.reboot());
 
     await expectLater(windowClosed, completes);
   });
