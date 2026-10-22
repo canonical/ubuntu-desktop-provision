@@ -9,7 +9,7 @@ typedef CanSelectStorage = bool Function(int disk, [int object]);
 typedef IsStorageSelected = bool Function(int disk, [int object]);
 typedef OnStorageSelected = void Function(int disk, [int object]);
 
-class StorageTable extends StatelessWidget {
+class StorageTable extends StatefulWidget {
   const StorageTable({
     required this.storages,
     required this.columns,
@@ -34,12 +34,19 @@ class StorageTable extends StatelessWidget {
   /// Called when the user selects a storage device.
   final OnStorageSelected? onSelected;
 
+  @override
+  State<StorageTable> createState() => _StorageTableState();
+}
+
+class _StorageTableState extends State<StorageTable> {
+  final _horizontalController = ScrollController();
+
   Widget _autoScrollTag({
     required Widget child,
     required int disk,
     int object = -1,
   }) {
-    if (controller == null) {
+    if (widget.controller == null) {
       return child;
     }
 
@@ -47,21 +54,21 @@ class StorageTable extends StatelessWidget {
     return AutoScrollTag(
       key: ValueKey(index),
       index: index,
-      controller: controller!,
+      controller: widget.controller!,
       child: child,
     );
   }
 
   List<DataRow> _buildDataRows(BuildContext context, {required int diskIndex}) {
-    final disk = storages[diskIndex];
+    final disk = widget.storages[diskIndex];
     return <DataRow>[
       DataRow.byIndex(
         index: diskIndex,
-        selected: isSelected?.call(diskIndex) ?? false,
-        onSelectChanged: canSelect?.call(diskIndex) ?? false
+        selected: widget.isSelected?.call(diskIndex) ?? false,
+        onSelectChanged: widget.canSelect?.call(diskIndex) ?? false
             ? (selected) {
                 if (selected ?? false) {
-                  onSelected?.call(diskIndex);
+                  widget.onSelected?.call(diskIndex);
                 }
               }
             : null,
@@ -71,11 +78,11 @@ class StorageTable extends StatelessWidget {
               height: kMinInteractiveDimension,
               child: _autoScrollTag(
                 disk: diskIndex,
-                child: columns.first.diskBuilder(context, disk),
+                child: widget.columns.first.diskBuilder(context, disk),
               ),
             ),
           ),
-          for (final column in columns.skip(1))
+          for (final column in widget.columns.skip(1))
             DataCell(column.diskBuilder(context, disk)),
         ],
       ),
@@ -84,14 +91,15 @@ class StorageTable extends StatelessWidget {
           ++objectIndex)
         DataRow(
           key: ValueKey(Object.hashAll([diskIndex, objectIndex])),
-          selected: isSelected?.call(diskIndex, objectIndex) ?? false,
-          onSelectChanged: (canSelect?.call(diskIndex, objectIndex) ?? false)
-              ? (selected) {
-                  if (selected ?? false) {
-                    onSelected?.call(diskIndex, objectIndex);
-                  }
-                }
-              : null,
+          selected: widget.isSelected?.call(diskIndex, objectIndex) ?? false,
+          onSelectChanged:
+              (widget.canSelect?.call(diskIndex, objectIndex) ?? false)
+                  ? (selected) {
+                      if (selected ?? false) {
+                        widget.onSelected?.call(diskIndex, objectIndex);
+                      }
+                    }
+                  : null,
           cells: <DataCell>[
             DataCell(
               SizedBox(
@@ -102,12 +110,12 @@ class StorageTable extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 40),
                     child: disk.partitions[objectIndex] is Partition
-                        ? columns.first.partitionBuilder(
+                        ? widget.columns.first.partitionBuilder(
                             context,
                             disk,
                             disk.partitions[objectIndex] as Partition,
                           )
-                        : columns.first.gapBuilder(
+                        : widget.columns.first.gapBuilder(
                             context,
                             disk,
                             disk.partitions[objectIndex] as Gap,
@@ -116,7 +124,7 @@ class StorageTable extends StatelessWidget {
                 ),
               ),
             ),
-            for (final column in columns.skip(1))
+            for (final column in widget.columns.skip(1))
               DataCell(
                 disk.partitions[objectIndex] is Partition
                     ? column.partitionBuilder(
@@ -146,32 +154,36 @@ class StorageTable extends StatelessWidget {
               theme.visualDensity.baseSizeAdjustment.dy;
           return OverrideMouseCursor(
             cursor: SystemMouseCursors.basic,
-            child: OverflowBox(
-              maxWidth: double.infinity,
-              alignment: Alignment.topLeft,
-              child: ConstrainedBox(
-                constraints: BoxConstraints(minWidth: constraints.minWidth),
-                child: SingleChildScrollView(
-                  controller: controller,
-                  child: DataTable(
-                    dataRowMinHeight: rowHeight,
-                    dataRowMaxHeight: rowHeight,
-                    headingRowHeight: rowHeight,
-                    showCheckboxColumn: false,
-                    headingTextStyle: theme.textTheme.titleSmall,
-                    dataTextStyle: theme.textTheme.bodyMedium,
-                    columns: columns
-                        .map(
-                          (column) =>
-                              DataColumn(label: column.titleBuilder(context)),
-                        )
-                        .toList(),
-                    rows: List.generate(storages.length, (index) {
-                      return _buildDataRows(context, diskIndex: index);
-                    }).fold<List<DataRow>>([], (allRows, diskRows) {
-                      allRows.addAll(diskRows);
-                      return allRows;
-                    }).toList(),
+            child: Scrollbar(
+              controller: _horizontalController,
+              thumbVisibility: true,
+              child: SingleChildScrollView(
+                controller: _horizontalController,
+                scrollDirection: Axis.horizontal,
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minWidth: constraints.minWidth),
+                  child: SingleChildScrollView(
+                    controller: widget.controller,
+                    child: DataTable(
+                      dataRowMinHeight: rowHeight,
+                      dataRowMaxHeight: rowHeight,
+                      headingRowHeight: rowHeight,
+                      showCheckboxColumn: false,
+                      headingTextStyle: theme.textTheme.titleSmall,
+                      dataTextStyle: theme.textTheme.bodyMedium,
+                      columns: widget.columns
+                          .map(
+                            (column) =>
+                                DataColumn(label: column.titleBuilder(context)),
+                          )
+                          .toList(),
+                      rows: List.generate(widget.storages.length, (index) {
+                        return _buildDataRows(context, diskIndex: index);
+                      }).fold<List<DataRow>>([], (allRows, diskRows) {
+                        allRows.addAll(diskRows);
+                        return allRows;
+                      }).toList(),
+                    ),
                   ),
                 ),
               ),
@@ -180,5 +192,11 @@ class StorageTable extends StatelessWidget {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _horizontalController.dispose();
+    super.dispose();
   }
 }
