@@ -5,13 +5,99 @@ import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:html/parser.dart' show parse;
 import 'package:mockito/mockito.dart';
+import 'package:ubuntu_bootstrap/pages/install/bottom_bar.dart';
+import 'package:ubuntu_bootstrap/pages/install/slide_view.dart';
 import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+import 'package:yaru/yaru.dart';
 
 import '../test_utils.dart';
+
+String _loadSlideHtml(int index) {
+  final document = parse(
+    File('assets/slides/$index/slide_en_US.html').readAsStringSync(),
+  );
+  for (final image in document.getElementsByTagName('img')) {
+    final src = image.attributes['src'];
+    if (src == null) continue;
+
+    final imagePath = src.startsWith('../icons/')
+        ? 'assets/slides/icons/${src.substring('../icons/'.length)}'
+        : 'assets/slides/$index/$src';
+    final bytes = File(imagePath).readAsBytesSync();
+    final extension = src.split('.').last;
+    final mimeType = extension == 'svg' ? 'svg+xml' : extension;
+    image.attributes['src'] =
+        'data:image/$mimeType;base64,${base64Encode(bytes)}';
+  }
+  return document.outerHtml.replaceAll('{{ DISTRO }}', 'Ubuntu');
+}
+
+Widget _installerPage(String html, ValueNotifier<int> controller) {
+  return WizardPage(
+    headerPadding: EdgeInsets.zero,
+    contentPadding: EdgeInsets.zero,
+    title: const YaruWindowTitleBar(
+      title: Text('Ubuntu 26.10'),
+    ),
+    content: SlideView(
+      controller: controller,
+      interval: Duration.zero,
+      slides: [SlideHtml(html)],
+    ),
+    bottomBar: const BottomBar(
+      title: Text('Copying files'),
+      subtitle: LinearProgressIndicator(value: 0),
+      leading: Row(
+        children: [
+          IconButton(onPressed: null, icon: Icon(Icons.chevron_left)),
+          SizedBox(width: 10),
+          IconButton(onPressed: null, icon: Icon(Icons.pause)),
+          SizedBox(width: 10),
+          IconButton(onPressed: null, icon: Icon(Icons.chevron_right)),
+        ],
+      ),
+      trailing: IconButton(onPressed: null, icon: Icon(Icons.terminal)),
+    ),
+  );
+}
+
+Future<Rect> _pumpInstallerSlide(
+  WidgetTester tester,
+  int index,
+  Size windowSize,
+) async {
+  final controller = ValueNotifier(0);
+  addTearDown(controller.dispose);
+  await tester
+      .pumpApp((_) => _installerPage(_loadSlideHtml(index), controller));
+
+  tester.view.physicalSize = windowSize;
+  tester.view.devicePixelRatio = 1;
+  addTearDown(tester.view.reset);
+  await tester.pumpAndSettle();
+
+  final images = tester.widgetList<Image>(
+    find.descendant(
+      of: find.byType(SlideView),
+      matching: find.byType(Image),
+    ),
+  );
+  await tester.runAsync(() async {
+    for (final image in images) {
+      await precacheImage(image.image, tester.element(find.byWidget(image)));
+    }
+  });
+  await tester.pumpAndSettle();
+
+  expect(tester.view.physicalSize, windowSize);
+  return tester.getRect(find.byType(SlideView));
+}
 
 void main() {
   testWidgets('can open links', (tester) async {
@@ -122,6 +208,199 @@ void main() {
     handle.dispose();
   });
 
+  const layoutSlides = <({int index, String title, String body})>[
+    (
+      index: 1,
+      title: 'Fast, free and full of new features',
+      body: 'The latest version makes computing easier than ever.',
+    ),
+    (
+      index: 2,
+      title: 'All the applications you need',
+      body: 'Install, manage and update all your apps',
+    ),
+    (
+      index: 3,
+      title: 'Develop with the best of open source',
+      body: 'Ubuntu is the ideal workstation for app or web development',
+    ),
+    (
+      index: 4,
+      title: 'Enhance your creativity',
+      body: "If you're an animator, designer",
+    ),
+    (
+      index: 5,
+      title: 'Great for gaming',
+      body: 'Ubuntu supports the latest NVIDIA and Mesa drivers',
+    ),
+    (
+      index: 6,
+      title: 'Private and secure',
+      body: 'Ubuntu provides all of the tools you need to stay private',
+    ),
+    (
+      index: 7,
+      title: 'Power up your productivity',
+      body: 'Ubuntu Desktop includes LibreOffice',
+    ),
+    (
+      index: 8,
+      title: 'Access for everyone',
+      body: 'At the heart of the Ubuntu philosophy is the belief',
+    ),
+    (
+      index: 9,
+      title: 'Help and support',
+      body: 'The official Ubuntu documentation is available',
+    ),
+  ];
+
+  for (final slide in layoutSlides) {
+    testWidgets('slide ${slide.index} fits the installer at 1280x720',
+        (tester) async {
+      final viewport = await _pumpInstallerSlide(
+        tester,
+        slide.index,
+        const Size(1280, 720),
+      );
+      expect(tester.takeException(), isNull);
+
+      final contentFinder = find.descendant(
+        of: find.byType(SlideView),
+        matching: find.byType(Text),
+      );
+      final content = tester.widgetList<Text>(contentFinder);
+      expect(content, isNotEmpty, reason: 'slide ${slide.index} has no text');
+      for (final text in content) {
+        final label = text.data ?? text.textSpan?.toPlainText() ?? '';
+        if (label.replaceAll('\uFFFC', '').trim().isEmpty) continue;
+        final rect = tester.getRect(find.byWidget(text));
+        expect(
+          rect.left,
+          greaterThanOrEqualTo(viewport.left - 2),
+          reason: '"$label" starts left of the slide viewport',
+        );
+        expect(
+          rect.right,
+          lessThanOrEqualTo(viewport.right + 2),
+          reason: '"$label" extends right of the slide viewport',
+        );
+        expect(
+          rect.top,
+          greaterThanOrEqualTo(viewport.top - 2),
+          reason: '"$label" starts above the slide viewport',
+        );
+        expect(
+          rect.bottom,
+          lessThanOrEqualTo(viewport.bottom + 2),
+          reason: '"$label" extends below the slide viewport',
+        );
+      }
+
+      for (final image in [
+        ...find
+            .descendant(
+              of: find.byType(SlideView),
+              matching: find.byType(SvgPicture),
+            )
+            .evaluate(),
+        ...find
+            .descendant(
+              of: find.byType(SlideView),
+              matching: find.byType(Image),
+            )
+            .evaluate(),
+      ]) {
+        final rect = tester.getRect(find.byWidget(image.widget));
+        expect(
+          rect.left,
+          greaterThanOrEqualTo(viewport.left - 2),
+          reason: 'slide ${slide.index} image extends left of the viewport',
+        );
+        expect(
+          rect.right,
+          lessThanOrEqualTo(viewport.right + 2),
+          reason: 'slide ${slide.index} image extends right of the viewport',
+        );
+        expect(
+          rect.top,
+          greaterThanOrEqualTo(viewport.top - 2),
+          reason: 'slide ${slide.index} image extends above the viewport',
+        );
+        expect(
+          rect.bottom,
+          lessThanOrEqualTo(viewport.bottom + 2),
+          reason: 'slide ${slide.index} image extends below the viewport',
+        );
+      }
+
+      final title = tester.getRect(find.text(slide.title));
+      final body = tester.getRect(find.textContaining(slide.body));
+      expect(title.overlaps(body), isFalse);
+      if (const [3, 4, 6, 8, 9].contains(slide.index)) {
+        expect(
+          title.top - viewport.top,
+          lessThanOrEqualTo(slide.index == 9 ? 80 : 50),
+          reason: 'slide ${slide.index} has excessive blank space above title',
+        );
+      }
+      if (slide.index == 8) {
+        expect(find.text('LibreOffice Writer'), findsOneWidget);
+        expect(
+          tester.getRect(find.text('LibreOffice Writer')).bottom,
+          lessThanOrEqualTo(viewport.bottom),
+        );
+      }
+      if (slide.index == 9) {
+        expect(find.text('Ask Ubuntu'), findsOneWidget);
+        expect(
+          tester.getRect(find.text('Ask Ubuntu')).bottom,
+          lessThanOrEqualTo(viewport.bottom),
+        );
+        expect(
+          body.right,
+          lessThanOrEqualTo(
+            tester.getRect(find.text('Official documentation')).left,
+          ),
+          reason: 'slide 9 body text overlaps the links column',
+        );
+      }
+    });
+  }
+
+  for (final slide in const [
+    (index: 1, title: 'Fast, free and full of new features'),
+    (index: 9, title: 'Help and support'),
+  ]) {
+    testWidgets('slide ${slide.index} fits the installer at 1280x720',
+        (tester) async {
+      final viewport = await _pumpInstallerSlide(
+        tester,
+        slide.index,
+        const Size(1280, 720),
+      );
+      expect(tester.takeException(), isNull);
+
+      for (final text in tester.widgetList<Text>(
+        find.descendant(
+          of: find.byType(SlideView),
+          matching: find.byType(Text),
+        ),
+      )) {
+        final label = text.data ?? text.textSpan?.toPlainText() ?? '';
+        if (label.replaceAll('\uFFFC', '').trim().isEmpty) continue;
+        expect(
+          tester.getRect(find.byWidget(text)).bottom,
+          lessThanOrEqualTo(viewport.bottom),
+          reason: '"$label" extends below the slide viewport',
+        );
+      }
+
+      expect(find.text(slide.title), findsOneWidget);
+    });
+  }
+
   testWidgets('bulleted links each render on their own line, left-aligned',
       (tester) async {
     final urlLauncher = MockUrlLauncher();
@@ -131,34 +410,14 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
 
-    // Render the real slide 9 (the only slide with a bulleted link column),
-    // inlining its logo as a data URI the way the slides provider does.
-    final raw = File('assets/slides/9/slide_en_US.html').readAsStringSync();
-    final svg = base64Encode(
-      File('assets/slides/9/ubuntu_discourse.svg').readAsBytesSync(),
-    );
-    final html = parse(
-      raw.replaceAll(
-        'src="ubuntu_discourse.svg"',
-        'src="data:image/svg+xml;base64,$svg"',
-      ),
-    ).outerHtml;
-
     await tester.pumpApp(
       (context) => ProviderScope(
-        child: Scaffold(body: SlideHtml(html)),
+        child: Scaffold(body: SlideHtml(_loadSlideHtml(9))),
       ),
     );
     await tester.pumpAndSettle();
 
-    // Slide 9 declares a fixed table height that is shorter than its content,
-    // so rendering it outside its usual SlideView surface paints an overflow
-    // warning. It still lays out correctly, so consume the harness-only error.
-    dynamic exception = tester.takeException();
-    while (exception != null) {
-      expect(exception, isA<FlutterError>());
-      exception = tester.takeException();
-    }
+    expect(tester.takeException(), isNull);
 
     const labels = [
       'Official documentation',
