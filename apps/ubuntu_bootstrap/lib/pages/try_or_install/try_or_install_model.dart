@@ -1,17 +1,9 @@
-import 'package:flutter_riverpod/legacy.dart';
-import 'package:safe_change_notifier/safe_change_notifier.dart';
-import 'package:ubuntu_bootstrap/services.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:ubuntu_logger/ubuntu_logger.dart';
-import 'package:ubuntu_provision/services.dart';
-import 'package:ubuntu_utils/ubuntu_utils.dart';
+
+part 'try_or_install_model.g.dart';
 
 final _log = Logger('try_or_install');
-
-final tryOrInstallModelProvider = ChangeNotifierProvider(
-  (_) => TryOrInstallModel(
-    network: getService<NetworkService>(),
-  ),
-);
 
 /// The available options on the Try or Install page.
 enum TryOrInstallOption {
@@ -23,35 +15,17 @@ enum TryOrInstallOption {
 }
 
 /// Implements the business logic of the try_or_install page.
-class TryOrInstallModel extends SafeChangeNotifier with PropertyStreamNotifier {
-  /// Creates the model with the given client.
-  TryOrInstallModel({
-    required NetworkService network,
-  }) : _network = network {
-    addPropertyListener('Connectivity', notifyListeners);
-  }
-
-  final NetworkService _network;
-
-  Future<void> init() {
-    return _network
-        .connect()
-        .then((_) => setProperties(_network.propertiesChanged))
-        .then((_) => notifyListeners());
-  }
-
-  /// The currently selected option.
-  TryOrInstallOption get option => _option;
-  TryOrInstallOption _option = TryOrInstallOption.installUbuntu;
+///
+/// The state is the currently selected option.
+@Riverpod(keepAlive: true)
+class TryOrInstallModel extends _$TryOrInstallModel {
+  @override
+  TryOrInstallOption build() => TryOrInstallOption.installUbuntu;
 
   /// Selects the given [option].
   void selectOption(TryOrInstallOption option) {
-    if (_option == option) return;
-    _option = option;
+    if (state == option) return;
+    state = option;
     _log.info('Selected ${option.name} option');
-    notifyListeners();
   }
-
-  /// Returns true if there is a network connection.
-  bool get isConnected => _network.isConnected;
 }
