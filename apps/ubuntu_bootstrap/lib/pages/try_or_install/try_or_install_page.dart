@@ -13,13 +13,9 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
   const TryOrInstallPage({super.key});
 
   @override
-  Future<bool> load(BuildContext context, WidgetRef ref) {
-    return ref.read(tryOrInstallModelProvider).init().then((_) => true);
-  }
-
-  @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final model = ref.watch(tryOrInstallModelProvider);
+    final option = ref.watch(tryOrInstallModelProvider);
+    final model = ref.read(tryOrInstallModelProvider.notifier);
     final lang = UbuntuBootstrapLocalizations.of(context);
     final flavor = ref.watch(flavorProvider);
 
@@ -30,17 +26,17 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
         leading: const BackWizardButton(),
         trailing: [
           WizardButton(
-            label: switch (model.option) {
+            label: switch (option) {
               TryOrInstallOption.installUbuntu =>
                 UbuntuLocalizations.of(context).nextLabel,
               TryOrInstallOption.tryUbuntu =>
                 UbuntuLocalizations.of(context).closeLabel,
             },
-            execute: switch (model.option) {
+            execute: switch (option) {
               TryOrInstallOption.installUbuntu => Wizard.of(context).next,
               TryOrInstallOption.tryUbuntu => YaruWindow.of(context).close,
             },
-            highlighted: model.option == TryOrInstallOption.tryUbuntu,
+            highlighted: option == TryOrInstallOption.tryUbuntu,
           ),
         ],
       ),
@@ -50,7 +46,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
       children: [
         OptionButton(
           value: TryOrInstallOption.installUbuntu,
-          groupValue: model.option,
+          groupValue: option,
           title: Text(lang.installOption(flavor.displayName)),
           subtitle: Text(lang.installDescription(flavor.displayName)),
           onChanged: (value) => model.selectOption(value!),
@@ -58,7 +54,7 @@ class TryOrInstallPage extends ConsumerWidget with ProvisioningPage {
         const SizedBox(height: kWizardSpacing / 2),
         OptionButton(
           value: TryOrInstallOption.tryUbuntu,
-          groupValue: model.option,
+          groupValue: option,
           title: Text(lang.tryOption(flavor.displayName)),
           subtitle: Text(lang.tryDescription(flavor.displayName)),
           onChanged: (value) => model.selectOption(value!),
