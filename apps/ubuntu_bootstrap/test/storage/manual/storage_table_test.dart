@@ -209,4 +209,38 @@ void main() {
 
     expect(find.text('Ubuntu 18.04'), findsOneWidget);
   });
+
+  testWidgets('scrolls horizontally when wider than the viewport',
+      (tester) async {
+    tester.view.physicalSize = const Size(300, 600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    final wideColumn = StorageColumn(
+      titleBuilder: (_) => const Text('wide'),
+      diskBuilder: (_, __) => const SizedBox(width: 1000),
+      gapBuilder: (_, __, ___) => const SizedBox(width: 1000),
+      partitionBuilder: (_, __, ___) => const SizedBox(width: 1000),
+    );
+
+    await tester.pumpWidget(buildTable([pathColumn, wideColumn]));
+
+    final horizontal = find.byWidgetPredicate(
+      (w) => w is SingleChildScrollView && w.scrollDirection == Axis.horizontal,
+    );
+    expect(horizontal, findsOneWidget);
+
+    final position = tester
+        .state<ScrollableState>(
+          find
+              .descendant(of: horizontal, matching: find.byType(Scrollable))
+              .first,
+        )
+        .position;
+    expect(position.maxScrollExtent, greaterThan(0));
+
+    await tester.drag(horizontal, const Offset(-200, 0));
+    await tester.pump();
+    expect(position.pixels, greaterThan(0));
+  });
 }
