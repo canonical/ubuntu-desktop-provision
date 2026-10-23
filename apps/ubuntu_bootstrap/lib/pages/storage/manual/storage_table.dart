@@ -154,35 +154,40 @@ class _StorageTableState extends State<StorageTable> {
               theme.visualDensity.baseSizeAdjustment.dy;
           return OverrideMouseCursor(
             cursor: SystemMouseCursors.basic,
-            child: Scrollbar(
-              controller: _horizontalController,
-              thumbVisibility: true,
-              child: SingleChildScrollView(
+            // Fill the box; OverrideMouseCursor's Stack loosens constraints.
+            child: SizedBox.fromSize(
+              size: constraints.biggest,
+              child: Scrollbar(
                 controller: _horizontalController,
-                scrollDirection: Axis.horizontal,
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minWidth: constraints.minWidth),
-                  child: SingleChildScrollView(
-                    controller: widget.controller,
-                    child: DataTable(
-                      dataRowMinHeight: rowHeight,
-                      dataRowMaxHeight: rowHeight,
-                      headingRowHeight: rowHeight,
-                      showCheckboxColumn: false,
-                      headingTextStyle: theme.textTheme.titleSmall,
-                      dataTextStyle: theme.textTheme.bodyMedium,
-                      columns: widget.columns
-                          .map(
-                            (column) =>
-                                DataColumn(label: column.titleBuilder(context)),
-                          )
-                          .toList(),
-                      rows: List.generate(widget.storages.length, (index) {
-                        return _buildDataRows(context, diskIndex: index);
-                      }).fold<List<DataRow>>([], (allRows, diskRows) {
-                        allRows.addAll(diskRows);
-                        return allRows;
-                      }).toList(),
+                thumbVisibility: true,
+                child: SingleChildScrollView(
+                  controller: _horizontalController,
+                  scrollDirection: Axis.horizontal,
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(minWidth: constraints.minWidth),
+                    child: SingleChildScrollView(
+                      controller: widget.controller,
+                      child: DataTable(
+                        dataRowMinHeight: rowHeight,
+                        dataRowMaxHeight: rowHeight,
+                        headingRowHeight: rowHeight,
+                        showCheckboxColumn: false,
+                        headingTextStyle: theme.textTheme.titleSmall,
+                        dataTextStyle: theme.textTheme.bodyMedium,
+                        columns: widget.columns
+                            .map(
+                              (column) => DataColumn(
+                                label: column.titleBuilder(context),
+                              ),
+                            )
+                            .toList(),
+                        rows: List.generate(widget.storages.length, (index) {
+                          return _buildDataRows(context, diskIndex: index);
+                        }).fold<List<DataRow>>([], (allRows, diskRows) {
+                          allRows.addAll(diskRows);
+                          return allRows;
+                        }).toList(),
+                      ),
                     ),
                   ),
                 ),
