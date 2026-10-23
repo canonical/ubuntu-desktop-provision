@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:yaru/yaru.dart';
 
@@ -7,6 +8,7 @@ class ThemedListTile extends StatefulWidget {
     required this.title,
     super.key,
     this.onTap,
+    this.onDoubleTap,
     this.leading,
     this.trailing,
   });
@@ -18,6 +20,10 @@ class ThemedListTile extends StatefulWidget {
   final Widget? trailing;
   final void Function()? onTap;
 
+  /// Called when the tile is double-clicked. The first click of a double-click
+  /// still triggers [onTap] immediately, so single clicks are not delayed.
+  final void Function()? onDoubleTap;
+
   @override
   State<ThemedListTile> createState() => _ThemedListTileState();
 }
@@ -25,11 +31,20 @@ class ThemedListTile extends StatefulWidget {
 class _ThemedListTileState extends State<ThemedListTile> {
   bool _focused = false;
 
+  void _handleSerialTapUp(SerialTapUpDetails details) {
+    switch (details.count) {
+      case 1:
+        widget.onTap?.call();
+      case 2:
+        widget.onDoubleTap?.call();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return AnimatedContainer(
+    final tile = AnimatedContainer(
       duration: kThemeAnimationDuration,
       foregroundDecoration: BoxDecoration(
         border: Border.all(
@@ -56,6 +71,24 @@ class _ThemedListTileState extends State<ThemedListTile> {
         selectedTileColor: Colors.transparent,
         shape: Border(),
       ),
+    );
+
+    if (widget.onDoubleTap == null) return tile;
+
+    // SerialTapGestureRecognizer reports every click of a series with its
+    // count, so the first click selects without waiting for a possible second
+    // click, and the second one activates. It wins the gesture arena over the
+    // ListTile's own tap recognizer, so onTap is not called twice. Keyboard
+    // activation still goes through ListTile.onTap.
+    return RawGestureDetector(
+      gestures: {
+        SerialTapGestureRecognizer:
+            GestureRecognizerFactoryWithHandlers<SerialTapGestureRecognizer>(
+          SerialTapGestureRecognizer.new,
+          (recognizer) => recognizer.onSerialTapUp = _handleSerialTapUp,
+        ),
+      },
+      child: tile,
     );
   }
 }

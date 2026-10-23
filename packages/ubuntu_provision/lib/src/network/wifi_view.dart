@@ -51,6 +51,7 @@ class WifiView extends ConsumerStatefulWidget {
     required this.expanded,
     required this.onEnabled,
     required this.onSelected,
+    this.onActivated,
     this.tabFocusNode,
     super.key,
   });
@@ -58,6 +59,9 @@ class WifiView extends ConsumerStatefulWidget {
   final bool expanded;
   final VoidCallback onEnabled;
   final OnWifiSelected onSelected;
+
+  /// Called when an access point is double-clicked, after it was selected.
+  final OnWifiSelected? onActivated;
   final FocusNode? tabFocusNode;
 
   @override
@@ -106,6 +110,7 @@ class _WifiViewState extends ConsumerState<WifiView> {
         padding: kWizardIndentation,
         child: WifiListView(
           onSelected: widget.onSelected,
+          onActivated: widget.onActivated,
           tabFocusNode: widget.tabFocusNode,
         ),
       ),
@@ -120,11 +125,13 @@ final wifiDeviceProvider = Provider.family<WifiDevice, int>(
 class WifiListView extends ConsumerWidget {
   const WifiListView({
     required this.onSelected,
+    this.onActivated,
     this.tabFocusNode,
     super.key,
   });
 
   final OnWifiSelected onSelected;
+  final OnWifiSelected? onActivated;
   final FocusNode? tabFocusNode;
 
   @override
@@ -154,6 +161,7 @@ class WifiListView extends ConsumerWidget {
                     model.selectDevice(device);
                     onSelected(device, accessPoint);
                   },
+                  onActivated: onActivated,
                 );
               },
             ),
@@ -169,12 +177,14 @@ class WifiListTile extends ConsumerWidget {
     required this.selected,
     required this.onSelected,
     required this.deviceIndex,
+    this.onActivated,
     this.showDevice = true,
     super.key,
   });
 
   final bool selected;
   final OnWifiSelected onSelected;
+  final OnWifiSelected? onActivated;
   final bool showDevice;
   final int deviceIndex;
 
@@ -231,6 +241,9 @@ class WifiListTile extends ConsumerWidget {
             device.selectAccessPoint(accessPoint);
             onSelected(device, accessPoint);
           },
+          onDoubleTap: onActivated != null
+              ? () => onActivated!(device, accessPoint)
+              : null,
         ),
     ];
 

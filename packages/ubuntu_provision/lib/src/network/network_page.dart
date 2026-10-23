@@ -82,6 +82,9 @@ class NetworkPage extends ConsumerWidget with ProvisioningPage {
           expanded: model.connectMode == ConnectMode.wifi,
           onEnabled: () => model.selectConnectMode(ConnectMode.wifi),
           onSelected: (_, __) => model.selectConnectMode(ConnectMode.wifi),
+          onActivated: (_, __) {
+            if (model.canConnect && !model.isConnecting) model.connect();
+          },
           tabFocusNode: ref.watch(_nextFocusNodeProvider),
         ),
         HiddenWifiRadioButton(

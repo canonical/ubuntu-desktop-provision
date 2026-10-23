@@ -110,6 +110,30 @@ void main() {
     verify(wifi.connect());
   });
 
+  test('does not start another connect while one is pending', () async {
+    final model = NetworkModel(MockNetworkService());
+
+    final wifi = MockConnectModel();
+    when(wifi.connectMode).thenReturn(ConnectMode.wifi);
+    when(wifi.onAvailabilityChanged).thenAnswer((_) => const Stream.empty());
+    model.addConnectMode(wifi);
+    model.selectConnectMode(ConnectMode.wifi);
+
+    final completer = Completer<void>();
+    when(wifi.connect()).thenAnswer((_) => completer.future);
+
+    final first = model.connect();
+    final second = model.connect();
+    verify(wifi.connect()).called(1);
+
+    completer.complete();
+    await Future.wait([first, second]);
+
+    when(wifi.connect()).thenAnswer((_) async {});
+    await model.connect();
+    verify(wifi.connect()).called(1);
+  });
+
   test('preferred mode', () {
     final ethernet = MockConnectModel();
     when(ethernet.isEnabled).thenReturn(true);
