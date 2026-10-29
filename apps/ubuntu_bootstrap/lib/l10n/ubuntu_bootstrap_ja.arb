@@ -74,7 +74,7 @@
     "installationTypeErase": "ディスクを削除して {DISTRO} をインストールする",
     "installationTypeEncrypt": "セキュリティのためディスクを暗号化し、 {RELEASE} をインストールする",
     "installationTypeAlongsideInfo": "{product}をインストールするため、サイズ変更と余白作成を実施するパーティションを選択してください。コンピュータを起動する際に、どのOSで起動するか選択できます。",
-    "installationTypeManualInfo": "自分で {DISTRO} をインストールするパーティションの作成やサイズ変更を行ったり、インストールに複数のパーティションを選択することもできます。",
+    "installationTypeManualInfo": "ディスク構成をカスタマイズしたい上級ユーザー向け。",
     "selectGuidedStoragePageTitle": "ディスクを削除して {DISTRO} をインストール",
     "partitionTypeLogical": "論理パーティション",
     "installationTypeAdvancedTitle": "暗号化とファイルシステム",
@@ -83,7 +83,7 @@
     "installationTypeOSDetected": "コンピューターには {os} がインストールされています。インストール方法を選択してください。",
     "installationTypeNoOSDetected": "コンピューターにインストールされた OS は見つかりませんでした。インストール方法を選択してください。",
     "installationTypeAdvancedLabel": "高度なオプション",
-    "installationTypeManual": "手動パーティショニング",
+    "installationTypeManual": "手動インストール",
     "selectGuidedStorageInfoLabel": "ディスク全体が使用されます。",
     "selectGuidedStorageInstallNow": "インストール",
     "allocateDiskSpace": "手動パーティショニング",
@@ -109,7 +109,7 @@
     "configuringSystem": "システムを設定しています…",
     "quitButtonText": "インストールを終了",
     "installAlongsideResizePartition": "パーティションのサイズを変更する",
-    "installAlongsideHiddenPartitions": "{num}の小さなパーティションは非表示になっています、<a href=\"{url}\">高度なパーティションツール</a>で更に多くの機能を使ってください",
+    "installAlongsideHiddenPartitions": "{num}つの小さなパーティションが非表示になっています、<a href=\"{url}\">高度なパーティションツール</a>で更に多くの機能を使ってください",
     "installationTypeAlongsideUnknown": "{product}を他のパーティションと共存してインストールする",
     "showSecurityKey": "表示",
     "installDriversSubtitle": "NVIDIAドライバーなどを含みますが、それに限定しません",
@@ -452,7 +452,7 @@
     "recoveryKeyExceptionDisallowedPathBody": "USBメモリーなど別の場所に保存するか、他の方法にしてください。",
     "recoveryKeyFilePickerTitle": "リカバリーキーファイルの保存",
     "recoveryKeyFilePickerFilter": "テキストファイル",
-    "landscapeMagicAttachInstructions": "QRコードをスキャンするか、 <a href=\"https://{url}\"> にあるコードを入力してください",
+    "landscapeMagicAttachInstructions": "QRコードをスキャンするか、 <a href=\"https://{url}\">{url}</a> にあるコードを入力してください",
     "@landscapeMagicAttachInstructions": {
         "placeholders": {
             "url": {
