@@ -1,6 +1,4 @@
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_page.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:yaru_test/yaru_test.dart';
@@ -10,39 +8,35 @@ import 'test_try_or_install.dart';
 void main() {
   setUpAll(YaruTestWindow.ensureInitialized);
 
-  testWidgets('offline', (tester) async {
-    final model = buildTryOrInstallModel(isConnected: false);
-    await tester.pumpApp((_) => buildTryOrInstallPage(model));
-
-    expect(find.byType(Html).hitTestable(), findsNothing);
-  });
-
   testWidgets('select option', (tester) async {
-    final model = buildTryOrInstallModel();
-    await tester.pumpApp((_) => buildTryOrInstallPage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage());
 
     expect(find.button(find.nextLabel), findsOneWidget);
-
-    await tester.tap(find.radio(TryOrInstallOption.installUbuntu));
-    verify(model.selectOption(TryOrInstallOption.installUbuntu)).called(1);
+    expect(find.button(find.closeLabel), findsNothing);
 
     await tester.tap(find.radio(TryOrInstallOption.tryUbuntu));
-    verify(model.selectOption(TryOrInstallOption.tryUbuntu)).called(1);
+    await tester.pump();
+    expect(find.button(find.nextLabel), findsNothing);
+    expect(find.button(find.closeLabel), findsOneWidget);
+
+    await tester.tap(find.radio(TryOrInstallOption.installUbuntu));
+    await tester.pump();
+    expect(find.button(find.nextLabel), findsOneWidget);
+    expect(find.button(find.closeLabel), findsNothing);
   });
 
   testWidgets('install ubuntu', (tester) async {
-    final model =
-        buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
-    await tester.pumpApp((_) => buildTryOrInstallPage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage());
 
     expect(find.button(find.nextLabel), isEnabled);
   });
 
   testWidgets('try ubuntu', (tester) async {
-    final model = buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
-    await tester.pumpApp((_) => buildTryOrInstallPage(model));
+    await tester.pumpApp((_) => buildTryOrInstallPage());
 
-    expect(find.button(find.nextLabel), isEnabled);
+    await tester.tap(find.radio(TryOrInstallOption.tryUbuntu));
+    await tester.pump();
+    expect(find.button(find.closeLabel), isEnabled);
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
