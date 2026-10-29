@@ -264,7 +264,7 @@
     "refreshHeader": "安裝程式有可用更新",
     "refreshUpdateNow": "現在進行更新",
     "validate": "驗證",
-    "restartWarningBody": "重新啟動以完成安裝，或繼續進行測試。\n重啟前，您所做的任何變更都不會被儲存。",
+    "restartWarningBody": "重新啟動以完成安裝，或繼續進行試用。\n重啟前，您所做的任何變更都不會被儲存。",
     "notEnoughDiskSpaceBody": "您選擇的磁碟沒有足夠空間安裝 {DISTRO}。結束安裝程式以挪出更多空間或是選擇另一個磁碟進行安裝。",
     "refreshReady": "更新已就緒",
     "refreshCloseLabel": "關閉安裝程式",
