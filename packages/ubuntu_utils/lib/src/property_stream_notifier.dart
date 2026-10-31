@@ -6,12 +6,18 @@ import 'package:flutter/foundation.dart';
 mixin PropertyStreamNotifier on ChangeNotifier {
   bool _enabled = true;
   final _callbacks = <String, VoidCallback>{};
-  StreamSubscription<List<String>>? _subscription;
+  final _subscriptions = <String, StreamSubscription<List<String>>>{};
 
   /// Sets a stream of [properties].
   void setProperties(Stream<List<String>> properties) {
-    _subscription?.cancel();
-    _subscription = properties.listen((changedProperties) {
+    setPropertiesFor('', properties);
+  }
+
+  /// Sets a stream of [properties] from a named [source], replacing only the
+  /// stream previously set for the same source.
+  void setPropertiesFor(String source, Stream<List<String>> properties) {
+    _subscriptions[source]?.cancel();
+    _subscriptions[source] = properties.listen((changedProperties) {
       if (_enabled == false) return;
       for (final property in changedProperties) {
         _callbacks[property]?.call();
@@ -32,7 +38,9 @@ mixin PropertyStreamNotifier on ChangeNotifier {
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    for (final subscription in _subscriptions.values) {
+      subscription.cancel();
+    }
     super.dispose();
   }
 }

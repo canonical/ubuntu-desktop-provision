@@ -205,6 +205,100 @@ void main() {
     expect(model.isConnected, isTrue);
   });
 
+  test('connected to a weaker access point sharing the SSID', () {
+    final strong = ap;
+    when(strong.strength).thenReturn(80);
+    when(strong.hwAddress).thenReturn('aa:aa');
+
+    final weak = MockNetworkManagerAccessPoint();
+    when(weak.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
+    when(weak.ssid).thenReturn(kTestSsid);
+    when(weak.hwAddress).thenReturn('bb:bb');
+    when(weak.strength).thenReturn(40);
+
+    when(wireless.accessPoints).thenReturn([strong, weak]);
+    wirelessChanged.add(['AccessPoints']);
+
+    model.selectDevice(wifi);
+    wifi.selectAccessPoint(wifi.accessPoints.first);
+
+    // NetworkManager associates with the weaker BSSID of the same network
+    when(device.state).thenReturn(NetworkManagerDeviceState.activated);
+    when(wireless.activeAccessPoint).thenReturn(weak);
+    wirelessChanged.add(['ActiveAccessPoint']);
+
+    expect(wifi.activeAccessPoint?.accessPoint, equals(weak));
+    expect(model.isConnected, isTrue);
+    expect(model.canConnect, isFalse);
+  });
+
+  test('keeps the selected access point when a same-SSID one gets stronger',
+      () {
+    final first = ap;
+    when(first.strength).thenReturn(60);
+    when(first.hwAddress).thenReturn('aa:aa');
+
+    final second = MockNetworkManagerAccessPoint();
+    when(second.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
+    when(second.ssid).thenReturn(kTestSsid);
+    when(second.hwAddress).thenReturn('bb:bb');
+    when(second.strength).thenReturn(55);
+
+    when(wireless.accessPoints).thenReturn([first, second]);
+    wirelessChanged.add(['AccessPoints']);
+
+    model.selectDevice(wifi);
+    wifi.selectAccessPoint(wifi.accessPoints.single);
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(first));
+
+    when(second.strength).thenReturn(65);
+    wirelessChanged.add(['AccessPoints']);
+
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(first));
+  });
+
+  test('notifies when the device state changes', () {
+    when(wireless.accessPoints).thenReturn([ap]);
+    wirelessChanged.add(['AccessPoints']);
+    model.selectDevice(wifi);
+    wifi.selectAccessPoint(wifi.accessPoints.first);
+
+    when(device.state).thenReturn(NetworkManagerDeviceState.config);
+    expect(model.isConnecting, isTrue);
+
+    var wasNotified = false;
+    model.addListener(() => wasNotified = true);
+    wifi.addListener(() => wasNotified = true);
+
+    when(device.state).thenReturn(NetworkManagerDeviceState.disconnected);
+    deviceChanged.add(['State']);
+
+    expect(wasNotified, isTrue);
+  });
+
+  test('notifies on wireless changes after the device was updated', () {
+    when(service.wirelessDevices).thenReturn([device]);
+    serviceChanged.add(['Devices']);
+    final modelDevice = model.devices.single;
+
+    // a new D-Bus device object with the same wireless interface
+    final updated = MockNetworkManagerDevice();
+    when(updated.udi).thenReturn('test udi');
+    when(updated.hwAddress).thenReturn('test address');
+    when(updated.propertiesChanged).thenAnswer((_) => deviceChanged.stream);
+    when(updated.state).thenReturn(NetworkManagerDeviceState.config);
+    when(updated.wireless).thenReturn(wireless);
+    when(service.wirelessDevices).thenReturn([updated]);
+    serviceChanged.add(['Devices']);
+
+    var wasNotified = false;
+    modelDevice.addListener(() => wasNotified = true);
+    when(wireless.accessPoints).thenReturn([ap]);
+    wirelessChanged.add(['AccessPoints']);
+
+    expect(wasNotified, isTrue);
+  });
+
   test('available connection', () async {
     when(device.activeConnection).thenReturn(null);
     when(wireless.accessPoints).thenReturn([ap]);
