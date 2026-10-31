@@ -171,7 +171,7 @@ class WifiDevice extends NetworkDevice {
 
   void _setWireless(NetworkManagerDeviceWireless wireless) {
     _wireless = wireless;
-    setProperties(_wireless.propertiesChanged);
+    setPropertiesFor('wireless', _wireless.propertiesChanged);
     _updateAccessPoints();
   }
 
@@ -192,7 +192,7 @@ class WifiDevice extends NetworkDevice {
 
   List<AccessPoint> get accessPoints => _accessPoints;
 
-  List<NetworkManagerAccessPoint> _getAccessPoints() {
+  List<NetworkManagerAccessPoint> _getAccessPoints(AccessPoint? selected) {
     final ssids = <List<int>>[];
 
     bool hasSsid(List<int> ssid) {
@@ -207,10 +207,17 @@ class WifiDevice extends NetworkDevice {
       return true;
     }
 
-    final accessPoints = _wireless.accessPoints
+    // Several APs can share an SSID but only one is kept per SSID. Prefer the
+    // active and the selected AP so neither is hidden by another one.
+    final preferred = [_wireless.activeAccessPoint, selected?.accessPoint];
+    final all = _wireless.accessPoints;
+    final candidates = [
+      for (final p in preferred) ...all.where((ap) => ap == p),
+      ...all.where((ap) => !preferred.contains(ap)),
+    ];
+    return candidates
         .where((ap) => acceptSsid(ap.ssid))
         .sorted((a, b) => b.strength.compareTo(a.strength));
-    return accessPoints;
   }
 
   AccessPoint _createAccessPoint(NetworkManagerAccessPoint accessPoint) {
@@ -221,7 +228,7 @@ class WifiDevice extends NetworkDevice {
     final updatedAps = <AccessPoint>[];
     final previousSelected = _selectedAccessPoint;
     _selectedAccessPoint = null;
-    for (final ap in _getAccessPoints()) {
+    for (final ap in _getAccessPoints(previousSelected)) {
       var model = _allAccessPoints[ap.hwAddress];
       if (model == null) {
         model = _createAccessPoint(ap);
