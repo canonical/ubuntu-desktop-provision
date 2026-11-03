@@ -134,6 +134,22 @@ class MockAccessibilityModel extends _i1.Mock
       );
 
   @override
+  void setPropertiesFor(
+    String? source,
+    _i4.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   void addPropertyListener(
     String? property,
     _i5.VoidCallback? onChanged,
