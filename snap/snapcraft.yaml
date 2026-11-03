@@ -4,7 +4,7 @@ summary: Factory Reset Tools
 description: |
   A tool to create reset media and reboot into the factory reset menu, for Ubuntu-preinstalled systems.
 
-base: core24
+base: core26
 confinement: strict
 grade: stable
 
@@ -55,7 +55,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 746da91c42e647fc66cf1ea8ee7efad4abc1fda1
+    source-commit: &commit-ref a64330a621ec7fc1d9496da5b6736abf94844496
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
