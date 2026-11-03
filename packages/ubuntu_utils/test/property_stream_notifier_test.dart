@@ -72,6 +72,71 @@ void main() {
     controller.add(['bar']);
     expect(bar, equals(1));
   });
+
+  test('streams from different sources do not replace each other', () {
+    final notifier = TestPropertyStreamNotifier();
+    final first = StreamController<List<String>>(sync: true);
+    final second = StreamController<List<String>>(sync: true);
+    notifier.setPropertiesFor('first', first.stream);
+    notifier.setPropertiesFor('second', second.stream);
+
+    var foo = 0;
+    var bar = 0;
+    notifier.addPropertyListener('foo', () => ++foo);
+    notifier.addPropertyListener('bar', () => ++bar);
+
+    first.add(['foo']);
+    second.add(['bar']);
+    expect(foo, equals(1));
+    expect(bar, equals(1));
+
+    notifier.dispose();
+  });
+
+  test('a source replaces only its own previous stream', () {
+    final notifier = TestPropertyStreamNotifier();
+
+    var firstCanceled = false;
+    final first = StreamController<List<String>>(
+      sync: true,
+      onCancel: () => firstCanceled = true,
+    );
+    final second = StreamController<List<String>>(sync: true);
+    final replacement = StreamController<List<String>>(sync: true);
+    notifier.setPropertiesFor('first', first.stream);
+    notifier.setPropertiesFor('second', second.stream);
+
+    var foo = 0;
+    notifier.addPropertyListener('foo', () => ++foo);
+
+    notifier.setPropertiesFor('first', replacement.stream);
+    expect(firstCanceled, isTrue);
+
+    replacement.add(['foo']);
+    second.add(['foo']);
+    expect(foo, equals(2));
+
+    notifier.dispose();
+  });
+
+  test('dispose cancels all sources', () {
+    final notifier = TestPropertyStreamNotifier();
+
+    var canceled = 0;
+    final first = StreamController<List<String>>(
+      sync: true,
+      onCancel: () => ++canceled,
+    );
+    final second = StreamController<List<String>>(
+      sync: true,
+      onCancel: () => ++canceled,
+    );
+    notifier.setPropertiesFor('first', first.stream);
+    notifier.setPropertiesFor('second', second.stream);
+
+    notifier.dispose();
+    expect(canceled, equals(2));
+  });
 }
 
 class TestPropertyStreamNotifier extends ChangeNotifier

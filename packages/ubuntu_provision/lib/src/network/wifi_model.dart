@@ -188,7 +188,7 @@ class WifiDevice extends NetworkDevice {
   bool get _isConnected =>
       isActive &&
       _selectedAccessPoint != null &&
-      _selectedAccessPoint!.name == activeAccessPoint?.name;
+      _selectedAccessPoint!.ssid.equals(activeAccessPoint?.ssid);
 
   List<AccessPoint> get accessPoints => _accessPoints;
 
@@ -246,7 +246,7 @@ class WifiDevice extends NetworkDevice {
     // The selected AP may be gone while its network is still reachable.
     if (_selectedAccessPoint == null && previousSelected != null) {
       _selectedAccessPoint = updatedAps.firstWhereOrNull(
-        (ap) => ap.name == previousSelected.name,
+        (ap) => ap.ssid.equals(previousSelected.ssid),
       );
     }
     _selectedAccessPoint ??= activeAccessPoint;
@@ -299,7 +299,7 @@ class WifiDevice extends NetworkDevice {
   /// if `ssid` is specified.
   Future<void> requestScan({String? ssid}) async {
     _cancelScan();
-    final ssids = <List<int>>[if (ssid != null) ssid.codeUnits];
+    final ssids = <List<int>>[if (ssid != null) utf8.encode(ssid)];
     log.debug('Request scan: $this');
     _setScanning(true);
     _completer = Completer();
@@ -326,8 +326,9 @@ class WifiDevice extends NetworkDevice {
 
   /// Tries to find an access point by `ssid`.
   AccessPoint? findAccessPoint(String ssid) {
+    final bytes = utf8.encode(ssid);
     return accessPoints.firstWhereOrNull((accessPoint) {
-      return ssid == accessPoint.name;
+      return accessPoint.ssid.equals(bytes);
     });
   }
 }
@@ -356,8 +357,12 @@ class AccessPoint extends SafeChangeNotifier with PropertyStreamNotifier {
     notifyListeners();
   }
 
+  /// Raw SSID bytes (D-Bus `ay`). Text is converted to/from them as UTF-8.
   List<int> get ssid => _accessPoint.ssid;
   String get hwAddress => _accessPoint.hwAddress;
+
+  /// For display only: distinct SSIDs can decode to the same name. Compare
+  /// [ssid] bytes to identify a network.
   String get name => utf8.decode(ssid, allowMalformed: true);
   int get strength => _accessPoint.strength;
   bool get isOpen => _accessPoint.isOpen;

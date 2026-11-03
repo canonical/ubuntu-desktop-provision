@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:dbus/dbus.dart';
 import 'package:fake_async/fake_async.dart';
@@ -283,6 +284,108 @@ void main() {
     expect(model.canConnect, isTrue);
   });
 
+  test('lists distinct SSIDs that decode to the same name separately', () {
+    const ssidA = [0x6e, 0x65, 0x74, 0xff];
+    const ssidB = [0x6e, 0x65, 0x74, 0xfe];
+
+    final first = ap;
+    when(first.ssid).thenReturn(ssidA);
+    when(first.strength).thenReturn(60);
+    when(first.hwAddress).thenReturn('aa:aa');
+
+    final second = MockNetworkManagerAccessPoint();
+    when(second.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
+    when(second.ssid).thenReturn(ssidB);
+    when(second.hwAddress).thenReturn('bb:bb');
+    when(second.strength).thenReturn(55);
+
+    when(wireless.accessPoints).thenReturn([first, second]);
+    wirelessChanged.add(['AccessPoints']);
+
+    expect(wifi.accessPoints, hasLength(2));
+    expect(wifi.accessPoints.first.name, equals(wifi.accessPoints.last.name));
+    expect(
+      wifi.accessPoints.map((a) => a.ssid),
+      unorderedEquals([ssidA, ssidB]),
+    );
+  });
+
+  test('does not reselect a different SSID that decodes to the same name', () {
+    const ssidA = [0x6e, 0x65, 0x74, 0xff];
+    const ssidB = [0x6e, 0x65, 0x74, 0xfe];
+
+    final first = ap;
+    when(first.ssid).thenReturn(ssidA);
+    when(first.strength).thenReturn(60);
+    when(first.hwAddress).thenReturn('aa:aa');
+
+    final second = MockNetworkManagerAccessPoint();
+    when(second.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
+    when(second.ssid).thenReturn(ssidB);
+    when(second.hwAddress).thenReturn('bb:bb');
+    when(second.strength).thenReturn(55);
+
+    when(wireless.accessPoints).thenReturn([first, second]);
+    wirelessChanged.add(['AccessPoints']);
+
+    model.selectDevice(wifi);
+    expect(wifi.accessPoints, hasLength(2));
+    expect(wifi.accessPoints.first.name, equals(wifi.accessPoints.last.name));
+
+    wifi.selectAccessPoint(wifi.accessPoints.first);
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(first));
+
+    when(wireless.accessPoints).thenReturn([second]);
+    wirelessChanged.add(['AccessPoints']);
+
+    expect(wifi.selectedAccessPoint, isNull);
+  });
+
+  test('is not connected to a different SSID with the same decoded name', () {
+    const ssidA = [0x6e, 0x65, 0x74, 0xff];
+    const ssidB = [0x6e, 0x65, 0x74, 0xfe];
+
+    final selected = ap;
+    when(selected.ssid).thenReturn(ssidA);
+    when(selected.hwAddress).thenReturn('aa:aa');
+    when(selected.strength).thenReturn(60);
+
+    final other = MockNetworkManagerAccessPoint();
+    when(other.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
+    when(other.ssid).thenReturn(ssidB);
+    when(other.hwAddress).thenReturn('bb:bb');
+    when(other.strength).thenReturn(55);
+
+    when(wireless.accessPoints).thenReturn([selected, other]);
+    wirelessChanged.add(['AccessPoints']);
+
+    model.selectDevice(wifi);
+    wifi.selectAccessPoint(wifi.accessPoints.first);
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(selected));
+
+    when(device.state).thenReturn(NetworkManagerDeviceState.activated);
+    when(wireless.activeAccessPoint).thenReturn(other);
+    wirelessChanged.add(['ActiveAccessPoint']);
+
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(selected));
+    expect(wifi.activeAccessPoint?.accessPoint, equals(other));
+    expect(model.isConnected, isFalse);
+  });
+
+  test('find access point compares raw SSID bytes', () {
+    when(ap.ssid).thenReturn([0x6e, 0xff]);
+    when(wireless.accessPoints).thenReturn([ap]);
+    wirelessChanged.add(['AccessPoints']);
+
+    // decodes to the same name as the malformed SSID, but is a different SSID
+    expect(wifi.findAccessPoint('n\uFFFD'), isNull);
+    expect(wifi.accessPoints.single.name, equals('n\uFFFD'));
+
+    when(ap.ssid).thenReturn([0x6e, 0x65, 0x74]);
+    wirelessChanged.add(['AccessPoints']);
+    expect(wifi.findAccessPoint('net'), isNotNull);
+  });
+
   test('notifies when the device state changes', () {
     when(wireless.accessPoints).thenReturn([ap]);
     wirelessChanged.add(['AccessPoints']);
@@ -429,6 +532,17 @@ void main() {
     expect(model.devices.first.scanning, isFalse);
     verify(wireless.lastScan).called(2);
     verify(wireless.requestScan(ssids: [kTestSsid])).called(2);
+  });
+
+  test('request scan sends the SSID as UTF-8 bytes', () {
+    when(service.wirelessDevices).thenReturn([device]);
+    serviceChanged.add(['Devices']);
+
+    final ssids = [utf8.encode('caf\u00e9 \u20ac')];
+    when(wireless.requestScan(ssids: ssids)).thenAnswer((_) async => null);
+
+    unawaited(model.requestScan(ssid: 'caf\u00e9 \u20ac'));
+    verify(wireless.requestScan(ssids: ssids)).called(1);
   });
 
   test('access point properties', () async {
