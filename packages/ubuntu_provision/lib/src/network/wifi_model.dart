@@ -243,6 +243,12 @@ class WifiDevice extends NetworkDevice {
       }
     }
     _accessPoints = updatedAps;
+    // The selected AP may be gone while its network is still reachable.
+    if (_selectedAccessPoint == null && previousSelected != null) {
+      _selectedAccessPoint = updatedAps.firstWhereOrNull(
+        (ap) => ap.name == previousSelected.name,
+      );
+    }
     _selectedAccessPoint ??= activeAccessPoint;
     log.debug(() => 'Update access points: $_accessPoints ($this)');
     notifyListeners();

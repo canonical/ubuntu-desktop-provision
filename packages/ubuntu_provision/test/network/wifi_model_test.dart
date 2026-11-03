@@ -257,6 +257,32 @@ void main() {
     expect(wifi.selectedAccessPoint?.accessPoint, equals(first));
   });
 
+  test('reselects a same-SSID access point when the selected one vanishes', () {
+    final first = ap;
+    when(first.strength).thenReturn(60);
+    when(first.hwAddress).thenReturn('aa:aa');
+
+    final second = MockNetworkManagerAccessPoint();
+    when(second.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
+    when(second.ssid).thenReturn(kTestSsid);
+    when(second.hwAddress).thenReturn('bb:bb');
+    when(second.strength).thenReturn(55);
+
+    when(wireless.accessPoints).thenReturn([first, second]);
+    wirelessChanged.add(['AccessPoints']);
+
+    model.selectDevice(wifi);
+    wifi.selectAccessPoint(wifi.accessPoints.single);
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(first));
+
+    // the selected AP leaves the scan results, the network is still reachable
+    when(wireless.accessPoints).thenReturn([second]);
+    wirelessChanged.add(['AccessPoints']);
+
+    expect(wifi.selectedAccessPoint?.accessPoint, equals(second));
+    expect(model.canConnect, isTrue);
+  });
+
   test('notifies when the device state changes', () {
     when(wireless.accessPoints).thenReturn([ap]);
     wirelessChanged.add(['AccessPoints']);
