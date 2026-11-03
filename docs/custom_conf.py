@@ -144,7 +144,8 @@ redirects = {}
 linkcheck_ignore = [
     'http://127.0.0.1:8000',
     'https://manpages.ubuntu.com',
-    'https://matrix.to/#/#ubuntu-apps:matrix.org'
+    'https://matrix.to/#/#ubuntu-apps:matrix.org',
+    'https://hosted.weblate.org'
     ]
 
 # Pages on which to ignore anchors
