@@ -1,4 +1,5 @@
 name: ubuntu_desktop_provision
+sdkPath: .fvm/flutter_sdk
 
 packages:
   - apps/**
