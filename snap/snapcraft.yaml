@@ -8,7 +8,7 @@ contact: https://bugs.launchpad.net/ubuntu-desktop-provision
 issues: https://bugs.launchpad.net/ubuntu-desktop-provision
 grade: stable
 confinement: classic
-base: core24
+base: core26
 platforms:
   amd64:
   arm64:
@@ -49,14 +49,14 @@ apps:
 
   # Debug tools for Subiquity
   probert:
-    command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.12 $SNAP/bin/probert
+    command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.14 $SNAP/bin/probert
   curtin:
     command: bin/subiquity/bin/subiquity-cmd $SNAP/bin/curtin
     environment:
-      PYTHON: $SNAP/usr/bin/python3.12
+      PYTHON: $SNAP/usr/bin/python3.14
       PATH: $PATH:$SNAP/bin
   python:
-    command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.12
+    command: bin/subiquity/bin/subiquity-cmd $SNAP/usr/bin/python3.14
 
 parts:
   ubuntu-bootstrap:
@@ -137,8 +137,8 @@ parts:
       # there doesn't seem to be any real benefit to listing them separately.
       - iso-codes
       - libpython3-stdlib
-      - libpython3.12-minimal
-      - libpython3.12-stdlib
+      - libpython3.14-minimal
+      - libpython3.14-stdlib
       - libsystemd0
       - lsb-release
       - ntfs-3g
@@ -164,7 +164,7 @@ parts:
       - python3-urwid
       - python3-yaml
       - python3-yarl
-      - python3.12-minimal
+      - python3.14-minimal
       - ssh-import-id
       - ubuntu-advantage-tools
     prime:
