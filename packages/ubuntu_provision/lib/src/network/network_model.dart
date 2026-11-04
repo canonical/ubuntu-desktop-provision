@@ -113,6 +113,16 @@ class NetworkModel extends SafeChangeNotifier implements ConnectModel {
   @override
   Future<void> enable() => _connectModel!.enable();
 
+  Future<void>? _pendingConnect;
+
+  /// Connects using the selected [ConnectModel].
+  ///
+  /// The connect model only reports [isConnecting] once the network service
+  /// has picked up the request, so a call made while a previous request is
+  /// still pending returns that request instead of starting another one.
   @override
-  Future<void> connect() => _connectModel!.connect();
+  Future<void> connect() {
+    return _pendingConnect ??=
+        _connectModel!.connect().whenComplete(() => _pendingConnect = null);
+  }
 }
