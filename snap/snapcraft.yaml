@@ -6,10 +6,10 @@ description: |
   It comprises a Flutter-based UI and a go backend packaged separately as a deb.
 grade: stable
 confinement: strict
-base: core22
-architectures:
-  - build-on: amd64
-  - build-on: arm64
+base: core26
+platforms:
+  amd64:
+  arm64:
 
 apps:
   ubuntu-desktop-init:
