@@ -27,7 +27,6 @@ import 'package:ubuntu_bootstrap/pages/storage/passphrase/passphrase_model.dart'
 import 'package:ubuntu_bootstrap/pages/storage/passphrase_type/passphrase_type_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_model.dart';
-import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 import 'package:ubuntu_bootstrap/providers/slides_provider.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
@@ -54,7 +53,6 @@ import 'secure_boot/test_secure_boot.dart';
 import 'source/not_enough_disk_space/test_not_enough_disk_space.dart';
 import 'source/test_source.dart';
 import 'storage/test_storage.dart';
-import 'try_or_install/test_try_or_install.dart';
 
 void main() {
   LiveTestWidgetsFlutterBinding.ensureInitialized();
@@ -77,8 +75,6 @@ void main() {
     final hiddenWifiModel = buildHiddenWifiModel();
     final refreshModel = buildRefreshModel();
     final localeModel = buildLocaleModel();
-    final tryOrInstallModel =
-        buildTryOrInstallModel(option: TryOrInstallOption.tryUbuntu);
 
     await tester.pumpWidget(
       ProviderScope(
@@ -93,7 +89,6 @@ void main() {
           loadingProvider
               .overrideWith((_) => Future<void>.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
-          tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
         ],
         child: tester.buildTestWizard(excludedPages: {}),
       ),
@@ -125,7 +120,9 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(TryOrInstallPage), findsOneWidget);
-    verify(tryOrInstallModel.init()).called(1);
+
+    await tester.tap(find.radio(TryOrInstallOption.tryUbuntu));
+    await tester.pumpAndSettle();
 
     final windowClosed = YaruTestWindow.waitForClosed();
 
@@ -138,8 +135,6 @@ void main() {
   testWidgets('guided reformat', (tester) async {
     final accessibilityModel = buildAccessibilityModel();
     final localeModel = buildLocaleModel();
-    final tryOrInstallModel =
-        buildTryOrInstallModel(option: TryOrInstallOption.installUbuntu);
     final rstModel = buildRstModel();
     final keyboardModel = buildKeyboardModel();
     final networkModel = buildNetworkModel();
@@ -174,7 +169,6 @@ void main() {
           accessibilityModelProvider.overrideWith((_) => accessibilityModel),
           loadingProvider.overrideWith((_) => Future.delayed(loadingTime)),
           localeModelProvider.overrideWith((_) => localeModel),
-          tryOrInstallModelProvider.overrideWith((_) => tryOrInstallModel),
           rstModelProvider.overrideWith((_) => rstModel),
           keyboardModelProvider.overrideWith((_) => keyboardModel),
           networkModelProvider.overrideWith((_) => networkModel),
@@ -229,7 +223,6 @@ void main() {
     await tester.tapNext();
     await tester.pumpAndSettle();
     expect(find.byType(TryOrInstallPage), findsOneWidget);
-    verify(tryOrInstallModel.init()).called(1);
 
     await tester.tapNext();
     await tester.pumpAndSettle();

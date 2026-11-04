@@ -1,47 +1,36 @@
-import 'dart:async';
-
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/try_or_install/try_or_install_model.dart';
 
-import 'test_try_or_install.dart';
-
 void main() {
-  test('network connectivity', () async {
-    final network = MockNetworkService();
-    when(network.isConnected).thenReturn(false);
-    final networkChanged = StreamController<List<String>>(sync: true);
-    when(network.propertiesChanged).thenAnswer((_) => networkChanged.stream);
-
-    final model = TryOrInstallModel(network: network);
-    await model.init();
-
-    expect(model.isConnected, isFalse);
-
-    var wasNotified = false;
-    model.addListener(() => wasNotified = true);
-
-    when(network.isConnected).thenReturn(true);
-    networkChanged.add(['Connectivity']);
-    expect(model.isConnected, isTrue);
-    expect(wasNotified, isTrue);
-    await networkChanged.close();
-  });
-
   test('selected option', () {
-    final network = MockNetworkService();
-    final model = TryOrInstallModel(network: network);
+    final container = ProviderContainer();
+    addTearDown(container.dispose);
 
-    var wasNotified = false;
-    model.addListener(() => wasNotified = true);
+    var notifications = 0;
+    container.listen(
+      tryOrInstallModelProvider,
+      (_, __) => notifications++,
+    );
 
-    expect(model.option, equals(TryOrInstallOption.installUbuntu));
+    final model = container.read(tryOrInstallModelProvider.notifier);
+
+    expect(
+      container.read(tryOrInstallModelProvider),
+      TryOrInstallOption.installUbuntu,
+    );
     model.selectOption(TryOrInstallOption.installUbuntu);
-    expect(model.option, equals(TryOrInstallOption.installUbuntu));
-    expect(wasNotified, isFalse);
+    expect(
+      container.read(tryOrInstallModelProvider),
+      TryOrInstallOption.installUbuntu,
+    );
+    expect(notifications, 0);
 
     model.selectOption(TryOrInstallOption.tryUbuntu);
-    expect(model.option, equals(TryOrInstallOption.tryUbuntu));
-    expect(wasNotified, isTrue);
+    expect(
+      container.read(tryOrInstallModelProvider),
+      TryOrInstallOption.tryUbuntu,
+    );
+    expect(notifications, 1);
   });
 }
