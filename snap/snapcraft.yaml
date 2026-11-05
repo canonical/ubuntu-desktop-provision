@@ -55,7 +55,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 746da91c42e647fc66cf1ea8ee7efad4abc1fda1
+    source-commit: &commit-ref 6eb0470a541b05801d6974447d461ecfc94f0914
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -63,6 +63,7 @@ parts:
       mkdir -p $CRAFT_PART_INSTALL/bin
 
       dart pub global activate melos
+      export MELOS_SDK_PATH=auto
       dart pub global run melos bootstrap
       cd apps/factory_reset_tools
       flutter build linux --release -v
@@ -78,6 +79,7 @@ parts:
       set -eux
       mkdir -p $CRAFT_PART_INSTALL/bin $CRAFT_PART_INSTALL/bin/polkit_agent_helper
       dart pub global activate melos
+      export MELOS_SDK_PATH=auto
       dart pub global run melos bootstrap
 
       pushd apps/factory_reset_tools
@@ -108,7 +110,7 @@ parts:
       fi
 
       craftctl default
-      FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
+      FLUTTER_VERSION=$(jq -r .flutter .fvmrc)
       git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
     override-build: |
       mkdir -p $CRAFT_PART_INSTALL/usr/bin
@@ -121,6 +123,7 @@ parts:
       - clang
       - cmake
       - curl
+      - jq
       - libgtk-3-dev
       - ninja-build
       - unzip
