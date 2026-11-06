@@ -15,6 +15,27 @@ void main() {
     await service.launch();
     verify(mockProcess.run('sudo', ['ubuntu-bug', 'snap-name'])).called(1);
   });
+
+  test('run ubuntu-bug forwards WAYLAND_DISPLAY', () async {
+    final mockProcess = MockProcess();
+    when(mockProcess.run(any, any))
+        .thenAnswer((_) async => ProcessResult(0, 0, '', ''));
+    final mockEnv = <String, String>{
+      'SNAP_NAME': 'snap-name',
+      'WAYLAND_DISPLAY': 'wayland-0',
+    };
+    final service = ApportService(runProcess: mockProcess.run, env: mockEnv);
+
+    await service.launch();
+    verify(
+      mockProcess.run('sudo', [
+        'env',
+        'WAYLAND_DISPLAY=wayland-0',
+        'ubuntu-bug',
+        'snap-name',
+      ]),
+    ).called(1);
+  });
 }
 
 abstract class _Process {
