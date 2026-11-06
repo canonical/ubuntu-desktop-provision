@@ -28,7 +28,17 @@ class ApportService {
     }
     if (liveRun) {
       _log.info('Running apport for $snapName');
-      final result = await runProcess('sudo', [apport, snapName]);
+      // sudo strips WAYLAND_DISPLAY, which snapped browsers launched by
+      // apport need to open on a Wayland session.
+      final waylandDisplay = env['WAYLAND_DISPLAY'];
+      final result = await runProcess('sudo', [
+        if (waylandDisplay != null) ...[
+          'env',
+          'WAYLAND_DISPLAY=$waylandDisplay',
+        ],
+        apport,
+        snapName,
+      ]);
       if (result.exitCode != 0) {
         _log.error('Failed to run apport for $snapName: ${result.stderr}');
       }
