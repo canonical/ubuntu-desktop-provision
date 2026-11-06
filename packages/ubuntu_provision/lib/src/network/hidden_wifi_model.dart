@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_provision/services.dart';
@@ -20,7 +22,8 @@ class HiddenWifiModel extends NetworkDeviceModel<WifiDevice> {
   @override
   bool get isConnected =>
       (selectedDevice?.isActive ?? false) &&
-      selectedDevice?.activeAccessPoint?.name == ssid;
+      const ListEquality<int>()
+          .equals(selectedDevice?.activeAccessPoint?.ssid, utf8.encode(ssid));
 
   @override
   bool get hasActiveConnection => false;

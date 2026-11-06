@@ -122,6 +122,22 @@ class MockTryOrInstallModel extends _i1.Mock implements _i2.TryOrInstallModel {
       );
 
   @override
+  void setPropertiesFor(
+    String? source,
+    _i3.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   void addPropertyListener(
     String? property,
     _i4.VoidCallback? onChanged,
