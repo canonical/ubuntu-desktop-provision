@@ -603,6 +603,22 @@ class MockEthernetDevice extends _i1.Mock implements _i3.EthernetDevice {
       );
 
   @override
+  void setPropertiesFor(
+    String? source,
+    _i6.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   void addPropertyListener(
     String? property,
     _i7.VoidCallback? onChanged,
@@ -868,6 +884,22 @@ class MockEthernetModel extends _i1.Mock implements _i3.EthernetModel {
         Invocation.method(
           #setProperties,
           [properties],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void setPropertiesFor(
+    String? source,
+    _i6.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
         ),
         returnValueForMissingStub: null,
       );
@@ -1166,6 +1198,22 @@ class MockHiddenWifiModel extends _i1.Mock implements _i10.HiddenWifiModel {
       );
 
   @override
+  void setPropertiesFor(
+    String? source,
+    _i6.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   void addPropertyListener(
     String? property,
     _i7.VoidCallback? onChanged,
@@ -1325,6 +1373,22 @@ class MockAccessPoint extends _i1.Mock implements _i4.AccessPoint {
         Invocation.method(
           #setProperties,
           [properties],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void setPropertiesFor(
+    String? source,
+    _i6.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
         ),
         returnValueForMissingStub: null,
       );
@@ -1597,6 +1661,22 @@ class MockWifiDevice extends _i1.Mock implements _i4.WifiDevice {
         Invocation.method(
           #setProperties,
           [properties],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void setPropertiesFor(
+    String? source,
+    _i6.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
         ),
         returnValueForMissingStub: null,
       );
@@ -1894,6 +1974,22 @@ class MockWifiModel extends _i1.Mock implements _i4.WifiModel {
         Invocation.method(
           #setProperties,
           [properties],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  void setPropertiesFor(
+    String? source,
+    _i6.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
         ),
         returnValueForMissingStub: null,
       );

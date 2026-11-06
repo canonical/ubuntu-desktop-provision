@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dbus/dbus.dart';
 import 'package:nm/nm.dart';
 
@@ -35,7 +37,7 @@ class NetworkService extends NetworkManagerClient {
         'type': const DBusString('802-11-wireless'),
       },
       '802-11-wireless': {
-        'ssid': DBusArray.byte(ssid.codeUnits),
+        'ssid': DBusArray.byte(utf8.encode(ssid)),
       },
       '802-11-wireless-security': {
         'key-mgmt': const DBusString('wpa-psk'),
