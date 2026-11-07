@@ -4,7 +4,7 @@ summary: Factory Reset Tools
 description: |
   A tool to create reset media and reboot into the factory reset menu, for Ubuntu-preinstalled systems.
 
-base: core24
+base: core26
 confinement: strict
 grade: stable
 
