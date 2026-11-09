@@ -22,6 +22,7 @@ apps:
       - hardware-observe
       - hostfs-usr-share-desktop-provision
       - run-provd-socket
+      - gsettings
       - network
       - network-manager
       - var-log-installer
