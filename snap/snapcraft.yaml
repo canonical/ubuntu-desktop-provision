@@ -63,7 +63,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    source-commit: &commit-ref 22154fde005146c25b776a37afd47878ca23eddd
+    source-commit: &commit-ref f62c9a24ed5b2a27e083ed1096a4fbec67a0e74d
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -78,6 +78,7 @@ parts:
       cp packages/subiquity_client/subiquity/scripts/management-script $CRAFT_PART_INSTALL/
 
       dart pub global activate melos
+      export MELOS_SDK_PATH=auto
       dart pub global run melos bootstrap
       cd apps/ubuntu_bootstrap
       flutter build linux --release -v
@@ -182,13 +183,8 @@ parts:
 
       craftctl default
 
-      if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
-        FLUTTER_VERSION=3.44.0
-        git clone -b ${FLUTTER_VERSION} --depth 1 https://github.com/flutter/flutter.git
-      else
-        FLUTTER_VERSION=$(sed -n "s/^flutter \([0-9.]\+\).*/\1/p" .tool-versions)
-        git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
-      fi
+      FLUTTER_VERSION=$(jq -r .flutter .fvmrc)
+      git clone -b $FLUTTER_VERSION --depth 1 https://github.com/flutter/flutter.git
     override-build: |
       if [ $CRAFT_ARCH_BUILD_FOR = riscv64 ]; then
         export FLUTTER_STORAGE_BASE_URL=https://flutter-experimental.ubuntu.com
@@ -204,6 +200,7 @@ parts:
       - clang
       - cmake
       - curl
+      - jq
       - libgtk-3-dev
       - ninja-build
       - unzip
