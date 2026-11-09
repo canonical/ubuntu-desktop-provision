@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -47,7 +48,7 @@ void main() {
     ap = MockNetworkManagerAccessPoint();
     accessPointChanged = StreamController<List<String>>.broadcast(sync: true);
     when(ap.propertiesChanged).thenAnswer((_) => accessPointChanged.stream);
-    when(ap.ssid).thenReturn('foo'.codeUnits);
+    when(ap.ssid).thenReturn(utf8.encode('foo'));
     when(ap.hwAddress).thenReturn('test address');
 
     wireless = MockNetworkManagerDeviceWireless();
@@ -126,6 +127,19 @@ void main() {
     expect(model.canConnect, isFalse);
     expect(model.isConnecting, isFalse);
     expect(model.isConnected, isTrue);
+  });
+
+  test('is not connected to an SSID that only decodes to the same name', () {
+    when(ap.ssid).thenReturn([0x6e, 0xff]);
+    when(wireless.accessPoints).thenReturn([ap]);
+    when(wireless.activeAccessPoint).thenReturn(ap);
+    wirelessChanged.add(['AccessPoints']);
+
+    model.selectDevice(wifi);
+    expect(wifi.activeAccessPoint?.name, equals('n\uFFFD'));
+
+    model.setSsid('n\uFFFD');
+    expect(model.isConnected, isFalse);
   });
 
   test('ssid', () {

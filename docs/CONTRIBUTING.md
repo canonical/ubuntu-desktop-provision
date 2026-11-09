@@ -81,7 +81,9 @@ Since the script is mostly agnostic to the directory structure and simply uses g
 
 ### Required dependencies
 
-[Install Flutter](https://docs.flutter.dev/platform-integration/linux/setup) - the currently used version is specified in `.tool-versions`. If you're using [asdf](https://asdf-vm.com/) to manage your Flutter SDK, you can simply run `asdf install` to install the required version.
+[Install Flutter](https://docs.flutter.dev/platform-integration/linux/setup) - the Flutter version is pinned in `.fvmrc`. With [FVM](https://fvm.app), run `fvm install` (or `fvm use`); otherwise install that version manually.
+
+If you use VS Code with FVM, you can optionally set `"dart.flutterSdkPath": ".fvm/flutter_sdk"` in your workspace settings so the IDE uses the pinned SDK.
 
 Fetch [Subiquity](https://github.com/canonical/subiquity), which is included as a git sub-module, by running
 ```
@@ -98,6 +100,8 @@ Install Melos:
 ```
 dart pub global activate melos
 ```
+
+Melos is configured to use the FVM-managed SDK in `.fvm/flutter_sdk`. Not using FVM? Run melos with `MELOS_SDK_PATH=auto` to use the Flutter SDK on your `PATH`.
 
 Bootstrap the workspace:
 ```

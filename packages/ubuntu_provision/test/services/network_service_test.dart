@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ubuntu_provision/src/services/network_service.dart';
 
@@ -13,10 +15,19 @@ void main() {
 
     final wireless = settings['802-11-wireless'];
     expect(wireless, isNotNull);
-    expect(wireless!['ssid']?.toNative(), equals('foo bar'.codeUnits));
+    expect(wireless!['ssid']?.toNative(), equals(utf8.encode('foo bar')));
 
     final security = settings['802-11-wireless-security'];
     expect(security, isNotNull);
     expect(security, contains('key-mgmt'));
+  });
+
+  test('wifi SSID is sent as UTF-8 bytes', () {
+    final settings = NetworkService().getWifiSettings(ssid: 'caf\u00e9 \u20ac');
+
+    expect(
+      settings['802-11-wireless']!['ssid']?.toNative(),
+      equals(utf8.encode('caf\u00e9 \u20ac')),
+    );
   });
 }

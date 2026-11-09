@@ -24,8 +24,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - run: melos analyze --fatal-infos
 
   bootstrap:
@@ -40,8 +41,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - run: |
           sudo apt update
@@ -65,8 +67,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - run: melos format:exclude
 
   init-e2e:
@@ -75,8 +78,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
         run: |
@@ -118,8 +122,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - run: sudo apt update
       - run: sudo apt install -y clang cmake curl gsettings-desktop-schemas libgtk-3-dev ninja-build pkg-config unzip
@@ -135,8 +140,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - run: melos generate
       - name: Check for outdated mocks
         if: github.event_name == 'pull_request'
@@ -157,8 +163,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - name: Regenerate subiquity types
         run: make -B
         working-directory: packages/subiquity_client
@@ -174,8 +181,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - run: melos gen-l10n
       - name: Check for outdated l10n
         if: github.event_name == 'pull_request'
@@ -196,8 +204,9 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: recursive
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - uses: canonical/desktop-engineering/gh-actions/common/dpkg-install-speedup@main
       - name: Install dependencies
         run: |
@@ -296,8 +305,9 @@ jobs:
       - go-tests
     steps:
       - uses: actions/checkout@v7
-      - uses: asdf-vm/actions/install@v4
-      - uses: bluefireteam/melos-action@v3
+      - uses: canonical/desktop-engineering/gh-actions/flutter/setup@main
+        with:
+          checkout: "false"
       - uses: actions/setup-go@v6
         with:
           go-version-file: "./provd/go.mod"
