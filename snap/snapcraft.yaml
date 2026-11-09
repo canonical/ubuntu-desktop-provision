@@ -24,6 +24,7 @@ apps:
       - udisks2
       - hardware-observe
       - mount-observe
+      - gsettings
       - dbus-system-com-canonical-oem-factory-reset-tools-client
     slots:
       - dbus-session-com-canonical-oem-factory-reset-tools-service
