@@ -1,9 +1,0 @@
-settings:
-  jira_project_key: UDENG
-  components:
-    - Flutter
-  labels:
-    - jira
-  status_mapping:
-    opened: Untriaged
-    closed: Done

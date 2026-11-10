@@ -1,8 +1,0 @@
-{
-  "@@locale": "am",
-  "welcome": "እንኳን ደህና መጡ",
-  "windowTitle": "መግጠም {RELEASE}",
-  "tryOption": "ይሞክሩ {RELEASE}",
-  "installOption": "መግጠም {RELEASE}",
-  "changeButtonText": "ለውጥ"
-}
