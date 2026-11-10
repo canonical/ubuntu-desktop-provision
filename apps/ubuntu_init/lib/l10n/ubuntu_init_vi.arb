@@ -1,0 +1,21 @@
+{
+  "welcomePageTitle": "Chào mừng",
+  "welcomePageHeader": "Chào mừng tới {distro}",
+  "welcomeWhatsNew": "CÓ GÌ MỚI?",
+  "welcomeStoreTitle": "App Store với diện mạo mới",
+  "welcomeChangelogLabel": "<a href=\"{url}\">Xem nhật ký thay đổi</a>",
+  "telemetryPageTitle": "Thu thập dữ liệu",
+  "telemetryDescription": "Chia sẻ dữ liệu ẩn danh với {distro} để chúng tôi có thể cải thiện trải nghiệm của bạn.",
+  "telemetryLabelOn": "Có, chia sẻ dữ liệu hệ thống với đội ngũ {distro}",
+  "telemetryLabelOff": "Không, không chia sẻ dữ liệu gì hết",
+  "telemetryLegalLabel": "Hợp pháp",
+  "privacyLocationEnable": "Dịch vụ định vị",
+  "welcomeStartSubtitle": "Hỗ trợ trải nghiệm cài đặt gọn gàng hơn.",
+  "welcomeStoreSubtitle": "Tìm kiếm phần mềm yêu thích của bạn chưa bao giờ dễ dàng hơn.",
+  "welcomeSecurityTitle": "Bảo mật được tăng cường",
+  "welcomeSecuritySubtitle": "Các tùy chọn mới cho mã hóa bằng phần cứng hoặc ZTS.",
+  "telemetryHeader": "Giúp cải thiện {distro}",
+  "privacyLocationTitle": "Bật dịch vụ định vị?",
+  "privacyPageTitle": "Dịch vụ định vị",
+  "privacyLocationSubtitle": "Cho phép các ứng dụng biết vị trí địa lý của bạn.\nBạn có thể thay đổi điều này bất cứ lúc nào trong Cài đặt hệ thống."
+}

@@ -1,0 +1,8 @@
+<node name="/com/canonical/oem/FactoryResetTools">
+  <interface name="com.canonical.oem.FactoryResetTools">
+    <property name="Version" type="s" access="read"/>
+    <method name="Reboot">
+      <arg name="rebootOption" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>

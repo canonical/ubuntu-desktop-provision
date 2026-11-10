@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+        # Create the provd user and group if they aren't already there
+        if ! getent passwd provd >/dev/null; then
+            adduser --system --group --force-badname --quiet \
+                --home /run/provd/ --no-create-home \
+                --shell /bin/false \
+                provd
+        fi
+
+        # TODO: Replace gis user with provd user when session is updated. 
+        # Add gnome-initial-setup to the provd group
+        usermod -G provd gnome-initial-setup
+
+        # Set ownership and permissions for launch-desktop-provision-init.sh
+        chown gnome-initial-setup:provd /usr/libexec/launch-desktop-provision-init
+        chmod 750 /usr/libexec/launch-desktop-provision-init
+
+        # Set ownership and permissions for bin's
+        chown root:provd /usr/libexec/provd
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+

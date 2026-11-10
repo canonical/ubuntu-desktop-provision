@@ -1,0 +1,2 @@
+hostname1.Get(interfaceName: org.freedesktop.hostname1, propertyName: StaticHostname)
+hostname1.Get(interfaceName: org.freedesktop.hostname1, propertyName: StaticHostname)

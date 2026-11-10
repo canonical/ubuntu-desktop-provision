@@ -1,0 +1,96 @@
+{
+    "welcomePageTitle": "ຍິນດີຕ້ອນຮັບ",
+    "welcomePageHeader": "ຍິນດີຕ້ອນຮັບສູ່ {distro}",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "ມີຫຍັງໃໝ່?",
+    "welcomeStartTitle": "ການເລີ່ມຕົ້ນທີ່ລຽບງ່າຍ",
+    "welcomeStartSubtitle": "ສະໜັບສະໜູນປະສົບການການຕິດຕັ້ງທີ່ສະອາດຕາກວ່າເກົ່າ.",
+    "welcomeStoreTitle": "ຮູບໂສມໃໝ່ຂອງຮ້ານຄ້າແອັບ",
+    "welcomeStoreSubtitle": "ຄົ້ນຫາຊອບແວທີ່ທ່ານມັກໄດ້ງ່າຍກວ່າທີ່ເຄີຍ.",
+    "welcomeSecurityTitle": "ຍົກລະດັບຄວາມປອດໄພ",
+    "welcomeSecuritySubtitle": "ຕົວເລືອກໃໝ່ສຳລັບການເຂົ້າລະຫັດທີ່ຮອງຮັບດ້ວຍຮາດແວ ຫຼື ZFS.",
+    "welcomeChangelogLabel": "<a href=\"{url}\">ເບິ່ງບັນທຶກການປ່ຽນແປງ</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryPageTitle": "ຂໍ້ມູນການນຳໃຊ້ (Telemetry)",
+    "telemetryHeader": "ຊ່ວຍປັບປຸງ {distro} ໃຫ້ດີຂຶ້ນ",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "ຊ່ວຍພວກເຮົາປັບປຸງ {distro} ໂດຍການແບ່ງປັນຂໍ້ມູນລະບົບຂອງທ່ານກັບພວກເຮົາ. ນີ້ລວມມີສິ່ງຕ່າງໆ ເຊັ່ນ: ລຸ້ນເຄື່ອງຂອງທ່ານ, ຊອບແວທີ່ຕິດຕັ້ງ ແລະ ທີ່ຕັ້ງທີ່ທ່ານເລືອກສຳລັບເຂດເວລາ.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "ຕົກລົງ, ແບ່ງປັນຂໍ້ມູນລະບົບກັບທີມງານ {distro}",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOff": "ບໍ່, ບໍ່ຕ້ອງແບ່ງປັນຂໍ້ມູນລະບົບ",
+    "telemetryReportLabel": "ສະແດງລາຍງານທຳອິດ",
+    "telemetryReportTitle": "ລາຍລະອຽດການລາຍງານ",
+    "telemetryLegalLabel": "ແຈ້ງເຕືອນທາງກົດໝາຍ",
+    "telemetryCollectError": "ການເກັບກຳຂໍ້ມູນ Telemetry ລົ້ມເຫຼວ",
+    "privacyPageTitle": "ບໍລິການລະບຸທີ່ຕັ້ງ",
+    "privacyLocationTitle": "ເປີດນຳໃຊ້ບໍລິການລະບຸທີ່ຕັ້ງບໍ່?",
+    "privacyLocationSubtitle": "ອະນຸຍາດໃຫ້ແອັບພລິເຄຊັນຮູ້ທີ່ຕັ້ງທາງພູມສາດຂອງທ່ານ.\nທ່ານສາມາດປ່ຽນແປງສິ່ງນີ້ໄດ້ທຸກເວລາໃນການຕັ້ງຄ່າລະບົບ.",
+    "privacyLocationEnable": "ບໍລິການລະບຸທີ່ຕັ້ງ",
+    "privacyPolicyLink": "ຄວາມເປັນສ່ວນຕົວຂອງຂໍ້ມູນ",
+    "ubuntuProMagicAttachInstructions": "ເຊື່ອມຕໍ່ແບບ Magic ດ້ວຍລະຫັດນີ້ທີ່ <a href=\"https://{url}\">{url}</a>",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProPageTitle": "Ubuntu Pro",
+    "ubuntuProHeader": "ເຊື່ອມຕໍ່ເຄື່ອງນີ້",
+    "ubuntuProOrAddTokenManually": "ຫຼື ເພີ່ມໂທເຄັນດ້ວຍໂຕເອງ",
+    "ubuntuProTokenTextfieldHint": "ໂທເຄັນ",
+    "ubuntuProSubscriptionDescription": "ຮັບການສະໝັກໃຊ້ທີ່ຄອບຄຸມທີ່ສຸດສຳລັບຄວາມປອດໄພຂອງຊອບແວໂອເພນຊອດ",
+    "ubuntuProSubscriptionFreeForPersonalUse": "ຟຣີສະເໝີສຳລັບການນຳໃຊ້ສ່ວນຕົວ. ທົດລອງໃຊ້ 30 ມື້ສຳລັບອົງກອນ. <a href=\"https://{url}\">ຮຽນຮູ້ເພີ່ມເຕີມ</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "ເຊື່ອມຕໍ່",
+    "ubuntuProTokenAttachError": "ໂທເຄັນບໍ່ຖືກຕ້ອງ",
+    "ubuntuProTokenAttachSucess": "ໂທເຄັນຖືກຕ້ອງ",
+    "ubuntuProTokenAttachErrorVariant": "ໂທເຄັນບໍ່ຖືກຕ້ອງ, ລອງໃໝ່",
+    "ubuntuProOnBoardingSkipForNow": "ຂ້າມໄປກ່ອນ",
+    "ubuntuProOnBoardingSkipForNowDescription": "ທ່ານສາມາດເປີດນຳໃຊ້ Ubuntu Pro ພາຍຫຼັງໄດ້ສະເໝີຜ່ານແອັບພລິເຄຊັນ Software & Updates.",
+    "ubuntuProOnBoardingEnableUbuntuPro": "ເປີດນຳໃຊ້ Ubuntu Pro",
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "ເຊື່ອມຕໍ່ເຄື່ອງນີ້ໃສ່ການສະໝັກໃຊ້ Ubuntu Pro ເພື່ອຮັບການອັບເດດຄວາມປອດໄພສຳລັບແພັກເກັດທີ່ກວ້າງຂວາງກວ່າເກົ່າ, ຈົນເຖິງປີ 2032.",
+    "ubuntuProSucessAttachHeader": "ຕອນນີ້ເປີດນຳໃຊ້ Ubuntu Pro ໃນເຄື່ອງນີ້ແລ້ວ",
+    "ubuntuProSucessAttachDescription": "ທ່ານສາມາດຈັດການບໍລິການ Pro ຂອງທ່ານໄດ້ໃນແອັບພລິເຄຊັນ Software & Updates.",
+    "successIconSemanticLabel": "ສຳເລັດ",
+    "closeIconSemanticLabel": "ປິດ",
+    "maximizeIconSemanticLabel": "ຂະຫຍາຍໃຫຍ່ສຸດ",
+    "minimizeIconSemanticLabel": "ຫຍໍ້ລົງ"
+}

@@ -1,0 +1,1 @@
+gsettings.SetValue(key: sources, variant: [('xkb', 'ok+ok')])

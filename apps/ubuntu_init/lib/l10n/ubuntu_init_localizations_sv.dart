@@ -1,0 +1,169 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'ubuntu_init_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Swedish (`sv`).
+class UbuntuInitLocalizationsSv extends UbuntuInitLocalizations {
+  UbuntuInitLocalizationsSv([String locale = 'sv']) : super(locale);
+
+  @override
+  String get welcomePageTitle => 'Välkommen';
+
+  @override
+  String welcomePageHeader(String distro) {
+    return 'Välkommen till $distro';
+  }
+
+  @override
+  String get welcomeWhatsNew => 'VAD ÄR NYTT?';
+
+  @override
+  String get welcomeStartTitle => 'En smidig start';
+
+  @override
+  String get welcomeStartSubtitle =>
+      'Stöd för en renare installationsupplevelse.';
+
+  @override
+  String get welcomeStoreTitle => 'Nytt utseende för App Store';
+
+  @override
+  String get welcomeStoreSubtitle =>
+      'Det har aldrig varit lättare att hitta din favoritprogramvara.';
+
+  @override
+  String get welcomeSecurityTitle => 'Utökad säkerhet';
+
+  @override
+  String get welcomeSecuritySubtitle =>
+      'Nya alternativ för hårdvarustödd kryptering eller ZFS-kryptering.';
+
+  @override
+  String welcomeChangelogLabel(String url) {
+    return '<a href=\"$url\">Visa ändringslogg</a>';
+  }
+
+  @override
+  String get telemetryPageTitle => 'Telemetri';
+
+  @override
+  String telemetryHeader(String distro) {
+    return 'Hjälp till att förbättra $distro';
+  }
+
+  @override
+  String telemetryDescription(String distro) {
+    return 'Hjälp oss att förbättra $distro genom att dela din systemdata med oss. Detta inkluderar saker som din maskinmodell, installerad programvara och den plats du valde för din tidszon.';
+  }
+
+  @override
+  String telemetryLabelOn(String distro) {
+    return 'Ja, dela systemdata med $distro-teamet';
+  }
+
+  @override
+  String get telemetryLabelOff => 'Nej, dela inte systemdata';
+
+  @override
+  String get telemetryReportLabel => 'Visa den första rapporten';
+
+  @override
+  String get telemetryReportTitle => 'Rapporteringsdetaljer';
+
+  @override
+  String get telemetryLegalLabel => 'Juridiskt meddelande';
+
+  @override
+  String get telemetryCollectError =>
+      'Misslyckades med att samla in telemetridata';
+
+  @override
+  String get privacyPageTitle => 'Platstjänster';
+
+  @override
+  String get privacyLocationTitle => 'Aktivera platstjänster?';
+
+  @override
+  String get privacyLocationSubtitle =>
+      'Låt programmen veta din geografiska plats.\nDu kan ändra detta när som helst i Systeminställningarna.';
+
+  @override
+  String get privacyLocationEnable => 'Platstjänster';
+
+  @override
+  String get privacyPolicyLink => 'Dataintegritet';
+
+  @override
+  String ubuntuProMagicAttachInstructions(String url) {
+    return 'Anslut magiskt med koden på <a href=\"https://$url\"></a>';
+  }
+
+  @override
+  String get ubuntuProPageTitle => 'Ubuntu Pro';
+
+  @override
+  String get ubuntuProHeader => 'Anslut den här maskinen';
+
+  @override
+  String get ubuntuProOrAddTokenManually => 'eller lägg till en token manuellt';
+
+  @override
+  String get ubuntuProTokenTextfieldHint => 'Token';
+
+  @override
+  String get ubuntuProSubscriptionDescription =>
+      'Få det mest omfattande abonnemanget för säkerhet med öppen källkod';
+
+  @override
+  String ubuntuProSubscriptionFreeForPersonalUse(String url) {
+    return 'Alltid kostnadsfritt för personligt bruk. 30 dagars provperiod för företag. <a href=\"https://$url\">Läs mer</a>';
+  }
+
+  @override
+  String get ubuntuProTokenAttachButton => 'Anslut';
+
+  @override
+  String get ubuntuProTokenAttachError => 'Ogiltig token';
+
+  @override
+  String get ubuntuProTokenAttachSucess => 'Giltig token';
+
+  @override
+  String get ubuntuProTokenAttachErrorVariant => 'Ogiltig token, försök igen';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNow => 'Hoppa över för nu';
+
+  @override
+  String get ubuntuProOnBoardingSkipForNowDescription =>
+      'Du kan alltid aktivera Ubuntu Pro senare via programmet Programvara och uppdateringar.';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuPro => 'Aktivera Ubuntu Pro';
+
+  @override
+  String get ubuntuProOnBoardingEnableUbuntuProDescription =>
+      'Lägg till denna maskin till ett Ubuntu Pro-abonnemang för säkerhetsuppdateringar för ett bredare utbud av paket, fram till 2032.';
+
+  @override
+  String get ubuntuProSucessAttachHeader =>
+      'Ubuntu Pro är nu aktiverat på den här maskinen';
+
+  @override
+  String get ubuntuProSucessAttachDescription =>
+      'Du kan hantera dina Pro-tjänster med programmet Programvara och uppdateringar.';
+
+  @override
+  String get successIconSemanticLabel => 'Lyckades';
+
+  @override
+  String get closeIconSemanticLabel => 'Stäng';
+
+  @override
+  String get maximizeIconSemanticLabel => 'Maximera';
+
+  @override
+  String get minimizeIconSemanticLabel => 'Minimera';
+}

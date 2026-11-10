@@ -1,0 +1,411 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'ubuntu_provision_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Hebrew (`he`).
+class UbuntuProvisionLocalizationsHe extends UbuntuProvisionLocalizations {
+  UbuntuProvisionLocalizationsHe([String locale = 'he']) : super(locale);
+
+  @override
+  String get accessibilityPageTitle => 'נגישות';
+
+  @override
+  String accessibilityPageHeader(String DISTRO) {
+    return 'נגישות ב־$DISTRO';
+  }
+
+  @override
+  String accessibilityPageBody(String DISTRO) {
+    return 'התאמת $DISTRO לצרכים שלך לפני ההתקנה. אפשר לשנות אותם מאוחר יותר ביישום ההגדרות.';
+  }
+
+  @override
+  String get accessibilitySeeingLabel => 'ראייה';
+
+  @override
+  String get accessibilityHearingLabel => 'שמיעה';
+
+  @override
+  String get accessibilityTypingLabel => 'הקלדה';
+
+  @override
+  String get accessibilityPointingLabel => 'הצבעה ולחיצה';
+
+  @override
+  String get accessibilityZoomLabel => 'תקריב';
+
+  @override
+  String get accessibilityHighContrastLabel => 'ניגודיות גבוהה';
+
+  @override
+  String get accessibilityLargeTextLabel => 'טקסט גדול';
+
+  @override
+  String get accessibilityReduceAnimationLabel => 'הפחתת הנפשות';
+
+  @override
+  String get accessibilityScreenReaderLabel => 'מקריא מסך';
+
+  @override
+  String get accessibilityVisualAlertsLabel => 'התראות חזותיות';
+
+  @override
+  String get accessibilityStickKeysLabel => 'מקשים דביקים';
+
+  @override
+  String get accessibilitySlowKeysLabel => 'מקשים איטיים';
+
+  @override
+  String get accessibilityMouseKeysLabel => 'מקשי עכבר';
+
+  @override
+  String get accessibilityDesktopZoomLabel => 'תקריב שולחן עבודה';
+
+  @override
+  String get errorPageTitle => 'משהו השתבש';
+
+  @override
+  String get errorPageUnexpected =>
+      'אנחנו לא בטוחים מה השגיאה, סליחה. אפשר לנסות להפעיל את המחשב מחדש ולהפעיל את תהליך ההתקנה מחדש. אפשר לנסות <a>לדווח על התקלה</a>.';
+
+  @override
+  String errorPageUbuntuBug(String SNAP) {
+    return 'כדי לשלוח דיווח אוטומטי על תקלה כולל הפרטים שקשורים אליה, נא להריץ את <pre>sudo ubuntu-bug $SNAP</pre> במסוף, או ממסוף שורת הפקודה (Alt+F2).';
+  }
+
+  @override
+  String get errorPageShowLog => 'הצגת היומן';
+
+  @override
+  String get errorPageHideLog => 'הסתרת היומן';
+
+  @override
+  String get errorPageTechnicalDetails => 'פרטים טכניים';
+
+  @override
+  String get restart => 'הפעלה מחדש';
+
+  @override
+  String get close => 'סגירה';
+
+  @override
+  String get timezonePageTitle => 'נא לבחור את אזור הזמן שלך';
+
+  @override
+  String get timezoneLocationLabel => 'מיקום';
+
+  @override
+  String get timezoneTimezoneLabel => 'אזור זמן';
+
+  @override
+  String get keyboardTitle => 'פריסת מקלדת';
+
+  @override
+  String get keyboardHeader => 'נא לבחור את פריסת המקלדת שלך';
+
+  @override
+  String get keyboardTestHint => 'ניתן להקליד כאן כדי לבדוק את המקלדת שלך';
+
+  @override
+  String get keyboardDetectTitle => 'זיהוי פריסת המקלדת';
+
+  @override
+  String get keyboardDetectButton => 'זיהוי';
+
+  @override
+  String get keyboardVariantLabel => 'נא לבחור את הגוון המקלדת שלך:';
+
+  @override
+  String get keyboardPressKeyLabel => 'נא ללחוץ על אחד מהתווים הבאים:';
+
+  @override
+  String get keyboardKeyPresentLabel => 'האם התו הבא קיים במקלדת שלך?';
+
+  @override
+  String get themePageTitle => 'נא לבחור את ערכת העיצוב שלך';
+
+  @override
+  String get themePageHeader => 'תמיד ניתן לשנות זאת מאוחר יותר בהגדרות המראה.';
+
+  @override
+  String get themeDark => 'כהה';
+
+  @override
+  String get themeLight => 'בהירה';
+
+  @override
+  String localePageTitle(String DISTRO) {
+    return 'ברוך בואך אל $DISTRO';
+  }
+
+  @override
+  String get localeHeader => 'נא לבחור שפה:';
+
+  @override
+  String get identityPageTitle => 'יצירת החשבון שלך';
+
+  @override
+  String get identityAutoLogin => 'כניסה אוטומטית';
+
+  @override
+  String get identityRequirePassword => 'דרישת הסיסמה שלי לצורך כניסה';
+
+  @override
+  String get identityRealNameLabel => 'השם שלך';
+
+  @override
+  String get identityRealNameRequired => 'דרוש שם';
+
+  @override
+  String get identityRealNameTooLong => 'השם ארוך מדי.';
+
+  @override
+  String get identityInvalidRealName => 'השם שגוי';
+
+  @override
+  String get identityHostnameLabel => 'שם המחשב שלך';
+
+  @override
+  String get identityHostnameInfo =>
+      'השם שישמש את המחשב בעת תקשורת מול מחשבים אחרים.';
+
+  @override
+  String get identityHostnameRequired => 'דרוש שם מחשב';
+
+  @override
+  String get identityHostnameTooLong => 'שם המחשב הזה ארוך מדי.';
+
+  @override
+  String get identityInvalidHostname => 'שם המחשב אינו תקני';
+
+  @override
+  String get identityUsernameLabel => 'שם המשתמש שלך (באותיות לטיניות)';
+
+  @override
+  String get identityUsernameRequired => 'דרוש שם משתמש';
+
+  @override
+  String get identityInvalidUsername =>
+      'שם המשתמש שגוי: הוא חייב להתחיל באות לטינית קטנה ויכול להיות מורכב רק מאותיות לטיניות קטנות, ספרות, מינוסים וקווים תחתיים.';
+
+  @override
+  String get identityUsernameInUse => 'שם משתמש זה כבר קיים.';
+
+  @override
+  String get identityUsernameSystemReserved => 'שם זה שמור לטובת המערכת.';
+
+  @override
+  String get identityUsernameTooLong => 'השם הזה ארוך מדי.';
+
+  @override
+  String get identityUsernameInvalidChars => 'שם זה מכיל תווים לא תקניים.';
+
+  @override
+  String get identityPasswordLabel => 'סיסמה';
+
+  @override
+  String get identityPasswordRequired => 'דרושה סיסמה';
+
+  @override
+  String get identityConfirmPasswordLabel => 'אישור הסיסמה';
+
+  @override
+  String get identityPasswordMismatch => 'הסיסמאות אינן זהות';
+
+  @override
+  String get identityPasswordShow => 'חשיפה';
+
+  @override
+  String get identityPasswordHide => 'הסתרה';
+
+  @override
+  String get identityActiveDirectoryOption => 'להשתמש ב־Active Directory';
+
+  @override
+  String get identityActiveDirectoryInfo =>
+      'יהיה אפשר להקליד את שם התחום (דומיין) ופרטים נוספים בשלב הבא.';
+
+  @override
+  String get activeDirectoryTitle => 'כניסה אל Active Directory';
+
+  @override
+  String get activeDirectoryHeader => 'להיכנס אל Active Directory?';
+
+  @override
+  String activeDirectoryInfo(String DISTRO) {
+    return 'מערכת $DISTRO תוכננה להשתלב בצורה חלקה עם Active Directory כדי להקל על הניהול.';
+  }
+
+  @override
+  String get activeDirectoryTestConnection => 'בדיקת חיבור לתחום';
+
+  @override
+  String get activeDirectoryDomainLabel => 'שם תחום (דומיין)';
+
+  @override
+  String get activeDirectoryDomainEmpty => 'חובה';
+
+  @override
+  String get activeDirectoryDomainTooLong => 'ארוך מדי';
+
+  @override
+  String get activeDirectoryDomainInvalidChars => 'תווים לא תקניים';
+
+  @override
+  String get activeDirectoryDomainStartDot => 'מתחיל בנקודה (.)';
+
+  @override
+  String get activeDirectoryDomainEndDot => 'מסתיים בנקודה (.)';
+
+  @override
+  String get activeDirectoryDomainStartHyphen => 'מתחיל במינוס (-)';
+
+  @override
+  String get activeDirectoryDomainEndHyphen => 'מסתיים במינוס (-)';
+
+  @override
+  String get activeDirectoryDomainMultipleDots => 'מכיל מספר נקודות ברצף (..)';
+
+  @override
+  String get activeDirectoryDomainNotFound => 'שם התחום לא נמצא';
+
+  @override
+  String get activeDirectoryAdminLabel => 'משתמש צירוף לתחום';
+
+  @override
+  String get activeDirectoryAdminEmpty => 'חובה';
+
+  @override
+  String get activeDirectoryAdminInvalidChars => 'תווים לא תקניים';
+
+  @override
+  String get activeDirectoryPasswordLabel => 'סיסמה';
+
+  @override
+  String get activeDirectoryPasswordEmpty => 'חובה';
+
+  @override
+  String get activeDirectoryErrorTitle =>
+      'שגיאה בהגדרת החיבור ל־Active Directory';
+
+  @override
+  String get activeDirectoryErrorMessage =>
+      'אי אפשר להגדיר חיבור ל־Active Directory כרגע, עמך הסליחה. לאחר סיום התקנת המערכת, יש לבקר בכתובת <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> לקבלת עזרה.';
+
+  @override
+  String get networkPageTitle => 'התחברות לרשת';
+
+  @override
+  String get networkPageHeader => 'נא להתחבר לאינטרנט';
+
+  @override
+  String get networkPageBody =>
+      'חיבור לאינטרנט ישפר את ההתקנה שלך בעזרת בדיקות תאימות וחבילות תוכנה נוספות.';
+
+  @override
+  String get networkWiredOption => 'להשתמש בחיבור קווי';
+
+  @override
+  String get networkWiredNone => 'לא זוהה חיבור קווי';
+
+  @override
+  String get networkWiredOff => 'החיבור הקווי מושבת';
+
+  @override
+  String get networkWiredDisabled =>
+      'כדי להשתמש בכבל רשת במחשב הזה יש להפעיל את החיבור הקווי';
+
+  @override
+  String get networkWiredEnable => 'להפעיל חיבור קווי';
+
+  @override
+  String get networkWifiOption => 'התחברות לרשת אלחוטית';
+
+  @override
+  String get networkWifiOff => 'הרשת האלחוטית מושבתת';
+
+  @override
+  String get networkWifiNone => 'לא זוהו התקני רשת אלחוטית';
+
+  @override
+  String get networkWifiDisabled =>
+      'כדי להשתמש ברשת אלחוטית במחשב הזה, יש להפעיל את התקשורת האלחוטית';
+
+  @override
+  String get networkWifiEnable => 'הפעלת רשת אלחוטית';
+
+  @override
+  String get networkHiddenWifiOption => 'התחברות לרשת אלחוטית נסתרת';
+
+  @override
+  String get networkHiddenWifiNameLabel => 'שם הרשת';
+
+  @override
+  String get networkHiddenWifiNameRequired => 'שם הרשת נחוץ';
+
+  @override
+  String get networkNoneOption => 'לא להתחבר לאינטרנט בשלב זה';
+
+  @override
+  String get eulaPageTitle => 'הסכם רישוי';
+
+  @override
+  String get eulaReviewTerms => 'סקירת תנאי הרישיון';
+
+  @override
+  String get eulaReadAndAcceptTerms =>
+      'כדי להמשיך להתקין את המכונה הזאת, חובה לקרוא ולהסכים לתנאי הרישוי.';
+
+  @override
+  String get eulaAcceptTerms => 'קראתי וקיבלתי את התנאים האלה';
+
+  @override
+  String get successIconSemanticLabel => 'הצליח';
+
+  @override
+  String get closeIconSemanticLabel => 'סגירה';
+
+  @override
+  String get maximizeIconSemanticLabel => 'הגדלה';
+
+  @override
+  String get minimizeIconSemanticLabel => 'מזעור';
+
+  @override
+  String get expandIconSemanticLabel => 'הרחבה';
+
+  @override
+  String get collapseIconSemanticLabel => 'צמצום';
+
+  @override
+  String get networkWifiSignalNone => 'אין אות';
+
+  @override
+  String get networkWifiSignalWeak => 'אות חלש';
+
+  @override
+  String get networkWifiSignalOk => 'אות סביר';
+
+  @override
+  String get networkWifiSignalGood => 'אות טוב';
+
+  @override
+  String get networkWifiSignalExcellent => 'אות מעולה';
+
+  @override
+  String get networkWifiOpenNetwork => 'רשת פתוחה';
+
+  @override
+  String get networkWifiSecureNetwork => 'רשת מאובטחת';
+
+  @override
+  String get networkWifiConnecting => 'התחברות…';
+
+  @override
+  String get networkWifiConnected => 'מחובר';
+
+  @override
+  String get logViewSemanticLabel => 'יומן';
+}

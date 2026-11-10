@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>canonical/ubuntu-flutter-plugins"
+  ],
+  "git-submodules": {
+    "enabled": true
+  },
+  "enabledManagers": [
+    "github-actions",
+    "pub",
+    "gomod",
+    "git-submodules"
+  ],
+  "postUpdateOptions": [
+    "gomodTidy",
+    "gomodUpdateImportPaths"
+  ],
+  "schedule": [
+    "after 9am and before 2pm on monday"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "packages/subiquity_client/subiquity"
+      ],
+      "schedule": [
+        "at any time"
+      ]
+    }
+  ]
+}

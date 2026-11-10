@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+
+service UserService {
+  rpc CreateUser(CreateUserRequest) returns (google.protobuf.Empty);
+  rpc ValidateUsername(ValidateUsernameRequest) returns (ValidateUsernameResponse);
+}
+
+message User {
+  string real_name = 1;
+  string hostname = 2;
+  string username = 3;
+  string password = 4;
+  bool auto_login = 5;
+}
+
+message CreateUserRequest {
+  User user = 1;
+  bool is_admin = 2;
+}
+
+message ValidateUsernameRequest {
+  string username = 1;
+}
+
+message ValidateUsernameResponse {
+  UsernameValidation username_validation = 1;
+}
+
+enum UsernameValidation {
+  OK = 0;
+  ALREADY_IN_USE = 1;
+  SYSTEM_RESERVED = 2;
+  INVALID_CHARS = 3;
+  TOO_LONG = 4;
+  EMPTY = 5;
+}

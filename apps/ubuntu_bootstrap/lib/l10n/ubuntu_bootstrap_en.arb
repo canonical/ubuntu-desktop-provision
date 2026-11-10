@@ -1,0 +1,1140 @@
+{
+  "@@locale": "en",
+  "appTitle": "Ubuntu Desktop Installer",
+  "windowTitle": "Install {RELEASE}",
+  "@windowTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallDirectTitle": "Automated installation",
+  "autoinstallDirectHeader": "Import autoinstall file",
+  "autoinstallDirectUrlLabel": "You can enter the URL of an autoinstall file:",
+  "autoinstallDirectFileLabel": "Or select a local file:",
+  "autoinstallDirectFileButtonLabel": "Select file...",
+  "autoinstallDirectFileClearButtonLabel": "Clear file",
+  "autoinstallDirectFilePickerTitle": "Choose file",
+  "autoinstallDirectFilePickerFilterLabel": "YAML files",
+  "autoinstallDirectImportButtonLabel": "Import",
+  "autoinstallDirectErrorNetworkTitle": "Autoinstall file is not reachable",
+  "autoinstallDirectErrorNetworkBody": "Check the URL is correct, test your internet connection, or try later.",
+  "autoinstallDirectErrorInvalidUrlTitle": "Invalid URL",
+  "autoinstallDirectErrorInvalidUrlBody": "Check the URL is correct or select a local file.",
+  "autoinstallDirectErrorInvalidContentTitle": "Invalid autoinstall file",
+  "autoinstallDirectErrorInvalidContentBody": "Check the file or provide a different one.",
+  "autoinstallDirectErrorFileSystemTitle": "Autoinstall file is not readable",
+  "autoinstallDirectErrorFileSystemBody": "Check your permissions or provide a different file.",
+  "autoinstallDirectErrorUnkownTitle": "Unknown error",
+  "autoinstallTitle": "Type of installation",
+  "autoinstallHeader": "How would you like to install {DISTRO}?",
+  "@autoinstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "autoinstallInstructions": "Enter the autoinstall.yaml URL or local file path:",
+  "autoinstallInteractiveOption": "Interactive installation",
+  "autoinstallInteractiveDescription": "For users who want to be guided step by step through the installation.",
+  "autoinstallDirectOption": "Automated with autoinstall file",
+  "autoinstallDirectDescription": "For advanced users who have an autoinstall.yaml for consistent and repeatable system setups.",
+  "autoinstallLandscapeOption": "Automated with Landscape",
+  "autoinstallLandscapeDescription": "For users in organizations that provide an autoinstall file via Landscape.",
+  "autoinstallErrorMessage": "A command in the autoinstall file failed to run during installation.",
+  "autoinstallGenericErrorMessage": "Installation cannot continue with the provided autoinstall file.",
+  "autoinstallValidationErrorMessage": "There is an issue with the provided autoinstall file.",
+  "autoinstallCloudInitSchemaValidationErrorMessage": "There is an issue with the cloud-init user data provided in the autoinstall file.",
+  "autoinstallErrorInstructions": "You will need to restart the installation. Check the autoinstall file, choose a different installation type, or contact your IT support.",
+  "changeButtonText": "Change",
+  "quitButtonText": "Quit installation",
+  "loadingPageTitle": "Welcome to {DISTRO}",
+  "@loadingPageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "loadingHeader": "Preparing {DISTRO}…",
+  "@loadingHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "warningLabel": "Warning:",
+  "tryOrInstallTitle": "Try or install {DISTRO}",
+  "@tryOrInstallTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallHeader": "What do you want to do with {DISTRO}?",
+  "@tryOrInstallHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallRepairOption": "Repair installation",
+  "tryOrInstallRepairDescription": "Repairing will reinstall all installed software without touching documents or settings.",
+  "tryOption": "Try {RELEASE}",
+  "@tryOption": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "tryDescription": "You can try {RELEASE} without making any changes to your computer.",
+  "@tryDescription": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installOption": "Install {RELEASE}",
+  "@installOption": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installDescription": "Install {RELEASE} alongside (or instead of) your current operating system. This shouldn't take too long.",
+  "@installDescription": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "tryOrInstallReleaseNotesLabel": "You may wish to read the <a href=\"{url}\">release notes</a>.",
+  "@tryOrInstallReleaseNotesLabel": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "rstTitle": "RST detected",
+  "rstHeader": "You must disable RST to continue installation",
+  "rstDisable": "Your computer uses Intel RST (Rapid Storage Technology). You can disable RST either in:",
+  "rstDisableWindows": "Windows, if you are using a dual boot setup with Windows",
+  "rstDisableBios": "The BIOS settings",
+  "rstInstructions": "For instructions, scan the QR code on another device or visit: <a href=\"https://{url}\">{url}</a>",
+  "@rstInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "configureSecureBootTitle": "Configure Secure Boot",
+  "configureSecureBootDescription": "You've chosen to install third-party driver software. This requires turning off Secure Boot.\nTo do this, you need to choose a security key now, and enter it when the system restarts.",
+  "configureSecureBootOption": "Configure Secure Boot",
+  "chooseSecurityKey": "Choose a security key",
+  "confirmSecurityKey": "Confirm the security key",
+  "dontInstallDriverSoftwareNow": "Don't install the driver software for now",
+  "dontInstallDriverSoftwareNowDescription": "You can install it later from Software & Updates.",
+  "configureSecureBootSecurityKeyRequired": "Security key is required",
+  "secureBootSecurityKeysDontMatch": "Security keys do not match",
+  "showSecurityKey": "Show",
+  "hideSecurityKey": "Hide",
+  "updatesOtherSoftwarePageTitle": "Applications",
+  "updatesOtherSoftwarePageDescription": "What apps would you like to install to start with?",
+  "codecsAndDriversPageTitle": "Optimise your computer",
+  "codecsAndDriversPageDescription": "Install recommended proprietary software?",
+  "codecsAndDriversPageBody": "{DISTRO} ships with no proprietary software by default. Installing additional software may improve your computer's performance.",
+  "@codecsAndDriversPageBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "codecsAndDriversNvidiaNote": "NVIDIA graphics card detected",
+  "codecsAndDriversNvidiaBody": "For the best performance of NVIDIA graphic cards, installing additional drivers is strongly recommended.",
+  "fullInstallationTitle": "Extended selection",
+  "fullInstallationSubtitle": "An offline-friendly selection of office tools, utilities and web browser.",
+  "minimalInstallationTitle": "Default selection",
+  "minimalInstallationSubtitle": "Just the essentials, web browser and basic utilities.",
+  "otherOptions": "Other options",
+  "installThirdPartyTitle": "Install third-party software for graphics and Wi-Fi hardware, as well as additional media formats",
+  "installThirdPartySubtitle": "This software is subject to license terms included with its documentation. Some are proprietary.",
+  "installDriversTitle": "Install third-party software for graphics and Wi-Fi hardware",
+  "installDriversSubtitle": "Including but not limited to NVIDIA drivers and similar",
+  "installCodecsTitle": "Download and install support for additional media formats",
+  "installCodecsSubtitle": "Including but not limited to MP3, MP4, MOV and similar",
+  "batteryWarning": "The computer is not plugged in to a power source.",
+  "offlineWarning": "You are currently offline",
+  "choosePassphraseHeader": "Create a passphrase",
+  "choosePassphraseBody": "You will need to enter your passphrase every time you turn on your computer. This passphrase is different from your user password.",
+  "choosePassphraseInfoHeader": "Make sure to save your passphrase",
+  "choosePassphraseInfoBody": "If you lose it, you will lose all your data.",
+  "chooseOptionalPassphraseInfoHeader": "Store your passphrase and recovery key somewhere safe",
+  "chooseOptionalPassphraseInfoBody": "If you lose your passphrase, you will lose all your data. The passphrase does not replace the recovery key or your user password.",
+  "passphrasePageTitle": "Encryption",
+  "passphrasePageHeaderPassphrase": "Set an encryption passphrase",
+  "passphrasePageHeaderPin": "Set an encryption PIN",
+  "passphrasePageBodyPassphrase": "You will need to enter the passphrase every time you start your computer. This passphrase is different from your user password. You can change it later in the Security Center.",
+  "passphrasePageBodyPin": "You will need to enter the PIN every time you start your computer. This PIN is different from your user password. You can change it later in the Security Center.",
+  "passphrasePageChoosePassphraseHint": "Passphrase",
+  "passphrasePageConfirmPassphraseHint": "Confirm passphrase",
+  "passphrasePageRequiredPassphrase": "A passphrase is required",
+  "passphrasePageMismatchPassphrase": "The passphrases do not match",
+  "passphrasePageChoosePinHint": "PIN",
+  "passphrasePageConfirmPinHint": "Confirm PIN",
+  "passphrasePageRequiredPin": "A PIN is required",
+  "passphrasePageMismatchPin": "The PINs do not match",
+  "passphraseTypePassphraseTileTitle": "Require a passphrase on startup",
+  "passphraseTypePassphraseTileSubTitle": "Most secure. You will need to enter a longer passphrase every time you turn on your computer.",
+  "passphraseTypePinTileTitle": "Require a PIN on startup",
+  "passphraseTypePinTileSubTitle": "More secure. You will need to enter a numeric PIN every time you turn on your computer.",
+  "passphraseTypeNoneTileTitle": "Unlock disk automatically",
+  "passphraseTypePageHeader": "Additional security",
+  "passphraseTypePageBody": "By default, the disk will unlock automatically on startup. You also have options to further protect your data.",
+  "passphraseTypePageBodyAuthRequired": "Hardware-backed encryption requires additional security in this computer.",
+  "passphrasePagePassphraseEntropyBelowMin": "Weak passphrase, make it longer or more complex",
+  "passphrasePagePassphraseEntropyBelowOptimal": "Fair passphrase, make it longer or more complex for better security",
+  "passphrasePagePassphraseEntropyOptimal": "Strong passphrase",
+  "passphrasePagePinEntropyBelowMin": "Weak PIN, make it longer or less predictable",
+  "passphrasePagePinEntropyBelowOptimal": "Fair PIN, make it longer or less predictable for better security",
+  "passphrasePagePinEntropyOptimal": "PIN is long enough",
+  "installationTypeTitle": "Disk setup",
+  "installationTypeHeader": "How do you want to install {DISTRO}?",
+  "@installationTypeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeOSDetected": "This computer currently has {os} on it. What would you like to do?",
+  "@installationTypeOSDetected": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeDualOSDetected": "This computer currently has {os1} and {os2} on it. What would you like to do?",
+  "@installationTypeDualOSDetected": {
+    "placeholders": {
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeMultiOSDetected": "This computer currently has multiple operating systems on it. What would you like to do?",
+  "installationTypeNoOSDetected": "This computer currently has no detected operating systems. What would you like to do?",
+  "installationTypeErase": "Erase disk and install {DISTRO}",
+  "@installationTypeErase": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseInfo": "All data and partitions on the disk will be erased, including operating systems.",
+  "installationTypeAdvancedLabel": "Advanced options",
+  "installationTypeAdvancedTitle": "Encryption and file system",
+  "installationTypeExperimental": "Experimental",
+  "installationTypeNone": "No encryption",
+  "installationTypeNoneInfo": "Standard file system without encryption.",
+  "installationTypeNoneSelected": "None selected",
+  "installationTypeLVM": "Use LVM without encryption",
+  "installationTypeLVMSelected": "LVM selected",
+  "installationTypeLVMEncryption": "Encrypt with a passphrase",
+  "installationTypeLVMEncryptionInfoResolute": "You will need to enter a passphrase every time you turn on your computer. {advancedHint}",
+  "@installationTypeLVMEncryptionInfoResolute": {
+    "placeholders": {
+      "advancedHint": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeLVMEncryptionInfo2": "This uses LVM with LUKS encryption.",
+  "installationTypeLVMEncryptionSelected": "LVM and encryption selected",
+  "installationTypeEncryptInfo": "You will choose a security key in the next step.",
+  "installationTypeZFS": "Use ZFS without encryption",
+  "installationTypeZFSEncryption": "Encrypt with a passphrase using ZFS",
+  "installationTypeZFSEncryptionInfo": "Native encryption with ZFS. You will need to enter a passphrase every time you turn on your computer.",
+  "installationTypeZFSSelected": "ZFS selected",
+  "installationTypeZFSEncryptionSelected": "ZFS and encryption selected",
+  "installationTypeTPM": "Use hardware-backed encryption",
+  "installationTypeTPMInfoResolute": "The disk will unlock automatically during startup.",
+  "installationTypeTPMInfoUnavailable": "Not available on this computer.",
+  "installationTypeTPMSelected": "TPM selected",
+  "installationTypeReinstall": "Erase {os} and reinstall",
+  "@installationTypeReinstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeReinstallWarning": "<font color=\"{color}\">Warning:</font> This will delete all your {os} programs, documents, photos, music, and any other files.",
+  "@installationTypeReinstallWarning": {
+    "placeholders": {
+      "color": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongside": "Install {product} alongside {os}",
+  "@installationTypeAlongside": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideDual": "Install {product} alongside {os1} and {os2}",
+  "@installationTypeAlongsideDual": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      },
+      "os1": {
+        "type": "String"
+      },
+      "os2": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideMulti": "Install {product} alongside existing operating systems",
+  "@installationTypeAlongsideMulti": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideUnknown": "Install {product} alongside other partitions",
+  "@installationTypeAlongsideUnknown": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeAlongsideInfo": "Select a partition to resize and create space for {product}. You can choose your operating system during boot.",
+  "@installationTypeAlongsideInfo": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstall": "Erase {os} and install {product}",
+  "@installationTypeEraseAndInstall": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      },
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeEraseAndInstallInfo": "All files and data from the existing {os} installation will be permanently deleted.",
+  "@installationTypeEraseAndInstallInfo": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "installationTypeManual": "Manual installation",
+  "installationTypeManualInfo": "For advanced users seeking customized disk setups.",
+  "@installationTypeManualInfo": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStoragePageTitle": "Erase disk and install {DISTRO}",
+  "@selectGuidedStoragePageTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "selectGuidedStorageInfo": "Start from scratch on your selected disk.",
+  "selectGuidedStorageDriveDropdownLabel": "Select drive:",
+  "selectGuidedStoragePartitionDropdownLabel": "Select partition:",
+  "selectGuidedStorageInfoLabel": "The entire disk will be used:",
+  "selectGuidedStorageInstallNow": "Install now",
+  "guidedStoragePageHeader": "Choose where to install {DISTRO}",
+  "@guidedStoragePageHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideSpaceDivider": "Allocate drive space by dragging the divider below:",
+  "installAlongsideHiddenPartitions": "{num} smaller partitions are hidden, use the <a href=\"{url}\">advanced partitioning tool</a> for more control",
+  "@installAlongsideHiddenPartitions": {
+    "placeholders": {
+      "num": {
+        "type": "int"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "installAlongsideResizePartition": "Resize partition",
+  "installAlongsideAllocateSpace": "Allocate space",
+  "installAlongsideFiles": "Files",
+  "installAlongsidePartition": "Partition:",
+  "installAlongsideSize": "Size:",
+  "installAlongsideAvailable": "Available:",
+  "allocateDiskSpace": "Manual partitioning",
+  "allocateDiskSpaceInvalidMountPointSlash": "Mount points must start with \"/\"",
+  "allocateDiskSpaceInvalidMountPointSpace": "Mount points cannot contain spaces",
+  "allocateDiskSpaceInvalidMountPointFormat": "{format} is not a supported filesystem for {mountpoint}",
+  "@allocateDiskSpaceInvalidMountPointFormat": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      },
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "allocateDiskSpaceBootMustBeExt4": "/boot must be mounted on an ext4 partition",
+  "allocateDiskSpaceBootMustBeExt4Info": "Use an ext4 partition for / or create a separate ext4 partition for /boot",
+  "diskHeadersDevice": "Device",
+  "diskHeadersType": "Type",
+  "diskHeadersMountPoint": "Mount point",
+  "diskHeadersSize": "Size",
+  "diskHeadersUsed": "Used",
+  "diskHeadersSystem": "System",
+  "diskHeadersFormat": "Format",
+  "freeDiskSpace": "Free space",
+  "newPartitionTable": "New partition table",
+  "newPartitionTableConfirmationTitle": "New empty partition",
+  "newPartitionTableConfirmationMessage": "Creating a new partition table on an entire device will remove all of its current partitions. This operation can be undone if needed.",
+  "tooManyPrimaryPartitions": "Too many primary partitions",
+  "partitionLimitReached": "Limit reached",
+  "bootLoaderDevice": "Device for boot loader installation",
+  "partitionCreateTitle": "Create partition",
+  "partitionEditTitle": "Edit partition",
+  "partitionSizeLabel": "Size:",
+  "partitionTypeLabel": "Type for the new partition:",
+  "partitionTypePrimary": "Primary",
+  "partitionTypeLogical": "Logical",
+  "partitionLocationLabel": "Location for the new partition:",
+  "partitionLocationBeginning": "Beginning of this space",
+  "partitionLocationEnd": "End of this space",
+  "partitionFormatLabel": "Used as:",
+  "partitionFormatNone": "Leave unformatted",
+  "partitionFormatKeep": "Leave formatted as {format}",
+  "@partitionFormatKeep": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "partitionErase": "Format the partition",
+  "partitionMountPointLabel": "Mount point:",
+  "confirmPageTitle": "Ready to install",
+  "confirmHeader": "Review your choices",
+  "confirmDiskEncryptionLVM": "LUKS (LVM)",
+  "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+  "confirmDiskEncryptionTPM": "TPM",
+  "confirmDiskEncryptionNone": "None",
+  "confirmDevicesTitle": "Devices",
+  "confirmEntryApplications": "Applications",
+  "confirmEntryDiskSetup": "Type of installation",
+  "confirmEntryDiskEncryption": "Disk encryption",
+  "confirmEntryInstallationDisk": "Installation disk",
+  "confirmEntryProprietarySoftware": "Proprietary software",
+  "confirmSectionGeneralTitle": "General",
+  "confirmSectionSecurityAndMoreTitle": "Security & more",
+  "confirmPartitionsTitle": "Partitions",
+  "confirmPartitionTables": "The partition tables of the following devices are changed:",
+  "confirmPartitionTable": "{serial} ({path})",
+  "@confirmPartitionTable": {
+    "description": "An entry for a disk whose partition table is being changed",
+    "placeholders": {
+      "serial": {
+        "type": "String"
+      },
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmProprietarySoftwareCodecs": "Codecs",
+  "confirmProprietarySoftwareCodecsDrivers": "Codecs & drivers",
+  "confirmProprietarySoftwareDrivers": "Drivers",
+  "confirmInstallButton": "Install",
+  "confirmTableErased": "Erased",
+  "confirmTableUnchanged": "Unchanged",
+  "confirmTableResized": "Resized from {oldsize} to {newsize}",
+  "@confirmTableResized": {
+    "placeholders": {
+      "oldsize": {
+        "type": "String"
+      },
+      "newsize": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableCreatedFormattedMounted": "Created and formatted as {format} used for {mountpoint}",
+  "@confirmTableCreatedFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormattedMounted": "Formatted as {format} used for {mountpoint}",
+  "@confirmTableFormattedMounted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      },
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableMounted": "Used for {mountpoint}",
+  "@confirmTableMounted": {
+    "placeholders": {
+      "mountpoint": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmTableFormatted": "Formatted as {format}",
+  "@confirmTableFormatted": {
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "installationCompleteTitle": "Installation complete",
+  "readyToUse": "{system} is installed and ready to use",
+  "@readyToUse": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "rebootToConfigure": "**{system}** has been copied to the disk",
+  "@rebootToConfigure": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartInto": "Restart into {system}",
+  "@restartInto": {
+    "placeholders": {
+      "system": {
+        "type": "String"
+      }
+    }
+  },
+  "restartWarningBody": "Restart to complete the installation or continue testing.\nAny changes you make will not be saved.",
+  "rebootToConfigureWarning": "You have to restart the computer to continue the installation process.",
+  "shutdown": "Shut down",
+  "restartNow": "Restart now",
+  "continueTesting": "Continue testing",
+  "bitlockerInfoTitle": "BitLocker detected",
+  "bitlockerInfoDescription": "One or more partitions are encrypted with BitLocker.",
+  "bitlockerInfoDisable": "To install alongside Windows, disable BitLocker in Windows.",
+  "bitlockerInfoRecovery": "Windows may request recovery keys on boot after installation.",
+  "bitlockerInfoInstructions": "For instructions, visit the <a href=\"{url}\">BitLocker guide</a>.",
+  "@bitlockerInfoInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bitlockerWarningTitle": "You may lose all your data without BitLocker recovery keys",
+  "restartComputer": "Restart computer",
+  "restartComputerTitle": "Restart computer?",
+  "restartInstaller": "Restart installer",
+  "restartIntoWindows": "Restart into Windows",
+  "restartIntoWindowsTitle": "Restart into Windows?",
+  "restartIntoWindowsDescription": "Are you sure you want to restart your computer? You will need to restart the {DISTRO} installation later to finish installing {DISTRO}.",
+  "@restartIntoWindowsDescription": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesTitle": "Welcome to {RELEASE}",
+  "@installationSlidesTitle": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAvailable": "Available:",
+  "installationSlidesIncluded": "Included:",
+  "installationSlidesWelcomeTitle": "Fast, free and full of new features",
+  "installationSlidesWelcomeHeader": "The latest version of {DISTRO} makes computing easier than ever.",
+  "@installationSlidesWelcomeHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesWelcomeBody": "Whether you're a developer, creator, gamer or administrator you'll find new tools to improve your productivity and enhance your experience in {RELEASE}.",
+  "@installationSlidesWelcomeBody": {
+    "placeholders": {
+      "RELEASE": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSoftwareTitle": "All the applications you need",
+  "installationSlidesSoftwareBody": "Install, manage and update all your apps in Ubuntu Software, including thousands of applications from both the Snap Store and {DISTRO} archive.",
+  "@installationSlidesSoftwareBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesDevelopmentTitle": "Develop with the best of open source",
+  "installationSlidesDevelopmentBody": "{DISTRO} is the ideal workstation for app or web development, data science and AI/ML as well as devops and administration. Every {DISTRO} release includes the latest toolchains and supports all major IDEs.",
+  "@installationSlidesDevelopmentBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesCreativityTitle": "Enhance your creativity",
+  "installationSlidesCreativityBody": "If you're an animator, designer, video creator or game developer it's easy to bring your workflows to {DISTRO} with support for open source and industry standard software and applications.",
+  "@installationSlidesCreativityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesGamingTitle": "Great for gaming",
+  "installationSlidesGamingBody": "{DISTRO} supports the latest NVIDIA and Mesa drivers to improve performance and compatibility. Thousands of Windows titles play great on {DISTRO} via applications like Steam with no additional configuration.",
+  "@installationSlidesGamingBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityTitle": "Private and secure",
+  "installationSlidesSecurityBody": "{DISTRO} provides all of the tools you need to stay private and secure online. With built in firewall and VPN support and a host of privacy-centric applications to ensure you are in full control of your data.",
+  "@installationSlidesSecurityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSecurityLts": "All {DISTRO} LTS releases come with five years of security patching included, extending to ten years with an Ubuntu Pro subscription.",
+  "@installationSlidesSecurityLts": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesProductivityTitle": "Power up your productivity",
+  "installationSlidesProductivityBody": "{DISTRO} Desktop includes LibreOffice, a suite of Microsoft Office compatible open source applications for documents, spreadsheets and presentations. Popular collaboration tools are also available.",
+  "@installationSlidesProductivityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityTitle": "Access for everyone",
+  "installationSlidesAccessibilityBody": "At the heart of the {DISTRO} philosophy is the belief that computing is for everyone. With advanced accessibility tools and options to change language, colours and text size, {DISTRO} makes computing easy - whoever and wherever you are.",
+  "@installationSlidesAccessibilityBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesAccessibilityOrca": "Orca screen reader",
+  "installationSlidesAccessibilityLanguages": "Language support",
+  "installationSlidesSupportTitle": "Help and support",
+  "installationSlidesSupportHeader": "The official {DISTRO} documentation is available both online and via the Help icon in the dock.",
+  "@installationSlidesSupportHeader": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "installationSlidesSupportCommunity": "Ask Ubuntu covers a range of questions and responses and the Ubuntu Discourse provides guides and discussions for new and experienced users.",
+  "installationSlidesSupportEnterprise": "For enterprise users Canonical provides commercial support to make it easy to onboard and manage Ubuntu securely in the workplace.",
+  "installationSlidesSupportResources": "Helpful resources:",
+  "installationSlidesSupportDocumentation": "Official documentation",
+  "installationSlidesSupportUbuntuPro": "Enterprise-grade 24/7 support with Ubuntu Pro",
+  "nextSlideSemanticLabel": "Next slide",
+  "previousSlideSemanticLabel": "Previous slide",
+  "playSlideshowSemanticLabel": "Play slideshow",
+  "pauseSlideshowSemanticLabel": "Pause slideshow",
+  "toggleLogsSemanticLabel": "Toggle install logs",
+  "copyingFiles": "Copying files…",
+  "installingSystem": "Installing the system…",
+  "configuringSystem": "Setting up the system…",
+  "installationFailed": "Installation failed",
+  "notEnoughDiskSpaceTitle": "Not enough disk space",
+  "notEnoughDiskSpaceUbuntu": "Not enough disk space to install {DISTRO}",
+  "@notEnoughDiskSpaceUbuntu": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceBody": "The selected disk does not have enough disk space to install {DISTRO}. Quit the installer to make space available or select another disk.",
+  "@notEnoughDiskSpaceBody": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "notEnoughDiskSpaceAvailable": "Available:",
+  "notEnoughDiskSpaceRequired": "Required:",
+  "refreshPageTitle": "Update available",
+  "refreshHeader": "An update is available for the installer",
+  "refreshUpdateNow": "Update now",
+  "refreshInfo": "Update to the latest version for improved reliability and more features.",
+  "refreshReady": "Update ready",
+  "refreshCurrent": "The current {snap} version is {version}.",
+  "@refreshCurrent": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshInstall": "Update to version {version}",
+  "@refreshInstall": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpToDate": "The current version {version} is up-to-date.",
+  "@refreshUpToDate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshUpdating": "Updating {snap}...",
+  "@refreshUpdating": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshRestart": "Please close the installer and relaunch to continue",
+  "refreshCloseLabel": "Close installer",
+  "refreshSnapPrerequisites": "Ensuring {snap} prerequisites...",
+  "@refreshSnapPrerequisites": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRefresh": "Refreshing {snap}...",
+  "@refreshSnapRefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCheckRerefresh": "Checking {snap} re-refresh...",
+  "@refreshSnapCheckRerefresh": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapPrepare": "Preparing {snap}...",
+  "@refreshSnapPrepare": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapDownload": "Downloading {snap}...",
+  "@refreshSnapDownload": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapValidate": "Validating {snap}...",
+  "@refreshSnapValidate": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapMount": "Mounting {snap}...",
+  "@refreshSnapMount": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStopServices": "Stopping {snap} services...",
+  "@refreshSnapStopServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapRemoveAliases": "Removing {snap} aliases...",
+  "@refreshSnapRemoveAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUnlink": "Unlinking {snap}...",
+  "@refreshSnapUnlink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateAssets": "Updating {snap} assets...",
+  "@refreshSnapUpdateAssets": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapUpdateKernelCommandLine": "Updating {snap} kernel command line...",
+  "@refreshSnapUpdateKernelCommandLine": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCopyData": "Copying {snap} data...",
+  "@refreshSnapCopyData": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupProfiles": "Setting up {snap} security profiles...",
+  "@refreshSnapSetupProfiles": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapLink": "Linking {snap}...",
+  "@refreshSnapLink": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapAutoConnect": "Connecting {snap} plugs and slots...",
+  "@refreshSnapAutoConnect": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetAutoAliases": "Setting automatic {snap} aliases...",
+  "@refreshSnapSetAutoAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapSetupAliases": "Setting up {snap} aliases...",
+  "@refreshSnapSetupAliases": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapStartServices": "Starting {snap} services...",
+  "@refreshSnapStartServices": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "refreshSnapCleanup": "Cleaning up {snap}...",
+  "@refreshSnapCleanup": {
+    "placeholders": {
+      "snap": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyTitle": "Recovery key",
+  "recoveryKeyTitleBadgeLabel": "Important",
+  "recoveryKeyHeader": "Save your recovery key",
+  "recoveryKeyInfoHeader": "You may lose all your data without a recovery key",
+  "recoveryKeyTextFieldLabel": "Recovery key",
+  "recoveryKeyStorageAdvice": "You will need to provide this recovery key if decryption fails during startup. Without the key, you will lose access to all your data. Save it somewhere safe, such as a password manager.",
+  "recoveryKeyConfirmation": "I saved my recovery key somewhere safe",
+  "recoveryKeyLinkLabel": "Learn more",
+  "recoveryKeySaveToFileLabel": "Save to file",
+  "recoveryKeyShowQrCodeLabel": "Show QR code",
+  "recoveryKeyQrDialogTitle": "{DISTRO} Desktop - Recovery key",
+  "@recoveryKeyQrDialogTitle": {
+    "placeholders": {
+      "DISTRO": {
+        "type": "String"
+      }
+    }
+  },
+  "recoveryKeyQrDialogBody": "Scan the QR code to copy the recovery key and save it somewhere safe, such as a password manager. You can also take a photo for later use.",
+  "recoveryKeyClipboardNotifiaction": "Copied to clipboard",
+  "recoveryKeyExceptionFileSystemTitle": "Recovery key file not saved",
+  "recoveryKeyExceptionDisallowedPathTitle": "Recovery key file cannot be saved in a temporary location",
+  "recoveryKeyExceptionUnknownTitle": "Unknown error",
+  "recoveryKeyExceptionFileSystemBody": "You do not have permission to write to that folder. Try a different location or use another method.",
+  "recoveryKeyExceptionDisallowedPathBody": "Try a different location, such as a removable drive, or use another method.",
+  "recoveryKeyFilePickerTitle": "Save recovery key file",
+  "recoveryKeyFilePickerFilter": "Text files",
+  "landscapeMagicAttachInstructions": "Scan the QR code or enter the code below at <a href=\"https://{url}\">{url}</a>",
+  "@landscapeMagicAttachInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapePageTitle": "Automated installation",
+  "@landscapePageTitle": {},
+  "landscapeHeader": "Log in to Landscape",
+  "@landscapeHeader": {},
+  "landscapeDomainHeader": "Enter Landscape domain (FQDN)",
+  "@landscapeDomainHeader": {},
+  "landscapeDomainHintText": "Landscape domain (FQDN)",
+  "@landscapeDomainHintText": {},
+  "landscapeDomainInstructions": "Provide your organization's Landscape domain to log in and fetch an autoinstall file. You can get the FQDN from your IT support.",
+  "@landscapeDomainInstructions": {},
+  "landscapeDomainTextField": "Landscape domain (FQDN)",
+  "@landscapeDomainTextField": {},
+  "next": "Next",
+  "@next": {},
+  "landscapeDomainInvalidDomainWarning": "Invalid domain, please check or contact your IT support",
+  "@landscapeDomainInvalidDomainWarning": {},
+  "landscapeDomainNoInternetTitleWarning": "Connect to the internet to continue",
+  "@landscapeDomainNoInternetTitleWarning": {},
+  "landscapeDomainNoInternetDescriptionWarning": "Internet is needed to fetch the autoinstall file from Landscape",
+  "@landscapeDomainNoInternetDescriptionWarning": {},
+  "landscapeCodeExpiredWarning": "Code expired, please try again",
+  "@landscapeCodeExpiredWarning": {},
+  "landscapeLoginFailedWarning": "Login failed, please try again",
+  "@landscapeLoginFailedWarning": {},
+  "landscapeErrorPageTitle": "Automated install is not available for your account",
+  "@landscapeErrorPageTitle": {},
+  "landscapeErrorPageBody": "Contact your IT support or try a different installation option.",
+  "@landscapeErrorPageBody": {},
+  "landscapeErrorPageCode": "Error code: {code}",
+  "@landscapeErrorPageCode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "landscapeConfirmPageSuccessInfoTitle": "Ubuntu will install with the configuration provided by your organization",
+  "@landscapeConfirmPageSuccessInfoTitle": {},
+  "landscapeConfirmPageSuccessInfoContent": "You can review the autoinstall file imported from Landscape below.",
+  "@landscapeConfirmPageSuccessInfoContent": {},
+  "successIconSemanticLabel": "Success",
+  "errorIconSemanticLabel": "Error",
+  "closeIconSemanticLabel": "Close",
+  "maximizeIconSemanticLabel": "Maximize",
+  "minimizeIconSemanticLabel": "Minimize",
+  "tpmActionPageTitle": "Hardware-backed encryption could not be enabled",
+  "tpmActionPageTitleActionable": "There is an issue with hardware-backed encryption",
+  "tpmActionBadgeLabel": "Action required",
+  "tpmActionDetailsLabel": "Technical details",
+  "tpmActionConfirmLabel": "Confirm",
+  "tpmActionSolutionLabel": "Solution {n}: {text}",
+  "@tpmActionSolutionLabel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "tpmActionSingleSolutionLabel": "Solution: {text}",
+  "@tpmActionSingleSolutionLabel": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "tpmActionDocumentationLinkLabel": "Learn more about hardware-backed encryption",
+  "tpmActionErrorSupportLabel": "Try the solutions below, contact IT support, or choose a different encryption method.",
+  "tpmActionErrorSupportSingleLabel": "Try the solution below, contact IT support, or choose a different encryption method.",
+  "tpmActionErrorSupportNoActionLabel": "Contact IT support, or choose a different encryption method.",
+  "tpmActionErrorKindInternal": "Internal error.",
+  "tpmActionErrorKindShutdownRequired": "Power off is required.",
+  "tpmActionErrorKindRebootRequired": "Restart is required.",
+  "tpmActionErrorKindUnexpectedAction": "Unexpected action.",
+  "tpmActionErrorKindMissingArgument": "Missing argument.",
+  "tpmActionErrorKindInvalidArgument": "Invalid argument.",
+  "tpmActionErrorKindActionFailed": "Action failed.",
+  "tpmActionErrorKindRunningInVm": "The current environment is a virtual machine.",
+  "tpmActionErrorKindSystemNotEfi": "This computer is using older firmware (legacy BIOS) that is not compatible with this encryption method.",
+  "tpmActionErrorKindEfiVariableAccess": "There is an issue with this computer's firmware.",
+  "tpmActionErrorKindNoSuitableTpm2Device": "This computer does not have the required security hardware (TPM 2.0) for this encryption method.",
+  "tpmActionErrorKindTpmDeviceDisabled": "This computer's TPM is disabled.",
+  "tpmActionErrorKindTpmHierarchiesOwned": "This computer's TPM is already in use by another system or application.",
+  "tpmActionErrorKindTpmDeviceLockoutLockedOut": "This computer's TPM is currently locked.",
+  "tpmActionErrorKindInsufficientTpmStorage": "This computer's TPM does not have enough storage available.",
+  "tpmActionErrorKindUnsupportedPlatform": "This computer is not compatible with hardware-backed encryption.",
+  "tpmActionErrorKindUefiDebuggingEnabled": "UEFI debugging is enabled.",
+  "tpmActionErrorKindInsufficientDmaProtection": "This computer is missing a required security feature (DMA protection).",
+  "tpmActionErrorKindNoKernelIommu": "This computer is missing a required security feature (IOMMU).",
+  "tpmActionErrorKindHostSecurity": "There is an issue with this computer's security configuration.",
+  "tpmActionErrorKindSysPrepApplicationsPresent": "There is software running at startup that might prevent a secure connection with the computer's TPM.",
+  "tpmActionErrorKindAbsolutePresent": "Absolute Persistence Module is enabled in this computer.",
+  "tpmActionErrorKindInvalidSecureBootMode": "Secure boot is disabled in this computer or is not set in deployed mode.",
+  "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Some of the certificates verifying software in this computer are outdated or use weak protection.",
+  "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "This computer is using a manual allowlist to verify software at startup.",
+  "tpmActionErrorKindAddonDriversPresent": "Add-on drivers are present.",
+  "tpmActionErrorKindNoHardwareRootOfTrust": "This computer is missing a required security feature (hardware root of trust).",
+  "tpmActionErrorKindGenericTpm": "There is an issue with this computer's TPM.",
+  "tpmActionErrorKindGenericFirmware": "There is an issue with this computer's firmware.",
+  "tpmActionFixActionReboot": "Restart",
+  "tpmActionFixActionShutdown": "Power off",
+  "tpmActionFixActionRebootToFwSettings": "Restart to firmware settings",
+  "tpmActionFixActionRebootToFwSettingsInstructions": "If firmware settings do not load automatically, restart and press the settings key repeatedly during startup (commonly F2, F10 or Delete).",
+  "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "Enable DMA protection manually",
+  "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "Clear TPM manually",
+  "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Enable secure boot manually",
+  "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "Enable IOMMU manually",
+  "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "Enable PCR banks manually",
+  "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "Enable TPM manually",
+  "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "Clear TPM manually",
+  "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "Clear TPM manually",
+  "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Disable Absolute Persistence Module manually",
+  "tpmActionFixActionContactOem": "Contact OEM",
+  "tpmActionFixActionContactOsVendor": "Contact OS vendor",
+  "tpmActionFixActionEnableTpmViaFirmware": "Enable TPM on restart",
+  "tpmActionFixActionEnableAndClearTpmViaFirmware": "Enable and clear TPM on restart",
+  "tpmActionFixActionClearTpmViaFirmware": "Clear TPM on restart",
+  "tpmActionFixActionClearTpm": "Clear TPM",
+  "tpmActionFixActionProceed": "Ignore",
+  "tpmActionFixActionRebootDescription": "Restart the computer to complete previous actions.",
+  "tpmActionFixActionRebootTpmDeviceFailureDescription": "Restarting the computer may fix the issue.",
+  "tpmActionFixActionShutdownDescription": "Power off the computer to complete previous actions.",
+  "tpmActionFixActionRebootToFwSettingsDescription": "You can do this in your computer's firmware settings.",
+  "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "You might be able to do this in your computer's firmware settings. Check the documentation of the CPU vendor for guidance.",
+  "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Check secure boot mode is set to \"deployed\".",
+  "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "This feature might be referred to as \"Virtualization Technology\", \"VT-d\" or \"AMD-Vi\".",
+  "tpmActionFixActionProceedDescription": "Ignoring this issue might result in a less secure installation.",
+  "tpmActionRestartLabel": "Restart",
+  "tpmActionRestartAndEnableTpmLabel": "Restart and enable TPM",
+  "tpmActionRestartAndClearTpmLabel": "Restart and clear TPM",
+  "tpmActionIgnoreAndContinueLabel": "Ignore and continue",
+  "tpmActionFixActionClearTpmWarningTitle": "Clearing the TPM erases all encryption keys",
+  "tpmActionFixActionClearTpmWarningBody": "You will lose access to all data in encrypted drives for which you do not have recovery keys. It will also break other features that depend on the TPM, such as authentication and certificates.",
+  "tpmActionFixActionClearTpmConfirmationLabel": "I understand the consequences of clearing the TPM",
+  "tpmActionFixActionCaveatConfirm": "You might be asked to confirm this action on restart.",
+  "tpmActionFixActionCaveatRetry": "Then you will need to start the installation again.",
+  "tpmActionErrorTitle": "This solution failed",
+  "tpmActionErrorDescription": "Try a different solution or contact IT support.",
+  "installationLogSemanticLabel": "Installation log",
+  "manualPartitioningWarningBody": "Try something else. You may also <a href=\"\">send an error report</a>.",
+  "manualPartitioningBootMustBeExt4WarningTitle": "/boot must be mounted on an ext4 partition",
+  "manualPartitioningBootMustBeExt4WarningBody": "Use an ext4 partition for / or create a separate ext4 partition for /boot",
+  "stepIndicatorLabel": "Step {CURRENT_STEP} of {TOTAL_STEPS}",
+  "@stepIndicatorLabel": {
+    "placeholders": {
+      "CURRENT_STEP": {
+        "type": "int"
+      },
+      "TOTAL_STEPS": {
+        "type": "int"
+      }
+    }
+  }
+}

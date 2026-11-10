@@ -1,0 +1,117 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'factory_reset_tools_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Hebrew (`he`).
+class FactoryResetToolsLocalizationsHe extends FactoryResetToolsLocalizations {
+  FactoryResetToolsLocalizationsHe([String locale = 'he']) : super(locale);
+
+  @override
+  String get appTitle => 'כלי איפוס להגדרות היצרן';
+
+  @override
+  String get windowTitle => 'כלי איפוס להגדרות היצרן';
+
+  @override
+  String get homeTitle => 'מה ברצונך לעשות?';
+
+  @override
+  String get createResetMedia => 'ליצור אמצעי איפוס';
+
+  @override
+  String get startFactoryReset => 'להתחיל איפוס להגדרות יצרן';
+
+  @override
+  String get createUsbTitle => 'ליצור אמצעי USB לאיפוס';
+
+  @override
+  String get createUsbBody =>
+      'ליצור אמצעי USB לאיפוס בשביל לשחזר את המערכת, כמו גם בשביל להתאים את התקנות אובונטו שלך.';
+
+  @override
+  String get createUsbListExplanation =>
+      'נא לבחור כונן USB נתיק. בכונן חייבים להיות **לפחות 16 ג״ב של מקום.**';
+
+  @override
+  String get createUsbWarning => 'הכונן הנתיק יפורמט וכל הנתונים שעליו יאבדו.';
+
+  @override
+  String get resetMediaTitle => 'אמצעי USB לאיפוס';
+
+  @override
+  String get noMediaDetected => 'לא זוהו אמצעי אחסון נתיקים';
+
+  @override
+  String get noMediaDetectedSubtitle =>
+      'צריך אחסון USB כדי ליצור אמצעי איפוס להגדרות היצרן.';
+
+  @override
+  String get factoryResetTitle =>
+      'נא לבחור אפשרות כדי להתחיל באיפוס להגדרות יצרן';
+
+  @override
+  String get loadingDrives => 'נא להמתין בעת משיכת הכוננים.';
+
+  @override
+  String get resetMediaReadyTitle => 'אמצעי ה־USB לאיפוס מוכן';
+
+  @override
+  String get resetMediaReadyBody =>
+      'בעת הצורך, יש להכניס את כונן ה־USB למחשב שברצונך לאפס ולהפעיל אותו מחדש.';
+
+  @override
+  String get errorLoadingDrives => 'אירעה שגיאה במשיכת הכוננים.';
+
+  @override
+  String get resetMediaInitializing => 'מתחילים';
+
+  @override
+  String get resetMediaCopying => 'מתבצעת העתקה';
+
+  @override
+  String get resetMediaFinalizing => 'לקראת סיום';
+
+  @override
+  String get resetMediaFinished => 'הפעולה הסתיימה';
+
+  @override
+  String get resetMediaFailed => 'הפעולה נכשלה';
+
+  @override
+  String get error => 'שגיאה';
+
+  @override
+  String get loading => 'בטעינה…';
+
+  @override
+  String get warning => 'אזהרה';
+
+  @override
+  String get restore => 'שחזור';
+
+  @override
+  String get restart => 'הפעלה מחדש';
+
+  @override
+  String get reformat => 'פרמוט מחדש';
+
+  @override
+  String get failed => 'הרצת הפקודה נכשלה';
+
+  @override
+  String get close => 'סגירה';
+
+  @override
+  String get ok => 'אישור';
+
+  @override
+  String get closeIconSemanticLabel => 'סגירה';
+
+  @override
+  String get maximizeIconSemanticLabel => 'הגדלה';
+
+  @override
+  String get minimizeIconSemanticLabel => 'מזעור';
+}

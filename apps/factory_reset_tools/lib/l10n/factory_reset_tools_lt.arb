@@ -1,0 +1,8 @@
+{
+    "@@locale": "lt",
+    "close": "Užverti",
+    "restart": "Paleisti iš naujo",
+    "maximizeIconSemanticLabel": "Išskleisti",
+    "minimizeIconSemanticLabel": "Suskleisti",
+    "closeIconSemanticLabel": "Užverti"
+}

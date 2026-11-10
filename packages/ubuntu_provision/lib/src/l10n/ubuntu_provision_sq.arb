@@ -1,0 +1,15 @@
+{
+  "timezonePageTitle": "Ku ndodheni?",
+  "timezoneLocationLabel": "Vendndodhja",
+  "timezoneTimezoneLabel": "Zona orare",
+  "themePageTitle": "Zgjidh pamjen tënde",
+  "themeDark": "E errët",
+  "themeLight": "E çelur",
+  "identityPageTitle": "Kush jeni ju?",
+  "identityAutoLogin": "Hyr automatikisht",
+  "identityRequirePassword": "Kërko fjalëkalimin tim për të hyrë",
+  "identityRealNameLabel": "Emri juaj",
+  "identityHostnameInfo": "Emri që ai përdor kur flet me kompjuterat e tjerë.",
+  "identityPasswordLabel": "Zgjidh një fjalëkalim",
+  "networkWifiEnable": "Aktivizo Wi-Fi"
+}

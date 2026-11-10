@@ -1,0 +1,129 @@
+{
+  "welcomePageTitle": "Welcome",
+  "@welcomePageTitle": {},
+  "welcomePageHeader": "Welcome to {distro}",
+  "@welcomePageHeader": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "welcomeWhatsNew": "WHAT'S NEW?",
+  "@welcomeWhatsNew": {},
+  "welcomeStartTitle": "A streamlined start",
+  "@welcomeStartTitle": {},
+  "welcomeStartSubtitle": "Supporting a cleaner setup experience.",
+  "@welcomeStartSubtitle": {},
+  "welcomeStoreTitle": "New look App Store",
+  "@welcomeStoretitle": {},
+  "welcomeStoreSubtitle": "It's never been easier to find your favourite software.",
+  "@welcomeStoreSubtitle": {},
+  "welcomeSecurityTitle": "Enhanced security",
+  "@welcomeSecurityTitle": {},
+  "welcomeSecuritySubtitle": "New options for hardware-backed or ZFS encryption.",
+  "@welcomeSecuritySubtitle": {},
+  "welcomeChangelogLabel": "<a href=\"{url}\">View changelog</a>",
+  "@welcomeChangelogLabel": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "telemetryPageTitle": "Telemetry",
+  "@telemetryPageTitle": {},
+  "telemetryHeader": "Help improve {distro}",
+  "@telemetryHeader": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "telemetryDescription": "Help us improve {distro} by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.",
+  "@telemetryDescription": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "telemetryLabelOn": "Yes, share system data with the {distro} team",
+  "@telemetryLabelOn": {
+    "placeholders": {
+      "distro": {
+        "type": "String"
+      }
+    }
+  },
+  "telemetryLabelOff": "No, don't share system data",
+  "@telemetryLabelOff": {},
+  "telemetryReportLabel": "Show the first report",
+  "@telemetryReportLabel": {},
+  "telemetryReportTitle": "Reporting details",
+  "telemetryLegalLabel": "Legal notice",
+  "@telemetryLegalLabel": {},
+  "telemetryCollectError": "Failed to collect telemetry data",
+  "@telemetryCollectError": {},
+  "privacyPageTitle": "Location services",
+  "@privacyPageTitle": {},
+  "privacyLocationTitle": "Enable location services?",
+  "@privacyLocationTitle": {},
+  "privacyLocationSubtitle": "Let applications know your geographical location.\nYou can change this anytime in System Settings.",
+  "@privacyLocationSubtitle": {},
+  "privacyLocationEnable": "Location services",
+  "@privacyLocationEnable": {},
+  "privacyPolicyLink": "Data Privacy",
+  "@privacyPolicyLink": {},
+  "ubuntuProMagicAttachInstructions": "Magic attach with this code at <a href=\"https://{url}\">{url}</a>",
+  "@ubuntuProMagicAttachInstructions": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "ubuntuProPageTitle": "Ubuntu Pro",
+  "@ubuntuProPageTitle": {},
+  "ubuntuProHeader": "Attach this machine",
+  "@ubuntuProHeader": {},
+  "ubuntuProOrAddTokenManually": "or add a token manually",
+  "@ubuntuProOrAddTokenManually": {},
+  "ubuntuProTokenTextfieldHint": "Token",
+  "@ubuntuProTokenTextfieldHint": {},
+  "ubuntuProSubscriptionDescription": "Get the most comprehensive subscription for open-source software security",
+  "@ubuntuProSubscriptionDescription": {},
+  "ubuntuProSubscriptionFreeForPersonalUse": "Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>",
+  "@ubuntuProSubscriptionFreeForPersonalUse": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "ubuntuProTokenAttachButton": "Attach",
+  "@ubuntuProTokenAttachButton": {},
+  "ubuntuProTokenAttachError": "Invalid token",
+  "@ubuntuProTokenAttachError": {},
+  "ubuntuProTokenAttachSucess": "Valid token",
+  "@ubuntuProTokenAttachSucess": {},
+  "ubuntuProTokenAttachErrorVariant": "Invalid token, retry",
+  "@ubuntuProTokenAttachErrorVariant": {},
+  "ubuntuProOnBoardingSkipForNow": "Skip for now",
+  "@ubuntuProOnBoardingSkipForNow": {},
+  "ubuntuProOnBoardingSkipForNowDescription": "You can always enable Ubuntu Pro later via the Software & Updates application.",
+  "@ubuntuProOnBoardingSkipForNowDescription": {},
+  "ubuntuProOnBoardingEnableUbuntuPro": "Enable Ubuntu Pro",
+  "@ubuntuProOnBoardingEnableUbuntuPro": {},
+  "ubuntuProOnBoardingEnableUbuntuProDescription": "Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.",
+  "@ubuntuProOnBoardingEnableUbuntuProDescription": {},
+  "ubuntuProSucessAttachHeader": "Ubuntu Pro is now enabled in this machine",
+  "@ubuntuProSucessAttachHeader": {},
+  "ubuntuProSucessAttachDescription": "You can manage your Pro services in the Software & Updates application.",
+  "@ubuntuProSucessAttachDescription": {},
+  "successIconSemanticLabel": "Success",
+  "closeIconSemanticLabel": "Close",
+  "maximizeIconSemanticLabel": "Maximize",
+  "minimizeIconSemanticLabel": "Minimize"
+}

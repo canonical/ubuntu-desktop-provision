@@ -1,0 +1,16 @@
+{
+  "@@locale": "th",
+  "tryOption": "ทดลอง {RELEASE}",
+  "installOption": "ติดตั้ง {RELEASE}",
+  "welcome": "ยินดีต้อนรับ",
+  "windowTitle": "ติดตั้ง {RELEASE}",
+  "tryOrInstallReleaseNotesLabel": "คุณอาจต้องการอ่าน <a href=\"{url}\">บันทึกการออกรุ่น</a>",
+  "tryOrInstallRepairOption": "ซ่อมแซมระบบที่ติดตั้ง",
+  "tryOrInstallRepairDescription": "การซ่อมแซมจะเป็นการติดตั้งซอฟต์แวร์ทั้งหมดที่ติดตั้งไว้ใหม่อีกครั้งโดยไม่แตะต้องเอกสารหรือการตั้งค่าของคุณ",
+  "tryDescription": "คุณสามารถทดลองใช้ {RELEASE} โดยไม่ทำการเปลี่ยนแปลงใดกับคอมพิวเตอร์ของคุณได้",
+  "installDescription": "ติดตั้ง {RELEASE} ควบคู่ (หรือแทนที่) ระบบปฏิบัติการปัจจุบันของคุณ ซึ่งกระบวนการนี้จะใช้เวลาไม่นานมากนัก",
+  "rstTitle": "ตรวจพบ RST",
+  "rstHeader": "ปิด RST เพื่อดำเนินการต่อ",
+  "rstDescription": "คอมพิวเตอร์เครื่องนี้ใช้ Intel RST (Rapid Storage Technology) คุณต้องปิด RST ใน Windows ก่อนที่จะติดตั้ง {DISTRO}",
+  "rstInstructions": "ถ้าต้องการดูคำแนะนำ ให้สแกนคิวอาร์โค้ดด้วยอุปกรณ์อื่น หรือไปยัง <a href=\"https://{url}\">{url}</a>"
+}

@@ -1,0 +1,3 @@
+hostname1.Get(interfaceName: org.freedesktop.hostname1, propertyName: StaticHostname)
+Accounts.CreateUser(username: "getuiderror", realname: "ok", accountType: 0)
+hostname1.Get(interfaceName: org.freedesktop.hostname1, propertyName: StaticHostname)

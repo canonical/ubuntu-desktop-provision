@@ -1,0 +1,534 @@
+{
+    "@@locale": "tr",
+    "changeButtonText": "Değiştir",
+    "tryOrInstallTitle": "{DISTRO} dene veya kur",
+    "welcome": "Hoş Geldiniz",
+    "appTitle": "Ubuntu Desktop Yükleyici",
+    "tryOption": "{RELEASE} Dene",
+    "tryDescription": "Bilgisayarınızda hiç bir değişiklik yapmadan {RELEASE} deneyebilirsiniz.",
+    "installOption": "{RELEASE} Kur",
+    "windowTitle": "{RELEASE} Yükle",
+    "tryOrInstallRepairOption": "Kurulumu tamir et",
+    "tryOrInstallRepairDescription": "Onarma, belgelere veya ayarlara dokunmadan tüm yüklü yazılımları yeniden yükleyecektir.",
+    "installDescription": "Mevcut işletim sisteminizin yanına (ya da yerine) {RELEASE} kur. Çok uzun sürmeyecektir.",
+    "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">Sürüm notlarını</a> okumak isteyebilirsiniz.",
+    "rstTitle": "RST tespit edildi",
+    "rstDescription": "Bu bilgisayar Intel RST (Rapid Storage Technology) kullanmaktadır. Ubuntu'yu kurmadan önce Windows'tan RST'yi kapatmalısınız.",
+    "rstInstructions": "Talimatlar için QR kodunu başka bir cihazda tarayın veya ziyaret edin: <a href=\"https://{url}\">{url}</a>",
+    "chooseSecurityKey": "Güvenlik anahtarı seçin",
+    "configureSecureBootTitle": "Güvenli Önyüklemeyi Yapılandır",
+    "configureSecureBootDescription": "Üçüncü parti sürücüleri kurmayı seçtiniz. Bu, Güvenli Önyüklemeyi kapatmanızı gerektirir.\nBunu yapabilmek için, şimdi bir güvenlik anahtarı seçmeli ve sistem yeniden başlatıldığında bu anahtarı girmelisiniz.",
+    "configureSecureBootOption": "Güvenli Önyüklemeyi Yapılandır",
+    "confirmSecurityKey": "Güvenlik anahtarını onaylayın",
+    "dontInstallDriverSoftwareNow": "Şimdilik sürücü yazılımını kurma",
+    "dontInstallDriverSoftwareNowDescription": "Daha sonra Yazılımlar ve Güncellemeler uygulamasından kurabilirsiniz.",
+    "configureSecureBootSecurityKeyRequired": "Güvenlik anahtarı gereklidir",
+    "secureBootSecurityKeysDontMatch": "Güvenlik anahtarları uyuşmamaktadır",
+    "otherOptions": "Diğer seçenekler",
+    "installThirdPartyTitle": "Grafik ve Wi-Fi donanımı için üçüncü taraf yazılımların yanı sıra ek medya formatlarını yükleyin",
+    "onBatteryWarning": "<font color=\"{color}\">Uyarı:</font> Bilgisayar güç kaynağına takılı değil.",
+    "selectGuidedStorageInstallNow": "Şimdi kur",
+    "diskHeadersSize": "Boyut",
+    "partitionEditTitle": "Bölüm düzenle",
+    "installationTypeTitle": "Disk kurulumu",
+    "diskHeadersDevice": "Cihaz",
+    "allocateDiskSpace": "Manuel bölümlendirme",
+    "newPartitionTable": "Yeni bölüm tablosu",
+    "installationTypeMultiOSDetected": "Bu bilgisayarda şu anda birden fazla işletim sistemi yüklü. Ne yapmak istersiniz?",
+    "diskHeadersType": "Tür",
+    "diskHeadersMountPoint": "Bağlama noktası",
+    "diskHeadersUsed": "Kullanılan",
+    "diskHeadersFormat": "Biçim",
+    "freeDiskSpace": "Boş alan",
+    "newPartitionTableConfirmationTitle": "Yeni boş bölüm",
+    "partitionCreateTitle": "Bölüm oluştur",
+    "partitionErase": "Bölümü biçimlendir",
+    "partitionMountPointLabel": "Bağlama noktası:",
+    "confirmInstallButton": "Kur",
+    "diskHeadersSystem": "Sistem",
+    "installThirdPartySubtitle": "Bu yazılım, belgelerinde yer alan lisans koşullarına tabidir. Bazıları tescillidir.",
+    "installationTypeNoOSDetected": "Bu bilgisayarda şu anda algılanan bir işletim sistemi yok. Ne yapmak istersiniz?",
+    "installationTypeAlongside": "{product} ürününü {os} yanına yükleyin",
+    "installationTypeManual": "Manuel kurulum",
+    "selectGuidedStorageDropdownLabel": "Sürücü seçin:",
+    "selectGuidedStorageInfoLabel": "Tüm disk kullanılacaktır:",
+    "updatesOtherSoftwarePageTitle": "Uygulamalar",
+    "updatesOtherSoftwarePageDescription": "Başlangıç olarak hangi uygulamaları kurmak istersiniz?",
+    "installationTypeAdvancedLabel": "Gelişmiş seçenekleri göster...",
+    "installationTypeAdvancedTitle": "Şifreleme ve dosya sistemi",
+    "installationTypeNone": "Şifreleme yok",
+    "installationTypeNoneSelected": "Hiçbiri seçilmedi",
+    "installationTypeLVMSelected": "LVM seçildi",
+    "installationTypeEncryptInfo": "Bir sonraki adımda güvenlik anahtarını seçeceksiniz.",
+    "installationTypeZFS": "Şifreleme olmadan ZFS kullanın",
+    "installationTypeZFSSelected": "ZFS seçildi",
+    "installationTypeReinstall": "{os} sil ve yeniden kur",
+    "partitionSizeLabel": "Boyut:",
+    "partitionTypeLabel": "Yeni bölümün türü:",
+    "partitionTypePrimary": "Birincil",
+    "partitionTypeLogical": "Mantıksal",
+    "partitionLocationLabel": "Yeni bölümün konumu:",
+    "partitionLocationBeginning": "Bu alanın başlangıcı",
+    "partitionLocationEnd": "Bu alanın sonu",
+    "confirmPageTitle": "Kuruluma hazır",
+    "confirmPartitionTable": "{serial} ({path})",
+    "confirmPartitionChanges": "Aşağıdaki bölüm değişiklikleri uygulanacak:",
+    "installationCompleteTitle": "Kurulum tamamlandı",
+    "readyToUse": "{system} kuruldu ve kullanıma hazır",
+    "shutdown": "Kapat",
+    "bitlockerTitle": "BitLocker aktif",
+    "restartIntoWindows": "Windows'a yeniden başlat",
+    "installationTypeErase": "Diski silin ve {DISTRO} yükleyin",
+    "selectGuidedStoragePageTitle": "Diski silin ve {DISTRO} yükleyin",
+    "installationTypeOSDetected": "Bu bilgisayarda şu anda {os} yüklü. Ne yapmak istersiniz?",
+    "bootLoaderDevice": "Önyükleyici kurulumu yapılacak cihaz",
+    "bitlockerInstructions": "Talimatlar için QR kodunu başka bir cihazda tarayın ya da <a href=\"https://{url}\">{url}</a> sayfasını ziyaret edin",
+    "installingSystem": "Sistem kuruluyor…",
+    "configuringSystem": "Sistem yapılandırılıyor…",
+    "installationFailed": "Kurulum başarısız oldu",
+    "newPartitionTableConfirmationMessage": "Bir cihazın tamamında yeni bir bölüm tablosu oluşturmak, cihazın tüm mevcut bölümlerini kaldırır. Gerekirse bu işlem geri alınabilir.",
+    "installAlongsideSpaceDivider": "Aşağıdaki ayırıcıyı sürükleyerek sürücü alanını ayırın:",
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Uyarı:</font> Bu, tüm {os} programlarınızı, belgelerinizi, fotoğraflarınızı, müziklerinizi ve diğer dosyalarınızı silecektir.",
+    "installationTypeManualInfo": "Özelleştirilmiş disk kurulumları arayan ileri düzey kullanıcılar için.",
+    "installationTypeAlongsideMulti": "{product} mevcut işletim sistemleriyle birlikte yükleyin",
+    "installAlongsideResizePartition": "Bölümü yeniden boyutlandır",
+    "installAlongsideAllocateSpace": "Alan ayır",
+    "installAlongsideHiddenPartitions": "{num} daha küçük bölüm gizlidir, daha fazla kontrol için <a href=\"{url}\">gelişmiş bölümlendirme aracını</a> kullanın",
+    "installAlongsidePartition": "Bölüm:",
+    "installationTypeAlongsideInfo": "Yeniden boyutlandırılacak ve {product} için alan oluşturulacak bölümü seçin. Önyükleme sırasında işletim sisteminizi seçebilirsiniz.",
+    "installationTypeDualOSDetected": "Bu bilgisayarda şu anda {os1} ve {os2} yüklü. Ne yapmak istersiniz?",
+    "partitionFormatLabel": "Kullanılan:",
+    "confirmPartitionMount": "<b>{sysname}</b> bölümü <b>{mount}</b> için kullanıldı",
+    "confirmPartitionTables": "Aşağıdaki cihazların bölüm tabloları değiştirildi:",
+    "confirmPartitionResize": "<b>{sysname}</b> bölümü <b>{oldsize}</b> boyutundan <b>{newsize}</b> boyutuna yeniden boyutlandırıldı",
+    "confirmHeader": "Seçimlerinizi gözden geçirin",
+    "copyingFiles": "Dosyalar kopyalanıyor…",
+    "installAlongsideFiles": "Dosyalar",
+    "installAlongsideAvailable": "Kullanılabilir:",
+    "confirmPartitionFormat": "<b>{sysname}</b> bölümü <b>{format}</b> olarak biçimlendirildi",
+    "restartInto": "{system}'i yeniden başlat",
+    "installAlongsideSize": "Boyut:",
+    "quitButtonText": "Kurulumdan Çık",
+    "installationTypeAlongsideUnknown": "{product} işletim sistemini diğer bölümlerin yanına kur",
+    "confirmPartitionCreate": "<b>{sysname}</b> bölümü oluşturuldu",
+    "installationTypeEncrypt": "Güvenlik için yeni {RELEASE} kurulumunu şifrele",
+    "installationTypeAlongsideDual": "{product} ürününü {os1} ve {os2} yanına kur",
+    "confirmPartitionFormatMount": "<b>{format} </b> biçimindeki <b>{sysname}</b> bölümü <b>{mount}</b> için kullanıldı",
+    "bitlockerDescription": "Bu bilgisayar Windows BitLocker şifreleme kullanmaktadır.\nBoş alan oluşturmak için Windows'u kullanmanız ya da devam etmek için '{option}'i seçmeniz gerekir.",
+    "notEnoughDiskSpaceTitle": "Yeterli alan yok",
+    "showSecurityKey": "Göster",
+    "installationTypeLVMEncryptionSelected": "LVM ve şifreleme seçildi",
+    "installDriversTitle": "Grafik ve Wi-Fi donanımı için üçüncü taraf yazılımları yükleyin",
+    "installDriversSubtitle": "NVIDIA sürücüleri ve benzerleri dahil ancak bunlarla sınırlı olmamak üzere",
+    "installCodecsTitle": "Ek medya biçimleri için desteği indirin ve yükleyin",
+    "installCodecsSubtitle": "MP3, MP4, MOV ve benzeri formatlar dahil ancak bunlarla sınırlı olmamak üzere",
+    "restartNow": "Şimdi yeniden başlat",
+    "continueTesting": "Test etmeye devam et",
+    "tooManyPrimaryPartitions": "Çok fazla birincil bölüm",
+    "partitionLimitReached": "Sınıra ulaşıldı",
+    "offlineWarning": "Şu anda çevrimdışısınız",
+    "partitionFormatNone": "Biçimlendirilmemiş olarak bırak",
+    "installationSlidesTitle": "{RELEASE} sürümüne hoş geldiniz",
+    "installationSlidesIncluded": "Dahil:",
+    "installationSlidesWelcomeTitle": "Hızlı, ücretsiz ve yeni özelliklerle dolu",
+    "installationSlidesWelcomeHeader": "{DISTRO}'nun son sürümü işleri hiç olmadığı kadar kolaylaştırır.",
+    "loadingHeader": "{DISTRO} hazırlanıyor…",
+    "confirmDevicesTitle": "Aygıtlar",
+    "confirmPartitionsTitle": "Bölümler",
+    "installationSlidesAvailable": "Mevcut:",
+    "installationSlidesWelcomeBody": "İster geliştirici, ister içerik oluşturucu, ister oyuncu veya yönetici olun, {RELEASE} sürümünde üretkenliğinizi artıracak ve deneyiminizi zenginleştirecek yeni araçlar bulacaksınız.",
+    "installationSlidesSoftwareTitle": "İhtiyacınız olan tüm uygulamalar",
+    "installationSlidesSoftwareBody": "Snap Store ve {DISTRO} arşivindeki binlerce uygulama dahil tüm uygulamaları Ubuntu Software ile kurun, yönetin ve güncelleyin.",
+    "installationSlidesDevelopmentTitle": "Açık kaynağın en iyileriyle geliştir",
+    "installationSlidesDevelopmentBody": "{DISTRO} uygulama veya web geliştirme, veri bilimi, yapay zeka ve makine öğrenmesi yanı sıra sistem yönetimi ve DevOps için ideal iş istasyonudur. Her {DISTRO} sürümü en güncel toolchainleri içerir ve tüm popüler IDE'leri destekler.",
+    "installationSlidesCreativityTitle": "Yaratıcılığınızı geliştirin",
+    "rstHeader": "Kuruluma devam etmek için RST'yi devre dışı bırakmalısınız",
+    "installationSlidesAccessibilityTitle": "Herkes için erişim",
+    "installationSlidesAccessibilityLanguages": "Dil desteği",
+    "bitlockerHeader": "Devam etmek için BitLocker'ı kapat",
+    "restartIntoWindowsTitle": "Windows'a yeniden başlatılsın mı?",
+    "restartIntoWindowsDescription": "Bilgisayarınızı yeniden başlatmak istediğinizden emin misiniz? {DISTRO} kurulumunu tamamlamak için daha sonra {DISTRO} kurulumunu yeniden başlatmanız gerekecektir.",
+    "installationSlidesAccessibilityBody": "{DISTRO} felsefesinin merkezinde, bilişimin herkes için olduğuna dair inanç yatar. Gelişmiş erişilebilirlik araçları ve dil, renk ve metin boyutunu değiştirme seçenekleriyle {DISTRO}, kim olursanız olun ve nerede olursanız olun bilişimi kolaylaştırır.",
+    "installationSlidesSupportTitle": "Yardım ve destek",
+    "installationSlidesSupportHeader": "Resmi {DISTRO} dokümantasyonu hem çevrimiçi olarak hem de dock'taki Yardım simgesi aracılığıyla kullanılabilir.",
+    "notEnoughDiskSpaceUbuntu": "{DISTRO} kurmak için yeterli disk alanı yok",
+    "notEnoughDiskSpaceAvailable": "Kullanılabilir:",
+    "notEnoughDiskSpaceRequired": "Gerekli:",
+    "installationSlidesCreativityBody": "Eğer bir animatör, tasarımcı, video yapımcısı veya oyun geliştiricisiyseniz, açık kaynaklı ve endüstri standardı yazılım ve uygulamalara destek sağlayan iş akışlarınızı {DISTRO}'ya taşımanız kolaydır.",
+    "installationSlidesGamingTitle": "Oyun için harika",
+    "installationSlidesSecurityLts": "Tüm {DISTRO} LTS sürümleri beş yıllık güvenlik yamasıyla birlikte gelir ve Ubuntu Pro aboneliğiyle bu süre on yıla kadar uzayabilir.",
+    "installationSlidesProductivityBody": "{DISTRO} Masaüstü, belgeler, elektronik tablolar ve sunumlar için Microsoft Office uyumlu açık kaynaklı uygulamalardan oluşan bir paket olan LibreOffice'i içerir. Popüler iş birliği araçları da mevcuttur.",
+    "installationSlidesAccessibilityOrca": "Orca Ekran Okuyucu",
+    "installationSlidesProductivityTitle": "Üretkenliğinizi artırın",
+    "installationSlidesGamingBody": "{DISTRO}, performans ve uyumluluğu artırmak için en yeni NVIDIA ve Mesa sürücülerini destekler. Binlerce Windows oyunu, Steam gibi uygulamalar aracılığıyla ek bir yapılandırmaya gerek kalmadan {DISTRO} üzerinde harika bir şekilde oynanabilir.",
+    "installationSlidesSecurityTitle": "Özel ve güvenli",
+    "installationSlidesSecurityBody": "{DISTRO}, çevrimiçi ortamda gizliliğinizi ve güvenliğinizi korumanız için ihtiyacınız olan tüm araçları sunar. Dahili güvenlik duvarı ve VPN desteğinin yanı sıra, verilerinizin tam kontrolünü elinizde tutmanızı sağlayan çok sayıda gizlilik odaklı uygulama sunar.",
+    "installationSlidesSupportCommunity": "Ask Ubuntu, çeşitli soru ve yanıtları kapsar ve Ubuntu Discourse, yeni ve deneyimli kullanıcılar için kılavuzlar ve tartışmalar sağlar.",
+    "installationSlidesSupportEnterprise": "Kurumsal kullanıcılar için Canonical, işyerinde Ubuntu'yu güvenli bir şekilde kullanmayı ve yönetmeyi kolaylaştırmak amacıyla ticari destek sağlıyor.",
+    "installationSlidesSupportResources": "Yararlı kaynaklar:",
+    "installationSlidesSupportDocumentation": "Resmi belgelendirme",
+    "installationSlidesSupportUbuntuPro": "Ubuntu Pro ile kurumsal düzeyde 7/24 destek",
+    "allocateDiskSpaceInvalidMountPointSlash": "Bağlama noktaları \"/\" ile başlamalıdır",
+    "allocateDiskSpaceInvalidMountPointSpace": "Bağlama noktaları boşluk içeremez",
+    "loadingPageTitle": "{DISTRO} dağıtımına hoş geldiniz",
+    "installationTypeTPM": "Donanım destekli şifrelemeyi kullanın",
+    "installationTypeTPMSelected": "TPM seçildi",
+    "partitionFormatKeep": "{format} olarak biçimlendirilmiş bırak",
+    "refreshCurrent": "Şu anki {snap} sürümü {version}.",
+    "refreshUpdating": "{snap} güncelleniyor...",
+    "refreshRestart": "Lütfen yükleyiciyi kapatın ve devam etmek için yeniden başlatın",
+    "refreshSnapSetAutoAliases": "Otomatik {snap} takma adları ayarlanıyor...",
+    "refreshSnapAutoConnect": "{snap} fişleri ve yuvaları bağlanıyor...",
+    "recoveryKeyTitle": "Kurtarma anahtarı",
+    "recoveryKeyWarning": "<font color=\"{color}\">Uyarı:</font> Bu güvenlik anahtarını kaybederseniz tüm veriler kaybolur. Gerekirse, anahtarınızı bir yere yazın ve güvenli başka bir yerde saklayın.",
+    "refreshPageTitle": "Güncelleme mevcut",
+    "refreshInstall": "{version} sürümüne güncelle",
+    "refreshUpToDate": "Mevcut sürüm {version} günceldir.",
+    "refreshSnapRefresh": "{snap} yenileniyor...",
+    "refreshSnapPrepare": "{snap} hazırlanıyor...",
+    "refreshSnapDownload": "{snap} indiriliyor...",
+    "refreshSnapValidate": "{snap} doğrulanıyor...",
+    "refreshSnapMount": "{snap} bağlanıyor...",
+    "refreshSnapStopServices": "{snap} hizmetleri durduruluyor...",
+    "refreshSnapRemoveAliases": "{snap} takma adları kaldırılıyor...",
+    "refreshSnapUnlink": "{snap} bağlantısı kaldırılıyor...",
+    "refreshSnapUpdateAssets": "{snap} varlıkları güncelleniyor...",
+    "refreshSnapUpdateKernelCommandLine": "{snap} çekirdek komut satırı güncelleniyor...",
+    "refreshSnapCopyData": "{snap} verileri kopyalanıyor...",
+    "refreshSnapSetupProfiles": "{snap} güvenlik profilleri ayarlanıyor...",
+    "refreshSnapLink": "{snap} bağlanıyor...",
+    "refreshSnapSetupAliases": "{snap} takma adları ayarlanıyor...",
+    "refreshSnapStartServices": "{snap} hizmetleri başlatılıyor...",
+    "recoveryKeyCommand": "Kurtarma anahtarınıza kurulumdan sonra aşağıdaki komutla erişebilirsiniz:",
+    "refreshSnapCleanup": "{snap} temizleniyor...",
+    "refreshSnapPrerequisites": "{snap} ön koşulları sağlanıyor...",
+    "refreshSnapCheckRerefresh": "{snap} yeniden yenilemesi denetleniyor...",
+    "fullInstallationSubtitle": "Ofis araçları, yardımcı programlar ve web tarayıcısının çevrimdışı kullanıma uygun bir seçkisi.",
+    "minimalInstallationTitle": "Varsayılan seçim",
+    "minimalInstallationSubtitle": "Sadece temel gereksinimler, web tarayıcısı ve temel yardımcı programlar.",
+    "fullInstallationTitle": "Genişletilmiş seçim",
+    "warningLabel": "Uyarı:",
+    "autoinstallTitle": "Yükleme türü",
+    "autoinstallAutomatedOption": "Otomatik yükleme",
+    "hideSecurityKey": "Gizle",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "Hiçbiri",
+    "confirmEntryApplications": "Uygulamalar",
+    "confirmEntryInstallationDisk": "Kurulum diski",
+    "confirmEntryDiskEncryption": "Disk şifreleme",
+    "confirmSectionGeneralTitle": "Genel",
+    "confirmSectionSecurityAndMoreTitle": "Güvenlik ve daha fazlası",
+    "confirmProprietarySoftwareCodecs": "Kodekler",
+    "confirmProprietarySoftwareCodecsDrivers": "Kodekler ve sürücüler",
+    "confirmProprietarySoftwareDrivers": "Sürücüler",
+    "refreshCloseLabel": "Yükleyiciyi kapat",
+    "validate": "Onayla",
+    "codecsAndDriversPageTitle": "Bilgisayarınızı optimize edin",
+    "codecsAndDriversNvidiaNote": "NVIDIA grafik kartı tespit edildi",
+    "codecsAndDriversNvidiaBody": "NVIDIA ekran kartlarının en iyi performansı için ek sürücülerin yüklenmesi şiddetle önerilir.",
+    "refreshUpdateNow": "Şimdi güncelle",
+    "refreshReady": "Güncelleme hazır",
+    "autoinstallDirectFileClearButtonLabel": "Dosyayı temizle",
+    "autoinstallDirectFilePickerTitle": "Dosya seçin",
+    "autoinstallDirectFilePickerFilterLabel": "YAML dosyaları",
+    "autoinstallDirectImportButtonLabel": "İçeri aktar",
+    "autoinstallDirectErrorInvalidUrlTitle": "Geçersiz URL",
+    "autoinstallDirectFileButtonLabel": "Dosya seç...",
+    "recoveryKeyExceptionFileSystemTitle": "Kurtarma anahtarı dosyası kaydedilmedi",
+    "recoveryKeyExceptionDisallowedPathTitle": "Kurtarma anahtarı dosyası geçici bir konuma kaydedilemez",
+    "recoveryKeyExceptionUnknownTitle": "Bilinmeyen hata",
+    "recoveryKeyExceptionFileSystemBody": "Bu klasöre yazma izniniz yok. Farklı bir konum deneyin veya başka bir yöntem kullanın.",
+    "recoveryKeyExceptionDisallowedPathBody": "Çıkarılabilir bir sürücü gibi farklı bir konum deneyin veya başka bir yöntem kullanın.",
+    "recoveryKeyFilePickerTitle": "Kurtarma anahtarı dosyasını kaydedin",
+    "recoveryKeyFilePickerFilter": "Metin dosyaları",
+    "autoinstallDirectTitle": "Otomatik kurulum",
+    "autoinstallDirectHeader": "Otomatik kurulum dosyasını içe aktar",
+    "autoinstallDirectUrlLabel": "Otomatik kurulum dosyasının URL'sini girebilirsiniz:",
+    "autoinstallDirectFileLabel": "Veya yerel bir dosya seçin:",
+    "autoinstallDirectErrorNetworkTitle": "Otomatik kurulum dosyasına ulaşılamıyor",
+    "autoinstallDirectErrorNetworkBody": "URL'nin doğru olduğundan emin olun, internet bağlantınızı test edin veya daha sonra deneyin.",
+    "autoinstallDirectErrorInvalidUrlBody": "URL'nin doğru olduğundan emin olun veya yerel bir dosya seçin.",
+    "autoinstallDirectErrorInvalidContentTitle": "Geçersiz otomatik kurulum dosyası",
+    "autoinstallDirectErrorInvalidContentBody": "Dosyayı kontrol edin veya farklı bir dosya sağlayın.",
+    "autoinstallDirectErrorFileSystemTitle": "Otomatik yükleme dosyası okunamıyor",
+    "autoinstallDirectErrorFileSystemBody": "İzinlerinizi kontrol edin veya farklı bir dosya sağlayın.",
+    "autoinstallDirectErrorUnkownTitle": "Bilinmeyen hata",
+    "autoinstallHeader": "{DISTRO}'yu nasıl kurmak istersiniz?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallInstructions": "autoinstall.yaml URL'sini veya yerel dosya yolunu girin:",
+    "autoinstallInteractiveOption": "Etkileşimli kurulum",
+    "autoinstallInteractiveDescription": "Kurulumda adım adım rehberlik almak isteyen kullanıcılar için.",
+    "autoinstallDirectOption": "Otomatik kurulum dosyasıyla otomatikleştirildi",
+    "autoinstallDirectDescription": "Tutarlı ve tekrarlanabilir sistem kurulumları için autoinstall.yaml dosyasına sahip ileri düzey kullanıcılar için.",
+    "autoinstallLandscapeOption": "Landscape ile Otomatikleştirilmiş",
+    "autoinstallLandscapeDescription": "Landscape aracılığıyla otomatik kurulum dosyası sağlayan kuruluşlardaki kullanıcılar için.",
+    "tryOrInstallHeader": "{DISTRO} ile ne yapmak istiyorsunuz?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "rstDisable": "Bilgisayarınız Intel RST (Hızlı Depolama Teknolojisi) kullanıyor. RST'yi şu şekilde devre dışı bırakabilirsiniz:",
+    "rstDisableWindows": "Windows, Windows ile çift önyükleme kurulumu kullanıyorsanız",
+    "rstDisableBios": "BIOS ayarları",
+    "codecsAndDriversPageDescription": "Önerilen özel yazılım kurulsun mu?",
+    "codecsAndDriversPageBody": "{DISTRO} varsayılan olarak herhangi bir özel yazılımla birlikte gelmez. Ek yazılım yüklemek bilgisayarınızın performansını artırabilir.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "batteryWarning": "Bilgisayar bir güç kaynağına bağlı değil.",
+    "choosePassphraseHeader": "Bir parola oluşturun",
+    "choosePassphraseBody": "Bilgisayarınızı her açtığınızda parolanızı girmeniz gerekecektir. Bu parola, kullanıcı parolanızdan farklıdır.",
+    "choosePassphraseInfoHeader": "Parolanızı kaydettiğinizden emin olun",
+    "choosePassphraseInfoBody": "Kaybederseniz tüm verilerinizi kaybedersiniz.",
+    "chooseOptionalPassphraseInfoHeader": "Parolanızı ve kurtarma anahtarınızı güvenli bir yerde saklayın",
+    "chooseOptionalPassphraseInfoBody": "Parolanızı kaybederseniz, tüm verilerinizi kaybedersiniz. Parola, kurtarma anahtarınızın veya kullanıcı parolanızın yerine geçmez.",
+    "passphrasePageTitle": "Şifreleme",
+    "passphrasePageHeaderPassphrase": "Bir şifreleme parolası ayarlayın",
+    "passphrasePageHeaderPin": "Şifreleme PIN'i ayarlayın",
+    "passphrasePageBodyPassphrase": "Bilgisayarınızı her açtığınızda parolanızı girmeniz gerekecektir. Bu parola, kullanıcı parolanızdan farklıdır. Parolanızı daha sonra değiştirebilirsiniz, ancak devre dışı bırakamazsınız. Parolanızı unutursanız, kurtarma anahtarını kullanarak diske yeniden erişebilirsiniz.",
+    "passphrasePageBodyPin": "Bilgisayarınızı her açtığınızda PIN kodunuzu girmeniz gerekecektir. Bu PIN, kullanıcı parolanızdan farklıdır. Daha sonra değiştirebilirsiniz, ancak devre dışı bırakamazsınız. PIN kodunuzu unutursanız, kurtarma anahtarını kullanarak diske tekrar erişebilirsiniz.",
+    "passphrasePageChoosePassphraseHint": "Parola",
+    "passphrasePageConfirmPassphraseHint": "Parolayı onayla",
+    "passphrasePageRequiredPassphrase": "Bir parola gereklidir",
+    "passphrasePageMismatchPassphrase": "Parolalar eşleşmiyor",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "PIN'i onayla",
+    "passphrasePageRequiredPin": "Bir PIN gereklidir",
+    "passphrasePageMismatchPin": "PIN'ler eşleşmiyor",
+    "passphraseTypePassphraseTileTitle": "Bir parola gereklidir",
+    "passphraseTypePassphraseTileSubTitle": "En güvenlisi. Bilgisayarınızı her açtığınızda daha uzun bir parola girmeniz gerekecek.",
+    "passphraseTypePinTileTitle": "PIN gereklidir",
+    "passphraseTypePinTileSubTitle": "Daha güvenli. Bilgisayarınızı her açtığınızda sayısal bir PIN girmeniz gerekecek.",
+    "passphraseTypeNoneTileTitle": "Diskin otomatik olarak kilidini aç",
+    "passphraseTypePageHeader": "Şifreleme PIN'i veya parola ifadesi",
+    "passphraseTypePageBody": "Varsayılan olarak, bilgisayarın Güvenilir Platform Modülü (TPM), başlatma sırasında diskin kilidini açacaktır. Ancak, verilerinizi daha fazla korumak için bir PIN veya parola da isteyebilirsiniz.",
+    "passphrasePagePassphraseEntropyBelowMin": "Zayıf parola cümlesi, daha uzun veya daha karmaşık hale getirin",
+    "passphrasePagePassphraseEntropyBelowOptimal": "Güçlü bir parola kullanın, daha iyi güvenlik için daha uzun veya daha karmaşık hale getirin",
+    "passphrasePagePassphraseEntropyOptimal": "Güçlü parola",
+    "passphrasePagePinEntropyBelowMin": "Zayıf PIN, daha uzun veya daha az tahmin edilebilir hale getirin",
+    "passphrasePagePinEntropyBelowOptimal": "Güçlü PIN kullanın, daha iyi güvenlik için daha uzun veya daha az tahmin edilebilir hale getirin",
+    "passphrasePagePinEntropyOptimal": "PIN yeterince uzun",
+    "installationTypeHeader": "{DISTRO}'yu nasıl kurmak istiyorsunuz?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Disk üzerindeki tüm veriler ve bölümler, işletim sistemleri de dahil olmak üzere silinecektir.",
+    "installationTypeExperimental": "Deneysel",
+    "installationTypeNoneInfo": "Şifrelemesiz standart dosya sistemi.",
+    "installationTypeLVM": "LVM'yi şifreleme olmadan kullanın",
+    "installationTypeLVMEncryption": "Bir parola ile şifreleyin",
+    "installationTypeLVMEncryptionInfo": "Bilgisayarınızı her açtığınızda bir parola girmeniz gerekecektir. Bu, LVM ile LUKS şifrelemesini kullanır.",
+    "installationTypeZFSEncryption": "ZFS kullanarak bir parola ile şifreleme",
+    "installationTypeZFSEncryptionInfo": "ZFS ile yerel şifreleme. Bilgisayarınızı her açtığınızda bir parola girmeniz gerekecektir.",
+    "installationTypeZFSEncryptionSelected": "ZFS ve şifreleme seçildi",
+    "installationTypeTPMInfo": "Bu seçeneği seçmeden önce <a href=\"{url}\">TPM şifrelemesi hakkında bilgi edinin</a>. Bu, donanımınız veya gelecekteki {DISTRO} sürümleriyle çalışmayabilir.",
+    "@installationTypeTPMInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os}'u silin ve {product}'ı yükleyin",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Mevcut {os} kurulumundaki tüm dosyalar ve veriler kalıcı olarak silinecektir.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Seçtiğiniz diskte sıfırdan başlayın.",
+    "selectGuidedStorageDriveDropdownLabel": "Sürücüyü seçin:",
+    "selectGuidedStoragePartitionDropdownLabel": "Bölüm seçin:",
+    "guidedStoragePageHeader": "{DISTRO}'nun nereye yükleneceğini seçin",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "allocateDiskSpaceInvalidMountPointFormat": "{format}, {mountpoint} için desteklenen bir dosya sistemi değildir",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmEntryDiskSetup": "Kurulum türü",
+    "confirmEntryProprietarySoftware": "Tescilli yazılım",
+    "confirmTableErased": "Silinmiş",
+    "confirmTableUnchanged": "Değişmemiş",
+    "confirmTableResized": "{oldsize} boyutundan {newsize} boyutuna yeniden boyutlandırıldı",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "{mountpoint} için kullanılan {format} olarak oluşturuldu ve biçimlendirildi",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormattedMounted": "{mountpoint} için kullanılan {format} olarak biçimlendirildi",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "{mountpoint} için kullanılır",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} olarak biçimlendirildi",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** diske kopyalandı",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Kurulumu tamamlamak veya teste devam etmek için yeniden başlatın.\nYaptığınız değişiklikler kaydedilmeyecektir.",
+    "rebootToConfigureWarning": "Kurulum işlemine devam edebilmek için bilgisayarınızı yeniden başlatmanız gerekmektedir.",
+    "bitlockerInfoTitle": "BitLocker algılandı",
+    "bitlockerInfoDescription": "Bir veya daha fazla bölüm BitLocker ile şifrelenmiştir.",
+    "bitlockerInfoDisable": "Windows'un yanına kurulum yapmak için Windows'ta BitLocker'ı devre dışı bırakın.",
+    "bitlockerInfoRecovery": "Windows, kurulumdan sonra önyükleme sırasında kurtarma anahtarları isteyebilir.",
+    "bitlockerInfoInstructions": "Talimatlar için <a href=\"{url}\">BitLocker kılavuzunu</a> ziyaret edin.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "BitLocker kurtarma anahtarları olmadan tüm verilerinizi kaybedebilirsiniz",
+    "restartComputer": "Bilgisayarı yeniden başlat",
+    "restartComputerTitle": "Bilgisayar yeniden başlatılsın mı?",
+    "notEnoughDiskSpaceBody": "Seçilen diskte {DISTRO}'yu yüklemek için yeterli disk alanı yok. Alanı açmak için yükleyiciden çıkın veya başka bir disk seçin.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshHeader": "Yükleyici için bir güncelleme mevcut",
+    "refreshInfo": "Gelişmiş güvenilirlik ve daha fazla özellik için en son sürüme güncelleyin.",
+    "recoveryKeyTitleBadgeLabel": "Önemli",
+    "recoveryKeyHeader": "Kurtarma anahtarınızı kaydedin",
+    "recoveryKeyInfoHeader": "Kurtarma anahtarınız olmadan tüm verilerinizi kaybedebilirsiniz",
+    "recoveryKeyTextFieldLabel": "Kurtarma anahtarı",
+    "recoveryKeyStorageAdvice": "Başlatma sırasında şifre çözme işlemi başarısız olursa, bu kurtarma anahtarını sağlamanız gerekecektir. Anahtar olmadan tüm verilerinize erişiminizi kaybedersiniz. Anahtarınızı parola yöneticisi gibi güvenli bir yerde saklayın.",
+    "recoveryKeyConfirmation": "Kurtarma anahtarımı güvenli bir yere kaydettim",
+    "recoveryKeyLinkLabel": "Daha fazla bilgi edin",
+    "recoveryKeySaveToFileLabel": "Dosyaya kaydet",
+    "recoveryKeyShowQrCodeLabel": "QR kodunu göster",
+    "recoveryKeyQrDialogTitle": "{DISTRO} Masaüstü - Kurtarma anahtarı",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "Kurtarma anahtarını kopyalamak ve şifre yöneticisi gibi güvenli bir yere kaydetmek için QR kodunu tarayın. Ayrıca daha sonra kullanmak üzere fotoğrafını da çekebilirsiniz.",
+    "recoveryKeyClipboardNotifiaction": "Panoya kopyalandı",
+    "landscapeMagicAttachInstructions": "QR kodunu tarayın veya aşağıdaki kodu <a href=\"https://{url}\">{url}</a> adresine girin",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "Otomatik kurulum",
+    "landscapeHeader": "Landscape'e giriş yapın",
+    "landscapeDomainHeader": "Landscape etki alanını girin (FQDN)",
+    "landscapeDomainHintText": "Landscape etki alanı (FQDN)",
+    "landscapeDomainInstructions": "Giriş yapmak ve otomatik yükleme dosyasını almak için kuruluşunuzun Landscape etki alanını belirtin. Tam alan adını (FQDN) BT destek ekibinizden alabilirsiniz.",
+    "landscapeDomainTextField": "Landscape etki alanı (FQDN)",
+    "next": "Sonraki",
+    "landscapeDomainInvalidDomainWarning": "Geçersiz alan adı, lütfen kontrol edin veya BT desteğinizle iletişime geçin",
+    "landscapeDomainNoInternetTitleWarning": "Devam etmek için internete bağlanın",
+    "landscapeDomainNoInternetDescriptionWarning": "Otomatik kurulum dosyasını Landscape'ten almak için internete ihtiyaç var",
+    "landscapeCodeExpiredWarning": "Kodun süresi doldu, lütfen tekrar deneyin",
+    "landscapeLoginFailedWarning": "Giriş başarısız oldu, lütfen tekrar deneyin",
+    "landscapeErrorPageTitle": "Hesabınız için otomatik kurulum mevcut değil",
+    "landscapeErrorPageBody": "BT desteğinizle iletişime geçin veya farklı bir kurulum seçeneği deneyin.",
+    "landscapeErrorPageCode": "Hata kodu: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu, kuruluşunuz tarafından sağlanan yapılandırmayla kurulacaktır",
+    "landscapeConfirmPageSuccessInfoContent": "Aşağıda Landscape'ten içe aktarılan otomatik kurulum dosyasını inceleyebilirsiniz."
+}

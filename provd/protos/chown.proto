@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package chown;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+service ChownService {
+    rpc ChownSettings(ChownRequest) returns (ChownResponse);
+}
+
+message ChownRequest {
+    string username = 1;
+}
+
+message ChownResponse {
+    enum ChownResponseCode {
+        SUCCESS = 0;
+        UNKNOWN_ERROR = 1;
+    }
+    ChownResponseCode code = 1;
+}

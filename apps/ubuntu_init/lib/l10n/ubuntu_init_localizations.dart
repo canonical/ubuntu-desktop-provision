@@ -1,0 +1,793 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl.dart' as intl;
+
+import 'ubuntu_init_localizations_am.dart';
+import 'ubuntu_init_localizations_ar.dart';
+import 'ubuntu_init_localizations_be.dart';
+import 'ubuntu_init_localizations_bg.dart';
+import 'ubuntu_init_localizations_bn.dart';
+import 'ubuntu_init_localizations_bo.dart';
+import 'ubuntu_init_localizations_bs.dart';
+import 'ubuntu_init_localizations_ca.dart';
+import 'ubuntu_init_localizations_cs.dart';
+import 'ubuntu_init_localizations_cy.dart';
+import 'ubuntu_init_localizations_da.dart';
+import 'ubuntu_init_localizations_de.dart';
+import 'ubuntu_init_localizations_dz.dart';
+import 'ubuntu_init_localizations_el.dart';
+import 'ubuntu_init_localizations_en.dart';
+import 'ubuntu_init_localizations_eo.dart';
+import 'ubuntu_init_localizations_es.dart';
+import 'ubuntu_init_localizations_et.dart';
+import 'ubuntu_init_localizations_eu.dart';
+import 'ubuntu_init_localizations_fa.dart';
+import 'ubuntu_init_localizations_fi.dart';
+import 'ubuntu_init_localizations_fr.dart';
+import 'ubuntu_init_localizations_ga.dart';
+import 'ubuntu_init_localizations_gl.dart';
+import 'ubuntu_init_localizations_gu.dart';
+import 'ubuntu_init_localizations_he.dart';
+import 'ubuntu_init_localizations_hi.dart';
+import 'ubuntu_init_localizations_hr.dart';
+import 'ubuntu_init_localizations_hu.dart';
+import 'ubuntu_init_localizations_id.dart';
+import 'ubuntu_init_localizations_is.dart';
+import 'ubuntu_init_localizations_it.dart';
+import 'ubuntu_init_localizations_ja.dart';
+import 'ubuntu_init_localizations_ka.dart';
+import 'ubuntu_init_localizations_kk.dart';
+import 'ubuntu_init_localizations_km.dart';
+import 'ubuntu_init_localizations_kn.dart';
+import 'ubuntu_init_localizations_ko.dart';
+import 'ubuntu_init_localizations_ku.dart';
+import 'ubuntu_init_localizations_lo.dart';
+import 'ubuntu_init_localizations_lt.dart';
+import 'ubuntu_init_localizations_lv.dart';
+import 'ubuntu_init_localizations_mk.dart';
+import 'ubuntu_init_localizations_ml.dart';
+import 'ubuntu_init_localizations_mr.dart';
+import 'ubuntu_init_localizations_my.dart';
+import 'ubuntu_init_localizations_nb.dart';
+import 'ubuntu_init_localizations_ne.dart';
+import 'ubuntu_init_localizations_nl.dart';
+import 'ubuntu_init_localizations_nn.dart';
+import 'ubuntu_init_localizations_oc.dart';
+import 'ubuntu_init_localizations_pa.dart';
+import 'ubuntu_init_localizations_pl.dart';
+import 'ubuntu_init_localizations_pt.dart';
+import 'ubuntu_init_localizations_ro.dart';
+import 'ubuntu_init_localizations_ru.dart';
+import 'ubuntu_init_localizations_se.dart';
+import 'ubuntu_init_localizations_si.dart';
+import 'ubuntu_init_localizations_sk.dart';
+import 'ubuntu_init_localizations_sl.dart';
+import 'ubuntu_init_localizations_sq.dart';
+import 'ubuntu_init_localizations_sr.dart';
+import 'ubuntu_init_localizations_sv.dart';
+import 'ubuntu_init_localizations_ta.dart';
+import 'ubuntu_init_localizations_te.dart';
+import 'ubuntu_init_localizations_tg.dart';
+import 'ubuntu_init_localizations_th.dart';
+import 'ubuntu_init_localizations_tl.dart';
+import 'ubuntu_init_localizations_tr.dart';
+import 'ubuntu_init_localizations_ug.dart';
+import 'ubuntu_init_localizations_uk.dart';
+import 'ubuntu_init_localizations_vi.dart';
+import 'ubuntu_init_localizations_zh.dart';
+
+// ignore_for_file: type=lint
+
+/// Callers can lookup localized strings with an instance of UbuntuInitLocalizations
+/// returned by `UbuntuInitLocalizations.of(context)`.
+///
+/// Applications need to include `UbuntuInitLocalizations.delegate()` in their app's
+/// `localizationDelegates` list, and the locales they support in the app's
+/// `supportedLocales` list. For example:
+///
+/// ```dart
+/// import 'l10n/ubuntu_init_localizations.dart';
+///
+/// return MaterialApp(
+///   localizationsDelegates: UbuntuInitLocalizations.localizationsDelegates,
+///   supportedLocales: UbuntuInitLocalizations.supportedLocales,
+///   home: MyApplicationHome(),
+/// );
+/// ```
+///
+/// ## Update pubspec.yaml
+///
+/// Please make sure to update your pubspec.yaml to include the following
+/// packages:
+///
+/// ```yaml
+/// dependencies:
+///   # Internationalization support.
+///   flutter_localizations:
+///     sdk: flutter
+///   intl: any # Use the pinned version from flutter_localizations
+///
+///   # Rest of dependencies
+/// ```
+///
+/// ## iOS Applications
+///
+/// iOS applications define key application metadata, including supported
+/// locales, in an Info.plist file that is built into the application bundle.
+/// To configure the locales supported by your app, you’ll need to edit this
+/// file.
+///
+/// First, open your project’s ios/Runner.xcworkspace Xcode workspace file.
+/// Then, in the Project Navigator, open the Info.plist file under the Runner
+/// project’s Runner folder.
+///
+/// Next, select the Information Property List item, select Add Item from the
+/// Editor menu, then select Localizations from the pop-up menu.
+///
+/// Select and expand the newly-created Localizations item then, for each
+/// locale your application supports, add a new item and select the locale
+/// you wish to add from the pop-up menu in the Value field. This list should
+/// be consistent with the languages listed in the UbuntuInitLocalizations.supportedLocales
+/// property.
+abstract class UbuntuInitLocalizations {
+  UbuntuInitLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+
+  final String localeName;
+
+  static UbuntuInitLocalizations of(BuildContext context) {
+    return Localizations.of<UbuntuInitLocalizations>(
+        context, UbuntuInitLocalizations)!;
+  }
+
+  static const LocalizationsDelegate<UbuntuInitLocalizations> delegate =
+      _UbuntuInitLocalizationsDelegate();
+
+  /// A list of this localizations delegate along with the default localizations
+  /// delegates.
+  ///
+  /// Returns a list of localizations delegates containing this delegate along with
+  /// GlobalMaterialLocalizations.delegate, GlobalCupertinoLocalizations.delegate,
+  /// and GlobalWidgetsLocalizations.delegate.
+  ///
+  /// Additional delegates can be added by appending to this list in
+  /// MaterialApp. This list does not have to be used at all if a custom list
+  /// of delegates is preferred or required.
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
+
+  /// A list of this localizations delegate's supported locales.
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('am'),
+    Locale('ar'),
+    Locale('be'),
+    Locale('bg'),
+    Locale('bn'),
+    Locale('bo'),
+    Locale('bs'),
+    Locale('ca'),
+    Locale('cs'),
+    Locale('cy'),
+    Locale('da'),
+    Locale('de'),
+    Locale('dz'),
+    Locale('el'),
+    Locale('en'),
+    Locale('en', 'GB'),
+    Locale('eo'),
+    Locale('es'),
+    Locale('et'),
+    Locale('eu'),
+    Locale('fa'),
+    Locale('fi'),
+    Locale('fr'),
+    Locale('ga'),
+    Locale('gl'),
+    Locale('gu'),
+    Locale('he'),
+    Locale('hi'),
+    Locale('hr'),
+    Locale('hu'),
+    Locale('id'),
+    Locale('is'),
+    Locale('it'),
+    Locale('ja'),
+    Locale('ka'),
+    Locale('kk'),
+    Locale('km'),
+    Locale('kn'),
+    Locale('ko'),
+    Locale('ku'),
+    Locale('lo'),
+    Locale('lt'),
+    Locale('lv'),
+    Locale('mk'),
+    Locale('ml'),
+    Locale('mr'),
+    Locale('my'),
+    Locale('nb'),
+    Locale('ne'),
+    Locale('nl'),
+    Locale('nn'),
+    Locale('oc'),
+    Locale('pa'),
+    Locale('pl'),
+    Locale('pt'),
+    Locale('pt', 'BR'),
+    Locale('ro'),
+    Locale('ru'),
+    Locale('se'),
+    Locale('si'),
+    Locale('sk'),
+    Locale('sl'),
+    Locale('sq'),
+    Locale('sr'),
+    Locale('sv'),
+    Locale('ta'),
+    Locale('te'),
+    Locale('tg'),
+    Locale('th'),
+    Locale('tl'),
+    Locale('tr'),
+    Locale('ug'),
+    Locale('uk'),
+    Locale('vi'),
+    Locale('zh'),
+    Locale('zh', 'TW')
+  ];
+
+  /// No description provided for @welcomePageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome'**
+  String get welcomePageTitle;
+
+  /// No description provided for @welcomePageHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to {distro}'**
+  String welcomePageHeader(String distro);
+
+  /// No description provided for @welcomeWhatsNew.
+  ///
+  /// In en, this message translates to:
+  /// **'WHAT\'S NEW?'**
+  String get welcomeWhatsNew;
+
+  /// No description provided for @welcomeStartTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A streamlined start'**
+  String get welcomeStartTitle;
+
+  /// No description provided for @welcomeStartSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Supporting a cleaner setup experience.'**
+  String get welcomeStartSubtitle;
+
+  /// No description provided for @welcomeStoreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New look App Store'**
+  String get welcomeStoreTitle;
+
+  /// No description provided for @welcomeStoreSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s never been easier to find your favourite software.'**
+  String get welcomeStoreSubtitle;
+
+  /// No description provided for @welcomeSecurityTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enhanced security'**
+  String get welcomeSecurityTitle;
+
+  /// No description provided for @welcomeSecuritySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New options for hardware-backed or ZFS encryption.'**
+  String get welcomeSecuritySubtitle;
+
+  /// No description provided for @welcomeChangelogLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'<a href=\"{url}\">View changelog</a>'**
+  String welcomeChangelogLabel(String url);
+
+  /// No description provided for @telemetryPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Telemetry'**
+  String get telemetryPageTitle;
+
+  /// No description provided for @telemetryHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Help improve {distro}'**
+  String telemetryHeader(String distro);
+
+  /// No description provided for @telemetryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Help us improve {distro} by sharing your system data with us. This includes things like your machine model, installed software and the location you chose for your timezone.'**
+  String telemetryDescription(String distro);
+
+  /// No description provided for @telemetryLabelOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, share system data with the {distro} team'**
+  String telemetryLabelOn(String distro);
+
+  /// No description provided for @telemetryLabelOff.
+  ///
+  /// In en, this message translates to:
+  /// **'No, don\'t share system data'**
+  String get telemetryLabelOff;
+
+  /// No description provided for @telemetryReportLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Show the first report'**
+  String get telemetryReportLabel;
+
+  /// No description provided for @telemetryReportTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reporting details'**
+  String get telemetryReportTitle;
+
+  /// No description provided for @telemetryLegalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Legal notice'**
+  String get telemetryLegalLabel;
+
+  /// No description provided for @telemetryCollectError.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to collect telemetry data'**
+  String get telemetryCollectError;
+
+  /// No description provided for @privacyPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Location services'**
+  String get privacyPageTitle;
+
+  /// No description provided for @privacyLocationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable location services?'**
+  String get privacyLocationTitle;
+
+  /// No description provided for @privacyLocationSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Let applications know your geographical location.\nYou can change this anytime in System Settings.'**
+  String get privacyLocationSubtitle;
+
+  /// No description provided for @privacyLocationEnable.
+  ///
+  /// In en, this message translates to:
+  /// **'Location services'**
+  String get privacyLocationEnable;
+
+  /// No description provided for @privacyPolicyLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Privacy'**
+  String get privacyPolicyLink;
+
+  /// No description provided for @ubuntuProMagicAttachInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Magic attach with this code at <a href=\"https://{url}\">{url}</a>'**
+  String ubuntuProMagicAttachInstructions(String url);
+
+  /// No description provided for @ubuntuProPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu Pro'**
+  String get ubuntuProPageTitle;
+
+  /// No description provided for @ubuntuProHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach this machine'**
+  String get ubuntuProHeader;
+
+  /// No description provided for @ubuntuProOrAddTokenManually.
+  ///
+  /// In en, this message translates to:
+  /// **'or add a token manually'**
+  String get ubuntuProOrAddTokenManually;
+
+  /// No description provided for @ubuntuProTokenTextfieldHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Token'**
+  String get ubuntuProTokenTextfieldHint;
+
+  /// No description provided for @ubuntuProSubscriptionDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Get the most comprehensive subscription for open-source software security'**
+  String get ubuntuProSubscriptionDescription;
+
+  /// No description provided for @ubuntuProSubscriptionFreeForPersonalUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Always free for personal use. 30-days trial for enterprises. <a href=\"https://{url}\">Learn more</a>'**
+  String ubuntuProSubscriptionFreeForPersonalUse(String url);
+
+  /// No description provided for @ubuntuProTokenAttachButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach'**
+  String get ubuntuProTokenAttachButton;
+
+  /// No description provided for @ubuntuProTokenAttachError.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid token'**
+  String get ubuntuProTokenAttachError;
+
+  /// No description provided for @ubuntuProTokenAttachSucess.
+  ///
+  /// In en, this message translates to:
+  /// **'Valid token'**
+  String get ubuntuProTokenAttachSucess;
+
+  /// No description provided for @ubuntuProTokenAttachErrorVariant.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid token, retry'**
+  String get ubuntuProTokenAttachErrorVariant;
+
+  /// No description provided for @ubuntuProOnBoardingSkipForNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip for now'**
+  String get ubuntuProOnBoardingSkipForNow;
+
+  /// No description provided for @ubuntuProOnBoardingSkipForNowDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can always enable Ubuntu Pro later via the Software & Updates application.'**
+  String get ubuntuProOnBoardingSkipForNowDescription;
+
+  /// No description provided for @ubuntuProOnBoardingEnableUbuntuPro.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Ubuntu Pro'**
+  String get ubuntuProOnBoardingEnableUbuntuPro;
+
+  /// No description provided for @ubuntuProOnBoardingEnableUbuntuProDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach this machine to an Ubuntu Pro subscription for security updates on a wider range of packages, until 2032.'**
+  String get ubuntuProOnBoardingEnableUbuntuProDescription;
+
+  /// No description provided for @ubuntuProSucessAttachHeader.
+  ///
+  /// In en, this message translates to:
+  /// **'Ubuntu Pro is now enabled in this machine'**
+  String get ubuntuProSucessAttachHeader;
+
+  /// No description provided for @ubuntuProSucessAttachDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can manage your Pro services in the Software & Updates application.'**
+  String get ubuntuProSucessAttachDescription;
+
+  /// No description provided for @successIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Success'**
+  String get successIconSemanticLabel;
+
+  /// No description provided for @closeIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get closeIconSemanticLabel;
+
+  /// No description provided for @maximizeIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximize'**
+  String get maximizeIconSemanticLabel;
+
+  /// No description provided for @minimizeIconSemanticLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Minimize'**
+  String get minimizeIconSemanticLabel;
+}
+
+class _UbuntuInitLocalizationsDelegate
+    extends LocalizationsDelegate<UbuntuInitLocalizations> {
+  const _UbuntuInitLocalizationsDelegate();
+
+  @override
+  Future<UbuntuInitLocalizations> load(Locale locale) {
+    return SynchronousFuture<UbuntuInitLocalizations>(
+        lookupUbuntuInitLocalizations(locale));
+  }
+
+  @override
+  bool isSupported(Locale locale) => <String>[
+        'am',
+        'ar',
+        'be',
+        'bg',
+        'bn',
+        'bo',
+        'bs',
+        'ca',
+        'cs',
+        'cy',
+        'da',
+        'de',
+        'dz',
+        'el',
+        'en',
+        'eo',
+        'es',
+        'et',
+        'eu',
+        'fa',
+        'fi',
+        'fr',
+        'ga',
+        'gl',
+        'gu',
+        'he',
+        'hi',
+        'hr',
+        'hu',
+        'id',
+        'is',
+        'it',
+        'ja',
+        'ka',
+        'kk',
+        'km',
+        'kn',
+        'ko',
+        'ku',
+        'lo',
+        'lt',
+        'lv',
+        'mk',
+        'ml',
+        'mr',
+        'my',
+        'nb',
+        'ne',
+        'nl',
+        'nn',
+        'oc',
+        'pa',
+        'pl',
+        'pt',
+        'ro',
+        'ru',
+        'se',
+        'si',
+        'sk',
+        'sl',
+        'sq',
+        'sr',
+        'sv',
+        'ta',
+        'te',
+        'tg',
+        'th',
+        'tl',
+        'tr',
+        'ug',
+        'uk',
+        'vi',
+        'zh'
+      ].contains(locale.languageCode);
+
+  @override
+  bool shouldReload(_UbuntuInitLocalizationsDelegate old) => false;
+}
+
+UbuntuInitLocalizations lookupUbuntuInitLocalizations(Locale locale) {
+  // Lookup logic when language+country codes are specified.
+  switch (locale.languageCode) {
+    case 'en':
+      {
+        switch (locale.countryCode) {
+          case 'GB':
+            return UbuntuInitLocalizationsEnGb();
+        }
+        break;
+      }
+    case 'pt':
+      {
+        switch (locale.countryCode) {
+          case 'BR':
+            return UbuntuInitLocalizationsPtBr();
+        }
+        break;
+      }
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'TW':
+            return UbuntuInitLocalizationsZhTw();
+        }
+        break;
+      }
+  }
+
+  // Lookup logic when only language code is specified.
+  switch (locale.languageCode) {
+    case 'am':
+      return UbuntuInitLocalizationsAm();
+    case 'ar':
+      return UbuntuInitLocalizationsAr();
+    case 'be':
+      return UbuntuInitLocalizationsBe();
+    case 'bg':
+      return UbuntuInitLocalizationsBg();
+    case 'bn':
+      return UbuntuInitLocalizationsBn();
+    case 'bo':
+      return UbuntuInitLocalizationsBo();
+    case 'bs':
+      return UbuntuInitLocalizationsBs();
+    case 'ca':
+      return UbuntuInitLocalizationsCa();
+    case 'cs':
+      return UbuntuInitLocalizationsCs();
+    case 'cy':
+      return UbuntuInitLocalizationsCy();
+    case 'da':
+      return UbuntuInitLocalizationsDa();
+    case 'de':
+      return UbuntuInitLocalizationsDe();
+    case 'dz':
+      return UbuntuInitLocalizationsDz();
+    case 'el':
+      return UbuntuInitLocalizationsEl();
+    case 'en':
+      return UbuntuInitLocalizationsEn();
+    case 'eo':
+      return UbuntuInitLocalizationsEo();
+    case 'es':
+      return UbuntuInitLocalizationsEs();
+    case 'et':
+      return UbuntuInitLocalizationsEt();
+    case 'eu':
+      return UbuntuInitLocalizationsEu();
+    case 'fa':
+      return UbuntuInitLocalizationsFa();
+    case 'fi':
+      return UbuntuInitLocalizationsFi();
+    case 'fr':
+      return UbuntuInitLocalizationsFr();
+    case 'ga':
+      return UbuntuInitLocalizationsGa();
+    case 'gl':
+      return UbuntuInitLocalizationsGl();
+    case 'gu':
+      return UbuntuInitLocalizationsGu();
+    case 'he':
+      return UbuntuInitLocalizationsHe();
+    case 'hi':
+      return UbuntuInitLocalizationsHi();
+    case 'hr':
+      return UbuntuInitLocalizationsHr();
+    case 'hu':
+      return UbuntuInitLocalizationsHu();
+    case 'id':
+      return UbuntuInitLocalizationsId();
+    case 'is':
+      return UbuntuInitLocalizationsIs();
+    case 'it':
+      return UbuntuInitLocalizationsIt();
+    case 'ja':
+      return UbuntuInitLocalizationsJa();
+    case 'ka':
+      return UbuntuInitLocalizationsKa();
+    case 'kk':
+      return UbuntuInitLocalizationsKk();
+    case 'km':
+      return UbuntuInitLocalizationsKm();
+    case 'kn':
+      return UbuntuInitLocalizationsKn();
+    case 'ko':
+      return UbuntuInitLocalizationsKo();
+    case 'ku':
+      return UbuntuInitLocalizationsKu();
+    case 'lo':
+      return UbuntuInitLocalizationsLo();
+    case 'lt':
+      return UbuntuInitLocalizationsLt();
+    case 'lv':
+      return UbuntuInitLocalizationsLv();
+    case 'mk':
+      return UbuntuInitLocalizationsMk();
+    case 'ml':
+      return UbuntuInitLocalizationsMl();
+    case 'mr':
+      return UbuntuInitLocalizationsMr();
+    case 'my':
+      return UbuntuInitLocalizationsMy();
+    case 'nb':
+      return UbuntuInitLocalizationsNb();
+    case 'ne':
+      return UbuntuInitLocalizationsNe();
+    case 'nl':
+      return UbuntuInitLocalizationsNl();
+    case 'nn':
+      return UbuntuInitLocalizationsNn();
+    case 'oc':
+      return UbuntuInitLocalizationsOc();
+    case 'pa':
+      return UbuntuInitLocalizationsPa();
+    case 'pl':
+      return UbuntuInitLocalizationsPl();
+    case 'pt':
+      return UbuntuInitLocalizationsPt();
+    case 'ro':
+      return UbuntuInitLocalizationsRo();
+    case 'ru':
+      return UbuntuInitLocalizationsRu();
+    case 'se':
+      return UbuntuInitLocalizationsSe();
+    case 'si':
+      return UbuntuInitLocalizationsSi();
+    case 'sk':
+      return UbuntuInitLocalizationsSk();
+    case 'sl':
+      return UbuntuInitLocalizationsSl();
+    case 'sq':
+      return UbuntuInitLocalizationsSq();
+    case 'sr':
+      return UbuntuInitLocalizationsSr();
+    case 'sv':
+      return UbuntuInitLocalizationsSv();
+    case 'ta':
+      return UbuntuInitLocalizationsTa();
+    case 'te':
+      return UbuntuInitLocalizationsTe();
+    case 'tg':
+      return UbuntuInitLocalizationsTg();
+    case 'th':
+      return UbuntuInitLocalizationsTh();
+    case 'tl':
+      return UbuntuInitLocalizationsTl();
+    case 'tr':
+      return UbuntuInitLocalizationsTr();
+    case 'ug':
+      return UbuntuInitLocalizationsUg();
+    case 'uk':
+      return UbuntuInitLocalizationsUk();
+    case 'vi':
+      return UbuntuInitLocalizationsVi();
+    case 'zh':
+      return UbuntuInitLocalizationsZh();
+  }
+
+  throw FlutterError(
+      'UbuntuInitLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
+}

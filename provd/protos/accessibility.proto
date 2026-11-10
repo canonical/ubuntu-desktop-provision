@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package accessibility;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/wrappers.proto";;
+ 
+service AccessibilityService {
+
+    // Seeing
+    rpc GetHighContrast(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableHighContrast(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableHighContrast(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    rpc GetReducedMotion(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableReducedMotion(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableReducedMotion(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    rpc GetLargeText(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableLargeText(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableLargeText(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    rpc GetScreenReader(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableScreenReader(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableScreenReader(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    // Hearing
+    rpc GetVisualAlerts(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableVisualAlerts(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableVisualAlerts(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    // Typing
+    rpc GetScreenKeyboard(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableScreenKeyboard(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableScreenKeyboard(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    rpc GetStickyKeys(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableStickyKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableStickyKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    rpc GetSlowKeys(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableSlowKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableSlowKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    // Pointing & Clicking
+    rpc GetMouseKeys(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableMouseKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableMouseKeys(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+
+    // Zoom
+    rpc GetDesktopZoom(google.protobuf.Empty) returns (google.protobuf.BoolValue) {}
+    rpc EnableDesktopZoom(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+    rpc DisableDesktopZoom(google.protobuf.Empty) returns (google.protobuf.Empty) {}
+}

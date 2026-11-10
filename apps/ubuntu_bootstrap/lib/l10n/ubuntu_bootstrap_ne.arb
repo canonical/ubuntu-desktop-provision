@@ -1,0 +1,13 @@
+{
+  "@@locale": "ne",
+  "changeButtonText": "बदल्नुहोस्",
+  "windowTitle": "{RELEASE} इन्सटल गर्नुहोस्",
+  "welcome": "स्वागत छ",
+  "tryOrInstallTitle": "प्रयास गर्नुहोस् वा स्थापना गर्नुहोस्",
+  "tryOrInstallReleaseNotesLabel": "तपाईंले <a href=\"{url}\">रिलिज नोटहरू</a> पढ्न आवश्यक हुन सक्छ।",
+  "rstTitle": "RST बन्द गर्नुहोस्",
+  "tryOption": "{RELEASE} प्रयास गर्नुहोस्",
+  "tryDescription": "तपाईंले आफ्नो कम्प्युटरमा कुनै परिवर्तन नगरी {RELEASE} प्रयोग गर्न सक्नुहुन्छ।",
+  "installOption": "{RELEASE} स्थापना गर्नुहोस्",
+  "installDescription": "आफ्नो अन्य अपरेटिङ सिस्टम संगै {RELEASE} स्थापना गर्नुहोस्। यो छिटो हुनेछ।"
+}

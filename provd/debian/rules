@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+export GOFLAGS := --mod=vendor -buildmode=pie
+
+# We are getting an issue for embedding in GOPATH mode which don’t copy none .go file.
+export GO111MODULE := on
+export DEB_BUILD_MAINT_OPTIONS := optimize=-lto
+
+# We want to take whatever ubuntu propose to us (as it won’t download a newer version),
+# as long as it matches the go.mod go stenza which is the language requirement.
+export GOTOOLCHAIN := local
+
+# Set GOCACHE and GOMODCACHE in the build dir instead of home directory, which
+# may not be writable in sbuild.
+export GOCACHE=$(CURDIR)/.gocache
+export GOMODCACHE=$(CURDIR)/.gomodcache
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+execute_after_dh_auto_clean:
+	# Create the vendor directory when building the source package
+	rm -rf $(GOCACHE) $(GOMODCACHE)
+	[ -d vendor/ ] || go mod vendor
+
+override_dh_auto_install:
+	# Drop this in debhelper 15 compat mode. Check for no-source still.
+	dh_auto_install --destdir=debian/tmp -- --no-source
+
+override_dh_auto_test:
+	dh_auto_test -- -v $(GOFLAGS) ./...

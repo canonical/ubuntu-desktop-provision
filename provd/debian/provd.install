@@ -1,0 +1,2 @@
+usr/bin/provd usr/libexec/
+debian/launch-desktop-provision-init usr/libexec/

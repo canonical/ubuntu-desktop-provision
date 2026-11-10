@@ -1,0 +1,219 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:subiquity_client/subiquity_client.dart';
+import 'package:ubuntu_bootstrap/app/installation_step.dart';
+import 'package:ubuntu_bootstrap/app/installer_model.dart';
+import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_bootstrap/pages.dart';
+import 'package:ubuntu_bootstrap/pages/autoinstall/autoinstall_model.dart';
+import 'package:ubuntu_bootstrap/services.dart';
+import 'package:ubuntu_provision/ubuntu_provision.dart';
+import 'package:ubuntu_wizard/ubuntu_wizard.dart';
+
+class InstallerWizard extends ConsumerStatefulWidget {
+  const InstallerWizard({super.key});
+
+  @override
+  ConsumerState<InstallerWizard> createState() => _InstallerWizardState();
+}
+
+class _InstallerWizardState extends ConsumerState<InstallerWizard>
+    with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    super.didChangePlatformBrightness();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final brightness = MediaQuery.platformBrightnessOf(context);
+      ref.read(brightnessProvider.notifier).state = brightness;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final status = ref.watch(applicationStatusProvider).value;
+    if (status?.state == ApplicationState.ERROR) {
+      return const _ErrorWizard();
+    }
+    return (status?.interactive ?? true)
+        ? const _InstallWizard()
+        : _AutoinstallWizard(status: status);
+  }
+}
+
+class _InstallWizard extends ConsumerWidget {
+  const _InstallWizard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final preInstallRoutes = <String, WizardRoute>{
+      for (final step in InstallationStep.wizardSteps)
+        step.route: step.toRoute(context, ref),
+    };
+    final totalSteps =
+        InstallationStep.values.where((value) => value.discreteStep).length;
+
+    return WizardBuilder(
+      initialRoute: InstallationStep.loading.route,
+      userData: WizardData(totalSteps: totalSteps),
+      errorRoute: InstallationStep.error.route,
+      routes: {
+        InstallationStep.loading.route: WizardRoute(
+          builder: (_) => const LoadingPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onReplace: (_) =>
+              const LoadingPage().load(context, ref).then((_) => null),
+        ),
+        ...preInstallRoutes,
+        InstallationStep.done.route: WizardRoute(
+          builder: (_) => const DonePage(),
+          onLoad: (_) {
+            if (!ref.context.mounted) {
+              return false;
+            }
+            return const DonePage().load(context, ref);
+          },
+        ),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => const ErrorPage(allowRestart: true),
+        ),
+      },
+      predicate: (route) =>
+          InstallationStep.requiredRoutes.contains(route) ||
+          ref.read(hasRouteProvider(route)),
+      observers: [_InstallerObserver(getService<TelemetryService>())],
+    );
+  }
+}
+
+class _InstallerObserver extends NavigatorObserver {
+  _InstallerObserver(this._telemetry);
+
+  final TelemetryService _telemetry;
+
+  @override
+  void didPush(Route<Object?> route, Route<Object?>? previousRoute) {
+    if (route.settings.name != null) {
+      _telemetry.addStage(route.settings.name!.replaceFirst('/', ''));
+    }
+  }
+}
+
+class _AutoinstallWizard extends ConsumerWidget {
+  const _AutoinstallWizard({this.status});
+
+  final ApplicationStatus? status;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return WizardBuilder(
+      errorRoute: InstallationStep.error.route,
+      routes: <String, WizardRoute>{
+        InstallationStep.loading.route: WizardRoute(
+          builder: (_) => const LoadingPage(),
+          userData: const WizardRouteData(
+            hasPrevious: false,
+            hasNext: false,
+          ),
+          onReplace: (_) =>
+              const LoadingPage().load(context, ref).then((_) => null),
+        ),
+        InstallationStep.confirm.route: WizardRoute(
+          builder: (_) => const ConfirmPage(),
+          onLoad: (_) => status?.isInstalling != true,
+        ),
+        InstallationStep.install.route: WizardRoute(
+          builder: (_) => const InstallPage(),
+          onLoad: (_) => const InstallPage().load(context, ref),
+        ),
+        InstallationStep.done.route: WizardRoute(
+          builder: (_) => const DonePage(),
+          onLoad: (_) => const DonePage().load(context, ref),
+        ),
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => ErrorPage(
+            allowRestart: false,
+          ),
+        ),
+      },
+    );
+  }
+}
+
+class _ErrorWizard extends ConsumerWidget {
+  const _ErrorWizard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final status = ref.read(applicationStatusProvider).value;
+    return Wizard(
+      routes: <String, WizardRoute>{
+        InstallationStep.error.route: WizardRoute(
+          builder: (_) => ErrorPage(
+            allowRestart: false,
+            errorDetails: status
+                ?.toErrorDetails(UbuntuBootstrapLocalizations.of(context)),
+          ),
+        ),
+      },
+    );
+  }
+}
+
+extension on ApplicationStatus {
+  ErrorDetails? toErrorDetails(UbuntuBootstrapLocalizations l10n) =>
+      switch (this) {
+        ApplicationStatus(
+          state: ApplicationState.ERROR,
+          nonreportableError: NonReportableError(
+            cause: final cause,
+            message: final message,
+            details: final details,
+          ),
+        )
+            when _autoinstallMessage(cause, l10n) != null =>
+          ErrorDetails(
+            title: l10n.installationFailed,
+            message: [
+              _autoinstallMessage(cause, l10n)!,
+              l10n.autoinstallErrorInstructions,
+            ],
+            details: [
+              message,
+              details,
+            ].nonNulls.join('\n'),
+            action: (ref) async {
+              await ref.read(autoinstallModelProvider.notifier).restart();
+            },
+            actionLabel: l10n.restartInstaller,
+          ),
+        _ => null,
+      };
+
+  String? _autoinstallMessage(
+    String? cause,
+    UbuntuBootstrapLocalizations l10n,
+  ) =>
+      switch (cause) {
+        'AutoinstallUserSuppliedCmdError' => l10n.autoinstallErrorMessage,
+        'AutoinstallError' => l10n.autoinstallGenericErrorMessage,
+        'AutoinstallValidationError' => l10n.autoinstallValidationErrorMessage,
+        'CloudInitSchemaValidationError' =>
+          l10n.autoinstallCloudInitSchemaValidationErrorMessage,
+        _ => null,
+      };
+}

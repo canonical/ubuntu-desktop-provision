@@ -1,0 +1,20 @@
+name: provd_client
+description: Dart client for interacting with provd
+repository: https://github.com/canonical/ubuntu-desktop-provision/packages/provd_client
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  fixnum: ^1.1.0
+  grpc: ^4.0.1
+  meta: ^1.11.0
+  protobuf: ^3.1.0
+  protoc_plugin: ^21.1.2
+
+dev_dependencies:
+  build_runner: ^2.15.1
+  mockito: ^5.4.4
+  test: any
+  ubuntu_lints: ^0.4.0

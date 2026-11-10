@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package timezone;
+
+option go_package = "github.com/canonical/ubuntu-desktop-provision/provd/proto";
+
+import "google/protobuf/empty.proto";
+
+service TimezoneService {
+  rpc SetTimezone(SetTimezoneRequest) returns (google.protobuf.Empty) {};
+  rpc GetTimezone(google.protobuf.Empty) returns (GetTimezoneResponse) {};
+}
+
+message SetTimezoneRequest {
+  string timezone = 1;
+}
+
+message GetTimezoneResponse {
+  string timezone = 1;
+}
