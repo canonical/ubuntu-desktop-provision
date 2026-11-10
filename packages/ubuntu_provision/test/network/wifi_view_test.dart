@@ -6,6 +6,7 @@ import 'package:ubuntu_provision/src/network/network_l10n.dart';
 import 'package:ubuntu_provision/src/network/network_page.dart';
 import 'package:ubuntu_provision/src/network/wifi_model.dart';
 import 'package:ubuntu_provision/src/network/wifi_view.dart';
+import 'package:ubuntu_provision/src/widgets/themed_list_tile.dart';
 import 'package:yaru/yaru.dart';
 import 'package:yaru_test/yaru_test.dart';
 
@@ -108,6 +109,55 @@ void main() {
     await tester.tap(ap2);
     expect(selectedDevice, equals(device2));
     expect(selectedAccessPoint, equals(accessPoint2));
+  });
+
+  testWidgets('access points with the same decoded name', (tester) async {
+    final device = MockWifiDevice();
+    when(device.model).thenReturn('model');
+    when(device.scanning).thenReturn(false);
+    when(device.isConnecting).thenReturn(false);
+    when(device.isAvailable).thenReturn(true);
+    when(device.isActive).thenReturn(false);
+
+    // distinct SSIDs (e.g. `net\xFF` and `net\xFE`) decode to the same name
+    final accessPoints = <AccessPoint>[];
+    for (final hwAddress in ['aa:aa', 'bb:bb']) {
+      final ap = MockAccessPoint();
+      when(ap.name).thenReturn('net\uFFFD');
+      when(ap.hwAddress).thenReturn(hwAddress);
+      when(ap.strength).thenReturn(1);
+      when(ap.isOpen).thenReturn(true);
+      when(device.isSelectedAccessPoint(ap)).thenReturn(false);
+      when(device.isActiveAccessPoint(ap)).thenReturn(false);
+      accessPoints.add(ap);
+    }
+    when(device.accessPoints).thenReturn(accessPoints);
+
+    final model = buildWifiModel(devices: [device], isEnabled: true);
+
+    await tester.pumpApp(
+      (_) => ProviderScope(
+        overrides: [wifiModelProvider.overrideWith((_) => model)],
+        child: Material(
+          child: Column(
+            children: [
+              WifiView(
+                expanded: true,
+                onEnabled: () {},
+                onSelected: (_, __) {},
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+
+    expect(find.listTile('net\uFFFD'), findsNWidgets(2));
+    final keys = tester
+        .widgetList<ThemedListTile>(find.byType(ThemedListTile))
+        .map((tile) => tile.key)
+        .toList();
+    expect(keys.toSet(), hasLength(keys.length));
   });
 
   testWidgets('wifi disabled', (tester) async {

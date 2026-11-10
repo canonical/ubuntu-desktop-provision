@@ -171,7 +171,7 @@ class WifiDevice extends NetworkDevice {
 
   void _setWireless(NetworkManagerDeviceWireless wireless) {
     _wireless = wireless;
-    setProperties(_wireless.propertiesChanged);
+    setPropertiesFor('wireless', _wireless.propertiesChanged);
     _updateAccessPoints();
   }
 
@@ -188,11 +188,11 @@ class WifiDevice extends NetworkDevice {
   bool get _isConnected =>
       isActive &&
       _selectedAccessPoint != null &&
-      _selectedAccessPoint!.name == activeAccessPoint?.name;
+      _selectedAccessPoint!.ssid.equals(activeAccessPoint?.ssid);
 
   List<AccessPoint> get accessPoints => _accessPoints;
 
-  List<NetworkManagerAccessPoint> _getAccessPoints() {
+  List<NetworkManagerAccessPoint> _getAccessPoints(AccessPoint? selected) {
     final ssids = <List<int>>[];
 
     bool hasSsid(List<int> ssid) {
@@ -207,10 +207,17 @@ class WifiDevice extends NetworkDevice {
       return true;
     }
 
-    final accessPoints = _wireless.accessPoints
+    // Several APs can share an SSID but only one is kept per SSID. Prefer the
+    // active and the selected AP so neither is hidden by another one.
+    final preferred = [_wireless.activeAccessPoint, selected?.accessPoint];
+    final all = _wireless.accessPoints;
+    final candidates = [
+      for (final p in preferred) ...all.where((ap) => ap == p),
+      ...all.where((ap) => !preferred.contains(ap)),
+    ];
+    return candidates
         .where((ap) => acceptSsid(ap.ssid))
         .sorted((a, b) => b.strength.compareTo(a.strength));
-    return accessPoints;
   }
 
   AccessPoint _createAccessPoint(NetworkManagerAccessPoint accessPoint) {
@@ -221,7 +228,7 @@ class WifiDevice extends NetworkDevice {
     final updatedAps = <AccessPoint>[];
     final previousSelected = _selectedAccessPoint;
     _selectedAccessPoint = null;
-    for (final ap in _getAccessPoints()) {
+    for (final ap in _getAccessPoints(previousSelected)) {
       var model = _allAccessPoints[ap.hwAddress];
       if (model == null) {
         model = _createAccessPoint(ap);
@@ -236,6 +243,12 @@ class WifiDevice extends NetworkDevice {
       }
     }
     _accessPoints = updatedAps;
+    // The selected AP may be gone while its network is still reachable.
+    if (_selectedAccessPoint == null && previousSelected != null) {
+      _selectedAccessPoint = updatedAps.firstWhereOrNull(
+        (ap) => ap.ssid.equals(previousSelected.ssid),
+      );
+    }
     _selectedAccessPoint ??= activeAccessPoint;
     log.debug(() => 'Update access points: $_accessPoints ($this)');
     notifyListeners();
@@ -286,7 +299,7 @@ class WifiDevice extends NetworkDevice {
   /// if `ssid` is specified.
   Future<void> requestScan({String? ssid}) async {
     _cancelScan();
-    final ssids = <List<int>>[if (ssid != null) ssid.codeUnits];
+    final ssids = <List<int>>[if (ssid != null) utf8.encode(ssid)];
     log.debug('Request scan: $this');
     _setScanning(true);
     _completer = Completer();
@@ -313,8 +326,9 @@ class WifiDevice extends NetworkDevice {
 
   /// Tries to find an access point by `ssid`.
   AccessPoint? findAccessPoint(String ssid) {
+    final bytes = utf8.encode(ssid);
     return accessPoints.firstWhereOrNull((accessPoint) {
-      return ssid == accessPoint.name;
+      return accessPoint.ssid.equals(bytes);
     });
   }
 }
@@ -343,8 +357,12 @@ class AccessPoint extends SafeChangeNotifier with PropertyStreamNotifier {
     notifyListeners();
   }
 
+  /// Raw SSID bytes (D-Bus `ay`). Text is converted to/from them as UTF-8.
   List<int> get ssid => _accessPoint.ssid;
   String get hwAddress => _accessPoint.hwAddress;
+
+  /// For display only: distinct SSIDs can decode to the same name. Compare
+  /// [ssid] bytes to identify a network.
   String get name => utf8.decode(ssid, allowMalformed: true);
   int get strength => _accessPoint.strength;
   bool get isOpen => _accessPoint.isOpen;

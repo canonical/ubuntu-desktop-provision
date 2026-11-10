@@ -295,6 +295,22 @@ class MockIdentityModel extends _i1.Mock implements _i2.IdentityModel {
       );
 
   @override
+  void setPropertiesFor(
+    String? source,
+    _i5.Stream<List<String>>? properties,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #setPropertiesFor,
+          [
+            source,
+            properties,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
   void addPropertyListener(
     String? property,
     _i6.VoidCallback? onChanged,

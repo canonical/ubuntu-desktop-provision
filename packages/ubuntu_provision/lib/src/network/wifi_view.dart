@@ -212,7 +212,8 @@ class WifiListTile extends ConsumerWidget {
     final accessPoints = <Widget>[
       for (final accessPoint in device.accessPoints)
         ThemedListTile(
-          key: ValueKey(accessPoint.name),
+          // Not the name: distinct SSIDs can share it and keys must be unique.
+          key: ValueKey(accessPoint),
           title: Text(accessPoint.name),
           leading: _leadingIcon(accessPoint, device, iconSize, lang),
           selected: selected && device.isSelectedAccessPoint(accessPoint),
