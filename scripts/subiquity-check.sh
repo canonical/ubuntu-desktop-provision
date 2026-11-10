@@ -28,12 +28,6 @@ SUBIQUITY_PARTS_OUTPUT="subiquity_parts.txt"
 yq -r '.parts["subiquitydeps"]["stage-packages"]' snap/snapcraft.yaml > $BOOTSTRAP_PARTS_OUTPUT
 curl -sL https://github.com/canonical/subiquity/raw/$SUBIQUITY_COMMIT/snapcraft.yaml | yq -r '.parts["subiquity"]["stage-packages"]' > $SUBIQUITY_PARTS_OUTPUT
 
-# The python interpreter packages are determined by the build base
-# (26.04 ships python3.14 and dropped the python3.12 packages, while
-# subiquity upstream still pins the 3.12 names from its core24 era),
-# so normalize the version before comparing.
-sed -i -E 's/python3\.[0-9]+(-minimal|-stdlib)/python3\1/g' $BOOTSTRAP_PARTS_OUTPUT $SUBIQUITY_PARTS_OUTPUT
-
 DEP_DIFF=$(diff bootstrap_parts.txt subiquity_parts.txt --unified)
 
 rm $BOOTSTRAP_PARTS_OUTPUT
