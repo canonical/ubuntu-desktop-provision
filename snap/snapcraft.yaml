@@ -63,10 +63,7 @@ parts:
     after: [flutter-git]
     plugin: nil
     source: .
-    # subiquity core26 branch (canonical/subiquity PR #2473): python3.14
-    # port + matching curtin/probert pins. Once that PR merges to main,
-    # bump this gitlink back to main.
-    source-commit: &commit-ref 50f33682e51cb6f8e10d8dba98d29e10a2fe92c3
+    source-commit: &commit-ref f62c9a24ed5b2a27e083ed1096a4fbec67a0e74d
     source-type: git
     build-attributes: [enable-patchelf]
     override-build: |
@@ -91,9 +88,7 @@ parts:
     plugin: nil
     source: https://github.com/canonical/curtin
     source-type: git
-    # aligned with subiquity core26 (see packages/subiquity_client
-    # gitlink below and canonical/subiquity PR #2473)
-    source-commit: 93c36fb6a0271fefd2bf311418b95eb48f856d5f
+    source-commit: ec32cf30b7898aa282b8f1f174fe01d50050d0fd
     override-pull: |
       craftctl default
       # Since snapcraft 8.14, the tags are not automatically fetched
