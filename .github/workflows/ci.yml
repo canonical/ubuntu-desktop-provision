@@ -99,13 +99,14 @@ jobs:
           set -ux
           set +e
           mv provd/example.config.yaml provd/provd.yaml
-          sudo mkdir -p /run/gnome-initial-setup/desktop-provision
-          sudo chown $USER /run/gnome-initial-setup/desktop-provision
+          SOCKET_DIR=/run/gdm3/home/gnome-initial-setup/desktop-provision
+          sudo mkdir -p $SOCKET_DIR
+          sudo chown $USER $SOCKET_DIR
           sudo provd/provd &
-          until [ -S /run/gnome-initial-setup/desktop-provision/init.socket ]; do
+          until [ -S $SOCKET_DIR/init.socket ]; do
             sleep 1
           done
-          sudo chmod go+rw /run/gnome-initial-setup/desktop-provision/init.socket
+          sudo chmod go+rw $SOCKET_DIR/init.socket
 
       - run: xvfb-run -a -s '-screen 0 1024x768x24 +extension GLX' flutter test integration_test/e2e_test.dart
         working-directory: apps/ubuntu_init

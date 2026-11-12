@@ -19,7 +19,7 @@ class ProvdChownClient {
 
   final ChownServiceClient _chownClient;
 
-  /// Runs a recursive chown on /run/gnome-initial-setup
+  /// Runs a recursive chown on /run/gdm3/home/gnome-initial-setup
   Future<bool> chownSettings(String username) async {
     final request = ChownRequest(username: username);
     final response = await _chownClient.chownSettings(request);
