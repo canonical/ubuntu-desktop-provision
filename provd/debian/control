@@ -5,6 +5,7 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper-compat (= 13),
                dh-golang,
                golang-go (>= 2:1.22~),
+               libcrypt-dev,
                libglib2.0-dev,
                libgtk-3-dev,
                dbus,

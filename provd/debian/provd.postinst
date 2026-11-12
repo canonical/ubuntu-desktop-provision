@@ -12,12 +12,9 @@ case "$1" in
                 provd
         fi
 
-        # TODO: Replace gis user with provd user when session is updated. 
-        # Add gnome-initial-setup to the provd group
-        usermod -G provd gnome-initial-setup
-
         # Set ownership and permissions for launch-desktop-provision-init.sh
-        chown gnome-initial-setup:provd /usr/libexec/launch-desktop-provision-init
+        # GDM allocates the gnome-initial-setup user dynamically, but the group is permanent
+        chown root:gnome-initial-setup /usr/libexec/launch-desktop-provision-init
         chmod 750 /usr/libexec/launch-desktop-provision-init
 
         # Set ownership and permissions for bin's
