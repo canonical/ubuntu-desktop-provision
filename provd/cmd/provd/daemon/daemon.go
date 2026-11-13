@@ -7,6 +7,7 @@ import (
 	"log/slog"
 	"runtime"
 
+	"github.com/canonical/ubuntu-desktop-provision/provd/internal/consts"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/daemon"
 	"github.com/canonical/ubuntu-desktop-provision/provd/internal/services"
 	"github.com/spf13/cobra"
@@ -58,7 +59,7 @@ func New() *App {
 			// Set config defaults
 			a.config = daemonConfig{
 				Paths: systemPaths{
-					Socket: "/run/gnome-initial-setup/desktop-provision/init.socket",
+					Socket: consts.DefaultSocketPath,
 				},
 			}
 

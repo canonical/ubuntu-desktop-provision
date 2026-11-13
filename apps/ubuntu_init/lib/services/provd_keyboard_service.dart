@@ -1,6 +1,9 @@
 import 'package:provd_client/provd_client.dart' as provd;
 import 'package:ubuntu_init/services/provd_address.dart';
+import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
+
+final _log = Logger('provd_keyboard_service');
 
 class ProvdKeyboardService with ProvdAddress implements KeyboardService {
   ProvdKeyboardService({provd.ProvdKeyboardClient? client})
@@ -30,8 +33,13 @@ class ProvdKeyboardService with ProvdAddress implements KeyboardService {
       _client.setInputSource(setting.layout, setting.variant);
 
   @override
-  Future<void> setKeyboard(KeyboardSetting setting) async =>
-      _client.setKeyboard(setting.layout, setting.variant);
+  Future<void> setKeyboard(KeyboardSetting setting) async {
+    try {
+      return await _client.setKeyboard(setting.layout, setting.variant);
+    } on Exception catch (e) {
+      _log.error(e);
+    }
+  }
 }
 
 extension on provd.KeyboardSetup {

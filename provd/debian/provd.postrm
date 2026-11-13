@@ -4,11 +4,6 @@ set -e
 
 case "$1" in
     purge)
-        # Revert gnome-initial-setup to nogroup
-        if getent passwd gnome-initial-setup >/dev/null; then
-            usermod -G nogroup gnome-initial-setup
-        fi
-
         # Remove provd user if it exists
         if getent passwd provd >/dev/null; then
             if which deluser >/dev/null 2>&1; then

@@ -1,13 +1,15 @@
 #!/bin/sh
 
-# Create the /run/gnome-initial-setup/desktop-provision directory
-mkdir -p /run/gnome-initial-setup/desktop-provision
+GIS_DIR=/run/gdm3/home/gnome-initial-setup
 
-# Create the /run/gnome-initial-setup/.cache directory
-mkdir -p /run/gnome-initial-setup/.cache
+# Create the $GIS_DIR/desktop-provision directory
+mkdir -p "$GIS_DIR/desktop-provision"
+
+# Create the $GIS_DIR/.cache directory
+mkdir -p "$GIS_DIR/.cache"
 
 /usr/libexec/provd &
-until [ -S /run/gnome-initial-setup/desktop-provision/init.socket ]; do
+until [ -S "$GIS_DIR/desktop-provision/init.socket" ]; do
 	sleep 1
 done
 env DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus" /snap/bin/ubuntu-desktop-init
