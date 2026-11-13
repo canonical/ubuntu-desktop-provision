@@ -520,5 +520,18 @@
     "tpmActionErrorKindUefiDebuggingEnabled": "UEFIデバッギングが有効になっています。",
     "tpmActionErrorKindInsufficientDmaProtection": "このコンピューターには必要なセキュリティ機能（DMAプロテクション）がありません。",
     "tpmActionErrorKindNoKernelIommu": "このコンピューターには必要なセキュリティ機能（IOMMU）がありません。",
-    "tpmActionErrorKindHostSecurity": "このコンピューターのセキュリティ設定には問題があります。"
+    "tpmActionErrorKindHostSecurity": "このコンピューターのセキュリティ設定には問題があります。",
+    "tpmActionPageTitleActionable": "ハードウェアベースの暗号化に問題があります",
+    "tpmActionErrorKindGenericTpm": "このコンピューターのTPMに問題があります。",
+    "tpmActionErrorKindGenericFirmware": "このコンピューターのファームウェアに問題があります。",
+    "tpmActionFixActionReboot": "再起動",
+    "tpmActionFixActionShutdown": "電源オフ",
+    "tpmActionConfirmLabel": "確認",
+    "tpmActionDocumentationLinkLabel": "ハードウェアベースの暗号化について詳しく知る",
+    "tpmActionErrorKindMissingArgument": "引数がありません。",
+    "tpmActionErrorKindInvalidArgument": "不正な引数です。",
+    "tpmActionErrorKindActionFailed": "操作に失敗しました。",
+    "tpmActionBadgeLabel": "対応が必要です",
+    "tpmActionErrorKindInvalidSecureBootMode": "このコンピューターでセキュアブートが無効になっているか、デプロイモードに設定されていません。",
+    "tpmActionDetailsLabel": "技術的な詳細"
 }
