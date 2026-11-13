@@ -1,6 +1,6 @@
 module github.com/canonical/ubuntu-desktop-provision/provd/tools
 
-go 1.26.10
+go 1.26.11
 
 require (
 	github.com/golangci/golangci-lint/v2 v2.14.0
