@@ -124,5 +124,6 @@
     "networkWifiSecureNetwork": "Red segura",
     "networkWifiConnecting": "Conectando…",
     "networkWifiConnected": "Conectado",
-    "networkWifiSignalOk": "Señal aceptable"
+    "networkWifiSignalOk": "Señal aceptable",
+    "logViewSemanticLabel": "Registro"
 }
