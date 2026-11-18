@@ -533,5 +533,29 @@
     "tpmActionErrorKindActionFailed": "操作に失敗しました。",
     "tpmActionBadgeLabel": "対応が必要です",
     "tpmActionErrorKindInvalidSecureBootMode": "このコンピューターでセキュアブートが無効になっているか、デプロイモードに設定されていません。",
-    "tpmActionDetailsLabel": "技術的な詳細"
+    "tpmActionDetailsLabel": "技術的な詳細",
+    "autoinstallValidationErrorMessage": "提供された自動インストールファイルに問題があります。",
+    "autoinstallGenericErrorMessage": "提供された自動インストールファイルでインストールを続行できません。",
+    "passphraseTypePageBodyAuthRequired": "ハードウェアによる暗号化を使用するには、コンピューターに追加のセキュリティが必要です。",
+    "tpmActionIgnoreAndContinueLabel": "無視して続行",
+    "tpmActionRestartLabel": "再起動",
+    "tpmActionFixActionProceed": "無視",
+    "tpmActionErrorKindUnexpectedAction": "予期せぬ操作です。",
+    "tpmActionFixActionClearTpm": "TPMをクリア",
+    "tpmActionFixActionClearTpmWarningBody": "リカバリーキーを持っていない暗号化ドライブ内のすべてのデータにアクセスできなくなります。また、TPMに依存するその他の機能（認証や証明書など）も動作しなくなります。",
+    "tpmActionFixActionClearTpmWarningTitle": "TPMをクリアすると暗号鍵がすべて消去されます",
+    "tpmActionFixActionClearTpmConfirmationLabel": "私はTPMのクリアによる影響を理解しています",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "このコンピューターには必要なセキュリティ機能（ハードウェアの信頼の起点（Root of Trust））がありません。",
+    "stepIndicatorLabel": "ステップ {CURRENT_STEP} / {TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "このコンピューターは起動時のソフトウェア検証に手動の許可リストを使用しています。"
 }
