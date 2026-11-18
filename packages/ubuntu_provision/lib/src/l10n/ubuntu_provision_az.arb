@@ -1,1 +1,164 @@
-{}
+{
+    "accessibilityPageTitle": "Əlçatanlıq",
+    "accessibilitySeeingLabel": "Görmə",
+    "accessibilityHearingLabel": "Eşitmə",
+    "accessibilityTypingLabel": "Yazma",
+    "accessibilityPointingLabel": "Tuşlama və klikləmə",
+    "accessibilityZoomLabel": "Miqyas",
+    "accessibilityHighContrastLabel": "Yüksək kontrast",
+    "accessibilityLargeTextLabel": "Böyük mətn",
+    "accessibilityReduceAnimationLabel": "Animasiyanı azalt",
+    "accessibilityScreenReaderLabel": "Ekran oxuyucu",
+    "accessibilityVisualAlertsLabel": "Vizual siqnallar",
+    "accessibilityStickKeysLabel": "Yapışqan düymələr",
+    "accessibilitySlowKeysLabel": "Yavaş düymələr",
+    "accessibilityMouseKeysLabel": "Siçan düymələri",
+    "accessibilityDesktopZoomLabel": "Masaüstü miqyaslanması",
+    "errorPageTitle": "Nəsə düz getmədi",
+    "errorPageShowLog": "Jurnal qeydini göstər",
+    "errorPageHideLog": "Jurnal qeydini gizlə",
+    "errorPageTechnicalDetails": "Texniki təfərrüatlar",
+    "restart": "Yenidən başlat",
+    "close": "Bağla",
+    "timezonePageTitle": "Saat qurşağınızı seçin",
+    "timezoneLocationLabel": "Məkan",
+    "timezoneTimezoneLabel": "Saat qurşağı",
+    "keyboardTitle": "Klaviatura düzümü",
+    "keyboardHeader": "Klaviatura düzümünüzü seçin",
+    "themeDark": "Qaranlıq",
+    "themeLight": "İşıqlı",
+    "localePageTitle": "{DISTRO} versiyasına xoş gəldiniz",
+    "@localePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "localeHeader": "Dilinizi seçin:",
+    "identityPageTitle": "Hesabınızı yaradın",
+    "identityAutoLogin": "Avtomatik giriş et",
+    "identityRequirePassword": "Girişdə şifrəmi tələb et",
+    "identityRealNameLabel": "Adınız",
+    "identityRealNameRequired": "Ad tələb olunur",
+    "identityRealNameTooLong": "Ad çox uzundur.",
+    "identityInvalidRealName": "Ad etibarsızdır",
+    "identityHostnameLabel": "Kompüterinizin adı",
+    "themePageTitle": "Mövzunuzu seçin",
+    "keyboardDetectTitle": "Klaviatura düzümünü müəyyən et",
+    "keyboardDetectButton": "Müəyyən et",
+    "themePageHeader": "Bunu daha sonra görünüş ayarlarında dəyişə bilərsiniz.",
+    "identityHostnameInfo": "Digər kompüterlərlə danışarkən istifadə etdiyi ad.",
+    "identityHostnameRequired": "Kompüter adı tələb olunur",
+    "identityHostnameTooLong": "Bu kompüter adı çox uzundur.",
+    "identityInvalidHostname": "Kompüter adı etibarsızdır",
+    "identityUsernameLabel": "İstifadəçi adınız",
+    "identityUsernameRequired": "İstifadəçi adı tələb olunur",
+    "identityInvalidUsername": "İstifadəçi adı yanlışdır: kiçik hərflə başlamalıdır və yalnız kiçik hərflər, rəqəmlər, defislər və alt xəttdən ibarət ola bilər.",
+    "identityUsernameInUse": "O istifadəçi adı artıq mövcuddur.",
+    "identityUsernameSystemReserved": "Bu ad sistem istifadəsi üçün saxlanılır.",
+    "identityUsernameTooLong": "Ad çox uzundur.",
+    "identityUsernameInvalidChars": "Bu adda etibarsız simvollar var.",
+    "identityPasswordLabel": "Şifrə",
+    "identityPasswordRequired": "Şifrə tələb edilir",
+    "identityConfirmPasswordLabel": "Şifrəni təsdiqlə",
+    "identityPasswordMismatch": "Şifrələr eyni deyil",
+    "identityPasswordShow": "Göstər",
+    "identityPasswordHide": "Gizlə",
+    "identityActiveDirectoryOption": "Active Directory istifadə et",
+    "identityActiveDirectoryInfo": "Növbəti addımda domen və digər məlumatları daxil edəcəksiniz.",
+    "activeDirectoryTitle": "Active Directory-yə giriş edin",
+    "activeDirectoryHeader": "Active Directory-yə giriş edilsin?",
+    "activeDirectoryInfo": "{DISTRO} daha asan idarəetmə üçün Aktiv Directory ilə problemsiz inteqrasiya üçün nəzərdə tutulub.",
+    "@activeDirectoryInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "activeDirectoryTestConnection": "Domen bağlantısını test edin",
+    "activeDirectoryDomainLabel": "Domen",
+    "activeDirectoryDomainEmpty": "Tələb olunur",
+    "activeDirectoryDomainTooLong": "Çox uzun",
+    "activeDirectoryDomainInvalidChars": "Etibarsız simvollar",
+    "activeDirectoryDomainStartDot": "Nöqtə (.) ilə başlayır",
+    "activeDirectoryDomainEndDot": "Nöqtə (.) ilə bitir",
+    "activeDirectoryDomainStartHyphen": "Tire (-) ilə başlayır",
+    "activeDirectoryDomainEndHyphen": "Tire (-) ilə bitir",
+    "activeDirectoryDomainMultipleDots": "Ardıcıl nöqtələr (..) ehtiva edir",
+    "activeDirectoryDomainNotFound": "Domen tapılmadı",
+    "activeDirectoryAdminEmpty": "Tələb olunur",
+    "activeDirectoryAdminInvalidChars": "Etibarsız simvollar",
+    "activeDirectoryPasswordLabel": "Şifrə",
+    "activeDirectoryPasswordEmpty": "Tələb olunur",
+    "activeDirectoryErrorTitle": "Active Directory ilə bağlantını konfiqurasiya edərkən xəta baş verdi",
+    "networkPageTitle": "İnternet bağlantısı",
+    "networkPageHeader": "İnternetə bağlan",
+    "networkPageBody": "İnternet bağlantısı uyğunluq yoxlanışı və əlavə proqram paketləri ilə quraşdırmanı təkmilləşdirəcək.",
+    "networkWiredOption": "Simli bağlantı istifadə et",
+    "networkWiredNone": "Simli bağlantı müəyyən edilmədi",
+    "networkWiredOff": "Simli bağlantı söndürülüb",
+    "networkWiredDisabled": "Bu kompüterdə Ethernet istifadə etmək üçün simli bağlantı aktiv edilməlidir",
+    "networkWiredEnable": "Simli bağlantını fəallaşdır",
+    "networkWifiOption": "Wi-Fi şəbəkəsinə bağlan",
+    "networkWifiOff": "Simsiz şəbəkə deaktiv edilib",
+    "networkWifiNone": "Heç bir Wi-Fi qurğusu müəyyən edilmədi",
+    "networkWifiDisabled": "Bu kompüterdə Wi-Fi istifadə etmək üçün simsiz şəbəkə aktiv edilməlidir",
+    "networkWifiEnable": "Wi-Fi-ı fəallaşdır",
+    "networkHiddenWifiOption": "Gizli Wi-Fi şəbəkəsinə qoşul",
+    "networkHiddenWifiNameLabel": "Şəbəkə adı",
+    "networkHiddenWifiNameRequired": "Şəbəkə adı tələb olunur",
+    "networkNoneOption": "İnternetə bağlanma",
+    "eulaPageTitle": "Lisenziya razılaşması",
+    "eulaReviewTerms": "Lisenziya şərtlərini nəzərdən keçir",
+    "eulaReadAndAcceptTerms": "Bu maşını quraşdırmağa davam etmək üçün lisenziya müqaviləsinin şərtlərini oxumalı və qəbul etməlisiniz.",
+    "eulaAcceptTerms": "Bu şərtləri oxudum və qəbul edirəm",
+    "successIconSemanticLabel": "Uğurlu",
+    "closeIconSemanticLabel": "Bağla",
+    "maximizeIconSemanticLabel": "Böyüt",
+    "minimizeIconSemanticLabel": "Kiçilt",
+    "expandIconSemanticLabel": "Genişləndir",
+    "collapseIconSemanticLabel": "Yığ",
+    "networkWifiSignalNone": "Siqnal yoxdur",
+    "networkWifiSignalWeak": "Zəif siqnal",
+    "networkWifiSignalOk": "Normal siqnal",
+    "networkWifiSignalGood": "Yaxşı siqnal",
+    "networkWifiSignalExcellent": "Əla siqnal",
+    "networkWifiOpenNetwork": "Açıq şəbəkə",
+    "networkWifiSecureNetwork": "Təhlükəsiz şəbəkə",
+    "networkWifiConnecting": "Bağlanır…",
+    "networkWifiConnected": "Bağlandı",
+    "logViewSemanticLabel": "Jurnal qeydi",
+    "accessibilityPageHeader": "{DISTRO} daxilində əlçatımlılıq",
+    "@accessibilityPageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "accessibilityPageBody": "Quraşdırmazdan əvvəl {DISTRO} cihazını ehtiyaclarınıza uyğunlaşdırın. Onları daha sonra Ayarlar tətbiqində dəyişə bilərsiniz.",
+    "@accessibilityPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "errorPageUnexpected": "Üzr istəyirik, lakin xətanın nə olduğunu bilmirik. Kompüterinizi yenidən başladaraq quraşdırma prosesini yenidən başlada bilərsiniz. Həmçinin <a>problemi bildirə</a> bilərsiniz.",
+    "errorPageUbuntuBug": "Müvafiq sazlama məlumatları daxil olmaqla avtomatlaşdırılmış xəta hesabatı göndərmək üçün terminalda və ya əmr konsolundan (Alt+F2) <pre>sudo ubuntu-bug {SNAP}</pre> əmrini icra edin.",
+    "@errorPageUbuntuBug": {
+        "placeholders": {
+            "SNAP": {
+                "type": "String"
+            }
+        }
+    },
+    "keyboardTestHint": "Klaviaturanızı yoxlamaq üçün bura yazın",
+    "keyboardVariantLabel": "Klaviatura növünüzü seçin:",
+    "keyboardPressKeyLabel": "Aşağıdakı düymələrdən birini sıxın:",
+    "keyboardKeyPresentLabel": "Aşağıdakı düymə klaviaturanızda mövcuddur?",
+    "activeDirectoryAdminLabel": "Domenə qoşulan istifadəçi",
+    "activeDirectoryErrorMessage": "Üzr istəyirik, Active Directory hazırda quraşdırıla bilməz. Sisteminiz işə salındıqdan sonra yardım üçün <a href=\"https://help.ubuntu.com/activedirectory\">help.ubuntu.com/activedirectory</a> ünvanına daxil olun."
+}
