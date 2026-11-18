@@ -453,7 +453,7 @@
     "tpmActionErrorKindSysPrepApplicationsPresent": "Hay software ejecutándose al inicio que puede prevenir una conexión segura con el TPM del equipo.",
     "tpmActionErrorKindAbsolutePresent": "Módulo de Persistencia Absoluta está habilitada en este equipo.",
     "tpmActionErrorKindInvalidSecureBootMode": "El arranque seguro está desactivado en este equipo o no está configurado en modo de despliegue.",
-    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Alguno de los certificados verifican componentes en este equipo están obsoletos o utilizan protección débil.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Algunos de los certificados que verifican los programas de este equipo están caducados o usan una protección débil.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Este equipo está utilizando un listado de permiso manual para verificar el software al arrancar.",
     "tpmActionErrorKindAddonDriversPresent": "Hay controladores presentes a través de complementos.",
     "tpmActionErrorKindGenericTpm": "Hay un problema con el TPM del equipo.",
@@ -525,5 +525,7 @@
     "tpmActionPageTitleActionable": "Hay un problema con el cifrado respaldado por hardware",
     "installationLogSemanticLabel": "Registro de instalación",
     "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Esta función puede denominarse «Tecnología de virtualización», «VT-d» o «AMD-Vi».",
-    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Revise que el modo del arranque seguro sea «de despliegue»."
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Revise que el modo del arranque seguro sea «de despliegue».",
+    "allocateDiskSpaceBootMustBeExt4": "/boot debe montarse en una partición ext4",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot debe montarse en una partición ext4"
 }
