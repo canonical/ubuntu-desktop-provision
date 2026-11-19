@@ -1,1 +1,96 @@
-{}
+{
+    "successIconSemanticLabel": "Uğurlu",
+    "closeIconSemanticLabel": "Bağla",
+    "maximizeIconSemanticLabel": "Böyüt",
+    "minimizeIconSemanticLabel": "Kiçilt",
+    "welcomePageTitle": "Xoş gəldiniz",
+    "welcomePageHeader": "{distro} versiyasına xoş gəldiniz",
+    "@welcomePageHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeWhatsNew": "YENİ NƏ VAR?",
+    "telemetryLabelOff": "Yox, sistem məlumatlarını paylaşma",
+    "telemetryReportLabel": "Birinci hesabatı göstər",
+    "telemetryReportTitle": "Hesabat təfərrüatları",
+    "ubuntuProPageTitle": "Ubuntu Pro",
+    "ubuntuProOnBoardingSkipForNow": "Hələlik ötür",
+    "welcomeStoreTitle": "Proqram Mərkəzinə yeni baxış",
+    "welcomeSecurityTitle": "Təkmilləşdirilmiş təhlükəsizlik",
+    "telemetryPageTitle": "Telemetriya",
+    "telemetryHeader": "{distro} sistemini yaxşılaşdırmağa yardım edin",
+    "@telemetryHeader": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryDescription": "Sistem məlumatlarınızı bizimlə paylaşmaqla {distro} sistemini təkmilləşdirməyimizə yardım edin. Buraya cihaz modeli, quraşdırılmış proqram təminatı və saat qurşağı üçün seçdiyiniz məkan kimi məlumatlar daxildir.",
+    "@telemetryDescription": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLabelOn": "Hə, {distro} komandası ilə sistem məlumatlarını paylaş",
+    "@telemetryLabelOn": {
+        "placeholders": {
+            "distro": {
+                "type": "String"
+            }
+        }
+    },
+    "telemetryLegalLabel": "Hüquqi bildiriş",
+    "telemetryCollectError": "Telemetriya məlumatları toplana bilmədi",
+    "privacyPageTitle": "Məkan servisləri",
+    "privacyLocationTitle": "Məkan servisləri fəallaşsın?",
+    "privacyLocationSubtitle": "Tətbiqlərə coğrafi məkanınızı bilməyə icazə verin.\nBunu istənilən vaxt Sistem Ayarlarında dəyişə bilərsiniz.",
+    "privacyLocationEnable": "Məkan servisləri",
+    "privacyPolicyLink": "Məlumat məxfiliyi",
+    "ubuntuProHeader": "Bu maşına qoş",
+    "ubuntuProOrAddTokenManually": "və ya tokeni əllə əlavə edin",
+    "ubuntuProTokenTextfieldHint": "Token",
+    "ubuntuProSubscriptionDescription": "Açıq mənbəli proqram təminatı təhlükəsizliyi üçün ən əhatəli abunəliyi əldə edin",
+    "ubuntuProSubscriptionFreeForPersonalUse": "Şəxsi istifadə üçün həmişə pulsuzdur. Müəssisələr üçün 30 günlük sınaq. <a href=\"https://{url}\">Ətraflı məlumat</a>",
+    "@ubuntuProSubscriptionFreeForPersonalUse": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "ubuntuProTokenAttachButton": "Qoş",
+    "ubuntuProTokenAttachError": "Etibarsız token",
+    "ubuntuProTokenAttachSucess": "Etibarlı token",
+    "ubuntuProTokenAttachErrorVariant": "Etibarsız token. Yenidən cəhd edin",
+    "ubuntuProOnBoardingEnableUbuntuPro": "Ubuntu Pronu fəallaşdır",
+    "ubuntuProOnBoardingSkipForNowDescription": "Ubuntu Pronu daha sonra Proqram Təminatı və Yenilənmələr tətbiqi vasitəsilə fəallaşdıra bilərsiniz.",
+    "ubuntuProOnBoardingEnableUbuntuProDescription": "2032-ci ilə qədər daha geniş paketlərdə təhlükəsizlik güncəlləmələri əldə etmək üçün bu cihazı Ubuntu Pro abunəliyinə əlavə edin.",
+    "ubuntuProSucessAttachHeader": "Ubuntu Pro artıq bu cihazda aktivləşdirilib",
+    "ubuntuProSucessAttachDescription": "Pro xidmətlərinizi Proqram və Yenilənmələr tətbiqində idarə edə bilərsiniz.",
+    "welcomeChangelogLabel": "<a href=\"{url}\">Dəyişiklik jurnalına baxın</a>",
+    "@welcomeChangelogLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "welcomeStartTitle": "Səlis başlanğıc",
+    "welcomeStartSubtitle": "Daha təmiz quraşdırma təcrübəsinin dəstəklənməsi.",
+    "welcomeStoreSubtitle": "Sevimli proqram təminatınızı tapmaq heç vaxt bu qədər asan olmamışdır.",
+    "welcomeSecuritySubtitle": "Avadanlıq dəstəkli və ya ZFS şifrələməsi üçün yeni seçimlər.",
+    "ubuntuProMagicAttachInstructions": "Bu kod ilə <a href=\"https://{url}\">{url}</a> ünvanında sürətli qoşulma",
+    "@ubuntuProMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    }
+}
