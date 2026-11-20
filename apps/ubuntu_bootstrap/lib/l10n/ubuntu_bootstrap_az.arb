@@ -1000,5 +1000,124 @@
     "tpmActionErrorKindGenericFirmware": "Bu kompüterin mikroproqramı ilə bağlı problem var.",
     "tpmActionFixActionReboot": "Yenidən başlat",
     "tpmActionFixActionShutdown": "Söndür",
-    "tpmActionFixActionRebootToFwSettings": "Mikroproqram ayarlarını yenidən başlat"
+    "tpmActionFixActionRebootToFwSettings": "Mikroproqram ayarlarını yenidən başlat",
+    "tpmActionFixActionContactOem": "OEM ilə əlaqə saxla",
+    "tpmActionFixActionContactOsVendor": "ƏS təchizatçısı ilə əlaqə saxla",
+    "tpmActionFixActionEnableTpmViaFirmware": "TPM-i fəallaşdırın və ya yenidən başladın",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Yenidən başlatdıqda TPM-i fəallaşdır və təmizlə",
+    "tpmActionFixActionClearTpmViaFirmware": "TPM-i yenidən başlatdıqa təmizlə",
+    "tpmActionFixActionClearTpm": "TPM-i təmizlə",
+    "tpmActionFixActionProceed": "Görməzdən gəl",
+    "tpmActionFixActionRebootDescription": "Öncəki əməliyyatları tamamlamaq üçün kompüteri yenidən başladın.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Kompüteri yenidən başlatmaq problemi həll edə bilər.",
+    "tpmActionFixActionShutdownDescription": "Öncəki əməliyyatları tamamlamaq üçün kompüteri söndürün.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Bunu kompüterinizin mikroproqram ayarlarında edə bilərsiniz.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Bunu kompüterinizin mikroproqram ayarlarında edə bilərsiniz. Təlimat üçün mərkəzi prosessor (CPU) təchizatçısının sənədlərini yoxlayın.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Təhlükəsiz önyükləmə rejiminin \"yerləşdirilmiş\" olaraq ayarlandığını yoxlayın.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Bu özəllik \"Virtuallaşdırma Texnologiyası\", \"T-d\" və ya \"AMD-Vi\" kimi adlandırıla bilər.",
+    "tpmActionFixActionProceedDescription": "Bu problemi görməzdən gəlmək quraşdırmanın daha az təhlükəsiz olmasına səbəb ola bilər.",
+    "tpmActionRestartLabel": "Yenidən başlat",
+    "tpmActionRestartAndEnableTpmLabel": "Yenidən başlat və TPM-i fəallaşdır",
+    "tpmActionRestartAndClearTpmLabel": "Yenidən başlar və TPM-i təmizlə",
+    "tpmActionIgnoreAndContinueLabel": "Görməzdən gəl və davame t",
+    "tpmActionFixActionClearTpmWarningTitle": "TPM-i təmizləmək bütün şifrələmə açarlarını silir",
+    "tpmActionFixActionClearTpmWarningBody": "Bərpa açarlarınız olmayan şifrələnmiş disklərdəki bütün məlumatlara girişi itirəcəksiniz. Bu, həmçinin kimlik doğrulama və sertifikatlar kimi TPM-dən asılı olan digər funksiyaların işini də pozacaq.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "TPM-i təmizləməyin nəticələrini anlayıram",
+    "tpmActionFixActionCaveatConfirm": "Yenidən başladıldıqda bu əməliyyatı təsdiqləməyiniz tələb oluna bilər.",
+    "tpmActionFixActionCaveatRetry": "Sonra quraşdırmanı yenidən başlatmalı olacaqsınız.",
+    "tpmActionErrorTitle": "Bu həll uğursuz oldu",
+    "tpmActionErrorDescription": "Fərqli həll yolu sınayın və ya İT dəstəyi ilə əlaqə saxlayın.",
+    "installationLogSemanticLabel": "Quraşdırma jurnalı",
+    "manualPartitioningWarningBody": "Başqa bir şey sınayın. Həmçinin <a href=\"\">xəta hesabatı göndərə</a> bilərsiniz.",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot ext4 bölməsinə birləşdirilməlidir",
+    "manualPartitioningBootMustBeExt4WarningBody": "/ üçün ext4 bölgüsündən istifadə edin və ya /boot üçün ayrıca ext4 bölgüsü yaradın",
+    "stepIndicatorLabel": "Addım {CURRENT_STEP}/{TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "{mountpoint} üçün istifadə olunan {format} formatında yaradıldı və formatlandı",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionFormatLabel": "İstifadə təyinatı:",
+    "refreshSnapCheckRerefresh": "{snap} təkrar yenilənməsi yoxlanılır...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "{snap} ayrılır...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "{snap} aktivləri yenilənir...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "{snap} kernel əmr sətri yenilənir...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "{snap} əlaqələndirilir...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "{snap} konnektorları və yuvaları qoşulur...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "Avtomatik {snap} təxəllüslər təyin edilir...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Mikroproqram ayarları avtomatik yüklənmirsə, yenidən başladın və başlatma zamanı ayarlar düyməsini təkrar-təkrar basın (adətən F2, F10 və ya Delete).",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA qorumasını əllə fəallaşdırın",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPM-i əllə təmizlə",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Təhlükəsiz önyükləməni əllə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "IOMMU-nu əllə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR banklarını əl ilə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPM-i əllə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM-i əllə təmizlə",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPM-i əllə təmizlə",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Mütləq Davamlılıq Modulunu əllə deaktiv et"
 }
