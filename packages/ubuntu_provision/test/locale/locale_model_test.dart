@@ -81,6 +81,22 @@ void main() {
     verify(locale.setLocale('fr_CA.UTF-8')).called(1);
   });
 
+  test('select and apply Swedish (Sweden)', () async {
+    final locale = MockLocaleService();
+    when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
+    when(locale.setLocale('sv_SE.UTF-8')).thenAnswer((_) async {});
+    final a11y = MockAccessibilityService();
+    final model = LocaleModel(locale: locale, sound: null, a11y: a11y);
+    await model.init();
+
+    await model.selectLanguage(model.searchLanguage('svenska'));
+    expect(model.selectedLocale, const Locale('sv', 'SE'));
+    verify(a11y.setScreenReaderLocale(const Locale('sv', 'SE'))).called(1);
+
+    await model.applyLocale(model.selectedLocale!);
+    verify(locale.setLocale('sv_SE.UTF-8')).called(1);
+  });
+
   test('selected language', () async {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
