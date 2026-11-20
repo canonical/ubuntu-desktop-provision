@@ -907,5 +907,98 @@
     "landscapeDomainInvalidDomainWarning": "Etibarsız domen, yoxlayın və ya İT dəstəyi ilə əlaqə saxlayın",
     "landscapeDomainNoInternetTitleWarning": "Davam etmək üçün internetə bağlanın",
     "landscapeDomainNoInternetDescriptionWarning": "Landscape-dən avtomatik quraşdırma faylını əldə etmək üçün internet lazımdır",
-    "landscapeCodeExpiredWarning": "Kodun vaxtı bitib. Zəhmət olmasa, yenidən cəhd edin"
+    "landscapeCodeExpiredWarning": "Kodun vaxtı bitib. Zəhmət olmasa, yenidən cəhd edin",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format}, {mountpoint} üçün dəstəklənən fayl sistemi deyil",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap} təxəllüsləri qurulur...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeLoginFailedWarning": "Giriş uğursuz oldu. Zəhmət olmasa, bir də cəhd edin",
+    "landscapeErrorPageTitle": "Avtomatik quraşdırma hesabınız üçün əlçatan deyil",
+    "landscapeErrorPageBody": "İT dəstəyi ilə əlaqə saxlayın və ya fərqli quraşdırma seçimini sınayın.",
+    "landscapeErrorPageCode": "Xəta kodu: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu təşkilatınız tərəfindən təmin edilən konfiqurasiya ilə quraşdırılacaq",
+    "landscapeConfirmPageSuccessInfoContent": "Aşağıda Landscape-dən idxal edilmiş avtomatik quraşdırma faylını nəzərdən keçirə bilərsiniz.",
+    "errorIconSemanticLabel": "Xəta",
+    "tpmActionPageTitle": "Avadanlıq tərəfindən dəstəklənən şifrələməni aktiv etmək mümkün olmadı",
+    "tpmActionPageTitleActionable": "Avadanlıq tərəfindən dəstəklənən şifrələmə ilə bağlı problem var",
+    "tpmActionBadgeLabel": "Əməliyyat tələb olunur",
+    "tpmActionDetailsLabel": "Texniki təfərrüatlar",
+    "tpmActionConfirmLabel": "Təsdiqlə",
+    "tpmActionSolutionLabel": "{n}. həll: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionSingleSolutionLabel": "Həll: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Avadanlıq tərəfindən dəstəklənən şifrələmə haqqında daha çox öyrən",
+    "tpmActionErrorSupportLabel": "Aşağıdakı həll yollarını sınayın, İT dəstəyi ilə əlaqə saxlayın və ya fərqli şifrələmə metodu seçin.",
+    "tpmActionErrorSupportSingleLabel": "Aşağıdakı həlli sınayın, İT dəstəyi ilə əlaqə saxlayın və ya fərqli şifrələmə metodu seçin.",
+    "tpmActionErrorSupportNoActionLabel": "İT dəstəyi ilə əlaqə saxlayın və ya fərqli şifrələmə metodu seçin.",
+    "tpmActionErrorKindInternal": "Daxili xəta.",
+    "tpmActionErrorKindShutdownRequired": "Söndürmək tələb olunur.",
+    "tpmActionErrorKindRebootRequired": "Yenidən başladılma tələb olunur.",
+    "tpmActionErrorKindUnexpectedAction": "Gözlənilməyən əməliyyat.",
+    "tpmActionErrorKindMissingArgument": "Arqument çatışmır.",
+    "tpmActionErrorKindInvalidArgument": "Etibarsız arqument.",
+    "tpmActionErrorKindActionFailed": "Əməliyyat uğursuz oldu.",
+    "tpmActionErrorKindRunningInVm": "Hazırkı mühit virtual maşındır.",
+    "tpmActionErrorKindSystemNotEfi": "Bu kompüter bu şifrələmə metodu ilə uyğun olmayan köhnə mikroproqramdan (köhnə BIOS) istifadə edir.",
+    "tpmActionErrorKindEfiVariableAccess": "Bu kompüterin mikroproqramında problem var.",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Bu kompüterdə bu şifrələmə metodu üçün tələb olunan təhlükəsizlik avadanlığı (TPM 2.0) yoxdur.",
+    "tpmActionErrorKindTpmDeviceDisabled": "Bu kompüterin TPM-i deaktiv edilib.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "Bu kompüterin TPM-i artıq başqa sistem və ya tətbiq tərəfindən istifadə olunur.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "Bu kompüterin TPM-i hazırda kilidlidir.",
+    "tpmActionErrorKindInsufficientTpmStorage": "Bu kompüterin TPM-ində kifayət qədər saxlanc yeri yoxdur.",
+    "tpmActionErrorKindUnsupportedPlatform": "Bu kompüter avadanlıq tərəfindən dəstəklənən şifrələmə ilə uyumlu deyil.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI sazlanması aktivdir.",
+    "tpmActionErrorKindInsufficientDmaProtection": "Bu kompüterdə tələb olunan təhlükəsizlik funksiyası (DMA qoruması) yoxdur.",
+    "tpmActionErrorKindNoKernelIommu": "Bu kompüterdə tələb olunan təhlükəsizlik funksiyası (IOMMU) yoxdur.",
+    "tpmActionErrorKindHostSecurity": "Bu kompüterin təhlükəsizlik konfiqurasiyası ilə bağlı problem var.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Kompüterin TPM ilə təhlükəsiz bağlantıya mane ola biləcək proqram təminatı işə düşərkən işləyir.",
+    "tpmActionErrorKindAbsolutePresent": "Mütləq Davamlılıq Modulu bu kompüterdə aktivdir.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Təhlükəsiz yükləmə bu kompüterdə deaktiv edilib və ya yerləşdirilmiş rejimdə ayarlanmayıb.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Bu kompüterdəki proqram təminatını doğrulayan bəzi sertifikatlar köhnəlib və ya zəif qoruma istifadə edir.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Bu kompüter proqram təminatını başlatma zamanı yoxlamaq üçün əl ilə icazə verilənlər siyahısından istifadə edir.",
+    "tpmActionErrorKindAddonDriversPresent": "Əlavə sürücüləri mövcuddur.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Bu kompüterdə tələb olunan təhlükəsizlik funksiyası yoxdur (hardware root of trust).",
+    "tpmActionErrorKindGenericTpm": "Bu kompüterin TPM-i ilə bağlı problem var.",
+    "tpmActionErrorKindGenericFirmware": "Bu kompüterin mikroproqramı ilə bağlı problem var.",
+    "tpmActionFixActionReboot": "Yenidən başlat",
+    "tpmActionFixActionShutdown": "Söndür",
+    "tpmActionFixActionRebootToFwSettings": "Mikroproqram ayarlarını yenidən başlat"
 }
