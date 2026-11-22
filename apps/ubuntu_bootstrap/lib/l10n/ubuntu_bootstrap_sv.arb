@@ -482,7 +482,7 @@
     "tpmActionFixActionClearTpmConfirmationLabel": "Jag förstår konsekvenserna av att rensa TPM",
     "tpmActionErrorTitle": "Lösningen misslyckades",
     "tpmActionErrorDescription": "Testa en annan lösning eller kontakta IT-support.",
-    "tpmActionErrorKindAddonDriversPresent": "Tillagda drivrutiner används.",
+    "tpmActionErrorKindAddonDriversPresent": "Tilläggsdrivrutiner finns.",
     "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Den här datorn använder en manuell vitlista för att verifiera programvara vid uppstart.",
     "manualPartitioningWarningBody": "Prova något annat. Du kan också <a href=\"\">skicka en felrapport</a>.",
     "tpmActionErrorKindGenericTpm": "Det finns ett problem med den här datorns TPM.",
