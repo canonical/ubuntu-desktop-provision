@@ -445,7 +445,7 @@
     "tpmActionErrorKindPcrUnsupported": "PCR ne subtenata",
     "tpmActionErrorKindNoSuitablePcrBank": "Mankas taŭga PCR-banko",
     "tpmActionErrorKindEmptyPcrBanks": "Malplenaj PCR-bankoj",
-    "tpmActionErrorKindAbsolutePresent": "Ĉeestas la modulo Absolute Persistence ĉe ĉi tiu komputilo.",
+    "tpmActionErrorKindAbsolutePresent": "La modulo Absolute Persistence estas aktivigita en ĉi tiu komputilo.",
     "tpmActionErrorKindTpmDeviceLockoutLockedOut": "La Fidata Platforma Modulo (TPM) de ĉi tiu komputilo estas aktuale ŝlosita.",
     "tpmActionErrorKindTpmStartupLocalityNotProtected": "Lokeco de TPM-starto ne estas gardata",
     "tpmActionErrorKindVarSuppliedDriversPresent": "Var-provizita pelilo ĉeestas",
