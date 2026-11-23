@@ -124,7 +124,11 @@ func (s *Service) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (_ 
 		if userID == 0 {
 			return
 		}
-		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, userID).Err
+		// AccountsService's DeleteUser signature is (id x, remove_files b):
+		// an int64 UID plus the remove-files flag. A lone uint64 marshals
+		// as "(t)", which GDBus rejects with a signature mismatch, making
+		// every rollback attempt fail.
+		err = s.accounts.Call(consts.DbusAccountsPrefix+".DeleteUser", 0, int64(userID), true).Err
 		if err != nil {
 			slog.Warn(fmt.Sprintf("error encountered when rolling back CreateUser: %v", err))
 		}
