@@ -1,0 +1,1123 @@
+{
+    "successIconSemanticLabel": "Uğurlu",
+    "closeIconSemanticLabel": "Bağla",
+    "maximizeIconSemanticLabel": "Böyüt",
+    "minimizeIconSemanticLabel": "Kiçilt",
+    "appTitle": "Ubuntu masaüstü qurucusu",
+    "windowTitle": "{RELEASE} quraşdır",
+    "@windowTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "autoinstallDirectTitle": "Avtomatik quraşdırma",
+    "autoinstallDirectHeader": "Avtomatik quraşdırma faylını idxal edin",
+    "autoinstallDirectImportButtonLabel": "İdxal et",
+    "passphrasePageTitle": "Şifrələmə",
+    "choosePassphraseHeader": "Keçid sözü yarat",
+    "passphrasePageChoosePassphraseHint": "Keçid sözü",
+    "passphrasePageConfirmPassphraseHint": "Keçid sözünü təsdiq edin",
+    "passphrasePageRequiredPassphrase": "Keçid sözü tələb edilir",
+    "passphrasePageMismatchPassphrase": "Keçid sözləri eyni deyil",
+    "passphrasePageChoosePinHint": "PIN",
+    "passphrasePageConfirmPinHint": "PIN-i təsdiqlə",
+    "passphrasePageRequiredPin": "PIN tələb olunur",
+    "autoinstallDirectFileLabel": "Və ye yerli fayl seçin:",
+    "autoinstallDirectFileButtonLabel": "Fayl seç...",
+    "autoinstallDirectFileClearButtonLabel": "Faylı təmizlə",
+    "autoinstallDirectFilePickerTitle": "Fayl seç",
+    "autoinstallDirectFilePickerFilterLabel": "YAML faylları",
+    "autoinstallDirectErrorInvalidUrlTitle": "Etibarsız URL",
+    "autoinstallDirectErrorUnkownTitle": "Naməlum xəta",
+    "autoinstallTitle": "Quraşdırma növü",
+    "autoinstallHeader": "{DISTRO} əməliyyat sistemini necə quraşdırmaq istərdiz?",
+    "@autoinstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "changeButtonText": "Dəyiş",
+    "quitButtonText": "Quraşdırmadan çıx",
+    "loadingPageTitle": "{DISTRO} əməliyyat sisteminə xoş gəlmisiniz",
+    "@loadingPageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "loadingHeader": "{DISTRO} hazırlanır…",
+    "@loadingHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "warningLabel": "Xəbərdarlıq:",
+    "tryOrInstallTitle": "{DISTRO} yoxla və ya quraşdır",
+    "@tryOrInstallTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallHeader": "{DISTRO} ilə nə etmək istəyirsiz?",
+    "@tryOrInstallHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallRepairOption": "Quraşdırmanı bərpa et",
+    "rstTitle": "RST aşkarlandı",
+    "rstDisableBios": "BIOS ayarları",
+    "showSecurityKey": "Göstər",
+    "hideSecurityKey": "Gizlə",
+    "updatesOtherSoftwarePageTitle": "Tətbiqetmə",
+    "autoinstallDirectUrlLabel": "Avtomatik quraşdırma faylının URL-ni daxil edə bilərsiniz:",
+    "autoinstallDirectErrorNetworkTitle": "Avtomatik quraşdırma faylı əlçatan deyil",
+    "autoinstallDirectErrorNetworkBody": "URL-in düzgünlüyünü yoxlayın, internet bağlantınızı yoxlayın və ya sonra cəhd edin.",
+    "autoinstallDirectErrorInvalidUrlBody": "URL-in düzgün olduğunu yoxlayın və ya yerli fayl seçin.",
+    "autoinstallDirectErrorInvalidContentTitle": "Etibarsız avtomatik quraşdırma faylı",
+    "autoinstallDirectErrorInvalidContentBody": "Faylı yoxlayın və ya başqasını təqdim edin.",
+    "autoinstallDirectErrorFileSystemTitle": "Avtomatik quraşdırma faylı oxunabilən deyil",
+    "autoinstallDirectErrorFileSystemBody": "İcazələri yoxlayın və ya fərqli fayl təqdim edin.",
+    "autoinstallInstructions": "autoinstall.yaml URL və ya yerli fayl yolunu daxil edin:",
+    "autoinstallInteractiveOption": "İnteraktiv quraşdırma",
+    "autoinstallInteractiveDescription": "Quraşdırma zamanı addım-addım bələdçilik edilmək istəyən istifadəçilər üçün.",
+    "autoinstallDirectOption": "Avtomatik quraşdırma faylı ilə avtomatlaşdırılıb",
+    "autoinstallDirectDescription": "Ardıcıl və təkrarlanan sistem quraşdırmaları üçün autoinstall.yaml faylına malik təcrübəli istifadəçilər üçün.",
+    "autoinstallLandscapeOption": "Landşaft ilə avtomatlaşdırılıb",
+    "autoinstallLandscapeDescription": "Landşaft vasitəsilə avtomatik quraşdırma faylı təmin edən təşkilatlardakı istifadəçilər üçün.",
+    "autoinstallErrorMessage": "Quraşdırma zamanı avtomatik quraşdırma faylındakı əmr işə düşmədi.",
+    "autoinstallGenericErrorMessage": "Təqdim edilmiş avtomatik quraşdırma faylı ilə quraşdırma davam edə bilməz.",
+    "autoinstallValidationErrorMessage": "Təqdim edilmiş avtomatik quraşdırma faylı ilə bağlı problem var.",
+    "autoinstallCloudInitSchemaValidationErrorMessage": "Avtomatik quraşdırma faylında təqdim edilən bulud başlanğıcı istifadəçi məlumatları ilə bağlı problem var.",
+    "autoinstallErrorInstructions": "Quraşdırmanı yenidən başlatmalı olacaqsınız. Avtomatik quraşdırma faylını yoxlayın, fərqli quraşdırma növü seçin və ya İT dəstəyi ilə əlaqə saxlayın.",
+    "tryOption": "{RELEASE} sınayın",
+    "@tryOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryDescription": "Kompüterinizdə heç bir dəyişiklik etmədən {RELEASE} sınaya bilərsiz.",
+    "@tryDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installOption": "{RELEASE} quraşdırın",
+    "@installOption": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installDescription": "{RELEASE} buraxılışını hazırki əməliyyat sisteminizlə birlikdə (və ya əvəzinə) quraşdırın. Bu çox vaxt aparmamalıdır.",
+    "@installDescription": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "tryOrInstallReleaseNotesLabel": "<a href=\"{url}\">Buraxılış qeydlərini</a> oxumaq istəyə bilərsiz.",
+    "@tryOrInstallReleaseNotesLabel": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "rstHeader": "Quraşdırmaya davam etmək üçün RST-ni söndürməlisiniz",
+    "rstDisable": "Kompüter Intel RST (Sürətli Yaddaş Texnologiyası) istifadə edir. RST-ni aşağıdakılardan birində söndürə edə bilərsiniz:",
+    "rstDisableWindows": "Windows ilə ikili önyükləmə quraşdırmasından istifadə edirsinizsə, Windows",
+    "rstInstructions": "Təlimatlar üçün digər cihazda QR kodunu skan edin və ya ünvanına daxil olun: <a href=\"https://{url}\">{url}</a>",
+    "@rstInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "configureSecureBootTitle": "Təhlükəsiz önyükləməni konfiqurasiya et",
+    "configureSecureBootDescription": "Üçüncü tərəf sürücü proqram təminatını quraşdırmağı seçmisiniz. Bu, Təhlükəsiz Önyükləməni söndürməyi etməyi tələb edir.\nBunun üçün indi təhlükəsizlik açarı seçməli və sistem yenidən başladıqda onu daxil etməlisiniz.",
+    "configureSecureBootOption": "Təhlükəsiz önyükləməni konfiqurasiya edin",
+    "chooseSecurityKey": "Təhlükəsizlik açarı seçin",
+    "confirmSecurityKey": "Təhlükəsizlik açarını konfiqurasiya edin",
+    "dontInstallDriverSoftwareNow": "Hələlik sürücü proqramını quraşdırma",
+    "dontInstallDriverSoftwareNowDescription": "Daha sonra Proqram Təminatı və Yenilənmələr bölməsindən quraşdıra bilərsiniz.",
+    "configureSecureBootSecurityKeyRequired": "Təhlükəsizlik açarı tələb olunur",
+    "secureBootSecurityKeysDontMatch": "Təhlükəsizlik açarları eyni deyil",
+    "updatesOtherSoftwarePageDescription": "Başlamaq üçün hansı tətbiqləri quraşdırmaq istəyirsiniz?",
+    "codecsAndDriversPageTitle": "Kompüterinizi optimallaşdırın",
+    "codecsAndDriversPageDescription": "Tövsiyə olunan özəl proqram təminatı quraşdırılsın?",
+    "codecsAndDriversPageBody": "{DISTRO} varsayılan olaraq xüsusi proqram təminatı ilə göndərilmir. Əlavə proqram təminatının quraşdırılması kompüterinizin performansını yaxşılaşdıra bilər.",
+    "@codecsAndDriversPageBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "codecsAndDriversNvidiaNote": "NVIDIA qrafik kartı aşkarlandı",
+    "codecsAndDriversNvidiaBody": "NVIDIA qrafik kartlarının daha yaxşı işləməsi üçün əlavə sürücülərin quraşdırılması qəti şəkildə tövsiyə olunur.",
+    "fullInstallationTitle": "Genişlənmiş seçim",
+    "fullInstallationSubtitle": "Ofis alətləri, vasitələr və veb səyyahların oflayn dostu seçimi.",
+    "minimalInstallationTitle": "Varsayılan seçim",
+    "minimalInstallationSubtitle": "Yalnız zəruri komponentlər, veb səyyah və əsas vasitələr.",
+    "otherOptions": "Digər seçimlər",
+    "installThirdPartyTitle": "Qrafika və Wi-Fi avadanlığı, eləcə də əlavə media formatları üçün üçüncü tərəf proqram təminatı quraşdır",
+    "installThirdPartySubtitle": "Bu proqram təminatı onun sənədlərinə daxil edilmiş lisenziya şərtlərinə tabedir. Bəziləri xüsusi mülkiyyətdir.",
+    "installDriversTitle": "Qrafika və Wi-Fi avadanlığı üçün üçüncü tərəf proqram təminatı quraşdır",
+    "installDriversSubtitle": "NVIDIA sürücüləri və oxşarları daxil olmaqla, lakin bunlarla məhdudlaşmayaraq",
+    "installCodecsTitle": "Əlavə media formatları üçün dəstək endirin və quraşdırın",
+    "installCodecsSubtitle": "MP3, MP4, MOV və oxşarları daxil olmaqla, lakin bununla məhdudlaşmayaraq",
+    "batteryWarning": "Kompüter enerji mənbəyinə qoşulmayıb.",
+    "offlineWarning": "Hazırda oflaynsınız",
+    "passphrasePageHeaderPassphrase": "Şifrələmə keçid sözü təyin edin",
+    "passphrasePageHeaderPin": "Şifrələmə PIN-i təyin edin",
+    "passphrasePageBodyPassphrase": "Hər dəfə kompüteri işə saldıqda şifrə ifadəsini daxil etməlisiniz. Bu şifrə istifadəçi şifrənizdən fərqlidir. Bunu daha sonra Təhlükəsizlik Mərkəzində dəyişə bilərsiniz.",
+    "passphrasePageBodyPin": "Hər dəfə kompüteri işə saldıqda PIN daxil etməlisiniz. Bu PIN istifadəçi şifrənizdən fərqlidir. Bunu daha sonra Təhlükəsizlik Mərkəzində dəyişə bilərsiniz.",
+    "choosePassphraseBody": "Hər dəfə kompüteri işə saldıqda keçid sözünü daxil etməlisiniz. Bu keçid sözü istifadəçi şifrənizdən fərqlidir.",
+    "choosePassphraseInfoHeader": "Keçid sözünüzü yadda saxladığınızdan əmin olun",
+    "choosePassphraseInfoBody": "Əgər onu itirsəniz, bütün məlumatlarınızı itirəcəksiniz.",
+    "chooseOptionalPassphraseInfoHeader": "Keçid sözünüzü və bərpa açarını təhlükəsiz yerdə saxlayın",
+    "chooseOptionalPassphraseInfoBody": "Əgər keçid sözünüzü itirsəniz, bütün məlumatlarınızı itirəcəksiz. Keçid sözü bərpa açarı və ya istifadəçi şifrənizi əvəz etmir.",
+    "passphrasePageMismatchPin": "PIN kodlar eyni deyil",
+    "passphraseTypePassphraseTileTitle": "Başlanğıcda keçid sözünü tələb et",
+    "passphraseTypePassphraseTileSubTitle": "Ən təhlükəsizi. Hər dəfə kompüteri işə saldıqda daha uzun keçid sözü daxil etməli olacaqsınız.",
+    "passphraseTypePinTileTitle": "Başlanğıcda PIN tələb et",
+    "passphraseTypePinTileSubTitle": "Daha təhlükəsiz. Hər dəfə kompüteri işə saldıqda rəqəmli PIN daxil etməlisiniz.",
+    "passphraseTypeNoneTileTitle": "Diskin kilidini avtomatik aç",
+    "passphraseTypePageHeader": "Əlavə təhlükəsizlik",
+    "passphraseTypePageBody": "Varsayılan olaraq, disk işə salındıqda avtomatik kiliddən çıxarılacaq. Həmçinin, məlumatlarınızı daha da qorumaq üçün seçimləriniz var.",
+    "passphraseTypePageBodyAuthRequired": "Avadanlıq dəstəkli şifrələmə bu kompüterdə əlavə təhlükəsizlik tələb edir.",
+    "passphrasePagePassphraseEntropyBelowMin": "Zəif keçid sözü; daha uzun və ya qarışıq edin",
+    "passphrasePagePassphraseEntropyBelowOptimal": "Orta səviyyəli keçid sözü; daha yüksək təhlükəsizlik üçün onu daha uzun və ya qarışıq edin",
+    "passphrasePagePassphraseEntropyOptimal": "Güclü keçid sözü",
+    "passphrasePagePinEntropyBelowMin": "Zəif PIN; daha uzun və ya təxmin edilməsi daha çətin olanını seçin",
+    "passphrasePagePinEntropyBelowOptimal": "Orta səviyyəli PIN; daha yüksək təhlükəsizlik üçün onu daha uzun və ya təxmin edilməsi çətin edin",
+    "passphrasePagePinEntropyOptimal": "PIN kifayət qədər uzundur",
+    "installationTypeTitle": "Disk quraşdırması",
+    "installationTypeHeader": "{DISTRO} sistemini necə quraşdırmaq istəyirsiz?",
+    "@installationTypeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeOSDetected": "Hazırda bu kompüterdə {os} var. Nə etmək istərdiniz?",
+    "@installationTypeOSDetected": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeDualOSDetected": "Hazırda bu kompüterdə {os1} və {os2} var. Nə etmək istərdiniz?",
+    "@installationTypeDualOSDetected": {
+        "placeholders": {
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeMultiOSDetected": "Hazırda bu kompüterdə bir neçə əməliyyat sistemi var. Nə etmək istərdiniz?",
+    "installationTypeNoOSDetected": "Hazırda bu kompüterdə heç bir əməliyyat sistemi aşkar edilməyib. Nə etmək istərdiniz?",
+    "installationTypeErase": "Diski təmizlə və {DISTRO} qur",
+    "@installationTypeErase": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseInfo": "Diskdəki bütün məlumatlar və bölgülər, o cümlədən əməliyyat sistemləri silinəcək.",
+    "installationTypeAdvancedLabel": "Qabaqcıl seçimlər",
+    "installationTypeAdvancedTitle": "Şifrələmə və fayl sistemi",
+    "installationTypeExperimental": "Təcrübi",
+    "installationTypeNone": "Şifrələmə yoxdur",
+    "installationTypeNoneInfo": "Şifrələnməsi olmayan standart fayl sistemi.",
+    "installationTypeNoneSelected": "Heç biri seçilməyib",
+    "installationTypeLVM": "LVM-i şifrələmə olmadan istifadə et",
+    "installationTypeLVMSelected": "LVM seçilib",
+    "installationTypeLVMEncryption": "Keçid sözü ilə şifrələ",
+    "installationTypeLVMEncryptionInfoResolute": "Hər dəfə kompüterinizi yandıranda keçid sözü daxil etməli olacaqsız. {advancedHint}",
+    "@installationTypeLVMEncryptionInfoResolute": {
+        "placeholders": {
+            "advancedHint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeLVMEncryptionInfo2": "Bu LVM-i LUKS şifrələməsi ilə istifadə edir.",
+    "installationTypeLVMEncryptionSelected": "LVM və şifrələnmə seçilib",
+    "installationTypeEncryptInfo": "Növbəti addımda təhlükəsizlik açarı seçəcəksiniz.",
+    "installationTypeZFS": "ZFS-i şifrələmə olmadan istifadə edin",
+    "installationTypeZFSEncryption": "ZFS istifadə edərək keçid sözü ilə şifrələmə",
+    "installationTypeZFSEncryptionInfo": "ZFS ilə daxili şifrələmə. Kompüterinizi hər dəfə yandırdıqda keçid sözü daxil etməli olacaqsınız.",
+    "installationTypeZFSSelected": "ZFS seçilib",
+    "installationTypeZFSEncryptionSelected": "ZFS və şifrələmə seçilib",
+    "installationTypeTPM": "Avadanlıq tərəfindən dəstəklənən şifrələmədən istifadə et",
+    "installationTypeTPMInfoResolute": "Disk başlatma zamanı avtomatik kiliddən çıxacaq.",
+    "installationTypeTPMInfoUnavailable": "Bu kompüterdə əlçatan deyil.",
+    "installationTypeTPMSelected": "TPM seçilib",
+    "installationTypeReinstall": "{os} əməliyyat sistemini sil və yenidən qur",
+    "@installationTypeReinstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeReinstallWarning": "<font color=\"{color}\">Xəbərdarlıq:</font> Bununla bütün {os} proqramlarınız, sənədləriniz, fotolarınız, musiqiləriniz və digər fayllarınız silinəcək.",
+    "@installationTypeReinstallWarning": {
+        "placeholders": {
+            "color": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongside": "{product} sistemini {os} ilə yanaşı qur",
+    "@installationTypeAlongside": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideDual": "{product} sistemini {os1} və {os2} ilə yanaşı qur",
+    "@installationTypeAlongsideDual": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            },
+            "os1": {
+                "type": "String"
+            },
+            "os2": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideMulti": "{product} sistemini mövcud əməliyyat sistemi ilə yanaşı qur",
+    "@installationTypeAlongsideMulti": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeAlongsideUnknown": "{product} sistemini digər bölgülərlə yanaşı qur",
+    "@installationTypeAlongsideUnknown": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstall": "{os} sistemini sil və {product} qur",
+    "@installationTypeEraseAndInstall": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            },
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInstallNow": "İndi qur",
+    "guidedStoragePageHeader": "{DISTRO} sisteminin hara qurulacağını seç",
+    "@guidedStoragePageHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideFiles": "Fayllar",
+    "tryOrInstallRepairDescription": "Təmir zamanı sənədlərə və ya ayarlara toxunmadan bütün quraşdırılmış proqram təminatı yenidən quraşdırılacaq.",
+    "installationTypeAlongsideInfo": "Ölçüsünü dəyişmək və {product} üçün yer yaratmaq üçün bölgü seçin. Önyükləmə zamanı əməliyyat sisteminizi seçə bilərsiniz.",
+    "@installationTypeAlongsideInfo": {
+        "placeholders": {
+            "product": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeEraseAndInstallInfo": "Mövcud {os} quraşdırmasından bütün fayllar və məlumatlar həmişəlik silinəcək.",
+    "@installationTypeEraseAndInstallInfo": {
+        "placeholders": {
+            "os": {
+                "type": "String"
+            }
+        }
+    },
+    "installationTypeManual": "Əllə quraşdırma",
+    "installationTypeManualInfo": "Fərdiləşdirilmiş disk ayarları axtaran qabaqcıl istifadəçilər üçün.",
+    "@installationTypeManualInfo": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStoragePageTitle": "Diski boşalt və {DISTRO} qur",
+    "@selectGuidedStoragePageTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "selectGuidedStorageInfo": "Seçdiyiniz diskdə sıfırdan başlayın.",
+    "selectGuidedStorageDriveDropdownLabel": "Sürücü seçin:",
+    "selectGuidedStoragePartitionDropdownLabel": "Bölgü seçin:",
+    "selectGuidedStorageInfoLabel": "Bütün disk istifadə olunacaq:",
+    "installAlongsideSpaceDivider": "Aşağıdakı ayırıcını sürükləyərək disk sahəsini bölüşdürün:",
+    "installAlongsideHiddenPartitions": "{num} kiçik bölgü gizlədilib. Daha çox idarəetmə üçün <a href=\"{url}\">qabaqcıl bölgü alətindən</a> istifadə edin",
+    "@installAlongsideHiddenPartitions": {
+        "placeholders": {
+            "num": {
+                "type": "int"
+            },
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "installAlongsideResizePartition": "Bölgünün ölçüsünü dəyiş",
+    "installAlongsideAllocateSpace": "Yer ayır",
+    "installAlongsidePartition": "Bölgü:",
+    "installAlongsideSize": "Ölçü:",
+    "installAlongsideAvailable": "Mövcud:",
+    "allocateDiskSpace": "Əllə bölgü",
+    "allocateDiskSpaceInvalidMountPointSlash": "Birləşdirmə nöqtələri \"/\" ilə başlamalıdır",
+    "allocateDiskSpaceBootMustBeExt4": "/boot ext4 bölgüsündə birləşdirilməlidir",
+    "allocateDiskSpaceBootMustBeExt4Info": "/ üçün ext4 bölgüsündən istifadə et və ya /boot üçün ayrıca ext4 bölgüsü yarat",
+    "diskHeadersDevice": "Qurğu",
+    "diskHeadersType": "Növ",
+    "diskHeadersMountPoint": "Birləşdirmə nöqtəsi",
+    "diskHeadersSize": "Ölçü",
+    "diskHeadersUsed": "İstifadə olunub",
+    "diskHeadersSystem": "Sistem",
+    "diskHeadersFormat": "Format",
+    "freeDiskSpace": "Boş sahə",
+    "newPartitionTable": "Yeni bölgü cədvəli",
+    "newPartitionTableConfirmationTitle": "Yeni boş bölgü",
+    "newPartitionTableConfirmationMessage": "Bütün cihazda yeni bölgü cədvəli yaratmaq onun bütün cari bölgülərini siləcək. Lazım gələrsə, bu əməliyyat geri qaytarıla bilər.",
+    "tooManyPrimaryPartitions": "Həddən artıq ilkin bölgü var",
+    "partitionLimitReached": "Limitə çatıldı",
+    "bootLoaderDevice": "Önyükləyici quraşdırılması üçün cihaz",
+    "partitionCreateTitle": "Bölgü yarat",
+    "partitionEditTitle": "Bölgünü redaktə et",
+    "partitionSizeLabel": "Ölçü:",
+    "partitionTypeLabel": "Yeni bögü növü:",
+    "partitionTypePrimary": "İlkin",
+    "partitionTypeLogical": "Məntiqi",
+    "partitionLocationLabel": "Yeni bölgü məkanı:",
+    "partitionLocationBeginning": "Bu sahənin başlanğıcı",
+    "partitionLocationEnd": "Bu sahənin sonu",
+    "partitionErase": "Bölgünü formatla",
+    "partitionMountPointLabel": "Birləşdirmə nöqtəsi:",
+    "confirmPageTitle": "Quraşdırmağa hazırdır",
+    "confirmHeader": "Seçimlərinizə nəzər yetirin",
+    "confirmDiskEncryptionLVM": "LUKS (LVM)",
+    "confirmDiskEncryptionZFS": "LUKS (ZFS)",
+    "confirmDiskEncryptionTPM": "TPM",
+    "confirmDiskEncryptionNone": "Heç biri",
+    "confirmDevicesTitle": "Qurğular",
+    "confirmEntryApplications": "Tətbiqetmələr",
+    "confirmEntryDiskSetup": "Quraşdırma növü",
+    "confirmEntryDiskEncryption": "Disk şifrələməsi",
+    "confirmEntryInstallationDisk": "Quraşdırma diski",
+    "confirmEntryProprietarySoftware": "Özəl proqram təminatı",
+    "confirmSectionGeneralTitle": "Ümumi",
+    "confirmSectionSecurityAndMoreTitle": "Təhlükəsizlik və daha çoxu",
+    "confirmPartitionsTitle": "Bölgülər",
+    "confirmPartitionTable": "{serial} ({path})",
+    "@confirmPartitionTable": {
+        "description": "An entry for a disk whose partition table is being changed",
+        "placeholders": {
+            "serial": {
+                "type": "String"
+            },
+            "path": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmProprietarySoftwareCodecs": "Kodeklər",
+    "confirmProprietarySoftwareCodecsDrivers": "Kodeklər və sürücülər",
+    "confirmProprietarySoftwareDrivers": "Sürücülər",
+    "confirmInstallButton": "Quraşdır",
+    "confirmTableErased": "Silinmiş",
+    "confirmTableUnchanged": "Dəyişilməmiş",
+    "confirmTableResized": "{oldsize} ölçüsündən {newsize} ölçüsünə dəyişdirildi",
+    "@confirmTableResized": {
+        "placeholders": {
+            "oldsize": {
+                "type": "String"
+            },
+            "newsize": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableMounted": "{mountpoint} üçün istifadə edilib",
+    "@confirmTableMounted": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmTableFormatted": "{format} kimi formatlanıb",
+    "@confirmTableFormatted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "installationCompleteTitle": "Quraşdırma tamamlandı",
+    "readyToUse": "{system} quraşdırılıb və istifadə üçün hazırdır",
+    "@readyToUse": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "rebootToConfigure": "**{system}** diskə köçürülüb",
+    "@rebootToConfigure": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartInto": "{system} əməliyyat sisteminə yenidən başlat",
+    "@restartInto": {
+        "placeholders": {
+            "system": {
+                "type": "String"
+            }
+        }
+    },
+    "restartWarningBody": "Quraşdırmanı tamamlamaq üçün yenidən başladın və ya sınamağa davam edin.\nEtdiyiniz heç bir dəyişiklik yadda saxlanılmayacaq.",
+    "rebootToConfigureWarning": "Quraşdırma prosesini davam etdirmək üçün kompüteri yenidən başlatmalısınız.",
+    "shutdown": "Söndür",
+    "restartNow": "İndi yenidən başlat",
+    "continueTesting": "Sınamağa davam et",
+    "bitlockerInfoTitle": "BitLocker aşkarlandı",
+    "bitlockerInfoDescription": "Bir və ya daha çox bölgü BitLocker ilə şifrələnib.",
+    "bitlockerInfoDisable": "Windows ilə yanaşı quraşdırmaq üçün Windows-da BitLocker-i deaktiv edin.",
+    "bitlockerInfoRecovery": "Windows quraşdırmadan sonra önyükləmə zamanı bərpa açarları tələb edə bilər.",
+    "bitlockerInfoInstructions": "Təlimat kitabçası üçün <a href=\"{url}\">BitLocker bələdçisinə</a> baş çəkin.",
+    "@bitlockerInfoInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "bitlockerWarningTitle": "BitLocker bərpa açarları olmadan bütün məlumatlarınızı itirə bilərsiniz",
+    "restartComputer": "Kompüteri yenidən başlat",
+    "restartComputerTitle": "Kompüter yenidən başladılsın?",
+    "restartInstaller": "Quraşdırıcını yenidən başlat",
+    "restartIntoWindows": "Windows-a yenidən başlat",
+    "restartIntoWindowsTitle": "Windows-a yenidən başladılsın?",
+    "restartIntoWindowsDescription": "Kompüterinizi yenidən başlatmaq istədiyinizə əminsiniz? {DISTRO} quraşdırmasını tamamlamaq üçün {DISTRO} quraşdırmasını yenidən başlatmalısınız.",
+    "@restartIntoWindowsDescription": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "allocateDiskSpaceInvalidMountPointSpace": "Birləşdirmə nöqtələrində boş sahə ola bilməz",
+    "partitionFormatNone": "Formatlanmamış saxla",
+    "partitionFormatKeep": "{format} kimi formatlaşdırılmış saxla",
+    "@partitionFormatKeep": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "confirmPartitionTables": "Bu cihazların bölgü cədvəlləri dəyişdirilir:",
+    "confirmTableFormattedMounted": "{mountpoint} üçün istifadə olunan {format} kimi formatlandı",
+    "@confirmTableFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesTitle": "{RELEASE} sisteminə xoş gəldiniz",
+    "@installationSlidesTitle": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAvailable": "Mövcud:",
+    "installationSlidesIncluded": "Daxildir:",
+    "installationSlidesWelcomeTitle": "Sürətli, azad və yeni özəlliklərlə dolu",
+    "installationSlidesWelcomeHeader": "{DISTRO} əməliyyat sisteminin son versiyası hesablamanı həmişəkindən daha asan edir.",
+    "@installationSlidesWelcomeHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesWelcomeBody": "Tərtibatçı, yaradıcı, oyunçu və ya inzibatçı olmağınızdan asılı olmayaraq {RELEASE} buraxılışında məhsuldarlığınızı artırmaq və təcrübənizi təkmilləşdirmək üçün yeni alətlər tapacaqsınız.",
+    "@installationSlidesWelcomeBody": {
+        "placeholders": {
+            "RELEASE": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSoftwareTitle": "Ehtiyacınız olan bütün tətbiqlər",
+    "installationSlidesSoftwareBody": "İstər Snap Store, istərsə də {DISTRO} arxivindən minlərlə tətbiq daxil olmaqla, Ubuntu Proqram Təminatında bütün tətbiqlərinizi quraşdırın, idarə edin və yeniləyin.",
+    "@installationSlidesSoftwareBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentTitle": "Ən yaxşı açıq mənbə ilə tərtib edin",
+    "installationSlidesSecurityTitle": "Məxfi və təhlükəsiz",
+    "installationSlidesSecurityBody": "{DISTRO} onlayn məxfi və təhlükəsiz qalmaq üçün lazım olan bütün alətləri təmin edir. Daxili qoruyucu divar və VPN dəstəyi və məlumatınıza tam nəzarət etməyinizi təmin etmək üçün məxfiliyə əsaslanan bir çox tətbiq ilə.",
+    "@installationSlidesSecurityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSecurityLts": "Bütün {DISTRO} LTS buraxılışlarına beş illik təhlükəsizlik yamağı daxildir və Ubuntu Pro abunəliyi ilə on ilə uzadılır.",
+    "@installationSlidesSecurityLts": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesProductivityTitle": "Məhsuldarlığınızı artırın",
+    "installationSlidesProductivityBody": "{DISTRO} Masaüstünə sənədlər, cədvəllər və təqdimatlar üçün Microsoft Office ilə uyğun açıq mənbə tətbiqləri dəsti olan LibreOffice daxildir. Populyar əməkdaşlıq alətləri də əlçatandır.",
+    "@installationSlidesProductivityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityTitle": "Hər kəs üçün əlçatımlılıq",
+    "installationSlidesAccessibilityBody": "{DISTRO} fəlsəfəsinin əsasında hesablamanın hər kəs üçün olduğuna inam dayanır. Qabaqcıl əlçatımlılıq alətləri və dil, rəng və mətn ölçüsünü dəyişmək seçimləri ilə {DISTRO} kim və harada olmağınızdan asılı olmayaraq hesablamanı asanlaşdırır.",
+    "@installationSlidesAccessibilityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesAccessibilityOrca": "Orca ekran oxuyucusu",
+    "installationSlidesAccessibilityLanguages": "Dil dəstəyi",
+    "installationSlidesSupportTitle": "Yardım və dəstək",
+    "installationSlidesSupportHeader": "Rəsmi {DISTRO} sənədləşməsi həm onlayn, həm də dokdakı Yardım ikonu vasitəsilə əlçatandır.",
+    "@installationSlidesSupportHeader": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesSupportCommunity": "Ask Ubuntu bir sıra sual və cavabları əhatə edir. Ubuntu Discourse isə yeni və təcrübəli istifadəçilər üçün bələdçilər və müzakirələr təqdim edir.",
+    "installationSlidesSupportEnterprise": "Müəssisə istifadəçiləri üçün Canonical iş yerində Ubuntunu asanlıqla və təhlükəsiz şəkildə idarə etmək üçün kommersiya dəstəyi təqdim edir.",
+    "installationSlidesSupportResources": "Faydalı resurslar:",
+    "installationSlidesSupportDocumentation": "Oflayn sənədləşmə",
+    "installationSlidesSupportUbuntuPro": "Ubuntu Pro ilə 7/24 korporativ dəstək",
+    "nextSlideSemanticLabel": "Növbəti slayd",
+    "previousSlideSemanticLabel": "Öncəki slayd",
+    "playSlideshowSemanticLabel": "Slaydşounu oynat",
+    "pauseSlideshowSemanticLabel": "Slaydşouya fasilə ver",
+    "toggleLogsSemanticLabel": "Quraşdırma qeydlərini aç-bağla",
+    "copyingFiles": "Fayllar köçürülür…",
+    "installingSystem": "Sistem quraşdırılır…",
+    "configuringSystem": "Sistem qurulur…",
+    "installationFailed": "Quraşdırma uğursuz oldu",
+    "notEnoughDiskSpaceTitle": "Kifayət qədər disk sahəsi yoxdur",
+    "notEnoughDiskSpaceUbuntu": "{DISTRO} qurmaq üçün kifayət qədər disk sahəsi yoxdur",
+    "@notEnoughDiskSpaceUbuntu": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceBody": "Seçilmiş diskdə {DISTRO} quraşdırmaq üçün kifayət qədər boş yer yoxdur. Yer açmaq üçün quraşdırıcıdan çıxın və ya başqa disk seçin.",
+    "@notEnoughDiskSpaceBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "notEnoughDiskSpaceAvailable": "Mövcud:",
+    "notEnoughDiskSpaceRequired": "Tələb olunan:",
+    "refreshPageTitle": "Yenilənmə mövcuddur",
+    "refreshHeader": "Quraşdırıcı üçün yenilənmə mövcuddur",
+    "refreshUpdateNow": "İndi yenilə",
+    "refreshInfo": "Təkmilləşdirilmiş etibarlılıq və digər funksiyalar üçün ən son versiyaya yeniləyin.",
+    "refreshReady": "Yenilənmə hazırdır",
+    "refreshCurrent": "Hazırki {snap} versiyası: {version}",
+    "@refreshCurrent": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            },
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshInstall": "{version} versiyasına güncəllə",
+    "@refreshInstall": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpToDate": "Hazırki {version} versiya ən son versiyadır.",
+    "@refreshUpToDate": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshUpdating": "{snap} yenilənir...",
+    "@refreshUpdating": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshRestart": "Davam etmək üçün quraşdırıcını bağlayın və yenidən başladın",
+    "refreshCloseLabel": "Quraşdırıcını bağla",
+    "refreshSnapPrerequisites": "{snap} ilkin şərtləri təmin edilir...",
+    "@refreshSnapPrerequisites": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRefresh": "{snap} güncəllənir...",
+    "@refreshSnapRefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapPrepare": "{snap} hazırlanır...",
+    "@refreshSnapPrepare": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapDownload": "{snap} endirilir...",
+    "@refreshSnapDownload": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapValidate": "{snap} təsdiqlənir...",
+    "@refreshSnapValidate": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapMount": "{snap} birləşdirilir...",
+    "@refreshSnapMount": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStopServices": "{snap} servisləri dayandırılır...",
+    "@refreshSnapStopServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapRemoveAliases": "{snap} təxllüsləri yığışdırılır...",
+    "@refreshSnapRemoveAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCopyData": "{snap} məlumatları köçürülür...",
+    "@refreshSnapCopyData": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupProfiles": "{snap} təhlükəsizlik profilləri qurulur...",
+    "@refreshSnapSetupProfiles": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesDevelopmentBody": "{DISTRO} tətbiq və ya veb tərtibatı, data elmi və Sİ/MÖ, eləcə də devops və idarəetmə üçün ideal iş stansiyasıdır. Hər bir {DISTRO} buraxılışı ən son alətlər zəncirini ehtiva edir və bütün əsas IDE-ləri dəstəkləyir.",
+    "@installationSlidesDevelopmentBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesCreativityTitle": "Yaradıcılığınızı artırın",
+    "installationSlidesCreativityBody": "Animasiyaçı, dizayner, video yaradıcısı və ya oyun tərtibatçısısınızsa, iş axınlarınızı açıq mənbə və sənaye standart proqram təminatı və tətbiqləri dəstəyi ilə {DISTRO} sisteminə gətirmək asandır.",
+    "@installationSlidesCreativityBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "installationSlidesGamingTitle": "Oyunlar üçün əladır",
+    "installationSlidesGamingBody": "{DISTRO} performansı və uyğunluğu artırmaq üçün ən son NVIDIA və Mesa sürücülərini dəstəkləyir. Minlərlə Windows oyunu əlavə tənzimləmə tələb etmədən Steam kimi tətbiqlər vasitəsilə {DISTRO} üzərində əla işləyir.",
+    "@installationSlidesGamingBody": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapStartServices": "{snap} servisləri başladılır...",
+    "@refreshSnapStartServices": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapCleanup": "{snap} təmizlənir...",
+    "@refreshSnapCleanup": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyTitle": "Bərpa açarı",
+    "recoveryKeyTitleBadgeLabel": "Vacib",
+    "recoveryKeyHeader": "Bərpa açarınızı yadda saxlayın",
+    "recoveryKeyInfoHeader": "Bərpa açarı olmadan bütün məlumatlarınızı itirə bilərsiniz",
+    "recoveryKeyTextFieldLabel": "Bərpa açarı",
+    "recoveryKeyStorageAdvice": "Başlama zamanı deşifrə uğursuz olarsa, bu bərpa açarını təqdim etməlisiniz. Açar olmadan bütün məlumatlarınıza girişi itirəcəksiniz. Onu şifrə idarəçisi kimi təhlükəsiz yerdə saxlayın.",
+    "recoveryKeyConfirmation": "Bərpa açarımı təhlükəsiz yerdə saxladım",
+    "recoveryKeyLinkLabel": "Daha çox öyrən",
+    "recoveryKeySaveToFileLabel": "Fayla saxla",
+    "recoveryKeyShowQrCodeLabel": "QR kodu göstər",
+    "recoveryKeyQrDialogTitle": "{DISTRO} Masaüstü - Bərpa açarı",
+    "@recoveryKeyQrDialogTitle": {
+        "placeholders": {
+            "DISTRO": {
+                "type": "String"
+            }
+        }
+    },
+    "recoveryKeyQrDialogBody": "Bərpa açarını köçürmək və şifrə idarəçisi kimi təhlükəsiz yerdə saxlamaq üçün QR kodunu skan edin. Həmçinin daha sonra istifadə etmək üçün foto çəkə bilərsiniz.",
+    "recoveryKeyClipboardNotifiaction": "Mübadilə buferinə köçürüldü",
+    "recoveryKeyExceptionFileSystemTitle": "Bərpa açarı faylı saxlanılmadı",
+    "recoveryKeyExceptionDisallowedPathTitle": "Bərpa açarı faylı müvəqqəti məkanda saxlanıla bilmədi",
+    "recoveryKeyExceptionUnknownTitle": "Naməlum xəta",
+    "recoveryKeyExceptionFileSystemBody": "Bu qovluğa yazmaq icazəniz yoxdur. Fərqli məkanı sınayın və ya başqa metoddan istifadə edin.",
+    "recoveryKeyExceptionDisallowedPathBody": "Çıxarıla bilən sürücü kimi fərqli bir məkan sınayın və ya başqa üsuldan istifadə edin.",
+    "recoveryKeyFilePickerTitle": "Bərpa açarı faylını yadda saxla",
+    "recoveryKeyFilePickerFilter": "Mətn faylları",
+    "landscapeMagicAttachInstructions": "QR kodunu skan edin və ya <a href=\"https://{url}\">{url}</a> ünvanında aşağıdakı kodu daxil edin",
+    "@landscapeMagicAttachInstructions": {
+        "placeholders": {
+            "url": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapePageTitle": "Avtomatik quraşdırılma",
+    "landscapeHeader": "Landscape-ə giriş edin",
+    "landscapeDomainHeader": "Landscape domeni daxil edin (FQDN)",
+    "landscapeDomainHintText": "Landscape domeni (FQDN)",
+    "landscapeDomainInstructions": "Daxil olmaq və avtomatik quraşdırma faylını əldə etmək üçün təşkilatınızın Lanscape domenini təqdim edin. FQDN-i İT dəstəyindən əldə edə bilərsiniz.",
+    "landscapeDomainTextField": "Landscape domeni (FQDN)",
+    "next": "Növbəti",
+    "landscapeDomainInvalidDomainWarning": "Etibarsız domen, yoxlayın və ya İT dəstəyi ilə əlaqə saxlayın",
+    "landscapeDomainNoInternetTitleWarning": "Davam etmək üçün internetə bağlanın",
+    "landscapeDomainNoInternetDescriptionWarning": "Landscape-dən avtomatik quraşdırma faylını əldə etmək üçün internet lazımdır",
+    "landscapeCodeExpiredWarning": "Kodun vaxtı bitib. Zəhmət olmasa, yenidən cəhd edin",
+    "allocateDiskSpaceInvalidMountPointFormat": "{format}, {mountpoint} üçün dəstəklənən fayl sistemi deyil",
+    "@allocateDiskSpaceInvalidMountPointFormat": {
+        "placeholders": {
+            "mountpoint": {
+                "type": "String"
+            },
+            "format": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetupAliases": "{snap} təxəllüsləri qurulur...",
+    "@refreshSnapSetupAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeLoginFailedWarning": "Giriş uğursuz oldu. Zəhmət olmasa, bir də cəhd edin",
+    "landscapeErrorPageTitle": "Avtomatik quraşdırma hesabınız üçün əlçatan deyil",
+    "landscapeErrorPageBody": "İT dəstəyi ilə əlaqə saxlayın və ya fərqli quraşdırma seçimini sınayın.",
+    "landscapeErrorPageCode": "Xəta kodu: {code}",
+    "@landscapeErrorPageCode": {
+        "placeholders": {
+            "code": {
+                "type": "String"
+            }
+        }
+    },
+    "landscapeConfirmPageSuccessInfoTitle": "Ubuntu təşkilatınız tərəfindən təmin edilən konfiqurasiya ilə quraşdırılacaq",
+    "landscapeConfirmPageSuccessInfoContent": "Aşağıda Landscape-dən idxal edilmiş avtomatik quraşdırma faylını nəzərdən keçirə bilərsiniz.",
+    "errorIconSemanticLabel": "Xəta",
+    "tpmActionPageTitle": "Avadanlıq tərəfindən dəstəklənən şifrələməni aktiv etmək mümkün olmadı",
+    "tpmActionPageTitleActionable": "Avadanlıq tərəfindən dəstəklənən şifrələmə ilə bağlı problem var",
+    "tpmActionBadgeLabel": "Əməliyyat tələb olunur",
+    "tpmActionDetailsLabel": "Texniki təfərrüatlar",
+    "tpmActionConfirmLabel": "Təsdiqlə",
+    "tpmActionSolutionLabel": "{n}. həll: {text}",
+    "@tpmActionSolutionLabel": {
+        "placeholders": {
+            "n": {
+                "type": "int"
+            },
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionSingleSolutionLabel": "Həll: {text}",
+    "@tpmActionSingleSolutionLabel": {
+        "placeholders": {
+            "text": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionDocumentationLinkLabel": "Avadanlıq tərəfindən dəstəklənən şifrələmə haqqında daha çox öyrən",
+    "tpmActionErrorSupportLabel": "Aşağıdakı həll yollarını sınayın, İT dəstəyi ilə əlaqə saxlayın və ya fərqli şifrələmə metodu seçin.",
+    "tpmActionErrorSupportSingleLabel": "Aşağıdakı həlli sınayın, İT dəstəyi ilə əlaqə saxlayın və ya fərqli şifrələmə metodu seçin.",
+    "tpmActionErrorSupportNoActionLabel": "İT dəstəyi ilə əlaqə saxlayın və ya fərqli şifrələmə metodu seçin.",
+    "tpmActionErrorKindInternal": "Daxili xəta.",
+    "tpmActionErrorKindShutdownRequired": "Söndürmək tələb olunur.",
+    "tpmActionErrorKindRebootRequired": "Yenidən başladılma tələb olunur.",
+    "tpmActionErrorKindUnexpectedAction": "Gözlənilməyən əməliyyat.",
+    "tpmActionErrorKindMissingArgument": "Arqument çatışmır.",
+    "tpmActionErrorKindInvalidArgument": "Etibarsız arqument.",
+    "tpmActionErrorKindActionFailed": "Əməliyyat uğursuz oldu.",
+    "tpmActionErrorKindRunningInVm": "Hazırkı mühit virtual maşındır.",
+    "tpmActionErrorKindSystemNotEfi": "Bu kompüter bu şifrələmə metodu ilə uyğun olmayan köhnə mikroproqramdan (köhnə BIOS) istifadə edir.",
+    "tpmActionErrorKindEfiVariableAccess": "Bu kompüterin mikroproqramında problem var.",
+    "tpmActionErrorKindNoSuitableTpm2Device": "Bu kompüterdə bu şifrələmə metodu üçün tələb olunan təhlükəsizlik avadanlığı (TPM 2.0) yoxdur.",
+    "tpmActionErrorKindTpmDeviceDisabled": "Bu kompüterin TPM-i deaktiv edilib.",
+    "tpmActionErrorKindTpmHierarchiesOwned": "Bu kompüterin TPM-i artıq başqa sistem və ya tətbiq tərəfindən istifadə olunur.",
+    "tpmActionErrorKindTpmDeviceLockoutLockedOut": "Bu kompüterin TPM-i hazırda kilidlidir.",
+    "tpmActionErrorKindInsufficientTpmStorage": "Bu kompüterin TPM-ində kifayət qədər saxlanc yeri yoxdur.",
+    "tpmActionErrorKindUnsupportedPlatform": "Bu kompüter avadanlıq tərəfindən dəstəklənən şifrələmə ilə uyumlu deyil.",
+    "tpmActionErrorKindUefiDebuggingEnabled": "UEFI sazlanması aktivdir.",
+    "tpmActionErrorKindInsufficientDmaProtection": "Bu kompüterdə tələb olunan təhlükəsizlik funksiyası (DMA qoruması) yoxdur.",
+    "tpmActionErrorKindNoKernelIommu": "Bu kompüterdə tələb olunan təhlükəsizlik funksiyası (IOMMU) yoxdur.",
+    "tpmActionErrorKindHostSecurity": "Bu kompüterin təhlükəsizlik konfiqurasiyası ilə bağlı problem var.",
+    "tpmActionErrorKindSysPrepApplicationsPresent": "Kompüterin TPM ilə təhlükəsiz bağlantıya mane ola biləcək proqram təminatı işə düşərkən işləyir.",
+    "tpmActionErrorKindAbsolutePresent": "Mütləq Davamlılıq Modulu bu kompüterdə aktivdir.",
+    "tpmActionErrorKindInvalidSecureBootMode": "Təhlükəsiz yükləmə bu kompüterdə deaktiv edilib və ya yerləşdirilmiş rejimdə ayarlanmayıb.",
+    "tpmActionErrorKindWeakSecureBootAlgorithmDetected": "Bu kompüterdəki proqram təminatını doğrulayan bəzi sertifikatlar köhnəlib və ya zəif qoruma istifadə edir.",
+    "tpmActionErrorKindPreOsSecureBootAuthByEnrolledDigests": "Bu kompüter proqram təminatını başlatma zamanı yoxlamaq üçün əl ilə icazə verilənlər siyahısından istifadə edir.",
+    "tpmActionErrorKindAddonDriversPresent": "Əlavə sürücüləri mövcuddur.",
+    "tpmActionErrorKindNoHardwareRootOfTrust": "Bu kompüterdə tələb olunan təhlükəsizlik funksiyası yoxdur (hardware root of trust).",
+    "tpmActionErrorKindGenericTpm": "Bu kompüterin TPM-i ilə bağlı problem var.",
+    "tpmActionErrorKindGenericFirmware": "Bu kompüterin mikroproqramı ilə bağlı problem var.",
+    "tpmActionFixActionReboot": "Yenidən başlat",
+    "tpmActionFixActionShutdown": "Söndür",
+    "tpmActionFixActionRebootToFwSettings": "Mikroproqram ayarlarını yenidən başlat",
+    "tpmActionFixActionContactOem": "OEM ilə əlaqə saxla",
+    "tpmActionFixActionContactOsVendor": "ƏS təchizatçısı ilə əlaqə saxla",
+    "tpmActionFixActionEnableTpmViaFirmware": "TPM-i fəallaşdırın və ya yenidən başladın",
+    "tpmActionFixActionEnableAndClearTpmViaFirmware": "Yenidən başlatdıqda TPM-i fəallaşdır və təmizlə",
+    "tpmActionFixActionClearTpmViaFirmware": "TPM-i yenidən başlatdıqa təmizlə",
+    "tpmActionFixActionClearTpm": "TPM-i təmizlə",
+    "tpmActionFixActionProceed": "Görməzdən gəl",
+    "tpmActionFixActionRebootDescription": "Öncəki əməliyyatları tamamlamaq üçün kompüteri yenidən başladın.",
+    "tpmActionFixActionRebootTpmDeviceFailureDescription": "Kompüteri yenidən başlatmaq problemi həll edə bilər.",
+    "tpmActionFixActionShutdownDescription": "Öncəki əməliyyatları tamamlamaq üçün kompüteri söndürün.",
+    "tpmActionFixActionRebootToFwSettingsDescription": "Bunu kompüterinizin mikroproqram ayarlarında edə bilərsiniz.",
+    "tpmActionFixActionRebootToFwSettingsWithDocsDescription": "Bunu kompüterinizin mikroproqram ayarlarında edə bilərsiniz. Təlimat üçün mərkəzi prosessor (CPU) təchizatçısının sənədlərini yoxlayın.",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootModeHint": "Təhlükəsiz önyükləmə rejiminin \"yerləşdirilmiş\" olaraq ayarlandığını yoxlayın.",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommuHint": "Bu özəllik \"Virtuallaşdırma Texnologiyası\", \"T-d\" və ya \"AMD-Vi\" kimi adlandırıla bilər.",
+    "tpmActionFixActionProceedDescription": "Bu problemi görməzdən gəlmək quraşdırmanın daha az təhlükəsiz olmasına səbəb ola bilər.",
+    "tpmActionRestartLabel": "Yenidən başlat",
+    "tpmActionRestartAndEnableTpmLabel": "Yenidən başlat və TPM-i fəallaşdır",
+    "tpmActionRestartAndClearTpmLabel": "Yenidən başlar və TPM-i təmizlə",
+    "tpmActionIgnoreAndContinueLabel": "Görməzdən gəl və davame t",
+    "tpmActionFixActionClearTpmWarningTitle": "TPM-i təmizləmək bütün şifrələmə açarlarını silir",
+    "tpmActionFixActionClearTpmWarningBody": "Bərpa açarlarınız olmayan şifrələnmiş disklərdəki bütün məlumatlara girişi itirəcəksiniz. Bu, həmçinin kimlik doğrulama və sertifikatlar kimi TPM-dən asılı olan digər funksiyaların işini də pozacaq.",
+    "tpmActionFixActionClearTpmConfirmationLabel": "TPM-i təmizləməyin nəticələrini anlayıram",
+    "tpmActionFixActionCaveatConfirm": "Yenidən başladıldıqda bu əməliyyatı təsdiqləməyiniz tələb oluna bilər.",
+    "tpmActionFixActionCaveatRetry": "Sonra quraşdırmanı yenidən başlatmalı olacaqsınız.",
+    "tpmActionErrorTitle": "Bu həll uğursuz oldu",
+    "tpmActionErrorDescription": "Fərqli həll yolu sınayın və ya İT dəstəyi ilə əlaqə saxlayın.",
+    "installationLogSemanticLabel": "Quraşdırma jurnalı",
+    "manualPartitioningWarningBody": "Başqa bir şey sınayın. Həmçinin <a href=\"\">xəta hesabatı göndərə</a> bilərsiniz.",
+    "manualPartitioningBootMustBeExt4WarningTitle": "/boot ext4 bölməsinə birləşdirilməlidir",
+    "manualPartitioningBootMustBeExt4WarningBody": "/ üçün ext4 bölgüsündən istifadə edin və ya /boot üçün ayrıca ext4 bölgüsü yaradın",
+    "stepIndicatorLabel": "Addım {CURRENT_STEP}/{TOTAL_STEPS}",
+    "@stepIndicatorLabel": {
+        "placeholders": {
+            "CURRENT_STEP": {
+                "type": "int"
+            },
+            "TOTAL_STEPS": {
+                "type": "int"
+            }
+        }
+    },
+    "confirmTableCreatedFormattedMounted": "{mountpoint} üçün istifadə olunan {format} formatında yaradıldı və formatlandı",
+    "@confirmTableCreatedFormattedMounted": {
+        "placeholders": {
+            "format": {
+                "type": "String"
+            },
+            "mountpoint": {
+                "type": "String"
+            }
+        }
+    },
+    "partitionFormatLabel": "İstifadə təyinatı:",
+    "refreshSnapCheckRerefresh": "{snap} təkrar yenilənməsi yoxlanılır...",
+    "@refreshSnapCheckRerefresh": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUnlink": "{snap} ayrılır...",
+    "@refreshSnapUnlink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateAssets": "{snap} aktivləri yenilənir...",
+    "@refreshSnapUpdateAssets": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapUpdateKernelCommandLine": "{snap} kernel əmr sətri yenilənir...",
+    "@refreshSnapUpdateKernelCommandLine": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapLink": "{snap} əlaqələndirilir...",
+    "@refreshSnapLink": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapAutoConnect": "{snap} konnektorları və yuvaları qoşulur...",
+    "@refreshSnapAutoConnect": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "refreshSnapSetAutoAliases": "Avtomatik {snap} təxəllüslər təyin edilir...",
+    "@refreshSnapSetAutoAliases": {
+        "placeholders": {
+            "snap": {
+                "type": "String"
+            }
+        }
+    },
+    "tpmActionFixActionRebootToFwSettingsInstructions": "Mikroproqram ayarları avtomatik yüklənmirsə, yenidən başladın və başlatma zamanı ayarlar düyməsini təkrar-təkrar basın (adətən F2, F10 və ya Delete).",
+    "tpmActionFixActionRebootToFwSettingsInsufficientDmaProtection": "DMA qorumasını əllə fəallaşdırın",
+    "tpmActionFixActionRebootToFwSettingsInsufficientTpmStorage": "TPM-i əllə təmizlə",
+    "tpmActionFixActionRebootToFwSettingsInvalidSecureBootMode": "Təhlükəsiz önyükləməni əllə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsNoKernelIommu": "IOMMU-nu əllə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsNoSuitablePcrBank": "PCR banklarını əl ilə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceDisabled": "TPM-i əllə fəallaşdır",
+    "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM-i əllə təmizlə",
+    "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPM-i əllə təmizlə",
+    "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Mütləq Davamlılıq Modulunu əllə deaktiv et"
+}

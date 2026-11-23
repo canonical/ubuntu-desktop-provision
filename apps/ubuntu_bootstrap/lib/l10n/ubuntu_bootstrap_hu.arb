@@ -459,7 +459,7 @@
     "tpmActionFixActionRebootToFwSettingsTpmDeviceLockoutLockedOut": "TPM kézi törlése",
     "tpmActionFixActionRebootToFwSettingsTpmHierarchiesOwned": "TPM kézi törlése",
     "tpmActionFixActionRebootToFwSettingsAbsolutePresent": "Absolute Persistence Module kézi letiltása",
-    "tpmActionFixActionContactOem": "Kapcsolatfelvétel az OEM-mel",
+    "tpmActionFixActionContactOem": "Kapcsolatfelvétel a készülék eredeti gyártójával",
     "tpmActionFixActionContactOsVendor": "Kapcsolatfelvétel az operációs rendszer gyártójával",
     "tpmActionFixActionEnableTpmViaFirmware": "TPM engedélyezése újraindításkor",
     "tpmActionFixActionEnableAndClearTpmViaFirmware": "TPM engedélyezése és törlése újraindításkor",
