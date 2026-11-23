@@ -4,4 +4,4 @@ User.SetPassword
 User.Get(interfaceName: org.freedesktop.Accounts.User, propertyName: Uid)
 User.SetAutomaticLogin(autoLogin: false)
 hostname1.Get(interfaceName: org.freedesktop.hostname1, propertyName: StaticHostname)
-Accounts.DeleteUser(userID: 1001)
+Accounts.DeleteUser(userID: 1001, removeFiles: true)

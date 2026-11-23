@@ -37,11 +37,11 @@ func (a accountsdbus) CreateUser(username string, realname string, accountType i
 	return fmt.Sprintf("/org/freedesktop/Accounts/User%s", username), nil
 }
 
-func (a accountsdbus) DeleteUser(userID uint32) *dbus.Error {
+func (a accountsdbus) DeleteUser(userID int64, removeFiles bool) *dbus.Error {
 	if userID == uidUserDeletionFails {
 		return dbus.NewError("org.freedesktop.Accounts.Error.Failed", []interface{}{"error requested in DeleteUser mocked method"})
 	}
-	action := fmt.Sprintf("Accounts.DeleteUser(userID: %d)", userID)
+	action := fmt.Sprintf("Accounts.DeleteUser(userID: %d, removeFiles: %t)", userID, removeFiles)
 	WriteActionToFile(action)
 	return nil
 }
@@ -69,7 +69,8 @@ func ExportAccountsMock(conn *dbus.Conn) error {
               <arg name="user" direction="out" type="o"/>
             </method>
             <method name="DeleteUser">
-                <arg name="userID" direction="in" type="u"/>
+                <arg name="userID" direction="in" type="x"/>
+                <arg name="removeFiles" direction="in" type="b"/>
             </method>
         </interface>%s</node>`, consts.DbusAccountsPrefix, introspect.IntrospectDataString)
 
