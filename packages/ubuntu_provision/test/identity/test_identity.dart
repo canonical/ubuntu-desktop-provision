@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/providers.dart';
@@ -10,6 +10,7 @@ import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 
 import '../accessibility/test_accessibility.dart';
 import 'test_identity.mocks.dart';
+
 export '../test_utils.dart';
 export 'test_identity.mocks.dart';
 

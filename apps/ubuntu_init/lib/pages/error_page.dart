@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';
 
 // TODO: Replace this with the error page from the ubuntu_provision package

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mockito/mockito.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_provision/timezone.dart';
@@ -85,6 +85,29 @@ void main() {
     verify(model.selectLocation(const GeoLocation(name: 'b'))).called(1);
   });
 
+  testWidgets('submitting location keeps options closed', (tester) async {
+    const locations = <GeoLocation>[
+      GeoLocation(name: 'a'),
+      GeoLocation(name: 'ab'),
+    ];
+
+    final model = buildTimezoneModel();
+    when(model.searchLocation('a')).thenAnswer((_) async => locations);
+    when(model.selectLocation(const GeoLocation())).thenAnswer((_) {});
+
+    await tester.pumpApp((_) => buildTimezonePage(model));
+
+    await tester.tap(find.byType(EditableText).first);
+    await tester.enterText(find.byType(EditableText).first, 'a');
+    await tester.pumpAndSettle();
+    expect(find.byType(ListView), findsOneWidget);
+
+    await tester.testTextInput.receiveAction(TextInputAction.done);
+    await tester.pumpAndSettle();
+    verify(model.selectLocation(const GeoLocation(name: 'a'))).called(1);
+    expect(find.byType(ListView), findsNothing);
+  });
+
   testWidgets('select timezone', (tester) async {
     const timezones = <GeoLocation>[
       GeoLocation(timezone: 'a'),
@@ -113,6 +136,31 @@ void main() {
     await tester.tapAt(tester.getTopLeft(item));
     await tester.pump();
     verify(model.selectTimezone(const GeoLocation(timezone: 'b'))).called(1);
+  });
+
+  testWidgets('submitting timezone keeps options closed', (tester) async {
+    const timezones = <GeoLocation>[
+      GeoLocation(timezone: 'a'),
+      GeoLocation(timezone: 'ab'),
+    ];
+
+    final model = buildTimezoneModel();
+    when(model.searchTimezone('a')).thenAnswer((_) async => timezones);
+    when(model.selectTimezone(const GeoLocation())).thenAnswer((_) {});
+
+    await tester.pumpApp((_) => buildTimezonePage(model));
+
+    final field = find.byType(EditableText).last;
+    await tester.tap(field);
+    await tester.enterText(field, 'a');
+    await tester.pumpAndSettle();
+    expect(find.byType(ListView), findsOneWidget);
+
+    await tester.testTextInput.receiveAction(TextInputAction.done);
+    await tester.pumpAndSettle();
+    verify(model.selectTimezone(const GeoLocation(timezone: 'a'))).called(1);
+    expect(find.byType(ListView), findsNothing);
+    expect(tester.widget<EditableText>(field).focusNode.hasFocus, isTrue);
   });
 
   testWidgets('select coordinates', (tester) async {

@@ -18,13 +18,12 @@ command:
       async: ^2.11.0
       collection: ^1.17.0
       crypt: ^4.3.1
-      dbus: ^0.7.10
+      dbus: ^0.8.0
       diacritic: ^0.1.5
       ffi: ^2.1.0
       file: ^7.0.0
       flutter_html: ^3.0.0-beta.2
       flutter_riverpod: ^3.4.3
-      flutter_spinbox: ^0.13.1
       flutter_svg: ^2.0.10
       form_field_validator: ^1.1.0
       freezed_annotation: ^3.1.0
@@ -33,8 +32,9 @@ command:
       handy_window: ^0.4.0
       intl: ^0.20.2
       json_annotation: ^4.9.0
+      material_ui: ^1.0.0
       meta: ^1.11.0
-      nm: ^0.5.0
+      nm: ^0.6.0
       package_config: ^2.1.0
       path: ^1.8.3
       platform: ^3.1.2
@@ -43,19 +43,19 @@ command:
       split_view: ^3.2.1
       stdlibc: ^0.1.4
       ubuntu_flavor: ^0.5.0
-      ubuntu_localizations: ^0.5.2+4
+      ubuntu_localizations: ^0.6.0
       ubuntu_logger: ^0.2.1
       ubuntu_service: ^0.4.0
-      ubuntu_session: ^0.0.4
-      ubuntu_widgets: ^0.8.1
+      ubuntu_session: ^0.0.5
+      ubuntu_widgets: ^0.9.0
       udev: ^0.0.3
-      upower: ^0.7.0
+      upower: ^0.8.0
       url_launcher: ^6.2.5
       wizard_router: ^1.2.0
       xdg_directories: ^1.0.4
       xdg_locale: ^0.0.1
       yaml: ^3.1.2
-      yaru: ^10.2.0
+      yaru: ^12.0.0
       yaru_window: ^0.2.1
 
     dev_dependencies:
@@ -68,9 +68,9 @@ command:
       plugin_platform_interface: ^2.1.8
       test: any
       ubuntu_lints: ^0.4.0
-      ubuntu_test: ^0.2.2
+      ubuntu_test: ^0.3.0
       url_launcher_platform_interface: ^2.3.2
-      yaru_test: ^0.3.0
+      yaru_test: ^1.0.0
 
 scripts:
   # collect coverage information for all packages

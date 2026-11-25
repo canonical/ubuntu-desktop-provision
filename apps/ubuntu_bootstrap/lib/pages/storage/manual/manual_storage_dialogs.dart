@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
@@ -383,6 +383,9 @@ class _PartitionMountField extends StatelessWidget {
                   controller: textEditingController,
                   focusNode: focusNode,
                   onChanged: (value) => partitionMount.value = value,
+                  // Keep focus on submit: YaruAutocomplete refocuses the field
+                  // after a selection, which would reopen the options view.
+                  onEditingComplete: () {},
                   onFieldSubmitted: (_) => onFieldSubmitted(),
                   autovalidateMode: AutovalidateMode.always,
                   validator: (value) =>

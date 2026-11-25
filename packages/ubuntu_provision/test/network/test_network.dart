@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_provision/providers.dart';
@@ -12,6 +12,7 @@ import 'package:ubuntu_provision/src/network/wifi_model.dart';
 
 import '../test_utils.mocks.dart';
 import 'test_network.mocks.dart';
+
 export '../test_utils.dart';
 export 'test_network.mocks.dart';
 

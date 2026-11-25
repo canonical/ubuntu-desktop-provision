@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/src/active_directory/active_directory_l10n.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';

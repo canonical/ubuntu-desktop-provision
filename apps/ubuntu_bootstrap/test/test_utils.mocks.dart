@@ -7,8 +7,8 @@ import 'dart:async' as _i8;
 
 import 'package:dbus/dbus.dart' as _i2;
 import 'package:file/file.dart' as _i5;
-import 'package:flutter/material.dart' as _i14;
 import 'package:gsettings/src/gsettings.dart' as _i6;
+import 'package:material_ui/material_ui.dart' as _i14;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i7;
 import 'package:subiquity_client/subiquity_client.dart' as _i4;

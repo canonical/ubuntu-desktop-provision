@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:timezone_map/timezone_map.dart';
 import 'package:ubuntu_provision/interfaces.dart';
 import 'package:ubuntu_provision/src/timezone/timezone_l10n.dart';
@@ -66,6 +66,10 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
                         decoration: InputDecoration(
                           labelText: lang.timezoneLocationLabel,
                         ),
+                        // Keep focus on submit: YaruAutocomplete refocuses
+                        // the field after a selection, which would reopen
+                        // the options view.
+                        onEditingComplete: () {},
                         onFieldSubmitted: (value) => onSubmitted(),
                       );
                     },
@@ -93,6 +97,7 @@ class TimezonePage extends ConsumerWidget with ProvisioningPage {
                         decoration: InputDecoration(
                           labelText: lang.timezoneTimezoneLabel,
                         ),
+                        onEditingComplete: () {},
                         onFieldSubmitted: (value) => onFieldSubmitted(),
                       );
                     },

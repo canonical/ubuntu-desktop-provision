@@ -1,9 +1,8 @@
 // ignore_for_file: unawaited_futures
 
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mockito/mockito.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
@@ -14,6 +13,7 @@ import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_types.dart';
 import 'package:ubuntu_bootstrap/services.dart';
 import 'package:ubuntu_provision/services.dart';
+import 'package:ubuntu_provision_test/ubuntu_provision_test.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
@@ -50,7 +50,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey(DataUnit.bytes)).last);
     await tester.pump();
 
-    await tester.enterText(find.byType(SpinBox), '12345678');
+    await tester.enterText(findStorageSizeTextField(), '12345678');
     await tester.pump();
 
     await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
@@ -74,6 +74,37 @@ void main() {
         mount: '/tst',
       ),
     ).called(1);
+  });
+
+  testWidgets('submitting mount point keeps options closed', (tester) async {
+    final disk = fakeDisk();
+    const gap = Gap(offset: 0, size: 100000000, usable: GapUsable.YES);
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    showCreatePartitionDialog(
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      gap,
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byType(YaruAutocomplete<String>));
+    await tester.enterText(find.byType(YaruAutocomplete<String>), '/');
+    await tester.pumpAndSettle();
+    expect(find.text('/boot'), findsOneWidget);
+
+    await tester.testTextInput.receiveAction(TextInputAction.done);
+    await tester.pumpAndSettle();
+    expect(find.text('/boot'), findsNothing);
   });
 
   testWidgets('create partition with invalid mount point', (tester) async {
@@ -146,7 +177,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey(DataUnit.bytes)).last);
     await tester.pump();
 
-    await tester.enterText(find.byType(SpinBox), '123');
+    await tester.enterText(findStorageSizeTextField(), '123');
     await tester.pump();
 
     await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
