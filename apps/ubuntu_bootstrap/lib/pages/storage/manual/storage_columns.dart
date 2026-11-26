@@ -36,11 +36,19 @@ class StorageDeviceColumn extends StorageColumn {
             return Text(lang.diskHeadersDevice);
           },
           diskBuilder: (context, disk) {
+            final hardwareName = [disk.vendor, disk.model]
+                .whereType<String>()
+                .map((part) => part.trim())
+                .where((part) => part.isNotEmpty)
+                .join(' ');
+            final deviceName = hardwareName.isEmpty
+                ? disk.sysname
+                : '${disk.sysname} - $hardwareName';
             return Row(
               children: [
                 const Icon(YaruIcons.drive_harddisk_filled),
                 const SizedBox(width: 16),
-                Text(disk.sysname),
+                Text(deviceName),
               ],
             );
           },
