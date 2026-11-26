@@ -40,7 +40,7 @@ class StorageDeviceColumn extends StorageColumn {
               children: [
                 const Icon(YaruIcons.drive_harddisk_filled),
                 const SizedBox(width: 16),
-                Text(disk.sysname),
+                Text(_formatDiskLabel(disk)),
               ],
             );
           },
@@ -86,6 +86,17 @@ class StorageDeviceColumn extends StorageColumn {
             );
           },
         );
+
+  static String _formatDiskLabel(Disk disk) {
+    final vendor = disk.vendor?.trim() ?? '';
+    final model = disk.model?.trim() ?? '';
+    if (vendor.isEmpty && model.isEmpty) {
+      return disk.sysname;
+    }
+
+    final separator = vendor.isEmpty || model.isEmpty ? '' : ' ';
+    return '${disk.sysname} - $vendor$separator$model';
+  }
 }
 
 class StorageTypeColumn extends StorageColumn {
