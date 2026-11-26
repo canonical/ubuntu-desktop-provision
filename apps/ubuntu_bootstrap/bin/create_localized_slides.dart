@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart' as path;
 import 'package:ubuntu_bootstrap/l10n.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart' show normalizeLocale;
 import 'package:ubuntu_widgets/ubuntu_widgets.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/widgets.dart';
@@ -63,7 +64,8 @@ Future<void> createLocalizedSlides(StreamController<String> controller) async {
   final scriptDir = path.dirname(Platform.script.toFilePath());
   final languages = await loadLocalizedLanguages(supportedLocales);
   final countryCodes = languages
-      .map((l) => '${l.locale.languageCode}_${l.locale.countryCode}')
+      .map((language) => normalizeLocale(language.locale))
+      .map((locale) => '${locale.languageCode}_${locale.countryCode}')
       .toList()
     ..remove('en_US');
 

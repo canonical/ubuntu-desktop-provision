@@ -81,6 +81,24 @@ void main() {
     verify(locale.setLocale('fr_CA.UTF-8')).called(1);
   });
 
+  test('Swedish locale uses the Sweden territory code', () async {
+    final locale = MockLocaleService();
+    when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');
+    when(locale.setLocale('sv_SE.UTF-8')).thenAnswer((_) async {});
+    final sound = MockSoundService();
+    final a11y = MockAccessibilityService();
+
+    final model = LocaleModel(locale: locale, sound: sound, a11y: a11y);
+    await model.init();
+    final swedishIndex = List.generate(model.languageCount, (index) => index)
+        .singleWhere((index) => model.locale(index).languageCode == 'sv');
+    final swedishLocale = model.locale(swedishIndex);
+
+    expect(swedishLocale, const Locale('sv', 'SE'));
+    await model.applyLocale(swedishLocale);
+    verify(locale.setLocale('sv_SE.UTF-8')).called(1);
+  });
+
   test('selected language', () async {
     final locale = MockLocaleService();
     when(locale.getLocale()).thenAnswer((_) async => 'en_US.UTF-8');

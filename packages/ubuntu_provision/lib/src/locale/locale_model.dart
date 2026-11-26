@@ -7,6 +7,7 @@ import 'package:ubuntu_logger/ubuntu_logger.dart';
 import 'package:ubuntu_provision/l10n.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
+import 'package:ubuntu_utils/ubuntu_utils.dart' show normalizeLocale;
 import 'package:ubuntu_widgets/ubuntu_widgets.dart' show KeySearchX;
 
 final _log = Logger('locale');
@@ -62,7 +63,14 @@ class LocaleModel extends SafeChangeNotifier {
       return;
     }
     final languages = await loadLocalizedLanguages(supportedLocales);
-    _languageList = List.of(languages);
+    _languageList = languages
+        .map(
+          (language) => LocalizedLanguage(
+            language.name,
+            normalizeLocale(language.locale),
+          ),
+        )
+        .toList();
     _log.info('Loaded ${_languageList.length} languages');
     return _locale.getLocale().then((v) async {
       await selectLocale(parseLocale(v));
