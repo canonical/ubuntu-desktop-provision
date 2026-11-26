@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:subiquity_test/subiquity_test.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
@@ -58,6 +61,7 @@ void main() {
 
   Widget buildTable(
     List<StorageColumn> columns, {
+    AutoScrollController? controller,
     CanSelectStorage? canSelect,
     IsStorageSelected? isSelected,
     OnStorageSelected? onSelected,
@@ -67,6 +71,7 @@ void main() {
       home: StorageTable(
         columns: columns,
         storages: [sda, sdb, sdc, sdd],
+        controller: controller,
         canSelect: canSelect,
         isSelected: isSelected,
         onSelected: onSelected,
@@ -210,9 +215,95 @@ void main() {
     expect(find.text('Ubuntu 18.04'), findsOneWidget);
   });
 
+  testWidgets('keeps column headings in place while scrolling rows',
+      (tester) async {
+    tester.view.physicalSize = const Size(800, 240);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    final controller = AutoScrollController();
+    addTearDown(controller.dispose);
+    (int, int)? selected;
+    await tester.pumpWidget(
+      buildTable(
+        [pathColumn, sizeColumn],
+        controller: controller,
+        canSelect: (_, [__ = -1]) => true,
+        onSelected: (disk, [partition = -1]) => selected = (disk, partition),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    final heading = find.text('path').last;
+    final row = find.text('/dev/sdb1');
+    final headingOrigin = tester.getTopLeft(heading);
+    final rowOrigin = tester.getTopLeft(row);
+
+    controller.jumpTo(96);
+    await tester.pumpAndSettle();
+
+    expect(tester.getTopLeft(heading), headingOrigin);
+    expect(tester.getTopLeft(row).dy, closeTo(rowOrigin.dy - 96, 0.1));
+    final semantics = tester.ensureSemantics();
+    try {
+      await tester.pump();
+      final accessibleTables = find.semantics.byPredicate(
+        (node) => node.role == SemanticsRole.table,
+      );
+      expect(accessibleTables.evaluate(), hasLength(1));
+    } finally {
+      semantics.dispose();
+    }
+
+    await tester.tapAt(tester.getCenter(heading));
+    expect(selected, isNull);
+    await tester.tap(row);
+    expect(selected, (1, 0));
+
+    await tester.sendEventToBinding(
+      PointerScrollEvent(
+        position: tester.getCenter(heading),
+        scrollDelta: const Offset(0, 48),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(controller.offset, greaterThan(96));
+  });
+
+  testWidgets('can scroll a partition into view below the pinned headings',
+      (tester) async {
+    tester.view.physicalSize = const Size(800, 240);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+
+    final controller = AutoScrollController(
+      viewportBoundaryGetter: () =>
+          const Rect.fromLTRB(0, kMinInteractiveDimension, 0, 0),
+    );
+    addTearDown(controller.dispose);
+    await tester.pumpWidget(
+      buildTable([pathColumn, sizeColumn], controller: controller),
+    );
+    await tester.pumpAndSettle();
+
+    final animation = controller.scrollToIndex(
+      Object.hashAll([2, 1]),
+      preferPosition: AutoScrollPosition.begin,
+    );
+    await tester.pumpAndSettle();
+    await animation;
+
+    expect(controller.offset, greaterThan(0));
+    final headingBottom = tester.getBottomLeft(find.text('path').last).dy;
+    expect(
+      tester.getTopLeft(find.text('/dev/sdc2')).dy,
+      greaterThan(headingBottom),
+    );
+  });
+
   testWidgets('scrolls horizontally when wider than the viewport',
       (tester) async {
-    tester.view.physicalSize = const Size(300, 600);
+    tester.view.physicalSize = const Size(300, 240);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
 
@@ -223,7 +314,19 @@ void main() {
       partitionBuilder: (_, __, ___) => const SizedBox(width: 1000),
     );
 
-    await tester.pumpWidget(buildTable([pathColumn, wideColumn]));
+    final controller = AutoScrollController();
+    addTearDown(controller.dispose);
+    await tester.pumpWidget(
+      buildTable([pathColumn, wideColumn, sizeColumn], controller: controller),
+    );
+    await tester.pumpAndSettle();
+    controller.jumpTo(96);
+    await tester.pumpAndSettle();
+
+    final heading = find.text('size').last;
+    final cell = find.text('11b');
+    final headingOrigin = tester.getTopLeft(heading);
+    expect(headingOrigin.dx, closeTo(tester.getTopLeft(cell).dx, 0.1));
 
     final horizontal = find.byWidgetPredicate(
       (w) => w is SingleChildScrollView && w.scrollDirection == Axis.horizontal,
@@ -242,5 +345,13 @@ void main() {
     await tester.drag(horizontal, const Offset(-200, 0));
     await tester.pump();
     expect(position.pixels, greaterThan(0));
+    expect(
+      tester.getTopLeft(heading),
+      headingOrigin.translate(-position.pixels, 0),
+    );
+    expect(
+      tester.getTopLeft(heading).dx,
+      closeTo(tester.getTopLeft(cell).dx, 0.1),
+    );
   });
 }

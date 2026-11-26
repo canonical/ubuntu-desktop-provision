@@ -34,12 +34,43 @@ class StorageTable extends StatefulWidget {
   /// Called when the user selects a storage device.
   final OnStorageSelected? onSelected;
 
+  /// The height of a row, including the column headings.
+  static double headingHeight(BuildContext context) =>
+      kMinInteractiveDimension +
+      Theme.of(context).visualDensity.baseSizeAdjustment.dy;
+
   @override
   State<StorageTable> createState() => _StorageTableState();
 }
 
 class _StorageTableState extends State<StorageTable> {
   final _horizontalController = ScrollController();
+  final _defaultVerticalController = ScrollController();
+  final _columnWidths = <int, double>{};
+  var _widthUpdateScheduled = false;
+
+  ScrollController get _verticalController =>
+      widget.controller ?? _defaultVerticalController;
+
+  @override
+  void didUpdateWidget(covariant StorageTable oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.columns.length != widget.columns.length) {
+      _columnWidths.clear();
+    }
+  }
+
+  void _recordColumnWidth(int index, double width) {
+    if (_columnWidths[index] == width) return;
+    _columnWidths[index] = width;
+    if (_widthUpdateScheduled) return;
+    _widthUpdateScheduled = true;
+    // Apply column measurements after the data table completes its layout.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _widthUpdateScheduled = false;
+      if (mounted) setState(() {});
+    });
+  }
 
   Widget _autoScrollTag({
     required Widget child,
@@ -143,15 +174,75 @@ class _StorageTableState extends State<StorageTable> {
     ];
   }
 
+  Widget _buildTable(BuildContext context, double rowHeight) {
+    final theme = Theme.of(context);
+    return DataTable(
+      dataRowMinHeight: rowHeight,
+      dataRowMaxHeight: rowHeight,
+      headingRowHeight: rowHeight,
+      showCheckboxColumn: false,
+      headingTextStyle: theme.textTheme.titleSmall,
+      dataTextStyle: theme.textTheme.bodyMedium,
+      columns: [
+        for (var index = 0; index < widget.columns.length; index++)
+          DataColumn(
+            label: widget.columns[index].titleBuilder(context),
+            columnWidth: _MeasuredColumnWidth(
+              onWidth: (width) => _recordColumnWidth(index, width),
+              flex: widget.columns.length == 1 ? 1 : null,
+            ),
+          ),
+      ],
+      rows: [
+        for (var index = 0; index < widget.storages.length; index++)
+          ..._buildDataRows(context, diskIndex: index),
+      ],
+    );
+  }
+
+  Widget _buildPinnedHeadings(BuildContext context, double rowHeight) {
+    final theme = Theme.of(context);
+    return AnimatedBuilder(
+      animation: _verticalController,
+      // Keep one accessible table with native column headings and data rows.
+      child: ExcludeSemantics(
+        child: AbsorbPointer(
+          child: ColoredBox(
+            color: theme.scaffoldBackgroundColor,
+            child: DataTable(
+              headingRowHeight: rowHeight,
+              showCheckboxColumn: false,
+              headingTextStyle: theme.textTheme.titleSmall,
+              columns: [
+                for (var index = 0; index < widget.columns.length; index++)
+                  DataColumn(
+                    label: widget.columns[index].titleBuilder(context),
+                    columnWidth: FixedColumnWidth(_columnWidths[index] ?? 0),
+                  ),
+              ],
+              rows: const [],
+            ),
+          ),
+        ),
+      ),
+      builder: (context, child) {
+        final controller = _verticalController;
+        final offset = controller.hasClients ? controller.offset : 0.0;
+        if (offset <= 0 || _columnWidths.length != widget.columns.length) {
+          return const SizedBox.shrink();
+        }
+        return Positioned(top: offset, left: 0, right: 0, child: child!);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return YaruBorderContainer(
       clipBehavior: Clip.antiAlias,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final theme = Theme.of(context);
-          final rowHeight = kMinInteractiveDimension +
-              theme.visualDensity.baseSizeAdjustment.dy;
+          final rowHeight = StorageTable.headingHeight(context);
           return OverrideMouseCursor(
             cursor: SystemMouseCursors.basic,
             // Fill the box; OverrideMouseCursor's Stack loosens constraints.
@@ -166,27 +257,12 @@ class _StorageTableState extends State<StorageTable> {
                   child: ConstrainedBox(
                     constraints: BoxConstraints(minWidth: constraints.minWidth),
                     child: SingleChildScrollView(
-                      controller: widget.controller,
-                      child: DataTable(
-                        dataRowMinHeight: rowHeight,
-                        dataRowMaxHeight: rowHeight,
-                        headingRowHeight: rowHeight,
-                        showCheckboxColumn: false,
-                        headingTextStyle: theme.textTheme.titleSmall,
-                        dataTextStyle: theme.textTheme.bodyMedium,
-                        columns: widget.columns
-                            .map(
-                              (column) => DataColumn(
-                                label: column.titleBuilder(context),
-                              ),
-                            )
-                            .toList(),
-                        rows: List.generate(widget.storages.length, (index) {
-                          return _buildDataRows(context, diskIndex: index);
-                        }).fold<List<DataRow>>([], (allRows, diskRows) {
-                          allRows.addAll(diskRows);
-                          return allRows;
-                        }).toList(),
+                      controller: _verticalController,
+                      child: Stack(
+                        children: [
+                          _buildTable(context, rowHeight),
+                          _buildPinnedHeadings(context, rowHeight),
+                        ],
                       ),
                     ),
                   ),
@@ -202,6 +278,20 @@ class _StorageTableState extends State<StorageTable> {
   @override
   void dispose() {
     _horizontalController.dispose();
+    _defaultVerticalController.dispose();
     super.dispose();
+  }
+}
+
+class _MeasuredColumnWidth extends IntrinsicColumnWidth {
+  const _MeasuredColumnWidth({required this.onWidth, super.flex});
+
+  final ValueChanged<double> onWidth;
+
+  @override
+  double maxIntrinsicWidth(Iterable<RenderBox> cells, double containerWidth) {
+    final width = super.maxIntrinsicWidth(cells, containerWidth);
+    onWidth(width);
+    return width;
   }
 }
