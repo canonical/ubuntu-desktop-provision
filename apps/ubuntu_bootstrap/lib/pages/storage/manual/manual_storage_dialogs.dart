@@ -184,10 +184,13 @@ Future<void> showEditPartitionDialog(
     builder: (context) {
       final partitionSize = ValueNotifier(partition.size ?? 0);
       final partitionUnit = ValueNotifier(DataUnit.megabytes);
+      final preserve = partition.preserve ?? false;
+      // Restore the explicit "Leave unformatted" choice for a new partition.
+      final initialFormat = partition.format == null && !preserve
+          ? PartitionFormat.none
+          : PartitionFormat.fromPartition(partition);
       final partitionFormat = ValueNotifier<PartitionFormat?>(
-        (partition.preserve ?? false) && !partition.isWiped
-            ? null
-            : PartitionFormat.fromPartition(partition),
+        preserve && !partition.isWiped ? null : initialFormat,
       );
       final partitionMount = ValueNotifier(partition.mount);
 

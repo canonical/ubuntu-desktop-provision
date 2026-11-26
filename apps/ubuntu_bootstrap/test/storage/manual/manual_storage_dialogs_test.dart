@@ -173,6 +173,117 @@ void main() {
     ).called(1);
   });
 
+  testWidgets('editing a new unformatted partition disables its mount point', (
+    tester,
+  ) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(960, 680);
+
+    const partition = Partition(number: 1, size: 100000000, preserve: false);
+    final disk = fakeDisk(partitions: [partition]);
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    final context = tester.element(find.byType(ManualStoragePage));
+    final lang = UbuntuBootstrapLocalizations.of(context);
+    final result =
+        showEditPartitionDialog(context, disk, partition, null, null);
+    await tester.pumpAndSettle();
+
+    final mountPoint = find.descendant(
+      of: find.byType(YaruAutocomplete<String>),
+      matching: find.byType(TextFormField),
+    );
+    expect(tester.widget<TextFormField>(mountPoint).enabled, isFalse);
+
+    await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.menuItem(PartitionFormat.ext4.displayName));
+    await tester.pumpAndSettle();
+    expect(tester.widget<TextFormField>(mountPoint).enabled, isTrue);
+
+    await tester.tap(find.byType(MenuButtonBuilder<PartitionFormat?>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.menuItem(lang.partitionFormatNone));
+    await tester.pumpAndSettle();
+    expect(tester.widget<TextFormField>(mountPoint).enabled, isFalse);
+
+    await tester.tapOk();
+    await result;
+
+    verify(
+      model.editPartition(
+        disk,
+        partition,
+        size: partition.size,
+        format: PartitionFormat.none,
+        wipe: false,
+      ),
+    ).called(1);
+  });
+
+  testWidgets('keeping an existing filesystem permits a mount point', (
+    tester,
+  ) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(960, 680);
+
+    const partition = Partition(
+      number: 1,
+      size: 100000000,
+      format: 'ext4',
+      mount: '/home',
+      preserve: true,
+    );
+    final disk = fakeDisk(partitions: [partition]);
+    final model = buildManualStorageModel(selectedDisk: disk);
+
+    registerMockService<UdevService>(MockUdevService());
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [manualStorageModelProvider.overrideWith((_) => model)],
+        child: tester.buildApp((_) => const ManualStoragePage()),
+      ),
+    );
+
+    final result = showEditPartitionDialog(
+      tester.element(find.byType(ManualStoragePage)),
+      disk,
+      partition,
+      partition,
+      null,
+    );
+    await tester.pumpAndSettle();
+
+    final mountPoint = find.descendant(
+      of: find.byType(YaruAutocomplete<String>),
+      matching: find.byType(TextFormField),
+    );
+    expect(tester.widget<TextFormField>(mountPoint).enabled, isTrue);
+
+    await tester.tapOk();
+    await result;
+
+    verify(
+      model.editPartition(
+        disk,
+        partition,
+        size: partition.size,
+        mount: '/home',
+        wipe: false,
+      ),
+    ).called(1);
+  });
+
   testWidgets('edit partition with invalid mount point', (tester) async {
     tester.view.devicePixelRatio = 1;
     tester.view.physicalSize = const Size(960, 680);
