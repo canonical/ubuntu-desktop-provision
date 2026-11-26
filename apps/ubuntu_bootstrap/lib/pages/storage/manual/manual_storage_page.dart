@@ -9,6 +9,7 @@ import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_model.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/manual_storage_widgets.dart';
 import 'package:ubuntu_bootstrap/pages/storage/manual/storage_selector.dart';
+import 'package:ubuntu_bootstrap/pages/storage/manual/storage_table.dart';
 import 'package:ubuntu_bootstrap/pages/storage/storage_model.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';
 import 'package:yaru/yaru.dart';
@@ -32,7 +33,10 @@ class ManualStoragePage extends ConsumerStatefulWidget {
 }
 
 class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
-  final _scrollController = AutoScrollController();
+  late final _scrollController = AutoScrollController(
+    viewportBoundaryGetter: () => Rect.fromLTRB(0, _headingHeight, 0, 0),
+  );
+  double _headingHeight = kMinInteractiveDimension;
   late void Function() _scrollListener;
   late final ManualStorageModel _model;
 
@@ -65,6 +69,7 @@ class _ManualStoragePageState extends ConsumerState<ManualStoragePage> {
 
   @override
   Widget build(BuildContext context) {
+    _headingHeight = StorageTable.headingHeight(context);
     final model = ref.watch(manualStorageModelProvider);
     final lang = UbuntuBootstrapLocalizations.of(context);
 
