@@ -158,8 +158,8 @@ void main() {
           columns: [StorageDeviceColumn(), sizeColumn],
           storages: [
             fakeDisk(path: '/dev/sda', size: 1000).copyWith(
-              vendor: 'Samsung',
-              model: '970 PRO',
+              vendor: '  Samsung ',
+              model: ' 970 PRO  ',
               partitions: [
                 const Partition(number: 1, size: 500, path: '/dev/sda1'),
               ],
@@ -172,6 +172,12 @@ void main() {
               vendor: '',
               model: '  ',
             ),
+            fakeDisk(
+              path: '/dev/sdd',
+              size: 1000,
+              vendor: '  Western Digital ',
+            ),
+            fakeDisk(path: '/dev/sde', size: 1000, model: ' DC500M  '),
           ],
           canSelect: (disk, [partition = -1]) => true,
           onSelected: (disk, [partition = -1]) => selectedDisk = disk,
@@ -182,6 +188,8 @@ void main() {
     expect(find.text('sda - Samsung 970 PRO'), findsOneWidget);
     expect(find.text('sdb - Samsung 980 PRO'), findsOneWidget);
     expect(find.text('sdc'), findsOneWidget);
+    expect(find.text('sdd - Western Digital'), findsOneWidget);
+    expect(find.text('sde - DC500M'), findsOneWidget);
     expect(find.text('sda1'), findsOneWidget);
 
     await tester.tap(find.text('sdb - Samsung 980 PRO'));

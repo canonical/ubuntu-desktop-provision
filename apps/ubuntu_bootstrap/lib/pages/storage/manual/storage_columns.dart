@@ -36,19 +36,11 @@ class StorageDeviceColumn extends StorageColumn {
             return Text(lang.diskHeadersDevice);
           },
           diskBuilder: (context, disk) {
-            final hardwareName = [disk.vendor, disk.model]
-                .whereType<String>()
-                .map((part) => part.trim())
-                .where((part) => part.isNotEmpty)
-                .join(' ');
-            final deviceName = hardwareName.isEmpty
-                ? disk.sysname
-                : '${disk.sysname} - $hardwareName';
             return Row(
               children: [
                 const Icon(YaruIcons.drive_harddisk_filled),
                 const SizedBox(width: 16),
-                Text(deviceName),
+                Text(_formatDiskLabel(disk)),
               ],
             );
           },
@@ -94,6 +86,17 @@ class StorageDeviceColumn extends StorageColumn {
             );
           },
         );
+
+  static String _formatDiskLabel(Disk disk) {
+    final vendor = disk.vendor?.trim() ?? '';
+    final model = disk.model?.trim() ?? '';
+    if (vendor.isEmpty && model.isEmpty) {
+      return disk.sysname;
+    }
+
+    final separator = vendor.isEmpty || model.isEmpty ? '' : ' ';
+    return '${disk.sysname} - $vendor$separator$model';
+  }
 }
 
 class StorageTypeColumn extends StorageColumn {
