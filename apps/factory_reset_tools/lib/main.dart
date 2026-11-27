@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:factory_reset_tools/l10n.dart';
 import 'package:factory_reset_tools/l10n/factory_reset_tools_localizations.dart';
 import 'package:factory_reset_tools/pages/reset_tools_wizard.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_wizard/ubuntu_wizard.dart';

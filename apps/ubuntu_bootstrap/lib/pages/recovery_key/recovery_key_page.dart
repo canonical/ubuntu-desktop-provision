@@ -1,8 +1,8 @@
 import 'package:barcode_widget/barcode_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_bootstrap/l10n.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_l10n.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';

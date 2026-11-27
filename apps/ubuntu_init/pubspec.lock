@@ -21,26 +21,26 @@ packages:
     dependency: transitive
     description:
       name: animated_vector
-      sha256: f1beb10e6fcfd8bd15abb788e20345def786d1c7391d7c1426bb2a1f2adf2132
+      sha256: "44c09df5b11a8416c49dfd7433cc08714308addda61acdd8b97ea87a7d8e8f76"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.2"
+    version: "0.2.3"
   animated_vector_annotations:
     dependency: transitive
     description:
       name: animated_vector_annotations
-      sha256: "07c1ea603a2096f7eb6f1c2b8f16c3c330c680843ea78b7782a3217c3c53f979"
+      sha256: c1bf348882940b64d7b86b8fc09572310a5dc28091cdde8436156844ca15a30d
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.2"
+    version: "0.3.0"
   archive:
     dependency: transitive
     description:
       name: archive
-      sha256: a96e8b390886ee8abb49b7bd3ac8df6f451c621619f52a26e815fdcf568959ff
+      sha256: "2fda90592c0afd219c5e285618a98da835cd10df38372666093d25dfe457a2d0"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.9"
+    version: "4.7.1"
   args:
     dependency: "direct main"
     description:
@@ -209,14 +209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.2"
-  cupertino_icons:
+  cupertino_ui:
     dependency: transitive
     description:
-      name: cupertino_icons
-      sha256: ba631d1c7f7bef6b729a622b7b752645a2d076dba9976925b8f25725a30e1ee6
+      name: cupertino_ui
+      sha256: c3eaf7f5bdfee36deb0b14a4cbf7602f1b6b8d8b8576b81f38fc08c25881c94c
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.8"
+    version: "1.1.7"
   dart_style:
     dependency: transitive
     description:
@@ -229,10 +229,10 @@ packages:
     dependency: "direct main"
     description:
       name: dbus
-      sha256: d0c98dcd4f5169878b6cf8f6e0a52403a9dff371a3e2f019697accbf6f44a270
+      sha256: fe6b46eae35441227e9e750656d06a4f40c230fe96e4390da7d7ebc69a60f0b3
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.12"
+    version: "0.8.1"
   diacritic:
     dependency: transitive
     description:
@@ -368,14 +368,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.4.3"
-  flutter_spinbox:
-    dependency: transitive
-    description:
-      name: flutter_spinbox
-      sha256: "38d8c1a3a39f0fa72823d4470785f5e165f2deb53531ca7803b54ba45e4dbd46"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.13.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -467,10 +459,10 @@ packages:
     dependency: "direct main"
     description:
       name: gsettings
-      sha256: "1b0ce661f5436d2db1e51f3c4295a49849f03d304003a7ba177d01e3a858249c"
+      sha256: "5e3e299b871a16d142691aa91595a4d73bab7a7fa65d53db0bf2c576959aaefc"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.8"
+    version: "0.2.9"
   gtk:
     dependency: transitive
     description:
@@ -531,10 +523,10 @@ packages:
     dependency: transitive
     description:
       name: image
-      sha256: f9881ff4998044947ec38d098bc7c8316ae1186fa786eddffdb867b9bc94dfce
+      sha256: bc13f61f0f5cb77936e78ae5dae3800f442718dac5d2bc4654f03c239230ed0c
       url: "https://pub.dev"
     source: hosted
-    version: "4.8.0"
+    version: "4.13.1"
   integration_test:
     dependency: "direct dev"
     description: flutter
@@ -674,6 +666,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.13.0"
+  material_ui:
+    dependency: "direct main"
+    description:
+      name: material_ui
+      sha256: a6b19012df437a356cbc01f8ea22a105e07194c47c9a6009da0032a0ce35c4ab
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.11.1"
   matrix4_transform:
     dependency: transitive
     description:
@@ -710,10 +710,10 @@ packages:
     dependency: transitive
     description:
       name: nm
-      sha256: "2c9aae4127bdc8993206464fcc063611e0e36e72018696cd9631023a31b24254"
+      sha256: "2ae480aa3379716b8bb58dfebb168e2919394c92b629efaaa0baaa5d140786e6"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.6.0"
   package_config:
     dependency: transitive
     description:
@@ -1113,10 +1113,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_localizations
-      sha256: "62c292f5d091f5a471fcff911ae1647aa764d27873a4a7b0e5a93dfbf4c7e00c"
+      sha256: "23d0ff93138989570777976f2025f5871f0604a5705d4f489041c5f7106d79a0"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.2+4"
+    version: "0.6.0"
   ubuntu_logger:
     dependency: "direct main"
     description:
@@ -1151,18 +1151,18 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_session
-      sha256: ce79fdd31faf7982b061b2e4a1cdd0815baf3b6b976e9c16c72609749511f3a1
+      sha256: a8d82037ed378346b015e5ca296c0c191f7ace2317a16a4bd1c0a6b206b3a4ac
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.4"
+    version: "0.0.5"
   ubuntu_test:
     dependency: "direct dev"
     description:
       name: ubuntu_test
-      sha256: "29aa4a0a64f4da80981206b420ddb8706950f85ef45a30ce8337ee717eecb79a"
+      sha256: "9077c48077eed39757cb1d582efd5dc04207dc9ec22fdf284443ac1574be6f0b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.3+2"
+    version: "0.3.0"
   ubuntu_utils:
     dependency: "direct main"
     description:
@@ -1174,10 +1174,10 @@ packages:
     dependency: "direct main"
     description:
       name: ubuntu_widgets
-      sha256: "7eaa3bcfde7197c8ae18e4546339316fa95d445e3fa8e1fdb2d3c2ea569a5d38"
+      sha256: "57e74055fe30323959cca2efc0e8adfdbfe4a00abcc71456f3caffc3b8ce7ef1"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.1"
+    version: "0.9.0"
   ubuntu_wizard:
     dependency: "direct main"
     description:
@@ -1197,10 +1197,10 @@ packages:
     dependency: transitive
     description:
       name: upower
-      sha256: cf042403154751180affa1d15614db7fa50234bc2373cd21c3db666c38543ebf
+      sha256: "229224ca060aaa6984a01808ce071112f2bd85826eda6d0b8360c9ae3db189ee"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.8.0"
   url_launcher:
     dependency: transitive
     description:
@@ -1373,10 +1373,10 @@ packages:
     dependency: transitive
     description:
       name: xdg_desktop_portal
-      sha256: "10d56d2212bfa33a676d209b312a82fe5862fed5a91d2cfcb39143da75d084c1"
+      sha256: b1e1b3893cea6c98272c8222dd6983eb5276736231f70c5ee2f54217434d7311
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.13"
+    version: "0.1.15"
   xdg_directories:
     dependency: transitive
     description:
@@ -1405,18 +1405,18 @@ packages:
     dependency: "direct main"
     description:
       name: yaru
-      sha256: "95e801c52dfda458bcb772baee6b2575c711fd951616a24910d6d30e70f5fb0d"
+      sha256: "22b000cd45d8fe6bc5d2e76df83f7aa81d903ac09f463360d9a2f72f2226e05e"
       url: "https://pub.dev"
     source: hosted
-    version: "10.2.0"
+    version: "12.0.0"
   yaru_test:
     dependency: "direct dev"
     description:
       name: yaru_test
-      sha256: "114132354ea73c379e97a9c880836ae984578d006129ea09517d9bb608b2a33b"
+      sha256: a2a89bb2ed0be61b04ecb82aa5fab9a41c799c83ed292418d8a68175e73afcd8
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.4"
+    version: "1.0.0"
   yaru_window:
     dependency: transitive
     description:
@@ -1458,5 +1458,5 @@ packages:
     source: hosted
     version: "0.0.4"
 sdks:
-  dart: ">=3.12.0 <4.0.0"
+  dart: ">=3.13.0 <4.0.0"
   flutter: ">=3.47.0"

@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:collection/collection.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:html/parser.dart' show parse;
 import 'package:intl/intl.dart' hide TextDirection;
 import 'package:intl/intl_standalone.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:path/path.dart' as path;
 import 'package:ubuntu_bootstrap/providers/slide_html.dart';
 import 'package:ubuntu_flavor/ubuntu_flavor.dart';

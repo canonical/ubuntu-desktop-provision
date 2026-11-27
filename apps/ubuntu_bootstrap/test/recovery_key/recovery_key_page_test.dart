@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:barcode_widget/barcode_widget.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_model.dart';
 import 'package:ubuntu_bootstrap/pages/recovery_key/recovery_key_page.dart';
 import 'package:ubuntu_provision/ubuntu_provision.dart';

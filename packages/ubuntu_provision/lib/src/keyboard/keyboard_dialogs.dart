@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/keyboard/keyboard_detector.dart';

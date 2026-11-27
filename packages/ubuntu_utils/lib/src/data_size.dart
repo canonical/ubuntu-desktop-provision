@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:ubuntu_localizations/ubuntu_localizations.dart';
 
 enum DataUnit {

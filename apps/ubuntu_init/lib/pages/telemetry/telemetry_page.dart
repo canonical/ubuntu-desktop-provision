@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_init/pages/telemetry/telemetry_dialogs.dart';
 import 'package:ubuntu_init/pages/telemetry/telemetry_l10n.dart';
 import 'package:ubuntu_init/pages/telemetry/telemetry_model.dart';

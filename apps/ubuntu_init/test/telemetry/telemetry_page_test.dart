@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_init/pages/telemetry/telemetry_dialogs.dart';
 import 'package:ubuntu_init/pages/telemetry/telemetry_l10n.dart';
@@ -11,6 +11,7 @@ import 'package:ubuntu_service/ubuntu_service.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
+
 import '../init_model_test.mocks.dart';
 import 'test_telemetry.dart';
 

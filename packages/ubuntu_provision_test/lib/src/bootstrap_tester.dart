@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_spinbox/flutter_spinbox.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:subiquity_client/subiquity_client.dart';
 import 'package:ubuntu_bootstrap/pages/storage/guided_capabilities_page.dart';
 import 'package:ubuntu_bootstrap/pages/storage/tpm_action/tpm_action_page.dart';
@@ -11,6 +10,11 @@ import 'package:ubuntu_provision_test/src/wizard_tester.dart';
 import 'package:ubuntu_test/ubuntu_test.dart';
 import 'package:ubuntu_utils/ubuntu_utils.dart';
 import 'package:yaru_test/yaru_test.dart';
+
+Finder findStorageSizeTextField() => find.descendant(
+      of: find.byType(StorageSizeBox),
+      matching: find.byType(TextField),
+    );
 
 extension UbuntuBootstrapPageTester on WidgetTester {
   Future<void> testTryOrInstallPage({
@@ -367,8 +371,9 @@ extension UbuntuBootstrapPageTester on WidgetTester {
 
         if (partition.size != null) {
           final size = fromBytes(partition.size!, DataUnit.megabytes);
-          await tap(find.byType(SpinBox));
-          await enterText(find.byType(SpinBox), '${size.round()}');
+          final sizeField = findStorageSizeTextField();
+          await tap(sizeField);
+          await enterText(sizeField, '${size.round()}');
           await pump();
         }
 

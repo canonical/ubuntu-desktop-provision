@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_model.dart';
 import 'package:ubuntu_bootstrap/pages/secure_boot/secure_boot_page.dart';
 
 import 'test_secure_boot.mocks.dart';
+
 export '../test_utils.dart';
 export 'test_secure_boot.mocks.dart';
 

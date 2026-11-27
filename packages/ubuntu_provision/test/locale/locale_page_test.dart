@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ubuntu_provision/services.dart';
 import 'package:ubuntu_provision/src/locale/locale_page.dart';
 import 'package:ubuntu_service/ubuntu_service.dart';
